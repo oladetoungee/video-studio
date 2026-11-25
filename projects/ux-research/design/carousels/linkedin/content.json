@@ -1,0 +1,270 @@
+{
+  "_help": "Edit text here (or in the studio), then run: node shared/build.mjs linkedin (from design/carousels). Markup: *word* = accent colour, _word_ = serif italic, ~word~ = struck through in marker, {word} = circled in marker, \\n = line break.",
+  "deck": "linkedin",
+  "width": 1080,
+  "height": 1350,
+  "accent": "#F26A2E",
+  "accentOnInk": "#F26A2E",
+  "docTitle": "Products fail two ways: UX research for product teams",
+  "slides": [
+    {
+      "layout": "hook",
+      "ground": "ink",
+      "title": "Products fail\ntwo ways.",
+      "size": 150,
+      "sub": "UX research catches both before launch. A guide from an HCI master's student.",
+      "subW": 540,
+      "subSize": 40,
+      "swipe": "Swipe",
+      "polaroid": {
+        "img": "gbemi_628.jpg",
+        "caption": "Gbemi"
+      },
+      "corner": "UX research: what it is, how to get in",
+      "notes": [
+        {
+          "t": "Nobody needs it."
+        },
+        {
+          "t": "Too hard to use.",
+          "o": true
+        }
+      ],
+      "noteSize": 280,
+      "noteFont": 38,
+      "gap": 70
+    },
+    {
+      "layout": "notes",
+      "ground": "ink",
+      "title": "Even with AI,\nbuilding is\nexpensive.",
+      "size": 120,
+      "cols": 2,
+      "noteSize": 380,
+      "noteFont": 50,
+      "gap": 70,
+      "notes": [
+        {
+          "t": "Change a sketch: cheap."
+        },
+        {
+          "t": "Rebuild a live app: costly.",
+          "o": true,
+          "circle": false
+        }
+      ],
+      "takeaway": "You still spend time, money and a team. Test the idea first."
+    },
+    {
+      "layout": "cards",
+      "ground": "paper",
+      "noteSize": 230,
+      "noteFont": 34,
+      "cards": [
+        {
+          "h": "UI",
+          "s": "What you see and touch.",
+          "notes": [
+            {
+              "t": "The buttons"
+            },
+            {
+              "t": "The colours"
+            },
+            {
+              "t": "The layout"
+            }
+          ]
+        },
+        {
+          "h": "UX",
+          "s": "How it feels to use.",
+          "o": true,
+          "notes": [
+            {
+              "t": "Can they find it?"
+            },
+            {
+              "t": "Does it make sense?"
+            },
+            {
+              "t": "Do they come back?",
+              "circle": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layout": "notes",
+      "ground": "ink",
+      "title": "How a study runs",
+      "size": 110,
+      "cols": 3,
+      "noteSize": 262,
+      "noteFont": 36,
+      "gap": 70,
+      "notes": [
+        {
+          "t": "1. Plan a study"
+        },
+        {
+          "t": "2. Recruit people"
+        },
+        {
+          "t": "3. Test with users"
+        },
+        {
+          "t": "4. Find the patterns"
+        },
+        {
+          "t": "5. Share what should change",
+          "o": true
+        }
+      ],
+      "takeaway": "The goal: change what gets built.",
+      "takeSize": 58
+    },
+    {
+      "layout": "notes",
+      "ground": "paper",
+      "title": "What users say\nisn't what\nthey *do.*",
+      "size": 104,
+      "cols": 2,
+      "noteSize": 400,
+      "noteFont": 52,
+      "corner": "// an example",
+      "notes": [
+        {
+          "t": "“I always use search.”"
+        },
+        {
+          "t": "Taps the menu instead.",
+          "o": true,
+          "circle": false
+        }
+      ],
+      "takeaway": "The gap is itself a finding. Good UX research watches as much as it asks.",
+      "takeSize": 50
+    },
+    {
+      "layout": "pairs",
+      "ground": "ink",
+      "title": "3 choices every\nstudy makes",
+      "size": 110,
+      "pairs": [
+        {
+          "k": "When",
+          "a": "Before building",
+          "as": "generative",
+          "b": "Does it work?",
+          "bs": "evaluative"
+        },
+        {
+          "k": "What",
+          "a": "The why",
+          "as": "qualitative",
+          "b": "The numbers",
+          "bs": "quantitative"
+        },
+        {
+          "k": "How",
+          "a": "What they say",
+          "as": "attitudinal",
+          "b": "What they do",
+          "bs": "behavioural"
+        }
+      ],
+      "takeaway": "Usually, you want both sides."
+    },
+    {
+      "layout": "notes",
+      "ground": "paper",
+      "title": "No research\nbudget?",
+      "size": 140,
+      "cols": 2,
+      "noteSize": 380,
+      "noteFont": 46,
+      "gap": 80,
+      "notes": [
+        {
+          "t": "Talk to 5 future users."
+        },
+        {
+          "t": "Watch 3 friends try your app.",
+          "o": true
+        }
+      ],
+      "takeaway": "A video call counts. Some research is always better than no research."
+    },
+    {
+      "layout": "stat",
+      "ground": "ink",
+      "title": "The job market,\nplainly",
+      "size": 110,
+      "stats": [
+        {
+          "n": "752",
+          "l": "US job posts for UX research in August 2026",
+          "accent": true,
+          "bar": 4.3
+        },
+        {
+          "n": "17,339",
+          "l": "for product design, the same month",
+          "bar": 100
+        }
+      ],
+      "body": "Designers and product managers are expected to do research too, so the skill pays off beyond the job title.",
+      "bodySize": 38,
+      "source": "Source: AcademyUX, Sep 2026"
+    },
+    {
+      "layout": "list",
+      "ground": "paper",
+      "title": "How to get in",
+      "size": 120,
+      "head": 60,
+      "pad": "34px 0 32px",
+      "rows": [
+        {
+          "n": "01",
+          "head": "Learn the basics",
+          "sub": "Free guides: Nielsen Norman Group, Maze."
+        },
+        {
+          "n": "02",
+          "head": "Run a practice study",
+          "sub": "Interview a few people. Write it up."
+        },
+        {
+          "n": "03",
+          "head": "Help a small business",
+          "sub": "Volunteer your research."
+        },
+        {
+          "n": "04",
+          "head": "Bring your background",
+          "sub": "Psychology, teaching, marketing, journalism.",
+          "accent": true
+        }
+      ]
+    },
+    {
+      "layout": "quote",
+      "ground": "ink",
+      "kicker": "",
+      "quote": "Good design doesn't start with ~screens~.\nIt starts with {people.}",
+      "qSize": 72,
+      "credit": "A line I found in a Medium article.",
+      "where": "Full video on YouTube",
+      "video": "What is UX research?",
+      "handle": "@WithGbemi",
+      "polaroid": {
+        "img": "gbemi_757.jpg",
+        "caption": "Gbemi"
+      },
+      "cta": "Repost if this helps someone starting out."
+    }
+  ]
+}

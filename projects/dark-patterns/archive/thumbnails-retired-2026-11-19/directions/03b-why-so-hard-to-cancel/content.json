@@ -1,0 +1,30 @@
+{
+ "direction": "Her on the left, big (photo 1550, hands out, 'really?'), on light grid paper. Top right: 'why it's so hard to cancel' with a red hand-drawn line under 'to cancel'. Below, the cancel maze as three sticky notes with drawn arrows: CANCEL -> ARE YOU SURE? -> CALL US TO CANCEL. Generic, no shop.",
+ "thumbnail_text": "why it's so hard to cancel",
+ "kind": "photo + diagram",
+ "recommended": false,
+ "titles": [
+  "Hard to Cancel Subscriptions? 11 Dark Patterns Explained",
+  "Dark Patterns Explained: 11 Tricks Websites Use on You",
+  "Dark Patterns in UX: 11 Examples and Why Companies Use Them"
+ ],
+ "text": {
+  "hd": "why it's so hard<br>to cancel",
+  "b1": "CANCEL",
+  "b2": "ARE YOU SURE?",
+  "b5": "CALL US TO CANCEL"
+ },
+ "images": {
+  "me": "../../assets/shoot/1550-cut.png"
+ },
+ "vars": {
+  "--ground": "#F5F5F4"
+ },
+ "board": "Thumbnails 129 (viral-3 \"FITNESS SALES FRAMEWORK\": the creator big on the left, a two-line heavy title top right with a red hand-drawn underline, a flow of coloured sticky labels with drawn arrows under it)",
+ "fonts": "Font 10 (Inter Tight 900, Design 378: #030502 on #F5F5F4) for the title and the notes",
+ "colours": "Font 10 specimen (Design 378): ground #F5F5F4, ink #030502; note colours yellow / cyan from Thumbnails 129 itself; red underline + last note #E2231A family",
+ "title": "Hard to Cancel Subscriptions? 11 Dark Patterns Explained",
+ "class": "no-lift",
+ "replaces": "03-hard-to-cancel (kept beside it)",
+ "scores": "cold critic 2026-11-16 (3 rounds, fresh agent each, PNGs alone): 7 / 6 / 6 (old 03: 5 / 6 / 5)"
+}

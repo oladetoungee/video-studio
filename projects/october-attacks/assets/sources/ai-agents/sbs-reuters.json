@@ -1,0 +1,173 @@
+{
+ "story": "ai-agents",
+ "outlet": "SBS News (Reuters)",
+ "slug": "sbs-reuters",
+ "url": "https://news.sbs.co.kr/english/article.do?news_id=N1008805974",
+ "finalUrl": "https://news.sbs.co.kr/english/article.do?news_id=N1008805974",
+ "status": "loaded",
+ "http": 200,
+ "title": "\"A Single Hacker Successfully Hacks 100 Companies Using AI Agents\"",
+ "h1": "\"A Single Hacker Successfully Hacks 100 Companies Using AI Agents\"",
+ "published": "2026-10-20T11:32:07+09:00",
+ "files": {
+  "fold": "ai-agents/sbs-reuters_fold.png",
+  "full": "ai-agents/sbs-reuters_full.jpg",
+  "scroll": "ai-agents/sbs-reuters_scroll.mp4"
+ },
+ "full": {
+  "width": 1440,
+  "height": 4460,
+  "pageHeight": 4460,
+  "zoom": 1,
+  "quotes": [
+   {
+    "quote": "The instructions were given in Chinese text consisting of fewer than 100 characters",
+    "box": {
+     "x": 270,
+     "y": 1566,
+     "w": 577,
+     "h": 54
+    },
+    "lines": [
+     {
+      "x": 270,
+      "y": 1566,
+      "w": 577,
+      "h": 21
+     },
+     {
+      "x": 270,
+      "y": 1599,
+      "w": 86,
+      "h": 21
+     }
+    ]
+   },
+   {
+    "quote": "This breaks down to about 50 dollars spent per successful hack",
+    "box": {
+     "x": 270,
+     "y": 1962,
+     "w": 512,
+     "h": 21
+    },
+    "lines": [
+     {
+      "x": 270,
+      "y": 1962,
+      "w": 512,
+      "h": 21
+     }
+    ]
+   }
+  ]
+ },
+ "scroll": {
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "seconds": 8,
+  "keyframes": [
+   {
+    "t": 0,
+    "y": 97
+   },
+   {
+    "t": 1,
+    "y": 97
+   },
+   {
+    "t": 2.407,
+    "y": 1156
+   },
+   {
+    "t": 3.507,
+    "y": 1156
+   },
+   {
+    "t": 4.542,
+    "y": 1552
+   },
+   {
+    "t": 8,
+    "y": 1552
+   }
+  ],
+  "zoom": 1,
+  "easing": "easeInOutCubic between keyframes, holds where y is equal",
+  "capped": false,
+  "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)",
+  "quotes": [
+   {
+    "quote": "The instructions were given in Chinese text consisting of fewer than 100 characters",
+    "inVideo": true,
+    "still": true,
+    "t": 2.95,
+    "visibleStill": [
+     2.33,
+     3.57
+    ],
+    "scrollY": 1156,
+    "box": {
+     "x": 510,
+     "y": 410,
+     "w": 577,
+     "h": 54
+    },
+    "lines": [
+     {
+      "x": 510,
+      "y": 410,
+      "w": 577,
+      "h": 21
+     },
+     {
+      "x": 510,
+      "y": 443,
+      "w": 86,
+      "h": 21
+     }
+    ],
+    "docBox": {
+     "x": 510,
+     "y": 1566,
+     "w": 577,
+     "h": 54
+    },
+    "layoutDriftPx": 1
+   },
+   {
+    "quote": "This breaks down to about 50 dollars spent per successful hack",
+    "inVideo": true,
+    "still": true,
+    "t": 6.25,
+    "visibleStill": [
+     4.47,
+     8.03
+    ],
+    "scrollY": 1552,
+    "box": {
+     "x": 510,
+     "y": 410,
+     "w": 512,
+     "h": 21
+    },
+    "lines": [
+     {
+      "x": 510,
+      "y": 410,
+      "w": 512,
+      "h": 21
+     }
+    ],
+    "docBox": {
+     "x": 510,
+     "y": 1962,
+     "w": 512,
+     "h": 21
+    },
+    "layoutDriftPx": 1
+   }
+  ]
+ }
+}

@@ -1,0 +1,22 @@
+{
+  "direction": "One object = the outcome (viral sample 2): a paper card with the one real line, CREATE INDEX (works in PostgreSQL and MySQL), yellow on the key words; she points at it. Round 2: no scribble, closed-mouth frame. Round 3: words name the result (cold read: \"one line of SQL\" did not say what it does). Round 4 (composition): centred: one-line headline across the top, the SQL card held across the middle of the frame.",
+  "concept": "T13",
+  "thumbnail_text": "Slow query? One line.",
+  "title": "What Is a Database Index? (And Why Your App Needs One)",
+  "titles": [
+    "What Is a Database Index? (And Why Your App Needs One)",
+    "Database Indexing for Beginners: Fix Slow SQL Queries",
+    "SQL Indexes: Make Slow Queries Fast with One Line"
+  ],
+  "text": {
+    "a": "Slow query? <span class=\"mark\">One line.</span>",
+    "c1": "<span class=\"hl\">CREATE INDEX</span> idx_author",
+    "c2": "ON books (author_id);"
+  },
+  "images": {
+    "scene": "../../assets/scene/f_448.7.jpg"
+  },
+  "frame": "7:28.7 (pointing at the card, mouth closed)",
+  "vars": {},
+  "scores": "final gate (round 4): A topic/click 5/7 · B pair 7 · C taste 7"
+}

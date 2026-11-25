@@ -1,0 +1,865 @@
+<title>My Current Reading Stack</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Silkscreen&family=VT323&display=swap">
+<style>
+:root{
+  color-scheme: dark;
+  --ground:#0d0a16; --surface:#171227; --surface2:#1f1934; --line:#2e2648;
+  --text:#f1e6cc; --muted:#9b92b9; --accent:#ffc861; --accent2:#63c7bf; --danger:#e0607e;
+  --px:"Press Start 2P", ui-monospace, monospace;
+  --vt:VT323, ui-monospace, "SF Mono", Menlo, monospace;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{background:var(--ground);color:var(--text)}
+body{font-family:var(--vt);font-size:21px;line-height:1.25;margin:0}
+.wrap{max-width:1200px;margin:0 auto;padding-inline:16px;padding-block:18px 40px;display:flex;flex-direction:column;gap:14px}
+header{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 16px}
+h1{font-family:var(--px);font-size:14px;letter-spacing:.04em;margin:0;color:var(--accent);text-wrap:balance;line-height:1.6}
+.meta{color:var(--muted)}
+.stage{position:relative;width:100%;aspect-ratio:16/9;max-width:100%;background:#000;border:2px solid var(--line);box-shadow:0 0 0 4px #07050d, 0 18px 40px #0008}
+.stage canvas{width:100%;height:100%;display:block;image-rendering:pixelated;image-rendering:crisp-edges}
+.stage .loading{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--px);font-size:12px;color:var(--muted)}
+.bar{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+button,.btn{font:inherit;font-size:20px;color:var(--text);background:var(--surface2);border:2px solid var(--line);padding:4px 12px;cursor:pointer;line-height:1.1}
+button:hover,.btn:hover{border-color:var(--accent)}
+button:focus-visible,input:focus-visible,.btn:focus-within{outline:2px solid var(--accent);outline-offset:2px}
+button[aria-pressed="true"]{background:var(--accent);color:#1a1226;border-color:var(--accent)}
+button.primary{background:var(--accent);color:#1a1226;border-color:var(--accent);min-width:92px}
+button.rec{border-color:var(--danger)}
+button.rec.on{background:var(--danger);color:#1a1226}
+.time{font-variant-numeric:tabular-nums;color:var(--muted);min-width:124px}
+.track{position:relative;flex:1 1 260px;height:26px;background:var(--surface);border:2px solid var(--line);cursor:pointer;touch-action:none}
+.track .fill{position:absolute;left:0;top:0;bottom:0;background:#3a2f5e}
+.track .mk{position:absolute;top:0;bottom:0;width:2px;background:#5c4f8f}
+.track .head{position:absolute;top:-4px;bottom:-4px;width:4px;background:var(--accent)}
+.grid{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:14px}
+@media (max-width:820px){.grid{grid-template-columns:1fr}}
+.panel{background:var(--surface);border:2px solid var(--line);padding:12px 14px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.panel h2{font-family:var(--px);font-size:10px;letter-spacing:.08em;margin:0;color:var(--accent2);line-height:1.6}
+.panel p{margin:0;color:var(--muted);max-width:62ch}
+.list{max-height:420px;overflow:auto;display:flex;flex-direction:column;border-top:2px solid var(--line)}
+.row{display:grid;grid-template-columns:64px 1fr;gap:10px;padding:6px 4px;border-bottom:1px solid var(--line);cursor:pointer;text-align:left;background:none;border-left:0;border-right:0;border-top:0;font-size:19px;color:var(--muted)}
+.row:hover{color:var(--text)}
+.row.on{background:var(--surface2);color:var(--text)}
+.row .ts{font-variant-numeric:tabular-nums;color:var(--accent)}
+label.inline{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+input[type=number]{font:inherit;font-size:20px;width:80px;background:var(--ground);color:var(--text);border:2px solid var(--line);padding:2px 6px}
+input[type=file]{display:none}
+.note{font-size:18px;color:var(--muted)}
+.status{font-size:19px;color:var(--accent)}
+kbd{font-family:var(--vt);border:1px solid var(--line);padding:0 5px;background:var(--ground)}
+@media (prefers-reduced-motion: reduce){.track .head{transition:none}}
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>MY CURRENT READING STACK</h1>
+    <div class="meta" id="meta">A code-drawn pixel film · 1920×1080 · no video model</div>
+  </header>
+
+  <div class="stage" id="stage">
+    <canvas id="screen" width="1920" height="1080" aria-label="Pixel animation"></canvas>
+    <div class="loading" id="loading">LOADING PIXELS…</div>
+  </div>
+
+  <div class="bar">
+    <button class="primary" id="play" type="button">▶ Play</button>
+    <span class="time" id="time">0:00 / 0:00</span>
+    <div class="track" id="track" role="slider" aria-label="Timeline" tabindex="0"><div class="fill" id="fill"></div><div class="head" id="head"></div></div>
+    <button id="capt" type="button" aria-pressed="true">Captions</button>
+    <button id="fs" type="button">Fullscreen</button>
+  </div>
+
+  <div class="grid">
+    <section class="panel">
+      <h2>SCRIPT &amp; TIMING</h2>
+      <p>Each line of your voiceover is one beat. Click a line to jump there. <kbd>Space</kbd> play, <kbd>←</kbd><kbd>→</kbd> 5 s, <kbd>[</kbd><kbd>]</kbd> line, <kbd>C</kbd> captions.</p>
+      <div class="list" id="list"></div>
+    </section>
+
+    <div style="display:flex;flex-direction:column;gap:14px;min-width:0">
+      <section class="panel">
+        <h2>MATCH YOUR VOICE</h2>
+        <label class="inline" for="wpm">Speaking pace <input id="wpm" type="number" min="90" max="240" step="5" value="150"> words / min</label>
+        <p class="note">Pace sets the timing of every scene. For exact sync, load your recorded voiceover and tap along.</p>
+        <div class="bar">
+          <label class="btn" for="vo">Load voiceover…</label><input id="vo" type="file" accept="audio/*">
+          <button id="mark" type="button">Tap-sync</button>
+          <button id="resetT" type="button">Reset timing</button>
+        </div>
+        <p class="note" id="markHelp">Tap-sync plays from the start. Press <kbd>N</kbd> (or the button) the moment each new line begins. Your timing is saved in this browser.</p>
+        <div class="status" id="status" aria-live="polite"></div>
+      </section>
+
+      <section class="panel">
+        <h2>EXPORT</h2>
+        <div class="bar">
+          <button class="rec" id="rec" type="button">● Record video</button>
+          <button id="srt" type="button">Subtitles .srt</button>
+          <button id="json" type="button">Timing .json</button>
+          <label class="btn" for="jsonIn">Import timing</label><input id="jsonIn" type="file" accept="application/json,.json">
+        </div>
+        <p class="note">Recording plays in real time from the playhead to the end at 1920×1080 (includes your voiceover if loaded). Downloads work when you open <b>index.html</b> locally in Chrome.</p>
+      </section>
+    </div>
+  </div>
+</div>
+
+<script>
+"use strict";
+/* ============================================================
+   SCRIPT → BEATS  (scene key, voiceover line)
+   ============================================================ */
+const BEATS=[
+['stack',"So this is my current reading stack."],
+['phrase',"By the way, I got that phrase from a video I was watching, and the guy was like, this is my current reading stack, and it sounded so nice to me. So yeah. My reading stack."],
+['three',"Right now I have three books."],
+['book1',"I have How to Read and Write Critically by Alex Baratta. I got this from the library the other day."],
+['book2',"And I have Convivial Toolbox. This one is for my thesis, one of my co-supervisors lent it to me."],
+['book3',"And I also have Miss Marple's Final Cases by Agatha Christie, which I'm not going to touch in this video, because fiction is a different thing entirely."],
+['promise',"So today I want to talk about a reading method that I think will work for you if you want to remember everything that you have read. And I'm going to try it practically in this video."],
+['problem',"So the problem is that you read a whole book, you sit with it for some days, some weeks, and then someone asks you what it was about. And you can tell them the general vibe of what the book is about, maybe one or two things that stuck."],
+['feeling',"But it's almost as though what you're left with is a feeling about the book rather than the book itself."],
+['feeling',"So this method is going to fix that."],
+['method',"The method is pretty much straightforward. The idea is that before you read a book, you read the structure of the book first."],
+['method',"So you get a new book, you go to the table of contents, and you actually study the table of contents. The chapters. The sub-headings. You look at how the whole thing is laid out before you even read a single page of the actual content."],
+['method',"It is after you have done this that you then actually read the book."],
+['method',"That's the whole thing. It sounds so simple."],
+['lineage',"I've seen this idea on Pinterest and YouTube, I actually did walk through it on YouTube I think. But the oldest version of this idea is from a book called How to Read a Book by Mortimer Adler, from 1940."],
+['lineage',"And I want to actually read this book full blown, not just tips and summaries from it."],
+['inspect',"He calls it inspectional reading. Before chapter one, you study the contents page, the chapter titles, the sub-headings, and you skim a little to see how the author has laid out their argument."],
+['priming',"The newer version of it is kind of popular. If you go on Justin Sung's YouTube page, I think he has a video where he calls it priming. Same idea, you spend a few minutes on the headings, ask yourself how the parts connect, and the real reading comes after."],
+['memorise',"But I like the TikTok version, where people say you should actually memorise it. That is what I'm doing. The memorise one actually sticks more for me."],
+['memorise',"Memorise the chapter titles and the sub-chapters, and after you're done memorising, then you read."],
+['memorise',"So for me, you can skim through it, you can read through it, but memorising just makes the mapping stronger in my mind."],
+['why',"So why does this method work?"],
+['why',"At least as far as I understand it, it's about having somewhere to put things."],
+['float',"When you start reading a book cold, every new idea that arrives, your brain has nowhere to file it. So it sort of floats. And then the next idea arrives and that one floats too."],
+['float',"And by the time you're in chapter six of the book, you're already holding a pile of floating things that are not attached to anything."],
+['shelves',"But when you have studied the structure first, you already know the shape of the argument. So when an idea shows up in the book, you know which part of the book it belongs to and what it is doing there."],
+['shelves',"In your mind, that idea has a place to go."],
+['shelves',"That's the whole mechanism. You are building the shelves before you start putting things on them."],
+['practical',"Okay, let's actually do this practically."],
+['baratta',"I'll start with this book because it's the smaller one and the structure is very clean. How to Read and Write Critically by Alex Baratta, a senior lecturer at the University of Manchester."],
+['baratta',"And before I open it, the title is already telling me something. The title was what attracted me to it in the library in the first place."],
+['baratta',"So first of all, the title is telling you that two things already belong together. Reading critically and writing critically are being treated together."],
+['chapters',"Now, the chapters. There are ten chapters in this book."],
+['chapters',"Chapter one, what does it mean to be critical?"],
+['chapters',"Chapter two, different ways to show your criticality."],
+['chapters',"Chapter three, understanding score bands and developing your skills within academic assessment."],
+['chapters',"Chapter four, the connection between critical reading, critical thinking and critical writing."],
+['chapters',"Chapter five, how to structure your essays."],
+['chapters',"Chapter six, how to structure your dissertation."],
+['chapters',"Chapter seven, additional assessments to consider."],
+['chapters',"Chapter eight, four ways to approach interpretation."],
+['chapters',"Chapter nine, how to use quotes, paraphrase and summarise."],
+['chapters',"Chapter ten, how to use critical language in your assessments."],
+['chapters',"So instead of just reading it out, let us go by it."],
+['ch1',"The first thing you notice is that chapter one is a question. What does it mean to be critical?"],
+['ch1',"Which means that the author thinks, at least I am assuming, that the main problem to start with is that no one has ever actually defined the word for you. Everybody keeps saying you should be critical, blah blah blah, be critical. But he starts by fixing the definition."],
+['ch1',"So in my head I'm already thinking, because I throw around critical thinking, I throw it around a lot. In my head I'm already thinking I am going to be challenged by the definition this person is going to give of what it means to be critical."],
+['ch1',"Is it that I get challenged, or does the idea I have in my head get supported? So I'm looking forward to that."],
+['ch2',"Chapter two, different ways to show your criticality. In my head I already know this is going to be practical. I'm going to get tips on how to show my criticality."],
+['ch3',"Chapter three goes on to score bands and assessment. That already tells me who this book is for and what it wants. So this is not just a book about critical thinking as a life skill."],
+['ch3',"Again, I am assuming by the chapter, it is a book about getting marked well, maybe in academia. Which is useful for me to know, because now I would not be expecting anything philosophical. Now I'm expecting practical academic strategy."],
+['ch4',"And then chapter four, I am also looking forward to that chapter. The connection between critical reading and thinking and writing. How everything comes together."],
+['ch4',"Is it possible to think critically but not write critically? Is it possible to do one or the other, or are they bundled together?"],
+['ch4',"Like once you think critically, you will read critically, you will write critically. I don't know yet, but I'm anticipating. I already have that shelf in my head."],
+['block57',"And then you look at chapter five, six and seven. Essay, dissertation, assessments. In my head, that's a block. That whole block is about structure."],
+['block57',"How do you organise? If I want to write an essay, how do I organise it? My dissertation, and all of that."],
+['block57',"And if you look at the additional assessments part, there's also oral presentation, poster presentation and all of that. So chapter five, six and seven feels like a block to me."],
+['ch8',"And then chapter eight, nine and ten. Chapter eight I'm also looking forward to. Four ways to approach interpretation."],
+['ch8',"I'm already thinking, is this about when someone says something, where should my mind go to first? How should I interpret what people say? Is it contextual, or anything like that?"],
+['ch8',"Under chapter eight I see that there are some sub-chapters. Agreement. Disagreement. Illustration. Explanation."],
+['ch9',"Then chapter nine, how to use quotes, how to use paraphrase, and how to summarise. Under it we have plagiarism, direct quotation, paraphrasing, summarising."],
+['ch10',"And the last chapter is how to use critical language in your assessments. So in my head again I'm thinking, there is critical language. There are languages that are critical, and perhaps there are languages that are not critical. I don't know yet."],
+['guess',"All of these are still my guess. Now when I read it, I'm reading to find out, am I right or am I wrong?"],
+['guess',"When I read this book, I'm able to retain more ideas now, because my mind is expecting things. My mind has a position now."],
+['thud',"Right, book two. This one is bigger, it's for my thesis."],
+['conv',"Convivial Toolbox, Generative Research for the Front End of Design, by Liz Sanders and Pieter Jan Stappers, published by BIS in Amsterdam."],
+['title3',"Now the title first. The title has three major words or phrases in it. There's convivial. There's generative. I know what a toolbox is. Convivial, generative, and front end of design."],
+['convivial',"So let's take a look at the main word. Convivial. What does convivial mean?"],
+['convivial',"The book is dedicated to a philosopher called Ivan Illich, and convivial tools is his idea. Convivial tools mean tools that give power back to the person using them, rather than tools that make the user dependent on an expert."],
+['convivial',"So before I read one single page out of this book, I already know the argument. This is my guess. The book is going to say that design research tools should also be able to be used by ordinary people, not just by researchers."],
+['convivial',"That is the vibe this title is giving."],
+['convivial',"Of course, I already know, because this book is connected to my thesis. But even if I didn't, it would give me that vibe."],
+['parts',"Now let's move to the structure of the book."],
+['parts',"Part one is the underlying principles. It runs from page fourteen to page ninety-five."],
+['parts',"Then we have part two, cases from practice."],
+['parts',"And part three is how to actually use the tools and the techniques."],
+['parts',"And also, keep the page numbers in mind. Part one is about eighty pages. Part two is about fifty pages. And part three is over a hundred and forty pages."],
+['parts',"So more than half of this book is the how-to section. So even though it opens with theory, I already know that this is a very practical book."],
+['disguise',"It is pretty much a manual that is pretending to be a textbook."],
+['disguise',"And that would change the way I read it. Because now I have a guess that the theory at the front is just there to make the manual and the practical part at the back make sense, not the other way around."],
+['intro',"So now if I dive deep into chapter one. Chapter one is called Introduction, and there are sub-chapters."],
+['intro',"Who is creative?"],
+['shrug',"Good question. Thank you. I don't know."],
+['shrug',"I usually would tell people, oh yeah, you're so creative, I love it. I sometimes don't think of myself as being creative. I think of people as ridiculously creative. So it's good to know who is creative."],
+['intro2',"Why are people expressing a need for creativity now? Business and design are changing."],
+['intro2',"So look at that. The first real question in this entire book is, who is creative?"],
+['intro2',"It's not even what is design research, or what is generative research. Who is creative?"],
+['everyone',"That tells me that the whole argument rests on a claim about ordinary people. He is going to argue that everybody is creative, and therefore everyone can participate in designing the things that affect them."],
+['everyone',"Which connects right back to the word from the title. Convivial. Makes sense."],
+['everyone',"So the title and the first sub-heading are already giving me something. A shelf, in my mind."],
+['bridge',"Now if I skip to the back of the book, I go to part three, chapter ten. Chapter ten is Bridging."],
+['bridge',"The questions he asks in that chapter. Where are the gaps? Where and when does bridging happen? Who is bridging the gaps? What are the ways we can bridge the gaps?"],
+['bridge',"Now, I haven't read the book. I do not know what gaps he means yet. But now I know that there is a gap problem somewhere in this book. It matters enough that it gets its own chapter."],
+['gapword',"And when I meet the word gap in part one, I should pay attention to it, because I'm coming back to meet it in the later chapters."],
+['gapword',"If I had read it cold without doing this, I would probably have missed it. I would have seen the word gap in chapter two and probably just thought of it as, oh yeah, it's just there, it just means a normal gap."],
+['time',"So I have been using this method to read, and I noticed that it takes less time than you think."],
+['time',"It sounds like something that will take you a lot of time and you don't want to do that extra work, you just want to get into reading. A few minutes per book, honestly."],
+['time',"It's not something that will overwhelm you before you start reading the book. In fact it's something that will raise your anticipation for reading the book."],
+['author',"And this contents page is written by the author on purpose. It is a summary of their argument. Pay some attention to it."],
+['want',"And the third one, yes, it makes you want to read the book more. Because once you see the shape, you start having questions. Is this author right? Is this author wrong? You anticipate reading it."],
+['recap',"So for non-fiction, this method is just something that I now do. Before reading the book, go over the contents, go over the sub-headings, the headings, the chapters. Take a guess about what the argument of the book is about, before you read."],
+['recap',"For me, I prefer the TikTok version of memorising. When I force myself to memorise it, it sticks in a way that, of course you can just read it and not necessarily memorise it, I've done that before. But the memorising actually sticks more for me."],
+['fiction',"And for fiction, absolutely, I don't think you should be doing this. But I don't know, if you do this for fiction, please let me know."],
+['unknown',"I think that for fiction, the point is, I love the unknown. It's like a world of unknown for me. So half the point of me reading a novel is not knowing what is coming next."],
+['fictoc',"And does fiction even have a table of contents? Oh, interesting. A fiction book actually has a table of contents. I've never noticed."],
+['surprise',"But really, there's no point. At least for me. I just want to know, I don't want to know what's up. I want the book to surprise me when it comes to fiction."],
+['summary',"Basically, that's the method. Read the structure, read the headings, the chapters, before you start reading the book. Take a guess about what the argument of the book is about."],
+['outro',"So yeah, see you in my next video. If you have a minute, tell me in the comments what is in your current reading stack. And if you already do something like this, let me know how it goes for you."],
+['outro',"Bye."],
+];
+const N=BEATS.length;
+
+/* ============================================================
+   PALETTE + BOOKS
+   ============================================================ */
+const C={
+ void:'#0b0914',night:'#151128',night2:'#1c1636',ind:'#231c44',dusk:'#342a63',vio:'#4f4491',lav:'#8b7fd0',
+ wall:'#2b1d33',wall2:'#33233c',wall3:'#46314f',
+ wood0:'#3b2019',wood:'#6a3b27',wood2:'#8f5634',wood3:'#b8773f',
+ lamp:'#ffe29a',amber:'#ffc861',orange:'#f08a3c',ember:'#c4542b',
+ paper:'#f4e7c9',paper2:'#dcc79d',paper3:'#a88c62',ink:'#241a2e',ink2:'#4a3d58',
+ teal:'#2c8c8f',teal2:'#63c7bf',teal0:'#1b5a61',
+ rose:'#e0607e',rose0:'#9b2f55',plum:'#6b2a5e',pink:'#f2a0b6',
+ mustard:'#e7b53c',mustard0:'#b07d1c',
+ leaf:'#5aa55e',leaf0:'#2e6a45',
+ sky:'#86c8f0',sky0:'#4a86c0',
+ red:'#c8363c',red0:'#7d1b2b',
+ white:'#fff6e6',grey:'#77708f',grey2:'#a9a3c4',grey0:'#4b4563',
+ skin:'#8d5a3b',skin0:'#6a3f28',skin1:'#b67d52',
+ hair:'#1d1420',sepia:'#c9a877',sepia0:'#8a6a44',sepia1:'#ecd9b0',sepia2:'#5d4630',
+ bp:'#14305a',bp1:'#1d4274',bp2:'#2a5a92',bpl:'#9fd3ff',
+ brain:'#ea94ad',brain0:'#b95b7e'
+};
+const BK={
+ crit:{id:'crit',bg:C.teal,bg0:C.teal0,hi:C.teal2,fg:C.white,acc:C.mustard,title:['HOW TO READ','& WRITE','CRITICALLY'],au:'ALEX BARATTA',short:'READ & WRITE'},
+ conv:{id:'conv',bg:C.orange,bg0:C.ember,hi:C.amber,fg:C.ink,acc:C.ink,title:['CONVIVIAL','TOOLBOX'],au:'SANDERS + STAPPERS',short:'CONVIVIAL TOOLBOX'},
+ marple:{id:'marple',bg:C.red0,bg0:'#4d1020',hi:C.red,fg:C.paper,acc:C.amber,title:["MISS MARPLE'S",'FINAL CASES'],au:'AGATHA CHRISTIE',short:'MARPLE'},
+ adler:{id:'adler',bg:C.sepia0,bg0:C.sepia2,hi:C.sepia,fg:C.sepia1,acc:C.sepia1,title:['HOW TO','READ A','BOOK'],au:'MORTIMER ADLER',short:'ADLER'}
+};
+const SKINS=['#f1c9a5','#d9a27a','#a8704a','#8d5a3b','#5e3a24','#c68a5e'];
+const SHIRTS=[C.teal,C.rose,C.mustard,C.sky0,C.leaf,C.orange,C.lav,C.red];
+const HAIRS=[C.hair,'#5b3a1e',C.ink2,'#c9a060','#8a2b1b',C.grey2];
+const SPC=[C.teal,C.rose0,C.mustard0,C.sky0,C.leaf0,C.plum,C.red0,C.ember,C.ink2,C.teal0,C.vio];
+
+/* ============================================================
+   CANVAS + PRIMITIVES
+   ============================================================ */
+const W=384,H=216,OW=1920,OH=1080;
+function mk(w,h){const c=document.createElement('canvas');c.width=w;c.height=h;return c;}
+const low=mk(W,H),buf=mk(W,H);
+const gLow=low.getContext('2d'),gBuf=buf.getContext('2d');
+gLow.imageSmoothingEnabled=false;gBuf.imageSmoothingEnabled=false;
+let g=gLow;
+const out=document.getElementById('screen');const o=out.getContext('2d');o.imageSmoothingEnabled=false;
+let TT=0,SPEAK=false,SHAKE=0;
+const rd=Math.round,clamp01=v=>v<0?0:v>1?1:v,lerp=(a,b,t)=>a+(b-a)*t;
+const eo=p=>1-Math.pow(1-clamp01(p),3), eio=p=>{p=clamp01(p);return p<.5?4*p*p*p:1-Math.pow(-2*p+2,3)/2;};
+const back=p=>{p=clamp01(p);const c1=1.70158,c3=c1+1;return 1+c3*Math.pow(p-1,3)+c1*Math.pow(p-1,2);};
+function bounce(p){p=clamp01(p);const n=7.5625,d=2.75;if(p<1/d)return n*p*p;if(p<2/d)return n*(p-=1.5/d)*p+.75;if(p<2.5/d)return n*(p-=2.25/d)*p+.9375;return n*(p-=2.625/d)*p+.984375;}
+function rnd(i){const x=Math.sin(i*12.9898+78.233)*43758.5453;return x-Math.floor(x);}
+
+function R(x,y,w,h,c){const x0=rd(x),y0=rd(y),x1=rd(x+w),y1=rd(y+h);if(x1<=x0||y1<=y0)return;g.fillStyle=c;g.fillRect(x0,y0,x1-x0,y1-y0);}
+function P(x,y,c){g.fillStyle=c;g.fillRect(rd(x),rd(y),1,1);}
+const BAY=[0,8,2,10,12,4,14,6,3,11,1,9,15,7,13,5];
+function pat(c,l){l=Math.round(clamp01(l)*16);const pc=g.__pc||(g.__pc={});const k=c+l;if(!pc[k]){const cv=mk(4,4),x=cv.getContext('2d');x.fillStyle=c;for(let i=0;i<16;i++)if(BAY[i]<l)x.fillRect(i%4,i>>2,1,1);pc[k]=g.createPattern(cv,'repeat');}return pc[k];}
+function shade(x,y,w,h,c,l){R(x,y,w,h,pat(c,l));}
+function disc(cx,cy,r,c){cx=rd(cx);cy=rd(cy);r=rd(r);for(let dy=-r;dy<=r;dy++){const w=Math.floor(Math.sqrt(r*r-dy*dy)+.35);R(cx-w,cy+dy,2*w+1,1,c);}}
+function ring(cx,cy,r,c,th=1){cx=rd(cx);cy=rd(cy);r=rd(r);const ri=r-th;for(let dy=-r;dy<=r;dy++){const wo=Math.floor(Math.sqrt(r*r-dy*dy)+.35);if(Math.abs(dy)>ri){R(cx-wo,cy+dy,2*wo+1,1,c);}else{const wi=Math.floor(Math.sqrt(ri*ri-dy*dy)+.35);R(cx-wo,cy+dy,wo-wi,1,c);R(cx+wi+1,cy+dy,wo-wi,1,c);}}}
+function ell(cx,cy,rx,ry,c){cx=rd(cx);cy=rd(cy);ry=rd(ry);for(let dy=-ry;dy<=ry;dy++){const w=Math.floor(rx*Math.sqrt(Math.max(0,1-(dy*dy)/(ry*ry)))+.35);R(cx-w,cy+dy,2*w+1,1,c);}}
+function line(x0,y0,x1,y1,c,th=1,dash=0){x0=rd(x0);y0=rd(y0);x1=rd(x1);y1=rd(y1);const dx=Math.abs(x1-x0),dy=-Math.abs(y1-y0),sx=x0<x1?1:-1,sy=y0<y1?1:-1;let e=dx+dy,n=0;const o2=th>>1;for(;;){if(!dash||(Math.floor(n/dash)%2===0))R(x0-o2,y0-o2,th,th,c);n++;if(x0===x1&&y0===y1)break;const e2=2*e;if(e2>=dy){e+=dy;x0+=sx;}if(e2<=dx){e+=dx;y0+=sy;}}}
+function poly(pts,c){let a=1e9,b=-1e9;for(const p of pts){a=Math.min(a,p[1]);b=Math.max(b,p[1]);}for(let y=Math.floor(a);y<=Math.ceil(b);y++){const yc=y+.5,xs=[];for(let i=0;i<pts.length;i++){const p=pts[i],q=pts[(i+1)%pts.length];if((p[1]<=yc&&q[1]>yc)||(q[1]<=yc&&p[1]>yc))xs.push(p[0]+(yc-p[1])/(q[1]-p[1])*(q[0]-p[0]));}xs.sort((m,n)=>m-n);for(let i=0;i+1<xs.length;i+=2){const xa=rd(xs[i]),xb=rd(xs[i+1]);if(xb>xa)R(xa,y,xb-xa,1,c);}}}
+function glow(cx,cy,r,c,l){for(let k=0;k<4;k++)disc(cx,cy,r*(1-k*.22),pat(c,l*(k+1)/4));}
+function box(x,y,w,h,f,e){x=rd(x);y=rd(y);w=rd(w);h=rd(h);if(e){R(x+1,y,w-2,h,e);R(x,y+1,w,h-2,e);R(x+1,y+1,w-2,h-2,f);}else{R(x+1,y,w-2,h,f);R(x,y+1,w,h-2,f);}}
+function panel(x,y,w,h,f,e){shade(x+3,y+3,w,h,C.void,.6);box(x,y,w,h,f,e);}
+function spr(rows,x,y,map,s=1){x=rd(x);y=rd(y);for(let j=0;j<rows.length;j++){const r=rows[j];for(let i=0;i<r.length;i++){const ch=r[i];if(ch!=='.'&&map[ch])R(x+i*s,y+j*s,s,s,map[ch]);}}}
+/* draw a small drawing at integer scale (chunky pixel upscaling) */
+const scv=mk(96,96),scx=scv.getContext('2d');scx.imageSmoothingEnabled=false;
+function scaled(fn,cx,cy,sc,sz=48){if(sc<=0)return;const prev=g;g=scx;scx.clearRect(0,0,96,96);fn(sz,sz);g=prev;const d=sz*2*sc;g.drawImage(scv,0,0,sz*2,sz*2,rd(cx-sz*sc),rd(cy-sz*sc),d,d);}
+
+/* ============================================================
+   CRISP PIXEL TEXT  (font → thresholded mask → tinted sprite)
+   ============================================================ */
+const FAM={p:'"Press Start 2P"',s:'Silkscreen',v:'VT323'};
+let TC=new Map(),FM={};
+function fmet(f,s){const k=f+s;if(FM[k])return FM[k];const c=mk(s*3,s*3),x=c.getContext('2d');x.font=s+'px '+FAM[f]+', monospace';x.textBaseline='top';x.fillStyle='#fff';x.fillText('H',2,2);const d=x.getImageData(0,0,c.width,c.height).data;let top=-1,bot=0;for(let y=0;y<c.height;y++)for(let i=0;i<c.width;i++)if(d[(y*c.width+i)*4+3]>110){if(top<0)top=y;bot=y;}if(top<0){top=2;bot=2+s*.7;}return FM[k]={top:top-2,cap:bot-top+1};}
+function tmask(str,f,s){const k=f+s+'|'+str;let m=TC.get(k);if(m)return m;if(TC.size>4000)TC=new Map();const font=s+'px '+FAM[f]+', monospace';const mc=mk(8,8).getContext('2d');mc.font=font;const w=Math.max(1,Math.ceil(mc.measureText(str).width));const c=mk(w+4,Math.ceil(s*1.7)+4),x=c.getContext('2d');x.font=font;x.textBaseline='top';x.fillStyle='#fff';x.fillText(str,2,2);const id=x.getImageData(0,0,c.width,c.height),d=id.data;for(let i=3;i<d.length;i+=4){d[i]=d[i]>110?255:0;d[i-1]=d[i-2]=d[i-3]=255;}x.putImageData(id,0,0);m={c,w,t:{}};TC.set(k,m);return m;}
+function tint(m,col){if(!m.t[col]){const c=mk(m.c.width,m.c.height),x=c.getContext('2d');x.drawImage(m.c,0,0);x.globalCompositeOperation='source-in';x.fillStyle=col;x.fillRect(0,0,c.width,c.height);m.t[col]=c;}return m.t[col];}
+function tw(str,f='p',s=8){return tmask(String(str),f,s).w;}
+function capH(f='p',s=8){return fmet(f,s).cap;}
+const OL=[[-1,0],[1,0],[0,-1],[0,1],[-1,-1],[1,-1],[-1,1],[1,1]];
+function tx(str,x,y,op={}){str=String(str);const f=op.f||'p',s=op.s||8;if(!str)return 0;const full=tmask(str,f,s);const n=op.n==null?str.length:Math.max(0,Math.floor(op.n));const sub=n>=str.length?full:(n>0?tmask(str.slice(0,n),f,s):null);let x0=x;if(op.a==='c')x0=x-full.w/2;else if(op.a==='r')x0=x-full.w;x0=rd(x0)-2;const y0=rd(y)-2-fmet(f,s).top;if(!sub)return full.w;if(op.ol){const t=tint(sub,op.ol);for(const[a,b]of OL)g.drawImage(t,x0+a,y0+b);g.drawImage(t,x0,y0+2);}if(op.sh)g.drawImage(tint(sub,op.sh),x0+1,y0+1);g.drawImage(tint(sub,op.c||C.white),x0,y0);return full.w;}
+function wrapPx(str,f,s,maxW){const words=str.split(' '),lines=[];let cur='';for(const w of words){const t=cur?cur+' '+w:w;if(tw(t,f,s)>maxW&&cur){lines.push(cur);cur=w;}else cur=t;}if(cur)lines.push(cur);return lines;}
+function chip(str,x,y,op={}){const f=op.f||'s',s=op.s||8,pad=op.pad??5,ch=capH(f,s);const w=tw(str,f,s)+pad*2,h=ch+pad*2-1;let x0=x;if(op.a==='c')x0=x-w/2;else if(op.a==='r')x0=x-w;x0=rd(x0);if(op.shadow!==false)shade(x0+2,y+2,w,h,C.void,.6);box(x0,y,w,h,op.bg||C.ink,op.bd||op.c||C.amber);tx(str,x0+pad,y+pad,{f,s,c:op.c||C.amber,n:op.n});return w;}
+function headline(str,y,p,op={}){const s=op.s||16;tx(str,op.x??W/2,y,{s,f:op.f||'p',a:op.a||'c',c:op.c||C.white,ol:op.ol||C.void,n:p*str.length});}
+
+/* ============================================================
+   ICONS & PROPS
+   ============================================================ */
+const HEART=[".HH.HH.","HHHHHHH","HHHHHHH",".HHHHH.","..HHH..","...H..."];
+const BULB=["...yyy...","..yYYYy..",".yYWYYYy.",".yWYYYYy.",".yYYYYYy.","..yYYYy..","...yYy...","...ggg...","...GGG...","...ggg...","....G...."];
+function heart(x,y,c=C.rose,s=1){spr(HEART,x-3*s,y-3*s,{H:c},s);}
+function bulb(x,y,on){spr(BULB,x-4,y-5,on?{y:C.mustard0,Y:C.lamp,W:C.white,g:C.grey2,G:C.grey}:{y:C.grey0,Y:C.grey,W:C.grey2,g:C.grey2,G:C.grey});if(on)glow(x,y-1,9,C.lamp,.35);}
+function star(x,y,c=C.lamp,r=2){R(x-r,y,2*r+1,1,c);R(x,y-r,1,2*r+1,c);P(x,y,C.white);}
+function check(x,y,c=C.leaf){line(x-4,y,x-1,y+3,c,2);line(x-1,y+3,x+5,y-4,c,2);}
+function cross(x,y,c=C.red){line(x-4,y-4,x+4,y+4,c,2);line(x+4,y-4,x-4,y+4,c,2);}
+function mag(cx,cy,r,c=C.ink2){disc(cx,cy,r-1,pat(C.sky,.3));ring(cx,cy,r,c,2);P(cx-r/2,cy-r/2,C.white);P(cx-r/2+1,cy-r/2,C.white);line(cx+r*.7,cy+r*.7,cx+r*.7+9,cy+r*.7+9,C.wood,3);}
+function wrench(x,y,c=C.grey2){line(x-6,y+6,x+3,y-3,c,2);ring(x+5,y-5,3,c,2);R(x+5,y-8,3,3,C.void);}
+function mortar(cx,cy){poly([[cx-12,cy],[cx,cy-5],[cx+12,cy],[cx,cy+5]],C.ink);R(cx-6,cy+2,12,5,C.ink);R(cx-5,cy-1,10,1,C.ink2);line(cx,cy,cx+10,cy+1,C.mustard);R(cx+10,cy+1,1,7,C.mustard);R(cx+9,cy+7,3,2,C.mustard);}
+function orb(x,y,c,i=0){glow(x,y,7,c,.35);disc(x,y,3,c);P(x-1,y-1,C.white);const k=i%4;if(k===0)P(x+1,y+1,C.white);}
+function gear(cx,cy,r,a,c,hole){for(let i=0;i<8;i++){const an=a+i*Math.PI/4;R(cx+Math.cos(an)*(r+1)-2,cy+Math.sin(an)*(r+1)-2,4,4,c);}disc(cx,cy,r,c);disc(cx,cy,Math.max(1,r/3),hole);}
+function bubble(x,y,w,h,tailX,tailY,lines,op={}){x=rd(x);y=rd(y);const f=op.fill||C.white,e=op.edge||C.ink;shade(x+2,y+2,w,h,C.void,.5);box(x,y,w,h,f,e);const bx=rd(tailX);const by=tailY>y?y+h-1:y;const dir=tailY>y?1:-1;poly([[bx-3,by],[bx+3,by],[tailX+(op.lean||0),tailY]],e);poly([[bx-2,by-dir],[bx+2,by-dir],[tailX+(op.lean||0)*.7,tailY-dir*2]],f);(lines||[]).forEach((l,i)=>tx(l,x+w/2,y+5+i*9,{f:'s',a:'c',c:op.c||C.ink,n:op.n==null?null:op.n-i*20}));}
+function arrow(x0,y0,x1,y1,c,th=2){line(x0,y0,x1,y1,c,th);const a=Math.atan2(y1-y0,x1-x0);poly([[x1+Math.cos(a)*3,y1+Math.sin(a)*3],[x1+Math.cos(a+2.4)*6,y1+Math.sin(a+2.4)*6],[x1+Math.cos(a-2.4)*6,y1+Math.sin(a-2.4)*6]],c);}
+function sparkle(x,y,a,c=C.lamp){if(a<0||a>.5)return;const r=rd(2+a*14);for(let i=0;i<6;i++){const an=i*Math.PI/3+.3;P(x+Math.cos(an)*r,y+Math.sin(an)*r,c);}if(a<.2)star(x,y,C.white,2);}
+function ico(name,cx,cy,c=C.white){
+ switch(name){
+ case 'q':tx('?',cx,cy-7,{s:16,a:'c',c:C.lamp,ol:C.void});break;
+ case 'bulb':bulb(cx,cy,1);break;
+ case 'bars':[4,8,12].forEach((h,i)=>R(cx-8+i*6,cy+6-h,5,h,[C.teal2,C.mustard,C.rose][i]));R(cx-10,cy+6,20,1,c);break;
+ case 'tri':line(cx,cy-7,cx-8,cy+6,C.teal2);line(cx,cy-7,cx+8,cy+6,C.teal2);line(cx-8,cy+6,cx+8,cy+6,C.teal2);disc(cx,cy-7,2,C.lamp);disc(cx-8,cy+6,2,C.rose);disc(cx+8,cy+6,2,C.sky);break;
+ case 'page':box(cx-7,cy-9,14,18,C.paper,C.paper3);for(let i=0;i<5;i++)R(cx-4,cy-5+i*3,i===0?8:6+(i%2)*2,1,C.ink2);break;
+ case 'tome':R(cx-9,cy-8,18,16,C.plum);R(cx-9,cy+5,18,3,C.paper2);R(cx-9,cy-8,3,16,C.rose0);R(cx-4,cy-5,10,2,C.mustard);break;
+ case 'easel':line(cx-6,cy+10,cx,cy-8,C.wood2,2);line(cx+6,cy+10,cx,cy-8,C.wood2,2);box(cx-9,cy-7,18,12,C.white,C.ink2);R(cx-6,cy-4,5,6,C.teal);R(cx,cy-4,5,3,C.rose);break;
+ case 'bubble':box(cx-10,cy-7,20,12,C.white,C.ink);poly([[cx-5,cy+4],[cx,cy+4],[cx-7,cy+9]],C.ink);[-5,0,5].forEach(d=>R(cx+d-1,cy-2,2,2,C.ink));break;
+ case 'quote':tx('"',cx,cy-7,{s:16,a:'c',c:C.lamp,ol:C.void});break;
+ case 'abc':box(cx-12,cy-7,24,12,C.white,C.ink);tx('ABC',cx,cy-4,{f:'s',a:'c',c:C.ink});break;
+ case 'eye':ell(cx,cy,8,4,C.white);disc(cx,cy,3,C.teal);disc(cx,cy,1,C.ink);break;
+ case 'pen':line(cx-6,cy+6,cx+5,cy-5,C.mustard,3);R(cx-8,cy+6,3,3,C.ink);R(cx+4,cy-7,3,3,C.rose);break;
+ case 'check':check(cx,cy,C.leaf);break;
+ case 'wrench':wrench(cx,cy);break;
+ }}
+
+/* ============================================================
+   BOOKS
+   ============================================================ */
+function spineH(x,y,w,h,b){x=rd(x);y=rd(y);R(x,y,w,h,b.bg);R(x,y,w,1,b.hi);R(x,y+h-1,w,1,b.bg0);R(x+3,y+1,1,h-2,b.acc);R(x+w-4,y+1,1,h-2,b.acc);R(x+w,y+1,1,h-1,C.paper2);if(h>=9){const t=b.short;if(tw(t,'s',8)<w-12)tx(t,x+w/2,y+(h-capH('s',8))/2,{f:'s',a:'c',c:b.fg});}}
+function cover(x,y,w,h,b,op={}){x=rd(x);y=rd(y);w=rd(w);h=rd(h);
+ if(op.shadow!==false)shade(x+3,y+3,w,h,C.void,.6);
+ R(x+w,y+2,2,h-3,C.paper2);R(x,y,w,h,b.bg);R(x,y,5,h,b.bg0);R(x+5,y,1,h,b.hi);R(x,y,w,1,b.hi);R(x+w-1,y,1,h,b.bg0);R(x,y+h-1,w,1,b.bg0);
+ const big=op.big&&w>=104,f=big?'p':'s';const lh=big?11:9;const ty=y+10;
+ if(w>=56){b.title.forEach((l,i)=>{if(tw(l,f,8)<=w-12)tx(l,x+w/2+2,ty+i*lh,{f,a:'c',c:b.fg});else R(x+10,ty+i*lh,w-18,3,b.fg);});}
+ else{for(let i=0;i<3;i++)R(x+9,y+8+i*6,w-16-(i%2)*6,2,b.fg);}
+ const my=ty+b.title.length*lh+4,mh=y+h-my-16;
+ if(mh>12)motif(x+6,my,w-10,mh,b);
+ if(w>=56&&tw(b.au,'s',8)<=w-10)tx(b.au,x+w/2+2,y+h-12,{f:'s',a:'c',c:b.acc});
+}
+function motif(x,y,w,h,b){const cx=x+w/2,cy=y+h/2;
+ if(b.id==='crit'){const s=Math.min(w,h*1.6)/2.4;poly([[cx,cy+s*.35],[cx-s,cy],[cx-s,cy-s*.6],[cx,cy-s*.3]],C.paper);poly([[cx,cy+s*.35],[cx+s,cy],[cx+s,cy-s*.6],[cx,cy-s*.3]],C.paper2);for(let i=1;i<4;i++){line(cx-s*.8,cy-s*.5+i*s*.15,cx-s*.15,cy-s*.25+i*s*.15,C.teal0);}line(cx+s*.2,cy+s*.1,cx+s*.95,cy-s*.9,C.mustard,3);R(cx+s*.1,cy+s*.05,3,3,C.ink);}
+ else if(b.id==='conv'){const u=Math.max(4,Math.floor(Math.min(w/4,h/3)));const cols=[C.sky,C.teal,C.rose,C.mustard,C.leaf,C.white];let k=0;for(let j=0;j<2;j++)for(let i=0;i<3;i++){const px=cx-u*1.6+i*u*1.1,py=cy-u*.6+j*u*1.1;const c=cols[k++];if((i+j)%2)disc(px+u/2,py+u/2,u/2-1,c);else R(px,py,u-1,u-1,c);}}
+ else if(b.id==='marple'){const s=Math.min(w,h)/2.2;R(x+2,y,w-4,1,C.amber);R(x+2,y+h-1,w-4,1,C.amber);R(cx-s*.7,cy-s*.1,s*1.1,s*.7,C.paper);R(cx-s*.6,cy+s*.6,s*.9,1,C.paper2);ring(cx+s*.45,cy+s*.2,3,C.paper,1);for(let i=0;i<3;i++)P(cx-s*.4+i*4,cy-s*.4-((i+rd(TT*3))%2),C.paper2);mag(cx+s*.6,cy-s*.5,Math.max(3,s*.35),C.amber);}
+ else{for(let i=0;i<2;i++)ring(cx,cy,Math.min(w,h)/3-i*3,b.fg,1);}}
+function openBook(cx,top,w,h,op={}){cx=rd(cx);top=rd(top);const hw=rd(w/2),cb=op.cover||C.teal0;R(cx-hw-3,top+2,w+6,h+2,cb);R(cx-hw-1,top+h,w+2,3,C.paper3);R(cx-hw,top+h,w,1,C.paper2);
+ for(let dx=-hw;dx<hw;dx++){const f=1-Math.abs(dx+.5)/hw;const yt=top+rd(3*f),yb=top+h+rd(1*f);const near=Math.abs(dx+.5)<4;R(cx+dx,yt,1,yb-yt,near?(Math.abs(dx+.5)<2?C.paper3:C.paper2):(op.paper||C.paper));}
+ if(op.lines!==false){const lc=op.lc||C.paper3;for(const side of[-1,1]){for(let i=0;i<(op.nl||8);i++){const lx=side<0?cx-hw+8:cx+6,lw=hw-16-(rnd(i*3+side)*14|0);if(i===0&&op.head)continue;R(lx,top+10+i*((h-18)/(op.nl||8)),lw,1,lc);}}}}
+function paperSheet(x,y,w,h,c=C.paper){shade(x+3,y+3,w,h,C.void,.5);R(x,y,w,h,c);R(x,y,w,1,C.white);R(x+w-1,y,1,h,C.paper2);R(x,y+h-1,w,1,C.paper3);}
+
+/* ============================================================
+   CHARACTERS
+   ============================================================ */
+function narr(x,y,op={}){x=rd(x);y=rd(y);const t=TT+(op.seed||0);
+ const sk=op.skin||C.skin,sk0=op.skin0||C.skin0,hc=op.shirt||C.mustard,hc0=op.shirt0||C.mustard0,hr=op.hairC||C.hair;
+ const br=Math.sin(t*2.1)>.2?0:1;
+ if(op.legs){const pc=op.pants||C.ink2;R(x-8,y+1,7,15,pc);R(x+1,y+1,7,15,pc);R(x-9,y+15,8,3,C.ink);R(x+1,y+15,8,3,C.ink);}
+ const ty=y-17;
+ R(x-8,ty,16,1,hc);R(x-10,ty+1,20,1,hc);R(x-11,ty+2,22,y-ty-1,hc);R(x+7,ty+2,4,y-ty-1,hc0);R(x-5,ty,10,2,hc0);
+ if(op.coat){R(x-1,ty+2,2,y-ty-1,C.grey2);R(x-6,ty+6,3,1,C.grey2);}else{P(x-2,ty+3,C.white);P(x-2,ty+4,C.white);P(x+1,ty+3,C.white);P(x+1,ty+4,C.white);R(x-6,y-5,12,1,hc0);}
+ R(x-2,ty-2,4,2,sk0);
+ const hy=ty-16+br;
+ if(op.hair==='puff'){ell(x,hy+3,9,7,hr);}
+ R(x-5,hy,10,1,sk);R(x-6,hy+1,12,1,sk);R(x-7,hy+2,14,10,sk);R(x-6,hy+12,12,1,sk);R(x-5,hy+13,10,1,sk);R(x+5,hy+2,2,10,sk0);R(x+4,hy+12,2,1,sk0);
+ P(x-8,hy+6,sk);P(x-8,hy+7,sk);P(x+7,hy+6,sk0);P(x+7,hy+7,sk0);
+ const hs=op.hair||'short';
+ if(hs==='bald'){R(x-7,hy+2,2,5,hr);R(x+5,hy+2,2,5,hr);}
+ else{R(x-4,hy-2,8,1,hr);R(x-6,hy-1,12,1,hr);R(x-7,hy,14,3,hr);R(x-7,hy+3,3,1,hr);R(x-3,hy+3,2,1,hr);R(x+2,hy+3,5,1,hr);R(x-7,hy+4,1,3,hr);R(x+6,hy+4,1,3,hr);P(x-3,hy-1,C.ink2);P(x-2,hy,C.ink2);
+  if(hs==='bun'){disc(x+1,hy-4,3,hr);P(x,hy-5,C.ink2);}}
+ const lk=op.look||0,ey=hy+6;const blink=((t*.8)%3.3)<.12;
+ if(blink){R(x-5+lk,ey+1,2,1,C.ink);R(x+2+lk,ey+1,2,1,C.ink);}else{R(x-4+lk,ey,1,2,C.ink);R(x+3+lk,ey,1,2,C.ink);}
+ if(op.glasses!==false){const gc=op.gc||C.ink;R(x-6,ey-1,5,1,gc);R(x-6,ey+2,5,1,gc);R(x-6,ey-1,1,4,gc);R(x-2,ey-1,1,4,gc);R(x+1,ey-1,5,1,gc);R(x+1,ey+2,5,1,gc);R(x+1,ey-1,1,4,gc);R(x+5,ey-1,1,4,gc);R(x-1,ey,2,1,gc);P(x-5,ey,C.white);P(x+2,ey,C.white);}
+ if(op.brow){R(x-6,ey-3,4,1,hr);R(x+2,ey-3,4,1,hr);}
+ P(x-5,hy+9,C.rose);P(x+4,hy+9,C.rose);
+ const talking=op.talk&&SPEAK&&Math.sin(TT*13+Math.sin(TT*5)*2)>-.1;
+ if(talking){R(x-1,hy+10,3,2,C.ink);P(x,hy+11,C.rose);}
+ else if(op.smile!==false){P(x-2,hy+9,C.skin0);R(x-1,hy+10,3,1,C.ink);P(x+2,hy+9,C.skin0);}
+ else R(x-1,hy+10,3,1,sk0);
+ const pose=op.pose||'rest';
+ if(pose==='hold'){R(x-12,y-9,6,7,hc);R(x+6,y-9,6,7,hc);R(x-9,y-12,18,11,op.book||C.teal);R(x-8,y-11,16,9,C.paper);R(x,y-11,1,9,C.paper3);for(let i=0;i<3;i++){R(x-6,y-9+i*2,4,1,C.paper3);R(x+2,y-9+i*2,4,1,C.paper3);}R(x-10,y-5,3,3,sk);R(x+7,y-5,3,3,sk);}
+ else if(pose==='rest'){R(x-15,y-6,8,5,hc);R(x+7,y-6,8,5,hc);R(x-10,y-5,4,3,sk);R(x+6,y-5,4,3,sk);}
+ else if(pose==='wave'){const f=Math.sin(t*10)>0?1:-1;R(x-15,y-6,8,5,hc);R(x-10,y-5,4,3,sk);line(x+10,ty+4,x+15,ty-8,hc,4);R(x+13+f,ty-14,5,5,sk);P(x+13+f,ty-15,sk);P(x+15+f,ty-15,sk);P(x+17+f,ty-15,sk);}
+ else if(pose==='shrug'){const u=Math.sin(t*3)>0?1:0;R(x-19,ty+6-u,9,4,hc);R(x+10,ty+6-u,9,4,hc);R(x-23,ty+4-u,4,4,sk);R(x+19,ty+4-u,4,4,sk);}
+ else if(pose==='point'){R(x-15,y-6,8,5,hc);R(x-10,y-5,4,3,sk);R(x+10,ty+5,12,4,hc);R(x+22,ty+5,4,3,sk);R(x+26,ty+5,3,1,sk);}
+ else if(pose==='cheer'){const u=Math.sin(t*8)>0?1:0;line(x-10,ty+4,x-15,ty-8-u,hc,4);line(x+10,ty+4,x+15,ty-8-u,hc,4);R(x-18,ty-14-u,5,5,sk);R(x+13,ty-14-u,5,5,sk);}
+ else if(pose==='think'){R(x-15,y-6,8,5,hc);R(x-10,y-5,4,3,sk);R(x+5,ty+2,5,10,hc);R(x+3,hy+12,5,4,sk);}
+ else if(pose==='tool'){R(x+8,ty+6,8,5,hc);R(x+14,ty+5,4,4,sk);wrench(x+18,ty+1,C.grey2);R(x-15,y-6,8,5,hc);R(x-10,y-5,4,3,sk);}
+}
+function tiny(x,y,i,op={}){x=rd(x);y=rd(y);const hop=op.hop?Math.max(0,Math.sin(TT*6+i*1.7))*2:0;y-=rd(hop);
+ const sk=SKINS[i%6],sh=SHIRTS[(i*3+1)%8],hr=HAIRS[(i*5+2)%6];
+ R(x-2,y-4,2,4,C.ink2);R(x+1,y-4,2,4,C.ink2);R(x-3,y-10,7,6,sh);
+ if(op.arms==='up'){R(x-5,y-14,2,5,sh);R(x+4,y-14,2,5,sh);P(x-5,y-15,sk);P(x+5,y-15,sk);}else{R(x-4,y-9,1,4,sh);R(x+4,y-9,1,4,sh);P(x-4,y-5,sk);P(x+4,y-5,sk);}
+ R(x-2,y-15,5,5,sk);R(x-2,y-16,5,2,hr);if(i%3===0){R(x-3,y-15,1,4,hr);R(x+3,y-15,1,4,hr);}else if(i%3===1)P(x,y-17,hr);
+ P(x-1,y-13,C.ink);P(x+1,y-13,C.ink);
+ if(op.tool){const k=i%3;if(k===0)wrench(x+7,y-9,C.grey2);else if(k===1){line(x+5,y-6,x+9,y-12,C.mustard,2);}else R(x+5,y-10,4,4,C.lamp);}
+ if(op.bulb!=null)bulb(x,y-25,op.bulb>0);}
+function cat(x,y){x=rd(x);y=rd(y);const k=C.ink2;const bl=((TT*.6)%4.1)<.15;
+ spr([".k...k....",".kk.kk....",".kkkkk....",".kekek....",".kkpkk....","..kkk.....",".kkkkk....","kkkkkkk...","kkkkkkk...",".kk.kk...."],x,y,{k,e:bl?k:C.amber,p:C.rose});
+ const s=Math.sin(TT*2);P(x+7,y+8,k);P(x+8,y+7,k);P(x+9,y+6+rd(s),k);P(x+9,y+5+rd(s),k);P(x+10,y+4+rd(s*1.5),k);}
+
+/* ============================================================
+   BACKGROUNDS
+   ============================================================ */
+function stars(x,y,w,h,n,seed){for(let i=0;i<n;i++){const sx=x+rnd(i+seed)*w,sy=y+rnd(i*7+seed)*h;const tw2=Math.sin(TT*(1+rnd(i*3)*2)+i)>.6;P(sx,sy,tw2?C.white:C.lav);}}
+function windowV(x,y,w,h,op={}){const d=op.day||0;
+ const sk=d>.66?[C.sky0,C.sky,'#c4e6f8']:d>.33?[C.dusk,C.plum,C.orange]:[C.void,C.night,C.ind];
+ R(x,y,w,h,sk[0]);shade(x,y+h*.35,w,h*.2,sk[1],.5);R(x,y+h*.55,w,h*.45,sk[1]);shade(x,y+h*.72,w,h*.28,sk[2],.5);
+ if(d<=.33){stars(x,y,w,h*.6,18,3);disc(x+w-22,y+16,6,C.paper);disc(x+w-19,y+14,5,sk[0]);if(((TT/9)%1)<.08){const p=((TT/9)%1)/.08;line(x+10+p*50,y+8+p*14,x+14+p*50,y+9+p*14,C.white);}}
+ else if(d>.66){disc(x+22,y+18,7,C.lamp);for(let i=0;i<2;i++){const cx=x+((TT*4+i*50)%(w+30))-15;ell(cx,y+30+i*12,9,3,C.white);}}
+ else disc(x+w/2,y+h*.7,9,C.orange);
+ let bx=x,i=0;while(bx<x+w){const bw=Math.min(8+rnd(i*5)*10|0,x+w-bx),bh=12+rnd(i*9+1)*26|0;R(bx,y+h-bh,bw,bh,d>.66?C.grey:C.night2);if(d<=.66)for(let wy=y+h-bh+3;wy<y+h-2;wy+=4)for(let wx=bx+2;wx<bx+bw-1;wx+=3)if(rnd(wx*3+wy*7)>.62)P(wx,wy,((TT*.3+rnd(wx+wy))%3)<2.8?C.amber:C.night);bx+=bw+1;i++;}
+ R(x-4,y-4,w+8,4,C.wood2);R(x-4,y+h,w+8,4,C.wood2);R(x-4,y,4,h,C.wood2);R(x+w,y,4,h,C.wood2);R(x+w/2-1,y,2,h,C.wood2);R(x,y+h/2-1,w,2,C.wood2);R(x-4,y-4,w+8,1,C.wood3);
+ const cy=y-8,ch=h+24;for(const cx of[x-16,x+w+2]){R(cx,cy,14,ch,C.rose0);for(let k=2;k<14;k+=4)R(cx+k,cy,1,ch,C.plum);R(cx,cy+ch-1,14,1,C.plum);}
+ R(x-20,y-11,w+40,3,C.ink2);R(x-9,y+h+4,w+18,4,C.wood3);R(x-9,y+h+8,w+18,2,C.wood0);
+ cat(x+w-26,y+h-6);}
+function shelfUnit(x,y,w,h){R(x,y,w,h,C.wood0);R(x,y,3,h,C.wood2);R(x+w-3,y,3,h,C.wood2);R(x,y,w,3,C.wood3);
+ for(let r=0;r<4;r++){const py=y+34+r*34;R(x,py,w,3,C.wood2);R(x,py,w,1,C.wood3);let bx=x+4,i=r*20;while(bx<x+w-8){const bw=4+(rnd(i*3+r)*4|0),bh=18+(rnd(i*7+r*3)*10|0);if(rnd(i*11)>.88){bx+=5;i++;continue;}R(bx,py-bh,bw,bh,SPC[(rnd(i*13+r)*SPC.length)|0]);R(bx,py-bh+3,bw,1,C.void);R(bx,py-bh,1,bh,pat(C.white,.2));bx+=bw;i++;}}
+ R(x+w-20,y-10,10,10,C.ember);R(x+w-21,y-10,12,2,C.orange);for(let k=0;k<5;k++){const a=-1.2+k*.6+Math.sin(TT*1.5+k)*.08;line(x+w-15,y-10,x+w-15+Math.cos(a-1.57)*-0+Math.sin(a)*9,y-10-Math.cos(a)*9,k%2?C.leaf:C.leaf0,2);}}
+function roomBack(op={}){R(0,0,W,H,C.wall);for(let x=10;x<W;x+=20)R(x,0,1,150,C.wall2);R(0,8,W,1,C.wall3);windowV(26,20,98,82,op);shelfUnit(292,14,84,136);glow(328,124,86,C.amber,.2);}
+function roomDesk(op={}){R(0,150,W,6,C.wood3);R(0,150,W,1,C.lamp);R(0,156,W,2,C.wood2);R(0,158,W,58,C.wood);for(let i=0;i<10;i++)R(rnd(i)*W,164+rnd(i*5)*48,20+rnd(i*9)*60,1,C.wood0);R(40,170,120,1,C.wood0);R(222,170,120,1,C.wood0);R(96,176,12,2,C.wood3);R(276,176,12,2,C.wood3);
+ if(op.mug!==false){const mx=86;R(mx,138,12,12,C.rose);R(mx,138,12,1,C.pink);R(mx+12,141,3,1,C.rose);R(mx+14,141,1,5,C.rose);R(mx+12,145,3,1,C.rose);R(mx+1,139,10,1,C.wood0);for(let k=0;k<3;k++){const p=((TT*.7+k/3)%1);P(mx+4+Math.sin(p*9+k)*2,136-p*16,p<.6?C.grey2:C.grey0);}}
+ R(326,146,18,4,C.ink2);line(335,146,326,122,C.ink2,2);poly([[312,122],[340,122],[334,106],[318,106]],C.teal0);R(318,106,16,1,C.teal2);R(316,121,22,2,C.lamp);poly([[316,124],[338,124],[376,150],[272,150]],pat(C.lamp,.18));}
+function motes(n,c,seed=0){for(let i=0;i<n;i++){const x=(rnd(i+seed)*W+TT*(2+rnd(i*3)*4))%W;const y=H-((rnd(i*7+seed)*H+TT*(3+rnd(i*5)*6))%H);P(x,y,Math.sin(TT*2+i)>0?c:C.ind);}}
+function bgVoid(op={}){const a=op.a||C.void,b=op.b||C.night,c=op.c||C.ind;R(0,0,W,H,a);glow(op.x??W/2,op.y??H/2,op.r||190,b,1);glow(op.x??W/2,op.y??H/2,(op.r||190)*.6,c,.6);for(let y=8;y<H;y+=16)for(let x=8;x<W;x+=16)P(x,y,c);motes(28,op.m||C.lav,op.seed||0);}
+function bgPaper(){R(0,0,W,H,C.wood);for(let i=0;i<26;i++){R(0,rnd(i)*H|0,W,1,C.wood0);R(rnd(i*3)*W,rnd(i*7)*H|0,30+rnd(i)*80,1,C.wood2);}shade(0,0,W,H,C.void,.25);}
+function bgBlue(){R(0,0,W,H,C.bp);for(let x=0;x<W;x+=16)R(x,0,1,H,x%64?C.bp1:C.bp2);for(let y=0;y<H;y+=16)R(0,y,W,1,y%64?C.bp1:C.bp2);}
+function bgSepia(){R(0,0,W,H,C.sepia1);glow(W/2,H/2,240,C.sepia,.25);shade(0,0,W,20,C.sepia0,.5);shade(0,H-20,W,20,C.sepia0,.5);shade(0,0,24,H,C.sepia0,.5);shade(W-24,0,24,H,C.sepia0,.5);}
+function filmGrain(){const f=Math.floor(TT*12);for(let i=0;i<70;i++)P(rnd(i+f*97)*W,rnd(i*3+f*31)*H,rnd(i+f)>.5?C.sepia2:C.white);if(rnd(f)>.6)R(rnd(f*7)*W,0,1,H,pat(C.sepia2,.5));if(rnd(f*3)>.85)shade(0,0,W,H,C.white,.12);}
+function bgLib(){R(0,0,W,H,C.wood0);for(let r=0;r<5;r++){const y=4+r*42;R(0,y+36,W,4,C.wood2);R(0,y+36,W,1,C.wood3);let x=0,i=r*40;while(x<W){const bw=5+(rnd(i*3+r)*5|0),bh=24+(rnd(i*7+r)*10|0);R(x,y+36-bh,bw,bh,SPC[(rnd(i*13+r)*SPC.length)|0]);R(x,y+36-bh+4,bw,1,C.void);R(x,y+36-bh,1,bh,pat(C.white,.2));x+=bw+(rnd(i)>.92?4:0);i++;}}for(let x=0;x<W;x+=128)R(x,0,5,H,C.wood);}
+function dim(l=.5){shade(0,0,W,H,C.void,l);}
+
+/* ============================================================
+   SCENES
+   s = {t, k, T, a(i) seconds since beat i, p(i,d) progress, bd(i) beat length, bf(i) beat fraction}
+   ============================================================ */
+const S={};
+function dropStack(cx,base,t,t0){const L=[[BK.conv,88,15],[BK.crit,72,11],[BK.marple,64,12]];let y=base;L.forEach(([b,w,h],i)=>{const a=t-t0-i*.45;if(a<0){y-=h;return;}const off=(1-bounce(a/.6))*190;const jx=[0,-4,5][i];spineH(cx-w/2+jx,y-h-off,w,h,b);if(a>.25&&a<.75){const q=(a-.25)/.5;for(let k=0;k<5;k++){P(cx-w/2+jx-q*18-k*3,y-1-q*6*(k%2+1),C.paper2);P(cx+w/2+jx+q*18+k*3,y-1-q*6*(k%2+1),C.paper2);}}y-=h;});}
+
+S.stack=s=>{roomBack();narr(268,154,{pose:'rest',talk:1,look:-1});roomDesk();dropStack(176,150,s.t,.3);
+ const n=(s.t-1.5)*16;tx('MY CURRENT',W/2,20,{s:16,a:'c',c:C.lamp,ol:C.void,n});tx('READING STACK',W/2,42,{s:16,a:'c',c:C.white,ol:C.void,n:n-10});
+ if(s.t>2.6)for(let i=0;i<3;i++)sparkle(90+i*110,70+(i%2)*14,((s.t-2.6+i*.3)%1.4));};
+
+S.phrase=s=>{roomBack();narr(300,154,{pose:'rest',talk:1,look:-1});roomDesk();dropStack(210,150,99,0);
+ const px=24,py=18,pw=170,ph=108;panel(px,py,pw,ph,C.ink,C.grey0);R(px+2,py+2,pw-4,10,C.ink2);[C.rose,C.mustard,C.leaf].forEach((c,i)=>R(px+5+i*6,py+5,4,4,c));
+ g.save();g.beginPath();g.rect(px+3,py+13,pw-6,ph-26);g.clip();R(px+3,py+13,pw-6,ph-26,C.dusk);for(let i=0;i<8;i++)R(px+110+i*7,py+30,5,30,SPC[i%SPC.length]);R(px+100,py+60,70,3,C.wood2);narr(px+56,py+ph-8,{pose:'hold',talk:1,shirt:C.sky0,shirt0:C.bp1,skin:C.skin1,hair:'short',seed:3,book:C.rose0});g.restore();
+ const pr=((s.t/s.dur));R(px+3,py+ph-10,pw-6,3,C.grey0);R(px+3,py+ph-10,(pw-6)*pr,3,C.rose);poly([[px+6,py+ph-6],[px+6,py+ph-2],[px+10,py+ph-4]],C.white);
+ const bn=(s.t-.6)*22;if(s.t>.6)bubble(px+84,py+16,86,30,px+72,py+52,['THIS IS MY','CURRENT READING','STACK.'],{n:bn});
+ const a=s.t-3.2;if(a>0){const q=eo(a/1.2);const fx=lerp(px+130,290,q),fy=lerp(py+40,92,q)-Math.sin(q*Math.PI)*24;if(q<1)chip('READING STACK',fx,fy,{a:'c',c:C.lamp});else{bubble(236,56,110,24,286,92,['OOH. NICE PHRASE.'],{});heart(344,52+Math.sin(TT*4)*2);}}};
+
+S.three=s=>{bgVoid({c:C.dusk});const bs=[BK.crit,BK.conv,BK.marple];bs.forEach((b,i)=>{const a=s.t-.25-i*.5;if(a<0)return;const cx=96+i*96,y=46+(1-back(a/.5))*120;cover(cx-43,y,86,112,b);const n=String(i+1);chip(n,cx,y-18,{a:'c',f:'p',c:C.lamp,pad:4});sparkle(cx,y-8,a-.3);});headline('3 BOOKS',12,(s.t-1.6)*1.5,{c:C.lamp});};
+
+S.book1=s=>{bgLib();const t=s.t;const sx=176,sy=88;
+ if(t<1.6){const pulse=Math.sin(t*10)>0;const out2=eo((t-.8)/.8)*14;R(sx-1,sy-31+out2*.2,9,33,pulse?C.lamp:C.amber);R(sx,sy-30+out2*.2,7,31,C.teal);R(sx,sy-26,7,1,C.mustard);glow(sx+3,sy-15,20,C.lamp,.4);dim(.25);}
+ else{dim(.62);const a=t-1.6,p=back(a/.6);const w=100,h=136;cover(40,26+(1-p)*140,w,h,BK.crit,{big:true});sparkle(90,40,a-.4);
+  const n=(a-.6)*26;tx('HOW TO READ AND',160,40,{c:C.white,n,ol:C.void});tx('WRITE CRITICALLY',160,54,{c:C.white,n:n-15,ol:C.void});tx('BY ALEX BARATTA',160,72,{f:'s',c:C.teal2,n:n-32,ol:C.void});
+  const st=a-2.2;if(st>0){const q=clamp01(st/.25);const y=100-(1-q)*30;if(q>=1&&st<.45)SHAKE=2;box(160,y,150,42,pat(C.red,.0),C.red);R(160,y,150,2,C.red);R(160,y+40,150,2,C.red);R(160,y,2,42,C.red);R(308,y,2,42,C.red);tx('BORROWED FROM',235,y+8,{a:'c',c:C.red});tx('THE LIBRARY',235,y+22,{a:'c',c:C.red});}}};
+
+S.book2=s=>{bgVoid({b:C.plum,c:C.rose0,m:C.pink});const p=eio((s.t-.2)/1.2);const bx=lerp(-130,44,p);
+ R(0,86,bx+8,14,C.teal0);R(0,86,bx+8,2,C.teal);R(bx-4,84,8,18,C.teal2);cover(bx,20,112,146,BK.conv,{big:true});R(bx-2,88,8,10,C.skin1);R(bx+2,86,5,3,C.skin1);for(let i=0;i<3;i++)R(bx+4,89+i*3,4,2,C.skin1);
+ const n=(s.t-1.4)*24;tx('CONVIVIAL TOOLBOX',186,40,{c:C.white,n,ol:C.void});tx('LENT BY ONE OF MY',186,60,{f:'s',c:C.pink,n:n-17,ol:C.void});tx('CO-SUPERVISORS',186,70,{f:'s',c:C.pink,n:n-34,ol:C.void});
+ if(s.t>3){const q=back((s.t-3)/.5);chip('FOR MY THESIS',186,96+(1-q)*20,{c:C.lamp,f:'p',pad:6});mortar(330,86-Math.abs(Math.sin(TT*3))*4);}};
+
+S.book3=s=>{bgVoid({b:C.red0,c:'#4d1020',m:C.rose});const bob=Math.sin(TT*1.5)*2;cover(144,24+bob,96,128,BK.marple);
+ R(96,128,26,16,C.paper);R(92,144,34,3,C.paper2);ring(126,134,4,C.paper,2);for(let k=0;k<3;k++){const q=((TT*.6+k/3)%1);P(104+k*6+Math.sin(q*8)*2,124-q*20,C.paper2);}
+ disc(272,138,9,C.rose);for(let i=-6;i<=6;i+=3)line(264,138+i*.5,280,136+i*.6,C.rose0);line(270,128,280,108,C.grey2);line(276,128,288,110,C.grey2);
+ tx("MISS MARPLE'S FINAL CASES",W/2,8,{f:'s',a:'c',c:C.paper,ol:C.void});tx('AGATHA CHRISTIE',W/2,18,{f:'s',a:'c',c:C.amber,ol:C.void});
+ const tp=(s.t-s.bd(0)*.45);if(tp>0){[[70,-1],[104,1]].forEach(([y,d],j)=>{const q=eo((tp-j*.3)/.6);const off=(1-q)*W*d;R(off,y,W,13,C.mustard);R(off,y,W,1,C.ink);R(off,y+12,W,1,C.ink);const scr=(TT*20*d)%120;for(let x=-120;x<W+120;x+=120)tx('FICTION  -  NOT TODAY  -',off+x+scr,y+3,{f:'s',c:C.ink});});}};
+
+function brain(cx,cy,rx,ry){ell(cx,cy,rx+1,ry+1,C.brain0);ell(cx,cy,rx,ry,C.brain);shade(cx-rx,cy-ry,rx,ry,C.white,.15);for(let k=0;k<Math.floor(ry*2/6);k++){const y=cy-ry+5+k*6;for(let x=cx-rx+3;x<cx+rx-3;x++){const dy=(y-cy)/ry,lim=rx*Math.sqrt(Math.max(0,1-dy*dy))-3;if(Math.abs(x-cx)<lim)P(x,y+Math.round(Math.sin(x*.5+k*2)*1.5),C.brain0);}}R(cx,cy-ry+1,1,ry*2-2,C.brain0);R(cx-3,cy+ry,6,6,C.brain0);}
+S.promise=s=>{bgVoid({c:C.dusk});openBook(W/2,122,150,40,{});brain(W/2,62,40,26);
+ for(let i=0;i<24;i++){const life=((s.t*.9+rnd(i)*3)%3)/3;const sx=W/2+(rnd(i*3)-.5)*130,sy=128;const tx2=W/2+(rnd(i*5)-.5)*50,ty=62+(rnd(i*7)-.5)*30;const q=eio(life);orb(lerp(sx,tx2,q)+Math.sin(q*6+i)*6,lerp(sy,ty,q),[C.lamp,C.teal2,C.sky,C.pink][i%4],i);}
+ const n=(s.t-.5)*26;tx('REMEMBER WHAT YOU READ',W/2,14,{a:'c',c:C.lamp,ol:C.void,n});
+ if(s.bf(0)>.6){const q=back((s.bf(0)-.6)/.1);chip('+ TESTED FOR REAL',W-18,176-q*40,{a:'r',c:C.teal2,f:'s'});}};
+
+S.problem=s=>{const f=s.bf(0);const cyc=f<.6?(s.t*1.4)%1:0;roomBack({day:cyc<.33?0:cyc<.5?.5:cyc<.85?1:.5});
+ panel(146,26,58,50,C.paper,C.paper3);R(146,26,58,11,C.red);tx('DAY',175,29,{f:'s',a:'c',c:C.white});const day=Math.min(43,1+Math.floor(Math.min(s.t,s.bd(0)*.6)*3.6));tx(String(day),175,48,{s:16,a:'c',c:C.ink});
+ const fr=f>.55;narr(270,154,{pose:fr?'rest':'hold',talk:1,look:fr?-1:0,brow:fr&&f>.75});
+ if(fr){const q=eo((f-.55)/.08);narr(lerp(-20,64,q),154,{pose:'rest',shirt:C.teal,shirt0:C.teal0,skin:SKINS[1],skin0:C.skin1,hair:'bun',hairC:'#5b3a1e',glasses:false,seed:2,look:1});}
+ roomDesk();
+ if(f>.62)bubble(22,76,108,26,66,110,['SO... WHAT WAS','IT ABOUT?'],{n:(f-.62)*s.bd(0)*24});
+ if(f>.78){bubble(196,70,112,26,262,108,['UMM... THE VIBE?'],{n:(f-.78)*s.bd(0)*24});heart(210,54+Math.sin(TT*3)*2,C.rose);star(292,54+Math.cos(TT*3)*2,C.lamp,3);}};
+
+S.feeling=s=>{bgVoid({b:C.plum,c:C.dusk,m:C.pink});const bx=152,by=36,bw=80,bh=104;const f0=eio(s.a(0)/2.2);const back2=s.k>=1?eio(s.a(1)/1.8):0;const e=f0*(1-back2);
+ if(e<.02)cover(bx,by,bw,bh,BK.crit);
+ else{for(let i=0;i<260;i++){const hx=bx+(i%13)*6+3,hy=by+Math.floor(i/13)*5+3;const u=rnd(i*3)*Math.PI*2;const k=.4+rnd(i*5)*.6;const cx=W/2+16*Math.pow(Math.sin(u),3)*3.2*k,cy=82-(13*Math.cos(u)-5*Math.cos(2*u)-2*Math.cos(3*u)-Math.cos(4*u))*3*k;const sw=Math.sin(e*Math.PI)*16;const x=lerp(hx,cx,e)+Math.sin(TT*2+i)*sw*.4,y=lerp(hy,cy,e)+Math.cos(TT*2+i)*sw*.3;const c=e<.5?(i%7?C.teal:C.mustard):[C.pink,C.rose,C.lav,C.brain][i%4];R(x,y,2,2,c);}}
+ if(s.k===0){if(s.a(0)>1.8){tx('THE BOOK',70,160,{a:'c',c:C.grey2,ol:C.void});R(34,163,72,1,C.red);R(34,164,72,1,C.red);tx('A FEELING',314,160,{a:'c',c:C.pink,ol:C.void});heart(314,146,C.rose);}}
+ else{if(back2>=1){glow(W/2,88,70,C.lamp,.3);sparkle(bx+10,by+10,(s.a(1)-1.8)%1);sparkle(bx+bw-8,by+bh-20,(s.a(1)-1.5)%1);}headline('THIS FIXES THAT.',160,(s.a(1)-1.2)*1.2,{c:C.lamp});}};
+
+S.method=s=>{bgBlue();const k=s.k;
+ if(k===0){const a=s.a(0);const p=eo(a/1.4);const x=132,y=44,w=120,h=112;line(x,y,x+w*p,y,C.bpl);line(x,y+h,x+w*p,y+h,C.bpl);line(x,y,x,y+h*p,C.bpl);line(x+w,y,x+w,y+h*p,C.bpl);line(x+12,y,x+12,y+h*p,C.bpl);
+  for(let i=0;i<6;i++){if(a>1+i*.25){const yy=y+10+i*16;R(x+18,yy,w-26,12,pat(C.bpl,.25));line(x+18,yy,x+w-8,yy,C.bpl);tx('CH '+(i+1),x+24,yy+3,{f:'s',c:C.bpl});}}
+  line(x-10,y,x-10,y+h,C.bpl,1,2);tx('10',x-22,y+h/2-3,{f:'s',c:C.bpl});line(x,y+h+8,x+w,y+h+8,C.bpl,1,2);
+  headline('READ THE',10,a*1.2,{s:16,c:C.white,ol:C.bp});headline('STRUCTURE FIRST',174,(a-1.4)*1.2,{s:16,c:C.lamp,ol:C.bp});}
+ else if(k===1){const a=s.a(1);const bd=s.bd(1);openBook(170,26,236,136,{cover:C.teal0,lines:false});tx('CONTENTS',110,38,{a:'c',c:C.ink});
+  const L=['1  THE PROBLEM','   1.1 WHY IT MATTERS','   1.2 WHAT WE KNOW','2  THE ARGUMENT','   2.1 FIRST CLAIM','   2.2 SECOND CLAIM','3  THE TOOLS'];
+  L.forEach((l,i)=>{const at=.6+i*(bd*.6/7);if(a>at)tx(l.trim(),l[0]===' '?78:62,54+i*13,{f:'s',c:l[0]===' '?C.ink2:C.ink,n:(a-at)*30});});
+  for(let i=0;i<7;i++)R(186,46+i*14,50+(rnd(i)*50|0),1,C.paper3);
+  const mi=Math.min(6,Math.floor(Math.max(0,a-.6)/(bd*.6/7)));mag(150+Math.sin(TT*2)*6,58+mi*13,12);
+  const tags=[['CHAPTERS',.25],['SUB-HEADINGS',.45],['THE LAYOUT',.65]];tags.forEach(([t2,f],i)=>{if(a>bd*f)chip(t2,300,40+i*26,{c:C.bpl,bg:C.bp,f:'s'});});}
+ else if(k===2){const a=s.a(2);openBook(W/2,28,240,130,{cover:C.teal0,nl:11,lc:C.ink2});const fp=(a*1.8)%1;const hw=120;const cw=Math.cos(fp*Math.PI);if(cw>0)R(W/2,28+2,hw*cw,128,C.paper2);else R(W/2+hw*cw,30,-hw*cw,128,C.paper);headline('NOW READ',170,a*1.5,{c:C.lamp,ol:C.bp});}
+ else{const a=s.a(3);const q1=back(a/.5),q2=back((a-.6)/.5);panel(54,60-(1-q1)*80,120,56,C.bp,C.bpl);tx('1',70,72-(1-q1)*80,{s:16,c:C.lamp});tx('STRUCTURE',92,80-(1-q1)*80,{f:'s',c:C.white});
+  if(a>.5)arrow(182,88,204,88,C.bpl);panel(212,60-(1-q2)*80,120,56,C.bp,C.bpl);tx('2',228,72-(1-q2)*80,{s:16,c:C.lamp});tx('READ',250,80-(1-q2)*80,{f:'s',c:C.white});
+  const pl=Math.sin(TT*6)>0;headline("THAT'S IT.",140,(a-1)*2,{c:pl?C.white:C.lamp,ol:C.bp});}};
+
+S.lineage=s=>{if(s.k===0){const a=s.a(0),bd=s.bd(0);const q=eio((a-bd*.3)/(bd*.4));const sep=q;R(0,0,W,H,C.night);bgVoid({});if(sep>0)shade(0,0,W,H,C.sepia0,sep*.9);
+  const y=110;R(20,y,344,2,C.grey2);for(let yr=1940;yr<=2026;yr+=10){const x=20+(yr-1940)/86*344;R(x,y-3,1,8,C.grey2);tx(String(yr),x,y+10,{f:'s',a:'c',c:C.grey2});}
+  const yr=rd(lerp(2026,1940,q));const mx=20+(yr-1940)/86*344;disc(mx,y,4,C.lamp);R(mx,y-30,1,26,C.lamp);tx(String(yr),W/2,18,{s:24,a:'c',c:sep>.5?C.sepia1:C.lamp,ol:C.void});
+  if(a<bd*.55){const ix=330;box(ix-40,48,30,34,C.wood3,C.wood2);[C.rose,C.teal2,C.lamp].forEach((c,i)=>{R(ix-37+i*9,54+i*6,7,9,C.paper);P(ix-34+i*9,53+i*6,c);});box(ix-4,50,34,24,C.ink,C.grey2);poly([[ix+9,56],[ix+9,68],[ix+18,62]],C.white);}
+  if(q>=1){const p=back((a-bd*.7)/.5);cover(40,34+(1-p)*130,72,96,BK.adler);tx('HOW TO READ A BOOK',128,50,{c:C.sepia1,ol:C.sepia2,n:(a-bd*.72)*30});tx('MORTIMER ADLER - 1940',128,66,{f:'s',c:C.sepia1,ol:C.sepia2,n:(a-bd*.8)*30});}
+  filmGrain();}
+ else{const a=s.a(1);bgSepia();openBook(236,36,190,110,{cover:C.sepia2,paper:C.sepia1,lc:C.sepia0,nl:10});tx('THE WHOLE BOOK',236,24,{a:'c',c:C.sepia2});
+  ['TIPS','SUMMARY','QUOTES','THREAD'].forEach((t2,i)=>{const out2=eo((a-1-i*.3)/.8);const x=20-out2*140,y=40+i*28;if(x>-100){box(x,y,78,20,C.white,C.grey);tx(t2,x+39,y+7,{f:'s',a:'c',c:C.ink});}});
+  if(a>2.4){chip('FULL BLOWN',236,160,{a:'c',f:'p',c:C.sepia2,bg:C.sepia1,bd:C.sepia2});check(186,166,C.leaf0);}filmGrain();}};
+
+S.inspect=s=>{bgSepia();const a=s.a(0),bd=s.bd(0);headline('INSPECTIONAL',10,a*1.4,{c:C.sepia2,ol:C.sepia1});headline('READING',30,(a-.6)*1.4,{c:C.sepia0,ol:C.sepia1});
+ openBook(104,58,170,104,{cover:C.sepia2,paper:C.sepia1,lines:false});tx('CONTENTS',62,68,{a:'c',f:'s',c:C.sepia2});for(let i=0;i<7;i++){R(i%3?40:32,82+i*10,i%3?40:48,2,C.sepia0);}for(let i=0;i<8;i++)R(116,68+i*10,62-(i%3)*8,1,C.sepia);
+ const my=78+((Math.sin(TT*.9)+1)/2)*60;mag(72+Math.sin(TT*1.3)*14,my,14,C.sepia2);
+ const L=['CONTENTS PAGE','CHAPTER TITLES','SUB-HEADINGS','SKIM A LITTLE'];L.forEach((l,i)=>{const at=bd*(.12+i*.17);const y=70+i*22;box(218,y,14,14,C.sepia1,C.sepia2);if(a>at){check(225,y+7,C.sepia2);tx(l,240,y+4,{f:'s',c:C.sepia2,n:(a-at)*30});}});
+ if(a>bd*.85)chip('= THE SHAPE OF THE ARGUMENT',W/2,178,{a:'c',c:C.sepia2,bg:C.sepia1,bd:C.sepia2});filmGrain();};
+
+S.priming=s=>{bgVoid({b:C.ind,c:C.vio});const a=s.a(0),bd=s.bd(0);const x=36,y=14,w=312,h=156;panel(x,y,w,h,C.night,C.grey0);R(x+2,y+2,w-4,10,C.ink2);
+ const nodes=[[110,58,'HEADING 1'],[270,52,'HEADING 2'],[190,96,'HEADING 3'],[96,130,'HEADING 4'],[282,128,'HEADING 5']];const edges=[[0,2],[1,2],[2,3],[2,4],[0,3],[1,4]];
+ edges.forEach(([i,j],k)=>{const at=bd*.3+k*.5;if(a<at)return;const q=clamp01((a-at)/.6);const A=nodes[i],B=nodes[j];line(A[0],A[1],lerp(A[0],B[0],q),lerp(A[1],B[1],q),C.teal2,1,3);if(q>=1&&a<bd*.8)tx('?',(A[0]+B[0])/2,(A[1]+B[1])/2-4,{a:'c',c:C.lamp,ol:C.void});});
+ nodes.forEach(([nx,ny,l],i)=>{if(a>.4+i*.3)chip(l,nx,ny-6,{a:'c',f:'s',c:C.white,bd:C.vio,bg:C.ind});});
+ tx('PRIMING',x+10,y+18,{s:16,c:C.lamp,ol:C.void,n:a*10});R(x+4,y+h-8,w-8,3,C.grey0);R(x+4,y+h-8,(w-8)*clamp01(a/bd),3,C.teal2);
+ const tm=Math.min(3,Math.floor(a/bd*4));chip('0'+tm+':00  A FEW MINUTES',x+w-8,y+18,{a:'r',f:'s',c:C.teal2,bg:C.night});
+ if(a>bd*.82)chip('THEN THE REAL READING',W/2,186,{a:'c',f:'p',c:C.lamp});};
+
+S.memorise=s=>{bgVoid({b:C.plum,c:C.vio,m:C.pink});const k=s.k;
+ if(k===0){const a=s.a(0);const px=70,py=12,pw=82,ph=160;box(px-4,py-4,pw+8,ph+8,C.ink,C.grey0);R(px,py,pw,ph,C.night);const scr=(a*30)%40;for(let i=0;i<5;i++){R(px+6,py+10+i*40-scr,pw-12,30,[C.dusk,C.plum,C.teal0,C.ind,C.rose0][i]);}
+  R(px,py+54,pw,52,C.void);tx('MEMORISE',px+pw/2,py+64,{f:'s',a:'c',c:C.white});tx('IT.',px+pw/2,py+78,{s:16,a:'c',c:C.lamp});for(let i=0;i<5;i++){const q=((a*.7+i/5)%1);heart(px+pw-10+Math.sin(q*9+i)*3,py+ph-10-q*70,i%2?C.rose:C.pink);}
+  const L=['SKIM IT','READ IT','MEMORISE IT'];L.forEach((l,i)=>{const y=58+i*28;const on=i===2&&a>1.8;box(190,y,150,20,on?C.lamp:C.ink,on?C.white:C.grey0);tx(l,265,y+7,{f:'s',a:'c',c:on?C.ink:C.grey2});});
+  if(a>1.8){const bl=Math.sin(TT*8)>0;tx('>',180,65+56,{c:bl?C.lamp:C.orange});chip('STICKS MORE FOR ME',265,150,{a:'c',f:'s',c:C.pink});}}
+ else if(k===1){const a=s.a(1);const cards=['CH 1','1.1','1.2','CH 2','2.1','CH 3','3.1','3.2'];const n=Math.floor(a*2.2);for(let i=Math.max(0,n-5);i<=Math.min(n,cards.length-1);i++){const d=n-i;const x=W/2-60+d*6,y=40+d*4;box(x-2,y,124,78,d?C.paper2:C.white,C.ink2);tx(cards[i],x+60,y+30,{s:16,a:'c',c:C.ink});}
+  mortar(80,50);brain(320,80,28,18);if(a>cards.length/2.2){chip('THEN READ',W/2,160,{a:'c',f:'p',c:C.lamp});}}
+ else{const a=s.a(2);const L=[['SKIM',1,C.grey2],['READ',2,C.teal2],['MEMORISE',3,C.lamp]];L.forEach(([l,th,c],j)=>{const ox=24+j*120;box(ox,34,104,110,C.night,j===2?C.lamp:C.grey0);const pts=[[20,20],[70,26],[46,56],[16,80],[84,76],[52,94]];const E=[[0,2],[1,2],[2,3],[2,4],[3,5],[4,5],[0,1]];const q=clamp01((a-j*.5)/1);E.forEach(([p1,p2])=>{line(ox+pts[p1][0],34+pts[p1][1],ox+lerp(pts[p1][0],pts[p2][0],q),34+lerp(pts[p1][1],pts[p2][1],q),c,th);});pts.forEach(([nx,ny])=>disc(ox+nx,34+ny,2+(j===2?1:0),c));if(j===2)glow(ox+52,90,50,C.lamp,.18);tx(l,ox+52,152,{f:'p',a:'c',c});});headline('STRONGER MAP',10,(a-1.5)*1.4,{c:C.lamp});}};
+
+S.why=s=>{bgVoid({c:C.dusk});const a=s.a(0);const bob=Math.sin(TT*2.5)*3;const mv=s.k>=1?eio(s.a(1)/.8):0;const qx=lerp(W/2,90,mv);
+ gear(qx-48,70,10,TT*1.5,C.grey0,C.void);gear(qx+50,110,14,-TT*1.1,C.grey0,C.void);gear(qx+40,52,7,TT*2,C.grey0,C.void);
+ tx('?',qx,56+bob,{s:48,a:'c',c:C.lamp,ol:C.void});if(s.k===0)headline('WHY DOES IT WORK?',150,a*1.4,{c:C.white});
+ if(s.k>=1){const b=s.a(1);const p=eo((b-.6)/.8);const sx=190,sy=110;R(sx,sy,160*p,5,C.wood2);R(sx,sy,160*p,1,C.wood3);if(p>=1){R(sx+14,sy+5,3,10,C.wood0);R(sx+140,sy+5,3,10,C.wood0);for(let i=0;i<6;i++){box(sx+10+i*24,sy-18,18,18,C.night,C.grey0);if(i===0&&b>2){orb(sx+19,sy-9,C.lamp,0);}}}
+  headline('SOMEWHERE',150,(b-1.4)*1.2,{s:16,c:C.white,x:270});headline('TO PUT THINGS',170,(b-1.8)*1.2,{s:8,c:C.lamp,x:270});}};
+
+const OC=[C.lamp,C.teal2,C.sky,C.pink,C.leaf,C.orange];
+S.float=s=>{bgVoid({a:C.void,b:C.night,c:C.plum,m:C.grey0});const t=s.t;brain(40,30,26,16);shade(10,10,64,44,C.void,.4);chip('READING COLD',W-12,10,{a:'r',f:'s',c:C.grey2,bd:C.grey0});
+ const n=Math.min(44,Math.floor(t/.42)+1);for(let i=0;i<n;i++){const b=i*.42;const age=t-b;const tx0=60+rnd(i*3)*280,ty0=40+rnd(i*5)*110;const q=eo(age/1.2);const x=lerp(W+10,tx0,q)+Math.sin(TT*(.6+rnd(i)*.8)+i)*18*q,y=lerp(ty0,ty0,q)+Math.cos(TT*(.5+rnd(i*9)*.7)+i*2)*14*q;orb(x,y,OC[i%6],i);if(i%5===0&&age>1)tx('?',x+5,y-10,{f:'s',c:C.grey2});}
+ const ch=s.k===0?1:Math.min(6,1+Math.floor(s.a(1)/(s.bd(1)*.8)*5));chip('CHAPTER '+ch,12,186-12,{f:'p',c:C.lamp});
+ if(s.k===0&&s.a(0)>2)tx('NOWHERE TO FILE IT',W-12,26,{f:'s',a:'r',c:C.pink,n:(s.a(0)-2)*30});if(s.k===1&&ch>=6){headline('A PILE OF FLOATING THINGS',188-26,(s.a(1)-s.bd(1)*.8)*2,{s:8,c:C.pink});}};
+
+S.shelves=s=>{bgVoid({a:C.void,b:C.night,c:C.ind,m:C.grey0});const ys=[70,112,154];const x0=78,x1=340;const pb=eo(s.a(0)/1.8);
+ ys.forEach((y,j)=>{const q=clamp01(pb*3-j);R(x0,y,(x1-x0)*q,5,C.wood2);R(x0,y,(x1-x0)*q,1,C.wood3);if(q>=1){R(x0+10,y+5,3,8,C.wood0);R(x1-14,y+5,3,8,C.wood0);}if(q>.2)chip('PART '+(j+1),16,y-7,{f:'s',c:C.teal2});});
+ if(s.k===0&&s.a(0)>2)tx('THE SHAPE OF THE ARGUMENT',W/2,14,{a:'c',c:C.teal2,ol:C.void,n:(s.a(0)-2)*30});
+ const a1=s.k>=1?s.a(1):-1;for(let i=0;i<30;i++){const j=i%3,slot=Math.floor(i/3);const tx0=x0+14+slot*25,ty0=ys[j]-6;const b=a1-i*.16;let x,y;if(b<0){x=W-30+Math.sin(TT+i)*16;y=40+rnd(i*5)*110+Math.cos(TT*.8+i)*10;if(s.k===0)continue;}else{const q=eio(b/.7);x=lerp(W-30,tx0,q);y=lerp(40+rnd(i*5)*110,ty0,q)-Math.sin(q*Math.PI)*20;if(q>=1)sparkle(tx0,ty0,b-.7);}orb(x,y,OC[i%6],i);}
+ if(s.k===1)tx('A PLACE TO GO',W/2,14,{a:'c',c:C.lamp,ol:C.void,n:s.a(1)*20});
+ if(s.k===2){headline('BUILD THE SHELVES',6,s.a(2)*1.2,{s:16,c:C.lamp});headline('BEFORE THE THINGS.',28,(s.a(2)-1.2)*1.2,{s:8,c:C.white});}};
+
+function clapper(x,y,ang){box(x,y,90,56,C.ink,C.grey0);tx('READING STACK',x+45,y+10,{f:'s',a:'c',c:C.white});tx('TAKE 1',x+10,y+26,{f:'s',c:C.lamp});tx('BOOK: 1',x+10,y+38,{f:'s',c:C.teal2});R(x,y-8,90,8,C.ink);for(let i=0;i<6;i++)poly([[x+i*15+4,y-8],[x+i*15+11,y-8],[x+i*15+7,y],[x+i*15,y]],C.white);
+ const L=92;for(let d=0;d<L;d++){const px2=x+Math.cos(ang)*d,py2=y-9+Math.sin(ang)*d;const c=Math.floor(d/15)%2?C.white:C.ink;for(let w2=0;w2<7;w2++)P(px2+Math.sin(ang)*w2,py2-Math.cos(ang)*w2,c);}}
+S.practical=s=>{roomBack();narr(270,154,{pose:s.t>1?'cheer':'rest',talk:1});roomDesk();const a=s.t;const ang=a<.5?-.5:a<.62?lerp(-.5,0,(a-.5)/.12):0;if(a>.62&&a<.78)SHAKE=2;clapper(120,46,ang);if(a>.62&&a<1.2){for(let i=0;i<8;i++){const an=i*Math.PI/4;P(165+Math.cos(an)*(a-.6)*80,40+Math.sin(an)*(a-.6)*40,C.lamp);}}headline("LET'S DO IT.",12,(a-.8)*1.5,{c:C.lamp});};
+
+S.baratta=s=>{bgVoid({b:C.teal0,c:C.teal,m:C.teal2});const k=s.k;const cx=40,cy=24;cover(cx,cy,104,140,BK.crit,{big:true});
+ if(k===0){const a=s.a(0);const L=[['ALEX BARATTA','p',C.lamp],['SENIOR LECTURER','s',C.white],['UNIVERSITY OF MANCHESTER','s',C.white]];L.forEach(([l,f,c],i)=>tx(l,166,40+i*16,{f,c,ol:C.void,n:(a-.5-i*.8)*26}));if(a>2.6)chip('THE SMALLER ONE',166,100,{f:'s',c:C.teal2});if(a>3.2)chip('VERY CLEAN STRUCTURE',166,122,{f:'s',c:C.teal2});}
+ else if(k===1){const a=s.a(1);const pl=Math.sin(TT*6)>0?C.lamp:C.white;const q=eo(a/.4);R(cx+8,cy+6,92*q,1,pl);R(cx+8,cy+42,92*q,1,pl);R(cx+8,cy+6,1,36*q,pl);R(cx+99,cy+6,1,36*q,pl);
+  tx('THE TITLE IS',166,48,{c:C.white,ol:C.void,n:a*24});tx('ALREADY TALKING.',166,62,{c:C.lamp,ol:C.void,n:(a-.6)*24});if(a>2){bgLibMini(166,90);tx('WHY I PICKED IT UP',166,146,{f:'s',c:C.teal2,n:(a-2)*30});}}
+ else{const a=s.a(2);const q=eio(a/1);const rx=lerp(cx+30,200,q),ry=lerp(cy+8,56,q),wx=lerp(cx+60,284,q),wy=lerp(cy+18,56,q);const lock=q>=1;
+  box(rx-26,ry,52,18,C.white,C.ink);tx('READ',rx,ry+6,{a:'c',c:C.ink});box(wx-28,wy,56,18,C.white,C.ink);tx('WRITE',wx,wy+6,{a:'c',c:C.ink});
+  if(lock){line(226,65,256,65,C.lamp,3);disc(241,65,6,C.lamp);tx('&',241,61,{f:'s',a:'c',c:C.ink});sparkle(241,65,(a-1)%1.5);tx('TREATED',242,96,{a:'c',c:C.white,ol:C.void,n:(a-1.2)*20});tx('TOGETHER',242,110,{a:'c',c:C.lamp,ol:C.void,n:(a-1.6)*20});}}};
+function bgLibMini(x,y){box(x,y,90,44,C.wood0,C.wood2);for(let i=0;i<16;i++)R(x+4+i*5,y+6+(i%3),4,16-(i%3),SPC[i%SPC.length]);R(x+2,y+22,86,2,C.wood2);for(let i=0;i<16;i++)R(x+4+i*5,y+26+(i%2),4,14-(i%2),SPC[(i+4)%SPC.length]);R(x+44,y+5,4,17,C.teal);glow(x+46,y+13,10,C.lamp,.5);}
+
+const CH=[['1','WHAT DOES IT MEAN TO BE CRITICAL?','q'],['2','WAYS TO SHOW YOUR CRITICALITY','bulb'],['3','SCORE BANDS & ACADEMIC ASSESSMENT','bars'],['4','CRITICAL READING, THINKING, WRITING','tri'],['5','HOW TO STRUCTURE YOUR ESSAYS','page'],['6','HOW TO STRUCTURE YOUR DISSERTATION','tome'],['7','ADDITIONAL ASSESSMENTS TO CONSIDER','easel'],['8','FOUR WAYS TO APPROACH INTERPRETATION','bubble'],['9','QUOTES, PARAPHRASE & SUMMARY','quote'],['10','HOW TO USE CRITICAL LANGUAGE','abc']];
+S.chapters=s=>{bgPaper();const px=10,py=8,pw=268,ph=170;paperSheet(px,py,pw,ph);tx('CONTENTS',px+pw/2,py+9,{a:'c',c:C.ink});R(px+20,py+21,pw-40,1,C.paper3);
+ for(let i=0;i<10;i++){const a=s.a(i+1);if(a<0)continue;const y=py+30+i*13.5;const cur=s.k===i+1;if(cur)R(px+6,y-3,pw-12*(1-eo(a/.4))-0,11,pat(C.mustard,.75));tx(CH[i][0],px+22,y,{f:'s',a:'r',c:C.ink2});tx(CH[i][1],px+28,y,{f:'s',c:C.ink,n:a*44});}
+ const rx=330;box(284,8,92,170,C.ink,C.grey0);
+ if(s.k===0){const a=s.a(0);tx('10',rx,60,{s:32,a:'c',c:C.lamp,n:a*3});tx('CHAPTERS',rx,104,{a:'c',f:'s',c:C.white,n:(a-.6)*20});}
+ else if(s.k<=10){const i=s.k-1,a=s.a(s.k);const q=eo(a/.35);tx(('0'+(i+1)).slice(-2),rx,34+(1-q)*14,{s:24,a:'c',c:C.lamp});const sc=a<.12?1:a<.24?3:2;scaled(()=>ico(CH[i][2],48,48),rx,110,sc);tx('CHAPTER',rx,64,{f:'s',a:'c',c:C.grey2});}
+ else{const a=s.a(11);tx('LET US',rx,50,{a:'c',c:C.white,n:a*12});tx('GO BY IT',rx,64,{a:'c',c:C.lamp,n:(a-.6)*12});const bob=Math.sin(TT*6)*2;arrow(px+pw+16+bob,py+33,px+pw-4+bob,py+33,C.rose,2);scaled(()=>mag(48,48,10),rx,120,2);}};
+
+function scale(ang,cx,cy,la,lb,tint2){R(cx-1,cy,3,60,C.grey2);R(cx-14,cy+58,30,4,C.grey2);const L=60;const dx=Math.cos(ang)*L,dy=Math.sin(ang)*L;line(cx-dx,cy-dy,cx+dx,cy+dy,C.grey2,3);disc(cx,cy,3,C.lamp);
+ [[-1,la],[1,lb]].forEach(([sd,l])=>{const ex=cx+sd*dx,ey=cy+sd*dy;line(ex,ey,ex-10,ey+22,C.grey);line(ex,ey,ex+10,ey+22,C.grey);R(ex-14,ey+22,28,3,C.grey2);R(ex-11,ey+25,22,2,C.grey);if(l)tx(l,ex,ey+32,{f:'s',a:'c',c:sd<0?C.rose:C.teal2,ol:C.void});});}
+S.ch1=s=>{bgVoid({c:C.dusk});const k=s.k;
+ if(k===0){const a=s.a(0);chip('CHAPTER 1',W/2,20,{a:'c',f:'p',c:C.teal2});tx('?',W/2,48+Math.sin(TT*3)*3,{s:48,a:'c',c:C.lamp,ol:C.void});tx('WHAT DOES IT MEAN',W/2,122,{a:'c',c:C.white,ol:C.void,n:(a-.8)*24});tx('TO BE CRITICAL?',W/2,136,{a:'c',c:C.white,ol:C.void,n:(a-1.5)*24});}
+ else if(k===1){const a=s.a(1),bd=s.bd(1);for(let i=0;i<13;i++){const x=20+i*28;tiny(x,184,i,{hop:1});const ph=((TT*.8+rnd(i)*4)%4);if(ph<1.2&&a<bd*.75)bubble(x-24,120-(i%2)*18,54,14,x,168,['BE CRITICAL!'],{});}
+  const dq=eo((a-bd*.4)/1.2);panel(92,24,200,70,C.paper,C.paper3);tx('CRITICAL',108,34,{c:C.ink});tx('(ADJ.)',184,34,{f:'s',c:C.ink2});if(dq<=0){tx('= ???',108,56,{c:C.grey,n:a*6});}else{for(let i=0;i<3;i++)R(108,54+i*10,160*clamp01(dq*3-i)-(i===2?50:0),3,C.ink2);chip('DEFINED FIRST',282,84,{a:'r',f:'s',c:C.teal2});}}
+ else{const a=s.a(2);narr(70,150,{pose:'think',talk:1,legs:false});bubble(22,24,108,26,64,98,['CRITICAL THINKING','(MY VERSION)'],{});panel(260,32,110,58,C.paper,C.paper3);tx('THE BOOK',315,40,{f:'s',a:'c',c:C.ink});for(let i=0;i<3;i++)R(270,54+i*9,86-(i%2)*18,2,C.ink2);
+  const osc=k===3?Math.sin(TT*2.2)*.28:Math.sin(TT*1.4)*.08;scale(osc,192,88,k===3?'CHALLENGED':'',k===3?'SUPPORTED':'',0);if(k===2)chip('READY TO BE CHALLENGED',192,168,{a:'c',f:'s',c:C.rose});else chip('LOOKING FORWARD TO IT',192,178,{a:'c',f:'s',c:C.lamp});}};
+
+S.ch2=s=>{bgVoid({c:C.teal0,m:C.teal2});const a=s.a(0),bd=s.bd(0);chip('CHAPTER 2',W/2,10,{a:'c',f:'p',c:C.teal2});tx('WAYS TO SHOW YOUR CRITICALITY',W/2,30,{f:'s',a:'c',c:C.white,ol:C.void});
+ const bx=150,by=120;const lid=eo((a-.6)/.5);R(bx,by,84,40,C.red);R(bx,by,84,3,C.rose);R(bx+36,by+14,12,6,C.grey2);R(bx+30,by-4-lid*14,24,4,C.grey0);poly([[bx,by],[bx+84,by],[bx+84-lid*6,by-lid*18],[bx-lid*6,by-lid*18]],C.red0);
+ for(let i=0;i<5;i++){const at=1.1+i*.35;if(a<at)continue;const q=back((a-at)/.6);const tx0=38+i*74,ty0=58;const x=lerp(bx+42,tx0,q),y=lerp(by,ty0,q)-Math.sin(clamp01(q)*Math.PI)*30;box(x-30,y-14,60,30,C.paper,C.mustard0);tx('TIP '+(i+1),x,y-8,{f:'s',a:'c',c:C.ink});R(x-20,y+4,40,1,C.paper3);R(x-20,y+8,28,1,C.paper3);}
+ if(a>bd*.55)chip('PRACTICAL.',W/2,172,{a:'c',f:'p',c:C.lamp});};
+
+S.ch3=s=>{bgVoid({c:C.dusk});const k=s.k;chip('CHAPTER 3',12,10,{f:'p',c:C.teal2});
+ const a=s.a(0);const B=[['1ST',112,C.leaf],['2:1',88,C.teal2],['2:2',62,C.mustard],['3RD',40,C.rose]];const dimB=k===1?.6:0;
+ B.forEach(([l,h,c],i)=>{const q=eo((a-.4-i*.2)/.8);const x=60+i*44;R(x,160-h*q,32,h*q,c);R(x,160-h*q,32,2,C.white);tx(l,x+16,166,{f:'s',a:'c',c:C.white});});R(50,160,190,1,C.grey2);mortar(76,34+Math.sin(TT*3)*2);tx('SCORE BANDS',146,28,{f:'s',a:'c',c:C.grey2});
+ if(k===0){if(a>2){chip('WHO IT IS FOR:',256,60,{f:'s',c:C.grey2});tx('STUDENTS',256,84,{c:C.white,n:(a-2.3)*20});tx('BEING MARKED',256,98,{c:C.lamp,n:(a-2.8)*20});}if(a>s.bd(0)*.7)chip('NOT JUST A LIFE SKILL',256,122,{f:'s',c:C.pink});}
+ else{if(dimB)shade(40,20,210,160,C.void,dimB);const b=s.a(1);const q=back(b/.6);const x1=100,x2=270;disc(x1,74-(1-q)*60,14,C.grey2);R(x1-10,88,20,18,C.grey2);R(x1-18,106,36,6,C.grey);R(x1-6,70,3,2,C.grey0);R(x1+3,70,3,2,C.grey0);tx('PHILOSOPHY',x1,122,{f:'s',a:'c',c:C.grey2});if(b>1){scaled(()=>cross(48,48,C.red),x1,80,3);}
+  box(x2-26,50,52,68,C.wood2,C.wood0);R(x2-8,46,16,6,C.grey2);R(x2-20,58,40,56,C.paper);for(let i=0;i<4;i++){R(x2-6,66+i*12,22,2,C.ink2);if(b>1.4+i*.3)check(x2-12,67+i*12,C.leaf);}tx('ACADEMIC STRATEGY',x2,124,{f:'s',a:'c',c:C.lamp});}};
+
+S.ch4=s=>{bgVoid({c:C.vio});const k=s.k;const nodes=[[W/2,40,'READ','eye',C.lamp],[110,140,'THINK','bulb',C.rose],[274,140,'WRITE','pen',C.sky]];
+ chip('CHAPTER 4',12,10,{f:'p',c:C.teal2});
+ if(k<2){const a=s.a(0);const E=[[0,1],[1,2],[2,0]];E.forEach(([i,j],m)=>{const q=eo((a-.6-m*.4)/.6);const A=nodes[i],B2=nodes[j];if(k===1){const fl=Math.sin(TT*5+m*2)>0;line(A[0],A[1],B2[0],B2[1],fl?C.grey0:C.grey,2,4);tx('?',(A[0]+B2[0])/2,(A[1]+B2[1])/2-6,{s:16,a:'c',c:C.lamp,ol:C.void});}else{line(A[0],A[1],lerp(A[0],B2[0],q),lerp(A[1],B2[1],q),C.teal2,2);}});
+  if(k===0){const tp=(TT*.5)%1;const seg=Math.floor(tp*3),f=(tp*3)%1;const A=nodes[seg],B2=nodes[(seg+1)%3];if(a>2)glow(lerp(A[0],B2[0],f),lerp(A[1],B2[1],f),8,C.white,.6);}
+  nodes.forEach(([x,y,l,ic,c])=>{disc(x,y,18,C.night);ring(x,y,18,c,2);ico(ic,x,y-2);tx(l,x,y+24,{a:'c',c,ol:C.void});});
+  if(k===1)chip('BUNDLED, OR SEPARATE?',W/2,186-14,{a:'c',f:'s',c:C.lamp});}
+ else{const a=s.a(2);const q=eio(a/1.2);const cx=lerp(W/2,120,q),cy=lerp(96,86,q),sc=lerp(1,.4,q);const P2=nodes.map(([x,y])=>[cx+(x-W/2)*sc,cy+(y-96)*sc]);line(P2[0][0],P2[0][1],P2[1][0],P2[1][1],C.teal2,2);line(P2[1][0],P2[1][1],P2[2][0],P2[2][1],C.teal2,2);line(P2[2][0],P2[2][1],P2[0][0],P2[0][1],C.teal2,2);P2.forEach((p,i)=>disc(p[0],p[1],rd(18*sc),nodes[i][4]));
+  R(40,122,300,5,C.wood2);R(40,122,300,1,C.wood3);R(50,127,3,10,C.wood0);R(326,127,3,10,C.wood0);for(let i=1;i<4;i++)box(60+i*70,94,48,28,C.night,C.grey0);tx('CH 4',120,130,{f:'s',a:'c',c:C.teal2});
+  if(a>1.2)headline('SHELF: READY',160,(a-1.2)*1.4,{c:C.lamp});if(a>.4)chip("I DON'T KNOW YET",W-12,30,{a:'r',f:'s',c:C.pink});}};
+
+function brick(x,y,w,h,n,l,c){box(x,y,w,h,c,C.void);R(x+2,y+2,w-4,1,C.white);tx(n,x+w/2,y+8,{s:16,a:'c',c:C.ink});tx(l,x+w/2,y+h-12,{f:'s',a:'c',c:C.ink});}
+S.block57=s=>{bgVoid({c:C.teal0,m:C.teal2});const k=s.k;const a=s.a(0);const gap=k===2?lerp(8,0,eo(s.a(2)/.8)):8;const bw=96;const L=[['5','ESSAYS',C.teal2,'page'],['6','DISSERTATION',C.mustard,'tome'],['7','ASSESSMENTS',C.pink,'easel']];const tot=bw*3+gap*2,x0=W/2-tot/2;
+ L.forEach(([n,l,c,ic],i)=>{const at=.3+i*.45;if(a<at)return;const y=100-(1-bounce((a-at)/.6))*140;brick(x0+i*(bw+gap),y,bw,52,n,l,c);if(k>=1){const q=back((s.a(1)-i*.3)/.5);if(q>0)scaled(()=>ico(ic,48,48),x0+i*(bw+gap)+bw/2,70-(1-q)*10,2);}});
+ if(k>=1&&s.a(1)>1)tx('HOW DO I ORGANISE IT?',W/2,20,{a:'c',c:C.white,ol:C.void,n:(s.a(1)-1)*24});
+ if(k===2){const b=s.a(2);if(b>.8){const pl=Math.sin(TT*5)>0?C.lamp:C.orange;R(x0-4,96,tot+8,2,pl);R(x0-4,154,tot+8,2,pl);R(x0-4,96,2,60,pl);R(x0+tot+2,96,2,60,pl);}headline('ONE BLOCK: STRUCTURE',172,(b-1)*1.4,{s:8,c:C.lamp});if(b>1.8){chip('ORAL',x0+tot-80,40,{f:'s',c:C.pink});chip('POSTER',x0+tot-38,40,{f:'s',c:C.pink});}}};
+
+S.ch8=s=>{bgVoid({c:C.dusk});const k=s.k;
+ if(k===0){const a=s.a(0);const bw=58,x0=24;[['5','',C.teal2],['6','',C.mustard],['7','',C.pink]].forEach(([n],i)=>{box(x0+i*(bw+2),120,bw,40,C.grey0,C.void);tx(n,x0+i*(bw+2)+bw/2,134,{s:16,a:'c',c:C.grey});});tx('STRUCTURE',x0+90,166,{f:'s',a:'c',c:C.grey});
+  const x1=204;[['8',C.lamp],['9',C.sky],['10',C.leaf]].forEach(([n,c],i)=>{const at=.3+i*.4;if(a<at)return;const y=120-(1-bounce((a-at)/.6))*120;box(x1+i*(bw+2),y,bw,40,c,C.void);tx(n,x1+i*(bw+2)+bw/2,y+14,{s:16,a:'c',c:C.ink});});
+  if(a>1.8){const pl=Math.sin(TT*6)>0;R(x1-3,116,bw+6,2,pl?C.white:C.lamp);R(x1-3,162,bw+6,2,pl?C.white:C.lamp);tx('FOUR WAYS TO APPROACH',W/2,40,{a:'c',c:C.white,ol:C.void,n:(a-2)*24});tx('INTERPRETATION',W/2,56,{a:'c',c:C.lamp,ol:C.void,n:(a-2.8)*24});}}
+ else{const a=s.a(k);const cx=W/2,cy=96;const tags=[['AGREEMENT',96,40,C.leaf],['DISAGREEMENT',288,40,C.rose],['ILLUSTRATION',96,152,C.sky],['EXPLANATION',288,152,C.lamp]];
+  tags.forEach(([l,x,y,c],i)=>{const q=eo((k===1?a-.6-i*.3:99)/.6);const ex=lerp(cx,x,q),ey=lerp(cy,y,q);if(q>0)arrow(cx,cy,ex,ey,k===2?c:C.grey2,2);if(k===1&&q>=1)tx('?',ex,ey-12,{a:'c',c:C.lamp,ol:C.void});if(k===2){const p2=back((a-i*.5)/.5);if(p2>0)chip(l,x,y-6+(1-p2)*10,{a:'c',f:'s',c});}});
+  disc(cx,cy,16,C.night);ring(cx,cy,16,C.white,2);bubble(cx-40,cy-50,80,16,cx,cy-18,['"..."'],{});
+  if(k===1)chip('CONTEXT FIRST?',cx,186-14,{a:'c',f:'s',c:C.pink});tx('CH 8',cx,cy-4,{f:'s',a:'c',c:C.white});}};
+
+S.ch9=s=>{bgVoid({c:C.ind,m:C.sky});const a=s.a(0),bd=s.bd(0);chip('CHAPTER 9',12,10,{f:'p',c:C.teal2});const b=Math.abs(Math.sin(TT*3))*6;tx('"',150,26-b,{s:32,c:C.lamp,ol:C.void});tx('"',234,26-(6-b),{s:32,c:C.lamp,ol:C.void});
+ const cards=[['PLAGIARISM',C.rose],['DIRECT QUOTE',C.lamp],['PARAPHRASE',C.teal2],['SUMMARY',C.sky]];cards.forEach(([l,c],i)=>{const at=bd*.45+i*.5;if(a<at)return;const q=back((a-at)/.5);const x=16+i*92,y=80+(1-q)*40;box(x,y,84,76,C.paper,c);R(x,y,84,12,c);tx(l,x+42,y+3,{f:'s',a:'c',c:C.ink});
+  if(i===0){for(let r=0;r<4;r++)R(x+8,y+20+r*9,68,2,C.paper3);if(a-at>.6){box(x+14,y+32,56,18,pat(C.red,0),C.red);tx('NO!',x+42,y+37,{a:'c',c:C.red});}}
+  else if(i===1){tx('"...',x+10,y+22,{f:'s',c:C.ink});for(let r=0;r<3;r++)R(x+10,y+34+r*9,60,2,C.ink2);tx('..."',x+60,y+60,{f:'s',c:C.ink});}
+  else if(i===2){for(let r=0;r<3;r++)R(x+8,y+20+r*7,68,2,C.paper3);arrow(x+42,y+42,x+42,y+50,C.teal,2);for(let r=0;r<2;r++)R(x+8,y+56+r*7,58-r*16,2,C.teal);}
+  else{for(let r=0;r<4;r++)R(x+8,y+20+r*6,68,2,C.paper3);const sq=eo((a-at-.6)/.8);R(x+8,y+50,68-sq*40,6,C.sky0);}});};
+
+S.ch10=s=>{bgVoid({c:C.dusk});const a=s.a(0),bd=s.bd(0);chip('CHAPTER 10: CRITICAL LANGUAGE',W/2,8,{a:'c',f:'s',c:C.teal2});
+ const bins=[[96,C.teal2,'CRITICAL'],[288,C.grey,'NOT CRITICAL?']];bins.forEach(([x,c,l])=>{R(x-50,130,100,48,C.night);R(x-50,130,3,48,c);R(x+47,130,3,48,c);R(x-50,175,100,3,c);tx(l,x,184,{f:'s',a:'c',c});});
+ const words=[['ARGUABLY',0],['EVERYONE KNOWS',1],['HOWEVER',0],['OBVIOUSLY',1],['THE EVIDENCE',0],['ALWAYS',1],['THIS SUGGESTS',0],['CLEARLY',1]];
+ R(150,30,84,10,C.grey0);R(186,40,12,8,C.grey0);
+ words.forEach(([w,b],i)=>{const at=.8+i*(bd*.7/8);const age=a-at;if(age<0)return;const q=clamp01(age/1.1);const tx0=bins[b][0]+((i>>1)%2?16:-16),ty0=142+Math.floor(i/4)*14;const x=lerp(192,tx0,eio(q)),y=lerp(46,ty0,q)-Math.sin(q*Math.PI)*28;box(x-tw(w,'s',8)/2-4,y,tw(w,'s',8)+8,12,C.white,b?C.grey:C.teal);tx(w,x,y+3,{f:'s',a:'c',c:C.ink});});
+ if(a>bd*.85)chip("I DON'T KNOW YET",W/2,86,{a:'c',f:'p',c:C.pink});};
+
+S.guess=s=>{bgVoid({c:C.vio});const k=s.k;
+ const G=['DEFINITION FIRST?','PRACTICAL TIPS?','FOR GRADES?','ALL BUNDLED?','5-7 = STRUCTURE?','CONTEXT FIRST?'];
+ if(k===0){const a=s.a(0);headline('RIGHT, OR WRONG?',10,a*1.2,{c:C.lamp});G.forEach((l,i)=>{const at=.3+i*.2;if(a<at)return;const q=back((a-at)/.5);const x=24+(i%3)*118,y=48+Math.floor(i/3)*62+(1-q)*20;box(x,y,106,48,[C.lamp,C.pink,C.sky,C.teal2,C.lamp,C.pink][i],C.ink);tx(l,x+53,y+10,{f:'s',a:'c',c:C.ink});box(x+45,y+24,16,16,C.white,C.ink);const st=Math.floor(TT*2.2+i*1.3)%3;if(st===1)check(x+53,y+32,C.leaf0);else if(st===2)cross(x+53,y+32,C.red);});}
+ else{const a=s.a(1);brain(W/2,90,70,48);const sock=[];for(let i=0;i<12;i++){sock.push([W/2-50+(i%4)*33,62+Math.floor(i/4)*26]);}sock.forEach(([x,y],i)=>{ring(x,y,6,C.brain0,2);const at=.4+i*.25;if(a>at){const q=eio((a-at)/.6);const sx=i%2?-10:W+10;orb(lerp(sx,x,q),lerp(30+i*10,y,q),OC[i%6],i);if(q>=1)sparkle(x,y,a-at-.6);}else if(Math.sin(TT*4+i)>.3)disc(x,y,2,C.white);});
+  headline('MY MIND HAS A POSITION',178-12,(a-1.5)*1.4,{s:8,c:C.lamp});}};
+
+S.thud=s=>{roomBack();narr(300,154,{pose:'rest',talk:1,look:-1,brow:s.t>.6&&s.t<2});roomDesk();spineH(60,139,70,11,BK.crit);
+ const a=s.t-.3;const y=a<0?-60:lerp(-60,94,clamp01(a/.35));if(a>.35&&a<.55)SHAKE=4;cover(150,y,96,56,{...BK.conv,title:['CONVIVIAL','TOOLBOX']});R(150,y+56,96,0,C.void);
+ if(a>.35){const q=(a-.35);for(let i=0;i<12;i++){const d=i<6?-1:1;P(198+d*(50+q*60+(i%6)*4),150-q*20*(i%3+1)+q*q*40,C.paper2);}}
+ if(a>.9){R(60,132,70,1,C.lamp);R(150,86,96,1,C.lamp);tx('SMALL',95,120,{f:'s',a:'c',c:C.white,ol:C.void});tx('BIG.',198,72,{a:'c',c:C.lamp,ol:C.void});}
+ headline('BOOK TWO',16,(s.t-1.2)*1.4,{c:C.white});if(s.t>2.2)chip('FOR MY THESIS',W/2,40,{a:'c',f:'s',c:C.lamp});};
+
+S.conv=s=>{bgVoid({b:C.ember,c:C.orange,a:C.void,m:C.amber});dim(.3);const a=s.t;cover(24,22,112,146,BK.conv,{big:true});
+ const L=[['CONVIVIAL TOOLBOX','p',C.white],['GENERATIVE RESEARCH FOR','s',C.amber],['THE FRONT END OF DESIGN','s',C.amber],['LIZ SANDERS','p',C.white],['PIETER JAN STAPPERS','p',C.white],['BIS PUBLISHERS - AMSTERDAM','s',C.grey2]];
+ let y=34;L.forEach(([l,f,c],i)=>{tx(l,152,y,{f,c,ol:C.void,n:(a-.3-i*.9)*26});y+=i===2?22:14;});};
+
+S.title3=s=>{bgVoid({b:C.night,c:C.dusk});const a=s.a(0),bd=s.bd(0);cover(W/2-26,10,52,66,BK.conv);
+ const T3=[['CONVIVIAL',70,110,C.rose,.2],['GENERATIVE',W-70,110,C.sky,.35],['TOOLBOX',70,160,C.grey,.5],['FRONT END OF DESIGN',W-80,160,C.lamp,.8]];
+ T3.forEach(([l,x,y,c,f],i)=>{const at=bd*f;if(a<at)return;const q=back((a-at)/.6);const px=lerp(W/2,x,clamp01(q)),py=lerp(50,y,clamp01(q));const w=tw(l,'p',8)+14;box(px-w/2,py-10,w,20,C.night,c);tx(l,px,py-3,{a:'c',c});if(i===2&&a-at>.6){check(px+w/2+10,py,C.leaf);tx('KNOWN',px,py+14,{f:'s',a:'c',c:C.grey2});}});
+ if(a>bd*.2)chip('3 BIG IDEAS',W/2,86,{a:'c',f:'s',c:C.white});};
+
+S.convivial=s=>{const k=s.k;
+ if(k===0){bgVoid({b:C.plum,c:C.rose0,m:C.pink});const a=s.a(0);const w=tw('CONVIVIAL','p',16)+20;box(W/2-w/2,30,w,30,C.night,C.rose);tx('CONVIVIAL',W/2,38,{s:16,a:'c',c:C.rose});panel(92,82,200,64,C.paper,C.paper3);tx('CONVIVIAL (ADJ.)',108,94,{f:'s',c:C.ink});tx('= ?',108,114,{s:16,c:C.ink2});if(Math.sin(TT*6)>0)R(146,114,6,12,C.ink);mag(270+Math.sin(TT*2)*8,122,12);}
+ else if(k===1){bgVoid({b:C.night,c:C.ind});const a=s.a(1),bd=s.bd(1);if(a<bd*.3){paperSheet(122,28,140,120,C.sepia1);tx('DEDICATED TO',192,52,{f:'s',a:'c',c:C.sepia0});tx('IVAN ILLICH',192,74,{a:'c',c:C.ink,n:(a-.4)*20});R(152,90,80,1,C.sepia0);tx('"TOOLS FOR',192,104,{f:'s',a:'c',c:C.sepia0,n:(a-1)*30});tx('CONVIVIALITY"',192,114,{f:'s',a:'c',c:C.sepia0,n:(a-1.4)*30});}
+  else{const b=a-bd*.3;narr(90,130,{pose:b<1.4?'tool':'rest',shirt:C.white,shirt0:C.grey2,coat:1,hair:'bald',hairC:C.grey2,skin:SKINS[0],skin0:SKINS[1],legs:1,seed:4});tx('EXPERT',90,168,{f:'s',a:'c',c:C.grey2});narr(294,130,{pose:b>2.2?'tool':'rest',shirt:C.teal,shirt0:C.teal0,skin:SKINS[4],skin0:C.hair,hair:'bun',glasses:false,legs:1,seed:1});tx('YOU',294,168,{f:'s',a:'c',c:C.teal2});
+   if(b>1.4&&b<2.2){const q=eio((b-1.4)/.8);wrench(lerp(108,300,q),lerp(96,96,q)-Math.sin(q*Math.PI)*40,C.grey2);}
+   const pw=clamp01((b-1.4)/1.2);box(142,40,100,12,C.night,C.grey0);R(144,42,96*(1-pw)*.9+4,8,C.grey);R(144+96*(1-pw*.9),42,96*pw*.9,8,C.teal2);tx('POWER',192,30,{f:'s',a:'c',c:C.white});if(b>2.6)headline('POWER BACK TO THE USER',8,(b-2.6)*1.5,{s:8,c:C.lamp});}}
+ else{bgVoid({b:C.teal0,c:C.teal,m:C.teal2});const a=s.a(k);for(let i=0;i<14;i++){tiny(22+i*26,170,i,{hop:1,tool:1});}
+  if(k===2){chip('MY GUESS:',W/2,24,{a:'c',f:'s',c:C.pink});tx('RESEARCH TOOLS',W/2,50,{a:'c',c:C.white,ol:C.void,n:a*20});tx('FOR ORDINARY PEOPLE',W/2,64,{a:'c',c:C.lamp,ol:C.void,n:(a-1)*20});tx('NOT JUST RESEARCHERS',W/2,82,{f:'s',a:'c',c:C.teal2,ol:C.void,n:(a-2)*30});}
+  else{for(let w=0;w<3;w++){const c=[C.rose,C.lamp,C.teal2][w];for(let x=0;x<W;x+=2){P(x,64+w*14+Math.sin(x*.05+TT*2+w)*8,c);}}headline(k===3?"THAT'S THE VIBE.":'(IT IS MY THESIS)',18,a*1.4,{s:k===3?16:8,c:C.white});if(k===4)chip('BUT THE TITLE SAYS IT ANYWAY',W/2,120,{a:'c',f:'s',c:C.lamp});}}};
+
+S.parts=s=>{bgBlue();const k=s.k;const P3=[['PART 1','PRINCIPLES','PP. 14-95','~80 PAGES',80,C.teal2],['PART 2','CASES FROM PRACTICE','','~50 PAGES',50,C.pink],['PART 3','TOOLS + TECHNIQUES','','140+ PAGES',140,C.lamp]];
+ headline('THE STRUCTURE',8,s.a(0)*1.3,{s:16,c:C.white,ol:C.bp});
+ const grow=k>=4?eio(s.a(4)/1.4):0;
+ P3.forEach(([p,l,pp,cnt,pg,c],i)=>{const y=40+i*40;const shown=k>=i+1;const full=250;const w=shown?lerp(full,pg*1.7,grow):full;if(!shown){for(let x=100;x<100+full;x+=4)P(x,y,C.bpl);for(let x=100;x<100+full;x+=4)P(x,y+26,C.bpl);R(100,y,1,26,C.bpl);R(100+full,y,1,26,C.bpl);return;}
+  const q=eo(s.a(i+1)/.5);R(100,y,w*q,26,c);R(100,y,w*q,2,C.white);tx(p,16,y+4,{c,ol:C.bp});tx(l,104,y+9,{f:'s',c:C.ink,n:s.a(i+1)*30});if(pp)tx(pp,16,y+16,{f:'s',c:C.bpl});if(k>=4)tx(cnt,100+w+8,y+9,{f:'s',c:C.white,n:(s.a(4)-.4-i*.5)*20});});
+ if(k>=5){const a=s.a(5);const pl=Math.sin(TT*6)>0?C.lamp:C.white;const x0=100,x1=100+140*1.7;R(x0,160,x1-x0,2,pl);R(x0,154,2,8,pl);R(x1,154,2,8,pl);if(a>.6){tx('MORE THAN HALF = HOW-TO',(x0+x1)/2,168,{f:'s',a:'c',c:C.lamp,n:(a-.6)*30});}if(a>2)chip('A VERY PRACTICAL BOOK',W-10,186-14,{a:'r',f:'s',c:C.teal2,bg:C.bp});}};
+
+S.disguise=s=>{bgVoid({b:C.ember,c:C.orange,m:C.amber});const k=s.k;
+ if(k===0){const a=s.a(0);const lift=eo((a-1.6)/.6);const bx=132,by=30;R(bx,by,120,130,C.orange);R(bx,by,6,130,C.ember);R(bx,by,120,2,C.amber);
+  tx('MANUAL',bx+63,by+40,{s:16,a:'c',c:C.ink});wrench(bx+63,by+80,C.ink);
+  if(lift<1){const oy=-lift*120;const ly=by+oy;R(bx+8,ly+10,110,40,C.paper);tx('TEXTBOOK',bx+63,ly+24,{a:'c',c:C.ink});ring(bx+42,ly+70,10,C.ink,3);ring(bx+84,ly+70,10,C.ink,3);R(bx+52,ly+68,22,3,C.ink);ell(bx+63,ly+94,24,5,C.hair);R(bx+46,ly+90,34,2,C.hair);}
+  if(a>2.2){headline('A MANUAL IN DISGUISE',176,(a-2.2)*1.4,{s:8,c:C.lamp});sparkle(bx+20,by+20,(a-2.2)%1.2);}}
+ else{const a=s.a(1);bgBlue();const q=eo(a/.6);R(40,70,80*q,40,C.teal2);tx('THEORY',80,86,{a:'c',c:C.ink});R(170,56,176*q,68,C.lamp);tx('THE MANUAL',258,84,{a:'c',c:C.ink});if(a>.8){const t2=(TT*.8)%1;arrow(124,90,164,90,C.white,2);orb(lerp(124,164,t2),90,C.white,1);}
+  tx('FRONT',80,120,{f:'s',a:'c',c:C.bpl});tx('BACK',258,130,{f:'s',a:'c',c:C.bpl});headline('THEORY SERVES THE PRACTICE',20,(a-1)*1.2,{s:8,c:C.white,ol:C.bp});if(a>3)chip('NOT THE OTHER WAY AROUND',W/2,160,{a:'c',f:'s',c:C.lamp,bg:C.bp});}};
+
+function introPage(a0,hl,struck){bgPaper();paperSheet(40,14,304,160);tx('PART 1  >  CHAPTER 1',56,26,{f:'s',c:C.ink2});tx('INTRODUCTION',56,40,{s:16,c:C.ink,n:a0*14});R(56,60,272,1,C.paper3);
+ const L=['WHO IS CREATIVE?','WHY ARE PEOPLE EXPRESSING A NEED','FOR CREATIVITY NOW?','BUSINESS AND DESIGN ARE CHANGING'];const at=[.8,1.6,1.6,2.4];
+ L.forEach((l,i)=>{if(a0<at[i])return;const y=72+i*14+(i>1?0:0);if(i===0&&hl){R(52,y-3,tw(l,'s',8)+14,12,pat(C.mustard,.75));}tx(i===2?'   '+l:l,64,y,{f:'s',c:C.ink,n:(a0-at[i])*40});tx(i===2?'':'-',56,y,{f:'s',c:C.ink2});});}
+S.intro=s=>{if(s.k===0){introPage(s.a(0),0);}else{const a=s.a(1);introPage(99,1);dim(.55);const q=back(a/.5);box(40,112-(1-q)*60,304,44,C.lamp,C.white);tx('WHO IS CREATIVE?',W/2,126-(1-q)*60,{s:16,a:'c',c:C.ink});}};
+S.shrug=s=>{roomBack();const k=s.k;narr(250,154,{pose:k===0?'shrug':'point',talk:1,brow:k===0,look:k===1?-1:0});roomDesk();
+ if(k===0){const a=s.a(0);tx('?',250,88+Math.sin(TT*4)*2,{s:16,a:'c',c:C.lamp,ol:C.void});if(a>.4)bubble(150,40,100,16,226,96,['GOOD QUESTION.'],{});if(a>1.6)bubble(274,50,82,16,262,98,["I DON'T KNOW."],{});}
+ else{const a=s.a(1),bd=s.bd(1);for(let i=0;i<5;i++){tiny(40+i*26,150,i+3,{hop:1});if(Math.sin(TT*3+i)>.4)star(40+i*26,120,C.lamp,2);}bubble(30,46,130,26,150,94,['YOU ARE ALL SO','CREATIVE!'],{n:a*24});heart(170,64+Math.sin(TT*4)*2);if(a>bd*.35)bubble(214,32,90,24,246,94,['ME? HMM...'],{fill:C.grey2});}};
+S.intro2=s=>{const k=s.k;introPage(99,k>=1);
+ if(k>=1){const a=s.a(1);const bob=Math.sin(TT*6)*2;arrow(200+bob,60,184+bob,70,C.rose,2);chip('THE FIRST REAL QUESTION',210,44,{f:'s',c:C.rose,bg:C.paper,bd:C.rose});}
+ if(k===2){const a=s.a(2);dim(.4);const L=[['WHAT IS DESIGN RESEARCH?',0],['WHAT IS GENERATIVE RESEARCH?',0],['WHO IS CREATIVE?',1]];L.forEach(([l,good],i)=>{const at=i*.9;if(a<at)return;const y=128+i*18;const w=tw(l,'s',8)+12;box(W/2-w/2,y-4,w,16,good?C.lamp:C.paper,C.ink);tx(l,W/2,y,{f:'s',a:'c',c:C.ink});if(!good&&a>at+.5)R(W/2-w/2-4,y+2,w+8,2,C.red);if(good)sparkle(W/2+w/2,y,(a-at)%1.3);});}};
+
+S.everyone=s=>{bgVoid({c:C.dusk});const k=s.k;const a0=s.a(0);
+ for(let i=0;i<13;i++){const on=a0>.6+i*.22;tiny(24+i*28,184,i,{hop:on?1:0,arms:on&&k===0?'up':null,bulb:on?1:0});}
+ if(k===0){if(a0>3.6)headline('EVERYBODY IS CREATIVE',12,(a0-3.6)*1.4,{s:8,c:C.lamp});if(a0>5)tx('SO EVERYONE CAN HELP DESIGN',W/2,32,{f:'s',a:'c',c:C.white,ol:C.void,n:(a0-5)*30});if(a0>6.5)tx('THE THINGS THAT AFFECT THEM',W/2,44,{f:'s',a:'c',c:C.white,ol:C.void,n:(a0-6.5)*30});}
+ else if(k===1){const a=s.a(1);const w=tw('CONVIVIAL','p',16)+20;box(W/2-w/2,24,w,28,C.night,C.rose);tx('CONVIVIAL',W/2,31,{s:16,a:'c',c:C.rose});for(let i=0;i<13;i++){const q=clamp01((a-i*.08)/.5);if(q>0)line(W/2,52,lerp(W/2,24+i*28,q),lerp(52,150,q),C.rose,1,3);}if(a>1.8)chip('MAKES SENSE.',W/2,72,{a:'c',f:'p',c:C.lamp});}
+ else{const a=s.a(2);R(80,90,224,5,C.wood2);R(80,90,224,1,C.wood3);R(90,95,3,8,C.wood0);R(290,95,3,8,C.wood0);[['TITLE',130,C.rose],['1ST SUB-HEADING',240,C.lamp]].forEach(([l,x,c],i)=>{const q=bounce((a-.3-i*.6)/.6);if(q<=0)return;const y=62-(1-q)*60;box(x-38,y,76,28,C.night,c);tx(l,x,y+10,{f:'s',a:'c',c});});headline('A SHELF, IN MY MIND',20,(a-1.4)*1.4,{s:8,c:C.white});}};
+
+S.bridge=s=>{const k=s.k;
+ if(k===0){bgVoid({c:C.dusk});const a=s.a(0);const fl=a<1.6;openBook(W/2,40,220,110,{cover:C.ember,nl:9});if(fl){const fp=(a*5)%1;const cw=Math.cos(fp*Math.PI);if(cw>0)R(W/2,42,110*cw,108,C.paper2);else R(W/2+110*cw,42,-110*cw,108,C.paper);}const pg=Math.min(250,rd(a/1.6*250));chip('PAGE '+pg,W-12,12,{a:'r',f:'s',c:C.grey2});
+  if(!fl){dim(.55);chip('PART 3 - CHAPTER 10',W/2,50,{a:'c',f:'s',c:C.teal2});headline('BRIDGING',76,(a-1.6)*1.4,{s:24,c:C.lamp});}}
+ else{const a=s.a(k);R(0,0,W,H,C.night);bgVoid({b:C.ind,c:C.dusk});stars(0,0,W,90,30,9);
+  poly([[0,120],[142,120],[150,216],[0,216]],C.wood0);R(0,118,144,3,C.leaf);poly([[240,120],[384,120],[384,216],[232,216]],C.wood0);R(240,118,144,3,C.leaf);shade(142,120,100,96,C.void,.6);
+  tiny(40,118,2,{});tiny(56,118,7,{});tiny(330,118,4,{});
+  if(k===1){const Q=['WHERE ARE THE GAPS?','WHERE AND WHEN?','WHO IS BRIDGING?','WHAT ARE THE WAYS?'];Q.forEach((q,i)=>{const at=.5+i*(s.bd(1)*.8/4);if(a>at)chip(q,W/2,12+i*22,{a:'c',f:'s',c:[C.lamp,C.pink,C.sky,C.teal2][i]});});tx('GAP',192,150,{s:16,a:'c',c:C.rose,ol:C.void});}
+  else{const n=Math.min(8,Math.floor(a/.45));for(let i=0;i<8;i++){const x=144+i*12;if(i<n)R(x,119,10,4,C.wood3);}line(144,112,144+n*12,112,C.paper2);R(143,108,2,12,C.wood2);R(239,108,2,12,C.wood2);if(n>=8)tiny(lerp(56,330,((a-3.6)*.25)%1),118,7,{});chip('A GAP PROBLEM',W/2,20,{a:'c',f:'p',c:C.rose});if(a>1.5)chip('IT GETS ITS OWN CHAPTER',W/2,44,{a:'c',f:'s',c:C.white});}}};
+
+S.gapword=s=>{bgVoid({c:C.ind});const k=s.k,a=s.a(k);paperSheet(30,24,170,146);tx('PART 1 - CH 2',115,32,{f:'s',a:'c',c:C.ink2});
+ const words='THE DESIGN PROCESS HAS A FRONT END WHERE PEOPLE AND MAKERS MEET BUT THERE IS A GAP BETWEEN WHAT USERS SAY AND WHAT THEY DO IN PRACTICE SO THE TOOLS'.split(' ');let x=40,y=46,gx=0,gy=0;for(const w of words){const ww=tw(w,'s',8);if(x+ww>192){x=40;y+=13;}if(w==='GAP'){gx=x;gy=y;if(k===0){R(x-2,y-3,ww+4,11,Math.sin(TT*6)>0?C.lamp:C.mustard);}}tx(w,x,y,{f:'s',c:w==='GAP'&&k===0?C.ink:C.ink2});x+=ww+5;}
+ box(290,70,74,40,C.ember,C.lamp);tx('CH 10',327,80,{a:'c',c:C.white});tx('BRIDGING',327,94,{f:'s',a:'c',c:C.lamp});
+ if(k===0){const q=eo(a/1.4);for(let i=0;i<=40*q;i++){const t2=i/40;const px=lerp(gx+8,290,t2),py=lerp(gy,80,t2)-Math.sin(t2*Math.PI)*60;if(i%2===0)P(px,py,C.lamp);}if(a>1.4)chip('PAY ATTENTION',W/2,186-16,{a:'c',f:'p',c:C.lamp});}
+ else{const ex=lerp(40,190,(TT*.35)%1);ell(ex,gy+14,6,3,C.white);disc(ex,gy+14,1,C.ink);shade(200,40,90,90,C.void,0);for(let i=0;i<40;i++){if(i%4)continue;const t2=i/40;P(lerp(gx+8,290,t2),lerp(gy,80,t2)-Math.sin(t2*Math.PI)*60,C.grey0);}cross(250,40,C.red);chip('READ COLD: MISSED IT',W/2,186-16,{a:'c',f:'p',c:C.rose});}};
+
+S.time=s=>{bgVoid({c:C.ind});const k=s.k,a=s.a(k);
+ if(k===0){const cx=W/2,cy=86;disc(cx,cy,44,C.paper);ring(cx,cy,44,C.ink2,3);for(let i=0;i<12;i++){const an=i*Math.PI/6;R(cx+Math.cos(an)*38-1,cy+Math.sin(an)*38-1,2,2,C.ink);}const m=a*.6;line(cx,cy,cx+Math.cos(m-1.57)*32,cy+Math.sin(m-1.57)*32,C.ink,2);line(cx,cy,cx+Math.cos(m/12-1.57)*20,cy+Math.sin(m/12-1.57)*20,C.rose,3);disc(cx,cy,3,C.ink);headline('LESS TIME THAN YOU THINK',150,(a-.8)*1.4,{s:8,c:C.lamp});}
+ else if(k===1){const cx=110,cy=90;R(cx-26,cy-54,52,6,C.wood2);R(cx-26,cy+48,52,6,C.wood2);poly([[cx-20,cy-48],[cx+20,cy-48],[cx+2,cy],[cx+20,cy+48],[cx-20,cy+48],[cx-2,cy]],pat(C.sky,.5));const f=clamp01(a/(s.bd(1)*.8));poly([[cx-18*(1-f),cy-48+46*f],[cx+18*(1-f),cy-48+46*f],[cx+1,cy-1],[cx-1,cy-1]],C.lamp);poly([[cx-18,cy+46],[cx+18,cy+46],[cx+18*(1-f*.6),cy+46-30*f],[cx-18*(1-f*.6),cy+46-30*f]],C.lamp);R(cx,cy,1,46,C.lamp);
+  chip('EXTRA WORK?',210,40,{f:'s',c:C.grey2});tx('A FEW MINUTES',210,78,{c:C.white,ol:C.void,n:(a-1.4)*20});tx('PER BOOK.',210,94,{s:16,c:C.lamp,ol:C.void,n:(a-2)*12});}
+ else{const g1=clamp01(a/2),g2=1-clamp01(a/3)*.8;[[120,'OVERWHELM',C.grey,.2],[264,'ANTICIPATION',C.lamp,g1]].forEach(([x,l,c,v])=>{box(x-16,30,32,120,C.night,C.grey0);const h2=112*v;R(x-12,146-h2,24,h2,c);for(let i=1;i<6;i++)R(x-14,30+i*20,4,1,C.grey0);tx(l,x,158,{f:'s',a:'c',c});});if(g1>=1){sparkle(264,34,(a-2)%1);heart(300,40+Math.sin(TT*4)*3);}}};
+
+S.author=s=>{bgVoid({b:C.wall,c:C.wall3});const a=s.t;R(20,140,150,6,C.wood3);R(20,146,150,40,C.wood);narr(90,142,{pose:'hold',shirt:C.leaf,shirt0:C.leaf0,hair:'bald',hairC:C.grey2,skin:SKINS[2],skin0:SKINS[3],seed:5,book:C.paper3});tx('THE AUTHOR',90,160,{f:'s',a:'c',c:C.paper});
+ const q=eio((a-1)/1.2);const px=lerp(80,220,q),py=lerp(128,30,q);paperSheet(px,py,130*(.3+.7*q),120*(.3+.7*q));if(q>.9){tx('CONTENTS',px+65,py+10,{a:'c',c:C.ink});for(let i=0;i<7;i++)R(px+14,py+26+i*12,100-(i%3)*18,2,i%3?C.ink2:C.ink);}
+ if(a>2.4){headline('ON PURPOSE.',150,(a-2.4)*1.4,{s:8,c:C.lamp,x:285});}if(a>3.6)chip('= THEIR ARGUMENT, SUMMED UP',285,170,{a:'c',f:'s',c:C.teal2});};
+
+S.want=s=>{bgVoid({c:C.plum,m:C.pink});const a=s.t;cover(W/2-40,40,80,108,BK.conv);const Q=['IS THIS RIGHT?','IS THIS WRONG?','HOW DO PARTS CONNECT?','WHAT GAP?','WHO IS CREATIVE?'];const pos=[[70,40],[310,48],[64,110],[320,120],[W/2,20]];
+ Q.forEach((q,i)=>{const at=.8+i*.8;if(a<at)return;const pp=back((a-at)/.4);const [x,y]=pos[i];const w=tw(q,'s',8)+10;bubble(x-w/2,y-(1-pp)*8,w,16,x+(x<W/2?20:-20),y+26,[q],{});});
+ const f=clamp01(a/(s.dur*.8));box(W/2-60,164,120,10,C.night,C.grey0);R(W/2-58,166,116*f,6,C.rose);tx('WANT TO READ',W/2,178,{f:'s',a:'c',c:C.pink});if(f>=1)heart(W/2+70,168,C.rose);};
+
+S.recap=s=>{const k=s.k;
+ if(k===0){bgVoid({c:C.teal0,m:C.teal2});const a=s.a(0),bd=s.bd(0);chip('NON-FICTION',W/2,10,{a:'c',f:'p',c:C.teal2});const L=['GO OVER THE CONTENTS','HEADINGS + SUB-HEADINGS','THE CHAPTERS','TAKE A GUESS AT THE ARGUMENT','THEN READ'];L.forEach((l,i)=>{const at=bd*(.15+i*.15);const y=38+i*26;box(80,y,16,16,C.night,C.grey2);tx(l,106,y+5,{c:a>at?C.white:C.grey0});if(a>at){check(88,y+8,C.leaf);sparkle(88,y+8,a-at);}});}
+ else{bgVoid({c:C.plum,m:C.pink});const a=s.a(1);brain(W/2,86,68,46);for(let i=0;i<7;i++){const at=.4+i*.35;if(a<at)continue;const q=bounce((a-at)/.5);const x=W/2-46+i*15,y=64+(i%3)*18;R(x,y-24*(1-q)-12,1,12,C.grey2);disc(x,y-24*(1-q)-13,2,[C.rose,C.lamp,C.teal2][i%3]);}headline('MEMORISE: IT STICKS',160,(a-2)*1.4,{s:8,c:C.lamp});}};
+
+S.fiction=s=>{bgVoid({b:C.red0,c:'#4d1020',m:C.rose});const a=s.t;cover(W/2-44,30,88,118,BK.marple);if(a>.8){const q=back((a-.8)/.4);chip('FICTION?  NOT FOR THIS.',W/2,10+(1-q)*-20,{a:'c',f:'s',c:C.lamp});}
+ if(a>s.dur*.55){const q=back((a-s.dur*.55)/.5);bubble(270,90-(1-q)*10,96,26,280,140,['YOU DO THIS?','LET ME KNOW.'],{});}};
+
+S.unknown=s=>{R(0,0,W,H,C.void);const a=s.t;const dx=W/2-40,dy=24,dw=80,dh=150;R(0,dy+dh,W,H-dy-dh,C.wall);R(0,0,W,dy+dh,C.wall2);R(dx-6,dy-6,dw+12,dh+6,C.wood2);
+ g.save();g.beginPath();g.rect(dx,dy,dw,dh);g.clip();R(dx,dy,dw,dh,C.void);stars(dx,dy,dw,dh,40,5);for(let i=0;i<8;i++){const t2=(TT*.2+i/8)%1;const r=t2*70;tx('?',W/2+Math.cos(i*2+TT*.5)*r,dy+dh/2+Math.sin(i*2+TT*.5)*r*.8,{f:'s',c:[C.lav,C.pink,C.sky][i%3]});}glow(W/2,dy+dh/2,40,C.vio,.5);g.restore();
+ const op=eo((a-.4)/1.4);const dw2=dw*(1-op*.85);R(dx,dy,dw2,dh,C.wood);R(dx+dw2-2,dy,2,dh,C.wood0);if(dw2>14){box(dx+4,dy+8,dw2-8,56,C.wood,C.wood0);box(dx+4,dy+76,dw2-8,64,C.wood,C.wood0);disc(dx+dw2-8,dy+82,2,C.amber);}
+ if(a>2)headline('THE UNKNOWN',8,(a-2)*1.4,{s:8,c:C.lav});if(a>3.2)chip('NOT KNOWING WHAT COMES NEXT',W/2,186-14,{a:'c',f:'s',c:C.pink});};
+
+S.fictoc=s=>{bgVoid({b:C.red0,c:'#4d1020',m:C.rose});const a=s.t;openBook(W/2,30,220,130,{cover:C.red0,lines:false});tx('CONTENTS',W/2-56,40,{a:'c',f:'s',c:C.ink});for(let i=0;i<8;i++)tx(String(i+1),W/2-94,56+i*12,{f:'s',c:C.ink2});for(let i=0;i<8;i++)R(W/2-84,58+i*12,60-(i%3)*10,2,C.ink2);for(let i=0;i<9;i++)R(W/2+10,44+i*12,90-(i%4)*12,1,C.paper3);
+ if(a>s.dur*.3){const q=back((a-s.dur*.3)/.4);tx('!',330,40-(1-q)*20,{s:32,a:'c',c:C.lamp,ol:C.void});}if(a>s.dur*.4)chip('OH. IT HAS ONE.',W/2,170,{a:'c',f:'p',c:C.lamp});};
+
+S.surprise=s=>{bgVoid({c:C.plum,m:C.pink});const a=s.t;const cx=W/2,by=150;const open=a>s.dur*.45;const lo=open?eo((a-s.dur*.45)/.5):0;
+ R(cx-40,by-50,80,50,C.rose);R(cx-6,by-50,12,50,C.lamp);R(cx-44,by-60-lo*50,88,12,C.rose0);R(cx-6,by-60-lo*50,12,12,C.lamp);poly([[cx,by-60-lo*50],[cx-16,by-72-lo*50],[cx-10,by-60-lo*50]],C.lamp);poly([[cx,by-60-lo*50],[cx+16,by-72-lo*50],[cx+10,by-60-lo*50]],C.lamp);
+ if(open){const b=a-s.dur*.45;for(let i=0;i<50;i++){const an=-Math.PI/2+(rnd(i)-.5)*2.4,sp=40+rnd(i*3)*80;const x=cx+Math.cos(an)*sp*b,y=by-50+Math.sin(an)*sp*b+30*b*b;R(x,y,2,2,[C.lamp,C.teal2,C.pink,C.sky,C.white][i%5]);}if(b>.5)headline('SURPRISE ME.',16,(b-.5)*1.4,{s:16,c:C.white});}
+ if(!open&&a>.5)chip("NO SPOILERS",cx,20,{a:'c',f:'p',c:C.pink});};
+
+S.summary=s=>{bgVoid({c:C.dusk});const a=s.t,d=s.dur;headline('THE METHOD',10,a*1.2,{s:16,c:C.lamp});
+ const St=[['READ THE','STRUCTURE','page'],['TAKE A','GUESS','q'],['THEN','READ','tome']];St.forEach(([l1,l2,ic],i)=>{const at=d*(.1+i*.22);if(a<at)return;const q=back((a-at)/.5);const x=64+i*128,y=60+(1-q)*30;box(x-50,y,100,100,C.night,[C.teal2,C.lamp,C.pink][i]);scaled(()=>ico(ic,48,48),x,y+34,2);tx(l1,x,y+64,{f:'s',a:'c',c:C.grey2});tx(l2,x,y+76,{a:'c',c:C.white});if(i<2&&a>at+.4)arrow(x+54,y+50,x+72,y+50,C.grey2,2);});};
+
+S.outro=s=>{const k=s.k;roomBack();narr(250,154,{pose:k===1?'wave':'rest',talk:1});roomDesk();dropStack(150,150,99,0);
+ if(k===0){const a=s.a(0);panel(20,16,188,38,C.ink,C.lamp);tx("WHAT'S IN YOUR",114,24,{a:'c',c:C.white,n:a*20});tx('READING STACK?',114,38,{a:'c',c:C.lamp,n:(a-.8)*20});
+  const cm=[['MY STACK: 4 BOOKS',C.teal2],['I DO THIS TOO!',C.pink],['TRYING IT NOW',C.lamp]];cm.forEach(([l,c],i)=>{const at=2+i*1.2;if(a<at)return;const q=back((a-at)/.4);const y=66+i*22;const w=tw(l,'s',8)+18;box(24,y+(1-q)*10,w,16,C.night,c);heart(30,y+8+(1-q)*10,c);tx(l,38,y+5+(1-q)*10,{f:'s',c:C.white});});}
+ else{const a=s.a(1);if(a>.3)bubble(262,56,50,18,256,98,['BYE!'],{});if(a>1.6){const q=clamp01((a-1.6)/1);dim(q*.85);if(q>.5){headline('MY CURRENT',70,(a-2.2)*1.6,{s:16,c:C.lamp});headline('READING STACK',92,(a-2.6)*1.6,{s:16,c:C.white});if(a>3.6)tx('THANKS FOR WATCHING',W/2,130,{f:'s',a:'c',c:C.grey2,n:(a-3.6)*30});}}}};
+
+/* ============================================================
+   TIMELINE
+   ============================================================ */
+const PAUSE=.55,END_HOLD=3.5;
+const WORDS=BEATS.map(b=>b[1].split(/\s+/).length);
+let WPM=150,TIMES=[],DURS=[],TOTAL=0,SEGS=[],SEGOF=[],CUSTOM=null;
+function autoDur(i){return Math.max(2.4,WORDS[i]/(WPM/60)+PAUSE);}
+function computeTimes(){TIMES=[];DURS=[];let t=.4;for(let i=0;i<N;i++){if(CUSTOM&&CUSTOM[i]!=null)t=CUSTOM[i];TIMES.push(t);t+=autoDur(i);}for(let i=0;i<N;i++){DURS[i]=(i<N-1?TIMES[i+1]:TIMES[i]+autoDur(i))-TIMES[i];if(DURS[i]<.3)DURS[i]=.3;}TOTAL=TIMES[N-1]+DURS[N-1]+END_HOLD;
+ SEGS=[];SEGOF=[];for(let i=0;i<N;i++){const key=BEATS[i][0];if(!SEGS.length||SEGS[SEGS.length-1].key!==key)SEGS.push({key,i0:i,i1:i});else SEGS[SEGS.length-1].i1=i;SEGOF[i]=SEGS.length-1;}}
+function beatEnd(i){return i<N-1?TIMES[i+1]:TOTAL;}
+function beatAt(T){let lo=0,hi=N-1;if(T<TIMES[0])return 0;while(lo<hi){const m=(lo+hi+1)>>1;if(TIMES[m]<=T)lo=m;else hi=m-1;}return lo;}
+function segState(seg,T){const i0=seg.i0;let k=0;for(let i=i0;i<=seg.i1;i++)if(T>=TIMES[i])k=i-i0;const st=seg.i0===0?0:TIMES[i0];
+ return{t:T-st,T,k,dur:beatEnd(seg.i1)-st,a:i=>T-TIMES[i0+i],p:(i,d=.6)=>clamp01((T-TIMES[i0+i])/d),bd:i=>beatEnd(i0+i)-TIMES[i0+i],bf:i=>clamp01((T-TIMES[i0+i])/(beatEnd(i0+i)-TIMES[i0+i]))};}
+function drawSeg(seg,T){try{S[seg.key](segState(seg,T));}catch(e){R(0,0,W,H,C.night);tx('SCENE ERROR: '+seg.key,W/2,H/2,{a:'c',c:C.rose});if(!drawSeg.logged){console.error(seg.key,e);drawSeg.logged=1;}}}
+
+/* captions: split beat into short chunks timed by word share */
+function chunks(text){const sent=text.match(/[^.?!]+[.?!]*\s*/g)||[text];const outc=[];for(let s of sent){s=s.trim();if(!s)continue;const w=s.split(' ');if(w.length<=16){outc.push(s);continue;}const parts=s.split(/(?<=,)\s+/);let cur='';for(const p of parts){const t=cur?cur+' '+p:p;if(t.split(' ').length>16&&cur){outc.push(cur);cur=p;}else cur=t;}if(cur){const ww=cur.split(' ');if(ww.length>18){const h=Math.ceil(ww.length/2);outc.push(ww.slice(0,h).join(' '));outc.push(ww.slice(h).join(' '));}else outc.push(cur);}}return outc;}
+const CHUNKS=BEATS.map(b=>chunks(b[1]));
+function captionAt(T){const i=beatAt(T);if(T<TIMES[i])return null;const speak=Math.max(.5,DURS[i]-PAUSE*.6);const e=T-TIMES[i];if(e>speak+.25)return null;const cs=CHUNKS[i];const tot=cs.reduce((m,c)=>m+c.split(' ').length,0);let acc=0;for(const c of cs){const d=c.split(' ').length/tot*speak;if(e<acc+d)return c;acc+=d;}return cs[cs.length-1];}
+
+/* ============================================================
+   RENDER
+   ============================================================ */
+let CAPTIONS=true;const TR=.55;
+function render(T){TT=T;SHAKE=0;const bi=beatAt(T);const si=SEGOF[bi];const seg=SEGS[si];const e=T-TIMES[bi];SPEAK=T>=TIMES[bi]&&e<Math.max(.5,DURS[bi]-PAUSE*.6);
+ g=gLow;drawSeg(seg,T);
+ const since=T-TIMES[seg.i0];if(si>0&&since<TR&&since>=0){const prev=SEGS[si-1];g=gBuf;const sp=SPEAK;SPEAK=false;drawSeg(prev,T);SPEAK=sp;g=gLow;const p=since/TR;const cell=16;gLow.save();gLow.beginPath();for(let cy=0;cy<H;cy+=cell)for(let cx=0;cx<W;cx+=cell){const lp=clamp01(p*1.7-(cx/W)*.7);const r=Math.ceil((1-lp)*cell*.72);if(r<=0)continue;const mx=cx+cell/2,my=cy+cell/2;for(let dy=-r;dy<r;dy++){const w=r-Math.abs(dy+.5)+.5;gLow.rect(Math.round(mx-w),my+dy,Math.round(w*2),1);}}gLow.clip();gLow.drawImage(buf,0,0);gLow.restore();}
+ const sx=SHAKE?(rnd(T*99)-.5)*SHAKE*2:0,sy=SHAKE?(rnd(T*77)-.5)*SHAKE*2:0;
+ o.fillStyle='#000';o.fillRect(0,0,OW,OH);o.imageSmoothingEnabled=false;o.drawImage(low,rd(sx)*5-(SHAKE?10:0),rd(sy)*5-(SHAKE?10:0),OW+(SHAKE?20:0),OH+(SHAKE?20:0));
+ if(CAPTIONS){const c=captionAt(T);if(c)drawCaption(c);}}
+function drawCaption(text){o.font='52px VT323, monospace';o.textBaseline='middle';o.textAlign='center';const maxW=1500;const words=text.split(' ');const lines=[];let cur='';for(const w of words){const t=cur?cur+' '+w:w;if(o.measureText(t).width>maxW&&cur){lines.push(cur);cur=w;}else cur=t;}if(cur)lines.push(cur);
+ const lh=50,h=lines.length*lh+30,wMax=Math.max(...lines.map(l=>o.measureText(l).width))+60;const x=OW/2-wMax/2,y=OH-40-h;const s5=5;o.fillStyle='rgba(11,9,20,.82)';o.fillRect(x+s5,y,wMax-2*s5,h);o.fillRect(x,y+s5,wMax,h-2*s5);
+ lines.forEach((l,i)=>{const ly=y+15+lh/2+i*lh;o.fillStyle='#0b0914';o.fillText(l,OW/2+4,ly+4);o.fillStyle='#fff6e6';o.fillText(l,OW/2,ly);});}
+
+/* ============================================================
+   PLAYER + UI
+   ============================================================ */
+const $=id=>document.getElementById(id);
+let T=0,playing=false,lastNow=null,audio=null,marking=false,markIdx=0,rec=null;
+function fmt(t){t=Math.max(0,t);const m=Math.floor(t/60),s=Math.floor(t%60);return m+':'+String(s).padStart(2,'0');}
+function loadCustom(){try{const v=JSON.parse(localStorage.getItem('rs-timing')||'null');if(v&&Array.isArray(v.starts)&&v.starts.length===N){CUSTOM=v.starts;WPM=v.wpm||WPM;}const w=+localStorage.getItem('rs-wpm');if(w)WPM=w;}catch(e){}}
+function saveCustom(){try{if(CUSTOM)localStorage.setItem('rs-timing',JSON.stringify({starts:CUSTOM,wpm:WPM}));else localStorage.removeItem('rs-timing');localStorage.setItem('rs-wpm',String(WPM));}catch(e){}}
+function status(m){$('status').textContent=m;}
+function buildList(){const L=$('list');L.innerHTML='';BEATS.forEach((b,i)=>{const r=document.createElement('button');r.type='button';r.className='row';r.dataset.i=i;r.innerHTML='<span class="ts"></span><span></span>';r.lastChild.textContent=b[1];r.onclick=()=>seek(TIMES[i]+.01);L.appendChild(r);});refreshList();}
+function refreshList(){const rows=$('list').children;for(let i=0;i<rows.length;i++)rows[i].firstChild.textContent=fmt(TIMES[i]);$('meta').textContent='Code-drawn pixel film · 1920×1080 · '+N+' lines · '+fmt(TOTAL);buildMarks();}
+function buildMarks(){const tr=$('track');tr.querySelectorAll('.mk').forEach(e=>e.remove());SEGS.forEach(sg=>{const m=document.createElement('div');m.className='mk';m.style.left=(TIMES[sg.i0]/TOTAL*100)+'%';tr.insertBefore(m,$('head'));});}
+let lastRow=-1;
+function updateUI(){$('time').textContent=fmt(T)+' / '+fmt(TOTAL);const f=T/TOTAL*100;$('fill').style.width=f+'%';$('head').style.left='calc('+f+'% - 2px)';$('play').textContent=playing?'❚❚ Pause':'▶ Play';
+ const bi=beatAt(T);if(bi!==lastRow){const rows=$('list').children;if(rows[lastRow])rows[lastRow].classList.remove('on');if(rows[bi]){rows[bi].classList.add('on');const L=$('list');const top=rows[bi].offsetTop-L.offsetTop;if(top<L.scrollTop||top>L.scrollTop+L.clientHeight-40)L.scrollTop=top-60;}lastRow=bi;}}
+function seek(t){T=Math.max(0,Math.min(TOTAL,t));if(audio){try{audio.currentTime=Math.min(T,audio.duration||T);}catch(e){}}render(T);updateUI();}
+function play(){if(T>=TOTAL-.05)seek(0);playing=true;lastNow=null;if(audio){audio.currentTime=T;audio.play().catch(()=>{});}}
+function pause(){playing=false;if(audio)audio.pause();if(marking)endMark();}
+function tick(now){if(playing){if(audio&&!audio.paused&&!audio.ended&&audio.currentTime<(audio.duration||0)-.05){T=audio.currentTime;}else{if(lastNow!=null)T+=Math.min(.1,(now-lastNow)/1000);}lastNow=now;if(T>=TOTAL){T=TOTAL;pause();if(rec&&rec.state==='recording')rec.stop();if(marking)endMark();}render(T);updateUI();}requestAnimationFrame(tick);}
+$('play').onclick=()=>playing?pause():play();
+$('capt').onclick=()=>{CAPTIONS=!CAPTIONS;$('capt').setAttribute('aria-pressed',String(CAPTIONS));render(T);};
+$('fs').onclick=()=>{const st=$('stage');const p=(document.fullscreenElement?document.exitFullscreen():st.requestFullscreen?.());if(p&&p.catch)p.catch(()=>status('Fullscreen is not available here.'));};
+(function(){const tr=$('track');let drag=false;const at=e=>{const r=tr.getBoundingClientRect();seek(clamp01((e.clientX-r.left)/r.width)*TOTAL);};tr.addEventListener('pointerdown',e=>{drag=true;tr.setPointerCapture(e.pointerId);at(e);});tr.addEventListener('pointermove',e=>{if(drag)at(e);});tr.addEventListener('pointerup',()=>drag=false);tr.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'){seek(T-5);e.preventDefault();}if(e.key==='ArrowRight'){seek(T+5);e.preventDefault();}});})();
+$('wpm').value=WPM;
+$('wpm').addEventListener('change',()=>{const v=+$('wpm').value;if(v>=60&&v<=300){WPM=v;const bi=beatAt(T),off=T-TIMES[bi];computeTimes();saveCustom();refreshList();seek(TIMES[bi]+off);status(CUSTOM?'Pace updated. Tap-synced lines keep their start times.':'Pace set to '+v+' words per minute.');}});
+document.addEventListener('keydown',e=>{if(e.target.tagName==='INPUT')return;if(e.code==='Space'&&e.target.tagName!=='BUTTON'){e.preventDefault();playing?pause():play();}else if(e.key==='ArrowLeft'&&e.target.id!=='track')seek(T-5);else if(e.key==='ArrowRight'&&e.target.id!=='track')seek(T+5);else if(e.key===']'){const b=beatAt(T);seek(TIMES[Math.min(N-1,b+1)]+.01);}else if(e.key==='['){const b=beatAt(T);seek(TIMES[Math.max(0,T-TIMES[b]<.6?b-1:b)]+.01);}else if(e.key==='c'||e.key==='C')$('capt').click();else if((e.key==='n'||e.key==='N')&&marking)markNext();});
+$('vo').addEventListener('change',()=>{const f=$('vo').files[0];if(!f)return;if(audio){audio.pause();URL.revokeObjectURL(audio.src);}audio=new Audio(URL.createObjectURL(f));audio.preload='auto';audio.addEventListener('loadedmetadata',()=>status('Voiceover loaded ('+fmt(audio.duration)+'). It now plays in sync with the film.'));});
+function markNext(){if(markIdx>=N-1){endMark();return;}markIdx++;CUSTOM[markIdx]=T;computeTimes();refreshList();status('Line '+(markIdx+1)+' of '+N+' marked. Press N when the next line starts.');if(markIdx>=N-1){status('All lines marked. Let it finish, or press Tap-sync to stop.');}}
+function endMark(){marking=false;$('mark').setAttribute('aria-pressed','false');$('mark').textContent='Tap-sync';saveCustom();status('Timing saved in this browser.');}
+$('mark').onclick=()=>{if(marking){markNext();return;}CUSTOM=new Array(N).fill(null);CUSTOM[0]=TIMES[0];computeTimes();markIdx=0;marking=true;$('mark').setAttribute('aria-pressed','true');$('mark').textContent='Next line (N)';seek(0);play();status(audio?'Playing your voiceover. Press N as each new line begins. Pause to stop.':'No voiceover loaded: read aloud and press N as you start each new line. Pause to stop.');};
+$('resetT').onclick=()=>{CUSTOM=null;computeTimes();saveCustom();refreshList();seek(Math.min(T,TOTAL));status('Timing reset to '+WPM+' words per minute.');};
+function download(blob,name){const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=name;document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove();},3000);}
+function srtTime(t){const ms=Math.round(t*1000),h=Math.floor(ms/3600000),m=Math.floor(ms/60000)%60,s=Math.floor(ms/1000)%60,r=ms%1000;return String(h).padStart(2,'0')+':'+String(m).padStart(2,'0')+':'+String(s).padStart(2,'0')+','+String(r).padStart(3,'0');}
+$('srt').onclick=()=>{let n=1,outS='';for(let i=0;i<N;i++){const speak=Math.max(.5,DURS[i]-PAUSE*.6);const cs=CHUNKS[i],tot=cs.reduce((m,c)=>m+c.split(' ').length,0);let acc=TIMES[i];for(const c of cs){const d=c.split(' ').length/tot*speak;outS+=(n++)+'\n'+srtTime(acc)+' --> '+srtTime(acc+d)+'\n'+c+'\n\n';acc+=d;}}download(new Blob([outS],{type:'text/plain'}),'reading-stack.srt');status('Subtitles exported.');};
+$('json').onclick=()=>{download(new Blob([JSON.stringify({wpm:WPM,starts:TIMES},null,1)],{type:'application/json'}),'reading-stack-timing.json');status('Timing exported.');};
+$('jsonIn').addEventListener('change',async()=>{const f=$('jsonIn').files[0];if(!f)return;try{const v=JSON.parse(await f.text());if(!Array.isArray(v.starts)||v.starts.length!==N)throw new Error('This file has '+(v.starts?v.starts.length:0)+' lines; the film has '+N+'.');CUSTOM=v.starts;if(v.wpm)WPM=v.wpm;$('wpm').value=WPM;computeTimes();saveCustom();refreshList();seek(0);status('Timing imported.');}catch(e){status('Could not import timing. '+e.message);}});
+let actx=null,asrc=null,adest=null;
+$('rec').onclick=()=>{if(rec&&rec.state==='recording'){rec.stop();pause();return;}if(!out.captureStream||!window.MediaRecorder){status('Recording needs Chrome, Edge or Firefox.');return;}
+ const stream=out.captureStream(30);if(audio){try{actx=actx||new AudioContext();if(!asrc){asrc=actx.createMediaElementSource(audio);adest=actx.createMediaStreamDestination();asrc.connect(adest);asrc.connect(actx.destination);}actx.resume();adest.stream.getAudioTracks().forEach(t=>stream.addTrack(t));}catch(e){}}
+ const types=['video/webm;codecs=vp9,opus','video/webm;codecs=vp9','video/webm;codecs=vp8,opus','video/webm','video/mp4'];const mime=types.find(t=>MediaRecorder.isTypeSupported(t))||'';let chunksR=[];try{rec=new MediaRecorder(stream,mime?{mimeType:mime,videoBitsPerSecond:16e6}:{});}catch(e){status('Recording is not available in this view. Open index.html locally.');return;}
+ rec.ondataavailable=e=>{if(e.data.size)chunksR.push(e.data);};rec.onstop=()=>{$('rec').classList.remove('on');$('rec').textContent='● Record video';const blob=new Blob(chunksR,{type:mime||'video/webm'});download(blob,'reading-stack.'+(mime.includes('mp4')?'mp4':'webm'));status('Recording finished ('+(blob.size/1e6).toFixed(1)+' MB).');};
+ rec.start(1000);$('rec').classList.add('on');$('rec').textContent='■ Stop recording';status('Recording from '+fmt(T)+' to the end. Keep this tab visible.');play();};
+
+/* contact sheet for checking every scene: open with #sheet */
+function sheet(){const cols=8,tw2=192,th=108,rows=Math.ceil(N/cols);out.width=cols*tw2;out.height=rows*th;o.imageSmoothingEnabled=false;out.width=cols*tw2;out.height=rows*th;for(let i=0;i<N;i++){const t=TIMES[i]+DURS[i]*.72;TT=t;SHAKE=0;const bi=beatAt(t);SPEAK=true;g=gLow;drawSeg(SEGS[SEGOF[bi]],t);o.drawImage(low,(i%cols)*tw2,Math.floor(i/cols)*th,tw2,th);o.fillStyle='#fff';o.font='12px monospace';o.fillText(i+' '+BEATS[i][0],(i%cols)*tw2+3,Math.floor(i/cols)*th+12);}$('stage').style.aspectRatio=(cols*tw2)+'/'+(rows*th);}
+
+async function boot(){loadCustom();$('wpm').value=WPM;computeTimes();buildList();
+ try{await Promise.race([Promise.all(['8px "Press Start 2P"','16px "Press Start 2P"','8px Silkscreen','52px VT323'].map(f=>document.fonts.load(f))),new Promise(r=>setTimeout(r,3500))]);}catch(e){}
+ TC=new Map();FM={};$('loading').hidden=true;
+ if(location.hash==='#sheet'){sheet();return;}
+ seek(2.6);updateUI();requestAnimationFrame(tick);}
+boot();
+</script>

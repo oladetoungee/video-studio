@@ -1,0 +1,36 @@
+{
+ "t": {
+  "pops-6/frustrated?": {
+   "hide": true
+  },
+  "pops-6/tired?": {
+   "hide": true
+  },
+  "pops-6/@pop 3": {
+   "pos": {
+    "9x16": {
+     "hide": true
+    }
+   }
+  },
+  "pops-6/@pop 1": {
+   "pos": {
+    "9x16": {
+     "hide": true
+    }
+   }
+  },
+  "pops-6/@pop 2": {
+   "pos": {
+    "9x16": {
+     "hide": true
+    }
+   }
+  }
+ },
+ "mix": {
+  "voice": 6,
+  "music": -6,
+  "sfx": 0
+ }
+}

@@ -1,0 +1,16 @@
+{
+ "label": "Autosave",
+ "auto": true,
+ "savedAt": 1791145051670,
+ "edits": {
+  "t": {
+   "platform/search verify": {
+    "s": "Search and *verify*"
+   }
+  },
+  "captions": {},
+  "modes": {
+   "sources": "dark"
+  }
+ }
+}

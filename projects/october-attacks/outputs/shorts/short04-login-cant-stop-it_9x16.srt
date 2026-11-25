@@ -1,0 +1,71 @@
+1
+00:00:00,077 --> 00:00:02,527
+the thing about PHP2Shell and why it's
+
+2
+00:00:02,527 --> 00:00:05,067
+really so crazy is that it happens before
+
+3
+00:00:05,067 --> 00:00:06,557
+your code even runs
+
+4
+00:00:06,557 --> 00:00:09,917
+so PHP reads the incoming request first and
+
+5
+00:00:09,917 --> 00:00:12,317
+this loophole is in that reading part
+
+6
+00:00:12,317 --> 00:00:14,797
+so your login, your middleware, your
+
+7
+00:00:14,797 --> 00:00:16,907
+authentication, nobody stands a chance
+
+8
+00:00:16,907 --> 00:00:18,047
+against this stuff
+
+9
+00:00:18,047 --> 00:00:20,017
+you can have the best login in the world and
+
+10
+00:00:20,017 --> 00:00:20,967
+it wouldn't matter
+
+11
+00:00:20,967 --> 00:00:22,857
+even Amazon has reported that someone tried
+
+12
+00:00:22,857 --> 00:00:25,137
+to use it on one of their MadPot servers,
+
+13
+00:00:25,137 --> 00:00:27,197
+which is basically a trap server set up to
+
+14
+00:00:27,197 --> 00:00:29,317
+catch attackers just four days before it was
+
+15
+00:00:29,317 --> 00:00:31,277
+even announced and there are government
+
+16
+00:00:31,277 --> 00:00:33,387
+websites in Europe that literally went off
+
+17
+00:00:33,387 --> 00:00:35,477
+while they patched because of all of this
+
+18
+00:00:35,477 --> 00:00:36,033
+drama

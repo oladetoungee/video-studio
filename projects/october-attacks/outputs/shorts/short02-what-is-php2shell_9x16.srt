@@ -1,0 +1,71 @@
+1
+00:00:00,087 --> 00:00:02,337
+PHP runs nearly three quarters of the
+
+2
+00:00:02,337 --> 00:00:03,967
+websites in the world
+
+3
+00:00:03,967 --> 00:00:05,597
+wordPress runs on PHP
+
+4
+00:00:05,597 --> 00:00:07,057
+Laravel runs on PHP
+
+5
+00:00:07,057 --> 00:00:08,657
+I write Laravel at work
+
+6
+00:00:08,657 --> 00:00:11,997
+most of the web runs on PHP
+
+7
+00:00:11,997 --> 00:00:14,017
+and two critical loopholes have been found
+
+8
+00:00:14,017 --> 00:00:15,237
+in PHP this month
+
+9
+00:00:15,237 --> 00:00:16,877
+they're calling it the PHP2Shell
+
+10
+00:00:16,877 --> 00:00:18,817
+and the shell part of the name is actually
+
+11
+00:00:18,817 --> 00:00:21,607
+very important getting a shell means that
+
+12
+00:00:21,607 --> 00:00:24,097
+the attack is so bad that an attacker can
+
+13
+00:00:24,097 --> 00:00:26,917
+type commands on your server as if they were
+
+14
+00:00:26,917 --> 00:00:29,027
+on their own personal computer
+
+15
+00:00:29,027 --> 00:00:32,237
+PHP has rated this 9.2 out of 10
+
+16
+00:00:32,237 --> 00:00:33,777
+so it is really terrible
+
+17
+00:00:33,777 --> 00:00:36,107
+these are huge loopholes that people have
+
+18
+00:00:36,107 --> 00:00:37,800
+already tried to exploit

@@ -1,0 +1,34 @@
+{
+ "title": "Deceptive Patterns — spreading awareness since 2010",
+ "h1": "Deceptive patterns trick people into doing things they didn’t mean to.",
+ "h1y": 136.15625,
+ "found": {
+  "deceptive": [
+   [
+    122,
+    19.765625,
+    108.296875,
+    29
+   ]
+  ]
+ },
+ "H": 2410,
+ "focus": {
+  "deceptive": {
+   "file": "dd-home__deceptive.png",
+   "top": 0,
+   "rects": [
+    [
+     122,
+     19.765625,
+     108.296875,
+     29
+    ]
+   ]
+  }
+ },
+ "clipTop": 16.15625,
+ "scale": 1.5,
+ "url": "https://deceptive.design/",
+ "captured": "2026-11-02T19:27:37.543Z"
+}

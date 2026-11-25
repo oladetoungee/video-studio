@@ -1,0 +1,66 @@
+{
+ "title": "Admissions – Artificial Intelligence For Sustainable Societies",
+ "h1": "Admissions &\nrequirements",
+ "h1y": 115,
+ "found": {
+  "2 December 2026": [
+   [
+    32,
+    5013.59375,
+    147.109375,
+    20
+   ]
+  ],
+  "2 February 2027": [
+   [
+    221.09375,
+    5013.59375,
+    10.03125,
+    20
+   ],
+   [
+    32,
+    5042.75,
+    122.078125,
+    20
+   ]
+  ]
+ },
+ "H": 10955,
+ "focus": {
+  "2 December 2026": {
+   "file": "aiss__2-december-2026.png",
+   "top": 4493.59375,
+   "rects": [
+    [
+     32,
+     520,
+     147.109375,
+     20
+    ]
+   ]
+  },
+  "2 February 2027": {
+   "file": "aiss__2-february-2027.png",
+   "top": 4493.59375,
+   "rects": [
+    [
+     221.09375,
+     520,
+     10.03125,
+     20
+    ],
+    [
+     32,
+     549.15625,
+     122.078125,
+     20
+    ]
+   ]
+  }
+ },
+ "clipTop": 0,
+ "scale": 1.5,
+ "url": "https://aissprogram.eu/how-to-apply/",
+ "captured": "2026-11-02T12:49:40.635Z"
+}

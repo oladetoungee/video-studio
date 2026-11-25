@@ -1,0 +1,106 @@
+{
+ "title": "PHP-ocalypse: How two critical web bugs almost broke the internet | TechCrunch",
+ "h1": "Developer platform Railway urges ‘all users’ to revoke secret keys after cyberattack",
+ "h1y": 658.296875,
+ "found": {
+  "revoke": [
+   [
+    998.921875,
+    702.21875,
+    121.671875,
+    39
+   ]
+  ],
+  "secret keys": [
+   [
+    660.390625,
+    745.140625,
+    206.15625,
+    39
+   ]
+  ],
+  "may have accessed encrypted environment variables": [
+   [
+    227.421875,
+    1290.953125,
+    456.234375,
+    19
+   ]
+  ],
+  "should revoke and rotate all of their keys": [
+   [
+    544,
+    1525.109375,
+    257.703125,
+    19
+   ],
+   [
+    145.5,
+    1551.703125,
+    82.84375,
+    19
+   ]
+  ]
+ },
+ "H": 11773,
+ "focus": {
+  "revoke": {
+   "file": "tc-railway__revoke.png",
+   "top": 182.21875,
+   "rects": [
+    [
+     998.921875,
+     520,
+     121.671875,
+     39
+    ]
+   ]
+  },
+  "secret keys": {
+   "file": "tc-railway__secret-keys.png",
+   "top": 225.140625,
+   "rects": [
+    [
+     660.390625,
+     520,
+     206.15625,
+     39
+    ]
+   ]
+  },
+  "may have accessed encrypted environment variables": {
+   "file": "tc-railway__may-have-accessed-encryp.png",
+   "top": 770.953125,
+   "rects": [
+    [
+     227.421875,
+     520,
+     456.234375,
+     19
+    ]
+   ]
+  },
+  "should revoke and rotate all of their keys": {
+   "file": "tc-railway__should-revoke-and-rotate.png",
+   "top": 1005.109375,
+   "rects": [
+    [
+     544,
+     520,
+     257.703125,
+     19
+    ],
+    [
+     145.5,
+     546.59375,
+     82.84375,
+     19
+    ]
+   ]
+  }
+ },
+ "clipTop": 538.296875,
+ "scale": 1.5,
+ "url": "https://techcrunch.com/2026/10/22/developer-platform-railway-urges-all-users-to-revoke-secret-keys-after-cyberattack/",
+ "captured": "2026-10-25T23:22:39.609Z"
+}

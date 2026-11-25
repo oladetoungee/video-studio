@@ -1,0 +1,29 @@
+{
+  "text": {
+    "w": "Europe",
+    "strip": "can you afford to study here?"
+  },
+  "images": {
+    "me": "../../assets/shoot/cut-1590c.png"
+  },
+  "vars": {},
+  "class": "no-lift",
+  "nudge": {},
+  "board": "yt-66 / yt-05 (huge word behind her head, her centred)",
+  "kind": "flat orange, EUROPE huge behind her head, her cut-out centred (palm out), a black strip over her shirt",
+  "direction": "Copies board yt-66 (\"FINANCIAL LITERACY\" behind the creator) / yt-05 (\"FAVOR\"): one huge word behind her head, her centred and big, one short question on a strip. Words: EUROPE + CAN YOU AFFORD IT? (the video: what a Nigerian really pays in year one, kit 7f).",
+  "thumbnail_text": "EUROPE (behind her) + CAN YOU AFFORD TO STUDY HERE?",
+  "titles": [
+    "What Studying in Europe Really Costs a Nigerian in 2027",
+    "Cheapest Countries to Study in Europe for Nigerians (2027)",
+    "Study in Europe for Free? What Nigerians Really Pay"
+  ],
+  "fonts": [
+    "design-02 Big Shoulders Display (black on orange, as Design 397)"
+  ],
+  "colours": "combo-07 (Design 397: #E99A3F + #000000)",
+  "title": "What Studying in Europe Really Costs a Nigerian in 2027",
+  "recommended": false,
+  "fontboard_note": "NEW 2026-11-12 (font board round 2): replaces a \"words left, her right\" layout",
+  "scores": "font-board round 2 (2026-11-13, fonts with their source colours; fresh cold critic, PNG alone, 4 rounds): 4/10"
+}

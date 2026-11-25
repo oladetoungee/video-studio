@@ -1,0 +1,25 @@
+{
+  "direction": "She peers over a printed marriage-search result she holds up (generic, no names), stamped ALREADY MARRIED, eyes to camera (2:59). Round 2 swapped the concept's certificate for the search result after the cold critic read the certificate as 'wedding paperwork'. Follows viral sample 5 (topic words big + the scene shows it).",
+  "concept": "T2",
+  "thumbnail_text": "Before the wedding",
+  "title": "Check If Someone Is Married: Ghana Now Has an App",
+  "titles": [
+    "Check If Someone Is Married: Ghana Now Has an App",
+    "Is He Already Married? Ghana Built an App to Check",
+    "You Can Now Check If Someone Is Married in Ghana"
+  ],
+  "scores": "a 2/4 · 4/7 · 5/8 | b 7/6 · 9/8 · 9/7 | c 5 · 5 · 5",
+  "recommended": false,
+  "text": {
+    "line1": "Before the",
+    "line2": "wedding",
+    "c_t1": "Marriage record search",
+    "c_k": "Your fiancé: [name]",
+    "c_stamp": "Already married"
+  },
+  "images": {
+    "scene": "../../assets/scene/warm/s_179.00.jpg",
+    "front": "../../assets/scene/warm/mask/s_179.00.png"
+  },
+  "vars": {}
+}

@@ -1,0 +1,80 @@
+URL: https://techcrunch.com/2026/10/22/developer-platform-railway-urges-all-users-to-revoke-secret-keys-after-cyberattack/
+STATUS: loaded (http 200)
+FINAL: https://techcrunch.com/2026/10/24/php-ocalypse-how-two-critical-web-bugs-almost-broke-the-internet/
+TITLE: PHP-ocalypse: How two critical web bugs almost broke the internet | TechCrunch
+H1: Developer platform Railway urges ‘all users’ to revoke secret keys after cyberattack
+OG: Developer platform Railway urges 'all users' to revoke secret keys after cyberattack | TechCrunch | TechCrunch
+PUBLISHED: 2026-10-22T14:03:00+00:00  MODIFIED: 2026-10-22T18:23:53+00:00
+DOC_H: 12733
+
+Development platform Railway has confirmed that a cyberattack allowed hackers to access some customer secrets, prompting the company to urge all users to rotate their API and cloud keys amid fears of a broader breach of customer data.
+
+The company, which allows customers to build apps and services on its cloud development platform, said in a blog post on Wednesday that the unidentified hackers “may have accessed encrypted environment variables and, for some of them, obtained the decrypted contents.”
+
+These environment variables are typically lists of passwords and API keys that are used by the developer’s apps to access other services, such as cloud data storage and databases. With these customer secrets, an attacker could also log in and access data as if they were the rightful owner.
+
+Railway said that while its initial analysis suggests the breach was limited to a “subset of users,” it suggested that “all users” should revoke and rotate all of their keys so that attackers cannot abuse them.
+
+The company also said it briefly paused new builds and deployments while the company investigated, and began restoration soon after.
+
+Railway did not say how many specific users were affected, or what was identified as the root cause. The company did not answer questions about the incident, or whether it has received any correspondence from hackers, such as a ransom demand. Railway founder and chief executive Jake Cooper told TechCrunch that the company plans to publish a post-mortem on the incident.
+
+It’s unclear how the attack went down or which Railway systems were compromised. Railway said that the breach was likely part of a broader attack targeting platforms “with the aim of compromising AI inference providers.” These kinds of attacks involve tricking AI systems into leaking sensitive data through malicious prompts beyond their guardrails.
+
+The latest breach comes soon after U.S. cybersecurity agency CISA warned that China-based AI companies are conducting large-scale attacks on U.S. companies with the aim of improving their own models.
+
+Earlier this week, open source AI coding tool OpenCode said customer secrets had been breached in a similar attack, with hackers taking more than 1% of its customers’ API keys and other secrets. OpenCode attributed the attack to an AI distillation attack, where large numbers of agents seek to extract sensitive information from AI models.
+
+The Railway attack appears to be separate from two critical security vulnerabilities publicly disclosed in the PHP web programming language this week, prompting companies and governments around the world to pull down their sites to fix the vulnerability before attackers could exploit it. (PHP is used in some 70% of websites and public-facing internet systems.)
+
+Patches for the bug, dubbed “PHP2Shell,” were publicly released on Wednesday, following a global coordinated effort to allow big organizations to fix their systems ahead of possible attacks. Security researchers at Amazon said they found evidence of exploitation four days before the patch releases, suggesting that the bugs are now being used in attacks.
+
+Updated with additional information from Railway.
+
+Topics
+
+cybersecurity
+data breach
+hackers
+railway
+Security
+vibe coding
+
+When you purchase through links in our articles, we may earn a small commission. This doesn’t affect our editorial independence.
+
+Zack Whittaker
+
+Security Editor
+
+   
+
+Zack Whittaker is the security editor at TechCrunch. He also authors the weekly cybersecurity newsletter, this week in security.
+
+He can be reached via encrypted message at zackwhittaker.1337 on Signal. You can also contact him by email, or to verify outreach, at zack.whittaker@techcrunch.com.
+
+View Bio 
+November 4
+Boston
+
+Buy One Pass, Get a Second Free
+
+Cover more ground at TechCrunch’s ultimate founder bootcamp of the year by bringing your co-founder or partner for free
+
+Book before the BOGO deal expires
+
+Register Now
+Most Popular
+
+Warhound raises $200M to engineer war dogs and arm them with Anduril gear
+
+Uber puts all 30,000 employees on ChatGPT Work
+
+Airbnb limits chores for guests, sparking backlash from hosts
+
+Year-old AI lab Flapping Airplanes raises $1B at a $6B valuation
+
+Tesla starts Optimus robot production in California as profit falls 43%
+
+The internet is having a very bad cybersecurity day
+
+People are using AI to make their smart TVs dumb again

@@ -1,0 +1,29 @@
+{
+  "text": {
+    "a": "Before",
+    "b": "After"
+  },
+  "images": {
+    "a": "../../assets/set5/scroll-bed.jpg",
+    "b": "../../assets/set5/reading-sofa.jpg"
+  },
+  "vars": {},
+  "class": "",
+  "kind": "split of two real scenes, no face of hers",
+  "board": "Thumbnails 66 (yt-13 Before | After: two photos side by side, a white word on each) · pick1119-06 (BEFORE / AFTER) is the closest pick; built from Thumbnails 66",
+  "fonts": [
+    "thumbs-18 Montserrat ExtraBold, yellow key word (white + #F6C343 on #3A3D3A, Thumbnails 162)"
+  ],
+  "colours": "Font thumbs-18 specimen: #3A3D3A (the divider) / #FFFFFF / #F6C343",
+  "thumbnail_text": "Before (on her phone in bed in the dark) | After (reading on the sofa in daylight)",
+  "titles": [
+    "I'm Replacing Doomscrolling With These 9 Habits",
+    "9 Easy Things I Do Instead of Doomscrolling"
+  ],
+  "direction": "Copies Thumbnails 66: the change is the picture. Left, someone lit by a phone in a dark bedroom; right, the same kind of evening with a book on the sofa.",
+  "nudge": {},
+  "scores": "cold critic 2026-11-19 (YouTube-card feed with 10 of her picks; alone / with title): r1 6/7 · r2 7/7 · r3 6/6 (After panel brightened before r3). Weakest kept.",
+  "recommended": false,
+  "title": "I'm Replacing Doomscrolling With These 9 Habits",
+  "census": "split, no face"
+}

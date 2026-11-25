@@ -1,0 +1,400 @@
+[
+ {
+  "story": "php2shell",
+  "outlet": "Datadog Security Labs",
+  "slug": "datadog",
+  "url": "https://securitylabs.datadoghq.com/articles/php2shell-critical-vulnerabilities-in-php/"
+ },
+ {
+  "story": "php2shell",
+  "outlet": "BleepingComputer",
+  "slug": "bleepingcomputer",
+  "url": "https://www.bleepingcomputer.com/news/security/php-ships-emergency-patches-for-critical-php2shell-flaws/"
+ },
+ {
+  "story": "php2shell",
+  "outlet": "The Hacker News",
+  "slug": "thehackernews",
+  "url": "https://thehackernews.com/2026/10/someone-tried-to-exploit-php2shell-4.html"
+ },
+ {
+  "story": "php2shell",
+  "outlet": "Deseret News (Reuters)",
+  "slug": "deseret-reuters",
+  "url": "https://www.deseret.com/business/2026/10/21/website-computer-server-security-flaw-artificial-intelligence-hackers-cybersecurity-php-programming-language/"
+ },
+ {
+  "story": "php2shell",
+  "outlet": "PHP.net",
+  "slug": "php-net",
+  "url": "https://www.php.net/"
+ },
+ {
+  "story": "php2shell",
+  "outlet": "GitHub (php-src advisory)",
+  "slug": "github-advisory-109618",
+  "url": "https://github.com/php/php-src/security/advisories/GHSA-w8hw-w9fx-j79w"
+ },
+ {
+  "story": "php2shell",
+  "outlet": "GitHub (php-src advisory)",
+  "slug": "github-advisory-109619",
+  "url": "https://github.com/php/php-src/security/advisories/GHSA-6wmf-4rv5-p3rp"
+ },
+ {
+  "story": "php2shell",
+  "outlet": "Vercel",
+  "slug": "vercel",
+  "url": "https://vercel.com/kb/bulletin/php2shell-security-bulletin"
+ },
+ {
+  "story": "php2shell",
+  "outlet": "Help Net Security",
+  "slug": "helpnetsecurity",
+  "url": "https://www.helpnetsecurity.com/2026/10/21/php2shell-php-vulnerabilities-patched-cve-2026-109618-cve-2026-109619/"
+ },
+ {
+  "story": "php2shell",
+  "outlet": "SecurityWeek",
+  "slug": "securityweek",
+  "url": "https://www.securityweek.com/php2shell-patches-land-as-first-exploitation-attempts-hit-sensors/"
+ },
+ {
+  "story": "php2shell",
+  "outlet": "Dark Reading",
+  "slug": "darkreading",
+  "url": "https://www.darkreading.com/application-security/php2shell-bugs-red-alert-security-industry"
+ },
+ {
+  "story": "php2shell",
+  "outlet": "Newsweek",
+  "slug": "newsweek",
+  "url": "https://www.newsweek.com/php-vunerability-php2shell-issue-websites-hack-server-12601225",
+  "fullMax": 8600
+ },
+ {
+  "story": "php2shell",
+  "outlet": "Insurance Business UK",
+  "slug": "insurancebusiness",
+  "url": "https://www.insurancebusinessmag.com/uk/news/cyber/uk-councils-and-met-police-among-sites-pulled-offline-after-ncsc-alert-594424.aspx"
+ },
+ {
+  "story": "php2shell",
+  "outlet": "Paperjam",
+  "slug": "paperjam",
+  "url": "https://en.paperjam.lu/article/php2shell-thousands-of-websites-exposed-in-luxembourg"
+ },
+ {
+  "story": "php2shell",
+  "outlet": "Wiz",
+  "slug": "wiz",
+  "url": "https://www.wiz.io/vulnerability-database/cve/cve-2026-109618"
+ },
+ {
+  "story": "railway",
+  "outlet": "Railway (official blog)",
+  "slug": "railway-blog",
+  "url": "https://blog.railway.com/p/security-disclosure-wednesday-october-21st"
+ },
+ {
+  "story": "railway",
+  "outlet": "TechCrunch",
+  "slug": "techcrunch",
+  "url": "https://techcrunch.com/2026/10/22/developer-platform-railway-urges-all-users-to-revoke-secret-keys-after-cyberattack/"
+ },
+ {
+  "story": "railway",
+  "outlet": "GitGuardian",
+  "slug": "gitguardian",
+  "url": "https://blog.gitguardian.com/railway-october-2026-incident-environment-variables/"
+ },
+ {
+  "story": "railway",
+  "outlet": "Railway Station (community)",
+  "slug": "railway-station",
+  "url": "https://station.railway.com/community/security-practices-after-a-recent-cloud-0bf3bdea",
+  "skip": "off-topic (2-month-old community thread about Zeabur, not this incident)"
+ },
+ {
+  "story": "railway",
+  "outlet": "Railway Status",
+  "slug": "railway-status",
+  "url": "https://status.railway.com/"
+ },
+ {
+  "story": "zeabur",
+  "outlet": "Zeabur (official blog)",
+  "slug": "zeabur-blog",
+  "url": "https://zeabur.com/blogs/zeabur-is-shutting-down"
+ },
+ {
+  "story": "zeabur",
+  "outlet": "BleepingComputer",
+  "slug": "bleepingcomputer",
+  "url": "https://www.bleepingcomputer.com/news/security/zeabur-shutting-down-after-second-security-breach-in-two-months/"
+ },
+ {
+  "story": "zeabur",
+  "outlet": "SC Media",
+  "slug": "scworld",
+  "url": "https://www.scworld.com/brief/zeabur-to-shut-down-following-major-security-breach"
+ },
+ {
+  "story": "zeabur",
+  "outlet": "Start With Identity",
+  "slug": "startwithidentity",
+  "url": "https://startwithidentity.com/blog/2026-10-19-zeabur-to-shut-down-after-a-non-expiring-admin-token-opened-its-shared-cluster/"
+ },
+ {
+  "story": "zeabur",
+  "outlet": "Ray's blog",
+  "slug": "israynotarray",
+  "url": "https://israynotarray.com/en/misc/2026/10/18/zeabur-shutting-down-taiwanese-startup-growing-pains/"
+ },
+ {
+  "story": "opencode",
+  "outlet": "TechCrunch",
+  "slug": "techcrunch",
+  "url": "https://techcrunch.com/2026/10/19/hackers-hit-ai-coding-tool-opencode-running-up-charges-on-users-ai-accounts/"
+ },
+ {
+  "story": "opencode",
+  "outlet": "BleepingComputer",
+  "slug": "bleepingcomputer",
+  "url": "https://www.bleepingcomputer.com/news/security/opencode-hack-exposes-api-keys-amid-ai-distillation-attacks/"
+ },
+ {
+  "story": "opencode",
+  "outlet": "Infosecurity Magazine",
+  "slug": "infosecurity",
+  "url": "https://www.infosecurity-magazine.com/news/opencode-breach-openai-anthropic/"
+ },
+ {
+  "story": "opencode",
+  "outlet": "DevOps.com",
+  "slug": "devops",
+  "url": "https://devops.com/opencode-breach-puts-spotlight-on-ai-distillation-threats/"
+ },
+ {
+  "story": "opencode",
+  "outlet": "OfficeChai",
+  "slug": "officechai",
+  "url": "https://officechai.com/ai/opencode-discloses-security-breach-says-attackers-may-have-accessed-users-openai-anthropic-and-google-api-keys/"
+ },
+ {
+  "story": "emudhra",
+  "outlet": "BleepingComputer",
+  "slug": "bleepingcomputer",
+  "url": "https://www.bleepingcomputer.com/news/security/mozilla-google-apple-block-compromised-emudhra-ca-certificates/"
+ },
+ {
+  "story": "emudhra",
+  "outlet": "The Hacker News",
+  "slug": "thehackernews",
+  "url": "https://thehackernews.com/2026/10/eight-emudhra-ca-keys-compromised.html"
+ },
+ {
+  "story": "emudhra",
+  "outlet": "The Next Web",
+  "slug": "thenextweb",
+  "url": "https://thenextweb.com/news/emudhra-certificates-weak-keys-browsers-block"
+ },
+ {
+  "story": "emudhra",
+  "outlet": "Help Net Security",
+  "slug": "helpnetsecurity",
+  "url": "https://www.helpnetsecurity.com/?p=388647"
+ },
+ {
+  "story": "emudhra",
+  "outlet": "Cybersecurity Dive",
+  "slug": "cybersecuritydive",
+  "url": "https://www.cybersecuritydive.com/news/website-encryption-security-certificates-emudhra-incident/833622/"
+ },
+ {
+  "story": "emudhra",
+  "outlet": "oss-security (Openwall)",
+  "slug": "openwall",
+  "url": "https://www.openwall.com/lists/oss-security/2026/10/20/30",
+  "zoom": 1.5
+ },
+ {
+  "story": "emudhra",
+  "outlet": "Inc42",
+  "slug": "inc42",
+  "url": "https://inc42.com/buzz/emudhras-security-key-flaw-what-went-wrong-and-why-google-mozilla-stepped-in/"
+ },
+ {
+  "story": "nodejs",
+  "outlet": "SecurityOnline",
+  "slug": "securityonline",
+  "url": "https://securityonline.info/nodejs-security-release-october-2026/"
+ },
+ {
+  "story": "nodejs",
+  "outlet": "Node.js (official blog)",
+  "slug": "nodejs-blog",
+  "url": "https://nodejs.org/en/blog/vulnerability/october-2026-security-releases"
+ },
+ {
+  "story": "nodejs",
+  "outlet": "Konfirmity",
+  "slug": "konfirmity",
+  "url": "https://www.konfirmity.com/advisories/nodejs-october-2026-security-releases"
+ },
+ {
+  "story": "nodejs",
+  "outlet": "FourWeekMBA",
+  "slug": "fourweekmba",
+  "url": "https://fourweekmba.com/ai-node-js-fixes-10-flaws-4-high-on-the-same-day-as-php/",
+  "skip": "blocked (HTTP 403)"
+ },
+ {
+  "story": "ai-agents",
+  "outlet": "Honolulu Star-Advertiser (Reuters)",
+  "slug": "staradvertiser-reuters",
+  "url": "https://www.staradvertiser.com/2026/10/19/breaking-news/how-one-hacker-used-ai-agents-to-break-into-over-100-company-websites/"
+ },
+ {
+  "story": "ai-agents",
+  "outlet": "The Next Web",
+  "slug": "thenextweb",
+  "url": "https://thenextweb.com/news/ai-agents-hacker-cairn-100-sites-deere-norforge"
+ },
+ {
+  "story": "ai-agents",
+  "outlet": "SBS News (Reuters)",
+  "slug": "sbs-reuters",
+  "url": "https://news.sbs.co.kr/english/article.do?news_id=N1008805974"
+ },
+ {
+  "story": "ai-agents",
+  "outlet": "OECD.AI incident monitor",
+  "slug": "oecd",
+  "url": "https://oecd.ai/en/incidents/2026-10-19-4666",
+  "skip": "AI-generated summary that claims data theft Reuters could not confirm"
+ },
+ {
+  "story": "ai-agents",
+  "outlet": "Let's Data Science",
+  "slug": "letsdatascience",
+  "url": "https://letsdatascience.com/news/hacker-uses-autonomous-ai-agents-to-breach-100-company-websi-6f2900ba",
+  "skip": "AI-written news aggregator, adds nothing over Reuters/TNW"
+ },
+ {
+  "story": "zeabur",
+  "outlet": "Zeabur (incident report)",
+  "slug": "zeabur-incident-report",
+  "url": "https://zeabur.com/blogs/october-2026-security-incident"
+ },
+ {
+  "story": "php2shell",
+  "outlet": "TechCrunch",
+  "slug": "techcrunch-phpocalypse",
+  "url": "https://techcrunch.com/2026/10/24/php-ocalypse-how-two-critical-web-bugs-almost-broke-the-internet/"
+ },
+ {
+  "story": "php2shell",
+  "outlet": "Wiz",
+  "slug": "wiz-blog",
+  "url": "https://www.wiz.io/blog/php2shell-php-rce"
+ },
+ {
+  "story": "php2shell",
+  "outlet": "AWS Security Blog",
+  "slug": "aws-blog",
+  "url": "https://aws.amazon.com/blogs/security/amazon-threat-intelligence-identifies-php2shell-exploitation-prior-to-public-disclosure-in-madpot/"
+ },
+ {
+  "story": "php2shell",
+  "outlet": "Hacker News (thread)",
+  "slug": "hn-thread",
+  "url": "https://news.ycombinator.com/item?id=50180836",
+  "zoom": 1.75
+ },
+ {
+  "story": "railway",
+  "outlet": "Railway (preliminary report)",
+  "slug": "railway-prelim-report",
+  "url": "https://blog.railway.com/p/preliminary-report-october-security-incident"
+ },
+ {
+  "story": "railway",
+  "outlet": "Hacker News (thread)",
+  "slug": "hn-thread",
+  "url": "https://news.ycombinator.com/item?id=50188228",
+  "zoom": 1.75
+ },
+ {
+  "story": "opencode",
+  "outlet": "OpenCode on X",
+  "slug": "x-opencode",
+  "url": "https://x.com/opencode/status/2111519637049319818",
+  "zoom": 1.5,
+  "reload": true
+ },
+ {
+  "story": "opencode",
+  "outlet": "Hacker News (thread)",
+  "slug": "hn-thread",
+  "url": "https://news.ycombinator.com/item?id=50139083",
+  "zoom": 1.75
+ },
+ {
+  "story": "emudhra",
+  "outlet": "Incident site (Dennis Jackson, Mozilla)",
+  "slug": "we-have-a-problem",
+  "url": "https://emudhra.we-have-a-problem.com/"
+ },
+ {
+  "story": "emudhra",
+  "outlet": "eMudhra (press release)",
+  "slug": "emudhra-press",
+  "url": "https://emudhra.com/en/press-release/emudhra-to-exit-global-ssl-tls-certificate-business"
+ },
+ {
+  "story": "emudhra",
+  "outlet": "Scott Helme",
+  "slug": "scotthelme",
+  "url": "https://scotthelme.co.uk/eight-bits-of-trust-emudhras-ca-keys-cracked-in-milliseconds/"
+ },
+ {
+  "story": "emudhra",
+  "outlet": "Google (Chrome Security)",
+  "slug": "google-blog",
+  "url": "https://blog.google/security/protecting-chrome-and-android-users-from-compromised-emudhra-intermediate-ca-certificates/"
+ },
+ {
+  "story": "emudhra",
+  "outlet": "Hacker News (thread)",
+  "slug": "hn-thread",
+  "url": "https://news.ycombinator.com/item?id=50166579",
+  "zoom": 1.75
+ },
+ {
+  "story": "ai-agents",
+  "outlet": "Reuters",
+  "slug": "reuters",
+  "url": "https://www.reuters.com/legal/government/how-one-hacker-used-ai-agents-few-thousand-dollars-break-into-scores-sites-2026-10-19/",
+  "skip": "blocked (HTTP 401, Reuters bot wall); use the Star-Advertiser / SBS syndicated copies of the same Reuters story"
+ },
+ {
+  "story": "php2shell",
+  "outlet": "php2shell.com (discoverers' site)",
+  "slug": "php2shell-site",
+  "url": "https://www.php2shell.com/"
+ },
+ {
+  "story": "php2shell",
+  "outlet": "Wikipedia",
+  "slug": "wikipedia",
+  "url": "https://en.wikipedia.org/wiki/PHP2Shell"
+ },
+ {
+  "story": "railway",
+  "outlet": "RuntimeWire",
+  "slug": "runtimewire",
+  "url": "https://runtimewire.com/article/railway-security-disclosure-environment-variables-october-2026",
+  "skip": "browser-verification wall + AI-assisted news site; Railway's own posts and TechCrunch cover the same facts"
+ }
+]

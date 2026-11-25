@@ -1,0 +1,33 @@
+{
+  "direction": "Photo background (kit T14): her room washed dark plum, she in colour with both palms up, and one big card sits by each hand: the elephant card 'your PHP' and the key card 'your API keys'. Two concrete checks, a small clickable promise. References: viral 5 (topic named, the scene shows it), her ux-research thumbnail (she presents the objects).",
+  "thumbnail_text": "CHECK THESE 2 THINGS",
+  "titles": [
+    "What October's Hacks Mean for Your PHP and API Keys",
+    "PHP2Shell, Railway and OpenCode: What Developers Should Do"
+  ],
+  "title": "What October's Hacks Mean for Your PHP and API Keys",
+  "kind": "photo",
+  "text": {
+    "hd": "Check these <span class=\"acc\">2</span> things",
+    "c1": "Your PHP",
+    "c2": "Your API keys"
+  },
+  "images": {
+    "bg": "../../assets/scene/gbemi-176.6.jpg",
+    "me": "../../assets/scene/gbemi-176.6-person.png",
+    "elephant": "../../assets/draw/elephant.svg",
+    "key": "../../assets/draw/key.svg"
+  },
+  "vars": {
+    "--ground": "#16110D",
+    "--fg": "#EFE7D8",
+    "--accent": "#F2541B",
+    "--wash": "#6B4A5E",
+    "--dim": "rgba(22,12,18,.42)",
+    "--sc": "1.05",
+    "--sc-x": "0px",
+    "--sc-y": "0px"
+  },
+  "scores": "cold critic R1 7 · R2 7.5",
+  "recommended": false
+}

@@ -1,0 +1,19 @@
+{
+  "direction": "Faceless, paper: the inventor of pull-to-refresh in his own words (Loren Brichter to the Guardian, 2017) on a clipping with the key word highlighted, beside a generic phone mid-refresh with the spinner circled.",
+  "concept": "new (TH04 as a quote)",
+  "follows": "her edit of ghana-marrify 10b (clipping + phone on plain ground)",
+  "thumbnail_text": "ITS INVENTOR SAID THIS",
+  "title": "Pull-to-Refresh Explained: Why You Keep Pulling Down",
+  "titles": [
+    "Pull-to-Refresh Explained: Why You Keep Pulling Down",
+    "How Apps Are Designed to Be Addictive, a Researcher Explains"
+  ],
+  "scores": "A topic (image only) 8/8 · B with best title 7.5 · C taste 7 (round 2; fixes from round 2 applied after)",
+  "text": {
+    "words": "Its inventor <span class=\"acc\">said this</span>",
+    "quote": "“Pull-to-refresh is <mark>addictive.</mark>”",
+    "credit": "Loren Brichter · The Guardian, 2017"
+  },
+  "images": {},
+  "vars": {}
+}

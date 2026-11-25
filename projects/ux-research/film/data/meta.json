@@ -1,0 +1,1266 @@
+{
+ "TOTAL": 724.616,
+ "INTRO": 0.6,
+ "OUTRO": 4.5,
+ "FPS": 30,
+ "CUES": [
+  {
+   "name": "pen",
+   "t": 0.68,
+   "db": -2
+  },
+  {
+   "name": "typeHit",
+   "t": 5.54,
+   "db": -4
+  },
+  {
+   "name": "pen",
+   "t": 10.58,
+   "db": -4
+  },
+  {
+   "name": "shutter",
+   "t": 13.64,
+   "db": 0
+  },
+  {
+   "name": "pop",
+   "t": 19.76,
+   "db": -3
+  },
+  {
+   "name": "pop",
+   "t": 22.48,
+   "db": -3
+  },
+  {
+   "name": "whoosh",
+   "t": 24.22,
+   "db": -4
+  },
+  {
+   "name": "riser",
+   "t": 26.48,
+   "db": -2
+  },
+  {
+   "name": "card",
+   "t": 30.62,
+   "db": 0
+  },
+  {
+   "name": "pen",
+   "t": 34.02,
+   "db": -3
+  },
+  {
+   "name": "swipe",
+   "t": 35.37,
+   "db": 0
+  },
+  {
+   "name": "pop",
+   "t": 39.38,
+   "db": -3
+  },
+  {
+   "name": "card",
+   "t": 42.78,
+   "db": -1
+  },
+  {
+   "name": "pop",
+   "t": 48.12,
+   "db": -3
+  },
+  {
+   "name": "pop",
+   "t": 51.78,
+   "db": -3
+  },
+  {
+   "name": "pen",
+   "t": 54.86,
+   "db": -3
+  },
+  {
+   "name": "pen",
+   "t": 60.74,
+   "db": -2
+  },
+  {
+   "name": "error",
+   "t": 64.49,
+   "db": -4
+  },
+  {
+   "name": "pen",
+   "t": 68.98,
+   "db": -3
+  },
+  {
+   "name": "pen",
+   "t": 72.3,
+   "db": -3
+  },
+  {
+   "name": "pen",
+   "t": 75.69,
+   "db": -6
+  },
+  {
+   "name": "shutter",
+   "t": 79.992,
+   "db": 0
+  },
+  {
+   "name": "swipe",
+   "t": 82.67,
+   "db": -6
+  },
+  {
+   "name": "shutter",
+   "t": 83.42,
+   "db": -2
+  },
+  {
+   "name": "pop",
+   "t": 91,
+   "db": -4
+  },
+  {
+   "name": "card",
+   "t": 95.66,
+   "db": 0
+  },
+  {
+   "name": "pen",
+   "t": 99.91,
+   "db": -2
+  },
+  {
+   "name": "card",
+   "t": 102.62,
+   "db": -2
+  },
+  {
+   "name": "pen",
+   "t": 105.58,
+   "db": -3
+  },
+  {
+   "name": "pop",
+   "t": 109.4,
+   "db": -3
+  },
+  {
+   "name": "pop",
+   "t": 112.06,
+   "db": -2
+  },
+  {
+   "name": "card",
+   "t": 119.92,
+   "db": 0
+  },
+  {
+   "name": "pop",
+   "t": 124.78,
+   "db": -3
+  },
+  {
+   "name": "pen",
+   "t": 128.24,
+   "db": -5
+  },
+  {
+   "name": "pen",
+   "t": 132.56,
+   "db": -3
+  },
+  {
+   "name": "hit",
+   "t": 136.76,
+   "db": -4
+  },
+  {
+   "name": "pop",
+   "t": 139.46,
+   "db": -4
+  },
+  {
+   "name": "error",
+   "t": 140.34,
+   "db": -6
+  },
+  {
+   "name": "swipe",
+   "t": 142.21,
+   "db": -6
+  },
+  {
+   "name": "cash",
+   "t": 143.14,
+   "db": -4
+  },
+  {
+   "name": "pop",
+   "t": 147.602,
+   "db": -3
+  },
+  {
+   "name": "card",
+   "t": 153.46,
+   "db": -2
+  },
+  {
+   "name": "pen",
+   "t": 160.24,
+   "db": -4
+  },
+  {
+   "name": "swipe",
+   "t": 164.43,
+   "db": -6
+  },
+  {
+   "name": "hit",
+   "t": 169.413,
+   "db": -6
+  },
+  {
+   "name": "pop",
+   "t": 175.6,
+   "db": -4
+  },
+  {
+   "name": "pop",
+   "t": 178.32,
+   "db": -3
+  },
+  {
+   "name": "error",
+   "t": 179.09,
+   "db": -6
+  },
+  {
+   "name": "card",
+   "t": 186.28,
+   "db": -2
+  },
+  {
+   "name": "pop",
+   "t": 191.72,
+   "db": 0
+  },
+  {
+   "name": "card",
+   "t": 196.44,
+   "db": 0
+  },
+  {
+   "name": "card",
+   "t": 199.2,
+   "db": -2
+  },
+  {
+   "name": "swipe",
+   "t": 202.65,
+   "db": -6
+  },
+  {
+   "name": "card",
+   "t": 206.22,
+   "db": 0
+  },
+  {
+   "name": "pop",
+   "t": 211.7,
+   "db": -3
+  },
+  {
+   "name": "card",
+   "t": 215,
+   "db": 0
+  },
+  {
+   "name": "pen",
+   "t": 224.02,
+   "db": -4
+  },
+  {
+   "name": "pop",
+   "t": 229.32,
+   "db": 0
+  },
+  {
+   "name": "pop",
+   "t": 232.6,
+   "db": -3
+  },
+  {
+   "name": "card",
+   "t": 238.68,
+   "db": 0
+  },
+  {
+   "name": "pop",
+   "t": 243.48,
+   "db": -4
+  },
+  {
+   "name": "pop",
+   "t": 246.18,
+   "db": -4
+  },
+  {
+   "name": "pen",
+   "t": 251.78,
+   "db": -5
+  },
+  {
+   "name": "pop",
+   "t": 260.54,
+   "db": -6
+  },
+  {
+   "name": "pop",
+   "t": 264.06,
+   "db": -6
+  },
+  {
+   "name": "pop",
+   "t": 266.96,
+   "db": -6
+  },
+  {
+   "name": "pen",
+   "t": 275.14,
+   "db": -5
+  },
+  {
+   "name": "pen",
+   "t": 279.84,
+   "db": -5
+  },
+  {
+   "name": "crumple",
+   "t": 283.84,
+   "db": -6
+  },
+  {
+   "name": "card",
+   "t": 292.04,
+   "db": 0
+  },
+  {
+   "name": "pop",
+   "t": 299.56,
+   "db": -4
+  },
+  {
+   "name": "pen",
+   "t": 305.84,
+   "db": -5
+  },
+  {
+   "name": "shutter",
+   "t": 308.64,
+   "db": 0
+  },
+  {
+   "name": "swipe",
+   "t": 310.74,
+   "db": -6
+  },
+  {
+   "name": "pop",
+   "t": 316.8,
+   "db": -4
+  },
+  {
+   "name": "pop",
+   "t": 319.83,
+   "db": -4
+  },
+  {
+   "name": "pen",
+   "t": 323.52,
+   "db": -5
+  },
+  {
+   "name": "whoosh",
+   "t": 325.14,
+   "db": -8
+  },
+  {
+   "name": "pop",
+   "t": 331.18,
+   "db": -2
+  },
+  {
+   "name": "card",
+   "t": 338.14,
+   "db": 0
+  },
+  {
+   "name": "pop",
+   "t": 340.91,
+   "db": -4
+  },
+  {
+   "name": "clock",
+   "t": 344.647,
+   "db": -4
+  },
+  {
+   "name": "pen",
+   "t": 347.6,
+   "db": -6
+  },
+  {
+   "name": "swipe",
+   "t": 348.94,
+   "db": -6
+  },
+  {
+   "name": "pop",
+   "t": 351.92,
+   "db": -4
+  },
+  {
+   "name": "pop",
+   "t": 354.64,
+   "db": -4
+  },
+  {
+   "name": "pen",
+   "t": 358.44,
+   "db": -3
+  },
+  {
+   "name": "pop",
+   "t": 361.44,
+   "db": -2
+  },
+  {
+   "name": "pop",
+   "t": 364.58,
+   "db": -2
+  },
+  {
+   "name": "card",
+   "t": 371.86,
+   "db": 0
+  },
+  {
+   "name": "pop",
+   "t": 379,
+   "db": -4
+  },
+  {
+   "name": "card",
+   "t": 382.12,
+   "db": -2
+  },
+  {
+   "name": "pop",
+   "t": 386.4,
+   "db": -4
+  },
+  {
+   "name": "tick",
+   "t": 389.3,
+   "db": -2
+  },
+  {
+   "name": "shutter",
+   "t": 395.62,
+   "db": 0
+  },
+  {
+   "name": "pen",
+   "t": 399.18,
+   "db": -3
+  },
+  {
+   "name": "pop",
+   "t": 402.24,
+   "db": -5
+  },
+  {
+   "name": "swipe",
+   "t": 406.45,
+   "db": -6
+  },
+  {
+   "name": "pen",
+   "t": 409.18,
+   "db": -6
+  },
+  {
+   "name": "pen",
+   "t": 412.2,
+   "db": -4
+  },
+  {
+   "name": "card",
+   "t": 415.54,
+   "db": -4
+  },
+  {
+   "name": "swipe",
+   "t": 420.59,
+   "db": -7
+  },
+  {
+   "name": "pop",
+   "t": 425.1,
+   "db": -5
+  },
+  {
+   "name": "ding",
+   "t": 434,
+   "db": -4
+  },
+  {
+   "name": "card",
+   "t": 439.34,
+   "db": 0
+  },
+  {
+   "name": "card",
+   "t": 443.56,
+   "db": -3
+  },
+  {
+   "name": "card",
+   "t": 448.7,
+   "db": -2
+  },
+  {
+   "name": "card",
+   "t": 452.32,
+   "db": -3
+  },
+  {
+   "name": "card",
+   "t": 457.44,
+   "db": -2
+  },
+  {
+   "name": "card",
+   "t": 463.26,
+   "db": -3
+  },
+  {
+   "name": "pen",
+   "t": 469.16,
+   "db": -5
+  },
+  {
+   "name": "card",
+   "t": 474.34,
+   "db": 0
+  },
+  {
+   "name": "card",
+   "t": 480.36,
+   "db": -2
+  },
+  {
+   "name": "card",
+   "t": 488.36,
+   "db": -2
+  },
+  {
+   "name": "card",
+   "t": 493.72,
+   "db": -3
+  },
+  {
+   "name": "swipe",
+   "t": 498.08,
+   "db": -6
+  },
+  {
+   "name": "clock",
+   "t": 502.64,
+   "db": -4
+  },
+  {
+   "name": "pop",
+   "t": 507.84,
+   "db": -2
+  },
+  {
+   "name": "pop",
+   "t": 511.08,
+   "db": -5
+  },
+  {
+   "name": "pop",
+   "t": 516.98,
+   "db": -4
+  },
+  {
+   "name": "error",
+   "t": 518.91,
+   "db": -6
+  },
+  {
+   "name": "pop",
+   "t": 523.57,
+   "db": -3
+  },
+  {
+   "name": "swipe",
+   "t": 524.68,
+   "db": -6
+  },
+  {
+   "name": "notify",
+   "t": 532.947,
+   "db": -3
+  },
+  {
+   "name": "tick",
+   "t": 536.12,
+   "db": -3
+  },
+  {
+   "name": "pop",
+   "t": 541.42,
+   "db": -3
+  },
+  {
+   "name": "pop",
+   "t": 546.8,
+   "db": -3
+  },
+  {
+   "name": "pen",
+   "t": 556.22,
+   "db": -3
+  },
+  {
+   "name": "pop",
+   "t": 562.213,
+   "db": -5
+  },
+  {
+   "name": "pen",
+   "t": 565.92,
+   "db": -5
+  },
+  {
+   "name": "pop",
+   "t": 570.28,
+   "db": -4
+  },
+  {
+   "name": "pen",
+   "t": 581.9,
+   "db": -5
+  },
+  {
+   "name": "swipe",
+   "t": 585.95,
+   "db": -6
+  },
+  {
+   "name": "cash",
+   "t": 590.58,
+   "db": -5
+  },
+  {
+   "name": "pen",
+   "t": 597.07,
+   "db": -6
+  },
+  {
+   "name": "card",
+   "t": 602.44,
+   "db": 0
+  },
+  {
+   "name": "swipe",
+   "t": 605.18,
+   "db": -8
+  },
+  {
+   "name": "shutter",
+   "t": 610.42,
+   "db": -3
+  },
+  {
+   "name": "pen",
+   "t": 613.86,
+   "db": -5
+  },
+  {
+   "name": "pop",
+   "t": 618.56,
+   "db": -3
+  },
+  {
+   "name": "shutter",
+   "t": 622.83,
+   "db": 0
+  },
+  {
+   "name": "card",
+   "t": 629.3,
+   "db": -4
+  },
+  {
+   "name": "card",
+   "t": 632.26,
+   "db": -3
+  },
+  {
+   "name": "swipe",
+   "t": 633.75,
+   "db": -6
+  },
+  {
+   "name": "pop",
+   "t": 640.18,
+   "db": -5
+  },
+  {
+   "name": "tick",
+   "t": 643.44,
+   "db": -3
+  },
+  {
+   "name": "shutter",
+   "t": 649.08,
+   "db": -3
+  },
+  {
+   "name": "shutter",
+   "t": 656.82,
+   "db": 0
+  },
+  {
+   "name": "pen",
+   "t": 660.4,
+   "db": -5
+  },
+  {
+   "name": "shutter",
+   "t": 666.86,
+   "db": -3
+  },
+  {
+   "name": "shutter",
+   "t": 667.62,
+   "db": -4
+  },
+  {
+   "name": "shutter",
+   "t": 669.64,
+   "db": -3
+  },
+  {
+   "name": "pop",
+   "t": 672.46,
+   "db": -4
+  },
+  {
+   "name": "swipe",
+   "t": 674.05,
+   "db": -6
+  },
+  {
+   "name": "tick",
+   "t": 677.37,
+   "db": -3
+  },
+  {
+   "name": "tick",
+   "t": 681.45,
+   "db": -3
+  },
+  {
+   "name": "swipe",
+   "t": 688.98,
+   "db": -7
+  },
+  {
+   "name": "pop",
+   "t": 691.6,
+   "db": -5
+  },
+  {
+   "name": "card",
+   "t": 694.42,
+   "db": -3
+  },
+  {
+   "name": "pop",
+   "t": 704.1,
+   "db": -2
+  },
+  {
+   "name": "whoosh",
+   "t": 706.88,
+   "db": -6
+  },
+  {
+   "name": "riser",
+   "t": 713.85,
+   "db": -4
+  },
+  {
+   "name": "hit",
+   "t": 717.32,
+   "db": -5
+  }
+ ],
+ "SCENES": [
+  {
+   "n": 1,
+   "id": "question",
+   "start": 0,
+   "end": 26.53,
+   "ground": "surf",
+   "label": "the question",
+   "trans": "cut"
+  },
+  {
+   "n": 2,
+   "id": "ui-ux-word",
+   "start": 26.53,
+   "end": 34.97,
+   "ground": "wallA",
+   "label": "UI/UX",
+   "trans": "cut"
+  },
+  {
+   "n": 3,
+   "id": "ui-vs-ux",
+   "start": 34.97,
+   "end": 55.33,
+   "ground": "wallB",
+   "label": "UI vs UX",
+   "trans": "cut"
+  },
+  {
+   "n": 4,
+   "id": "nightmare",
+   "start": 55.33,
+   "end": 64.65,
+   "ground": "wallA",
+   "label": "great UI, terrible UX",
+   "trans": "cut"
+  },
+  {
+   "n": 5,
+   "id": "bigger",
+   "start": 64.65,
+   "end": 70.56,
+   "ground": "wallB",
+   "label": "the experience is bigger",
+   "trans": "cut"
+  },
+  {
+   "n": 6,
+   "id": "what-is-ux",
+   "start": 70.56,
+   "end": 78.44,
+   "ground": "wallA",
+   "label": "what is UX?",
+   "trans": "cut"
+  },
+  {
+   "n": 7,
+   "id": "norman",
+   "start": 78.44,
+   "end": 82.42,
+   "ground": "wallB",
+   "label": "Don Norman",
+   "trans": "cut"
+  },
+  {
+   "n": 8,
+   "id": "definition",
+   "start": 82.42,
+   "end": 93.91,
+   "ground": "wallA",
+   "label": "the definition",
+   "trans": "cut"
+  },
+  {
+   "n": 9,
+   "id": "quote",
+   "start": 93.91,
+   "end": 105.88,
+   "ground": "wallB",
+   "label": "human-centred design",
+   "trans": "cut"
+  },
+  {
+   "n": 10,
+   "id": "around-people",
+   "start": 105.88,
+   "end": 113.92,
+   "ground": "wallA",
+   "label": "start from the people",
+   "trans": "cut"
+  },
+  {
+   "n": 11,
+   "id": "what-is-ux-research",
+   "start": 113.92,
+   "end": 131.86,
+   "ground": "wallB",
+   "label": "what is UX research?",
+   "trans": "cut"
+  },
+  {
+   "n": 12,
+   "id": "why",
+   "start": 131.86,
+   "end": 141.91,
+   "ground": "wallA",
+   "label": "why do research?",
+   "trans": "cut"
+  },
+  {
+   "n": 13,
+   "id": "expensive",
+   "start": 141.91,
+   "end": 148.07,
+   "ground": "wallB",
+   "label": "building is expensive",
+   "trans": "cut"
+  },
+  {
+   "n": 14,
+   "id": "fail",
+   "start": 148.07,
+   "end": 164.18,
+   "ground": "wallA",
+   "label": "why products fail",
+   "trans": "cut"
+  },
+  {
+   "n": 15,
+   "id": "cheaper",
+   "start": 164.18,
+   "end": 169.3,
+   "ground": "wallB",
+   "label": "cheaper to change a sketch",
+   "trans": "cut"
+  },
+  {
+   "n": 16,
+   "id": "real-people",
+   "start": 169.3,
+   "end": 179.27,
+   "ground": "wallA",
+   "label": "real people decide",
+   "trans": "cut"
+  },
+  {
+   "n": 17,
+   "id": "researcher",
+   "start": 179.27,
+   "end": 193.62,
+   "ground": "wallB",
+   "label": "who is a UX researcher?",
+   "trans": "cut"
+  },
+  {
+   "n": 18,
+   "id": "week",
+   "start": 193.62,
+   "end": 202.3,
+   "ground": "wallA",
+   "label": "a typical week",
+   "trans": "cut"
+  },
+  {
+   "n": 19,
+   "id": "patterns",
+   "start": 202.3,
+   "end": 205.59,
+   "ground": "wallB",
+   "label": "find patterns",
+   "trans": "cut"
+  },
+  {
+   "n": 20,
+   "id": "share",
+   "start": 205.59,
+   "end": 213.2,
+   "ground": "wallA",
+   "label": "share what they found",
+   "trans": "cut"
+  },
+  {
+   "n": 21,
+   "id": "researcher-vs-designer",
+   "start": 213.2,
+   "end": 234.56,
+   "ground": "wallB",
+   "label": "researcher vs designer",
+   "trans": "cut"
+  },
+  {
+   "n": 22,
+   "id": "curiosity",
+   "start": 234.56,
+   "end": 250.28,
+   "ground": "wallA",
+   "label": "curiosity",
+   "trans": "cut"
+  },
+  {
+   "n": 23,
+   "id": "categories",
+   "start": 250.28,
+   "end": 283.44,
+   "ground": "wallB",
+   "label": "so many categories",
+   "trans": "cut"
+  },
+  {
+   "n": 24,
+   "id": "three-pairs",
+   "start": 283.44,
+   "end": 288.98,
+   "ground": "wallA",
+   "label": "the three big pairs",
+   "trans": "cut"
+  },
+  {
+   "n": 25,
+   "id": "generative",
+   "start": 288.98,
+   "end": 310.44,
+   "ground": "wallB",
+   "label": "generative",
+   "trans": "cut"
+  },
+  {
+   "n": 26,
+   "id": "evaluative",
+   "start": 310.44,
+   "end": 324.74,
+   "ground": "wallA",
+   "label": "evaluative",
+   "trans": "cut"
+  },
+  {
+   "n": 27,
+   "id": "gen-vs-eval",
+   "start": 324.74,
+   "end": 332.54,
+   "ground": "wallB",
+   "label": "decide vs check",
+   "trans": "cut"
+  },
+  {
+   "n": 28,
+   "id": "quantitative",
+   "start": 332.54,
+   "end": 348.64,
+   "ground": "wallA",
+   "label": "quantitative",
+   "trans": "cut"
+  },
+  {
+   "n": 29,
+   "id": "qualitative",
+   "start": 348.64,
+   "end": 359.01,
+   "ground": "wallB",
+   "label": "qualitative",
+   "trans": "cut"
+  },
+  {
+   "n": 30,
+   "id": "want-both",
+   "start": 359.01,
+   "end": 366.22,
+   "ground": "wallA",
+   "label": "you want both",
+   "trans": "cut"
+  },
+  {
+   "n": 31,
+   "id": "attitudinal-behavioural",
+   "start": 366.22,
+   "end": 390.58,
+   "ground": "wallB",
+   "label": "say vs do",
+   "trans": "cut"
+  },
+  {
+   "n": 32,
+   "id": "say-vs-do",
+   "start": 390.58,
+   "end": 406.15,
+   "ground": "wallA",
+   "label": "what people say vs do",
+   "trans": "cut"
+  },
+  {
+   "n": 33,
+   "id": "ask-vs-watch",
+   "start": 406.15,
+   "end": 420.24,
+   "ground": "wallB",
+   "label": "ask vs watch",
+   "trans": "cut"
+  },
+  {
+   "n": 34,
+   "id": "watches-asks",
+   "start": 420.24,
+   "end": 434.27,
+   "ground": "wallA",
+   "label": "watches as much as it asks",
+   "trans": "cut"
+  },
+  {
+   "n": 35,
+   "id": "more-categories",
+   "start": 434.27,
+   "end": 468.16,
+   "ground": "wallB",
+   "label": "a few more categories",
+   "trans": "cut"
+  },
+  {
+   "n": 36,
+   "id": "methods",
+   "start": 468.16,
+   "end": 497.78,
+   "ground": "wallA",
+   "label": "the methods",
+   "trans": "cut"
+  },
+  {
+   "n": 37,
+   "id": "more-methods",
+   "start": 497.78,
+   "end": 515.72,
+   "ground": "wallB",
+   "label": "more methods",
+   "trans": "cut"
+  },
+  {
+   "n": 38,
+   "id": "small-budget",
+   "start": 515.72,
+   "end": 524.38,
+   "ground": "wallA",
+   "label": "small budget",
+   "trans": "cut"
+  },
+  {
+   "n": 39,
+   "id": "five-people",
+   "start": 524.38,
+   "end": 543.5,
+   "ground": "wallB",
+   "label": "five people",
+   "trans": "cut"
+  },
+  {
+   "n": 40,
+   "id": "user-research",
+   "start": 543.5,
+   "end": 585.65,
+   "ground": "wallA",
+   "label": "UX vs user research",
+   "trans": "cut"
+  },
+  {
+   "n": 41,
+   "id": "market-research",
+   "start": 585.65,
+   "end": 596.37,
+   "ground": "wallB",
+   "label": "market research",
+   "trans": "cut"
+  },
+  {
+   "n": 42,
+   "id": "ai",
+   "start": 596.37,
+   "end": 618.52,
+   "ground": "wallA",
+   "label": "will AI replace it?",
+   "trans": "cut"
+  },
+  {
+   "n": 43,
+   "id": "career",
+   "start": 618.52,
+   "end": 633.45,
+   "ground": "wallB",
+   "label": "the career",
+   "trans": "cut"
+  },
+  {
+   "n": 44,
+   "id": "career-2",
+   "start": 633.45,
+   "end": 654.36,
+   "ground": "wallA",
+   "label": "companies expect",
+   "trans": "cut"
+  },
+  {
+   "n": 45,
+   "id": "get-in",
+   "start": 654.36,
+   "end": 673.75,
+   "ground": "wallB",
+   "label": "how to get in",
+   "trans": "cut"
+  },
+  {
+   "n": 46,
+   "id": "real-research",
+   "start": 673.75,
+   "end": 688.68,
+   "ground": "wallA",
+   "label": "real research",
+   "trans": "cut"
+  },
+  {
+   "n": 47,
+   "id": "other-fields",
+   "start": 688.68,
+   "end": 706.28,
+   "ground": "wallB",
+   "label": "other fields",
+   "trans": "cut"
+  },
+  {
+   "n": 48,
+   "id": "the-wall",
+   "start": 706.28,
+   "end": 708.7,
+   "ground": "wallA",
+   "label": "that's UX research",
+   "trans": "cut"
+  },
+  {
+   "n": 49,
+   "id": "close",
+   "start": 708.7,
+   "end": 724.616,
+   "ground": "wallB",
+   "label": "good design starts with people",
+   "trans": "cut"
+  }
+ ]
+}

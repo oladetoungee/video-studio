@@ -1,0 +1,20 @@
+@font-face{font-family:"Newsreader";font-weight:200 800;src:url(../_fonts/Newsreader.ttf)}
+@font-face{font-family:"Newsreader";font-style:italic;font-weight:200 800;src:url(../_fonts/Newsreader-Italic.ttf)}
+@font-face{font-family:"Caveat";font-weight:400 700;src:url(../_fonts/Caveat.ttf)}
+@font-face{font-family:"Space Grotesk";font-weight:300 700;src:url(../_fonts/SpaceGrotesk.ttf)}
+@font-face{font-family:"Space Mono";font-weight:400;src:url(../_fonts/SpaceMono-Regular.ttf)}
+@font-face{font-family:"Space Mono";font-weight:700;src:url(../_fonts/SpaceMono-Bold.ttf)}
+@font-face{font-family:"CMU Serif";font-weight:400;src:url(../_fonts/cmunrm.woff)}
+@font-face{font-family:"CMU Serif";font-weight:700;src:url(../_fonts/cmunbx.woff)}
+@font-face{font-family:"CMU Serif";font-style:italic;src:url(../_fonts/cmunti.woff)}
+@font-face{font-family:"CMU Typewriter";src:url(../_fonts/cmuntt.woff)}
+@font-face{font-family:"CMU Sans";font-weight:400;src:url(../_fonts/cmunss.woff)}
+@font-face{font-family:"CMU Sans";font-weight:700;src:url(../_fonts/cmunsx.woff)}
+@font-face{font-family:"DM Mono";font-weight:500;src:url(../_fonts/DMMono-Medium.ttf)}
+@font-face{font-family:"HN Cond";font-weight:900;src:local("HelveticaNeue-CondensedBlack")}
+@font-face{font-family:"HN Cond";font-weight:700;src:local("HelveticaNeue-CondensedBold")}
+html,body{margin:0;padding:0;overflow:hidden;background:#000}
+#stage{position:relative;overflow:hidden}
+#stage *{box-sizing:border-box}
+.abs{position:absolute}
+img{display:block}

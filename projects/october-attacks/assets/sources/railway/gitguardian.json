@@ -1,0 +1,161 @@
+{
+ "story": "railway",
+ "outlet": "GitGuardian",
+ "slug": "gitguardian",
+ "url": "https://blog.gitguardian.com/railway-october-2026-incident-environment-variables/",
+ "finalUrl": "https://blog.gitguardian.com/railway-october-2026-incident-environment-variables/",
+ "status": "loaded",
+ "http": 200,
+ "title": "New Railway Incident: Treat Every Env Variable as Exposed",
+ "h1": "Railway October 2026 Incident: Treat Every Environment Variable as Exposed",
+ "published": "2026-10-22T09:33:16.000Z",
+ "files": {
+  "fold": "railway/gitguardian_fold.png",
+  "full": "railway/gitguardian_full.jpg",
+  "scroll": "railway/gitguardian_scroll.mp4"
+ },
+ "full": {
+  "width": 1440,
+  "height": 5906,
+  "pageHeight": 5906,
+  "zoom": 1,
+  "quotes": [
+   {
+    "quote": "Treat every secret stored in Railway as at risk until investigated",
+    "box": {
+     "x": 200,
+     "y": 1870,
+     "w": 545,
+     "h": 24
+    },
+    "lines": [
+     {
+      "x": 200,
+      "y": 1870,
+      "w": 545,
+      "h": 24
+     }
+    ]
+   },
+   {
+    "quote": "has paused deployments during the investigation",
+    "box": {
+     "x": 237,
+     "y": 1550,
+     "w": 427,
+     "h": 24
+    },
+    "lines": [
+     {
+      "x": 237,
+      "y": 1550,
+      "w": 427,
+      "h": 24
+     }
+    ]
+   }
+  ]
+ },
+ "scroll": {
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "seconds": 8,
+  "keyframes": [
+   {
+    "t": 0,
+    "y": 12
+   },
+   {
+    "t": 1,
+    "y": 12
+   },
+   {
+    "t": 2.438,
+    "y": 1140
+   },
+   {
+    "t": 3.538,
+    "y": 1140
+   },
+   {
+    "t": 4.514,
+    "y": 1460
+   },
+   {
+    "t": 8,
+    "y": 1460
+   }
+  ],
+  "zoom": 1,
+  "easing": "easeInOutCubic between keyframes, holds where y is equal",
+  "capped": false,
+  "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)",
+  "quotes": [
+   {
+    "quote": "Treat every secret stored in Railway as at risk until investigated",
+    "inVideo": true,
+    "still": true,
+    "t": 6.23,
+    "visibleStill": [
+     4.43,
+     8.03
+    ],
+    "scrollY": 1460,
+    "box": {
+     "x": 440,
+     "y": 410,
+     "w": 545,
+     "h": 24
+    },
+    "lines": [
+     {
+      "x": 440,
+      "y": 410,
+      "w": 545,
+      "h": 24
+     }
+    ],
+    "docBox": {
+     "x": 440,
+     "y": 1870,
+     "w": 545,
+     "h": 24
+    },
+    "layoutDriftPx": 0
+   },
+   {
+    "quote": "has paused deployments during the investigation",
+    "inVideo": true,
+    "still": true,
+    "t": 2.98,
+    "visibleStill": [
+     2.37,
+     3.6
+    ],
+    "scrollY": 1140,
+    "box": {
+     "x": 477,
+     "y": 410,
+     "w": 427,
+     "h": 24
+    },
+    "lines": [
+     {
+      "x": 477,
+      "y": 410,
+      "w": 427,
+      "h": 24
+     }
+    ],
+    "docBox": {
+     "x": 477,
+     "y": 1550,
+     "w": 427,
+     "h": 24
+    },
+    "layoutDriftPx": 0
+   }
+  ]
+ }
+}

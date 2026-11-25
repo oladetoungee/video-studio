@@ -1,0 +1,34 @@
+[00:00] HTTP just got a new method called query. Most of us use get to fetch data and post to send data.
+[00:06] So what problem does query actually solve? Let's say you're shopping for a t-shirt on an online
+[00:11] store. To narrow your search, you apply filters for brand Nike or Puma, size medium in black color
+[00:17] and under $30. When you hit search, the browser sends a get request and every one of those filters
+[00:22] gets packed into the URL. So the URL looks something like shop.com slash t-shirts question
+[00:28] mark brand equals Nike, Puma, and so on. A few filters like this are fine, but the more filters
+[00:34] you add, the longer this URL gets. Our store server might accept a very long URL, but the request
+[00:40] doesn't land on the server directly. On the way, it passes through components like a load balancer
+[00:44] and a CDN. Each of these components has its own limit on how long a URL can be. For example,
+[00:50] AWS CloudFront rejects any URL longer than about eight kilobytes. So a big search URL can get
+[00:56] rejected by the CDN before it ever reaches the store server. So why not move the filters from
+[01:01] the URL into the request body? After all, the request body can carry much more data, but we
+[01:06] have one major problem. The get method in HTTP was always about the URL and never about the body.
+[01:12] So different servers can treat the body differently. One server reads the body and filters your t-shirts.
+[01:17] Another can quietly ignore the body and you get every t-shirt in the store as if you picked no
+[01:21] filters at all. And CloudFront rejects any GET request with a body outright. So you can't count
+[01:27] on a GET body working. That's why most teams fall back to the POST method, because POST was made to
+[01:32] carry a body. But POST has a problem of its own. POST is usually used for requests that change
+[01:37] something on the server, like placing an order. When the CDN sees a POST, it won't reuse a saved
+[01:42] answer because it thinks the request is meant to change something on the server. So every single
+[01:46] search goes all the way to the server. Now imagine the app sends a POST request, but the connection
+[01:51] drops before it gets a response. If that POST was placing an order, sending it again might create a
+[01:56] second order. That's why POST requests are generally not retried automatically. The problem
+[02:00] is that POST doesn't tell us whether a request is just reading data or changing something.
+[02:05] And this is exactly where query helps. A query request carries your filters in the body just
+[02:10] like a POST request. But the query method itself tells all the components on the way two things.
+[02:14] First, it's only reading data, not changing anything. Second, sending the same request again
+[02:20] won't cause any extra changes. Engineers call this safe and idempotent. So if the connection drops,
+[02:26] the app can safely send the search again. And a CDN that supports query can save the search results
+[02:31] and reuse them when someone makes the same search again. It also checks the filters in the request
+[02:35] body. So a search for black t shirts doesn't accidentally return saved results for white t
+[02:39] shirts. Before you start using query and production, make sure you test it thoroughly, because your
+[02:44] load balancer or CDN provider might not support this new method yet. If this video helped hit
+[02:49] hit subscribe and follow.

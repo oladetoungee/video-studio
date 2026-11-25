@@ -1,0 +1,244 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>A · The House</title>
+<style>
+@font-face { font-family: "DM Mono"; src: url(../../../../../../library/fonts/DMMono-Medium.ttf); font-weight: 500; }
+html, body { margin: 0; background: #000; overflow: hidden; }
+#stage { position: relative; overflow: hidden; background: #A11D33; }
+.hn { font-family: "Helvetica Neue"; }
+.cond { font-family: "Helvetica Neue"; font-stretch: condensed; font-weight: 900; }
+</style></head>
+<body><div id="stage"></div>
+<script src="../_tools/kit.js"></script>
+<script>
+// A · THE HOUSE: your home screen is a casino floor. Ground: flat oxblood (casino carpet red), cream type, her yellow as
+// the marquee gold, badge red only on badges. Real photos: a 1930s Mills slot machine, poker chips, a Reno slot floor,
+// B.J. Fogg; real sources: behaviormodel.org, the CHI 2016 paper page. The phone (real CC0 photo) is the slot machine.
+const OX = '#A11D33', OXD = '#6E0F20', CREAM = '#F6EFDC', RED = '#FF3B30';
+// the felt edge: a flat deeper-red band along the bottom that the cut-outs pass behind, so her caption never sits on a hand
+function band(r) { if (!PORTRAIT) el('div', { left: 0, top: (H - 150) + 'px', width: W + 'px', height: '150px', background: OXD, zIndex: 40 }, '', r); }
+const credTR = (r, t) => credit(r, t, { right: '36px', top: '28px', color: CREAM, opacity: 0.85, zIndex: 41, whiteSpace: V('nowrap', 'normal'), maxWidth: (W - 72) + 'px', textAlign: 'right', lineHeight: 1.3 });
+const lab = (root, text, css) => el('div', Object.assign({ font: `500 ${V(30, 32)}px "DM Mono"`, letterSpacing: '0.08em', color: CREAM, textTransform: 'uppercase', whiteSpace: 'nowrap' }, css), text, root);
+function stackType(root, small, big, css, o = {}) {
+  const box = el('div', Object.assign({ color: YEL, fontFamily: '"Helvetica Neue"' }, css), '', root);
+  const a = el('div', { position: 'relative', font: `700 ${o.ss || 56}px "Helvetica Neue"`, letterSpacing: '-0.03em', lineHeight: 1.05, color: o.sc || CREAM }, '', box);
+  const b = el('div', { position: 'relative', font: `900 ${o.bs || 150}px "Helvetica Neue"`, fontStretch: 'condensed', letterSpacing: '-0.01em', lineHeight: 0.92, textTransform: 'uppercase', marginTop: '10px' }, '', box);
+  return { box, a: words(a, small), b: words(b, big) };
+}
+
+// ---------- slot reels on the phone screen ----------
+const SYM = [
+  { k: 'none', html: '<span style="color:#5d5f66;font:700 64px Helvetica Neue">—</span>' },
+  { k: 'heart', html: `<span style="color:${RED};font:700 74px Helvetica Neue">♥</span>` },
+  { k: 'msg', html: `<span style="color:${CREAM};font:700 64px Helvetica Neue">✉</span>` },
+  { k: 'star', html: `<span style="color:${YEL};font:700 70px Helvetica Neue">★</span>` },
+  { k: '99', html: `<span style="display:inline-flex;align-items:center;justify-content:center;background:${RED};color:#fff;border-radius:40px;height:72px;padding:0 14px;font:700 46px Helvetica Neue">99+</span>` },
+];
+function reels(screen) {
+  const S = { cols: [], win: null };
+  set(screen, { background: '#141216' });
+  // top: a generic feed header and the pull area
+  S.pull = el('div', { left: 0, top: 0, width: '407px', height: '720px' }, '', screen);
+  el('div', { left: '28px', top: '40px', width: '351px', font: `500 22px "DM Mono"`, letterSpacing: '0.1em', color: '#8a8790' }, 'PULL TO REFRESH', S.pull);
+  S.spin = el('div', { left: '183px', top: '-60px', width: '40px', height: '40px', border: `5px solid ${YEL}`, borderTopColor: 'transparent', borderRadius: '50%', boxSizing: 'border-box' }, '', screen);
+  const win = el('div', { left: '20px', top: '220px', width: '367px', height: '280px', background: '#0B0A0C', borderRadius: '22px', overflow: 'hidden', boxShadow: `inset 0 0 0 4px ${YEL}` }, '', S.pull);
+  for (let c = 0; c < 3; c++) {
+    const col = el('div', { left: (14 + c * 115) + 'px', top: 0, width: '109px', height: '280px', overflow: 'hidden', background: '#1C1A1F', borderRadius: '10px' }, '', win);
+    const strip = el('div', { left: 0, top: 0, width: '109px' }, '', col);
+    for (let i = 0; i < 40; i++) el('div', { position: 'relative', width: '109px', height: '110px', display: 'flex', alignItems: 'center', justifyContent: 'center' }, SYM[(i * 7 + c * 3) % SYM.length].html, strip);
+    S.cols.push(strip);
+  }
+  el('div', { left: '0', top: '138px', width: '367px', height: '4px', background: 'rgba(243,236,122,0.35)' }, '', win);
+  S.res = el('div', { left: '20px', top: '540px', width: '367px', textAlign: 'center', font: `700 40px "Helvetica Neue"`, color: CREAM, letterSpacing: '-0.02em' }, '', S.pull);
+  return S;
+}
+// land a reel on symbol index k at time t1 (spins from t0); strip cell = 110 px, window centre = 140 px
+function reelAt(strip, c, lt, t0, t1, k, prevK) {
+  const target = (j) => { for (let i = 30; i >= 0; i--) if ((i * 7 + c * 3) % SYM.length === j) return i; return 0; };
+  const iT = target(k), iP = prevK == null ? 2 : (() => { for (let i = 0; i < 12; i++) if ((i * 7 + c * 3) % SYM.length === prevK) return i; return 2; })();
+  const yOf = (i) => 140 - 55 - i * 110;
+  let y;
+  if (lt < t0) y = yOf(iP);
+  else if (lt >= t1 + 0.6) y = yOf(iT);
+  else { const p = lt < t1 ? eIO(prog(lt, t0, t1 - t0)) * 0.97 : 0.97 + 0.03 * spring(lt - t1, 3, 0.45); y = lerp(yOf(iP), yOf(iT), p); }
+  strip.style.transform = `translateY(${y}px)`;
+  const v = lt > t0 && lt < t1 ? Math.min(14, Math.abs(Math.sin(prog(lt, t0, t1 - t0) * Math.PI)) * 14) : 0;
+  strip.style.filter = v > 0.5 ? `blur(0 ${v}px)` : '';
+  strip.style.filter = v > 0.5 ? `url(#vblur)` : '';
+  strip.dataset.v = v;
+}
+
+// ========== A1 · the product (0-10) ==========
+scene('A1', 0, 10, (r, S) => {
+  S.chips = img('cut/chips-fade.png', { left: V(1010, 160) + 'px', top: V(170, 760) + 'px', width: V(860, 780) + 'px' }, r);
+  S.tag = lab(r, 'Your attention', { left: V(1180, 300) + 'px', top: V(120, 700) + 'px', color: OX, background: YEL, padding: '10px 18px', borderRadius: '6px' });
+  S.cash = el('div', { left: V(150, 90) + 'px', top: V(170, 200) + 'px', width: V(760, 900) + 'px' }, '', r);
+  S.rows = ['Instagram', 'TikTok', 'Facebook'].map((n, i) => {
+    const row = el('div', { left: 0, top: (i * 86) + 'px', width: '100%', height: '70px', borderBottom: `2px solid rgba(246,239,220,0.25)`, display: 'flex', justifyContent: 'space-between', alignItems: 'center', font: `700 ${V(54, 58)}px "Helvetica Neue"`, color: CREAM, letterSpacing: '-0.02em' }, `<span>${n}</span><span style="font:500 ${V(40, 44)}px DM Mono;color:${YEL}">$0.00</span>`, S.cash);
+    return row;
+  });
+  S.st = stackType(r, 'your attention is, in a way,', 'the product.', { left: V(150, 90) + 'px', top: V(490, 470) + 'px', width: V(900, 900) + 'px' }, { bs: V(170, 170), ss: V(54, 56) });
+  band(r); credTR(r, 'Chips: Tim Reckmann, CC BY 2.0');
+  caption3(r, ['your attention', 'is in a way', 'the product']);
+}, (lt, S) => {
+  enter(S.chips, lt, 0.1, 0.7, { y: 120, o: 0, mb: 10 });
+  enter(S.tag, lt, 0.9, 0.4, { y: -20, o: 0 });
+  S.rows.forEach((row, i) => enter(row, lt, 0.2 + i * 0.1, 0.45, { x: -60, o: 0, mb: 8 }));
+  typeOn(S.st.a, lt, 1.0); typeOn(S.st.b, lt, 1.5, 0.12, 0.35, 40);
+});
+
+// ========== A2 · the house rules: B = MAP dealt as cards (10-20) ==========
+scene('A2', 10, 20, (r, S) => {
+  S.fogg = img('cut/fogg.png', { left: V(-40, -120) + 'px', top: V(250, 980) + 'px', height: V(1240, 1150) + 'px' }, r);
+  S.src = el('div', { left: V(645, 80) + 'px', top: V(290, 330) + 'px', font: `500 ${V(30, 30)}px "DM Mono"`, letterSpacing: '0.06em', color: CREAM, textTransform: 'uppercase', whiteSpace: 'nowrap' }, 'Fogg Behavior Model', r);
+  S.srcHi = el('div', { left: V(1290 + 540 * 0.0, 560) + 'px', top: '0px', width: '0px', height: '0px' }, '', r);
+  S.cr1 = credit(r, 'source: behaviormodel.org (BJ Fogg)', { left: V(1300, 400) + 'px', top: V(880, 1500) + 'px', color: CREAM, opacity: 0.85 });
+  S.cr2 = credit(r, 'Photo: Kris Krüg, CC BY 2.0', { left: V(60, 40) + 'px', top: V(40, 40) + 'px', color: CREAM, opacity: 0.7 });
+  S.eq = el('div', { left: V(640, 80) + 'px', top: V(110, 140) + 'px', font: `900 ${V(150, 150)}px "Helvetica Neue"`, fontStretch: 'condensed', color: YEL, letterSpacing: '-0.01em' }, 'B = MAP', r);
+  S.cards = [['M', 'Motivation', 'curiosity'], ['A', 'Ability', 'one tap'], ['P', 'Prompt', 'a notification']].map((c, i) => {
+    const cw = V(300, 300), ch = V(420, 420);
+    const x = V([620, 880, 1170][i], [70, 380, 690][i]), y = V([450, 425, 400][i], [520, 500, 470][i]);
+    const card = el('div', { left: x + 'px', top: y + 'px', width: cw + 'px', height: ch + 'px', background: CREAM, borderRadius: '18px', boxShadow: '0 22px 40px rgba(0,0,0,0.35)', transformOrigin: '50% 100%' }, '', r);
+    el('div', { left: '24px', top: '14px', font: `900 120px "Helvetica Neue"`, fontStretch: 'condensed', color: OX }, c[0], card);
+    el('div', { left: '24px', top: '210px', font: `700 46px "Helvetica Neue"`, color: '#1a1a1a', letterSpacing: '-0.02em' }, c[1], card);
+    el('div', { left: '24px', top: '272px', width: (cw - 48) + 'px', height: '3px', background: OX, opacity: 0.25 }, '', card);
+    el('div', { left: '24px', top: '296px', font: `500 30px "DM Mono"`, color: OX, letterSpacing: '0.04em' }, c[2], card);
+    return card;
+  });
+  band(r);
+  caption3(r, ['motivation', 'ability', 'and a prompt']);
+}, (lt, S) => {
+  enter(S.fogg, lt, 0, 0.6, { x: -80, o: 0, mb: 8 });
+  enter(S.src, lt, 0.5, 0.5, { y: 40, r: 3, o: 0 }, { r: -2 });
+  enter(S.cr1, lt, 0.8, 0.4, { o: 0 }); enter(S.cr2, lt, 0.6, 0.4, { o: 0 });
+  enter(S.eq, lt, 0.9, 0.5, { s: 0.9, o: 0, blur: 10 });
+  S.cards.forEach((c, i) => enter(c, lt, 1.3 + i * 0.35, 0.5, { x: 420 - i * 120, y: -160, r: 18, o: 0, mb: 10 }, { r: [-7, -2, 4][i], s: [0.92, 0.96, V(1.25, 1.12)][i] }));
+});
+
+// ========== A3 · the slot machine in your pocket (20-30) — signature ==========
+function buildSlot(r, S, o) {
+  S.disc = el('div', { left: V(10, 20) + 'px', top: V(180, 160) + 'px', width: V(640, 600) + 'px', height: V(640, 600) + 'px', borderRadius: '50%', background: OXD }, '', r);
+  S.mills = img('cut/millsslot.png', { left: V(60, 60) + 'px', top: V(220, 190) + 'px', height: V(660, 600) + 'px' }, r);
+  S.l1 = lab(r, '1930s slot machine', { left: V(60, 60) + 'px', top: V(120, 120) + 'px', opacity: 0.85 });
+  S.ph = phone(r, V(1262, 60), V(60, 1080), V(0.72, 1.0));
+  S.R = reels(S.ph.screen);
+  S.l2 = lab(r, 'your phone', { left: V(1440, 640) + 'px', top: V(990 - 40, 1920 - 330) + 'px', opacity: 0.85, fontSize: V(26, 28) + 'px', display: 'none' });
+  const L = ['sometimes nothing.', 'sometimes small things.', 'sometimes a big thing.'];
+  S.lines = L.map((t, i) => el('div', { left: V(530, 480) + 'px', top: V(330 + i * 90, 300 + i * 74) + 'px', whiteSpace: 'nowrap', width: 'auto', font: `900 ${V(64, 46)}px "Helvetica Neue"`, fontStretch: 'condensed', textTransform: 'uppercase', letterSpacing: '-0.005em', lineHeight: 0.95, color: CREAM, opacity: 0 }, t, r));
+  band(r); credTR(r, V('Slot machine: Gameroom Show, CC BY-SA 4.0 · Phone: NeONBRAND, CC0', 'Slot: Gameroom Show, CC BY-SA 4.0 · Phone: NeONBRAND'));
+  caption3(r, ['sometimes nothing', 'sometimes small things', 'sometimes a big thing'], 880, o && o.times);
+}
+function updSlot(lt, S, beats, f = 1) {
+  enter(S.mills, lt, 0, 0.6, { x: -70, o: 0, mb: 8 });
+  // the old machine answers each pull: a short kick down and back, like a lever pull
+  let kick = 0; beats.forEach(b0 => { if (lt > b0) kick += 10 * Math.exp(-6 * (lt - b0)) * Math.sin(14 * (lt - b0)); });
+  S.mills.style.transform += ` translateY(${kick.toFixed(2)}px)`;
+  if (S.disc) enter(S.disc, lt, 0, 0.6, { s: 0.85, o: 0 });
+  enter(S.ph.wrap, lt, 0.15, 0.6, { x: 90, o: 0, mb: 8 });
+  enter(S.l1, lt, 0.5, 0.4, { o: 0 });
+  // three pulls: the screen drags down (pull-to-refresh = the lever), the spinner shows, the reels spin and land
+  const outs = [[0, 0, 0], [1, 1, 3], [4, 4, 4]], res = ['nothing new', '1 new like', '99+ messages'];
+  let prev = [3, 2, 1];
+  beats.forEach((b, i) => {
+    const pullP = lt < b ? 0 : lt < b + 0.35 * f ? eOut(prog(lt, b, 0.35 * f)) : 1 - spring(lt - b - 0.35 * f, 2.2 / f, 0.67);
+    if (lt >= b && lt < b + 1.6 * f) { S.R.pull.style.transform = `translateY(${pullP * 150}px)`; S.R.spin.style.transform = `translateY(${pullP * 150}px) rotate(${lt * 720}deg)`; }
+    outs[i].forEach((k, c) => { if (lt >= b - 0.01 && (i === beats.length - 1 || lt < beats[i + 1])) reelAt(S.R.cols[c], c, lt, b + 0.3 * f, b + (1.1 + c * 0.22) * f, k, prev[c]); });
+    if (lt >= b + 1.6 * f) prev = outs[i].slice();
+    const rt = b + 1.55 * f; if (lt >= rt && (i === beats.length - 1 || lt < beats[i + 1] + 1.55 * f)) { S.R.res.textContent = res[i]; S.R.res.style.color = i === 0 ? '#8a8790' : i === 1 ? CREAM : YEL; enter(S.R.res, lt, rt, 0.3, { y: 16, o: 0 }); }
+    if (lt < beats[0] + 1.55 * f) S.R.res.style.opacity = 0;
+    const ln = S.lines[i], lt0 = b + 1.5 * f; if (lt >= lt0) { ln.style.opacity = 1; ln.style.color = (i === beats.length - 1 || lt < beats[i + 1] + 1.5 * f) ? YEL : CREAM; enter(ln, lt, lt0, 0.35, { y: 24, o: 0, blur: 6 }); }
+    else if (i > 0) ln.style.opacity = 0;
+  });
+  if (lt < beats[0] + 1.5 * f) S.lines[0].style.opacity = 0;
+  if (lt < beats[0]) { S.R.pull.style.transform = ''; S.R.spin.style.transform = 'translateY(0)'; S.R.cols.forEach((s, c) => reelAt(s, c, 0, 1, 2, prev[c], prev[c])); }
+}
+scene('A3', 20, 30, (r, S) => buildSlot(r, S), (lt, S) => updSlot(lt, S, [0.6, 2.4, 4.2]));
+
+// ========== A4 · no stopping cues (30-40) ==========
+scene('A4', 30, 40, (r, S) => {
+  const P = V([[50, 380, 560], [690, 390, 420], [1150, 390, 0.62]], [[40, 440, 520], [580, 300, 440], [200, 820, 0.62]]);
+  S.book = img('cut/books1.png', { left: P[0][0] + 'px', top: P[0][1] + 'px', width: P[0][2] + 'px' }, r);
+  S.tv = img('cut/tv1956.png', { left: P[1][0] + 'px', top: P[1][1] + 'px', width: P[1][2] + 'px' }, r);
+  S.ph = phone(r, P[2][0], P[2][1], P[2][2]);
+  set(S.ph.screen, { background: '#141216' });
+  S.feed = el('div', { left: 0, top: 0, width: '407px' }, '', S.ph.screen);
+  for (let i = 0; i < 30; i++) {
+    const card = el('div', { position: 'relative', margin: '18px 18px 0', height: '300px', borderRadius: '16px', background: i % 3 === 0 ? '#2A2630' : i % 3 === 1 ? '#3A1C22' : '#232A2E' }, '', S.feed);
+    el('div', { left: '18px', top: '18px', width: '44px', height: '44px', borderRadius: '50%', background: 'rgba(246,239,220,0.35)' }, '', card);
+    el('div', { left: '76px', top: '28px', width: '150px', height: '16px', borderRadius: '8px', background: 'rgba(246,239,220,0.35)' }, '', card);
+    el('div', { left: '18px', top: '80px', width: '335px', height: '170px', borderRadius: '10px', background: 'rgba(246,239,220,0.12)' }, '', card);
+  }
+  const L = V([[60, 150, 'a book has', 'chapters'], [690, 150, 'a TV show had', 'episodes'], [1290, 150, 'the feed has', 'no end']], [[40, 650, 'a book has', 'chapters'], [580, 650, 'a TV show had', 'episodes'], [40, 1300, 'the feed has', 'no end']]);
+  S.labs = L.map(([x, y, a, b], i) => {
+    const d = el('div', { left: x + 'px', top: y + 'px' }, '', r);
+    el('div', { position: 'relative', font: `500 ${V(30, 30)}px "DM Mono"`, letterSpacing: '0.06em', color: CREAM, opacity: 0.85, textTransform: 'uppercase' }, a, d);
+    el('div', { position: 'relative', font: `900 ${V(104, 96)}px "Helvetica Neue"`, fontStretch: 'condensed', textTransform: 'uppercase', color: i === 2 ? YEL : CREAM, lineHeight: 0.95 }, b, d);
+    return d;
+  });
+  band(r); credTR(r, 'Books: Chris Lawton, CC0 · TV: electromechanic812291, CC BY 2.0 · Phone: NeONBRAND, CC0');
+  caption3(r, ['older forms of media', 'had', 'stopping cues']);
+}, (lt, S) => {
+  enter(S.book, lt, 0.1, 0.55, { y: 80, o: 0, mb: 8 });
+  enter(S.tv, lt, 0.35, 0.55, { y: 80, o: 0, mb: 8 });
+  enter(S.ph.wrap, lt, 0.6, 0.6, { y: 120, o: 0, mb: 8 });
+  S.labs.forEach((l, i) => enter(l, lt, 0.5 + i * 0.3, 0.45, { y: 20, o: 0 }));
+  // the feed never stops: a constant scroll with a flick every 1.4 s (no dead stop, no end)
+  const k = Math.floor(lt / 1.4), f = eOut(prog(lt % 1.4, 0, 0.7));
+  S.feed.style.transform = `translateY(${-((k + f) * 318) % (318 * 24)}px)`;
+});
+
+// ========== A5 · the casino floor + the CHI study (40-50) ==========
+scene('A5', 40, 50, (r, S) => {
+  S.floor = img('raw/slotrow2.jpg', { left: 0, top: 0, width: W + 'px', height: H + 'px', objectFit: 'cover' }, r);
+  S.tint = el('div', { left: 0, top: 0, width: W + 'px', height: H + 'px', background: OXD, opacity: 0.9, mixBlendMode: 'multiply' }, '', r);
+  S.tint2 = el('div', { left: 0, top: 0, width: W + 'px', height: H + 'px', background: OXD, opacity: 0.45 }, '', r);
+  S.card = el('div', { left: V(190, 60) + 'px', top: V(200, 330) + 'px', width: V(1000, 960) + 'px', background: '#FFFDF6', borderRadius: '10px', boxShadow: '0 30px 60px rgba(0,0,0,0.45)', overflow: 'hidden', transformOrigin: '50% 50%' }, '', r);
+  S.chi = img('sources/chi-title.png', { position: 'relative', display: 'block', width: '100%' }, S.card);
+  // yellow marker over "Increase Inattention and Hyperactivity" (line 2 of the title in the capture)
+  S.hi = el('div', { left: V(18, 17) + 'px', top: V(1000 * 0.385, 960 * 0.385) + 'px', width: V(1000 * 0.565, 960 * 0.565) + 'px', height: V(1000 * 0.095, 960 * 0.095) + 'px', background: YEL, mixBlendMode: 'multiply', transformOrigin: '0 50%' }, '', S.card);
+  S.cr = credit(r, 'Kushlev, Proulx & Dunn · CHI 2016 · via Semantic Scholar', { left: V(190, 60) + 'px', top: V(200 + 216 + 18, 330 + 207 + 18) + 'px', color: CREAM });
+  S.cr2 = credit(r, 'Casino floor: Jim G, CC BY 2.0 · Phone: NeONBRAND, CC0', { right: '36px', top: V(28, 28) + 'px', color: CREAM, opacity: 0.7 });
+  S.ph = phone(r, V(1240, 520), V(250, 820), V(0.62, 0.56));
+  set(S.ph.screen, { background: '#141216' });
+  S.icons = []; S.bdg = [];
+  const cols = ['#3B6FD9', '#2BA36B', '#E0742A', '#8A5CD1', '#D94A6A', '#3BA7B8', '#C9A227', '#5A6474', '#E0742A', '#2BA36B', '#3B6FD9', '#D94A6A'];
+  const NOTE = [['message', 3], ['like', 12], ['memory', 1], ['comment', 99], ['trending now', 7], ['new followers', 24], ['weekly recap', 5]];
+  NOTE.slice(0, 4).forEach(([t, n], i) => { const y = 70 + i * 160; const row = el('div', { left: '20px', top: y + 'px', width: '367px', height: '136px', background: '#232026', borderRadius: '18px' }, '', S.ph.screen); el('div', { left: '22px', top: '44px', width: '240px', font: `700 40px "Helvetica Neue"`, color: CREAM, whiteSpace: 'nowrap', overflow: 'hidden' }, t, row); S.icons.push(row); S.bdg.push(badge(row, 270, 38, 60, n)); });
+  S.L = el('div', { left: V(190, 60) + 'px', top: V(520, 590) + 'px', width: V(1000, 960) + 'px' }, '', r);
+  S.la = el('div', { position: 'relative', font: `500 ${V(32, 32)}px "DM Mono"`, letterSpacing: '0.06em', color: CREAM, textTransform: 'uppercase' }, 'one week on · one week off', S.L);
+  S.lb = el('div', { position: 'relative', marginTop: '14px', font: `900 ${V(116, 104)}px "Helvetica Neue"`, fontStretch: 'condensed', textTransform: 'uppercase', color: YEL, lineHeight: 0.92 }, 'notifications on:<br>more inattention', S.L);
+  band(r);
+  caption3(r, ['in the week where', 'notifications were on', 'more inattention']);
+}, (lt, S) => {
+  const push = 1 + 0.05 * eIO(prog(lt, 0, 9)); S.floor.style.transform = `scale(${push})`;
+  enter(S.card, lt, 0.2, 0.55, { y: 60, r: -3, o: 0, mb: 8 }, { r: -1.5 });
+  marker(S.hi, lt, 1.2, 0.5);
+  enter(S.cr, lt, 0.7, 0.4, { o: 0 }); enter(S.cr2, lt, 0.4, 0.4, { o: 0 });
+  enter(S.ph.wrap, lt, 0.4, 0.6, { x: 100, o: 0, mb: 8 });
+  S.bdg.forEach((b, i) => { const at = 1.0 + i * 0.09; const p = spring(lt - at, 3.2, 0.5); b.style.transform = `scale(${Math.max(0, p)})`; });
+  enter(S.L, lt, 1.6, 0.45, { y: 26, o: 0, blur: 6 });
+});
+
+// ========== A6 · cash out (50-60) ==========
+scene('A6', 50, 60, (r, S) => {
+  S.ph = phone(r, V(1080, 40), V(120, 1080), V(0.8, 1.0));
+  S.R = reels(S.ph.screen);
+  S.chips = img('cut/chips-fade.png', { left: V(160, 560) + 'px', top: V(690, 540) + 'px', width: V(400, 440) + 'px' }, r);
+  S.st = stackType(r, 'your attention is', 'an asset.', { left: V(150, 80) + 'px', top: V(170, 170) + 'px', width: V(900, 560) + 'px' }, { bs: V(220, 150), ss: V(64, 54) });
+  band(r); credTR(r, 'Phone: NeONBRAND, CC0 · Chips: Tim Reckmann, CC BY 2.0');
+  caption3(r, ['your attention', 'is an', 'asset']);
+}, (lt, S) => {
+  [0, 1, 2].forEach(c => reelAt(S.R.cols[c], c, lt, 0, 0.01, 3, 3));
+  S.R.res.textContent = 'put it down'; S.R.res.style.color = CREAM;
+  enter(S.ph.wrap, lt, 0, 0.6, { y: 80, o: 0, mb: 8 });
+  // the phone loses its colour (the grayscale tip): the casino stops being a casino
+  const g = eIO(prog(lt, 1.6, 0.9)); S.ph.inner.style.filter = `grayscale(${g})`;
+  // chips slide back to you
+  enter(S.chips, lt, 1.2, 0.7, { x: V(500, 0), y: V(0, 400), o: 0, mb: 12 });
+  typeOn(S.st.a, lt, 0.4); typeOn(S.st.b, lt, 0.9, 0.12, 0.35, 40);
+});
+
+// ========== motion test: the lever pull (0-7 s at t 100) ==========
+scene('MT', 100, 108, (r, S) => buildSlot(r, S, { times: [101.56, 102.38, 103.70] }), (lt, S) => updSlot(lt, S, [0.95, 2.05, 3.2], 0.68));
+</script>
+<svg width="0" height="0" style="position:absolute"><filter id="vblur"><feGaussianBlur stdDeviation="0 6"/></filter></svg>
+</body></html>

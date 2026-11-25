@@ -1,0 +1,28 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../lib/base.css"><style>
+.t{--ground:var(--paper);--fg:var(--ink);--accent:var(--orange)}
+.h{left:640px;top:44px}
+.h>div{font-size:100px}.h>div+div{margin-top:6px}
+.l2{color:var(--accent)}
+.ui.box{left:640px;top:244px;width:600px;height:292px}
+.ui .lbl{right:20px;top:36px;font-size:16px}
+.search{height:92px;padding:0 26px;font-size:40px;border-bottom:4px solid var(--ink)}
+.search svg{width:40px;height:40px;flex:none}
+.search .ph{color:#8A8A8A;font-size:32px;font-weight:500}
+.rows{padding:6px 26px 0}
+.row{height:96px;font-family:'Bricolage';font-weight:800;font-size:80px;text-transform:uppercase;letter-spacing:-.02em;justify-content:space-between}
+.row:first-child{border-top:none}
+.row .y{font-family:'DM Mono';font-weight:500;font-size:34px;letter-spacing:.04em;color:rgba(17,17,20,.6)}
+.row.hl .w{color:var(--accent)}
+.search .cursor{background:var(--ink)}
+</style></head><body><div class="t">
+<img class="cut" data-img="person" alt="">
+<div class="h disp" data-move="headline"><div class="l1" data-k="line1"></div><div class="l2" data-k="line2"></div></div>
+<div class="ui box" data-move="search">
+  <div class="search"><svg viewBox="0 0 40 40"><circle cx="17" cy="17" r="11" fill="none" stroke="#111114" stroke-width="5"/><line x1="25" y1="25" x2="36" y2="36" stroke="#111114" stroke-width="5" stroke-linecap="round"/></svg><span class="cursor"></span><span class="ph" data-k="query"></span></div>
+  <div class="rows">
+    <div class="row"><span class="w" data-k="r1"></span></div>
+    <div class="row hl"><span class="w" data-k="r2"></span></div>
+  </div>
+  <div class="lbl" data-k="label"></div>
+</div>
+</div><script src="../../lib/flags.js"></script><script src="../../lib/bind.js"></script></body></html>

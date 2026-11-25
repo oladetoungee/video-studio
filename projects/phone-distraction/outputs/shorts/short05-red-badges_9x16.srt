@@ -1,0 +1,87 @@
+1
+00:00:00,080 --> 00:00:01,330
+most apps show
+
+2
+00:00:01,590 --> 00:00:03,870
+notifications as red badges and that does
+
+3
+00:00:03,870 --> 00:00:05,630
+not, did not happen by accident
+
+4
+00:00:05,630 --> 00:00:07,280
+they were intentionally designed
+
+5
+00:00:07,280 --> 00:00:09,450
+a notification is an interruption that
+
+6
+00:00:09,450 --> 00:00:11,350
+someone else or something else decides to
+
+7
+00:00:11,350 --> 00:00:14,310
+send you and the colour matters
+
+8
+00:00:14,310 --> 00:00:17,470
+facebook's notification icon used to be blue
+
+9
+00:00:17,510 --> 00:00:19,070
+to match the rest of the site because, you
+
+10
+00:00:19,070 --> 00:00:20,830
+know, Facebook and that blue vibe
+
+11
+00:00:20,830 --> 00:00:23,590
+according to reports, people barely notice
+
+12
+00:00:23,590 --> 00:00:24,680
+the blue one
+
+13
+00:00:24,680 --> 00:00:27,410
+so it was changed to red to grab your
+
+14
+00:00:27,410 --> 00:00:28,130
+attention
+
+15
+00:00:28,290 --> 00:00:30,390
+now, if you look at your phone, almost every
+
+16
+00:00:30,390 --> 00:00:33,170
+app uses a red badge now with a number on it
+
+17
+00:00:33,200 --> 00:00:35,830
+that red badge, that red colour, and that
+
+18
+00:00:35,830 --> 00:00:37,870
+number, it creates a small feeling in your
+
+19
+00:00:37,870 --> 00:00:39,160
+brain that something is
+
+20
+00:00:39,410 --> 00:00:41,590
+unfinished and you need to go clear
+
+21
+00:00:41,610 --> 00:00:43,610
+it's like a sense of urgency, if that makes
+
+22
+00:00:43,610 --> 00:00:43,900
+sense

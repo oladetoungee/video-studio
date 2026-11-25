@@ -1,0 +1,51 @@
+{
+  "direction": "Her shoot photo (black top, pink headband) in her room, the room darkened so the words read; her face natural. The search words as the picture: FULLY FUNDED / SCHOLARSHIPS on a green highlight bar (like the Reel covers on the board) / IN EUROPE 2027. Her note 2026-11-11: drop the €1,400 (no context for strangers), highlight the keyword.",
+  "thumbnail_text": "2027 + FULLY FUNDED + SCHOLARSHIPS (green highlight) + IN EUROPE",
+  "titles": [
+    "Fully Funded Scholarships in Europe for Africans (2027)",
+    "Scholarships That Pay You to Study in Europe (2027)",
+    "Erasmus Mundus and More: Fully Funded Master's in Europe"
+  ],
+  "kind": "photo",
+  "recommended": true,
+  "class": "no-lift",
+  "text": {
+    "yr": "2027",
+    "l1": "Fully funded",
+    "hl": "Scholarships",
+    "l3": "in Europe"
+  },
+  "images": {
+    "room": "../../assets/shoot/room-1612.jpg",
+    "me": "../../assets/shoot/room-1612-cut.png"
+  },
+  "vars": {
+    "--rw": "1935px",
+    "--rx": "-7px",
+    "--ry": "-184px",
+    "--dim": "rgba(8,8,10,.60)"
+  },
+  "title": "Fully Funded Scholarships in Europe for Africans (2027)",
+  "nudge": {
+    "yr": {
+      "dx": 203,
+      "s": 1.428,
+      "dy": 8
+    },
+    "l1": {
+      "dy": 26,
+      "s": 1.121,
+      "dx": -1
+    },
+    "hl": {
+      "dx": -5,
+      "dy": 23,
+      "s": 1.167
+    },
+    "l3": {
+      "dx": 120,
+      "dy": 29,
+      "s": 1.255
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "direction": "A phone held up to the camera, big: 'Marital status: MARRIED' for '[your name]' (illustration); she looks straight at you, unimpressed (1:16). Follows the NADRA outliers (a phone held to camera with the status) and sample 2 (one object = the result).",
+  "concept": "T6",
+  "thumbnail_text": "Even yours",
+  "title": "Check Marital Status Online: Ghana's New App",
+  "titles": [
+    "Check Marital Status Online: Ghana's New App",
+    "Married? In Ghana, Anyone Can Now Look You Up",
+    "You Can Now Check If Someone Is Married in Ghana"
+  ],
+  "scores": "a 3/5 · 3/5 · 3/6 | b 7/6 · 7/6 · 7/7 | c 5 · 5 · 5",
+  "recommended": false,
+  "text": {
+    "line1": "Even",
+    "line2": "yours",
+    "p_app": "Marriage records",
+    "p_q": "[your name]",
+    "p_lab": "Marital status",
+    "p_big": "Married"
+  },
+  "images": {
+    "scene": "../../assets/scene/warm/s_76.20.jpg",
+    "front": "../../assets/scene/warm/mask/s_76.20.png"
+  },
+  "vars": {}
+}

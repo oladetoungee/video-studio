@@ -1,0 +1,28 @@
+{
+  "direction": "Flat graphic with her colour cut-out (kit T3): warm paper ground, a big clipboard checklist in handwriting (update PHP, restart PHP, change API keys, set spending alerts), two ticked, two still open; she on the right, calm, with a thin outline. It promises a short to-do list in a bad news week. References: viral 2 (clipboard with DONE), viral 3 (the steps drawn).",
+  "thumbnail_text": "YOUR SECURITY TO-DO",
+  "titles": [
+    "PHP2Shell, Railway and OpenCode: What Developers Should Do",
+    "What October's Hacks Mean for Your PHP and API Keys"
+  ],
+  "title": "PHP2Shell, Railway and OpenCode: What Developers Should Do",
+  "kind": "graphic",
+  "text": {
+    "hd": "Your security <span class=\"acc\">to-do</span>",
+    "i1": "Update PHP",
+    "i2": "Restart PHP",
+    "i3": "Change API keys",
+    "i4": "Spending alerts"
+  },
+  "images": {
+    "me": "../../assets/cut/gbemi-410.0.png"
+  },
+  "vars": {
+    "--ground": "#EFE7D8",
+    "--fg": "#16110D",
+    "--accent": "#F2541B",
+    "--ol": "#16110D"
+  },
+  "scores": "cold critic R1 6.5 · R2 7",
+  "recommended": false
+}

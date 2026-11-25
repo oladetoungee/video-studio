@@ -1,0 +1,172 @@
+{
+ "TOTAL": 463,
+ "INTRO": 0,
+ "OUTRO": 1,
+ "FPS": 30,
+ "CUES": [
+  {
+   "name": "pop",
+   "t": 0.15,
+   "db": -5,
+   "keep": true
+  },
+  {
+   "name": "pop2",
+   "t": 3.36,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "type",
+   "t": 4.7,
+   "db": -8,
+   "keep": true
+  },
+  {
+   "name": "focus",
+   "t": 5.45,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "marker",
+   "t": 6,
+   "db": -5,
+   "keep": true
+  },
+  {
+   "name": "swipe",
+   "t": 8.15,
+   "db": -8,
+   "keep": true
+  },
+  {
+   "name": "hit",
+   "t": 8.86,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "cash",
+   "t": 116.54,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "marker",
+   "t": 120.42,
+   "db": -5,
+   "keep": true
+  },
+  {
+   "name": "hit",
+   "t": 122.12,
+   "db": -5,
+   "keep": true
+  },
+  {
+   "name": "tick",
+   "t": 164.84,
+   "db": -5,
+   "keep": true
+  },
+  {
+   "name": "tick2",
+   "t": 166.1,
+   "db": -5,
+   "keep": true
+  },
+  {
+   "name": "tick3",
+   "t": 166.76,
+   "db": -5,
+   "keep": true
+  },
+  {
+   "name": "clock",
+   "t": 234.9,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "click",
+   "t": 237.62,
+   "db": -3,
+   "keep": true
+  },
+  {
+   "name": "tape",
+   "t": 238.3,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "shutter",
+   "t": 341.1,
+   "db": -5,
+   "keep": true
+  },
+  {
+   "name": "focus",
+   "t": 345,
+   "db": -4,
+   "keep": true
+  }
+ ],
+ "SCENES": [
+  {
+   "n": 1,
+   "id": "open",
+   "start": 0,
+   "end": 8.47,
+   "ground": "pink",
+   "label": "open",
+   "trans": "cut"
+  },
+  {
+   "n": 2,
+   "id": "name",
+   "start": 8.47,
+   "end": 115.6,
+   "ground": "pink2",
+   "label": "name",
+   "trans": "cut"
+  },
+  {
+   "n": 3,
+   "id": "costs",
+   "start": 115.6,
+   "end": 163.8,
+   "ground": "pink",
+   "label": "costs",
+   "trans": "cut"
+  },
+  {
+   "n": 4,
+   "id": "wording",
+   "start": 163.8,
+   "end": 232.6,
+   "ground": "pink",
+   "label": "wording",
+   "trans": "whip"
+  },
+  {
+   "n": 5,
+   "id": "timer",
+   "start": 232.6,
+   "end": 341,
+   "ground": "pink",
+   "label": "timer",
+   "trans": "whip"
+  },
+  {
+   "n": 6,
+   "id": "ftc",
+   "start": 341,
+   "end": 463,
+   "ground": "pink",
+   "label": "ftc",
+   "trans": "whip"
+  }
+ ]
+}

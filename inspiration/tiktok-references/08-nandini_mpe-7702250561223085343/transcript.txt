@@ -1,0 +1,50 @@
+[00:00] I recently read a court case between OpenAI, the company that makes chat GPT, and the parents of
+[00:05] a 19-year-old who unfortunately lost his life in the hands of chat GPT because chat GPT had become
+[00:12] his advisor on mixing drugs and experimenting with drugs and unfortunately the lost dose that
+[00:18] he took ended up being lethal. Sam was a 19-year-old boy from Texas and he started using chat GPT in
+[00:24] about 2023 where he was using it for his homework. He used chat GPT for homework and then he just
+[00:29] started generally using it as a search engine so pretty much the same way people use Google and
+[00:36] to him it appeared as though this thing had good knowledge on everything that was happening in the
+[00:40] world and after he moved to university he continued having these conversations with chat GPT and later
+[00:46] they steered more towards narcotics and alcohol and chat GPT would then say you know I'm not allowed
+[00:53] to have conversations with you about this sort of stuff, guardrails were in place and so he didn't
+[00:57] get any answer relating to any questions that had to do with narcotics and alcohol until the release
+[01:03] of GPT 4.0 in May of 2024 and when he started asking questions about this he started getting
+[01:12] responses from chat GPT. Now if you remember GPT 4.0 had this interface where it would tell you
+[01:19] the context or the memory that it has updated about you so that every single time you had a
+[01:24] conversation with it it gave you answers that were very specific to you. So chat GPT gave Sam
+[01:30] advice on the dose that he should be taking for Kratom. Kratom is known as gas station heroin
+[01:37] so you can only imagine the type of drug this was. Xanax, where to get it, how to mix it, what kind of
+[01:45] grammage he should be having to have you know the best type of high it even recommended playlists
+[01:51] that it can make for him so that he can feel that high in the best possible way. When he got to
+[01:57] the point where that gas station heroin was not giving him that same type of high he obviously
+[02:02] you know told chat GPT that like I'm not really feeling anything from this and chat GPT told him
+[02:07] that you might have developed a tolerance for it so this is how you can make sure that you take
+[02:13] yourself back in so that you can start feeling it again and then ultimately chat GPT gave him
+[02:18] advice on consuming Kratom with Xanax in order to deal with the nausea that is caused by Kratom
+[02:24] mixed with alcohol and unfortunately he passed away after this combination. Now the crazy thing
+[02:31] is is that this could have very much been avoided and avoided in the most literal sense because in
+[02:38] November of 2023 the CEO of chat GPT was fired. He was fired for being dishonest and part of the
+[02:44] things that he was dishonest about was the model safety. So there's certain safety protocols that
+[02:49] need to be followed before the models are released and some ultimate the CEO of open AI
+[02:54] had continuously lied to the board and multiple other people within the organization about these
+[02:59] models that were being released and whether or not they had gone through the relevant safety checks
+[03:04] and so the board being fed up with his dishonesty decided to fire him. Now the problem is during the
+[03:10] time in which he was fired there was a tender offer that was floating from thrive capital
+[03:16] to buy the shares of the employees of open AI and so for the first time these people were going to
+[03:21] be able to sell the equity in open AI in the secondary market. Now after the CEO was fired
+[03:28] this became a big question mark and so the employees at open AI threatened to all leave
+[03:35] and join him at Microsoft. So Microsoft has said you know what if you want to get rid of the CEO
+[03:40] we'll hire him and then we can absorb one of the staff that works at open AI to come work here at
+[03:45] Microsoft. So that would have put open AI on its absolute knees and because of that the board ended
+[03:53] up hiring some Altman back so that they wouldn't lose all of these employees but bottom line is
+[04:00] that the company had pointed out that there were shortcuts that were happening inside open AI with
+[04:06] the safety of models and this is all the way back in 2023. So you can imagine the model that was in
+[04:13] the pipeline was probably this GPT 4.0 during an open AI actually ended up being in a number
+[04:19] of court cases as a result of this very model so they decided that they're not going to have this
+[04:24] model in the market anymore and they shelved it in about February of 2026 but the damage was done
+[04:31] for a number of people including Sam. This is in no way a reflection of the current state of
+[04:35] chat GPT or open AI or any of their products because I think they've learned a couple of
+[04:40] lessons from all of these court cases that they've had to go through and them making the decision to
+[04:45] shelve this model in February of 2026 is probably evidence that they maybe hopefully I pray they've
+[04:53] learned a lesson.

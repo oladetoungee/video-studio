@@ -1,0 +1,178 @@
+{
+ "TOTAL": 463,
+ "INTRO": 0,
+ "OUTRO": 1,
+ "FPS": 30,
+ "CUES": [
+  {
+   "name": "swipe",
+   "t": 95.15,
+   "db": -8,
+   "keep": true
+  },
+  {
+   "name": "pop",
+   "t": 96.2,
+   "db": -5,
+   "keep": true
+  },
+  {
+   "name": "tick",
+   "t": 97.9,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "pop2",
+   "t": 100.36,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "cash",
+   "t": 101.24,
+   "db": -5,
+   "keep": true
+  },
+  {
+   "name": "marker",
+   "t": 102.24,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "tick",
+   "t": 223.2,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "type",
+   "t": 284.9,
+   "db": -8,
+   "keep": true
+  },
+  {
+   "name": "rise",
+   "t": 286.7,
+   "db": -8,
+   "keep": true
+  },
+  {
+   "name": "error",
+   "t": 288.64,
+   "db": -9,
+   "keep": true
+  },
+  {
+   "name": "shutter",
+   "t": 341,
+   "db": -5,
+   "keep": true
+  },
+  {
+   "name": "marker",
+   "t": 345.24,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "shutter",
+   "t": 382.84,
+   "db": -5,
+   "keep": true
+  },
+  {
+   "name": "tick",
+   "t": 384.64,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "marker",
+   "t": 384.8,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "swipe",
+   "t": 450.3,
+   "db": -8,
+   "keep": true
+  }
+ ],
+ "SCENES": [
+  {
+   "n": 1,
+   "id": "pre",
+   "start": 0,
+   "end": 0.1,
+   "ground": "split",
+   "label": "pre",
+   "trans": "cut"
+  },
+  {
+   "n": 2,
+   "id": "open",
+   "start": 0.1,
+   "end": 94.6,
+   "ground": "split",
+   "label": "open",
+   "trans": "whip"
+  },
+  {
+   "n": 3,
+   "id": "basket",
+   "start": 94.6,
+   "end": 218.4,
+   "ground": "split2",
+   "label": "basket",
+   "trans": "cut"
+  },
+  {
+   "n": 4,
+   "id": "gift",
+   "start": 218.4,
+   "end": 284.4,
+   "ground": "split",
+   "label": "gift",
+   "trans": "cut"
+  },
+  {
+   "n": 5,
+   "id": "abtest",
+   "start": 284.4,
+   "end": 340.2,
+   "ground": "split",
+   "label": "abtest",
+   "trans": "whip"
+  },
+  {
+   "n": 6,
+   "id": "ftc",
+   "start": 340.2,
+   "end": 381.2,
+   "ground": "split",
+   "label": "ftc",
+   "trans": "whip"
+  },
+  {
+   "n": 7,
+   "id": "law",
+   "start": 381.2,
+   "end": 449.9,
+   "ground": "split",
+   "label": "law",
+   "trans": "whip"
+  },
+  {
+   "n": 8,
+   "id": "honest",
+   "start": 449.9,
+   "end": 463,
+   "ground": "split",
+   "label": "honest",
+   "trans": "whip"
+  }
+ ]
+}

@@ -1,0 +1,61 @@
+| pexels/banana-bread.jpg | banana bread loaf baking | Rachel Loughman | https://www.pexels.com/photo/overhead-shot-of-a-delicious-banana-bread-5441033/ |
+| pexels/bike.jpg | woman riding bicycle city | Salo Al | https://www.pexels.com/photo/woman-riding-bicycle-71096/ |
+| pexels/book-table.jpg | open book coffee table | The Lazy Artist Gallery | https://www.pexels.com/photo/cappuccino-served-on-wooden-board-on-table-with-open-book-1346292/ |
+| pexels/busstop.jpg | waiting at bus stop | Konstantin Mishchenko | https://www.pexels.com/photo/group-of-adults-sitting-at-a-bus-stop-38928712/ |
+| pexels/call.jpg | woman phone call smiling | Andrea Piacquadio | https://www.pexels.com/photo/woman-in-white-knit-sweater-on-phone-3893136/ |
+| pexels/coffee-talk.jpg | friends talking coffee | John Diez | https://www.pexels.com/photo/female-with-coffee-speaking-with-black-boyfriend-on-street-7388892/ |
+| pexels/crochet.jpg | crochet hands | wal_ 172619 | https://www.pexels.com/photo/close-up-of-hands-crocheting-with-blue-yarn-36238478/ |
+| pexels/journal.jpg | junk journal | melanfolia меланфолія | https://www.pexels.com/photo/an-aesthetic-flat-lay-of-junk-journaling-supplies-gathered-on-top-of-a-handmade-journal-surrounded-by-art-props-vintage-papers-and-dry-leaves-17042503/ |
+| pexels/kettle.jpg | kettle boiling | Engin Akyurt | https://www.pexels.com/photo/electric-glass-kettle-with-water-10965749/ |
+| pexels/longread.jpg | reading long article tablet | iam hogir | https://www.pexels.com/photo/hands-touching-the-screen-of-a-tablet-17801344/ |
+| pexels/plants.jpg | watering houseplants | cottonbro studio | https://www.pexels.com/photo/a-man-watering-green-houseplants-9710641/ |
+| pexels/pray.jpg | woman praying | Arina Krasnikova | https://www.pexels.com/photo/a-person-in-orange-shirt-with-hands-together-5418299/ |
+| pexels/pushups.jpg | push ups at home | Gustavo Fring | https://www.pexels.com/photo/a-man-in-black-active-wear-working-out-doing-push-ups-6496124/ |
+| pexels/read-eat.jpg | reading book while eating | RF._.studio _ | https://www.pexels.com/photo/person-reading-a-book-3060324/ |
+| pexels/thrift.jpg | thrift store bags | cottonbro studio | https://www.pexels.com/photo/used-things-on-cabinet-in-thrift-store-6070061/ |
+| pexels/waiting.jpg | woman waiting alone bench city | Brett Sayles | https://www.pexels.com/photo/woman-sitting-on-bench-1412978/ |
+| pexels/phone-night.jpg | phone-night | YESID Valencia | https://www.pexels.com/photo/woman-in-black-tank-top-holding-smartphone-3836045/ |
+| pexels/scroll-hand.jpg | scroll-hand | Liliana Drew | https://www.pexels.com/photo/close-up-photo-of-a-person-holding-cellphone-8554617/ |
+| pexels/window-pause.jpg | window-pause | Sóc Năng Động | https://www.pexels.com/photo/pensive-woman-looking-out-urban-window-38352223/ |
+| pexels/couch-phone.jpg | couch-phone | https://kaboompics.com/ | https://www.pexels.com/photo/woman-lying-on-sofa-and-reading-from-smartphone-6255976/ |
+| pexels/tea-book.jpg | tea-book | Olha Ruskykh | https://www.pexels.com/photo/mug-with-beverage-and-book-on-bed-5984589/ |
+| pexels/tired-sofa.jpg | tired-sofa | SHVETS production | https://www.pexels.com/photo/anonymous-woman-relaxing-on-couch-after-household-routine-7513213/ |
+| pexels/reading-smile.jpg | reading-smile | Mental Health America  (MHA) | https://www.pexels.com/photo/smiling-woman-wearing-a-sun-hat-and-reading-a-book-5531323/ |
+| pexels/queue.jpg | queue | Click Jeth | https://www.pexels.com/photo/line-of-waiting-people-18530593/ |
+| pexels/lunch-alone.jpg | lunch-alone | MART  PRODUCTION | https://www.pexels.com/photo/woman-in-plaid-shirt-eating-sandwich-8165299/ |
+| pexels/bored-book.jpg | bored-book | https://kaboompics.com/ | https://www.pexels.com/photo/a-woman-yawning-while-covering-her-mouth-4468088/ |
+| pexels/tablet.jpg | tablet | Alexander Pöllinger | https://www.pexels.com/photo/a-tablet-and-a-smartphone-on-a-wooden-table-10535365/ |
+| pexels/ceiling.jpg | ceiling | cottonbro studio | https://www.pexels.com/photo/a-woman-in-sweater-lying-down-on-the-bed-6951535/ |
+| pexels/bench-alone.jpg | bench-alone | Brett Sayles | https://www.pexels.com/photo/person-sitting-on-brown-wooden-bench-1073076/ |
+| pexels/daydream.jpg | daydream | Vitaly Gariev | https://www.pexels.com/photo/woman-enjoying-coffee-by-the-window-indoors-36729606/ |
+| pexels/phones-table.jpg | phones-table | Mikhail Nilov | https://www.pexels.com/photo/women-looking-at-the-screen-of-a-cellphone-9543917/ |
+| pexels/neighbours.jpg | neighbours | Cut Nanda Oemar | https://www.pexels.com/photo/elderly-women-smiling-at-colorful-window-in-java-40312508/ |
+| pexels/barista.jpg | barista | Pavel Danilyuk | https://www.pexels.com/photo/a-woman-in-black-shirt-talking-to-her-customers-while-ordering-at-the-counter-6612716/ |
+| pexels/bench-talk.jpg | bench-talk | Reem  Mansour | https://www.pexels.com/photo/two-old-men-sitting-on-bench-in-park-in-autumn-10339902/ |
+| pexels/laughing-talk.jpg | laughing-talk | Ketut Subiyanto | https://www.pexels.com/photo/women-holding-disposable-cups-laughing-5047002/ |
+| pexels/school-kids.jpg | school-kids | Thang Nguyen | https://www.pexels.com/photo/two-children-crossing-street-with-backpacks-37098586/ |
+| pexels/friends-laugh.jpg | friends-laugh | Andrea Piacquadio | https://www.pexels.com/photo/photo-of-women-laughing-while-sitting-near-water-fountain-3768884/ |
+| pexels/planner.jpg | planner | Ahmed ؜ | https://www.pexels.com/photo/woman-planning-in-a-notebook-19905189/ |
+| pexels/picnic.jpg | picnic | Danik Prihodko | https://www.pexels.com/photo/women-laughing-together-7658703/ |
+| pexels/bike-evening.jpg | bike-evening | Soumyojit Sinha | https://www.pexels.com/photo/cycling-to-a-sunset-27979306/ |
+| pexels/bike-road.jpg | bike-road | Pixabay | https://www.pexels.com/photo/road-amidst-trees-in-forest-against-sky-258036/ |
+| pexels/handlebars.jpg | handlebars | Pavel Danilyuk | https://www.pexels.com/photo/person-riding-a-bicycle-5807742/ |
+| pexels/rack.jpg | rack | cottonbro studio | https://www.pexels.com/photo/a-man-wearing-sunglasses-and-sun-visor-cap-looking-at-the-hanging-clothes-on-the-rack-6069961/ |
+| pexels/vintage.jpg | vintage | Oğuz Kandemir | https://www.pexels.com/photo/jewelry-and-accessories-18766297/ |
+| pexels/store-exit.jpg | store-exit | Mike Jones | https://www.pexels.com/photo/a-woman-walking-out-of-a-cafe-holding-a-book-and-a-cup-of-coffee-9051799/ |
+| pexels/happy-shopper.jpg | happy-shopper | Andrea Piacquadio | https://www.pexels.com/photo/woman-in-black-coat-holding-a-shopping-bags-3775547/ |
+| pexels/gardening.jpg | gardening | Ron Lach | https://www.pexels.com/photo/a-person-planting-on-a-soil-7944396/ |
+| pexels/coins.jpg | coins | Nataliya Vaitkevich | https://www.pexels.com/photo/coins-in-a-jar-6863252/ |
+| pexels/painting-happy.jpg | painting-happy | Vitaly Gariev | https://www.pexels.com/photo/smiling-artist-in-studio-surrounded-by-colorful-paintings-39205343/ |
+| pexels/explore.jpg | explore | 小和尚 温柔的 | https://www.pexels.com/photo/woman-at-night-market-mirror-reflection-32885243/ |
+| pexels/laptop-video.jpg | laptop-video | Ketut Subiyanto | https://www.pexels.com/photo/smiley-black-boys-watching-funny-video-on-laptop-on-bed-4545951/ |
+| pexels/headphones-focus.jpg | headphones-focus | Eren Li | https://www.pexels.com/photo/a-person-wearing-headphones-7241373/ |
+| pexels/notes-watch.jpg | notes-watch | Anna Shvets | https://www.pexels.com/photo/person-writing-on-a-notebook-4226208/ |
+| pexels/couch-lazy.jpg | couch-lazy | RDNE Stock project | https://www.pexels.com/photo/man-lying-down-on-couch-while-having-a-video-call-6414653/ |
+| pexels/notebook-write.jpg | notebook-write | Liza Summer | https://www.pexels.com/photo/focused-woman-checking-address-on-parcel-label-6348092/ |
+| pexels/doodle.jpg | doodle | Mike Murray | https://www.pexels.com/photo/stationery-materials-on-white-surface-5594313/ |
+| pexels/handwriting.jpg | handwriting | betül nur akyürek | https://www.pexels.com/photo/open-notebook-with-handwritten-text-on-a-table-34835174/ |
+| pexels/crumpled.jpg | crumpled | Darina Belonogova | https://www.pexels.com/photo/a-macbook-pro-beside-a-spiral-notebook-over-the-desk-8004054/ |
+| pexels/library.jpg | library | Tima Miroshnichenko | https://www.pexels.com/photo/books-in-wooden-bookshelves-9572664/ |
+| pexels/phone-down.jpg | phone-down | Jessica Lewis 🦋 thepaintedsquare | https://www.pexels.com/photo/notebook-and-smartphone-on-a-table-10024579/ |
+| pexels/vintage-bag.jpg | vintage-bag | Mehmet Turgut  Kirkgoz | https://www.pexels.com/photo/handcrafted-leather-bags-display-in-shop-36933246/ |

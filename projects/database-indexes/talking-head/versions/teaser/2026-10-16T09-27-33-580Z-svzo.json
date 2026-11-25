@@ -1,0 +1,26 @@
+{
+ "label": "Before this session’s edits",
+ "auto": true,
+ "savedAt": 1792142853580,
+ "edits": {
+  "t": {
+   "teaser/label": {
+    "s": "Database indexes"
+   }
+  },
+  "captions": {},
+  "capShort": {},
+  "cap16": {
+   "23": "adding a database index* will literally"
+  },
+  "mix": {
+   "voice": 7,
+   "music": 0,
+   "sfx": 0
+  },
+  "captions16": {
+   "size": 65,
+   "y": 948
+  }
+ }
+}

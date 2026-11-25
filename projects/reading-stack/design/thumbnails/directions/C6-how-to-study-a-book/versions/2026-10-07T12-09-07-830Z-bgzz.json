@@ -1,0 +1,33 @@
+{
+ "label": "Before this session’s edits",
+ "auto": true,
+ "savedAt": 1791374947830,
+ "content": {
+  "direction": "Her photo 16; Baratta top-left, Convivial Toolbox top-right, an open notebook of handwritten notes on the right. Serif line \"How to study a book\"; labels \"uni and thesis reading\", \"remember more\". For a student-focused test; paired with S4 so the title does not repeat the thumbnail.",
+  "concept": "T6",
+  "sample": "viral sample 5 (\"how to be consistent\": studying among books) in the time-to-lock-in look",
+  "thumbnail_text": "How to study a book",
+  "title": "How to Retain What You Read: Start With the Contents Page",
+  "titles": [
+   "How to Retain What You Read: Start With the Contents Page",
+   "How to Read Non-Fiction and Actually Remember It"
+  ],
+  "text": {
+   "big": "How to study a book",
+   "l1": "uni and thesis reading"
+  },
+  "images": {
+   "photo": "../../assets/photo/gbemi16_warm.jpg",
+   "baratta": "../../assets/collage/cover_baratta_clean.jpg",
+   "convivial": "../../assets/collage/cover_convivial_clean.jpg",
+   "notebook": "../../assets/collage/notebook_notes.png"
+  },
+  "vars": {},
+  "gates": {
+   "round3": "a 4/4 · b 8/5 · c 7",
+   "pass": false,
+   "note": "fails click: generic, search-only option",
+   "key": "a = cold image-only topic confidence/5 and click/10; b = in a mocked feed with the title, clarity/click (pass 8/8); c = taste vs her collage samples (pass 8)"
+  }
+ }
+}

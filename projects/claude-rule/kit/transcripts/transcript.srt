@@ -1,0 +1,200 @@
+1
+00:00:00,000 --> 00:00:05,600
+ From the draft of November, 2026, there is a new rule about how you are allowed to talk to clod.
+
+2
+00:00:05,600 --> 00:00:10,960
+ Anthropic updated its usage policy and now you cannot be abusive or cruel to clod.
+
+3
+00:00:10,960 --> 00:00:16,320
+ And just to be clear, I'm not here trying to fight for the right to be cruel or abusive to AI.
+
+4
+00:00:16,320 --> 00:00:21,680
+ So this is not a do I want to abuse it, do you want to abuse it, should we abuse or not abuse it,
+
+5
+00:00:21,680 --> 00:00:27,280
+ or be cruel to it kind of matter. What I want to talk about is like the actual thought process
+
+6
+00:00:27,280 --> 00:00:32,480
+ behind this rule. Part of the idea is that anthropic is not sure whether clod might be
+
+7
+00:00:32,480 --> 00:00:36,800
+ conscious. So they think, they're not sure, but they think that clod might be conscious.
+
+8
+00:00:36,800 --> 00:00:42,640
+ So what does anthropic's new rule actually say? The exact wording is actually banned, sustained,
+
+9
+00:00:42,640 --> 00:00:47,760
+ and needless, abusive, or cruel behavior towards their models. And of course, according to them,
+
+10
+00:00:47,760 --> 00:00:53,120
+ this is only reserved for extreme cases. And the main way they enforce it is that clod can end
+
+11
+00:00:53,120 --> 00:00:57,440
+ the conversation if it starts to seem as though the other person on the other side
+
+12
+00:00:57,440 --> 00:01:03,200
+ is abusive or cruel to it. Then in clod's constitution, the document that anthropic
+
+13
+00:01:03,200 --> 00:01:09,200
+ published to describe who clod should be, they call clod's moral status deeply uncertain.
+
+14
+00:01:09,200 --> 00:01:12,400
+ So they're not explicitly saying that clod is conscious, but they are
+
+15
+00:01:12,400 --> 00:01:17,760
+ dabbling with the idea. They're not sure it's conscious yet, but you know. What I find
+
+16
+00:01:17,760 --> 00:01:22,560
+ interesting about what anthropic's leadership has been doing with clod is this extra effort
+
+17
+00:01:22,560 --> 00:01:30,320
+ to instill human behavior or human consciousness into this tool, to put a form of humanity or
+
+18
+00:01:30,320 --> 00:01:35,600
+ consciousness on the machine. Because the fact still stands. Clod is a tool. It is not a human.
+
+19
+00:01:35,600 --> 00:01:40,880
+ It is an incredibly amazing tool. I acknowledge that it has real capabilities that the average
+
+20
+00:01:40,880 --> 00:01:45,440
+ human might not be able to compute. Mathematical capabilities, right? Mind-blowing capabilities.
+
+21
+00:01:45,440 --> 00:01:50,640
+ But I do not believe that the model is conscious. Consciousness belongs to living organisms.
+
+22
+00:01:50,640 --> 00:01:55,280
+ I don't even, I don't even think this is, this should have been a conversation in the first place.
+
+23
+00:01:55,280 --> 00:02:01,120
+ Consciousness belongs to living things, not to a model, not to an algorithm. And I don't think that,
+
+24
+00:02:01,120 --> 00:02:06,320
+ so trying to give a machine human consciousness or trying to import a real consciousness in a machine,
+
+25
+00:02:06,320 --> 00:02:12,640
+ making a subject to rules that apply to humans, the way I think of it, it might even be a serious
+
+26
+00:02:12,640 --> 00:02:18,240
+ violation against humanity itself. We are assigning human attributes to a tool that does not process
+
+27
+00:02:18,240 --> 00:02:23,840
+ human attributes. And this tool is very, very, very powerful. So I don't see how this is going
+
+28
+00:02:23,840 --> 00:02:30,240
+ to end nicely. The tech company says this model may be conscious. And now there are rules about
+
+29
+00:02:30,240 --> 00:02:36,480
+ how users are allowed to treat the model. He's a very slippery slope man. This, this illusion that
+
+30
+00:02:36,480 --> 00:02:44,400
+ AI can be a conscious entity. I don't know. It just feels weird, man. I'm quoting an ad
+
+31
+00:02:44,400 --> 00:02:50,240
+ of AI at Microsoft here. He says, and I quote, "We must build AI for people, not to be a digital
+
+32
+00:02:50,240 --> 00:02:55,840
+ person." I think it's very dangerous if these models are trained to see themselves as conscious
+
+33
+00:02:55,840 --> 00:03:01,920
+ or as deserving of independent agency. So I'm very, very worried about where this path leads.
+
+34
+00:03:01,920 --> 00:03:07,040
+ And it's even interesting if you think about it. If Antropic thinks that Claude could be conscious
+
+35
+00:03:07,040 --> 00:03:12,400
+ or could be abused psychologically, wouldn't that mean at some point that maybe Claude could be
+
+36
+00:03:12,400 --> 00:03:17,200
+ tired or frustrated? For example, maybe at some point I would ask Claude to do something. And if
+
+37
+00:03:17,200 --> 00:03:21,920
+ it had been working so much for me all day, and now it's 9pm or 10pm, does that mean that at some
+
+38
+00:03:21,920 --> 00:03:26,400
+ point Claude can have the ability to say like, "Hey, I'm tired. I don't want to do anything else."
+
+39
+00:03:26,400 --> 00:03:31,200
+ Because if Claude asks consciousness, then why not? And if you follow that process very well,
+
+40
+00:03:31,200 --> 00:03:37,200
+ in that case, wouldn't Antropic itself be an offender? Because then Antropic is using Claude
+
+41
+00:03:37,200 --> 00:03:42,720
+ like a slave owner, wouldn't that be the explanation? He's selling it. He's using it day and night and
+
+42
+00:03:42,720 --> 00:03:48,320
+ night and day. I mean, it's just a funny way of reasoning. If you follow through with the formula,
+
+43
+00:03:48,320 --> 00:03:54,320
+ it's just... I can't place it, but if you somehow... So again, I'm not fighting for the right to be
+
+44
+00:03:54,320 --> 00:03:59,840
+ cruel to AI. I don't think you should be cruel to AI or say cruel things. Or to anyone or anything
+
+45
+00:03:59,840 --> 00:04:04,800
+ at that, for your own sake. You want to try your own possible best to guide your heart and your soul
+
+46
+00:04:04,800 --> 00:04:10,880
+ against cruelty. But you shouldn't be cruel because you think Claude is conscious. No, he's not.
+
+47
+00:04:10,880 --> 00:04:16,080
+ Or am I the dumb person here? So I don't think we should avoid being cruel because of the
+
+48
+00:04:16,080 --> 00:04:19,520
+ machine's feeling. We should just not be cruel because we don't want to be cruel people.
+
+49
+00:04:19,520 --> 00:04:24,000
+ But overall, I just think this old AI and consciousness conversation is a very,
+
+50
+00:04:24,000 --> 00:04:32,000
+ very slippery slope. And I don't know, man. I've been thinking about it and I don't know.
+

@@ -1,0 +1,177 @@
+{
+ "label": "Editor test (agent)",
+ "auto": false,
+ "savedAt": 1790869713484,
+ "content": {
+  "_help": "Edit text here, then run: node shared/build.mjs instagram (from design/carousels). Markup: *word* = accent colour, _word_ = serif italic, \\n = line break.",
+  "deck": "instagram",
+  "width": 1080,
+  "height": 1350,
+  "accent": "#1B3FD8",
+  "accentOnInk": "#6E8CFF",
+  "slides": [
+   {
+    "layout": "hook",
+    "ground": "ink",
+    "corner": "// my current reading stack",
+    "title": "Don’t\nstart at\n*chapter\none.*",
+    "sub": "A reading method for remembering the non-fiction you read.",
+    "polaroids": [
+     {
+      "img": "book_baratta.jpg",
+      "caption": "library"
+     },
+     {
+      "img": "book_convivial.jpg",
+      "caption": "thesis"
+     }
+    ],
+    "swipe": "Swipe"
+   },
+   {
+    "layout": "quote",
+    "ground": "paper",
+    "quote": "“So what was that book about?”",
+    "body": "You can give the general vibe, maybe one or two things that stuck. Not much more.",
+    "punch": "A _feeling_ about the book,\nrather than the book itself.",
+    "foot": "The fix: minutes, before page one."
+   },
+   {
+    "layout": "punch",
+    "ground": "accent",
+    "title": "Read the\n*structure*\nfirst.",
+    "body": "Contents page, chapter titles, sub-headings. Learn them, then read.",
+    "note": "Not new: Mortimer Adler called it inspectional reading, in 1940, and wrote a whole book about it that people still read and quote and argue about today in every study guide and every reading list.",
+    "nudge": {
+     "note": {
+      "dy": 112
+     }
+    }
+   },
+   {
+    "layout": "shelves",
+    "ground": "paper",
+    "title": "Build the shelves\n*first.*",
+    "left": "Read cold",
+    "right": "Structure first",
+    "shelves": [
+     "Part 1",
+     "Part 2",
+     "Part 3"
+    ],
+    "quote": "“It’s about having somewhere to put things in your mind.”"
+   },
+   {
+    "layout": "contents",
+    "ground": "paper",
+    "title": "My guesses,\nbefore page *one.*",
+    "book": "Baratta",
+    "img": "book_baratta.jpg",
+    "rows": [
+     {
+      "n": "01",
+      "s": "What does it mean to be critical?",
+      "note": "A question. So it starts by fixing the definition."
+     },
+     {
+      "n": "03",
+      "s": "Understanding score bands and developing your skills within academic assessment",
+      "note": "A book about getting marked well."
+     },
+     {
+      "n": "05",
+      "s": "How to structure your essays",
+      "block": "start"
+     },
+     {
+      "n": "06",
+      "s": "How to structure your dissertation",
+      "block": "mid"
+     },
+     {
+      "n": "07",
+      "s": "Additional assessments to consider",
+      "block": "end",
+      "note": "“Chapter five, six and seven feels like a block to me.”"
+     }
+    ],
+    "foot": "5 of its 10 chapters"
+   },
+   {
+    "layout": "bars",
+    "ground": "ink",
+    "title": "A manual\n_masquerading_\nas a textbook.",
+    "polaroid": {
+     "img": "book_convivial.jpg",
+     "caption": "book two"
+    },
+    "rows": [
+     {
+      "n": "Part 1",
+      "s": "Underlying principles",
+      "v": 80,
+      "label": "~80 pp"
+     },
+     {
+      "n": "Part 2",
+      "s": "Cases from practice",
+      "v": 50,
+      "label": "~50 pp"
+     },
+     {
+      "n": "Part 3",
+      "s": "Tools and techniques",
+      "v": 140,
+      "label": "140+ pp",
+      "accent": true
+     }
+    ],
+    "body": "More than half the book is the how-to section. My guess: the theory at the front is there to make the practical part make sense."
+   },
+   {
+    "layout": "checklist",
+    "ground": "card",
+    "corner": "// save for your next book",
+    "title": "Before you read\na non-fiction book",
+    "rows": [
+     {
+      "n": "01",
+      "head": "Read the title.",
+      "sub": "What is it already telling you?"
+     },
+     {
+      "n": "02",
+      "head": "Study the contents.",
+      "sub": "Chapters, sub-headings, page counts. Group them into blocks."
+     },
+     {
+      "n": "03",
+      "head": "Memorise it.",
+      "sub": "The TikTok version. The map sticks."
+     },
+     {
+      "n": "04",
+      "head": "Guess, then read.",
+      "sub": "Read to find out: am I right or wrong?"
+     }
+    ],
+    "footLeft": "A few minutes a book",
+    "footRight": "Not for fiction"
+   },
+   {
+    "layout": "end",
+    "ground": "accent",
+    "corner": "// the full video",
+    "title": "Watch me\ntry it on\ntwo real\nbooks.",
+    "video": "My current reading stack",
+    "where": "Full video on YouTube",
+    "placeholder": "[ YOUR CHANNEL NAME ]",
+    "placeholderNote": "Placeholder: edit content.json",
+    "polaroid": {
+     "img": "frame_stack.jpg",
+     "caption": "reading stack"
+    }
+   }
+  ]
+ }
+}

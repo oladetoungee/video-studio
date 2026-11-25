@@ -1,0 +1,1792 @@
+{
+	"systeminfo": "WHISPER : COREML = 0 | OPENVINO = 0 | MTL : EMBED_LIBRARY = 1 | CPU : NEON = 1 | ARM_FMA = 1 | FP16_VA = 1 | MATMUL_INT8 = 1 | DOTPROD = 1 | SME = 1 | ACCELERATE = 1 | OPENMP = 1 | REPACK = 1 | ",
+	"model": {
+		"type": "small",
+		"multilingual": false,
+		"vocab": 51864,
+		"audio": {
+			"ctx": 1500,
+			"state": 768,
+			"head": 12,
+			"layer": 12
+		},
+		"text": {
+			"ctx": 448,
+			"state": 768,
+			"head": 12,
+			"layer": 12
+		},
+		"mels": 80,
+		"ftype": 1
+	},
+	"params": {
+		"model": "/Users/gbemi/.cache/whisper/ggml-small.en.bin",
+		"language": "en",
+		"translate": false
+	},
+	"result": {
+		"language": "en"
+	},
+	"transcription": [
+		{
+			"timestamps": {
+				"from": "00:00:00,000",
+				"to": "00:00:21,980"
+			},
+			"offsets": {
+				"from": 0,
+				"to": 21980
+			},
+			"text": " So, this is my current reading stack, by the way, I got that phrase from a video I saw"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:21,980",
+				"to": "00:00:27,500"
+			},
+			"offsets": {
+				"from": 21980,
+				"to": 27500
+			},
+			"text": " this guy was like, this is my current reading stack and I love this so much it's always"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:27,500",
+				"to": "00:00:35,820"
+			},
+			"offsets": {
+				"from": 27500,
+				"to": 35820
+			},
+			"text": " so nice to me. So yeah, this is my current reading stack. Right now I have three books."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:35,820",
+				"to": "00:00:43,480"
+			},
+			"offsets": {
+				"from": 35820,
+				"to": 43480
+			},
+			"text": " I have how to read and write critically by Alex Barata, I got this from the library the"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:43,480",
+				"to": "00:00:51,680"
+			},
+			"offsets": {
+				"from": 43480,
+				"to": 51680
+			},
+			"text": " other day, and I have convivial two books. This one is for my thesis, one of my course"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:51,680",
+				"to": "00:01:00,560"
+			},
+			"offsets": {
+				"from": 51680,
+				"to": 60560
+			},
+			"text": " to provide so at length, it's to me. And I also have Miss Maple's final cases, scratch"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:00,560",
+				"to": "00:01:09,240"
+			},
+			"offsets": {
+				"from": 60560,
+				"to": 69240
+			},
+			"text": " that. And I also have Miss Maple's final cases by Adata Christie, which I'm not going"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:09,240",
+				"to": "00:01:14,080"
+			},
+			"offsets": {
+				"from": 69240,
+				"to": 74080
+			},
+			"text": " to talk about in this video, because fiction I think is a different thing entirely. So"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:14,080",
+				"to": "00:01:17,700"
+			},
+			"offsets": {
+				"from": 74080,
+				"to": 77700
+			},
+			"text": " today I want to talk about a reading method that I think will work for you if you want"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:17,700",
+				"to": "00:01:25,560"
+			},
+			"offsets": {
+				"from": 77700,
+				"to": 85560
+			},
+			"text": " to remember a huge chunk of the things that you read. And I'm going to try it practically"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:25,560",
+				"to": "00:01:31,820"
+			},
+			"offsets": {
+				"from": 85560,
+				"to": 91820
+			},
+			"text": " in this video. So the problem is that you read a book, you sit with it for some days,"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:31,820",
+				"to": "00:01:37,360"
+			},
+			"offsets": {
+				"from": 91820,
+				"to": 97360
+			},
+			"text": " some weeks, and then someone asks you later, what is this book about? And you can tell"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:37,360",
+				"to": "00:01:41,780"
+			},
+			"offsets": {
+				"from": 97360,
+				"to": 101780
+			},
+			"text": " them the general gist, the general vibe of what the book is about, maybe one or two things"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:41,780",
+				"to": "00:01:50,000"
+			},
+			"offsets": {
+				"from": 101780,
+				"to": 110000
+			},
+			"text": " that stuck out to you. But you cannot really pinpoint, you can't give them more information."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:50,000",
+				"to": "00:01:55,440"
+			},
+			"offsets": {
+				"from": 110000,
+				"to": 115440
+			},
+			"text": " It's almost as though you are left with the feeling about the book, as opposed to the"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:55,440",
+				"to": "00:02:00,560"
+			},
+			"offsets": {
+				"from": 115440,
+				"to": 120560
+			},
+			"text": " book itself. So this method that I'm going to talk about in this video is going to fix"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:00,560",
+				"to": "00:02:05,040"
+			},
+			"offsets": {
+				"from": 120560,
+				"to": 125040
+			},
+			"text": " that. The method is pretty much straightforward. The idea is that before you read a book, you"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:05,040",
+				"to": "00:02:10,080"
+			},
+			"offsets": {
+				"from": 125040,
+				"to": 130080
+			},
+			"text": " read the structure of the book first. So you get a new book, you go to the table of content"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:10,080",
+				"to": "00:02:14,560"
+			},
+			"offsets": {
+				"from": 130080,
+				"to": 134560
+			},
+			"text": " first. You don't just flip and start reading. You go to the table of content, you started"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:14,560",
+				"to": "00:02:20,320"
+			},
+			"offsets": {
+				"from": 134560,
+				"to": 140320
+			},
+			"text": " the chapters, the subedings. You look at how the whole thing is laid out before you even"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:20,320",
+				"to": "00:02:28,000"
+			},
+			"offsets": {
+				"from": 140320,
+				"to": 148000
+			},
+			"text": " read a single page of the actual content. After you have done that, then you can then"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:28,000",
+				"to": "00:02:33,320"
+			},
+			"offsets": {
+				"from": 148000,
+				"to": 153320
+			},
+			"text": " actually read the book. That has the whole idea. It's so simple. I've seen it several"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:33,320",
+				"to": "00:02:39,400"
+			},
+			"offsets": {
+				"from": 153320,
+				"to": 159400
+			},
+			"text": " times. I think the first time I saw it was on Pinterest, and then on YouTube. And it's"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:39,400",
+				"to": "00:02:44,880"
+			},
+			"offsets": {
+				"from": 159400,
+				"to": 164880
+			},
+			"text": " an odd idea. The oldest version of this method is actually from a book called How to Read"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:44,880",
+				"to": "00:02:55,240"
+			},
+			"offsets": {
+				"from": 164880,
+				"to": 175240
+			},
+			"text": " a Book by Mortimer Halder from 1940. By the way, I'm noting this down. I actually want"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:55,240",
+				"to": "00:03:13,040"
+			},
+			"offsets": {
+				"from": 175240,
+				"to": 193040
+			},
+			"text": " to get that book and read it. Before you read chapter one, you started the content page,"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:13,040",
+				"to": "00:03:20,060"
+			},
+			"offsets": {
+				"from": 193040,
+				"to": 200060
+			},
+			"text": " the chapter titles, the subedings. You skim a little to see how the author has laid out"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:20,060",
+				"to": "00:03:27,360"
+			},
+			"offsets": {
+				"from": 200060,
+				"to": 207360
+			},
+			"text": " the argument. You can see on YouTube, people talk about it. I think this guy, Justin Song's"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:27,360",
+				"to": "00:03:33,000"
+			},
+			"offsets": {
+				"from": 207360,
+				"to": 213000
+			},
+			"text": " YouTube page, I subscribe to his YouTube channel. I think I saw it in a video where it calls"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:33,000",
+				"to": "00:03:39,440"
+			},
+			"offsets": {
+				"from": 213000,
+				"to": 219440
+			},
+			"text": " it priming. I'm not sure. Same idea. The idea is that you spend a few minutes with the heading,"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:39,440",
+				"to": "00:03:44,840"
+			},
+			"offsets": {
+				"from": 219440,
+				"to": 224840
+			},
+			"text": " you access out the path connect before you start reading. And I love the version I saw"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:44,840",
+				"to": "00:03:49,920"
+			},
+			"offsets": {
+				"from": 224840,
+				"to": 229920
+			},
+			"text": " on TikTok because I did use to memorize it. I would actually read through the headings"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:49,920",
+				"to": "00:03:57,880"
+			},
+			"offsets": {
+				"from": 229920,
+				"to": 237880
+			},
+			"text": " and the subedings. But memorizing, it actually makes it work better for me. It makes it stick"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:57,880",
+				"to": "00:04:06,140"
+			},
+			"offsets": {
+				"from": 237880,
+				"to": 246140
+			},
+			"text": " for me as opposed to just skimming through. It makes the mapping stronger in my mind."
+		},
+		{
+			"timestamps": {
+				"from": "00:04:06,140",
+				"to": "00:04:12,280"
+			},
+			"offsets": {
+				"from": 246140,
+				"to": 252280
+			},
+			"text": " So why does this method work? At least as far as I understand. It's about having somewhere"
+		},
+		{
+			"timestamps": {
+				"from": "00:04:12,280",
+				"to": "00:04:17,960"
+			},
+			"offsets": {
+				"from": 252280,
+				"to": 257960
+			},
+			"text": " to put things in your mind. When you start reading a book called, every new idea from"
+		},
+		{
+			"timestamps": {
+				"from": "00:04:17,960",
+				"to": "00:04:24,680"
+			},
+			"offsets": {
+				"from": 257960,
+				"to": 264680
+			},
+			"text": " the book that arrives, your brain has nowhere to file it. So the idea sort of floats in"
+		},
+		{
+			"timestamps": {
+				"from": "00:04:24,680",
+				"to": "00:04:30,720"
+			},
+			"offsets": {
+				"from": 264680,
+				"to": 270720
+			},
+			"text": " your mind. And then the next idea, you have, we got one idea from chapter one, the next"
+		},
+		{
+			"timestamps": {
+				"from": "00:04:30,720",
+				"to": "00:04:38,800"
+			},
+			"offsets": {
+				"from": 270720,
+				"to": 278800
+			},
+			"text": " idea arrived. And by the time you are in chapter six, you already have a pile of ideas floating"
+		},
+		{
+			"timestamps": {
+				"from": "00:04:38,800",
+				"to": "00:04:45,320"
+			},
+			"offsets": {
+				"from": 278800,
+				"to": 285320
+			},
+			"text": " around in your mind, and they have nothing to attach themself to. But when you have started"
+		},
+		{
+			"timestamps": {
+				"from": "00:04:45,320",
+				"to": "00:04:49,800"
+			},
+			"offsets": {
+				"from": 285320,
+				"to": 289800
+			},
+			"text": " the structure for us, you already know the shape of the argument. So when an idea shows"
+		},
+		{
+			"timestamps": {
+				"from": "00:04:49,800",
+				"to": "00:04:54,520"
+			},
+			"offsets": {
+				"from": 289800,
+				"to": 294520
+			},
+			"text": " up in the book, you know which part of the book it belongs to and what it is doing there."
+		},
+		{
+			"timestamps": {
+				"from": "00:04:54,520",
+				"to": "00:05:00,480"
+			},
+			"offsets": {
+				"from": 294520,
+				"to": 300480
+			},
+			"text": " In your mind, that idea has somewhere to go to. That's the old mechanism. You're building"
+		},
+		{
+			"timestamps": {
+				"from": "00:05:00,480",
+				"to": "00:05:06,600"
+			},
+			"offsets": {
+				"from": 300480,
+				"to": 306600
+			},
+			"text": " the shelves before you put something on them. So let's actually do this practically. I'll"
+		},
+		{
+			"timestamps": {
+				"from": "00:05:06,600",
+				"to": "00:05:11,680"
+			},
+			"offsets": {
+				"from": 306600,
+				"to": 311680
+			},
+			"text": " start with this book, because it's a smaller one, and the structure is very clean. How"
+		},
+		{
+			"timestamps": {
+				"from": "00:05:11,680",
+				"to": "00:05:18,080"
+			},
+			"offsets": {
+				"from": 311680,
+				"to": 318080
+			},
+			"text": " to read and write critically by Alex Barata. And before I open it, the title is already"
+		},
+		{
+			"timestamps": {
+				"from": "00:05:18,080",
+				"to": "00:05:23,360"
+			},
+			"offsets": {
+				"from": 318080,
+				"to": 323360
+			},
+			"text": " telling us something. The title is what attracted me to it in the library in the first place."
+		},
+		{
+			"timestamps": {
+				"from": "00:05:23,360",
+				"to": "00:05:32,160"
+			},
+			"offsets": {
+				"from": 323360,
+				"to": 332160
+			},
+			"text": " So first of all, it's very simple and direct how to read and write critically. Treating"
+		},
+		{
+			"timestamps": {
+				"from": "00:05:32,160",
+				"to": "00:05:39,280"
+			},
+			"offsets": {
+				"from": 332160,
+				"to": 339280
+			},
+			"text": " writing and reading critically together. And now if we open up to the chapters, we have"
+		},
+		{
+			"timestamps": {
+				"from": "00:05:39,280",
+				"to": "00:05:45,000"
+			},
+			"offsets": {
+				"from": 339280,
+				"to": 345000
+			},
+			"text": " 10 chapters in this book. Chapter one, what does it mean to be critical? Different ways"
+		},
+		{
+			"timestamps": {
+				"from": "00:05:45,000",
+				"to": "00:05:50,520"
+			},
+			"offsets": {
+				"from": 345000,
+				"to": 350520
+			},
+			"text": " to show your criticality. Chapter two, understanding the score band and developing your skills"
+		},
+		{
+			"timestamps": {
+				"from": "00:05:50,520",
+				"to": "00:05:59,000"
+			},
+			"offsets": {
+				"from": 350520,
+				"to": 359000
+			},
+			"text": " within academic assessment. The connection between critical reading, thinking and writing,"
+		},
+		{
+			"timestamps": {
+				"from": "00:05:59,000",
+				"to": "00:06:04,200"
+			},
+			"offsets": {
+				"from": 359000,
+				"to": 364200
+			},
+			"text": " how to structure your essay, how to structure your dissertation, additional assessment to"
+		},
+		{
+			"timestamps": {
+				"from": "00:06:04,200",
+				"to": "00:06:11,400"
+			},
+			"offsets": {
+				"from": 364200,
+				"to": 371400
+			},
+			"text": " consider, far ways to approach interpretation, how to use quotes and paraphrase, how to use"
+		},
+		{
+			"timestamps": {
+				"from": "00:06:11,400",
+				"to": "00:06:32,560"
+			},
+			"offsets": {
+				"from": 371400,
+				"to": 392560
+			},
+			"text": " quotes, paraphrase and summarise, how to use critical language in your assessment."
+		},
+		{
+			"timestamps": {
+				"from": "00:06:32,560",
+				"to": "00:06:54,400"
+			},
+			"offsets": {
+				"from": 392560,
+				"to": 414400
+			},
+			"text": " So the first thing you notice is that chapter one is a question, at least in this book particularly,"
+		},
+		{
+			"timestamps": {
+				"from": "00:06:54,400",
+				"to": "00:07:00,440"
+			},
+			"offsets": {
+				"from": 414400,
+				"to": 420440
+			},
+			"text": " what does it mean to be critical? Which means that the author thinks, at least I am assuming"
+		},
+		{
+			"timestamps": {
+				"from": "00:07:00,440",
+				"to": "00:07:06,120"
+			},
+			"offsets": {
+				"from": 420440,
+				"to": 426120
+			},
+			"text": " that the main problem to start with is that no one has actually defined the word for you."
+		},
+		{
+			"timestamps": {
+				"from": "00:07:06,120",
+				"to": "00:07:11,640"
+			},
+			"offsets": {
+				"from": 426120,
+				"to": 431640
+			},
+			"text": " So everybody keeps saying you should be critical, you should think critically, blah, blah, blah."
+		},
+		{
+			"timestamps": {
+				"from": "00:07:11,640",
+				"to": "00:07:18,040"
+			},
+			"offsets": {
+				"from": 431640,
+				"to": 438040
+			},
+			"text": " But this author I'm assuming starts by fixing the definition. So in my head, I'm already"
+		},
+		{
+			"timestamps": {
+				"from": "00:07:18,040",
+				"to": "00:07:23,400"
+			},
+			"offsets": {
+				"from": 438040,
+				"to": 443400
+			},
+			"text": " thinking, because I also told the word critical thinking around a lot. I think I even have"
+		},
+		{
+			"timestamps": {
+				"from": "00:07:23,400",
+				"to": "00:07:30,440"
+			},
+			"offsets": {
+				"from": 443400,
+				"to": 450440
+			},
+			"text": " a video on my YouTube that has something to do with critical thinking. So in my head I'm"
+		},
+		{
+			"timestamps": {
+				"from": "00:07:30,440",
+				"to": "00:07:34,400"
+			},
+			"offsets": {
+				"from": 450440,
+				"to": 454400
+			},
+			"text": " already thinking, am I going to be challenged by the definition this person is going to"
+		},
+		{
+			"timestamps": {
+				"from": "00:07:34,400",
+				"to": "00:07:40,600"
+			},
+			"offsets": {
+				"from": 454400,
+				"to": 460600
+			},
+			"text": " give of what it means to be critical? Is it that I get challenged or the idea I have in"
+		},
+		{
+			"timestamps": {
+				"from": "00:07:40,600",
+				"to": "00:07:46,720"
+			},
+			"offsets": {
+				"from": 460600,
+				"to": 466720
+			},
+			"text": " my head that's supported by this author? So I'm already looking forward to that. Chapter"
+		},
+		{
+			"timestamps": {
+				"from": "00:07:46,720",
+				"to": "00:07:52,440"
+			},
+			"offsets": {
+				"from": 466720,
+				"to": 472440
+			},
+			"text": " two, different ways to show your criticality. In my head again, I already know that this"
+		},
+		{
+			"timestamps": {
+				"from": "00:07:52,440",
+				"to": "00:07:58,240"
+			},
+			"offsets": {
+				"from": 472440,
+				"to": 478240
+			},
+			"text": " is going to be practical. I'm going to get tips. I'm assuming, I haven't read the book,"
+		},
+		{
+			"timestamps": {
+				"from": "00:07:58,240",
+				"to": "00:08:04,040"
+			},
+			"offsets": {
+				"from": 478240,
+				"to": 484040
+			},
+			"text": " I'm assuming that I'm going to get tips on how to show my criticality. Chapter three"
+		},
+		{
+			"timestamps": {
+				"from": "00:08:04,040",
+				"to": "00:08:10,200"
+			},
+			"offsets": {
+				"from": 484040,
+				"to": 490200
+			},
+			"text": " goes on to score bands and assessment. That already tells me what this book is for and"
+		},
+		{
+			"timestamps": {
+				"from": "00:08:10,200",
+				"to": "00:08:17,160"
+			},
+			"offsets": {
+				"from": 490200,
+				"to": 497160
+			},
+			"text": " what it wants. So this is not just a book about critical thinking as a life skill. Again,"
+		},
+		{
+			"timestamps": {
+				"from": "00:08:17,160",
+				"to": "00:08:23,360"
+			},
+			"offsets": {
+				"from": 497160,
+				"to": 503360
+			},
+			"text": " I'm assuming by the chapter title that it is a book about getting marked well academically"
+		},
+		{
+			"timestamps": {
+				"from": "00:08:23,360",
+				"to": "00:08:29,720"
+			},
+			"offsets": {
+				"from": 503360,
+				"to": 509720
+			},
+			"text": " in academia, which is useful for me to know because now I would not be expecting anything"
+		},
+		{
+			"timestamps": {
+				"from": "00:08:29,720",
+				"to": "00:08:37,600"
+			},
+			"offsets": {
+				"from": 509720,
+				"to": 517600
+			},
+			"text": " philosophical. Now I'm expecting practical academic strategy. And then chapter four,"
+		},
+		{
+			"timestamps": {
+				"from": "00:08:37,600",
+				"to": "00:08:43,800"
+			},
+			"offsets": {
+				"from": 517600,
+				"to": 523800
+			},
+			"text": " I'm looking forward to that chapter. The connection between critical thinking, critical writing,"
+		},
+		{
+			"timestamps": {
+				"from": "00:08:43,800",
+				"to": "00:08:51,760"
+			},
+			"offsets": {
+				"from": 523800,
+				"to": 531760
+			},
+			"text": " how everything comes together. I also have started to ask questions. Is it possible to"
+		},
+		{
+			"timestamps": {
+				"from": "00:08:51,760",
+				"to": "00:08:55,680"
+			},
+			"offsets": {
+				"from": 531760,
+				"to": 535680
+			},
+			"text": " think critically, but not write critically? Is it possible to do one or the other? Or"
+		},
+		{
+			"timestamps": {
+				"from": "00:08:55,680",
+				"to": "00:09:01,920"
+			},
+			"offsets": {
+				"from": 535680,
+				"to": 541920
+			},
+			"text": " are they bundled together? I don't know yet, but I'm anticipating that this author has"
+		},
+		{
+			"timestamps": {
+				"from": "00:09:01,920",
+				"to": "00:09:10,840"
+			},
+			"offsets": {
+				"from": 541920,
+				"to": 550840
+			},
+			"text": " the answer. Then you look at chapter five, six, seven, essay dissertation, assessment."
+		},
+		{
+			"timestamps": {
+				"from": "00:09:10,840",
+				"to": "00:09:16,040"
+			},
+			"offsets": {
+				"from": 550840,
+				"to": 556040
+			},
+			"text": " In my head, that feels like a block. The whole block is about structure. At least I am assuming."
+		},
+		{
+			"timestamps": {
+				"from": "00:09:16,040",
+				"to": "00:09:27,480"
+			},
+			"offsets": {
+				"from": 556040,
+				"to": 567480
+			},
+			"text": " Do you organize your essay? Blah, blah, blah. And if you look at additional assessment parts,"
+		},
+		{
+			"timestamps": {
+				"from": "00:09:27,480",
+				"to": "00:09:38,600"
+			},
+			"offsets": {
+				"from": 567480,
+				"to": 578600
+			},
+			"text": " which is chapter seven, post-op presentation, oral presentation, and all of that, still"
+		},
+		{
+			"timestamps": {
+				"from": "00:09:38,600",
+				"to": "00:09:43,640"
+			},
+			"offsets": {
+				"from": 578600,
+				"to": 583640
+			},
+			"text": " everything feels like a block to me. And then chapter eight, nine, and ten, we have chapter"
+		},
+		{
+			"timestamps": {
+				"from": "00:09:43,640",
+				"to": "00:09:49,960"
+			},
+			"offsets": {
+				"from": 583640,
+				"to": 589960
+			},
+			"text": " eight, four ways to approach interpretation. In my head, I'm thinking when someone says"
+		},
+		{
+			"timestamps": {
+				"from": "00:09:49,960",
+				"to": "00:09:54,560"
+			},
+			"offsets": {
+				"from": 589960,
+				"to": 594560
+			},
+			"text": " something, this chapter is going to be about where should my mind go to first? Actually,"
+		},
+		{
+			"timestamps": {
+				"from": "00:09:54,560",
+				"to": "00:10:00,640"
+			},
+			"offsets": {
+				"from": 594560,
+				"to": 600640
+			},
+			"text": " I interpret what people say. Do I interpret contestually or something like that? I don't"
+		},
+		{
+			"timestamps": {
+				"from": "00:10:00,640",
+				"to": "00:10:06,800"
+			},
+			"offsets": {
+				"from": 600640,
+				"to": 606800
+			},
+			"text": " know yet what's, I'm already forming something up in my head. On that chapter eight, I see"
+		},
+		{
+			"timestamps": {
+				"from": "00:10:06,800",
+				"to": "00:10:15,600"
+			},
+			"offsets": {
+				"from": 606800,
+				"to": 615600
+			},
+			"text": " that the four approaches are agreement, disagreement, illustration, and explanation. Those are the"
+		},
+		{
+			"timestamps": {
+				"from": "00:10:15,600",
+				"to": "00:10:21,760"
+			},
+			"offsets": {
+				"from": 615600,
+				"to": 621760
+			},
+			"text": " four approaches. And the next chapter is how to use quotes, paraphrase, and summarize."
+		},
+		{
+			"timestamps": {
+				"from": "00:10:21,760",
+				"to": "00:10:26,280"
+			},
+			"offsets": {
+				"from": 621760,
+				"to": 626280
+			},
+			"text": " On that chapter, we have the garrison, the rest quotation. And the last chapter is how"
+		},
+		{
+			"timestamps": {
+				"from": "00:10:26,280",
+				"to": "00:10:32,720"
+			},
+			"offsets": {
+				"from": 626280,
+				"to": 632720
+			},
+			"text": " to use critical language in your assessment. There is aging. Why do we age? I don't know"
+		},
+		{
+			"timestamps": {
+				"from": "00:10:32,720",
+				"to": "00:10:38,240"
+			},
+			"offsets": {
+				"from": 632720,
+				"to": 638240
+			},
+			"text": " that either. But in my head, I'm thinking, oh, there's critical language. So there are"
+		},
+		{
+			"timestamps": {
+				"from": "00:10:38,240",
+				"to": "00:10:42,080"
+			},
+			"offsets": {
+				"from": 638240,
+				"to": 642080
+			},
+			"text": " language that are critical, and perhaps there are languages that are not critical. I don't"
+		},
+		{
+			"timestamps": {
+				"from": "00:10:42,080",
+				"to": "00:10:47,080"
+			},
+			"offsets": {
+				"from": 642080,
+				"to": 647080
+			},
+			"text": " know yet. All of these are still my guess. Now, when I read, I'm reading to find out"
+		},
+		{
+			"timestamps": {
+				"from": "00:10:47,080",
+				"to": "00:10:52,560"
+			},
+			"offsets": {
+				"from": 647080,
+				"to": 652560
+			},
+			"text": " am I right or am I wrong? When I read this book, I'm able to retain more ideas now because"
+		},
+		{
+			"timestamps": {
+				"from": "00:10:52,560",
+				"to": "00:10:59,840"
+			},
+			"offsets": {
+				"from": 652560,
+				"to": 659840
+			},
+			"text": " my mind is expecting things. My mind has a position now. So right. Now, book two. This"
+		},
+		{
+			"timestamps": {
+				"from": "00:10:59,840",
+				"to": "00:11:05,600"
+			},
+			"offsets": {
+				"from": 659840,
+				"to": 665600
+			},
+			"text": " one is bigger. It's for my thesis, Convivial Toolbox, Generative Research for the Front"
+		},
+		{
+			"timestamps": {
+				"from": "00:11:05,600",
+				"to": "00:11:17,320"
+			},
+			"offsets": {
+				"from": 665600,
+				"to": 677320
+			},
+			"text": " End of Design by Lee Sanders and Pieta. It's not Pieta, Pieta, Jan Stapers. Now, the title"
+		},
+		{
+			"timestamps": {
+				"from": "00:11:17,320",
+				"to": "00:11:22,600"
+			},
+			"offsets": {
+				"from": 677320,
+				"to": 682600
+			},
+			"text": " first. The title has three major words of racism that catches my attention. There's"
+		},
+		{
+			"timestamps": {
+				"from": "00:11:22,600",
+				"to": "00:11:28,160"
+			},
+			"offsets": {
+				"from": 682600,
+				"to": 688160
+			},
+			"text": " convivial, there's generative. I know what the toolbox is. And there is front end of"
+		},
+		{
+			"timestamps": {
+				"from": "00:11:28,160",
+				"to": "00:11:33,880"
+			},
+			"offsets": {
+				"from": 688160,
+				"to": 693880
+			},
+			"text": " design. So let's take a look at the main word, convivial. What does convivial mean? The book"
+		},
+		{
+			"timestamps": {
+				"from": "00:11:33,880",
+				"to": "00:11:40,200"
+			},
+			"offsets": {
+				"from": 693880,
+				"to": 700200
+			},
+			"text": " is dedicated, because I checked it, dedicated to a philosopher. And convivial tools, the"
+		},
+		{
+			"timestamps": {
+				"from": "00:11:40,200",
+				"to": "00:11:46,720"
+			},
+			"offsets": {
+				"from": 700200,
+				"to": 706720
+			},
+			"text": " name of the philosopher is Ivan something. Convivial tool is his idea. Convivial tools"
+		},
+		{
+			"timestamps": {
+				"from": "00:11:46,720",
+				"to": "00:11:53,600"
+			},
+			"offsets": {
+				"from": 706720,
+				"to": 713600
+			},
+			"text": " mean tools that give power back to the person using them, rather than making that user dependent"
+		},
+		{
+			"timestamps": {
+				"from": "00:11:53,600",
+				"to": "00:11:58,120"
+			},
+			"offsets": {
+				"from": 713600,
+				"to": 718120
+			},
+			"text": " on an aspect. So before I read a single page, I already know the argument. This is my guess."
+		},
+		{
+			"timestamps": {
+				"from": "00:11:58,120",
+				"to": "00:12:04,200"
+			},
+			"offsets": {
+				"from": 718120,
+				"to": 724200
+			},
+			"text": " This book is going to be, it's going to say something that like design research tools"
+		},
+		{
+			"timestamps": {
+				"from": "00:12:04,200",
+				"to": "00:12:08,960"
+			},
+			"offsets": {
+				"from": 724200,
+				"to": 728960
+			},
+			"text": " should be able to be used by ordinary people and not just researchers. I'm thinking that's"
+		},
+		{
+			"timestamps": {
+				"from": "00:12:08,960",
+				"to": "00:12:13,440"
+			},
+			"offsets": {
+				"from": 728960,
+				"to": 733440
+			},
+			"text": " the vibe that the title is given, because I already know this is disconnected to my"
+		},
+		{
+			"timestamps": {
+				"from": "00:12:13,440",
+				"to": "00:12:18,080"
+			},
+			"offsets": {
+				"from": 733440,
+				"to": 738080
+			},
+			"text": " thesis. But even if I didn't, it would give me that vibe. Now let's move on to the structure"
+		},
+		{
+			"timestamps": {
+				"from": "00:12:18,080",
+				"to": "00:12:24,560"
+			},
+			"offsets": {
+				"from": 738080,
+				"to": 744560
+			},
+			"text": " of the book. It has three parts. It has parts and then chapters and sub chapters. Part one"
+		},
+		{
+			"timestamps": {
+				"from": "00:12:24,560",
+				"to": "00:12:33,040"
+			},
+			"offsets": {
+				"from": 744560,
+				"to": 753040
+			},
+			"text": " is kind of like basics, the underlying principle. And then we have part two, cases from practice."
+		},
+		{
+			"timestamps": {
+				"from": "00:12:33,040",
+				"to": "00:12:41,400"
+			},
+			"offsets": {
+				"from": 753040,
+				"to": 761400
+			},
+			"text": " And then part three is how to use the tools and the techniques. Also keep in mind the"
+		},
+		{
+			"timestamps": {
+				"from": "00:12:41,400",
+				"to": "00:12:46,000"
+			},
+			"offsets": {
+				"from": 761400,
+				"to": 766000
+			},
+			"text": " page number. It also tells you something. For example, in this book, part one is about"
+		},
+		{
+			"timestamps": {
+				"from": "00:12:46,000",
+				"to": "00:12:53,160"
+			},
+			"offsets": {
+				"from": 766000,
+				"to": 773160
+			},
+			"text": " 80 pages, part two is 50 pages, and part three is over 140 pages. So more than half the book"
+		},
+		{
+			"timestamps": {
+				"from": "00:12:53,160",
+				"to": "00:12:59,240"
+			},
+			"offsets": {
+				"from": 773160,
+				"to": 779240
+			},
+			"text": " is the outer section. So even though it opens with the theory, I already know that this"
+		},
+		{
+			"timestamps": {
+				"from": "00:12:59,240",
+				"to": "00:13:05,560"
+			},
+			"offsets": {
+				"from": 779240,
+				"to": 785560
+			},
+			"text": " is a very practical book. It's pretty much a manual that is masquerading as a textbook."
+		},
+		{
+			"timestamps": {
+				"from": "00:13:05,560",
+				"to": "00:13:10,680"
+			},
+			"offsets": {
+				"from": 785560,
+				"to": 790680
+			},
+			"text": " And that would change the way I read it, right? Because now I have a guess that a theory that"
+		},
+		{
+			"timestamps": {
+				"from": "00:13:10,680",
+				"to": "00:13:16,320"
+			},
+			"offsets": {
+				"from": 790680,
+				"to": 796320
+			},
+			"text": " is at the front is just there to make the manual or the practical part at the back make"
+		},
+		{
+			"timestamps": {
+				"from": "00:13:16,320",
+				"to": "00:13:22,640"
+			},
+			"offsets": {
+				"from": 796320,
+				"to": 802640
+			},
+			"text": " sense, not the other way around. So now if I dive deep into chapter one, chapter one"
+		},
+		{
+			"timestamps": {
+				"from": "00:13:22,640",
+				"to": "00:13:29,960"
+			},
+			"offsets": {
+				"from": 802640,
+				"to": 809960
+			},
+			"text": " is the introduction. And there are some questions in the subedence. Who is creative? Good question."
+		},
+		{
+			"timestamps": {
+				"from": "00:13:29,960",
+				"to": "00:13:34,160"
+			},
+			"offsets": {
+				"from": 809960,
+				"to": 814160
+			},
+			"text": " Thank you. I don't know. I usually would tell people, oh yeah, you're so creative. I love"
+		},
+		{
+			"timestamps": {
+				"from": "00:13:34,160",
+				"to": "00:13:39,680"
+			},
+			"offsets": {
+				"from": 814160,
+				"to": 819680
+			},
+			"text": " it. I sometimes don't think of myself as being creative. And I think of people, there are"
+		},
+		{
+			"timestamps": {
+				"from": "00:13:39,680",
+				"to": "00:13:45,200"
+			},
+			"offsets": {
+				"from": 819680,
+				"to": 825200
+			},
+			"text": " people that I meet, I'm like, ah, this person is ridiculously creative. So yeah, this is"
+		},
+		{
+			"timestamps": {
+				"from": "00:13:45,200",
+				"to": "00:13:52,520"
+			},
+			"offsets": {
+				"from": 825200,
+				"to": 832520
+			},
+			"text": " a nice way to start, to know exactly who is creative. And the next question says, why"
+		},
+		{
+			"timestamps": {
+				"from": "00:13:52,520",
+				"to": "00:13:57,520"
+			},
+			"offsets": {
+				"from": 832520,
+				"to": 837520
+			},
+			"text": " have people expressing a need for creativity now? The next part is business and design"
+		},
+		{
+			"timestamps": {
+				"from": "00:13:57,520",
+				"to": "00:14:04,720"
+			},
+			"offsets": {
+				"from": 837520,
+				"to": 844720
+			},
+			"text": " are changing. So really interesting questions. But the first question I even like, who is"
+		},
+		{
+			"timestamps": {
+				"from": "00:14:04,720",
+				"to": "00:14:10,360"
+			},
+			"offsets": {
+				"from": 844720,
+				"to": 850360
+			},
+			"text": " creative? It is interesting that the first question is just that. It's not about design"
+		},
+		{
+			"timestamps": {
+				"from": "00:14:10,360",
+				"to": "00:14:14,400"
+			},
+			"offsets": {
+				"from": 850360,
+				"to": 854400
+			},
+			"text": " research or what is generative research. Who is creative? That tells me that the whole"
+		},
+		{
+			"timestamps": {
+				"from": "00:14:14,400",
+				"to": "00:14:23,020"
+			},
+			"offsets": {
+				"from": 854400,
+				"to": 863020
+			},
+			"text": " argument of this book, you're dressed on a claim about ordinary people. It's going to"
+		},
+		{
+			"timestamps": {
+				"from": "00:14:23,020",
+				"to": "00:14:29,560"
+			},
+			"offsets": {
+				"from": 863020,
+				"to": 869560
+			},
+			"text": " argue, I'm assuming, that everybody is creative or nobody is creative or only a select people"
+		},
+		{
+			"timestamps": {
+				"from": "00:14:29,560",
+				"to": "00:14:36,440"
+			},
+			"offsets": {
+				"from": 869560,
+				"to": 876440
+			},
+			"text": " are creative. And I think that is linking already back to the main world, convivio."
+		},
+		{
+			"timestamps": {
+				"from": "00:14:36,440",
+				"to": "00:14:47,160"
+			},
+			"offsets": {
+				"from": 876440,
+				"to": 887160
+			},
+			"text": " So now I have a show for this idea in my mind. And if I skip to the last part of the book,"
+		},
+		{
+			"timestamps": {
+				"from": "00:14:47,160",
+				"to": "00:14:53,000"
+			},
+			"offsets": {
+				"from": 887160,
+				"to": 893000
+			},
+			"text": " chapter 10, I think bridging. Under that chapter, they're like questions, where had the gap?"
+		},
+		{
+			"timestamps": {
+				"from": "00:14:53,000",
+				"to": "00:14:57,480"
+			},
+			"offsets": {
+				"from": 893000,
+				"to": 897480
+			},
+			"text": " Where and when does bridging happen? Who is bridging the gap? What are the ways we can"
+		},
+		{
+			"timestamps": {
+				"from": "00:14:57,480",
+				"to": "00:15:02,640"
+			},
+			"offsets": {
+				"from": 897480,
+				"to": 902640
+			},
+			"text": " bridge the gap? I haven't read this book. I do not know what the gap that this author"
+		},
+		{
+			"timestamps": {
+				"from": "00:15:02,640",
+				"to": "00:15:09,040"
+			},
+			"offsets": {
+				"from": 902640,
+				"to": 909040
+			},
+			"text": " is talking about means. But now I know that there is a gap problem somewhere in this book."
+		},
+		{
+			"timestamps": {
+				"from": "00:15:09,040",
+				"to": "00:15:16,160"
+			},
+			"offsets": {
+				"from": 909040,
+				"to": 916160
+			},
+			"text": " It matters enough that it gets its own chapter. So when I would meet the world gap in part"
+		},
+		{
+			"timestamps": {
+				"from": "00:15:16,160",
+				"to": "00:15:22,040"
+			},
+			"offsets": {
+				"from": 916160,
+				"to": 922040
+			},
+			"text": " one, I should pay attention to it, because I'm coming back to see it in the later chapter."
+		},
+		{
+			"timestamps": {
+				"from": "00:15:22,040",
+				"to": "00:15:26,280"
+			},
+			"offsets": {
+				"from": 922040,
+				"to": 926280
+			},
+			"text": " If I'd read it cold without doing this, I would have probably missed it. I would have"
+		},
+		{
+			"timestamps": {
+				"from": "00:15:26,280",
+				"to": "00:15:34,200"
+			},
+			"offsets": {
+				"from": 926280,
+				"to": 934200
+			},
+			"text": " seen the world gap in chapter two. And I wouldn't think so much of it. So really great method"
+		},
+		{
+			"timestamps": {
+				"from": "00:15:34,200",
+				"to": "00:15:39,080"
+			},
+			"offsets": {
+				"from": 934200,
+				"to": 939080
+			},
+			"text": " to read, if you ask me. And I noticed that it takes less. It feels like a lot of work."
+		},
+		{
+			"timestamps": {
+				"from": "00:15:39,080",
+				"to": "00:15:44,320"
+			},
+			"offsets": {
+				"from": 939080,
+				"to": 944320
+			},
+			"text": " I have to read the Eddings first and all of that. But it takes less time than I think."
+		},
+		{
+			"timestamps": {
+				"from": "00:15:44,320",
+				"to": "00:15:52,840"
+			},
+			"offsets": {
+				"from": 944320,
+				"to": 952840
+			},
+			"text": " A few minutes for a book. The day you pick the book, just go through the chapters, memorize"
+		},
+		{
+			"timestamps": {
+				"from": "00:15:52,840",
+				"to": "00:15:58,680"
+			},
+			"offsets": {
+				"from": 952840,
+				"to": 958680
+			},
+			"text": " the chapters if you can. It's honestly not something that would overwhelm you. In fact,"
+		},
+		{
+			"timestamps": {
+				"from": "00:15:58,680",
+				"to": "00:16:03,960"
+			},
+			"offsets": {
+				"from": 958680,
+				"to": 963960
+			},
+			"text": " it's something, at least for me, that will raise your anticipation, which makes you excited"
+		},
+		{
+			"timestamps": {
+				"from": "00:16:03,960",
+				"to": "00:16:15,040"
+			},
+			"offsets": {
+				"from": 963960,
+				"to": 975040
+			},
+			"text": " for reading about the book. Because you've seen the shape. You're already asking questions."
+		},
+		{
+			"timestamps": {
+				"from": "00:16:15,040",
+				"to": "00:16:23,680"
+			},
+			"offsets": {
+				"from": 975040,
+				"to": 983680
+			},
+			"text": " You are curious now. What is this person trying to say? So he builds up your anticipation."
+		},
+		{
+			"timestamps": {
+				"from": "00:16:23,680",
+				"to": "00:16:30,000"
+			},
+			"offsets": {
+				"from": 983680,
+				"to": 990000
+			},
+			"text": " For nonfiction books, this method is just a no brainer for me now. I just use it for"
+		},
+		{
+			"timestamps": {
+				"from": "00:16:30,000",
+				"to": "00:16:36,480"
+			},
+			"offsets": {
+				"from": 990000,
+				"to": 996480
+			},
+			"text": " nonfiction books and I want to read nonfiction books. So yeah, before reading that book,"
+		},
+		{
+			"timestamps": {
+				"from": "00:16:36,480",
+				"to": "00:16:43,280"
+			},
+			"offsets": {
+				"from": 996480,
+				"to": 1003280
+			},
+			"text": " go over the content, go over the sub Eddings, the Eddings, the chapters, take a guess about"
+		},
+		{
+			"timestamps": {
+				"from": "00:16:43,280",
+				"to": "00:16:49,440"
+			},
+			"offsets": {
+				"from": 1003280,
+				"to": 1009440
+			},
+			"text": " what the argument of the book is about before you read it. For me, I prefer the TikTok version"
+		},
+		{
+			"timestamps": {
+				"from": "00:16:49,440",
+				"to": "00:16:54,640"
+			},
+			"offsets": {
+				"from": 1009440,
+				"to": 1014640
+			},
+			"text": " of just memorizing it. When I force myself to memorize the Eddings, the chapters, it"
+		},
+		{
+			"timestamps": {
+				"from": "00:16:54,640",
+				"to": "00:17:00,320"
+			},
+			"offsets": {
+				"from": 1014640,
+				"to": 1020320
+			},
+			"text": " sticks in a way that, of course, it just sticks for me. Memorizing actually sticks for me"
+		},
+		{
+			"timestamps": {
+				"from": "00:17:00,320",
+				"to": "00:17:06,880"
+			},
+			"offsets": {
+				"from": 1020320,
+				"to": 1026880
+			},
+			"text": " more. And for fiction, I don't think you should be doing this for fiction. I don't know. Fiction"
+		},
+		{
+			"timestamps": {
+				"from": "00:17:06,880",
+				"to": "00:17:13,600"
+			},
+			"offsets": {
+				"from": 1026880,
+				"to": 1033600
+			},
+			"text": " for me is just at the point of reading a novel for me is not knowing what is coming next."
+		},
+		{
+			"timestamps": {
+				"from": "00:17:13,600",
+				"to": "00:17:25,280"
+			},
+			"offsets": {
+				"from": 1033600,
+				"to": 1045280
+			},
+			"text": " So I don't even think that fiction has a table of contents. Oh, fiction. Fiction does, actually."
+		},
+		{
+			"timestamps": {
+				"from": "00:17:25,280",
+				"to": "00:17:30,320"
+			},
+			"offsets": {
+				"from": 1045280,
+				"to": 1050320
+			},
+			"text": " But really, there's no point in doing that for fiction, at least for me. Basically, that's"
+		},
+		{
+			"timestamps": {
+				"from": "00:17:30,320",
+				"to": "00:17:34,880"
+			},
+			"offsets": {
+				"from": 1050320,
+				"to": 1054880
+			},
+			"text": " the method. Read the structure, read the Eddings, read the chapters before you start reading"
+		},
+		{
+			"timestamps": {
+				"from": "00:17:34,880",
+				"to": "00:17:43,760"
+			},
+			"offsets": {
+				"from": 1054880,
+				"to": 1063760
+			},
+			"text": " the book. Take a guess about what the argument of the book is about. So yeah, see you in my"
+		},
+		{
+			"timestamps": {
+				"from": "00:17:43,760",
+				"to": "00:17:50,160"
+			},
+			"offsets": {
+				"from": 1063760,
+				"to": 1070160
+			},
+			"text": " next video. If you have a minute, tell me in the comments what is in your current reading"
+		},
+		{
+			"timestamps": {
+				"from": "00:17:50,160",
+				"to": "00:18:05,680"
+			},
+			"offsets": {
+				"from": 1070160,
+				"to": 1085680
+			},
+			"text": " talk. I mean, we already do something like this. Let me know how it goes for you. Bye."
+		}
+	]
+}

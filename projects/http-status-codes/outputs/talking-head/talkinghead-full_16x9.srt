@@ -1,0 +1,995 @@
+1
+00:00:00,000 --> 00:00:03,110
+every time your browser or your app sends a
+
+2
+00:00:03,110 --> 00:00:06,220
+request to a server, the server sends back a
+
+3
+00:00:06,220 --> 00:00:08,334
+response and the first line of that response
+
+4
+00:00:08,334 --> 00:00:10,230
+has a three-digit number
+
+5
+00:00:10,230 --> 00:00:12,730
+the number is the HTTP status code
+
+6
+00:00:12,730 --> 00:00:14,917
+in this case here, 200 is the status code
+
+7
+00:00:14,917 --> 00:00:16,603
+that OK is the reason phrase
+
+8
+00:00:16,603 --> 00:00:18,643
+the job of the status code is to tell you
+
+9
+00:00:18,643 --> 00:00:21,513
+what happened while the body gives you the
+
+10
+00:00:21,513 --> 00:00:23,333
+detail and you can already tell a lot from
+
+11
+00:00:23,333 --> 00:00:25,593
+the first digit of the number
+
+12
+00:00:25,593 --> 00:00:28,203
+HTTP status codes are grouped into five
+
+13
+00:00:28,203 --> 00:00:30,183
+classes the first digit of the three digit
+
+14
+00:00:30,183 --> 00:00:32,283
+number tells you which class it is
+
+15
+00:00:32,283 --> 00:00:35,013
+the easiest way to think of them is to think
+
+16
+00:00:35,013 --> 00:00:37,763
+of asking for a book at a bookshop counter
+
+17
+00:00:37,763 --> 00:00:40,523
+1xx means, hold on, I'm working on it
+
+18
+00:00:40,523 --> 00:00:42,333
+like the attendant telling you, hey, give me
+
+19
+00:00:42,333 --> 00:00:43,403
+a second, let me check
+
+20
+00:00:43,403 --> 00:00:45,037
+2xx means success
+
+21
+00:00:45,037 --> 00:00:46,617
+I've got your book, right?
+
+22
+00:00:46,617 --> 00:00:47,697
+yeah, it is
+
+23
+00:00:47,697 --> 00:00:49,857
+and 3xx means redirection
+
+24
+00:00:49,857 --> 00:00:52,587
+we moved that book to our other branch, go
+
+25
+00:00:52,587 --> 00:00:54,597
+there 4xx means client error
+
+26
+00:00:54,597 --> 00:00:56,717
+something is wrong with what you asked for
+
+27
+00:00:56,717 --> 00:00:58,097
+maybe you asked for a book that doesn't
+
+28
+00:00:58,097 --> 00:00:59,627
+exist or you didn't show your Bookshop
+
+29
+00:00:59,627 --> 00:01:02,117
+membership card 5xx means server error
+
+30
+00:01:02,117 --> 00:01:04,157
+your request was fine, but something broke
+
+31
+00:01:04,157 --> 00:01:04,797
+on our end
+
+32
+00:01:04,797 --> 00:01:06,837
+our bookstore computer system went down,
+
+33
+00:01:06,837 --> 00:01:07,857
+whatever it is
+
+34
+00:01:07,857 --> 00:01:10,287
+so when something fails or succeeds, look at
+
+35
+00:01:10,287 --> 00:01:12,567
+the first digit of this three-digit number
+
+36
+00:01:12,567 --> 00:01:14,547
+first if we start with a four, we start by
+
+37
+00:01:14,547 --> 00:01:16,357
+checking the request the client sends
+
+38
+00:01:16,357 --> 00:01:18,027
+if we start with a five, we start by
+
+39
+00:01:18,027 --> 00:01:18,757
+checking the server
+
+40
+00:01:18,757 --> 00:01:20,327
+now we'll go through each of them, each of
+
+41
+00:01:20,327 --> 00:01:22,147
+this group using our bookstore API
+
+42
+00:01:22,147 --> 00:01:24,907
+the 1xx status codes, you rarely see this
+
+43
+00:01:24,907 --> 00:01:27,484
+for yourself you might see 101 Switching
+
+44
+00:01:27,484 --> 00:01:30,197
+Protocols when a connection upgrades to a
+
+45
+00:01:30,197 --> 00:01:33,677
+WebSocket, but your day-to-day API is mostly
+
+46
+00:01:33,677 --> 00:01:36,397
+2xx to 5xx HTTP status codes
+
+47
+00:01:36,397 --> 00:01:39,197
+the 2xx status codes mean success
+
+48
+00:01:39,197 --> 00:01:42,067
+and there are three that you will use all of
+
+49
+00:01:42,067 --> 00:01:44,677
+the time 200 OK means your request worked
+
+50
+00:01:44,677 --> 00:01:45,637
+here's the result
+
+51
+00:01:45,637 --> 00:01:49,160
+so GET book 42 returns 200 OK with the book
+
+52
+00:01:49,160 --> 00:01:51,560
+201 Created means the request worked and
+
+53
+00:01:51,560 --> 00:01:52,730
+something new was created
+
+54
+00:01:52,730 --> 00:01:55,310
+so when you POST books to add a new book,
+
+55
+00:01:55,310 --> 00:01:57,230
+the right answer is 201
+
+56
+00:01:57,230 --> 00:01:58,810
+you can also add a Location header that
+
+57
+00:01:58,810 --> 00:01:59,670
+points to the new book
+
+58
+00:01:59,670 --> 00:02:02,800
+204 No Content, means that your request
+
+59
+00:02:02,800 --> 00:02:04,590
+worked, but there's nothing to send back
+
+60
+00:02:04,590 --> 00:02:07,030
+usually we get a 204 a lot with delete
+
+61
+00:02:07,030 --> 00:02:08,880
+for example, in DELETE book 42, there is
+
+62
+00:02:08,880 --> 00:02:09,910
+nothing left to show
+
+63
+00:02:09,910 --> 00:02:13,110
+so you return 204 with an empty body
+
+64
+00:02:13,110 --> 00:02:16,521
+the 3xx HTTP status codes are redirects
+
+65
+00:02:16,521 --> 00:02:20,620
+they tell the client that what it wants is
+
+66
+00:02:20,620 --> 00:02:21,417
+at a different
+
+67
+00:02:21,760 --> 00:02:23,933
+address so the new address goes in the
+
+68
+00:02:23,933 --> 00:02:25,893
+Location header there are four common 3xx
+
+69
+00:02:25,893 --> 00:02:28,003
+HTTP status codes that you will see
+
+70
+00:02:28,003 --> 00:02:29,263
+and to pick the right one, you just need to
+
+71
+00:02:29,263 --> 00:02:29,983
+answer two questions
+
+72
+00:02:29,983 --> 00:02:31,923
+question one, is the move permanent or
+
+73
+00:02:31,923 --> 00:02:34,183
+temporary? if a bookshop moves that book to
+
+74
+00:02:34,183 --> 00:02:37,463
+the other branch for good, that's a 301 or a
+
+75
+00:02:37,463 --> 00:02:39,793
+308 if the book is only there for now and
+
+76
+00:02:39,793 --> 00:02:42,223
+it's coming back, that's a 302 or 307
+
+77
+00:02:42,223 --> 00:02:44,893
+the second question, does the request stay
+
+78
+00:02:44,893 --> 00:02:46,443
+the same when the client follows the
+
+79
+00:02:46,443 --> 00:02:48,713
+redirect so you come to the counter to hand
+
+80
+00:02:48,713 --> 00:02:50,523
+in an order form, and they send it to the
+
+81
+00:02:50,523 --> 00:02:53,263
+other branch with 307 or 308, you take the
+
+82
+00:02:53,263 --> 00:02:55,163
+same form to the other branch, and you hand
+
+83
+00:02:55,163 --> 00:02:55,843
+it in there
+
+84
+00:02:55,843 --> 00:02:58,393
+with 301 and 302, the browser is allowed to
+
+85
+00:02:58,393 --> 00:02:59,783
+switch from POST to GET
+
+86
+00:02:59,783 --> 00:03:01,863
+that so for normal web pages, 301 and 302
+
+87
+00:03:01,863 --> 00:03:03,933
+are fine if you're redirecting an API where
+
+88
+00:03:03,933 --> 00:03:06,613
+POST requests matter, I would use 307 and
+
+89
+00:03:06,613 --> 00:03:10,133
+308 now the 4xx status codes are client
+
+90
+00:03:10,133 --> 00:03:11,823
+errors they mean the system thinks something
+
+91
+00:03:11,823 --> 00:03:14,073
+is wrong with the request and they are the
+
+92
+00:03:14,073 --> 00:03:15,343
+ones you would debug the most
+
+93
+00:03:15,343 --> 00:03:17,743
+let's start with 400 and 422 because they
+
+94
+00:03:17,743 --> 00:03:19,103
+sound similar 400 Bad Request means the
+
+95
+00:03:19,103 --> 00:03:21,023
+server can't read your request properly
+
+96
+00:03:21,023 --> 00:03:23,063
+like broken JSON with a missing bracket
+
+97
+00:03:23,063 --> 00:03:25,583
+422 Unprocessable Content means that the
+
+98
+00:03:25,583 --> 00:03:27,283
+server could read the request just fine, but
+
+99
+00:03:27,283 --> 00:03:28,823
+the data inside does not make sense
+
+100
+00:03:28,823 --> 00:03:31,553
+if you send a bookstore a new book with no
+
+101
+00:03:31,553 --> 00:03:34,093
+title or something like that, you get 422
+
+102
+00:03:34,093 --> 00:03:36,963
+some APIs send 400 for validation errors too
+
+103
+00:03:36,963 --> 00:03:39,023
+I think 422 is clearer because it tells the
+
+104
+00:03:39,023 --> 00:03:41,173
+front end that the format was fine and data
+
+105
+00:03:41,173 --> 00:03:42,583
+is what needs fixing
+
+106
+00:03:42,583 --> 00:03:44,503
+404 Not Found means that there's nothing in
+
+107
+00:03:44,503 --> 00:03:47,673
+the address so if I send GET book 9999 and
+
+108
+00:03:47,673 --> 00:03:49,383
+there's no book 9999, the book does not
+
+109
+00:03:49,383 --> 00:03:51,983
+exist so this client gets a 404 Not Found
+
+110
+00:03:51,983 --> 00:03:53,503
+you probably send a 404 yourself
+
+111
+00:03:53,503 --> 00:03:56,383
+410 Gone is a stronger version of 404
+
+112
+00:03:56,383 --> 00:03:58,383
+It means that this resource was here, it was
+
+113
+00:03:58,383 --> 00:04:00,103
+removed on purpose and it should not be back
+
+114
+00:04:00,103 --> 00:04:01,773
+like a book that you've taken out of the
+
+115
+00:04:01,773 --> 00:04:03,213
+catalog for good
+
+116
+00:04:03,213 --> 00:04:06,175
+in practice, most APIs use 404, but Google's
+
+117
+00:04:06,175 --> 00:04:09,583
+docs say it treats 404 and 410 the same way
+
+118
+00:04:09,583 --> 00:04:11,523
+so you use 410 Gone when you want to be
+
+119
+00:04:11,523 --> 00:04:13,463
+clear that something is gone for good
+
+120
+00:04:13,463 --> 00:04:16,773
+409 Conflict means the request clashed with
+
+121
+00:04:16,773 --> 00:04:18,613
+the current state of the thing that you're
+
+122
+00:04:18,613 --> 00:04:21,103
+changing say two admins open book 42 at the
+
+123
+00:04:21,103 --> 00:04:23,183
+same time admin A changes the price and save
+
+124
+00:04:23,183 --> 00:04:24,983
+admin B is still looking at the old version
+
+125
+00:04:24,983 --> 00:04:26,663
+they change the title and save
+
+126
+00:04:26,663 --> 00:04:28,543
+and that save will put the old price back
+
+127
+00:04:28,543 --> 00:04:30,803
+so if the API keeps track of versions, It
+
+128
+00:04:30,803 --> 00:04:32,853
+can reply with 409 Conflict to admin B
+
+129
+00:04:32,853 --> 00:04:35,183
+instead, so that it can reload and try again
+
+130
+00:04:35,183 --> 00:04:37,123
+429, Too Many Requests means you have been
+
+131
+00:04:37,123 --> 00:04:39,493
+rate limited It means you have sent too many
+
+132
+00:04:39,493 --> 00:04:41,363
+requests in a short time and is asking you
+
+133
+00:04:41,363 --> 00:04:42,083
+to slow down
+
+134
+00:04:42,083 --> 00:04:44,023
+now, 401 versus 403
+
+135
+00:04:44,023 --> 00:04:46,563
+401 versus 403 are two status codes that
+
+136
+00:04:46,563 --> 00:04:48,543
+people mix up together a lot
+
+137
+00:04:48,543 --> 00:04:51,273
+say our bookstore has an admin route, DELETE
+
+138
+00:04:51,273 --> 00:04:53,903
+book 42 only admins can delete book
+
+139
+00:04:53,903 --> 00:04:55,383
+case one, now let's look at two scenarios
+
+140
+00:04:55,383 --> 00:04:57,053
+case one, a request comes in with no token
+
+141
+00:04:57,053 --> 00:04:58,343
+at all, or the token has expired
+
+142
+00:04:58,343 --> 00:05:00,278
+the server has no idea who's sending this
+
+143
+00:05:00,278 --> 00:05:03,043
+request that is a 401 Unauthorized
+
+144
+00:05:03,043 --> 00:05:04,723
+case two, the request has a valid token
+
+145
+00:05:04,723 --> 00:05:06,443
+so the server knows exactly who it is
+
+146
+00:05:06,443 --> 00:05:08,363
+it's a customer, and customers cannot delete
+
+147
+00:05:08,363 --> 00:05:09,923
+book that is a 403 Forbidden
+
+148
+00:05:09,923 --> 00:05:11,843
+so two different cases, right?
+
+149
+00:05:11,843 --> 00:05:13,643
+it's like when you have a hotel keycard
+
+150
+00:05:13,643 --> 00:05:15,363
+401 is when you don't even have a keycard at
+
+151
+00:05:15,363 --> 00:05:16,683
+all or your card doesn't work
+
+152
+00:05:16,683 --> 00:05:18,743
+403 is when your card works fine, but it's
+
+153
+00:05:18,743 --> 00:05:20,183
+for another room and you're trying to enter
+
+154
+00:05:20,183 --> 00:05:22,283
+another room so 401 is kind of who are you?
+
+155
+00:05:22,283 --> 00:05:24,123
+while 403 is kind of, I know who you are,
+
+156
+00:05:24,123 --> 00:05:25,363
+but you can't do this
+
+157
+00:05:25,363 --> 00:05:27,033
+the part that confuses people mostly is the
+
+158
+00:05:27,033 --> 00:05:28,913
+name 401 is called Unauthorized
+
+159
+00:05:28,913 --> 00:05:30,553
+and meanwhile, it's really about
+
+160
+00:05:30,553 --> 00:05:33,203
+authentication 403, on the other hand, is
+
+161
+00:05:33,203 --> 00:05:34,643
+the one that is about permission
+
+162
+00:05:34,643 --> 00:05:37,033
+on a 401, the right move is to send the user
+
+163
+00:05:37,033 --> 00:05:38,803
+to login or refresh their token
+
+164
+00:05:38,803 --> 00:05:41,003
+on a 403, logging in again won't help
+
+165
+00:05:41,003 --> 00:05:42,683
+because the server already knows who they
+
+166
+00:05:42,683 --> 00:05:44,283
+are you just need to show them a message
+
+167
+00:05:44,283 --> 00:05:46,083
+that they don't have the access to do this
+
+168
+00:05:46,083 --> 00:05:48,403
+sometimes a server will return 404 instead
+
+169
+00:05:48,403 --> 00:05:50,403
+of 403 on purpose just to hide that
+
+170
+00:05:50,403 --> 00:05:52,653
+something exists for example, GitHub's API
+
+171
+00:05:52,653 --> 00:05:54,163
+does this if you ask for a private
+
+172
+00:05:54,163 --> 00:05:56,313
+repository that you don't have access to,
+
+173
+00:05:56,313 --> 00:05:59,303
+you get a 404 so that GitHub doesn't confirm
+
+174
+00:05:59,303 --> 00:06:01,223
+to you that the repository exists
+
+175
+00:06:01,223 --> 00:06:02,923
+you shouldn't have access to it, and you
+
+176
+00:06:02,923 --> 00:06:04,923
+shouldn't even know that it exists
+
+177
+00:06:04,923 --> 00:06:07,683
+now, the 5xx status codes are server errors
+
+178
+00:06:07,683 --> 00:06:09,853
+the requests look fine, but the server
+
+179
+00:06:09,853 --> 00:06:11,123
+failed to handle it
+
+180
+00:06:11,123 --> 00:06:14,403
+500 Internal Server Error is the general one
+
+181
+00:06:14,403 --> 00:06:15,843
+something unexpected went wrong
+
+182
+00:06:15,843 --> 00:06:18,883
+usually, it's an exception in your code that
+
+183
+00:06:18,883 --> 00:06:20,913
+nothing caught in most real setups, a
+
+184
+00:06:20,913 --> 00:06:24,333
+request first hits a proxy, like an NGINX or
+
+185
+00:06:24,333 --> 00:06:27,213
+a load balancer, and the proxy passes it to
+
+186
+00:06:27,213 --> 00:06:30,483
+your app 502 Bad Gateway means that the
+
+187
+00:06:30,483 --> 00:06:32,983
+proxy got an invalid response from your app
+
+188
+00:06:32,983 --> 00:06:34,973
+or couldn't get a proper response from it at
+
+189
+00:06:34,973 --> 00:06:37,923
+all 504 Gateway Timeout means that the proxy
+
+190
+00:06:37,923 --> 00:06:39,843
+waited for your app, and your app took too
+
+191
+00:06:39,843 --> 00:06:41,203
+long to answer
+
+192
+00:06:41,203 --> 00:06:43,093
+A very slow database query can actually
+
+193
+00:06:43,093 --> 00:06:44,003
+cause this one
+
+194
+00:06:44,003 --> 00:06:45,963
+503 Service Unavailable means the server
+
+195
+00:06:45,963 --> 00:06:48,163
+cannot handle requests at the moment, and
+
+196
+00:06:48,163 --> 00:06:50,137
+that situation is temporary
+
+197
+00:06:50,137 --> 00:06:51,477
+It might be that the server is overloaded,
+
+198
+00:06:51,477 --> 00:06:53,447
+or maybe the server is down for maintenance
+
+199
+00:06:53,447 --> 00:06:56,147
+and there are some common HTTP status code
+
+200
+00:06:56,147 --> 00:06:58,017
+mistakes in API that people make
+
+201
+00:06:58,017 --> 00:07:00,537
+the first one, common one, is returning 200
+
+202
+00:07:00,537 --> 00:07:01,397
+OK for everything
+
+203
+00:07:01,397 --> 00:07:03,077
+if your request fails and your API still
+
+204
+00:07:03,077 --> 00:07:05,047
+returns 200 OK, with something like error or
+
+205
+00:07:05,047 --> 00:07:06,857
+something went wrong inside the body, your
+
+206
+00:07:06,857 --> 00:07:08,297
+front end only sees 200
+
+207
+00:07:08,297 --> 00:07:09,967
+your front end sees 200 and is like, OK,
+
+208
+00:07:09,967 --> 00:07:10,857
+yeah, book saved
+
+209
+00:07:10,857 --> 00:07:13,257
+your monitoring also counts it as a success
+
+210
+00:07:13,257 --> 00:07:15,897
+so you need to send the actual status code
+
+211
+00:07:15,897 --> 00:07:17,617
+and then put the details in the body
+
+212
+00:07:17,617 --> 00:07:19,287
+the second mistake that people make with
+
+213
+00:07:19,287 --> 00:07:21,667
+HTTP status code is using 500 for things
+
+214
+00:07:21,667 --> 00:07:23,207
+that the clients got wrong
+
+215
+00:07:23,207 --> 00:07:25,167
+for example, say someone says, GET book
+
+216
+00:07:25,167 --> 00:07:28,143
+9999, and you use find instead of findOrFail
+
+217
+00:07:28,143 --> 00:07:29,743
+so the book comes back as null, and then
+
+218
+00:07:29,743 --> 00:07:31,903
+your code tries to read the title from null,
+
+219
+00:07:31,903 --> 00:07:33,893
+and then it crashes, and the client gets a
+
+220
+00:07:33,893 --> 00:07:37,183
+500 the right answer is a 404, not a 500,
+
+221
+00:07:37,183 --> 00:07:38,863
+because the book does not exist
+
+222
+00:07:38,863 --> 00:07:40,463
+in this scenario, a 500 is the wrong code,
+
+223
+00:07:40,463 --> 00:07:42,543
+because 500 says that the server is broken
+
+224
+00:07:42,543 --> 00:07:43,783
+meanwhile, the server is not broken
+
+225
+00:07:43,783 --> 00:07:45,583
+that can just set off an alarm for nothing
+
+226
+00:07:45,583 --> 00:07:48,623
+the third mistake is mixing 401 and 403
+
+227
+00:07:48,623 --> 00:07:51,333
+if you return 403 when the user's token has
+
+228
+00:07:51,333 --> 00:07:52,773
+expired, your front end doesn't send them
+
+229
+00:07:52,773 --> 00:07:54,583
+back to the login, which is what your front
+
+230
+00:07:54,583 --> 00:07:55,143
+end should do
+
+231
+00:07:55,143 --> 00:07:56,623
+so they just, they are stuck
+
+232
+00:07:56,623 --> 00:07:59,303
+the fourth one is leaking stack traces in
+
+233
+00:07:59,303 --> 00:08:00,343
+your 500 response
+
+234
+00:08:00,343 --> 00:08:03,033
+in Laravel, for example, if APP_DEBUG is
+
+235
+00:08:03,033 --> 00:08:05,793
+true and something crashes, the JSON error
+
+236
+00:08:05,793 --> 00:08:08,093
+response includes the exception message,
+
+237
+00:08:08,093 --> 00:08:10,543
+your file path, the line number, the full
+
+238
+00:08:10,543 --> 00:08:12,863
+stack trace that's useful for you as the
+
+239
+00:08:12,863 --> 00:08:14,993
+engineer in production, however, if you show
+
+240
+00:08:14,993 --> 00:08:16,333
+that, you are showing someone your folder
+
+241
+00:08:16,333 --> 00:08:17,543
+structure and how your code runs
+
+242
+00:08:17,543 --> 00:08:20,313
+so APP_DEBUG should always be false in
+
+243
+00:08:20,313 --> 00:08:22,917
+production, with the body of your 500
+
+244
+00:08:22,917 --> 00:08:24,503
+response just saying Server Error
+
+245
+00:08:24,503 --> 00:08:26,103
+that's all your users need to know
+
+246
+00:08:26,103 --> 00:08:29,233
+and one last HTTP status code, just for the
+
+247
+00:08:29,233 --> 00:08:30,043
+fun of it
+
+248
+00:08:30,043 --> 00:08:31,703
+418, I'm a teapot
+
+249
+00:08:31,703 --> 00:08:32,433
+bye

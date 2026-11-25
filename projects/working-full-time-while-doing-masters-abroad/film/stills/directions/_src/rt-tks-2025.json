@@ -1,0 +1,94 @@
+{
+ "title": "Täiskasvanute koolituse seadus-Riigi Teataja",
+ "h1": "Riigi Teataja",
+ "h1y": 0,
+ "found": {
+  "kuni 30 kalendripäeva kalendriaasta jooksul": [
+   [
+    484.3125,
+    7153.875,
+    270.859375,
+    16
+   ]
+  ],
+  "20 kalendripäeva eest": [
+   [
+    366.84375,
+    7314.875,
+    137,
+    16
+   ]
+  ],
+  "täiendavalt õppepuhkust 15 kalendripäeva": [
+   [
+    375.890625,
+    7363.875,
+    262.328125,
+    16
+   ]
+  ],
+  "vähemalt neliteist": [
+   [
+    957.171875,
+    7545.875,
+    108.1875,
+    16
+   ]
+  ]
+ },
+ "H": 9862,
+ "focus": {
+  "kuni 30 kalendripäeva kalendriaasta jooksul": {
+   "file": "rt-tks-2025__kuni-30-kalendrip-eva-ka.png",
+   "top": 6633.875,
+   "rects": [
+    [
+     484.3125,
+     520,
+     270.859375,
+     16
+    ]
+   ]
+  },
+  "20 kalendripäeva eest": {
+   "file": "rt-tks-2025__20-kalendrip-eva-eest.png",
+   "top": 6794.875,
+   "rects": [
+    [
+     366.84375,
+     520,
+     137,
+     16
+    ]
+   ]
+  },
+  "täiendavalt õppepuhkust 15 kalendripäeva": {
+   "file": "rt-tks-2025__t-iendavalt-ppepuhkust-1.png",
+   "top": 6843.875,
+   "rects": [
+    [
+     375.890625,
+     520,
+     262.328125,
+     16
+    ]
+   ]
+  },
+  "vähemalt neliteist": {
+   "file": "rt-tks-2025__v-hemalt-neliteist.png",
+   "top": 7025.875,
+   "rects": [
+    [
+     957.171875,
+     520,
+     108.1875,
+     16
+    ]
+   ]
+  }
+ },
+ "clipTop": 0,
+ "scale": 1.5,
+ "url": "https://www.riigiteataja.ee/akt/130012025002",
+ "captured": "2026-11-02T19:26:22.050Z"
+}

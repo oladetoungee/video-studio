@@ -1,0 +1,1781 @@
+URL: https://news.ycombinator.com/item?id=50180836
+STATUS: loaded (http 200)
+FINAL: https://news.ycombinator.com/item?id=50180836
+TITLE: PHP2Shell: AI uncovers critical RCE in PHP | Hacker News
+H1: 
+OG:  | 
+PUBLISHED:   MODIFIED: 
+DOC_H: 17676
+
+	Hacker Newsnew | past | comments | ask | show | jobs | submit	login
+
+	
+	PHP2Shell: AI uncovers critical RCE in PHP (wiz.io)
+	454 points by danlark1 4 days ago | hide | past | favorite | 185 comments
+	
+https://www.php2shell.com/
+
+	
+ help
+
+	
+	
+fwlr 4 days ago | next [–]
+
+So from what I gather, it was found by OpenAI (via unspecified model?) and independently by Wiz (via Gemini Argon)… but before that it was found by Calif (via unspecified but consumer-available model)… but Calif credit LCFR_HAX before them with first discovery, disclosure, and remediation efforts.
+
+I guess either LCFR or Calif put it in the training data (by using a consumer-available frontier model in the process of discovery or remediation), and then OpenAI reproduced it from the training data, Navier-Stokes-scoop-style? Except I guess more plausibly unaware, and also late? They thought they had something novel, because they weren’t privy to the existing remediation effort? It’s all rather confusing, and then on top there’s a leak and a PR campaign and it just becomes impossible to untangle.
+
+edit: thank you PHP foundation for making this all make sense https://thephp.foundation/blog/2026/10/21/todays-php-securit...
+
+reply
+
+	
+	
+ToValueFunfetti 4 days ago | parent | next [–]
+
+I don't think the timelines make sense for it to have been included in training data, LLM training does not seem to be nearly efficient enough to learn these things from lone examples, and it wouldn't make sense for this earlier work to have made its way into both OpenAI and Gemini's data. Navier-Stokes is not strong evidence that this kind of thing can happen, as OpenAI denies that Buckmaster's work was in the training data for the model they used, Buckmaster didn't have a blowup that they could steal, and Scientific American reports[1] that the similarities between their approaches were superficial. It's also well-established that models can find novel vulns at this point.
+
+[1]https://www.scientificamerican.com/article/openais-blockbust...
+
+reply
+
+	
+	
+fwlr 4 days ago | root | parent | next [–]
+
+My understanding at the time I wrote that was “someone else using chat-logged OAI model: September???; OAI using unspecified model: October???”, and when I say “Navier-Stokes-style-scoop” I am thinking along the same lines as the comment I made during that controversy, here: https://news.ycombinator.com/item?id=49639648. I don’t buy that their public statements are not “technically correct but misleading without internal context” on these matters.
+
+Naturally, with the added info from the PHP foundation link (specifically that OAI reported it the same day as Calif, and that Calif was operating under the auspices of an OAI program) the timeline collapses for my initial impression!
+
+reply
+
+	
+	
+nh23423fefe 4 days ago | root | parent | prev | next [–]
+
+This is the new, "they stole the internet" ostrich belief
+
+reply
+
+	
+	
+magnat 4 days ago | parent | prev | next [–]
+
+> On August 11th researcher Ryan A at Calif reported an unconditional remote code execution with the same root cause as the OOM problem we had found in 2024. OpenAI independently reported the same root cause on the same day
+
+What a coincidence.
+
+reply
+
+	
+	
+hashstring 4 days ago | parent | prev | next [–]
+
+> The PHP Foundation got the PHP project into the Patch the Planet program, as part of which security firm Calif began an audit of PHP on July 30th, 2026. On August 11th researcher Ryan A at Calif reported an unconditional remote code execution with the same root cause as the OOM problem we had found in 2024. OpenAI independently reported the same root cause on the same day
+
+How does this work? Calif works with OAI on Patch the Planet program. Calif reports the finding to PHP. OAI ‘independently’ reports it too, on the same day. I suppose Calif did communicate with OAI about said findings, or is this not how Patch the Planet operates? It seems extremely coincidental.
+
+reply
+
+	
+	
+WarmWash 4 days ago | parent | prev | next [–]
+
+LLMs would be orders of magnitude more powerful if a single instance in training data was enough for something to surface while inferencing.
+
+reply
+
+	
+	
+dspillett 3 days ago | root | parent | next [–]
+
+Could that “single instance” be copied enough times in places also used in training, so represented much more in the training data than once? If it only takes a small number of malicious chunks of information can potentially poison an LLM or large size (ref: https://www.turing.ac.uk/blog/llms-may-be-more-vulnerable-da...), then presumably a small number of a good chunk can influence output similarly?
+
+reply
+
+	
+	
+fma 4 days ago | parent | prev | next [–]
+
+WSJ reports Calif used 6.1 Sol
+
+reply
+
+	
+	
+Topfi 4 days ago | prev | next [–]
+
+Can anyone explain the two month window between reporting and disclosure? I do understand Responsible Disclosure as a concept, but looking at the timeline and severity, I struggle to understand the timing, especially the month that passed before an acknowledgment.
+
+Edit: Apparently this had been reported more than half a decade ago [0]. I am getting more confused the more I look into this, hopeful for a well written, factual post-mortem from someone who hasn't actively avoided PHP for the last decade.
+
+[0] https://news.ycombinator.com/item?id=50181395
+
+reply
+
+	
+	
+kylestanfield 4 days ago | parent | next [–]
+
+How is a bug that was patched six years ago causing RCE today? Not sure your link is correct.
+
+reply
+
+	
+	
+blantonl 4 days ago | root | parent | next [–]
+
+6 years ago it was deemed to be too complex to exploit and therefore not as high priority.
+
+reply
+
+	
+	
+dspillett 3 days ago | root | parent | prev | next [–]
+
+> How is a bug that was patched six years ago causing RCE today?
+
+From what I read last night: that patch fixed a specific case (an over-large index that became a negative number) that could trigger the problem, but did not fix the core problem itself. The new exploits try to trigger the problem in another manner, the new patch does address the core issue.
+
+reply
+
+	
+	
+phoronixrly 4 days ago | parent | prev | next [–]
+
+Can anyone explain the lack of the irresponsible disclosure in the 'Responsible' disclosure timeline? The one that happened just before the coordinated release?
+
+reply
+
+	
+	
+phoronixrly 4 days ago | root | parent | next [–]
+
+Here's the missing part, as per the PHP announcement
+
+> On October 21st at 07:41 UTC, more than six hours before the coordinated release, Chainguard unilaterally broke the embargo and published built images containing the fix. Like other distributors, Chainguard had received the patch in advance so its users could update the moment the vulnerabilities were disclosed. Any attacker could now study the fix in binary form while every other PHP user was still waiting for the release. This disregarded weeks of work by many parties toward a coordinated disclosure.
+
+reply
+
+	
+	
+AtNightWeCode 4 days ago | parent | prev | next [–]
+
+People should stop reading AI slop on X and other social media. The exploit is advanced and took some effort to fix. If there really was an open RCE in PHP for anyone to use the impact would be massive.
+
+reply
+
+	
+	
+Topfi 4 days ago | root | parent | next [–]
+
+Sorry, what do you mean? There was/is an open RCE in PHP and the impact was/is massive. Pity the teams on older versions especially.
+
+reply
+
+	
+	
+AtNightWeCode 4 days ago | root | parent | next [–]
+
+So what sites are confirmed to be "hacked" cause of this exploit? I mean, Log4J broke Minecraft and a lot of other services.
+
+reply
+
+	
+	
+Topfi 4 days ago | root | parent | next [–]
+
+We don't know yet. Not sure how that changes things either way. Impact goes far beyond getting exploited and the leak wasn't ideal in that regard either.
+
+reply
+
+	
+	
+utternerd 4 days ago | root | parent | prev | next [–]
+
+It was just disclosed, be patient. A PHP RCE is no joke.
+
+reply
+
+	
+	
+AtNightWeCode 4 days ago | root | parent | next [–]
+
+State hackers and others prepare how to use exploits long before they happen. If there was an opened known RCE in PHP they would have caused havoc immediately. Clearly that did not happen.
+
+Is this HN or boomer FB? I don't know anymore.
+
+reply
+
+	
+	
+varispeed 4 days ago | parent | prev | next [–]
+
+Many exploits are used by security services, so this gives time to wrap any investigations or surveillance or find another method of accessing target servers.
+
+reply
+
+	
+	
+airtnp 4 days ago | prev | next [–]
+
+Ok, based on my reads on Wiz and Calif writeups, there are 5-6 issues mapped to 2 CVEs.
+
+Wiz (with GPT 5.6 Sol + Gemini 4 Argon) : Remote process-memory disclosure; OPcache type confusion; Fatal-error backtrace UAF. POC on Wordpress, Drupal and Joomla
+
+Calif (with LLM, no specific model, but model is accessible to all): Zend HashTable OOM. Targets PHP-FPM and mod_php.
+
+Both discovers the UAF on upload progress unserializer.
+
+Surprised to see the anime girl dancing with POC is really uploaded by Calif researchers.
+
+reply
+
+	
+	
+airtnp 4 days ago | parent | next [–]
+
+BTW, the backport fix seems to disable session upload entire in old version, not fixing the issue like new versions:
+
+https://github.com/php/php-src/commit/712e60f9edfd03f0960fc4...
+
+reply
+
+	
+	
+chuckadams 4 days ago | parent | prev | next [–]
+
+Both of them memory safety issues. C is just not fit for purpose in this decade.
+
+reply
+
+	
+	
+rbanffy 4 days ago | root | parent | next [–]
+
+C is not to blame for programmers using its features unwisely and, as a result, writing buggy code. Writing secure C code requires discipline, and, most likely, keeping yourself limited to a subset of the language.
+
+This is why languages like Rust have their place - their compilers impose the discipline and the restraint C doesn't. It's not impossible to write code with memory safety issues in Rust - it's just a lot harder. I remember saying the same about Java - it doesn't make writing the program any easier, but it makes writing some bugs difficult.
+
+reply
+
+	
+	
+kstrauser 4 days ago | root | parent | next [–]
+
+> C is not to blame for programmers using its features unwisely and, as a result, writing buggy code. Writing secure C code requires discipline, and, most likely, keeping yourself limited to a subset of the language.
+
+It sure is to blame. Evidence shows you need wisdom, discipline, and an impossibly high bar of encyclopedic knowledge of every feature of C and all common libc's combined with an inhuman perfection of never once making a single typo, and a vast amount of tooling to analyze the code and find some of the bugs that made it through anyway.
+
+The best, most trusted, most accomplished C programmers I could name still have a track record of writing vulnerabilities triggered by C footguns, not just garden variety logic bugs that could affect code written in any language. Can I write more diligent C code than the OpenBSD team? Than the Linux devs? Than Fabrice "I made everything" Bellard? Not a chance, but C has bitten each of them. Us mortals don't stand a chance.
+
+reply
+
+	
+	
+rbanffy 4 days ago | root | parent | next [–]
+
+> Us mortals don't stand a chance.
+
+I'd say it's just a matter of moving in shorter steps, test incrementally, use extensive tooling to poke holes at your code, and develop those Linux/BSD/Fabrice skills. You might not be able to accomplish as much as these people did, but that's OK as well. The world still needs simpler programs.
+
+reply
+
+	
+	
+kstrauser 4 days ago | root | parent | next [–]
+
+Why even bother, though? I have +- 8 hours a day to write code. I can spend 7.5 hours writing business logic and .5 hours getting the thing to compile (Rust/Python/Java/C#/whatever), or .5 hours writing business logic and 7.5 hours convincing myself I haven't added an RCE. I just don't see a valid use case for writing non-trivial C programs today. Maintaining existing programs, sure. That stuff isn't going away. Writing anything new in it today, though, seems like engineering malpractice.
+
+reply
+
+	
+	
+rbanffy 3 days ago | root | parent | next [–]
+
+That’s kind of my point. If your program is too complicated for you to be absolutely sure it’s correct and doesn’t misuse memory management or expose any way to misuse the system, then don’t. Write it with a different language.
+
+reply
+
+	
+	
+KingOfCoders 4 days ago | root | parent | prev | next [–]
+
+"Writing secure C code requires discipline"
+
+Ah the old, you're using the tool wrong.
+
+Yes, perhaps, although a tool that no one seems to be able to use correctly, see kernel bugs, zero days everywhere, bugs in cURL by people who seem very rigorous and thorough, in google and microsoft products, etc. I'm not sure the tool is innocent in this. If the highest paid C developers in the world can't use it, who can?
+
+reply
+
+	
+	
+cowlevel 4 days ago | root | parent | prev | next [–]
+
+Yes and no. I'd say there's nothing wrong with C - it's not evil - but maybe we still shouldn't use it because we should demand things C doesn't provide. There's nothing wrong with assembly code either but we rarely use it.
+
+reply
+
+	
+	
+chuckadams 4 days ago | root | parent | next [–]
+
+C was adequate for its era, though it had major problems from day one: like array pointer decay, lack of counted strings, aliasing just about anywhere and everywhere, and a legacy of squishy types it inherited from BCPL which was about as well-typed as Forth. Even so, it did yeomans work, but it's now long past its use-by date.
+
+I still want C to burn in a fire, but I suppose it's at least earned an honorable Viking funeral (yeah I know that's ahistorical but you get the idea).
+
+reply
+
+	
+	
+UncleMeat 4 days ago | root | parent | prev | next [–]
+
+What we have learned over the past many decades is that no amount of discipline solves this. It does not matter how world class your team is. Complex C programs that process untrusted input have security vulnerabilities.
+
+reply
+
+	
+	
+chuckadams 4 days ago | root | parent | prev | next [–]
+
+> C is not to blame for programmers using its features unwisely
+
+"Make no mistakes" works about as well for humans as it does for AI, and we have decades of lived experiences to draw on for that verdict.
+
+reply
+
+	
+	
+tialaramex 4 days ago | root | parent | next [–]
+
+And this isn't even a new thing for Programming. We already learned this lesson once.
+
+Go look at a nineteenth century mechanical signal box. When you, through inattention or even malevolence, try to release signals so that train B can plough into train A, the lever won't move because it is physically impossible due to mechanical interlocking, you need to move a piece of sold metal through another piece of solid metal and it won't go.
+
+Do not rely on humans to do boring but important things, they are very bad at this.
+
+reply
+
+	
+	
+rbanffy 4 days ago | root | parent | prev | next [–]
+
+I didn't say "make no mistakes". I said "using its features unwisely". If you can't write software that manages shared mutable state, then don't do it. The world still needs lots of simpler programs.
+
+reply
+
+	
+	
+UncleMeat 4 days ago | root | parent | next [–]
+
+In this case the features are things like "allocating memory on the heap" and "incrementing a pointer."
+
+It isn't like C has some "there be dragons" set of features that are hard to use. The source of exploitable memory safety issues is consistently just foundational language features.
+
+reply
+
+	
+	
+chuckadams 4 days ago | root | parent | prev | next [–]
+
+Why can't simpler programs be written in languages that at least make an attempt to be memory-safe?
+
+reply
+
+	
+	
+rbanffy 3 days ago | root | parent | next [–]
+
+Of course you can. You should pick the right tool for the job.
+
+There is a catch, however. Some languages will not allow you to take some shortcuts you know are safe unless you can prove them safe.
+
+reply
+
+	
+	
+echelon 4 days ago | root | parent | prev | next [–]
+
+C allows you to express things easily which should not be easily expressable. When people do these things it is almost always in error.
+
+That is the fault of the language.
+
+reply
+
+	
+	
+Ar-Curunir 4 days ago | root | parent | prev | next [–]
+
+“C cannot fail; it can only be failed”
+
+reply
+
+	
+	
+processunknown 4 days ago | parent | prev | next [–]
+
+Whats the issue with the POC video? I dont understand why thats surprising
+
+reply
+
+	
+	
+echoangle 4 days ago | root | parent | next [–]
+
+Don't you think the style of video looks a bit unprofessional? It's like the next iPhone being presented by the Apple CEO but using a vTuber avatar with subway surfer gameplay in the background.
+
+reply
+
+	
+	
+nicce 4 days ago | root | parent | next [–]
+
+In some circles it is a sign of credibility. Leaking it beforehand is very unprofessional, however.
+
+After all, furries run the internet.
+
+reply
+
+	
+	
+owenmarshall 4 days ago | root | parent | next [–]
+
+> In some circles it is a sign of credibility.
+
+I was griping about my day being ruined over the breakfast table and my son was interested. I showed him the video and he asked why there was an anime girl on the screen?
+
+My response was "if you've worked with computers for any length of time, and you ever see a video of a terminal posted with an anime, catgirl, or furry overlay, you know something really bad is coming your way."
+
+reply
+
+	
+	
+cowlevel 4 days ago | root | parent | next [–]
+
+is this about to become the new meta? become a furry anime catgirl just to get people to take you more seriously?
+
+reply
+
+	
+	
+lenerdenator 4 days ago | root | parent | prev | next [–]
+
+> After all, furries run the internet.
+
+And how's that going?
+
+reply
+
+	
+	
+solyin 4 days ago | root | parent | next [–]
+
+I dunno. Php aside, has it been up today, and every single day since you started using it?
+
+reply
+
+	
+	
+lenerdenator 4 days ago | root | parent | next [–]
+
+"Up" is an ambiguous term, and then we have to get into what is actually being done with the internet while it is "up".
+
+reply
+
+	
+	
+jareklupinski 4 days ago | root | parent | prev | next [–]
+
+> the next iPhone being presented by the Apple CEO but using a vTuber avatar
+
+sounds like a good time
+
+reply
+
+	
+	
+throawayonthe 3 days ago | root | parent | prev | next [–]
+
+well it isn't apple, you should expect a different brand of professionalism :p
+
+reply
+
+	
+	
+airtnp 4 days ago | root | parent | prev | next [–]
+
+Before the official fix someone published it, and it seems the person is not associated with Calif: https://x.com/k_firsov
+
+reply
+
+	
+	
+echoangle 4 days ago | root | parent | next [–]
+
+How did they get access to the script though? The output seems to be identical to the real PoC, so it looks like the same script.
+
+reply
+
+	
+	
+nicce 4 days ago | root | parent | next [–]
+
+Which makes someone to think, whether Calif could not wait for the responsible disclosure. Or someone leaked the video for someone they should not have.
+
+reply
+
+	
+	
+klausa 4 days ago | root | parent | prev | next [–]
+
+They got access to the video, not the script. Calif authored the video and it was accidentally made public.
+
+reply
+
+	
+	
+edh649 4 days ago | prev | next [–]
+
+Seems to have been prompted from research by calif.io who started disclosure on August 11 vs Wiz on August 24th? A bit unclear on the participants and how they all interacted... https://calif.io/php2shell/
+
+reply
+
+	
+	
+geerlingguy 4 days ago | parent | next [–]
+
+One pattern of AI-assisted writing I hate is that technical articles now read as Atlantic journalistic tech-noir stories, which require scrolling through 20+ pages of content to get to the meat of a post.
+
+reply
+
+	
+	
+himinlomax 4 days ago | root | parent | next [–]
+
+You're supposed to ask your agent to summarize it for you, I guess.
+
+reply
+
+	
+	
+jeffbee 4 days ago | root | parent | prev | next [–]
+
+Didn't that start with Heartbleed or maybe Spectre?
+
+reply
+
+	
+	
+chimeracoder 4 days ago | root | parent | next [–]
+
+No, those provided glitzy branding for the bug but the actual pages were pretty compact and information-centric.
+
+reply
+
+	
+	
+pizzafeelsright 4 days ago | root | parent | prev | next [–]
+
+I generally click away when I see comic book style writing.
+
+reply
+
+	
+	
+azizk121 4 days ago | parent | prev | next [–]
+
+no it was discovered first by an independent researcher https://x.com/calif_io/status/2112914613297668583
+
+reply
+
+	
+	
+WJW 4 days ago | prev | next [–]
+
+From the related article on calif.io:
+
+> We therefore control where PHP places a pointer and its associated type information. This is application-dependent RCE under both Apache mod_php and PHP-FPM.
+
+Both articles describe how you can end up with freed memory that still has pointers into it. I can understand that this should never be possible, but it seems to me that both articles skip the very important step of how to actually turn this into RCE?
+
+From my (admittedly limited) understanding of these things you would not only need to write arbitrary memory, but also need to be able to jump to the relevant address to execute such things. Or do they overwrite the PHP (byte)code with their own and then just let the interpreter do its thing?
+
+reply
+
+	
+	
+cowlevel 4 days ago | parent | next [–]
+
+It's generally safe for a defender to assume that if an attacker can corrupt the heap they can achieve RCE, because there are usually so many ways to do it. They're all very specific ways that are hard to find because of all the complexity and mitigations, but there are a practically unlimited supply if someone puts in the effort to find one. But as a defender you don't need to, you should just say game over as soon as you get heap corruption, and go fix it.
+
+Generally the attacker has to cause a sequence of heap allocations so that a certain kind of object gets allocated into the freed space that's still being pointed to, then use the old pointer to corrupt that object, then use the object. A good target is any C++ object with a vtable pointer - not sure if PHP is written in C++. If you can rewrite a vtable pointer and make it point to attacker-controlled data, you can get execution to jump to an attacker-controlled address.
+
+reply
+
+	
+	
+not_a9 4 days ago | parent | prev | next [–]
+
+Plenty of function pointers to overwrite, presumably
+
+reply
+
+	
+	
+jongjong 4 days ago | prev | next [–]
+
+Damn. I've been saying that writing correct software is almost impossible.
+
+I suspect it's a matter of time before all mainstream blockchain projects are cracked. Many of those projects are hundreds of thousands of lines of code. There's no way they don't have vulnerabilities given that AI is now uncovering so many vulnerabilities in such high exposure projects.
+
+I was a code minimalist before, now I'm a radical minimalist. We need to get the lines of code down to the absolute minimum.
+
+Attack surfaces need to be clearly defined, enumerable and testable under all possible conditions.
+
+reply
+
+	
+	
+wat10000 4 days ago | parent | next [–]
+
+That's why so much emphasis is now placed on trying to make incorrect software either fail to build or fail at runtime in a way that doesn't let people take over the computer. C makes it extremely likely that a random correctness issue will be a security issue. Newer languages much less so. They're far from perfect but it's a lot better.
+
+reply
+
+	
+	
+nijave 4 days ago | root | parent | next [–]
+
+Also sandboxing and strong permission boundaries ie when things fail, contain the damage
+
+reply
+
+	
+	
+pettijohn 4 days ago | prev | next [–]
+
+Silly question, is PHP part of Project Glasswing? Crazy this has been dormant for a decade. And scary to wonder what else is lurking out there.
+
+reply
+
+	
+	
+Maxious 4 days ago | parent | next [–]
+
+The OpenAI post linked says Sol assisted https://openai.com/index/coordinated-disclosure-of-critical-... and they invite more open source projects to apply to their program https://patchtheplanet.org/
+
+reply
+
+	
+	
+rs999gti 4 days ago | parent | prev | next [–]
+
+Lots of stuff is PHP e.g. most message boards. It was very popular pre-dynamic web.
+
+reply
+
+	
+	
+whycome 4 days ago | root | parent | next [–]
+
+It’s still popular af. Almost half of any cms site online is powered by Wordpress. Many sales sites use woocommerce (Wordpress plugin). Message boards for sure (phpbb!). Moodle and other similar learning management tools run on PHP. Other cms systems like drupal and joomla make up another big portion of cms installs. I think the custom Wikipedia (mediawiki?) is php.
+
+reply
+
+	
+	
+nijave 4 days ago | root | parent | next [–]
+
+Yeah, I thought it was dying a bit but was looking for webmail software (Roundcube, etc) a couple days ago and all of it is PHP.
+
+reply
+
+	
+	
+phplovesong 4 days ago | root | parent | prev | next [–]
+
+PHP is ONLY popular because of mainly wordpress. Usage outside the big CMS are minimal at best, in 2026. I dont see much greenfield / PHP jobs that are not legacy software these days.
+
+reply
+
+	
+	
+nostrademons 4 days ago | root | parent | next [–]
+
+There's very little green-field PHP being written, but there's an awful lot of the Internet that was written over the last 30 years, and there's also a lot of very popular turn-key software (eg. WordPress, MediaWiki, phpBB) that gets redeployed on new sites by people who just want something user-friendly that works.
+
+reply
+
+	
+	
+sgarland 4 days ago | root | parent | prev | next [–]
+
+Hack (Meta) is presumably contributing somewhat to PHP’s continued existence.
+
+reply
+
+	
+	
+phplovesong 3 days ago | root | parent | next [–]
+
+I dont see much Hack out in the wild. Its basically only Meta that uses it for facebook. Also kind of funny that PHP was so BAD that they actually had the write their own language.
+
+reply
+
+	
+	
+nijave 4 days ago | root | parent | prev | next [–]
+
+I'm not sure that's true. It seems very popular in OSS in general but not much enterprise/commercial uptake.
+
+I guess node has taken some market share it seems like
+
+reply
+
+	
+	
+phplovesong 3 days ago | root | parent | next [–]
+
+Nah. There is legacy, then there is the (now dying) wordpress/drupal/<php-cms> shops that still run PHP. Custom apps are not done in PHP, unless its a (usually) unskilled dev who knows no better.
+
+With AI, there is little need for PHP in 2026, even for the novice dev. The onl thing PHP had in the early 2000s was the FTP deployment story, but that has long faded. I van deploy a go binary WAY easier than a PHP application.
+
+reply
+
+	
+	
+cowlevel 4 days ago | root | parent | prev | next [–]
+
+What else is using it and popular? Mediawiki - that's true. And some forums, but forums aren't popular any more.
+
+reply
+
+	
+	
+whycome 4 days ago | root | parent | next [–]
+
+No way. Forums are still incredibly popular. Something like RedFlagDeals has an entire business based around their forum and get close to 40m page views per month and more than 3m uniques.
+
+And there are at least 3 other hugely popular php based forums that I occasionally check — and those are just for my own niche interests.
+
+reply
+
+	
+	
+cowlevel 2 days ago | root | parent | next [–]
+
+I've never heard of RedFlagDeals. I have heard of Twitter.
+
+reply
+
+	
+	
+dvdkon 4 days ago | root | parent | prev | next [–]
+
+Nextcloud, the mentioned Roundcube, plenty non-Wordpress CMSs, many internal tools I work with daily...
+
+reply
+
+	
+	
+dd8601fn 4 days ago | root | parent | prev | next [–]
+
+I just got a nostalgia hit remembering all the phpBB type boards.
+
+But also I haven’t seen much of that style of bulletin boards in ages. Maybe the occasional EEVBlog or Ars kinda count?
+
+reply
+
+	
+	
+robotmay 4 days ago | root | parent | next [–]
+
+I slopcoded my own forum software in Elixir/Phoenix recently, starting from my memories of phpBB and SMF forums I used to run. I’m using it as a forum for my vintage camera stall as I have a lot of people who enjoy hanging out at the stall, and it turns out they enjoy hanging out on a retro forum too.
+
+I do want to add some stupid forum features I remember from the 2000s. An RPG mod is definitely on my mind.
+
+reply
+
+	
+	
+bombcar 4 days ago | root | parent | prev | next [–]
+
+phpBB, vbulletin, and XenForo still power more than you might realize - often websites that still have comments are using one of those as a back-end, even if you can't access it directly.
+
+reply
+
+	
+	
+rkozik1989 4 days ago | root | parent | next [–]
+
+How dare your forget PHPnuke.
+
+reply
+
+	
+	
+doublerabbit 4 days ago | root | parent | next [–]
+
+Ah the platform where exploits exploit themselves. It was so bug ridden.
+
+reply
+
+	
+	
+timw4mail 4 days ago | root | parent | prev | next [–]
+
+Ewww... I remember having to work with that trash.
+
+reply
+
+	
+	
+apocalyptic0n3 4 days ago | root | parent | prev | next [–]
+
+It's still the most widely used server side language on the web thanks to WordPress, unless that has changed recently (it was dropping)
+
+reply
+
+	
+	
+StilesCrisis 4 days ago | root | parent | prev | next [–]
+
+Facebook is developed on a reimplementation of PHP!
+
+reply
+
+	
+	
+SyneRyder 4 days ago | parent | prev | next [–]
+
+Not a silly question at all. The PHP Foundation page mentions that they were given access to Mythos via a third company, and Anthropic paid for the security audit... and it didn't find this. It somehow took 5.6 Sol, and researchers who knew how to steer Sol.
+
+"Earlier this year, we worked with Alpha-Omega to scan PHP with Anthropic's Claude Mythos. But since the Mythos scan, we have added other tools, including OpenAI's Daybreak Red for validating reports and exploits, alongside sanitizer builds and reproduction environments that match our CI on every platform PHP supports."
+
+https://thephp.foundation/blog/2026/10/21/todays-php-securit...
+
+To me, this is either a black eye for the myth of Mythos, or worse - Mythos deliberately wouldn't reveal this vulnerability to them, even in a Glasswing style approval environment. It might not be the model's own fault, maybe the model was trained by Anthropic not to reveal certain vulnerabilities.
+
+I think Claudes are great, Opus 5.5 has been incredibly helpful at building software and helping in other ways... but I am repeatedly seeing unhelpfulness (more like dismissiveness) from Anthropic models when it comes to cybersecurity defence, and even just secure bugfixes. At least, that's my personal take, on a very grumpy day with very little sleep.
+
+reply
+
+	
+	
+tchalla 4 days ago | prev | next [–]
+
+> We used Wiz Atlas, Gemini 4 Argon and GPT-5.6 Sol throughout this research. Notably, Gemini 4 Argon made an invaluable contribution to finding the vulnerability, exploit development, attack detection, and validation of the patch.
+
+reply
+
+	
+	
+krelian 4 days ago | parent | next [–]
+
+First the product they sell, then the product they got early access too...
+
+I know they waited two months with this but wouldn't it be wiser to wait just a little bit more than a few minutes after the fix released?
+
+reply
+
+	
+	
+NoahZuniga 4 days ago | root | parent | next [–]
+
+Wiz is a google company...
+
+reply
+
+	
+	
+trollbridge 4 days ago | root | parent | next [–]
+
+Thanks - I've noted to avoid ever bothering trying to pay for Argon or Wiz from now on. I don't want to do business with people who act like this.
+
+reply
+
+	
+	
+warkdarrior 4 days ago | root | parent | prev | next [–]
+
+The fix is out. How much longer should they wait? 5 minutes after fix release? 5 days? 5 months?
+
+reply
+
+	
+	
+krelian 4 days ago | root | parent | next [–]
+
+A week or two
+
+reply
+
+	
+	
+eagleal 4 days ago | root | parent | next [–]
+
+Apparently one of the distributors that had access to the patch broke the plan and went live with it earlier. So they had to rush patches and disclosures.
+
+These articles were supposed to come out in about a week
+
+reply
+
+	
+	
+evandena 4 days ago | parent | prev | next [–]
+
+a little self promotion there :P
+
+reply
+
+	
+	
+wildmXranat 4 days ago | prev | next [–]
+
+Did anyone find a reputable source for code which can be used to validate fixes ?
+
+reply
+
+	
+	
+croes 3 days ago | parent | next [–]
+
+Seems like there isn’t even a reputable source code for the exploit
+
+https://news.ycombinator.com/item?id=50188948
+
+reply
+
+	
+	
+chasil 4 days ago | prev | next [–]
+
+Does active SELinux (as used in Red Hat derivatives) limit the damage at all?
+
+I built some rhel7 systems that are relaying user-provided LDAP credentials into a domain controller, and these are probably wide open with these flaws.
+
+I would hope that SELinux would prevent the launch of a shell, at least.
+
+Does PHP built with FORTIFY_SOURCE and other RedHat-recommended compiler flags help?
+
+reply
+
+	
+	
+bananamogul 4 days ago | parent | next [–]
+
+Interestingly, PHP lists it as a 9.2 but RHEL lists it as an 8.1.
+
+https://access.redhat.com/security/cve/cve-2026-109618 https://access.redhat.com/security/cve/cve-2026-109619
+
+Is this because RedHat's default configuration isn't as vulnerable?
+
+I'm ignorant of how these numbers are calculated. Could PHP on Debian, Ubuntu, etc. be a 9.2 but on RedHat it's only an 8.1 because RedHat has various mitigations?
+
+reply
+
+	
+	
+chasil 4 days ago | root | parent | next [–]
+
+For 109619, "Exploitation requires hitting a precise out-of-memory condition during request processing, which keeps this below Critical."
+
+The lower criticality may be wishful thinking.
+
+reply
+
+	
+	
+jacobalcock 4 days ago | parent | prev | next [–]
+
+Not much. mod_php and php-fpm both run as httpd_t, and httpd_t is allowed to exec /bin/sh, so the shell still launches. SELinux does keep it from writing outside httpd_sys_rw_content_t. With httpd_can_network_connect off it also can't connect to arbitrary hosts. But code running inside the PHP worker still sees every LDAP credential your app relays, and SELinux does nothing about that.
+
+reply
+
+	
+	
+ang_cire 4 days ago | prev | next [–]
+
+> PHP powers approximately 70% of websites,
+
+Well, that's my depressing statistic for the day...
+
+reply
+
+	
+	
+driverdan 4 days ago | parent | next [–]
+
+Why is that depressing? PHP is just as capable as everything else out there. It may not be our first choice but its use is not depressing.
+
+reply
+
+	
+	
+Gigachad 4 days ago | root | parent | next [–]
+
+The interpreter is written in C. It shouldn’t be trusted for web related tasks that handle malicious data.
+
+reply
+
+	
+	
+iAMkenough 4 days ago | root | parent | next [–]
+
+The Linux kernel is written in C.
+
+Should we all go back to using Microsoft IIS to host web servers?
+
+reply
+
+	
+	
+Gigachad 4 days ago | root | parent | next [–]
+
+Which is why they are reporting 2000+ CVEs per release right now. The Linux project needs to seriously consider replacing some of the networking related components with Rust versions.
+
+reply
+
+	
+	
+driverdan 3 days ago | root | parent | next [–]
+
+The language is not why there are CVEs. They assign CVEs to most patches. Watch this talk by one of the maintainers to understand it: https://www.youtube.com/watch?v=NnV_cWeoo5Q
+
+reply
+
+	
+	
+sunaookami 4 days ago | parent | prev | next [–]
+
+One billion devices run Java!
+
+reply
+
+	
+	
+pjmlp 4 days ago | root | parent | next [–]
+
+Actually even more nowadays, given Android with 75% market share, even if it is a different brand of coffee, alongside all developers using JetBrains products even when not using Java as their programming language.
+
+reply
+
+	
+	
+binlog 4 days ago | root | parent | next [–]
+
+Depends on how you define Java. Android can execute Java programs, and bundles a handful of OpenJDK libraries, but it stopped running the JVM a long time ago.
+
+reply
+
+	
+	
+pjmlp 4 days ago | root | parent | next [–]
+
+Android never had a JVM as such, first Dalvik, and nowadays ART, and I mentioned another brand of coffee for a reason.
+
+And it isn't the only subset of Java around, see the embedded market with their own flavours as well.
+
+https://developer.android.com/build/jdks
+
+https://developer.android.com/about/versions/14/features#cor...
+
+reply
+
+	
+	
+ang_cire 4 days ago | root | parent | prev | next [–]
+
+If Oracle had never bought Sun, this would be downright inspirational. ;)
+
+reply
+
+	
+	
+pjmlp 4 days ago | root | parent | next [–]
+
+No one else showed up. :)
+
+reply
+
+	
+	
+robotnikman 4 days ago | root | parent | prev | next [–]
+
+Ah, the quote from the Java Windows installer lol.
+
+reply
+
+	
+	
+binlog 4 days ago | parent | prev | next [–]
+
+This is a very misleading stat. A single path or subdomain on the website needs to be running PHP for the entire site to count as “powered by PHP”. Plus it excludes sites whose server-side tech cannot be identified at all (aka properly configured ones).
+
+reply
+
+	
+	
+abirch 4 days ago | parent | prev | next [–]
+
+I'd love to see that number. Are those the parked domains or actual sites? I'm guessing Wordpress adds to those numbers.
+
+reply
+
+	
+	
+bananamogul 4 days ago | root | parent | next [–]
+
+"Adds to" is underselling it. WordPress is used by about 40% of websites.
+
+reply
+
+	
+	
+bguebert 4 days ago | root | parent | prev | next [–]
+
+wordpress is about 40% out of all
+
+https://w3techs.com/technologies/overview/programming_langua...
+
+https://w3techs.com/technologies/overview/content_management
+
+reply
+
+	
+	
+basilikum 4 days ago | parent | prev | next [–]
+
+are there really so few static web sites?
+
+reply
+
+	
+	
+asbv-1qq 4 days ago | prev | next [–]
+
+The flaw was in at least 20 year old code, which seems to be a common theme for AI discoveries.
+
+No compute costs for finding the issue or for writing the exploit are disclosed.
+
+But it is marketed as if it were the first RCE found in human history.
+
+reply
+
+	
+	
+nope1000 4 days ago | parent | next [–]
+
+I like to be AI sceptical as well but I think it's even more noticeable if the flaw is in 20 year old code which thousands of people have read and reviewed and not noticed, isn't it?
+
+reply
+
+	
+	
+ashfg1 4 days ago | root | parent | next [–]
+
+Hardly anyone reads and reviews in open source. It is a myth from ESR. Probably one person wrote it and another one said LGTM.
+
+reply
+
+	
+	
+basilikum 3 days ago | root | parent | next [–]
+
+The exact bug was reported two times in the past. But only as DOS and incorrectly patched. Clearly people actually read the code.
+
+reply
+
+	
+	
+bitwize 4 days ago | root | parent | prev | next [–]
+
+Today ESR would say "All bugs are really shallow this time, thanks to our robot friends!"
+
+reply
+
+	
+	
+pizzafeelsright 4 days ago | root | parent | prev | next [–]
+
+The recent signed keys being '4' is an example.
+
+Looks good, validates, works, and then trust is assumed.
+
+reply
+
+	
+	
+basilikum 4 days ago | root | parent | next [–]
+
+Private keys are not exactly open source. I mean in this case they kinda were, which is why they were found, but the point stands.
+
+reply
+
+	
+	
+pizzafeelsright 4 days ago | root | parent | next [–]
+
+It was assumed the private keys were private, not easily figureoutable, so they were most likely never tested.
+
+reply
+
+	
+	
+pizzafeelsright 4 days ago | parent | prev | next [–]
+
+I discovered a large security concern that has existed for a decade, since the code was originally written. I was working on an unrelated task when my AI agent discovered an oversight because the agent happen to examine that file.
+
+Everything was sound and every test passed for years along with every security scan because intent was not validated.
+
+I would expect an unending source of exploits in the future until AI rewrites everything.
+
+reply
+
+	
+	
+zdragnar 4 days ago | root | parent | next [–]
+
+AI writing the code doesn't make it safer. It is prone to making all the same mistakes humans do.
+
+AI reviewing the code does help, though.
+
+reply
+
+	
+	
+zoeysmithe 4 days ago | parent | prev | next [–]
+
+php RCE's are a big deal. So much of public facing stuff is drupal or wordpress and heaven knows all the places php is being used. Think embedded systems and appliances and in turn-key software.
+
+I don't know why php is impossible to harden, but its a security minefield, and if there is an RCE then its trivial to attack because so many of these systems are public facing. I veto any php based applications just over this.
+
+reply
+
+	
+	
+pixl97 4 days ago | parent | prev | next [–]
+
+Eh, it's an RCE that's been around forever and runs on a pretty large number of websites. Worse a lot of businesses have things like wordpress sites so one of those getting compromised is a foot in the door allowing movement into the more protected areas of the network.
+
+So yea, it's a big deal.
+
+reply
+
+	
+	
+zelphirkalt 4 days ago | root | parent | next [–]
+
+Personally, I am looking forward to any rich-enough companies, that make horrific WP websites and call it a day, rather than actually caring what they force upon people, to have their websites defaced. I have long held the opinion, that you can't really make an actually professional website, that is anything more than a blog, based on WP.
+
+It just has so many flaws, that it will always be shitty in some way or another. For an actual business of say > 5 people, it will be worth using other technology to make their web presence.
+
+There will always be something some of the following:
+
+(1) You have 20 plugins to manage and update things often, and still have vulnerabilities and exploits going on with your site.
+
+(2) Your theme is shitty and not actually responsive, because it is built upon a trash pile of bad styling and badly thought out WP theme structure which relies on concatenation rather than composition of parts.
+
+(3) The database is a mess, because you need to shoehorn things into WP's very limiting DB design of posts and pages being the primitives to think in terms of.
+
+(4) The site is super sluggish. Then self-taught "WP specialist" comes and "saves the day" by installing yet another caching plugin, adding even more attack surface. And now your site relies on yet a badly written cache plugin.
+
+(5) WP itself will break your code and also break your data protection, by having updates, that include third-party fonts to misuse fonts, to render unicode characters that you used as friggin icon characters from that third party font. (no joke, this happened)
+
+So you really cannot win this battle and your site will simply not be a site, that I would consider actually professionally made. The whole WP ecosystem is too broken, to allow you to succeed. You would have to go against many of its common practices and if you do that, you don't actually benefit from that ecosystem and can simply use another language and another web framework, that doesn't suck so much for creating web platforms.
+
+WP is for quick blogging. Don't use it for other stuff.
+
+reply
+
+	
+	
+SoftTalker 4 days ago | root | parent | prev | next [–]
+
+Web servers should not be a foot in the door. They should be assumed hostile and stringently limited. PHP especially has been notorious for remotely exploitable bugs but that's probably more due to its popularity and wide use by beginners than it being strictly worse than any other stack in this regard.
+
+reply
+
+	
+	
+pixl97 4 days ago | root | parent | next [–]
+
+>Web servers should not be a foot in the door.
+
+shoobe < doobe
+
+PHP was a component in the LAMP stack which was known to be 'free' and easy to setup for new users at the time as you say. That builds an ecosystem. Ecosystems are very hard to move away from, especially when your users are not highly technical. Security is almost always a second or third rate consideration for this type of user.
+
+If you look at most applications configured in the enterprise, or practically any Microsoft web based application, they are not strongly security configured against write access to the machine.
+
+reply
+
+	
+	
+trollbridge 4 days ago | root | parent | prev | next [–]
+
+I treat my PHP servers like they're a hostile entity, going so far as to put them on their own VLANs, turning off optimisations for virtualisations to avoid container escaping, and so forth.
+
+It's a strategy that has so far paid off quite well. Thankfully in the era of AI it is gettig quite easy to refactor PHP into something else.
+
+reply
+
+	
+	
+rbanffy 4 days ago | prev | next [–]
+
+Maybe a silly question, but is there any full-featured CMS suitable for large-ish organizations that's been undefeated in terms of security? The only one that comes to mind is Plone (which is used extensively in the Brazilian government), but there has to be more.
+
+reply
+
+	
+	
+jewel 4 days ago | parent | next [–]
+
+Anything that compiles to a static site will be nearly immune!
+
+reply
+
+	
+	
+rbanffy 4 days ago | root | parent | next [–]
+
+Yes, but that doesn't solve all problems. You will still need to expose a CMS interface to the editorial team, be it command line, git based, or something else. A static site can't be attacked, but the system that manages the contents of the static website or its compilation can.
+
+reply
+
+	
+	
+schleck8 4 days ago | prev | next [–]
+
+Looking at the technical deep dive further down the article, this is worse than Log4Shell if you need a point of reference. It's one of the two worst exploits that ever publicly surfaced, up there with EternalBlue.
+
+reply
+
+	
+	
+sigmarule 4 days ago | parent | next [–]
+
+How reliably exploitable is it, if you know? EternalBlue was fairly close to a point-and-click exploit iirc, the early PoCs I’ve seen for this so far pin things for specific builds/images/configs, one consuming asan output, etc.
+
+reply
+
+	
+	
+zelphirkalt 4 days ago | prev | next [–]
+
+And just a while ago, I decided against hosting a PHP-based forum service, and instead build my own. Feeling vindicated today.
+
+reply
+
+	
+	
+mg794613 4 days ago | prev | next [–]
+
+I'm so tired of some of these "research setups", do you really need a logo, a brand and everything setup so you can cash in? Was this truely a problem or artificially created?
+
+Especially after fumbling it like this.
+
+"Buy our product, because we found a bug", yeah and you leaked it too.
+
+reply
+
+	
+	
+sehw 4 days ago | prev | next [–]
+
+Ye, no humans but "AI".
+
+reply
+
+	
+	
+dewey 4 days ago | parent | next [–]
+
+Grinding through abandoned source code in hopes of finding a vulnerability isn't exactly the most fulfilling work for many, perfect use case for AI which doesn't sleep.
+
+reply
+
+	
+	
+dspillett 4 days ago | parent | prev | next [–]
+
+Apparently both bugs had been reported previously, pre-AI, if so some important questions need to be asked about how those reports slipped through without a fix.
+
+reply
+
+	
+	
+dwohnitmok 4 days ago | root | parent | next [–]
+
+I'm very confused about what's going on. In fact as far as I can tell those specific bugs were fixed.
+
+https://bugs.php.net/bug.php?id=78876 marks the OOM bug as closed and fixed in 2020.
+
+It seems the AI exploration was able to find variants of those bugs that were not fixed rather than exactly those bugs themselves?
+
+reply
+
+	
+	
+amiga386 4 days ago | root | parent | next [–]
+
+That report describes sending a 2^31 length filename, which is cast to a negative number, which leads to asking erealloc() to allocate a very large buffer, which fails, which leads to the symptoms of the bug we're discussing today (mid-request allocation failure becomes a partially initialised request)
+
+The fix at the time wasn't to do proper cleanup on eralloc() failure, it was merely to avoid filename length being cast to a negative number.
+
+reply
+
+	
+	
+dspillett 4 days ago | root | parent | prev | next [–]
+
+Or perhaps the fixes were not complete, and only addressed a specific test case instead of resolving the wider issue.
+
+reply
+
+	
+	
+thway15269037 4 days ago | root | parent | prev | next [–]
+
+"Looks minor, hard to reproduce, little affected area. Throw it into backlog for 2095 release cycle."
+
+reply
+
+	
+	
+ascii0eks84 4 days ago | prev | next [–]
+
+To be honest nobody should be surprised. PHP is a wormhole of sorts.. can of worms.
+
+reply
+
+	
+	
+throwaway2037 3 days ago | prev | next [–]
+
+Jesus, I just tried to confirm my organ donation wishes at a national org website, and the front page of the website says (roughly): "We are currently down due to a PHP security vulnerability." Truly, this has hit the normies!
+
+reply
+
+	
+	
+1vuio0pswjnm7 4 days ago | prev | next [–]
+
+1792509635 | Tell HN: 2x PHP RCE CVEs with CVSS 10.0 Incoming | item?id=50167754 | https://news.ycombinator.com/item?id=50167754 | 0 comments
+
+1792524843 | Upcoming Critical PHP Security Release | https://www.php.net/archive/2026.php | https://news.ycombinator.com/item?id=50171528 | 8 comments
+
+1792525762 | Apparent CVSS 10.0 RCE in PHP core [x] | https://twitter.com/cyb3rops/status/2112616479061667936 | https://news.ycombinator.com/item?id=50171694 | 0 comments
+
+1792526855 | Upcoming Critical PHP Security Release Wednesday 21 oct 14:00 UTC | https://www.php.net/archive/2026.php | https://news.ycombinator.com/item?id=50171937 | 0 comments
+
+1792527350 | Upcoming Critical PHP Security Release | https://news-web.php.net/php.announce/509 | https://news.ycombinator.com/item?id=50172041 | 0 comments
+
+1792527832 | Upcoming Critical PHP Security Release | https://www.php.net/archive/2026.php | https://news.ycombinator.com/item?id=50172142 | 0 comments
+
+1792528374 | Upcoming Critical PHP Security Release | https://www.php.net/archive/2026.php | https://news.ycombinator.com/item?id=50172253 | 0 comments
+
+1792530087 | PHP RCE Zero-Days CVE-2026-109618, CVE-2026-109619 Leak Early | https://www.cyberkendra.com/2026/10/php-cve-2026-109618-cve-... | https://news.ycombinator.com/item?id=50172614 | 0 comments
+
+1792531634 | Pure PHP WebRTC+RTMP powering a Telegram webradio | https://twitter.com/DaniilGentili/status/2112635967597150323 | https://news.ycombinator.com/item?id=50172923 | 0 comments
+
+1792533451 | Critical Vulnerabilities in PHP | https://cert.europa.eu/publications/security-advisories/2026... | https://news.ycombinator.com/item?id=50173247 | 1 comment
+
+1792534818 | EU issues RED alert for the critical PHP vulnerability | https://cert.europa.eu/publications/security-advisories/2026... | https://news.ycombinator.com/item?id=50173483 | 0 comments
+
+1792535009 | PHP warns admins of two critical flaws, emergency patches coming tomorrow | https://www.bleepingcomputer.com/news/security/php-warns-adm... | https://news.ycombinator.com/item?id=50173508 | 1 comment
+
+1792536830 | Upcoming Critical PHP Security Release | https://www.php.net/archive/2026.php | https://news.ycombinator.com/item?id=50173797 | 0 comments
+
+1792536907 | Upcoming Critical PHP Security Release | https://externals.io/message/132883 | https://news.ycombinator.com/item?id=50173817 | 0 comments
+
+1792537022 | Upcoming Critical PHP Security Release | https://www.php.net/archive/2026.php | https://news.ycombinator.com/item?id=50173836 | 0 comments
+
+1792539057 | Critical PHP Security Release | https://www.php.net/archive/2026.php | https://news.ycombinator.com/item?id=50174131 | 0 comments
+
+1792539672 | Upcoming Critical PHP Security Release (CVSSv4 score of 9.2) | https://www.php.net/index.php | https://news.ycombinator.com/item?id=50174221 | 1 comment
+
+reply
+
+	
+	
+1vuio0pswjnm7 4 days ago | prev | next [–]
+
+1792584762 | Show HN: Timeminator Self-hosted open-source time tracker (PHP, Docker) | https://github.com/freshNfunky/Timeminator-Community | https://news.ycombinator.com/item?id=50179595 | 1 comment
+
+1792585635 | Governments Take Websites Offline After PHP Security Warnings | https://www.bloomberg.com/news/articles/2026-10-21/governmen... | https://news.ycombinator.com/item?id=50179760 | 1 comment
+
+1792585888 | Dutch National Cyber Security Center is Offline because it uses PHP | https://www.ncsc.nl/actueel | https://news.ycombinator.com/item?id=50179828 | 58 comments
+
+1792586839 | Show HN: Passive exposure check for the PHP2Shell flaws (CVE-2026-109618/109619) | https://php2shell.xyz | https://news.ycombinator.com/item?id=50179999 | 0 comments
+
+1792587855 | Show HN: Managed EmDash CMS hosting on Cloudflare, no PHP, no server | https://hostmyemdash.com/ | https://news.ycombinator.com/item?id=50180254 | 0 comments
+
+1792589908 | Check/probe tool for PHP CVE-2026-109618/619 | https://php2shell.site/news.ycombinator.com/11c22360e8df83b4 | https://news.ycombinator.com/item?id=50180769 | 0 comments
+
+1792589952 | PHP patches have been released | https://www.php.net/archive/2026.php | https://news.ycombinator.com/item?id=50180783 | 0 comments
+
+1792590090 | Simple Proxy to secure your PHP from vulnerability CVE-2026-109618 | https://github.com/Qbix/proxy | https://news.ycombinator.com/item?id=50180810 | 0 comments
+
+1792590108 | PHP Security advisory: Critical remote code execution vulnerabilities | https://www.php.net/archive/2026.php | https://news.ycombinator.com/item?id=50180818 | 0 comments
+
+reply
+
+	
+	
+NooneAtAll3 4 days ago | prev | next [–]
+
+Ai fumbles responsible disclosure*
+
+reply
+
+	
+	
+simonw 4 days ago | prev | next [–]
+
+Timeline from that article:
+
+August 19, 2026: Wiz Research discovers the first PHP vulnerability using Wiz Atlas, Gemini 4 Argon, and GPT-5.6 Sol.
+
+August 20, 2026: Unauthenticated RCE is confirmed against Drupal.
+
+August 21, 2026: Unauthenticated RCE is confirmed against WordPress.
+
+August 24, 2026: Wiz Research reports the vulnerabilities to the PHP security team.
+
+September 21, 2026: PHP acknowledges the reports and begins developing a coordinated fix.
+
+October 21, 2026: Patched PHP releases become available.
+
+October 21, 2026: Public disclosure.
+
+I want to understand how it leaked. I guess a whole lot of people were looped in between September 21 and October 21?
+
+reply
+
+	
+	
+mjr00 4 days ago | parent | next [–]
+
+> I want to understand how it leaked. I guess a whole lot of people were looped in between September 21 and October 21?
+
+Yes. I was at AWS when Spectre and Meltdown were discovered, and we received approximately a month of advance notice and put together teams to apply mitigations. The work of the team was on a need-to-know basis--even team members' managers only knew they were pulled onto a critical project, not what the specific project was. But there were still 30+ people in the company who knew, and that was just one company (I'm guessing Google/Azure/other cloud providers got similar advance notice).
+
+Now, this is a much wider scale vulnerability, in the sense that Spectre/Meltdown primarily impacted cloud providers, but this attack impacts literally anyone who runs PHP. Dozens, if not hundreds, of companies likely got advance notice that a patch needed to be installed. In those companies there are teams of people applying those patches. All it takes is one of them who wants 15 minutes of internet fame to leak the details.
+
+reply
+
+	
+	
+geerlingguy 4 days ago | root | parent | next [–]
+
+Even some smaller vulnerabilities are spread through hosting companies pretty quickly within a day or two prior to public release, to give teams time to make sure staff will be ready to patch immediately.
+
+The wider the pre-release news spreads, the more chance you get someone who will spill the beans (intentionally or not).
+
+reply
+
+	
+	
+bombcar 4 days ago | parent | prev | next [–]
+
+Two months is way too long for this, and the people involved seem to not know the "way" to do this - it shouldn't have taken a month from "reports" to "PHP acknowledges" which smells like "we sent an email or filled out a web form" when the ACTUAL reporting mechanism is "we talked to our friends at <MAJOR DISTRO> or <WORDPRESS> who called the right people and a patch is being slipped in."
+
+reply
+
+	
+	
+simonw 4 days ago | parent | prev | next [–]
+
+There's an answer in https://thephp.foundation/blog/2026/10/21/todays-php-securit...
+
+> On Tuesday, October 20th, at around 15:00 UTC, the two CVE IDs began circulating on online forums and social media. They came with a wrong release time and a wrong CVSS score of 10.0 (the actual score is 9.2). No technical details leaked [...]
+
+> As a result of the leak and pre-announcement around 20:00 UTC, Calif, one of the security firms that had reported the issues mistakenly published a video. It showed their proof of concept working against a number of targets and revealed a few additional, though limited, details about the vulnerabilities. Copies of the deleted video started circulating on social media soon after.
+
+reply
+
+	
+	
+Good4boothee 4 days ago | parent | prev | next [–]
+
+> I want to understand how it leaked
+
+If I understand correctly someone showed off a video of exploit in action - just like the ones included in article - and the visible messages were enough for other LLM users to discover the exploited bug.
+
+reply
+
+	
+	
+simonw 4 days ago | root | parent | next [–]
+
+How did the person who shared the video hear about the exploit?
+
+Were they already looped in or was it circulating outside of the trusted group already?
+
+reply
+
+	
+	
+cpncrunch 4 days ago | root | parent | next [–]
+
+From what I gather, https://x.com/J4ck3LSyN/status/2112703096443097263 figured it out after the disclosure by wiz.io and openai (which I think was 24h before the patch landed). So they then used AI models to analyze the php code and independently found the vulnerabilities.
+
+So, if that is correct then the problem was the 24h prior notice about the patches, which gave time for people to use AI to find the bugs.
+
+reply
+
+	
+	
+olafmol 4 days ago | root | parent | prev | next [–]
+
+that's the million-dollar question currently. The guy posting the movie on X is referring back to Calif.io and other person as the creators of the video. Also, it's not a working exploit, but a video of a PoC, including a dancing manga character, so I'm wondering why a company like Calif.io creates such a thing. Another "interesting" development: chainguard unilaterally decided to break embargo 6 hours before the official publishing, by releasing patched container images. Why???
+
+reply
+
+	
+	
+yreg 4 days ago | root | parent | next [–]
+
+> chainguard
+
+They comment on it here: https://news.ycombinator.com/item?id=50176735
+
+reply
+
+	
+	
+its606 4 days ago | parent | prev | next [–]
+
+It would have been nice if there had been time for downstream distributors to patch as well.
+
+reply
+
+	
+	
+jwilk 4 days ago | parent | prev | next [–]
+
+> I want to understand how it leaked
+
+I'm confused. How do you know it leaked?
+
+reply
+
+	
+	
+projektfu 4 days ago | parent | prev | next [–]
+
+Simon, it seems you spend too much time close to the AIs and your writing is getting flagged.
+
+reply
+
+	
+	
+wren6991 4 days ago | prev | next [–]
+
+Did an LLM do the write-up? Half of the "technical deep dive" was just re-stating earlier statements about scope and impact, and I left without a solid grasp of the mechanics of the exploits.
+
+reply
+
+	
+	
+iaaan 4 days ago | parent | next [–]
+
+That's wiz.io for you. Blogspam
+
+reply
+
+	
+	
+azyc 4 days ago | prev | next [–]
+
+The Wiz post says the root cause is fatal errors (mostly out of memory) leaving corrupted state behind, which "a later request or worker can reuse". So the memory disclosure looks like it depends on the same FPM worker living on into the next request.
+
+Would a low pm.max_requests narrow that part until people can patch? It obviously wouldn't help with the OPcache type confusion, since OPcache is shared memory across workers. airtnp also points out the old-branch backport just disables session upload progress, so session.upload_progress.enabled=0 looks like the cheaper interim knob.
+
+https://www.wiz.io/blog/php2shell-php-rce
+
+reply
+
+	
+	
+eptcyka 4 days ago | prev | next [–]
+
+I guess I should update my nextcloud.
+
+No, scratch that. I should replace it with something that is not a trash fire.
+
+reply
+
+	
+	
+melonpan7 4 days ago | parent | next [–]
+
+Thanks for the reminder. I should probably switch my homelab to something like openCloud which is more lightweight and memory efficient anyways.
+
+reply
+
+	
+	
+foxrider 4 days ago | parent | prev | next [–]
+
+OpenCloud had been great for me lately
+
+reply
+
+	
+	
+varispeed 4 days ago | prev [–]
+
+If AI "uncovered" it, that means it was already in the training data and likely exploited in the wild.
+
+reply
+
+	
+	
+trollbridge 4 days ago | parent | next [–]
+
+That's... not how coding agents work.
+
+reply
+
+	
+	
+varispeed 4 days ago | root | parent | next [–]
+
+They guess the next token based on probability which is derived from training data.
+
+reply
+
+	
+	
+cowlevel 4 days ago | root | parent | prev | next [–]
+
+Sometimes it is. If the AI can do it for the defender it can also do it for the attacker.
+
+reply
+
+	
+	
+trollbridge 4 days ago | root | parent | next [–]
+
+I wish. As the defender, I have a model that just barks at me that I hit a guardrail. The attacker has no such constraints.
+
+reply
+
+	
+	
+BenjiWiebe 4 days ago | parent | prev [–]
+
+So with that logic, AI won't find a vulnerability in my newly written code, since that particular vulnerability wasn't in its training data?
+
+reply
+
+Consider applying for YC's Winter 2027 batch! Applications are open till November 2.
+
+Guidelines | FAQ | Lists | API | Security | Legal | Apply to YC | Contact
+
+Search: 

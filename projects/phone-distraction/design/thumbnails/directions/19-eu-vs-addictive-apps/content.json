@@ -1,0 +1,24 @@
+{
+  "direction": "Real-document look on white: the real European Commission headline (10 Jul 2026, a screenshot of their page) stuck on as a clipping, \"addictive design\" highlighted, small source credit; her colour cut-out with a red outline on the right; the topic on top.",
+  "kind": "other",
+  "concept": "v3 (2026-10-16)",
+  "references": "her own ghana-marrify 10b edit (real document + highlight) · a paper screenshot (viral sample) · QUIT DATA NOW (tweet card)",
+  "thumbnail_text": "The EU vs addictive apps",
+  "title": "Europe Says Infinite Scroll May Break the Law. Here’s Why",
+  "titles": [
+    "Europe Says Infinite Scroll May Break the Law. Here’s Why",
+    "Instagram’s Addictive Design Explained: What Europe Found",
+    "Why Can’t I Stop Scrolling? It Was Designed That Way"
+  ],
+  "scores": "fresh critics vs her bar: r1 6 · r2 7 · r3 7.8 · r4 7.5",
+  "recommended": "",
+  "text": {
+    "words": "The EU vs<br><span class=\"acc\">addictive apps</span>",
+    "credit": "European Commission, 10 Jul 2026"
+  },
+  "images": {
+    "clip": "../../assets/props/eu-headline.png",
+    "photo": "../../assets/cut/895.75_col_red.png"
+  },
+  "vars": {}
+}

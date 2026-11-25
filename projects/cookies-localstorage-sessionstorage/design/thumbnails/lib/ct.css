@@ -1,0 +1,99 @@
+/* cookies-localstorage-sessionstorage thumbnails, set 2 (2026-11-07). Colours from the film's A "Crash test" (concrete #D9DCDA,
+   ink #0E0E0E, survived green #0B9A5B, wiped red #E5262A); type = her set 03 "Heavy + light" (inspiration/know-how/TYPE-SYSTEM.md):
+   Helvetica Neue Bold 700 at -0.045em, sentence case, with Helvetica Neue Light 300 for the contrast words; DM Mono 500 caps labels.
+   No thick borders, outlines, stamp frames, rings or handwriting: separate with space and colour (2 px max on UI cards).
+   Editable: text in content.json "text", photos in "images", colours in "vars", moves in "nudge" (lib/bind.js). */
+@font-face { font-family: 'DMMono'; src: url('../fonts/DMMono-Medium.ttf') format('truetype'); font-weight: 500; }
+
+:root { --concrete: #D9DCDA; --ink: #0E0E0E; --green: #0B9A5B; --red: #E5262A; --white: #FFFFFF; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1280px; height: 720px; overflow: hidden; background: #0E0E0E; }
+.t { position: relative; width: 1280px; height: 720px; overflow: hidden; background: var(--ground, #D9DCDA); color: var(--fg, #0E0E0E);
+  font-family: 'Helvetica Neue', Helvetica, sans-serif; }
+.guides .badge { position: absolute; right: 10px; bottom: 10px; width: 150px; height: 70px; border: 3px dashed #0f0; z-index: 99; }
+.z1 { z-index: 1; } .z2 { z-index: 2; } .z3 { z-index: 3; } .z4 { z-index: 4; } .z5 { z-index: 5; } .z6 { z-index: 6; }
+.abs { position: absolute; }
+
+/* headline: Helvetica Neue Bold, tight, sentence case; .lt = the light contrast words */
+.hd { position: absolute; font-family: 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; line-height: .94; letter-spacing: -.045em;
+  white-space: nowrap; color: var(--fg, #0E0E0E); }
+.lt { font-weight: 300; letter-spacing: -.035em; }
+.b { font-weight: 700; }
+.g { color: var(--green); } .r { color: var(--red); } .w { color: #fff; } .mid { color: rgba(14,14,14,.55); }
+.body { position: absolute; font-family: 'Helvetica Neue', Helvetica, sans-serif; font-weight: 400; letter-spacing: -.01em; line-height: 1.2; }
+.mono { font-family: 'DMMono', monospace; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; }
+.code { font-family: 'DMMono', monospace; font-weight: 500; letter-spacing: 0; text-transform: none; }
+
+/* result words: coloured Helvetica Bold, no frame, no tilt */
+.res { position: absolute; font-family: 'Helvetica Neue'; font-weight: 700; letter-spacing: -.04em; line-height: .95; white-space: nowrap; }
+.res.ok { color: var(--green); } .res.gone { color: var(--red); }
+/* a solid colour field behind a word (colour, not a line) */
+.fld { padding: .06em .16em .08em; display: inline-block; line-height: 1; }
+.fld.ok { background: var(--green); color: #fff; } .fld.gone { background: var(--red); color: #fff; } .fld.ink { background: var(--ink); color: #fff; }
+
+/* generic checkout form (no brand): white card, hairline fields */
+.form { position: absolute; background: #fff; padding: 26px 28px 30px; }
+.form .lb { font-family: 'DMMono'; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; font-size: 24px; margin-bottom: 8px; color: rgba(14,14,14,.6); }
+.form .f { border: 1px solid var(--ink); height: 62px; margin-top: 14px; font-family: 'Helvetica Neue'; font-weight: 400; font-size: 30px;
+  display: flex; align-items: center; padding: 0 18px; white-space: nowrap; overflow: hidden; color: var(--ink); }
+.form .f.empty { color: transparent; border-color: rgba(14,14,14,.35); }
+/* a browser tab with its x */
+.tab { position: absolute; background: #fff; display: flex; align-items: center; gap: 20px; padding: 0 26px; border-radius: 16px 16px 0 0; color: var(--ink); }
+.tab .dot { width: .6em; height: .6em; border-radius: 50%; background: var(--ink); flex: none; }
+.tab .tt { font-family: 'Helvetica Neue'; font-weight: 500; flex: 1; white-space: nowrap; letter-spacing: -.01em; }
+.tab .x { width: 1.5em; height: 1.5em; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Helvetica Neue'; font-weight: 300; flex: none; }
+.tab .x.on { background: var(--ink); color: #fff; }
+/* white card, flat */
+.card { position: absolute; background: #fff; color: var(--ink); }
+.card.ink { background: var(--ink); color: #fff; }
+/* key / value rows (storage panel, generic), hairlines only */
+.kv { display: grid; grid-template-columns: 1fr 1.3fr; font-family: 'DMMono'; font-size: 30px; color: var(--ink); }
+.kv > div { padding: 12px 20px; border-top: 1px solid rgba(14,14,14,.25); white-space: nowrap; overflow: hidden; }
+.kv .h { font-weight: 500; text-transform: uppercase; letter-spacing: .12em; font-size: 20px; border-top: 0; color: rgba(14,14,14,.55); }
+/* results circles */
+.dotc { display: inline-flex; width: 1em; height: 1em; border-radius: 50%; align-items: center; justify-content: center; color: #fff; vertical-align: middle; }
+.dotc.ok { background: var(--green); } .dotc.gone { background: var(--red); }
+.dotc svg { width: 58%; height: 58%; }
+
+/* her photo as a cut-out on the flat ground (no outline, no sticker border) */
+.cut { position: absolute; bottom: 0; display: block; }
+.cut.bw { filter: grayscale(1) contrast(1.05); }
+/* object die-cut (collage): soft shadow only */
+.obj { position: absolute; filter: drop-shadow(0 14px 18px rgba(0,0,0,.22)); }
+.arrow { position: absolute; overflow: visible; }
+
+/* ===== 2026-11-10 rollout: her shoot photos (outfit A white shirt, Enhance photo) + quiet same-hue patterns ===== */
+/* her shoot photos are already bright and enhanced: no extra brightening on top (her note 2026-11-08, face too light) */
+.t.no-lift .scene .me-c, .t.no-lift .cut { filter: none; }
+.t.no-lift .cut.bw { filter: grayscale(1) contrast(1.05); }
+/* full photo of her room (4:3): room + her person layer share one box, so they line up; size --pw, place --pl / --pt */
+.pf { position: absolute; inset: 0; overflow: hidden; }
+.pf img { position: absolute; left: var(--pl, 0px); top: var(--pt, -120px); width: var(--pw, 1280px); height: auto; }
+.pf .wash { position: absolute; left: var(--pl, 0px); top: var(--pt, -120px); width: var(--pw, 1280px); height: calc(var(--pw, 1280px) * .75);
+  background: var(--wash, #D9DCDA); mix-blend-mode: multiply; opacity: var(--washo, 1); }
+.pf .dim { position: absolute; inset: 0; background: var(--dim, rgba(14,14,14,0)); }
+.pf.washed .room { filter: grayscale(1) contrast(var(--wc, .7)) brightness(var(--wb, 1.45)); }
+.pf .room { filter: var(--roomf, none); }
+/* a bold ground with a fine static pattern in the same hue, a few % darker (THUMBNAIL-STUDY §7) */
+.pat::before { content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background-image: repeating-linear-gradient(var(--pata, 135deg), var(--patc, rgba(14,14,14,.055)) 0 2px, transparent 2px var(--patg, 13px)); }
+.sh { text-shadow: 0 2px 4px rgba(0,0,0,.25), 0 8px 30px rgba(0,0,0,.35); }
+/* a phone (lib/phone.js makes it real: frame, island, status bar) */
+.phone { position: absolute; background: #0E0E0E; border-radius: 44px; padding: 14px; box-shadow: 0 26px 50px rgba(14,14,14,.35); }
+.phone .scr { background: #fff; border-radius: 32px; width: 100%; height: 100%; overflow: hidden; position: relative; color: #0E0E0E; }
+/* a desktop browser window, generic (no brand): one tab with its x, the address bar as a soft field */
+.win { position: absolute; background: #fff; border-radius: 18px; overflow: hidden; box-shadow: 0 24px 48px rgba(14,14,14,.28); color: #0E0E0E; }
+.win .bar { background: #E8EAE9; height: 64px; display: flex; align-items: flex-end; padding: 0 18px; gap: 10px; }
+.win .bar .tb { background: #fff; border-radius: 12px 12px 0 0; height: 48px; display: flex; align-items: center; gap: 14px; padding: 0 16px 0 20px;
+  font-weight: 500; font-size: 22px; white-space: nowrap; }
+.win .bar .tb .x { width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 300; font-size: 28px; }
+.win .bar .tb .x.on { background: var(--red); color: #fff; }
+.win .addr { margin: 12px 18px; height: 40px; border-radius: 20px; background: #F0F1F0; }
+/* a tick / cross disc (results), sized by font-size */
+.dotc svg { display: block; }
+/* a small mouse pointer (svg) */
+.ptr { position: absolute; width: 54px; filter: drop-shadow(0 6px 8px rgba(0,0,0,.35)); }
+.pf:not(.washed) .wash { display: none; }
+/* 2026-11-10: form fields are soft grey fills, no outlines (her 'old website' note 2026-11-07) */
+.form .f { border: 0; background: #EEF0EF; border-radius: 8px; }
+.form .f.empty { background: #EEF0EF; color: transparent; }

@@ -1,0 +1,909 @@
+{
+ "title": "dark-patterns: talking-head",
+ "source": "../kit/raw-video.mov",
+ "fps": 30,
+ "words": "data/raw_words.json",
+ "faces": "data/face_track.json",
+ "edl": "data/edl.json",
+ "edit": {
+  "silenceDb": -44,
+  "maxPause": 0.42,
+  "keepBefore": 0.14,
+  "keepAfter": 0.1
+ },
+ "out": "../outputs/talking-head",
+ "shortsOut": "../outputs/shorts",
+ "tail": 0.7,
+ "audio": {
+  "voiceFilter": "highpass=f=80,afftdn=nr=8:nf=-52:tn=1,deesser=i=0.3:m=0.5:f=0.5,acompressor=threshold=0.06:ratio=3:attack=6:release=160:knee=3,equalizer=f=3200:t=q:w=1.2:g=1.5",
+  "music": {
+   "dir": "library:music"
+  },
+  "levels": {
+   "voiceLufs": -16.0,
+   "duckDb": -18.0,
+   "openDb": -10.0,
+   "target": -14.0,
+   "ceiling": 0.8
+  },
+  "sfx": {
+   "palette": true,
+   "roles": {
+    "focus": {
+     "files": [
+      "library:camera-autofocus"
+     ],
+     "align": "peak",
+     "db": -4
+    },
+    "marker": {
+     "files": [
+      "library:marker-line"
+     ],
+     "align": "peak",
+     "db": -5
+    },
+    "click": {
+     "files": [
+      "library:mouse-double-click",
+      "library:click-classic"
+     ],
+     "align": "peak",
+     "db": -3
+    },
+    "wrong": {
+     "files": [
+      "library:wrong-answer",
+      "library:buzzer-fail"
+     ],
+     "align": "peak",
+     "db": -8
+    },
+    "coin": {
+     "files": [
+      "library:coins-clinking",
+      "library:coin-win"
+     ],
+     "align": "peak",
+     "db": -6
+    },
+    "stamp": {
+     "files": [
+      "library:wood-hard-hit",
+      "library:punch-soft-quick"
+     ],
+     "align": "peak",
+     "db": -5
+    }
+   },
+   "gainDb": 8
+  }
+ },
+ "moments": [
+  {
+   "id": "full",
+   "kind": "full",
+   "slug": "full",
+   "title": "The whole video, tightened, with graphics (C Blown up + B split)",
+   "in": 0,
+   "out": 459.8,
+   "cuts": [
+    [
+     273.53,
+     303.1
+    ],
+    [
+     357.18,
+     359.08
+    ],
+    [
+     451.45,
+     457.79
+    ]
+   ],
+   "retakes": false,
+   "script": "moments/full.js",
+   "music": [
+    "443",
+    0.0
+   ],
+   "note": "cuts: CLEANUP restart 357.18-359.08 + ending (kit Q1: the unfinished sentence 451.45-457.79; out 459.8 drops \"I don't know\"). Remove the second cut to keep her sentence."
+  },
+  {
+   "id": "sh01",
+   "kind": "short",
+   "slug": "what-is-a-dark-pattern",
+   "title": "What is a dark pattern?",
+   "label": "What is a dark pattern?",
+   "sublabel": "",
+   "in": 0.08,
+   "out": 41.97,
+   "cuts": [],
+   "script": "shorts/sh01.js",
+   "music": [
+    "443",
+    4.0
+   ],
+   "tail": 0.5,
+   "dpStyle": {
+    "lab": "pink",
+    "cap": "outline"
+   },
+   "endCard": false,
+   "fmt": "H",
+   "frame9": "fill",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 16.95,
+    "text": "What is a dark pattern?",
+    "kind": "photo"
+   },
+   "board": [
+    26,
+    36,
+    13
+   ],
+   "pad": "#D8CDBB",
+   "fonts": [
+    "pair-01"
+   ],
+   "colours": "pair-01"
+  },
+  {
+   "id": "sh02",
+   "kind": "short",
+   "slug": "confirmshaming",
+   "title": "Confirmshaming: the guilt-trip \"No thanks\" button",
+   "label": "confirmshaming",
+   "sublabel": "",
+   "in": 0.08,
+   "out": 60.81,
+   "cuts": [
+    [
+     9.91,
+     45.12
+    ]
+   ],
+   "script": "shorts/sh02.js",
+   "music": [
+    "102",
+    4.0
+   ],
+   "tail": 0.5,
+   "dpStyle": {
+    "lab": "mix",
+    "cap": "pop"
+   },
+   "endCard": false,
+   "fmt": "M",
+   "frame9": "fill",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 13.08,
+    "text": "What is confirmshaming?",
+    "kind": "frame"
+   },
+   "board": [
+    32,
+    60,
+    28
+   ],
+   "pad": "#D9F44F",
+   "fonts": [
+    "shorts-07",
+    "design-09"
+   ],
+   "colours": "shorts-07 + design-09"
+  },
+  {
+   "id": "sh03",
+   "kind": "short",
+   "slug": "hard-to-cancel-amazon",
+   "title": "Amazon Prime and the hard-to-cancel trap",
+   "label": "Why it's so hard to cancel Amazon Prime",
+   "sublabel": "",
+   "in": 60.81,
+   "out": 413.61,
+   "cuts": [
+    [
+     85.42,
+     399.2
+    ]
+   ],
+   "script": "shorts/sh03.js",
+   "music": [
+    "175",
+    4.0
+   ],
+   "tail": 0.5,
+   "dpStyle": {
+    "lab": "white",
+    "cap": "serif"
+   },
+   "endCard": false,
+   "pauses": false,
+   "fmt": "I",
+   "frame9": "fill",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 273.1,
+    "text": "Why is it so hard to cancel Amazon Prime?",
+    "kind": "photo"
+   },
+   "board": [
+    66,
+    42,
+    16
+   ],
+   "pad": "#000000",
+   "fonts": [
+    "design-33"
+   ],
+   "colours": "design-33"
+  },
+  {
+   "id": "sh04",
+   "kind": "short",
+   "slug": "sneak-into-basket-hidden-costs",
+   "title": "Sneak into basket: items you never added in your cart",
+   "label": "Sneak into basket | things in your cart you never added",
+   "sublabel": "",
+   "in": 94.5,
+   "out": 127.55,
+   "cuts": [
+    [
+     110.25,
+     115.49
+    ]
+   ],
+   "script": "shorts/sh04.js",
+   "music": [
+    "234",
+    4.0
+   ],
+   "tail": 0.5,
+   "dpStyle": {
+    "lab": "ink",
+    "cap": "serifbox"
+   },
+   "endCard": false,
+   "fmt": "B",
+   "frame9": "4x5",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 114.89,
+    "text": "Something in your cart you never added? | it's called sneak into basket",
+    "kind": "frame"
+   },
+   "board": [
+    5,
+    47,
+    9
+   ],
+   "pad": "#CB482E",
+   "fonts": [
+    "pair-04"
+   ],
+   "colours": "pair-04"
+  },
+  {
+   "id": "sh05",
+   "kind": "short",
+   "slug": "hidden-subscription",
+   "title": "Hidden subscriptions: free trials that start charging",
+   "label": "Free trials that start charging you",
+   "sublabel": "",
+   "in": 127.55,
+   "out": 149.28,
+   "cuts": [],
+   "script": "shorts/sh05.js",
+   "music": [
+    "27",
+    4.0
+   ],
+   "tail": 0.5,
+   "dpStyle": {
+    "lab": "plain",
+    "cap": "helv"
+   },
+   "endCard": false,
+   "fmt": "I",
+   "frame9": "fill",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 140.61,
+    "text": "Charged after a free trial? | free trials that turn into paid plans",
+    "kind": "card"
+   },
+   "board": [
+    29,
+    39,
+    53
+   ],
+   "pad": "#031150",
+   "fonts": [
+    "design-20",
+    "combo-21"
+   ],
+   "colours": "design-20 + combo-21"
+  },
+  {
+   "id": "sh06",
+   "kind": "short",
+   "slug": "pre-ticked-boxes",
+   "title": "Pre-ticked boxes at checkout (EU law)",
+   "label": "Pre-ticked boxes at checkout",
+   "sublabel": "",
+   "in": 212.68,
+   "out": 398.95,
+   "cuts": [
+    [
+     227.34,
+     381.15
+    ]
+   ],
+   "script": "shorts/sh06.js",
+   "music": [
+    "480",
+    4.0
+   ],
+   "tail": 0.5,
+   "dpStyle": {
+    "lab": "type",
+    "cap": "outline"
+   },
+   "endCard": false,
+   "fmt": "J",
+   "poster": "Pre-ticked boxes at checkout",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 250.87,
+    "text": "Is a pre-ticked box at checkout legal?",
+    "kind": "frame"
+   },
+   "board": [
+    64,
+    65,
+    11
+   ],
+   "pad": "#111111",
+   "fonts": [
+    "shorts-14",
+    "shorts-15"
+   ],
+   "colours": "shorts-14 + shorts-15"
+  },
+  {
+   "id": "sh07",
+   "kind": "short",
+   "slug": "trick-wording-disguised-ads",
+   "title": "Trick wording: checkboxes written to confuse you",
+   "label": "Checkboxes written to confuse you",
+   "sublabel": "",
+   "in": 157.51,
+   "out": 188.26,
+   "cuts": [],
+   "script": "shorts/sh07.js",
+   "music": [
+    "1168",
+    4.0
+   ],
+   "tail": 0.5,
+   "dpStyle": {
+    "lab": "mix",
+    "cap": "outline"
+   },
+   "endCard": false,
+   "fmt": "I",
+   "frame9": "fill",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 169.97,
+    "text": "Checkboxes that trick you into saying yes",
+    "kind": "photo"
+   },
+   "board": [
+    25,
+    54,
+    34
+   ],
+   "pad": "#F2F3C4",
+   "fonts": [
+    "design-24"
+   ],
+   "colours": "design-24"
+  },
+  {
+   "id": "sh08",
+   "kind": "short",
+   "slug": "nagging-notifications",
+   "title": "Why apps keep asking you to turn on notifications",
+   "label": "Why apps keep asking you to turn on notifications",
+   "sublabel": "",
+   "in": 188.26,
+   "out": 212.68,
+   "cuts": [],
+   "script": "shorts/sh08.js",
+   "music": [
+    "135",
+    4.0
+   ],
+   "tail": 0.5,
+   "dpStyle": {
+    "lab": "white",
+    "cap": "word"
+   },
+   "endCard": false,
+   "fmt": "F",
+   "frame9": "1x1top",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 207.66,
+    "text": "Why do apps keep asking you to turn on notifications?",
+    "kind": "photo"
+   },
+   "board": [
+    40,
+    12,
+    20
+   ],
+   "pad": "#000000",
+   "fonts": [
+    "design-13"
+   ],
+   "colours": "design-13"
+  },
+  {
+   "id": "sh09",
+   "kind": "short",
+   "slug": "fake-countdown-timers",
+   "title": "Fake countdown timers on shopping sites",
+   "label": "Fake countdown timers",
+   "sublabel": "",
+   "in": 227.34,
+   "out": 329.3,
+   "cuts": [
+    [
+     246.42,
+     314.94
+    ]
+   ],
+   "script": "shorts/sh09.js",
+   "music": [
+    "157",
+    4.0
+   ],
+   "tail": 0.5,
+   "dpStyle": {
+    "lab": "pink",
+    "cap": "outline"
+   },
+   "endCard": false,
+   "fmt": "C",
+   "frame9": "4x5",
+   "poster": "Fake countdown timers",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 289.22,
+    "text": "Is that countdown timer fake?",
+    "kind": "photo"
+   },
+   "board": [
+    38,
+    57,
+    48
+   ],
+   "pad": "#3A3A33",
+   "fonts": [
+    "shorts-09",
+    "shorts-20"
+   ],
+   "colours": "shorts-09 + shorts-20"
+  },
+  {
+   "id": "sh10",
+   "kind": "short",
+   "slug": "fake-scarcity",
+   "title": "\"Only 2 left in stock\": fake scarcity",
+   "label": "\"Only 2 left in stock\" is often not true",
+   "sublabel": "",
+   "in": 246.42,
+   "out": 268.14,
+   "cuts": [],
+   "script": "shorts/sh10.js",
+   "music": [
+    "167",
+    4.0
+   ],
+   "tail": 0.5,
+   "dpStyle": {
+    "lab": "plain",
+    "cap": "karaoke"
+   },
+   "endCard": false,
+   "fmt": "H",
+   "frame9": "fill",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 246.95,
+    "text": "\"Only 2 left in stock\" is often fake",
+    "kind": "frame"
+   },
+   "board": [
+    68,
+    22,
+    10
+   ],
+   "pad": "#2E2E33",
+   "fonts": [
+    "shorts-17"
+   ],
+   "colours": "shorts-17"
+  },
+  {
+   "id": "sh11",
+   "kind": "short",
+   "slug": "why-companies-use-dark-patterns",
+   "title": "Why companies use dark patterns",
+   "label": "Why companies use dark patterns | it's the numbers",
+   "sublabel": "",
+   "in": 268.14,
+   "out": 313.77,
+   "cuts": [
+    [
+     273.53,
+     303.1
+    ]
+   ],
+   "script": "shorts/sh11.js",
+   "music": [
+    "1009",
+    4.0
+   ],
+   "tail": 0.5,
+   "dpStyle": {
+    "lab": "ink",
+    "cap": "serifbox"
+   },
+   "endCard": false,
+   "fmt": "K",
+   "frame9": "fill",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 304.4,
+    "text": "Why apps trick you | it's the numbers",
+    "kind": "photo"
+   },
+   "board": [
+    58,
+    48,
+    52
+   ],
+   "pad": "#3C2A22",
+   "fonts": [
+    "shorts-10"
+   ],
+   "colours": "shorts-10"
+  },
+  {
+   "id": "sh12",
+   "kind": "short",
+   "slug": "how-common-dark-patterns",
+   "title": "The EU checked 399 online shops for dark patterns",
+   "label": "The EU checked 399 online shops",
+   "sublabel": "",
+   "in": 313.77,
+   "out": 351.95,
+   "cuts": [],
+   "script": "shorts/sh12.js",
+   "music": [
+    "150",
+    4.0
+   ],
+   "tail": 0.5,
+   "dpStyle": {
+    "lab": "pink",
+    "cap": "outline"
+   },
+   "endCard": false,
+   "fmt": "M",
+   "frame9": "fill",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 336.69,
+    "text": "How many online shops use dark patterns?",
+    "kind": "frame"
+   },
+   "board": [
+    31,
+    53,
+    47
+   ],
+   "pad": "#E99A3F",
+   "fonts": [
+    "design-02"
+   ],
+   "colours": "design-02"
+  },
+  {
+   "id": "sh13",
+   "kind": "short",
+   "slug": "are-dark-patterns-illegal",
+   "title": "Are dark patterns illegal in the EU and US?",
+   "label": "Are dark patterns illegal? | what EU and US law says",
+   "sublabel": "",
+   "in": 351.95,
+   "out": 425.89,
+   "cuts": [
+    [
+     357.18,
+     359.08
+    ]
+   ],
+   "script": "shorts/sh13.js",
+   "music": [
+    "282",
+    4.0
+   ],
+   "tail": 0.5,
+   "dpStyle": {
+    "lab": "mix",
+    "cap": "outline"
+   },
+   "endCard": false,
+   "pauses": false,
+   "fmt": "G",
+   "frame9": "letterbox",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 381.72,
+    "text": "Are dark patterns illegal? | EU and US law",
+    "kind": "card"
+   },
+   "board": [
+    9,
+    12,
+    44
+   ],
+   "pad": "#111111",
+   "fonts": [
+    "pair-05"
+   ],
+   "colours": "pair-05"
+  },
+  {
+   "id": "sh14",
+   "kind": "short",
+   "slug": "asked-to-build-a-dark-pattern",
+   "title": "Being asked to build a dark pattern at work",
+   "label": "Asked to build a dark pattern at work?",
+   "sublabel": "",
+   "in": 431.01,
+   "out": 449.86,
+   "cuts": [],
+   "script": "shorts/sh14.js",
+   "music": [
+    "722",
+    4.0
+   ],
+   "tail": 0.5,
+   "dpStyle": {
+    "lab": "block",
+    "cap": "small"
+   },
+   "endCard": false,
+   "fmt": "H",
+   "frame9": "fill",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 449.6,
+    "text": "UX designers, have you been asked to build a dark pattern?",
+    "kind": "photo"
+   },
+   "board": [
+    4,
+    60,
+    28
+   ],
+   "pad": "#0C0C0C",
+   "fonts": [
+    "design-26"
+   ],
+   "colours": "design-26"
+  },
+  {
+   "id": "teaser",
+   "kind": "teaser",
+   "slug": "dark-patterns",
+   "title": "Teaser for LinkedIn and X: her best lines, C Blown up look",
+   "bites": [
+    [
+     0.05,
+     9.91
+    ],
+    [
+     21.84,
+     28.84
+    ],
+    [
+     77.71,
+     85.42
+    ],
+    [
+     152.97,
+     157.51
+    ],
+    {
+     "gap": 0.8,
+     "at": 366.7
+    },
+    [
+     122.9,
+     127.55
+    ],
+    [
+     146.0,
+     149.28
+    ],
+    [
+     204.11,
+     212.68
+    ],
+    [
+     237.11,
+     240.44
+    ],
+    {
+     "gap": 0.8,
+     "at": 366.7
+    },
+    [
+     303.1,
+     309.43
+    ],
+    [
+     344.0,
+     351.85
+    ],
+    [
+     399.19,
+     408.1
+    ],
+    [
+     445.64,
+     447.95
+    ],
+    {
+     "gap": 0.8,
+     "at": 366.7
+    },
+    [
+     28.84,
+     33.51
+    ]
+   ],
+   "tail": 6.5,
+   "captionStyle": "shorts",
+   "script": "teaser/teaser.js",
+   "music": [
+    "766",
+    0.0
+   ],
+   "endCard": {
+    "title": "Dark Patterns: “No Thanks, I Hate Saving Money” Has a Name"
+   },
+   "fonts": [
+    "pair-02"
+   ],
+   "colours": "pair-02"
+  }
+ ],
+ "common": [
+  "../film/assets/src/clips.js",
+  "../film/scenes/dp.js",
+  "moments/common.js",
+  "moments/visuals.js",
+  "moments/plan.js",
+  "moments/formats.js",
+  "moments/looks.js"
+ ],
+ "pad": "#FF9EC4",
+ "frame9": "4x5",
+ "videoTitle": "Dark Patterns: \"No Thanks, I Hate Saving Money\" Has a Name",
+ "fonts": [
+  "500 40px \"Geist Mono\""
+ ],
+ "images": {
+  "clip_cms-dfa": "../film/assets/src/cms-dfa.png",
+  "clip_crd-22": "../film/assets/src/crd-22.png",
+  "clip_dd-cancel": "../film/assets/src/dd-cancel.png",
+  "clip_dd-confirm": "../film/assets/src/dd-confirm.png",
+  "clip_dd-nagging": "../film/assets/src/dd-nagging.png",
+  "clip_dd-origin": "../film/assets/src/dd-origin.png",
+  "clip_dd-scarcity": "../film/assets/src/dd-scarcity.png",
+  "clip_dd-sneak": "../film/assets/src/dd-sneak.png",
+  "clip_dd-urgency": "../film/assets/src/dd-urgency.png",
+  "clip_ec-42": "../film/assets/src/ec-42.png",
+  "clip_ec-head": "../film/assets/src/ec-head.png",
+  "clip_ftc-76-lens": "../film/assets/src/ftc-76-lens.png",
+  "clip_ftc-76": "../film/assets/src/ftc-76.png",
+  "clip_ftc-amazon-q1": "../film/assets/src/ftc-amazon-q1.png",
+  "clip_ftc-amazon-q2": "../film/assets/src/ftc-amazon-q2.png",
+  "clip_gdpr-32": "../film/assets/src/gdpr-32.png",
+  "px-1181370": "../film/assets/src/px-1181370.jpg",
+  "px-13975271": "../film/assets/src/px-13975271.jpg",
+  "px-17177368": "../film/assets/src/px-17177368.jpg",
+  "px-22046935": "../film/assets/src/px-22046935.jpg",
+  "px-37125633": "../film/assets/src/px-37125633.jpg",
+  "px-3865639": "../film/assets/src/px-3865639.jpg",
+  "px-4979123": "../film/assets/src/px-4979123.jpg",
+  "px-4980430": "../film/assets/src/px-4980430.jpg",
+  "px-5699374": "../film/assets/src/px-5699374.jpg",
+  "px-5717969": "../film/assets/src/px-5717969.jpg",
+  "px-5872362": "../film/assets/src/px-5872362.jpg",
+  "px-6214362": "../film/assets/src/px-6214362.jpg",
+  "px-7588163": "../film/assets/src/px-7588163.jpg",
+  "clip_ucpd-7": "../film/assets/src/ucpd-7.png",
+  "px-11952304": "../film/assets/src/px-11952304.jpg",
+  "px-4437148": "../film/assets/src/px-4437148.jpg",
+  "px-35184839": "../film/assets/src/px-35184839.jpg",
+  "cover_sh01": "assets/covers/sh01.jpg",
+  "cover_sh02": "assets/covers/sh02.jpg",
+  "cover_sh03": "assets/covers/sh03.jpg",
+  "cover_sh04": "assets/covers/sh04.jpg",
+  "cover_sh04_cut": "assets/covers/sh04-cut.png",
+  "cover_sh05": "assets/covers/sh05.jpg",
+  "cover_sh06": "assets/covers/sh06.jpg",
+  "cover_sh07": "assets/covers/sh07.jpg",
+  "cover_sh08": "assets/covers/sh08.jpg",
+  "cover_sh08_cut": "assets/covers/sh08-cut.png",
+  "cover_sh09": "assets/covers/sh09.jpg",
+  "cover_sh10": "assets/covers/sh10.jpg",
+  "cover_sh11": "assets/covers/sh11.jpg",
+  "cover_sh12": "assets/covers/sh12.jpg",
+  "cover_sh12_cut": "assets/covers/sh12-cut.png",
+  "cover_sh13": "assets/covers/sh13.jpg",
+  "cover_sh14": "assets/covers/sh14.jpg",
+  "cover_sh04_frame": "assets/covers/sh04-frame.jpg",
+  "cover_sh10_frame": "assets/covers/sh10-frame.jpg",
+  "cover_sh12_frame": "assets/covers/sh12-frame.jpg",
+  "cover_sh02_frame": "assets/covers/sh02-frame.jpg",
+  "cover_sh06_frame": "assets/covers/sh06-frame.jpg"
+ },
+ "teaserOut": "../outputs/teaser",
+ "pauses": [
+  {
+   "id": "fix-amazon",
+   "at": 413.64,
+   "d": 9,
+   "text": "To be exact: Amazon agreed to a $2.5 billion settlement\n($1 billion penalty and up to $1.5 billion in refunds).\nIt did not admit wrongdoing.\nSources: FTC, NBC News"
+  }
+ ],
+ "outroCard": {
+  "on": true,
+  "thumb": "../outputs/thumbnails/02-this-timer-is-fake.png",
+  "title": "That Countdown Timer Is Fake. 11 Tricks Online Shops Use",
+  "dur": 6.5,
+  "photo": "/library/her-photos/avatar.png",
+  "style": {
+   "ground": "#111111",
+   "ink": "#FFFFFF",
+   "mid": "#A3A3A3",
+   "accent": "#FF9EC4"
+  }
+ }
+}

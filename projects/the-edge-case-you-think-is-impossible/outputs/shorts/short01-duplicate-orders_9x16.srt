@@ -1,0 +1,115 @@
+1
+00:00:00,210 --> 00:00:02,610
+if, for example, in an online shop, someone
+
+2
+00:00:02,610 --> 00:00:03,750
+clicks place order,
+
+3
+00:00:03,990 --> 00:00:05,320
+and maybe the page
+
+4
+00:00:05,430 --> 00:00:07,700
+feels a little slow, they click it again
+
+5
+00:00:07,810 --> 00:00:09,440
+now our server gets
+
+6
+00:00:09,830 --> 00:00:12,140
+two requests, and it creates two orders
+
+7
+00:00:12,330 --> 00:00:14,090
+and if we charge on each order, you can
+
+8
+00:00:14,090 --> 00:00:15,210
+charge the user twice
+
+9
+00:00:15,210 --> 00:00:16,710
+it doesn't even need a double-click
+
+10
+00:00:16,890 --> 00:00:18,470
+the phone can lose the network after the
+
+11
+00:00:18,470 --> 00:00:20,370
+request was sent and the app can retry
+
+12
+00:00:20,770 --> 00:00:22,390
+or they can refresh the page, and then the
+
+13
+00:00:22,390 --> 00:00:23,630
+browser asks them if they want to send the
+
+14
+00:00:23,630 --> 00:00:25,300
+form again and they say yes
+
+15
+00:00:25,390 --> 00:00:27,570
+disabling the button after the first click
+
+16
+00:00:27,570 --> 00:00:29,250
+helps with this, but it only covers the
+
+17
+00:00:29,250 --> 00:00:30,810
+double-click part it does nothing for like
+
+18
+00:00:30,810 --> 00:00:32,790
+maybe a retry or a second tab
+
+19
+00:00:32,790 --> 00:00:35,170
+the fix that is common for this is using an
+
+20
+00:00:35,170 --> 00:00:35,690
+idempotency
+
+21
+00:00:36,080 --> 00:00:36,590
+key
+
+22
+00:00:36,930 --> 00:00:37,990
+basically, an idempotency
+
+23
+00:00:38,220 --> 00:00:40,110
+key puts things in place such
+
+24
+00:00:40,290 --> 00:00:43,190
+that doing something twice has the same
+
+25
+00:00:43,190 --> 00:00:45,170
+result, as doing it just once
+
+26
+00:00:45,760 --> 00:00:48,710
+stripe's API uses the same idea with an
+
+27
+00:00:48,710 --> 00:00:49,990
+idempotency key header
+
+28
+00:00:49,990 --> 00:00:51,130
+so a retried
+
+29
+00:00:51,370 --> 00:00:53,000
+request doesn't create a second payment

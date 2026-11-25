@@ -1,0 +1,27 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../lib/eu.css"><style>
+/* fix 2026-11-12 (her note: "the text completely blends with the background"): words on a WHITE card (board Thumbnails 54 / yt-01),
+   the key word in a red box (Thumbnails 68 / yt-15), the chart as coloured sticky notes + hand-drawn arrows (Thumbnails 15 / pin-01-15). */
+.bg{width:var(--bw,1512px);left:var(--bx,0px);top:var(--by,-205px)}
+.veil{inset:0;background:var(--dim,rgba(12,12,16,.5))}
+.card{position:absolute;left:var(--cx,34px);top:var(--cy,30px);padding:18px 30px 22px 26px;background:#E8E6E2;border-radius:16px;box-shadow:0 18px 40px rgba(0,0,0,.45);rotate:-1deg}
+.w{font:800 var(--ws,100px)/1.02 "IT",sans-serif;color:#111111;letter-spacing:-.035em;text-transform:uppercase;white-space:nowrap}
+.w .hl{background:#DA443D;color:#FFFFFF;padding:0 .12em;border-radius:.08em;display:inline-block;line-height:1.02}
+.rows{position:absolute;left:var(--sx,40px);top:var(--sy,296px)}
+.row{display:flex;align-items:center;height:96px}
+.sticky{width:240px;height:80px;display:flex;align-items:center;justify-content:center;font:400 50px/1 "PM",cursive;color:#FFFFFF;box-shadow:0 8px 16px rgba(0,0,0,.35)}
+.row:nth-child(1) .sticky{background:#C8201E;rotate:-2deg}.row:nth-child(2) .sticky{background:#111111;rotate:1.5deg}
+.row:nth-child(3) .sticky{background:#C8201E;rotate:-1deg}.row:nth-child(4) .sticky{background:#111111;rotate:2deg}
+.arr{width:76px;height:40px;margin:0 4px 0 8px}
+.mk{width:76px;height:76px;background:#E8E6E2;display:flex;align-items:center;justify-content:center;font:800 64px/1 "IT",sans-serif;box-shadow:0 8px 16px rgba(0,0,0,.35);rotate:2deg}
+.mk.y{color:#111111}.mk.n{color:#DA443D}
+</style></head><body><div class="t">
+<img class="ph bg z1" data-img="bg" alt=""><div class="veil z2"></div>
+<div class="rows z6" data-move="sheet">
+<div class="row"><div class="sticky" data-k="r0"></div><svg class="arr" viewBox="0 0 86 40"><path d="M4 22 C 24 14, 50 26, 76 20 M62 8 L 78 20 L 64 32" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="mk y">&#10003;</div></div>
+<div class="row"><div class="sticky" data-k="r1"></div><svg class="arr" viewBox="0 0 86 40"><path d="M4 18 C 26 26, 48 14, 76 20 M62 8 L 78 20 L 64 32" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="mk n">&#10007;</div></div>
+<div class="row"><div class="sticky" data-k="r2"></div><svg class="arr" viewBox="0 0 86 40"><path d="M4 22 C 24 16, 52 24, 76 20 M62 8 L 78 20 L 64 32" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="mk n">&#10007;</div></div>
+<div class="row"><div class="sticky" data-k="r3"></div><svg class="arr" viewBox="0 0 86 40"><path d="M4 20 C 26 26, 50 14, 76 20 M62 8 L 78 20 L 64 32" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="mk n">&#10007;</div></div>
+</div>
+<img class="ph bg cut z4" data-img="me" alt="">
+<div class="card z5" data-move="card"><div class="w" data-k="w"></div></div>
+</div><script src="../../lib/bind.js"></script></body></html>

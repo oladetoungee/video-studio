@@ -1,0 +1,32 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../lib/rm.css"><style>
+/* sample 7 measured: tiles TL 0,0-645,305 · TR 645,0-1280,378 · BL 0,305-645,720 · BR 645,378-1280,720, no gaps;
+   captions white bold caps ~17 px with a soft shadow; title heavy wide grotesk cream #F2EBE5, cap 110 px,
+   "A PORTLAND" x 170-1045 cap top 250, "VLOG" x 710-1105 cap top 365, hard grey shadow (-6,7);
+   small word "Cozy" ~38 px at 228,212; person cut-out x 630-815 y 455-720; iced-coffee sticker x 1140-1250 y 215-380;
+   stacked right caption x 1000-1150 y 500-605, ~26 px. */
+.t{--ground:#222;--fg:#F2EBE5;--accent:#555;--cx:447px;--cy:452px;--cw:520px}
+.tile img{width:100%;height:100%;object-fit:cover}
+.cap{position:absolute;font-family:'Montserrat';font-weight:600;font-size:15px;letter-spacing:.01em;color:#fff;text-transform:uppercase;text-shadow:0 1px 4px rgba(0,0,0,.55);line-height:1.25;white-space:nowrap;z-index:4}
+.ttl{position:absolute;font-family:'Archivo Black';color:var(--fg);text-transform:uppercase;line-height:1;letter-spacing:-.035em;text-shadow:-6px 7px 0 rgba(72,72,72,.82);white-space:nowrap;z-index:3}
+.sm{position:absolute;left:228px;top:198px;font-family:'Montserrat';font-weight:700;font-size:42px;color:#F2EBE5;text-shadow:-3px 4px 0 rgba(72,72,72,.85);z-index:3}
+.cut2{z-index:5}
+.flag.stick{position:absolute;left:1132px;top:240px;width:120px;height:80px;transform:rotate(-9deg);border:5px solid #fff;box-shadow:0 4px 10px rgba(0,0,0,.35);z-index:4}
+.cr{position:absolute;left:0;top:0;width:330px;padding:12px 0 8px 22px;background:#fff;font-family:'DM Mono';font-weight:500;font-size:11px;letter-spacing:.08em;color:#555;text-transform:uppercase;z-index:4}
+</style></head><body><div class="t">
+<div class="tile" style="left:0;top:0;width:645px;height:305px;background:#fff" data-move="tile-news"><img data-img="news" alt="" style="position:absolute;left:-24px;top:-18px;width:690px;height:auto"></div>
+<div class="tile" style="left:645px;top:0;width:635px;height:378px" data-move="tile-her"><img data-img="her" alt="" style="position:absolute;left:-182px;top:-138px;width:922px;height:auto"></div>
+<div class="tile" style="left:0;top:305px;width:645px;height:415px" data-move="tile-rings"><img data-img="rings" alt="" style="object-position:62% 50%"></div>
+<div class="tile" style="left:645px;top:378px;width:635px;height:342px" data-move="tile-records"><img data-img="records" alt="" style="object-position:50% 38%"></div>
+<div style="position:absolute;left:0;top:170px;width:645px;height:135px;background:#fff;z-index:1"></div>
+<div class="cr" data-k="credit"></div>
+<div class="cap" style="left:22px;top:24px;color:#111;text-shadow:none" data-k="c1"></div>
+<div class="cap" style="left:672px;top:150px;width:180px" data-k="c2"></div>
+<div class="cap" style="left:1030px;top:62px" data-k="c3"></div>
+<div class="cap" style="left:16px;top:648px" data-k="c4"></div>
+<div class="cap" style="left:930px;top:540px;width:220px;text-align:right;font-size:24px;line-height:1.3" data-k="c5"></div>
+<div class="flag stick" data-flag="gh" data-move="sticker"></div>
+<div class="sm" data-k="small" style="top:228px;color:#2a2a2a;text-shadow:none"></div>
+<div data-move="title"><div class="ttl" style="left:166px;top:276px;font-size:150px" data-k="line1"></div>
+<div class="ttl" style="left:700px;top:392px;font-size:156px" data-k="line2"></div></div>
+<div class="cut2" data-move="her-cutout"><img data-img="front" alt=""></div>
+</div><script src="../../lib/flags.js"></script><script src="../../lib/rm.js"></script><script src="../../lib/bind.js"></script></body></html>

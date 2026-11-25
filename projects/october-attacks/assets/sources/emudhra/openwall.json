@@ -1,0 +1,104 @@
+{
+ "story": "emudhra",
+ "outlet": "oss-security (Openwall)",
+ "slug": "openwall",
+ "url": "https://www.openwall.com/lists/oss-security/2026/10/20/30",
+ "finalUrl": "https://www.openwall.com/lists/oss-security/2026/10/20/30",
+ "status": "loaded",
+ "http": 200,
+ "title": "oss-security - NSS 3.131.1 Release - Important Security Updates",
+ "h1": "",
+ "published": "",
+ "files": {
+  "fold": "emudhra/openwall_fold.png",
+  "full": "emudhra/openwall_full.jpg",
+  "scroll": "emudhra/openwall_scroll.mp4"
+ },
+ "full": {
+  "width": 1440,
+  "height": 1544,
+  "pageHeight": 1544,
+  "zoom": 1.5,
+  "quotes": [
+   {
+    "quote": "This release removes trust in the following root certificates",
+    "box": {
+     "x": 36,
+     "y": 710,
+     "w": 716,
+     "h": 23
+    },
+    "lines": [
+     {
+      "x": 36,
+      "y": 710,
+      "w": 716,
+      "h": 23
+     }
+    ]
+   }
+  ]
+ },
+ "scroll": {
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "seconds": 8,
+  "keyframes": [
+   {
+    "t": 0,
+    "y": 0
+   },
+   {
+    "t": 1,
+    "y": 0
+   },
+   {
+    "t": 1.865,
+    "y": 299
+   },
+   {
+    "t": 8,
+    "y": 299
+   }
+  ],
+  "zoom": 1.5,
+  "easing": "easeInOutCubic between keyframes, holds where y is equal",
+  "capped": false,
+  "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)",
+  "quotes": [
+   {
+    "quote": "This release removes trust in the following root certificates",
+    "inVideo": true,
+    "still": true,
+    "t": 4.92,
+    "visibleStill": [
+     1.8,
+     8.03
+    ],
+    "scrollY": 299,
+    "box": {
+     "x": 36,
+     "y": 411,
+     "w": 716,
+     "h": 23
+    },
+    "lines": [
+     {
+      "x": 36,
+      "y": 411,
+      "w": 716,
+      "h": 23
+     }
+    ],
+    "docBox": {
+     "x": 36,
+     "y": 710,
+     "w": 716,
+     "h": 23
+    },
+    "layoutDriftPx": 0
+   }
+  ]
+ }
+}

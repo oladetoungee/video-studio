@@ -1,0 +1,99 @@
+/* database-indexes thumbnails: shared parts. Look = the film's "Query Plan" (off-black, hairline grid, ONE yellow =
+   the query's path, IBM Plex) for code / diagram options, and her warm-graded room for photo options.
+   Colours a direction exposes to the studio editor: --ground, --fg, --accent (declared on .t). */
+@font-face { font-family: 'Plex'; src: url('../fonts/IBMPlexSans.ttf') format('truetype'); font-weight: 100 700; }
+@font-face { font-family: 'Plex Mono'; src: url('../fonts/IBMPlexMono-Regular.ttf') format('truetype'); font-weight: 400; }
+@font-face { font-family: 'Plex Mono'; src: url('../fonts/IBMPlexMono-SemiBold.ttf') format('truetype'); font-weight: 600; }
+@font-face { font-family: 'Archivo'; src: url('../fonts/Archivo.ttf') format('truetype'); font-weight: 100 900; }
+@font-face { font-family: 'Archivo Black'; src: url('../fonts/ArchivoBlack-Regular.ttf') format('truetype'); }
+@font-face { font-family: 'Anton'; src: url('../fonts/Anton-Regular.ttf') format('truetype'); }
+@font-face { font-family: 'Montserrat'; src: url('../fonts/Montserrat.ttf') format('truetype'); font-weight: 100 900; }
+@font-face { font-family: 'Inter'; src: url('../fonts/Inter.ttf') format('truetype'); font-weight: 100 900; }
+@font-face { font-family: 'Instrument Serif'; src: url('../fonts/InstrumentSerif-Regular.ttf') format('truetype'); }
+@font-face { font-family: 'Instrument Serif'; src: url('../fonts/InstrumentSerif-Italic.ttf') format('truetype'); font-style: italic; }
+@font-face { font-family: 'Playfair'; src: url('../fonts/PlayfairDisplay.ttf') format('truetype'); font-weight: 400 900; }
+@font-face { font-family: 'Playfair'; src: url('../fonts/PlayfairDisplay-Italic.ttf') format('truetype'); font-weight: 400 900; font-style: italic; }
+@font-face { font-family: 'Caveat'; src: url('../fonts/Caveat.ttf') format('truetype'); font-weight: 400 700; }
+
+:root { --ink:#0E1013; --ink2:#15181D; --line:#2C313A; --gridl:#1A1D23; --dim:#7A808A; --chalk:#ECEAE4;
+        --paper:#EDE9E2; --card:#FFFDF6; --yellow:#FFC53D; --red:#F23D2E; --green:#22C55E; --white:#F7F5F0; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1280px; height: 720px; overflow: hidden; background: #000; }
+.t { position: relative; width: 1280px; height: 720px; overflow: hidden; background: var(--ground, var(--ink)); color: var(--fg, var(--white)); }
+.abs { position: absolute; }
+.acc { color: var(--accent, var(--yellow)); font-style: normal; }
+.red { color: var(--red); } .yel { color: var(--yellow); } .grn { color: var(--green); }
+
+/* her photo (warm-graded frame) and its person cut-out, positioned identically so words can sit BEHIND her head */
+.photo, .front { position: absolute; inset: 0; pointer-events: none; }
+.photo img, .front img { position: absolute; left: var(--px, 0px); top: var(--py, 0px); width: var(--pw, 1280px); display: block; }
+.front img { left: var(--fx, var(--px, 0px)); top: var(--fy, var(--py, 0px)); width: var(--fw, var(--pw, 1280px)); }
+.photo img { filter: brightness(var(--pb, 1.06)) contrast(1.04) saturate(1.02); }
+.front img { filter: brightness(var(--pb, 1.06)) contrast(1.04) saturate(1.02); }
+.photo .dim { position: absolute; inset: 0; background: #000; opacity: var(--dimo, 0); }
+.photo.blur img { filter: blur(var(--blur, 10px)) brightness(var(--pb, 1)) saturate(.9); }
+img.cutout { position: absolute; display: block; }
+
+/* the film's grid ground */
+.grid { position: absolute; inset: 0; background-image: linear-gradient(var(--gridc, var(--gridl)) 1px, transparent 1px),
+  linear-gradient(90deg, var(--gridc, var(--gridl)) 1px, transparent 1px); background-size: 60px 60px; }
+
+/* headline faces */
+.anton { font-family: 'Anton', sans-serif; text-transform: uppercase; line-height: .92; letter-spacing: .005em; }
+.blk { font-family: 'Archivo Black', sans-serif; text-transform: uppercase; line-height: .9; letter-spacing: -.02em; }
+.mont { font-family: 'Montserrat', sans-serif; font-weight: 800; text-transform: uppercase; line-height: .95; letter-spacing: -.01em; }
+.plex { font-family: 'Plex', sans-serif; font-weight: 700; letter-spacing: -.025em; line-height: .98; }
+.mono { font-family: 'Plex Mono', monospace; }
+.serif { font-family: 'Instrument Serif', serif; font-weight: 400; letter-spacing: -.01em; }
+.play { font-family: 'Playfair', serif; }
+.hand { font-family: 'Caveat', cursive; font-weight: 700; }
+.nowrap > div, .nowrap { white-space: nowrap; }
+.shadow { text-shadow: 0 4px 24px rgba(0,0,0,.45); }
+.box { display: inline-block; padding: .02em .16em .04em; background: var(--accent, var(--red)); color: #fff; }
+.boxy { display: inline-block; padding: .02em .14em .04em; background: var(--yellow); color: var(--ink); }
+.hl { background: var(--yellow); color: var(--ink); padding: 0 .1em; }
+/* this set's headline: IBM Plex Sans Bold, sentence case, tight; ONE key word on a yellow (or red) block */
+.hd { font-family: 'Plex', sans-serif; font-weight: 700; letter-spacing: -.04em; line-height: .96; white-space: nowrap; }
+.mark { background: var(--accent, var(--yellow)); color: var(--ink); padding: 0 .1em; -webkit-box-decoration-break: clone; }
+.markr { background: var(--red); color: #fff; padding: 0 .1em; }
+.sh2 { text-shadow: 0 2px 18px rgba(0,0,0,.55); }
+
+/* terminal / code card (the film's panel) */
+.term { position: absolute; background: var(--ink2); border: 2px solid var(--line); border-radius: 14px; color: var(--chalk);
+        font-family: 'Plex Mono', monospace; padding: 26px 30px; box-shadow: 0 18px 50px rgba(0,0,0,.45); }
+.term .ln { white-space: pre; line-height: 1.32; }
+.term .p { color: var(--dim); }
+.term .k { color: var(--chalk); font-weight: 600; }
+.term .bad { display: inline-block; background: var(--red); color: #fff; font-weight: 600; padding: 0 .22em; border-radius: 4px; }
+.term .good { display: inline-block; background: var(--yellow); color: var(--ink); font-weight: 600; padding: 0 .22em; border-radius: 4px; }
+.term .bar { position: absolute; left: 0; right: 0; top: 0; height: 40px; border-bottom: 2px solid var(--line); }
+.term .bar i { position: absolute; top: 14px; width: 12px; height: 12px; border-radius: 50%; background: var(--line); }
+.paper { position: absolute; background: var(--card); color: var(--ink); border-radius: 10px; font-family: 'Plex Mono', monospace;
+         box-shadow: 0 16px 40px rgba(0,0,0,.35); padding: 26px 32px; }
+
+/* tick / cross badges */
+.mk { position: absolute; width: var(--bs, 84px); height: var(--bs, 84px); border-radius: 50%; display: grid; place-items: center;
+         box-shadow: 0 6px 18px rgba(0,0,0,.35); border: 5px solid #fff; }
+.mk.x { background: var(--red); } .mk.ok { background: var(--green); }
+.mk svg { width: 56%; height: 56%; }
+
+/* a table of rows */
+.tbl { position: absolute; background: var(--card); color: var(--ink); border-radius: 10px; overflow: hidden; font-family: 'Plex Mono', monospace;
+       box-shadow: 0 16px 40px rgba(0,0,0,.35); }
+.tbl .r { display: grid; grid-template-columns: var(--cols, 1fr 2fr 1fr); border-top: 2px solid rgba(14,16,19,.12); }
+.tbl .r > span { padding: var(--cp, 8px 14px); white-space: nowrap; overflow: hidden; }
+.tbl .h { background: var(--ink); color: var(--chalk); font-weight: 600; border-top: 0; }
+.tbl .hit { background: var(--yellow); font-weight: 600; }
+.tbl .faded { opacity: .45; }
+
+/* phone (generic, an illustration) */
+.phone { position: absolute; background: #111; border-radius: 46px; padding: 14px; box-shadow: 0 24px 60px rgba(0,0,0,.5); }
+.phone .scr { position: relative; width: 100%; height: 100%; background: var(--card); border-radius: 34px; overflow: hidden; color: var(--ink);
+              font-family: 'Inter', sans-serif; }
+.phone .notch { position: absolute; top: 12px; left: 50%; width: 34%; height: 22px; margin-left: -17%; background: #111; border-radius: 12px; z-index: 2; }
+
+.lbl { position: absolute; font-family: 'Plex Mono', monospace; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+.sticky { position: absolute; background: #FFE26A; color: var(--ink); box-shadow: 0 10px 22px rgba(0,0,0,.3); padding: 18px 20px; font-family: 'Plex', sans-serif; font-weight: 700; }
+
+/* review overlay: YouTube duration badge zone (bottom-right). Shown only with ?guides (bind.js adds div.badge) */
+.guides .badge { position: absolute; right: 10px; bottom: 10px; width: 150px; height: 70px; border: 3px dashed #f0f; z-index: 99; }

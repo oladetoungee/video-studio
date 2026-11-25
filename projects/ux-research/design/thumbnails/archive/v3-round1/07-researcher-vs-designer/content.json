@@ -1,0 +1,27 @@
+{
+  "direction": "Two 'Hello, I'm' name-tag stickers either side of her face, one UX researcher, one UX designer, and a big serif 'vs' under her chin. Her two index fingers up, one for each job. References: yt 'Before/After' splits (12, 21), 'Ruthless / Relaxed' (21b), Pinterest 'LOCKED FOCUS'.",
+  "thumbnail_text": "UX researcher vs UX designer",
+  "text": {
+    "hello1": "HELLO, I'M A",
+    "hello2": "HELLO, I'M A",
+    "r": "UX researcher",
+    "d": "UX designer",
+    "vs": "vs"
+  },
+  "images": {
+    "bg": "../../assets/scene/g/s_330.5.jpg",
+    "cut": "../../assets/scene/g/mask3/s_330.5.png"
+  },
+  "vars": {
+    "--bgb": "0.8",
+    "--meb": "1.05"
+  },
+  "titles": [
+    "What Does a UX Researcher Actually Do All Week?",
+    "How to Become a UX Researcher With No Experience",
+    "UX Research for Beginners: What It Is and How It Works"
+  ],
+  "title": "What Does a UX Researcher Actually Do All Week?",
+  "set": 3,
+  "kind": "photo"
+}

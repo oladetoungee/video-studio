@@ -1,0 +1,33 @@
+{
+ "direction": "A dark band across the top with one line, \"shops that trick you\" (\"trick\" in red). Below it her real room (photo 1559), she centred and natural, palm up; on her palm a phone with a shop pop-up whose grey link says \"No thanks, I hate saving money\".",
+ "thumbnail_text": "shops that trick you",
+ "kind": "photo",
+ "recommended": false,
+ "titles": [
+  "Dark Patterns: \"No Thanks, I Hate Saving Money\" Has a Name",
+  "The Tricks Online Shops Use to Make You Say Yes",
+  "Dark Patterns Explained: 11 Tricks Websites Use on You"
+ ],
+ "text": {
+  "hd": "shops that <span class=\"r\">trick</span> you",
+  "off": "10% OFF",
+  "yes": "Yes please",
+  "no": "No thanks, I hate saving money"
+ },
+ "images": {
+  "room": "../../assets/shoot/1559.jpg",
+  "me": "../../assets/shoot/1559-person.png"
+ },
+ "vars": {
+  "--pw": "1300px",
+  "--pl": "-20px",
+  "--pt": "-40px",
+  "--dim": "rgba(10,10,10,.3)"
+ },
+ "board": "Thumbnails 101 (yt-48 \"Do THIS After Work\": one line in a band across the top, the creator centred in her real room below)",
+ "fonts": "Font 65 (Poppins Bold lowercase, red key word, Thumbnails 84) on its dark ground; phone text = Font 58 (Inter Tight, black on light)",
+ "colours": "Font 65 specimen: band #2A2522, words #FFFFFF, key word #E5342B",
+ "title": "Dark Patterns: \"No Thanks, I Hate Saving Money\" Has a Name",
+ "class": "no-lift",
+ "scores": "cold critic round 6: 6.5 alone / 7 with title"
+}

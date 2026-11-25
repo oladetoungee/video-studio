@@ -1,0 +1,62 @@
+{
+ "sample_rate": 48000,
+ "source": "talking-head/data/edl.json full",
+ "edited_duration": 448.617,
+ "segments": [
+  {
+   "orig_start": 0.0,
+   "orig_end": 9.5667,
+   "edit_start": 0.0
+  },
+  {
+   "orig_start": 9.7667,
+   "orig_end": 16.5333,
+   "edit_start": 9.5317
+  },
+  {
+   "orig_start": 16.8667,
+   "orig_end": 46.7667,
+   "edit_start": 16.2633
+  },
+  {
+   "orig_start": 47.0333,
+   "orig_end": 90.4333,
+   "edit_start": 46.1283
+  },
+  {
+   "orig_start": 90.7667,
+   "orig_end": 257.7333,
+   "edit_start": 89.4933
+  },
+  {
+   "orig_start": 258.1,
+   "orig_end": 261.1333,
+   "edit_start": 256.4249
+  },
+  {
+   "orig_start": 261.4333,
+   "orig_end": 348.0667,
+   "edit_start": 259.4232
+  },
+  {
+   "orig_start": 348.3333,
+   "orig_end": 357.2333,
+   "edit_start": 346.0216
+  },
+  {
+   "orig_start": 359.0667,
+   "orig_end": 366.7,
+   "edit_start": 354.8866
+  },
+  {
+   "orig_start": 366.9,
+   "orig_end": 451.4,
+   "edit_start": 362.4849
+  },
+  {
+   "orig_start": 458.1333,
+   "orig_end": 459.8,
+   "edit_start": 446.9499
+  }
+ ]
+}

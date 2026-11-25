@@ -1,0 +1,3168 @@
+URL: https://news.ycombinator.com/item?id=50188228
+STATUS: loaded (http 200)
+FINAL: https://news.ycombinator.com/item?id=50188228
+TITLE: Security Disclosure | Hacker News
+H1: 
+OG:  | 
+PUBLISHED:   MODIFIED: 
+DOC_H: 30858
+
+	Hacker Newsnew | past | comments | ask | show | jobs | submit	login
+
+	
+	Security Disclosure (railway.com)
+	602 points by passenger 4 days ago | hide | past | favorite | 340 comments
+	
+
+	
+ help
+
+	
+	
+vintagedave 3 days ago | next [–]
+
+It's 5:20 AM here in Europe and I just rotated a bunch of keys.
+
+Only to read,
+
+> Because deployments are paused, you will not be able to redeploy your services to pick up the new credentials until builds are restored. We will post here when builds resume with any additional details.
+
+So now my service does not work. Which is worse: a stolen key or a broken product? I'm genuinely regretting following their advice on rotating keys, because logs showed no sign of incorrect usage, and our service would at least have remained online.
+
+I hope that they automatically redeploy their customer services. I just worry that I won't have tested it. I mean: 5AM. Keys changed. Nothing more I can do. Should go back to sleep. No timeline to wake up to check deployments, so... I... wait?
+
+reply
+
+	
+	
+nrmitchi 3 days ago | parent | next [–]
+
+I don’t know if this is a real question, but for most credentials a stolen key is worse than downtime on a product.
+
+reply
+
+	
+	
+hdgvhicv 3 days ago | root | parent | next [–]
+
+Live by the sass, die by the sass.
+
+reply
+
+	
+	
+nocam 3 days ago | root | parent | next [–]
+
+that autocorrect is doing a lot of work. bearing loads even.
+
+reply
+
+	
+	
+RetardedBastard 20 hours ago | root | parent | next [–]
+
+Nice envelope hydration
+
+reply
+
+	
+	
+monarchwadia 3 days ago | root | parent | prev | next [–]
+
+Very SaaSy of you to point that out.
+
+reply
+
+	
+	
+resonious 3 days ago | root | parent | prev | next [–]
+
+If it's a serious key like AWS or Zendesk then you're probably screwed the instant it gets stolen.
+
+reply
+
+	
+	
+kortilla 3 days ago | root | parent | prev | next [–]
+
+No, a leaked credential is a nothing event in a mass leak as far as expected loss goes.
+
+You’re better off waiting and monitoring until you’re sure you can get back online if your service supports any kind of revenue.
+
+reply
+
+	
+	
+dylanz 3 days ago | root | parent | next [–]
+
+A nothing event? Having access to our database is a nothing event? For most applications, all they keys a businesses castle are stored in a platform providers parameter store / secret key system. Downtime is bad for customers and slightly bad for a business. Stolen credentials are critical for both.
+
+reply
+
+	
+	
+berkes 3 days ago | root | parent | prev | next [–]
+
+A stolen key isn't just a key to your customers' private data.
+
+It's a key to your creditcard. Your revenue will be wiped out if you get the AWS bill after hackers booted hundreds of GPU instances under your account, moved terabytes in your data-transfer budgetm, burned tens of thousands of CPU-minutes in github actions under your creditcard, or used thousands of $s worth of tokens with your AI provider.
+
+reply
+
+	
+	
+ptero 3 days ago | root | parent | next [–]
+
+Depends on the key. It may be the key to the kingdom or it can be a do not care (say, for a repo with 5 suggested problems to discuss at interviews).
+
+reply
+
+	
+	
+berkes 3 days ago | root | parent | next [–]
+
+Obviously. It may even be a key to a no longer active account.
+
+Naturally "a stolen key" here means that the key has access to something worth stealing. And my point was that there's far more worth stealing than your users' private data which many companies don't value that much.
+
+reply
+
+	
+	
+bayindirh 3 days ago | root | parent | prev | next [–]
+
+If that nothing event can cause not only loss of revenue, but loss of everything, I'd rather sleep soundly than panicking 7/24 until a fix arrives.
+
+From Margin Call:
+
+> It's just money; it's made up. Pieces of paper with pictures on it so we don't have to kill each other just to get something to eat.
+
+reply
+
+	
+	
+dspillett 3 days ago | root | parent | prev | next [–]
+
+> No, a leaked credential is a nothing event in a mass leak as far as expected loss goes.
+
+Even if that were not absolutely wrong¹ these days², if your risk is mitigated by being one of millions the damage done if you are hit could still be so high that you can't afford to³ knowingly take that risk.
+
+--------
+
+[1] if the credentials can be easily linked to the relevant account, cycling through them to see what useful stuff can be accessed using which is not difficult to quickly automate
+
+[2] if it were ever right
+
+[3] or your customers can't afford for you to
+
+reply
+
+	
+	
+tvink 3 days ago | root | parent | prev | next [–]
+
+What are you talking about.
+
+reply
+
+	
+	
+simmerup 3 days ago | root | parent | next [–]
+
+He’s living in an industry where the customer have zero protections
+
+reply
+
+	
+	
+rootnod3 3 days ago | root | parent | next [–]
+
+Ah, a vibe code shop?
+
+reply
+
+	
+	
+alias_neo 3 days ago | root | parent | prev | next [–]
+
+Late stage capitalism at its finest; protect the profits at all costs.
+
+Thankfully, they clarified they're in Europe, so GDPR prevents them from ignoring known leaked credentials, lest they have that to deal with, on top of the revenue loss they'll make when all of their customers eventually find out: "they ran leaked credentials knowing our data was at risk, but decided to suck it and see".
+
+reply
+
+	
+	
+ryanSrich 3 days ago | parent | prev | next [–]
+
+Spend limits saved me. I noticed a massive spike on one of my Anthropic keys and couldn't figure out where it was coming from. It hit the cap in one day, which isn't normal. So I rotated it just to be safe. I went to update it in Railway only to find out that I couldn't do deploys, so I also have a broken product. The good news is that it's only serving around 300 users, but still. Not great.
+
+reply
+
+	
+	
+joking 3 days ago | root | parent | next [–]
+
+how the hell are they able to resell the keys and be able to take profit from that is beyond my imagination. Is not money what they are stoling and they are still able to take advantage of it.
+
+With cloud credentials I understand that they are able to create machines, but with api keys... what they are able to do to take profit from?
+
+reply
+
+	
+	
+whizzter 3 days ago | root | parent | next [–]
+
+Depends on the API? Considering how much Chinese actors rumored to be spending on straw owners buying for them to then distill information out of OAI/Anthrophic, I'm sure any OAI/Antrophic keys in the wild gets bought up quickly.
+
+reply
+
+	
+	
+averrous 3 days ago | parent | prev | next [–]
+
+The customers of my company are angry. It is 9.45 AM here in SE Asia. Things are bad.
+
+reply
+
+	
+	
+alpineman 3 days ago | parent | prev | next [–]
+
+It's now 6 hours later and still builds are taking more than 1 hour or failing completely, complete mess
+
+reply
+
+	
+	
+piazz 3 days ago | parent | prev | next [–]
+
+Same situation. Frankly unbelievable - how do you not lead with this? You can't tell customers to rotate their keys and not inform them in the same breath them that actually, environment variable updates currently cannot deploy.
+
+reply
+
+	
+	
+ryanisnan 3 days ago | root | parent | next [–]
+
+They're actively firefighting an incident, and are likely going to make some mistakes along the way. In this case, they've erred on the side of security over availability, which in some cases is the better outcome. I know not in all, but some.
+
+reply
+
+	
+	
+dnautics 3 days ago | root | parent | prev | next [–]
+
+I think they meant you can't deploy new code. I had zero problems rotating an env variable earlier (and restarting my container)
+
+reply
+
+	
+	
+brianfryer 3 days ago | root | parent | prev | next [–]
+
+They did.
+
+reply
+
+	
+	
+vintagedave 3 days ago | root | parent | next [–]
+
+No. They did not. From https://blog.railway.com/p/security-disclosure-wednesday-oct... :
+
+> What you should do: As such, we strongly recommend that you immediately roll all environment variables, including any API keys, stored in Railway, as well as any private registry credentials, and review logs for those services for unusual activity.
+
+> All deployments are paused while we investigate. Until builds are restored, you will not be able to roll out new versions. We apologize for this inconvenience.
+
+They lead with rotating keys.
+
+Next, I did not realize that this meant not being able to restart an existing deployment to bring up new env vars. They also speak of builds. I don’t need a new build. I need my existing deployment to work.
+
+It was not at all clear ‘paused’ mean this; maybe I should have realized, but I had interpreted it as doing new deployments or builds. New services. Code changes. New builds as they even say. It’s fully reasonable to pause that in this sort of situation and so I had interpreted their statement that way.
+
+If there is a clear impact from following advice — ‘do what we recommend and your service will not function’ — those who provide that advice need to make that clear.
+
+reply
+
+	
+	
+theflyingkiwi42 3 days ago | root | parent | prev | next [–]
+
+Their first message where they recommended rotating keys did not make that clear (though obviously if you cannot deploy, rotating keys means you will go down)
+
+reply
+
+	
+	
+johncch 3 days ago | parent | prev | next [–]
+
+Yeah. OpenRouter disabled my keys because of this and now i'm in a catch-22
+
+reply
+
+	
+	
+not_mehul 3 days ago | root | parent | next [–]
+
+thought I was the only one, openrouter is auto disabling railway affiliated keys
+
+reply
+
+	
+	
+theanotherdev 3 days ago | parent | prev | next [–]
+
+They only re-enabled the redeploy feature for Pro and Enterprise customers, leaving users on Hobby plans unable to redeploy...
+
+Making a security incident recovery a paid feature is a new low. I guess this is how they plan to recoup the money they lost from the incident.
+
+reply
+
+	
+	
+vintagedave 3 days ago | root | parent | next [–]
+
+I do understand prioritising customers, if there is some difficulty in re-enabling deployment. Right now though I don't how what that is. It could be as simple as resources: perhaps with available CPUs if everyone redeployed at the same time they would be DDOS-ing themselves and making then situation worse.
+
+I think if redeploying was not possible, I would have preferred they automatically hid or revoked keys, or the sites or services were automatically turned offline. I suppose this may not be everyone's preference. I know for my site, a simple 'This is hosted by Railway and we have an outage' (and for our service tier, all REST service requests 500-ing, or 404-ing, or...) would be far preferable to the site being online, appearing to work, and functionality just failing for people due to the keys being revoked. Something clear is preferable to something hidden. I worry that to our users, who don't know our host, when the service is down but we cannot change the deployment, it makes us look like we're unreliable or flaky.
+
+I like Railway but have been burned a little by them. FWIW, while not using them for one service where I felt really let down, one other service remained and just a week ago I recommended them again... ouch!
+
+I feel they've grown fast but may not have the infrastructure fully fleshed out. A mass 'disable all services' button probably would not exist until the day they need one.
+
+reply
+
+	
+	
+stackskipton 3 days ago | root | parent | next [–]
+
+Yea, redeploying probably means relaunching the container and anyone using a JIT language can cause some CPU constraints.
+
+Last job had a ton of .Net applications once when we did multiple Kubernetes redeploys, CPU spiked for 4 minutes on a bunch of nodes causing problems.
+
+reply
+
+	
+	
+CrimsonRain 3 days ago | parent | prev | next [–]
+
+Why even use railway?
+
+reply
+
+	
+	
+fomoz 3 days ago | root | parent | next [–]
+
+This. You can use a VPS for a small fraction of the price. Just have you AI harness manage it for you.
+
+reply
+
+	
+	
+ryanisnan 3 days ago | root | parent | prev | next [–]
+
+Honest question, what do you use to manage your containers that you durably trust to stay online?
+
+reply
+
+	
+	
+CrimsonRain 2 days ago | root | parent | next [–]
+
+Depending on use case.
+
+Right now I use ECS and coolify in some cases.
+
+My point was just use the cloud directly want their tools instead of something like this.
+
+reply
+
+	
+	
+dylanz 3 days ago | parent | prev | next [–]
+
+Yeah, I had to rotate my data store keys ASAP. Now I'm stuck with a broken application. Best option, horrible option.
+
+reply
+
+	
+	
+mihaaly 3 days ago | parent | prev | next [–]
+
+Naive question: why would someone trust private keys and other secrets to a service provider?
+
+reply
+
+	
+	
+alias_neo 3 days ago | root | parent | next [–]
+
+Because you have no choice. Often times you run your backend on someone else's computer (the cloud) and they need the key(s) they need in order to access the other services your application needs to do its job.
+
+reply
+
+	
+	
+mihaaly 3 days ago | root | parent | next [–]
+
+I heard providers making private keys expecting it to be private, keeping it secret. But it is not, it is shared in fact. It sounds like violating the intended nature of keys. For convenience. Convenience of yet another service is much less important than security and har to imagine being a 'no choice' matter. It feels like some developers consciously but ignorantly and actively fuck up the product they make, risking their users, along their own convenience.
+
+reply
+
+	
+	
+tnolet 3 days ago | root | parent | next [–]
+
+I'm not sure what you mean. If I have an app that sends emails (Sendgrid), maybe an SMS (Twilio), connects to a database (Planetscale), talks to some AI vendor (OpenAI) in the background and has a Stripe integration, I have no other option than to store the credentials for those services with my app at the cloud hoster of choice.
+
+reply
+
+	
+	
+mihaaly 3 days ago | root | parent | next [–]
+
+If there is no choice than exposing private keys that needs to be rotated in case of compromise then perhaps that is an incompetent design choice, isn't it? Co-locating services where available or limit from what location a key is accepted, why that is not an option? I still think that if there is 'no other choice than exposing secrets' then there is some seriously fundamental wrongdoing is involved there and there is no-one else to blame for the lots of fuck ups happening than those forming those services - who else, basically, right? the weather or some imaginary father-figure? - the way they do. Regardless if this is a widespread practice. Many wrong will not make something good. There is always a choice, like not doing what cannot be done right. Right?
+
+We reached a state where whatever is on the web that cannot be trusted. Users worry, privacy and secrets are compromised on a huuuge scale, while the creators who did this way are saying 'this is normal business'. That's not right! Privacy is sacrificed for developer's convenience.
+
+reply
+
+	
+	
+zbentley 5 hours ago | root | parent | next [–]
+
+Genuine question: what do you recommend as an alternative?
+
+The only alternative I can think of is "own and operate all of your site's hardware on physical premises to which you have sole access", and even that's not perfect.
+
+Are you arguing against hosting/cloud/datacenter services in general? Or is there a specific technique you would prefer people use to secure their keys in a non-owned environment?
+
+reply
+
+	
+	
+justincormack 3 days ago | root | parent | prev | next [–]
+
+Well, OIDC Federation exists, but its still not widely available, and also requires a trustworthy party.
+
+reply
+
+	
+	
+vldszn 4 days ago | prev | next [–]
+
+Crazy day for cybersecurity: PHP RCE, eMudhra certificates, and now Railway.
+
+And it’s all just getting started imo.
+
+https://blog.cloudflare.com/emudhra-certificate-compromise
+
+https://www.wiz.io/blog/php2shell-php-rce
+
+reply
+
+	
+	
+netvarun 3 days ago | parent | next [–]
+
+I think the pingcap hack might be the biggest of them all, somehow it has gone under the radar.
+
+[0] https://news.ycombinator.com/item?id=50173716
+
+reply
+
+	
+	
+jeremyjh 3 days ago | root | parent | next [–]
+
+I guess I picked the wrong week to stop sniffing glue.
+
+reply
+
+	
+yungbeto 3 days ago | root | parent | next [2 more]
+
+	
+	
+dang 3 days ago | root | parent | prev | next [–]
+
+Related ongoing thread:
+
+PingCap TiDB Leaks - https://news.ycombinator.com/item?id=50173716 - Oct 2026 (32 comments)
+
+(It had only spent 3 hours on the frontpage so I re-upped it.)
+
+reply
+
+	
+	
+llama052 3 days ago | root | parent | prev | next [–]
+
+I find it wild how much they have downplayed this in their statement. https://www.pingcap.com/trust-hub/security/security-update-o...
+
+”An external incident response firm reviewed PingCAP’s production systems and found no evidence that the attacker ran commands or maintained persistent access in the systems reviewed”
+
+hmm, I don't think that's true.
+
+reply
+
+	
+	
+danielheath 3 days ago | root | parent | next [–]
+
+"Found no evidence" doesn't mean it didn't happen, it means the incident response firm didn't find it.
+
+reply
+
+	
+	
+llama052 3 days ago | root | parent | next [–]
+
+The evidence is in the blog post explaining how they did it. However seeing at how bad their operations were I doubt they have evidence of anything themselves
+
+reply
+
+	
+	
+sailfast 3 days ago | root | parent | prev | next [–]
+
+Plaid is listed as a customer. Good times.
+
+reply
+
+	
+	
+esseph 3 days ago | root | parent | prev | next [–]
+
+That was a single company, the cert problem hit something like 70% of all websites and devices.
+
+reply
+
+	
+	
+ChickeNES 3 days ago | root | parent | prev | next [–]
+
+Honestly…I’ve never heard of pingcap
+
+reply
+
+	
+	
+gerikson 3 days ago | root | parent | next [–]
+
+Same here. Nor have I heard of Railway.
+
+reply
+
+	
+	
+corford 3 days ago | root | parent | prev | next [–]
+
+Jesus that one is bad
+
+reply
+
+	
+	
+semiquaver 3 days ago | root | parent | next [–]
+
+  > We even stood up a replication feed of their own control-plane database using credentials committed in their own repositories — GCP service-account keys and an Azure service principal — and let their infrastructure deliver it to us. Every six hours, for the last twenty-two days of the campaign, from 8 September to 30 September, that pipeline faithfully re-exported every table of the operational heart of TiDB Cloud — tenants, users, API keys, cluster credentials, changefeeds, migrations — and pushed it out. Eighty-eight consecutive exports, not one detection event.
+
+I can’t even
+
+reply
+
+	
+	
+esseph 3 days ago | root | parent | next [–]
+
+Utterly humiliating.
+
+reply
+
+	
+	
+dangoodmanUT 3 days ago | root | parent | prev | next [–]
+
+yes, how is nobody talking about this
+
+reply
+
+	
+	
+vldszn 3 days ago | root | parent | prev | next [–]
+
+pingcap breach is crazy...
+
+reply
+
+	
+	
+tom1337 4 days ago | parent | prev | next [–]
+
+Also GitLab
+
+https://docs.gitlab.com/releases/patches/patch-release-gitla...
+
+reply
+
+	
+	
+vdfs 3 days ago | root | parent | next [–]
+
+Also Shopify, they have been delisting a lot of apps without giving a reason, most lickely a supply chain attacked that spoofed/stol checkout data
+
+reply
+
+	
+	
+vldszn 3 days ago | root | parent | prev | next [–]
+
+Madness..
+
+reply
+
+	
+	
+SlightlyLeftPad 3 days ago | parent | prev | next [–]
+
+And about 50+ sev 9+ CVEs for the linux kernel
+
+reply
+
+	
+	
+bokchoi 3 days ago | parent | prev | next [–]
+
+And litellm too
+
+reply
+
+	
+	
+vldszn 3 days ago | root | parent | next [–]
+
+true =(
+
+reply
+
+	
+	
+reducesuffering 3 days ago | parent | prev | next [–]
+
+"It's just marketing" HN mostly told us
+
+reply
+
+	
+	
+perlgeek 3 days ago | parent | prev | next [–]
+
+It seems the bugocalypse (or however you write that) has landed.
+
+reply
+
+	
+	
+effortprogramme 3 days ago | parent | prev | next [–]
+
+Yea, and I feel like we'll experience more like this
+
+reply
+
+	
+	
+altmanaltman 3 days ago | parent | prev | next [–]
+
+I thought we solved cybersecurity with Mythos and it was the "death of cybersecurity" according to media
+
+reply
+
+	
+	
+mihaaly 3 days ago | parent | prev | next [–]
+
+Being that guy, I say cybersecurity is an oxymoron with the messy and heterogenous implementation of identifying the authorised actor. For example passwords are known like two decades or more being frail and vulnerable, yet that's the backbone of security after all those years? So it had to be patched and scaffolded with various techniques like 2FA and one time codes. Still, different ways in all places, so users resort putting all their eggs in one basket just to be able to get moving, storing secrets and keys in one place, handing over to someone on the internet, while calling it progress and the edge of technology. It feels like for a frustrated user who needs to fight through daily identifications in at least one or two of the dozens of systems (distracting from productive work) that the poor person is forced to use as everything must be put on the net regardless if it is better that way or not, it is modern and good for the developer. All in the name of security, so poor user starts to write things down or put all the eggs in one basket in other ways, aggravating the password situation and exposing/risking his life and livelihood. As we see from the frustrated folks in various threads here on HN too.
+
+I do not thing there is (any) security in cyberspace, and this is exposed big now with the use of AI.
+
+reply
+
+	
+	
+theturtletalks 4 days ago | prev | next [–]
+
+Postiz founder posted on X that his service is being brought down, his keys were already used and Railway was quiet about this until he spoke up:
+
+https://x.com/wickedguro/status/2113015432974405658
+
+reply
+
+	
+	
+lifeisloving 3 days ago | parent | next [–]
+
+Why is a 300k mrr company (his tiwtter bio) running on raleway?
+
+reply
+
+	
+	
+jeremyjh 3 days ago | root | parent | next [–]
+
+You may think that sounds like a very nice salary but $4MM annual gross is a very small business. I can’t imagine how Railway would be in business if that were considered a large customer.
+
+reply
+
+	
+	
+trollbridge 3 days ago | root | parent | next [–]
+
+The average business in America has a revenue around $1.2-$2.5 million depending on how you define "business".
+
+Median annual revenue for a small business (or just business) is a paltry $280k.
+
+reply
+
+	
+	
+lifeisloving 3 days ago | root | parent | prev | next [–]
+
+Sure, I guess there are a ton of dumb people. But please name a few sites that aren't slop ecom fly by nights... I cant think of any serious business that runs on raleway.
+
+I dont understand using any PaaS that essentially functions by arbitraging aws to people that are scared of an aws dashboard at a 3x markup.
+
+Seems like a decent platform for toy projects not for enterprise.
+
+reply
+
+	
+	
+nemothekid 3 days ago | root | parent | next [–]
+
+Maybe I'm finally old, but I don't see how it's surprising that Raleway is at all successful. Heroku built the same business ~15 years ago and had plenty of "enterprise" clients. I don't really understand if there's that much more value in Raleway vs Vercel, and Vercel claims to have OpenAI and Meta as clients.
+
+reply
+
+	
+	
+eddythompson80 3 days ago | root | parent | next [–]
+
+Never underestimate the power of good UX and tooling. I’m not really familiar with Railway, but Heroku (and Vercel) made their business around ease of use and good DX and tools. It’s sadly not a great long term business strategy because there a price point where it’s cheaper to pay someone to deal with AWS or Azure for you.
+
+reply
+
+	
+	
+throwaway2037 3 days ago | root | parent | prev | next [–]
+
+They claim 31% of the Fortune 500 are customers: https://railway.com/customers
+
+reply
+
+	
+	
+jeremyjh 3 days ago | root | parent | prev | next [–]
+
+Yes, they should be charging 6x if they want to hunt the big fish.
+
+reply
+
+	
+	
+j16sdiz 3 days ago | root | parent | prev | next [–]
+
+> But please name a few sites that aren't slop ecom fly by nights.
+
+https://railway.com/customers
+
+tripadvisor and bilt, maybe?
+
+It's pretty common to have "toy" infrastructure in a non-tech business
+
+reply
+
+	
+	
+what 3 days ago | root | parent | next [–]
+
+Not sure where you see TripAdvisor on there? And what even is bilt?
+
+reply
+
+	
+	
+nl 3 days ago | root | parent | next [–]
+
+TripAdvisor is there in the scrolling names. Intuit and Congnizant too.
+
+Of course "uses" doesn't mean they run critical services.
+
+reply
+
+	
+	
+maeln 3 days ago | root | parent | prev | next [–]
+
+I find it very funny when people put the link of their company in their bio (that's fine and normal) and next to it the ARR it brings (who cares ??). It *really* makes you look like those influencer-entrepreneur-scammer who claim to have 10 side projects making 2B ARR but still somehow spend their time selling you courses on how to be like them instead of taking care of their companies. Your client do NOT care about your ARR (well to an extent), so why is it something you are so keen on advertising
+
+reply
+
+	
+	
+HatchedLake721 3 days ago | root | parent | next [–]
+
+it's called building in public, e.g. see http://trustmrr.com. they're not putting it there for clients, but for others in the huge community of indie hackers/saas entrepeneurs on x
+
+reply
+
+	
+	
+to11mtm 3 days ago | root | parent | prev | next [–]
+
+300K ARR means you get 300K in annual recurring revenue.
+
+Subtract costs for employees. Which, given current economy and inflation, that gets you a founder scraping on their savings, one or two other people (remember that if you're paying someone unless it's totally offshored through a house which has it's own inflation, you have other factors) and then your own taxes... yeah... much more than that and you are in the black.
+
+As a general factor I keep in mind, when I worked at a 'normal' but toxic place before I was an actual software engineer, my manager's rules were something like '40 percent L2R' (might have been lower) for in-house employees and 70- 80% L2R for contractors.
+
+IOW, for every dollar billed for an actual employee, we paid the employee 40 cents. For every dollar billed for a contractor, we paid them 70-80 cents.
+
+I've heard similar figures from others (e.x. 'in house employee has a real cost of 1.5-2x their actual pay').
+
+And yes it sucks and yes the structure at least here in the US is a factor.
+
+reply
+
+	
+	
+trollbridge 3 days ago | root | parent | next [–]
+
+If your overhead for an employee is 60% you need to seriously rethink some things
+
+reply
+
+	
+	
+autoexec 3 days ago | root | parent | next [–]
+
+You mean things in addition to your use of railway
+
+reply
+
+	
+	
+trollbridge 3 days ago | root | parent | next [–]
+
+I do think Railway's founders have been a little overconfident with some statements like this:
+
+  Technical people should understand they're going to get their ass beat by non-technical people right now
+
+  You don't need to know how to code to write Rust anymore
+
+  Stop pearl clutching and start problem solving
+
+I guess you can't vibe "make sure my secrets store is secure".
+
+Or:
+
+  The implementation no longer matters
+
+  People really, really need to understand that
+
+I think the implementation matters more than ever. With agentic AI you have a lot more choices for the implementation, too.
+
+reply
+
+	
+	
+pcthrowaway 3 days ago | root | parent | next [–]
+
+The uncharitable take (for them) is that it turns out, knowing how to code is important after all.
+
+The cynical take for the state of the industry, which is maybe more aligned with Railway's statements, is that even people who do know how to code can get hacked, given how good the LLMs are at attacking targets now.
+
+I imagine both camps would agree that without a red team that's leveraging the frontier, you're much more likely to fall victim to an attack.
+
+reply
+
+	
+	
+rco8786 3 days ago | root | parent | prev | next [–]
+
+Lots of companies run on railway
+
+reply
+
+	
+	
+hdgvhicv 3 days ago | root | parent | next [–]
+
+And by choosing a single point of failure for their entire company they live with the consequences.
+
+reply
+
+	
+	
+rco8786 3 days ago | root | parent | next [–]
+
+Yes. If you think you don't have any SPoFs then I've got a handsome bridge for sale that may interest you.
+
+reply
+
+	
+	
+trollbridge 3 days ago | root | parent | next [–]
+
+However, choosing something like AWS is now looking like a more sensible choice. (Or even running one's own infrastructure.)
+
+reply
+
+	
+	
+rco8786 2 days ago | root | parent | next [–]
+
+AWS goes down too
+
+reply
+
+	
+	
+SkyPuncher 3 days ago | root | parent | prev | next [–]
+
+Why not?
+
+reply
+
+	
+	
+posabsolute 3 days ago | root | parent | prev | next [–]
+
+Why are you even commenting? And it's Railway not raleway.
+
+reply
+
+	
+	
+halfmatthalfcat 3 days ago | root | parent | next [–]
+
+User since 2011 and you’re asking this question?
+
+reply
+
+	
+	
+fbrncci 4 days ago | prev | next [–]
+
+Right just as I take my first day off (for the entire year!) from work to fly out for a vacation. The mother of all security bombs starts dropping all around stacks and services that I am responsible for. How else could have taken time off go for me…
+
+reply
+
+	
+	
+jazzyjackson 3 days ago | parent | next [–]
+
+Brother do not cancel anything for these people, they do not care about you, it's their fault for not considering bus factor in their org chart. Why can't the person above you handle that?
+
+reply
+
+	
+	
+jackdoe 3 days ago | root | parent | next [–]
+
+Rob: They're not real. You get that, right? None of it is real. The critics aren't real. The customers aren't real. Because... this isn't real.
+
+Chef Finway: [laughing awkwardly] Okay...
+
+Rob: Derek, why do you care about these people? They don't care about you. None of them. They don't even know you because you haven't shown them. Every day, you'll wake up, and there'll be less of you. You live your life for them, and they don't even see you. You don't even see yourself.
+
+[long pause; Derek's tight smile has slowly faded into a look of sorrow and regret]
+
+Rob: We don't get a lot of things to really care about.
+
+reply
+
+	
+	
+jjulius 4 days ago | parent | prev | next [–]
+
+Prioritize your mental health, go enjoy your vacation.
+
+reply
+
+	
+	
+fbrncci 3 days ago | root | parent | next [–]
+
+Thanks, yes I will. Left without the laptop(s). Let the chips fall where they lay. If they need me back so urgently, they will have to go through the full cancellation of booked flights and hotels first. Lets enjoy the time off.
+
+reply
+
+	
+	
+boringg 3 days ago | root | parent | next [–]
+
+I hope you don't check in on hackernews after this post here!
+
+reply
+
+	
+	
+hirako2000 3 days ago | root | parent | next [–]
+
+What if they do. Sec analyst terminated for being on holiday posting on a forum being on vacation without laptop, not cancelling his trip ?
+
+reply
+
+	
+	
+jjulius 3 days ago | root | parent | next [–]
+
+I didn't read it as that, more as, "You might hear about other similar work-related bullshit here while you're trying to chill and not think about it".
+
+reply
+
+	
+	
+jjulius 3 days ago | root | parent | prev | next [–]
+
+Whoo hoo, enjoy! :D
+
+reply
+
+	
+	
+bryancoxwell 4 days ago | root | parent | prev | next [–]
+
+Strongly concur
+
+reply
+
+	
+	
+Liuser 3 days ago | parent | prev | next [–]
+
+Not your problem. Enjoy your vacation. Bus factor of 1 is poor planning of leadership.
+
+reply
+
+	
+	
+throwaway2037 3 days ago | root | parent | next [–]
+
+    > Bus factor of 1
+
+Is this a joke about hit by a bus?
+
+reply
+
+	
+	
+71bw 3 days ago | root | parent | next [–]
+
+Yes. Basically, if there is 1 person that knows all the critical stuff and you will have BIG issues after they get hit by a bus... well, the rest is self-explanatory. :-)
+
+reply
+
+	
+	
+Gander5739 3 days ago | root | parent | prev | next [–]
+
+https://en.wikipedia.org/wiki/Bus_factor
+
+reply
+
+	
+	
+vips7L 3 days ago | parent | prev | next [–]
+
+Take more days off. Today was my first day back after 2.5 weeks.
+
+reply
+
+	
+	
+balderdash 3 days ago | parent | prev | next [–]
+
+Either a) your company will reimburse you for your costs incurred and give you a different week off, or b) they don’t need you there that badly.
+
+reply
+
+	
+	
+oofdere 3 days ago | parent | prev | next [–]
+
+I say this as a Railway customer, go take your vacation. The only time you should even reconsider is a massive bonus plus more time off for staying.
+
+reply
+
+	
+	
+eecks 3 days ago | root | parent | next [–]
+
+Correct me if I am wrong - if the API keys are compromised, then a large bill could be racked up?
+
+reply
+
+	
+	
+dansquizsoft 3 days ago | root | parent | next [–]
+
+Oh you're right, that does sound like a good reason for the original commenter to not take his vacation. Lucky the organisation he works for made him the single point of failure in circumstances such as these.
+
+reply
+
+	
+	
+eecks 3 days ago | root | parent | next [–]
+
+I had assumed the original commenter OWNED the company. Yes, I agree with you that if he is an employee then take the time off.
+
+reply
+
+	
+	
+dansquizsoft 3 days ago | root | parent | next [–]
+
+Ah yep, that would be a different story if that's the case (from reading his original comment I still think he is an employee though)
+
+reply
+
+	
+	
+remywang 3 days ago | parent | prev | next [–]
+
+Services you were responsible for
+
+reply
+
+	
+	
+reassess_blind 3 days ago | parent | prev | next [–]
+
+None of this matters if you zoom out.
+
+reply
+
+	
+	
+MattIPv4 4 days ago | prev | next [–]
+
+Seen multiple folks in the Railway Discord confirming that their secrets stored in Railway have been used by third parties, so it definitely sounds like the attackers were able to read decrypted environment variables.
+
+reply
+
+	
+	
+numbsafari 4 days ago | parent | next [–]
+
+Environment variables are a terrible place to store secrets.
+
+I'm just going to say it, since having said it non-stop for over 20 years, nobody seems to listen and we keep circling this drain.
+
+The 12 Factor manifesto was 100% wrong on this point.
+
+Use environment variables to point to where secrets are located, not to store their values.
+
+reply
+
+	
+	
+jrochkind1 3 days ago | root | parent | next [–]
+
+It doesn't sound like they got them via a shell environment, they just hacked into the place that stored them. If the place you store secrets can be hacked into, it doesn't really matter if they are injected into environment variables or not.
+
+reply
+
+	
+	
+tptacek 3 days ago | root | parent | prev | next [–]
+
+Environment variables are generally fine for secrets. Environment files are problematic. Modern systems that inject secrets into the environment launch the program itself.
+
+reply
+
+	
+	
+IanCal 3 days ago | root | parent | next [–]
+
+(pre-caveat thing to not be massively annoyingly pedantic throughout, I'm not a security buff and I know who it is I'm talking to, I'm not trying to correct them)
+
+I'm not sure I get the difference - the issue I would have thought was having the system code have access to the secrets themselves? Env file vs env vars injected at runtime seems the same there - either can be exfiltrated. The difference would be having it injected when used.
+
+Is the problem with files about what happens outside that, being committed, etc?
+
+reply
+
+	
+	
+tptacek 3 days ago | root | parent | next [–]
+
+Everything can be exfiltrated. If you never store the environment in a durable file, it's not meaningfully easier to exfiltrate from the environment than from process memory. Most of the wisdom about the insecurity of environment variables falls out of people setting them in .profile or in .envrc files --- that's very bad, yes, as are configuration files (the thing 12 Factor Apps was responding to).
+
+The headline here is that there's no reason to believe "environment variables" were the reason this data was breached; presumably, the database those variables came from was what actually got hit.
+
+reply
+
+	
+	
+trollbridge 3 days ago | root | parent | next [–]
+
+You can say "everything can be exfiltrated" but capturing my PC's password is about nigh unto impossible. The only way it can be captured is if a program has active control over the keyboard controller/associated drivers when I type in the password to unlock it.
+
+These problems were all solved a long time ago.
+
+reply
+
+	
+	
+justincormack 3 days ago | root | parent | next [–]
+
+Plugging a keyboard into your Railway instance every time you start on app is not going to give you a great SaaS experience.
+
+reply
+
+	
+	
+NichoPaolucci 3 days ago | root | parent | next [–]
+
+I think some of this conversation is circling around the concept of 'allowable risk'...
+
+We have a couple of VMs that are not mission critical, and they don't hold sensitive data. We just inject the secrets into the runtime. Access to those machines is restricted to a single IP, there's not much more protection in front of them.
+
+A meaningful attack on one of those machines would require a LOT of effort, and almost nothing in return. Some systems don't NEED to have government level security, as a developer it's my job to provide the best solution for each scenario.
+
+(IE, I wouldn't put 12 security cameras and an armed guard around a fruit stand, but I might around a jewelry store)
+
+reply
+
+	
+	
+skinfaxi 3 days ago | root | parent | prev | next [–]
+
+> Use environment variables to point to where secrets are located, not to store their values.
+
+Now your apps need to be able to read the secret that is pointed to, as opposed to the task runner populating the secret and the app would not know about the details.Not to mention the changes it entails to development.
+
+reply
+
+	
+	
+esseph 3 days ago | root | parent | next [–]
+
+> Not to mention the changes it entails to development.
+
+Oh no, guess they'll have to hire developers that can adapt!
+
+reply
+
+	
+	
+skinfaxi 3 days ago | root | parent | next [–]
+
+I'm not sure the point of your comment.
+
+reply
+
+	
+	
+esseph 3 days ago | root | parent | next [–]
+
+Developers often do things out of convenience, not thinking about repeatability, deployment reliability, security, or thinking about other people having to manage and patch systems for 30y after their gone.
+
+Docker in 2026 is a perfect example of this (long lasting habits due to familiarity, not best practice).
+
+In addition to the developers not interested in using AI to augment their skills and code.
+
+reply
+
+	
+	
+atherton94027 3 days ago | root | parent | prev | next [–]
+
+How does this help? If your container gets compromised it's trivial to exfiltrate the secrets.
+
+reply
+
+	
+	
+trollbridge 3 days ago | root | parent | prev | next [–]
+
+Or we could just use our operating systems for the things we do well, and have a service to send our API calls to that inserts the appropriate token.
+
+I don't have to enter my Mac's password every time I open an app.
+
+reply
+
+	
+	
+zaik 3 days ago | root | parent | prev | next [–]
+
+systemd makes it easy: https://systemd.io/CREDENTIALS/
+
+reply
+
+	
+	
+piazz 3 days ago | prev | next [–]
+
+Yup, got my OpenRouter key. They managed to run up a whole $2 on Opus 5.5 and Fable. Well, time for a new hosting provider I guess...
+
+Incidentally, I'm testing Muse as an email triage agent today - it buried "oh also, railway and anthropic say yours keys have been leaked and you need to rotate asap" under 50 routine deploy / admin emails notifications. Oh to live through such an AI powered software renaissance!
+
+reply
+
+	
+	
+phyzome 3 days ago | parent | next [–]
+
+Hahaha, you're giving Muse access to a mailbox? Good luck, have fun.
+
+reply
+
+	
+	
+martinald 4 days ago | prev | next [–]
+
+I have a bad gut feeling that every day is going to look a bit like today with endless urgent patches and breaches.
+
+Fwiw it sounds similar to the hack over the weekend that opencode suffered.
+
+reply
+
+	
+	
+0x1F8B 4 days ago | parent | next [–]
+
+The security team at my company is working with a frontier lab to scan all our code/systems. They are in a borderline panic to close every possible issue, even innocuous ones that are buried under defense in depth. Whatever they are seeing from our partner has them spooked -- as in "acceptable risk" is no longer a thing anymore.
+
+reply
+
+	
+	
+lukewilson02 3 days ago | root | parent | next [–]
+
+What company do you work for?
+
+reply
+
+	
+	
+xtracto 3 days ago | parent | prev | next [–]
+
+The internet is over. We are going back to static htmls for public pages, and Point to Point VPN bases connections for B2B service provision.
+
+B2C? too risky to publish services online haha.
+
+reply
+
+	
+	
+jjulius 3 days ago | root | parent | next [–]
+
+>We are going back to static htmls for public pages...
+
+God yes, please. I backpack and mountaineer in the PNW and have been trying to research trip ideas up in British Columbia, and as a result I discovered https://bivouac.com.
+
+Here's a website that's still frequently used by a large number of people as a valuable resource, is regularly updated and maintained, and yet looks like it's straight out of 1995.
+
+Every pages loads instantaneously, everything is simple yet packed with detail, and it's such a basic, straightforward, delightfully pleasant experience to just browse through the site. I was so thrilled after just 5 minutes on the site that I threw them $25 for a year's full access.
+
+Sorry for the tangent, but oh man, it's such a refreshingly stark contrast to the rest of the bullshit that fills the web these days.
+
+reply
+
+	
+	
+sellmesoap 3 days ago | root | parent | next [–]
+
+Simple and fast also works better when you're sneaking some internet from your hike to recon your next chunk of trail, good on them!
+
+reply
+
+	
+	
+mosura 3 days ago | root | parent | prev | next [–]
+
+Still some industries where you cable colocated servers in a shared DC together where neither server has internet access.
+
+reply
+
+	
+	
+SoftTalker 3 days ago | root | parent | next [–]
+
+Consider using spiped.
+
+http://www.tarsnap.com/spiped.html
+
+reply
+
+	
+	
+mosura 3 days ago | root | parent | next [–]
+
+I think you missed why they’d be doing it in the first place.
+
+reply
+
+	
+	
+SoftTalker 3 days ago | root | parent | next [–]
+
+No, but being able to directly cable two servers in a COLO rack isn't always possible.
+
+reply
+
+	
+	
+bee_rider 3 days ago | root | parent | prev | next [–]
+
+Static HTML, yeah.
+
+Not sure about VPN. Seems likely to provide a false sense of security.
+
+reply
+
+	
+	
+duckmysick 3 days ago | root | parent | next [–]
+
+I think they mean VPN as in WireGuard where each customer would have a separate private network to the service provider. This way the service wouldn't be exposed to the public Internet.
+
+reply
+
+	
+	
+hdgvhicv 3 days ago | root | parent | next [–]
+
+MTLS would do the job, but you still just need one compromised customer.
+
+reply
+
+	
+	
+Fordec 4 days ago | parent | prev | next [–]
+
+I fully believe the only sustainable future is that hot patching will need to itself become fully automated. Hot patch now with a minimal allowed amount of line changes to head off the AIs, review it in office hours for auditing and the team is actually awake.
+
+My second belief is that environment variables as a development concept will need to be retired. If it's something that causes a security breach if it by its mere existence on a public git repo, it is information that by design cannot ever pass to a filesystem out of a chain of trust, not by mere development conventions people choose to adhere to.
+
+reply
+
+	
+	
+munificent 4 days ago | root | parent | next [–]
+
+> hot patching will need to itself become fully automated.
+
+Great, even less control over the things we use and more power ceded to corporations.
+
+reply
+
+	
+	
+Fordec 4 days ago | root | parent | next [–]
+
+Due to the small nature of hot patching (eg. bump this dependency, rotate these keys, turn off that config, follow the runbook) it will unlikely need to be a frontier model and is likely able to be done LocalLLM/Jev style decision making rather than having to hand all the keys to frontier model operators.
+
+reply
+
+	
+	
+SoftTalker 3 days ago | root | parent | prev | next [–]
+
+One more step to just turning it all over to Skynet. It's hilarious how prophetic that movie was.
+
+reply
+
+	
+	
+esseph 3 days ago | root | parent | prev | next [–]
+
+Do you want your shit hacked? Better patch.
+
+reply
+
+	
+	
+71bw 3 days ago | root | parent | next [–]
+
+And where does that leave the tenet of auditing patches?
+
+reply
+
+	
+	
+esseph 3 days ago | root | parent | next [–]
+
+Do you want to get hacked or audit the patch?
+
+The barbarians are at the gates and they're interested in laundering your compute and network for other attacks, scams, and things like transferring CSAM.
+
+How much time do you need to audit? You might have an hour - for now.
+
+reply
+
+	
+	
+stabbles 4 days ago | root | parent | prev | next [–]
+
+Hot patching is itself a liability
+
+reply
+
+	
+	
+Fordec 4 days ago | root | parent | next [–]
+
+Not reacting is a liability. Blue-Green deployment is a liability. Code is itself a liability. Choosing this career at all is a liability.
+
+reply
+
+	
+	
+Capricorn2481 3 days ago | root | parent | next [–]
+
+For the record, there was a bunch of non-functional vibe coded fixes flying around during this PHP bug. If you were just running the first thing AI made because you were worried about "not reacting," you would likely end up running a crap script.
+
+AI is quite good at finding vulnerabilities, but it's been rough for patching them. The old adage "defenders have to be right every time, attackers only have to be right once" applies to AI security patches.
+
+reply
+
+	
+	
+soulofmischief 3 days ago | root | parent | prev | next [–]
+
+Great, but the fact remains that easy hot patching which skips normal review is going to open you up to many of the same liabilities you're trying to minimize by introducing it. The target just shifts, and people will attack that infrastructure.
+
+The actual solution largely involves the same technologies but in reverse: leveraging AI for live security monitoring, better correctness validation and security testing before code goes live, etc. And of course more pressure to use battle-tested widely-adopted libraries and systems, even though of course that comes with its own tradeoffs.
+
+Importantly, as an engineer, when someone tells you something has liabilities or tradeoffs, the response is not "Everything is a liability, existing is a liability"; that is unprofessional. The appropriate response is to engage with them on these tradeoffs and working through the best ones, because that's your job. Otherwise defer to security engineers who are ready to back up their arguments. It could be as simple as following up with, "But do you think those liabilities outweigh the benefits of hot patching without proper review? What are some of the main liabilities you see, and what methods/technologies do you think properly address them?"
+
+reply
+
+	
+	
+mizzao 3 days ago | root | parent | next [–]
+
+With AI, in the long term open source code might actually become more secure than obfuscated closed source, since it's had so many more (AI) eyes looking at it.
+
+reply
+
+	
+	
+yakz 4 days ago | parent | prev | next [–]
+
+It's only just starting. It'll get worse before it gets better.
+
+reply
+
+	
+	
+reconnecting 4 days ago | parent | prev | next [–]
+
+I think the only way out is to go back to on-prem for everything, like in the 00s.
+
+LAN cables will go up in price soon.
+
+reply
+
+	
+	
+cyberax 3 days ago | root | parent | next [–]
+
+I think we'll see a reduction in complexity and an increase in transparency, rather than just on-prem.
+
+One medium-sized server can now easily serve the entire banking system of a large country. So you don't need clusters of servers with careful tradeoffs between consistency and availability because of the CAP theorem.
+
+Just get a big honking host, slap Postres on it, and run your application server in a VM on the same host. For backup, export the WAL logs from Postgres onto your favorite off-site blob storage. UI for it? There's Pigsty.
+
+It still makes sense to host this in a cloud provider, just because you probably don't want to deal with actual hardware. And maybe get a second standby server for redundancy.
+
+That's it.
+
+You'll need a bunch of external dependencies for email, 2FA, observability, LLMs, and so on. But they should all be outgoing dependencies that should not allow access back into your system.
+
+reply
+
+	
+	
+mosura 3 days ago | root | parent | next [–]
+
+Real loads are too spiky for that.
+
+reply
+
+	
+	
+cyberax 3 days ago | root | parent | next [–]
+
+A PostgreSQL server on an NVMe can handle several _million_ simple requests per second. This is bonkers.
+
+Do you think you can hit these load levels? For compute, a 64-core CPU can saturate a 10G network with simple template rendering. If the code is written in something reasonably fast (Go, Rust, Java).
+
+Of course, if you're on a scale of Amazon or Stripe, you'll need more than that.
+
+reply
+
+	
+	
+mosura 3 days ago | root | parent | next [–]
+
+This is how we spot someone that has never done transaction processing in a consumer facing business. You are focused on completely the wrong dimensions.
+
+Postgres fanboys are insufferable.
+
+reply
+
+	
+	
+lukewilson02 3 days ago | root | parent | next [–]
+
+You sound insufferable. Educate us, wise guy.
+
+reply
+
+	
+	
+seanw444 3 days ago | root | parent | prev | next [–]
+
+Ha, Cyberpunk 2077 is becoming reality. We're proposing the Blackwall.
+
+reply
+
+	
+	
+soulofmischief 3 days ago | root | parent | next [–]
+
+That was always going to happen. The future of the internet is AIs scamming you and your grandmother, ransomwaring you, draining your back accounts, etc. There will be no reason or rhyme, it's simply a function of available compute and ease of automation, both of which have reached a critical threshold.
+
+reply
+
+	
+	
+david_shi 3 days ago | root | parent | prev | next [–]
+
+coincidence?
+
+https://www.businesswire.com/news/home/20261020736847/en/Bla...
+
+reply
+
+	
+	
+chanux 3 days ago | root | parent | prev | next [–]
+
+"So you want to build your own data center?"
+
+https://blog.railway.com/p/data-center-build-part-one
+
+reply
+
+	
+	
+hdgvhicv 3 days ago | root | parent | next [–]
+
+They then say they are colocating. Something everyone and his dog did as a hobby 25 years ago.
+
+reply
+
+	
+	
+solyin 4 days ago | root | parent | prev | next [–]
+
+How does on-prem help if your product is a SaaS.
+
+reply
+
+	
+	
+lawrenceduk 4 days ago | root | parent | next [–]
+
+You open a SaaS shop where people come to use it
+
+reply
+
+	
+	
+codeulike 4 days ago | root | parent | prev | next [–]
+
+Instead of being a SaaS it will need to just become a S
+
+reply
+
+	
+	
+80fj0348i 4 days ago | root | parent | prev | next [–]
+
+You put the SaaS into a Box your customers can install into their datacenter!
+
+reply
+
+	
+	
+doubled112 3 days ago | root | parent | next [–]
+
+What a brave new concept!
+
+Sometimes I do miss owning the hardware to run a thing.
+
+What I don't miss was having all of those appliances run a different base distro of Linux, each with varying levels of update support, while the security team keeps reading security scans to me.
+
+reply
+
+	
+	
+reaperducer 3 days ago | root | parent | prev | next [–]
+
+Like back when you could rent a Google appliance.
+
+reply
+
+	
+	
+Sivart13 4 days ago | parent | prev | next [–]
+
+surely once there's been enough patches the code will be perfect though?
+
+reply
+
+	
+	
+alpineman 4 days ago | prev | next [–]
+
+Train wreck. People were writing on discord 3 hours ago, 10 hours after the incident started, that keys created just for railway were running up usage. Meanwhile builds have been down for more than 12 hours. Only NOW did they just send out an email to all customers. I wouldn't have found out until then if I wasn't checking the discord periodically.
+
+reply
+
+	
+	
+ndneighbor 3 days ago | parent | next [–]
+
+Hi Angelo from Railway here. This is very much me. https://x.com/ngeloxyz/status/2113077263386239309?s=20
+
+We have gotten a lot of comments about why didn't we just message the breach sooner when people have noticed compromise with their accounts. I think that crit is fair and justified, and although we have been up for days on end- I don't blame you if you don't have sympathy for us.
+
+Our thought process was that we didn't want to recommend that people roll keys when we couldn't possibly confirm that we confidently plugged the breach and rolled the mitigation(s). I am comfortable to publicly say that this was a highly motivated attacker. Meanwhile, our threat team mitigates DDoSes, CVEs, while been patching everything immediately as dealt with exploits.
+
+As for this breach in particular, we tried to balance a duty to warn, which we take very seriously... However, it took a significant amount of time on the order of hours to verify, reviewing, and keep up with the attacker as they attempted to move laterally around, and briefly, within the system. We didn't want message anything beyond a shadow of a doubt that there were no further exploit paths.
+
+We take the view that we would like to "aviate, navigate, then communicate" when we deal with incidents like these then we prepared communications to the public and all users. While it was ongoing, we were in contact with external partners and vendors to revoke keys (the source of some online chatter) with investigators that required time and coordination.
+
+On the incident side of the house, it's a suite of bad options, we're still in the middle of it making sure customers are safe. But, hopefully this offers a view into our thought process.
+
+Formal postmortem after we fully restore service and complete the investigation. Apologies to all, I personally I feel like I let everyone down.
+
+reply
+
+	
+	
+pamcake 3 days ago | root | parent | next [–]
+
+> Our thought process was that we didn't want to recommend that people roll keys when we couldn't possibly confirm that we confidently plugged the breach and rolled the mitigation(s). I am comfortable to publicly say that this was a highly motivated attacker. Meanwhile, our threat team mitigates DDoSes, CVEs, while been patching everything immediately as dealt with exploits.
+
+> As for this breach in particular, we tried to balance a duty to warn, which we take very seriously... However, it took a significant amount of time on the order of hours to verify, reviewing, and keep up with the attacker as they attempted to move laterally around, and briefly, within the system. We didn't want message anything beyond a shadow of a doubt that there were no further exploit paths.
+
+Once you realize there is compromise, you message accordingly, as soon as you are able. If you can't immediately determine exactly what subset of customers were affected, this means you have to tell everyone. Then you provide follow-up updates to fill in gaps as you develop your understanding of scope+impact and work on remediation.
+
+What you should never do is hold off on reaching out to possibly affected stakeholders that they may be affected by a compromise because you still have uncertainties about current status.
+
+A situation like this does not in any way a constitute a dilemma or tough balance regarding when or to whom to do initial disclosure - you do it as soon as you can, to everyone except those you know are not impacted.
+
+reply
+
+	
+	
+frio 3 days ago | root | parent | prev | next [–]
+
+> and although we have been up for days on end- I don't blame you if you don't have sympathy for us.
+
+From my timezone, this started last night and is ongoing into today. Has this been going for longer than the status page and email indicated? If so, why was notification delayed so long?
+
+I love your product, have an incredible amount of sympathy for you as humans (having been in similar sleep-consuming nightmares) and was willing to forgive the GCP-triggered outage as an understandable teething pain, but sadly this response has really knocked my confidence.
+
+I understand the hard reality of security issues -- "urgently rotate your keys, they're already compromised" is an important message to share -- but "sorry, that will also require your site going down because we've blocked deploys" (presumably as a response to the incident...) is an incredibly frustrating situation to find ourselves in.
+
+reply
+
+	
+	
+frio 3 days ago | root | parent | next [–]
+
+I also want to briefly note that communicating, from the outset, "this is a significant incident, your keys are compromised, the attack is ongoing and you cannot enter new keys as _those too will be compromised_" is a better response than leaving people to figure out the unfortunate combo endpoint of "my keys are compromised, I have rotated them, this has broken my site but I have new keys, and oh surprise, I can't deploy". The full story needed to be communicated more clearly; the email just said "revoke your keys", which I urgently did... and then remembered/found out that changing environment variables requires a deploy.
+
+I would rather have known earlier that I should put a notice on my site, or my own social media, or notify my own customers ASAP and disable some functionality (or make my own choice about porting somewhere else as a mitigation) than get caught out like this after the horse has bolted and it turns out you've been desperately trying to get it back into the paddock for days.
+
+reply
+
+	
+	
+trezm 3 days ago | root | parent | prev | next [–]
+
+I was a loyal railway customer for a while, but this response smacks of "we didn't want people to know" instead of "we wanted to take responsibility."
+
+The options railway has given us are "rotate your keys and bring down your service" or "keep your service up and let the exposed keys remain at risk." Kind of a crap position, no? Mistakes are going to happen, but when the suggested mitigations are to stab yourself in the leg or stab yourself in the ass, it's hard to be sympathetic.
+
+I have to imagine quite a few users are asking their agents to port their stacks over to alternate providers like I am. The cost of switching has never been cheaper thanks to AI.
+
+reply
+
+	
+	
+eclipticplane 3 days ago | root | parent | prev | next [–]
+
+"aviate, navigate, then communicate" only matters if you are the one in control of outcomes.
+
+Customers could have simply revoked keys and not re-launched services with rolled credentials (that from your post, may have been re-stolen), but instead you let this fester.
+
+What a disaster for Railway. I hope you get through this stressful moment, but this should be the end of Railway.
+
+reply
+
+	
+	
+film42 3 days ago | root | parent | prev | next [–]
+
+IMO "aviate, navigate, then communicate" does not work in this situation. There is more than one pilot. The moment you detected a breach, hell, even knowing that an attacker was inside your system, you should have pointed to anyone. Hell, even AI, to draft a disclosure with more info coming.
+
+reply
+
+	
+	
+justinai6 3 days ago | root | parent | prev | next [–]
+
+You know... I get it.
+
+  Railway / OpenAI: I had a key compromised this morning. It hit our limit, so I revoked the key... and figured, well, we'll have to track down the leak.
+
+  Then this security notice came out, telling all of their customers to rotate all their keys... As the guy whose spent the entire evening rotating keys and etc. doing
+
+  this is... it's a huge message to send.
+
+  The cost and implications go really far.
+
+  We have many production services that we've taken offline or disabled because we can't deploy to fix the credentials. because of the railway deploy problem...
+
+  Railway was stuck between some pretty nasty tradeoffs. I get that the few hour delay in communication caused some of us more cost, issues, and potential breach... and maybe larger suff.
+
+ But I also realize that rolling the keys while things may still be compromised, with deployments blocked, could make thins even more sticky
+  leaves only very bad options. Also we don't know how much they we're spending time actively stopping the attack. the time and focus could be very much consumed. if it was 5% of exposure and they prevented the 95% exposure.. i'm sure glad they aviated instead of communicated.
+
+  We make the best decision we can in these moments..  and they all just suck.
+
+reply
+
+	
+	
+disconnection 3 days ago | prev | next [–]
+
+I already moved my big customers off Railway after an earlier incident this year that leaked customer data. It’s a stunningly horrible situation to not be able to cycle environment variables after such an event. I did an emergency migration to fly.io today with minimal disruption today. I’d recommend everyone to immediately migrate somewhere else ASAP so you can change environment variables. And of course never give Railway a cent more of your money.
+
+reply
+
+	
+	
+demibabs 3 days ago | parent | next [–]
+
+What was the previous incident?
+
+reply
+
+	
+	
+disconnection 2 days ago | root | parent | next [–]
+
+Not even that one. One day I got calls from customers saying: "why can I see other people's accounts?". Then saw that Railway had started caching arbitrary responses. Like how do you even do that without trying?
+
+IMO Railway's response was evasive, underplayed the incident, and did not reflect the severity of this failure. As a response we pulled all our big projects off Railway.
+
+All I want is that my data is reliably secure on some iron somewhere, without a million vibe coding features or whatever they are trying to build, distracting from basic security.
+
+Anything hosted on Railway is at a huge risk, IMO.
+
+https://blog.railway.com/p/incident-report-march-30-2026-acc...
+
+reply
+
+	
+	
+bhtru 1 day ago | root | parent | next [–]
+
+I genuinely flabbergasted at the lack of uproar or at least publicly being voiced over this incident. Downtime is bad enough, but this kind of data leak and exposure of sensitive keys is a massive breach.
+
+I too in my org are having to navigate the fallout of this and begin migrations to another platform. Once is okay, but this isn't their first big outage this year.
+
+Infra providers have only their name and stats back themselves up with, let's be honest from a tooling perspective it's largely all same same. Real shame, has been easy to use Railway up till now.
+
+reply
+
+	
+	
+ivanjermakov 3 days ago | root | parent | prev | next [–]
+
+Maybe https://news.ycombinator.com/item?id=48201484
+
+reply
+
+	
+	
+vellcopo 3 days ago | prev | next [–]
+
+I have a bad feeling about all the recent news. Woke up today to the Railway email and rotated all my keys. Checked my OpenRouter dashboard and, to my surprise, there were API calls to Anthropic models I didn’t make. Luckily I have all my limits set to $25 a month...
+
+Interestingly enough, from the logs they were only using Anthropic as the provider, with a Go HTTP client. Pretty sure the main target was LLM API keys...
+
+reply
+
+	
+	
+DrawTR 4 days ago | prev | next [–]
+
+Jeez, what a rough past 24 hours for all security folk. Hang in there
+
+reply
+
+	
+	
+jacquesm 4 days ago | parent | next [–]
+
+It's going to be a rough decade.
+
+reply
+
+	
+	
+rectang 4 days ago | root | parent | next [–]
+
+I really don't know how we are going to deal with accelerated exploit generation via LLMs — it blows up the disclosure processes we've evolved.
+
+The only thing I can think of is hunkering down with static HTML to reduce attack surface, but that's laughably incompatible with many many business requirements.
+
+reply
+
+	
+	
+jacquesm 4 days ago | root | parent | next [–]
+
+I think it will kill open source to some degree. I found it already very hard to imagine how the endless queues of issues were being dealt with so diligently, but at least there was a human on the other side. The torrent that is unleashed now is not manageable on a human scale. It's a highly automated arms race with a bunch of good-willing humans caught in the crossfire between large companies and criminals duking it out.
+
+reply
+
+	
+	
+rectang 3 days ago | root | parent | next [–]
+
+Could open source activity transition towards provably correct software, with far more modest feature sets?
+
+I don't have experience with proof based tools, so I'm not sure what's feasible.
+
+reply
+
+	
+	
+jacquesm 3 days ago | root | parent | next [–]
+
+A lot of people in the open source world actually enjoy the act of programming. Not all of them will enjoy prompting to the same degree, but to keep pace with the bad guys you will have to either join or find something else to do. That's going to be a big loss.
+
+reply
+
+	
+	
+rectang 3 days ago | root | parent | next [–]
+
+It's funny, that's true although I personally can't relate — I enjoy having built something robust, but the act of building isn't something I love.
+
+I can imagine prompting an LLM to build provably correct software. Aren't we already doing something similar already when we remind it to write unit tests and account for all edge cases?
+
+Actually writing provably correct software from scratch sounds terribly tedious, which is why I've never explored it. But maybe an LLM could make that task more approachable.
+
+reply
+
+	
+	
+jacquesm 3 days ago | root | parent | next [–]
+
+I switch between the two modes. I love algorithmic stuff and I really don't like working on boilerplate and plumbing. So I use AI for the second and read every line and all the other stuff I roll by hand. The speedup isn't super like that but the amount of control is pretty good.
+
+reply
+
+	
+	
+rectang 3 days ago | root | parent | next [–]
+
+I just gave this prompt to duck.ai (5.6 Terra under the hood): "How would one go about writing a provably correct algorithm to count UTF-8 code points?"
+
+It gave me something which looked pretty legit. Of course, the generated output very likely to be subtly wrong, but as starting input to a formal checked specification/proof process it seemed like a good start.
+
+I wrote some UTF-8 based string handling software back in the day. It doesn't seem unreasonable to write up a set of requirements and edge cases and then have a formal mechanism prove correctness for common UTF-8 string manipulation operations.
+
+[PEAK HN ON] Now if we could just write provably correct exception handling, we could solve one of the two PHP vulns from today. [PEAK HN OFF]
+
+reply
+
+	
+	
+jacquesm 3 days ago | root | parent | next [–]
+
+UTF8 is one nasty little standard. So many edge cases.
+
+I should check it against my email address validator that would be a nice benchmark. It's interesting that there are people that are using email addresses that are not actually valid according to the standard.
+
+reply
+
+	
+	
+rectang 3 days ago | root | parent | next [–]
+
+But UTF-8 is also extremely well-studied.
+
+We can have an LLM enumerate all those edge cases, and we can assemble them into a spec. Then we can integrate that spec into a proof.
+
+And because the spec is functional rather than expressive, we can produce copyright-free, provably correct reference implementations whose correctness is as strong as our spec and our proof process.
+
+This reference implementation would then be available for use by a language like PHP, or perhaps an LLM generating a vibe-coded dependency.
+
+Over time, then, the accumulation of such proven reference works grows. We'll never prove all the application code out there correct, but incremental progress is possible.
+
+reply
+
+	
+	
+jacquesm 3 days ago | root | parent | next [–]
+
+I think such constructs should be part of the language or at least of the standard runtime library and not re-implemented by every Tom, Dick, Harriet & HAL.
+
+reply
+
+	
+	
+faizshah 3 days ago | root | parent | prev | next [–]
+
+In new software I write these days I limit the number of external dependencies and mostly vibe code anything I need besides the most critical foundational libraries (increasingly I am replacing these as well).
+
+I think this, the supply chain attacks and binary reverse engineering will cause us to go back to thin clients, html over the wire and vibe coded libs instead of external open source deps.
+
+reply
+
+	
+	
+rectang 3 days ago | root | parent | next [–]
+
+Vibe coding deps is security through obscurity, with all of its weaknesses (and strengths). It's not that such deps have fewer security bugs than the open source reference implementations from which they are derived, it's just that those bugs are currently less discoverable.
+
+In the near to medium term, the current open source regime has issues because bugs have become extremely discoverable and easy to exploit. But I am skeptical that obscurity will provide vibe coded deps sufficient protection over the long term. As soon as the source code for those vibe-coded deps leaks, you are screwed.
+
+reply
+
+	
+	
+faizshah 3 days ago | root | parent | next [–]
+
+It's not just obscurity, it's increasingly difficult to trust the governance and quality of code of any outside library. A lot of deps in code are unnecessary you use maybe 1-10% of the api surface. But since building and maintaining software can be cheaper now it can be better to maintain a 1-5k LOC vibe coded version that meets your security bar than to trust an external party's governance & quality. This has the additional benefit of reconsidering if you even need the dep or if you can reuse something you already have (since you may not want to maintain the lib).
+
+reply
+
+	
+	
+jacquesm 3 days ago | root | parent | next [–]
+
+> it's increasingly difficult to trust the governance and quality of code of any outside library
+
+The value of 'code written before 2024' is going to be substantially higher than of code written afterwards.
+
+Sort of like a 'low background steel', a comparison someone made on HN before which I think was pretty good.
+
+reply
+
+	
+	
+reassess_blind 3 days ago | root | parent | next [–]
+
+I really doubt that. If these models continue to improve, they will be producing higher quality code than, maybe not the best human developers, but certainly the average human developer who would have typically been writing code on these systems.
+
+Pre-2024 code is full of human-written vulnerabilities.
+
+reply
+
+	
+	
+prodigycorp 3 days ago | root | parent | prev | next [–]
+
+This only applies to its value in regards to training data for LLMs.
+
+reply
+
+	
+	
+jacquesm 3 days ago | root | parent | next [–]
+
+No, it will also be reflected in the value of IP.
+
+reply
+
+	
+	
+jacquesm 3 days ago | root | parent | prev | next [–]
+
+Limiting the number of dependencies is always good, within reason. Especially with eco-systems that want to pull in everything and the kitchen sink. That's just asking for a supply chain attack. I try to limit myself to what well reputed distros provide and what I can review. That's still no guarantee but it cuts down the risk substantially.
+
+reply
+
+	
+	
+aaron_m04 3 days ago | root | parent | prev | next [–]
+
+Business requirements will have to change. All your competitors are under the same pressure with the same shitty set of options, after all.
+
+reply
+
+	
+	
+jacquesm 3 days ago | root | parent | next [–]
+
+That would have to start with businesses shelling out more funds for the packages that their businesses depend on.
+
+reply
+
+	
+	
+kilroy123 3 days ago | root | parent | prev | next [–]
+
+It already _is_ a rough decade. I have hated the 20s so damn much.
+
+reply
+
+	
+	
+justinai6 3 days ago | root | parent | prev | next [–]
+
+Yeah, the future of our jobs in this industry... for the type of work we do. are concerning. Explosure has whole new meaning
+
+reply
+
+	
+	
+cortesoft 4 days ago | root | parent | prev | next [–]
+
+It feels like the only solution is going to be proactively running your own AI agents looking for patches and applying them.
+
+reply
+
+	
+	
+rectang 4 days ago | root | parent | next [–]
+
+The issue is where to direct the LLM's attention.
+
+Prompting the LLM to "look for vulnerabilities in PHP's multipart upload handling code" is going to find stuff that "look for vulnerabilities in PHP" won't.
+
+reply
+
+	
+	
+cortesoft 3 days ago | root | parent | next [–]
+
+I was more talking about staying up on security issues with your stack after they are patched. We will need to check for security updates constantly, or risk being exploited in the gap between a security release and you finding out that you need to update your software.
+
+reply
+
+	
+	
+justinai6 3 days ago | root | parent | prev | next [–]
+
+Does any one know of good feeds that we should be pulling or scraping from? I think the proactive nature here is seriously important.
+
+reply
+
+	
+	
+jacquesm 4 days ago | root | parent | prev | next [–]
+
+Yes, so who will pay for that? Open source so far meant you would use your brains and your creativity, now you need to use your money too if you want to keep pace. From a 'guts, credits & glory' proposition to 'slop processor if you can afford it' is not really an upgrade.
+
+reply
+
+	
+	
+cyberpunk 4 days ago | root | parent | prev | next [–]
+
+Or, you know, use client certificates so the bots can’t hit you.
+
+Those can leak / be stolen of course, but a bunch of my clients php apis survived as without a cert they’re told to fuck right off.
+
+It does make their client onboarding a bit harder but it’s a trade off which seems to have been the right one.
+
+reply
+
+	
+	
+cortesoft 3 days ago | root | parent | next [–]
+
+This doesn’t help you if you need to run a public website.
+
+reply
+
+	
+	
+llama052 4 days ago | parent | prev | next [–]
+
+I'm already tired, between pushing back on vibe coded internal projects being put onto the internet and then the constant barrage of CVEs that mean nothing.
+
+Then you have real security incidents that you need to tune into constantly.
+
+reply
+
+	
+	
+merlindru 4 days ago | parent | prev | next [–]
+
+job security!
+
+reply
+
+	
+	
+paxy 4 days ago | prev | next [–]
+
+It’s funny that every security breach disclosure now has a mandatory “the attacker used AI!” as if it absolves you from having to maintain a secure system. If anything it makes the situation more damning. If it was possible to find exploits using AI then your own red teaming should have found them before the attacker did.
+
+reply
+
+	
+	
+tokioyoyo 4 days ago | parent | next [–]
+
+Defending is so much harder than attacking. You don't even have to focus on one target, as you can just mass-AI-script a lot of attacks wherever it's possible, and see what sticks. Even if you did everything right, there's always the social-engineering angle, or a single compromised device, or just accidental bad upgrade through supply chain. If you can mass-spread the seed, and plant something that "calls home" constantly, you can just have an agent that would start the attack the minute it gets infected, and go deeper.
+
+It's really a wild west right now, have no idea how we fix it. I'm assuming everything will get more concentrated in big co's hands, as having a very robust security is extremely hard.
+
+Also, we have to agree that younger people will start companies. There will be small companies that cannot afford red teams. There will be companies that are just not equipped, and their profit margins cannot sustain constant attacks.
+
+reply
+
+	
+	
+nrmitchi 4 days ago | parent | prev | next [–]
+
+> It’s funny that every security breach disclosure now has a mandatory “the attacker used AI!”
+
+This isn't in the article? They do not at all claim "the attacked used AI!".
+
+The only mention of "AI" is "We believe this is part of a series of attacks recently targeting platform companies with the aim of compromising AI inference providers." This is the same (apparently) end-goal as the Opencode breach last week, and is not blaming or finger-point at AI. It is stating (rightfully) that AI inference is very easy to resell and turn stolen credentials into cash.
+
+reply
+
+	
+	
+arcanemachiner 4 days ago | parent | prev | next [–]
+
+> your own red teaming should have found them before the attacker did
+
+Easier said than done. The defender has to do everything right, all the time, to prevent a headline like this. The attacker only needs to be right once, and it's game over. AI or no AI.
+
+reply
+
+	
+	
+solyin 3 days ago | root | parent | next [–]
+
+It's a nice saying, but if you did enough things right, the attacker still needs multiple things to line up in order to get anything of value, if you get everything right. No one competent who's doing everything right is leaving open S3 buckets open to the world. Doing some things right means using multiple buckets, using multiple time limited-keys with limited read-only access, using special write-access, not having admin keys on developer laptops, a SIEM system that monitors buckets for traffic going in & out and sending emails (both amount and who it's going to) to the person on call. A firewall (inc IP-address-based blocks so eg China can't access the customer data from China at all). A WAF.
+
+That's not an exaustive list but if the attacker gets one of those "right" once, it is not game over. (They aren't of equal strength, mind you.)
+
+reply
+
+	
+	
+reassess_blind 3 days ago | root | parent | next [–]
+
+Show me a perfectly secure complex system, and with enough time, I'll show you a vulnerability.
+
+reply
+
+	
+	
+gkoberger 4 days ago | parent | prev | next [–]
+
+Unless they edited the post, they never said this. You should delete this; it's false information.
+
+reply
+
+	
+	
+mbreese 4 days ago | parent | prev | next [–]
+
+I didn’t actually see that in this post at all. They mention that the end goal of the attackers might be to get to AI inference providers. But I don’t think they are crying “AI was used” here.
+
+Or did I miss something?
+
+reply
+
+	
+	
+ndneighbor 3 days ago | root | parent | next [–]
+
+We (Railway) make no claims about the tools the attacker used in the above post.
+
+However, from discussions with partners, it resembled the pattern of attacks to secure AI API tokens and credentials. Preliminary forensics tell us that this was the primary goal of their attack. That said, I want to be careful here commenting until we have our formal public post-mortem.
+
+reply
+
+	
+	
+barrrrald 4 days ago | parent | prev | next [–]
+
+This one doesn’t?
+
+reply
+
+	
+	
+tomwphillips 3 days ago | prev | next [–]
+
+After the last outage we considered moving off to Cloud Run - used it several times before and it is rock solid - but we gave them another chance. Unlikely we are staying after a day of no deployments and then this.
+
+Rotated all our secrets but since deploys are paused our app is down.
+
+I'm unimpressed.
+
+reply
+
+	
+	
+m8s 3 days ago | parent | next [–]
+
+Agreed. This feels like an abandon ship situation. I’m working on switching right now. That’s too bad, but this is not acceptable unfortunately
+
+reply
+
+	
+	
+tomwphillips 3 days ago | parent | prev | next [–]
+
+We are now on Cloud Run.
+
+reply
+
+	
+	
+sergiotapia 4 days ago | prev | next [–]
+
+If you're on Railway do not wait, ROTATE every API key at the source, and do not set new values because Railway is still compromised and not secured.
+
+reply
+
+	
+	
+AJRF 4 days ago | prev | next [–]
+
+Do cloud providers have a lock-down mode where you can press 1 button and stop all spend?
+
+reply
+
+	
+	
+Aboutplants 4 days ago | parent | next [–]
+
+Not a bad idea
+
+reply
+
+	
+	
+tom1337 3 days ago | root | parent | next [–]
+
+It is… for their business.
+
+reply
+
+	
+	
+fyzix 4 days ago | prev | next [–]
+
+How is it possible rotate keys if you disable deployments? You're basically telling us to take our services offline...
+
+reply
+
+	
+	
+film42 3 days ago | parent | next [–]
+
+What about buckets? I tried to regenerate my secrets but deploys are paused. I don't know if they actually rotated or not because the old keys seem to still be working! Dear attackers, please don't read or mutate my files while my app is offline :)
+
+reply
+
+	
+	
+justinai6 3 days ago | root | parent | next [–]
+
+yeah .. this is the suck
+
+reply
+
+	
+	
+tossstone 4 days ago | parent | prev | next [–]
+
+I've already taken my applications offline and will be migrating to a new host...
+
+reply
+
+	
+	
+ashishmax31 3 days ago | root | parent | next [–]
+
+If you are open to self hosting and want a railway like experience, i have been building stackdome: https://github.com/axernel-labs/stackdome . Its mit-licensed and can run on cheap vps's to large k8s clusters.
+
+reply
+
+	
+	
+dingaling911 3 days ago | root | parent | prev | next [–]
+
+In general, the new host will have its own problems, otherwise you would've used them to begin with.
+
+reply
+
+	
+	
+tossstone 2 days ago | root | parent | next [–]
+
+I have used it because of the nicer developer experience and it's a little bit more friendly to my clients who find AWS too confusing to navigate; but unfortunately this has destroyed all of my confidence in Railway. Nothing personal, and I'm sympathetic to the engineers who are navigating this situation the best they can. I simply refused to believe something this egregious would happen with Secrets Manager in AWS
+
+reply
+
+	
+	
+loloquwowndueo 3 days ago | root | parent | prev | next [–]
+
+Well no- perhaps they hosted on the first paas they found, worked well enough, never had reason to evaluate something else until now.
+
+reply
+
+	
+	
+justinai6 3 days ago | root | parent | prev | next [–]
+
+I'm curious where you decided to go
+
+reply
+
+	
+	
+brokenodo 3 days ago | root | parent | next [–]
+
+I moved to Render 3 or 4 months ago during Railway’s big GCP outage and have been very pleased.
+
+reply
+
+	
+	
+frio 3 days ago | parent | prev | next [–]
+
+Yep. What an incredibly frustrating notice. I like Railway and I guess their hands are tied here, but wow.
+
+reply
+
+	
+	
+eecks 3 days ago | parent | prev | next [–]
+
+I rotated mine. If you just change the keys and hit deploy it works
+
+reply
+
+	
+	
+xmcp123 3 days ago | root | parent | next [–]
+
+Saw someone on Twitter indicating that they did this, and new keys got compromised.
+
+reply
+
+	
+	
+eclipticplane 3 days ago | root | parent | next [–]
+
+Link?
+
+reply
+
+	
+	
+xmcp123 3 days ago | root | parent | next [–]
+
+I tried to re-find it but could not.
+
+reply
+
+	
+	
+piazz 3 days ago | root | parent | prev | next [–]
+
+It appears to work in the UI, but go test your product. Mine didn't receive the new keys.
+
+reply
+
+	
+	
+eecks 3 days ago | root | parent | next [–]
+
+You are most likely correct. I did something else that broke my deploy and left me in a stuck state so it's hard to say for me.
+
+reply
+
+	
+	
+jvidalv 3 days ago | prev | next [–]
+
+As an european, just woke up to this, wow crazy.
+
+All my apps are on Railway, deployments has been down since yesterday morning (24 hours), feels nuts that they have waited until 2AM to say this.
+
+reply
+
+	
+	
+minraws 4 days ago | prev | next [–]
+
+how are the secrets decrypted, I would like some explanation so that I can have some understanding here, I am starting to feel like all these companies are just meme-ing with their security posture.
+
+Like did someone vibe code too hard, how do env secrets leak for everyone...
+
+reply
+
+	
+	
+efficax 3 days ago | parent | next [–]
+
+secret encryption is always a bit of a conundrum for a running cloud system. the secret needs to be plaintext when you use it, so you have to decrypt at least on every deploy. but that means the keys have to be ready at hand, no passphrase, somewhere an automated system can get them. that makes it very hard to actually protect them from someone with full access
+
+reply
+
+	
+	
+9cb14c1ec0 4 days ago | parent | prev | next [–]
+
+Easy, all the bad guys need to do is access whatever system stores the decryption keys.
+
+reply
+
+	
+	
+claaams 3 days ago | parent | prev | next [–]
+
+They absolutely are. Every ceo sees security as a massive money pit (it is) but there’s a reason it’s expensive and hard to do well. Those compliance frameworks they show off are meaningless and can be manipulated extremely easily. There are a lot of security leaders who are going to be having a very bad time soon.
+
+reply
+
+	
+	
+tlonny 3 days ago | prev | next [–]
+
+For the people who had OAI/Anthropic API keys stolen and used? Are you able to see how they were used in your dashboard?
+
+I'm really curious how hackers have monetised the compromised API keys? Do they submit them to a shady AI-multiplexer that provides cheaper inference using stolen keys? One would expect completely random/disparate usage patterns/prompts if so...
+
+reply
+
+	
+	
+alpineman 3 days ago | parent | next [–]
+
+Someone on the railway discord posted a screenshot of logs showing people were using it for erotic dirty chat
+
+reply
+
+	
+	
+fmvilas 3 days ago | prev | next [–]
+
+> As such, we strongly recommend that you immediately roll all environment variables, including any API keys, stored in Railway, as well as any private registry credentials, and review logs for those services for unusual activity.
+
+> All deployments are paused
+
+Can you explain us how can we rotate secrets without going down too?
+
+reply
+
+	
+	
+1-6 3 days ago | prev | next [–]
+
+It's time for competent programmers to get rehired to help patch massive exploits that are about to unfold before us.
+
+reply
+
+	
+	
+eviks 3 days ago | parent | next [–]
+
+What stopped them from building the systems competently when they were employed?
+
+reply
+
+	
+	
+Lebenita 3 days ago | root | parent | next [–]
+
+They built the systems that are not in the news right now.
+
+reply
+
+	
+	
+toofy 3 days ago | root | parent | prev | next [–]
+
+> What stopped them from building the systems competently when they were employed?
+
+managers, accountants, c-suite, sales dept, shareholders, stock-must-go-up, etc...
+
+its no secret the industry wide trash of "move fast and break things" has been the mantra far too often as opposed to "take the time to build it correctly"
+
+for much of the industry its "ship features. now."
+
+we regularly read here how often engineer's concerns are ignored by company salesmen and executives.
+
+reply
+
+	
+	
+efficax 3 days ago | parent | prev | next [–]
+
+like the competent programmers that built php or?
+
+reply
+
+	
+	
+3m 3 days ago | parent | prev | next [–]
+
+Bad take.
+
+What's happening is that machines are now better at coding than humans are, and they are finding copious numbers of vulnerabilities in software written by "competent programmers" over the last 40 years.
+
+This is only going to get worse.
+
+reply
+
+	
+	
+elliotbnvl 3 days ago | prev | next [–]
+
+I had an Anthropic API key that was used in a Railway deployment be disabled due to evidence of unauthorized abuse ~3hrs after receiving the Railway security notice. They managed to spend about $20 in Opus 4.8 tokens before the abuse was detected. What a headache.
+
+reply
+
+	
+	
+3m 3 days ago | parent | next [–]
+
+Out of interest, what were they trying to do with Opus?
+
+reply
+
+	
+	
+loloquwowndueo 3 days ago | root | parent | next [–]
+
+Shady vendor who has an ai-powered saas plugs bought-in-black-market keys into their product which they bought for $1, racks up $20 of charges before having to move to another stolen key. The economics at least check out.
+
+reply
+
+	
+	
+david_shi 3 days ago | prev | next [–]
+
+Genuinely curious: how much liability insurance do you need to survive something like this?
+
+reply
+
+	
+	
+averrous 3 days ago | prev | next [–]
+
+Anyone can help?
+
+I changed he api key in the env var as openrouter revoke the previous one based on this incident. However, as the redeploy cannot be done in my region, the env cannot be updated and now the product cannot be used. Any command in railway to fix this?
+
+reply
+
+	
+	
+rdm_blackhole 3 days ago | prev | next [–]
+
+11:43am CET here: builds still stuck in the queue. We are supposed to rotate keys but keys can't be rotated because you need to redeploy for the changes to take effect. Effectively speaking the potentially compromised keys can't be updated.
+
+Also it's impossible to get verified on the Discord server to see what's going on and the support link in the dashboard leads to a 404 page.
+
+I am kinda losing patience here.
+
+reply
+
+	
+	
+icymi 3 days ago | parent | next [–]
+
+I think you need to email support@railway.com to get in touch atp
+
+reply
+
+	
+	
+sergiotapia 3 days ago | prev | next [–]
+
+Actually I will move my projects away from Railway. With AI what it is today, no reason to shy away from hosting on actual VPS.
+
+What is the best VPS to use today? Is it still hetzner or ovh?
+
+reply
+
+	
+	
+ashishmax31 3 days ago | parent | next [–]
+
+I use linode and have nothing but praises for their service.
+
+>Actually I will move my projects away from Railway
+
+If you want a railway like experience, i have been building an opensource alternative to railway: https://github.com/axernel-labs/stackdome . Its mit-licensed and can run on a single vps to full-scale k8s clusters.
+
+reply
+
+	
+	
+wateralien 4 days ago | prev | next [–]
+
+Is this our new AI daily reality?
+
+reply
+
+	
+	
+pizzafeelsright 3 days ago | parent | next [–]
+
+script kiddies now have access to frontier models. bad
+
+reply
+
+	
+	
+iririririr 4 days ago | parent | prev | next [–]
+
+companies probably have php and Python applications exposed to the web and nobody knows.
+
+the speed of irresponsible deployments is infinite now, by design
+
+reply
+
+	
+	
+rdm_blackhole 3 days ago | prev | next [–]
+
+Despite them saying that deployments work on Pro accounts (as of 30 minutes ago), my deployments are still stuck. Honestly disappointed.
+
+Also they regenerated credentials for buckets but stopped deployments so the services could not connect to the buckets. Completely stupid. If you are going to regenerate the credentials, then let us redeploy the services.
+
+reply
+
+	
+	
+dylanz 3 days ago | prev | next [–]
+
+I'm rotating production secrets all night... great. I confirmed that they've actually used many of my secret keys already.
+
+reply
+
+	
+	
+eclipticplane 3 days ago | parent | next [–]
+
+Which secrets were they using?
+
+reply
+
+	
+	
+dylanz 3 days ago | root | parent | next [–]
+
+So far I found they accessed my S3 buckets, used my OpenAI key (which OpenAI thankfully detected odd behaviour and revoked the key automatically), did readonly operations on my Valkey instance, etc.
+
+reply
+
+	
+	
+3m 3 days ago | root | parent | next [–]
+
+What were they trying to do with OpenAI tokens? What actual requests were they making?
+
+Was it just to create damage? i.e. create unnecessary spend to cause trouble? Or were they trying to use the LLMs for a specific reason?
+
+reply
+
+	
+	
+halfmatthalfcat 3 days ago | root | parent | prev | next [–]
+
+The secret ones
+
+reply
+
+	
+	
+lucagiftzek 2 days ago | prev | next [–]
+
+As greek i can only say that security should be taken really seriously on trains
+
+reply
+
+	
+	
+cowlby 3 days ago | prev | next [–]
+
+This is so fucked up. I was reviewing my account and I just saw this in the logs... Claude says database credentials and bucket credentials go in via env vars so likely they had access to database and bucket contents.
+
+  Audit Logs
+  Oct 21, 2026 05:54:13 PM CDT
+  BucketInstanceCredential.regenerated in my-project production by Railway Staff
+  Oct 21, 2026 05:54:13 PM CDT
+  BucketInstanceCredential.regenerated in my-project production by Railway Staff
+  Oct 21, 2026 05:54:13 PM CDT
+  BucketInstanceCredential.regenerated in my-project production by Railway Staff
+
+reply
+
+	
+	
+tlonny 3 days ago | parent | next [–]
+
+When I last used Railway - the default behaviour for railway-hosted databases was for them to be inaccessible to the public internet - so a leaked DB connection URL might not be as catastrophic as you would first think...
+
+reply
+
+	
+	
+frio 3 days ago | root | parent | next [–]
+
+The default setup is to configure an Internet accessible DB. So yes — the credentials leak has also likely compromised many databases too. They are still obscuring the impact.
+
+reply
+
+	
+	
+tstrebitzer 3 days ago | prev | next [–]
+
+meanwhile on railway.com:
+
+Ship software peacefully
+
+reply
+
+	
+	
+gbnwl 4 days ago | prev | next [–]
+
+The past two days have been awful as someone who uses Railway.
+
+reply
+
+	
+	
+lijok 4 days ago | prev | next [–]
+
+Damn I guess all those l33t hiring practices were for nothing
+
+reply
+
+	
+	
+rvz 4 days ago | parent | next [–]
+
+Of course, it was a giant scam that tested for nothing and optimized for how to pass a test.
+
+Let's see if companies are ready to hire more people who know what they are doing, against a super-intelligent swarm of millions of agents with cyber capabilities.
+
+reply
+
+	
+	
+MattIPv4 4 days ago | prev | next [–]
+
+Related: https://news.ycombinator.com/item?id=50177413
+
+reply
+
+	
+	
+AndrewKemendo 3 days ago | prev | next [–]
+
+Yeah I’m not sure what happened but there was a huge bot swarm the last few days
+
+I had an open gitea host pulled into some botnet
+
+Luckily digitaloceam sent an alert.
+
+reply
+
+	
+	
+eecks 4 days ago | prev | next [–]
+
+Huh, I've been using Railway tonight and this was the first I've seen of this. Just got an email about it now too at 23:36
+
+reply
+
+	
+	
+arbayi 3 days ago | prev | next [–]
+
+i revoked my api keys, changed with new ones but guess what? railway does not allow deployments at the moment, so my app is down.
+
+reply
+
+	
+	
+jasona123 3 days ago | prev | next [–]
+
+sighs
+
+Thankfully I'm only using Railway for a hobby project (aptly, for a real-time transit dashboard) but still
+
+reply
+
+	
+	
+effortprogramme 3 days ago | prev | next [–]
+
+It's pretty crazy how php saga and railway service came on the same day...
+
+reply
+
+	
+	
+nosefrog 3 days ago | prev | next [–]
+
+Railway was not honest about the reason for their last big outage.
+
+reply
+
+	
+	
+shinycode 4 days ago | prev | next [–]
+
+I’m lucky I moved away from it to host my own db with coolify
+
+reply
+
+	
+	
+dgellow 4 days ago | parent | next [–]
+
+That’s coming for all platforms unfortunately
+
+reply
+
+	
+	
+alpineman 3 days ago | root | parent | next [–]
+
+Take coolify admin off the web, put it on a private address only accessible via tailscale
+
+reply
+
+	
+	
+Good4boothee 3 days ago | prev | next [–]
+
+Really? Security announcement on blog subdomain, while the largest text on their home page is "Ship software peacefully" slogan, without any mention of the issue? And after looking at it for a while I still don't know what it exactly is, some kind of Terraform/CloudFormation GUI?
+
+reply
+
+	
+	
+ksajadi 3 days ago | prev | next [–]
+
+someone managed to get the environment variables AND the encryption keys for those? i feel for the secops engineers over there right now. brutal
+
+reply
+
+	
+	
+indiantinker 3 days ago | prev | next [–]
+
+I have 3 clients projects running there. I am on pro plan. Openrouter has invalidated all keys. Nothing is working. Clients are angry. Railway is taking forever to resolve this and are taking steps in a mildly brain dead way. I cant swap keys.
+
+What can i do? Move to render ?
+
+reply
+
+	
+	
+efficax 3 days ago | parent | next [–]
+
+use aws or digital ocean
+
+reply
+
+	
+	
+OxfordCommand 3 days ago | prev | next [–]
+
+deploys have started for me on hobby plan.
+
+reply
+
+	
+	
+mschuster91 3 days ago | prev | next [–]
+
+> We believe this is part of a series of attacks recently targeting platform companies with the aim of compromising AI inference providers.
+
+So basically, the same shit as in the crypto heydays - rich techbros providing extremely lucrative incentives for unscrupulous actors to hack anyone and anything.
+
+reply
+
+	
+	
+esseph 4 days ago | prev | next [–]
+
+Fuck, I thought this was about trains
+
+reply
+
+	
+	
+Kerode0 2 days ago | prev | next [–]
+
+It's absolutely disgusting that they waited that long to even let everyone know. irresponsible behavior.
+
+reply
+
+	
+	
+Keloran 4 days ago | prev | next [–]
+
+Well this is certainly interesting, I wonder how their secrets were being stored, I assumed they were stored in vault and then injected with a sidecar, but I guess not
+
+reply
+
+	
+	
+rpmisms 3 days ago | prev | next [–]
+
+Aw shit. I just got done patching our PHP servers, now I gotta do the Railway too? I swear I'm gonna wake up to a Vercel SNAFU.
+
+reply
+
+	
+	
+jasona123 3 days ago | parent | next [–]
+
+We are not manifesting this energy
+
+reply
+
+	
+	
+goforbg 3 days ago | prev | next [–]
+
+the worst service I've signed up for has to be railway. What a terrible product.
+
+reply
+
+	
+	
+barelysapient 3 days ago | prev | next [–]
+
+Ugh. Love Railway.
+
+reply
+
+	
+	
+torben-friis 3 days ago | prev | next [–]
+
+>We believe this is part of a series of attacks recently targeting platform companies with the aim of compromising AI inference providers.
+
+Is that an accusation? As in, major AI players taking out competitors ?
+
+reply
+
+	
+	
+jon128 3 days ago | parent | next [–]
+
+It's a cop-out and cheap attempt at misdirection to distract from their incompetence.
+
+reply
+
+	
+	
+paulgb 3 days ago | parent | prev | next [–]
+
+I don’t think that’s what’s implied here. Possibly they are trying to get API tokens of providers to distill their own models.
+
+reply
+
+	
+	
+visch 3 days ago | prev | next [–]
+
+This is exactly why we should own our deployment stacks. Going to push up the launch here as pdt is a railway alternative thttps://github.com/autoidm/pdt for scheduled jobs
+
+AI makes this so much easier to do now, we should all own our own code, and deployment infrastructure (use a cloud instead of someone wrapping aws for you)
+
+reply
+
+	
+	
+skwirl 3 days ago | parent | next [–]
+
+Do you own argcomplete, backoff, certifi, cffi, charset-normalizer, cryptography, google-auth, google-auth-oauthlib, idna, markdown-it-py, mdurl, msal, oauthlib, pyasn1, pyasn1-modules, pycparser, pygments, pyjwt, python-dotenv, pyyaml, requests, requests-oauthlib, rich, rich-argparse, shellingham, and urllib3?
+
+reply
+
+	
+	
+visch 3 days ago | root | parent | next [–]
+
+No, and this isn't about a supply chain attack on Python libs. This is about running your service(s) on a service that runs in front of a cloud provider. My argument is simply that it's needless extra risk
+
+You do have an argument to be made about vendoring our dependencies, or removing them in general. Not a bad idea
+
+reply
+
+	
+	
+ComputerGuru 3 days ago | prev [–]
+
+Shameless plug: stop storing secrets in environment variables. Better solutions exist.
+
+Our own open-source, cross-platform, multi-language, cross-framework SecureStore is an embedded secrets store (sort of like SQLite) that lets you version your secrets alongside your code in git (and deploy updates via CI, accordingly), only securely.
+
+Available for rust, golang, php, python, js/ts (node, bun, or in-browser), C#/.NET, PowerShell, bash, and more. Open Source (MIT), not vibe coded, and lovingly maintained for a decade.
+
+https://github.com/neosmart/securestore-rs
+
+reply
+
+	
+	
+jon128 3 days ago | parent [–]
+
+Encrypted secrets in Git with a tool written in Rust under a fully permissive license is the right way to do it. Encrypted copies of secrets in environment variables is okay too, as long as they are encrypted.
+
+The somewhat widely known Mozilla SOPS is a tool in the same broad category.
+
+I hadn't seen securestore-rs before. Thank you for sharing this.
+
+reply
+
+Consider applying for YC's Winter 2027 batch! Applications are open till November 2.
+
+Guidelines | FAQ | Lists | API | Security | Legal | Apply to YC | Contact
+
+Search: 

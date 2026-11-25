@@ -1,0 +1,23 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../lib/set.css"><style>
+
+.t{background:var(--ground,#DFD8D4)}
+.hd{left:56px;top:34px;font-family:'Big Shoulders Display';font-weight:800;font-size:178px;line-height:.9;letter-spacing:-.01em;color:#000000;z-index:5}
+.hd b{color:#000000;font-weight:900}
+.hd span{font-weight:500}
+.bars{position:absolute;left:170px;right:190px;bottom:118px;height:470px;display:flex;align-items:flex-end;justify-content:space-between;z-index:3}
+.bar{display:flex;flex-direction:column;align-items:center;gap:0}
+.blk{width:300px;border:6px solid #262824;background:#262824;display:flex;flex-direction:column;gap:6px;padding:6px}
+.blk i{display:block;height:38px;border:4px solid #E99A3F;background:transparent}
+.blk.big{background:#000000;border-color:#000000}
+.blk.big i{border-color:#E99A3F;background:#000000}
+.lb{position:absolute;bottom:14px;font-family:'Big Shoulders Display';font-weight:800;font-size:78px;line-height:1;color:#000000;letter-spacing:.02em;text-transform:uppercase;white-space:nowrap}
+.arrow{position:absolute;left:90px;top:250px;width:520px;height:330px;z-index:2}
+
+</style></head><body><div class="t">
+<div class="a hd nw" data-k="hd"></div>
+<div class="bars" data-move="chart">
+ <div class="bar"><div class="blk"><i></i></div></div>
+ <div class="bar"><div class="blk big"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+</div>
+<div class="lb" data-k="la" style="left:120px;width:400px;text-align:center"></div><div class="lb" data-k="lb2" style="left:690px;width:500px;text-align:center"></div>
+</div><script src="../../lib/bind.js"></script></body></html>

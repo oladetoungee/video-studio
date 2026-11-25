@@ -1,0 +1,29 @@
+{
+ "label": "Before this session’s edits",
+ "auto": true,
+ "savedAt": 1791319442460,
+ "content": {
+  "direction": "REMAKE of viral sample 5 (\"how to be consistent\"): the how-to phrase small in grey, the key word giant in red behind her head, her centred and smiling at a desk in a bright blurred room, a thin black wave behind her, stacks either side. Book stacks -> stacks of old paper records; the open book -> an open marriage register.",
+  "concept": "R5",
+  "sample": "5",
+  "thumbnail_text": "how to check if someone is married",
+  "title": "Is He Already Married? Ghana Built an App to Check",
+  "titles": [
+   "Is He Already Married? Ghana Built an App to Check",
+   "Married? In Ghana, Anyone Can Now Look You Up",
+   "Ghana Made Marriages Searchable. Anyone Can Check Yours"
+  ],
+  "text": {
+   "small": "how to check if someone is",
+   "big": "married",
+   "reg": "Marriage Register"
+  },
+  "images": {
+   "bg": "../../assets/stock/bright_room.jpg",
+   "front": "../../assets/scene/warm/mask/s_165.00_clean.png",
+   "left": "../../assets/stock/paper_bundles_cut.png",
+   "right": "../../assets/stock/file_stack_cut.png"
+  },
+  "vars": {}
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "id": "7699481944286825780",
+ "title": "How Zip Files Shrink Without Losing Data!🗃️ A 1 GB folder zips down t...",
+ "description": "How Zip Files Shrink Without Losing Data!🗃️ A 1 GB folder zips down to 400 MB and unzips back to the full 1 GB. The method behind it is Huffman coding. In the word BANANA, A appears three times, N twice and B once, yet a computer spends 8 bits on every letter, 48 bits in total. Huffman gives the most frequent letter the shortest code: A becomes 0, B becomes 10, N becomes 11. The same word now fits in 9 bits, and every letter is still there. Did you think zip deleted something to save space? Yes or no in the comments. #HuffmanCoding #DataCompression #ZipFile #ComputerScience #Algorithms #KodeKloud #Programming #TechExplained #BinaryCode #CodingShorts #Shorts",
+ "uploader": "kodekloud",
+ "uploader_id": "7244524040541520898",
+ "channel": "KodeKloud",
+ "view_count": 1100000,
+ "like_count": 106200,
+ "comment_count": 473,
+ "repost_count": 5530,
+ "save_count": 22480,
+ "duration": 165,
+ "upload_date": "20261022",
+ "timestamp": 1792675354,
+ "webpage_url": "https://www.tiktok.com/@kodekloud/video/7699481944286825780",
+ "track": "original sound - KodeKloud",
+ "artist": "KodeKloud",
+ "width": 576,
+ "height": 1024
+}

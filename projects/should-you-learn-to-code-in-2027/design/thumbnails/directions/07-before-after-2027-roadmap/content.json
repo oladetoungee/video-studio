@@ -1,0 +1,37 @@
+{
+ "board": "pick1119-06",
+ "kind": "before / after halves: your room (the old way) | you on stage (now), a laptop on each side",
+ "direction": "Copies pick1119-06 (How I Would Learn Python in 2027 (If I Could Start Over): BEFORE in a red box over a bored person behind a laptop with a taped print(df) label, AFTER in a green box over the same person happy with an open laptop of code, a yellow arrow between, a yellow 2027 ROADMAP sticker). Here: BEFORE = your room, hand at your chin, a laptop lid taped print(\"Hello World\") (the old way of learning); AFTER = you on stage explaining, an open laptop with code (what the video's roadmap leads to: build with AI first, then reading code, debugging, fundamentals).",
+ "thumbnail_text": "BEFORE / AFTER + sticker 2027 ROADMAP",
+ "fonts": [
+  "thumbs-01 Anton + red box (white #FFFFFF on #D9262B, as Thumbnails 10); AFTER and the sticker on thumbs-02's yellow #F7D51D with ink #1C1C1C",
+  "thumbs-08 JetBrains Mono for the code + the taped label"
+ ],
+ "colours": "thumbs-01 (#D9262B, #FFFFFF, #1A1A1A) + thumbs-02 yellow #F7D51D",
+ "text": {
+  "before": "Before",
+  "after": "After",
+  "sticker": "<b>2027</b>Roadmap",
+  "tape": "print(\"Hello World\")",
+  "code": "<span class=\"k\">async function</span> <span class=\"f\">signUp</span>(user) {\n  <span class=\"k\">const</span> exists = <span class=\"k\">await</span> db.<span class=\"f\">find</span>(user.email);\n  <span class=\"k\">if</span> (exists) <span class=\"k\">return</span> <span class=\"s\">\"Already signed up\"</span>;\n  <span class=\"k\">await</span> db.<span class=\"f\">save</span>(user);\n}"
+ },
+ "images": {
+  "before": "../../assets/shoot/1613.jpg",
+  "after": "../../assets/oredev/55642239799.jpg"
+ },
+ "vars": {},
+ "class": "no-lift",
+ "titles": [
+  "How I'd Learn to Code in 2027 If I Were Starting Today",
+  "Learning to Code in 2027? Here's the Roadmap I'd Follow",
+  "Should You Still Learn to Code in 2027? A Developer's Answer"
+ ],
+ "title": "How I'd Learn to Code in 2027 If I Were Starting Today",
+ "titles_2026": [
+  "How I'd Learn to Code in 2026 If I Were Starting Today",
+  "Learning to Code in 2026? Here's the Roadmap I'd Follow",
+  "Should You Still Learn to Code in 2026? A Developer's Answer"
+ ],
+ "scores_2026_11_19": "2026-11-19 cold (feed): R1 6/4 (sat beside its own pick in that feed), R2 6/6, R3 5/6. Fix after R1: the second laptop cut. Below 7: kept as the one before/after in the set; drop it if you don't like it.",
+ "recommended": false
+}

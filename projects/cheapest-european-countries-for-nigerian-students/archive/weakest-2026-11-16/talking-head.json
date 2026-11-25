@@ -1,0 +1,712 @@
+{
+ "title": "cheapest-european-countries-for-nigerian-students: talking-head",
+ "source": "../kit/raw-video.mov",
+ "fps": 30,
+ "words": "data/raw_words.json",
+ "faces": "data/face_track.json",
+ "edl": "data/edl.json",
+ "edit": {
+  "silenceDb": -44,
+  "maxPause": 0.42,
+  "keepBefore": 0.14,
+  "keepAfter": 0.1
+ },
+ "out": "../outputs/talking-head",
+ "shortsOut": "../outputs/shorts",
+ "tail": 0.7,
+ "audio": {
+  "voiceFilter": "highpass=f=80,afftdn=nr=8:nf=-52:tn=1,deesser=i=0.3:m=0.5:f=0.5,acompressor=threshold=0.06:ratio=3:attack=6:release=160:knee=3,equalizer=f=3200:t=q:w=1.2:g=1.5",
+  "music": {
+   "dir": "library:music"
+  },
+  "levels": {
+   "voiceLufs": -16.0,
+   "duckDb": -18.0,
+   "openDb": -10.0,
+   "target": -14.0,
+   "ceiling": 0.8
+  },
+  "sfx": {
+   "palette": true,
+   "gainDb": 8,
+   "roles": {
+    "shutter": {
+     "files": [
+      "library:shutter-hard-click"
+     ],
+     "align": "peak",
+     "db": -4
+    },
+    "bell": {
+     "files": [
+      "library:bell-service-ding"
+     ],
+     "align": "peak",
+     "db": -6
+    },
+    "pop": {
+     "files": [
+      "library:pop-dry",
+      "library:pop-hard-click"
+     ],
+     "align": "peak",
+     "db": -5
+    },
+    "ast": {
+     "files": [
+      "library:pop-hard-click"
+     ],
+     "align": "peak",
+     "db": -4
+    },
+    "sticker": {
+     "files": [
+      "library:wood-hard-hit",
+      "library:punch-soft-quick"
+     ],
+     "align": "peak",
+     "db": -2
+    },
+    "marker": {
+     "files": [
+      "library:marker-line"
+     ],
+     "align": "start",
+     "db": -6,
+     "maxlen": 0.7
+    },
+    "paper": {
+     "files": [
+      "library:card-place",
+      "library:paper-quick-move"
+     ],
+     "align": "peak",
+     "db": -3
+    },
+    "tick": {
+     "files": [
+      "library:ui-select-click",
+      "library:click-classic",
+      "library:switch-tap"
+     ],
+     "align": "peak",
+     "db": -5
+    },
+    "coins": {
+     "files": [
+      "library:coins-clinking"
+     ],
+     "align": "start",
+     "db": -8,
+     "maxlen": 0.9
+    },
+    "scan": {
+     "files": [
+      "library:ui-device-click",
+      "library:ui-click-tone"
+     ],
+     "align": "peak",
+     "db": -5
+    }
+   }
+  }
+ },
+ "moments": [
+  {
+   "id": "full",
+   "kind": "full",
+   "slug": "full",
+   "title": "The whole video, cleaned, with graphics (A · Price Check)",
+   "in": 0,
+   "out": "end",
+   "retakes": false,
+   "cuts": [
+    [
+     5.36,
+     7.37
+    ],
+    [
+     31.37,
+     32.4
+    ],
+    [
+     137.27,
+     144.25
+    ],
+    [
+     349.48,
+     352.66
+    ],
+    [
+     361.07,
+     371.42
+    ],
+    [
+     502.08,
+     504.85
+    ]
+   ],
+   "script": "moments/full.js",
+   "music": [
+    "480",
+    0.0
+   ],
+   "captionStyle": "shorts",
+   "note": "cuts = opening trim (kit Q1), CLEANUP 1-4 (cut 4 widened 2026-11-07 to drop the leftover \"for a … funds\"), Czech \"$6,000\" (kit Q7). Optional CLEANUP cut 711.97-715.95 NOT applied."
+  },
+  {
+   "id": "sh01",
+   "kind": "short",
+   "slug": "proof-of-funds",
+   "title": "What is proof of funds for a student visa?",
+   "label": "",
+   "sublabel": "",
+   "in": 41.72,
+   "out": 75.5,
+   "cuts": [],
+   "script": "shorts/sh01.js",
+   "music": [
+    "175",
+    4.0
+   ],
+   "tail": 0.5,
+   "endCard": false,
+   "fmt": "H",
+   "frame9": "fill",
+   "topLabel": "Proof of funds | what it means for your visa",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 70.39,
+    "text": "Proof\nof funds | for Nigerian students",
+    "style": "v3"
+   },
+   "board": [
+    26,
+    36,
+    60
+   ],
+   "fonts": [
+    "shorts-06"
+   ],
+   "colours": "shorts-06"
+  },
+  {
+   "id": "sh02",
+   "kind": "short",
+   "slug": "germany",
+   "title": "Studying in Germany is free. The proof of funds isn't",
+   "label": "",
+   "sublabel": "",
+   "in": 112.22,
+   "out": 208.7,
+   "cuts": [
+    [
+     137.27,
+     144.25
+    ]
+   ],
+   "script": "shorts/sh02.js",
+   "music": [
+    "175",
+    13.0
+   ],
+   "tail": 0.5,
+   "endCard": false,
+   "fmt": "H",
+   "frame9": "fill",
+   "topLabel": "Free tuition in Germany",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 164.81,
+    "text": "Free tuition for international students in Germany",
+    "style": "v3"
+   },
+   "board": [
+    47,
+    5,
+    3
+   ],
+   "punch": {
+    "id": "de-afford",
+    "word": "affordable"
+   },
+   "fonts": [
+    "thumbs-14"
+   ],
+   "colours": "combo-06"
+  },
+  {
+   "id": "sh03",
+   "kind": "short",
+   "slug": "france",
+   "title": "Studying in France: the 2026 changes",
+   "label": "",
+   "sublabel": "",
+   "in": 208.7,
+   "out": 301.1,
+   "cuts": [],
+   "script": "shorts/sh03.js",
+   "music": [
+    "175",
+    22.0
+   ],
+   "tail": 0.5,
+   "endCard": false,
+   "fmt": "H",
+   "frame9": "fill",
+   "topLabel": "studying in france",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 274.53,
+    "text": "studying in france 2027",
+    "style": "v3"
+   },
+   "board": [
+    32,
+    60,
+    28
+   ],
+   "fonts": [
+    "shorts-07"
+   ],
+   "colours": "shorts-07"
+  },
+  {
+   "id": "sh04",
+   "kind": "short",
+   "slug": "italy",
+   "title": "Studying in Italy: fees based on family income",
+   "label": "",
+   "sublabel": "",
+   "in": 325.98,
+   "out": 398.4,
+   "cuts": [
+    [
+     349.48,
+     352.66
+    ],
+    [
+     361.07,
+     371.42
+    ]
+   ],
+   "script": "shorts/sh04.js",
+   "music": [
+    "175",
+    31.0
+   ],
+   "tail": 0.5,
+   "endCard": false,
+   "fmt": "H",
+   "frame9": "fill",
+   "topLabel": "Studying in Italy",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 398.0,
+    "text": "Italy for Nigerian students",
+    "style": "v3"
+   },
+   "board": [
+    42,
+    63,
+    33
+   ],
+   "fonts": [
+    "thumbs-12"
+   ],
+   "colours": "thumbs-12"
+  },
+  {
+   "id": "sh05",
+   "kind": "short",
+   "slug": "austria",
+   "title": "Studying in Austria: why your age matters",
+   "label": "",
+   "sublabel": "",
+   "in": 398.36,
+   "out": 472.6,
+   "cuts": [
+    [
+     464.26,
+     469.84
+    ]
+   ],
+   "script": "shorts/sh05.js",
+   "music": [
+    "175",
+    40.0
+   ],
+   "tail": 0.5,
+   "endCard": false,
+   "fmt": "H",
+   "frame9": "fill",
+   "topLabel": "Austria tuition fees",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 472.2,
+    "text": "Is tuition free for Nigerians in Austria?",
+    "style": "v3"
+   },
+   "board": [
+    24,
+    69,
+    21
+   ],
+   "punch": {
+    "id": "at-age",
+    "word": "age"
+   },
+   "fonts": [
+    "shorts-05"
+   ],
+   "colours": "combo-21"
+  },
+  {
+   "id": "sh06",
+   "kind": "short",
+   "slug": "czech-poland",
+   "title": "Czech Republic and Poland: what students pay",
+   "label": "",
+   "sublabel": "",
+   "in": 473.18,
+   "out": 529.9,
+   "cuts": [
+    [
+     502.08,
+     504.85
+    ]
+   ],
+   "script": "shorts/sh06.js",
+   "music": [
+    "175",
+    49.0
+   ],
+   "tail": 0.5,
+   "endCard": false,
+   "fmt": "H",
+   "frame9": "fill",
+   "topLabel": "1. Czech Republic | 2. Poland",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 473.58,
+    "text": "Cost of studying\nin ~Czech Republic~\nand ~Poland~",
+    "style": "v3"
+   },
+   "board": [
+    19,
+    31,
+    53
+   ],
+   "fonts": [
+    "design-03",
+    "design-29"
+   ],
+   "colours": "design-03"
+  },
+  {
+   "id": "sh07",
+   "kind": "short",
+   "slug": "estonia",
+   "title": "Studying in Estonia: what I pay",
+   "label": "",
+   "sublabel": "",
+   "in": 532.04,
+   "out": 600.9,
+   "cuts": [
+    [
+     595.37,
+     598.77
+    ]
+   ],
+   "script": "shorts/sh07.js",
+   "music": [
+    "175",
+    58.0
+   ],
+   "tail": 0.5,
+   "endCard": false,
+   "fmt": "H",
+   "frame9": "fill",
+   "topLabel": "What I pay to study in Estonia",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 532.44,
+    "text": "What I pay\nto study in\nEstonia as\na Nigerian",
+    "style": "v3"
+   },
+   "board": [
+    4,
+    34,
+    54
+   ],
+   "fonts": [
+    "design-24"
+   ],
+   "colours": "combo-09"
+  },
+  {
+   "id": "sh08",
+   "kind": "short",
+   "slug": "norway-finland",
+   "title": "Norway and Finland: tuition for non-EU students",
+   "label": "",
+   "sublabel": "",
+   "in": 601.02,
+   "out": 675.6,
+   "cuts": [],
+   "script": "shorts/sh08.js",
+   "music": [
+    "175",
+    7.0
+   ],
+   "tail": 0.5,
+   "endCard": false,
+   "fmt": "H",
+   "frame9": "fill",
+   "topLabel": "Norway & Finland | tuition fees",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 601.42,
+    "text": "~Norway~ & ~Finland~\ntuition fees | for Nigerian students",
+    "style": "v3"
+   },
+   "board": [
+    15,
+    1,
+    13
+   ],
+   "fonts": [
+    "design-25"
+   ],
+   "colours": "combo-10"
+  },
+  {
+   "id": "sh09",
+   "kind": "short",
+   "slug": "cheapest",
+   "title": "Cheapest country to study in Europe for Nigerians",
+   "label": "",
+   "sublabel": "",
+   "in": 692.12,
+   "out": 734.2,
+   "cuts": [
+    [
+     711.36,
+     717.8
+    ]
+   ],
+   "script": "shorts/sh09.js",
+   "music": [
+    "175",
+    16.0
+   ],
+   "tail": 0.5,
+   "endCard": false,
+   "fmt": "H",
+   "frame9": "fill",
+   "topLabel": "Cheapest country to study in Europe",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 700.03,
+    "text": "Cheapest country\nto study in Europe | for Nigerians 2027",
+    "style": "v3"
+   },
+   "board": [
+    14,
+    20,
+    22
+   ],
+   "punch": {
+    "id": "cz-free",
+    "word": "literally"
+   },
+   "fonts": [
+    "shorts-04"
+   ],
+   "colours": "shorts-17"
+  },
+  {
+   "id": "teaser",
+   "kind": "teaser",
+   "slug": "cheapest-countries",
+   "title": "Teaser for LinkedIn and X (v3): Germany is free?, what cheap means, four countries, her takeaway",
+   "bites": [
+    [
+     0.05,
+     5.36
+    ],
+    [
+     7.37,
+     18.05
+    ],
+    [
+     41.56,
+     50.3
+    ],
+    [
+     51.0,
+     62.45
+    ],
+    {
+     "gap": 0.8,
+     "at": 611.5
+    },
+    [
+     118.16,
+     125.1
+    ],
+    [
+     144.48,
+     159.0
+    ],
+    {
+     "gap": 0.8,
+     "at": 611.5
+    },
+    [
+     210.34,
+     216.95
+    ],
+    [
+     219.38,
+     230.95
+    ],
+    {
+     "gap": 0.8,
+     "at": 611.5
+    },
+    [
+     419.48,
+     432.75
+    ],
+    {
+     "gap": 0.8,
+     "at": 611.5
+    },
+    [
+     475.74,
+     484.75
+    ],
+    {
+     "gap": 1.6,
+     "at": 611.5
+    },
+    [
+     687.5,
+     691.9
+    ],
+    [
+     751.64,
+     759.2
+    ]
+   ],
+   "tail": 6.5,
+   "captionStyle": "shorts",
+   "script": "teaser/teaser.js",
+   "music": [
+    "766",
+    0.0
+   ],
+   "endCard": false,
+   "note": "2026-11-12 v3: one story a stranger can follow (TEASER-PLAYBOOK 0a); plan in teaser/PLAN-v3.md; v2 in ../archive/teaser-v2/. Ends on the outroCard.",
+   "fonts": [
+    "design-05",
+    "design-31",
+    "design-29"
+   ],
+   "colours": "combo-20"
+  }
+ ],
+ "images": {
+  "clip_at-list": "assets/src/at-list.png",
+  "clip_at-oead": "assets/src/at-oead.png",
+  "clip_at-tuw": "assets/src/at-tuw.png",
+  "clip_cz-mv": "assets/src/cz-mv.png",
+  "clip_de-bw": "assets/src/de-bw.png",
+  "clip_de-daad": "assets/src/de-daad.png",
+  "clip_fr-cnam": "assets/src/fr-cnam.png",
+  "clip_fr-funds": "assets/src/fr-funds.png",
+  "clip_fr-icef": "assets/src/fr-icef.png",
+  "clip_fr-work": "assets/src/fr-work.png",
+  "clip_no-udi": "assets/src/no-udi.png",
+  "px_berlin": "assets/px/berlin.jpg",
+  "px_bologna": "assets/px/bologna.jpg",
+  "px_card": "assets/px/card.jpg",
+  "px_euro-100": "assets/px/euro-100.jpg",
+  "px_euro-fan": "assets/px/euro-fan.jpg",
+  "px_helsinki": "assets/px/helsinki.jpg",
+  "px_oslo": "assets/px/oslo.jpg",
+  "px_paris": "assets/px/paris.jpg",
+  "px_prague": "assets/px/prague.jpg",
+  "px_tallinn-street": "assets/px/tallinn-street.jpg",
+  "px_vienna": "assets/px/vienna.jpg",
+  "px_warsaw": "assets/px/warsaw.jpg",
+  "px_lecture": "assets/px/lecture.jpg",
+  "px_keys": "assets/px/keys.jpg",
+  "px_work": "assets/px/work.jpg",
+  "px_family-papers": "assets/px/family-papers.jpg",
+  "px_calculator": "assets/px/calculator.jpg",
+  "px_graduation": "assets/px/graduation.jpg",
+  "px_laptop-library": "assets/px/laptop-library.jpg",
+  "px_passport-euro": "assets/px/passport-euro.jpg",
+  "cover_sh01": "assets/covers/sh01.jpg",
+  "cover_sh02": "assets/covers/sh02.jpg",
+  "cover_sh03": "assets/covers/sh03.jpg",
+  "cover_sh04": "assets/covers/sh04.jpg",
+  "cover_sh05": "assets/covers/sh05.jpg",
+  "cover_sh06": "assets/covers/sh06.jpg",
+  "cover_sh07": "assets/covers/sh07.jpg",
+  "cover_sh08": "assets/covers/sh08.jpg",
+  "cover_sh09": "assets/covers/sh09.jpg",
+  "cover_sh04_cut": "assets/covers/sh04-cut.png",
+  "cover_sh08_cut": "assets/covers/sh08-cut.png",
+  "cover_sh05_cut": "assets/covers/sh05-cut.png",
+  "cover_sh03_cut": "assets/covers/sh03-cut.png",
+  "cover_sh07_cut": "assets/covers/sh07-cut.png",
+  "cover_sh05_frame": "assets/src/at-list.png",
+  "px_tallinn-roofs": "assets/px/tallinn-roofs.jpg"
+ },
+ "common": [
+  "assets/src/clips.js",
+  "../film/scenes/pckit.js",
+  "../film/scenes/pcsent.js",
+  "moments/common.js",
+  "moments/visuals.js",
+  "moments/plan.js",
+  "moments/formats.js",
+  "moments/boards.js"
+ ],
+ "pad": "#E4E6E3",
+ "frame9": "3x4",
+ "videoTitle": "Cheapest Countries to Study in Europe for Nigerians (2027)",
+ "pauses": [
+  {
+   "id": "fix-964",
+   "at": 305.94,
+   "d": 4.5,
+   "text": "Correction: students in France can work up to 964 hours a year\n(60 % of the legal working year)."
+  }
+ ],
+ "outroCard": {
+  "on": true,
+  "thumb": "../outputs/thumbnails/01-notebook-cheap-countries-europe.png",
+  "title": "What Studying in Europe Really Costs a Nigerian in 2027",
+  "dur": 6.5,
+  "photo": "/library/her-photos/avatar.png",
+  "style": {
+   "ground": "#111114",
+   "ink": "#EDE9E2",
+   "mid": "#A39E94",
+   "accent": "#FF4713"
+  }
+ }
+}

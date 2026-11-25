@@ -1,0 +1,128 @@
+<!doctype html><html><head><meta charset="utf-8"><title>A crash test</title>
+<style>
+@font-face{font-family:Saira;font-weight:900;src:url(../_fonts/SairaCondensed-Black.ttf)}
+@font-face{font-family:Saira;font-weight:600;src:url(../_fonts/SairaCondensed-SemiBold.ttf)}
+@font-face{font-family:Chivo Mono;font-weight:100 900;src:url(../_fonts/ChivoMono.ttf)}
+html,body{margin:0;background:#D9DCDA}
+#stage{position:relative;overflow:hidden;background:#D9DCDA;color:#0E0E0E;font-family:Saira}
+.mono{font-family:'Chivo Mono';font-weight:500;letter-spacing:.06em;text-transform:uppercase}
+.big{font-weight:900;text-transform:uppercase;line-height:.86;letter-spacing:-.005em}
+.mark{border-radius:50%;background:conic-gradient(#FFD400 0 25%,#0E0E0E 0 50%,#FFD400 0 75%,#0E0E0E 0);border:6px solid #0E0E0E;box-sizing:border-box}
+.tab{background:#fff;border:5px solid #0E0E0E;border-bottom:none;border-radius:26px 26px 0 0;box-sizing:border-box}
+.field{border:4px solid #0E0E0E;background:#fff;box-sizing:border-box;font-family:'Chivo Mono';font-weight:500;display:flex;align-items:center;padding:0 22px}
+.stamp{font-weight:900;text-transform:uppercase;border:8px solid currentColor;padding:6px 26px 0;line-height:1}
+.hair{background:#0E0E0E}
+</style></head><body><div id="stage"></div>
+<script src="../_shared/lib.js"></script>
+<script>
+const INK='#0E0E0E', HL='#0E0E0E', Y='#FFD400', G='#0B9A5B', R='#E5262A', PAPER='#D9DCDA';
+// floor grid: the lab floor (thin lines, static)
+const floor0 = () => '';
+const floorGrid = () => { let s=''; for(let x=0;x<=W;x+=120) s+=box({left:x,top:0,width:1,height:H,background:'rgba(14,14,14,.07)'}); for(let y=0;y<=H;y+=120) s+=box({left:0,top:y,width:W,height:1,background:'rgba(14,14,14,.07)'}); return s; };
+const floor = floor0;
+// corner test label (sparingly: one per test screen)
+const testLabel = (n, txt, x, y, o=1) => box({left:x,top:y,opacity:o,display:'flex',alignItems:'center',gap:18}, `<div class="mark" style="width:64px;height:64px"></div><div class="mono" style="font-size:${PORT?34:44}px">TEST ${n} · ${txt}</div>`);
+// the form under test (sessionStorage), wiped = 0..1
+function formCard(x,y,s,wiped=0,shake=0){
+  const f=['Ada Okafor','Tartu mnt 12','Tallinn'];
+  const fields=f.map((v,i)=>{const keep=Math.round(v.length*(1-clamp(wiped*1.6-i*.3))); return `<div class="field" style="height:${74}px;margin-top:${i?18:0}px;font-size:34px">${esc(v.slice(0,keep))}${keep<v.length&&keep>0?'':''}</div>`;}).join('');
+  return box({left:x+shake,top:y,width:560,transform:`scale(${s})`,transformOrigin:'0 0'},
+    `<div class="mono" style="font-size:${PORT?34:44}px;margin-bottom:16px">Checkout form</div>${fields}`);
+}
+// a big browser tab with the x button
+function bigTab(x,y,w,title,xPress=0,o=1){
+  return box({left:x,top:y,width:w,height:118,opacity:o}, `<div class="tab" style="position:absolute;inset:0;display:flex;align-items:center;padding:0 34px;gap:22px">
+   <div style="width:34px;height:34px;border-radius:50%;background:${INK}"></div>
+   <div style="font-family:'Chivo Mono';font-weight:600;font-size:38px;flex:1">${title}</div>
+   <div style="width:66px;height:66px;border-radius:50%;background:${xPress>0?INK:'transparent'};color:${xPress>0?'#fff':INK};display:flex;align-items:center;justify-content:center;font-family:'Chivo Mono';font-size:48px;transform:scale(${1-0.12*Math.sin(Math.PI*clamp(xPress))})">×</div></div>`);
+}
+const stamp = (txt,color,x,y,p,t0,rot=-6,size=120) => { const k=mv(p,t0,.35,EBACK); if(p<t0) return ''; return box({left:x,top:y,color,transform:`rotate(${rot}deg) scale(${lerp(1.6,1,k)})`,opacity:clamp((p-t0)/.08),transformOrigin:'50% 50%'},`<div class="stamp" style="font-size:${size}px">${txt}</div>`); };
+
+const SC = {
+ // 215.3 "sessionStorage belongs to one tab."
+ subject: (p) => {
+  const k=mv(p,0,.6), kt=mv(p,1.27,.5);
+  if(PORT) return floor()+box({left:70,top:140},`<div class="mono" style="font-size:36px">Test subject 03</div><div class="big" style="font-size:150px;margin-top:14px;text-transform:none">${typed('sessionStorage',p,0,30)}</div>`)
+   + formCard(134,980,1.45)+bigTab(110,680,860,'shop.example · Checkout',0,kt)+box({left:540,top:798,width:5,height:130*kt,background:INK})+box({left:70,top:1560,opacity:kt},`<div class="big" style="font-size:110px">belongs to</div><div class="big" style="font-size:110px;background:${HL};color:#fff;display:inline-block;padding:10px 16px 0;margin-top:12px">one tab.</div>`);
+  return floor()+box({left:120,top:110},`<div class="mono" style="font-size:${PORT?36:44}px">Test subject 03 · the checkout form</div><div class="big" style="font-size:200px;margin-top:14px;text-transform:none">${typed('sessionStorage',p,0,30)}</div>`)
+   + formCard(120,400,1.3) + box({left:848,top:640,width:172*kt,height:5,background:INK})
+   + box({left:1020,top:570,width:780,height:300,opacity:kt},`<div class="tab" style="position:absolute;left:0;top:0;width:560px;height:118px;display:flex;align-items:center;padding:0 30px;gap:20px"><div style="width:30px;height:30px;border-radius:50%;background:${INK}"></div><div style="font-family:'Chivo Mono';font-weight:600;font-size:34px;flex:1">Checkout</div><div style="font-family:'Chivo Mono';font-size:44px">×</div></div><div style="position:absolute;left:0;top:113px;width:780px;height:5px;background:${INK}"></div><div class="mono" style="position:absolute;left:0;top:140px;font-size:32px">tab 1 of 1</div>`)
+   + box({left:120,top:900,opacity:mv(p,1.27,.5),transform:`translateY(${(1-mv(p,1.27,.5))*30}px)`},`<div class="big" style="font-size:120px">belongs to <span style="background:${HL};color:#fff;padding:0 16px">one tab.</span></div>`);
+ },
+ // 217.5 "If you refresh the page, it's still there."
+ refresh: (p) => {
+  const k=mv(p,.3,.45,EBACK), spin=EIO(clamp((p-.4)/.9))*360, shake=p>.4&&p<1.3?Math.sin(p*80)*6*(1.3-p):0;
+  const sl=mv(p,0,.3); const head = box({left:PORT?70:120,top:PORT?180:110,transform:`scale(${lerp(1.18,1,sl)})`,transformOrigin:'0 50%'},`<div class="big" style="font-size:${PORT?190:230}px">Refresh</div>`);
+  const arrow = box({left:PORT?690:1340,top:PORT?190:130,width:200,height:200,transform:`rotate(${spin}deg)`},`<svg viewBox="0 0 100 100" width="200" height="200"><path d="M80 50a30 30 0 1 1-9-21" fill="none" stroke="${INK}" stroke-width="11" stroke-linecap="round"/><path d="M74 10v24H50" fill="none" stroke="${INK}" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/></svg>`);
+  return floor()+testLabel('01','Refresh the page',PORT?70:120,PORT?90:40)+head+arrow+ formCard(PORT?134:120,PORT?700:440,PORT?1.45:1.3,0,shake)
+   + stamp('Still there',G,PORT?120:960,PORT?1340:640,p,1.2,-5,PORT?130:150);
+ },
+ // 219.75 "But if you close the tab, it's gone."
+ close: (p) => {
+  const k=mv(p,.35,.45,EBACK), xPress=clamp((p-.73)/.25), gone=mv(p,.88,.35);
+  const dr=mv(p,0,.35,EBACK); const head = box({left:PORT?70:120,top:(PORT?180:110)+(1-dr)*40},`<div class="big" style="font-size:${PORT?170:230}px">Close tab</div>`);
+  const tabY = PORT?520:380, tabX=PORT?110:1000;
+  return floor()+testLabel('02','Close the tab',PORT?70:120,PORT?90:40)+head
+   + bigTab(tabX, tabY + gone*40, PORT?860:800,'shop.example · Checkout',xPress,1-gone*0.8)
+   + formCard(PORT?134:120,PORT?820:440,PORT?1.45:1.3,clamp((p-.93)/.5))
+   + stamp('Gone',R,PORT?300:1000,PORT?1400:700,p,1.28,-4,PORT?190:190);
+ },
+ // the results board (spine of the film; fills in across the video)
+ board: (p) => {
+  const rows=[['Login','cookie (HttpOnly)'],['Cart','localStorage'],['Form','sessionStorage']], cols=['Refresh','Close tab','Close browser','Close incognito'];
+  const res=[['ok','ok','dep','gone'],['ok','ok','ok','gone'],['ok','gone','gone','gone']];
+  const cw=PORT?215:310, rw=PORT?300:470, x0=PORT?60:130, y0=PORT?520:330, rh=PORT?230:180;
+  let s=floorGrid()+box({left:x0,top:PORT?150:80},`<div class="mono" style="font-size:${PORT?34:44}px">Results · Ada's shop</div><div class="big" style="font-size:${PORT?150:150}px;margin-top:10px">What survives?</div>`);
+  const cols2 = PORT? cols.slice(0,3):cols;
+  cols2.forEach((c,i)=>{ s+=box({left:x0+rw+i*cw,top:y0-46,width:cw-16,textAlign:'center'},`<div class="mono" style="font-size:${PORT?30:38}px;line-height:1.15">${c}</div>`); });
+  rows.forEach((r,j)=>{ const y=y0+70+j*rh; s+=box({left:x0,top:y,width:rw+cols2.length*cw,height:3,background:INK});
+    s+=box({left:x0,top:y+30},`<div class="big" style="font-size:${PORT?80:96}px">${r[0]}</div><div class="mono" style="font-size:${PORT?34:44}px;margin-top:6px;text-transform:none">${PORT?r[1].replace(' (','<br>('):r[1]}</div>`);
+    cols2.forEach((c,i)=>{ const v=res[j][i], k=mv(p,.2+(j*4+i)*.07,.3,EBACK); if(p<.2+(j*4+i)*.07) return;
+      s+=box({left:x0+rw+i*cw+(cw-16)/2-60,top:y+28,width:120,height:120,borderRadius:'50%',background:v==='dep'?Y:(v.startsWith('ok')?G:R),transform:`scale(${k})`,display:'flex',alignItems:'center',justifyContent:'center',color:'#fff'},`<svg viewBox="0 0 40 40" width="64" height="64">${v==='dep'?'<text x="20" y="40" text-anchor="middle" font-family="Saira" font-weight="900" font-size="52" fill="#0E0E0E">*</text>':v.startsWith('ok')?'<path d="M9 21l7 7 15-16" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>':'<path d="M11 11l18 18M29 11L11 29" stroke="#fff" stroke-width="6" stroke-linecap="round"/>'}</svg>`);
+      if(0) s+=box({left:x0+rw+i*cw+(cw-16)/2+50,top:y+14},`<div class="big" style="font-size:60px">*</div>`); }); });
+  s+=box({left:x0,top:y0+70+3*rh+(PORT?20:14),width:PORT?960:1660},`<div class="mono" style="font-size:${PORT?34:44}px;text-transform:none;letter-spacing:.02em;line-height:1.3">* Depends on the cookie. No expiry: gone, unless the browser restores your tabs. With an expiry date: it stays.</div>`);
+  return s;
+ },
+ // receipt: MDN on a lab clipboard, highlighted on her words
+ receipt: (p) => {
+  const k=mv(p,0,.6), hl=mv(p,.7,.6);
+  const cw=PORT?980:1620, ch=cw*220/1080;
+  return floor()+box({left:PORT?50:120,top:PORT?160:90},`<div class="mono" style="font-size:${PORT?34:44}px">Checked against the docs</div><div class="big" style="font-size:${PORT?130:150}px;margin-top:10px">Close the tab = gone</div>`)
+   + box({left:PORT?50:120,top:(PORT?620:360)+(1-k)*60,opacity:k,width:cw,padding:28,background:'#fff',border:`5px solid ${INK}`,boxSizing:'content-box'},
+     `<div style="position:relative;width:${cw}px;height:${ch}px"><img src="../_src/clips/mdn-session.png" style="width:100%;display:block">
+      <div style="position:absolute;left:${cw*(72/1080)}px;top:${ch*(176/220)}px;height:${ch*(38/220)}px;width:${cw*(720/1080)*hl}px;background:${Y};mix-blend-mode:multiply"></div></div>`)
+   + box({left:PORT?50:120,top:(PORT?620:360)+ch+80},`<div class="mono" style="font-size:${PORT?34:44}px;text-transform:none">Source: MDN Web Docs, Window.sessionStorage</div>`)
+   + box({left:PORT?820:1560,top:PORT?120:96,width:PORT?190:220,height:PORT?190:220,transform:`rotate(${(1-k)*90}deg)`},`<div class="mark" style="width:100%;height:100%"></div>`);
+ },
+ // a cookie is weighed: 4 KB vs 5 MB
+ cloak: (p) => {
+  const k=mv(p,0,.5), tg=mv(p,.5,.5,EBACK), fl=EIO(clamp((p-1.6)/.5));
+  const tagBox=(x,y,s)=>box({left:x,top:y,width:420,transform:`scale(${s}) rotate(${lerp(-14,-4,tg)}deg) scaleX(${Math.max(.03,Math.abs(Math.cos(Math.PI*fl)))})`,transformOrigin:'50% 0'},
+    `<div style="width:22px;height:60px;border:6px solid ${INK};border-bottom:none;border-radius:20px 20px 0 0;margin-left:199px;box-sizing:border-box"></div>
+     <div style="background:${fl>.5?INK:'#fff'};color:${fl>.5?Y:INK};border:6px solid ${INK};padding:30px 34px;box-sizing:border-box;height:330px;position:relative">
+     ${fl>.5?`<div class="mono" style="font-size:${PORT?36:44}px">Cookie</div><div style="font-family:'Chivo Mono';font-size:40px;margin-top:40px;white-space:nowrap">session_id=117</div>`:`<div class="mono" style="font-size:${PORT?36:44}px">Subject 01</div><div class="big" style="font-size:120px;margin-top:22px">No.&nbsp;117</div>`}
+     <div class="mark" style="position:absolute;right:24px;top:24px;width:64px;height:64px"></div></div>`);
+  if(PORT) return box({left:60,top:140},`<div class="big" style="font-size:120px">A cookie works<br>like that ticket.</div>`)
+    + box({left:60,top:440,width:960,height:620,overflow:'hidden',border:`6px solid ${INK}`,opacity:k},`<img src="../_src/pexels/px-10880678.jpg" style="width:100%;height:100%;object-fit:cover">`)
+    + box({left:60,top:1075},`<div class="mono" style="font-size:${PORT?34:44}px;text-transform:none">Photo: Alari Tammsalu · Pexels</div>`) + tagBox(330,1200,1);
+  return box({left:120,top:90},`<div class="mono" style="font-size:${PORT?36:44}px">Test subject 01 · the cookie</div><div class="big" style="font-size:118px;margin-top:10px">A cookie works like that ticket.</div>`)
+   + box({left:120,top:300,width:1080,height:640,overflow:'hidden',border:`6px solid ${INK}`,opacity:k},`<img src="../_src/pexels/px-10880678.jpg" style="width:100%;height:100%;object-fit:cover">`)
+   + box({left:120,top:955},`<div class="mono" style="font-size:${PORT?34:44}px;text-transform:none">Photo: Alari Tammsalu · Pexels</div>`)
+   + tagBox(1300,330,1.3);
+ },
+ scale: (p) => {
+  const k=mv(p,.2,.7), n=Math.round(lerp(0,4096,EO(clamp((p-.2)/1.2))));
+  const L = PORT? {x:60,y:620} : {x:120,y:350};
+  return floor()+box({left:L.x,top:PORT?160:90},`<div class="mono" style="font-size:${PORT?34:44}px">Cookie vs localStorage</div><div class="big" style="font-size:${PORT?130:150}px;margin-top:10px">How much fits?</div>`)
+   + box({left:L.x,top:L.y,width:PORT?960:820,height:PORT?380:520,background:INK,color:'#fff',padding:'40px 46px',boxSizing:'border-box'},
+     `<div class="mono" style="font-size:${PORT?34:44}px;color:${Y}">Set-Cookie</div><div style="font-family:'Chivo Mono';font-size:${PORT?40:44}px;margin-top:22px;line-height:1.35;word-break:break-all">session_id=8f3a1c77e0b2…</div>
+      <div class="big" style="position:absolute;right:46px;bottom:30px;font-size:${PORT?150:170}px;color:${Y}">${(n/1024).toFixed(n<4096?1:0)} KB</div>`)
+   + box({left:PORT?60:1010,top:PORT?1080:350,width:PORT?960:790,height:PORT?380:520,border:`5px solid ${INK}`,boxSizing:'border-box',padding:'40px 46px',opacity:mv(p,1.2,.5)},
+     `<div class="mono" style="font-size:${PORT?34:44}px">localStorage · per website</div><div class="big" style="font-size:${PORT?150:170}px;position:absolute;left:46px;bottom:30px">≈ 5 MB</div>`)
+   + box({left:L.x,top:PORT?1500:910,width:PORT?960:1700},`<div class="mono" style="font-size:${PORT?34:44}px;text-transform:none">Sources: RFC 6265 §6.1 · MDN, Storage quotas</div>`);
+ },
+};
+// motion test: raw 215.3 - 222.4 (her words drive every hit)
+setup(SC, [[215.0,0,'subject'],[217.73,0,'refresh'],[220.09,0,'close']].map(([t0,_,s])=>[t0,0,s]),
+ [{t:216.57,name:'tick'},{t:217.73,name:'refresh'},{t:218.93,name:'stamp'},{t:220.09,name:'hit'},{t:220.82,name:'click'},{t:221.02,name:'wipe'}]);
+</script></body></html>

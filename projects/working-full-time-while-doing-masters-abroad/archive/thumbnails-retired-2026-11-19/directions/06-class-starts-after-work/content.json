@@ -1,0 +1,28 @@
+{
+  "text": {
+    "h": "Master's<br>after a 9-5"
+  },
+  "images": {
+    "bg": "../../assets/px/laptop.jpg",
+    "me": "../../assets/shoot2/cut-1585r-clean.png"
+  },
+  "kind": "real scene (a desk at night, code on the screen) + her, tired, bottom left; words on a dark plate right",
+  "layout": "her left, words right",
+  "board": "Thumbnails 94 (yt-41 \"AI has rewired my brain\": \"It Clicked.\" one short line on a dark picture)",
+  "fonts": [
+    "design-26 Inter Tight Black (white #FFFFFF, red #D92A11 on #0C0C0C, Design 20)"
+  ],
+  "colours": "Design 20: #0C0C0C / #FFFFFF / #D92A11",
+  "thumbnail_text": "MASTER'S AFTER A 9-5 (her tired, a desk with code at night)",
+  "titles": [
+    "Studying After Work: My Master's With a Full-Time Job",
+    "How I Work Full Time While Doing a Master's Abroad",
+    "Working a 9-5 While Doing a Master's Abroad"
+  ],
+  "title": "Studying After Work: My Master's With a Full-Time Job",
+  "direction": "Copies Thumbnails 94: one dark real scene (a desk at night with code, Pexels, film/assets/CREDITS.md), one short line on a dark plate, her tired in the corner (hand in her hair).",
+  "nudge": {},
+  "vars": {},
+  "class": "no-lift",
+  "scores": "round-5 cold critic 6; round 6 polished, waiting for the re-score"
+}

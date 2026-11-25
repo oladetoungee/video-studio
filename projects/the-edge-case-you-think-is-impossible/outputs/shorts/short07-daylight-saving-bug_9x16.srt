@@ -1,0 +1,87 @@
+1
+00:00:00,023 --> 00:00:01,823
+in Estonia where I live, the clock changes
+
+2
+00:00:01,823 --> 00:00:02,943
+twice in a year
+
+3
+00:00:02,943 --> 00:00:04,423
+on the 29th of March,
+
+4
+00:00:04,553 --> 00:00:06,973
+the clocks in Tallinn jump from 3 a.m
+
+5
+00:00:06,973 --> 00:00:07,843
+straight to 4 a.m
+
+6
+00:00:07,843 --> 00:00:08,873
+so 3:30
+
+7
+00:00:09,223 --> 00:00:10,553
+that morning never happened
+
+8
+00:00:10,633 --> 00:00:12,163
+the same way on the 25th
+
+9
+00:00:12,383 --> 00:00:12,873
+of
+
+10
+00:00:13,023 --> 00:00:13,623
+October,
+
+11
+00:00:14,383 --> 00:00:15,063
+the clock
+
+12
+00:00:15,223 --> 00:00:16,263
+went from 4 a.m
+
+13
+00:00:16,263 --> 00:00:17,203
+back to 3 a.m
+
+14
+00:00:17,203 --> 00:00:18,033
+so 3:30
+
+15
+00:00:18,580 --> 00:00:19,390
+happened twice
+
+16
+00:00:19,610 --> 00:00:22,250
+now imagine our online shop sends a daily
+
+17
+00:00:22,250 --> 00:00:24,780
+sales report at 3:30, Tallinn time
+
+18
+00:00:25,070 --> 00:00:26,460
+on one day of the year,
+
+19
+00:00:26,670 --> 00:00:28,370
+that job would not run
+
+20
+00:00:28,560 --> 00:00:29,950
+on another day of the year, it would run
+
+21
+00:00:29,950 --> 00:00:30,430
+twice
+
+22
+00:00:30,540 --> 00:00:31,767
+so these are things to consider

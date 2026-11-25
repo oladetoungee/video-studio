@@ -1,0 +1,1285 @@
+{
+ "TOTAL": 387.095,
+ "INTRO": 0.3,
+ "OUTRO": 2.5,
+ "FPS": 30,
+ "CUES": [
+  {
+   "name": "typeHit",
+   "t": 0.3,
+   "db": -3
+  },
+  {
+   "name": "tick",
+   "t": 1.187,
+   "db": -6
+  },
+  {
+   "name": "tick",
+   "t": 7.657,
+   "db": -6
+  },
+  {
+   "name": "paper",
+   "t": 16.678,
+   "db": -4
+  },
+  {
+   "name": "typeHit",
+   "t": 21.027,
+   "db": -3
+  },
+  {
+   "name": "tick",
+   "t": 22.898,
+   "db": -6
+  },
+  {
+   "name": "paper",
+   "t": 23.668,
+   "db": -4
+  },
+  {
+   "name": "error",
+   "t": 27.268,
+   "db": -9
+  },
+  {
+   "name": "tick",
+   "t": 28.808,
+   "db": -7
+  },
+  {
+   "name": "paper",
+   "t": 32.438,
+   "db": -4
+  },
+  {
+   "name": "mark",
+   "t": 34.628,
+   "db": -3
+  },
+  {
+   "name": "paper",
+   "t": 37.808,
+   "db": -4
+  },
+  {
+   "name": "typeHit",
+   "t": 39.137,
+   "db": -2
+  },
+  {
+   "name": "tick",
+   "t": 41.477,
+   "db": -6
+  },
+  {
+   "name": "shutter",
+   "t": 45.477,
+   "db": -6
+  },
+  {
+   "name": "typeHit",
+   "t": 47.238,
+   "db": -7
+  },
+  {
+   "name": "tick",
+   "t": 53.558,
+   "db": -6
+  },
+  {
+   "name": "tick",
+   "t": 58.728,
+   "db": -6
+  },
+  {
+   "name": "typeHit",
+   "t": 61.637,
+   "db": -3
+  },
+  {
+   "name": "tick",
+   "t": 65.158,
+   "db": -6
+  },
+  {
+   "name": "pop",
+   "t": 68.738,
+   "db": -7
+  },
+  {
+   "name": "tick",
+   "t": 70.777,
+   "db": -6
+  },
+  {
+   "name": "tick",
+   "t": 75.397,
+   "db": -6
+  },
+  {
+   "name": "tick",
+   "t": 83.067,
+   "db": -6
+  },
+  {
+   "name": "typeHit",
+   "t": 88.928,
+   "db": -3
+  },
+  {
+   "name": "tap",
+   "t": 89.828,
+   "db": -7
+  },
+  {
+   "name": "tick",
+   "t": 90.677,
+   "db": -6
+  },
+  {
+   "name": "mark",
+   "t": 96.798,
+   "db": -3
+  },
+  {
+   "name": "paper",
+   "t": 97.738,
+   "db": -4
+  },
+  {
+   "name": "typeHit",
+   "t": 98.868,
+   "db": -3
+  },
+  {
+   "name": "typeHit",
+   "t": 99.748,
+   "db": -3
+  },
+  {
+   "name": "typeHit",
+   "t": 100.468,
+   "db": -3
+  },
+  {
+   "name": "typeHit",
+   "t": 101.798,
+   "db": -3
+  },
+  {
+   "name": "typeHit",
+   "t": 102.728,
+   "db": -3
+  },
+  {
+   "name": "typeHit",
+   "t": 103.758,
+   "db": -1
+  },
+  {
+   "name": "typeHit",
+   "t": 105.878,
+   "db": -7
+  },
+  {
+   "name": "tick",
+   "t": 106.808,
+   "db": -6
+  },
+  {
+   "name": "tick",
+   "t": 112.118,
+   "db": -6
+  },
+  {
+   "name": "check",
+   "t": 116.137,
+   "db": -7
+  },
+  {
+   "name": "tick",
+   "t": 117.238,
+   "db": -6
+  },
+  {
+   "name": "paper",
+   "t": 119.837,
+   "db": -4
+  },
+  {
+   "name": "pop",
+   "t": 123.768,
+   "db": -3
+  },
+  {
+   "name": "pop",
+   "t": 125.408,
+   "db": -7
+  },
+  {
+   "name": "tick",
+   "t": 128.798,
+   "db": -6
+  },
+  {
+   "name": "tick",
+   "t": 133.677,
+   "db": -6
+  },
+  {
+   "name": "typeHit",
+   "t": 143.907,
+   "db": -1
+  },
+  {
+   "name": "tap",
+   "t": 146.857,
+   "db": -7
+  },
+  {
+   "name": "tick",
+   "t": 147.577,
+   "db": -6
+  },
+  {
+   "name": "paper",
+   "t": 149.618,
+   "db": -4
+  },
+  {
+   "name": "error",
+   "t": 151.727,
+   "db": -8
+  },
+  {
+   "name": "typeHit",
+   "t": 152.697,
+   "db": -7
+  },
+  {
+   "name": "tick",
+   "t": 153.537,
+   "db": -6
+  },
+  {
+   "name": "error",
+   "t": 158.637,
+   "db": -8
+  },
+  {
+   "name": "mark",
+   "t": 165.337,
+   "db": -3
+  },
+  {
+   "name": "typeHit",
+   "t": 166.727,
+   "db": -3
+  },
+  {
+   "name": "glitch",
+   "t": 168.887,
+   "db": -6
+  },
+  {
+   "name": "tick",
+   "t": 170.387,
+   "db": -4
+  },
+  {
+   "name": "notify",
+   "t": 171.488,
+   "db": -5
+  },
+  {
+   "name": "check",
+   "t": 173.167,
+   "db": -7
+  },
+  {
+   "name": "tick",
+   "t": 174.547,
+   "db": -6
+  },
+  {
+   "name": "pop",
+   "t": 178.137,
+   "db": -3
+  },
+  {
+   "name": "paper",
+   "t": 183.047,
+   "db": -4
+  },
+  {
+   "name": "typeHit",
+   "t": 185.197,
+   "db": -3
+  },
+  {
+   "name": "tick",
+   "t": 186.697,
+   "db": -2
+  },
+  {
+   "name": "error",
+   "t": 187.927,
+   "db": -8
+  },
+  {
+   "name": "pop",
+   "t": 188.827,
+   "db": -7
+  },
+  {
+   "name": "tick",
+   "t": 190.827,
+   "db": -6
+  },
+  {
+   "name": "typeHit",
+   "t": 201.008,
+   "db": -3
+  },
+  {
+   "name": "tick",
+   "t": 202.697,
+   "db": -6
+  },
+  {
+   "name": "typeHit",
+   "t": 204.728,
+   "db": 0
+  },
+  {
+   "name": "typeHit",
+   "t": 205.827,
+   "db": -1
+  },
+  {
+   "name": "paper",
+   "t": 209.657,
+   "db": -4
+  },
+  {
+   "name": "tick",
+   "t": 214.547,
+   "db": -6
+  },
+  {
+   "name": "typeHit",
+   "t": 215.587,
+   "db": -3
+  },
+  {
+   "name": "tap",
+   "t": 216.578,
+   "db": -7
+  },
+  {
+   "name": "tick",
+   "t": 218.617,
+   "db": -6
+  },
+  {
+   "name": "paper",
+   "t": 220.898,
+   "db": -4
+  },
+  {
+   "name": "tick",
+   "t": 222.657,
+   "db": -6
+  },
+  {
+   "name": "typeHit",
+   "t": 226.777,
+   "db": -7
+  },
+  {
+   "name": "tick",
+   "t": 228.337,
+   "db": -6
+  },
+  {
+   "name": "swipe",
+   "t": 233.847,
+   "db": -4
+  },
+  {
+   "name": "swipe",
+   "t": 234.898,
+   "db": -4
+  },
+  {
+   "name": "swipe",
+   "t": 239.777,
+   "db": -4
+  },
+  {
+   "name": "pop",
+   "t": 245.217,
+   "db": -3
+  },
+  {
+   "name": "typeHit",
+   "t": 257.357,
+   "db": -1
+  },
+  {
+   "name": "check",
+   "t": 259.988,
+   "db": -7
+  },
+  {
+   "name": "tick",
+   "t": 260.978,
+   "db": -6
+  },
+  {
+   "name": "pop",
+   "t": 262.948,
+   "db": -7
+  },
+  {
+   "name": "tick",
+   "t": 265.308,
+   "db": -6
+  },
+  {
+   "name": "shutter",
+   "t": 266.488,
+   "db": -6
+  },
+  {
+   "name": "paper",
+   "t": 269.028,
+   "db": -4
+  },
+  {
+   "name": "typeHit",
+   "t": 271.038,
+   "db": -3
+  },
+  {
+   "name": "typeHit",
+   "t": 272.058,
+   "db": -3
+  },
+  {
+   "name": "typeHit",
+   "t": 272.858,
+   "db": -3
+  },
+  {
+   "name": "paper",
+   "t": 276.078,
+   "db": -4
+  },
+  {
+   "name": "typeHit",
+   "t": 280.778,
+   "db": -1
+  },
+  {
+   "name": "tick",
+   "t": 285.19,
+   "db": -4
+  },
+  {
+   "name": "paper",
+   "t": 287.228,
+   "db": -4
+  },
+  {
+   "name": "tick",
+   "t": 290.067,
+   "db": -6
+  },
+  {
+   "name": "typeHit",
+   "t": 291.887,
+   "db": -3
+  },
+  {
+   "name": "tick",
+   "t": 297.468,
+   "db": -6
+  },
+  {
+   "name": "tap",
+   "t": 299.867,
+   "db": -7
+  },
+  {
+   "name": "tick",
+   "t": 301.778,
+   "db": -6
+  },
+  {
+   "name": "shutter",
+   "t": 303.957,
+   "db": -6
+  },
+  {
+   "name": "typeHit",
+   "t": 314.528,
+   "db": -7
+  },
+  {
+   "name": "tick",
+   "t": 318.908,
+   "db": -6
+  },
+  {
+   "name": "typeHit",
+   "t": 321.818,
+   "db": -3
+  },
+  {
+   "name": "mark",
+   "t": 325.398,
+   "db": -3
+  },
+  {
+   "name": "typeHit",
+   "t": 327.758,
+   "db": -3
+  },
+  {
+   "name": "check",
+   "t": 328.957,
+   "db": -7
+  },
+  {
+   "name": "tick",
+   "t": 331.937,
+   "db": -6
+  },
+  {
+   "name": "paper",
+   "t": 333.477,
+   "db": -4
+  },
+  {
+   "name": "paper",
+   "t": 338.42,
+   "db": -4
+  },
+  {
+   "name": "tick",
+   "t": 340.768,
+   "db": -6
+  },
+  {
+   "name": "typeHit",
+   "t": 343.488,
+   "db": -3
+  },
+  {
+   "name": "typeHit",
+   "t": 346.122,
+   "db": -3
+  },
+  {
+   "name": "typeHit",
+   "t": 347.358,
+   "db": -3
+  },
+  {
+   "name": "typeHit",
+   "t": 348.377,
+   "db": -3
+  },
+  {
+   "name": "paper",
+   "t": 349.328,
+   "db": -4
+  },
+  {
+   "name": "typeHit",
+   "t": 350.178,
+   "db": -3
+  },
+  {
+   "name": "typeHit",
+   "t": 351.078,
+   "db": -3
+  },
+  {
+   "name": "pop",
+   "t": 353.877,
+   "db": -3
+  },
+  {
+   "name": "pop",
+   "t": 360.328,
+   "db": -7
+  },
+  {
+   "name": "tick",
+   "t": 362.168,
+   "db": -6
+  },
+  {
+   "name": "paper",
+   "t": 368.228,
+   "db": -4
+  },
+  {
+   "name": "tap",
+   "t": 371.848,
+   "db": -7
+  },
+  {
+   "name": "tick",
+   "t": 373.437,
+   "db": -6
+  },
+  {
+   "name": "typeHit",
+   "t": 380.018,
+   "db": -3
+  },
+  {
+   "name": "tick",
+   "t": 381.838,
+   "db": -6
+  }
+ ],
+ "SCENES": [
+  {
+   "n": 1,
+   "id": "open",
+   "start": 0,
+   "end": 7.138,
+   "ground": "rvGrey",
+   "label": "open",
+   "trans": "cut"
+  },
+  {
+   "n": 2,
+   "id": "rare",
+   "start": 7.138,
+   "end": 9.207,
+   "ground": "rvInk",
+   "label": "rare",
+   "trans": "cut"
+  },
+  {
+   "n": 3,
+   "id": "indeed",
+   "start": 9.207,
+   "end": 16.728,
+   "ground": "rvGrey",
+   "label": "indeed",
+   "trans": "cut"
+  },
+  {
+   "n": 4,
+   "id": "only-45",
+   "start": 16.728,
+   "end": 20.927,
+   "ground": "rvGreyB",
+   "label": "only-45",
+   "trans": "cut"
+  },
+  {
+   "n": 5,
+   "id": "reduced",
+   "start": 20.927,
+   "end": 23.668,
+   "ground": "rvGrey",
+   "label": "reduced",
+   "trans": "cut"
+  },
+  {
+   "n": 6,
+   "id": "ladder",
+   "start": 23.668,
+   "end": 28.688,
+   "ground": "rvGreyB",
+   "label": "ladder",
+   "trans": "cut"
+  },
+  {
+   "n": 7,
+   "id": "s3",
+   "start": 28.688,
+   "end": 32.438,
+   "ground": "rvGrey",
+   "label": "s3",
+   "trans": "cut"
+  },
+  {
+   "n": 8,
+   "id": "up-15",
+   "start": 32.438,
+   "end": 37.808,
+   "ground": "rvGreyB",
+   "label": "up-15",
+   "trans": "cut"
+  },
+  {
+   "n": 9,
+   "id": "senior-71",
+   "start": 37.808,
+   "end": 40.758,
+   "ground": "rvGrey",
+   "label": "senior-71",
+   "trans": "cut"
+  },
+  {
+   "n": 10,
+   "id": "s6",
+   "start": 40.758,
+   "end": 45.477,
+   "ground": "rvGreyB",
+   "label": "s6",
+   "trans": "cut"
+  },
+  {
+   "n": 11,
+   "id": "just-code",
+   "start": 45.477,
+   "end": 47.118,
+   "ground": "rvGrey",
+   "label": "just-code",
+   "trans": "cut"
+  },
+  {
+   "n": 12,
+   "id": "s8",
+   "start": 47.118,
+   "end": 54.118,
+   "ground": "rvGreyB",
+   "label": "s8",
+   "trans": "cut"
+  },
+  {
+   "n": 13,
+   "id": "s9",
+   "start": 54.118,
+   "end": 60.377,
+   "ground": "rvInk",
+   "label": "s9",
+   "trans": "cut"
+  },
+  {
+   "n": 14,
+   "id": "yes-but",
+   "start": 60.377,
+   "end": 68.618,
+   "ground": "rvGrey",
+   "label": "yes-but",
+   "trans": "cut"
+  },
+  {
+   "n": 15,
+   "id": "s11",
+   "start": 68.618,
+   "end": 72.937,
+   "ground": "rvGreyB",
+   "label": "s11",
+   "trans": "cut"
+  },
+  {
+   "n": 16,
+   "id": "why-video",
+   "start": 72.937,
+   "end": 77.837,
+   "ground": "rvInk",
+   "label": "why-video",
+   "trans": "cut"
+  },
+  {
+   "n": 17,
+   "id": "s13",
+   "start": 77.837,
+   "end": 83.568,
+   "ground": "rvGrey",
+   "label": "s13",
+   "trans": "cut"
+  },
+  {
+   "n": 18,
+   "id": "then-now",
+   "start": 83.568,
+   "end": 89.708,
+   "ground": "rvGreyB",
+   "label": "then-now",
+   "trans": "cut"
+  },
+  {
+   "n": 19,
+   "id": "s16",
+   "start": 89.708,
+   "end": 97.718,
+   "ground": "rvGrey",
+   "label": "s16",
+   "trans": "cut"
+  },
+  {
+   "n": 20,
+   "id": "four-things",
+   "start": 97.718,
+   "end": 103.708,
+   "ground": "rvGreyB",
+   "label": "four-things",
+   "trans": "cut"
+  },
+  {
+   "n": 21,
+   "id": "skill-1",
+   "start": 103.708,
+   "end": 105.758,
+   "ground": "rvInk",
+   "label": "skill-1",
+   "trans": "cut"
+  },
+  {
+   "n": 22,
+   "id": "s18",
+   "start": 105.758,
+   "end": 111.598,
+   "ground": "rvGrey",
+   "label": "s18",
+   "trans": "cut"
+  },
+  {
+   "n": 23,
+   "id": "not-read",
+   "start": 111.598,
+   "end": 116.017,
+   "ground": "rvGreyB",
+   "label": "not-read",
+   "trans": "cut"
+  },
+  {
+   "n": 24,
+   "id": "s21",
+   "start": 116.017,
+   "end": 119.837,
+   "ground": "rvGrey",
+   "label": "s21",
+   "trans": "cut"
+  },
+  {
+   "n": 25,
+   "id": "read-it",
+   "start": 119.837,
+   "end": 125.288,
+   "ground": "rvGreyB",
+   "label": "read-it",
+   "trans": "cut"
+  },
+  {
+   "n": 26,
+   "id": "s23",
+   "start": 125.288,
+   "end": 130.187,
+   "ground": "rvGrey",
+   "label": "s23",
+   "trans": "cut"
+  },
+  {
+   "n": 27,
+   "id": "s24",
+   "start": 130.187,
+   "end": 143.857,
+   "ground": "rvGreyB",
+   "label": "s24",
+   "trans": "cut"
+  },
+  {
+   "n": 28,
+   "id": "skill-2",
+   "start": 143.857,
+   "end": 146.737,
+   "ground": "rvInk",
+   "label": "skill-2",
+   "trans": "cut"
+  },
+  {
+   "n": 29,
+   "id": "s27",
+   "start": 146.737,
+   "end": 149.618,
+   "ground": "rvGrey",
+   "label": "s27",
+   "trans": "cut"
+  },
+  {
+   "n": 30,
+   "id": "crash",
+   "start": 149.618,
+   "end": 152.577,
+   "ground": "rvGreyB",
+   "label": "crash",
+   "trans": "cut"
+  },
+  {
+   "n": 31,
+   "id": "s29",
+   "start": 152.577,
+   "end": 158.337,
+   "ground": "rvGrey",
+   "label": "s29",
+   "trans": "cut"
+  },
+  {
+   "n": 32,
+   "id": "paste",
+   "start": 158.337,
+   "end": 163.107,
+   "ground": "rvGreyB",
+   "label": "paste",
+   "trans": "cut"
+  },
+  {
+   "n": 33,
+   "id": "try-catch",
+   "start": 163.107,
+   "end": 173.047,
+   "ground": "rvGrey",
+   "label": "try-catch",
+   "trans": "cut"
+  },
+  {
+   "n": 34,
+   "id": "s36",
+   "start": 173.047,
+   "end": 174.927,
+   "ground": "rvGreyB",
+   "label": "s36",
+   "trans": "cut"
+  },
+  {
+   "n": 35,
+   "id": "read-error",
+   "start": 174.927,
+   "end": 183.047,
+   "ground": "rvGrey",
+   "label": "read-error",
+   "trans": "cut"
+  },
+  {
+   "n": 36,
+   "id": "real-fix",
+   "start": 183.047,
+   "end": 186.397,
+   "ground": "rvGreyB",
+   "label": "real-fix",
+   "trans": "cut"
+  },
+  {
+   "n": 37,
+   "id": "email-taken",
+   "start": 186.397,
+   "end": 188.707,
+   "ground": "rvGrey",
+   "label": "email-taken",
+   "trans": "cut"
+  },
+  {
+   "n": 38,
+   "id": "s39",
+   "start": 188.707,
+   "end": 191.297,
+   "ground": "rvGreyB",
+   "label": "s39",
+   "trans": "cut"
+  },
+  {
+   "n": 39,
+   "id": "s40",
+   "start": 191.297,
+   "end": 198.097,
+   "ground": "rvInk",
+   "label": "s40",
+   "trans": "cut"
+  },
+  {
+   "n": 40,
+   "id": "which-one",
+   "start": 198.097,
+   "end": 205.777,
+   "ground": "rvGrey",
+   "label": "which-one",
+   "trans": "cut"
+  },
+  {
+   "n": 41,
+   "id": "skill-3",
+   "start": 205.777,
+   "end": 209.657,
+   "ground": "rvInk",
+   "label": "skill-3",
+   "trans": "cut"
+  },
+  {
+   "n": 42,
+   "id": "web-works",
+   "start": 209.657,
+   "end": 216.458,
+   "ground": "rvGrey",
+   "label": "web-works",
+   "trans": "cut"
+  },
+  {
+   "n": 43,
+   "id": "s46",
+   "start": 216.458,
+   "end": 220.898,
+   "ground": "rvGreyB",
+   "label": "s46",
+   "trans": "cut"
+  },
+  {
+   "n": 44,
+   "id": "questions",
+   "start": 220.898,
+   "end": 226.657,
+   "ground": "rvGrey",
+   "label": "questions",
+   "trans": "cut"
+  },
+  {
+   "n": 45,
+   "id": "s50",
+   "start": 226.657,
+   "end": 228.697,
+   "ground": "rvGreyB",
+   "label": "s50",
+   "trans": "cut"
+  },
+  {
+   "n": 46,
+   "id": "webhook",
+   "start": 228.697,
+   "end": 238.898,
+   "ground": "rvGrey",
+   "label": "webhook",
+   "trans": "cut"
+  },
+  {
+   "n": 47,
+   "id": "twice",
+   "start": 238.898,
+   "end": 257.307,
+   "ground": "rvGreyB",
+   "label": "twice",
+   "trans": "cut"
+  },
+  {
+   "n": 48,
+   "id": "skill-4",
+   "start": 257.307,
+   "end": 259.868,
+   "ground": "rvInk",
+   "label": "skill-4",
+   "trans": "cut"
+  },
+  {
+   "n": 49,
+   "id": "s59",
+   "start": 259.868,
+   "end": 262.828,
+   "ground": "rvGrey",
+   "label": "s59",
+   "trans": "cut"
+  },
+  {
+   "n": 50,
+   "id": "s60",
+   "start": 262.828,
+   "end": 266.468,
+   "ground": "rvGreyB",
+   "label": "s60",
+   "trans": "cut"
+  },
+  {
+   "n": 51,
+   "id": "fleet",
+   "start": 266.468,
+   "end": 269.028,
+   "ground": "rvGrey",
+   "label": "fleet",
+   "trans": "cut"
+  },
+  {
+   "n": 52,
+   "id": "fields",
+   "start": 269.028,
+   "end": 273.307,
+   "ground": "rvGreyB",
+   "label": "fields",
+   "trans": "cut"
+  },
+  {
+   "n": 53,
+   "id": "pharmacy",
+   "start": 273.307,
+   "end": 276.078,
+   "ground": "rvGrey",
+   "label": "pharmacy",
+   "trans": "cut"
+  },
+  {
+   "n": 54,
+   "id": "expires-first",
+   "start": 276.078,
+   "end": 287.228,
+   "ground": "rvGreyB",
+   "label": "expires-first",
+   "trans": "cut"
+  },
+  {
+   "n": 55,
+   "id": "whats-missing",
+   "start": 287.228,
+   "end": 292.908,
+   "ground": "rvGrey",
+   "label": "whats-missing",
+   "trans": "cut"
+  },
+  {
+   "n": 56,
+   "id": "s66",
+   "start": 292.908,
+   "end": 299.747,
+   "ground": "rvGreyB",
+   "label": "s66",
+   "trans": "cut"
+  },
+  {
+   "n": 57,
+   "id": "s67",
+   "start": 299.747,
+   "end": 303.957,
+   "ground": "rvGrey",
+   "label": "s67",
+   "trans": "cut"
+  },
+  {
+   "n": 58,
+   "id": "go-to",
+   "start": 303.957,
+   "end": 314.408,
+   "ground": "rvGreyB",
+   "label": "go-to",
+   "trans": "cut"
+  },
+  {
+   "n": 59,
+   "id": "s70",
+   "start": 314.408,
+   "end": 321.078,
+   "ground": "rvGrey",
+   "label": "s70",
+   "trans": "cut"
+  },
+  {
+   "n": 60,
+   "id": "worth-it",
+   "start": 321.078,
+   "end": 324.338,
+   "ground": "rvGreyB",
+   "label": "worth-it",
+   "trans": "cut"
+  },
+  {
+   "n": 61,
+   "id": "less-of",
+   "start": 324.338,
+   "end": 328.837,
+   "ground": "rvGrey",
+   "label": "less-of",
+   "trans": "cut"
+  },
+  {
+   "n": 62,
+   "id": "s73",
+   "start": 328.837,
+   "end": 333.477,
+   "ground": "rvGreyB",
+   "label": "s73",
+   "trans": "cut"
+  },
+  {
+   "n": 63,
+   "id": "junior-role",
+   "start": 333.477,
+   "end": 338.42,
+   "ground": "rvGrey",
+   "label": "junior-role",
+   "trans": "cut"
+  },
+  {
+   "n": 64,
+   "id": "plan",
+   "start": 338.42,
+   "end": 349.328,
+   "ground": "rvGreyB",
+   "label": "plan",
+   "trans": "cut"
+  },
+  {
+   "n": 65,
+   "id": "free-places",
+   "start": 349.328,
+   "end": 360.208,
+   "ground": "rvGrey",
+   "label": "free-places",
+   "trans": "cut"
+  },
+  {
+   "n": 66,
+   "id": "s79",
+   "start": 360.208,
+   "end": 362.768,
+   "ground": "rvGreyB",
+   "label": "s79",
+   "trans": "cut"
+  },
+  {
+   "n": 67,
+   "id": "s80",
+   "start": 362.768,
+   "end": 368.208,
+   "ground": "rvGrey",
+   "label": "s80",
+   "trans": "cut"
+  },
+  {
+   "n": 68,
+   "id": "market",
+   "start": 368.208,
+   "end": 371.728,
+   "ground": "rvGreyB",
+   "label": "market",
+   "trans": "cut"
+  },
+  {
+   "n": 69,
+   "id": "s81",
+   "start": 371.728,
+   "end": 379.898,
+   "ground": "rvGrey",
+   "label": "s81",
+   "trans": "cut"
+  },
+  {
+   "n": 70,
+   "id": "promise",
+   "start": 379.898,
+   "end": 387.095,
+   "ground": "rvInk",
+   "label": "promise",
+   "trans": "cut"
+  }
+ ]
+}

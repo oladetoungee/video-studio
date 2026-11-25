@@ -1,0 +1,66 @@
+{
+ "title": "Set-Cookie header - HTTP | MDN",
+ "h1": "Set-Cookie header",
+ "h1y": 107,
+ "found": {
+  "Session cookies will also be restored": [
+   [
+    743.703125,
+    2824.5,
+    210.3125,
+    20
+   ],
+   [
+    354,
+    2852.5,
+    62.484375,
+    20
+   ]
+  ],
+  "Forbids JavaScript from accessing the cookie": [
+   [
+    304,
+    3164.5,
+    342.234375,
+    20
+   ]
+  ]
+ },
+ "H": 11153,
+ "focus": {
+  "Session cookies will also be restored": {
+   "file": "mdn-setcookie__session-cookies-will-als.png",
+   "top": 2304.5,
+   "rects": [
+    [
+     743.703125,
+     520,
+     210.3125,
+     20
+    ],
+    [
+     354,
+     548,
+     62.484375,
+     20
+    ]
+   ]
+  },
+  "Forbids JavaScript from accessing the cookie": {
+   "file": "mdn-setcookie__forbids-javascript-from-.png",
+   "top": 2644.5,
+   "rects": [
+    [
+     304,
+     520,
+     342.234375,
+     20
+    ]
+   ]
+  }
+ },
+ "clipTop": 0,
+ "scale": 1.5,
+ "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie",
+ "captured": "2026-11-02T19:33:34.956Z"
+}

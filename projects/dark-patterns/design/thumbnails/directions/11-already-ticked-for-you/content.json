@@ -1,0 +1,27 @@
+{
+ "direction": "No face. Black ground: a checkout list in white on the left with three boxes already ticked in red (Gift wrap +€2.99, Insurance +€4.50, Newsletter), and \"Already ticked for you.\" in a calm serif on the right. Generic, no shop.",
+ "thumbnail_text": "Already ticked for you.",
+ "kind": "flat",
+ "recommended": false,
+ "titles": [
+  "Why the Box at Checkout Was Already Ticked for You",
+  "Dark Patterns in E-Commerce: 11 Checkout Tricks to Spot",
+  "Untick These Boxes Before You Pay Online"
+ ],
+ "text": {
+  "hd": "Already<br>ticked<br>for you.",
+  "r1": "Gift wrap +€2.99",
+  "r2": "Insurance +€4.50",
+  "r3": "Protection +€3.99"
+ },
+ "images": {},
+ "vars": {
+  "--ground": "#010101"
+ },
+ "board": "Thumbnails 36 (pin-03-08 \"Everything done by 2pm.\": a white card on a dark frame, a hand-drawn checklist on the left, one calm serif line on the right)",
+ "fonts": "Font 18 (Gloock, Design 391: red on black) + Font 26 (Inter Tight, Design 20: white on black) for the list",
+ "colours": "Font 18 specimen: red #BF3520 on black #010101; Font 26 specimen: white on black; ticks in the same red",
+ "title": "Why the Box at Checkout Was Already Ticked for You",
+ "class": "no-lift",
+ "scores": "rework 2026-11-19 cold critic R1 6/7, R2 6/7, R3 5/7; headline bigger"
+}

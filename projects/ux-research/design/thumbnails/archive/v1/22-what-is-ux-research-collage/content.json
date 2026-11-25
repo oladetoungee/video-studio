@@ -1,0 +1,25 @@
+{
+  "direction": "Her collage style (viral-samples/collage: \"Capsule wardrobe\", \"Time to lock in.\"): full natural photo of her in her room, bright, small objects of the topic floating around her (two sticky notes with the two questions research asks, an index card UI ≠ UX), one big elegant serif line across her chest, two small italic labels.",
+  "concept": "Collage over the creator (her 2026-10-07 style)",
+  "thumbnail_text": "UX research, in plain words",
+  "title": "UX Research for Beginners: What It Is and How It Works",
+  "titles": [
+    "UX Research for Beginners: What It Is and How It Works",
+    "What Is UX Research? Explained With Real App Examples"
+  ],
+  "text": {
+    "line": "UX research, <i>in plain words</i>",
+    "n1": "Who is it for?",
+    "n2": "What do they need?",
+    "card": "UI ≠ UX",
+    "s1": "say vs do",
+    "s2": "how to get in"
+  },
+  "images": {
+    "scene": "../../assets/scene/g/s_586.jpg",
+    "front": "../../assets/scene/g/mask/s_586.png"
+  },
+  "vars": {},
+  "scores": "a 4/3 · 4/5 · 4/4 | b 5/4 · 4/4 · 5/4 | c 7 · 8 · 8",
+  "recommended": false
+}

@@ -1,0 +1,36 @@
+{
+  "direction": "Photo background (kit T10, without the laptop photo we don't have yet): her room washed slate blue, she calm in colour on the left; on the right a pile of three alert cards every developer got this month (generic, no app or brand). References: her saved YouTube thumbnails (person in her real setting + a phone/chat card), her ux-research thumbnail.",
+  "thumbnail_text": "DEVELOPERS, UPDATE NOW",
+  "titles": [
+    "October Was a Terrible Month for Developer Security",
+    "Cybersecurity Awareness Month 2026 Went Badly for Developers",
+    "The October 2026 Hacks Every Developer Should Know"
+  ],
+  "title": "October Was a Terrible Month for Developer Security",
+  "kind": "photo",
+  "text": {
+    "hd": "Developers,<br><span class=\"acc\">update now</span>",
+    "a1": "Update PHP today",
+    "a1s": "Critical security fix released",
+    "a2": "Change your API keys",
+    "a2s": "After the Railway breach",
+    "a3": "Unusual AI usage",
+    "a3s": "This month: $1,000+"
+  },
+  "images": {
+    "bg": "../../assets/scene/gbemi-410.0.jpg",
+    "me": "../../assets/scene/gbemi-410.0-person.png"
+  },
+  "vars": {
+    "--ground": "#16110D",
+    "--fg": "#EFE7D8",
+    "--accent": "#F2541B",
+    "--wash": "#50607E",
+    "--dim": "rgba(12,16,26,.42)",
+    "--sc": "1.3",
+    "--sc-x": "-190px",
+    "--sc-y": "-20px"
+  },
+  "scores": "cold critic R1 6 · R2 6.5",
+  "recommended": false
+}

@@ -1,0 +1,19 @@
+@font-face{font-family:"DM Serif Display";src:url(../_fonts/DMSerifDisplay-Regular.ttf)}
+@font-face{font-family:"DM Serif Display";font-style:italic;src:url(../_fonts/DMSerifDisplay-Italic.ttf)}
+@font-face{font-family:"Hanken Grotesk";font-weight:100 900;src:url(../_fonts/HankenGrotesk-VF.ttf)}
+@font-face{font-family:"Azeret Mono";font-weight:100 900;src:url(../_fonts/AzeretMono-VF.ttf)}
+@font-face{font-family:"Barlow Condensed";font-weight:500;src:url(../_fonts/BarlowCondensed-Medium.ttf)}
+@font-face{font-family:"Barlow Condensed";font-weight:600;src:url(../_fonts/BarlowCondensed-SemiBold.ttf)}
+@font-face{font-family:"Barlow Condensed";font-weight:800;src:url(../_fonts/BarlowCondensed-ExtraBold.ttf)}
+@font-face{font-family:"Barlow";font-weight:500;src:url(../_fonts/Barlow-Medium.ttf)}
+@font-face{font-family:"Big Shoulders Display";font-weight:100 900;src:url(../_fonts/BigShouldersDisplay-VF.ttf)}
+@font-face{font-family:"Plus Jakarta Sans";font-weight:200 800;src:url(../_fonts/PlusJakartaSans-VF.ttf)}
+@font-face{font-family:"Instrument Serif";src:url(../_fonts/InstrumentSerif-Regular.ttf)}
+@font-face{font-family:"Instrument Serif";font-style:italic;src:url(../_fonts/InstrumentSerif-Italic.ttf)}
+@font-face{font-family:"DM Mono";font-weight:400;src:url(../_fonts/DMMono-Regular.ttf)}
+@font-face{font-family:"DM Mono";font-weight:500;src:url(../_fonts/DMMono-Medium.ttf)}
+html,body{margin:0;padding:0;overflow:hidden;background:#000}
+#stage{position:relative;overflow:hidden}
+#stage *{box-sizing:border-box}
+.abs{position:absolute}
+img{display:block}

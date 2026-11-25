@@ -1,0 +1,32 @@
+{
+  "direction": "REMAKE of viral sample 4 (\"you're stuck in a loop\", Karina Alexandria): her real room, her on the right talking, a printed black-and-white diagram pinned on a whiteboard on the left, one lowercase white line across the top. The anger-loop chart becomes an engraving-style chart of how one name search pulls a marriage record from courts, the registry, assemblies and the gazette (illustration).",
+  "concept": "R4",
+  "sample": "4",
+  "thumbnail_text": "your marriage is searchable",
+  "title": "You Can Now Check If Someone Is Married in Ghana",
+  "titles": [
+    "You Can Now Check If Someone Is Married in Ghana",
+    "Ghana's Marriage Records Are Now Online. Should They Be?",
+    "Ghana Put Marriage and Divorce Records Online. Good Idea?"
+  ],
+  "text": {
+    "head": "your marriage is searchable",
+    "d1": "How one name search",
+    "d2": "finds a marriage",
+    "b1": "• Is she married?",
+    "b2": "• Since when?",
+    "b3": "• Ever divorced?",
+    "b4": "• Was the pastor licensed?",
+    "l1": "Courts",
+    "l2": "Registrar-General",
+    "l3": "Local assemblies",
+    "l4": "Ghana Gazette",
+    "l5": "",
+    "l6": "Records pulled together"
+  },
+  "images": {
+    "scene": "../../assets/scene/warm/s_133.00.jpg",
+    "front": "../../assets/scene/warm/mask/s_133.00.png"
+  },
+  "vars": {}
+}

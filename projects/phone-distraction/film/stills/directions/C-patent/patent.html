@@ -1,0 +1,124 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:NR;src:url(../_fonts/Newsreader.ttf)}
+@font-face{font-family:NRI;src:url(../_fonts/Newsreader-Italic.ttf)}
+@font-face{font-family:PM;src:url(../_fonts/IBMPlexMono-Regular.ttf)}
+@font-face{font-family:PMB;src:url(../_fonts/IBMPlexMono-SemiBold.ttf)}
+html,body{margin:0;background:#F6F5F0;overflow:hidden}
+#stage{position:relative;overflow:hidden;background:#F6F5F0;color:#151515}
+.say{font-family:NR;font-weight:500;font-variation-settings:"opsz" 72;letter-spacing:-.015em;line-height:1.06}
+.mono{font-family:PM;font-size:34px;line-height:1.35;letter-spacing:-.01em}
+.mb{font-family:PMB}
+.w{display:inline-block;white-space:pre}
+.fig{mix-blend-mode:multiply}
+</style></head><body><div id="stage"></div>
+<script src="../_tools/kit.js"></script>
+<script>
+// C · PATENT OFFICE. 0-9.3 = motion test (her 5:01.9-5:11.2). Later scenes are stills only.
+const PAPER = '#F6F5F0', INK = '#151515', RED = '#E2382B', GREY = '#77756E';
+const T0 = 301.9, wt = s => +(s - T0).toFixed(2);
+function words(p, x, y, w, size, list, extra = {}) {
+  const b = el('div', Object.assign({ left: x + 'px', top: y + 'px', width: w + 'px', fontSize: size + 'px' }, extra), '', p); b.className = 'say';
+  b.ws = list.map(([t, txt]) => { const s = document.createElement('span'); s.className = 'w'; s.textContent = txt + ' '; b.appendChild(s); return [t, s]; });
+  return b;
+}
+function showW(b, t) { for (const [t0, s] of b.ws) { const p = prog(t, t0 - 0.02, t0 + 0.12); s.style.opacity = p; s.style.filter = `blur(${(1 - p) * 5}px)`; } }
+function mono(p, x, y, w, html, extra = {}) { const m = el('div', Object.assign({ left: x + 'px', top: y + 'px', width: w + 'px' }, extra), html, p); m.className = 'mono'; return m; }
+// SVG overlay helper in a given box
+function svgBox(p, x, y, w, h, inner) { return el('div', { left: x + 'px', top: y + 'px', width: w + 'px', height: h + 'px' }, `<svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" style="overflow:visible">${inner}</svg>`, p); }
+// ---------------- the motion test ----------------
+scene('test', 0, 9.3, (R, S) => {
+  // the real figure, in a camera group
+  const fh = V(1000, 1060), fw = fh * 2101 / 3033, fx = V(1080, (W - fw) / 2), fy = V(40, 730);
+  S.clip = el('div', { left: 0, top: 0, width: W + 'px', height: H + 'px', clipPath: PORTRAIT ? 'inset(700px 0 0 0)' : 'inset(0 0 0 1040px)' }, '', R);
+  S.cam = el('div', { left: 0, top: 0, width: W + 'px', height: H + 'px', transformOrigin: '0 0' }, '', S.clip);
+  S.figWrap = el('div', { left: fx + 'px', top: fy + 'px', width: fw + 'px', height: fh + 'px', overflow: 'hidden' }, '', S.cam);
+  const im = el('img', { left: 0, top: 0, width: fw + 'px', height: fh + 'px' }, '', S.figWrap); im.src = '../../../assets/sources/patent-US8448084-fig8-ink.png';
+  S.scan = el('div', { left: fx - 20 + 'px', top: fy + 'px', width: fw + 40 + 'px', height: '3px', background: RED }, '', S.cam);
+  S.F = { fx, fy, fw, fh };
+  // red marker ellipse around "Pull down to refresh..." (fig coords .31-.60 x, .25-.29 y)
+  const ex = fx + fw * 0.30, ey = fy + fh * 0.245, ew = fw * 0.31, eh = fh * 0.05;
+  S.ell = svgBox(S.cam, ex, ey, ew, eh, `<ellipse cx="${ew / 2}" cy="${eh / 2}" rx="${ew / 2}" ry="${eh / 2}" fill="none" stroke="${RED}" stroke-width="2.4" stroke-dasharray="1000" stroke-dashoffset="1000" transform="rotate(-2 ${ew / 2} ${eh / 2})"/>`);
+  S.Z = { x: ex + ew / 2, y: ey + eh / 2 };
+    S.figLab = mono(R, V(120, 60), V(64, 650), 900, '<span class="mb">US 8,448,084 B2</span> · FIG. 8');
+  // words
+  const tx = V(120, 60), tw = V(880, 960), ts = V(70, 60), ty = V(220, 150);
+  S.w1 = words(R, tx, ty, tw, ts, [[wt(302.0), 'That'], [wt(302.0), 'feature'], [wt(302.42), 'was'], [wt(302.60), 'developed'], [wt(303.14), 'by'], [wt(303.27), 'a'], [wt(303.52), 'developer'], [wt(303.86), 'called'], [wt(304.22), 'Loren,'], [wt(304.60), 'for'], [wt(304.79), 'a'], [wt(304.85), 'Twitter'], [wt(305.33), 'app'], [wt(305.64), 'he'], [wt(305.64), 'built,'], [wt(305.92), 'called'], [wt(306.24), 'Tweetie.']]);
+  S.cred = mono(R, tx, V(640, 500), tw, ['Inventor: Loren Brichter', 'Assignee: Twitter, Inc.', 'Filed 8 Apr 2010 · granted 21 May 2013'].map(l => `<div class="ln" style="position:relative">${l}</div>`).join(''), { color: GREY });
+  S.w2 = words(R, tx, ty, tw, ts, [[wt(308.08), 'And'], [wt(308.28), 'he'], [wt(308.39), 'himself'], [wt(308.83), 'later'], [wt(309.16), 'said'], [wt(309.45), 'that'], [wt(309.72), 'this'], [wt(309.88), 'thing'], [wt(310.12), 'is'], [wt(310.26), 'really'], [wt(310.68), 'addictive.']]);
+  S.q = mono(R, tx, V(640, 500), tw, '“Pull-to-refresh is addictive.”<br>Loren Brichter, The Guardian, 2017', { color: GREY });
+  mono(R, V(120, 60), V(990, 1800), 900, '', {});
+}, (t, S) => {
+  const { fx, fy, fw, fh } = S.F;
+  // plot the figure top -> bottom in 1.0 s (outQuint-ish)
+  const pl = eOut(prog(t, 0.0, 1.1)); S.figWrap.style.height = fh * pl + 'px'; S.scan.style.top = fy + fh * pl + 'px'; S.scan.style.opacity = pl < 1 ? 1 : 0;
+  S.figLab.style.opacity = prog(t, 0.2, 0.5);
+  // camera push into the "Pull down to refresh..." line, 5.0-5.9 (inOutQuart), scale 1 -> 2.6
+  const k = eIO(prog(t, 5.0, 5.9)), sc = 1 + 1.2 * k;
+  const tx = V(1480, CX) , ty = V(560, 1100);
+  const ox = S.Z.x + (tx - S.Z.x) * k, oy = S.Z.y + (ty - S.Z.y) * k;
+  S.cam.style.transform = `translate(${ox - S.Z.x * sc}px, ${oy - S.Z.y * sc}px) scale(${sc})`;
+  S.figLab.style.opacity = prog(t, 0.2, 0.5) * (1 - k);
+  S.ell.querySelector('ellipse').setAttribute('stroke-dashoffset', 1000 * (1 - eOut(prog(t, 5.95, 6.5))));
+  // words: block 1 until 6.05, then block 2
+  showW(S.w1, t); S.w1.style.opacity = 1 - prog(t, 5.9, 6.1);
+  [...S.cred.querySelectorAll('.ln')].forEach((l, i) => { const p = eOut(prog(t, wt(304.22) + i * 0.1, wt(304.22) + i * 0.1 + 0.4)); l.style.opacity = p; l.style.transform = `translateY(${(1 - p) * 14}px)`; });
+  S.cred.style.opacity = 1 - prog(t, 5.9, 6.1);
+  showW(S.w2, t); S.w2.style.opacity = t < 6.1 ? 0 : 1;
+  // hand underline under "addictive." on its word (8.78): a child of the word, so it follows the line wrap
+  if (!S.ulEl) { const last = S.w2.ws[S.w2.ws.length - 1][1]; last.style.position = 'relative'; S.ulEl = el('div', { left: '2px', bottom: '-6px', width: 'calc(100% - 26px)', height: '7px', borderRadius: '4px', background: RED, transformOrigin: 'left', transform: 'rotate(-1deg)' }, '', last); }
+  S.ulEl.style.transform = `rotate(-1deg) scaleX(${eOut(prog(t, wt(310.68), wt(310.68) + 0.45))})`;
+  const qp = eOut(prog(t, wt(310.75), wt(310.75) + 0.4)); S.q.style.opacity = qp; S.q.style.transform = `translateY(${(1 - qp) * 14}px)`;
+});
+// ---------------- still: Fogg's model drawn in patent style ----------------
+scene('fogg', 20, 30, (R, S) => {
+  words(R, V(120, 60), V(110, 160), V(1700, 960), V(84, 76), [[0, 'The notification'], [0, 'is the prompt.']]).querySelectorAll('.w').forEach(s => s.style.opacity = 1);
+  const bx = V(120, 60), by = V(330, 520), bw = V(470, 600), bh = V(150, 170), gx = V(60, 0), gy = V(0, 70);
+  const items = [['101', 'MOTIVATION', 'curiosity'], ['102', 'ABILITY', 'a single tap'], ['103', 'PROMPT', 'a notification']];
+  let svgs = '';
+  items.forEach(([n, a, b], i) => {
+    const x = PORTRAIT ? bx : bx + i * (bw + gx), y = PORTRAIT ? by + i * (bh + gy) : by;
+    svgs += `<rect x="${x}" y="${y}" width="${bw}" height="${bh}" fill="none" stroke="${i === 2 ? RED : INK}" stroke-width="${i === 2 ? 4 : 2.5}"/>`;
+    mono(R, x + 28, y + 26, bw - 56, `<span class="mb">${a}</span><br>${b}`);
+    svgs += `<line x1="${x + bw - 40}" y1="${y}" x2="${x + bw + (PORTRAIT ? 60 : 10)}" y2="${y - 40}" stroke="${INK}" stroke-width="2"/>`;
+    mono(R, x + bw + (PORTRAIT ? 66 : 14), y - 82, 120, `<u>${n}</u>`);
+  });
+  // behaviour box
+  const yx = PORTRAIT ? bx : bx + 2 * (bw + gx) - V(0, 0), yy = PORTRAIT ? by + 3 * (bh + gy) + 60 : by + bh + 170;
+  const behX = PORTRAIT ? bx : bx + (bw + gx), behY = yy;
+  svgs += `<rect x="${behX}" y="${behY}" width="${bw}" height="${bh}" fill="none" stroke="${INK}" stroke-width="2.5" stroke-dasharray="10 8"/>`;
+  mono(R, behX + 28, behY + 26, bw - 56, '<span class="mb">BEHAVIOUR</span><br>you open the app');
+  const ax = behX + bw / 2; svgs += `<line x1="${ax}" y1="${behY - (PORTRAIT ? 70 : 170)}" x2="${ax}" y2="${behY - 14}" stroke="${INK}" stroke-width="2.5"/><path d="M${ax - 10} ${behY - 26} L${ax} ${behY - 8} L${ax + 10} ${behY - 26}" fill="none" stroke="${INK}" stroke-width="2.5"/>`;
+  svgBox(R, 0, 0, W, H, svgs);
+  mono(R, V(120, 60), V(960, 1760), V(1700, 960), 'FIG. A · drawn in patent style, after B.J. Fogg’s behaviour model', { color: GREY });
+}, () => {});
+// ---------------- still: Exhibit (the EU's Meta finding) ----------------
+scene('exhibit', 30, 40, (R, S) => {
+  words(R, V(120, 60), V(110, 150), V(760, 960), V(76, 72), [[0, 'In'], [0, 'July'], [0, 'they'], [0, 'made'], [0, 'the'], [0, 'same'], [0, 'kind'], [0, 'of'], [0, 'preliminary'], [0, 'findings'], [0, 'against'], [0, 'Meta.']]).querySelectorAll('.w').forEach(s => s.style.opacity = 1);
+  mono(R, V(120, 60), V(620, 640), V(700, 960), 'EXHIBIT B<br>European Commission press release, 10 Jul 2026. Preliminary, not a final decision.', { color: GREY });
+  const iw = V(900, 960), sc = iw / 1250, ix = V(960, 60), iy = V(150, 900);
+  const card = el('div', { left: ix + 'px', top: iy + 'px', width: iw + 'px', height: 495 * sc + 'px', background: '#fff', outline: `2px solid ${INK}`, outlineOffset: '14px', transform: 'rotate(-1.2deg)' }, '', R);
+  el('img', { left: 0, top: 0, width: iw + 'px' }, '', card).src = '../../../assets/sources/eu-meta-lead.png';
+  // marker underlines on infinite scroll + autoplay + push notifications (meta lead coords, css px, relative to crop)
+  [[419.4 - 20, 381, 105.6], [534.8 - 20, 381, 70.4], [615 - 20, 381, 148.3]].forEach(([x, y, w]) => el('div', { left: x * sc + 'px', top: (y + 19) * sc + 'px', width: w * sc + 'px', height: 4 * sc + 'px', background: RED }, '', card));
+  mono(R, ix, iy + 495 * sc + 40, iw, 'Screenshot · ec.europa.eu · 13 Oct 2026', { color: GREY });
+}, () => {});
+// ---------------- still: FIG. B, the red badge (drawn in patent style) ----------------
+scene('badge', 40, 50, (R, S) => {
+  words(R, V(120, 60), V(110, 160), V(800, 960), V(84, 84), [[0, 'And'], [0, 'the'], [0, 'colour'], [0, 'matters.']]).querySelectorAll('.w').forEach(s => s.style.opacity = 1);
+  const cx = V(1300, 400), cy = V(560, 1050), s = V(360, 380);
+  let g = `<rect x="${cx - s / 2}" y="${cy - s / 2}" width="${s}" height="${s}" rx="${s * 0.22}" fill="none" stroke="${INK}" stroke-width="3"/>`;
+  g += `<circle cx="${cx + s / 2 - 10}" cy="${cy - s / 2 + 10}" r="${s * 0.17}" fill="${RED}" stroke="${INK}" stroke-width="3"/>`;
+  g += `<text x="${cx + s / 2 - 10}" y="${cy - s / 2 + 10 + s * 0.065}" font-family="PMB" font-size="${s * 0.18}" text-anchor="middle" fill="#fff">3</text>`;
+  // hatched ghost of the blue badge (dashed), moved aside
+  g += `<circle cx="${cx + s / 2 + s * 0.42}" cy="${cy - s / 2 + 10}" r="${s * 0.17}" fill="none" stroke="${INK}" stroke-width="2.5" stroke-dasharray="8 7"/>`;
+  g += `<line x1="${cx - s / 2 + 30}" y1="${cy + s / 2 - 30}" x2="${cx - s / 2 - 90}" y2="${cy + s / 2 + 80}" stroke="${INK}" stroke-width="2"/>`;
+  g += `<line x1="${cx + s / 2 + 30}" y1="${cy - s / 2 + 50}" x2="${cx + s / 2 + 140}" y2="${cy - s / 2 + 170}" stroke="${INK}" stroke-width="2"/>`;
+  g += `<line x1="${cx + s / 2 + s * 0.42}" y1="${cy - s / 2 - s * 0.17 - 4}" x2="${cx + s / 2 + s * 0.42 + 40}" y2="${cy - s / 2 - s * 0.17 - 80}" stroke="${INK}" stroke-width="2"/>`;
+  svgBox(R, 0, 0, W, H, g);
+  mono(R, cx - s / 2 - 200, cy + s / 2 + 84, 300, '<u>201</u> app icon');
+  mono(R, cx + s / 2 + 140, cy - s / 2 + 170, 300, '<u>202</u> badge, red');
+  mono(R, Math.min(cx + s / 2 + s * 0.42 - 40, W - 400), cy - s / 2 - s * 0.17 - 200, 360, '<u>203</u> badge, blue<br>(before, reportedly)');
+  mono(R, V(120, 60), V(960, 1760), V(1700, 960), 'FIG. B · drawn in patent style · illustration, not a real patent', { color: GREY });
+}, () => {});
+</script></body></html>

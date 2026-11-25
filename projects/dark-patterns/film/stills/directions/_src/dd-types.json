@@ -1,0 +1,74 @@
+{
+ "title": "Types of deceptive pattern | Deceptive Patterns",
+ "h1": "Types of deceptive pattern",
+ "h1y": 131.90625,
+ "found": {
+  "Confirmshaming": [
+   [
+    147.828125,
+    1960.046875,
+    189.21875,
+    29
+   ]
+  ],
+  "Hard to cancel": [
+   [
+    147.828125,
+    584.265625,
+    163.109375,
+    29
+   ]
+  ],
+  "Sneaking": [
+   [
+    147.828125,
+    354.96875,
+    103,
+    29
+   ]
+  ]
+ },
+ "H": 2804,
+ "focus": {
+  "Confirmshaming": {
+   "file": "dd-types__confirmshaming.png",
+   "top": 1440.046875,
+   "rects": [
+    [
+     147.828125,
+     520,
+     189.21875,
+     29
+    ]
+   ]
+  },
+  "Hard to cancel": {
+   "file": "dd-types__hard-to-cancel.png",
+   "top": 64.265625,
+   "rects": [
+    [
+     147.828125,
+     520,
+     163.109375,
+     29
+    ]
+   ]
+  },
+  "Sneaking": {
+   "file": "dd-types__sneaking.png",
+   "top": 0,
+   "rects": [
+    [
+     147.828125,
+     354.96875,
+     103,
+     29
+    ]
+   ]
+  }
+ },
+ "clipTop": 11.90625,
+ "scale": 1.5,
+ "url": "https://deceptive.design/types",
+ "captured": "2026-11-02T12:50:23.373Z"
+}

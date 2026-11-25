@@ -1,0 +1,171 @@
+{
+  "cheapest-european-countries-for-nigerian-students": {
+    "name": "Cheapest countries to study in Europe",
+    "rec": "01",
+    "decisions": [
+      "Thumbnails: 01 (your favourite) is still the pick. New overnight: 03b (7), 06b (6), 08b (6.5); none reached 8. Keep 08 or 08b, not both (they look alike).",
+      "02 and 10 are both a country price list with 'Austria €?'; the €11,904 figure is on 4 thumbnails. Keep fewer of them?",
+      "Captions: SH8 LinkedIn now says '(I have a separate video on scholarships too)'. Is that right?",
+      "Captions: the 'Is Estonia worth it?' reply has you saying 'For me it has been'. Is that what you'd say?",
+      "Then: export the 9 shorts + teaser into ~/Downloads/cheapest-countries-shorts/ (music -15, sound effects -7 are set)."
+    ],
+    "done": [
+      "Every caption and post rewritten so it sounds like you talking (58 blocks). The old kit is in archive/captions-2026-11-16/.",
+      "Teaser 1:1 and 4:5: captions now stay off your chin.",
+      "Thumbnails 03b, 06b, 08b added beside the old ones.",
+      "sh03: the ICEF and French decree headlines now show whole on three lines instead of cut off at both ends (4.5 -> 5)."
+    ],
+    "links": {
+      "Thumbnails editor": "http://localhost:7700/design/cheapest-european-countries-for-nigerian-students/thumbnails/",
+      "Kit": "http://localhost:7700/kit/cheapest-european-countries-for-nigerian-students/",
+      "Teaser": "http://localhost:7700/moment/cheapest-european-countries-for-nigerian-students/teaser/"
+    }
+  },
+  "dark-patterns": {
+    "name": "Dark patterns",
+    "rec": "02",
+    "decisions": [
+      "Thumbnails: 02 'this timer is fake' is still the pick. New: 03b, 06b, 08b (about 7). Keep one of each pair: 03 or 03b, 06 or 06b, 08 or 08b.",
+      "Test & Compare: 08b instead of 08? (08 scored 5 in every round, 08b 7.)",
+      "The EU Digital Fairness Act draft was due on 11 November. If it is out, SH13 and the IS2 script need a line about it.",
+      "Captions: 6a says 'Hidden costs are the big one for me', a bit more than your 'this happens to me a lot'. Keep it?",
+      "sh14: the critic calls the team photo filler and wants a real picture (e.g. a message pushing back on a dark pattern). Do you have one?",
+      "Then: export the 14 shorts + teaser into ~/Downloads/dark-patterns-shorts/."
+    ],
+    "done": [
+      "Every caption and post rewritten in your voice (76 blocks, nothing about A/B testing).",
+      "Shift+Enter line breaks now work in the small second label line too.",
+      "Teaser 1:1 and 4:5 captions off your chin.",
+      "Thumbnails 03b, 06b, 08b added beside the old ones.",
+      "sh14: a picture comes in on your second line, so it isn't 16 s of talking (4 -> 5). sh04: '€40' no longer touches the shoe photo."
+    ],
+    "links": {
+      "Thumbnails editor": "http://localhost:7700/design/dark-patterns/thumbnails/",
+      "Kit": "http://localhost:7700/kit/dark-patterns/",
+      "Teaser": "http://localhost:7700/moment/dark-patterns/teaser/"
+    }
+  },
+  "the-edge-case-you-think-is-impossible": {
+    "name": "Edge cases",
+    "rec": "01",
+    "decisions": [
+      "Thumbnails: 01 is still the pick. New 07b 'YOUR TESTS WON'T CATCH THIS' was the top score of all 11 in every round (8 / 7.5 / 7). Put 07b in a Test & Compare slot?",
+      "Test & Compare 06 says 'O'Brien' and 05 says '29 February': both are story details, which your rule says don't go on thumbnails. Swap them for 07b / 03b?",
+      "Your LinkedIn post (6a) still says 'In this video I went through…'. Keep it? (It's your draft, so we didn't touch it.)",
+      "Re-export the shorts + teaser with the new fonts? (Your Downloads copy has the old fonts.)"
+    ],
+    "done": [
+      "All the other captions and posts now match the voice of your 6a post (77 blocks; no more lists of story details).",
+      "Thumbnails 03b, 04b, 07b added beside the old ones."
+    ],
+    "links": {
+      "Thumbnails editor": "http://localhost:7700/design/the-edge-case-you-think-is-impossible/thumbnails/",
+      "Kit": "http://localhost:7700/kit/the-edge-case-you-think-is-impossible/"
+    }
+  },
+  "should-you-learn-to-code-in-2027": {
+    "name": "Should you learn to code in 2027",
+    "rec": "01",
+    "decisions": [
+      "Thumbnails: the kit recommends 01 (the chart). New: 04b 'READ THE CODE AI WRITES' (7) and 05b 'STOP LEARNING TO CODE THE OLD WAY' (7), now level with 01.",
+      "Photos: 3-4 expressive photos of you in the black top + pink headband (pointing, surprised, laughing, holding a laptop) are what would take a face-led thumbnail to 8.",
+      "Captions: we added a few emojis (🫠 once, 😅 three times). Delete any you don't like.",
+      "Captions: SH1 LinkedIn reuses your phrase 'in usual fashion, I made a video about it'. OK?",
+      "Kit question 10: what you said at raw 3:20 ('your mind' / 'the human in the loop'); that line stays out of the captions until you confirm."
+    ],
+    "done": [
+      "Every caption and post rewritten in your voice (48 blocks; fixed 'Developer Developer' and two repeated sentences).",
+      "Shift+Enter line breaks now work in the small mono lines on covers and screens.",
+      "Teaser 1:1 and 4:5 captions off your chin.",
+      "Thumbnails 04b, 05b added beside the old ones."
+    ],
+    "links": {
+      "Thumbnails editor": "http://localhost:7700/design/should-you-learn-to-code-in-2027/thumbnails/",
+      "Kit": "http://localhost:7700/kit/should-you-learn-to-code-in-2027/"
+    }
+  },
+  "cookies-localstorage-sessionstorage": {
+    "name": "Cookies, localStorage, sessionStorage",
+    "rec": "01",
+    "decisions": [
+      "Thumbnails: 01 or 01b? 01b is 01 with the empty grey cart squares filled (a shoe and a bottle): 01 scored 5, 01b 7. If you pick 01b, the picture on the shorts' ending card changes too.",
+      "08 scored 8 on its own this time, the first in this set.",
+      "Captions: the replies about Laravel and 'where should I store my JWT?' point to a part 2 video that isn't recorded yet.",
+      "Captions: check three small opinions in your name: SH1 LinkedIn 'I think that's the best place to start', SH5 LinkedIn '(I think we've all seen it happen)', the 6e comment 'If there's one thing from this video I'd want people to remember'."
+    ],
+    "done": [
+      "Every caption and post rewritten in your voice (64 blocks).",
+      "Teaser 1:1 and 4:5 captions off your chin (before/after picture below).",
+      "Thumbnail 01b added. 06b, 09b, 12b were tried and lost, so they're in archive/thumbnails-weakest-2026-11-16/."
+    ],
+    "links": {
+      "Thumbnails editor": "http://localhost:7700/design/cookies-localstorage-sessionstorage/thumbnails/",
+      "Kit": "http://localhost:7700/kit/cookies-localstorage-sessionstorage/",
+      "Teaser": "http://localhost:7700/moment/cookies-localstorage-sessionstorage/teaser/"
+    }
+  },
+  "9-things-i-do-instead-of-doomscrolling": {
+    "name": "9 things I do instead of doomscrolling",
+    "rec": "07",
+    "decisions": [
+      "Thumbnails: 07 is the recommended one, but tonight's critics scored it 5-6.5 because nothing in it says phone or scrolling. 07b adds 'scrolling' (6). 01 (7.5), 04b (7) and 03 (7) scored higher. Do you want to change the pick?",
+      "Keep 04 or 04b (same idea; 04b scored higher every round). 09 or 09b is about even.",
+      "Photos: you reading, on the bike, thrifting, journaling, calling your mum, plus one or two reaction faces, are what would lift this set past 7.",
+      "Captions: the essay says the banana bread failed 'three times'; the recording just says 'one failure after the other'. Which is right?",
+      "Your 7 open questions in kit section 0 are still waiting."
+    ],
+    "done": [
+      "Every caption and post rewritten from your own words in the recording (71 blocks).",
+      "Shift+Enter line breaks now work in the small top-left tag.",
+      "Teaser 1:1 and 4:5 captions off your chin.",
+      "Thumbnails 04b, 07b, 09b added beside the old ones."
+    ],
+    "links": {
+      "Thumbnails editor": "http://localhost:7700/design/9-things-i-do-instead-of-doomscrolling/thumbnails/",
+      "Kit": "http://localhost:7700/kit/9-things-i-do-instead-of-doomscrolling/"
+    }
+  },
+  "how-to-read-research-papers": {
+    "name": "How to read research papers",
+    "rec": "08",
+    "decisions": [
+      "Thumbnails: 08 is still the pick (it scored 8.5 with its title earlier, but only 6-6.5 alone tonight). New 02b '4 hours | 10 minutes' scored 7 in every round. Put it in Test & Compare instead of 02?",
+      "09 or 09b: about even (09b reads better on a phone; 09 has your face bigger).",
+      "Captions: the reply to 'Which AI do you use?' doesn't name a tool. Add the one you use?",
+      "Captions: 6a borrows your aside '(I don't really have a choice🫠)' from your reading post. Keep it or cut it?"
+    ],
+    "done": [
+      "Every caption and post rewritten in your voice (66 blocks).",
+      "Teaser 1:1 and 4:5: captions were across your mouth in the small-window shots; now they sit on the plain ground above your picture.",
+      "Thumbnails 02b, 09b added beside the old ones.",
+      "sh06: graphics bigger on the screen behind you (4 -> 5). sh04: the five questions big on their own, plus a 'three passes' graphic during a long talking stretch (4 -> 5)."
+    ],
+    "links": {
+      "Thumbnails editor": "http://localhost:7700/design/how-to-read-research-papers/thumbnails/",
+      "Kit": "http://localhost:7700/kit/how-to-read-research-papers/",
+      "Teaser": "http://localhost:7700/moment/how-to-read-research-papers/teaser/"
+    }
+  },
+  "working-full-time-while-doing-masters-abroad": {
+    "name": "Working full time during a master's abroad",
+    "rec": "03",
+    "decisions": [
+      "Thumbnails: 03 '9 AM JOB / 9 PM MASTER'S' is still the pick. New 01b, 02b, 06b each scored 7 (from 5-6). 02b and 06b could go in Test & Compare.",
+      "Photos: every thumbnail shows the same calm face in the white tee; critics asked for tired, smiling or overwhelmed. New photos, or leave it?",
+      "Captions: keep your line 'Working while studying is the real ghetto' in the SH2 TikTok caption?",
+      "Full edit: the 'tired in class' time card had silently dropped out of the full edit and sh06 since the 13 Nov caption fix. It is back now. Please look at the full edit around that line before you export.",
+      "Captions: the ready reply to 'How did you get the job?' promises a job-search video. Delete that half if you have no plans for one."
+    ],
+    "done": [
+      "Every caption and post rewritten from your own words (61 blocks).",
+      "Shift+Enter line breaks now work in the cover's small second line.",
+      "Teaser 1:1 and 4:5 captions off your chin.",
+      "Thumbnails 01b, 02b, 06b added beside the old ones.",
+      "sh06: more happening during the long talking stretch (a week calendar that fills in as you speak), and the time card is back (critic 3 -> 6)."
+    ],
+    "links": {
+      "Thumbnails editor": "http://localhost:7700/design/working-full-time-while-doing-masters-abroad/thumbnails/",
+      "Kit": "http://localhost:7700/kit/working-full-time-while-doing-masters-abroad/"
+    }
+  }
+}

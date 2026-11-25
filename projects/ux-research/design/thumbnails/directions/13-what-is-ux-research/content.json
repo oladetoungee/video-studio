@@ -1,0 +1,32 @@
+{
+  "direction": "Faceless graphic (kept from set 2): the question as the topic and UX research in one move: users' sticky-note complaints, a big curved arrow, and a calm app screen that answers them. Off-black, canary only. References: her database-indexes thumbnail (a mechanism with an arrow), viral 'Fitness sales framework', yt 'Two sum'.",
+  "thumbnail_text": "What is UX research?",
+  "titles": [
+    "Why Some Apps Are So Confusing (UX Research Explained)",
+    "UX Research Explained Simply (No Jargon, Just Examples)",
+    "Why Beautiful Apps Can Be Awful to Use (UX Research)"
+  ],
+  "text": {
+    "hd": "What is<br><span class=\"acc\">UX research?</span>",
+    "n1": "Where's my order?",
+    "n2": "",
+    "btn": "Track order",
+    "way": "On its way!"
+  },
+  "images": {},
+  "vars": {
+    "--ground": "#111114",
+    "--fg": "#FFFFFF",
+    "--accent": "#FFE15A"
+  },
+  "title": "Why Some Apps Are So Confusing (UX Research Explained)",
+  "set": 3,
+  "kind": "graphic",
+  "scores": "critic scores R1 8 · R2 7.5 · R3 7.5 · R4 8 · R5 7.5",
+  "recommended": false,
+  "nudge": {
+    "phone": {
+      "s": 0.97
+    }
+  }
+}

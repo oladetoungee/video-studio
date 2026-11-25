@@ -1,0 +1,54 @@
+{
+  "direction": "Her photo pointing at her head (her own pick from an earlier thumbnail, warm colour balance): \"stop forgetting\" shown literally. Old books top-left, Convivial Toolbox top-right, a notebook of handwritten notes on the right. Serif line \"Stop forgetting books.\"; labels \"non-fiction\", \"takes a few minutes\". (Photo 18 from the kit was dropped: at feed size the mic at her lips read as a knife in her mouth.)",
+  "concept": "T1",
+  "sample": "time-to-lock-in (one serif line across her chest, books top-left, objects top-right, small corner labels) + KYNID \"STOP FORGETTING\" outlier",
+  "thumbnail_text": "Stop forgetting books.",
+  "title": "How to Remember What You Read: A Method From 1940",
+  "titles": [
+    "How to Remember What You Read: A Method From 1940",
+    "A 1940 Reading Method That Helps You Remember Books",
+    "How to Remember What You Read (the Contents Page Trick)"
+  ],
+  "text": {
+    "big": "How to remember what you read",
+    "l1": "non-fiction"
+  },
+  "images": {
+    "photo": "../../assets/photo/gbemishot_warm.jpg",
+    "stack": "../../../../assets/uploads/cutouts/pexels-martabranco-23833967-cutout.png",
+    "convivial": "../../assets/collage/cover_convivial_clean.jpg",
+    "notebook": "../../assets/collage/notebook_notes.png"
+  },
+  "vars": {},
+  "gates": {
+    "round3": "a 4/6 · b 8/7 · c 7",
+    "pass": false,
+    "note": "closest to passing (b 8/8 in round 2); recommended",
+    "key": "a = cold image-only topic confidence/5 and click/10; b = in a mocked feed with the title, clarity/click (pass 8/8); c = taste vs her collage samples (pass 8)"
+  },
+  "nudge": {
+    "img:notebook": {
+      "s": 2.054,
+      "dx": -517,
+      "dy": -27
+    },
+    "img:stack": {
+      "s": 1.503,
+      "dx": 323,
+      "dy": 57
+    },
+    "img:convivial": {
+      "dx": -82,
+      "s": 1.279,
+      "dy": 48
+    },
+    "big": {
+      "dx": -27,
+      "dy": 59
+    },
+    "photo": {
+      "dx": 103,
+      "dy": 52
+    }
+  }
+}

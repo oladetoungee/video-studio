@@ -1,0 +1,8873 @@
+{
+ "generated": "2026-10-26T03:04",
+ "coordinates": "fullBox/fullLines: pixels in <slug>_full.jpg (1440 wide). video.box/lines: pixels in the 1920x1080 scroll.mp4 at time video.t (seconds); the page is standing still during holdWindow [start,end] so a highlighter can be drawn there. For other times use scroll.keyframes + formula.",
+ "entries": [
+  {
+   "story": "php2shell",
+   "outlet": "Datadog Security Labs",
+   "slug": "datadog",
+   "url": "https://securitylabs.datadoghq.com/articles/php2shell-critical-vulnerabilities-in-php/",
+   "headline": "PHP2Shell - Critical vulnerabilities in PHP (CVE-2026-109618, CVE-2026-109619): detection, analysis, and remediation",
+   "date": "2026-10-21",
+   "credit": "Source: Datadog Security Labs, 21 Oct 2026 (updated 23 Oct)",
+   "status": "loaded",
+   "note": "",
+   "finalUrl": "https://securitylabs.datadoghq.com/articles/php2shell-critical-vulnerabilities-in-php/",
+   "files": {
+    "fold": "php2shell/datadog_fold.png",
+    "full": "php2shell/datadog_full.jpg",
+    "scroll": "php2shell/datadog_scroll.mp4"
+   },
+   "sizeMB": 5.3,
+   "full": {
+    "width": 1440,
+    "height": 6000,
+    "pageHeight": 16574
+   },
+   "scroll": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "seconds": 9.133333333333333,
+    "keyframes": [
+     {
+      "t": 0,
+      "y": 24
+     },
+     {
+      "t": 1,
+      "y": 24
+     },
+     {
+      "t": 2.445,
+      "y": 1169
+     },
+     {
+      "t": 3.545,
+      "y": 1169
+     },
+     {
+      "t": 4.892,
+      "y": 2099
+     },
+     {
+      "t": 5.992,
+      "y": 2099
+     },
+     {
+      "t": 7.434,
+      "y": 3237
+     },
+     {
+      "t": 9.134,
+      "y": 3237
+     }
+    ],
+    "easing": "easeInOutCubic between keyframes, holds where y is equal",
+    "capped": false,
+    "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)"
+   },
+   "quotes": [
+    {
+     "quote": "each with a CVSS v4.0 score of 9.2",
+     "fullBox": {
+      "x": 64,
+      "y": 1613,
+      "w": 830,
+      "h": 54
+     },
+     "fullLines": [
+      {
+       "x": 720,
+       "y": 1613,
+       "w": 174,
+       "h": 26
+      },
+      {
+       "x": 64,
+       "y": 1641,
+       "w": 93,
+       "h": 26
+      }
+     ],
+     "video": {
+      "t": 2.98,
+      "holdWindow": [
+       2.37,
+       3.6
+      ],
+      "box": {
+       "x": 276,
+       "y": 410,
+       "w": 897,
+       "h": 54
+      },
+      "lines": [
+       {
+        "x": 932,
+        "y": 410,
+        "w": 241,
+        "h": 26
+       },
+       {
+        "x": 276,
+        "y": 438,
+        "w": 26,
+        "h": 26
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "application-level authentication can't block an attack: PHP processes the malicious request before any application code runs",
+     "fullBox": {
+      "x": 64,
+      "y": 1641,
+      "w": 849,
+      "h": 54
+     },
+     "fullLines": [
+      {
+       "x": 615,
+       "y": 1641,
+       "w": 298,
+       "h": 26
+      },
+      {
+       "x": 64,
+       "y": 1669,
+       "w": 689,
+       "h": 26
+      }
+     ],
+     "video": {
+      "t": 2.98,
+      "holdWindow": [
+       2.37,
+       3.6
+      ],
+      "box": {
+       "x": 276,
+       "y": 438,
+       "w": 853,
+       "h": 54
+      },
+      "lines": [
+       {
+        "x": 759,
+        "y": 438,
+        "w": 370,
+        "h": 26
+       },
+       {
+        "x": 276,
+        "y": 466,
+        "w": 617,
+        "h": 26
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "AWS reported PHP2Shell exploitation attempts in the wild as early as October 17, 2026, four days before public disclosure and the release of patches",
+     "fullBox": {
+      "x": 63,
+      "y": 1713,
+      "w": 819,
+      "h": 54
+     },
+     "fullLines": [
+      {
+       "x": 63,
+       "y": 1713,
+       "w": 819,
+       "h": 26
+      },
+      {
+       "x": 64,
+       "y": 1741,
+       "w": 350,
+       "h": 26
+      }
+     ],
+     "video": {
+      "t": 2.98,
+      "holdWindow": [
+       2.37,
+       3.6
+      ],
+      "box": {
+       "x": 275,
+       "y": 510,
+       "w": 873,
+       "h": 54
+      },
+      "lines": [
+       {
+        "x": 275,
+        "y": 510,
+        "w": 873,
+        "h": 26
+       },
+       {
+        "x": 276,
+        "y": 538,
+        "w": 296,
+        "h": 26
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "After a memory allocation fails, PHP leaves invalid data behind for its cleanup routine to process",
+     "fullBox": {
+      "x": 64,
+      "y": 2543,
+      "w": 855,
+      "h": 54
+     },
+     "fullLines": [
+      {
+       "x": 221,
+       "y": 2543,
+       "w": 698,
+       "h": 26
+      },
+      {
+       "x": 64,
+       "y": 2571,
+       "w": 62,
+       "h": 26
+      }
+     ],
+     "video": {
+      "t": 5.45,
+      "holdWindow": [
+       4.83,
+       6.07
+      ],
+      "box": {
+       "x": 276,
+       "y": 410,
+       "w": 855,
+       "h": 54
+      },
+      "lines": [
+       {
+        "x": 433,
+        "y": 410,
+        "w": 698,
+        "h": 26
+       },
+       {
+        "x": 276,
+        "y": 438,
+        "w": 62,
+        "h": 26
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "A PHP worker can reuse stale state from a previous request",
+     "fullBox": {
+      "x": 221,
+      "y": 2615,
+      "w": 468,
+      "h": 26
+     },
+     "fullLines": [
+      {
+       "x": 221,
+       "y": 2615,
+       "w": 468,
+       "h": 26
+      }
+     ],
+     "video": {
+      "t": 5.45,
+      "holdWindow": [
+       4.83,
+       6.07
+      ],
+      "box": {
+       "x": 433,
+       "y": 482,
+       "w": 468,
+       "h": 26
+      },
+      "lines": [
+       {
+        "x": 433,
+        "y": 482,
+        "w": 468,
+        "h": 26
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "Restart or replace every worker that still runs the old runtime",
+     "fullBox": {
+      "x": 68,
+      "y": 3709,
+      "w": 487,
+      "h": 26
+     },
+     "fullLines": [
+      {
+       "x": 68,
+       "y": 3709,
+       "w": 487,
+       "h": 26
+      }
+     ],
+     "video": {
+      "t": 8.27,
+      "holdWindow": [
+       7.37,
+       9.17
+      ],
+      "box": {
+       "x": 280,
+       "y": 410,
+       "w": 487,
+       "h": 26
+      },
+      "lines": [
+       {
+        "x": 280,
+        "y": 410,
+        "w": 487,
+        "h": 26
+       }
+      ]
+     },
+     "note": null
+    }
+   ]
+  },
+  {
+   "story": "php2shell",
+   "outlet": "BleepingComputer",
+   "slug": "bleepingcomputer",
+   "url": "https://www.bleepingcomputer.com/news/security/php-ships-emergency-patches-for-critical-php2shell-flaws/",
+   "headline": "PHP ships emergency patches for critical PHP2Shell flaws",
+   "date": "2026-10-21",
+   "credit": "Source: BleepingComputer, 21 Oct 2026",
+   "status": "loaded",
+   "note": "",
+   "finalUrl": "https://www.bleepingcomputer.com/news/security/php-ships-emergency-patches-for-critical-php2shell-flaws/",
+   "files": {
+    "fold": "php2shell/bleepingcomputer_fold.png",
+    "full": "php2shell/bleepingcomputer_full.jpg",
+    "scroll": "php2shell/bleepingcomputer_scroll.mp4"
+   },
+   "sizeMB": 4.67,
+   "full": {
+    "width": 1440,
+    "height": 5137,
+    "pageHeight": 5137
+   },
+   "scroll": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "seconds": 8,
+    "keyframes": [
+     {
+      "t": 0,
+      "y": 312
+     },
+     {
+      "t": 1,
+      "y": 312
+     },
+     {
+      "t": 2.005,
+      "y": 668
+     },
+     {
+      "t": 3.105,
+      "y": 668
+     },
+     {
+      "t": 4.145,
+      "y": 1071
+     },
+     {
+      "t": 8,
+      "y": 1071
+     }
+    ],
+    "easing": "easeInOutCubic between keyframes, holds where y is equal",
+    "capped": false,
+    "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)"
+   },
+   "quotes": [
+    {
+     "quote": "The PHP security team released emergency security patches for two critical remote code execution (RCE) vulnerabilities",
+     "fullBox": {
+      "x": 135,
+      "y": 1078,
+      "w": 832,
+      "h": 46
+     },
+     "fullLines": [
+      {
+       "x": 135,
+       "y": 1078,
+       "w": 832,
+       "h": 21
+      },
+      {
+       "x": 135,
+       "y": 1103,
+       "w": 114,
+       "h": 21
+      }
+     ],
+     "video": {
+      "t": 2.55,
+      "holdWindow": [
+       1.93,
+       3.17
+      ],
+      "box": {
+       "x": 375,
+       "y": 410,
+       "w": 832,
+       "h": 46
+      },
+      "lines": [
+       {
+        "x": 375,
+        "y": 410,
+        "w": 832,
+        "h": 21
+       },
+       {
+        "x": 375,
+        "y": 435,
+        "w": 114,
+        "h": 21
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "discovered by Calif, OpenAI, and Wiz security researchers",
+     "fullBox": {
+      "x": 466,
+      "y": 1143,
+      "w": 459,
+      "h": 21
+     },
+     "fullLines": [
+      {
+       "x": 466,
+       "y": 1143,
+       "w": 459,
+       "h": 21
+      }
+     ],
+     "video": {
+      "t": 2.55,
+      "holdWindow": [
+       1.93,
+       3.17
+      ],
+      "box": {
+       "x": 706,
+       "y": 475,
+       "w": 459,
+       "h": 21
+      },
+      "lines": [
+       {
+        "x": 706,
+        "y": 475,
+        "w": 459,
+        "h": 21
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "Admins should install PHP 8.5.12, 8.4.27, 8.3.36, or 8.2.35 as soon as possible",
+     "fullBox": {
+      "x": 135,
+      "y": 1481,
+      "w": 620,
+      "h": 21
+     },
+     "fullLines": [
+      {
+       "x": 135,
+       "y": 1481,
+       "w": 620,
+       "h": 21
+      }
+     ],
+     "video": {
+      "t": 6.05,
+      "holdWindow": [
+       4.07,
+       8.03
+      ],
+      "box": {
+       "x": 375,
+       "y": 410,
+       "w": 620,
+       "h": 21
+      },
+      "lines": [
+       {
+        "x": 375,
+        "y": 410,
+        "w": 620,
+        "h": 21
+       }
+      ]
+     },
+     "note": null
+    }
+   ]
+  },
+  {
+   "story": "php2shell",
+   "outlet": "The Hacker News",
+   "slug": "thehackernews",
+   "url": "https://thehackernews.com/2026/10/someone-tried-to-exploit-php2shell-4.html",
+   "headline": "Someone Tried to Exploit PHP2Shell 4 Days Before the Vulnerabilities Were Publicly Disclosed",
+   "date": "2026-10-22",
+   "credit": "Source: The Hacker News, 22 Oct 2026",
+   "status": "loaded",
+   "note": "",
+   "finalUrl": "https://thehackernews.com/2026/10/someone-tried-to-exploit-php2shell-4.html",
+   "files": {
+    "fold": "php2shell/thehackernews_fold.png",
+    "full": "php2shell/thehackernews_full.jpg",
+    "scroll": "php2shell/thehackernews_scroll.mp4"
+   },
+   "sizeMB": 3.73,
+   "full": {
+    "width": 1440,
+    "height": 6000,
+    "pageHeight": 7438
+   },
+   "scroll": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "seconds": 8,
+    "keyframes": [
+     {
+      "t": 0,
+      "y": 181
+     },
+     {
+      "t": 1,
+      "y": 181
+     },
+     {
+      "t": 1.947,
+      "y": 467
+     },
+     {
+      "t": 3.047,
+      "y": 467
+     },
+     {
+      "t": 4.315,
+      "y": 1239
+     },
+     {
+      "t": 8,
+      "y": 1239
+     }
+    ],
+    "easing": "easeInOutCubic between keyframes, holds where y is equal",
+    "capped": false,
+    "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)"
+   },
+   "quotes": [
+    {
+     "quote": "detected an attempt to exploit the newly disclosed PHP2Shell vulnerabilities dating back to October 17, 2026, against its MadPot honeypot service",
+     "fullBox": {
+      "x": 176,
+      "y": 877,
+      "w": 679,
+      "h": 74
+     },
+     "fullLines": [
+      {
+       "x": 572,
+       "y": 877,
+       "w": 279,
+       "h": 19
+      },
+      {
+       "x": 176,
+       "y": 905,
+       "w": 679,
+       "h": 19
+      },
+      {
+       "x": 176,
+       "y": 932,
+       "w": 50,
+       "h": 19
+      }
+     ],
+     "video": {
+      "t": 2.5,
+      "holdWindow": [
+       1.87,
+       3.13
+      ],
+      "box": {
+       "x": 416,
+       "y": 410,
+       "w": 679,
+       "h": 74
+      },
+      "lines": [
+       {
+        "x": 812,
+        "y": 410,
+        "w": 279,
+        "h": 19
+       },
+       {
+        "x": 416,
+        "y": 438,
+        "w": 679,
+        "h": 19
+       },
+       {
+        "x": 416,
+        "y": 465,
+        "w": 50,
+        "h": 19
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "There is no authentication to bypass, no session to steal, and no vulnerable endpoint to discover",
+     "fullBox": {
+      "x": 181,
+      "y": 1649,
+      "w": 666,
+      "h": 19
+     },
+     "fullLines": [
+      {
+       "x": 181,
+       "y": 1649,
+       "w": 666,
+       "h": 19
+      }
+     ],
+     "video": {
+      "t": 6.13,
+      "holdWindow": [
+       4.23,
+       8.03
+      ],
+      "box": {
+       "x": 421,
+       "y": 410,
+       "w": 666,
+       "h": 19
+      },
+      "lines": [
+       {
+        "x": 421,
+        "y": 410,
+        "w": 666,
+        "h": 19
+       }
+      ]
+     },
+     "note": null
+    }
+   ]
+  },
+  {
+   "story": "php2shell",
+   "outlet": "Deseret News (Reuters)",
+   "slug": "deseret-reuters",
+   "url": "https://www.deseret.com/business/2026/10/21/website-computer-server-security-flaw-artificial-intelligence-hackers-cybersecurity-php-programming-language/",
+   "headline": "A just-revealed security flaw is hitting computer systems around the world",
+   "date": "2026-10-21",
+   "credit": "Source: Deseret News (citing Reuters), 21 Oct 2026",
+   "status": "loaded",
+   "note": "Deseret News story citing Reuters and the Wall Street Journal",
+   "finalUrl": "https://www.deseret.com/business/2026/10/21/website-computer-server-security-flaw-artificial-intelligence-hackers-cybersecurity-php-programming-language/",
+   "files": {
+    "fold": "php2shell/deseret-reuters_fold.png",
+    "full": "php2shell/deseret-reuters_full.jpg",
+    "scroll": "php2shell/deseret-reuters_scroll.mp4"
+   },
+   "sizeMB": 4.91,
+   "full": {
+    "width": 1440,
+    "height": 4429,
+    "pageHeight": 4429
+   },
+   "scroll": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "seconds": 10.733333333333333,
+    "keyframes": [
+     {
+      "t": 0,
+      "y": 48
+     },
+     {
+      "t": 1,
+      "y": 48
+     },
+     {
+      "t": 2.434,
+      "y": 1167
+     },
+     {
+      "t": 3.534,
+      "y": 1167
+     },
+     {
+      "t": 5.061,
+      "y": 2509
+     },
+     {
+      "t": 6.161,
+      "y": 2509
+     },
+     {
+      "t": 6.961,
+      "y": 2643
+     },
+     {
+      "t": 8.061,
+      "y": 2643
+     },
+     {
+      "t": 9.037,
+      "y": 2962
+     },
+     {
+      "t": 10.737,
+      "y": 2962
+     }
+    ],
+    "easing": "easeInOutCubic between keyframes, holds where y is equal",
+    "capped": false,
+    "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)"
+   },
+   "quotes": [
+    {
+     "quote": "numerous government websites across Europe that went dark Wednesday, to execute fixes",
+     "fullBox": {
+      "x": 182,
+      "y": 1577,
+      "w": 659,
+      "h": 50
+     },
+     "fullLines": [
+      {
+       "x": 337,
+       "y": 1577,
+       "w": 504,
+       "h": 22
+      },
+      {
+       "x": 182,
+       "y": 1605,
+       "w": 227,
+       "h": 22
+      }
+     ],
+     "video": {
+      "t": 2.98,
+      "holdWindow": [
+       2.37,
+       3.6
+      ],
+      "box": {
+       "x": 422,
+       "y": 410,
+       "w": 659,
+       "h": 50
+      },
+      "lines": [
+       {
+        "x": 577,
+        "y": 410,
+        "w": 504,
+        "h": 22
+       },
+       {
+        "x": 422,
+        "y": 438,
+        "w": 227,
+        "h": 22
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "PHP powers nearly three-quarters of the world's websites",
+     "fullBox": {
+      "x": 182,
+      "y": 2919,
+      "w": 707,
+      "h": 50
+     },
+     "fullLines": [
+      {
+       "x": 678,
+       "y": 2919,
+       "w": 211,
+       "h": 22
+      },
+      {
+       "x": 182,
+       "y": 2947,
+       "w": 260,
+       "h": 22
+      }
+     ],
+     "video": {
+      "t": 5.62,
+      "holdWindow": [
+       5,
+       6.23
+      ],
+      "box": {
+       "x": 422,
+       "y": 410,
+       "w": 707,
+       "h": 50
+      },
+      "lines": [
+       {
+        "x": 918,
+        "y": 410,
+        "w": 211,
+        "h": 22
+       },
+       {
+        "x": 422,
+        "y": 438,
+        "w": 260,
+        "h": 22
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "The PHP2Shell flaws are rated 9.2 out of 10",
+     "fullBox": {
+      "x": 182,
+      "y": 3053,
+      "w": 350,
+      "h": 22
+     },
+     "fullLines": [
+      {
+       "x": 182,
+       "y": 3053,
+       "w": 350,
+       "h": 22
+      }
+     ],
+     "video": {
+      "t": 7.5,
+      "holdWindow": [
+       6.87,
+       8.13
+      ],
+      "box": {
+       "x": 422,
+       "y": 410,
+       "w": 350,
+       "h": 22
+      },
+      "lines": [
+       {
+        "x": 422,
+        "y": 410,
+        "w": 350,
+        "h": 22
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "uncovered the PHP problems with assistance from OpenAI's GPT-5.6 Sol platform",
+     "fullBox": {
+      "x": 182,
+      "y": 3372,
+      "w": 689,
+      "h": 51
+     },
+     "fullLines": [
+      {
+       "x": 590,
+       "y": 3372,
+       "w": 281,
+       "h": 22
+      },
+      {
+       "x": 182,
+       "y": 3401,
+       "w": 382,
+       "h": 22
+      }
+     ],
+     "video": {
+      "t": 9.87,
+      "holdWindow": [
+       8.97,
+       10.77
+      ],
+      "box": {
+       "x": 422,
+       "y": 410,
+       "w": 689,
+       "h": 51
+      },
+      "lines": [
+       {
+        "x": 830,
+        "y": 410,
+        "w": 281,
+        "h": 22
+       },
+       {
+        "x": 422,
+        "y": 439,
+        "w": 382,
+        "h": 22
+       }
+      ]
+     },
+     "note": null
+    }
+   ]
+  },
+  {
+   "story": "php2shell",
+   "outlet": "PHP.net",
+   "slug": "php-net",
+   "url": "https://www.php.net/",
+   "headline": "Security advisory: Critical remote code execution vulnerabilities, update now",
+   "date": "2026-10-21",
+   "credit": "Source: php.net, 21 Oct 2026",
+   "status": "loaded",
+   "note": "php.net home page news column; the 21 Oct advisory sits below a newer 23 Oct informational advisory",
+   "finalUrl": "https://www.php.net/",
+   "files": {
+    "fold": "php2shell/php-net_fold.png",
+    "full": "php2shell/php-net_full.jpg",
+    "scroll": "php2shell/php-net_scroll.mp4"
+   },
+   "sizeMB": 3.77,
+   "full": {
+    "width": 1440,
+    "height": 6000,
+    "pageHeight": 11888
+   },
+   "scroll": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "seconds": 8,
+    "keyframes": [
+     {
+      "t": 0,
+      "y": 0
+     },
+     {
+      "t": 1,
+      "y": 0
+     },
+     {
+      "t": 2.125,
+      "y": 527
+     },
+     {
+      "t": 3.225,
+      "y": 527
+     },
+     {
+      "t": 4.029,
+      "y": 672
+     },
+     {
+      "t": 5.129,
+      "y": 672
+     },
+     {
+      "t": 6.166,
+      "y": 1070
+     },
+     {
+      "t": 8,
+      "y": 1070
+     }
+    ],
+    "easing": "easeInOutCubic between keyframes, holds where y is equal",
+    "capped": false,
+    "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)"
+   },
+   "quotes": [
+    {
+     "quote": "Security advisory: Critical remote code execution vulnerabilities, update now",
+     "fullBox": {
+      "x": 159,
+      "y": 991,
+      "w": 697,
+      "h": 76
+     },
+     "fullLines": [
+      {
+       "x": 159,
+       "y": 991,
+       "w": 697,
+       "h": 28
+      },
+      {
+       "x": 159,
+       "y": 1039,
+       "w": 128,
+       "h": 28
+      }
+     ],
+     "video": {
+      "t": 2.68,
+      "holdWindow": [
+       2.07,
+       3.3
+      ],
+      "box": {
+       "x": 264,
+       "y": 410,
+       "w": 832,
+       "h": 28
+      },
+      "lines": [
+       {
+        "x": 264,
+        "y": 410,
+        "w": 832,
+        "h": 28
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "PHP 8.5.12, 8.4.27, 8.3.36 and 8.2.35 fix two critical vulnerabilities that can allow unauthenticated remote code execution",
+     "fullBox": {
+      "x": 159,
+      "y": 1106,
+      "w": 789,
+      "h": 46
+     },
+     "fullLines": [
+      {
+       "x": 159,
+       "y": 1106,
+       "w": 789,
+       "h": 19
+      },
+      {
+       "x": 159,
+       "y": 1133,
+       "w": 71,
+       "h": 19
+      }
+     ],
+     "video": {
+      "t": 2.68,
+      "holdWindow": [
+       2.07,
+       3.3
+      ],
+      "box": {
+       "x": 264,
+       "y": 477,
+       "w": 864,
+       "h": 19
+      },
+      "lines": [
+       {
+        "x": 264,
+        "y": 477,
+        "w": 864,
+        "h": 19
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "We consider the risk highest for mod_php, with a demonstrated exploit where an unauthenticated request can trigger the attack before any application code runs",
+     "fullBox": {
+      "x": 159,
+      "y": 1212,
+      "w": 788,
+      "h": 46
+     },
+     "fullLines": [
+      {
+       "x": 362,
+       "y": 1212,
+       "w": 585,
+       "h": 19
+      },
+      {
+       "x": 159,
+       "y": 1239,
+       "w": 582,
+       "h": 19
+      }
+     ],
+     "video": {
+      "t": 4.57,
+      "holdWindow": [
+       3.93,
+       5.2
+      ],
+      "box": {
+       "x": 264,
+       "y": 410,
+       "w": 1018,
+       "h": 73
+      },
+      "lines": [
+       {
+        "x": 1261,
+        "y": 410,
+        "w": 21,
+        "h": 19
+       },
+       {
+        "x": 264,
+        "y": 437,
+        "w": 984,
+        "h": 19
+       },
+       {
+        "x": 264,
+        "y": 464,
+        "w": 158,
+        "h": 19
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "PHP 8.1 and older no longer receive updates from the PHP project",
+     "fullBox": {
+      "x": 183,
+      "y": 1654,
+      "w": 474,
+      "h": 19
+     },
+     "fullLines": [
+      {
+       "x": 183,
+       "y": 1654,
+       "w": 474,
+       "h": 19
+      }
+     ],
+     "video": {
+      "t": 7.07,
+      "holdWindow": [
+       6.1,
+       8.03
+      ],
+      "box": {
+       "x": 288,
+       "y": 410,
+       "w": 474,
+       "h": 19
+      },
+      "lines": [
+       {
+        "x": 288,
+        "y": 410,
+        "w": 474,
+        "h": 19
+       }
+      ]
+     },
+     "note": null
+    }
+   ]
+  },
+  {
+   "story": "php2shell",
+   "outlet": "GitHub (php-src advisory)",
+   "slug": "github-advisory-109618",
+   "url": "https://github.com/php/php-src/security/advisories/GHSA-w8hw-w9fx-j79w",
+   "headline": "RCE via OOM corruption (CVE-2026-109618)",
+   "date": "2026-10-21",
+   "credit": "Source: PHP security advisory on GitHub, 21 Oct 2026",
+   "status": "loaded",
+   "note": "",
+   "finalUrl": "https://github.com/php/php-src/security/advisories/GHSA-w8hw-w9fx-j79w",
+   "files": {
+    "fold": "php2shell/github-advisory-109618_fold.png",
+    "full": "php2shell/github-advisory-109618_full.jpg",
+    "scroll": "php2shell/github-advisory-109618_scroll.mp4"
+   },
+   "sizeMB": 2.95,
+   "full": {
+    "width": 1440,
+    "height": 2356,
+    "pageHeight": 2356
+   },
+   "scroll": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "seconds": 8,
+    "keyframes": [
+     {
+      "t": 0,
+      "y": 109
+     },
+     {
+      "t": 1,
+      "y": 109
+     },
+     {
+      "t": 2.455,
+      "y": 1276
+     },
+     {
+      "t": 8,
+      "y": 1276
+     }
+    ],
+    "easing": "easeInOutCubic between keyframes, holds where y is equal",
+    "capped": false,
+    "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)"
+   },
+   "quotes": [
+    {
+     "quote": "RCE via OOM corruption",
+     "fullBox": {
+      "x": 112,
+      "y": 248,
+      "w": 336,
+      "h": 38
+     },
+     "fullLines": [
+      {
+       "x": 112,
+       "y": 248,
+       "w": 336,
+       "h": 38
+      }
+     ],
+     "video": {
+      "t": 0.53,
+      "holdWindow": [
+       0,
+       1.07
+      ],
+      "box": {
+       "x": 352,
+       "y": 139,
+       "w": 336,
+       "h": 38
+      },
+      "lines": [
+       {
+        "x": 352,
+        "y": 139,
+        "w": 336,
+        "h": 38
+       }
+      ]
+     },
+     "note": null
+    }
+   ]
+  },
+  {
+   "story": "php2shell",
+   "outlet": "GitHub (php-src advisory)",
+   "slug": "github-advisory-109619",
+   "url": "https://github.com/php/php-src/security/advisories/GHSA-6wmf-4rv5-p3rp",
+   "headline": "RCE via stale global state (CVE-2026-109619)",
+   "date": "2026-10-21",
+   "credit": "Source: PHP security advisory on GitHub, 21 Oct 2026",
+   "status": "loaded",
+   "note": "",
+   "finalUrl": "https://github.com/php/php-src/security/advisories/GHSA-6wmf-4rv5-p3rp",
+   "files": {
+    "fold": "php2shell/github-advisory-109619_fold.png",
+    "full": "php2shell/github-advisory-109619_full.jpg",
+    "scroll": "php2shell/github-advisory-109619_scroll.mp4"
+   },
+   "sizeMB": 3.36,
+   "full": {
+    "width": 1440,
+    "height": 4573,
+    "pageHeight": 4573
+   },
+   "scroll": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "seconds": 8,
+    "keyframes": [
+     {
+      "t": 0,
+      "y": 109
+     },
+     {
+      "t": 1,
+      "y": 109
+     },
+     {
+      "t": 2.55,
+      "y": 1509
+     },
+     {
+      "t": 8,
+      "y": 1509
+     }
+    ],
+    "easing": "easeInOutCubic between keyframes, holds where y is equal",
+    "capped": false,
+    "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)"
+   },
+   "quotes": [
+    {
+     "quote": "RCE via stale global state",
+     "fullBox": {
+      "x": 112,
+      "y": 248,
+      "w": 344,
+      "h": 38
+     },
+     "fullLines": [
+      {
+       "x": 112,
+       "y": 248,
+       "w": 344,
+       "h": 38
+      }
+     ],
+     "video": {
+      "t": 0.53,
+      "holdWindow": [
+       0,
+       1.07
+      ],
+      "box": {
+       "x": 352,
+       "y": 139,
+       "w": 344,
+       "h": 38
+      },
+      "lines": [
+       {
+        "x": 352,
+        "y": 139,
+        "w": 344,
+        "h": 38
+       }
+      ]
+     },
+     "note": null
+    }
+   ]
+  },
+  {
+   "story": "php2shell",
+   "outlet": "Vercel",
+   "slug": "vercel",
+   "url": "https://vercel.com/kb/bulletin/php2shell-security-bulletin",
+   "headline": "PHP security advisory: php2shell (CVE-2026-109618, CVE-2026-109619)",
+   "date": "2026-10-21",
+   "credit": "Source: Vercel, 21 Oct 2026",
+   "status": "loaded",
+   "note": "",
+   "finalUrl": "https://vercel.com/kb/bulletin/php2shell-security-bulletin",
+   "files": {
+    "fold": "php2shell/vercel_fold.png",
+    "full": "php2shell/vercel_full.jpg",
+    "scroll": "php2shell/vercel_scroll.mp4"
+   },
+   "sizeMB": 0.93,
+   "full": {
+    "width": 1440,
+    "height": 5358,
+    "pageHeight": 5358
+   },
+   "scroll": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "seconds": 8,
+    "keyframes": [
+     {
+      "t": 0,
+      "y": 44
+     },
+     {
+      "t": 1,
+      "y": 44
+     },
+     {
+      "t": 1.882,
+      "y": 260
+     },
+     {
+      "t": 8,
+      "y": 260
+     }
+    ],
+    "easing": "easeInOutCubic between keyframes, holds where y is equal",
+    "capped": false,
+    "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)"
+   },
+   "quotes": [
+    {
+     "quote": "Working public exploits are already available, and exploitation attempts have been reported across the industry",
+     "fullBox": {
+      "x": 378,
+      "y": 670,
+      "w": 669,
+      "h": 51
+     },
+     "fullLines": [
+      {
+       "x": 378,
+       "y": 670,
+       "w": 669,
+       "h": 23
+      },
+      {
+       "x": 378,
+       "y": 698,
+       "w": 231,
+       "h": 23
+      }
+     ],
+     "video": {
+      "t": 4.92,
+      "holdWindow": [
+       1.8,
+       8.03
+      ],
+      "box": {
+       "x": 616,
+       "y": 410,
+       "w": 669,
+       "h": 51
+      },
+      "lines": [
+       {
+        "x": 616,
+        "y": 410,
+        "w": 669,
+        "h": 23
+       },
+       {
+        "x": 616,
+        "y": 438,
+        "w": 231,
+        "h": 23
+       }
+      ]
+     },
+     "note": null
+    }
+   ]
+  },
+  {
+   "story": "php2shell",
+   "outlet": "Help Net Security",
+   "slug": "helpnetsecurity",
+   "url": "https://www.helpnetsecurity.com/2026/10/21/php2shell-php-vulnerabilities-patched-cve-2026-109618-cve-2026-109619/",
+   "headline": "PHP2Shell: Critical PHP vulnerabilities patched, update now!",
+   "date": "2026-10-21",
+   "credit": "Source: Help Net Security, 21 Oct 2026",
+   "status": "loaded",
+   "note": "",
+   "finalUrl": "https://www.helpnetsecurity.com/2026/10/21/php2shell-php-vulnerabilities-patched-cve-2026-109618-cve-2026-109619/",
+   "files": {
+    "fold": "php2shell/helpnetsecurity_fold.png",
+    "full": "php2shell/helpnetsecurity_full.jpg",
+    "scroll": "php2shell/helpnetsecurity_scroll.mp4"
+   },
+   "sizeMB": 4.69,
+   "full": {
+    "width": 1440,
+    "height": 4562,
+    "pageHeight": 4562
+   },
+   "scroll": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "seconds": 8,
+    "keyframes": [
+     {
+      "t": 0,
+      "y": 224
+     },
+     {
+      "t": 1,
+      "y": 224
+     },
+     {
+      "t": 2.048,
+      "y": 638
+     },
+     {
+      "t": 3.148,
+      "y": 638
+     },
+     {
+      "t": 4.97,
+      "y": 2814
+     },
+     {
+      "t": 8,
+      "y": 2814
+     }
+    ],
+    "easing": "easeInOutCubic between keyframes, holds where y is equal",
+    "capped": false,
+    "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)"
+   },
+   "quotes": [
+    {
+     "quote": "These findings rank among the most severe vulnerabilities discovered in PHP, and arguably in software history",
+     "fullBox": {
+      "x": 215,
+      "y": 1048,
+      "w": 621,
+      "h": 48
+     },
+     "fullLines": [
+      {
+       "x": 221,
+       "y": 1048,
+       "w": 615,
+       "h": 21
+      },
+      {
+       "x": 215,
+       "y": 1075,
+       "w": 255,
+       "h": 21
+      }
+     ],
+     "video": {
+      "t": 2.6,
+      "holdWindow": [
+       1.97,
+       3.23
+      ],
+      "box": {
+       "x": 455,
+       "y": 410,
+       "w": 621,
+       "h": 48
+      },
+      "lines": [
+       {
+        "x": 461,
+        "y": 410,
+        "w": 615,
+        "h": 21
+       },
+       {
+        "x": 455,
+        "y": 437,
+        "w": 255,
+        "h": 21
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "its MadPot honeypot network recorded a PHP2Shell exploitation attempt on Oct. 17, 2026, four days before",
+     "fullBox": {
+      "x": 215,
+      "y": 3224,
+      "w": 643,
+      "h": 48
+     },
+     "fullLines": [
+      {
+       "x": 548,
+       "y": 3224,
+       "w": 310,
+       "h": 21
+      },
+      {
+       "x": 215,
+       "y": 3251,
+       "w": 538,
+       "h": 21
+      }
+     ],
+     "video": {
+      "t": 6.47,
+      "holdWindow": [
+       4.9,
+       8.03
+      ],
+      "box": {
+       "x": 455,
+       "y": 410,
+       "w": 643,
+       "h": 48
+      },
+      "lines": [
+       {
+        "x": 788,
+        "y": 410,
+        "w": 310,
+        "h": 21
+       },
+       {
+        "x": 455,
+        "y": 437,
+        "w": 538,
+        "h": 21
+       }
+      ]
+     },
+     "note": null
+    }
+   ]
+  },
+  {
+   "story": "php2shell",
+   "outlet": "SecurityWeek",
+   "slug": "securityweek",
+   "url": "https://www.securityweek.com/php2shell-patches-land-as-first-exploitation-attempts-hit-sensors/",
+   "headline": "PHP2Shell Patches Land as First Exploitation Attempts Hit Sensors",
+   "date": "2026-10-21",
+   "credit": "Source: SecurityWeek, 21 Oct 2026",
+   "status": "loaded",
+   "note": "",
+   "finalUrl": "https://www.securityweek.com/php2shell-patches-land-as-first-exploitation-attempts-hit-sensors/",
+   "files": {
+    "fold": "php2shell/securityweek_fold.png",
+    "full": "php2shell/securityweek_full.jpg",
+    "scroll": "php2shell/securityweek_scroll.mp4"
+   },
+   "sizeMB": 3.49,
+   "full": {
+    "width": 1440,
+    "height": 5697,
+    "pageHeight": 5697
+   },
+   "scroll": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "seconds": 8,
+    "keyframes": [
+     {
+      "t": 0,
+      "y": 174
+     },
+     {
+      "t": 1,
+      "y": 174
+     },
+     {
+      "t": 2.452,
+      "y": 1335
+     },
+     {
+      "t": 8,
+      "y": 1335
+     }
+    ],
+    "easing": "easeInOutCubic between keyframes, holds where y is equal",
+    "capped": false,
+    "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)"
+   },
+   "quotes": [
+    {
+     "quote": "Several cybersecurity companies saw exploitation attempts of CVE-2026-109618 and CVE-2026-109619 before PHP released the patches",
+     "fullBox": {
+      "x": 100,
+      "y": 458,
+      "w": 1170,
+      "h": 31
+     },
+     "fullLines": [
+      {
+       "x": 100,
+       "y": 458,
+       "w": 1170,
+       "h": 31
+      }
+     ],
+     "video": {
+      "t": 0.53,
+      "holdWindow": [
+       0,
+       1.07
+      ],
+      "box": {
+       "x": 340,
+       "y": 284,
+       "w": 1170,
+       "h": 31
+      },
+      "lines": [
+       {
+        "x": 340,
+        "y": 284,
+        "w": 1170,
+        "h": 31
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "We are now seeing php2shell exploited in the wild at scale",
+     "fullBox": {
+      "x": 107,
+      "y": 1745,
+      "w": 438,
+      "h": 27
+     },
+     "fullLines": [
+      {
+       "x": 107,
+       "y": 1745,
+       "w": 438,
+       "h": 27
+      }
+     ],
+     "video": {
+      "t": 5.2,
+      "holdWindow": [
+       2.37,
+       8.03
+      ],
+      "box": {
+       "x": 347,
+       "y": 410,
+       "w": 438,
+       "h": 27
+      },
+      "lines": [
+       {
+        "x": 347,
+        "y": 410,
+        "w": 438,
+        "h": 27
+       }
+      ]
+     },
+     "note": null
+    }
+   ]
+  },
+  {
+   "story": "php2shell",
+   "outlet": "Dark Reading",
+   "slug": "darkreading",
+   "url": "https://www.darkreading.com/application-security/php2shell-bugs-red-alert-security-industry",
+   "headline": "'PHP2Shell' Bugs Signal Red Alert for Security Industry",
+   "date": "2026-10-21",
+   "credit": "Source: Dark Reading, 21 Oct 2026",
+   "status": "loaded",
+   "note": "",
+   "finalUrl": "https://www.darkreading.com/application-security/php2shell-bugs-red-alert-security-industry",
+   "files": {
+    "fold": "php2shell/darkreading_fold.png",
+    "full": "php2shell/darkreading_full.jpg",
+    "scroll": "php2shell/darkreading_scroll.mp4"
+   },
+   "sizeMB": 2.96,
+   "full": {
+    "width": 1440,
+    "height": 6000,
+    "pageHeight": 6983
+   },
+   "scroll": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "seconds": 8,
+    "keyframes": [
+     {
+      "t": 0,
+      "y": 202
+     },
+     {
+      "t": 1,
+      "y": 202
+     },
+     {
+      "t": 2.55,
+      "y": 1602
+     },
+     {
+      "t": 8,
+      "y": 1602
+     }
+    ],
+    "easing": "easeInOutCubic between keyframes, holds where y is equal",
+    "capped": false,
+    "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)"
+   },
+   "quotes": [
+    {
+     "quote": "Security teams are scrambling to remediate two critical PHP vulnerabilities following leaked details and reports of exploitation attempts",
+     "fullBox": {
+      "x": 202,
+      "y": 402,
+      "w": 962,
+      "h": 48
+     },
+     "fullLines": [
+      {
+       "x": 202,
+       "y": 402,
+       "w": 962,
+       "h": 21
+      },
+      {
+       "x": 202,
+       "y": 429,
+       "w": 177,
+       "h": 21
+      }
+     ],
+     "video": {
+      "t": 0.53,
+      "holdWindow": [
+       0,
+       1.07
+      ],
+      "box": {
+       "x": 442,
+       "y": 200,
+       "w": 962,
+       "h": 48
+      },
+      "lines": [
+       {
+        "x": 442,
+        "y": 200,
+        "w": 962,
+        "h": 21
+       },
+       {
+        "x": 442,
+        "y": 227,
+        "w": 177,
+        "h": 21
+       }
+      ]
+     },
+     "note": null
+    }
+   ]
+  },
+  {
+   "story": "php2shell",
+   "outlet": "Newsweek",
+   "slug": "newsweek",
+   "url": "https://www.newsweek.com/php-vunerability-php2shell-issue-websites-hack-server-12601225",
+   "headline": "Critical PHP Flaws Threaten Millions of Websites in New AI Security Test",
+   "date": "2026-10-21",
+   "credit": "Source: Newsweek, 21 Oct 2026",
+   "status": "loaded",
+   "note": "long page; key lines are far down (full image extended to 8600 px)",
+   "finalUrl": "https://www.newsweek.com/php-vunerability-php2shell-issue-websites-hack-server-12601225",
+   "files": {
+    "fold": "php2shell/newsweek_fold.png",
+    "full": "php2shell/newsweek_full.jpg",
+    "scroll": "php2shell/newsweek_scroll.mp4"
+   },
+   "sizeMB": 3.71,
+   "full": {
+    "width": 1440,
+    "height": 8600,
+    "pageHeight": 11735
+   },
+   "scroll": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "seconds": 8,
+    "keyframes": [
+     {
+      "t": 0,
+      "y": 35
+     },
+     {
+      "t": 1,
+      "y": 35
+     },
+     {
+      "t": 3.2,
+      "y": 5062
+     },
+     {
+      "t": 8,
+      "y": 5062
+     }
+    ],
+    "easing": "easeInOutCubic between keyframes, holds where y is equal",
+    "capped": true,
+    "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)"
+   },
+   "quotes": [
+    {
+     "quote": "government websites in the Netherlands and Finland were taken offline",
+     "fullBox": {
+      "x": 380,
+      "y": 5787,
+      "w": 607,
+      "h": 52
+     },
+     "fullLines": [
+      {
+       "x": 749,
+       "y": 5787,
+       "w": 238,
+       "h": 24
+      },
+      {
+       "x": 380,
+       "y": 5815,
+       "w": 375,
+       "h": 24
+      }
+     ],
+     "video": {
+      "t": 5.58,
+      "holdWindow": [
+       3.13,
+       8.03
+      ],
+      "box": {
+       "x": 620,
+       "y": 725,
+       "w": 607,
+       "h": 52
+      },
+      "lines": [
+       {
+        "x": 989,
+        "y": 725,
+        "w": 238,
+        "h": 24
+       },
+       {
+        "x": 620,
+        "y": 753,
+        "w": 375,
+        "h": 24
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "Some organizations have temporarily taken websites and online services offline rather than leave potentially vulnerable systems exposed while fixes are installed",
+     "fullBox": {
+      "x": 380,
+      "y": 5472,
+      "w": 648,
+      "h": 80
+     },
+     "fullLines": [
+      {
+       "x": 380,
+       "y": 5472,
+       "w": 625,
+       "h": 24
+      },
+      {
+       "x": 380,
+       "y": 5500,
+       "w": 648,
+       "h": 24
+      },
+      {
+       "x": 380,
+       "y": 5528,
+       "w": 107,
+       "h": 24
+      }
+     ],
+     "video": {
+      "t": 5.58,
+      "holdWindow": [
+       3.13,
+       8.03
+      ],
+      "box": {
+       "x": 620,
+       "y": 410,
+       "w": 648,
+       "h": 80
+      },
+      "lines": [
+       {
+        "x": 620,
+        "y": 410,
+        "w": 625,
+        "h": 24
+       },
+       {
+        "x": 620,
+        "y": 438,
+        "w": 648,
+        "h": 24
+       },
+       {
+        "x": 620,
+        "y": 466,
+        "w": 107,
+        "h": 24
+       }
+      ]
+     },
+     "note": null
+    }
+   ]
+  },
+  {
+   "story": "php2shell",
+   "outlet": "Insurance Business UK",
+   "slug": "insurancebusiness",
+   "url": "https://www.insurancebusinessmag.com/uk/news/cyber/uk-councils-and-met-police-among-sites-pulled-offline-after-ncsc-alert-594424.aspx",
+   "headline": "UK councils and Met Police among sites pulled offline after NCSC alert",
+   "date": "2026-10-21",
+   "credit": "Source: Insurance Business UK, 21 Oct 2026",
+   "status": "loaded",
+   "note": "",
+   "finalUrl": "https://www.insurancebusinessmag.com/uk/news/cyber/uk-councils-and-met-police-among-sites-pulled-offline-after-ncsc-alert-594424.aspx",
+   "files": {
+    "fold": "php2shell/insurancebusiness_fold.png",
+    "full": "php2shell/insurancebusiness_full.jpg",
+    "scroll": "php2shell/insurancebusiness_scroll.mp4"
+   },
+   "sizeMB": 2.59,
+   "full": {
+    "width": 1440,
+    "height": 6000,
+    "pageHeight": 8004
+   },
+   "scroll": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "seconds": 8,
+    "keyframes": [
+     {
+      "t": 0,
+      "y": 467
+     },
+     {
+      "t": 1,
+      "y": 467
+     },
+     {
+      "t": 2.304,
+      "y": 1311
+     },
+     {
+      "t": 3.404,
+      "y": 1311
+     },
+     {
+      "t": 4.381,
+      "y": 1631
+     },
+     {
+      "t": 8,
+      "y": 1631
+     }
+    ],
+    "easing": "easeInOutCubic between keyframes, holds where y is equal",
+    "capped": false,
+    "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)"
+   },
+   "quotes": [
+    {
+     "quote": "Websites belonging to UK councils, the Metropolitan Police and governments across Europe went dark on Wednesday",
+     "fullBox": {
+      "x": 335,
+      "y": 1575,
+      "w": 713,
+      "h": 54
+     },
+     "fullLines": [
+      {
+       "x": 335,
+       "y": 1575,
+       "w": 713,
+       "h": 24
+      },
+      {
+       "x": 335,
+       "y": 1605,
+       "w": 372,
+       "h": 24
+      }
+     ],
+     "video": {
+      "t": 2.85,
+      "holdWindow": [
+       2.23,
+       3.47
+      ],
+      "box": {
+       "x": 370,
+       "y": 410,
+       "w": 713,
+       "h": 54
+      },
+      "lines": [
+       {
+        "x": 370,
+        "y": 410,
+        "w": 713,
+        "h": 24
+       },
+       {
+        "x": 370,
+        "y": 440,
+        "w": 372,
+        "h": 24
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "Both are rated 9.2 out of 10 for severity",
+     "fullBox": {
+      "x": 509,
+      "y": 1895,
+      "w": 362,
+      "h": 24
+     },
+     "fullLines": [
+      {
+       "x": 509,
+       "y": 1895,
+       "w": 362,
+       "h": 24
+      }
+     ],
+     "video": {
+      "t": 6.17,
+      "holdWindow": [
+       4.3,
+       8.03
+      ],
+      "box": {
+       "x": 544,
+       "y": 410,
+       "w": 362,
+       "h": 24
+      },
+      "lines": [
+       {
+        "x": 544,
+        "y": 410,
+        "w": 362,
+        "h": 24
+       }
+      ]
+     },
+     "note": null
+    }
+   ]
+  },
+  {
+   "story": "php2shell",
+   "outlet": "Paperjam",
+   "slug": "paperjam",
+   "url": "https://en.paperjam.lu/article/php2shell-thousands-of-websites-exposed-in-luxembourg",
+   "headline": "PHP2Shell: thousands of websites exposed in Luxembourg",
+   "date": "2026-10-21",
+   "credit": "Source: Paperjam, 21 Oct 2026",
+   "status": "loaded",
+   "note": "",
+   "finalUrl": "https://en.paperjam.lu/article/php2shell-thousands-of-websites-exposed-in-luxembourg",
+   "files": {
+    "fold": "php2shell/paperjam_fold.png",
+    "full": "php2shell/paperjam_full.jpg",
+    "scroll": "php2shell/paperjam_scroll.mp4"
+   },
+   "sizeMB": 4.93,
+   "full": {
+    "width": 1440,
+    "height": 6000,
+    "pageHeight": 8693
+   },
+   "scroll": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "seconds": 8,
+    "keyframes": [
+     {
+      "t": 0,
+      "y": 208
+     },
+     {
+      "t": 1,
+      "y": 208
+     },
+     {
+      "t": 2.996,
+      "y": 2972
+     },
+     {
+      "t": 4.096,
+      "y": 2972
+     },
+     {
+      "t": 5.609,
+      "y": 4278
+     },
+     {
+      "t": 8,
+      "y": 4278
+     }
+    ],
+    "easing": "easeInOutCubic between keyframes, holds where y is equal",
+    "capped": false,
+    "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)"
+   },
+   "quotes": [
+    {
+     "quote": "temporarily taken certain services offline as a precautionary measure",
+     "fullBox": {
+      "x": 236,
+      "y": 3382,
+      "w": 558,
+      "h": 56
+     },
+     "fullLines": [
+      {
+       "x": 245,
+       "y": 3382,
+       "w": 549,
+       "h": 27
+      },
+      {
+       "x": 236,
+       "y": 3411,
+       "w": 78,
+       "h": 27
+      }
+     ],
+     "video": {
+      "t": 3.55,
+      "holdWindow": [
+       2.93,
+       4.17
+      ],
+      "box": {
+       "x": 476,
+       "y": 410,
+       "w": 558,
+       "h": 56
+      },
+      "lines": [
+       {
+        "x": 485,
+        "y": 410,
+        "w": 549,
+        "h": 27
+       },
+       {
+        "x": 476,
+        "y": 439,
+        "w": 78,
+        "h": 27
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "So far, no major infrastructure has publicly documented a successful intrusion conclusively attributed to PHP2Shell",
+     "fullBox": {
+      "x": 236,
+      "y": 4688,
+      "w": 601,
+      "h": 56
+     },
+     "fullLines": [
+      {
+       "x": 310,
+       "y": 4688,
+       "w": 527,
+       "h": 27
+      },
+      {
+       "x": 236,
+       "y": 4717,
+       "w": 526,
+       "h": 27
+      }
+     ],
+     "video": {
+      "t": 6.78,
+      "holdWindow": [
+       5.53,
+       8.03
+      ],
+      "box": {
+       "x": 476,
+       "y": 410,
+       "w": 601,
+       "h": 56
+      },
+      "lines": [
+       {
+        "x": 550,
+        "y": 410,
+        "w": 527,
+        "h": 27
+       },
+       {
+        "x": 476,
+        "y": 439,
+        "w": 526,
+        "h": 27
+       }
+      ]
+     },
+     "note": null
+    }
+   ]
+  },
+  {
+   "story": "php2shell",
+   "outlet": "Wiz",
+   "slug": "wiz",
+   "url": "https://www.wiz.io/vulnerability-database/cve/cve-2026-109618",
+   "headline": "CVE-2026-109618: \nPHP vulnerability analysis and mitigation",
+   "date": "",
+   "credit": "Source: Wiz vulnerability database",
+   "status": "loaded",
+   "note": "Wiz vulnerability database entry (reference page, no article date)",
+   "finalUrl": "https://www.wiz.io/vulnerability-database/cve/cve-2026-109618",
+   "files": {
+    "fold": "php2shell/wiz_fold.png",
+    "full": "php2shell/wiz_full.jpg",
+    "scroll": "php2shell/wiz_scroll.mp4"
+   },
+   "sizeMB": 3.07,
+   "full": {
+    "width": 1440,
+    "height": 6000,
+    "pageHeight": 7265
+   },
+   "scroll": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "seconds": 8,
+    "keyframes": [
+     {
+      "t": 0,
+      "y": 93
+     },
+     {
+      "t": 1,
+      "y": 93
+     },
+     {
+      "t": 2.55,
+      "y": 1493
+     },
+     {
+      "t": 8,
+      "y": 1493
+     }
+    ],
+    "easing": "easeInOutCubic between keyframes, holds where y is equal",
+    "capped": false,
+    "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)"
+   },
+   "quotes": []
+  },
+  {
+   "story": "railway",
+   "outlet": "Railway (official blog)",
+   "slug": "railway-blog",
+   "url": "https://blog.railway.com/p/security-disclosure-wednesday-october-21st",
+   "headline": "Security Disclosure: Wednesday October 21st",
+   "date": "2026-10-21",
+   "credit": "Source: Railway, 21 Oct 2026",
+   "status": "loaded",
+   "note": "",
+   "finalUrl": "https://blog.railway.com/p/security-disclosure-wednesday-october-21st",
+   "files": {
+    "fold": "railway/railway-blog_fold.png",
+    "full": "railway/railway-blog_full.jpg",
+    "scroll": "railway/railway-blog_scroll.mp4"
+   },
+   "sizeMB": 0.99,
+   "full": {
+    "width": 1440,
+    "height": 2407,
+    "pageHeight": 2407
+   },
+   "scroll": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "seconds": 8,
+    "keyframes": [
+     {
+      "t": 0,
+      "y": 81
+     },
+     {
+      "t": 1,
+      "y": 81
+     },
+     {
+      "t": 1.966,
+      "y": 389
+     },
+     {
+      "t": 8,
+      "y": 389
+     }
+    ],
+    "easing": "easeInOutCubic between keyframes, holds where y is equal",
+    "capped": false,
+    "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)"
+   },
+   "quotes": [
+    {
+     "quote": "Security Disclosure: Wednesday October 21st",
+     "fullBox": {
+      "x": 368,
+      "y": 218,
+      "w": 548,
+      "h": 118
+     },
+     "fullLines": [
+      {
+       "x": 368,
+       "y": 218,
+       "w": 443,
+       "h": 62
+      },
+      {
+       "x": 368,
+       "y": 274,
+       "w": 548,
+       "h": 62
+      }
+     ],
+     "video": {
+      "t": 0.53,
+      "holdWindow": [
+       0,
+       1.07
+      ],
+      "box": {
+       "x": 608,
+       "y": 137,
+       "w": 548,
+       "h": 118
+      },
+      "lines": [
+       {
+        "x": 608,
+        "y": 137,
+        "w": 443,
+        "h": 62
+       },
+       {
+        "x": 608,
+        "y": 193,
+        "w": 548,
+        "h": 62
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "an unauthorized third party may have accessed encrypted environment variables and, for some of them, obtained the decrypted contents",
+     "fullBox": {
+      "x": 368,
+      "y": 454,
+      "w": 679,
+      "h": 48
+     },
+     "fullLines": [
+      {
+       "x": 551,
+       "y": 454,
+       "w": 496,
+       "h": 21
+      },
+      {
+       "x": 368,
+       "y": 481,
+       "w": 669,
+       "h": 21
+      }
+     ],
+     "video": {
+      "t": 0.53,
+      "holdWindow": [
+       0,
+       1.07
+      ],
+      "box": {
+       "x": 608,
+       "y": 373,
+       "w": 679,
+       "h": 48
+      },
+      "lines": [
+       {
+        "x": 791,
+        "y": 373,
+        "w": 496,
+        "h": 21
+       },
+       {
+        "x": 608,
+        "y": 400,
+        "w": 669,
+        "h": 21
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "We believe this is part of a series of attacks recently targeting platform companies with the aim of compromising AI inference providers",
+     "fullBox": {
+      "x": 368,
+      "y": 578,
+      "w": 699,
+      "h": 48
+     },
+     "fullLines": [
+      {
+       "x": 368,
+       "y": 578,
+       "w": 699,
+       "h": 21
+      },
+      {
+       "x": 368,
+       "y": 605,
+       "w": 444,
+       "h": 21
+      }
+     ],
+     "video": {
+      "t": 0.53,
+      "holdWindow": [
+       0,
+       1.07
+      ],
+      "box": {
+       "x": 608,
+       "y": 497,
+       "w": 699,
+       "h": 48
+      },
+      "lines": [
+       {
+        "x": 608,
+        "y": 497,
+        "w": 699,
+        "h": 21
+       },
+       {
+        "x": 608,
+        "y": 524,
+        "w": 444,
+        "h": 21
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "we strongly recommend that you immediately roll all environment variables",
+     "fullBox": {
+      "x": 368,
+      "y": 799,
+      "w": 680,
+      "h": 48
+     },
+     "fullLines": [
+      {
+       "x": 630,
+       "y": 799,
+       "w": 418,
+       "h": 21
+      },
+      {
+       "x": 368,
+       "y": 826,
+       "w": 212,
+       "h": 21
+      }
+     ],
+     "video": {
+      "t": 4.97,
+      "holdWindow": [
+       1.9,
+       8.03
+      ],
+      "box": {
+       "x": 608,
+       "y": 410,
+       "w": 680,
+       "h": 48
+      },
+      "lines": [
+       {
+        "x": 870,
+        "y": 410,
+        "w": 418,
+        "h": 21
+       },
+       {
+        "x": 608,
+        "y": 437,
+        "w": 212,
+        "h": 21
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "All deployments are paused while we investigate",
+     "fullBox": {
+      "x": 368,
+      "y": 896,
+      "w": 413,
+      "h": 21
+     },
+     "fullLines": [
+      {
+       "x": 368,
+       "y": 896,
+       "w": 413,
+       "h": 21
+      }
+     ],
+     "video": {
+      "t": 4.97,
+      "holdWindow": [
+       1.9,
+       8.03
+      ],
+      "box": {
+       "x": 608,
+       "y": 507,
+       "w": 413,
+       "h": 21
+      },
+      "lines": [
+       {
+        "x": 608,
+        "y": 507,
+        "w": 413,
+        "h": 21
+       }
+      ]
+     },
+     "note": null
+    }
+   ]
+  },
+  {
+   "story": "railway",
+   "outlet": "TechCrunch",
+   "slug": "techcrunch",
+   "url": "https://techcrunch.com/2026/10/22/developer-platform-railway-urges-all-users-to-revoke-secret-keys-after-cyberattack/",
+   "headline": "Developer platform Railway urges ‘all users’ to revoke secret keys after cyberattack",
+   "date": "2026-10-22",
+   "credit": "Source: TechCrunch, 22 Oct 2026",
+   "status": "loaded",
+   "note": "",
+   "finalUrl": "https://techcrunch.com/2026/10/22/developer-platform-railway-urges-all-users-to-revoke-secret-keys-after-cyberattack/",
+   "files": {
+    "fold": "railway/techcrunch_fold.png",
+    "full": "railway/techcrunch_full.jpg",
+    "scroll": "railway/techcrunch_scroll.mp4"
+   },
+   "sizeMB": 3.64,
+   "full": {
+    "width": 1440,
+    "height": 6000,
+    "pageHeight": 10975
+   },
+   "scroll": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "seconds": 8,
+    "keyframes": [
+     {
+      "t": 0,
+      "y": 220
+     },
+     {
+      "t": 1,
+      "y": 220
+     },
+     {
+      "t": 2.012,
+      "y": 585
+     },
+     {
+      "t": 3.112,
+      "y": 585
+     },
+     {
+      "t": 4.141,
+      "y": 973
+     },
+     {
+      "t": 8,
+      "y": 973
+     }
+    ],
+    "easing": "easeInOutCubic between keyframes, holds where y is equal",
+    "capped": false,
+    "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)"
+   },
+   "quotes": [
+    {
+     "quote": "Developer platform Railway urges 'all users' to revoke secret keys after cyberattack",
+     "fullBox": {
+      "x": 729,
+      "y": 362,
+      "w": 539,
+      "h": 128
+     },
+     "fullLines": [
+      {
+       "x": 729,
+       "y": 362,
+       "w": 503,
+       "h": 40
+      },
+      {
+       "x": 729,
+       "y": 406,
+       "w": 471,
+       "h": 40
+      },
+      {
+       "x": 729,
+       "y": 450,
+       "w": 539,
+       "h": 40
+      }
+     ],
+     "video": {
+      "t": 0.53,
+      "holdWindow": [
+       0,
+       1.07
+      ],
+      "box": {
+       "x": 936,
+       "y": 142,
+       "w": 539,
+       "h": 128
+      },
+      "lines": [
+       {
+        "x": 936,
+        "y": 142,
+        "w": 503,
+        "h": 40
+       },
+       {
+        "x": 936,
+        "y": 186,
+        "w": 471,
+        "h": 40
+       },
+       {
+        "x": 936,
+        "y": 230,
+        "w": 539,
+        "h": 40
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "may have accessed encrypted environment variables and, for some of them, obtained the decrypted contents",
+     "fullBox": {
+      "x": 226,
+      "y": 995,
+      "w": 658,
+      "h": 45
+     },
+     "fullLines": [
+      {
+       "x": 307,
+       "y": 995,
+       "w": 577,
+       "h": 19
+      },
+      {
+       "x": 226,
+       "y": 1021,
+       "w": 356,
+       "h": 19
+      }
+     ],
+     "video": {
+      "t": 2.57,
+      "holdWindow": [
+       1.93,
+       3.2
+      ],
+      "box": {
+       "x": 466,
+       "y": 410,
+       "w": 658,
+       "h": 45
+      },
+      "lines": [
+       {
+        "x": 547,
+        "y": 410,
+        "w": 577,
+        "h": 19
+       },
+       {
+        "x": 466,
+        "y": 436,
+        "w": 356,
+        "h": 19
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "Railway did not say how many specific users were affected, or what was identified as the root cause",
+     "fullBox": {
+      "x": 226,
+      "y": 1383,
+      "w": 609,
+      "h": 46
+     },
+     "fullLines": [
+      {
+       "x": 226,
+       "y": 1383,
+       "w": 609,
+       "h": 19
+      },
+      {
+       "x": 226,
+       "y": 1410,
+       "w": 233,
+       "h": 19
+      }
+     ],
+     "video": {
+      "t": 6.05,
+      "holdWindow": [
+       4.07,
+       8.03
+      ],
+      "box": {
+       "x": 466,
+       "y": 410,
+       "w": 609,
+       "h": 46
+      },
+      "lines": [
+       {
+        "x": 466,
+        "y": 410,
+        "w": 609,
+        "h": 19
+       },
+       {
+        "x": 466,
+        "y": 437,
+        "w": 233,
+        "h": 19
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "the company plans to publish a post-mortem on the incident",
+     "fullBox": {
+      "x": 226,
+      "y": 1489,
+      "w": 588,
+      "h": 46
+     },
+     "fullLines": [
+      {
+       "x": 372,
+       "y": 1489,
+       "w": 442,
+       "h": 19
+      },
+      {
+       "x": 226,
+       "y": 1516,
+       "w": 71,
+       "h": 19
+      }
+     ],
+     "video": {
+      "t": 6.05,
+      "holdWindow": [
+       4.07,
+       8.03
+      ],
+      "box": {
+       "x": 466,
+       "y": 516,
+       "w": 588,
+       "h": 46
+      },
+      "lines": [
+       {
+        "x": 612,
+        "y": 516,
+        "w": 442,
+        "h": 19
+       },
+       {
+        "x": 466,
+        "y": 543,
+        "w": 71,
+        "h": 19
+       }
+      ]
+     },
+     "note": null
+    }
+   ]
+  },
+  {
+   "story": "railway",
+   "outlet": "GitGuardian",
+   "slug": "gitguardian",
+   "url": "https://blog.gitguardian.com/railway-october-2026-incident-environment-variables/",
+   "headline": "Railway October 2026 Incident: Treat Every Environment Variable as Exposed",
+   "date": "2026-10-22",
+   "credit": "Source: GitGuardian, 22 Oct 2026",
+   "status": "loaded",
+   "note": "",
+   "finalUrl": "https://blog.gitguardian.com/railway-october-2026-incident-environment-variables/",
+   "files": {
+    "fold": "railway/gitguardian_fold.png",
+    "full": "railway/gitguardian_full.jpg",
+    "scroll": "railway/gitguardian_scroll.mp4"
+   },
+   "sizeMB": 2.24,
+   "full": {
+    "width": 1440,
+    "height": 5906,
+    "pageHeight": 5906
+   },
+   "scroll": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "seconds": 8,
+    "keyframes": [
+     {
+      "t": 0,
+      "y": 12
+     },
+     {
+      "t": 1,
+      "y": 12
+     },
+     {
+      "t": 2.438,
+      "y": 1140
+     },
+     {
+      "t": 3.538,
+      "y": 1140
+     },
+     {
+      "t": 4.514,
+      "y": 1460
+     },
+     {
+      "t": 8,
+      "y": 1460
+     }
+    ],
+    "easing": "easeInOutCubic between keyframes, holds where y is equal",
+    "capped": false,
+    "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)"
+   },
+   "quotes": [
+    {
+     "quote": "Treat every secret stored in Railway as at risk until investigated",
+     "fullBox": {
+      "x": 200,
+      "y": 1870,
+      "w": 545,
+      "h": 24
+     },
+     "fullLines": [
+      {
+       "x": 200,
+       "y": 1870,
+       "w": 545,
+       "h": 24
+      }
+     ],
+     "video": {
+      "t": 6.23,
+      "holdWindow": [
+       4.43,
+       8.03
+      ],
+      "box": {
+       "x": 440,
+       "y": 410,
+       "w": 545,
+       "h": 24
+      },
+      "lines": [
+       {
+        "x": 440,
+        "y": 410,
+        "w": 545,
+        "h": 24
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "has paused deployments during the investigation",
+     "fullBox": {
+      "x": 237,
+      "y": 1550,
+      "w": 427,
+      "h": 24
+     },
+     "fullLines": [
+      {
+       "x": 237,
+       "y": 1550,
+       "w": 427,
+       "h": 24
+      }
+     ],
+     "video": {
+      "t": 2.98,
+      "holdWindow": [
+       2.37,
+       3.6
+      ],
+      "box": {
+       "x": 477,
+       "y": 410,
+       "w": 427,
+       "h": 24
+      },
+      "lines": [
+       {
+        "x": 477,
+        "y": 410,
+        "w": 427,
+        "h": 24
+       }
+      ]
+     },
+     "note": null
+    }
+   ]
+  },
+  {
+   "story": "railway",
+   "outlet": "Railway Station (community)",
+   "slug": "railway-station",
+   "url": "https://station.railway.com/community/security-practices-after-a-recent-cloud-0bf3bdea",
+   "status": "not captured",
+   "note": "off-topic (2-month-old community thread about Zeabur, not this incident)",
+   "headline": "",
+   "date": ""
+  },
+  {
+   "story": "railway",
+   "outlet": "Railway Status",
+   "slug": "railway-status",
+   "url": "https://status.railway.com/",
+   "headline": "Railway Status page",
+   "date": "2026-10-23",
+   "credit": "Source: status.railway.com, viewed 26 Oct 2026",
+   "status": "loaded",
+   "note": "live status page as of 26 Oct 2026; shows the 23 Oct notice that new account signups remain paused",
+   "finalUrl": "https://status.railway.com/",
+   "files": {
+    "fold": "railway/railway-status_fold.png",
+    "full": "railway/railway-status_full.jpg",
+    "scroll": "railway/railway-status_scroll.mp4"
+   },
+   "sizeMB": 0.85,
+   "full": {
+    "width": 1440,
+    "height": 6000,
+    "pageHeight": 9259
+   },
+   "scroll": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "seconds": 8,
+    "keyframes": [
+     {
+      "t": 0,
+      "y": 0
+     },
+     {
+      "t": 1,
+      "y": 0
+     },
+     {
+      "t": 2.55,
+      "y": 1400
+     },
+     {
+      "t": 8,
+      "y": 1400
+     }
+    ],
+    "easing": "easeInOutCubic between keyframes, holds where y is equal",
+    "capped": false,
+    "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)"
+   },
+   "quotes": [
+    {
+     "quote": "New account signups remain paused",
+     "fullBox": {
+      "x": 363,
+      "y": 324,
+      "w": 270,
+      "h": 18
+     },
+     "fullLines": [
+      {
+       "x": 363,
+       "y": 324,
+       "w": 270,
+       "h": 18
+      }
+     ],
+     "video": {
+      "t": 0.53,
+      "holdWindow": [
+       0,
+       1.07
+      ],
+      "box": {
+       "x": 603,
+       "y": 324,
+       "w": 270,
+       "h": 18
+      },
+      "lines": [
+       {
+        "x": 603,
+        "y": 324,
+        "w": 270,
+        "h": 18
+       }
+      ]
+     },
+     "note": null
+    }
+   ]
+  },
+  {
+   "story": "zeabur",
+   "outlet": "Zeabur (official blog)",
+   "slug": "zeabur-blog",
+   "url": "https://zeabur.com/blogs/zeabur-is-shutting-down",
+   "headline": "Zeabur is shutting down: what happens next",
+   "date": "2026-10-17",
+   "credit": "Source: Zeabur, 17 Oct 2026",
+   "status": "loaded",
+   "note": "",
+   "finalUrl": "https://zeabur.com/blogs/zeabur-is-shutting-down",
+   "files": {
+    "fold": "zeabur/zeabur-blog_fold.png",
+    "full": "zeabur/zeabur-blog_full.jpg",
+    "scroll": "zeabur/zeabur-blog_scroll.mp4"
+   },
+   "sizeMB": 2.72,
+   "full": {
+    "width": 1440,
+    "height": 5233,
+    "pageHeight": 5233
+   },
+   "scroll": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "seconds": 8,
+    "keyframes": [
+     {
+      "t": 0,
+      "y": 94
+     },
+     {
+      "t": 1,
+      "y": 94
+     },
+     {
+      "t": 2.181,
+      "y": 711
+     },
+     {
+      "t": 3.281,
+      "y": 711
+     },
+     {
+      "t": 4.746,
+      "y": 1903
+     },
+     {
+      "t": 8,
+      "y": 1903
+     }
+    ],
+    "easing": "easeInOutCubic between keyframes, holds where y is equal",
+    "capped": false,
+    "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)"
+   },
+   "quotes": [
+    {
+     "quote": "Zeabur is shutting down: what happens next",
+     "fullBox": {
+      "x": 302,
+      "y": 231,
+      "w": 835,
+      "h": 120
+     },
+     "fullLines": [
+      {
+       "x": 302,
+       "y": 231,
+       "w": 835,
+       "h": 62
+      },
+      {
+       "x": 673,
+       "y": 289,
+       "w": 94,
+       "h": 62
+      }
+     ],
+     "video": {
+      "t": 0.53,
+      "holdWindow": [
+       0,
+       1.07
+      ],
+      "box": {
+       "x": 542,
+       "y": 137,
+       "w": 835,
+       "h": 120
+      },
+      "lines": [
+       {
+        "x": 542,
+        "y": 137,
+        "w": 835,
+        "h": 62
+       },
+       {
+        "x": 913,
+        "y": 195,
+        "w": 94,
+        "h": 62
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "all dedicated servers and shared clusters will be shut down by December 31",
+     "fullBox": {
+      "x": 513,
+      "y": 368,
+      "w": 583,
+      "h": 50
+     },
+     "fullLines": [
+      {
+       "x": 891,
+       "y": 368,
+       "w": 205,
+       "h": 23
+      },
+      {
+       "x": 513,
+       "y": 395,
+       "w": 411,
+       "h": 23
+      }
+     ],
+     "video": {
+      "t": 0.53,
+      "holdWindow": [
+       0,
+       1.07
+      ],
+      "box": {
+       "x": 753,
+       "y": 274,
+       "w": 583,
+       "h": 50
+      },
+      "lines": [
+       {
+        "x": 1131,
+        "y": 274,
+        "w": 205,
+        "h": 23
+       },
+       {
+        "x": 753,
+        "y": 301,
+        "w": 411,
+        "h": 23
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "Today, I have a difficult decision to share: we will be winding down Zeabur",
+     "fullBox": {
+      "x": 272,
+      "y": 1121,
+      "w": 542,
+      "h": 21
+     },
+     "fullLines": [
+      {
+       "x": 272,
+       "y": 1121,
+       "w": 542,
+       "h": 21
+      }
+     ],
+     "video": {
+      "t": 2.73,
+      "holdWindow": [
+       2.1,
+       3.37
+      ],
+      "box": {
+       "x": 512,
+       "y": 410,
+       "w": 542,
+       "h": 21
+      },
+      "lines": [
+       {
+        "x": 512,
+        "y": 410,
+        "w": 542,
+        "h": 21
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "We ultimately decided to wind down",
+     "fullBox": {
+      "x": 272,
+      "y": 2313,
+      "w": 884,
+      "h": 53
+     },
+     "fullLines": [
+      {
+       "x": 1027,
+       "y": 2313,
+       "w": 129,
+       "h": 21
+      },
+      {
+       "x": 272,
+       "y": 2345,
+       "w": 143,
+       "h": 21
+      }
+     ],
+     "video": {
+      "t": 6.35,
+      "holdWindow": [
+       4.67,
+       8.03
+      ],
+      "box": {
+       "x": 512,
+       "y": 410,
+       "w": 884,
+       "h": 53
+      },
+      "lines": [
+       {
+        "x": 1267,
+        "y": 410,
+        "w": 129,
+        "h": 21
+       },
+       {
+        "x": 512,
+        "y": 442,
+        "w": 143,
+        "h": 21
+       }
+      ]
+     },
+     "note": null
+    }
+   ]
+  },
+  {
+   "story": "zeabur",
+   "outlet": "BleepingComputer",
+   "slug": "bleepingcomputer",
+   "url": "https://www.bleepingcomputer.com/news/security/zeabur-shutting-down-after-second-security-breach-in-two-months/",
+   "headline": "Zeabur shutting down after second security breach in two months",
+   "date": "2026-10-20",
+   "credit": "Source: BleepingComputer, 20 Oct 2026",
+   "status": "loaded",
+   "note": "",
+   "finalUrl": "https://www.bleepingcomputer.com/news/security/zeabur-shutting-down-after-second-security-breach-in-two-months/",
+   "files": {
+    "fold": "zeabur/bleepingcomputer_fold.png",
+    "full": "zeabur/bleepingcomputer_full.jpg",
+    "scroll": "zeabur/bleepingcomputer_scroll.mp4"
+   },
+   "sizeMB": 5.14,
+   "full": {
+    "width": 1440,
+    "height": 6000,
+    "pageHeight": 7059
+   },
+   "scroll": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "seconds": 8.966666666666667,
+    "keyframes": [
+     {
+      "t": 0,
+      "y": 312
+     },
+     {
+      "t": 1,
+      "y": 312
+     },
+     {
+      "t": 2.024,
+      "y": 693
+     },
+     {
+      "t": 3.124,
+      "y": 693
+     },
+     {
+      "t": 4.904,
+      "y": 2739
+     },
+     {
+      "t": 6.004,
+      "y": 2739
+     },
+     {
+      "t": 7.281,
+      "y": 3529
+     },
+     {
+      "t": 8.981,
+      "y": 3529
+     }
+    ],
+    "easing": "easeInOutCubic between keyframes, holds where y is equal",
+    "capped": false,
+    "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)"
+   },
+   "quotes": [
+    {
+     "quote": "Zeabur shutting down after second security breach in two months",
+     "fullBox": {
+      "x": 135,
+      "y": 456,
+      "w": 810,
+      "h": 27
+     },
+     "fullLines": [
+      {
+       "x": 135,
+       "y": 456,
+       "w": 810,
+       "h": 27
+      }
+     ],
+     "video": {
+      "t": 0.53,
+      "holdWindow": [
+       0,
+       1.07
+      ],
+      "box": {
+       "x": 375,
+       "y": 144,
+       "w": 810,
+       "h": 27
+      },
+      "lines": [
+       {
+        "x": 375,
+        "y": 144,
+        "w": 810,
+        "h": 27
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "steal over 3.2 million environment variable records and information for 321,810 accounts",
+     "fullBox": {
+      "x": 135,
+      "y": 1103,
+      "w": 828,
+      "h": 46
+     },
+     "fullLines": [
+      {
+       "x": 796,
+       "y": 1103,
+       "w": 167,
+       "h": 21
+      },
+      {
+       "x": 135,
+       "y": 1128,
+       "w": 537,
+       "h": 21
+      }
+     ],
+     "video": {
+      "t": 2.58,
+      "holdWindow": [
+       1.97,
+       3.2
+      ],
+      "box": {
+       "x": 375,
+       "y": 410,
+       "w": 828,
+       "h": 46
+      },
+      "lines": [
+       {
+        "x": 1036,
+        "y": 410,
+        "w": 167,
+        "h": 21
+       },
+       {
+        "x": 375,
+        "y": 435,
+        "w": 537,
+        "h": 21
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "The admin tokens had no expiry, had not been rotated since they were created in January 2024, and were not included in the post-August rotation",
+     "fullBox": {
+      "x": 135,
+      "y": 3149,
+      "w": 800,
+      "h": 46
+     },
+     "fullLines": [
+      {
+       "x": 142,
+       "y": 3149,
+       "w": 793,
+       "h": 21
+      },
+      {
+       "x": 135,
+       "y": 3174,
+       "w": 362,
+       "h": 21
+      }
+     ],
+     "video": {
+      "t": 5.45,
+      "holdWindow": [
+       4.83,
+       6.07
+      ],
+      "box": {
+       "x": 375,
+       "y": 410,
+       "w": 800,
+       "h": 46
+      },
+      "lines": [
+       {
+        "x": 382,
+        "y": 410,
+        "w": 793,
+        "h": 21
+       },
+       {
+        "x": 375,
+        "y": 435,
+        "w": 362,
+        "h": 21
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "it will shut down its services starting December 1, 2026, and finish by December 31, 2026",
+     "fullBox": {
+      "x": 135,
+      "y": 3939,
+      "w": 824,
+      "h": 46
+     },
+     "fullLines": [
+      {
+       "x": 827,
+       "y": 3939,
+       "w": 132,
+       "h": 21
+      },
+      {
+       "x": 135,
+       "y": 3964,
+       "w": 571,
+       "h": 21
+      }
+     ],
+     "video": {
+      "t": 8.1,
+      "holdWindow": [
+       7.2,
+       9
+      ],
+      "box": {
+       "x": 375,
+       "y": 410,
+       "w": 824,
+       "h": 46
+      },
+      "lines": [
+       {
+        "x": 1067,
+        "y": 410,
+        "w": 132,
+        "h": 21
+       },
+       {
+        "x": 375,
+        "y": 435,
+        "w": 571,
+        "h": 21
+       }
+      ]
+     },
+     "note": null
+    }
+   ]
+  },
+  {
+   "story": "zeabur",
+   "outlet": "SC Media",
+   "slug": "scworld",
+   "url": "https://www.scworld.com/brief/zeabur-to-shut-down-following-major-security-breach",
+   "headline": "Zeabur to shut down following major security breach",
+   "date": "2026-10-21",
+   "credit": "Source: SC Media, 21 Oct 2026",
+   "status": "loaded",
+   "note": "",
+   "finalUrl": "https://www.scworld.com/brief/zeabur-to-shut-down-following-major-security-breach",
+   "files": {
+    "fold": "zeabur/scworld_fold.png",
+    "full": "zeabur/scworld_full.jpg",
+    "scroll": "zeabur/scworld_scroll.mp4"
+   },
+   "sizeMB": 2.3,
+   "full": {
+    "width": 1440,
+    "height": 2858,
+    "pageHeight": 2858
+   },
+   "scroll": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "seconds": 8,
+    "keyframes": [
+     {
+      "t": 0,
+      "y": 0
+     },
+     {
+      "t": 1,
+      "y": 0
+     },
+     {
+      "t": 2.235,
+      "y": 713
+     },
+     {
+      "t": 8,
+      "y": 713
+     }
+    ],
+    "easing": "easeInOutCubic between keyframes, holds where y is equal",
+    "capped": false,
+    "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)"
+   },
+   "quotes": [
+    {
+     "quote": "The company failed to rotate administrator tokens, which had remained unchanged since January 2024",
+     "fullBox": {
+      "x": 188,
+      "y": 1123,
+      "w": 690,
+      "h": 78
+     },
+     "fullLines": [
+      {
+       "x": 848,
+       "y": 1123,
+       "w": 30,
+       "h": 21
+      },
+      {
+       "x": 188,
+       "y": 1151,
+       "w": 674,
+       "h": 21
+      },
+      {
+       "x": 188,
+       "y": 1180,
+       "w": 109,
+       "h": 21
+      }
+     ],
+     "video": {
+      "t": 5.1,
+      "holdWindow": [
+       2.17,
+       8.03
+      ],
+      "box": {
+       "x": 428,
+       "y": 410,
+       "w": 690,
+       "h": 78
+      },
+      "lines": [
+       {
+        "x": 1088,
+        "y": 410,
+        "w": 30,
+        "h": 21
+       },
+       {
+        "x": 428,
+        "y": 438,
+        "w": 674,
+        "h": 21
+       },
+       {
+        "x": 428,
+        "y": 467,
+        "w": 109,
+        "h": 21
+       }
+      ]
+     },
+     "note": null
+    }
+   ]
+  },
+  {
+   "story": "zeabur",
+   "outlet": "Start With Identity",
+   "slug": "startwithidentity",
+   "url": "https://startwithidentity.com/blog/2026-10-19-zeabur-to-shut-down-after-a-non-expiring-admin-token-opened-its-shared-cluster/",
+   "headline": "Zeabur to shut down after a non-expiring admin token opened its shared cluster",
+   "date": "2026-10-19",
+   "credit": "Source: Start With Identity, 19 Oct 2026",
+   "status": "loaded",
+   "note": "",
+   "finalUrl": "https://startwithidentity.com/blog/2026-10-19-zeabur-to-shut-down-after-a-non-expiring-admin-token-opened-its-shared-cluster/",
+   "files": {
+    "fold": "zeabur/startwithidentity_fold.png",
+    "full": "zeabur/startwithidentity_full.jpg",
+    "scroll": "zeabur/startwithidentity_scroll.mp4"
+   },
+   "sizeMB": 1.65,
+   "full": {
+    "width": 1440,
+    "height": 3321,
+    "pageHeight": 3321
+   },
+   "scroll": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "seconds": 8,
+    "keyframes": [
+     {
+      "t": 0,
+      "y": 51
+     },
+     {
+      "t": 1,
+      "y": 51
+     },
+     {
+      "t": 2.55,
+      "y": 1451
+     },
+     {
+      "t": 8,
+      "y": 1451
+     }
+    ],
+    "easing": "easeInOutCubic between keyframes, holds where y is equal",
+    "capped": false,
+    "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)"
+   },
+   "quotes": [
+    {
+     "quote": "a shared-cluster admin token created in January 2024 with no expiry",
+     "fullBox": {
+      "x": 360,
+      "y": 391,
+      "w": 661,
+      "h": 57
+     },
+     "fullLines": [
+      {
+       "x": 645,
+       "y": 391,
+       "w": 376,
+       "h": 24
+      },
+      {
+       "x": 360,
+       "y": 424,
+       "w": 270,
+       "h": 24
+      }
+     ],
+     "video": {
+      "t": 0.53,
+      "holdWindow": [
+       0,
+       1.07
+      ],
+      "box": {
+       "x": 600,
+       "y": 340,
+       "w": 661,
+       "h": 57
+      },
+      "lines": [
+       {
+        "x": 885,
+        "y": 340,
+        "w": 376,
+        "h": 24
+       },
+       {
+        "x": 600,
+        "y": 373,
+        "w": 270,
+        "h": 24
+       }
+      ]
+     },
+     "note": null
+    }
+   ]
+  },
+  {
+   "story": "zeabur",
+   "outlet": "Ray's blog",
+   "slug": "israynotarray",
+   "url": "https://israynotarray.com/en/misc/2026/10/18/zeabur-shutting-down-taiwanese-startup-growing-pains/",
+   "headline": "Zeabur Is Shutting Down: A Taiwanese Startup's Growing Pains",
+   "date": "2026-10-18",
+   "credit": "Source: Ray's blog, 18 Oct 2026",
+   "status": "loaded",
+   "note": "",
+   "finalUrl": "https://israynotarray.com/en/misc/2026/10/18/zeabur-shutting-down-taiwanese-startup-growing-pains/",
+   "files": {
+    "fold": "zeabur/israynotarray_fold.png",
+    "full": "zeabur/israynotarray_full.jpg",
+    "scroll": "zeabur/israynotarray_scroll.mp4"
+   },
+   "sizeMB": 1.79,
+   "full": {
+    "width": 1440,
+    "height": 6000,
+    "pageHeight": 13454
+   },
+   "scroll": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "seconds": 8,
+    "keyframes": [
+     {
+      "t": 0,
+      "y": 27
+     },
+     {
+      "t": 1,
+      "y": 27
+     },
+     {
+      "t": 2.55,
+      "y": 1427
+     },
+     {
+      "t": 8,
+      "y": 1427
+     }
+    ],
+    "easing": "easeInOutCubic between keyframes, holds where y is equal",
+    "capped": false,
+    "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)"
+   },
+   "quotes": []
+  },
+  {
+   "story": "opencode",
+   "outlet": "TechCrunch",
+   "slug": "techcrunch",
+   "url": "https://techcrunch.com/2026/10/19/hackers-hit-ai-coding-tool-opencode-running-up-charges-on-users-ai-accounts/",
+   "headline": "Hackers hit AI coding tool OpenCode, running up charges on users’ AI accounts",
+   "date": "2026-10-19",
+   "credit": "Source: TechCrunch, 19 Oct 2026",
+   "status": "loaded",
+   "note": "",
+   "finalUrl": "https://techcrunch.com/2026/10/19/hackers-hit-ai-coding-tool-opencode-running-up-charges-on-users-ai-accounts/",
+   "files": {
+    "fold": "opencode/techcrunch_fold.png",
+    "full": "opencode/techcrunch_full.jpg",
+    "scroll": "opencode/techcrunch_scroll.mp4"
+   },
+   "sizeMB": 4.47,
+   "full": {
+    "width": 1440,
+    "height": 6000,
+    "pageHeight": 9835
+   },
+   "scroll": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "seconds": 8,
+    "keyframes": [
+     {
+      "t": 0,
+      "y": 220
+     },
+     {
+      "t": 1,
+      "y": 220
+     },
+     {
+      "t": 1.9,
+      "y": 454
+     },
+     {
+      "t": 3,
+      "y": 454
+     },
+     {
+      "t": 4.138,
+      "y": 1002
+     },
+     {
+      "t": 5.238,
+      "y": 1002
+     },
+     {
+      "t": 6.138,
+      "y": 1236
+     },
+     {
+      "t": 8,
+      "y": 1236
+     }
+    ],
+    "easing": "easeInOutCubic between keyframes, holds where y is equal",
+    "capped": false,
+    "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)"
+   },
+   "quotes": [
+    {
+     "quote": "Hackers hit AI coding tool OpenCode, running up charges on users' AI accounts",
+     "fullBox": {
+      "x": 729,
+      "y": 362,
+      "w": 577,
+      "h": 128
+     },
+     "fullLines": [
+      {
+       "x": 729,
+       "y": 362,
+       "w": 470,
+       "h": 40
+      },
+      {
+       "x": 729,
+       "y": 406,
+       "w": 577,
+       "h": 40
+      },
+      {
+       "x": 729,
+       "y": 450,
+       "w": 397,
+       "h": 40
+      }
+     ],
+     "video": {
+      "t": 0.53,
+      "holdWindow": [
+       0,
+       1.07
+      ],
+      "box": {
+       "x": 936,
+       "y": 142,
+       "w": 577,
+       "h": 128
+      },
+      "lines": [
+       {
+        "x": 936,
+        "y": 142,
+        "w": 470,
+        "h": 40
+       },
+       {
+        "x": 936,
+        "y": 186,
+        "w": 577,
+        "h": 40
+       },
+       {
+        "x": 936,
+        "y": 230,
+        "w": 397,
+        "h": 40
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "attackers broke into an older system overnight, affecting 1.4% of users of its online platform, OpenCode Console",
+     "fullBox": {
+      "x": 226,
+      "y": 864,
+      "w": 657,
+      "h": 46
+     },
+     "fullLines": [
+      {
+       "x": 264,
+       "y": 864,
+       "w": 619,
+       "h": 19
+      },
+      {
+       "x": 226,
+       "y": 891,
+       "w": 329,
+       "h": 19
+      }
+     ],
+     "video": {
+      "t": 2.45,
+      "holdWindow": [
+       1.83,
+       3.07
+      ],
+      "box": {
+       "x": 466,
+       "y": 410,
+       "w": 657,
+       "h": 46
+      },
+      "lines": [
+       {
+        "x": 504,
+        "y": 410,
+        "w": 619,
+        "h": 19
+       },
+       {
+        "x": 466,
+        "y": 437,
+        "w": 329,
+        "h": 19
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "I saw my Open AI, Anthropic, and Google AI spend alerts all fire off before going to bed",
+     "fullBox": {
+      "x": 226,
+      "y": 1412,
+      "w": 646,
+      "h": 46
+     },
+     "fullLines": [
+      {
+       "x": 450,
+       "y": 1412,
+       "w": 422,
+       "h": 19
+      },
+      {
+       "x": 226,
+       "y": 1439,
+       "w": 302,
+       "h": 19
+      }
+     ],
+     "video": {
+      "t": 4.68,
+      "holdWindow": [
+       4.07,
+       5.3
+      ],
+      "box": {
+       "x": 466,
+       "y": 410,
+       "w": 646,
+       "h": 46
+      },
+      "lines": [
+       {
+        "x": 690,
+        "y": 410,
+        "w": 422,
+        "h": 19
+       },
+       {
+        "x": 466,
+        "y": 437,
+        "w": 302,
+        "h": 19
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "Other users reported charges in the hundreds of dollars on individual accounts; a few described totals above $1,000",
+     "fullBox": {
+      "x": 226,
+      "y": 1516,
+      "w": 589,
+      "h": 46
+     },
+     "fullLines": [
+      {
+       "x": 226,
+       "y": 1516,
+       "w": 589,
+       "h": 19
+      },
+      {
+       "x": 226,
+       "y": 1543,
+       "w": 397,
+       "h": 19
+      }
+     ],
+     "video": {
+      "t": 4.68,
+      "holdWindow": [
+       4.07,
+       5.3
+      ],
+      "box": {
+       "x": 466,
+       "y": 514,
+       "w": 589,
+       "h": 46
+      },
+      "lines": [
+       {
+        "x": 466,
+        "y": 514,
+        "w": 589,
+        "h": 19
+       },
+       {
+        "x": 466,
+        "y": 541,
+        "w": 397,
+        "h": 19
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "OpenCode said refunds for unauthorized charges are underway",
+     "fullBox": {
+      "x": 226,
+      "y": 1646,
+      "w": 610,
+      "h": 46
+     },
+     "fullLines": [
+      {
+       "x": 606,
+       "y": 1646,
+       "w": 230,
+       "h": 19
+      },
+      {
+       "x": 226,
+       "y": 1673,
+       "w": 309,
+       "h": 19
+      }
+     ],
+     "video": {
+      "t": 7.05,
+      "holdWindow": [
+       6.07,
+       8.03
+      ],
+      "box": {
+       "x": 466,
+       "y": 410,
+       "w": 610,
+       "h": 46
+      },
+      "lines": [
+       {
+        "x": 846,
+        "y": 410,
+        "w": 230,
+        "h": 19
+       },
+       {
+        "x": 466,
+        "y": 437,
+        "w": 309,
+        "h": 19
+       }
+      ]
+     },
+     "note": null
+    }
+   ]
+  },
+  {
+   "story": "opencode",
+   "outlet": "BleepingComputer",
+   "slug": "bleepingcomputer",
+   "url": "https://www.bleepingcomputer.com/news/security/opencode-hack-exposes-api-keys-amid-ai-distillation-attacks/",
+   "headline": "OpenCode hack exposes API keys amid AI distillation attacks",
+   "date": "2026-10-19",
+   "credit": "Source: BleepingComputer, 19 Oct 2026",
+   "status": "loaded",
+   "note": "",
+   "finalUrl": "https://www.bleepingcomputer.com/news/security/opencode-hack-exposes-api-keys-amid-ai-distillation-attacks/",
+   "files": {
+    "fold": "opencode/bleepingcomputer_fold.png",
+    "full": "opencode/bleepingcomputer_full.jpg",
+    "scroll": "opencode/bleepingcomputer_scroll.mp4"
+   },
+   "sizeMB": 3.5,
+   "full": {
+    "width": 1440,
+    "height": 5610,
+    "pageHeight": 5610
+   },
+   "scroll": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "seconds": 8,
+    "keyframes": [
+     {
+      "t": 0,
+      "y": 312
+     },
+     {
+      "t": 1,
+      "y": 312
+     },
+     {
+      "t": 2.099,
+      "y": 799
+     },
+     {
+      "t": 3.199,
+      "y": 799
+     },
+     {
+      "t": 4.27,
+      "y": 1245
+     },
+     {
+      "t": 8,
+      "y": 1245
+     }
+    ],
+    "easing": "easeInOutCubic between keyframes, holds where y is equal",
+    "capped": false,
+    "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)"
+   },
+   "quotes": [
+    {
+     "quote": "OpenCode hack exposes API keys amid AI distillation attacks",
+     "fullBox": {
+      "x": 135,
+      "y": 456,
+      "w": 748,
+      "h": 27
+     },
+     "fullLines": [
+      {
+       "x": 135,
+       "y": 456,
+       "w": 748,
+       "h": 27
+      }
+     ],
+     "video": {
+      "t": 0.53,
+      "holdWindow": [
+       0,
+       1.07
+      ],
+      "box": {
+       "x": 375,
+       "y": 144,
+       "w": 748,
+       "h": 27
+      },
+      "lines": [
+       {
+        "x": 375,
+        "y": 144,
+        "w": 748,
+        "h": 27
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "the breach affected 1.4% of OpenCode Console users, with some reporting more than $1,700 in unauthorized charges overnight",
+     "fullBox": {
+      "x": 135,
+      "y": 1209,
+      "w": 798,
+      "h": 46
+     },
+     "fullLines": [
+      {
+       "x": 428,
+       "y": 1209,
+       "w": 505,
+       "h": 21
+      },
+      {
+       "x": 135,
+       "y": 1234,
+       "w": 497,
+       "h": 21
+      }
+     ],
+     "video": {
+      "t": 2.65,
+      "holdWindow": [
+       2.03,
+       3.27
+      ],
+      "box": {
+       "x": 375,
+       "y": 410,
+       "w": 798,
+       "h": 46
+      },
+      "lines": [
+       {
+        "x": 668,
+        "y": 410,
+        "w": 505,
+        "h": 21
+       },
+       {
+        "x": 375,
+        "y": 435,
+        "w": 497,
+        "h": 21
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "Distillation is a legitimate machine-learning technique that trains smaller AI models using responses generated by more powerful models",
+     "fullBox": {
+      "x": 135,
+      "y": 1655,
+      "w": 799,
+      "h": 46
+     },
+     "fullLines": [
+      {
+       "x": 135,
+       "y": 1655,
+       "w": 799,
+       "h": 21
+      },
+      {
+       "x": 135,
+       "y": 1680,
+       "w": 285,
+       "h": 21
+      }
+     ],
+     "video": {
+      "t": 6.12,
+      "holdWindow": [
+       4.2,
+       8.03
+      ],
+      "box": {
+       "x": 375,
+       "y": 410,
+       "w": 799,
+       "h": 46
+      },
+      "lines": [
+       {
+        "x": 375,
+        "y": 410,
+        "w": 799,
+        "h": 21
+       },
+       {
+        "x": 375,
+        "y": 435,
+        "w": 285,
+        "h": 21
+       }
+      ]
+     },
+     "note": null
+    }
+   ]
+  },
+  {
+   "story": "opencode",
+   "outlet": "Infosecurity Magazine",
+   "slug": "infosecurity",
+   "url": "https://www.infosecurity-magazine.com/news/opencode-breach-openai-anthropic/",
+   "headline": "OpenCode Breach Could Affect OpenAI, Anthropic and Google",
+   "date": "2026-10-19",
+   "credit": "Source: Infosecurity Magazine, 19 Oct 2026",
+   "status": "loaded",
+   "note": "",
+   "finalUrl": "https://www.infosecurity-magazine.com/news/opencode-breach-openai-anthropic/",
+   "files": {
+    "fold": "opencode/infosecurity_fold.png",
+    "full": "opencode/infosecurity_full.jpg",
+    "scroll": "opencode/infosecurity_scroll.mp4"
+   },
+   "sizeMB": 2.53,
+   "full": {
+    "width": 1440,
+    "height": 3190,
+    "pageHeight": 3190
+   },
+   "scroll": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "seconds": 8,
+    "keyframes": [
+     {
+      "t": 0,
+      "y": 360
+     },
+     {
+      "t": 1,
+      "y": 360
+     },
+     {
+      "t": 2.224,
+      "y": 1052
+     },
+     {
+      "t": 8,
+      "y": 1052
+     }
+    ],
+    "easing": "easeInOutCubic between keyframes, holds where y is equal",
+    "capped": false,
+    "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)"
+   },
+   "quotes": [
+    {
+     "quote": "identified unauthorized access to a legacy system that we were in the process of decommissioning",
+     "fullBox": {
+      "x": 222,
+      "y": 1462,
+      "w": 660,
+      "h": 43
+     },
+     "fullLines": [
+      {
+       "x": 432,
+       "y": 1462,
+       "w": 450,
+       "h": 19
+      },
+      {
+       "x": 222,
+       "y": 1486,
+       "w": 224,
+       "h": 19
+      }
+     ],
+     "video": {
+      "t": 5.1,
+      "holdWindow": [
+       2.17,
+       8.03
+      ],
+      "box": {
+       "x": 462,
+       "y": 410,
+       "w": 660,
+       "h": 43
+      },
+      "lines": [
+       {
+        "x": 672,
+        "y": 410,
+        "w": 450,
+        "h": 19
+       },
+       {
+        "x": 462,
+        "y": 434,
+        "w": 224,
+        "h": 19
+       }
+      ]
+     },
+     "note": null
+    }
+   ]
+  },
+  {
+   "story": "opencode",
+   "outlet": "DevOps.com",
+   "slug": "devops",
+   "url": "https://devops.com/opencode-breach-puts-spotlight-on-ai-distillation-threats/",
+   "headline": "OpenCode Breach Puts Spotlight on AI Distillation Threats",
+   "date": "2026-10-19",
+   "credit": "Source: DevOps.com, 19 Oct 2026",
+   "status": "loaded",
+   "note": "",
+   "finalUrl": "https://devops.com/opencode-breach-puts-spotlight-on-ai-distillation-threats",
+   "files": {
+    "fold": "opencode/devops_fold.png",
+    "full": "opencode/devops_full.jpg",
+    "scroll": "opencode/devops_scroll.mp4"
+   },
+   "sizeMB": 2.21,
+   "full": {
+    "width": 1440,
+    "height": 4696,
+    "pageHeight": 4696
+   },
+   "scroll": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "seconds": 8,
+    "keyframes": [
+     {
+      "t": 0,
+      "y": 196
+     },
+     {
+      "t": 1,
+      "y": 196
+     },
+     {
+      "t": 1.969,
+      "y": 507
+     },
+     {
+      "t": 8,
+      "y": 507
+     }
+    ],
+    "easing": "easeInOutCubic between keyframes, holds where y is equal",
+    "capped": false,
+    "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)"
+   },
+   "quotes": [
+    {
+     "quote": "Stolen keys can lead to unexpected bills and greater risk",
+     "fullBox": {
+      "x": 132,
+      "y": 917,
+      "w": 392,
+      "h": 19
+     },
+     "fullLines": [
+      {
+       "x": 132,
+       "y": 917,
+       "w": 392,
+       "h": 19
+      }
+     ],
+     "video": {
+      "t": 4.97,
+      "holdWindow": [
+       1.9,
+       8.03
+      ],
+      "box": {
+       "x": 372,
+       "y": 410,
+       "w": 392,
+       "h": 19
+      },
+      "lines": [
+       {
+        "x": 372,
+        "y": 410,
+        "w": 392,
+        "h": 19
+       }
+      ]
+     },
+     "note": null
+    }
+   ]
+  },
+  {
+   "story": "opencode",
+   "outlet": "OfficeChai",
+   "slug": "officechai",
+   "url": "https://officechai.com/ai/opencode-discloses-security-breach-says-attackers-may-have-accessed-users-openai-anthropic-and-google-api-keys/",
+   "headline": "OpenCode Discloses Security Breach, Says Attackers May Have Accessed Users’ OpenAI, Anthropic And Google API Keys",
+   "date": "2026-10-17",
+   "credit": "Source: OfficeChai, 17 Oct 2026",
+   "status": "loaded",
+   "note": "",
+   "finalUrl": "https://officechai.com/ai/opencode-discloses-security-breach-says-attackers-may-have-accessed-users-openai-anthropic-and-google-api-keys/",
+   "files": {
+    "fold": "opencode/officechai_fold.png",
+    "full": "opencode/officechai_full.jpg",
+    "scroll": "opencode/officechai_scroll.mp4"
+   },
+   "sizeMB": 1.94,
+   "full": {
+    "width": 1440,
+    "height": 5012,
+    "pageHeight": 5012
+   },
+   "scroll": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "seconds": 8,
+    "keyframes": [
+     {
+      "t": 0,
+      "y": 77
+     },
+     {
+      "t": 1,
+      "y": 77
+     },
+     {
+      "t": 2.248,
+      "y": 814
+     },
+     {
+      "t": 8,
+      "y": 814
+     }
+    ],
+    "easing": "easeInOutCubic between keyframes, holds where y is equal",
+    "capped": false,
+    "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)"
+   },
+   "quotes": [
+    {
+     "quote": "Whole new world with AI-powered hacking",
+     "fullBox": {
+      "x": 274,
+      "y": 1224,
+      "w": 355,
+      "h": 20
+     },
+     "fullLines": [
+      {
+       "x": 274,
+       "y": 1224,
+       "w": 355,
+       "h": 20
+      }
+     ],
+     "video": {
+      "t": 5.1,
+      "holdWindow": [
+       2.17,
+       8.03
+      ],
+      "box": {
+       "x": 514,
+       "y": 410,
+       "w": 355,
+       "h": 20
+      },
+      "lines": [
+       {
+        "x": 514,
+        "y": 410,
+        "w": 355,
+        "h": 20
+       }
+      ]
+     },
+     "note": null
+    }
+   ]
+  },
+  {
+   "story": "emudhra",
+   "outlet": "BleepingComputer",
+   "slug": "bleepingcomputer",
+   "url": "https://www.bleepingcomputer.com/news/security/mozilla-google-apple-block-compromised-emudhra-ca-certificates/",
+   "headline": "Mozilla, Google, Apple block compromised eMudhra CA certificates",
+   "date": "2026-10-20",
+   "credit": "Source: BleepingComputer, 20 Oct 2026",
+   "status": "loaded",
+   "note": "",
+   "finalUrl": "https://www.bleepingcomputer.com/news/security/mozilla-google-apple-block-compromised-emudhra-ca-certificates/",
+   "files": {
+    "fold": "emudhra/bleepingcomputer_fold.png",
+    "full": "emudhra/bleepingcomputer_full.jpg",
+    "scroll": "emudhra/bleepingcomputer_scroll.mp4"
+   },
+   "sizeMB": 4.14,
+   "full": {
+    "width": 1440,
+    "height": 5768,
+    "pageHeight": 5768
+   },
+   "scroll": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "seconds": 8,
+    "keyframes": [
+     {
+      "t": 0,
+      "y": 312
+     },
+     {
+      "t": 1,
+      "y": 312
+     },
+     {
+      "t": 2.224,
+      "y": 1005
+     },
+     {
+      "t": 8,
+      "y": 1005
+     }
+    ],
+    "easing": "easeInOutCubic between keyframes, holds where y is equal",
+    "capped": false,
+    "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)"
+   },
+   "quotes": [
+    {
+     "quote": "Mozilla, Google, Apple block compromised eMudhra CA certificates",
+     "fullBox": {
+      "x": 135,
+      "y": 456,
+      "w": 832,
+      "h": 27
+     },
+     "fullLines": [
+      {
+       "x": 135,
+       "y": 456,
+       "w": 832,
+       "h": 27
+      }
+     ],
+     "video": {
+      "t": 0.53,
+      "holdWindow": [
+       0,
+       1.07
+      ],
+      "box": {
+       "x": 375,
+       "y": 144,
+       "w": 832,
+       "h": 27
+      },
+      "lines": [
+       {
+        "x": 375,
+        "y": 144,
+        "w": 832,
+        "h": 27
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "the private key for eMudhra's \"EM OV TLS CA - G3C\" certificate had a value of just 4",
+     "fullBox": {
+      "x": 135,
+      "y": 1415,
+      "w": 823,
+      "h": 46
+     },
+     "fullLines": [
+      {
+       "x": 335,
+       "y": 1415,
+       "w": 623,
+       "h": 21
+      },
+      {
+       "x": 135,
+       "y": 1440,
+       "w": 44,
+       "h": 21
+      }
+     ],
+     "video": {
+      "t": 5.1,
+      "holdWindow": [
+       2.17,
+       8.03
+      ],
+      "box": {
+       "x": 375,
+       "y": 410,
+       "w": 823,
+       "h": 46
+      },
+      "lines": [
+       {
+        "x": 575,
+        "y": 410,
+        "w": 623,
+        "h": 21
+       },
+       {
+        "x": 375,
+        "y": 435,
+        "w": 44,
+        "h": 21
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "eMudhra blamed the issue on an error in a script used to generate the certificates in April 2025",
+     "fullBox": {
+      "x": 135,
+      "y": 1521,
+      "w": 751,
+      "h": 46
+     },
+     "fullLines": [
+      {
+       "x": 334,
+       "y": 1521,
+       "w": 552,
+       "h": 21
+      },
+      {
+       "x": 135,
+       "y": 1546,
+       "w": 197,
+       "h": 21
+      }
+     ],
+     "video": {
+      "t": 5.1,
+      "holdWindow": [
+       2.17,
+       8.03
+      ],
+      "box": {
+       "x": 375,
+       "y": 516,
+       "w": 751,
+       "h": 46
+      },
+      "lines": [
+       {
+        "x": 574,
+        "y": 516,
+        "w": 552,
+        "h": 21
+       },
+       {
+        "x": 375,
+        "y": 541,
+        "w": 197,
+        "h": 21
+       }
+      ]
+     },
+     "note": null
+    }
+   ]
+  },
+  {
+   "story": "emudhra",
+   "outlet": "The Hacker News",
+   "slug": "thehackernews",
+   "url": "https://thehackernews.com/2026/10/eight-emudhra-ca-keys-compromised.html",
+   "headline": "Eight eMudhra CA Keys Compromised, Triggering Emergency Fixes Across Browsers and Software",
+   "date": "2026-10-20",
+   "credit": "Source: The Hacker News, 20 Oct 2026",
+   "status": "loaded",
+   "note": "",
+   "finalUrl": "https://thehackernews.com/2026/10/eight-emudhra-ca-keys-compromised.html",
+   "files": {
+    "fold": "emudhra/thehackernews_fold.png",
+    "full": "emudhra/thehackernews_full.jpg",
+    "scroll": "emudhra/thehackernews_scroll.mp4"
+   },
+   "sizeMB": 3.09,
+   "full": {
+    "width": 1440,
+    "height": 6000,
+    "pageHeight": 12023
+   },
+   "scroll": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "seconds": 8,
+    "keyframes": [
+     {
+      "t": 0,
+      "y": 181
+     },
+     {
+      "t": 1,
+      "y": 181
+     },
+     {
+      "t": 2.09,
+      "y": 654
+     },
+     {
+      "t": 8,
+      "y": 654
+     }
+    ],
+    "easing": "easeInOutCubic between keyframes, holds where y is equal",
+    "capped": false,
+    "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)"
+   },
+   "quotes": [
+    {
+     "quote": "Chrome and Firefox blocked the eight certificates within hours",
+     "fullBox": {
+      "x": 176,
+      "y": 1064,
+      "w": 432,
+      "h": 19
+     },
+     "fullLines": [
+      {
+       "x": 176,
+       "y": 1064,
+       "w": 432,
+       "h": 19
+      }
+     ],
+     "video": {
+      "t": 5.03,
+      "holdWindow": [
+       2.03,
+       8.03
+      ],
+      "box": {
+       "x": 416,
+       "y": 410,
+       "w": 432,
+       "h": 19
+      },
+      "lines": [
+       {
+        "x": 416,
+        "y": 410,
+        "w": 432,
+        "h": 19
+       }
+      ]
+     },
+     "note": null
+    }
+   ]
+  },
+  {
+   "story": "emudhra",
+   "outlet": "The Next Web",
+   "slug": "thenextweb",
+   "url": "https://thenextweb.com/news/emudhra-certificates-weak-keys-browsers-block",
+   "headline": "eMudhra certificates blocked: one private key was the number 4",
+   "date": "2026-10-21",
+   "credit": "Source: The Next Web, 21 Oct 2026",
+   "status": "loaded",
+   "note": "",
+   "finalUrl": "https://thenextweb.com/news/emudhra-certificates-weak-keys-browsers-block",
+   "files": {
+    "fold": "emudhra/thenextweb_fold.png",
+    "full": "emudhra/thenextweb_full.jpg",
+    "scroll": "emudhra/thenextweb_scroll.mp4"
+   },
+   "sizeMB": 2.02,
+   "full": {
+    "width": 1440,
+    "height": 5235,
+    "pageHeight": 5235
+   },
+   "scroll": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "seconds": 8,
+    "keyframes": [
+     {
+      "t": 0,
+      "y": 0
+     },
+     {
+      "t": 1,
+      "y": 0
+     },
+     {
+      "t": 2.55,
+      "y": 1400
+     },
+     {
+      "t": 8,
+      "y": 1400
+     }
+    ],
+    "easing": "easeInOutCubic between keyframes, holds where y is equal",
+    "capped": false,
+    "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)"
+   },
+   "quotes": [
+    {
+     "quote": "Eight eMudhra certificate keys were so weak that one was the number 4",
+     "fullBox": {
+      "x": 145,
+      "y": 186,
+      "w": 1151,
+      "h": 116
+     },
+     "fullLines": [
+      {
+       "x": 145,
+       "y": 186,
+       "w": 1151,
+       "h": 56
+      },
+      {
+       "x": 241,
+       "y": 246,
+       "w": 958,
+       "h": 56
+      }
+     ],
+     "video": {
+      "t": 0.53,
+      "holdWindow": [
+       0,
+       1.07
+      ],
+      "box": {
+       "x": 385,
+       "y": 186,
+       "w": 1151,
+       "h": 116
+      },
+      "lines": [
+       {
+        "x": 385,
+        "y": 186,
+        "w": 1151,
+        "h": 56
+       },
+       {
+        "x": 481,
+        "y": 246,
+        "w": 958,
+        "h": 56
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "Chrome, Firefox, Apple and Microsoft have blocked the eMudhra certificates",
+     "fullBox": {
+      "x": 114,
+      "y": 331,
+      "w": 856,
+      "h": 29
+     },
+     "fullLines": [
+      {
+       "x": 114,
+       "y": 331,
+       "w": 856,
+       "h": 29
+      }
+     ],
+     "video": {
+      "t": 0.53,
+      "holdWindow": [
+       0,
+       1.07
+      ],
+      "box": {
+       "x": 354,
+       "y": 331,
+       "w": 856,
+       "h": 29
+      },
+      "lines": [
+       {
+        "x": 354,
+        "y": 331,
+        "w": 856,
+        "h": 29
+       }
+      ]
+     },
+     "note": null
+    }
+   ]
+  },
+  {
+   "story": "emudhra",
+   "outlet": "Help Net Security",
+   "slug": "helpnetsecurity",
+   "url": "https://www.helpnetsecurity.com/?p=388647",
+   "headline": "eMudhra security blunder left trusted CA signing keys exposed to anyone",
+   "date": "2026-10-21",
+   "credit": "Source: Help Net Security, 21 Oct 2026",
+   "status": "loaded",
+   "note": "",
+   "finalUrl": "https://www.helpnetsecurity.com/2026/10/21/emudhra-certificates-private-keys-compromised/",
+   "files": {
+    "fold": "emudhra/helpnetsecurity_fold.png",
+    "full": "emudhra/helpnetsecurity_full.jpg",
+    "scroll": "emudhra/helpnetsecurity_scroll.mp4"
+   },
+   "sizeMB": 3.59,
+   "full": {
+    "width": 1440,
+    "height": 5172,
+    "pageHeight": 5172
+   },
+   "scroll": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "seconds": 8,
+    "keyframes": [
+     {
+      "t": 0,
+      "y": 224
+     },
+     {
+      "t": 1,
+      "y": 224
+     },
+     {
+      "t": 3.078,
+      "y": 3289
+     },
+     {
+      "t": 8,
+      "y": 3289
+     }
+    ],
+    "easing": "easeInOutCubic between keyframes, holds where y is equal",
+    "capped": false,
+    "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)"
+   },
+   "quotes": [
+    {
+     "quote": "eMudhra announced it will leave the global SSL/TLS certificate business",
+     "fullBox": {
+      "x": 215,
+      "y": 3699,
+      "w": 574,
+      "h": 48
+     },
+     "fullLines": [
+      {
+       "x": 375,
+       "y": 3699,
+       "w": 414,
+       "h": 21
+      },
+      {
+       "x": 215,
+       "y": 3726,
+       "w": 157,
+       "h": 21
+      }
+     ],
+     "video": {
+      "t": 5.52,
+      "holdWindow": [
+       3,
+       8.03
+      ],
+      "box": {
+       "x": 455,
+       "y": 410,
+       "w": 574,
+       "h": 48
+      },
+      "lines": [
+       {
+        "x": 615,
+        "y": 410,
+        "w": 414,
+        "h": 21
+       },
+       {
+        "x": 455,
+        "y": 437,
+        "w": 157,
+        "h": 21
+       }
+      ]
+     },
+     "note": null
+    }
+   ]
+  },
+  {
+   "story": "emudhra",
+   "outlet": "Cybersecurity Dive",
+   "slug": "cybersecuritydive",
+   "url": "https://www.cybersecuritydive.com/news/website-encryption-security-certificates-emudhra-incident/833622/",
+   "headline": "Don’t miss tomorrow’s Cybersecurity industry news",
+   "date": "2026-10-21",
+   "credit": "Source: Cybersecurity Dive, 21 Oct 2026",
+   "status": "loaded",
+   "note": "",
+   "finalUrl": "https://www.cybersecuritydive.com/news/website-encryption-security-certificates-emudhra-incident/833622/",
+   "files": {
+    "fold": "emudhra/cybersecuritydive_fold.png",
+    "full": "emudhra/cybersecuritydive_full.jpg",
+    "scroll": "emudhra/cybersecuritydive_scroll.mp4"
+   },
+   "sizeMB": 3.06,
+   "full": {
+    "width": 1440,
+    "height": 4751,
+    "pageHeight": 4751
+   },
+   "scroll": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "seconds": 8,
+    "keyframes": [
+     {
+      "t": 0,
+      "y": 0
+     },
+     {
+      "t": 1,
+      "y": 0
+     },
+     {
+      "t": 2.55,
+      "y": 1400
+     },
+     {
+      "t": 8,
+      "y": 1400
+     }
+    ],
+    "easing": "easeInOutCubic between keyframes, holds where y is equal",
+    "capped": false,
+    "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)"
+   },
+   "quotes": [
+    {
+     "quote": "Weak encryption certificates could have let hackers easily spoof websites",
+     "fullBox": {
+      "x": 135,
+      "y": 179,
+      "w": 746,
+      "h": 109
+     },
+     "fullLines": [
+      {
+       "x": 135,
+       "y": 179,
+       "w": 697,
+       "h": 61
+      },
+      {
+       "x": 135,
+       "y": 227,
+       "w": 746,
+       "h": 61
+      }
+     ],
+     "video": {
+      "t": 0.53,
+      "holdWindow": [
+       0,
+       1.07
+      ],
+      "box": {
+       "x": 375,
+       "y": 179,
+       "w": 746,
+       "h": 109
+      },
+      "lines": [
+       {
+        "x": 375,
+        "y": 179,
+        "w": 697,
+        "h": 61
+       },
+       {
+        "x": 375,
+        "y": 227,
+        "w": 746,
+        "h": 61
+       }
+      ]
+     },
+     "note": null
+    }
+   ]
+  },
+  {
+   "story": "emudhra",
+   "outlet": "oss-security (Openwall)",
+   "slug": "openwall",
+   "url": "https://www.openwall.com/lists/oss-security/2026/10/20/30",
+   "headline": "NSS 3.131.1 Release - Important Security Updates (Mozilla, via oss-security)",
+   "date": "2026-10-20",
+   "credit": "Source: Mozilla NSS release notice (oss-security), 20 Oct 2026",
+   "status": "loaded",
+   "note": "",
+   "finalUrl": "https://www.openwall.com/lists/oss-security/2026/10/20/30",
+   "files": {
+    "fold": "emudhra/openwall_fold.png",
+    "full": "emudhra/openwall_full.jpg",
+    "scroll": "emudhra/openwall_scroll.mp4"
+   },
+   "sizeMB": 1.26,
+   "full": {
+    "width": 1440,
+    "height": 1544,
+    "pageHeight": 1544
+   },
+   "scroll": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "seconds": 8,
+    "keyframes": [
+     {
+      "t": 0,
+      "y": 0
+     },
+     {
+      "t": 1,
+      "y": 0
+     },
+     {
+      "t": 1.865,
+      "y": 299
+     },
+     {
+      "t": 8,
+      "y": 299
+     }
+    ],
+    "easing": "easeInOutCubic between keyframes, holds where y is equal",
+    "capped": false,
+    "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)"
+   },
+   "quotes": [
+    {
+     "quote": "This release removes trust in the following root certificates",
+     "fullBox": {
+      "x": 36,
+      "y": 710,
+      "w": 716,
+      "h": 23
+     },
+     "fullLines": [
+      {
+       "x": 36,
+       "y": 710,
+       "w": 716,
+       "h": 23
+      }
+     ],
+     "video": {
+      "t": 4.92,
+      "holdWindow": [
+       1.8,
+       8.03
+      ],
+      "box": {
+       "x": 36,
+       "y": 411,
+       "w": 716,
+       "h": 23
+      },
+      "lines": [
+       {
+        "x": 36,
+        "y": 411,
+        "w": 716,
+        "h": 23
+       }
+      ]
+     },
+     "note": null
+    }
+   ]
+  },
+  {
+   "story": "emudhra",
+   "outlet": "Inc42",
+   "slug": "inc42",
+   "url": "https://inc42.com/buzz/emudhras-security-key-flaw-what-went-wrong-and-why-google-mozilla-stepped-in/",
+   "headline": "eMudhra’s Security Key Flaw: What Went Wrong And Why Google, Mozilla Stepped In",
+   "date": "2026-10-21",
+   "credit": "Source: Inc42, 21 Oct 2026",
+   "status": "loaded",
+   "note": "",
+   "finalUrl": "https://inc42.com/buzz/emudhras-security-key-flaw-what-went-wrong-and-why-google-mozilla-stepped-in/",
+   "files": {
+    "fold": "emudhra/inc42_fold.png",
+    "full": "emudhra/inc42_full.jpg",
+    "scroll": "emudhra/inc42_scroll.mp4"
+   },
+   "sizeMB": 3.49,
+   "full": {
+    "width": 1440,
+    "height": 6000,
+    "pageHeight": 12740
+   },
+   "scroll": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "seconds": 8,
+    "keyframes": [
+     {
+      "t": 0,
+      "y": 32
+     },
+     {
+      "t": 1,
+      "y": 32
+     },
+     {
+      "t": 2.55,
+      "y": 1432
+     },
+     {
+      "t": 8,
+      "y": 1432
+     }
+    ],
+    "easing": "easeInOutCubic between keyframes, holds where y is equal",
+    "capped": false,
+    "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)"
+   },
+   "quotes": []
+  },
+  {
+   "story": "nodejs",
+   "outlet": "SecurityOnline",
+   "slug": "securityonline",
+   "url": "https://securityonline.info/nodejs-security-release-october-2026/",
+   "headline": "Node.js Fixes 10 Flaws, Including Brotli RCE and TLS Hostname Bypasses",
+   "date": "2026-10-21",
+   "credit": "Source: SecurityOnline, 21 Oct 2026",
+   "status": "loaded",
+   "note": "",
+   "finalUrl": "https://securityonline.info/nodejs-security-release-october-2026/",
+   "files": {
+    "fold": "nodejs/securityonline_fold.png",
+    "full": "nodejs/securityonline_full.jpg",
+    "scroll": "nodejs/securityonline_scroll.mp4"
+   },
+   "sizeMB": 2.08,
+   "full": {
+    "width": 1440,
+    "height": 5779,
+    "pageHeight": 5779
+   },
+   "scroll": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "seconds": 8,
+    "keyframes": [
+     {
+      "t": 0,
+      "y": 300
+     },
+     {
+      "t": 1,
+      "y": 300
+     },
+     {
+      "t": 2.172,
+      "y": 902
+     },
+     {
+      "t": 3.272,
+      "y": 902
+     },
+     {
+      "t": 4.78,
+      "y": 2197
+     },
+     {
+      "t": 8,
+      "y": 2197
+     }
+    ],
+    "easing": "easeInOutCubic between keyframes, holds where y is equal",
+    "capped": false,
+    "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)"
+   },
+   "quotes": [
+    {
+     "quote": "On October 21, 2026, the Node.js project shipped versions 22.23.4, 24.22.1 and 26.12.1 to fix 10 vulnerabilities",
+     "fullBox": {
+      "x": 127,
+      "y": 1312,
+      "w": 745,
+      "h": 53
+     },
+     "fullLines": [
+      {
+       "x": 127,
+       "y": 1312,
+       "w": 745,
+       "h": 24
+      },
+      {
+       "x": 127,
+       "y": 1341,
+       "w": 146,
+       "h": 24
+      }
+     ],
+     "video": {
+      "t": 2.72,
+      "holdWindow": [
+       2.1,
+       3.33
+      ],
+      "box": {
+       "x": 367,
+       "y": 410,
+       "w": 745,
+       "h": 53
+      },
+      "lines": [
+       {
+        "x": 367,
+        "y": 410,
+        "w": 745,
+        "h": 24
+       },
+       {
+        "x": 367,
+        "y": 439,
+        "w": 146,
+        "h": 24
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "The Node.js team does not report exploitation in the wild",
+     "fullBox": {
+      "x": 127,
+      "y": 2607,
+      "w": 482,
+      "h": 24
+     },
+     "fullLines": [
+      {
+       "x": 127,
+       "y": 2607,
+       "w": 482,
+       "h": 24
+      }
+     ],
+     "video": {
+      "t": 6.37,
+      "holdWindow": [
+       4.7,
+       8.03
+      ],
+      "box": {
+       "x": 367,
+       "y": 410,
+       "w": 482,
+       "h": 24
+      },
+      "lines": [
+       {
+        "x": 367,
+        "y": 410,
+        "w": 482,
+        "h": 24
+       }
+      ]
+     },
+     "note": null
+    }
+   ]
+  },
+  {
+   "story": "nodejs",
+   "outlet": "Node.js (official blog)",
+   "slug": "nodejs-blog",
+   "url": "https://nodejs.org/en/blog/vulnerability/october-2026-security-releases",
+   "headline": "Wednesday, October 21, 2026 Security Releases",
+   "date": "2026-10-21",
+   "credit": "Source: nodejs.org, 21 Oct 2026",
+   "status": "loaded",
+   "note": "",
+   "finalUrl": "https://nodejs.org/en/blog/vulnerability/october-2026-security-releases",
+   "files": {
+    "fold": "nodejs/nodejs-blog_fold.png",
+    "full": "nodejs/nodejs-blog_full.jpg",
+    "scroll": "nodejs/nodejs-blog_scroll.mp4"
+   },
+   "sizeMB": 2.04,
+   "full": {
+    "width": 1440,
+    "height": 6000,
+    "pageHeight": 6529
+   },
+   "scroll": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "seconds": 8,
+    "keyframes": [
+     {
+      "t": 0,
+      "y": 144
+     },
+     {
+      "t": 1,
+      "y": 144
+     },
+     {
+      "t": 2.109,
+      "y": 646
+     },
+     {
+      "t": 8,
+      "y": 646
+     }
+    ],
+    "easing": "easeInOutCubic between keyframes, holds where y is equal",
+    "capped": false,
+    "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)"
+   },
+   "quotes": [
+    {
+     "quote": "Wednesday, October 21, 2026 Security Releases",
+     "fullBox": {
+      "x": 337,
+      "y": 281,
+      "w": 667,
+      "h": 41
+     },
+     "fullLines": [
+      {
+       "x": 337,
+       "y": 281,
+       "w": 667,
+       "h": 41
+      }
+     ],
+     "video": {
+      "t": 0.53,
+      "holdWindow": [
+       0,
+       1.07
+      ],
+      "box": {
+       "x": 513,
+       "y": 137,
+       "w": 667,
+       "h": 41
+      },
+      "lines": [
+       {
+        "x": 513,
+        "y": 137,
+        "w": 667,
+        "h": 41
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "ca-cert (eMudhra Intermediate CA Compromise) on 26.x, 24.x, 22.x",
+     "fullBox": {
+      "x": 361,
+      "y": 972,
+      "w": 495,
+      "h": 22
+     },
+     "fullLines": [
+      {
+       "x": 361,
+       "y": 972,
+       "w": 495,
+       "h": 22
+      }
+     ],
+     "video": {
+      "t": 5.03,
+      "holdWindow": [
+       2.03,
+       8.03
+      ],
+      "box": {
+       "x": 537,
+       "y": 410,
+       "w": 495,
+       "h": 22
+      },
+      "lines": [
+       {
+        "x": 537,
+        "y": 410,
+        "w": 495,
+        "h": 22
+       }
+      ]
+     },
+     "note": null
+    }
+   ]
+  },
+  {
+   "story": "nodejs",
+   "outlet": "Konfirmity",
+   "slug": "konfirmity",
+   "url": "https://www.konfirmity.com/advisories/nodejs-october-2026-security-releases",
+   "headline": "Node.js October 2026 Security Releases",
+   "date": "2026-10-21",
+   "credit": "Source: Konfirmity, 21 Oct 2026",
+   "status": "loaded",
+   "note": "",
+   "finalUrl": "https://www.konfirmity.com/advisories/nodejs-october-2026-security-releases",
+   "files": {
+    "fold": "nodejs/konfirmity_fold.png",
+    "full": "nodejs/konfirmity_full.jpg",
+    "scroll": "nodejs/konfirmity_scroll.mp4"
+   },
+   "sizeMB": 2.27,
+   "full": {
+    "width": 1440,
+    "height": 6000,
+    "pageHeight": 17300
+   },
+   "scroll": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "seconds": 8,
+    "keyframes": [
+     {
+      "t": 0,
+      "y": 94
+     },
+     {
+      "t": 1,
+      "y": 94
+     },
+     {
+      "t": 2.55,
+      "y": 1494
+     },
+     {
+      "t": 8,
+      "y": 1494
+     }
+    ],
+    "easing": "easeInOutCubic between keyframes, holds where y is equal",
+    "capped": false,
+    "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)"
+   },
+   "quotes": []
+  },
+  {
+   "story": "nodejs",
+   "outlet": "FourWeekMBA",
+   "slug": "fourweekmba",
+   "url": "https://fourweekmba.com/ai-node-js-fixes-10-flaws-4-high-on-the-same-day-as-php/",
+   "status": "not captured",
+   "note": "blocked (HTTP 403)",
+   "headline": "",
+   "date": ""
+  },
+  {
+   "story": "ai-agents",
+   "outlet": "Honolulu Star-Advertiser (Reuters)",
+   "slug": "staradvertiser-reuters",
+   "url": "https://www.staradvertiser.com/2026/10/19/breaking-news/how-one-hacker-used-ai-agents-to-break-into-over-100-company-websites/",
+   "headline": "How one hacker used AI agents to break into over 100 company websites",
+   "date": "2026-10-19",
+   "credit": "Source: Reuters (via Honolulu Star-Advertiser), 19 Oct 2026",
+   "status": "loaded",
+   "note": "Reuters story by Raphael Satter, syndicated; reuters.com itself blocks automated browsers",
+   "finalUrl": "https://www.staradvertiser.com/2026/10/19/breaking-news/how-one-hacker-used-ai-agents-to-break-into-over-100-company-websites/",
+   "files": {
+    "fold": "ai-agents/staradvertiser-reuters_fold.png",
+    "full": "ai-agents/staradvertiser-reuters_full.jpg",
+    "scroll": "ai-agents/staradvertiser-reuters_scroll.mp4"
+   },
+   "sizeMB": 5.68,
+   "full": {
+    "width": 1440,
+    "height": 4303,
+    "pageHeight": 4303
+   },
+   "scroll": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "seconds": 8,
+    "keyframes": [
+     {
+      "t": 0,
+      "y": 233
+     },
+     {
+      "t": 1,
+      "y": 233
+     },
+     {
+      "t": 2.176,
+      "y": 842
+     },
+     {
+      "t": 3.276,
+      "y": 842
+     },
+     {
+      "t": 4.874,
+      "y": 2367
+     },
+     {
+      "t": 8,
+      "y": 2367
+     }
+    ],
+    "easing": "easeInOutCubic between keyframes, holds where y is equal",
+    "capped": false,
+    "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)"
+   },
+   "quotes": [
+    {
+     "quote": "How one hacker used AI agents to break into over 100 company websites",
+     "fullBox": {
+      "x": 72,
+      "y": 368,
+      "w": 724,
+      "h": 90
+     },
+     "fullLines": [
+      {
+       "x": 72,
+       "y": 368,
+       "w": 724,
+       "h": 50
+      },
+      {
+       "x": 72,
+       "y": 408,
+       "w": 573,
+       "h": 50
+      }
+     ],
+     "video": {
+      "t": 0.53,
+      "holdWindow": [
+       0,
+       1.07
+      ],
+      "box": {
+       "x": 312,
+       "y": 135,
+       "w": 724,
+       "h": 90
+      },
+      "lines": [
+       {
+        "x": 312,
+        "y": 135,
+        "w": 724,
+        "h": 50
+       },
+       {
+        "x": 312,
+        "y": 175,
+        "w": 573,
+        "h": 50
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "broke into websites belonging to more than 100 companies, including farm equipment maker Deere & Co., home appliance company SharkNinja Inc. and engine manufacturer Cummins Inc.",
+     "fullBox": {
+      "x": 140,
+      "y": 1252,
+      "w": 702,
+      "h": 75
+     },
+     "fullLines": [
+      {
+       "x": 363,
+       "y": 1252,
+       "w": 475,
+       "h": 21
+      },
+      {
+       "x": 140,
+       "y": 1279,
+       "w": 702,
+       "h": 21
+      },
+      {
+       "x": 140,
+       "y": 1306,
+       "w": 315,
+       "h": 21
+      }
+     ],
+     "video": {
+      "t": 2.72,
+      "holdWindow": [
+       2.1,
+       3.33
+      ],
+      "box": {
+       "x": 380,
+       "y": 410,
+       "w": 702,
+       "h": 75
+      },
+      "lines": [
+       {
+        "x": 603,
+        "y": 410,
+        "w": 475,
+        "h": 21
+       },
+       {
+        "x": 380,
+        "y": 437,
+        "w": 702,
+        "h": 21
+       },
+       {
+        "x": 380,
+        "y": 464,
+        "w": 315,
+        "h": 21
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "Yet the hacker did almost none of the work.",
+     "fullBox": {
+      "x": 140,
+      "y": 1353,
+      "w": 345,
+      "h": 21
+     },
+     "fullLines": [
+      {
+       "x": 140,
+       "y": 1353,
+       "w": 345,
+       "h": 21
+      }
+     ],
+     "video": {
+      "t": 2.72,
+      "holdWindow": [
+       2.1,
+       3.33
+      ],
+      "box": {
+       "x": 380,
+       "y": 511,
+       "w": 345,
+       "h": 21
+      },
+      "lines": [
+       {
+        "x": 380,
+        "y": 511,
+        "w": 345,
+        "h": 21
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "about $50 per successful hack",
+     "fullBox": {
+      "x": 417,
+      "y": 2777,
+      "w": 243,
+      "h": 21
+     },
+     "fullLines": [
+      {
+       "x": 417,
+       "y": 2777,
+       "w": 243,
+       "h": 21
+      }
+     ],
+     "video": {
+      "t": 6.42,
+      "holdWindow": [
+       4.8,
+       8.03
+      ],
+      "box": {
+       "x": 657,
+       "y": 410,
+       "w": 243,
+       "h": 21
+      },
+      "lines": [
+       {
+        "x": 657,
+        "y": 410,
+        "w": 243,
+        "h": 21
+       }
+      ]
+     },
+     "note": null
+    }
+   ]
+  },
+  {
+   "story": "ai-agents",
+   "outlet": "The Next Web",
+   "slug": "thenextweb",
+   "url": "https://thenextweb.com/news/ai-agents-hacker-cairn-100-sites-deere-norforge",
+   "headline": "‘It’s not script kiddie stuff’: AI agents hack 100+ sites for one hacker",
+   "date": "2026-10-19",
+   "credit": "Source: The Next Web, 19 Oct 2026",
+   "status": "loaded",
+   "note": "",
+   "finalUrl": "https://thenextweb.com/news/ai-agents-hacker-cairn-100-sites-deere-norforge",
+   "files": {
+    "fold": "ai-agents/thenextweb_fold.png",
+    "full": "ai-agents/thenextweb_full.jpg",
+    "scroll": "ai-agents/thenextweb_scroll.mp4"
+   },
+   "sizeMB": 4.11,
+   "full": {
+    "width": 1440,
+    "height": 5527,
+    "pageHeight": 5527
+   },
+   "scroll": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "seconds": 8,
+    "keyframes": [
+     {
+      "t": 0,
+      "y": 0
+     },
+     {
+      "t": 1,
+      "y": 0
+     },
+     {
+      "t": 2.81,
+      "y": 2139
+     },
+     {
+      "t": 8,
+      "y": 2139
+     }
+    ],
+    "easing": "easeInOutCubic between keyframes, holds where y is equal",
+    "capped": false,
+    "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)"
+   },
+   "quotes": [
+    {
+     "quote": "AI agents broke into 100+ sites for one hacker at $50 each, researcher says",
+     "fullBox": {
+      "x": 156,
+      "y": 186,
+      "w": 1128,
+      "h": 116
+     },
+     "fullLines": [
+      {
+       "x": 156,
+       "y": 186,
+       "w": 1128,
+       "h": 56
+      },
+      {
+       "x": 179,
+       "y": 246,
+       "w": 1083,
+       "h": 56
+      }
+     ],
+     "video": {
+      "t": 0.53,
+      "holdWindow": [
+       0,
+       1.07
+      ],
+      "box": {
+       "x": 396,
+       "y": 186,
+       "w": 1128,
+       "h": 116
+      },
+      "lines": [
+       {
+        "x": 396,
+        "y": 186,
+        "w": 1128,
+        "h": 56
+       },
+       {
+        "x": 419,
+        "y": 246,
+        "w": 1083,
+        "h": 56
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "Successful attacks took a little under 23 hours on average",
+     "fullBox": {
+      "x": 304,
+      "y": 2549,
+      "w": 661,
+      "h": 54
+     },
+     "fullLines": [
+      {
+       "x": 678,
+       "y": 2549,
+       "w": 287,
+       "h": 22
+      },
+      {
+       "x": 304,
+       "y": 2581,
+       "w": 204,
+       "h": 22
+      }
+     ],
+     "video": {
+      "t": 5.38,
+      "holdWindow": [
+       2.73,
+       8.03
+      ],
+      "box": {
+       "x": 544,
+       "y": 410,
+       "w": 661,
+       "h": 54
+      },
+      "lines": [
+       {
+        "x": 918,
+        "y": 410,
+        "w": 287,
+        "h": 22
+       },
+       {
+        "x": 544,
+        "y": 442,
+        "w": 204,
+        "h": 22
+       }
+      ]
+     },
+     "note": null
+    }
+   ]
+  },
+  {
+   "story": "ai-agents",
+   "outlet": "SBS News (Reuters)",
+   "slug": "sbs-reuters",
+   "url": "https://news.sbs.co.kr/english/article.do?news_id=N1008805974",
+   "headline": "\"A Single Hacker Successfully Hacks 100 Companies Using AI Agents\"",
+   "date": "2026-10-20",
+   "credit": "Source: SBS News citing Reuters, 20 Oct 2026",
+   "status": "loaded",
+   "note": "AI-translated Korean article (the page says so)",
+   "finalUrl": "https://news.sbs.co.kr/english/article.do?news_id=N1008805974",
+   "files": {
+    "fold": "ai-agents/sbs-reuters_fold.png",
+    "full": "ai-agents/sbs-reuters_full.jpg",
+    "scroll": "ai-agents/sbs-reuters_scroll.mp4"
+   },
+   "sizeMB": 3.15,
+   "full": {
+    "width": 1440,
+    "height": 4460,
+    "pageHeight": 4460
+   },
+   "scroll": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "seconds": 8,
+    "keyframes": [
+     {
+      "t": 0,
+      "y": 97
+     },
+     {
+      "t": 1,
+      "y": 97
+     },
+     {
+      "t": 2.407,
+      "y": 1156
+     },
+     {
+      "t": 3.507,
+      "y": 1156
+     },
+     {
+      "t": 4.542,
+      "y": 1552
+     },
+     {
+      "t": 8,
+      "y": 1552
+     }
+    ],
+    "easing": "easeInOutCubic between keyframes, holds where y is equal",
+    "capped": false,
+    "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)"
+   },
+   "quotes": [
+    {
+     "quote": "The instructions were given in Chinese text consisting of fewer than 100 characters",
+     "fullBox": {
+      "x": 270,
+      "y": 1566,
+      "w": 577,
+      "h": 54
+     },
+     "fullLines": [
+      {
+       "x": 270,
+       "y": 1566,
+       "w": 577,
+       "h": 21
+      },
+      {
+       "x": 270,
+       "y": 1599,
+       "w": 86,
+       "h": 21
+      }
+     ],
+     "video": {
+      "t": 2.95,
+      "holdWindow": [
+       2.33,
+       3.57
+      ],
+      "box": {
+       "x": 510,
+       "y": 410,
+       "w": 577,
+       "h": 54
+      },
+      "lines": [
+       {
+        "x": 510,
+        "y": 410,
+        "w": 577,
+        "h": 21
+       },
+       {
+        "x": 510,
+        "y": 443,
+        "w": 86,
+        "h": 21
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "This breaks down to about 50 dollars spent per successful hack",
+     "fullBox": {
+      "x": 270,
+      "y": 1962,
+      "w": 512,
+      "h": 21
+     },
+     "fullLines": [
+      {
+       "x": 270,
+       "y": 1962,
+       "w": 512,
+       "h": 21
+      }
+     ],
+     "video": {
+      "t": 6.25,
+      "holdWindow": [
+       4.47,
+       8.03
+      ],
+      "box": {
+       "x": 510,
+       "y": 410,
+       "w": 512,
+       "h": 21
+      },
+      "lines": [
+       {
+        "x": 510,
+        "y": 410,
+        "w": 512,
+        "h": 21
+       }
+      ]
+     },
+     "note": null
+    }
+   ]
+  },
+  {
+   "story": "ai-agents",
+   "outlet": "OECD.AI incident monitor",
+   "slug": "oecd",
+   "url": "https://oecd.ai/en/incidents/2026-10-19-4666",
+   "status": "not captured",
+   "note": "AI-generated summary that claims data theft Reuters could not confirm",
+   "headline": "",
+   "date": ""
+  },
+  {
+   "story": "ai-agents",
+   "outlet": "Let's Data Science",
+   "slug": "letsdatascience",
+   "url": "https://letsdatascience.com/news/hacker-uses-autonomous-ai-agents-to-breach-100-company-websi-6f2900ba",
+   "status": "not captured",
+   "note": "AI-written news aggregator, adds nothing over Reuters/TNW",
+   "headline": "",
+   "date": ""
+  },
+  {
+   "story": "zeabur",
+   "outlet": "Zeabur (incident report)",
+   "slug": "zeabur-incident-report",
+   "url": "https://zeabur.com/blogs/october-2026-security-incident",
+   "headline": "Zeabur October 2026 security incident (preliminary report)",
+   "date": "2026-10-19",
+   "credit": "Source: Zeabur, 19 Oct 2026",
+   "status": "loaded",
+   "note": "",
+   "finalUrl": "https://zeabur.com/blogs/october-2026-security-incident",
+   "files": {
+    "fold": "zeabur/zeabur-incident-report_fold.png",
+    "full": "zeabur/zeabur-incident-report_full.jpg",
+    "scroll": "zeabur/zeabur-incident-report_scroll.mp4"
+   },
+   "sizeMB": 4.87,
+   "full": {
+    "width": 1440,
+    "height": 6000,
+    "pageHeight": 20280
+   },
+   "scroll": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "seconds": 11.166666666666666,
+    "keyframes": [
+     {
+      "t": 0,
+      "y": 94
+     },
+     {
+      "t": 1,
+      "y": 94
+     },
+     {
+      "t": 1.984,
+      "y": 424
+     },
+     {
+      "t": 3.084,
+      "y": 424
+     },
+     {
+      "t": 4.099,
+      "y": 792
+     },
+     {
+      "t": 5.199,
+      "y": 792
+     },
+     {
+      "t": 6.406,
+      "y": 1456
+     },
+     {
+      "t": 7.506,
+      "y": 1456
+     },
+     {
+      "t": 9.477,
+      "y": 4129
+     },
+     {
+      "t": 11.177,
+      "y": 4129
+     }
+    ],
+    "easing": "easeInOutCubic between keyframes, holds where y is equal",
+    "capped": false,
+    "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)"
+   },
+   "quotes": [
+    {
+     "quote": "On October 14–15, 2026, an attacker used leaked Zeabur internal credentials to break into the shared cluster",
+     "fullBox": {
+      "x": 312,
+      "y": 834,
+      "w": 811,
+      "h": 53
+     },
+     "fullLines": [
+      {
+       "x": 441,
+       "y": 834,
+       "w": 682,
+       "h": 21
+      },
+      {
+       "x": 312,
+       "y": 866,
+       "w": 103,
+       "h": 21
+      }
+     ],
+     "video": {
+      "t": 2.53,
+      "holdWindow": [
+       1.9,
+       3.17
+      ],
+      "box": {
+       "x": 552,
+       "y": 410,
+       "w": 811,
+       "h": 53
+      },
+      "lines": [
+       {
+        "x": 681,
+        "y": 410,
+        "w": 682,
+        "h": 21
+       },
+       {
+        "x": 552,
+        "y": 442,
+        "w": 103,
+        "h": 21
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "long-lived admin credentials were stored in plaintext and could be used from the public internet",
+     "fullBox": {
+      "x": 312,
+      "y": 1202,
+      "w": 825,
+      "h": 53
+     },
+     "fullLines": [
+      {
+       "x": 754,
+       "y": 1202,
+       "w": 383,
+       "h": 21
+      },
+      {
+       "x": 312,
+       "y": 1234,
+       "w": 310,
+       "h": 21
+      }
+     ],
+     "video": {
+      "t": 4.65,
+      "holdWindow": [
+       4.03,
+       5.27
+      ],
+      "box": {
+       "x": 552,
+       "y": 410,
+       "w": 825,
+       "h": 53
+      },
+      "lines": [
+       {
+        "x": 994,
+        "y": 410,
+        "w": 383,
+        "h": 21
+       },
+       {
+        "x": 552,
+        "y": 442,
+        "w": 310,
+        "h": 21
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "The shared cluster's admin interface was open to the public internet at the time, and the admin tokens had no expiry",
+     "fullBox": {
+      "x": 312,
+      "y": 1866,
+      "w": 845,
+      "h": 21
+     },
+     "fullLines": [
+      {
+       "x": 312,
+       "y": 1866,
+       "w": 845,
+       "h": 21
+      }
+     ],
+     "video": {
+      "t": 6.95,
+      "holdWindow": [
+       6.33,
+       7.57
+      ],
+      "box": {
+       "x": 552,
+       "y": 410,
+       "w": 845,
+       "h": 21
+      },
+      "lines": [
+       {
+        "x": 552,
+        "y": 410,
+        "w": 845,
+        "h": 21
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "321,810 accounts",
+     "fullBox": {
+      "x": 761,
+      "y": 4539,
+      "w": 110,
+      "h": 18
+     },
+     "fullLines": [
+      {
+       "x": 761,
+       "y": 4539,
+       "w": 110,
+       "h": 18
+      }
+     ],
+     "video": {
+      "t": 10.3,
+      "holdWindow": [
+       9.4,
+       11.2
+      ],
+      "box": {
+       "x": 1001,
+       "y": 410,
+       "w": 110,
+       "h": 18
+      },
+      "lines": [
+       {
+        "x": 1001,
+        "y": 410,
+        "w": 110,
+        "h": 18
+       }
+      ]
+     },
+     "note": null
+    }
+   ]
+  },
+  {
+   "story": "php2shell",
+   "outlet": "TechCrunch",
+   "slug": "techcrunch-phpocalypse",
+   "url": "https://techcrunch.com/2026/10/24/php-ocalypse-how-two-critical-web-bugs-almost-broke-the-internet/",
+   "headline": "PHP-ocalypse: How two critical web bugs almost broke the internet",
+   "date": "2026-10-24",
+   "credit": "Source: TechCrunch, 24 Oct 2026",
+   "status": "loaded",
+   "note": "",
+   "finalUrl": "https://techcrunch.com/2026/10/24/php-ocalypse-how-two-critical-web-bugs-almost-broke-the-internet/",
+   "files": {
+    "fold": "php2shell/techcrunch-phpocalypse_fold.png",
+    "full": "php2shell/techcrunch-phpocalypse_full.jpg",
+    "scroll": "php2shell/techcrunch-phpocalypse_scroll.mp4"
+   },
+   "sizeMB": 3.24,
+   "full": {
+    "width": 1440,
+    "height": 6000,
+    "pageHeight": 13208
+   },
+   "scroll": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "seconds": 8,
+    "keyframes": [
+     {
+      "t": 0,
+      "y": 220
+     },
+     {
+      "t": 1,
+      "y": 220
+     },
+     {
+      "t": 1.846,
+      "y": 401
+     },
+     {
+      "t": 2.946,
+      "y": 401
+     },
+     {
+      "t": 4.084,
+      "y": 949
+     },
+     {
+      "t": 8,
+      "y": 949
+     }
+    ],
+    "easing": "easeInOutCubic between keyframes, holds where y is equal",
+    "capped": false,
+    "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)"
+   },
+   "quotes": [
+    {
+     "quote": "On Wednesday, a decades-old open-source web technology called PHP almost broke the internet",
+     "fullBox": {
+      "x": 226,
+      "y": 811,
+      "w": 612,
+      "h": 46
+     },
+     "fullLines": [
+      {
+       "x": 226,
+       "y": 811,
+       "w": 612,
+       "h": 19
+      },
+      {
+       "x": 226,
+       "y": 838,
+       "w": 216,
+       "h": 19
+      }
+     ],
+     "video": {
+      "t": 2.4,
+      "holdWindow": [
+       1.77,
+       3.03
+      ],
+      "box": {
+       "x": 466,
+       "y": 410,
+       "w": 612,
+       "h": 46
+      },
+      "lines": [
+       {
+        "x": 466,
+        "y": 410,
+        "w": 612,
+        "h": 19
+       },
+       {
+        "x": 466,
+        "y": 437,
+        "w": 216,
+        "h": 19
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "the world — so far — broadly avoided mass internet exploitation",
+     "fullBox": {
+      "x": 304,
+      "y": 1359,
+      "w": 538,
+      "h": 19
+     },
+     "fullLines": [
+      {
+       "x": 304,
+       "y": 1359,
+       "w": 538,
+       "h": 19
+      }
+     ],
+     "video": {
+      "t": 6.02,
+      "holdWindow": [
+       4,
+       8.03
+      ],
+      "box": {
+       "x": 544,
+       "y": 410,
+       "w": 538,
+       "h": 19
+      },
+      "lines": [
+       {
+        "x": 544,
+        "y": 410,
+        "w": 538,
+        "h": 19
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "Banks, retailers, gaming sites, online stores, hospitals, and some government agencies took down their servers to prevent attacks",
+     "fullBox": {
+      "x": 226,
+      "y": 1465,
+      "w": 633,
+      "h": 46
+     },
+     "fullLines": [
+      {
+       "x": 305,
+       "y": 1465,
+       "w": 554,
+       "h": 19
+      },
+      {
+       "x": 226,
+       "y": 1492,
+       "w": 550,
+       "h": 19
+      }
+     ],
+     "video": {
+      "t": 6.02,
+      "holdWindow": [
+       4,
+       8.03
+      ],
+      "box": {
+       "x": 466,
+       "y": 516,
+       "w": 633,
+       "h": 46
+      },
+      "lines": [
+       {
+        "x": 545,
+        "y": 516,
+        "w": 554,
+        "h": 19
+       },
+       {
+        "x": 466,
+        "y": 543,
+        "w": 550,
+        "h": 19
+       }
+      ]
+     },
+     "note": null
+    }
+   ]
+  },
+  {
+   "story": "php2shell",
+   "outlet": "Wiz",
+   "slug": "wiz-blog",
+   "url": "https://www.wiz.io/blog/php2shell-php-rce",
+   "headline": "PHP2Shell: AI uncovers critical RCE vulnerabilities affecting 70% of the Internet",
+   "date": "2026-10-21",
+   "credit": "Source: Wiz Research, 21 Oct 2026",
+   "status": "loaded",
+   "note": "",
+   "finalUrl": "https://www.wiz.io/blog/php2shell-php-rce",
+   "files": {
+    "fold": "php2shell/wiz-blog_fold.png",
+    "full": "php2shell/wiz-blog_full.jpg",
+    "scroll": "php2shell/wiz-blog_scroll.mp4"
+   },
+   "sizeMB": 3.09,
+   "full": {
+    "width": 1440,
+    "height": 6000,
+    "pageHeight": 15530
+   },
+   "scroll": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "seconds": 8,
+    "keyframes": [
+     {
+      "t": 0,
+      "y": 1
+     },
+     {
+      "t": 1,
+      "y": 1
+     },
+     {
+      "t": 2.449,
+      "y": 1155
+     },
+     {
+      "t": 3.549,
+      "y": 1155
+     },
+     {
+      "t": 4.47,
+      "y": 1411
+     },
+     {
+      "t": 8,
+      "y": 1411
+     }
+    ],
+    "easing": "easeInOutCubic between keyframes, holds where y is equal",
+    "capped": false,
+    "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)"
+   },
+   "quotes": [
+    {
+     "quote": "These findings rank among the most severe vulnerabilities discovered in PHP, and arguably in software history",
+     "fullBox": {
+      "x": 98,
+      "y": 1565,
+      "w": 905,
+      "h": 24
+     },
+     "fullLines": [
+      {
+       "x": 98,
+       "y": 1565,
+       "w": 905,
+       "h": 24
+      }
+     ],
+     "video": {
+      "t": 3,
+      "holdWindow": [
+       2.37,
+       3.63
+      ],
+      "box": {
+       "x": 338,
+       "y": 410,
+       "w": 905,
+       "h": 24
+      },
+      "lines": [
+       {
+        "x": 338,
+        "y": 410,
+        "w": 905,
+        "h": 24
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "how frontier AI helped us find and fix vulnerabilities that had remained hidden in the PHP codebase for more than a decade",
+     "fullBox": {
+      "x": 65,
+      "y": 1821,
+      "w": 1013,
+      "h": 56
+     },
+     "fullLines": [
+      {
+       "x": 257,
+       "y": 1821,
+       "w": 821,
+       "h": 24
+      },
+      {
+       "x": 65,
+       "y": 1853,
+       "w": 195,
+       "h": 24
+      }
+     ],
+     "video": {
+      "t": 6.22,
+      "holdWindow": [
+       4.4,
+       8.03
+      ],
+      "box": {
+       "x": 305,
+       "y": 410,
+       "w": 1013,
+       "h": 56
+      },
+      "lines": [
+       {
+        "x": 497,
+        "y": 410,
+        "w": 821,
+        "h": 24
+       },
+       {
+        "x": 305,
+        "y": 442,
+        "w": 195,
+        "h": 24
+       }
+      ]
+     },
+     "note": null
+    }
+   ]
+  },
+  {
+   "story": "php2shell",
+   "outlet": "AWS Security Blog",
+   "slug": "aws-blog",
+   "url": "https://aws.amazon.com/blogs/security/amazon-threat-intelligence-identifies-php2shell-exploitation-prior-to-public-disclosure-in-madpot/",
+   "headline": "Amazon Threat Intelligence identifies PHP2Shell exploitation prior to public disclosure in MadPot",
+   "date": "2026-10-21",
+   "credit": "Source: AWS Security Blog, 21 Oct 2026",
+   "status": "loaded",
+   "note": "",
+   "finalUrl": "https://aws.amazon.com/blogs/security/amazon-threat-intelligence-identifies-php2shell-exploitation-prior-to-public-disclosure-in-madpot/",
+   "files": {
+    "fold": "php2shell/aws-blog_fold.png",
+    "full": "php2shell/aws-blog_full.jpg",
+    "scroll": "php2shell/aws-blog_scroll.mp4"
+   },
+   "sizeMB": 1.57,
+   "full": {
+    "width": 1440,
+    "height": 5116,
+    "pageHeight": 5116
+   },
+   "scroll": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "seconds": 8,
+    "keyframes": [
+     {
+      "t": 0,
+      "y": 131
+     },
+     {
+      "t": 1,
+      "y": 131
+     },
+     {
+      "t": 1.879,
+      "y": 344
+     },
+     {
+      "t": 2.979,
+      "y": 344
+     },
+     {
+      "t": 3.84,
+      "y": 539
+     },
+     {
+      "t": 8,
+      "y": 539
+     }
+    ],
+    "easing": "easeInOutCubic between keyframes, holds where y is equal",
+    "capped": false,
+    "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)"
+   },
+   "quotes": [
+    {
+     "quote": "Amazon Threat Intelligence identified a PHP2Shell exploitation attempt dating to Oct. 17, 2026, in MadPot telemetry, four days before public disclosure",
+     "fullBox": {
+      "x": 135,
+      "y": 425,
+      "w": 748,
+      "h": 39
+     },
+     "fullLines": [
+      {
+       "x": 135,
+       "y": 425,
+       "w": 748,
+       "h": 17
+      },
+      {
+       "x": 135,
+       "y": 447,
+       "w": 213,
+       "h": 17
+      }
+     ],
+     "video": {
+      "t": 0.53,
+      "holdWindow": [
+       0,
+       1.07
+      ],
+      "box": {
+       "x": 375,
+       "y": 294,
+       "w": 748,
+       "h": 39
+      },
+      "lines": [
+       {
+        "x": 375,
+        "y": 294,
+        "w": 748,
+        "h": 17
+       },
+       {
+        "x": 375,
+        "y": 316,
+        "w": 213,
+        "h": 17
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "PHP2Shell is now seeing broad exploitation attempts in the wild",
+     "fullBox": {
+      "x": 221,
+      "y": 754,
+      "w": 408,
+      "h": 17
+     },
+     "fullLines": [
+      {
+       "x": 221,
+       "y": 754,
+       "w": 408,
+       "h": 17
+      }
+     ],
+     "video": {
+      "t": 2.43,
+      "holdWindow": [
+       1.8,
+       3.07
+      ],
+      "box": {
+       "x": 461,
+       "y": 410,
+       "w": 408,
+       "h": 17
+      },
+      "lines": [
+       {
+        "x": 461,
+        "y": 410,
+        "w": 408,
+        "h": 17
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "AI-assisted analysis makes it cheaper to turn a patch diff or advisory into a working exploit",
+     "fullBox": {
+      "x": 157,
+      "y": 949,
+      "w": 741,
+      "h": 40
+     },
+     "fullLines": [
+      {
+       "x": 468,
+       "y": 949,
+       "w": 430,
+       "h": 17
+      },
+      {
+       "x": 157,
+       "y": 972,
+       "w": 138,
+       "h": 17
+      }
+     ],
+     "video": {
+      "t": 5.9,
+      "holdWindow": [
+       3.77,
+       8.03
+      ],
+      "box": {
+       "x": 397,
+       "y": 410,
+       "w": 741,
+       "h": 40
+      },
+      "lines": [
+       {
+        "x": 708,
+        "y": 410,
+        "w": 430,
+        "h": 17
+       },
+       {
+        "x": 397,
+        "y": 433,
+        "w": 138,
+        "h": 17
+       }
+      ]
+     },
+     "note": null
+    }
+   ]
+  },
+  {
+   "story": "php2shell",
+   "outlet": "Hacker News (thread)",
+   "slug": "hn-thread",
+   "url": "https://news.ycombinator.com/item?id=50180836",
+   "headline": "PHP2Shell: AI uncovers critical RCE in PHP (454 points, 185 comments)",
+   "date": "2026-10-21",
+   "credit": "Source: Hacker News, 21 Oct 2026",
+   "status": "loaded",
+   "note": "Hacker News discussion of the Wiz blog post",
+   "finalUrl": "https://news.ycombinator.com/item?id=50180836",
+   "files": {
+    "fold": "php2shell/hn-thread_fold.png",
+    "full": "php2shell/hn-thread_full.jpg",
+    "scroll": "php2shell/hn-thread_scroll.mp4"
+   },
+   "sizeMB": 4.26,
+   "full": {
+    "width": 1440,
+    "height": 6000,
+    "pageHeight": 35527
+   },
+   "scroll": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "seconds": 8,
+    "keyframes": [
+     {
+      "t": 0,
+      "y": 0
+     },
+     {
+      "t": 1,
+      "y": 0
+     },
+     {
+      "t": 2.55,
+      "y": 2450
+     },
+     {
+      "t": 8,
+      "y": 2450
+     }
+    ],
+    "easing": "easeInOutCubic between keyframes, holds where y is equal",
+    "capped": false,
+    "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)"
+   },
+   "quotes": [
+    {
+     "quote": "PHP2Shell: AI uncovers critical RCE in PHP",
+     "fullBox": {
+      "x": 68,
+      "y": 82,
+      "w": 499,
+      "h": 28
+     },
+     "fullLines": [
+      {
+       "x": 68,
+       "y": 82,
+       "w": 499,
+       "h": 28
+      }
+     ],
+     "video": {
+      "t": 0.53,
+      "holdWindow": [
+       0,
+       1.07
+      ],
+      "box": {
+       "x": 200,
+       "y": 82,
+       "w": 499,
+       "h": 28
+      },
+      "lines": [
+       {
+        "x": 200,
+        "y": 82,
+        "w": 499,
+        "h": 28
+       }
+      ]
+     },
+     "note": null
+    }
+   ]
+  },
+  {
+   "story": "railway",
+   "outlet": "Railway (preliminary report)",
+   "slug": "railway-prelim-report",
+   "url": "https://blog.railway.com/p/preliminary-report-october-security-incident",
+   "headline": "Preliminary Report: Oct 21st Security Incident",
+   "date": "2026-10-22",
+   "credit": "Source: Railway, 22 Oct 2026",
+   "status": "loaded",
+   "note": "",
+   "finalUrl": "https://blog.railway.com/p/preliminary-report-october-security-incident",
+   "files": {
+    "fold": "railway/railway-prelim-report_fold.png",
+    "full": "railway/railway-prelim-report_full.jpg",
+    "scroll": "railway/railway-prelim-report_scroll.mp4"
+   },
+   "sizeMB": 4.25,
+   "full": {
+    "width": 1440,
+    "height": 6000,
+    "pageHeight": 8875
+   },
+   "scroll": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "seconds": 10.6,
+    "keyframes": [
+     {
+      "t": 0,
+      "y": 81
+     },
+     {
+      "t": 1,
+      "y": 81
+     },
+     {
+      "t": 1.93,
+      "y": 347
+     },
+     {
+      "t": 3.03,
+      "y": 347
+     },
+     {
+      "t": 3.86,
+      "y": 514
+     },
+     {
+      "t": 4.96,
+      "y": 514
+     },
+     {
+      "t": 6.009,
+      "y": 929
+     },
+     {
+      "t": 7.109,
+      "y": 929
+     },
+     {
+      "t": 8.887,
+      "y": 2969
+     },
+     {
+      "t": 10.587,
+      "y": 2969
+     }
+    ],
+    "easing": "easeInOutCubic between keyframes, holds where y is equal",
+    "capped": false,
+    "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)"
+   },
+   "quotes": [
+    {
+     "quote": "Early investigations tell us this attack was attempting to obtain AI provider API keys to perform distillation attacks",
+     "fullBox": {
+      "x": 368,
+      "y": 757,
+      "w": 697,
+      "h": 48
+     },
+     "fullLines": [
+      {
+       "x": 752,
+       "y": 757,
+       "w": 313,
+       "h": 21
+      },
+      {
+       "x": 368,
+       "y": 784,
+       "w": 639,
+       "h": 21
+      }
+     ],
+     "video": {
+      "t": 2.48,
+      "holdWindow": [
+       1.87,
+       3.1
+      ],
+      "box": {
+       "x": 608,
+       "y": 410,
+       "w": 697,
+       "h": 48
+      },
+      "lines": [
+       {
+        "x": 992,
+        "y": 410,
+        "w": 313,
+        "h": 21
+       },
+       {
+        "x": 608,
+        "y": 437,
+        "w": 639,
+        "h": 21
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "we are not yet able to share the specific details and scale of the exploits",
+     "fullBox": {
+      "x": 368,
+      "y": 924,
+      "w": 699,
+      "h": 48
+     },
+     "fullLines": [
+      {
+       "x": 905,
+       "y": 924,
+       "w": 162,
+       "h": 21
+      },
+      {
+       "x": 368,
+       "y": 951,
+       "w": 446,
+       "h": 21
+      }
+     ],
+     "video": {
+      "t": 4.4,
+      "holdWindow": [
+       3.77,
+       5.03
+      ],
+      "box": {
+       "x": 608,
+       "y": 410,
+       "w": 699,
+       "h": 48
+      },
+      "lines": [
+       {
+        "x": 1145,
+        "y": 410,
+        "w": 162,
+        "h": 21
+       },
+       {
+        "x": 608,
+        "y": 437,
+        "w": 446,
+        "h": 21
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "at most 1.85% of all workspaces had some environment variables potentially compromised",
+     "fullBox": {
+      "x": 368,
+      "y": 3379,
+      "w": 684,
+      "h": 48
+     },
+     "fullLines": [
+      {
+       "x": 910,
+       "y": 3379,
+       "w": 142,
+       "h": 21
+      },
+      {
+       "x": 368,
+       "y": 3406,
+       "w": 623,
+       "h": 21
+      }
+     ],
+     "video": {
+      "t": 9.72,
+      "holdWindow": [
+       8.8,
+       10.63
+      ],
+      "box": {
+       "x": 608,
+       "y": 410,
+       "w": 684,
+       "h": 48
+      },
+      "lines": [
+       {
+        "x": 1150,
+        "y": 410,
+        "w": 142,
+        "h": 21
+       },
+       {
+        "x": 608,
+        "y": 437,
+        "w": 623,
+        "h": 21
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "This represents, numerically, about 100,000 workspaces",
+     "fullBox": {
+      "x": 368,
+      "y": 3406,
+      "w": 669,
+      "h": 48
+     },
+     "fullLines": [
+      {
+       "x": 1001,
+       "y": 3406,
+       "w": 36,
+       "h": 21
+      },
+      {
+       "x": 368,
+       "y": 3433,
+       "w": 439,
+       "h": 21
+      }
+     ],
+     "video": {
+      "t": 9.72,
+      "holdWindow": [
+       8.8,
+       10.63
+      ],
+      "box": {
+       "x": 608,
+       "y": 437,
+       "w": 669,
+       "h": 48
+      },
+      "lines": [
+       {
+        "x": 1241,
+        "y": 437,
+        "w": 36,
+        "h": 21
+       },
+       {
+        "x": 608,
+        "y": 464,
+        "w": 439,
+        "h": 21
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "We recommend that all customers who signed up prior to October 21 rotate their keys stored on Railway",
+     "fullBox": {
+      "x": 368,
+      "y": 1339,
+      "w": 694,
+      "h": 75
+     },
+     "fullLines": [
+      {
+       "x": 982,
+       "y": 1339,
+       "w": 27,
+       "h": 21
+      },
+      {
+       "x": 368,
+       "y": 1366,
+       "w": 694,
+       "h": 21
+      },
+      {
+       "x": 368,
+       "y": 1393,
+       "w": 150,
+       "h": 21
+      }
+     ],
+     "video": {
+      "t": 6.55,
+      "holdWindow": [
+       5.93,
+       7.17
+      ],
+      "box": {
+       "x": 608,
+       "y": 410,
+       "w": 694,
+       "h": 75
+      },
+      "lines": [
+       {
+        "x": 1222,
+        "y": 410,
+        "w": 27,
+        "h": 21
+       },
+       {
+        "x": 608,
+        "y": 437,
+        "w": 694,
+        "h": 21
+       },
+       {
+        "x": 608,
+        "y": 464,
+        "w": 150,
+        "h": 21
+       }
+      ]
+     },
+     "note": null
+    }
+   ]
+  },
+  {
+   "story": "railway",
+   "outlet": "Hacker News (thread)",
+   "slug": "hn-thread",
+   "url": "https://news.ycombinator.com/item?id=50188228",
+   "headline": "Security Disclosure (Railway) (602 points, 340 comments)",
+   "date": "2026-10-21",
+   "credit": "Source: Hacker News, 21 Oct 2026",
+   "status": "loaded",
+   "note": "",
+   "finalUrl": "https://news.ycombinator.com/item?id=50188228",
+   "files": {
+    "fold": "railway/hn-thread_fold.png",
+    "full": "railway/hn-thread_full.jpg",
+    "scroll": "railway/hn-thread_scroll.mp4"
+   },
+   "sizeMB": 3.05,
+   "full": {
+    "width": 1440,
+    "height": 6000,
+    "pageHeight": 61009
+   },
+   "scroll": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "seconds": 8,
+    "keyframes": [
+     {
+      "t": 0,
+      "y": 0
+     },
+     {
+      "t": 1,
+      "y": 0
+     },
+     {
+      "t": 2.55,
+      "y": 2450
+     },
+     {
+      "t": 8,
+      "y": 2450
+     }
+    ],
+    "easing": "easeInOutCubic between keyframes, holds where y is equal",
+    "capped": false,
+    "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)"
+   },
+   "quotes": [
+    {
+     "quote": "Security Disclosure",
+     "fullBox": {
+      "x": 68,
+      "y": 82,
+      "w": 224,
+      "h": 28
+     },
+     "fullLines": [
+      {
+       "x": 68,
+       "y": 82,
+       "w": 224,
+       "h": 28
+      }
+     ],
+     "video": {
+      "t": 0.53,
+      "holdWindow": [
+       0,
+       1.07
+      ],
+      "box": {
+       "x": 200,
+       "y": 82,
+       "w": 224,
+       "h": 28
+      },
+      "lines": [
+       {
+        "x": 200,
+        "y": 82,
+        "w": 224,
+        "h": 28
+       }
+      ]
+     },
+     "note": null
+    }
+   ]
+  },
+  {
+   "story": "opencode",
+   "outlet": "OpenCode on X",
+   "slug": "x-opencode",
+   "url": "https://x.com/opencode/status/2111519637049319818",
+   "headline": "OpenCode on X: \"We had a security breach last night...\"",
+   "date": "2026-10-17",
+   "credit": "Source: @opencode on X, 17 Oct 2026",
+   "status": "loaded",
+   "note": "logged-out view of the post; replies below it include one with a swear word, so crop to the post",
+   "finalUrl": "https://x.com/opencode/status/2111519637049319818",
+   "files": {
+    "fold": "opencode/x-opencode_fold.png",
+    "full": "opencode/x-opencode_full.jpg",
+    "scroll": "opencode/x-opencode_scroll.mp4"
+   },
+   "sizeMB": 1.4,
+   "full": {
+    "width": 1440,
+    "height": 2054,
+    "pageHeight": 2054
+   },
+   "scroll": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "seconds": 8,
+    "keyframes": [
+     {
+      "t": 0,
+      "y": 0
+     },
+     {
+      "t": 1,
+      "y": 0
+     },
+     {
+      "t": 2.199,
+      "y": 974
+     },
+     {
+      "t": 8,
+      "y": 974
+     }
+    ],
+    "easing": "easeInOutCubic between keyframes, holds where y is equal",
+    "capped": false,
+    "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)"
+   },
+   "quotes": [
+    {
+     "quote": "We had a security breach last night related to a large scale distillation attack that impacted 1.4% of OpenCode Console users",
+     "fullBox": {
+      "x": 348,
+      "y": 179,
+      "w": 810,
+      "h": 66
+     },
+     "fullLines": [
+      {
+       "x": 348,
+       "y": 179,
+       "w": 810,
+       "h": 30
+      },
+      {
+       "x": 348,
+       "y": 215,
+       "w": 638,
+       "h": 30
+      }
+     ],
+     "video": {
+      "t": 0.53,
+      "holdWindow": [
+       0,
+       1.07
+      ],
+      "box": {
+       "x": 441,
+       "y": 179,
+       "w": 810,
+       "h": 66
+      },
+      "lines": [
+       {
+        "x": 441,
+        "y": 179,
+        "w": 810,
+        "h": 30
+       },
+       {
+        "x": 441,
+        "y": 215,
+        "w": 638,
+        "h": 30
+       }
+      ]
+     },
+     "note": null
+    }
+   ]
+  },
+  {
+   "story": "opencode",
+   "outlet": "Hacker News (thread)",
+   "slug": "hn-thread",
+   "url": "https://news.ycombinator.com/item?id=50139083",
+   "headline": "OpenCode has a security breach ... impacted 1.4% of console users (55 points)",
+   "date": "2026-10-18",
+   "credit": "Source: Hacker News, 18 Oct 2026",
+   "status": "loaded",
+   "note": "",
+   "finalUrl": "https://news.ycombinator.com/item?id=50139083",
+   "files": {
+    "fold": "opencode/hn-thread_fold.png",
+    "full": "opencode/hn-thread_full.jpg",
+    "scroll": "opencode/hn-thread_scroll.mp4"
+   },
+   "sizeMB": 3.16,
+   "full": {
+    "width": 1440,
+    "height": 5626,
+    "pageHeight": 5626
+   },
+   "scroll": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "seconds": 8,
+    "keyframes": [
+     {
+      "t": 0,
+      "y": 0
+     },
+     {
+      "t": 1,
+      "y": 0
+     },
+     {
+      "t": 2.55,
+      "y": 2450
+     },
+     {
+      "t": 8,
+      "y": 2450
+     }
+    ],
+    "easing": "easeInOutCubic between keyframes, holds where y is equal",
+    "capped": false,
+    "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)"
+   },
+   "quotes": [
+    {
+     "quote": "OpenCode has a security breach",
+     "fullBox": {
+      "x": 68,
+      "y": 82,
+      "w": 380,
+      "h": 28
+     },
+     "fullLines": [
+      {
+       "x": 68,
+       "y": 82,
+       "w": 380,
+       "h": 28
+      }
+     ],
+     "video": {
+      "t": 0.53,
+      "holdWindow": [
+       0,
+       1.07
+      ],
+      "box": {
+       "x": 200,
+       "y": 82,
+       "w": 380,
+       "h": 28
+      },
+      "lines": [
+       {
+        "x": 200,
+        "y": 82,
+        "w": 380,
+        "h": 28
+       }
+      ]
+     },
+     "note": null
+    }
+   ]
+  },
+  {
+   "story": "emudhra",
+   "outlet": "Incident site (Dennis Jackson, Mozilla)",
+   "slug": "we-have-a-problem",
+   "url": "https://emudhra.we-have-a-problem.com/",
+   "headline": "eMudhra Intermediate CA Compromise",
+   "date": "2026-10-20",
+   "credit": "Source: emudhra.we-have-a-problem.com (Mozilla's Dennis Jackson), 20 Oct 2026",
+   "status": "loaded",
+   "note": "",
+   "finalUrl": "https://emudhra.we-have-a-problem.com/",
+   "files": {
+    "fold": "emudhra/we-have-a-problem_fold.png",
+    "full": "emudhra/we-have-a-problem_full.jpg",
+    "scroll": "emudhra/we-have-a-problem_scroll.mp4"
+   },
+   "sizeMB": 1.7,
+   "full": {
+    "width": 1440,
+    "height": 6000,
+    "pageHeight": 7733
+   },
+   "scroll": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "seconds": 8,
+    "keyframes": [
+     {
+      "t": 0,
+      "y": 0
+     },
+     {
+      "t": 1,
+      "y": 0
+     },
+     {
+      "t": 1.847,
+      "y": 182
+     },
+     {
+      "t": 2.947,
+      "y": 182
+     },
+     {
+      "t": 3.873,
+      "y": 444
+     },
+     {
+      "t": 8,
+      "y": 444
+     }
+    ],
+    "easing": "easeInOutCubic between keyframes, holds where y is equal",
+    "capped": false,
+    "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)"
+   },
+   "quotes": [
+    {
+     "quote": "The private keys of eight eMudhra intermediate CA certificates have been compromised",
+     "fullBox": {
+      "x": 270,
+      "y": 228,
+      "w": 706,
+      "h": 21
+     },
+     "fullLines": [
+      {
+       "x": 270,
+       "y": 228,
+       "w": 706,
+       "h": 21
+      }
+     ],
+     "video": {
+      "t": 0.53,
+      "holdWindow": [
+       0,
+       1.07
+      ],
+      "box": {
+       "x": 510,
+       "y": 228,
+       "w": 706,
+       "h": 21
+      },
+      "lines": [
+       {
+        "x": 510,
+        "y": 228,
+        "w": 706,
+        "h": 21
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "We have a problem here - Wayne",
+     "fullBox": {
+      "x": 292,
+      "y": 592,
+      "w": 266,
+      "h": 21
+     },
+     "fullLines": [
+      {
+       "x": 292,
+       "y": 592,
+       "w": 266,
+       "h": 21
+      }
+     ],
+     "video": {
+      "t": 2.4,
+      "holdWindow": [
+       1.77,
+       3.03
+      ],
+      "box": {
+       "x": 532,
+       "y": 410,
+       "w": 266,
+       "h": 21
+      },
+      "lines": [
+       {
+        "x": 532,
+        "y": 410,
+        "w": 266,
+        "h": 21
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "The certificates have been blocked in Firefox and Chrome since the 17th of October",
+     "fullBox": {
+      "x": 270,
+      "y": 854,
+      "w": 886,
+      "h": 48
+     },
+     "fullLines": [
+      {
+       "x": 1033,
+       "y": 854,
+       "w": 123,
+       "h": 21
+      },
+      {
+       "x": 270,
+       "y": 881,
+       "w": 545,
+       "h": 21
+      }
+     ],
+     "video": {
+      "t": 5.92,
+      "holdWindow": [
+       3.8,
+       8.03
+      ],
+      "box": {
+       "x": 510,
+       "y": 410,
+       "w": 886,
+       "h": 48
+      },
+      "lines": [
+       {
+        "x": 1273,
+        "y": 410,
+        "w": 123,
+        "h": 21
+       },
+       {
+        "x": 510,
+        "y": 437,
+        "w": 545,
+        "h": 21
+       }
+      ]
+     },
+     "note": null
+    }
+   ]
+  },
+  {
+   "story": "emudhra",
+   "outlet": "eMudhra (press release)",
+   "slug": "emudhra-press",
+   "url": "https://emudhra.com/en/press-release/emudhra-to-exit-global-ssl-tls-certificate-business",
+   "headline": "eMudhra to Exit global SSL/TLS Certificate Business",
+   "date": "2026-10-22",
+   "credit": "Source: eMudhra, 22 Oct 2026",
+   "status": "loaded",
+   "note": "",
+   "finalUrl": "https://emudhra.com/en/press-release/emudhra-to-exit-global-ssl-tls-certificate-business",
+   "files": {
+    "fold": "emudhra/emudhra-press_fold.png",
+    "full": "emudhra/emudhra-press_full.jpg",
+    "scroll": "emudhra/emudhra-press_scroll.mp4"
+   },
+   "sizeMB": 2.17,
+   "full": {
+    "width": 1440,
+    "height": 3752,
+    "pageHeight": 3752
+   },
+   "scroll": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "seconds": 8,
+    "keyframes": [
+     {
+      "t": 0,
+      "y": 92
+     },
+     {
+      "t": 1,
+      "y": 92
+     },
+     {
+      "t": 2.55,
+      "y": 1492
+     },
+     {
+      "t": 8,
+      "y": 1492
+     }
+    ],
+    "easing": "easeInOutCubic between keyframes, holds where y is equal",
+    "capped": false,
+    "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)"
+   },
+   "quotes": [
+    {
+     "quote": "eMudhra to Exit global SSL/TLS Certificate Business",
+     "fullBox": {
+      "x": 92,
+      "y": 230,
+      "w": 921,
+      "h": 52
+     },
+     "fullLines": [
+      {
+       "x": 92,
+       "y": 230,
+       "w": 921,
+       "h": 52
+      }
+     ],
+     "video": {
+      "t": 0.53,
+      "holdWindow": [
+       0,
+       1.07
+      ],
+      "box": {
+       "x": 332,
+       "y": 138,
+       "w": 921,
+       "h": 52
+      },
+      "lines": [
+       {
+        "x": 332,
+        "y": 138,
+        "w": 921,
+        "h": 52
+       }
+      ]
+     },
+     "note": null
+    }
+   ]
+  },
+  {
+   "story": "emudhra",
+   "outlet": "Scott Helme",
+   "slug": "scotthelme",
+   "url": "https://scotthelme.co.uk/eight-bits-of-trust-emudhras-ca-keys-cracked-in-milliseconds/",
+   "headline": "Eight Bits of Trust; eMudhra's CA keys cracked in milliseconds",
+   "date": "2026-10-20",
+   "credit": "Source: Scott Helme, 20 Oct 2026",
+   "status": "loaded",
+   "note": "",
+   "finalUrl": "https://scotthelme.co.uk/eight-bits-of-trust-emudhras-ca-keys-cracked-in-milliseconds/",
+   "files": {
+    "fold": "emudhra/scotthelme_fold.png",
+    "full": "emudhra/scotthelme_full.jpg",
+    "scroll": "emudhra/scotthelme_scroll.mp4"
+   },
+   "sizeMB": 1.53,
+   "full": {
+    "width": 1440,
+    "height": 6000,
+    "pageHeight": 11839
+   },
+   "scroll": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "seconds": 8,
+    "keyframes": [
+     {
+      "t": 0,
+      "y": 270
+     },
+     {
+      "t": 8,
+      "y": 270
+     }
+    ],
+    "easing": "easeInOutCubic between keyframes, holds where y is equal",
+    "capped": false,
+    "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)"
+   },
+   "quotes": [
+    {
+     "quote": "One of eMudhra's certificate authority private keys is the number 4.",
+     "fullBox": {
+      "x": 190,
+      "y": 736,
+      "w": 596,
+      "h": 22
+     },
+     "fullLines": [
+      {
+       "x": 190,
+       "y": 736,
+       "w": 596,
+       "h": 22
+      }
+     ],
+     "video": {
+      "t": 4.02,
+      "holdWindow": [
+       0,
+       8.03
+      ],
+      "box": {
+       "x": 350,
+       "y": 413,
+       "w": 596,
+       "h": 22
+      },
+      "lines": [
+       {
+        "x": 350,
+        "y": 413,
+        "w": 596,
+        "h": 22
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "Not a number that starts with 4, or the number 4 followed by a few hundred random digits, just, 4...",
+     "fullBox": {
+      "x": 190,
+      "y": 800,
+      "w": 587,
+      "h": 56
+     },
+     "fullLines": [
+      {
+       "x": 190,
+       "y": 800,
+       "w": 587,
+       "h": 22
+      },
+      {
+       "x": 190,
+       "y": 834,
+       "w": 285,
+       "h": 22
+      }
+     ],
+     "video": {
+      "t": 4.02,
+      "holdWindow": [
+       0,
+       8.03
+      ],
+      "box": {
+       "x": 350,
+       "y": 477,
+       "w": 802,
+       "h": 56
+      },
+      "lines": [
+       {
+        "x": 350,
+        "y": 477,
+        "w": 802,
+        "h": 22
+       },
+       {
+        "x": 350,
+        "y": 511,
+        "w": 71,
+        "h": 22
+       }
+      ]
+     },
+     "note": null
+    }
+   ]
+  },
+  {
+   "story": "emudhra",
+   "outlet": "Google (Chrome Security)",
+   "slug": "google-blog",
+   "url": "https://blog.google/security/protecting-chrome-and-android-users-from-compromised-emudhra-intermediate-ca-certificates/",
+   "headline": "Protecting Chrome and Android Users from Compromised eMudhra Intermediate CA Certificates",
+   "date": "2026-10-20",
+   "credit": "Source: Google Chrome Security blog, 20 Oct 2026",
+   "status": "loaded",
+   "note": "",
+   "finalUrl": "https://blog.google/security/protecting-chrome-and-android-users-from-compromised-emudhra-intermediate-ca-certificates/",
+   "files": {
+    "fold": "emudhra/google-blog_fold.png",
+    "full": "emudhra/google-blog_full.jpg",
+    "scroll": "emudhra/google-blog_scroll.mp4"
+   },
+   "sizeMB": 1.08,
+   "full": {
+    "width": 1440,
+    "height": 3420,
+    "pageHeight": 3420
+   },
+   "scroll": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "seconds": 8,
+    "keyframes": [
+     {
+      "t": 0,
+      "y": 40
+     },
+     {
+      "t": 1,
+      "y": 40
+     },
+     {
+      "t": 2.083,
+      "y": 503
+     },
+     {
+      "t": 8,
+      "y": 503
+     }
+    ],
+    "easing": "easeInOutCubic between keyframes, holds where y is equal",
+    "capped": false,
+    "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)"
+   },
+   "quotes": [
+    {
+     "quote": "Protecting Chrome and Android Users from Compromised eMudhra Intermediate CA Certificates",
+     "fullBox": {
+      "x": 292,
+      "y": 178,
+      "w": 771,
+      "h": 291
+     },
+     "fullLines": [
+      {
+       "x": 292,
+       "y": 178,
+       "w": 629,
+       "h": 75
+      },
+      {
+       "x": 292,
+       "y": 250,
+       "w": 522,
+       "h": 75
+      },
+      {
+       "x": 292,
+       "y": 322,
+       "w": 640,
+       "h": 75
+      },
+      {
+       "x": 292,
+       "y": 394,
+       "w": 771,
+       "h": 75
+      }
+     ],
+     "video": {
+      "t": 0.53,
+      "holdWindow": [
+       0,
+       1.07
+      ],
+      "box": {
+       "x": 532,
+       "y": 138,
+       "w": 771,
+       "h": 291
+      },
+      "lines": [
+       {
+        "x": 532,
+        "y": 138,
+        "w": 629,
+        "h": 75
+       },
+       {
+        "x": 532,
+        "y": 210,
+        "w": 522,
+        "h": 75
+       },
+       {
+        "x": 532,
+        "y": 282,
+        "w": 640,
+        "h": 75
+       },
+       {
+        "x": 532,
+        "y": 354,
+        "w": 771,
+        "h": 75
+       }
+      ]
+     },
+     "note": null
+    },
+    {
+     "quote": "enabling anyone to forge trusted HTTPS certificates to impersonate any website",
+     "fullBox": {
+      "x": 402,
+      "y": 913,
+      "w": 566,
+      "h": 46
+     },
+     "fullLines": [
+      {
+       "x": 577,
+       "y": 913,
+       "w": 391,
+       "h": 20
+      },
+      {
+       "x": 402,
+       "y": 939,
+       "w": 181,
+       "h": 20
+      }
+     ],
+     "video": {
+      "t": 5.02,
+      "holdWindow": [
+       2,
+       8.03
+      ],
+      "box": {
+       "x": 642,
+       "y": 410,
+       "w": 566,
+       "h": 46
+      },
+      "lines": [
+       {
+        "x": 817,
+        "y": 410,
+        "w": 391,
+        "h": 20
+       },
+       {
+        "x": 642,
+        "y": 436,
+        "w": 181,
+        "h": 20
+       }
+      ]
+     },
+     "note": null
+    }
+   ]
+  },
+  {
+   "story": "emudhra",
+   "outlet": "Hacker News (thread)",
+   "slug": "hn-thread",
+   "url": "https://news.ycombinator.com/item?id=50166579",
+   "headline": "eMudhra intermediate CA compromise (1,281 points, 504 comments)",
+   "date": "2026-10-20",
+   "credit": "Source: Hacker News, 20 Oct 2026",
+   "status": "loaded",
+   "note": "",
+   "finalUrl": "https://news.ycombinator.com/item?id=50166579",
+   "files": {
+    "fold": "emudhra/hn-thread_fold.png",
+    "full": "emudhra/hn-thread_full.jpg",
+    "scroll": "emudhra/hn-thread_scroll.mp4"
+   },
+   "sizeMB": 2.99,
+   "full": {
+    "width": 1440,
+    "height": 6000,
+    "pageHeight": 108973
+   },
+   "scroll": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "seconds": 8,
+    "keyframes": [
+     {
+      "t": 0,
+      "y": 0
+     },
+     {
+      "t": 1,
+      "y": 0
+     },
+     {
+      "t": 2.55,
+      "y": 2450
+     },
+     {
+      "t": 8,
+      "y": 2450
+     }
+    ],
+    "easing": "easeInOutCubic between keyframes, holds where y is equal",
+    "capped": false,
+    "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)"
+   },
+   "quotes": [
+    {
+     "quote": "eMudhra intermediate CA compromise",
+     "fullBox": {
+      "x": 58,
+      "y": 82,
+      "w": 450,
+      "h": 28
+     },
+     "fullLines": [
+      {
+       "x": 58,
+       "y": 82,
+       "w": 450,
+       "h": 28
+      }
+     ],
+     "video": {
+      "t": 0.53,
+      "holdWindow": [
+       0,
+       1.07
+      ],
+      "box": {
+       "x": 200,
+       "y": 82,
+       "w": 450,
+       "h": 28
+      },
+      "lines": [
+       {
+        "x": 200,
+        "y": 82,
+        "w": 450,
+        "h": 28
+       }
+      ]
+     },
+     "note": null
+    }
+   ]
+  },
+  {
+   "story": "ai-agents",
+   "outlet": "Reuters",
+   "slug": "reuters",
+   "url": "https://www.reuters.com/legal/government/how-one-hacker-used-ai-agents-few-thousand-dollars-break-into-scores-sites-2026-10-19/",
+   "status": "not captured",
+   "note": "blocked (HTTP 401, Reuters bot wall); use the Star-Advertiser / SBS syndicated copies of the same Reuters story",
+   "headline": "How one hacker used AI agents and a few thousand dollars to break into scores of sites",
+   "date": "2026-10-19"
+  },
+  {
+   "story": "php2shell",
+   "outlet": "php2shell.com (discoverers' site)",
+   "slug": "php2shell-site",
+   "url": "https://www.php2shell.com/",
+   "headline": "PHP2Shell",
+   "date": "",
+   "credit": "Source: php2shell.com (discoverers' site)",
+   "status": "loaded",
+   "note": "the discoverers' explainer site",
+   "finalUrl": "https://www.php2shell.com/",
+   "files": {
+    "fold": "php2shell/php2shell-site_fold.png",
+    "full": "php2shell/php2shell-site_full.jpg",
+    "scroll": "php2shell/php2shell-site_scroll.mp4"
+   },
+   "sizeMB": 2.2,
+   "full": {
+    "width": 1440,
+    "height": 6000,
+    "pageHeight": 9815
+   },
+   "scroll": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "seconds": 8,
+    "keyframes": [
+     {
+      "t": 0,
+      "y": 75
+     },
+     {
+      "t": 1,
+      "y": 75
+     },
+     {
+      "t": 2.55,
+      "y": 1475
+     },
+     {
+      "t": 8,
+      "y": 1475
+     }
+    ],
+    "easing": "easeInOutCubic between keyframes, holds where y is equal",
+    "capped": false,
+    "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)"
+   },
+   "quotes": []
+  },
+  {
+   "story": "php2shell",
+   "outlet": "Wikipedia",
+   "slug": "wikipedia",
+   "url": "https://en.wikipedia.org/wiki/PHP2Shell",
+   "headline": "PHP2Shell",
+   "date": "",
+   "credit": "Source: Wikipedia, PHP2Shell article (viewed 26 Oct 2026)",
+   "status": "loaded",
+   "note": "",
+   "finalUrl": "https://en.wikipedia.org/wiki/PHP2Shell",
+   "files": {
+    "fold": "php2shell/wikipedia_fold.png",
+    "full": "php2shell/wikipedia_full.jpg",
+    "scroll": "php2shell/wikipedia_scroll.mp4"
+   },
+   "sizeMB": 4.45,
+   "full": {
+    "width": 1440,
+    "height": 5636,
+    "pageHeight": 5636
+   },
+   "scroll": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "seconds": 8,
+    "keyframes": [
+     {
+      "t": 0,
+      "y": 0
+     },
+     {
+      "t": 1,
+      "y": 0
+     },
+     {
+      "t": 2.55,
+      "y": 1400
+     },
+     {
+      "t": 8,
+      "y": 1400
+     }
+    ],
+    "easing": "easeInOutCubic between keyframes, holds where y is equal",
+    "capped": false,
+    "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)"
+   },
+   "quotes": []
+  },
+  {
+   "story": "railway",
+   "outlet": "RuntimeWire",
+   "slug": "runtimewire",
+   "url": "https://runtimewire.com/article/railway-security-disclosure-environment-variables-october-2026",
+   "status": "not captured",
+   "note": "browser-verification wall + AI-assisted news site; Railway's own posts and TechCrunch cover the same facts",
+   "headline": "",
+   "date": ""
+  }
+ ]
+}

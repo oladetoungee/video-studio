@@ -1,0 +1,25 @@
+{
+  "direction": "Off-centre: her on the right pointing at herself (the UX researcher), the question in heavy dark type on the clean pale wall, one prop: a clipboard with her interview checklist (talk to users, watch them). References: yt 'POV' (29), Pinterest 'how to be consistent' (person + plain question), her database-indexes sample (few big elements).",
+  "thumbnail_text": "What does a UX researcher do?",
+  "text": {
+    "hd": "What does a<span class=\"big\"><span class=\"acc\">UX researcher</span><br>actually do?</span>",
+    "notes": "✓ talk to users<br>✓ watch them"
+  },
+  "images": {
+    "bg": "../../assets/scene/g2/s_349.jpg",
+    "cut": "../../assets/scene/g2/cut/s_349.png"
+  },
+  "vars": {
+    "--meb": "1.02"
+  },
+  "titles": [
+    "What Does a UX Researcher Actually Do All Week?",
+    "What Is UX Research? A Beginner's Path Into the Field",
+    "UX Researcher vs UX Designer: Who Does What on a Team?"
+  ],
+  "title": "What Does a UX Researcher Actually Do All Week?",
+  "set": 3,
+  "kind": "photo",
+  "scores": "critic scores R1 6 · R2 6.5 · R3 6 · R4 6.5 · R5 7.5",
+  "recommended": false
+}

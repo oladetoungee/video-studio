@@ -1,0 +1,28 @@
+{
+  "board": "pick1119-14",
+  "pick": "pick1119-14 (why you should have a youtube channel: 1 view is enough.)",
+  "kind": "one quiet real moment (Øredev 2026, orange top, chin in her hands, a small smile, warm lights), a short thought in plain white type beside her face",
+  "direction": "Copies pick1119-14: a calm real face and one short thought, no props. The title says what the video is; the picture says the feeling every Nigerian student planning Europe has.",
+  "thumbnail_text": "can I actually afford this?",
+  "titles": [
+    "Can You Afford to Study in Europe as a Nigerian? I Checked",
+    "Cheapest Countries to Study in Europe for Nigerians (2027)",
+    "What Studying in Europe Really Costs a Nigerian in 2027"
+  ],
+  "title": "Can You Afford to Study in Europe as a Nigerian? I Checked",
+  "class": "no-lift",
+  "text": {
+    "w": "can I <em>actually</em><br>afford this?"
+  },
+  "images": {
+    "bg": "../../assets/oredev/55642230148.jpg"
+  },
+  "vars": {},
+  "recommended": false,
+  "fonts": [
+    "thumbs-17 Inter Tight 500 + Instrument Serif italic, white (Thumbnails 152)"
+  ],
+  "colours": "thumbs-17: white over a warm dark ground (#2B2420)",
+  "photo": "library/her-photos/oredev-2026-11-10/55642230148_001459c6ac_o.jpg through Enhance photo (--bg keep)",
+  "built": "2026-11-19 rework (projects/THUMBS-REWORK-BRIEF-2026-11-19.md)"
+}

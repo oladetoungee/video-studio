@@ -1,0 +1,29 @@
+{
+  "text": {
+    "h": "9-5 + master's",
+    "r0": "Job<br><i>9-5</i>",
+    "r1": "Study<br><i>6-9 PM</i>"
+  },
+  "images": {
+    "me": "../../assets/shoot2/cut-1578c-clean2.png"
+  },
+  "kind": "flat + her on the LEFT, a plain day plan on the right (Job 9-5 bar, Study 6-9 PM bar)",
+  "layout": "her left, plan right",
+  "board": "Thumbnails 51 (yt-79 \"How I have time for everything with a full time job\": her with her plan behind her)",
+  "fonts": [
+    "design-09 Inter Tight Black (ink #070804 on lime #D9F44F, Design 394)"
+  ],
+  "colours": "Design 394: #D9F44F / #070804 (+ white)",
+  "thumbnail_text": "9-5 + MASTER'S + Job 9-5 / Study 6-9 PM",
+  "titles": [
+    "Full-Time Job and Full-Time Master's: How I Plan My Week",
+    "Working a 9-5 While Doing a Master's Abroad",
+    "My Week as a Developer and a Full-Time Master's Student"
+  ],
+  "title": "Full-Time Job and Full-Time Master's: How I Plan My Week",
+  "direction": "Copies Thumbnails 51: her day as one plain plan beside her (job 9-5, study 6-9 PM, two solid bars). Inter Tight Black ink on lime, as Design 394.",
+  "nudge": {},
+  "vars": {},
+  "class": "no-lift",
+  "scores": "round-5 cold critic 7; round 6 polished, waiting for the re-score"
+}

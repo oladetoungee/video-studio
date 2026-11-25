@@ -1,0 +1,16 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../lib/cr.css"><style>
+.t{--ground:var(--lilac)}
+.hl{left:44px;top:50px;font-size:150px}
+.box{position:absolute;left:44px;top:400px;width:1192px;height:210px;background:#fff;border-radius:105px;z-index:6;display:flex;align-items:center;
+ padding:0 40px 0 70px;font-weight:600;font-size:140px;letter-spacing:-.04em;box-shadow:0 10px 0 var(--ink)}
+.box .cur{display:inline-block;width:10px;height:130px;background:var(--accent,var(--red));margin-left:10px}
+.box .send{margin-left:auto;width:130px;height:130px;border-radius:65px;background:var(--ink);display:flex;align-items:center;justify-content:center}
+.to{position:absolute;left:52px;top:340px;font-family:'Plex Mono';font-weight:500;font-size:44px;letter-spacing:.04em;color:var(--mute)}
+.ill.k{position:absolute;left:52px;top:650px;font-size:14px}
+img.bg,img.fg{clip-path:var(--clip,none)}
+</style></head><body><div class="t">
+<div class="hl" data-move="headline" style=""><div data-k="l1"></div><div data-k="l2"></div></div>
+<div class="to" data-k="to" data-move="to"></div>
+<div class="box" data-move="input"><span data-k="typed"></span><span class="cur"></span><span class="send"><svg width="64" height="64" viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+
+</div><script src="../../lib/bind.js"></script></body></html>

@@ -1,0 +1,182 @@
+{
+ "label": "Photo/colour test (agent)",
+ "auto": false,
+ "savedAt": 1790872261743,
+ "content": {
+  "_help": "Edit text here, then run: node shared/build.mjs instagram (from design/carousels). Markup: *word* = accent colour, _word_ = serif italic, \\n = line break.",
+  "deck": "instagram",
+  "width": 1080,
+  "height": 1350,
+  "accent": "#1B3FD8",
+  "accentOnInk": "#6E8CFF",
+  "slides": [
+   {
+    "layout": "hook",
+    "ground": "ink",
+    "corner": "// a reading method for non-fiction",
+    "title": "How to\nremember\nwhat you\n*read.*",
+    "sub": "Study one page before you start any non-fiction book. It takes a few minutes.",
+    "polaroids": [
+     {
+      "img": "book_baratta.jpg",
+      "caption": ""
+     },
+     {
+      "img": "book_convivial.jpg",
+      "caption": ""
+     }
+    ],
+    "swipe": "Swipe"
+   },
+   {
+    "layout": "quote",
+    "ground": "paper",
+    "quote": "“So what was that book about?”",
+    "body": "Weeks after you finish a non-fiction book, you can give the gist and one or two points. Not much more.",
+    "punch": "You remember a _feeling_ about the book, not the book itself.",
+    "foot": "The fix happens before you read",
+    "groundColor": "#EFB428"
+   },
+   {
+    "layout": "punch",
+    "ground": "accent",
+    "title": "Read the\n*structure*\nfirst.",
+    "body": "Before page one, study the contents page: the chapter titles and sub-headings. Learn them by heart if you can. Then read the book.",
+    "note": "An old idea: Mortimer Adler described it in _How to Read a Book_ (1940)."
+   },
+   {
+    "layout": "shelves",
+    "ground": "paper",
+    "title": "Why it works:\nideas need *shelves.*",
+    "left": "Start at page 1",
+    "right": "Contents first",
+    "shelves": [
+     "Part 1",
+     "Part 2",
+     "Part 3"
+    ],
+    "quote": "Without the structure, new ideas pile up. With it, each one has a place to go."
+   },
+   {
+    "layout": "contents",
+    "ground": "paper",
+    "title": "Turn chapter\ntitles into\n*guesses.*",
+    "book": "book 1",
+    "img": "book_baratta.jpg",
+    "rows": [
+     {
+      "n": "01",
+      "s": "What does it mean to be critical?",
+      "note": "Guess: it starts by defining the word."
+     },
+     {
+      "n": "02",
+      "s": "Different ways to show your criticality",
+      "note": "Guess: practical tips on how to show it."
+     },
+     {
+      "n": "05",
+      "s": "How to structure your essays",
+      "block": "start"
+     },
+     {
+      "n": "06",
+      "s": "How to structure your dissertation",
+      "block": "mid"
+     },
+     {
+      "n": "07",
+      "s": "Additional assessments to consider",
+      "block": "end",
+      "note": "Guess: 5, 6 and 7 belong together. All about structure."
+     }
+    ],
+    "foot": "Its real chapter titles, 5 of 10",
+    "corner": "// example 1: critical writing"
+   },
+   {
+    "layout": "bars",
+    "ground": "ink",
+    "title": "Check\nthe page\n*counts.*",
+    "polaroid": {
+     "img": "book_convivial.jpg",
+     "caption": "book 2"
+    },
+    "rows": [
+     {
+      "n": "Part 1",
+      "s": "Underlying principles",
+      "v": 80,
+      "label": "~80 pages"
+     },
+     {
+      "n": "Part 2",
+      "s": "Cases from practice",
+      "v": 50,
+      "label": "~50 pages"
+     },
+     {
+      "n": "Part 3",
+      "s": "Tools and techniques",
+      "v": 140,
+      "label": "140+ pages",
+      "accent": true
+     }
+    ],
+    "body": "Over half of _Convivial Toolbox_ is the how-to part. My guess: it’s a manual dressed as a textbook.",
+    "corner": "// example 2: design research"
+   },
+   {
+    "layout": "checklist",
+    "ground": "card",
+    "corner": "// save for your next book",
+    "title": "Before you read\na non-fiction book",
+    "rows": [
+     {
+      "n": "01",
+      "head": "Read the title.",
+      "sub": "What is it already telling you?"
+     },
+     {
+      "n": "02",
+      "head": "Study the contents.",
+      "sub": "Chapters, sub-headings, page counts. Group them into blocks."
+     },
+     {
+      "n": "03",
+      "head": "Memorise it.",
+      "sub": "If you can. Then every new idea has a shelf."
+     },
+     {
+      "n": "04",
+      "head": "Guess, then read.",
+      "sub": "Read to find out: were you right?"
+     }
+    ],
+    "footLeft": "A few minutes per book",
+    "footRight": "Non-fiction only"
+   },
+   {
+    "layout": "end",
+    "ground": "accent",
+    "corner": "// send it to a friend who reads",
+    "title": "Save it\nfor your\nnext\n*book.*",
+    "video": "How to Actually Remember What You Read",
+    "where": "Full video on YouTube",
+    "placeholder": "[ YOUR CHANNEL NAME ]",
+    "placeholderNote": "Placeholder: edit content.json",
+    "polaroid": {
+     "img": "../../thumbnails/assets/photo/neutral.jpg",
+     "caption": ""
+    },
+    "nudge": {
+     "polaroid": {
+      "dx": 10,
+      "dy": 40,
+      "s": 0.9
+     }
+    }
+   }
+  ]
+ }
+}

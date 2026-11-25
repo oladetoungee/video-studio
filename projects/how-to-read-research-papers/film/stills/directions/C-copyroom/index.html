@@ -1,0 +1,103 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../_shared/fonts.css">
+<style>
+:root{--k:#0F0F0F;--paper:#F1F0EB;--g:#3DF07B;--ghost:#D9D8D2;--toner:#1A1A1A;--mid:#8A8A86}
+#stage{background:var(--k);font-family:"Space Grotesk";color:var(--paper)}
+.big{font-weight:700;text-transform:uppercase;letter-spacing:-.035em;line-height:.9}
+.mono{font-family:"Space Mono";letter-spacing:.04em}
+.sheet{position:absolute;background:var(--paper);overflow:hidden}
+.sheet .grain{position:absolute;inset:0;pointer-events:none;mix-blend-mode:multiply;opacity:.4}
+.blk{position:absolute;background:var(--toner)}
+.scan{position:absolute;background:var(--g)}
+.xerox{filter:grayscale(1) contrast(2.1) brightness(1.08)}
+.cred{font-family:"Space Mono";font-size:22px;color:var(--mid);letter-spacing:.02em}
+</style></head><body><div id="stage"></div>
+<svg width="0" height="0" style="position:absolute"><filter id="speck" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="7"/><feColorMatrix values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -2.4 1.32"/></filter></svg>
+<script src="../_shared/lib.js"></script>
+<script>
+function txt(par, html, css, cls = '') { const e = h(`<div class="abs ${cls}" style="${css}">${html}</div>`); par.appendChild(e); return e; }
+// a generic paper (no real content): blocks in sheet units (sheet 100 wide), kinds: t title, a abstract, hd heading, b body, f figure, c conclusion
+const LAYOUT = (() => { const L = []; let y = 7;
+  L.push(['t', 14, y, 72, 3.6]); y += 6; L.push(['au', 32, y, 36, 1.4]); y += 5;
+  for (let i = 0; i < 5; i++) L.push(['a', 10, y + i * 2.4, i == 4 ? 50 : 80, 1.1]); y += 15;
+  const secs = [['hd', 4], ['b', 6], ['hd', 1], ['b', 4], ['f', 1], ['b', 5], ['hd', 1], ['b', 6], ['hd', 1], ['c', 4]];
+  for (const [k, n] of secs) { if (k === 'hd') { L.push(['hd', 10, y + 1, 30, 1.8]); y += 5; }
+    else if (k === 'f') { L.push(['f', 18, y, 64, 16]); y += 19; }
+    else for (let i = 0; i < n; i++) { L.push([k, 10, y, i == n - 1 ? 46 + (i * 13 % 30) : 80, 1.1]); y += 2.4; } if (k !== 'hd' && k !== 'f') y += 1.6; }
+  return L; })();
+const SHOW = { 1: { t: 1, au: 1, a: 1, hd: 1, c: 1 }, 2: { t: 1, au: 1, a: 1, hd: 1, c: 1, f: 1, b: .45 }, 3: { t: 1, au: 1, a: 1, hd: 1, c: 1, f: 1, b: 1 } };
+function sheet(par, x, y, w, pass, opts = {}) { const hh = w * 1.414; const s = h(`<div class="sheet" style="left:${x}px;top:${y}px;width:${w}px;height:${hh}px;${opts.css || ''}"></div>`); par.appendChild(s);
+  const u = w / 100; const show = SHOW[pass] || {}; const cut = opts.cut ?? 999; // reveal only above cut (sheet units)
+  LAYOUT.forEach(([k, bx, by, bw, bh]) => { if (by * u * 1.0 > hh - 3 * u) return; const on = by < cut; let a = show[k] ?? 0; const col = a >= 1 ? 'var(--toner)' : a > 0 ? '#9A9994' : 'var(--ghost)';
+    const e = h(`<div class="blk" style="left:${bx * u}px;top:${by * u}px;width:${bw * u}px;height:${bh * u}px;background:${on ? col : 'var(--ghost)'}"></div>`);
+    if (k === 'f') { e.style.background = 'transparent'; e.style.border = `${Math.max(2, .5 * u)}px solid ${on && a ? 'var(--toner)' : 'var(--ghost)'}`; if (on && a) e.innerHTML = `<svg width="100%" height="100%" viewBox="0 0 64 16" preserveAspectRatio="none"><polyline points="4,13 14,10 24,11 34,6 44,7 54,3 60,4" fill="none" stroke="#1A1A1A" stroke-width=".6"/></svg>`; }
+    s.appendChild(e); });
+  s.appendChild(h(`<svg class="grain" width="${w}" height="${hh}"><rect width="100%" height="100%" filter="url(#speck)"/></svg>`));
+  return s; }
+// ---------- opening (t = 0 at raw 20.20) ----------
+function opening(t, S) {
+  const W = 1920; const sw = 700, sx = 1080, sy = 70;
+  // scanner glass: page sits under a lid that lifts 0-0.6
+  const lidK = P(t, 0, .6, E.outExpo);
+  // pass 0: full scan 1.5-2.9 reveals every line (start to finish), pass 1 from 4.6: only the parts
+  const fullCut = lerp(0, 141, P(t, 1.5, 1.5, E.lin)); const p1 = t >= 4.6; const p1Cut = lerp(0, 141, P(t, 4.6, 1.6, E.inOutQuart));
+  const pass = p1 ? 1 : 3; const cut = p1 ? p1Cut : fullCut;
+  const s = sheet(S, sx, sy, sw, pass, { cut });
+  const hh = sw * 1.414, u = sw / 100;
+  // scan bar
+  const barY = sy + cut * u; const barOn = (t > 1.5 && t < 3.05) || (t > 4.6 && t < 6.25);
+  if (barOn) { txt(S, '', `left:${sx - 30}px;top:${barY - 5}px;width:${sw + 60}px;height:10px`, 'scan'); txt(S, '', `left:${sx - 30}px;top:${barY - 40}px;width:${sw + 60}px;height:40px;background:rgba(61,240,123,.16)`); }
+  // lid
+  txt(S, '', `left:${sx - 40}px;top:${sy - 40 - lidK * (hh + 120)}px;width:${sw + 80}px;height:${hh + 80}px;background:#222;border-bottom:6px solid #333`);
+  // left type
+  const A = txt(S, `<div class="big" style="font-size:132px">How to read<br>a research<br>paper</div>`, 'left:96px;top:220px;width:900px');
+  enter(A, P(t, .1, .5), -40, 0, 8); A.style.opacity = A.style.opacity * (1 - P(t, 3.15, .2));
+  // 3.3 'like a novel': the left type swaps to the claim; copy counter shows 1/1 crossed
+  const kN = P(t, 3.3, .3, E.outExpo);
+  if (t >= 3.3 && t < 6.4) { const N = txt(S, `<div class="big" style="font-size:150px">Not a<br><span style="color:var(--g)">novel.</span></div>`, `left:96px;top:300px`); N.style.transform = `translateY(${(1 - kN) * 30}px)`; N.style.opacity = kN * (1 - P(t, 6.2, .2)); }
+  // counter display
+  const cnt = t < 1.5 ? '000' : t < 3.05 ? String(Math.min(141, Math.floor(fullCut))).padStart(3, '0') : t < 4.6 ? '141' : 'PASS 1';
+  if (t < 4.6) txt(S, `<span style="color:var(--mid)">LINES READ</span>&nbsp;&nbsp;<span style="color:var(--g)">${cnt}</span>`, 'left:100px;top:940px;font-size:34px', 'mono');
+  // 6.6 parts labels (mono, right of sheet) + 8.0 order numbers
+  const parts = [['TITLE', 7], ['ABSTRACT', 20], ['HEADINGS', 36], ['CONCLUSION', 128]];
+  parts.forEach(([lab, by], i) => { const k = P(t, 6.6 + i * .12, .3, E.outCubic); const kn = P(t, 8.0 + i * .14, .25, E.outQuint);
+    const e = txt(S, `<span style="color:var(--g);opacity:${kn > 0 ? 1 : 0};display:inline-block;transform:scale(${lerp(1.6, 1, kn)})">0${i + 1}</span>&nbsp;${lab}`, `left:${sx - 380}px;top:${sy + by * u - 20}px;width:340px;text-align:right;font-size:36px`, 'mono');
+    enter(e, k, 30, 0, 6); });
+  if (t >= 6.3) { const k = P(t, 6.3, .4); const Q = txt(S, `<div class="big" style="font-size:96px">The parts.<br>The order.</div>`, 'left:96px;top:120px'); enter(Q, k, 0, 30, 6); }
+}
+const SCENES = {
+  c1: { draw: (t, S) => { // pass 1 scan mid-sweep
+      const sx = 1080, sy = 70, sw = 700, u = 7; sheet(S, sx, sy, sw, 1, { cut: 92 });
+      txt(S, '', `left:${sx - 30}px;top:${sy + 92 * u - 5}px;width:${sw + 60}px;height:10px`, 'scan'); txt(S, '', `left:${sx - 30}px;top:${sy + 92 * u - 40}px;width:${sw + 60}px;height:40px;background:rgba(61,240,123,.16)`);
+      txt(S, `<div class="big" style="font-size:118px">Do you even<br>need <span style="color:var(--g)">this</span><br>paper?</div>`, 'left:96px;top:230px;width:900px');
+      txt(S, `PASS 1 · 5–10 MIN`, 'left:100px;top:940px;font-size:34px;color:var(--g)', 'mono');
+  } },
+  c2: { draw: (t, S) => { // three copies
+      const xs = [820, 1180, 1540], lab = [['01', '5–10 MIN'], ['02', 'UP TO 1 HOUR'], ['03', '4–5 HOURS']];
+      [1, 2, 3].forEach((p, i) => { const sh = sheet(S, xs[i], 170 + i * 40, 360, p, { css: `transform:rotate(${[-3, 1, 4][i]}deg)` }); if (p === 3) { [30, 52, 95].forEach(y => sh.appendChild(h(`<div class="abs" style="left:${88 * 3.6}px;top:${y * 3.6}px;width:${10 * 3.6}px;height:${5}px;background:var(--g)"></div>`))); }
+        txt(S, `<span style="color:var(--g)">${lab[i][0]}</span> ${lab[i][1]}`, `left:${xs[i]}px;top:${170 + i * 40 + 545}px;font-size:30px`, 'mono'); });
+      txt(S, `<div class="big" style="font-size:120px">One paper.<br>Three<br><span style="color:var(--g)">passes.</span></div>`, 'left:96px;top:250px;width:800px');
+  } },
+  c3: { draw: (t, S) => { // Pexels printer photo, xerox look
+      txt(S, `<img class="xerox" src="../_src/pexels/7014408.jpg" style="width:1100px;height:1080px;object-fit:cover;object-position:50% 50%">`, 'left:820px;top:0');
+      txt(S, `<div class="big" style="font-size:112px">Print it<br>out so you<br>can <span style="color:var(--g)">mark<br>it up.</span></div>`, 'left:96px;top:200px;width:720px');
+      txt(S, `PHOTO: GEORGE MILTON / PEXELS`, 'left:100px;top:1010px', 'cred');
+  } },
+  c4: { draw: (t, S) => { // funding receipt, photocopied look
+      const sc = 1.28, ox = 132, oy = 482; const card = h(`<div class="sheet" style="left:800px;top:390px;width:1040px;height:${(600 - oy) * sc + 40}px"></div>`); S.appendChild(card);
+      card.appendChild(h(`<div class="abs" style="left:0;top:0;transform:scale(${sc});transform-origin:0 0"><img class="xerox" src="../_src/pubmed__leads-to-more-favorable-.png" style="position:absolute;width:1280px;left:-${ox}px;top:-${oy}px;max-width:none"></div>`));
+      card.appendChild(h(`<div class="abs" style="left:${(150 - ox) * sc}px;top:${(520 - oy + 20) * sc}px;width:${406 * sc}px;height:8px;background:var(--g)"></div>`));
+      card.appendChild(h(`<svg width="1040" height="400" style="position:absolute;left:0;top:0;mix-blend-mode:multiply;opacity:.22"><rect width="100%" height="100%" filter="url(#speck)"/></svg>`));
+      txt(S, `<div class="big" style="font-size:132px">Who<br><span style="color:var(--g)">funded</span><br>it?</div>`, 'left:96px;top:250px');
+      txt(S, `LUNDH ET AL., COCHRANE REVIEW 2017 · PUBMED 28207928`, 'left:802px;top:${300 + (600 - 482) * 1.28 + 70}px'.replace('${300 + (600 - 482) * 1.28 + 70}', String(390 + (600 - 482) * 1.28 + 70)), 'cred');
+  } },
+  p1: { draw: (t, S) => { // black phrase card, 9:16 (her line)
+      txt(S, `<div class="big" style="font-size:150px;line-height:.92">Ten<br>minutes<br>can save<br>you a<br><span style="color:var(--g)">whole<br>evening.</span></div>`, 'left:80px;top:420px;width:940px');
+  } },
+  p2: { draw: (t, S) => { // 12 people
+      const g = h(`<div class="abs" style="left:110px;top:300px;width:860px;display:grid;grid-template-columns:repeat(4,1fr);gap:40px 30px"></div>`); S.appendChild(g);
+      for (let i = 0; i < 12; i++) g.appendChild(h(`<svg viewBox="0 0 60 100" width="150" height="230"><circle cx="30" cy="20" r="15" fill="#F1F0EB"/><path d="M6 100 V58 Q6 40 30 40 Q54 40 54 58 V100 Z" fill="#F1F0EB"/></svg>`));
+      txt(S, `<div class="big" style="font-size:96px">12 people can<br>tell you <span style="color:var(--g)">how.</span><br>Not what<br>percentage.</div>`, 'left:80px;top:1250px;width:940px');
+  } },
+};
+window.SCENES = SCENES; window.TEST = opening; boot();
+</script></body></html>

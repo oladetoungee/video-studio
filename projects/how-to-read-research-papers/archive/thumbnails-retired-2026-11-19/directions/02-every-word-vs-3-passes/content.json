@@ -1,0 +1,31 @@
+{
+  "text": {
+    "a": "every word",
+    "b": "3 passes"
+  },
+  "images": {
+    "a": "../../assets/photo/shoot/room-1595.jpg",
+    "acut": "../../assets/photo/shoot/room-1595-cut.png",
+    "b": "../../assets/photo/shoot/room-1601.jpg",
+    "bcut": "../../assets/photo/shoot/room-1601-cut.png"
+  },
+  "kind": "split (her twice: buried in pages / at ease with one page)",
+  "board": "Thumbnails 69 (yt-16 \"12:30 PM | 7:30 PM\")",
+  "fonts": [
+    "thumbs-02 Inter Tight Bold / Black (white on #1C1C1C, #1C1C1C on the yellow box #F7D51D, from Thumbnails 21)"
+  ],
+  "colours": "thumbs-02: #1C1C1C / #FFFFFF / #F7D51D",
+  "thumbnail_text": "every word | 3 passes",
+  "titles": [
+    "Stop Reading Research Papers From Start to Finish",
+    "How to Read Research Papers Faster as a Student",
+    "You're Reading Research Papers in the Wrong Order"
+  ],
+  "direction": "Copies Thumbnails 69: two photos side by side, one short label each. Left: her, stressed (hand on her head), a pile of real printed pages up to her chin, \"every word\"; right: her at ease, one page with the title and abstract highlighted.",
+  "nudge": {},
+  "vars": {},
+  "class": "no-lift",
+  "title": "Stop Reading Research Papers From Start to Finish",
+  "scores": "",
+  "recommended": false
+}

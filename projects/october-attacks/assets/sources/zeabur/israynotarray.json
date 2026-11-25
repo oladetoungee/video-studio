@@ -1,0 +1,53 @@
+{
+ "story": "zeabur",
+ "outlet": "Ray's blog",
+ "slug": "israynotarray",
+ "url": "https://israynotarray.com/en/misc/2026/10/18/zeabur-shutting-down-taiwanese-startup-growing-pains/",
+ "finalUrl": "https://israynotarray.com/en/misc/2026/10/18/zeabur-shutting-down-taiwanese-startup-growing-pains/",
+ "status": "loaded",
+ "http": 200,
+ "title": "Zeabur Is Shutting Down: A Taiwanese Startup's Growing Pains | Is Ray, Not Array",
+ "h1": "Zeabur Is Shutting Down: A Taiwanese Startup's Growing Pains",
+ "published": "2026-10-18T20:39:25.000Z",
+ "files": {
+  "fold": "zeabur/israynotarray_fold.png",
+  "full": "zeabur/israynotarray_full.jpg",
+  "scroll": "zeabur/israynotarray_scroll.mp4"
+ },
+ "full": {
+  "width": 1440,
+  "height": 6000,
+  "pageHeight": 13454,
+  "zoom": 1,
+  "quotes": []
+ },
+ "scroll": {
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "seconds": 8,
+  "keyframes": [
+   {
+    "t": 0,
+    "y": 27
+   },
+   {
+    "t": 1,
+    "y": 27
+   },
+   {
+    "t": 2.55,
+    "y": 1427
+   },
+   {
+    "t": 8,
+    "y": 1427
+   }
+  ],
+  "zoom": 1,
+  "easing": "easeInOutCubic between keyframes, holds where y is equal",
+  "capped": false,
+  "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)",
+  "quotes": []
+ }
+}

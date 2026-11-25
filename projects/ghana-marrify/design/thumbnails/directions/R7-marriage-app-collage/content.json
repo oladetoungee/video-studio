@@ -1,0 +1,31 @@
+{
+  "direction": "REMAKE of viral sample 7 (\"A PORTLAND VLOG\" collage): four photo tiles of the topic edge to edge, small white caps captions in the tiles, a giant cream title with a grey drop shadow across the middle, a small script-ish word above it, a small cut-out of her at the bottom centre and one sticker. Tiles: the real Graphic Online headline (credited), her talking, rings on paper (Pexels), old paper records (Pexels); sticker: a Ghana flag.",
+  "concept": "R7",
+  "sample": "7",
+  "thumbnail_text": "Ghana's new MARRIAGE APP",
+  "title": "You Can Now Check If Someone Is Married in Ghana",
+  "titles": [
+    "You Can Now Check If Someone Is Married in Ghana",
+    "Should Marriage Records Be Public? Ghana Just Made Them",
+    "Ghana Put Marriage and Divorce Records Online. Good Idea?"
+  ],
+  "text": {
+    "small": "Ghana's new",
+    "line1": "MARRIAGE",
+    "line2": "APP",
+    "c1": "",
+    "c2": "MY HONEST<br>TAKE",
+    "c3": "LAUNCHED IN ACCRA",
+    "c4": "MARRIED OR SINGLE?",
+    "c5": "IS THIS<br>TOO<br>PUBLIC?",
+    "credit": "Graphic Online, 3 Sep 2026"
+  },
+  "images": {
+    "news": "../../../../film/assets/sources/news/news_graphic_headline_crop.png",
+    "her": "../../assets/scene/warm/s_76.00.jpg",
+    "rings": "../../assets/stock/rings_paper.jpg",
+    "records": "../../assets/stock/paper_bundles.jpg",
+    "front": "../../assets/scene/warm/mask/s_87.10.png"
+  },
+  "vars": {}
+}

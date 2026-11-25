@@ -1,0 +1,54 @@
+{
+ "title": "About us | Deceptive Patterns",
+ "h1": "About us",
+ "h1y": 145.84375,
+ "found": {
+  "2010": [
+   [
+    370.25,
+    1631.359375,
+    42.09375,
+    22
+   ]
+  ],
+  "Harry Brignull": [
+   [
+    183.046875,
+    716,
+    136.65625,
+    24
+   ]
+  ]
+ },
+ "H": 3265,
+ "focus": {
+  "2010": {
+   "file": "dd-about__2010.png",
+   "top": 1111.359375,
+   "rects": [
+    [
+     370.25,
+     520,
+     42.09375,
+     22
+    ]
+   ]
+  },
+  "Harry Brignull": {
+   "file": "dd-about__harry-brignull.png",
+   "top": 196,
+   "rects": [
+    [
+     183.046875,
+     520,
+     136.65625,
+     24
+    ]
+   ]
+  }
+ },
+ "clipTop": 25.84375,
+ "scale": 1.5,
+ "url": "https://deceptive.design/about-us",
+ "captured": "2026-11-02T12:51:38.612Z"
+}

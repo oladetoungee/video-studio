@@ -1,0 +1,71 @@
+1
+00:00:00,060 --> 00:00:02,050
+and there are several mistakes you can make
+
+2
+00:00:02,050 --> 00:00:04,040
+that can stop your database index from
+
+3
+00:00:04,290 --> 00:00:04,950
+working as well
+
+4
+00:00:04,950 --> 00:00:07,250
+you can have a database index and the
+
+5
+00:00:07,250 --> 00:00:09,137
+database still won't use it
+
+6
+00:00:09,137 --> 00:00:11,107
+and these are the common mistakes that cause
+
+7
+00:00:11,107 --> 00:00:13,160
+it the first one is wrapping your column in
+
+8
+00:00:13,160 --> 00:00:15,557
+a function for example, in this case, a
+
+9
+00:00:15,557 --> 00:00:18,147
+normal index on email is sorted by the
+
+10
+00:00:18,147 --> 00:00:20,587
+emails exactly as they were stored
+
+11
+00:00:20,897 --> 00:00:23,607
+the lowercase versions are not in that index
+
+12
+00:00:23,787 --> 00:00:26,247
+so the database can't use it here, unless
+
+13
+00:00:26,247 --> 00:00:28,787
+you create an index on the same expression
+
+14
+00:00:28,863 --> 00:00:31,899
+the second can also be adding a wildcard at
+
+15
+00:00:31,899 --> 00:00:33,634
+the start of a LIKE
+
+16
+00:00:33,634 --> 00:00:36,413
+the index is sorted by how each value starts
+
+17
+00:00:36,413 --> 00:00:38,493
+and if you don't know how it starts, the
+
+18
+00:00:38,493 --> 00:00:40,333
+index cannot help you find it

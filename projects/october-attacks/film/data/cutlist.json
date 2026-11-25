@@ -1,0 +1,60 @@
+{
+ "sample_rate": 48000,
+ "original_duration": 479.746,
+ "edited_duration": 477.436,
+ "manual_cuts": [
+  {
+   "start": 365.29,
+   "end": 367.01,
+   "seconds": 1.72,
+   "reason": "retake: 'that your browsers need,' (she corrects it to 'that your browsers trust'; join on the 365.29 dip after 'companies')"
+  }
+ ],
+ "manual_seconds_removed": 1.72,
+ "pauses_tightened": 3,
+ "pause_seconds_removed": 0.59,
+ "pauses": [
+  {
+   "orig_at": 12.16,
+   "was": 0.56,
+   "now": 0.42
+  },
+  {
+   "orig_at": 179.16,
+   "was": 0.61,
+   "now": 0.43
+  },
+  {
+   "orig_at": 451.37,
+   "was": 0.71,
+   "now": 0.44
+  }
+ ],
+ "segments": [
+  {
+   "orig_start": 0.0,
+   "orig_end": 12.3975,
+   "edit_start": 0.0
+  },
+  {
+   "orig_start": 12.5025,
+   "orig_end": 179.3975,
+   "edit_start": 12.3625
+  },
+  {
+   "orig_start": 179.5425,
+   "orig_end": 365.3075,
+   "edit_start": 179.2225
+  },
+  {
+   "orig_start": 366.9925,
+   "orig_end": 451.6075,
+   "edit_start": 364.9525
+  },
+  {
+   "orig_start": 451.8425,
+   "orig_end": 479.746,
+   "edit_start": 449.5325
+  }
+ ]
+}

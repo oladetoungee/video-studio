@@ -1,0 +1,10 @@
+Fonts in this folder (all free for commercial use, SIL Open Font License 1.1 unless noted; full OFL text in OFL.txt):
+- Instrument Serif (Regular, Italic): OFL, Rodrigo Fuenzalida / Jordan Egstad, github.com/google/fonts/tree/main/ofl/instrumentserif
+- Instrument Sans: OFL, github.com/google/fonts/tree/main/ofl/instrumentsans
+- Playfair Display (+ Italic): OFL, Claus Eggers Sørensen, github.com/google/fonts/tree/main/ofl/playfairdisplay
+- Caveat (handwriting): OFL, Impallari Type, github.com/google/fonts/tree/main/ofl/caveat
+- Anton: OFL, Vernon Adams, github.com/google/fonts/tree/main/ofl/anton
+- Archivo, Archivo Black, Bricolage Grotesque, Bebas Neue, DM Mono: OFL (house fonts, library/fonts)
+Downloaded 2026-10-06 from github.com/google/fonts.
+
+Added 2026-10-06 for the remakes (all SIL Open Font License, from github.com/google/fonts): Montserrat, Montserrat Italic, Inter, IM Fell English (+Italic, SC), Patrick Hand, Kalam, Gochi Hand.

@@ -1,0 +1,396 @@
+{
+ "story": "railway",
+ "outlet": "Railway (preliminary report)",
+ "slug": "railway-prelim-report",
+ "url": "https://blog.railway.com/p/preliminary-report-october-security-incident",
+ "finalUrl": "https://blog.railway.com/p/preliminary-report-october-security-incident",
+ "status": "loaded",
+ "http": 200,
+ "title": "Preliminary Report: Oct 21st Security Incident | Railway Blog",
+ "h1": "Preliminary Report: Oct 21st Security Incident",
+ "published": "2026-10-22T23:31:37.225Z",
+ "files": {
+  "fold": "railway/railway-prelim-report_fold.png",
+  "full": "railway/railway-prelim-report_full.jpg",
+  "scroll": "railway/railway-prelim-report_scroll.mp4"
+ },
+ "full": {
+  "width": 1440,
+  "height": 6000,
+  "pageHeight": 8875,
+  "zoom": 1,
+  "quotes": [
+   {
+    "quote": "Early investigations tell us this attack was attempting to obtain AI provider API keys to perform distillation attacks",
+    "box": {
+     "x": 368,
+     "y": 757,
+     "w": 697,
+     "h": 48
+    },
+    "lines": [
+     {
+      "x": 752,
+      "y": 757,
+      "w": 313,
+      "h": 21
+     },
+     {
+      "x": 368,
+      "y": 784,
+      "w": 639,
+      "h": 21
+     }
+    ]
+   },
+   {
+    "quote": "we are not yet able to share the specific details and scale of the exploits",
+    "box": {
+     "x": 368,
+     "y": 924,
+     "w": 699,
+     "h": 48
+    },
+    "lines": [
+     {
+      "x": 905,
+      "y": 924,
+      "w": 162,
+      "h": 21
+     },
+     {
+      "x": 368,
+      "y": 951,
+      "w": 446,
+      "h": 21
+     }
+    ]
+   },
+   {
+    "quote": "at most 1.85% of all workspaces had some environment variables potentially compromised",
+    "box": {
+     "x": 368,
+     "y": 3379,
+     "w": 684,
+     "h": 48
+    },
+    "lines": [
+     {
+      "x": 910,
+      "y": 3379,
+      "w": 142,
+      "h": 21
+     },
+     {
+      "x": 368,
+      "y": 3406,
+      "w": 623,
+      "h": 21
+     }
+    ]
+   },
+   {
+    "quote": "This represents, numerically, about 100,000 workspaces",
+    "box": {
+     "x": 368,
+     "y": 3406,
+     "w": 669,
+     "h": 48
+    },
+    "lines": [
+     {
+      "x": 1001,
+      "y": 3406,
+      "w": 36,
+      "h": 21
+     },
+     {
+      "x": 368,
+      "y": 3433,
+      "w": 439,
+      "h": 21
+     }
+    ]
+   },
+   {
+    "quote": "We recommend that all customers who signed up prior to October 21 rotate their keys stored on Railway",
+    "box": {
+     "x": 368,
+     "y": 1339,
+     "w": 694,
+     "h": 75
+    },
+    "lines": [
+     {
+      "x": 982,
+      "y": 1339,
+      "w": 27,
+      "h": 21
+     },
+     {
+      "x": 368,
+      "y": 1366,
+      "w": 694,
+      "h": 21
+     },
+     {
+      "x": 368,
+      "y": 1393,
+      "w": 150,
+      "h": 21
+     }
+    ]
+   }
+  ]
+ },
+ "scroll": {
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "seconds": 10.6,
+  "keyframes": [
+   {
+    "t": 0,
+    "y": 81
+   },
+   {
+    "t": 1,
+    "y": 81
+   },
+   {
+    "t": 1.93,
+    "y": 347
+   },
+   {
+    "t": 3.03,
+    "y": 347
+   },
+   {
+    "t": 3.86,
+    "y": 514
+   },
+   {
+    "t": 4.96,
+    "y": 514
+   },
+   {
+    "t": 6.009,
+    "y": 929
+   },
+   {
+    "t": 7.109,
+    "y": 929
+   },
+   {
+    "t": 8.887,
+    "y": 2969
+   },
+   {
+    "t": 10.587,
+    "y": 2969
+   }
+  ],
+  "zoom": 1,
+  "easing": "easeInOutCubic between keyframes, holds where y is equal",
+  "capped": false,
+  "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)",
+  "quotes": [
+   {
+    "quote": "Early investigations tell us this attack was attempting to obtain AI provider API keys to perform distillation attacks",
+    "inVideo": true,
+    "still": true,
+    "t": 2.48,
+    "visibleStill": [
+     1.87,
+     3.1
+    ],
+    "scrollY": 347,
+    "box": {
+     "x": 608,
+     "y": 410,
+     "w": 697,
+     "h": 48
+    },
+    "lines": [
+     {
+      "x": 992,
+      "y": 410,
+      "w": 313,
+      "h": 21
+     },
+     {
+      "x": 608,
+      "y": 437,
+      "w": 639,
+      "h": 21
+     }
+    ],
+    "docBox": {
+     "x": 608,
+     "y": 757,
+     "w": 697,
+     "h": 48
+    },
+    "layoutDriftPx": 0
+   },
+   {
+    "quote": "we are not yet able to share the specific details and scale of the exploits",
+    "inVideo": true,
+    "still": true,
+    "t": 4.4,
+    "visibleStill": [
+     3.77,
+     5.03
+    ],
+    "scrollY": 514,
+    "box": {
+     "x": 608,
+     "y": 410,
+     "w": 699,
+     "h": 48
+    },
+    "lines": [
+     {
+      "x": 1145,
+      "y": 410,
+      "w": 162,
+      "h": 21
+     },
+     {
+      "x": 608,
+      "y": 437,
+      "w": 446,
+      "h": 21
+     }
+    ],
+    "docBox": {
+     "x": 608,
+     "y": 924,
+     "w": 699,
+     "h": 48
+    },
+    "layoutDriftPx": 0
+   },
+   {
+    "quote": "at most 1.85% of all workspaces had some environment variables potentially compromised",
+    "inVideo": true,
+    "still": true,
+    "t": 9.72,
+    "visibleStill": [
+     8.8,
+     10.63
+    ],
+    "scrollY": 2969,
+    "box": {
+     "x": 608,
+     "y": 410,
+     "w": 684,
+     "h": 48
+    },
+    "lines": [
+     {
+      "x": 1150,
+      "y": 410,
+      "w": 142,
+      "h": 21
+     },
+     {
+      "x": 608,
+      "y": 437,
+      "w": 623,
+      "h": 21
+     }
+    ],
+    "docBox": {
+     "x": 608,
+     "y": 3379,
+     "w": 684,
+     "h": 48
+    },
+    "layoutDriftPx": 0
+   },
+   {
+    "quote": "This represents, numerically, about 100,000 workspaces",
+    "inVideo": true,
+    "still": true,
+    "t": 9.72,
+    "visibleStill": [
+     8.8,
+     10.63
+    ],
+    "scrollY": 2969,
+    "box": {
+     "x": 608,
+     "y": 437,
+     "w": 669,
+     "h": 48
+    },
+    "lines": [
+     {
+      "x": 1241,
+      "y": 437,
+      "w": 36,
+      "h": 21
+     },
+     {
+      "x": 608,
+      "y": 464,
+      "w": 439,
+      "h": 21
+     }
+    ],
+    "docBox": {
+     "x": 608,
+     "y": 3406,
+     "w": 669,
+     "h": 48
+    },
+    "layoutDriftPx": 0
+   },
+   {
+    "quote": "We recommend that all customers who signed up prior to October 21 rotate their keys stored on Railway",
+    "inVideo": true,
+    "still": true,
+    "t": 6.55,
+    "visibleStill": [
+     5.93,
+     7.17
+    ],
+    "scrollY": 929,
+    "box": {
+     "x": 608,
+     "y": 410,
+     "w": 694,
+     "h": 75
+    },
+    "lines": [
+     {
+      "x": 1222,
+      "y": 410,
+      "w": 27,
+      "h": 21
+     },
+     {
+      "x": 608,
+      "y": 437,
+      "w": 694,
+      "h": 21
+     },
+     {
+      "x": 608,
+      "y": 464,
+      "w": 150,
+      "h": 21
+     }
+    ],
+    "docBox": {
+     "x": 608,
+     "y": 1339,
+     "w": 694,
+     "h": 75
+    },
+    "layoutDriftPx": 0
+   }
+  ]
+ }
+}

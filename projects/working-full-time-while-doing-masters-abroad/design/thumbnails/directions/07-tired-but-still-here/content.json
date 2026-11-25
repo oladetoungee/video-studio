@@ -1,0 +1,30 @@
+{
+  "text": {
+    "small": "job + master's,",
+    "h": "it's a lot."
+  },
+  "images": {
+    "room": "../../assets/p1119/tired.jpg",
+    "me": "../../assets/p1119/tired-person.png"
+  },
+  "kind": "real warm moment (Øredev evening, orange top, chin on her hands, soft smile); the room dimmed, her natural on top; small plain line + big serif italic aside top right",
+  "layout": "her centre-left, words top right (not a words-left / her-right)",
+  "board": "pick1119-27 (\"study with a sleep-deprived doctor\": \"tired, but still here.\" serif italic over a dim warm night scene)",
+  "fonts": [
+    "thumbs-17 Inter Tight Medium + Instrument Serif italic (white #FFFFFF on #2B2320, Thumbnails 152)"
+  ],
+  "colours": "Thumbnails 152: #2B2320 / #FFFFFF",
+  "photo": "library/her-photos/oredev-2026-11-10/55642230148_001459c6ac_o.jpg (Enhance photo 0.35, person layer)",
+  "thumbnail_text": "job + master's, it's a lot.",
+  "titles": [
+    "What Working Full Time During My Master's Is Really Like",
+    "How I Work Full Time While Doing a Master's Abroad",
+    "Working Full Time During My Master's: My Honest First Year"
+  ],
+  "title": "What Working Full Time During My Master's Is Really Like",
+  "direction": "Copies pick1119-27: a real, warm, slightly tired moment (her at the Øredev evening, chin on her hands, soft smile), dimmed around her, a small plain line and a big serif italic feeling. The words are the feeling, the title says the topic.",
+  "nudge": {},
+  "vars": {},
+  "class": "no-lift",
+  "scores": "2026-11-19 feed critic: R1 6/7 ('tired, but still here.', too close to the pick's own words) · R2 5/6 · R3 5/6; then the top line 64 -> 84 px (the R3 fix), not re-scored. R3 critic's A/B test pick"
+}

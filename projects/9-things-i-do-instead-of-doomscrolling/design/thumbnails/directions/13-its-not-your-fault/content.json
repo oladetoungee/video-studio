@@ -1,0 +1,28 @@
+{
+  "text": {
+    "h": "it's not <span class=\"y\">your fault.</span>"
+  },
+  "images": {
+    "me": "../../assets/oredev/chin-cut.png",
+    "feed1": "../../assets/pexels/busstop.jpg"
+  },
+  "kind": "her in the middle (Oredev, orange top, hand at her chin, a small smile, looking down towards a phone with an endless feed on the left) + one line at the bottom (round 2: the third photo on the right was dropped)",
+  "board": "pick1119-22 (I'm 45. If you're in your 30s, watch this. / girl, it's not too late.)",
+  "fonts": [
+    "thumbs-18 Montserrat ExtraBold + yellow (white + #F6C343 on #3A3D3A, Thumbnails 162)"
+  ],
+  "colours": "Font thumbs-18 specimen: #3A3D3A ground / white / yellow #F6C343",
+  "thumbnail_text": "it's not your fault. (\"your fault.\" in yellow)",
+  "titles": [
+    "Why You Can't Stop Doomscrolling (And What I Do Instead)",
+    "Can't Stop Doomscrolling? 9 Things I Do Instead"
+  ],
+  "direction": "Copies pick1119-22: a reassuring line, not a scold (her video opens with the apps being designed to keep you scrolling). Her in the middle, the feed on the left, real life (a phone call) on the right, the line in white bold lowercase with the key words in yellow. Round 1: the talking photo and a dark left scene said nothing about phones; now a phone with a feed is the first thing you see.",
+  "nudge": {},
+  "vars": {},
+  "class": "no-lift",
+  "title": "Why You Can't Stop Doomscrolling (And What I Do Instead)",
+  "census": "phone left, her right, words bottom",
+  "scores": "cold critic 2026-11-19: r1 5/6 (talking photo, no phone) · r2 6/7 · r3 6/7 (third photo dropped). Weakest kept; with its title it holds 7.",
+  "recommended": false
+}

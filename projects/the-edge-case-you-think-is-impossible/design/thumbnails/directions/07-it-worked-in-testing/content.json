@@ -1,0 +1,27 @@
+{
+  "text": {
+    "big": "It worked in testing.",
+    "chip": "Crashed at 3:30 a.m."
+  },
+  "images": {
+    "room": "../../assets/shoot/room3-1588.jpg",
+    "me": "../../assets/shoot/me3-1588.png"
+  },
+  "kind": "photo + a post card (her on the LEFT, card right)",
+  "board": "Thumbnails 97 (yt-44: QUIT DATA NOW post card beside her)",
+  "fonts": [
+    "design-10 Inter Tight Black (#030502 on #F5F5F4, Design 378)"
+  ],
+  "colours": "Design 378: card #F5F5F4 / ink #030502",
+  "thumbnail_text": "IT WORKED IN TESTING. (a card)",
+  "scores": "cold critic r5: 7.5 / 8.5 (then a closed-mouth photo, 1588; not re-scored)",
+  "titles": [
+    "It Worked in Testing: Edge Cases That Break Real Apps",
+    "Edge Cases: Why Code That Passes Tests Still Breaks"
+  ],
+  "title": "It Worked in Testing: Edge Cases That Break Real Apps",
+  "direction": "Copies Thumbnails 97: a post card with one big black line beside the person; here she shrugs on the left of her dimmed room, the card on the right. Generic card (no platform).",
+  "nudge": {},
+  "vars": {},
+  "class": "no-lift"
+}

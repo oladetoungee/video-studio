@@ -1,0 +1,24 @@
+{
+  "direction": "Photo-led: her real frame (warm grade, the room softly out of focus so nothing competes, never flipped), calm and direct, with one huge canary sticky note (the film's research-wall object) carrying the topic in heavy type.",
+  "thumbnail_text": "UX Research, explained",
+  "titles": [
+    "What Is UX Research? Explained From Scratch",
+    "UX Research Explained by an HCI Master's Student",
+    "UX Research for Beginners: What It Is and How It Works"
+  ],
+  "text": {
+    "hd": "UX<br>Research",
+    "sub": "explained"
+  },
+  "images": {
+    "photo": "../../assets/photo/room-299-wide.jpg"
+  },
+  "vars": {
+    "--ground": "#2A2E28",
+    "--fg": "#17140F",
+    "--accent": "#FFE15A"
+  },
+  "scores": "",
+  "recommended": false,
+  "title": "What Is UX Research? Explained From Scratch"
+}

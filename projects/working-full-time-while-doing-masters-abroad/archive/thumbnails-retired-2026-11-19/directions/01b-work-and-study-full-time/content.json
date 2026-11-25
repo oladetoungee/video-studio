@@ -1,0 +1,30 @@
+{
+  "text": {
+    "h": "Full-time job<br>+ full-time master's"
+  },
+  "images": {
+    "room": "../../assets/shoot2/room-1578.jpg",
+    "me": "../../assets/shoot2/cut-1578c-clean2.png",
+    "laptop": "../../assets/collage/laptop2.png",
+    "books": "../../assets/collage/books.png"
+  },
+  "kind": "her real room washed in one colour, her in full colour in the middle, the two halves of her week as objects either side (laptop = work, books = study), the topic in tall condensed caps across the top",
+  "layout": "her centre, objects either side, words across the top",
+  "board": "Thumbnails 126 (own-ux-research, her own thumbnail: room washed in one colour, her in the middle, 2 big objects, the topic huge across the top in a tall condensed face)",
+  "fonts": [
+    "design-05 Anton (cream #D8CDBB on navy #17357B, Design 368)"
+  ],
+  "colours": "Design 368: #17357B / #D8CDBB",
+  "thumbnail_text": "FULL-TIME JOB + FULL-TIME MASTER'S",
+  "titles": [
+    "How I Work Full Time While Doing a Master's Abroad",
+    "Working Full Time While Doing a Master's Abroad",
+    "Masters While Working Full Time: My First Year"
+  ],
+  "title": "How I Work Full Time While Doing a Master's Abroad",
+  "direction": "New version of 01 (2026-11-16, 01 stays as it was). Copies Thumbnails 126 (her own UX RESEARCH thumbnail): her real room washed in one colour (navy), she in full colour in the middle, a laptop with code (work) and a book stack (study) either side, FULL-TIME JOB + FULL-TIME MASTER'S in Anton cream across the top, as Design 368.",
+  "nudge": {},
+  "vars": {},
+  "class": "no-lift",
+  "scores": "2026-11-16 blind critic: R1 5 (Six Caps on cream, dropped) / R2 6.5 / R3 7 (old 01 in the same rounds: 6 / 6 / 6)"
+}

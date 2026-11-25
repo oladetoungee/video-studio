@@ -1,0 +1,127 @@
+1
+00:00:00,000 --> 00:00:01,980
+a drawback that TechCabal raised.
+
+2
+00:00:01,980 --> 00:00:04,040
+Which is that marriage and divorce records are
+
+3
+00:00:04,040 --> 00:00:06,087
+sensitive private data.
+
+4
+00:00:06,087 --> 00:00:08,427
+a divorce record is a personal thing about
+
+5
+00:00:08,427 --> 00:00:09,297
+someone's life.
+
+6
+00:00:09,297 --> 00:00:10,187
+And now,
+
+7
+00:00:10,187 --> 00:00:12,267
+that's a record searchable by anyone that has
+
+8
+00:00:12,267 --> 00:00:13,807
+your name.
+
+9
+00:00:13,807 --> 00:00:15,267
+And I'm saying this about someone that likes
+
+10
+00:00:15,267 --> 00:00:15,547
+open data.
+
+11
+00:00:15,547 --> 00:00:17,007
+I think that's a genuine drawback.
+
+12
+00:00:17,007 --> 00:00:17,987
+In Estonia,
+
+13
+00:00:17,987 --> 00:00:19,503
+you can search online and find businesses.
+
+14
+00:00:19,503 --> 00:00:20,553
+You can look up how much they made in
+
+15
+00:00:20,553 --> 00:00:20,873
+a year.
+
+16
+00:00:20,873 --> 00:00:21,493
+And that's fine,
+
+17
+00:00:21,493 --> 00:00:21,953
+I think.
+
+18
+00:00:21,953 --> 00:00:23,473
+Because a business is a public entity,
+
+19
+00:00:23,473 --> 00:00:24,673
+that takes public money,
+
+20
+00:00:24,673 --> 00:00:26,333
+owes public accountability.
+
+21
+00:00:26,333 --> 00:00:27,833
+But maybe in the case of a divorce,
+
+22
+00:00:27,833 --> 00:00:29,207
+it's a little bit different.
+
+23
+00:00:29,207 --> 00:00:30,087
+I don't really know,
+
+24
+00:00:30,087 --> 00:00:31,567
+because I love the idea of open data.
+
+25
+00:00:31,567 --> 00:00:33,447
+there's also the consent part of the
+
+26
+00:00:33,447 --> 00:00:33,767
+conversation. Like,
+
+27
+00:00:33,767 --> 00:00:34,991
+there's a difference between your divorce
+
+28
+00:00:34,991 --> 00:00:37,739
+papers sitting in one courthouse or somewhere
+
+29
+00:00:37,739 --> 00:00:39,000
+in 2003,
+
+30
+00:00:39,000 --> 00:00:40,220
+And somebody just being able to check it on
+
+31
+00:00:40,220 --> 00:00:42,050
+their phone in three seconds,
+
+32
+00:00:42,050 --> 00:00:43,167
+right?

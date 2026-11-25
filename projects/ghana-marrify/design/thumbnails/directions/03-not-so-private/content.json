@@ -1,0 +1,26 @@
+{
+  "direction": "A paper divorce decree (generic, no names) being pulled up into a search bar; she looks on, wry (2:13). 'not so' in heavy serif italic, PRIVATE in a red box (her board's red box on one word). Follows viral sample 4 (the idea drawn as one picture).",
+  "concept": "T9 (top pair 3)",
+  "thumbnail_text": "Not so private",
+  "title": "Your Divorce, Searchable by Name? Ghana Just Did It",
+  "titles": [
+    "Your Divorce, Searchable by Name? Ghana Just Did It",
+    "Ghana's Marriage Records Are Now Online. Should They Be?",
+    "You Can Now Check If Someone Is Married in Ghana"
+  ],
+  "scores": "a 3/6 · 3/5 · 4/7 | b 8/8 · 8/8 · 8/8 | c 5 · 6 · 5",
+  "recommended": true,
+  "text": {
+    "line1": "not so",
+    "line2": "PRIVATE",
+    "s_q": "Search a name",
+    "d_t1": "Decree of",
+    "d_t2": "Divorce",
+    "d_nm": "[name] and [name]"
+  },
+  "images": {
+    "scene": "../../assets/scene/warm/s_133.00.jpg",
+    "front": "../../assets/scene/warm/mask/s_133.00.png"
+  },
+  "vars": {}
+}

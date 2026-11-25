@@ -1,0 +1,23 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../lib/set.css"><style>
+/* copies pick1119-45 ("50/10 Pomodoro Timer": the frame split in two flat panels, a small spaced caps label on top of each,
+   a big line-drawn circle icon in the middle, a big light number under it). Font 31 (Inter Tight, Design 406): cream #F5EFDE,
+   orange #D16A3C, ink #0C160C. */
+.pn{position:absolute;top:0;width:640px;height:720px}
+.pn.a1{left:0;background:#F5EFDE;color:#0C160C}
+.pn.a2{left:640px;background:#D16A3C;color:#0C160C}
+.lab{position:absolute;left:0;right:0;top:52px;text-align:center;font-family:'Inter Tight';font-weight:800;font-size:60px;letter-spacing:.2em}
+.ic{position:absolute;left:170px;top:150px;width:300px;height:300px}
+.big{position:absolute;left:0;right:0;top:478px;text-align:center;font-family:'Inter Tight';font-weight:600;font-size:132px;letter-spacing:-.05em;letter-spacing:-.03em;line-height:1}
+</style></head><body><div class="t">
+<div class="pn a1"><div class="lab" data-k="lab1"></div>
+ <svg class="ic" data-move="icon1" viewBox="0 0 300 300"><circle cx="150" cy="150" r="140" fill="none" stroke="#0C160C" stroke-width="7"/>
+  <rect x="78" y="112" width="144" height="58" rx="10" fill="none" stroke="#0C160C" stroke-width="7"/>
+  <path d="M150 150 l0 82 l20 -20 l18 34 l14 -7 l-18 -34 l28 -3 z" fill="#F5EFDE" stroke="#0C160C" stroke-width="7" stroke-linejoin="round"/></svg>
+ <div class="big" data-k="big1"></div></div>
+<div class="pn a2"><div class="lab" data-k="lab2"></div>
+ <svg class="ic" data-move="icon2" viewBox="0 0 300 300"><circle cx="150" cy="150" r="140" fill="none" stroke="#0C160C" stroke-width="7"/>
+  <path d="M150 52 L150 78 L210 78 L210 222 L90 222 L90 108 L180 108 L180 192 L120 192 L120 138 L152 138 L152 166" fill="none" stroke="#0C160C" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M60 82 L60 252 L240 252 L240 52 L180 52" fill="none" stroke="#0C160C" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="152" cy="166" r="11" fill="#F5EFDE"/></svg>
+ <div class="big" data-k="big2"></div></div>
+</div><script src="../../lib/bind.js"></script></body></html>

@@ -1,0 +1,548 @@
+{
+ "slug": "database-indexes",
+ "aspect": "16x9",
+ "note": "Transition board. Fill carrier (what brings the next shot in: a shape, a line, a word, the camera, or \"hard cut\") and why (>= 20 characters: the reason, e.g. \"cut on the beat of 'licensed', new idea\"). Re-running lab.mjs board keeps them.",
+ "cuts": [
+  {
+   "from": "open-grows",
+   "to": "open-fix",
+   "frame": 295,
+   "t": 9.81,
+   "kind": "cut",
+   "lands_on": "One @ 9.81 s (f294)",
+   "carrier": "hard cut on the word (twin off-black grounds), the shot opens half-built",
+   "why": "new idea on \"One thing\": the fix gets its own screen, its name lands on her word"
+  },
+  {
+   "from": "open-fix",
+   "to": "agenda",
+   "frame": 394,
+   "t": 13.12,
+   "kind": "cut",
+   "lands_on": "In @ 13.17 s (f395)",
+   "carrier": "hard cut on the word (twin off-black grounds), the shot opens half-built",
+   "why": "cut on \"In this video\": the plan of the video as a numbered list"
+  },
+  {
+   "from": "agenda",
+   "to": "ch1",
+   "frame": 820,
+   "t": 27.31,
+   "kind": "cut",
+   "lands_on": "To @ 27.36 s (f821)",
+   "carrier": "hard cut on the word (twin off-black grounds), the shot opens half-built",
+   "why": "chapter turn on her word: the plan path shows where we are"
+  },
+  {
+   "from": "ch1",
+   "to": "books-table",
+   "frame": 1052,
+   "t": 35.04,
+   "kind": "cut",
+   "lands_on": "Say @ 35.06 s (f1052)",
+   "carrier": "hard cut on the word (twin off-black grounds), the shot opens half-built",
+   "why": "cut on \"Say we have a bookstore\": the example table she describes"
+  },
+  {
+   "from": "books-table",
+   "to": "no-idea",
+   "frame": 1299,
+   "t": 43.28,
+   "kind": "cut",
+   "lands_on": "Without @ 43.30 s (f1299)",
+   "carrier": "the same query line stays on screen across the cut (match cut on the code)",
+   "why": "zoom out to the whole table on \"no idea where\": the problem in one picture"
+  },
+  {
+   "from": "no-idea",
+   "to": "full-scan",
+   "frame": 1490,
+   "t": 49.65,
+   "kind": "cut",
+   "lands_on": "It @ 49.65 s (f1490)",
+   "carrier": "hard cut on the word (twin off-black grounds), the shot opens half-built",
+   "why": "cut on \"It starts at the first row\": the scan she narrates, row by row"
+  },
+  {
+   "from": "full-scan",
+   "to": "scale",
+   "frame": 1717,
+   "t": 57.23,
+   "kind": "cut",
+   "lands_on": "And @ 57.23 s (f1717)",
+   "carrier": "hard cut on the word (twin off-black grounds), the shot opens half-built",
+   "why": "cut on \"And in many cases\": from one scan to the size comparison"
+  },
+  {
+   "from": "scale",
+   "to": "ch2",
+   "frame": 2048,
+   "t": 68.25,
+   "kind": "cut",
+   "lands_on": "What @ 68.30 s (f2049)",
+   "carrier": "hard cut on the word (twin off-black grounds), the shot opens half-built",
+   "why": "chapter turn on \"What is a database index\""
+  },
+  {
+   "from": "ch2",
+   "to": "book-index",
+   "frame": 2191,
+   "t": 73.02,
+   "kind": "cut",
+   "lands_on": "The @ 73.04 s (f2191)",
+   "carrier": "hard cut on the word (twin off-black grounds), the shot opens half-built",
+   "why": "cut on \"The easiest way\": the back-of-the-book analogy she uses"
+  },
+  {
+   "from": "book-index",
+   "to": "same-way",
+   "frame": 2594,
+   "t": 86.45,
+   "kind": "cut",
+   "lands_on": "A @ 86.47 s (f2594)",
+   "carrier": "hard cut on the word (twin off-black grounds), the shot opens half-built",
+   "why": "cut on \"works the same way\": the book index becomes the database index"
+  },
+  {
+   "from": "same-way",
+   "to": "smaller",
+   "frame": 2916,
+   "t": 97.18,
+   "kind": "cut",
+   "lands_on": "lives. @ 97.11 s (f2913)",
+   "carrier": "hard cut on the word (twin off-black grounds), the shot opens half-built",
+   "why": "cut on \"it only stores the column\": the size comparison"
+  },
+  {
+   "from": "smaller",
+   "to": "ch3",
+   "frame": 3087,
+   "t": 102.88,
+   "kind": "cut",
+   "lands_on": "Now @ 102.93 s (f3088)",
+   "carrier": "hard cut on the word (twin off-black grounds), the shot opens half-built",
+   "why": "chapter turn on \"Now what mechanism\""
+  },
+  {
+   "from": "ch3",
+   "to": "btree-walk",
+   "frame": 3403,
+   "t": 113.42,
+   "kind": "cut",
+   "lands_on": "Say @ 113.44 s (f3403)",
+   "carrier": "hard cut on the word (twin off-black grounds), the shot opens half-built",
+   "why": "cut on \"Say you have an index on the email column\": the bob walk she reads"
+  },
+  {
+   "from": "btree-walk",
+   "to": "twenty",
+   "frame": 4225,
+   "t": 140.83,
+   "kind": "cut",
+   "lands_on": "So @ 140.85 s (f4226)",
+   "carrier": "hard cut on the word (twin off-black grounds), the shot opens half-built",
+   "why": "cut on \"So with this strategy\": the count of steps"
+  },
+  {
+   "from": "twenty",
+   "to": "btree-levels",
+   "frame": 4583,
+   "t": 152.74,
+   "kind": "cut",
+   "lands_on": "Most @ 152.76 s (f4583)",
+   "carrier": "hard cut on the word (twin off-black grounds), the shot opens half-built",
+   "why": "cut on \"Most databases store\": the real structure, a B-tree"
+  },
+  {
+   "from": "btree-levels",
+   "to": "add-sql",
+   "frame": 5065,
+   "t": 168.82,
+   "kind": "cut",
+   "lands_on": "Adding @ 168.84 s (f5065)",
+   "carrier": "hard cut on the word (twin off-black grounds), the shot opens half-built",
+   "why": "cut on \"Adding a database index\": how to add one"
+  },
+  {
+   "from": "add-sql",
+   "to": "add-laravel",
+   "frame": 5282,
+   "t": 176.06,
+   "kind": "cut",
+   "lands_on": "If @ 176.06 s (f5282)",
+   "carrier": "the same query line stays on screen across the cut (match cut on the code)",
+   "why": "cut on \"If you are using Laravel\": the SQL stays, the migration types under it"
+  },
+  {
+   "from": "add-laravel",
+   "to": "index-first",
+   "frame": 5409,
+   "t": 180.28,
+   "kind": "cut",
+   "lands_on": "Now @ 180.28 s (f5408)",
+   "carrier": "hard cut on the word (twin off-black grounds), the shot opens half-built",
+   "why": "cut on \"Now when you search books by author\": the index used, path to the rows"
+  },
+  {
+   "from": "index-first",
+   "to": "explain-front",
+   "frame": 5604,
+   "t": 186.77,
+   "kind": "cut",
+   "lands_on": "Once @ 186.79 s (f5604)",
+   "carrier": "hard cut on the word (twin off-black grounds), the shot opens half-built",
+   "why": "cut on \"Once you have added\": how to check it"
+  },
+  {
+   "from": "explain-front",
+   "to": "explain-pg",
+   "frame": 5866,
+   "t": 195.52,
+   "kind": "cut",
+   "lands_on": "In @ 195.54 s (f5866)",
+   "carrier": "hard cut on the word (twin off-black grounds), the shot opens half-built",
+   "why": "cut on \"In PostgreSQL\": the real plan wording"
+  },
+  {
+   "from": "explain-pg",
+   "to": "explain-mysql",
+   "frame": 6253,
+   "t": 208.41,
+   "kind": "cut",
+   "lands_on": "In @ 208.43 s (f6253)",
+   "carrier": "hard cut on the word (twin off-black grounds), the shot opens half-built",
+   "why": "cut on \"In MySQL\": the MySQL table"
+  },
+  {
+   "from": "explain-mysql",
+   "to": "scan-or-index",
+   "frame": 6600,
+   "t": 219.97,
+   "kind": "cut",
+   "lands_on": "So @ 219.99 s (f6600)",
+   "carrier": "hard cut on the word (twin off-black grounds), the shot opens half-built",
+   "why": "cut on \"So if your query is slow\": the one question to ask"
+  },
+  {
+   "from": "scan-or-index",
+   "to": "ch4",
+   "frame": 6841,
+   "t": 228.01,
+   "kind": "cut",
+   "lands_on": "There @ 228.03 s (f6841)",
+   "carrier": "hard cut on the word (twin off-black grounds), the shot opens half-built",
+   "why": "chapter turn on \"There are a few types\""
+  },
+  {
+   "from": "ch4",
+   "to": "btree-default",
+   "frame": 7134,
+   "t": 237.78,
+   "kind": "cut",
+   "lands_on": "The @ 237.80 s (f7134)",
+   "carrier": "hard cut on the word (twin off-black grounds), the shot opens half-built",
+   "why": "cut on \"The first one is B-tree\": type 01"
+  },
+  {
+   "from": "btree-default",
+   "to": "btree-can",
+   "frame": 7437,
+   "t": 247.9,
+   "kind": "cut",
+   "lands_on": "It @ 247.92 s (f7438)",
+   "carrier": "hard cut on the word (twin off-black grounds), the shot opens half-built",
+   "why": "cut on \"It can find exact matches\": four abilities, one per panel"
+  },
+  {
+   "from": "btree-can",
+   "to": "sorted-harry",
+   "frame": 7859,
+   "t": 261.96,
+   "kind": "cut",
+   "lands_on": "And @ 261.98 s (f7859)",
+   "carrier": "hard cut on the word (twin off-black grounds), the shot opens half-built",
+   "why": "cut on \"that works because the index is sorted\": the reason, zoomed in"
+  },
+  {
+   "from": "sorted-harry",
+   "to": "unique",
+   "frame": 8016,
+   "t": 267.19,
+   "kind": "cut",
+   "lands_on": "The @ 267.21 s (f8016)",
+   "carrier": "hard cut on the word (twin off-black grounds), the shot opens half-built",
+   "why": "cut on \"The second\": type 02"
+  },
+  {
+   "from": "unique",
+   "to": "composite",
+   "frame": 8382,
+   "t": 279.4,
+   "kind": "cut",
+   "lands_on": "And @ 279.42 s (f8383)",
+   "carrier": "hard cut on the word (twin off-black grounds), the shot opens half-built",
+   "why": "cut on \"And the third one\": type 03, her aside on screen"
+  },
+  {
+   "from": "composite",
+   "to": "phone-book",
+   "frame": 8917,
+   "t": 297.23,
+   "kind": "cut",
+   "lands_on": "A @ 297.25 s (f8918)",
+   "carrier": "hard cut on the word (twin off-black grounds), the shot opens half-built",
+   "why": "cut on \"A little bit of a reason\": the phone book she uses"
+  },
+  {
+   "from": "phone-book",
+   "to": "every-ada",
+   "frame": 9622,
+   "t": 320.72,
+   "kind": "cut",
+   "lands_on": "But @ 320.74 s (f9622)",
+   "carrier": "hard cut on the word (twin off-black grounds), the shot opens half-built",
+   "why": "cut on \"But what if\": the other question, three pages"
+  },
+  {
+   "from": "every-ada",
+   "to": "composite-tip",
+   "frame": 10153,
+   "t": 338.42,
+   "kind": "cut",
+   "lands_on": "So @ 338.44 s (f10153)",
+   "carrier": "the same query line stays on screen across the cut (match cut on the code)",
+   "why": "cut on \"So that is exactly what happens\": back to the code, the tip"
+  },
+  {
+   "from": "composite-tip",
+   "to": "hash",
+   "frame": 10502,
+   "t": 350.05,
+   "kind": "cut",
+   "lands_on": "And @ 350.07 s (f10502)",
+   "carrier": "hard cut on the word (twin off-black grounds), the shot opens half-built",
+   "why": "cut on \"And for the rest\": the special types"
+  },
+  {
+   "from": "hash",
+   "to": "bitmap",
+   "frame": 11051,
+   "t": 368.35,
+   "kind": "cut",
+   "lands_on": "A @ 368.37 s (f11051)",
+   "carrier": "hard cut on the word (twin off-black grounds), the shot opens half-built",
+   "why": "cut on \"A bitmap is for\": next type"
+  },
+  {
+   "from": "bitmap",
+   "to": "spatial",
+   "frame": 11331,
+   "t": 377.67,
+   "kind": "cut",
+   "lands_on": "And @ 377.69 s (f11331)",
+   "carrier": "hard cut on the word (twin off-black grounds), the shot opens half-built",
+   "why": "cut on \"And then we have spatial index\": next type"
+  },
+  {
+   "from": "spatial",
+   "to": "full-text",
+   "frame": 11903,
+   "t": 396.74,
+   "kind": "cut",
+   "lands_on": "And @ 396.76 s (f11903)",
+   "carrier": "hard cut on the word (twin off-black grounds), the shot opens half-built",
+   "why": "cut on \"the full-text index\": next type"
+  },
+  {
+   "from": "full-text",
+   "to": "covering-partial",
+   "frame": 12329,
+   "t": 410.96,
+   "kind": "cut",
+   "lands_on": "And @ 410.98 s (f12329)",
+   "carrier": "hard cut on the word (twin off-black grounds), the shot opens half-built",
+   "why": "cut on \"covering index and partial index\": named only"
+  },
+  {
+   "from": "covering-partial",
+   "to": "clustered",
+   "frame": 12422,
+   "t": 414.043,
+   "kind": "cut",
+   "lands_on": "You @ 414.06 s (f12422)",
+   "carrier": "hard cut on the word (twin off-black grounds), the shot opens half-built",
+   "why": "cut on \"You also hear about clustered\": the order on disk"
+  },
+  {
+   "from": "clustered",
+   "to": "non-clustered",
+   "frame": 13046,
+   "t": 434.85,
+   "kind": "cut",
+   "lands_on": "A @ 434.87 s (f13046)",
+   "carrier": "hard cut on the word (twin off-black grounds), the shot opens half-built",
+   "why": "cut on \"A non-clustered index\": separate structures pointing back"
+  },
+  {
+   "from": "non-clustered",
+   "to": "why-not",
+   "frame": 13516,
+   "t": 450.53,
+   "kind": "cut",
+   "lands_on": "So @ 450.55 s (f13517)",
+   "carrier": "hard cut on the word (twin off-black grounds), the shot opens half-built",
+   "why": "cut on \"So now that begs the question\": the cost section opens"
+  },
+  {
+   "from": "why-not",
+   "to": "cannot",
+   "frame": 13767,
+   "t": 458.89,
+   "kind": "cut",
+   "lands_on": "We @ 458.85 s (f13766)",
+   "carrier": "hard cut on the word (twin off-black grounds), the shot opens half-built",
+   "why": "hard stop on \"We cannot\": the answer, big"
+  },
+  {
+   "from": "cannot",
+   "to": "seven-writes",
+   "frame": 14021,
+   "t": 467.35,
+   "kind": "cut",
+   "lands_on": "So @ 467.37 s (f14021)",
+   "carrier": "hard cut on the word (twin off-black grounds), the shot opens half-built",
+   "why": "cut on \"So if your orders table has six indexes\": the count to 7"
+  },
+  {
+   "from": "seven-writes",
+   "to": "slower",
+   "frame": 14196,
+   "t": 473.18,
+   "kind": "cut",
+   "lands_on": "So @ 473.20 s (f14196)",
+   "carrier": "hard cut on the word (twin off-black grounds), the shot opens half-built",
+   "why": "cut on \"So the more database indexes\": writes per row and storage"
+  },
+  {
+   "from": "slower",
+   "to": "small-table",
+   "frame": 14391,
+   "t": 479.68,
+   "kind": "cut",
+   "lands_on": "And @ 479.70 s (f14391)",
+   "carrier": "hard cut on the word (twin off-black grounds), the shot opens half-built",
+   "why": "cut on \"And for a small table\": the planner skips the index"
+  },
+  {
+   "from": "small-table",
+   "to": "only-these",
+   "frame": 14743,
+   "t": 491.43,
+   "kind": "cut",
+   "lands_on": "So @ 491.45 s (f14744)",
+   "carrier": "hard cut on the word (twin off-black grounds), the shot opens half-built",
+   "why": "cut on \"So what you do\": the columns worth indexing"
+  },
+  {
+   "from": "only-these",
+   "to": "ch5",
+   "frame": 15071,
+   "t": 502.34,
+   "kind": "cut",
+   "lands_on": "And @ 502.36 s (f15071)",
+   "carrier": "hard cut on the word (twin off-black grounds), the shot opens half-built",
+   "why": "chapter turn on \"And there are several mistakes\""
+  },
+  {
+   "from": "ch5",
+   "to": "mistake-lower",
+   "frame": 15419,
+   "t": 513.95,
+   "kind": "cut",
+   "lands_on": "The @ 513.97 s (f15419)",
+   "carrier": "hard cut on the word (twin off-black grounds), the shot opens half-built",
+   "why": "cut on \"The first one is wrapping\": mistake 01"
+  },
+  {
+   "from": "mistake-lower",
+   "to": "mistake-like",
+   "frame": 15945,
+   "t": 531.5,
+   "kind": "cut",
+   "lands_on": "The @ 531.52 s (f15946)",
+   "carrier": "hard cut on the word (twin off-black grounds), the shot opens half-built",
+   "why": "cut on \"The second\": mistake 02"
+  },
+  {
+   "from": "mistake-like",
+   "to": "foreign-key",
+   "frame": 16303,
+   "t": 543.41,
+   "kind": "cut",
+   "lands_on": "Another @ 543.43 s (f16303)",
+   "carrier": "hard cut on the word (twin off-black grounds), the shot opens half-built",
+   "why": "cut on \"Another database index gotcha\": MySQL vs PostgreSQL"
+  },
+  {
+   "from": "foreign-key",
+   "to": "when",
+   "frame": 17045,
+   "t": 568.14,
+   "kind": "cut",
+   "lands_on": "So @ 568.16 s (f17045)",
+   "carrier": "hard cut on the word (twin off-black grounds), the shot opens half-built",
+   "why": "cut on \"So again, to reiterate\": the recap"
+  },
+  {
+   "from": "when",
+   "to": "order-limit",
+   "frame": 17331,
+   "t": 577.7,
+   "kind": "cut",
+   "lands_on": "So @ 577.72 s (f17332)",
+   "carrier": "hard cut on the word (twin off-black grounds), the shot opens half-built",
+   "why": "cut on \"So say you are sorting a million orders\": the ORDER BY + LIMIT case"
+  },
+  {
+   "from": "order-limit",
+   "to": "explain-slow",
+   "frame": 17818,
+   "t": 593.91,
+   "kind": "cut",
+   "lands_on": "Also, @ 593.93 s (f17818)",
+   "carrier": "hard cut on the word (twin off-black grounds), the shot opens half-built",
+   "why": "cut on \"Also, when you use EXPLAIN\": the plan says full scan"
+  },
+  {
+   "from": "explain-slow",
+   "to": "read-heavy",
+   "frame": 18285,
+   "t": 609.47,
+   "kind": "cut",
+   "lands_on": "Also, @ 609.49 s (f18285)",
+   "carrier": "hard cut on the word (twin off-black grounds), the shot opens half-built",
+   "why": "cut on \"when a table gets more read\": reads vs writes"
+  },
+  {
+   "from": "read-heavy",
+   "to": "skip-when",
+   "frame": 18515,
+   "t": 617.16,
+   "kind": "cut",
+   "lands_on": "But @ 617.18 s (f18515)",
+   "carrier": "hard cut on the word (twin off-black grounds), the shot opens half-built",
+   "why": "cut on \"But you should not\": when to skip it"
+  },
+  {
+   "from": "skip-when",
+   "to": "end",
+   "frame": 18765,
+   "t": 625.48,
+   "kind": "cut",
+   "lands_on": "So @ 625.50 s (f18765)",
+   "carrier": "hard cut on the word (twin off-black grounds), the shot opens half-built",
+   "why": "cut on \"So that is it\": the end card"
+  }
+ ],
+ "flags": []
+}

@@ -1,0 +1,78 @@
+URL: https://securityonline.info/nodejs-security-release-october-2026/
+STATUS: loaded (http 200)
+FINAL: https://securityonline.info/nodejs-security-release-october-2026/
+TITLE: Node.js Security Release Fixes Remote Code Execution Bug
+H1: Node.js Fixes 10 Flaws, Including Brotli RCE and TLS Hostname Bypasses
+OG: Node.js Fixes 10 Flaws, Including Brotli RCE and TLS Hostname Bypasses | Daily CyberSecurity
+PUBLISHED: 2026-10-21T15:48:25+00:00  MODIFIED: 
+DOC_H: 5185
+
+Vulnerability Report
+Node.js Fixes 10 Flaws, Including Brotli RCE and TLS Hostname Bypasses
+ Do Son  October 21, 2026 2 minutes read 
+ 0
+Add Daily CyberSecurity as a preferred source on Google
+TL;DR
+
+On October 21, 2026, the Node.js project shipped versions 22.23.4, 24.22.1 and 26.12.1 to fix 10 vulnerabilities. This Node.js security release patches four high-severity flaws, including a Brotli decoder bug that “permits remote code execution.” It also drops trust in the compromised eMudhra certificates.
+
+Tired of noisy CVE feeds? Set your own EPSS/CVSS alert threshold.
+Try free for 14 days →
+Why It Matters
+
+Node.js runs countless web servers, APIs and build tools. Three of the high-severity bugs weaken TLS hostname checks, which protect connections from impersonation. Meanwhile, the Brotli flaw could let crafted compressed data run code on a server.
+
+How the Attacks Work
+High severity
+CVE-2026-111497: an out-of-bounds write in the Brotli decoder that can lead to remote code execution.
+CVE-2026-105483 and CVE-2026-106069: TLS certificate hostname checks can be bypassed with unusual IP address formats.
+CVE-2026-105482: dns.resolve cuts off names that contain a NUL character.
+Medium and low severity
+
+Other fixes cover keep-alive response mix-ups, weak IP certificate checks and repeated random values in startup snapshots. Three low-severity bugs affect ZIP handling and the Permission Model.
+
+eMudhra certificate cleanup
+
+This Node.js security release also updates the bundled CA certificate store. It removes trust tied to the eMudhra intermediate CA compromise, which Mozilla, Google and Apple blocked between October 17 and 19. As a result, Node.js apps will no longer accept certificates signed by those leaked keys.
+
+Exploitation status
+
+The Node.js team does not report exploitation in the wild. No public proof-of-concept has been confirmed either.
+
+Affected Versions
+
+The flaws affect the 26.x, 24.x and 22.x release lines, though some only hit 26.x or 24.x.
+
+Patch and Mitigation Steps
+Upgrade to Node.js 22.23.4, 24.22.1 or 26.12.1.
+Update bundled dependencies, including c-ares, OpenSSL, SQLite and Undici.
+Rebuild apps packaged as single executables or snapshots.
+
+Full details are in the Node.js October 2026 security releases post. Given the remote code execution risk, teams should apply this Node.js security release promptly.
+
+RELATED COVERAGE
+Apache Doris Vulnerabilities Patched in New Updates
+Host-Root Escape Vulnerability Uncovered in Kata Containers
+The Instant Weaponization of Oracle’s 10.0 CVSS “Zero-Day-Like” Flaw
+CVE-2026-61511: vBulletin Preauth RCE with Public PoC Disclosed
+Booting Up Malware: Critical Flaw in Rufus Grants Admin Access (CVE-2026-23988)
+Duplicator WordPress Plugin Patched for High-Severity PHP Object Injection Vulnerability
+Track all actively exploited CVEs →
+Get Zero-Hour Vulnerability Alerts
+
+Critical CVEs, CVSS scores, and PoC updates — straight to your inbox every week.
+
+Get the Alerts
+
+We respect your inbox. Unsubscribe anytime.
+
+WRITTEN BY
+@DDOS · SECURITY RESEARCHER
+Do Son
+
+Do Son is the Founder and Editor of SecurityOnline.info. Working in cybersecurity since 2013, he reports on vulnerabilities, malware, and emerging threats, providing timely analysis to help organizations and individuals stay ahead of evolving risks.
+
+Tags: CVE-2026-105483 CVE-2026-106069 CVE-2026-111497 eMudhra nodejs Remote Code Execution tls
+Leave a Reply
+
+You must be logged in to post a comment.

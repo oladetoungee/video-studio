@@ -1,0 +1,412 @@
+1
+00:00:00,000 --> 00:00:08,320
+ In 1996, a physicist at NYU named Alan Sokol convinced an academic journal to publish a paper that he had
+
+2
+00:00:08,320 --> 00:00:12,500
+ deliberately filled with a bunch of nonsense. He called the paper
+
+3
+00:00:12,500 --> 00:00:16,960
+ transgressing the boundaries towards a transformative hermeneutics of
+
+4
+00:00:16,960 --> 00:00:25,320
+ quantum gravity, and if that title makes little or no sense to you, then that's sort of the point. The article mixed real physics
+
+5
+00:00:25,320 --> 00:00:27,320
+ with a bunch of false claims,
+
+6
+00:00:27,480 --> 00:00:32,560
+ unsupported leaps in logic, and sentences that Sokol later admitted didn't mean anything.
+
+7
+00:00:32,560 --> 00:00:36,200
+ You see, he had written the entire thing as kind of an experiment.
+
+8
+00:00:36,200 --> 00:00:41,100
+ He wanted to see whether a journal would publish an article filled with a bunch of nonsense
+
+9
+00:00:41,100 --> 00:00:50,360
+ if the article sounded impressive and told the editors basically what they wanted to hear. And sure enough, a cultural studies journal called Social Text
+
+10
+00:00:50,360 --> 00:00:54,020
+ included it in a special issue about the conflict between
+
+11
+00:00:54,640 --> 00:01:01,840
+ science and cultural studies. But on the same day that the article appeared, Sokol revealed that the entire thing was just a hoax, which
+
+12
+00:01:01,840 --> 00:01:05,560
+ sparked a massive public controversy in academia.
+
+13
+00:01:05,560 --> 00:01:11,840
+ Now, to be fair, the editors of Social Text disputed what Sokol thought he had proven.
+
+14
+00:01:11,840 --> 00:01:19,640
+ They pointed out that their journal wasn't a peer-reviewed science journal, and they just wanted to treat it as an unusual
+
+15
+00:01:19,640 --> 00:01:24,000
+ contribution from a physicist trying to engage with their field.
+
+16
+00:01:24,280 --> 00:01:28,620
+ So is this really a story of a bunch of stupid academics getting fooled?
+
+17
+00:01:28,620 --> 00:01:31,200
+ Maybe, maybe not. Either way,
+
+18
+00:01:31,200 --> 00:01:37,300
+ I think that the hoax still exposes something really interesting about the way we recognize intelligence.
+
+19
+00:01:37,300 --> 00:01:42,640
+ One thing he had shown was that you could make nonsense sound intelligent, which is something
+
+20
+00:01:42,640 --> 00:01:48,240
+ I think that all of us kind of know intuitively. And that kind of got me wondering, what about the reverse?
+
+21
+00:01:48,240 --> 00:01:56,680
+ You know, how often does someone have a genuinely intelligent idea, but they explain it so badly that it sounds like nonsense?
+
+22
+00:01:56,680 --> 00:01:58,900
+ And how are we supposed to know the difference?
+
+23
+00:01:58,900 --> 00:02:03,800
+ I've been thinking about this a lot because I've been reading John Rawls' A Theory of Justice
+
+24
+00:02:03,800 --> 00:02:10,440
+ for several months now, and I can safely say that this is the hardest book I have ever read.
+
+25
+00:02:10,440 --> 00:02:15,200
+ There are pages in here I've gone through several times, and I have no idea
+
+26
+00:02:15,440 --> 00:02:20,720
+ what in the world he's talking about. And he was obviously an extremely intelligent person,
+
+27
+00:02:20,720 --> 00:02:25,280
+ so my first assumption is that, of course, the problem is with me.
+
+28
+00:02:25,280 --> 00:02:29,840
+ But I have to wonder, you know, after struggling with this book for so long,
+
+29
+00:02:29,840 --> 00:02:36,680
+ I can't help wonder how much of the complexity comes from the ideas themselves and how much comes from
+
+30
+00:02:36,680 --> 00:02:41,840
+ the author just not being able to explain them very well. Because as an educator,
+
+31
+00:02:41,840 --> 00:02:46,120
+ I know all too well that just because someone knows a subject really well,
+
+32
+00:02:46,120 --> 00:02:48,480
+ that doesn't mean that they're good at explaining it.
+
+33
+00:02:48,480 --> 00:02:52,920
+ Steven Pinker writes about this problem in his book, Sense of Style.
+
+34
+00:02:52,920 --> 00:02:58,880
+ He calls it the curse of knowledge, which is this idea that experts have difficulty
+
+35
+00:02:58,880 --> 00:03:03,760
+ imagining what it's like for someone else not to know something that they do in fact know.
+
+36
+00:03:03,760 --> 00:03:06,880
+ And so they have a tendency to overestimate
+
+37
+00:03:07,320 --> 00:03:13,720
+ the novice's understanding. And in the process, they skip important basic steps without really realizing it.
+
+38
+00:03:13,720 --> 00:03:16,320
+ There's a really simple experiment that illustrates this.
+
+39
+00:03:16,320 --> 00:03:22,600
+ It was conducted by a Stanford graduate student named Elizabeth Newton and later became well known
+
+40
+00:03:22,600 --> 00:03:25,800
+ through Chip and Dan Heath's book, Made to Stick.
+
+41
+00:03:25,800 --> 00:03:32,960
+ So in this study, one person was asked to choose a really easy and familiar song like Happy Birthday.
+
+42
+00:03:32,960 --> 00:03:39,000
+ And then all they had to do was tap out the rhythm on the table so that another person could listen to the tapping and
+
+43
+00:03:39,000 --> 00:03:42,480
+ then just guess the song. Now before they ran the experiment,
+
+44
+00:03:42,480 --> 00:03:47,600
+ they asked the tappers to make a prediction about how often the listeners would be able to
+
+45
+00:03:47,600 --> 00:03:54,160
+ recognize the song and they guessed that the listeners would be able to get it right about half the time.
+
+46
+00:03:54,160 --> 00:03:57,920
+ But it turns out that when they ran the experiment,
+
+47
+00:03:57,920 --> 00:04:04,600
+ they were only able to identify three out of a hundred and twenty songs that were possible, which is only about two and a half percent.
+
+48
+00:04:04,600 --> 00:04:11,000
+ So the people tapping the song, they weren't able to put themselves in the listener's shoes,
+
+49
+00:04:11,000 --> 00:04:14,960
+ so to speak, because as they tapped, they could hear the melody in their heads.
+
+50
+00:04:14,960 --> 00:04:17,880
+ And so to them at least, the answer seemed obvious.
+
+51
+00:04:17,880 --> 00:04:20,360
+ But of course, the listeners didn't have any melody in their head.
+
+52
+00:04:20,360 --> 00:04:25,000
+ And so all they really heard was this series of disconnected tapping sounds.
+
+53
+00:04:25,640 --> 00:04:32,120
+ And because the tappers weren't able to temporarily imagine what it was like not to know the song,
+
+54
+00:04:32,120 --> 00:04:36,960
+ they had a very poor sense of how little information they were actually communicating.
+
+55
+00:04:36,960 --> 00:04:40,520
+ And by the way, I should probably point out that when I say smart people,
+
+56
+00:04:40,520 --> 00:04:46,680
+ I'm mostly talking about people who have developed a lot of knowledge in a particular area because
+
+57
+00:04:46,680 --> 00:04:50,760
+ intelligence by itself, it doesn't make someone an expert in everything.
+
+58
+00:04:50,760 --> 00:04:57,120
+ You know, a person could be really good at mathematics, but know nothing about, for example, fixing their car.
+
+59
+00:04:57,120 --> 00:05:03,560
+ So this disconnected tends to happen when someone is working inside of a subject that's extremely familiar to them.
+
+60
+00:05:03,560 --> 00:05:08,960
+ And so what happens is, is people gain knowledge or just get better at doing something.
+
+61
+00:05:08,960 --> 00:05:16,200
+ They began to process information more as whole patterns rather than as separate individual parts.
+
+62
+00:05:16,200 --> 00:05:21,480
+ You can see a really good example of this when you compare beginner and expert chess players.
+
+63
+00:05:21,480 --> 00:05:29,360
+ Beginners tend to think about their game and their strategy on the level of individual pieces or individual moves.
+
+64
+00:05:29,360 --> 00:05:36,120
+ But experienced players, they see several pieces and several moves together as a familiar arrangement.
+
+65
+00:05:36,120 --> 00:05:43,440
+ And so this allows really strong chess players to remember positions that are taken from actual games much better than beginners
+
+66
+00:05:43,440 --> 00:05:50,760
+ because they're grouping the pieces into meaningful patterns rather than trying to memorize every piece and every move individually.
+
+67
+00:05:50,760 --> 00:05:52,880
+ And it's no different with something like reading.
+
+68
+00:05:52,880 --> 00:06:02,760
+ With enough practice, smaller steps like decoding word parts or syntax or grammar, punctuation, all of that becomes automatic.
+
+69
+00:06:02,760 --> 00:06:09,840
+ But those automatic steps are also harder to explain precisely because they've become so automatic,
+
+70
+00:06:09,840 --> 00:06:12,120
+ because you're no longer thinking about them anymore.
+
+71
+00:06:12,120 --> 00:06:17,480
+ And so you sort of take for granted how foundational but also essential they are.
+
+72
+00:06:17,480 --> 00:06:23,920
+ Now, so far, I've mostly been talking about experts who skip important steps without realizing it.
+
+73
+00:06:23,920 --> 00:06:28,560
+ But there is another way that smart people can end up sounding stupid.
+
+74
+00:06:28,560 --> 00:06:33,680
+ And that's when a person has a perfectly good idea, maybe even a brilliant idea,
+
+75
+00:06:33,680 --> 00:06:42,080
+ but then makes the language more complicated on purpose because they think, well, you know, that's what they need to do in order to be taken seriously.
+
+76
+00:06:42,080 --> 00:06:46,240
+ They need to dress it up in big words or technical jargon.
+
+77
+00:06:46,240 --> 00:06:50,520
+ That's the same assumption that Sokol exploited in his experiment.
+
+78
+00:06:50,520 --> 00:06:55,440
+ And what's funny about that is that doing that can sometimes have the opposite effect.
+
+79
+00:06:55,440 --> 00:07:01,200
+ Daniel Oppenheimer conducted a series of experiments where readers evaluated different pieces of writing.
+
+80
+00:07:01,200 --> 00:07:06,160
+ Some versions of this writing use unnecessarily long and complex language.
+
+81
+00:07:06,160 --> 00:07:12,080
+ But other versions had the exact same ideas, only they were written more plainly using more basic vocabulary.
+
+82
+00:07:12,080 --> 00:07:20,120
+ And what they found is that when those ideas were genuinely good ideas, the writers who use the more complicated language,
+
+83
+00:07:20,120 --> 00:07:24,840
+ they were judged to be less intelligent rather than more intelligent.
+
+84
+00:07:24,840 --> 00:07:33,200
+ Now, that doesn't mean that every difficult book is written poorly or that every idea can be reduced to a few simple sentences.
+
+85
+00:07:33,200 --> 00:07:37,840
+ I mean, some subjects require technical language and there's just no way around it.
+
+86
+00:07:37,840 --> 00:07:44,160
+ And some ideas take a really long time to understand because they really are complicated.
+
+87
+00:07:44,160 --> 00:07:52,480
+ So certainly the reader has to show up, they have to put in the effort, but the writer has some responsibility here, too.
+
+88
+00:07:52,480 --> 00:08:00,880
+ This relationship between the reader and the writer is expressed really well in Adler and Van Doren's How to Read a Book.
+
+89
+00:08:00,880 --> 00:08:03,920
+ So to explain this, they use a baseball analogy.
+
+90
+00:08:03,920 --> 00:08:08,880
+ The writer is the pitcher, the writing is the ball, and the reader is the catcher.
+
+91
+00:08:08,880 --> 00:08:13,280
+ Now, of course, the catcher or the reader in this case, they have to be active.
+
+92
+00:08:13,280 --> 00:08:18,400
+ They have to pay attention and make the effort to catch whatever writing is being thrown at them.
+
+93
+00:08:18,400 --> 00:08:22,720
+ But the pitcher or the writer still needs some control.
+
+94
+00:08:22,720 --> 00:08:27,840
+ If the ball is thrown 10 feet over the catcher's head, it doesn't matter how much effort the catcher makes.
+
+95
+00:08:27,840 --> 00:08:29,440
+ They're not going to be able to catch it.
+
+96
+00:08:29,440 --> 00:08:35,760
+ This also reminds me of a famous exchange between William Faulkner and Ernest Hemingway.
+
+97
+00:08:35,760 --> 00:08:44,320
+ Faulkner once criticized Hemingway by saying that Hemingway never used any words that made the reader need to consult a dictionary.
+
+98
+00:08:44,320 --> 00:08:52,800
+ And Hemingway is reported to have said, "Poor Faulkner, does he really think big emotions come from big words?"
+
+99
+00:08:52,800 --> 00:09:01,760
+ He thinks, "I don't know the $10 words, I know them all right, but they are older and simpler and better words, and those are the ones I use."
+
+100
+00:09:01,760 --> 00:09:09,280
+ In fact, Hemingway's simple and clear writing style has been emulated, perhaps more than any other American writer.
+
+101
+00:09:09,280 --> 00:09:15,760
+ And don't get me wrong, Faulkner was obviously a brilliant writer too, and the complexity of his prose wasn't an accident.
+
+102
+00:09:15,760 --> 00:09:18,320
+ But I think Hemingway had a point.
+
+103
+00:09:18,320 --> 00:09:22,320
+ you don't need complicated language to express something deep and meaningful.
+

@@ -1,0 +1,488 @@
+{
+ "slug": "ux-research",
+ "aspect": "16x9",
+ "note": "Transition board. Fill carrier (what brings the next shot in: a shape, a line, a word, the camera, or \"hard cut\") and why (>= 20 characters: the reason, e.g. \"cut on the beat of 'licensed', new idea\"). Re-running lab.mjs board keeps them.",
+ "cuts": [
+  {
+   "from": "question",
+   "to": "ui-ux-word",
+   "frame": 796,
+   "t": 26.53,
+   "kind": "cut",
+   "lands_on": "You've @ 26.72 s (f802)",
+   "carrier": "the dive: the camera sinks through the strata into the green wall",
+   "why": "C's opening: the screen is the surface, the research wall lies under it; the first words write on as the wall arrives"
+  },
+  {
+   "from": "ui-ux-word",
+   "to": "ui-vs-ux",
+   "frame": 1050,
+   "t": 34.97,
+   "kind": "cut",
+   "lands_on": "things. @ 35.16 s (f1055)",
+   "carrier": "camera travel along the wall; the paint-marker line from the last board draws on with it",
+   "why": "a new topic is the next board on the same wall: continuity, no blank frame"
+  },
+  {
+   "from": "ui-vs-ux",
+   "to": "nightmare",
+   "frame": 1660,
+   "t": 55.33,
+   "kind": "cut",
+   "lands_on": "use @ 55.24 s (f1657)",
+   "carrier": "camera travel along the wall; the paint-marker line from the last board draws on with it",
+   "why": "a new topic is the next board on the same wall: continuity, no blank frame"
+  },
+  {
+   "from": "nightmare",
+   "to": "bigger",
+   "frame": 1940,
+   "t": 64.65,
+   "kind": "cut",
+   "lands_on": "So @ 64.95 s (f1948)",
+   "carrier": "camera travel along the wall; the paint-marker line from the last board draws on with it",
+   "why": "a new topic is the next board on the same wall: continuity, no blank frame"
+  },
+  {
+   "from": "bigger",
+   "to": "what-is-ux",
+   "frame": 2117,
+   "t": 70.56,
+   "kind": "cut",
+   "lands_on": "the @ 70.50 s (f2115)",
+   "carrier": "camera travel along the wall; the paint-marker line from the last board draws on with it",
+   "why": "a new topic is the next board on the same wall: continuity, no blank frame"
+  },
+  {
+   "from": "what-is-ux",
+   "to": "norman",
+   "frame": 2354,
+   "t": 78.44,
+   "kind": "cut",
+   "lands_on": "service. @ 78.60 s (f2358)",
+   "carrier": "camera travel along the wall; the paint-marker line from the last board draws on with it",
+   "why": "a new topic is the next board on the same wall: continuity, no blank frame"
+  },
+  {
+   "from": "norman",
+   "to": "definition",
+   "frame": 2473,
+   "t": 82.42,
+   "kind": "cut",
+   "lands_on": "And @ 82.72 s (f2482)",
+   "carrier": "camera move within the same board (inOutQuart 0.8 s, motion blur)",
+   "why": "same topic, next idea: the board continues off-frame, so the wall itself carries the change"
+  },
+  {
+   "from": "definition",
+   "to": "quote",
+   "frame": 2818,
+   "t": 93.91,
+   "kind": "cut",
+   "lands_on": "this @ 93.88 s (f2816)",
+   "carrier": "camera travel along the wall; the paint-marker line from the last board draws on with it",
+   "why": "a new topic is the next board on the same wall: continuity, no blank frame"
+  },
+  {
+   "from": "quote",
+   "to": "around-people",
+   "frame": 3177,
+   "t": 105.88,
+   "kind": "cut",
+   "lands_on": "people. @ 105.78 s (f3173)",
+   "carrier": "camera travel along the wall; the paint-marker line from the last board draws on with it",
+   "why": "a new topic is the next board on the same wall: continuity, no blank frame"
+  },
+  {
+   "from": "around-people",
+   "to": "what-is-ux-research",
+   "frame": 3418,
+   "t": 113.92,
+   "kind": "cut",
+   "lands_on": "them. @ 114.12 s (f3424)",
+   "carrier": "camera travel along the wall; the paint-marker line from the last board draws on with it",
+   "why": "a new topic is the next board on the same wall: continuity, no blank frame"
+  },
+  {
+   "from": "what-is-ux-research",
+   "to": "why",
+   "frame": 3956,
+   "t": 131.86,
+   "kind": "cut",
+   "lands_on": "them. @ 131.90 s (f3957)",
+   "carrier": "camera travel along the wall; the paint-marker line from the last board draws on with it",
+   "why": "a new topic is the next board on the same wall: continuity, no blank frame"
+  },
+  {
+   "from": "why",
+   "to": "expensive",
+   "frame": 4258,
+   "t": 141.91,
+   "kind": "cut",
+   "lands_on": "wrong @ 141.82 s (f4255)",
+   "carrier": "camera move within the same board (inOutQuart 0.8 s, motion blur)",
+   "why": "same topic, next idea: the board continues off-frame, so the wall itself carries the change"
+  },
+  {
+   "from": "expensive",
+   "to": "fail",
+   "frame": 4443,
+   "t": 148.07,
+   "kind": "cut",
+   "lands_on": "team. @ 147.95 s (f4439)",
+   "carrier": "camera travel along the wall; the paint-marker line from the last board draws on with it",
+   "why": "a new topic is the next board on the same wall: continuity, no blank frame"
+  },
+  {
+   "from": "fail",
+   "to": "cheaper",
+   "frame": 4926,
+   "t": 164.18,
+   "kind": "cut",
+   "lands_on": "It @ 164.48 s (f4934)",
+   "carrier": "camera move within the same board (inOutQuart 0.8 s, motion blur)",
+   "why": "same topic, next idea: the board continues off-frame, so the wall itself carries the change"
+  },
+  {
+   "from": "cheaper",
+   "to": "real-people",
+   "frame": 5079,
+   "t": 169.3,
+   "kind": "cut",
+   "lands_on": "already @ 169.31 s (f5079)",
+   "carrier": "camera travel along the wall; the paint-marker line from the last board draws on with it",
+   "why": "a new topic is the next board on the same wall: continuity, no blank frame"
+  },
+  {
+   "from": "real-people",
+   "to": "researcher",
+   "frame": 5379,
+   "t": 179.27,
+   "kind": "cut",
+   "lands_on": "team. @ 179.18 s (f5375)",
+   "carrier": "camera travel along the wall; the paint-marker line from the last board draws on with it",
+   "why": "a new topic is the next board on the same wall: continuity, no blank frame"
+  },
+  {
+   "from": "researcher",
+   "to": "week",
+   "frame": 5809,
+   "t": 193.62,
+   "kind": "cut",
+   "lands_on": "A @ 194.32 s (f5830)",
+   "carrier": "camera travel along the wall; the paint-marker line from the last board draws on with it",
+   "why": "a new topic is the next board on the same wall: continuity, no blank frame"
+  },
+  {
+   "from": "week",
+   "to": "patterns",
+   "frame": 6069,
+   "t": 202.3,
+   "kind": "cut",
+   "lands_on": "down @ 202.30 s (f6069)",
+   "carrier": "camera move within the same board (inOutQuart 0.8 s, motion blur)",
+   "why": "same topic, next idea: the board continues off-frame, so the wall itself carries the change"
+  },
+  {
+   "from": "patterns",
+   "to": "share",
+   "frame": 6168,
+   "t": 205.59,
+   "kind": "cut",
+   "lands_on": "And @ 205.49 s (f6165)",
+   "carrier": "camera travel along the wall; the paint-marker line from the last board draws on with it",
+   "why": "a new topic is the next board on the same wall: continuity, no blank frame"
+  },
+  {
+   "from": "share",
+   "to": "researcher-vs-designer",
+   "frame": 6396,
+   "t": 213.2,
+   "kind": "cut",
+   "lands_on": "built. @ 213.40 s (f6402)",
+   "carrier": "camera travel along the wall; the paint-marker line from the last board draws on with it",
+   "why": "a new topic is the next board on the same wall: continuity, no blank frame"
+  },
+  {
+   "from": "researcher-vs-designer",
+   "to": "curiosity",
+   "frame": 7037,
+   "t": 234.56,
+   "kind": "cut",
+   "lands_on": "well. @ 234.72 s (f7042)",
+   "carrier": "camera travel along the wall; the paint-marker line from the last board draws on with it",
+   "why": "a new topic is the next board on the same wall: continuity, no blank frame"
+  },
+  {
+   "from": "curiosity",
+   "to": "categories",
+   "frame": 7509,
+   "t": 250.28,
+   "kind": "cut",
+   "lands_on": "UX @ 250.38 s (f7511)",
+   "carrier": "camera travel along the wall; the paint-marker line from the last board draws on with it",
+   "why": "a new topic is the next board on the same wall: continuity, no blank frame"
+  },
+  {
+   "from": "categories",
+   "to": "three-pairs",
+   "frame": 8504,
+   "t": 283.44,
+   "kind": "cut",
+   "lands_on": "first @ 283.42 s (f8503)",
+   "carrier": "camera move within the same board (inOutQuart 0.8 s, motion blur)",
+   "why": "same topic, next idea: the board continues off-frame, so the wall itself carries the change"
+  },
+  {
+   "from": "three-pairs",
+   "to": "generative",
+   "frame": 8670,
+   "t": 288.98,
+   "kind": "cut",
+   "lands_on": "attitudinal. @ 289.07 s (f8672)",
+   "carrier": "camera travel along the wall; the paint-marker line from the last board draws on with it",
+   "why": "a new topic is the next board on the same wall: continuity, no blank frame"
+  },
+  {
+   "from": "generative",
+   "to": "evaluative",
+   "frame": 9314,
+   "t": 310.44,
+   "kind": "cut",
+   "lands_on": "Evaluative @ 310.79 s (f9324)",
+   "carrier": "camera move within the same board (inOutQuart 0.8 s, motion blur)",
+   "why": "same topic, next idea: the board continues off-frame, so the wall itself carries the change"
+  },
+  {
+   "from": "evaluative",
+   "to": "gen-vs-eval",
+   "frame": 9743,
+   "t": 324.74,
+   "kind": "cut",
+   "lands_on": "So @ 325.04 s (f9751)",
+   "carrier": "camera move within the same board (inOutQuart 0.8 s, motion blur)",
+   "why": "same topic, next idea: the board continues off-frame, so the wall itself carries the change"
+  },
+  {
+   "from": "gen-vs-eval",
+   "to": "quantitative",
+   "frame": 9977,
+   "t": 332.54,
+   "kind": "cut",
+   "lands_on": "works. @ 332.86 s (f9986)",
+   "carrier": "camera travel along the wall; the paint-marker line from the last board draws on with it",
+   "why": "a new topic is the next board on the same wall: continuity, no blank frame"
+  },
+  {
+   "from": "quantitative",
+   "to": "qualitative",
+   "frame": 10460,
+   "t": 348.64,
+   "kind": "cut",
+   "lands_on": "Qualitative @ 348.99 s (f10470)",
+   "carrier": "camera move within the same board (inOutQuart 0.8 s, motion blur)",
+   "why": "same topic, next idea: the board continues off-frame, so the wall itself carries the change"
+  },
+  {
+   "from": "qualitative",
+   "to": "want-both",
+   "frame": 10771,
+   "t": 359.01,
+   "kind": "cut",
+   "lands_on": "Usually, @ 359.31 s (f10779)",
+   "carrier": "camera move within the same board (inOutQuart 0.8 s, motion blur)",
+   "why": "same topic, next idea: the board continues off-frame, so the wall itself carries the change"
+  },
+  {
+   "from": "want-both",
+   "to": "attitudinal-behavioural",
+   "frame": 10987,
+   "t": 366.22,
+   "kind": "cut",
+   "lands_on": "happening. @ 366.46 s (f10994)",
+   "carrier": "camera travel along the wall; the paint-marker line from the last board draws on with it",
+   "why": "a new topic is the next board on the same wall: continuity, no blank frame"
+  },
+  {
+   "from": "attitudinal-behavioural",
+   "to": "say-vs-do",
+   "frame": 11718,
+   "t": 390.58,
+   "kind": "cut",
+   "lands_on": "why @ 390.96 s (f11729)",
+   "carrier": "camera travel along the wall; the paint-marker line from the last board draws on with it",
+   "why": "a new topic is the next board on the same wall: continuity, no blank frame"
+  },
+  {
+   "from": "say-vs-do",
+   "to": "ask-vs-watch",
+   "frame": 12185,
+   "t": 406.15,
+   "kind": "cut",
+   "lands_on": "If @ 406.50 s (f12195)",
+   "carrier": "camera move within the same board (inOutQuart 0.8 s, motion blur)",
+   "why": "same topic, next idea: the board continues off-frame, so the wall itself carries the change"
+  },
+  {
+   "from": "ask-vs-watch",
+   "to": "watches-asks",
+   "frame": 12608,
+   "t": 420.24,
+   "kind": "cut",
+   "lands_on": "So @ 420.64 s (f12619)",
+   "carrier": "camera move within the same board (inOutQuart 0.8 s, motion blur)",
+   "why": "same topic, next idea: the board continues off-frame, so the wall itself carries the change"
+  },
+  {
+   "from": "watches-asks",
+   "to": "more-categories",
+   "frame": 13029,
+   "t": 434.27,
+   "kind": "cut",
+   "lands_on": "finding. @ 434.36 s (f13031)",
+   "carrier": "camera travel along the wall; the paint-marker line from the last board draws on with it",
+   "why": "a new topic is the next board on the same wall: continuity, no blank frame"
+  },
+  {
+   "from": "more-categories",
+   "to": "methods",
+   "frame": 14045,
+   "t": 468.16,
+   "kind": "cut",
+   "lands_on": "them. @ 468.34 s (f14050)",
+   "carrier": "camera travel along the wall; the paint-marker line from the last board draws on with it",
+   "why": "a new topic is the next board on the same wall: continuity, no blank frame"
+  },
+  {
+   "from": "methods",
+   "to": "more-methods",
+   "frame": 14934,
+   "t": 497.78,
+   "kind": "cut",
+   "lands_on": "There @ 498.13 s (f14944)",
+   "carrier": "camera move within the same board (inOutQuart 0.8 s, motion blur)",
+   "why": "same topic, next idea: the board continues off-frame, so the wall itself carries the change"
+  },
+  {
+   "from": "more-methods",
+   "to": "small-budget",
+   "frame": 15472,
+   "t": 515.72,
+   "kind": "cut",
+   "lands_on": "like @ 515.70 s (f15471)",
+   "carrier": "camera travel along the wall; the paint-marker line from the last board draws on with it",
+   "why": "a new topic is the next board on the same wall: continuity, no blank frame"
+  },
+  {
+   "from": "small-budget",
+   "to": "five-people",
+   "frame": 15732,
+   "t": 524.38,
+   "kind": "cut",
+   "lands_on": "Talk @ 524.32 s (f15730)",
+   "carrier": "camera move within the same board (inOutQuart 0.8 s, motion blur)",
+   "why": "same topic, next idea: the board continues off-frame, so the wall itself carries the change"
+  },
+  {
+   "from": "five-people",
+   "to": "user-research",
+   "frame": 16305,
+   "t": 543.5,
+   "kind": "cut",
+   "lands_on": "Now, @ 543.74 s (f16312)",
+   "carrier": "camera travel along the wall; the paint-marker line from the last board draws on with it",
+   "why": "a new topic is the next board on the same wall: continuity, no blank frame"
+  },
+  {
+   "from": "user-research",
+   "to": "market-research",
+   "frame": 17570,
+   "t": 585.65,
+   "kind": "cut",
+   "lands_on": "And @ 585.70 s (f17571)",
+   "carrier": "camera move within the same board (inOutQuart 0.8 s, motion blur)",
+   "why": "same topic, next idea: the board continues off-frame, so the wall itself carries the change"
+  },
+  {
+   "from": "market-research",
+   "to": "ai",
+   "frame": 17892,
+   "t": 596.37,
+   "kind": "cut",
+   "lands_on": "as @ 596.34 s (f17890)",
+   "carrier": "camera travel along the wall; the paint-marker line from the last board draws on with it",
+   "why": "a new topic is the next board on the same wall: continuity, no blank frame"
+  },
+  {
+   "from": "ai",
+   "to": "career",
+   "frame": 18556,
+   "t": 618.52,
+   "kind": "cut",
+   "lands_on": "it @ 618.46 s (f18554)",
+   "carrier": "camera travel along the wall; the paint-marker line from the last board draws on with it",
+   "why": "a new topic is the next board on the same wall: continuity, no blank frame"
+  },
+  {
+   "from": "career",
+   "to": "career-2",
+   "frame": 19004,
+   "t": 633.45,
+   "kind": "cut",
+   "lands_on": "think @ 633.32 s (f19000)",
+   "carrier": "camera move within the same board (inOutQuart 0.8 s, motion blur)",
+   "why": "same topic, next idea: the board continues off-frame, so the wall itself carries the change"
+  },
+  {
+   "from": "career-2",
+   "to": "get-in",
+   "frame": 19631,
+   "t": 654.36,
+   "kind": "cut",
+   "lands_on": "UX @ 654.28 s (f19628)",
+   "carrier": "camera travel along the wall; the paint-marker line from the last board draws on with it",
+   "why": "a new topic is the next board on the same wall: continuity, no blank frame"
+  },
+  {
+   "from": "get-in",
+   "to": "real-research",
+   "frame": 20213,
+   "t": 673.75,
+   "kind": "cut",
+   "lands_on": "also @ 673.68 s (f20210)",
+   "carrier": "camera move within the same board (inOutQuart 0.8 s, motion blur)",
+   "why": "same topic, next idea: the board continues off-frame, so the wall itself carries the change"
+  },
+  {
+   "from": "real-research",
+   "to": "other-fields",
+   "frame": 20661,
+   "t": 688.68,
+   "kind": "cut",
+   "lands_on": "I've @ 688.54 s (f20656)",
+   "carrier": "camera move within the same board (inOutQuart 0.8 s, motion blur)",
+   "why": "same topic, next idea: the board continues off-frame, so the wall itself carries the change"
+  },
+  {
+   "from": "other-fields",
+   "to": "the-wall",
+   "frame": 21189,
+   "t": 706.28,
+   "kind": "cut",
+   "lands_on": "So @ 706.48 s (f21194)",
+   "carrier": "camera pulls far back over the wall, then pans along it",
+   "why": "'So that's UX research': the whole wall of notes is the recap of the video"
+  },
+  {
+   "from": "the-wall",
+   "to": "close",
+   "frame": 21359,
+   "t": 711.94,
+   "kind": "cut",
+   "lands_on": "it. @ 712.00 s (f21360)",
+   "carrier": "camera flies from the wall overview into the last board (1.2 s)",
+   "why": "the closing line gets its own board, landing on \"this phrase\""
+  }
+ ],
+ "flags": []
+}

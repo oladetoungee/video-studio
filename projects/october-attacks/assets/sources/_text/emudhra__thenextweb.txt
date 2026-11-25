@@ -1,0 +1,83 @@
+URL: https://thenextweb.com/news/emudhra-certificates-weak-keys-browsers-block
+STATUS: loaded (http 200)
+FINAL: https://thenextweb.com/news/emudhra-certificates-weak-keys-browsers-block
+TITLE: Eight eMudhra certificate keys were so weak that one was the number 4
+H1: 
+OG: eMudhra certificates blocked: one private key was the number 4 | TNW | Data-security
+PUBLISHED: 2026-10-21T10:25:31+00:00  MODIFIED: 2026-10-21T10:25:31+00:00
+DOC_H: 5235
+
+DATA AND SECURITY
+Eight eMudhra certificate keys were so weak that one was the number 4
+
+Chrome, Firefox, Apple and Microsoft have blocked the eMudhra certificates, which let anyone forge trusted certificates for any website. Linux distributions, developer tools and devices are still catching up.
+
+October 21, 2026 - 10:25 am
+Credit: Denny Müller on Unsplash
+
+Anyone could calculate the private keys of eight eMudhra intermediate certificates from the certificates themselves. eMudhra is a certificate authority based in India. Anyone holding the keys could issue a certificate for any website that browsers and apps would accept.
+
+A researcher credited only as Wayne reported the problem to the browser root programs on Saturday, 17 October. As proof, Wayne signed the message “We have a problem here – Wayne” with each of the eight keys. That is according to a disclosure site run by Mozilla engineer Dennis Jackson.
+
+“One of eMudhra’s certificate authority private keys is the number 4,” security researcher Scott Helme wrote in a blog post.
+
+Helme said he recovered all eight keys from their public certificates on his laptop in less than a second. A key of this type should be a random 384-bit number. The eight eMudhra certificates’ keys were 4, 56, 66, 115, 155, 156, 230 and 237, Dan Goodin reported for Ars Technica.
+
+How the browsers responded
+
+Chrome received the report at 18:05 UTC and blocked the six certificates used for websites at 19:45 UTC, Google said in a blog post. Mozilla received the report at 20:06 UTC. It finished pushing a block to Firefox users at 22:59 UTC, Mozilla wrote in its own post. Neither block needed users to update or restart.
+
+Apple blocked the certificates on 19 October and Microsoft on 20 October, according to Jackson’s site. Android devices got the block through Google Play Services on 19 October, Google said.
+
+Google said eMudhra generated the keys with too little randomness. Nobody had logged a website certificate chaining to the six in Certificate Transparency, the public record of trusted certificates. So, Google said, no forged certificate from them could have worked against clients that enforce it, such as Chrome. It checked the other keys in its root stores and found none with the same flaw.
+
+Chrome will drop emSign ECC Root CA – G3, the eMudhra root the six chain to, on 27 October. Mozilla removed the same root from its NSS trust list on 20 October.
+
+The long tail
+
+Many programs outside browsers do not check revocation lists or Certificate Transparency. They keep trusting the certificates until someone updates their software or bundled list of roots. Jackson’s site lists patched versions of Go, Python’s certifi, pip, uv and Electron. It also lists the ca-certificates packages of Ubuntu, Debian, Fedora, Arch and Alpine. Node.js, Bun and FreeBSD were still listed as pending on Tuesday.
+
+“This will be a massive cleanup job, bigger than Heartbleed. There will be a very, very long tail, IoT devices, Docker containers, forgotten Linux machines, unmaintained CLI tools that shipped their own copy of the roots,” Filippo Valsorda, a cryptography maintainer for the Go programming language, told Ars Technica.
+
+Cloudflare said it learned of the problem on 19 October. It has released updated WARP, 1.1.1.1 and cloudflared clients. Customers who run their own origin servers may need to update their trust stores themselves, Cloudflare said in a blog post.
+
+Using the keys requires intercepting traffic between two parties, Ars reported. The flaw does not affect Signal, WhatsApp and WireGuard, which do not rely on TLS for confidentiality, Ars reported.
+
+What eMudhra says
+
+eMudhra said in a statement on Wednesday that it created the eight certificates in a key generation ceremony (KGC) on 30 April 2025.
+
+“A flaw in the KGC caused a wrap/unwrap step to produce a second set of weak keys alongside the original strong keys. The weak keys were the ones published to the browser root stores,” eMudhra said.
+
+The company said the incident did not compromise its infrastructure or breach any data. Its Indian digital signature and eSign businesses run on separate infrastructure, and the incident does not affect them, it said. It added that the researcher may have used AI-assisted techniques. India’s CERT-In said last week that AI agents under testing had broken into live systems at Indian firms.
+
+Helme later wrote that Claude, Anthropic’s model, recovered the keys from a single prompt. In May, Anthropic’s Claude Mythos found 10,000 critical vulnerabilities in one month. Last week, XBOW used GPT-5.6 Sol to build a Chrome exploit.
+
+eMudhra said the global TLS business makes up around 1% of its revenue. It is giving affected customers replacement certificates and is still working to establish the root cause.
+
+Get the TNW newsletter
+
+Get the most important tech news in your inbox each week.
+
+Email address
+Subscribe
+Website 
+
+By subscribing you agree to our Privacy Statement.
+
+Published October 21, 2026 - 10:25 am UTC
+Back to top
+STORY BY A
+Ana Maria Constantin
+Popular articles
+1
+Cloudflare passes 10 million developers, up 35% in a quarter
+2
+Blackwall quadruples its valuation to $2.2bn as bots take over the web
+3
+US Army picks a bid for ECHOTRIBBLE, its plan for autonomous AI agents
+4
+SandboxAQ launches tools to test AI agents and track what they cost
+5
+Emil Michael tells The Information export controls can rein in AI labs
+Get the TNW newsletter

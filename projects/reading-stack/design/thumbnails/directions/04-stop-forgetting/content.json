@@ -1,0 +1,17 @@
+{
+  "direction": "The problem in three words on full-bleed orange + concerned face",
+  "title": "The Simple Habit That Makes Non-Fiction Stick",
+  "text": {
+    "line1": "Stop",
+    "line2": "forgetting",
+    "line3": "books."
+  },
+  "images": {
+    "person": "../../assets/cut/concerned.png"
+  },
+  "vars": {
+    "--x": "640px",
+    "--y": "-30px",
+    "--w": "830px"
+  }
+}

@@ -1,0 +1,148 @@
+URL: https://letsdatascience.com/news/hacker-uses-autonomous-ai-agents-to-breach-100-company-websi-6f2900ba
+STATUS: loaded (http 200)
+FINAL: https://letsdatascience.com/news/hacker-uses-autonomous-ai-agents-to-breach-100-company-websi-6f2900ba
+TITLE: Hacker Uses Autonomous AI Agents to Breach 100+ Company Websites
+H1: Hacker Uses Autonomous AI Agents to Breach 100+ Company Websites
+OG: Hacker Uses Autonomous AI Agents to Breach 100+ Company Websites | Let's Data Science
+PUBLISHED: 2026-10-20T20:32:19.344Z  MODIFIED: 
+DOC_H: 5784
+
+News
+Hacker Uses Autonomous AI Agents to Breach 100+ Company Websites
+Search
+SECURITY & RISK
+ai agents
+cairn
+cyberattack
+norforge
+Hacker Uses Autonomous AI Agents to Breach 100+ Company Websites
+5 sources
+|
+October 20, 2026
+|
+By LDS Team
+7.2
+Relevance Score
+Photo: blogger.googleusercontent.com · rights & takedowns
+QUICK SUMMARY
+Hide
+
+NorForge researcher Snorre Fagerland found exposed control panels for the open-source Cairn AI tool showing a Chinese-speaking operator aimed autonomous agents at more than 1,200 websites. Reuters, which reviewed the attacker's records, identified victims among more than 100 compromised companies, including Deere, SharkNinja and Cummins. The Hacker News reports that how much data, if any, was taken is not known.
+
+A Chinese-speaking criminal operator used autonomous AI agents to attack more than 1,200 websites and reached sites belonging to more than 100 companies, according to research from security firm NorForge and reporting by Reuters. The Hacker News reports that Reuters identified victims including Deere, SharkNinja and Cummins by reviewing the attacker's own records. How much data, if any, was taken is not known, and Cyberpress notes that the affected environments and consequences differed by victim.
+
+How the campaign was discovered
+
+NorForge principal threat researcher Snorre Fagerland found the activity while scanning the internet for exposed instances of Cairn, an open-source, general-purpose AI problem-solving engine. According to The Hacker News, beginning around October 2 he found about two dozen Cairn instances being used maliciously, which let him read the operators' work in real time. NorForge published its findings on October 19, per Cyberpress.
+
+Cairn's author, who posts as "le1xia0," told Reuters the tool was not designed for hacking attacks and that harmful use was not their intention, The Hacker News reports.
+
+What the agents did
+
+Cairn gives agents a starting state and a goal. Cyberpress describes agents generating "intents" (planned actions) and "facts" (discoveries), with a shared blackboard that lets workers reuse findings and revise hypotheses without continuous human direction. The human operator can add hints along the way, per The Hacker News.
+
+NorForge grouped the exposed panels into three clusters and judged more than 20 likely malicious. The busiest, tracked as AIA0001, is Chinese-language and links 14 panels to more than 1,100 attack projects. NorForge assessed that its aim was lasting access to shop and payment systems for later monetization. Reported targets span the United States, Japan and Australia, and Cyberpress also lists Canada.
+
+Cyberpress reports that instructions prioritized:
+
+•
+unauthenticated remote code execution
+•
+SQL injection
+•
+unsafe deserialization
+•
+authentication bypass
+•
+vulnerable file uploads
+
+A typical task asked agents to find a way to run code on a shop and then plant an uploader web shell. The Hacker News notes this form saves uploaded files rather than running commands, and an attacker could swap it for something more dangerous later. Exposed worker directories contained standard tooling including Nmap, OWASP Amass, dnsrecon, ffuf and PHPGGC, per Cyberpress.
+
+What was verified
+
+NorForge checked one claimed break-in at a large hardware-parts vendor and found the web shell live, according to The Hacker News. It also independently confirmed the compromise of one very large US retailer, where the agents found the single cookie setting that selected a vulnerable backend server.
+
+Cyberpress reports that in one case the agent attributed a compromise to write access to a memcached session store, unsafe PHP object deserialization and a gadget chain through legacy Zend Framework components. It adds that researchers did not independently validate every exploitation step.
+
+TechRadar and Cyberpress put the operator's spend at an estimated $5,000 in AI tokens.
+
+Why it matters for practitioners
+
+TechRadar reports that researchers warn AI-powered attacks are making large-scale website compromise faster and cheaper. The reported exploit classes, such as deserialization chains, session-store abuse and upload flaws, are long known, so patching legacy components and closing exposed admin surfaces remains relevant.
+
+The exposure of the attackers' own dashboards is also a reminder that agent frameworks bring their own operational-security and misconfiguration risks, which defenders and researchers can sometimes exploit for visibility, as happened here.
+
+Key Points
+1
+NorForge found exposed Cairn panels showing AI agents attacked 1,200+ sites and reached 100+ companies, giving real-time visibility into agent-driven intrusions.
+2
+Reports put the operator's cost near $5,000 in tokens, suggesting autonomous agents can lower the labor cost of mass website exploitation.
+3
+Reported exploit classes were long-known, such as deserialization and upload flaws, so patching legacy web components remains a core defense against agent-scale scanning.
+Scoring Rationale
+
+A documented, partly independently verified case of autonomous AI agents conducting large-scale intrusions with minimal human input is directly relevant to practitioners building or defending against agentic systems. The extent of data theft remains unknown and the techniques themselves are conventional, which tempers the score.
+
+MORE
+AI Agents news
+→
+SOURCES
+
+Public references used for this report.
+
+5 SOURCES
+THEHACKERNEWS.COM
+Hackers Use Autonomous AI Agents to Breach Company Websites, Target Over 1,200 Sites
+TECHRADAR.COM
+Chinese hacker hits over 100 company websites using AI ...
+TOMSHARDWARE.COM
+A Chinese hacker used AI agents to break into more than ...
+View 2 more sources
+NEWSLETTER
+·
+WEEKLY · FREE
+Weekly AI News
+
+A 5-minute Tuesday brief on AI & data science. Curated, no fluff.
+
+Email address
+Subscribe
+
+No spam. Privacy.
+
+Practice with real Telecom & ISP data
+
+90 SQL & Python problems · 15 industry datasets
+
+Used by DS/ML engineers at top companies
+Active Residential Customers
+Easy
+Unlimited Fiber Plans 500Mbps+
+Medium
+Customer Churn Risk Assessment
+Hard
+
+250 free problems · No credit card
+
+See all Telecom & ISP problems
+← NEWER STORY
+DeepSeek Open-Sources DeepInfer, Its Production Inference Engine for V4.1-Flash
+OLDER STORY →
+SIFMA and KPMG Survey Finds Gen Z Trust in AI-Only Advice Halves
+More AI & Data Science News
+4 hours ago
+Unit 42 Reports PHP2Shell Attack on European Government Entity
+6.0
+5 hours ago
+Nvidia discusses $2,000-per-GPU annual software licensing example for AI agents
+6 hours ago
+Forever Security reports AGENTS.md file in Downloads hijacked AI coding agent
+5.4
+9 hours ago
+KB Securities Estimates Samsung Has Contracted About 80% of 2027 Memory Output
+View All News
+Browse the archive
+Back to News Feed
+News archive
+
+News on Let's Data Science is compiled from multiple public sources with editorial oversight. See our Editorial Standards and Corrections Policy.

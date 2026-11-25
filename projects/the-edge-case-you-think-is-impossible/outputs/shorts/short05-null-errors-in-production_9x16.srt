@@ -1,0 +1,99 @@
+1
+00:00:00,137 --> 00:00:02,497
+in 2016, the BBC wrote about a woman called
+
+2
+00:00:02,497 --> 00:00:05,057
+Jennifer Null when Jennifer Null tries to
+
+3
+00:00:05,057 --> 00:00:07,297
+buy a plane ticket, most websites tell her
+
+4
+00:00:07,297 --> 00:00:09,757
+that she has left the surname field blank
+
+5
+00:00:09,897 --> 00:00:11,127
+her surname is Null
+
+6
+00:00:11,217 --> 00:00:13,327
+the website sees the name Null and treats it
+
+7
+00:00:13,327 --> 00:00:15,407
+as empty and yeah,
+
+8
+00:00:15,627 --> 00:00:17,687
+so Null, apart from even being in a name
+
+9
+00:00:17,687 --> 00:00:20,147
+situation, is also an edge case that catches
+
+10
+00:00:20,257 --> 00:00:23,057
+almost everyone because Null means no value
+
+11
+00:00:23,057 --> 00:00:25,297
+there was another story, I was told at a
+
+12
+00:00:25,297 --> 00:00:26,027
+conference,
+
+13
+00:00:26,177 --> 00:00:27,267
+where a security
+
+14
+00:00:27,487 --> 00:00:28,977
+researcher got a personal
+
+15
+00:00:29,387 --> 00:00:31,587
+license plate in California that said NULL
+
+16
+00:00:31,657 --> 00:00:33,547
+like that was the license plate, NULL
+
+17
+00:00:33,577 --> 00:00:35,467
+then he started getting parking tickets over
+
+18
+00:00:35,467 --> 00:00:36,007
+$12,000
+
+19
+00:00:36,457 --> 00:00:38,723
+in fines that were not his tickets
+
+20
+00:00:38,723 --> 00:00:40,433
+there were tickets where no plate number had
+
+21
+00:00:40,433 --> 00:00:41,943
+been recorded and in the system that
+
+22
+00:00:41,943 --> 00:00:42,913
+processes the tickets,
+
+23
+00:00:43,223 --> 00:00:45,673
+those were now linked to a plate called NULL
+
+24
+00:00:45,673 --> 00:00:47,813
+so all of them landed on his plate
+
+25
+00:00:47,893 --> 00:00:49,533
+so this is another null situation

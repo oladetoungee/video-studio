@@ -1,0 +1,56 @@
+/* phone-distraction thumbnails v3 (2026-10-16): a MIX of kinds (photo backgrounds, collage over her photo, flat graphic,
+   split / clipping / close face). Same film palette (ink #0C0D10, paper #F2EFE9, badge red #FF4433) + one yellow highlight.
+   Every phone, app icon and card is a generic drawing (no real app, logo or UI). Her frames are never flipped. */
+@import url('v2.css');
+@font-face { font-family: 'Anton'; src: url('../fonts/Anton-Regular.ttf') format('truetype'); }
+@font-face { font-family: 'NewsR'; src: url('../fonts/Newsreader.ttf') format('truetype'); font-weight: 200 800; }
+@font-face { font-family: 'Play'; src: url('../fonts/PlayfairDisplay.ttf') format('truetype'); font-weight: 400 900; }
+@font-face { font-family: 'Play'; src: url('../fonts/PlayfairDisplay-Italic.ttf') format('truetype'); font-weight: 400 900; font-style: italic; }
+@font-face { font-family: 'Inst'; src: url('../fonts/InstrumentSerif-Regular.ttf') format('truetype'); }
+@font-face { font-family: 'Inst'; src: url('../fonts/InstrumentSerif-Italic.ttf') format('truetype'); font-style: italic; }
+@font-face { font-family: 'Caveat'; src: url('../fonts/Caveat.ttf') format('truetype'); font-weight: 400 700; }
+@font-face { font-family: 'Mono'; src: url('../fonts/DMMono-Medium.ttf') format('truetype'); }
+
+/* her photo as the scene + (optional) the same frame's person cut-out on top, so words can sit behind her head */
+.photo, .front { position: absolute; inset: 0; overflow: hidden; }
+.photo { z-index: 1; } .front { z-index: 3; pointer-events: none; }
+.photo img, .front img { position: absolute; display: block; filter: brightness(var(--br, 1.14)) contrast(1.06) saturate(1.06); }
+
+/* type */
+.it { font-family: 'IT', sans-serif; font-weight: 800; letter-spacing: -0.035em; line-height: .92; }
+.an { font-family: 'Anton', sans-serif; font-weight: 400; letter-spacing: -0.005em; line-height: .9; text-transform: uppercase; }
+.nr { font-family: 'NewsR', serif; font-weight: 500; letter-spacing: -0.02em; line-height: 1; }
+.nr i, i.nr { font-family: 'News', serif; font-style: italic; }
+.pf { font-family: 'Play', serif; font-weight: 700; letter-spacing: -0.02em; line-height: .95; }
+.ins { font-family: 'Inst', serif; letter-spacing: -0.01em; line-height: .95; }
+.hand { font-family: 'Caveat', cursive; font-weight: 700; line-height: .95; }
+.mono { font-family: 'Mono', monospace; letter-spacing: .08em; text-transform: uppercase; }
+.sh { text-shadow: 0 3px 16px rgba(0, 0, 0, .5); }
+.sh2 { text-shadow: 0 2px 6px rgba(0, 0, 0, .55), 0 6px 22px rgba(0, 0, 0, .35); }
+.red { color: var(--red); } .yel { color: #FFE14D; }
+
+/* boxed words (one highlight per option) */
+.bx { display: inline-block; padding: .04em .16em .1em; background: var(--bxb, #fff); color: var(--bxc, #0C0D10); }
+.bx.y { --bxb: #FFE14D; } .bx.r { --bxb: #FF4433; --bxc: #fff; } .bx.k { --bxb: #0C0D10; --bxc: #fff; }
+
+/* stickers for the collages: a white border + a soft drop shadow, like cut-out paper */
+.stk { position: absolute; background: #fff; padding: 9px; border-radius: var(--r, 22px); box-shadow: 0 16px 30px rgba(0, 0, 0, .38); z-index: 4; }
+.lab { position: absolute; font-family: 'IT'; font-weight: 600; font-size: 30px; letter-spacing: -0.01em; color: #fff; z-index: 5;
+       text-shadow: 0 2px 8px rgba(0, 0, 0, .6), 0 0 2px rgba(0, 0, 0, .4); white-space: nowrap; }
+
+/* phone dark feed helper */
+.feedpost { margin: 0 14px 14px; border-radius: 18px; background: #1D1F25; padding: 14px; }
+.ph.mini { width: 220px; height: 450px; border-radius: 38px; padding: 9px; }
+.ph.mini .scr { border-radius: 30px; }
+.ph.mini .isl { width: 64px; height: 18px; margin-left: -32px; top: 11px; }
+
+/* settings card */
+.card { position: absolute; background: #FBFAF7; color: #111; border-radius: 30px; box-shadow: 0 24px 50px rgba(0, 0, 0, .35); z-index: 4; }
+.row { display: flex; align-items: center; justify-content: space-between; padding: 22px 30px; border-top: 2px solid #E6E2D9; }
+.row span { font-family: 'IT'; font-weight: 700; font-size: 38px; letter-spacing: -0.02em; }
+.tog.off { background: #CFCBC2; }
+
+/* clipping */
+.clip { position: absolute; background: #fff; color: #111; padding: 34px 38px 36px; box-shadow: 0 16px 36px rgba(0, 0, 0, .18);
+        font-family: 'NewsR', serif; font-weight: 700; letter-spacing: -.02em; line-height: 1.1; z-index: 3; }
+.clip mark { background: #FFE14D; color: #111; padding: 0 .06em; box-decoration-break: clone; -webkit-box-decoration-break: clone; }

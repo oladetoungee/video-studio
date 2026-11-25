@@ -1,0 +1,2 @@
+{"video": "A-house/A_house_motiontest_silent.mp4", "out": "A-house/A_house_motiontest_16x9.mp4", "voice": ["/Users/gbemi/Desktop/CODE/videos/projects/phone-distraction/kit/transcripts/voice.m4a", 248.5, 255.5],
+ "cues": [[0.95, "switch-tap", -2], [2.0, "tap-small-hit", -4], [2.05, "switch-tap", -2], [3.1, "pop-dry", -3], [3.2, "switch-tap", -2], [4.25, "coin-win", -2]]}

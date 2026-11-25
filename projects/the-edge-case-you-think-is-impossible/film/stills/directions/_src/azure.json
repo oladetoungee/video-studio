@@ -1,0 +1,54 @@
+{
+ "title": "Summary of Windows Azure Service Disruption on Feb 29th, 2012 | Microsoft Azure Blog",
+ "h1": "Summary of Windows Azure Service Disruption on Feb 29th, 2012",
+ "h1y": 293,
+ "found": {
+  "adding one to its year": [
+   [
+    772.34375,
+    4076.34375,
+    192.828125,
+    23
+   ]
+  ],
+  "February 29, 2013": [
+   [
+    440.34375,
+    4136.34375,
+    162.671875,
+    23
+   ]
+  ]
+ },
+ "H": 14839,
+ "focus": {
+  "adding one to its year": {
+   "file": "azure__adding-one-to-its-year.png",
+   "top": 3556.34375,
+   "rects": [
+    [
+     772.34375,
+     520,
+     192.828125,
+     23
+    ]
+   ]
+  },
+  "February 29, 2013": {
+   "file": "azure__february-29-2013.png",
+   "top": 3616.34375,
+   "rects": [
+    [
+     440.34375,
+     520,
+     162.671875,
+     23
+    ]
+   ]
+  }
+ },
+ "clipTop": 173,
+ "scale": 1.5,
+ "url": "https://azure.microsoft.com/en-us/blog/summary-of-windows-azure-service-disruption-on-feb-29th-2012/",
+ "captured": "2026-11-02T19:34:43.031Z"
+}

@@ -1,0 +1,24 @@
+{
+  "direction": "Flat graphic (kit T11): warm paper ground, a .env file in the middle (values blurred, generic names), three orange arrows reach for it from three sides, each one of the month's breaches (Railway, Zeabur, OpenCode). Shows three attacks aiming at one thing. References: viral 3 (the framework drawn), her database-indexes thumbnail (one mechanism with arrows).",
+  "thumbnail_text": "HACKERS WANT YOUR .ENV",
+  "titles": [
+    "Three Breaches This Month Went After Developers' Secret Keys",
+    "Railway Hack, Zeabur and OpenCode: Change Your API Keys"
+  ],
+  "title": "Three Breaches This Month Went After Developers' Secret Keys",
+  "kind": "graphic",
+  "text": {
+    "hd": "Hackers want your <span class=\"acc\">.env</span>",
+    "l1": "Railway breach",
+    "l2": "Zeabur breach",
+    "l3": "OpenCode breach"
+  },
+  "images": {},
+  "vars": {
+    "--ground": "#EFE7D8",
+    "--fg": "#16110D",
+    "--accent": "#F2541B"
+  },
+  "scores": "cold critic R1 8 · R2 8",
+  "recommended": true
+}

@@ -1,0 +1,23 @@
+{
+  "direction": "Half research wall, half her: the film's green wall on the left with two index cards (UI, UX), canary notes under UI (what you see) and orange notes under UX (how it feels); her real photo on the right, worried eyebrows-up look.",
+  "concept": "T02 variant in the film look",
+  "thumbnail_text": "UI / UX on the research wall",
+  "title": "UI vs UX Explained: What Users See vs How It Feels",
+  "titles": [
+    "UI vs UX Explained: What Users See vs How It Feels",
+    "UI vs UX vs UX Research: The Difference Explained"
+  ],
+  "text": {
+    "a": "UI",
+    "b": "UX",
+    "u1": "The button",
+    "x1": "Can they find it?"
+  },
+  "images": {
+    "scene": "../../assets/scene/g/s_653.5.jpg",
+    "front": "../../assets/scene/g/mask/s_653.5.png"
+  },
+  "vars": {},
+  "scores": "a 3/4 · 4/7 · 4/7 | b 7/5 · 8/6 · 8/6 | c 5 · 8 · 7",
+  "recommended": false
+}

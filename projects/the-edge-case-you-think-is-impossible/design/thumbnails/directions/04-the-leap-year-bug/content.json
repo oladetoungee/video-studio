@@ -1,0 +1,25 @@
+{
+  "text": {
+    "m": "February",
+    "d": "29",
+    "w": "the <span class=\"b\">leap year</span> bug."
+  },
+  "kind": "object on black, no face",
+  "board": "Thumbnails 47 (yt-75 flowstate.: one object centred on black, one line under it)",
+  "fonts": [
+    "design-13 Switzer (grey #A5A3B0 + blue #2A1FF3 on #000000, Design 350)"
+  ],
+  "colours": "Design 350 / combo-12: #000000 / #A5A3B0 / #2A1FF3",
+  "thumbnail_text": "the leap year bug. + a calendar page: February 29",
+  "scores": "cold critic r4: 7.5 alone / 8 with title",
+  "titles": [
+    "The Leap Year Bug and 7 Other Edge Cases That Break Apps",
+    "Edge Cases: 8 Real Bugs That Broke Apps"
+  ],
+  "title": "The Leap Year Bug and 7 Other Edge Cases That Break Apps",
+  "direction": "Copies Thumbnails 47: one object in the middle of black (a calendar page on 29 February) and one line under it naming the bug people search for.",
+  "nudge": {},
+  "images": {},
+  "vars": {},
+  "class": "no-lift"
+}

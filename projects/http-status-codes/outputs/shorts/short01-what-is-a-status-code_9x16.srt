@@ -1,0 +1,43 @@
+1
+00:00:00,000 --> 00:00:03,043
+every time your browser or your app sends a
+
+2
+00:00:03,043 --> 00:00:06,153
+request to a server, the server sends back a
+
+3
+00:00:06,153 --> 00:00:08,267
+response and the first line of that response
+
+4
+00:00:08,267 --> 00:00:10,163
+has a three-digit number
+
+5
+00:00:10,163 --> 00:00:12,663
+the number is the HTTP status code
+
+6
+00:00:12,663 --> 00:00:14,850
+in this case here, 200 is the status code
+
+7
+00:00:14,850 --> 00:00:16,537
+that oK is the reason phrase
+
+8
+00:00:16,537 --> 00:00:18,577
+the job of the status code is to tell you
+
+9
+00:00:18,577 --> 00:00:21,447
+what happened while the body gives you the
+
+10
+00:00:21,447 --> 00:00:23,267
+detail and you can already tell a lot from
+
+11
+00:00:23,267 --> 00:00:25,533
+the first digit of the number

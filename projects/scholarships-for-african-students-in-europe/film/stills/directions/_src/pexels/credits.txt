@@ -1,0 +1,6 @@
+| stockholm.jpg | photo | Jakob Stöberl | https://www.pexels.com/photo/scenic-view-of-stockholm-skyline-at-daytime-30158443/ |
+| budapest.jpg | photo | Efrem  Efre | https://www.pexels.com/photo/parliament-building-in-budapest-18815996/ |
+| tallinn.jpg | photo | Sergei  Gussev | https://www.pexels.com/photo/charming-rooftop-view-of-tallinn-s-old-town-35838020/ |
+| amsterdam.jpg | photo | Magda Ehlers | https://www.pexels.com/photo/tenements-by-the-canal-in-amsterdam-12705128/ |
+| gradcap.jpg | photo | Towfiqu barbhuiya | https://www.pexels.com/photo/hand-holding-academic-cap-with-string-14658819/ |
+| stockholm-waterfront.mp4 | video | Damir K | https://www.pexels.com/video/charming-waterfront-view-in-stockholm-sweden-32724738/ |

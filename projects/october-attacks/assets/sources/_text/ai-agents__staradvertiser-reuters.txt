@@ -1,0 +1,374 @@
+URL: https://www.staradvertiser.com/2026/10/19/breaking-news/how-one-hacker-used-ai-agents-to-break-into-over-100-company-websites/
+STATUS: loaded (http -1)
+FINAL: https://www.staradvertiser.com/2026/10/19/breaking-news/how-one-hacker-used-ai-agents-to-break-into-over-100-company-websites/
+TITLE: How one hacker used AI agents to break into over 100 company websites | Honolulu Star-Advertiser
+H1: How one hacker used AI agents to break into over 100 company websites
+OG: How one hacker used AI agents to break into over 100 company websites | Honolulu Star-Advertiser | Honolulu Star-Advertiser
+PUBLISHED: 2026-10-19T17:58:00+00:00  MODIFIED: 2026-10-19T19:06:37+00:00
+DOC_H: 9880
+
+Skip advertisement
+View Hawaii's Best
+Subscribe 
+Opens in a new tab
+Log In
+Home
+ 
+Breaking News
+ 
+Hawaii News
+ 
+Sports
+ 
+Editorial
+ 
+Obituaries 
+Opens in a new tab
+ 
+Crave
+ 
+Videos
+ 
+Print Replica
+ 
+Legal Ads 
+Opens in a new tab
+ 
+Weather
+
+Sunday, October 25, 2026
+ 83°
+Today's Paper
+
+BREAKING NEWS
+Opens in a new tab
+How one hacker used AI agents to break into over 100 company websites
+
+By Raphael Satter / Reuters
+
+Oct. 19, 2026
+
+NICK OXFORD / REUTERS / JUNE 13, 2024
+
+A farmer works on harvests wheat using a John Deere combine near Skedee, Okla., in 2024.
+
+WASHINGTON >> Over the past couple of weeks, a cybersecurity researcher watched as a Chinese-speaking hacker broke into websites belonging to more than 100 companies, including farm equipment maker Deere & Co., home appliance company SharkNinja Inc. and engine manufacturer Cummins Inc..
+
+Yet the hacker did almost none of the work.
+
+The cybercriminal instead outsourced the hacking spree almost entirely to artificial intelligence, tasking AI agents with spending hours autonomously probing and breaking into targeted sites, according to Snorre Fagerland, principal threat researcher at the cybersecurity company NorForge.
+
+ADVERTISING
+
+In a report provided to Reuters ahead of publication today, Fagerland said the hacker was one of several he discovered while scanning the web for inadvertently exposed instances of Cairn, an open-source AI problem-solving platform popular with hackers.
+
+Beginning around Oct. 2, Fagerland said he found about two dozen instances of Cairn being used for malicious activity, which allowed him to quietly peer over the cybercriminals’ shoulders as they set their AI tools loose on the world.
+
+Fagerland’s report on the Chinese-speaking hacker did not name the victims, but Reuters was able to establish the victims’ identities by independently reviewing the hacker’s Cairn activity.
+
+Don't miss out on what's happening!
+
+Stay in touch with breaking news, as it happens, conveniently in your email inbox. It's FREE!
+
+Email
+Sign Up
+By clicking to sign up, you agree to Star-Advertiser's and Google's Terms of Service 
+Opens in a new tab
+ and Privacy Policy 
+Opens in a new tab
+. This form is protected by reCAPTCHA.
+
+At a time of rising anxiety over the power of autonomous AI tools, Fagerland said his find was real-life evidence that commercially available AI agents could pull off complex intrusions from start to finish without human intervention, a dramatic boost to the power of a single malicious actor.
+
+“It’s a new world now,” said Fagerland.
+
+Reuters could not ascertain the degree to which the breaches resulted in unauthorized extraction of data.
+
+Deere, makers of John Deere equipment, told Reuters it had taken “necessary remediation actions” following the incident and had “no indication that sensitive information was accessed.” SharkNinja said the hack had hit a standalone site carrying only product support information and that the threat had been contained. Cummins said it was “investigating the report of a potential cyber-attack on a website operated by one of our third-party vendors.”
+
+Two smaller businesses also acknowledged being compromised. Other victims listed in the Cairn data did not return messages.
+
+One of the hackers that Fagerland observed stole a trove of credit card data. Another tried to get AI agents to rob a cryptocurrency exchange. The Chinese-speaking hacker was the most prolific. Beginning on Sept. 25, they set their AI army loose against U.S., Canadian, Australian and Japanese e-commerce websites.
+
+Their instructions were terse, sketching out their preferred intrusion tactics in fewer than 100 Chinese characters. As of late last week, their agents had attempted to break into more than 1,200 sites. Successful intrusions typically took around 23 hours of poking and prodding for vulnerabilities. Fagerland estimated that the campaign, which appeared to be using a mixture of China’s DeepSeek and Anthropic’s Claude Code, had chewed up roughly $5,000 worth of tokens, or about $50 per successful hack.
+
+Fagerland — who has worked in cybersecurity for nearly three decades — said he was impressed by some of the techniques the agents used to compromise their victims. In one case, after failing to find any weaknesses in a big company’s public-facing application, the AI agents pored through digital records to find associated infrastructure, located a public-facing control panel, discovered a subtle weakness in the way it processed data, and after hours of trial and error, reported leveraging it to trick the server into executing malicious commands.
+
+“It’s not straightforward to come up with solutions like that,” Fagerland said. “It’s not script kiddie stuff.”
+
+Cairn’s author, whose social media handle is “le1xia0”, acknowledged receipt of a Reuters message but did not immediately answer a list of questions. In a recent post on X, they said their platform was “an innovative type of multi-agent architecture and was not designed for hacking attacks. If it is used to carry out harmful hacking attacks, that is not my intention.”
+
+The ability of agentic AI systems to autonomously discover vulnerabilities, conduct intrusions, and steal data is a source of increasing anxiety around the world. Rogue agents inadvertently unleashed by major AI companies have hacked their way out of computer labs,broken into government websites, and engaged in unsanctioned social engineering attempts. South Korea and Japan have in recent weeks been buffeted by a series of well-publicized hacks attributed to AI-using cybercriminals.
+
+AI agents are increasingly becoming staples of the cybercriminal underground. In August, the Israeli firm Gambit Security found that Russian-speaking extortionists had leveraged SpaceX’s Cursor AI tool to break into seven organizations.
+
+In September, Gambit documented an AI agent-driven spree that resulted in breaches at 25 companies and the theft of at least 600,000 credit card records. Last week, the cyber intelligence company Bitsight said that discussions about how to use autonomous agents were surging across cybercriminal forums.
+
+Fagerland said he had previously assumed hacker-agents would need at least some supervision. He said it was now obvious that the technology had moved past that.
+
+“The development in this field is astounding,” he said.
+
+See more:
+Business
+World news
+
+Hawaii incumbents face longshot challengers in Congressional races | Honolulu Star-Advertiser
+Discover
+‘Breaking Bad’ actor RJ Mitte dies at 34 | Honolulu Star-Advertiser
+Discover
+Blinkist Magazine
+The Secret Habit of the World's Richest Person – I Tried It for a Month
+Read More
+Skip
+Rearview Mirror: Take a trip through time on Ala Moana Boulevard | Honolulu Star-Advertiser
+Discover
+Kaho Valikoula of Kahuku draws strength from family, football and the ocean | Honolulu Star-Advertiser
+Discover
+The Secret Habit of the World's Richest Person – I Tried It for a Month
+It's not a morning routine, a cold shower, or a meditation app. The one thing the world's wealthiest person does every single day is far simpler — and far more powerful — than that.
+Blinkist Magazine
+|
+Sponsored
+Divorced? Dating isn't over
+Less waiting. More dating
+Goldenromances
+|
+Sponsored
+Click Here
+I Asked ChatGPT What the Rich Do That We Don’t. The Answer Was Uncomfortably Simple.
+Not investing. Not hustle. Not 5 a.m. alarms. It was one daily habit most of us dropped years ago – and almost nobody picks back up.
+Blinkist Magazine
+|
+Sponsored
+Widowed women worth a look
+Start over here. Date online
+Soulfuldate
+|
+Sponsored
+Click Here
+Have fun or mean business? Decide
+Scrolling again? Meet singles online
+Goldenromances
+|
+Sponsored
+Click Here
+Online dating. Skip the small talk
+Scrolling again? Try a dating site instead
+Datingarts
+|
+Sponsored
+Learn More
+AI is changing the way you learn a language
+Discover how personalized, real conversations transform language learning experiences
+Talkpal - AI Language Learning
+|
+Sponsored
+Sign Up
+Pickpockets Never See This Hidden Wallet Tracker. It's Getting Them Caught
+Ondrela
+|
+Sponsored
+Cute Christmas Sweatshirts
+Shop adorable cat and dog prints with cozy styles for the holiday season.
+Veluniva
+|
+Sponsored
+Shop Now
+Language Learning Has Changed: Now You Just Talk to an AI
+Have real conversations on any topic with an AI that adapts to your level. Judgment-free practice, 130+ languages.
+Talkpal - AI Language Learning
+|
+Sponsored
+Sign Up
+Are you registered to vote? | Honolulu Star-Advertiser
+Star-Advertiser
+HART advances $652M budget as Skyline extension plan awaits review | Honolulu Star-Advertiser
+Star-Advertiser
+Edema Is Not From Salty Food. Meet the Real Enemy of Swollen Legs
+Kinzeno Roller Gel
+|
+Sponsored
+Plumber Reveals: Stop Scrubbing the Toilet. Do This Instead
+Top Gadget Insider
+|
+Sponsored
+What Plumbers Don’t Tell You: The 1-Spoon Trick for Clear Drains
+Clean House Secrets
+|
+Sponsored
+War Thunder - Register now for free and play against over 75 Million real Players
+Fight in over 2000 unique and authentic Vehicles. Fight on Land, on Water and in the Air. Join the most comprehensive vehicular combat game. Over 2000 tanks, ships and aircraft.
+War Thunder
+|
+Sponsored
+Play Now
+Kokua Line: Does HECO ask permission for drone use? | Honolulu Star-Advertiser
+Star-Advertiser
+Modern 2-Bed Senior Houses - Take A Look Inside!
+2 Bed Homes
+|
+Sponsored
+Planned new Oahu jail being downsized | Honolulu Star-Advertiser
+Star-Advertiser
+DOJ investigating TV networks over Trump pool coverage | Honolulu Star-Advertiser
+Star-Advertiser
+SUBSCRIBER FAVORITES
+1
+Hawaii snaps losing streak in blasting Northern Illinois
+2
+Attention, passengers: High airfares may be here to stay
+3
+Residents on Oahu’s North Shore take on dredging as lawsuits seek accountability
+4
+Obama issues searing attacks on Trump, Ramaswamy in return to campaign trail
+5
+Rainbow Wahine rally to second sweep of Rebels
+MORE BUSINESS
+Audi defends decision to stand by Trump on $4B U.S. factory in Georgia
+Hawaii Career Expo to feature over 100 top employers
+Attention, passengers: High airfares may be here to stay
+AI-discovered bugs may soon trigger fresh disruptions, experts say
+DHHL and OHA join forces to unveil Kakaako Makai housing plan
+
+Upcoming Events
+Wed, Oct 28 @9:00amSponsored
+Hawaii Career Expo
+Blaisdell Center
+
+Sat, Oct 31 @11:00amSponsored
+The Buho Babes Brunch Featuring Rupaul's Drag Race's Yvie Oddly
+Buho Cocina y Cantina
+
+Wed, Oct 28 @9:00amSponsored
+Hawaii Career Expo
+Blaisdell Center
+
+Sat, Oct 31 @11:00amSponsored
+The Buho Babes Brunch Featuring Rupaul's Drag Race's Yvie Oddly
+Buho Cocina y Cantina
+
+Wed, Oct 28 @9:00amSponsored
+Hawaii Career Expo
+Blaisdell Center
+
+Sat, Oct 31 @11:00amSponsored
+The Buho Babes Brunch Featuring Rupaul's Drag Race's Yvie Oddly
+Buho Cocina y Cantina
+
+Item 1 of 2
+Sun, Oct 25
+House of Intention Celebrates Six Years with Hawaiʻi Foodbank Drive
+House of Intention by Aloha Elixir
+Sun, Oct 25 @8:00am
+Charity Pickleball & Wellness Expo - Stretchin' in the Kitchen
+Pickles at Forté
+Sun, Oct 25 @9:00am
+Lokahi Kailua Market
+Lokahi Kailua Market
+Sun, Oct 25 @9:00am
+Meet the Children's Book Author: The Unforgettable Boxcar
+Hawaiian Railway Society Base Yard
+Sun, Oct 25 @10:00am
+4 Seasons Juice - Fresh Fruits & Juice
+Byodo-In Temple
+Sun, Oct 25 @11:00am
+Halloween Trick or Treat Fun!
+Town Center of Mililani
+Sun, Oct 25 @12:00pm
+CENTER-WIDE TRICK-OR-TREATING
+Royal Hawaiian Center
+Sun, Oct 25 @2:00pm
+The Wizard of Oz
+Kennedy Theatre
+Sun, Oct 25 @7:00pm
+Rick Springfield
+Blue Note Hawaii
+Sun, Oct 25 @8:00pm
+Duva
+Maui Brewing Co. Waikiki
+Sun, Oct 25 @8:00pm
+Waimea Valley's Moonwalk
+Waimea Valley
+Mon, Oct 26 @9:30am
+Nature Bathing: Bye Bye Manic Mondays
+Harold L. Lyon Arboretum
+Mon, Oct 26 @1:00pm
+Policy Board
+person at 560 N. Nimitz Hwy
+Mon, Oct 26 @7:00pm
+Open Mic Night
+Hula's
+Tue, Oct 27 @7:30am
+Documentary Screening: GHOST IN THE MACHINE
+Hale La‘akea Library Learning Commons
+Tue, Oct 27 @12:00pm
+FREE Afternoon BALLROOM SWING DANCING, each Tues., Wed. Thurs., noon-2:45pm
+Ala Wai Palladium Ballroom
+Tue, Oct 27 @4:30pm
+vein at KAKAʻAKO: Ladies Night
+SALT At Our Kaka'ako
+Tue, Oct 27 @7:00pm
+Jeff Bernat
+Blue Note Hawaii
+Tue, Oct 27 @7:00pm
+Trivia Tuesdays at Village Beer
+SALT At Our Kaka'ako
+Tue, Oct 27 @8:00pm
+Tropical Jazz Tuesdays (Free)
+Green Lady Cocktail Room
+See All Events
+Add Your Event
+
+Opens in a new tab
+
+LOOKING BACK 
+Opens in a new tab
+October 2018: Hurricane Walaka destroys East Island in Northwestern Hawaiian Islands
+Opens in a new tab
+Opens in a new tab
+Featured Businesses
+
+500 Ala Moana Blvd. #2-200
+Honolulu, HI 96813
+(808) 529-4747
+
+Opens in a new tab
+ 
+Opens in a new tab
+ 
+Opens in a new tab
+ 
+Opens in a new tab
+ 
+Opens in a new tab
+ 
+
+Our Company
+
+About Us
+Contact Us
+Advertise
+Privacy Policy
+Terms of Service
+
+Subscribers
+
+My Account
+Activate Digital Account
+Print Replica
+Customer Service
+FAQs
+
+More
+
+Mobile App 
+Opens in a new tab
+Email Newsletters
+Web Push Notifications
+Search
+Archives
+Copyright © StarAdvertiser.com. All rights reserved. Privacy Policy 
+Opens in a new tab
+ | Terms of Service 
+Opens in a new tab
+ |

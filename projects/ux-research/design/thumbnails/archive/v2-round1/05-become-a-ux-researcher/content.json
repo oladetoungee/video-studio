@@ -1,0 +1,26 @@
+{
+  "direction": "Getting into the field: a big generic staff badge on a lanyard that says UX RESEARCHER with an empty photo slot ('You?'). Her cut-out bottom-left calm, hands together, in black and white with a green outline. Off-black ground, green as the only colour.",
+  "thumbnail_text": "Become a UX Researcher",
+  "titles": [
+    "How to Get Into UX Research With No Experience",
+    "UX Research Explained by an HCI Master's Student",
+    "What Does a UX Researcher Actually Do All Week?"
+  ],
+  "text": {
+    "hd": "Become a<br><span class=\"acc\">UX Researcher</span>",
+    "role": "UX RESEARCHER",
+    "slot": "You?"
+  },
+  "images": {
+    "me": "../../assets/cut/gbemi-calm-steeple.png"
+  },
+  "vars": {
+    "--ground": "#111114",
+    "--fg": "#FFFFFF",
+    "--accent": "#22E08A",
+    "--ol": "#22E08A"
+  },
+  "scores": "",
+  "recommended": false,
+  "title": "How to Get Into UX Research With No Experience"
+}

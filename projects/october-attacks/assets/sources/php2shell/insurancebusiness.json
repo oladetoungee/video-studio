@@ -1,0 +1,173 @@
+{
+ "story": "php2shell",
+ "outlet": "Insurance Business UK",
+ "slug": "insurancebusiness",
+ "url": "https://www.insurancebusinessmag.com/uk/news/cyber/uk-councils-and-met-police-among-sites-pulled-offline-after-ncsc-alert-594424.aspx",
+ "finalUrl": "https://www.insurancebusinessmag.com/uk/news/cyber/uk-councils-and-met-police-among-sites-pulled-offline-after-ncsc-alert-594424.aspx",
+ "status": "loaded",
+ "http": 200,
+ "title": "UK councils and Met Police among sites pulled offline after NCSC alert",
+ "h1": "UK councils and Met Police among sites pulled offline after NCSC alert",
+ "published": "2026-10-21T17:25:58+00:00",
+ "files": {
+  "fold": "php2shell/insurancebusiness_fold.png",
+  "full": "php2shell/insurancebusiness_full.jpg",
+  "scroll": "php2shell/insurancebusiness_scroll.mp4"
+ },
+ "full": {
+  "width": 1440,
+  "height": 6000,
+  "pageHeight": 8004,
+  "zoom": 1,
+  "quotes": [
+   {
+    "quote": "Websites belonging to UK councils, the Metropolitan Police and governments across Europe went dark on Wednesday",
+    "box": {
+     "x": 335,
+     "y": 1575,
+     "w": 713,
+     "h": 54
+    },
+    "lines": [
+     {
+      "x": 335,
+      "y": 1575,
+      "w": 713,
+      "h": 24
+     },
+     {
+      "x": 335,
+      "y": 1605,
+      "w": 372,
+      "h": 24
+     }
+    ]
+   },
+   {
+    "quote": "Both are rated 9.2 out of 10 for severity",
+    "box": {
+     "x": 509,
+     "y": 1895,
+     "w": 362,
+     "h": 24
+    },
+    "lines": [
+     {
+      "x": 509,
+      "y": 1895,
+      "w": 362,
+      "h": 24
+     }
+    ]
+   }
+  ]
+ },
+ "scroll": {
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "seconds": 8,
+  "keyframes": [
+   {
+    "t": 0,
+    "y": 467
+   },
+   {
+    "t": 1,
+    "y": 467
+   },
+   {
+    "t": 2.304,
+    "y": 1311
+   },
+   {
+    "t": 3.404,
+    "y": 1311
+   },
+   {
+    "t": 4.381,
+    "y": 1631
+   },
+   {
+    "t": 8,
+    "y": 1631
+   }
+  ],
+  "zoom": 1,
+  "easing": "easeInOutCubic between keyframes, holds where y is equal",
+  "capped": false,
+  "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)",
+  "quotes": [
+   {
+    "quote": "Websites belonging to UK councils, the Metropolitan Police and governments across Europe went dark on Wednesday",
+    "inVideo": true,
+    "still": true,
+    "t": 2.85,
+    "visibleStill": [
+     2.23,
+     3.47
+    ],
+    "scrollY": 1311,
+    "box": {
+     "x": 370,
+     "y": 410,
+     "w": 713,
+     "h": 54
+    },
+    "lines": [
+     {
+      "x": 370,
+      "y": 410,
+      "w": 713,
+      "h": 24
+     },
+     {
+      "x": 370,
+      "y": 440,
+      "w": 372,
+      "h": 24
+     }
+    ],
+    "docBox": {
+     "x": 370,
+     "y": 1721,
+     "w": 713,
+     "h": 54
+    },
+    "layoutDriftPx": 0
+   },
+   {
+    "quote": "Both are rated 9.2 out of 10 for severity",
+    "inVideo": true,
+    "still": true,
+    "t": 6.17,
+    "visibleStill": [
+     4.3,
+     8.03
+    ],
+    "scrollY": 1631,
+    "box": {
+     "x": 544,
+     "y": 410,
+     "w": 362,
+     "h": 24
+    },
+    "lines": [
+     {
+      "x": 544,
+      "y": 410,
+      "w": 362,
+      "h": 24
+     }
+    ],
+    "docBox": {
+     "x": 544,
+     "y": 2041,
+     "w": 362,
+     "h": 24
+    },
+    "layoutDriftPx": 0
+   }
+  ]
+ }
+}

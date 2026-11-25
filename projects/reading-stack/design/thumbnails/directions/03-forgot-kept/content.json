@@ -1,0 +1,23 @@
+{
+  "direction": "Before / after with her face: forgot it (concerned) vs kept it (smile)",
+  "title": "Why You Forget What You Read (and How to Fix It)",
+  "text": {
+    "left": "<span style=\"font-size:100px\">Read it.<br>Forgot it.</span>",
+    "right": "<span style=\"font-size:100px\">Read it.<br>Kept it.</span>",
+    "leftTag": "",
+    "rightTag": ""
+  },
+  "images": {
+    "left": "../../assets/cut/concerned.png",
+    "right": "../../assets/cut/grin.png"
+  },
+  "note": "Two real frames from the video: concerned (0:39) and smiling (17:52). Neither face is flipped.",
+  "vars": {
+    "--lx": "-10px",
+    "--ly": "150px",
+    "--lw": "790px",
+    "--rx": "-330px",
+    "--ry": "140px",
+    "--rw": "940px"
+  }
+}

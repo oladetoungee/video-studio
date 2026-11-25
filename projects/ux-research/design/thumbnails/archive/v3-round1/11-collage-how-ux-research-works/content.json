@@ -1,0 +1,27 @@
+{
+  "direction": "Collage: her open hands each 'holding' a sticky note that floats above the palm (ask, then watch), the topic in a big warm serif behind her head, two handwritten labels. References: viral collage 'Time to lock in.' and 'in defense of being online', yt 'HELPED ME LEARN' (16).",
+  "thumbnail_text": "How UX research works",
+  "text": {
+    "hd": "How UX research works",
+    "n1": "Ask users",
+    "n2": "Watch them use it",
+    "l1": "interviews",
+    "l2": "usability tests"
+  },
+  "images": {
+    "bg": "../../assets/scene/g/s_459.5.jpg",
+    "cut": "../../assets/scene/g/mask3/s_459.5.png"
+  },
+  "vars": {
+    "--bgb": "0.9",
+    "--meb": "1.05"
+  },
+  "titles": [
+    "7 UX Research Methods, From Interviews to A/B Tests",
+    "UX Research for Beginners: What It Is and How It Works",
+    "UX Research for Beginners: Watch Users, Don't Just Ask"
+  ],
+  "title": "7 UX Research Methods, From Interviews to A/B Tests",
+  "set": 3,
+  "kind": "collage"
+}

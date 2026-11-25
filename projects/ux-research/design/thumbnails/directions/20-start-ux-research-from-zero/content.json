@@ -1,0 +1,29 @@
+{
+  "direction": "Big-face close crop: her calm face fills the right half, whole head in frame; on an off-black block on the left, 'UX research with 0 experience' with a giant yellow zero. References: yt 'Never get distracted again' (11, face + text block), 'Zero to Data scientist' (27), 'THEY LIED TO US' (24b).",
+  "thumbnail_text": "UX research with 0 experience",
+  "text": {
+    "hd": "UX research",
+    "from": "with",
+    "zero": "0",
+    "exp": "experience"
+  },
+  "images": {
+    "bg": "../../assets/scene/g2/s_9.5.jpg",
+    "cut": "../../assets/scene/g2/cut/s_9.5.png"
+  },
+  "vars": {
+    "--ground": "#111114",
+    "--accent": "#FFD84D",
+    "--meb": "1.02"
+  },
+  "titles": [
+    "How to Become a UX Researcher With No Experience",
+    "How to Get Into UX Research With No Experience",
+    "UX Research for Beginners: What It Is and How It Works"
+  ],
+  "title": "How to Become a UX Researcher With No Experience",
+  "set": 3,
+  "kind": "other",
+  "scores": "critic scores R1 6.5 · R2 7 · R3 7 · R4 7 · R5 7.5",
+  "recommended": false
+}

@@ -1,0 +1,32 @@
+{
+  "direction": "A printed MARRIAGE RECORD card cut to one line: DIVORCE, on record, in red; she sits beside it, hands at her chin, thoughtful (1:58), like her best video's chin-on-hand pose. Follows viral samples 4 and 3 (a readable board, face beside it).",
+  "concept": "T3",
+  "thumbnail_text": "Even your divorce",
+  "title": "Ghana's Marriage Records Are Now Online. Should They Be?",
+  "titles": [
+    "Ghana's Marriage Records Are Now Online. Should They Be?",
+    "Your Divorce, Searchable by Name? Ghana Just Did It",
+    "Ghana Put Every Marriage and Divorce Online. Good Idea?"
+  ],
+  "scores": "a 3/5 · 4/6 · 3/6 | b 8/8 · 8/7 · 8/7 | c 6 · 5 · 6",
+  "recommended": false,
+  "text": {
+    "line1": "even your",
+    "line2": "DIVORCE",
+    "r_h": "Marriage record",
+    "r_sub": "Registry search result",
+    "r_k1": "Name",
+    "r_v1": "[name]",
+    "r_k2": "Spouse",
+    "r_v2": "[name]",
+    "r_k3": "Wedding",
+    "r_v3": "[date]",
+    "r_k4": "Divorce",
+    "r_v4": "On record"
+  },
+  "images": {
+    "scene": "../../assets/scene/warm/s_118.75.jpg",
+    "front": "../../assets/scene/warm/mask/s_118.75.png"
+  },
+  "vars": {}
+}

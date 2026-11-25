@@ -1,0 +1,26 @@
+{
+  "text": {
+    "a": "is <em>10 min</em><br>enough?"
+  },
+  "images": {
+    "me": "../../assets/photo/oredev/od-55642230148-cut.png"
+  },
+  "kind": "flat black + her cut-out thinking on the left + one question with the number in red + the real paper under it",
+  "board": "pick1119-43 (\"How to never procrastinate\": figure left on black, \"is 3:32 too long?\" with the number red)",
+  "fonts": [
+    "thumbs-10 Poppins Bold lowercase, white + red key word #E8352B (Thumbnails 84)"
+  ],
+  "colours": "thumbs-10: #FFFFFF + #E8352B on #000000",
+  "photo": "Øredev 2026 photo 55642230148 (orange top, hand at chin), Enhance photo --bg keep --strength 0.5, cut-out",
+  "thumbnail_text": "is 10 min enough?",
+  "titles": [
+    "How to Know if a Research Paper Is Worth Reading",
+    "Can You Judge a Research Paper in 10 Minutes?",
+    "How to Skim a Research Paper Before You Commit to It"
+  ],
+  "direction": "Copies pick1119-43: one person on black on the left, a short question with a number in red on the right. The number is true: Keshav's first pass takes 5-10 minutes and tells you whether to read on.",
+  "nudge": {},
+  "vars": {},
+  "class": "no-lift",
+  "title": "How to Know if a Research Paper Is Worth Reading"
+}

@@ -1,0 +1,28 @@
+{
+ "label": "Editor test (agent)",
+ "auto": false,
+ "savedAt": 1790869572734,
+ "content": {
+  "direction": "Face + book + 3-word hook",
+  "title": "How I Remember the Non-Fiction I Read",
+  "text": {
+   "line1": "Read the",
+   "line2": "contents",
+   "line3": "today."
+  },
+  "images": {
+   "person": "../../assets/cut/grin.png"
+  },
+  "vars": {
+   "--x": "430px",
+   "--y": "6px",
+   "--w": "912px"
+  },
+  "nudge": {
+   "img:person": {
+    "dx": 110,
+    "dy": -55
+   }
+  }
+ }
+}

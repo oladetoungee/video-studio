@@ -1,0 +1,27 @@
+{
+  "direction": "Collage: her open hands, three method labels floating around her like notes (interviews, usability tests, surveys), and the topic in a big warm serif on a solid black band across the bottom. References: viral collage 'Time to lock in.' (labels around the person), yt 'HELPED ME LEARN' (16), Pinterest editorial bands.",
+  "thumbnail_text": "UX research methods",
+  "text": {
+    "hd": "UX research methods",
+    "l1": "interviews",
+    "l2": "usability tests",
+    "l3": "surveys"
+  },
+  "images": {
+    "bg": "../../assets/scene/g2/s_459.5.jpg",
+    "cut": "../../assets/scene/g2/cut/s_459.5.png"
+  },
+  "vars": {
+    "--meb": "1.02"
+  },
+  "titles": [
+    "7 UX Research Methods, From Interviews to A/B Tests",
+    "How Is UX Research Done? Interviews, Tests and Surveys",
+    "UX Research for Beginners: What It Is and How It Works"
+  ],
+  "title": "7 UX Research Methods, From Interviews to A/B Tests",
+  "set": 3,
+  "kind": "collage",
+  "scores": "critic scores new in R2: R2 6.5 · R3 7 · R4 7 · R5 7.5",
+  "recommended": false
+}

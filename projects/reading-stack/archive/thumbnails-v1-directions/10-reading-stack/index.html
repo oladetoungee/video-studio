@@ -1,0 +1,27 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../lib/base.css"><style>
+.t{--ground:var(--paper);--fg:var(--ink);--accent:var(--orange)}
+.h{position:absolute;left:48px;top:44px;color:var(--fg);font-size:var(--hs,138px);white-space:nowrap}
+.h .serif{font-size:calc(var(--hs,138px) * 1.13);letter-spacing:-.02em;text-transform:none}
+img.cut{left:var(--x);top:var(--y);width:var(--w)}
+.stack{position:absolute;left:var(--sx,150px);top:var(--sy,300px);width:var(--sw,980px)}
+.sp{position:relative;height:var(--sh,104px);border:3px solid var(--ink);margin-top:-3px;display:flex;align-items:center;padding:0 30px;gap:24px}
+.sp .ti{font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:var(--ts,38px);letter-spacing:-.01em;white-space:nowrap}
+.sp .au{font-family:'DM Mono',monospace;font-weight:500;font-size:16px;letter-spacing:.1em;text-transform:uppercase;margin-left:auto;white-space:nowrap;font-size:14px}
+.sp.off .ti,.sp.off .au{opacity:.45}
+.strike{position:absolute;left:18px;right:18px;top:50%;height:6px;background:var(--accent);transform:rotate(-1.2deg)}
+.note{position:absolute;right:-6px;top:-34px;color:var(--accent)}
+</style></head><body><div class="t"><div class="grid dark"></div>
+<img class="cut" data-img="person" alt=""><div class="h disp" data-k="headline"></div>
+<div class="stack" id="stack" data-move="stack"></div>
+</div>
+<script>
+window.layout = c => {
+  const s = document.getElementById('stack');
+  (c.books || []).forEach((b, i) => {
+    const d = document.createElement('div'); d.className = 'sp' + (b.off ? ' off' : '');
+    d.style.background = b.bg; d.style.color = b.fg; d.style.marginLeft = (b.shift || 0) + 'px'; d.style.width = (b.width || 100) + '%';
+    d.innerHTML = '<span class="ti" data-k="books.' + i + '.title">' + b.title + '</span><span class="au">' + b.author + '</span>' + (b.off ? '<i class="strike"></i>' : '') + (b.note ? '<span class="note mono" data-k="books.' + i + '.note">' + b.note + '</span>' : '');
+    s.appendChild(d);
+  });
+};
+</script><script src="../../lib/bind.js"></script></body></html>

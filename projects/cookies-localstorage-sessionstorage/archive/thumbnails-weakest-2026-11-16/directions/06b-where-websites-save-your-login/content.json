@@ -1,0 +1,34 @@
+{
+ "direction": "06b (2026-11-16 rework of 06, which scored 6/7 cold: small table heads at phone size, the words a puzzle). Her own Database Indexes thumbnail's composition (Thumbnails 125): pale grid ground, the promise huge top left (Where websites save your login & cart), a tilted dark table below it with three big rows (cookie = login, localStorage = cart (lit), sessionStorage = form), no column heads; she sits large on the right, amused. The old 06 stays beside it.",
+ "thumbnail_text": "Where websites save your login & cart",
+ "kind": "flat",
+ "recommended": false,
+ "titles": [
+  "localStorage vs sessionStorage vs Cookies (What Goes Where)",
+  "Browser Storage Explained: Cookies, localStorage and sessionStorage",
+  "Where Online Shops Keep Your Login, Cart and Form"
+ ],
+ "text": {
+  "hd": "Where websites save<br>your login &amp; cart",
+  "k1": "cookie",
+  "v1": "login",
+  "k2": "localStorage",
+  "v2": "cart",
+  "k3": "sessionStorage",
+  "v3": "form"
+ },
+ "images": {
+  "me": "../../assets/shoot/1558-hard.png"
+ },
+ "vars": {
+  "--ground": "#F2F3C4",
+  "--grid": "#E4E5B2",
+  "--ink": "#2A1F6E"
+ },
+ "board": "Thumbnails 125 (her own Database Indexes thumbnail: grid ground, topic name huge top left, index card -> arrow -> highlighted table row, her small bottom right)",
+ "fonts": "Font 91 (pair-16: Bricolage Grotesque 800 + DM Mono, navy #2A1F6E on pale #F2F3C4, Design 409)",
+ "colours": "Font 91 specimen: navy #2A1F6E on pale yellow #F2F3C4 (grid a few % darker, same hue); table navy with the lit row in the pale ground colour",
+ "title": "localStorage vs sessionStorage vs Cookies (What Goes Where)",
+ "class": "no-lift",
+ "scores": "new 2026-11-16, see STATUS.md"
+}

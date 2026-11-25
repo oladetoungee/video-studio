@@ -1,0 +1,230 @@
+/* the-edge-case-you-think-is-impossible carousels (2026-11-03): the film's look B "THE FIELD". Grounds: accent = lime #D4F04A
+   (default), ink = #0C0C0C, card = white. Every edge case is something a person types or clicks, drawn at poster size as a
+   white form field with a thick ink outline; what goes wrong is the ONE accent, error red #FF3B1F (*word* = a red block with
+   white letters). Onest 800/500 display and body, JetBrains Mono labels (>= 32 px). Real screenshots never altered, credited. */
+@font-face { font-family: 'Onest'; src: url('fonts/Onest-800.ttf') format('truetype'); font-weight: 800; }
+@font-face { font-family: 'Onest'; src: url('fonts/Onest-500.ttf') format('truetype'); font-weight: 500; }
+@font-face { font-family: 'JB Mono'; src: url('fonts/JBMono-800.ttf') format('truetype'); font-weight: 800; }
+@font-face { font-family: 'JB Mono'; src: url('fonts/JBMono-500.ttf') format('truetype'); font-weight: 500; }
+@font-face { font-family: 'Plate'; src: url('fonts/BarlowCond-800.ttf') format('truetype'); }
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { background: #2a2a2e; }
+body { font-family: 'Onest', sans-serif; padding: 40px; display: flex; flex-direction: column; gap: 40px; align-items: flex-start; }
+html.v-slide body, html.v-strip body { padding: 0; gap: 0; }
+html.v-strip body { flex-direction: row; }
+@media print { body { padding: 0; gap: 0; } .slide { break-after: page; } }
+@page { margin: 0; }
+
+.slide { position: relative; width: var(--W); height: var(--H); overflow: hidden; background: var(--bg); color: var(--fg); flex: none; }
+.g-ink    { --bg: #0C0C0C; --fg: #FFFFFF; --sub: rgba(255,255,255,.84); --mid: rgba(255,255,255,.62); --line: rgba(255,255,255,.22); }
+.g-card, .g-paper { --bg: #FFFFFF; --fg: #0C0C0C; --sub: rgba(12,12,12,.8); --mid: rgba(12,12,12,.6); --line: rgba(12,12,12,.18); }
+.g-accent { --bg: var(--acc); --fg: #0C0C0C; --sub: rgba(12,12,12,.84); --mid: rgba(12,12,12,.64); --line: rgba(12,12,12,.22); }
+
+.main { position: absolute; left: 80px; right: 80px; top: 96px; bottom: 150px; display: flex; flex-direction: column; }
+.push { margin-top: auto; }
+.disp { font-family: 'Onest', sans-serif; font-weight: 800; line-height: 1.08; text-wrap: balance; letter-spacing: -0.04em; color: var(--fg); }
+/* *word* = the error marker: a red block, white letters */
+.acc { background: #FF3B1F; color: #FFFFFF; padding: 0 .08em; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+.body { font-size: 40px; line-height: 1.3; font-weight: 500; letter-spacing: -0.01em; color: var(--sub); text-wrap: pretty; }
+.bal { text-wrap: balance; }
+.nw { white-space: nowrap; }
+.mono { font-family: 'JB Mono', monospace; font-weight: 800; font-size: 32px; letter-spacing: .04em; text-transform: uppercase; }
+.lab { line-height: 1.2; }
+.chip { display: inline-flex; align-self: flex-start; align-items: center; gap: 18px; padding: 10px 20px 12px; background: var(--fg); color: var(--bg); }
+.chip b { font-family: 'JB Mono'; font-weight: 800; font-size: 34px; line-height: 1; letter-spacing: .04em; text-transform: uppercase; }
+
+.foot { position: absolute; left: 80px; right: 80px; bottom: 56px; display: flex; justify-content: space-between; align-items: center; font-family: 'JB Mono'; font-weight: 500; font-size: 34px; color: var(--mid); }
+.foot .num b { color: var(--fg); font-weight: 800; }
+.meter { display: flex; gap: 6px; }
+.meter i { width: 26px; height: 8px; background: var(--line); }
+.meter i.on { background: var(--fg); }
+
+/* the field */
+.ui { background: #FFFFFF; color: #0C0C0C; }
+.g-card .ui { outline: 6px solid #0C0C0C; outline-offset: -6px; }
+.form { display: flex; flex-direction: column; gap: 30px; }
+.fl .lab { font-family: 'JB Mono'; font-weight: 800; font-size: 32px; letter-spacing: .06em; text-transform: uppercase; color: var(--fg); margin-bottom: 12px; }
+.fl .box { background: #FFFFFF; color: #0C0C0C; border: 8px solid #0C0C0C; padding: 10px 26px 14px; font-weight: 800; font-size: 84px; letter-spacing: -.035em; line-height: 1.1; white-space: nowrap; }
+.fl .box.m { font-family: 'JB Mono'; letter-spacing: -.02em; font-size: 72px; }
+.fl.err .lab { color: #FF3B1F; }
+.fl.err .box { border-color: #FF3B1F; }
+.fl .msg { color: #FF3B1F; font-weight: 800; font-size: 40px; letter-spacing: -.02em; margin-top: 14px; display: flex; gap: 14px; align-items: center; }
+.bang { display: inline-flex; width: 46px; height: 46px; border-radius: 50%; background: #FF3B1F; color: #fff; align-items: center; justify-content: center; font-size: 32px; flex: none; }
+.g-ink .fl.err .lab { color: #FF3B1F; }
+
+/* button + orders */
+.btnx { display: inline-block; background: #0C0C0C; color: #fff; font-weight: 800; font-size: 76px; letter-spacing: -.02em; padding: 22px 54px 28px; }
+.g-ink .btnx { background: #fff; color: #0C0C0C; }
+.cur { position: relative; width: 84px; height: 112px; margin-left: -60px; vertical-align: -70px; }
+.ord { margin-top: 40px; padding: 24px 34px 10px; }
+.rowx { display: flex; justify-content: space-between; align-items: baseline; gap: 24px; font-size: 50px; font-weight: 800; letter-spacing: -.02em; padding: 18px 0; border-top: 3px solid rgba(12,12,12,.12); }
+.rowx .v { font-family: 'JB Mono'; font-weight: 800; }
+.rowx.dup { color: #FF3B1F; }
+
+/* gift cards */
+.gcs { display: flex; flex-direction: column; gap: 30px; }
+.gc { padding: 26px 32px 26px; }
+.g3 { display: flex; gap: 18px; margin-top: 16px; }
+.g3 .g { flex: 1; height: 150px; background: #0C0C0C; color: #fff; border-radius: 18px; display: flex; align-items: flex-end; padding: 14px 20px; font-family: 'JB Mono'; font-weight: 800; font-size: 52px; }
+.gc.r .g { background: #FF3B1F; }
+.gc .tot { font-family: 'JB Mono'; font-weight: 800; font-size: 72px; margin-top: 16px; letter-spacing: -.02em; }
+
+/* stock */
+.stk2 { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: start; }
+.prod { padding: 26px; }
+.prod .ph { height: 260px; background: #E8E5DC; background-image: linear-gradient(135deg, transparent 46%, rgba(12,12,12,.14) 46% 54%, transparent 54%); }
+.prod b { display: block; font-size: 52px; letter-spacing: -.03em; margin-top: 20px; }
+.prod .left { color: #FF3B1F; margin-top: 10px; }
+.oks { display: flex; flex-direction: column; gap: 26px; }
+.ok { padding: 26px 28px; }
+.ok b { display: block; font-size: 60px; letter-spacing: -.03em; margin-top: 8px; }
+.ok.r { background: #FF3B1F; color: #fff; }
+
+/* code */
+.codex { background: #0C0C0C; color: #fff; font-family: 'JB Mono'; font-weight: 500; font-size: 40px; line-height: 1.4; padding: 30px 36px; margin-top: 40px; white-space: pre-wrap; }
+.g-ink .codex { background: #fff; color: #0C0C0C; }
+.codex b { font-weight: 800; }
+.codex .r { background: #FF3B1F; color: #fff; }
+.codex .g { opacity: .45; }
+
+/* plate + fines */
+.pl { position: relative; height: 640px; }
+.plate { position: absolute; left: 0; top: 0; width: 720px; height: 360px; background: #fff; border: 16px solid #0C0C0C; border-radius: 34px; color: #0C0C0C; display: flex; flex-direction: column; align-items: center; justify-content: center; transform: rotate(-3deg); }
+.plate::before, .plate::after { content: ""; position: absolute; top: 9%; width: 30px; height: 30px; border-radius: 50%; background: #0C0C0C; }
+.plate::before { left: 14%; } .plate::after { right: 14%; }
+.plate .pt { font-family: 'Plate'; font-size: 270px; line-height: .85; letter-spacing: .02em; }
+.plate .ps { font-family: 'JB Mono'; font-weight: 800; font-size: 32px; letter-spacing: .3em; text-transform: uppercase; }
+.tks { position: absolute; left: 470px; top: 330px; }
+.tk { position: absolute; width: 300px; background: #fff; color: #0C0C0C; box-shadow: 0 14px 30px rgba(0,0,0,.25); }
+.tk .band { background: #FF3B1F; color: #fff; font-family: 'JB Mono'; font-weight: 800; font-size: 32px; letter-spacing: .04em; padding: 12px 16px; }
+.tk .ln { height: 12px; margin: 16px 16px 0; background: rgba(12,12,12,.14); }
+.tk .ln.s { width: 55%; }
+.tk .bc { height: 46px; margin: 18px 16px 18px; background: repeating-linear-gradient(90deg, #0C0C0C 0 4px, transparent 4px 8px, #0C0C0C 8px 10px, transparent 10px 15px); }
+.fine { position: absolute; left: 0; top: 470px; font-weight: 800; font-size: 76px; letter-spacing: -.04em; background: #FF3B1F; color: #fff; padding: 4px 18px 10px; }
+
+/* clocks */
+.clks { display: flex; flex-direction: column; gap: 30px; }
+.clk { background: #fff; color: #0C0C0C; padding: 22px 34px 26px; display: grid; grid-template-columns: 1fr auto; align-items: end; column-gap: 30px; }
+.clk .mono { grid-column: 1 / -1; opacity: .65; }
+.clk .t { font-family: 'JB Mono'; font-weight: 800; font-size: 150px; letter-spacing: -.04em; line-height: 1; }
+.clk .n { font-weight: 800; font-size: 44px; letter-spacing: -.02em; padding-bottom: 18px; }
+.clk.r { background: #FF3B1F; color: #fff; }
+
+/* bytes */
+.cnt { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 40px; }
+.cnt .c { padding: 24px 30px; }
+.cnt .c .mono { opacity: .65; }
+.cnt .c .n { font-family: 'JB Mono'; font-weight: 800; font-size: 150px; line-height: 1; margin-top: 8px; letter-spacing: -.04em; }
+.cnt .c.r { background: #FF3B1F; color: #fff; }
+.cnt .c.r .mono { opacity: .9; }
+
+/* quote */
+.qt { padding: 46px 50px 44px; }
+.qt .q { font-weight: 800; font-size: 54px; line-height: 1.2; letter-spacing: -.03em; }
+.qt .by { margin-top: 26px; opacity: .65; }
+
+/* real screenshot, untouched, credited */
+.shot { position: relative; background: #fff; padding: 18px; box-shadow: 0 24px 50px rgba(0,0,0,.2); }
+.shot img { display: block; width: 100%; }
+.shot .cr { position: absolute; left: 0; top: 100%; margin-top: 16px; font-family: 'JB Mono'; font-weight: 800; font-size: 32px; letter-spacing: .02em; text-transform: uppercase; color: var(--mid); white-space: nowrap; }
+
+/* end: her photo as a polaroid */
+.pol { position: absolute; background: #FFFFFF; padding: 14px 14px 0; box-shadow: 0 20px 40px rgba(0,0,0,.25); }
+.pol img { display: block; width: 100%; object-fit: cover; }
+.pol .cap { font-family: 'JB Mono'; font-weight: 800; font-size: 32px; color: #0C0C0C; padding: 12px 4px 14px; text-transform: uppercase; letter-spacing: .02em; white-space: nowrap; overflow: hidden; }
+.handle { display: inline-block; font-family: 'Onest'; font-weight: 800; letter-spacing: -.03em; font-size: 76px; line-height: 1; background: var(--fg); color: var(--bg); padding: 12px 22px 18px; }
+/* a letter with stacked tone marks (ọ̀): Onest has no mark anchors for it, so that one letter is drawn in Helvetica Neue */
+.cmb { letter-spacing: 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-weight: 800; }
+/* fit fixes (2026-11-03) */
+.l-cover .fl .box { font-size: 72px; }
+.l-cover .form { gap: 22px; }
+.g3 .g { height: 110px; }
+.gcs { gap: 22px; }
+.gc { padding: 20px 28px; }
+.gc .tot { font-size: 60px; margin-top: 10px; }
+.pl { height: 560px; }
+.plate { width: 640px; height: 320px; }
+.plate .pt { font-size: 240px; }
+.tks { left: 400px; top: 290px; }
+.tk { width: 260px; }
+.fine { top: 410px; }
+.prod .ph { display: none; }
+.prod b { margin-top: 0; font-size: 60px; }
+.prod { padding: 34px 30px; }
+.prod .left { font-size: 40px; }
+/* critic round 1 (2026-11-03): variety + spacing */
+.l-trick .main, .l-visual .main, .l-punch .main, .l-cover .main { justify-content: center; }
+.l-statement .main { justify-content: flex-start; }
+.g-red { --bg: #FF3B1F; --fg: #FFFFFF; --sub: rgba(255,255,255,.92); --mid: rgba(255,255,255,.75); --line: rgba(255,255,255,.3); }
+.g-red .acc { background: #0C0C0C; }
+.g-ink .shot .cr { color: #BDBDBD; }
+.led { padding: 24px 34px 26px; }
+.led .rowx { font-size: 44px; }
+.ltot { display: flex; align-items: baseline; gap: 26px; margin-top: 18px; padding-top: 18px; border-top: 6px solid #0C0C0C; }
+.ltot .mono { flex: 1; }
+.ltot .was { font-family: 'JB Mono'; font-weight: 800; font-size: 64px; opacity: .4; text-decoration: line-through; }
+.ltot .now { font-family: 'JB Mono'; font-weight: 800; font-size: 96px; color: #FF3B1F; }
+.clx { position: relative; padding-top: 140px; }
+.clx .ck { position: absolute; color: var(--fg); font-size: 40px; transform: rotate(-6deg); }
+.clk .n { font-size: 48px; }
+.qt .q { font-weight: 500; font-size: 42px; line-height: 1.28; }
+.codex { font-size: 46px; }
+.pl { height: 520px; }
+.plate { z-index: 2; }
+.tks { left: 300px; top: 190px; z-index: 1; }
+.fine { top: 400px; z-index: 3; }
+/* NULL slide: tickets fanned beside the plate, never cut by it */
+.plate { width: 540px; height: 290px; }
+.plate .pt { font-size: 210px; }
+.tks { left: 530px; top: 30px; }
+.tk { width: 230px; }
+.tk .band { font-size: 32px; padding: 10px 12px; letter-spacing: 0; }
+.fine { top: 380px; }
+.pl { height: 500px; }
+.tks .tk:not(:last-child) .band { color: transparent; }
+.plate .ps { letter-spacing: .12em; font-size: 32px; margin-top: 18px; }
+.plate::before, .plate::after { top: 7%; width: 24px; height: 24px; }
+.plate::before { left: 7%; } .plate::after { right: 7%; }
+.l-end .pol { width: 310px !important; }
+.l-end .pol img { height: 340px !important; }
+
+/* ===== 2026-11-07: her type set 05 "Warm serif + mono" (TYPE-SYSTEM.md) + no thick lines. Overrides everything above. ===== */
+@font-face { font-family: 'DSerif'; src: url('fonts/DMSerifDisplay-Regular.ttf') format('truetype'); }
+@font-face { font-family: 'DMono'; src: url('fonts/DMMono-Medium.ttf') format('truetype'); font-weight: 500; }
+@font-face { font-family: 'ITight'; src: url('fonts/InterTightExtraBold.ttf') format('truetype'); font-weight: 800; }
+@font-face { font-family: 'ITight'; src: url('fonts/InterTightMedium.ttf') format('truetype'); font-weight: 500; }
+body { font-family: 'ITight', sans-serif; }
+.disp { font-family: 'DSerif', serif !important; font-weight: 400 !important; letter-spacing: -.025em !important; line-height: 1.04 !important; }
+.acc { background: none !important; color: #FF3B1F !important; padding: 0 !important; }
+.g-red .acc, .g-ink .acc.blk { color: #FFFFFF !important; }
+.g-red .disp { color: #FFFFFF; }
+.body { font-family: 'ITight', sans-serif !important; font-weight: 500 !important; }
+.mono, .chip b, .foot, .fl .lab, .fl .msg, .ltot .mono, .tk .band, .pol .cap, .shot .cr, .qt .by, .cnt .c .mono, .clk .mono, .ok .mono, .prod .left, .ord .mono, .led .mono
+  { font-family: 'DMono', monospace !important; font-weight: 500 !important; }
+.chip { background: none !important; padding: 0 !important; }
+.chip b { color: var(--fg) !important; letter-spacing: .14em !important; font-size: 32px !important; }
+.g-ink .chip b { color: #FFFFFF !important; }
+/* fields: flat white blocks, error = red text + 2 px red rule */
+.fl .box { border: 0 !important; font-family: 'ITight', sans-serif !important; font-weight: 800 !important; }
+.fl .box.m { font-family: 'DMono', monospace !important; font-weight: 500 !important; }
+.fl.err .box { color: #FF3B1F; box-shadow: inset 0 -2px 0 #FF3B1F; }
+.g-card .fl .box { background: #EAE6DA; }
+.g-card .ui { outline: 0 !important; }
+.g-card { --bg: #FFFFFF; }
+.btnx, .rowx, .prod b, .ok b, .gc .tot, .ltot .now, .ltot .was, .clk .t, .cnt .c .n, .plate .pt, .codex { font-family: 'ITight', sans-serif !important; }
+.clk .t, .cnt .c .n, .ltot .now, .ltot .was, .rowx .v { font-family: 'DMono', monospace !important; font-weight: 500 !important; }
+.codex { font-family: 'DMono', monospace !important; font-weight: 400 !important; }
+.qt .q { font-family: 'DSerif', serif !important; font-weight: 400 !important; font-size: 46px !important; line-height: 1.2 !important; }
+.ok b, .prod b { font-family: 'DSerif', serif !important; font-weight: 400 !important; }
+.plate { border: 0 !important; box-shadow: 0 18px 40px rgba(0,0,0,.22); }
+.plate .pt { font-weight: 800 !important; }
+.ltot { border-top: 2px solid #0C0C0C !important; }
+.rowx { border-bottom: 1px solid rgba(12,12,12,.14) !important; border-top: 0 !important; }
+.ord .rowx:first-of-type { border-top: 0 !important; }
+.handle { font-family: 'DSerif', serif !important; font-weight: 400 !important; background: none !important; color: var(--fg) !important; padding: 0 !important; font-size: 84px !important; }
+.fine { font-family: 'DSerif', serif !important; background: none !important; color: #FF3B1F !important; padding: 0 !important; font-size: 84px !important; }
+.cnt .c.r, .clk.r, .ok.r, .gc.r .g { border: 0 !important; }
+.cmb { font-family: 'Helvetica Neue', Arial, sans-serif !important; font-weight: 700 !important; }
+.g-card .ui { background: #EAE6DA !important; } .g-card .cnt .c.r, .g-card .ok.r { background: #FF3B1F !important; }
+.g-ink .shot { box-shadow: none !important; } .qt .q { font-size: 40px !important; }

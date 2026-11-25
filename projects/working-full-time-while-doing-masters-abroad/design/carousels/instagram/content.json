@@ -1,0 +1,264 @@
+{
+ "_help": "Edit text here (or in the studio), then run: node shared/build.mjs instagram (from design/carousels). Markup: *word* = accent colour, \\n = line break.",
+ "width": 1080,
+ "height": 1350,
+ "accent": "#C8102E",
+ "accentOnInk": "#E8344F",
+ "deck": "instagram",
+ "docTitle": "How I work full time while doing a master's abroad (Instagram)",
+ "slides": [
+  {
+   "layout": "cover",
+   "ground": "ink",
+   "title": "How I work full time while doing a *master's* abroad",
+   "size": 136,
+   "sub": "I'm a software developer in Estonia, and I'm also doing a full-time master's. These are the things that help me.",
+   "subSize": 42,
+   "polaroid": {
+    "img": "gbemi-564.jpg",
+    "caption": "Tallinn"
+   },
+   "polY": 716,
+   "polX": 80,
+   "stubY": 880,
+   "stub": [
+    {
+     "k": "WORK",
+     "v": "09:00-17:00"
+    },
+    {
+     "k": "CLASS",
+     "v": "18:00-20:00",
+     "red": true
+    }
+   ]
+  },
+  {
+   "layout": "tip",
+   "ground": "ink",
+   "num": "01",
+   "title": "Check if students can *work* where you study",
+   "size": 100,
+   "body": "In Estonia there's no limit on the hours an international student can work. You still have to stay a full-time student, because dropping to part-time can put your residence permit at risk.",
+   "shot": {
+    "img": "sie-hours.png",
+    "credit": "studyinestonia.ee, Working · 2 Nov 2026",
+    "w": 820
+   },
+   "rot": -1.5
+  },
+  {
+   "layout": "tip",
+   "ground": "paper",
+   "num": "02",
+   "title": "Know your *credits* before the semester gets busy",
+   "size": 100,
+   "body": "In Estonia, full-time means at least 45 ECTS by the end of each study year. Your school may count it its own way, so check your study rules early.",
+   "shot": {
+    "img": "tt-45-2l.png",
+    "credit": "taltech.ee, practical information · 2 Nov 2026",
+    "w": 860
+   },
+   "rot": -1
+  },
+  {
+   "layout": "stamps",
+   "ground": "ink",
+   "title": "Give your thesis and internship *more time*",
+   "size": 110,
+   "marks": [
+    {
+     "t": "6-8 weeks",
+     "strike": true,
+     "rot": -3
+    },
+    {
+     "t": "10 weeks",
+     "fill": true,
+     "rot": 3,
+     "x": 120
+    }
+   ],
+   "body": "If you think something big will take six to eight weeks, plan for ten.",
+   "num": "03"
+  },
+  {
+   "layout": "week",
+   "ground": "paper",
+   "title": "Block your week from what *can't move*",
+   "size": 100,
+   "body": "I put in my classes, deadlines and work meetings first. Then my study time gets its own slot, like Tuesday evening for reading.",
+   "week": {
+    "w": 920,
+    "h": 520,
+    "days": [
+     "MON",
+     "TUE",
+     "WED"
+    ],
+    "blocks": [
+     {
+      "d": 0,
+      "s": 9,
+      "e": 17,
+      "k": "w",
+      "t": "work"
+     },
+     {
+      "d": 1,
+      "s": 9,
+      "e": 17,
+      "k": "w",
+      "t": "work"
+     },
+     {
+      "d": 2,
+      "s": 9,
+      "e": 17,
+      "k": "w",
+      "t": "work"
+     },
+     {
+      "d": 0,
+      "s": 18,
+      "e": 20.5,
+      "k": "c",
+      "t": "class"
+     },
+     {
+      "d": 2,
+      "s": 18,
+      "e": 20.5,
+      "k": "c",
+      "t": "class"
+     },
+     {
+      "d": 1,
+      "s": 18.5,
+      "e": 21.5,
+      "k": "s",
+      "t": "reading"
+     }
+    ]
+   },
+   "num": "04"
+  },
+  {
+   "layout": "dials",
+   "ground": "accent",
+   "title": "Keep work and school on *one calendar*",
+   "size": 110,
+   "arcsA": [
+    {
+     "from": 9,
+     "to": 17,
+     "k": "work"
+    }
+   ],
+   "labA": "work calendar",
+   "arcsB": [
+    {
+     "from": 9,
+     "to": 17,
+     "k": "work"
+    },
+    {
+     "from": 18,
+     "to": 20.5,
+     "k": "class"
+    },
+    {
+     "from": 20.5,
+     "to": 22,
+     "k": "study"
+    }
+   ],
+   "labB": "your one day",
+   "center": "24H",
+   "body": "With two calendars it feels like you have two 24 hours. You only have one.",
+   "num": "05"
+  },
+  {
+   "layout": "tip",
+   "ground": "ink",
+   "num": "06",
+   "title": "Study leave in Estonia is up to *30 days* a year",
+   "size": 100,
+   "body": "20 of those days are paid at your average wage when it's for formal studies, like a master's.",
+   "shot": {
+    "img": "rt-13-2l.png",
+    "credit": "riigiteataja.ee, Adult Education Act § 13",
+    "w": 860
+   },
+   "rot": -1
+  },
+  {
+   "layout": "stamps",
+   "ground": "paper",
+   "num": "07",
+   "title": "Tell your manager *early*",
+   "size": 120,
+   "marks": [
+    {
+     "t": "busy week ahead",
+     "fill": true,
+     "rot": -3
+    }
+   ],
+   "body": "If you know a busy school week is coming, tell your manager before it starts. It's easier for everyone to plan around it."
+  },
+  {
+   "layout": "tip",
+   "ground": "ink",
+   "num": "08",
+   "title": "The kind of job you have *matters*",
+   "size": 110,
+   "body": "A job with fixed hours and a job with flexible hours feel very different when you also have classes. Think about which one you can study with.",
+   "stub": [
+    {
+     "k": "FIXED",
+     "v": "09:00-17:00"
+    },
+    {
+     "k": "FLEXIBLE",
+     "v": "you plan it",
+     "red": true
+    }
+   ]
+  },
+  {
+   "layout": "photo",
+   "ground": "paper",
+   "title": "Meal prep will *save your life*",
+   "size": 120,
+   "body": "Cook on the weekend, so you're not cooking on a Wednesday evening after work and class.",
+   "photo": "mealprep.png",
+   "photoW": 800,
+   "num": "09"
+  },
+  {
+   "layout": "photo",
+   "ground": "ink",
+   "num": "10",
+   "title": "Protect your *sleep*",
+   "size": 130,
+   "body": "It's easy to cut sleep when you're doing both, but your job and your studies both need you rested.",
+   "photo": "clock.png",
+   "photoW": 460
+  },
+  {
+   "layout": "end",
+   "ground": "paper",
+   "title": "Which of these do you *already do*?",
+   "size": 120,
+   "body": "I talk through all of them in my video on working full time while doing a master's abroad.",
+   "where": "Full video on YouTube",
+   "handle": "@WithGbemi",
+   "polaroid": {
+    "img": "gbemi-86.jpg",
+    "caption": "Gbemi"
+   },
+   "polY": 760
+  }
+ ]
+}

@@ -1,0 +1,74 @@
+{
+ "title": "Settling In | Tallinn University of Technology (TalTech)",
+ "h1": "Settling In",
+ "h1y": 259,
+ "found": {
+  "45 ECTS": [
+   [
+    737.640625,
+    2120.265625,
+    70.3125,
+    18
+   ]
+  ],
+  "TRP will be canceled": [
+   [
+    296.578125,
+    2060.265625,
+    168.296875,
+    18
+   ]
+  ],
+  "at least 75% of the study load": [
+   [
+    497.8125,
+    2120.265625,
+    230.71875,
+    18
+   ]
+  ]
+ },
+ "H": 19847,
+ "focus": {
+  "45 ECTS": {
+   "file": "taltech2__45-ects.png",
+   "top": 1600.265625,
+   "rects": [
+    [
+     737.640625,
+     520,
+     70.3125,
+     18
+    ]
+   ]
+  },
+  "TRP will be canceled": {
+   "file": "taltech2__trp-will-be-canceled.png",
+   "top": 1540.265625,
+   "rects": [
+    [
+     296.578125,
+     520,
+     168.296875,
+     18
+    ]
+   ]
+  },
+  "at least 75% of the study load": {
+   "file": "taltech2__at-least-75-of-the-study.png",
+   "top": 1600.265625,
+   "rects": [
+    [
+     497.8125,
+     520,
+     230.71875,
+     18
+    ]
+   ]
+  }
+ },
+ "clipTop": 139,
+ "scale": 1.5,
+ "url": "https://taltech.ee/en/practical",
+ "captured": "2026-11-02T19:27:43.256Z"
+}

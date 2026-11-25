@@ -1,0 +1,30 @@
+{
+ "music": "766",
+ "musicAt": 0,
+ "musicDb": -22,
+ "sfxDb": -4,
+ "roles": {
+  "thud": "hit-short-bass",
+  "slide": "paper-slide",
+  "marker": "marker-line",
+  "place": "card-place",
+  "tap": "tap-small-hit",
+  "flick": "card-flick",
+  "tap2": "click-box-check",
+  "pop": "pop-dry",
+  "zoom": "swipe-fast-zoom",
+  "punch": "punch-soft-quick",
+  "click": "pop-hard-click",
+  "slide2": "transition-tech-slide",
+  "shutter": "shutter-click",
+  "type": [
+   "keyboard-typing",
+   -6
+  ],
+  "check": "click-box-check",
+  "check2": "ui-select-click",
+  "tick": "clock-tick-single",
+  "riser": "riser-short-stutter",
+  "scribble": "pencil-short"
+ }
+}

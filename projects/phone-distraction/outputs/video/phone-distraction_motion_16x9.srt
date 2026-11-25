@@ -1,0 +1,1317 @@
+1
+00:00:00,400 --> 00:00:01,400
+Your phone
+
+2
+00:00:01,920 --> 00:00:02,950
+Was intentionally
+
+3
+00:00:03,500 --> 00:00:06,350
+And strategically
+designed to distract you.
+
+4
+00:00:06,410 --> 00:00:09,730
+It's the reason why you pick it up to do
+one thing and 20 minutes later, you're
+
+5
+00:00:10,140 --> 00:00:10,990
+Doing
+
+6
+00:00:11,010 --> 00:00:14,120
+A million and one other thing and you're
+forgetting the one thing that you wanted
+
+7
+00:00:14,140 --> 00:00:17,330
+To do. My name is Gbemisola, and I'm
+currently doing my master's in human-computer
+
+8
+00:00:17,680 --> 00:00:18,570
+Interaction.
+
+9
+00:00:18,590 --> 00:00:19,410
+In
+
+10
+00:00:19,430 --> 00:00:22,810
+This video, I'm going to show you
+first of all, why your attention
+
+11
+00:00:23,280 --> 00:00:28,030
+Is worth so much money, and has
+so much value in the first place.
+
+12
+00:00:28,540 --> 00:00:32,440
+Because people and corporations make a
+lot of money just from you scrolling.
+
+13
+00:00:32,500 --> 00:00:36,480
+And then I will talk about where the
+design ideas that keep you stuck on your
+
+14
+00:00:36,500 --> 00:00:40,820
+Phone come from the actual features that
+make this happen and the people who
+
+15
+00:00:40,840 --> 00:00:44,710
+Built them. And finally, what
+you can actually do about it.
+
+16
+00:00:44,940 --> 00:00:47,220
+So understand why your phone
+is designed to distract you.
+
+17
+00:00:47,240 --> 00:00:50,580
+You first have to understand something
+called the attention economy.
+
+18
+00:00:50,650 --> 00:00:51,520
+Back in
+
+19
+00:00:51,540 --> 00:00:56,300
+1971, an economist called Herbert
+Simon, who later won a Nobel Prize,
+
+20
+00:00:56,320 --> 00:01:00,230
+Wrote that a wealth of information
+creates a poverty of attention.
+
+21
+00:01:00,280 --> 00:01:03,130
+What he meant was that
+information is everywhere.
+
+22
+00:01:03,580 --> 00:01:06,630
+The thing that has now become
+scarce is your attention.
+
+23
+00:01:06,740 --> 00:01:09,580
+And there is only so much of
+human attention to go around.
+
+24
+00:01:09,880 --> 00:01:14,260
+So the attention economy is a system where
+human attention is treated as a scarce,
+
+25
+00:01:14,740 --> 00:01:17,040
+Valuable thing and it's
+traded like currency.
+
+26
+00:01:17,110 --> 00:01:19,990
+Now think about our social
+media apps make their money.
+
+27
+00:01:20,070 --> 00:01:21,840
+You don't pay Instagram to use Instagram.
+
+28
+00:01:21,860 --> 00:01:23,660
+The majority of people that use
+Instagram don't pay Instagram.
+
+29
+00:01:23,680 --> 00:01:25,280
+You don't pay TikTok.
+You don't pay Facebook.
+
+30
+00:01:25,720 --> 00:01:27,110
+People call it
+
+31
+00:01:27,580 --> 00:01:30,660
+A free service, but in
+a way it is monetised.
+
+32
+00:01:30,840 --> 00:01:35,320
+They make money from your engagement
+and your attention by selling targeted
+
+33
+00:01:35,340 --> 00:01:36,340
+Advertisement.
+
+34
+00:01:36,430 --> 00:01:40,270
+So the more time you spend on
+the app, the more ads you see,
+
+35
+00:01:40,600 --> 00:01:42,560
+The more the app learns about you.
+
+36
+00:01:42,720 --> 00:01:46,950
+It's your time and your attention that
+are actually being sold in a way.
+
+37
+00:01:46,980 --> 00:01:50,940
+And that's why so many of these apps are
+built to keep you in them for as long
+
+38
+00:01:50,960 --> 00:01:52,960
+As possible. So your attention
+
+39
+00:01:53,380 --> 00:01:56,940
+Is in a way the product. Now technology
+can be designed in a way that changes
+
+40
+00:01:56,960 --> 00:02:00,220
+People's behavior. And this idea
+is called persuasive technology.
+
+41
+00:02:00,430 --> 00:02:04,140
+A lot of it traces back to a researcher
+at Stanford University called B.J.
+
+42
+00:02:04,160 --> 00:02:09,660
+Fogg. He ran a lab there called the
+persuasive technology lab and later published
+
+43
+00:02:09,680 --> 00:02:13,500
+A book on using computers to
+change what people think and do.
+
+44
+00:02:13,520 --> 00:02:17,210
+To make it more interesting,
+in 2007 B.J. Fogg.
+
+45
+00:02:17,680 --> 00:02:23,430
+Taught a famous class at Stanford
+where students use these ideas to build
+
+46
+00:02:23,910 --> 00:02:27,520
+Apps. Within weeks, their
+apps had millions of users.
+
+47
+00:02:27,540 --> 00:02:31,440
+Some of these students went on to build
+some of the popular apps that we now
+
+48
+00:02:31,460 --> 00:02:36,520
+Know. B.J. Fogg. also described a simple
+model of behavior for someone to do
+
+49
+00:02:36,540 --> 00:02:39,260
+Something. One, they need motivation.
+
+50
+00:02:39,380 --> 00:02:41,610
+Two, they need the ability to do it.
+
+51
+00:02:41,640 --> 00:02:45,920
+And three, they need a prompt. Now
+thinking in terms of social apps,
+
+52
+00:02:46,230 --> 00:02:49,320
+Think about a notification.
+The notification is the prompt.
+
+53
+00:02:49,560 --> 00:02:51,140
+Opening the app is the ability
+
+54
+00:02:51,520 --> 00:02:54,000
+To do it. And that just
+takes a single tap.
+
+55
+00:02:54,020 --> 00:02:57,600
+So it's an easy ability.
+And then the motivation.
+
+56
+00:02:57,620 --> 00:03:01,180
+The motivation, especially with social
+apps, is the curiosity about what is
+
+57
+00:03:01,200 --> 00:03:05,420
+Waiting for you there. And again, some
+of these people who studied with B.J.
+
+58
+00:03:05,440 --> 00:03:07,860
+Fogg went on to shape the
+apps that we use today.
+
+59
+00:03:07,880 --> 00:03:10,830
+So you can link how
+everything works together.
+
+60
+00:03:11,140 --> 00:03:14,380
+Mike Krieger, one of the co-founders
+of Instagram, was a student of his.
+
+61
+00:03:14,400 --> 00:03:18,260
+And so was Tristan Harris, who later
+became one of the loudest critics of this
+
+62
+00:03:18,280 --> 00:03:22,060
+Kind of design, actually. This is not to
+demonise all of the things that these
+
+63
+00:03:22,080 --> 00:03:26,160
+People did or taught. But the ideas
+that he found and taught were real.
+
+64
+00:03:26,180 --> 00:03:29,100
+And of course, the industry picked up on
+them and made a shitload of money out
+
+65
+00:03:29,120 --> 00:03:32,000
+Of them. The motivation
+is a very important one.
+
+66
+00:03:32,250 --> 00:03:36,400
+It's the curiosity that something
+on that app is waiting for you.
+
+67
+00:03:36,580 --> 00:03:40,900
+Now, the most powerful part of all of
+this is the unpredictable reward at the
+
+68
+00:03:40,920 --> 00:03:43,520
+End of it. It is the
+bedrock of so many things.
+
+69
+00:03:43,540 --> 00:03:45,300
+It is also the bedrock of gambling.
+
+70
+00:03:45,320 --> 00:03:47,720
+For example, you don't know
+what you will get out of it.
+
+71
+00:03:47,740 --> 00:03:50,850
+Sometimes nothing, sometimes a
+small thing, sometimes a big thing.
+
+72
+00:03:50,900 --> 00:03:53,280
+The same principle kind of
+applies to social media.
+
+73
+00:03:53,360 --> 00:03:56,530
+And psychologists have known this for a
+long time, that reward that you cannot
+
+74
+00:03:56,560 --> 00:04:00,920
+Predict tends to make you come back
+strongly, even more strongly than reward
+
+75
+00:04:00,940 --> 00:04:03,260
+That you can predict. If I
+know that if I do this thing,
+
+76
+00:04:03,280 --> 00:04:06,840
+I will get this thing, I probably won't
+come back to it as much as I would if
+
+77
+00:04:06,860 --> 00:04:09,460
+There was an unpredictable
+reward waiting for me.
+
+78
+00:04:09,480 --> 00:04:11,440
+And this is exactly how your phone works.
+
+79
+00:04:11,560 --> 00:04:14,960
+You don't know if there is a new
+message, a new like on your video,
+
+80
+00:04:14,980 --> 00:04:17,180
+A new video for you to see, a new gist.
+
+81
+00:04:17,350 --> 00:04:22,370
+And that's not knowing. It's exactly why
+you keep picking up your phone to check.
+
+82
+00:04:22,640 --> 00:04:25,780
+And there's so many designs that are now
+put in place to make sure that you're
+
+83
+00:04:26,160 --> 00:04:29,380
+Constantly on your phone
+and distracted by it.
+
+84
+00:04:29,640 --> 00:04:32,280
+The first of many is the pull-to-refresh.
+
+85
+00:04:32,300 --> 00:04:35,760
+You know that gesture where you drag
+your feed down and you let it go to see
+
+86
+00:04:35,780 --> 00:04:39,110
+If something new has appeared?
+That's the pull-to-refresh.
+
+87
+00:04:39,240 --> 00:04:43,124
+That feature was developed by a developer
+called Loren for a Twitter app he
+
+88
+00:04:43,144 --> 00:04:45,720
+Built, called Tweetie, around 2008. And
+
+89
+00:04:46,120 --> 00:04:49,120
+He himself later said that this
+thing is really addictive,
+
+90
+00:04:49,140 --> 00:04:52,280
+Right? So it's an addictive
+feature, an addictive gesture,
+
+91
+00:04:52,420 --> 00:04:55,600
+And it has this unpredictable
+reward again at the end of it.
+
+92
+00:04:55,620 --> 00:04:58,660
+When you pull down your feed to
+refresh, you don't know what's coming,
+
+93
+00:04:58,680 --> 00:05:00,530
+But you know something
+new will pop up, right?
+
+94
+00:05:01,110 --> 00:05:04,940
+So you keep pulling down. Another
+intentional design that keeps you stuck on
+
+95
+00:05:04,960 --> 00:05:07,200
+Your phone is the infinite scroll.
+
+96
+00:05:07,220 --> 00:05:10,420
+If you don't know what the infinite
+scroll is, it's just the ability to keep
+
+97
+00:05:10,440 --> 00:05:14,080
+Scrolling infinitely. Before this
+feature or this design was made,
+
+98
+00:05:14,360 --> 00:05:18,000
+Websites used to have pages. When you
+get to the bottom and you wanted to see
+
+99
+00:05:18,020 --> 00:05:20,730
+More content, you would
+have to click next page.
+
+100
+00:05:20,760 --> 00:05:22,940
+That click was a stopping point.
+
+101
+00:05:22,960 --> 00:05:27,020
+It's a very important moment where
+your brain has the chance to ask,
+
+102
+00:05:27,040 --> 00:05:28,880
+Do I actually want to keep going?
+
+103
+00:05:29,250 --> 00:05:34,320
+Infinite scroll was designed in
+2006 and it's removed that moment.
+
+104
+00:05:34,340 --> 00:05:35,980
+So you don't have to click anything.
+
+105
+00:05:36,000 --> 00:05:41,740
+The content just keeps loading and there
+is now no natural place or chance for
+
+106
+00:05:41,760 --> 00:05:44,850
+You to stop. There is no cue
+sent to your brain to stop.
+
+107
+00:05:45,260 --> 00:05:49,340
+If there's a button to load more, that
+button will send a cue to my brain like,
+
+108
+00:05:49,360 --> 00:05:51,740
+Okay, do I want to load more or do
+I want to drop my freaking phone?
+
+109
+00:05:51,760 --> 00:05:56,706
+But that is no longer there. If you
+notice older forms of media had stopping
+
+110
+00:05:56,726 --> 00:05:59,240
+Cues. For example, a book has chapters.
+
+111
+00:05:59,260 --> 00:06:02,520
+I do this when I read book where I try
+to get to the end of one chapter so that
+
+112
+00:06:02,540 --> 00:06:04,350
+I can drop the book and
+maybe get to something.
+
+113
+00:06:04,370 --> 00:06:06,630
+So a book has chapters,
+that's a stopping cue.
+
+114
+00:06:06,710 --> 00:06:11,560
+A TV show, TV shows used to end and then
+you'd have to wait like for the next
+
+115
+00:06:11,580 --> 00:06:13,300
+Episode for like a week. I
+remember when I was a kid,
+
+116
+00:06:13,320 --> 00:06:17,200
+I would buy movies. You'd buy season
+one and if you wanted to buy season two,
+
+117
+00:06:17,220 --> 00:06:20,050
+You'd have to go back to buy
+season two or wait for season two.
+
+118
+00:06:20,180 --> 00:06:23,320
+Those are stopping cues, but
+in the case of social apps,
+
+119
+00:06:23,340 --> 00:06:27,920
+That is taken away, right? Your feed does
+not have a last page and it's intentionally
+
+120
+00:06:27,940 --> 00:06:31,500
+Designed that way so that you can
+keep scrolling forever if you can.
+
+121
+00:06:31,520 --> 00:06:34,670
+Another design that keeps you stuck
+on your phone is the autoplay.
+
+122
+00:06:34,830 --> 00:06:38,030
+If you notice on YouTube, when a video
+ends, you don't have to do anything.
+
+123
+00:06:38,050 --> 00:06:40,680
+The next one starts playing on
+its own within a few seconds.
+
+124
+00:06:40,780 --> 00:06:43,950
+When a video is coming to an end,
+you have two decisions to make.
+
+125
+00:06:44,150 --> 00:06:47,040
+You can keep watching or you
+can decide to stop watching.
+
+126
+00:06:47,250 --> 00:06:51,400
+The problem with autoplay or what autoplay
+introduces is that you don't have
+
+127
+00:06:51,420 --> 00:06:54,960
+To decide to keep watching. That
+decision has been made for you.
+
+128
+00:06:55,430 --> 00:06:58,890
+It is where you want to stop watching
+that you now have to put in the efforts
+
+129
+00:06:59,250 --> 00:07:02,460
+To stop watching. So deciding
+to stop takes efforts,
+
+130
+00:07:02,540 --> 00:07:06,460
+But deciding to continue does not take
+any effort on the end of the user at
+
+131
+00:07:06,480 --> 00:07:08,920
+All. So you can guess which
+one happens more continuing,
+
+132
+00:07:08,940 --> 00:07:11,880
+Of course. And another thing
+that powers this is defaults.
+
+133
+00:07:11,900 --> 00:07:14,540
+On YouTube. For example,
+autoplay is on by default.
+
+134
+00:07:14,560 --> 00:07:17,740
+And most people don't change the
+settings that their app comes with.
+
+135
+00:07:17,760 --> 00:07:19,550
+So it just keeps going on like that.
+
+136
+00:07:19,590 --> 00:07:24,310
+Next up on the list of things that are
+designed to keep you on your phone is
+
+137
+00:07:24,340 --> 00:07:26,710
+Notifications and red
+badges. Most apps show
+
+138
+00:07:27,120 --> 00:07:31,120
+Notifications as red badges and that
+does not, did not happen by accident.
+
+139
+00:07:31,160 --> 00:07:32,720
+They were intentionally designed.
+
+140
+00:07:32,810 --> 00:07:36,680
+A notification is an interruption that
+someone else or something else decides
+
+141
+00:07:36,700 --> 00:07:39,820
+To send you. And the colour matters.
+
+142
+00:07:39,840 --> 00:07:44,460
+Facebook's notification icon used to be
+blue to match the rest of the site because,
+
+143
+00:07:44,480 --> 00:07:46,260
+You know, Facebook and that blue vibe.
+
+144
+00:07:46,360 --> 00:07:50,090
+According to reports, people
+barely notice the blue one.
+
+145
+00:07:50,510 --> 00:07:52,050
+So it was changed to red
+
+146
+00:07:52,400 --> 00:07:55,660
+To grab your attention. Now,
+if you look at your phone,
+
+147
+00:07:55,680 --> 00:07:59,050
+Almost every app uses a red
+badge now with a number on it.
+
+148
+00:07:59,230 --> 00:08:03,400
+That red badge, that red colour, and
+that number, it creates a small feeling
+
+149
+00:08:03,420 --> 00:08:05,040
+In your brain that something is
+
+150
+00:08:05,440 --> 00:08:07,470
+Unfinished and you need to go clear.
+
+151
+00:08:07,640 --> 00:08:10,050
+It's like a sense of urgency,
+if that makes sense.
+
+152
+00:08:10,140 --> 00:08:14,840
+There's a study from CHI,
+
+153
+00:08:15,270 --> 00:08:19,090
+Which is the main conference in my
+field, human-computer interaction,
+
+154
+00:08:19,230 --> 00:08:23,020
+Where researchers had people keep their
+phone notifications on for one week
+
+155
+00:08:23,040 --> 00:08:27,060
+And off for the other week. In the week
+where the phone notifications were on,
+
+156
+00:08:27,420 --> 00:08:31,130
+The people had more symptoms of
+inattention and hyperactivity.
+
+157
+00:08:31,610 --> 00:08:34,720
+Because that's what notifications are
+meant to do, to call your attention,
+
+158
+00:08:34,740 --> 00:08:37,340
+To make you feel like something
+urgent is waiting for you.
+
+159
+00:08:37,360 --> 00:08:38,930
+You need to open your phone, right?
+
+160
+00:08:38,950 --> 00:08:43,160
+Another reason why you cannot let go of
+your phone is likes and social approval.
+
+161
+00:08:43,180 --> 00:08:44,860
+Again, this is intentional design.
+
+162
+00:08:45,130 --> 00:08:47,920
+There was a time when likes
+on your posts didn't exist.
+
+163
+00:08:48,230 --> 00:08:52,040
+The like button launched on Facebook
+in 2009 and it has spread across every
+
+164
+00:08:52,060 --> 00:08:56,360
+Social media app since then. As a like
+or a love or something of that kind.
+
+165
+00:08:56,440 --> 00:08:58,430
+And it is also a design that is put
+
+166
+00:08:58,960 --> 00:09:00,710
+In place to keep you coming back.
+
+167
+00:09:00,770 --> 00:09:04,350
+The like button gives you a
+small burst of social approval.
+
+168
+00:09:04,640 --> 00:09:07,980
+I make a post, someone sees
+what I posted and they like it.
+
+169
+00:09:08,150 --> 00:09:12,300
+When I make that post, again, this
+goes back to the idea of unpredictable
+
+170
+00:09:12,800 --> 00:09:15,740
+Rewards, yeah? When I make
+a post and I drop my phone,
+
+171
+00:09:15,940 --> 00:09:17,790
+I don't know how many likes I will get.
+
+172
+00:09:17,890 --> 00:09:20,510
+And I don't know how many
+likes I've already gotten.
+
+173
+00:09:20,680 --> 00:09:24,700
+So, again, it's an unpredictable reward
+that I am looking forward to and it
+
+174
+00:09:24,720 --> 00:09:27,580
+Keeps me coming back. Have you ever made
+a post on social media and you keep
+
+175
+00:09:27,600 --> 00:09:31,340
+Going back to check it to see how
+many likes or reaction it has gotten.
+
+176
+00:09:31,400 --> 00:09:32,870
+That's intentional design.
+
+177
+00:09:33,220 --> 00:09:35,010
+In a way, you keep coming back.
+
+178
+00:09:35,230 --> 00:09:39,020
+There's a whole lot of research and a lot
+of claims about phone and our attention
+
+179
+00:09:39,040 --> 00:09:43,340
+And distraction. I was reading one study
+that even says that having your phone
+
+180
+00:09:43,360 --> 00:09:47,180
+On your desk, even if it's switched
+off, it makes you worse at thinking.
+
+181
+00:09:47,200 --> 00:09:49,050
+They call it the brain drain or something.
+
+182
+00:09:49,130 --> 00:09:53,970
+So, it's a very interesting topic
+that just attracts a lot of claims,
+
+183
+00:09:54,020 --> 00:09:56,330
+Especially because it
+affects a lot of people.
+
+184
+00:09:56,410 --> 00:09:58,190
+I was also reading that in February, 2026,
+
+185
+00:09:58,870 --> 00:10:03,624
+The European Commission made a preliminary
+finding that TikTok's design breaches
+
+186
+00:10:03,644 --> 00:10:07,560
+The EU's Digital Services Act.
+Now, when it comes to regulation,
+
+187
+00:10:07,580 --> 00:10:10,200
+I think the EU deserves
+like a global award.
+
+188
+00:10:10,220 --> 00:10:13,030
+Some of the regulations
+sometimes can feel overbearing,
+
+189
+00:10:13,300 --> 00:10:15,040
+But some of them are
+actually very helpful.
+
+190
+00:10:15,060 --> 00:10:18,150
+In this finding, the EU named
+infinite scroll, autoplay,
+
+191
+00:10:18,420 --> 00:10:22,220
+Push notifications, TikTok's highly
+personalised recommendation.
+
+192
+00:10:22,240 --> 00:10:25,932
+Those are the list of things
+that they named in the findings.
+
+193
+00:10:25,952 --> 00:10:31,170
+And also in July, they made the same kind
+of preliminary findings against Meta
+
+194
+00:10:31,240 --> 00:10:32,900
+For the addictive design of
+
+195
+00:10:33,380 --> 00:10:37,200
+Instagram and Facebook. I think this is
+one of the first time that a regulator
+
+196
+00:10:37,220 --> 00:10:41,100
+Has formally said that these
+features like infinite scroll,
+
+197
+00:10:42,060 --> 00:10:44,890
+Autoplay and stuff like that
+can be a legal problem.
+
+198
+00:10:44,910 --> 00:10:46,700
+I mean, it's not like these
+are final decisions yet,
+
+199
+00:10:46,720 --> 00:10:50,690
+But I live in the EU and I'm very
+curious to see how this all goes.
+
+200
+00:10:50,830 --> 00:10:54,580
+The fact that regulators are starting to
+see these designs as a problem is something
+
+201
+00:10:54,600 --> 00:10:56,090
+That I really want to see the end of.
+
+202
+00:10:56,200 --> 00:10:59,190
+So, we've gone over the
+fact that you are addicted,
+
+203
+00:10:59,320 --> 00:11:03,700
+We are addicted to our phones and their
+intentional features put in place to
+
+204
+00:11:03,720 --> 00:11:06,150
+Keep us stuck on it.
+infinite scroll, autoplay,
+
+205
+00:11:06,740 --> 00:11:10,700
+Notifications. So, what exactly
+can we, you, me, do about this?
+
+206
+00:11:10,760 --> 00:11:12,590
+This is something that I
+started to think about like,
+
+207
+00:11:12,720 --> 00:11:16,520
+Yes, way back. If I even understood
+this thing, I remember when I was 19,
+
+208
+00:11:16,540 --> 00:11:20,420
+I used to use Instagram a lot. I feel
+like if I continued using Instagram at
+
+209
+00:11:20,440 --> 00:11:24,480
+That rate, I would have turned out
+to be one influencer or something.
+
+210
+00:11:24,680 --> 00:11:30,560
+But even around that time at 19, I
+just felt strongly that it was very
+
+211
+00:11:30,580 --> 00:11:32,550
+Dysfunctional to the life
+that I wanted to live.
+
+212
+00:11:32,650 --> 00:11:35,180
+And at this time, it wasn't
+even as popular as it is now,
+
+213
+00:11:35,200 --> 00:11:39,720
+But I really felt like, nah. So, I left
+Instagram and I didn't use the app for
+
+214
+00:11:39,740 --> 00:11:40,790
+Six good years.
+
+215
+00:11:41,600 --> 00:11:45,040
+These days, my personal rule
+for social media is need.
+
+216
+00:11:45,120 --> 00:11:47,740
+This is the rule I keep for myself
+and of course, I break it sometimes.
+
+217
+00:11:47,760 --> 00:11:50,880
+The rule is that I should only
+open Twitter when I need something
+
+218
+00:11:51,280 --> 00:11:54,690
+From Twitter. And in many
+cases, my need could be, oh,
+
+219
+00:11:54,710 --> 00:11:55,760
+What are people saying about this topic?
+
+220
+00:11:55,780 --> 00:11:58,350
+Or maybe I want to like get up
+to date information or people's,
+
+221
+00:11:59,300 --> 00:12:02,010
+You know, and sometimes
+just post my own content.
+
+222
+00:12:02,410 --> 00:12:04,860
+I should only open Instagram as well
+when I need something from there.
+
+223
+00:12:04,880 --> 00:12:08,120
+I should only open TikTok when I need
+something from there and all my notifications
+
+224
+00:12:08,140 --> 00:12:11,280
+Are turned off, even WhatsApp. If
+someone's trying to reach me and they don't
+
+225
+00:12:11,300 --> 00:12:13,400
+Have my mobile number to call me directly.
+
+226
+00:12:13,420 --> 00:12:14,710
+I'll see it when I open the app.
+
+227
+00:12:15,040 --> 00:12:18,020
+And this sounds a little bit hypocritical
+because I post content on these apps
+
+228
+00:12:18,100 --> 00:12:21,440
+Myself and I want people to watch it, but
+it would do nobody any good if they're
+
+229
+00:12:21,460 --> 00:12:25,080
+All just stuck on our phones. So, if
+you want to push back on your phone use,
+
+230
+00:12:25,100 --> 00:12:28,320
+There are a few things you can do that
+are actually backed up by research.
+
+231
+00:12:28,480 --> 00:12:29,860
+You can try grayscale.
+
+232
+00:12:30,220 --> 00:12:32,820
+Most phones let you turn
+your screen black and white.
+
+233
+00:12:33,000 --> 00:12:34,760
+It's in the accessibility setting.
+
+234
+00:12:34,780 --> 00:12:36,850
+There's a study that shows that
+when people use grayscale,
+
+235
+00:12:37,200 --> 00:12:38,860
+They spend less time on their phone.
+
+236
+00:12:38,880 --> 00:12:42,690
+So, you take the colour away and your
+phone becomes a little less rewarding.
+
+237
+00:12:42,940 --> 00:12:44,800
+Turn off autoplay on YouTube and Netflix.
+
+238
+00:12:45,060 --> 00:12:46,690
+It puts the stopping point back.
+
+239
+00:12:46,990 --> 00:12:50,420
+After episode one plays. you should get
+the chance to choose whether you want
+
+240
+00:12:50,440 --> 00:12:52,140
+To continue watching or you want to stop.
+
+241
+00:12:52,350 --> 00:12:53,920
+Turn off the notifications you don't need.
+
+242
+00:12:54,420 --> 00:12:55,420
+I
+
+243
+00:12:55,640 --> 00:12:57,320
+Mean, notifications that you
+know that you do not need,
+
+244
+00:12:57,340 --> 00:12:59,320
+You will not die if you don't get
+
+245
+00:12:59,720 --> 00:13:01,770
+These notifications immediately coming.
+
+246
+00:13:02,280 --> 00:13:03,280
+Turn it off.
+
+247
+00:13:03,410 --> 00:13:06,460
+Move your distracting
+app off your home screen.
+
+248
+00:13:06,480 --> 00:13:09,800
+I use an app, a software app blocker,
+that I've been using since the start of
+
+249
+00:13:09,820 --> 00:13:12,450
+This year. I pay for the yearly
+subscription in January.
+
+250
+00:13:13,140 --> 00:13:15,570
+If I want to use Instagram
+right now, I have to
+
+251
+00:13:16,000 --> 00:13:16,680
+Go
+
+252
+00:13:16,700 --> 00:13:19,600
+Through several mountains or some
+valleys to access Instagram.
+
+253
+00:13:19,620 --> 00:13:23,060
+So, that stops me. And also,
+before you open an app,
+
+254
+00:13:23,080 --> 00:13:26,300
+I know that this is a lot of work, mental
+work, but just simply ask yourself,
+
+255
+00:13:26,320 --> 00:13:28,560
+I'm opening Instagram. What do
+I need from Instagram right now?
+
+256
+00:13:28,580 --> 00:13:30,520
+What do I need from TikTok right now?
+
+257
+00:13:30,540 --> 00:13:32,620
+Do I want to reply to someone?
+Do I want to post something?
+
+258
+00:13:32,640 --> 00:13:35,460
+Or do I just want to scroll?
+Your attention is an asset.
+
+259
+00:13:35,480 --> 00:13:36,910
+Your phone is designed
+
+260
+00:13:37,280 --> 00:13:42,040
+To hold your attention. Your attention
+is what pays for a lot of these apps.
+
+261
+00:13:42,260 --> 00:13:45,590
+And the techniques that are being
+used to hold your attention,
+
+262
+00:13:45,670 --> 00:13:47,220
+They are intentionally crafted.
+
+263
+00:13:47,240 --> 00:13:50,600
+You need to know that. So, the next
+time you're scrolling for one hour,
+
+264
+00:13:50,620 --> 00:13:53,800
+Two hour, I hope you're able to remember
+that there are people that intentionally
+
+265
+00:13:53,820 --> 00:13:54,850
+Put things
+
+266
+00:13:55,650 --> 00:13:57,950
+In place. They're all working
+
+267
+00:13:58,560 --> 00:14:00,040
+So hard for you to stay on Instagram.
+
+268
+00:14:00,060 --> 00:14:01,660
+They're working so hard
+for you to stay on TikTok.
+
+269
+00:14:01,860 --> 00:14:04,310
+And I hope that you're able
+to drop it when you want to.
+
+270
+00:14:04,440 --> 00:14:06,540
+It's not something that I've
+completely figured out either,
+
+271
+00:14:06,560 --> 00:14:09,460
+But I would think that I use social media
+a little less than the average person,
+
+272
+00:14:09,480 --> 00:14:12,170
+At least from this year, last year.
+
+273
+00:14:12,940 --> 00:14:16,240
+But I really do hope that everyone gets
+into this idea and understand that your
+
+274
+00:14:16,260 --> 00:14:17,470
+Attention is an asset.
+
+275
+00:14:18,160 --> 00:14:21,800
+And it is literally being fought
+over by different corporations.
+
+276
+00:14:21,820 --> 00:14:24,940
+And you need to take it back for
+yourself, for the people who love you,
+
+277
+00:14:24,960 --> 00:14:27,940
+The people that you love, for the
+things that are important in your life.

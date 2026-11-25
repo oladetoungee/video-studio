@@ -1,0 +1,26 @@
+{
+  "direction": "Mistake format: the query with LOWER(email) and a plain index on email gets Seq Scan (red); the fix, an index on the same expression, gets Index Scan (yellow). Her wary on the left. Real PostgreSQL behaviour. Round 2: the fix is now the expression index (the first version silently changed the query), words \"skips\" (it only skips a plain index). Round 3: labelled PostgreSQL (MySQL 8 writes the index as ((LOWER(email)))).",
+  "concept": "T06",
+  "thumbnail_text": "LOWER() skips your index",
+  "title": "Why Your Database Ignores Your Index (2 Common Mistakes)",
+  "titles": [
+    "Why Your Database Ignores Your Index (2 Common Mistakes)",
+    "Database Index Mistakes (and How to Check with EXPLAIN)",
+    "2 Database Index Mistakes (and a Postgres Gotcha)"
+  ],
+  "text": {
+    "a": "<span class=\"markr\">LOWER()</span>",
+    "b": "skips your index",
+    "c1": "WHERE LOWER(email) = 'bob@…'",
+    "s1": "Seq Scan",
+    "c2": "CREATE INDEX ON users (LOWER(email));",
+    "s2": "Index Scan",
+    "pg": "PostgreSQL"
+  },
+  "images": {
+    "scene": "../../assets/scene/f_410.2.jpg"
+  },
+  "frame": "6:50.2 (wary frown, mouth closed)",
+  "vars": {},
+  "scores": "final gate (round 4): A topic/click 4/6 · B pair 8 · C taste 6"
+}

@@ -1,0 +1,140 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>B · The Fine Print</title>
+<style>
+@font-face { font-family: 'News'; src: url(../_fonts/Newsreader.ttf); font-weight: 200 800; font-style: normal; }
+@font-face { font-family: 'News'; src: url(../_fonts/Newsreader-Italic.ttf); font-weight: 200 800; font-style: italic; }
+:root { --ground: #1F1B18; --paper: #F3EDE3; --accent: #93A6FF; --mute: #A69E92; }
+html, body { margin: 0; background: var(--ground); }
+#stage { position: relative; overflow: hidden; background: var(--ground); font-family: 'News', serif; color: var(--paper); font-optical-sizing: auto; }
+.sheet { position: absolute; transform-origin: 0 0; box-shadow: none; }
+.sheet img { position: absolute; left: 0; top: 0; display: block; }
+.mark { position: absolute; background: var(--accent); mix-blend-mode: multiply; transform-origin: left center; }
+.cred { position: absolute; font-family: 'News', serif; font-weight: 500; text-transform: uppercase; letter-spacing: 0.09em; color: var(--mute); white-space: nowrap; }
+.disp { position: absolute; font-weight: 300; letter-spacing: -0.025em; line-height: 0.98; }
+.disp b { font-weight: 600; }
+.disp i { font-style: italic; color: var(--accent); font-weight: 400; }
+.wd { display: inline-block; white-space: pre; }
+.note { position: absolute; font-style: italic; font-weight: 400; color: var(--accent); line-height: 1.2; }
+.rule { position: absolute; height: 2px; background: var(--accent); transform-origin: left center; }
+</style></head>
+<body><div id="stage"></div>
+<script src="../_tools/kit.js"></script>
+<script src="../_tools/words.js"></script>
+<script src="../_tools/sources.js"></script>
+<script>
+// B · THE FINE PRINT: the stage is the real text. The camera reads the real Anthropic pages (captured 12 Oct 2026,
+// credited), her voice highlights the words she reads, and the phrase LIFTS off the page into giant editorial type.
+// Her own view arrives as orange italic margin notes. Nothing on a screenshot is edited; marks sit on top.
+const SRCDIR = '../../../assets/sources/anthropic/';
+const M = V(120, 72);
+const CRED = V(30, 32);
+
+// a real page crop as a sheet. clip = capture clip in CSS px; drawn at `scale` css->stage px.
+function sheet(root, file, clip, scale) {
+  const s = el('div', { left: '0px', top: '0px', width: clip.width * scale + 'px', height: clip.height * scale + 'px', background: '#FAF9F5' }, '', root); s.className = 'sheet';
+  const im = el('img', { width: clip.width * scale + 'px', height: clip.height * scale + 'px' }, '', s); im.src = SRCDIR + file;
+  s.style.clipPath = `inset(${16 * scale}px 0 ${16 * scale}px 0)`;
+  return { s, im, clip, scale };
+}
+function marks(S, lines, times, ends) {
+  return lines.map((l, i) => { const m = el('div', { left: (l.x - S.clip.x - 4) * S.scale + 'px', top: (l.y - S.clip.y - 1) * S.scale + 'px', width: (l.w + 8) * S.scale + 'px', height: (l.h + 3) * S.scale + 'px' }, '', S.s); m.className = 'mark'; m._a = times[i]; m._b = ends[i]; return m; });
+}
+// highlighter wipes at reading speed: from the first spoken word of the line to the last (linear in time, eased ends)
+const updMarks = (ms, t) => ms.forEach(m => { m.style.transform = `scaleX(${eOutQ(clamp((t - m._a) / Math.max(F(6), m._b - m._a)))})`; });
+// display text made of words that land on her voice: each word blur-to-sharp 6 f, rises 18 px outQuint
+function disp(root, html, css) { const d = el('div', css, html, root); d.className = 'disp'; return d; }
+function words(d) { return [...d.querySelectorAll('.wd')]; }
+function updWords(ws, times, t, dur = F(6)) {
+  ws.forEach((w, i) => { const p = clamp((t - times[i]) / dur), q = eOutQ((t - times[i]) / F(10));
+    w.style.opacity = p; w.style.filter = `blur(${(1 - p) * 6}px)`; w.style.transform = `translateY(${(1 - q) * 18}px)`; });
+}
+const wrap = (txt, it = false) => txt.split(' ').map(w => `<span class="wd">${it === 'her' ? '<i>' + w + '</i>' : it ? '<b>' + w + '</b>' : w} </span>`).join('');
+function cred(root, text, css) { const c = el('div', Object.assign({ fontSize: CRED + 'px' }, css), text, root); c.className = 'cred'; return c; }
+
+// ---------- scene 1: the exact wording (39.6 - 50.6) ----------
+scene('wording', 39.6, 50.6, (r, S) => {
+  const g = SRC.ap, clip = g.shots.crop_section.clip_doc_css;          // heading + both paragraphs, 720 x 371 css
+  S.k = V(2.25, 1.32);
+  S.sh = sheet(r, 'ap_crop_section.png', clip, S.k);
+  const L = g.phrases.rule_short.lines;
+  S.mk = marks(S.sh, L, [41.95, 44.4], [43.4, 45.55]);
+  S.cr = cred(r, 'Screenshot · anthropic.com · “2026 Usage Policy update” · 8 Oct 2026', {});
+  // giant lift (landscape: 3 lines at 132 px; portrait: 5 lines at 104 px)
+  S.big = disp(r, V(wrap('sustained and needless') + '<br>' + wrap('abusive or cruel', true) + '<br>' + wrap('behavior toward our models.'),
+                    wrap('sustained and') + '<br>' + wrap('needless') + wrap('abusive', true) + '<br>' + wrap('or cruel', true) + wrap('behavior') + '<br>' + wrap('toward our models.')),
+    { left: M + 'px', top: V(170, 420) + 'px', fontSize: V(132, 108) + 'px', width: (W - 2 * M) + 'px' });
+  S.bw = words(S.big);
+  S.bigCred = cred(r, 'Anthropic’s wording · 8 Oct 2026', { left: M + 'px', top: V(640, 960) + 'px' });
+  S.ex = disp(r, wrap('only in') + wrap('extreme cases.', true) + `<span class="wd" style="font-size:0.34em;letter-spacing:0.09em;color:var(--mute);font-weight:500"> ANTHROPIC</span>`, { left: M + 'px', top: V(770, 1060) + 'px', fontSize: V(96, 84) + 'px', width: (W - 2 * M) + 'px' });
+  S.ew = words(S.ex);
+}, (lt, S, t) => {
+  // camera: sheet arrives as a zoom-in (scale 0.55 -> 1, outExpo 18 f), recedes on the lift (inOutQuart 15 f) to a small
+  // tilted card at the bottom-right, 30 % opacity (flat, no blur, no shadow)
+  const sw = S.sh.clip.width * S.k, shh = S.sh.clip.height * S.k;
+  const pIn = eOutX((t - 39.75) / F(18)), pOut = eOutX((t - 46.15) / F(12));
+  const x0 = (W - sw) / 2, y0 = V(150, 520);
+  const sc = lerp(0.55, 1, pIn) * lerp(1, V(0.34, 0.4), pOut);
+  const x = lerp(lerp(CX - sw * 0.275, x0, pIn), W - M - sw * V(0.34, 0.4), pOut), y = lerp(lerp(CY - shh * 0.275, y0, pIn), V(780, 1230), pOut);
+  set(S.sh.s, { transform: `translate(${x}px, ${y}px) scale(${sc})`, opacity: clamp((t - 39.6) / F(4)) * (1 - clamp((t - 46.15) / F(6))) });
+  updMarks(S.mk, t);
+  set(S.cr, { left: x + 'px', top: (y + shh * sc + 18) + 'px', opacity: clamp((t - 40.2) / F(8)) * (1 - pOut) });
+  // the lift: phrase words land one after another from 46.30 (2 f stagger), so the sentence assembles in ~0.5 s
+  updWords(S.bw, S.bw.map((_, i) => 46.3 + i * F(2)), t);
+  S.bigCred.style.opacity = clamp((t - 46.9) / F(8));
+  updWords(S.ew, [48.2, 48.25, 49.0, 49.05, 49.4], t);
+});
+
+// ---------- scene 2: the constitution (65.6 - 76.8) ----------
+scene('uncertain', 65.6, 76.8, (r, S) => {
+  const g = SRC.ac, clip = g.shots.crop_moral_status.clip_doc_css;
+  S.k = V(1.9, 1.32);
+  S.sh = sheet(r, 'ac_crop_moral_status.png', clip, S.k);
+  S.mk = marks(S.sh, g.phrases.moral_status.lines, [66.5], [68.2]);
+  set(S.sh.s, { left: '0px', top: '0px' });
+  S.cr = cred(r, 'Screenshot · anthropic.com/constitution · Claude’s constitution, published Jan 2026', {});
+  S.big = disp(r, wrap('Claude’s moral status is') + '<br>' + wrap('deeply uncertain.', true) + `<span class="wd" style="font-size:0.24em;letter-spacing:0.09em;color:var(--mute);font-weight:500"> CLAUDE’S CONSTITUTION</span>`, { left: M + 'px', top: V(150, 430) + 'px', fontSize: V(132, 104) + 'px', width: (W - 2 * M) + 'px' });
+  S.bw = words(S.big);
+  S.note = el('div', { left: M + 'px', top: V(520, 900) + 'px', width: V(1180, 900) + 'px', fontSize: V(56, 54) + 'px' }, '', r); S.note.className = 'note';
+  S.nw = Wt(69.2, 'So they’re not explicitly saying that Claude is conscious, but they are dabbling with the idea.');
+  S.note.innerHTML = S.nw.map(w => `<span class="wd">${w.w} </span>`).join('');
+  S.nl = el('div', { left: M + 'px', top: V(500, 880) + 'px', width: '120px' }, '', r); S.nl.className = 'rule';
+  S.nc = cred(r, 'Gbemi', { left: M + 'px', top: V(700, 1180) + 'px', color: 'var(--accent)' });
+}, (lt, S, t) => {
+  const sw = S.sh.clip.width * S.k, shh = S.sh.clip.height * S.k;
+  const pIn = eOutX((t - 65.7) / F(18)), pOut = eOutX((t - 68.3) / F(12));
+  const sc = lerp(0.6, 1, pIn) * lerp(1, 0.34, pOut);
+  const x = lerp((W - sw) / 2, W - M - sw * 0.34, pOut), y = lerp(V(280, 600), V(800, 1230), pOut);
+  set(S.sh.s, { transform: `translate(${x}px, ${y}px) scale(${sc})`, opacity: clamp((t - 65.6) / F(4)) * (1 - clamp((t - 68.3) / F(6))) });
+  set(S.cr, { left: x + 'px', top: (y + shh * sc + 18) + 'px', opacity: clamp((t - 66) / F(8)) * (1 - pOut) });
+  updMarks(S.mk, t);
+  updWords(S.bw, S.bw.map((_, i) => 68.4 + i * F(2)), t);
+  S.nl.style.transform = `scaleX(${eOutQ((t - 69.1) / F(10))})`;
+  updWords([...S.note.children], S.nw.map(w => w.s), t);
+  S.nc.style.opacity = clamp((t - 69.4) / F(8));
+});
+
+// ---------- scene 3: her line as pure type (115.2 - 119.4) ----------
+scene('living', 115.2, 119.4, (r, S) => {
+  const w = Wt(115.3, 'Consciousness belongs to living things, not to a model, not to an algorithm.');
+  S.t = w.map(x => x.s);
+  const h = w.map((x, i) => `<span class="wd"><i>${x.w}</i> </span>`);
+  S.g = cred(r, 'Gbemi', { left: M + 'px', top: V(200, 440) + 'px', color: 'var(--accent)' });
+  S.d = disp(r, V(h.slice(0, 3).join('') + '<br>' + h.slice(3, 5).join('') + '<br>' + h.slice(5, 9).join('') + '<br>' + h.slice(9).join(''), h.slice(0, 2).join('') + '<br>' + h.slice(2, 5).join('') + '<br><br>' + h.slice(5, 9).join('') + '<br>' + h.slice(9).join('')),
+    { left: M + 'px', top: V(250, 520) + 'px', fontSize: V(124, 96) + 'px', width: (W - 2 * M) + 'px' });
+}, (lt, S, t) => updWords(words(S.d), S.t, t));
+
+// ---------- scene 4: the Microsoft quote (166.0 - 171.0) ----------
+scene('quote', 166.0, 171.0, (r, S) => {
+  const w = Wt(167.5, '“We must build AI for people, not to be a digital person.”');
+  S.t = w.map(x => x.s);
+  const h = w.map((x, i) => `<span class="wd">${i >= 9 ? '<b>' + x.w + '</b>' : x.w} </span>`);
+  S.d = disp(r, V(h.slice(0, 6).join('') + '<br>' + h.slice(6).join(''), h.slice(0, 3).join('') + '<br>' + h.slice(3, 6).join('') + '<br>' + h.slice(6, 9).join('') + '<br>' + h.slice(9).join('')),
+    { left: M + 'px', top: V(330, 560) + 'px', fontSize: V(112, 108) + 'px', width: (W - 2 * M) + 'px' });
+  S.c = cred(r, V('Mustafa Suleyman · CEO, Microsoft AI · essay, 19 Aug 2025', 'Mustafa Suleyman<br>CEO, Microsoft AI · essay, 19 Aug 2025'), { left: M + 'px', top: V(640, 1240) + 'px', lineHeight: 1.5 });
+  S.l = el('div', { left: M + 'px', top: V(280, 500) + 'px', width: '120px' }, '', r); S.l.className = 'rule';
+}, (lt, S, t) => {
+  updWords(words(S.d), S.t, t);
+  S.c.style.opacity = clamp((t - 166.2) / F(8));
+  S.l.style.transform = `scaleX(${eOutQ((t - 166.1) / F(10))})`;
+});
+</script></body></html>

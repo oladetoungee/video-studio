@@ -1,0 +1,26 @@
+{
+  "direction": "Faceless before / after split: on grey, a cluttered app buried in pop-ups and an error; on green, the same task as one clear screen and one button. The headline says what the comparison is. References: yt 'before / after' (1, 12, 21, 32), 'my-project.vercel.app vs myproject.com' (28).",
+  "thumbnail_text": "What UX research fixes",
+  "text": {
+    "hd": "<span>What UX research fixes</span>",
+    "before": "Before",
+    "after": "After",
+    "p1": "Rate us!",
+    "p2": "Allow alerts?",
+    "p3": "Error: try again",
+    "done": "Order placed",
+    "btn": "Done"
+  },
+  "images": {},
+  "vars": {
+    "--accent": "#2BD27F"
+  },
+  "titles": [
+    "Why Some Apps Are So Confusing (UX Research Explained)",
+    "What Is UX Research? Why Good-Looking Apps Still Fail",
+    "Why Beautiful Apps Can Be Awful to Use (UX Research)"
+  ],
+  "title": "Why Some Apps Are So Confusing (UX Research Explained)",
+  "set": 3,
+  "kind": "other"
+}

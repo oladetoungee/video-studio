@@ -1,0 +1,25 @@
+{
+  "direction": "Research on a small budget: a laptop on a video call with four people (generic flat figures) and a big '$0' price tag. Warm paper, orange as the only colour, her calm cut-out bottom-left in black and white with an orange outline.",
+  "thumbnail_text": "UX research with no budget",
+  "titles": [
+    "No Budget for UX Research? Talk to 5 Users First",
+    "Can't Afford UX Research? Start With 5 Conversations",
+    "Test Your App Idea Before You Build It (UX Research)"
+  ],
+  "text": {
+    "hd": "UX research<br>with <span class=\"acc\">no budget</span>",
+    "tag": "$0"
+  },
+  "images": {
+    "me": "../../assets/cut/gbemi-calm.png"
+  },
+  "vars": {
+    "--ground": "#EDE9E2",
+    "--fg": "#17140F",
+    "--accent": "#FF4713",
+    "--ol": "#FF4713"
+  },
+  "scores": "",
+  "recommended": false,
+  "title": "No Budget for UX Research? Talk to 5 Users First"
+}

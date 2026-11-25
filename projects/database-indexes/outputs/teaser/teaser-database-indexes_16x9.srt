@@ -1,0 +1,127 @@
+1
+00:00:01,583 --> 00:00:04,273
+as you get more users, your database grows
+
+2
+00:00:04,273 --> 00:00:06,037
+and your tables get bigger
+
+3
+00:00:06,037 --> 00:00:07,717
+now it might take a little bit longer for
+
+4
+00:00:07,717 --> 00:00:09,337
+your app to load and you're now having
+
+5
+00:00:09,337 --> 00:00:10,317
+performance issues
+
+6
+00:00:10,317 --> 00:00:12,430
+it starts at the first row and it checks
+
+7
+00:00:12,430 --> 00:00:15,260
+every single row, all one million of them,
+
+8
+00:00:15,350 --> 00:00:17,720
+and that is called a full table scan
+
+9
+00:00:17,720 --> 00:00:20,000
+when your table has maybe 10, 100 rows,
+
+10
+00:00:20,000 --> 00:00:22,200
+maybe it wouldn't be a problem, maybe you
+
+11
+00:00:22,200 --> 00:00:23,090
+wouldn't notice,
+
+12
+00:00:23,320 --> 00:00:26,100
+but at a million rows, then it's a problem
+
+13
+00:00:26,713 --> 00:00:28,603
+the easiest way to think about it is the
+
+14
+00:00:28,603 --> 00:00:30,457
+index at the back of a book
+
+15
+00:00:30,457 --> 00:00:31,797
+so with this strategy,
+
+16
+00:00:32,077 --> 00:00:34,567
+even with a million rows, you can get to the
+
+17
+00:00:34,567 --> 00:00:37,397
+row you're looking for in about 20 steps or
+
+18
+00:00:37,397 --> 00:00:40,170
+so without an index, you will do up to a
+
+19
+00:00:40,170 --> 00:00:42,263
+million checks in the worst case scenario
+
+20
+00:00:42,263 --> 00:00:44,598
+adding a database index will literally up
+
+21
+00:00:44,598 --> 00:00:46,743
+your query optimisation game, and it's kind
+
+22
+00:00:46,743 --> 00:00:47,700
+of a one-liner
+
+23
+00:00:47,700 --> 00:00:49,740
+just put the word EXPLAIN in front of your
+
+24
+00:00:49,740 --> 00:00:50,220
+query
+
+25
+00:00:50,963 --> 00:00:53,483
+so now that begs the question, if database
+
+26
+00:00:53,483 --> 00:00:56,293
+indexes makes queries so fast, why don't we
+
+27
+00:00:56,293 --> 00:00:59,230
+just index every column and be done with it?
+
+28
+00:00:59,230 --> 00:01:01,847
+we cannot, because every index has a cost
+
+29
+00:01:01,847 --> 00:01:04,257
+so the more database indexes you have, the
+
+30
+00:01:04,257 --> 00:01:05,683
+slower your writes get
+
+31
+00:01:05,683 --> 00:01:07,983
+you can have a database index and the
+
+32
+00:01:07,983 --> 00:01:09,933
+database still won't use it

@@ -1,0 +1,189 @@
+{
+ "story": "php2shell",
+ "outlet": "Newsweek",
+ "slug": "newsweek",
+ "url": "https://www.newsweek.com/php-vunerability-php2shell-issue-websites-hack-server-12601225",
+ "finalUrl": "https://www.newsweek.com/php-vunerability-php2shell-issue-websites-hack-server-12601225",
+ "status": "loaded",
+ "http": 200,
+ "title": "PHP vulnerability sparks scramble as major websites face threat",
+ "h1": "Critical PHP Flaws Threaten Millions of Websites in New AI Security Test",
+ "published": "2026-10-21T19:03:58",
+ "files": {
+  "fold": "php2shell/newsweek_fold.png",
+  "full": "php2shell/newsweek_full.jpg",
+  "scroll": "php2shell/newsweek_scroll.mp4"
+ },
+ "full": {
+  "width": 1440,
+  "height": 8600,
+  "pageHeight": 11735,
+  "zoom": 1,
+  "quotes": [
+   {
+    "quote": "government websites in the Netherlands and Finland were taken offline",
+    "box": {
+     "x": 380,
+     "y": 5787,
+     "w": 607,
+     "h": 52
+    },
+    "lines": [
+     {
+      "x": 749,
+      "y": 5787,
+      "w": 238,
+      "h": 24
+     },
+     {
+      "x": 380,
+      "y": 5815,
+      "w": 375,
+      "h": 24
+     }
+    ]
+   },
+   {
+    "quote": "Some organizations have temporarily taken websites and online services offline rather than leave potentially vulnerable systems exposed while fixes are installed",
+    "box": {
+     "x": 380,
+     "y": 5472,
+     "w": 648,
+     "h": 80
+    },
+    "lines": [
+     {
+      "x": 380,
+      "y": 5472,
+      "w": 625,
+      "h": 24
+     },
+     {
+      "x": 380,
+      "y": 5500,
+      "w": 648,
+      "h": 24
+     },
+     {
+      "x": 380,
+      "y": 5528,
+      "w": 107,
+      "h": 24
+     }
+    ]
+   }
+  ]
+ },
+ "scroll": {
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "seconds": 8,
+  "keyframes": [
+   {
+    "t": 0,
+    "y": 35
+   },
+   {
+    "t": 1,
+    "y": 35
+   },
+   {
+    "t": 3.2,
+    "y": 5062
+   },
+   {
+    "t": 8,
+    "y": 5062
+   }
+  ],
+  "zoom": 1,
+  "easing": "easeInOutCubic between keyframes, holds where y is equal",
+  "capped": true,
+  "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)",
+  "quotes": [
+   {
+    "quote": "government websites in the Netherlands and Finland were taken offline",
+    "inVideo": true,
+    "still": true,
+    "t": 5.58,
+    "visibleStill": [
+     3.13,
+     8.03
+    ],
+    "scrollY": 5062,
+    "box": {
+     "x": 620,
+     "y": 725,
+     "w": 607,
+     "h": 52
+    },
+    "lines": [
+     {
+      "x": 989,
+      "y": 725,
+      "w": 238,
+      "h": 24
+     },
+     {
+      "x": 620,
+      "y": 753,
+      "w": 375,
+      "h": 24
+     }
+    ],
+    "docBox": {
+     "x": 620,
+     "y": 5787,
+     "w": 607,
+     "h": 52
+    },
+    "layoutDriftPx": 0
+   },
+   {
+    "quote": "Some organizations have temporarily taken websites and online services offline rather than leave potentially vulnerable systems exposed while fixes are installed",
+    "inVideo": true,
+    "still": true,
+    "t": 5.58,
+    "visibleStill": [
+     3.13,
+     8.03
+    ],
+    "scrollY": 5062,
+    "box": {
+     "x": 620,
+     "y": 410,
+     "w": 648,
+     "h": 80
+    },
+    "lines": [
+     {
+      "x": 620,
+      "y": 410,
+      "w": 625,
+      "h": 24
+     },
+     {
+      "x": 620,
+      "y": 438,
+      "w": 648,
+      "h": 24
+     },
+     {
+      "x": 620,
+      "y": 466,
+      "w": 107,
+      "h": 24
+     }
+    ],
+    "docBox": {
+     "x": 620,
+     "y": 5472,
+     "w": 648,
+     "h": 80
+    },
+    "layoutDriftPx": 0
+   }
+  ]
+ }
+}

@@ -1,0 +1,31 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../lib/base.css"><style>
+.t{--ground:var(--paper);--fg:var(--ink);--accent:var(--orange)}
+.h{position:absolute;left:52px;top:50%;transform:translateY(-52%);color:var(--fg)}
+.h div{white-space:nowrap}.h .l1,.h .l2,.h .l3{font-size:124px}.h .l2,.h .l3{margin-top:8px}
+.h .l2 em{font-style:normal;color:var(--accent)}
+.sub{position:absolute;left:56px;bottom:58px;color:color-mix(in srgb,var(--fg) 55%,transparent)}
+.card{position:absolute;left:var(--cx,640px);top:var(--cy,52px);width:var(--cw,560px);background:var(--card);border:3px solid var(--ink);
+      padding:30px 34px 26px;transform:rotate(var(--rot,-2.5deg));box-shadow:10px 10px 0 var(--ink)}
+.card .hd{display:flex;justify-content:space-between;color:var(--ink);margin-bottom:14px}
+.row{display:grid;grid-template-columns:44px 1fr;align-items:baseline;border-top:1.5px solid rgba(17,17,20,.18);padding:11px 0 10px;
+     font-family:'Archivo',sans-serif;font-weight:600;font-size:19px;color:var(--ink);letter-spacing:-.01em;white-space:nowrap;overflow:hidden}
+.row > span:last-child{overflow:hidden;text-overflow:ellipsis}
+.row .n{font-family:'DM Mono',monospace;font-weight:500;font-size:16px;color:rgba(17,17,20,.5)}
+.row.hit{position:relative;font-size:23px;font-weight:800;overflow:visible}
+.ring{position:absolute;left:12px;top:-16px;width:calc(100% + 4px);height:calc(100% + 30px);overflow:visible}
+</style></head><body><div class="t">
+<div class="h disp" data-move="headline"><div class="l1" data-k="line1"></div><div class="l2" data-k="line2"></div><div class="l3" data-k="line3"></div></div>
+<div class="sub mono" data-k="caption"></div>
+<div class="card" data-move="card"><div class="hd mono"><span data-k="cardHead"></span><span data-k="cardBook"></span></div><div id="rows"></div></div>
+</div>
+<script>
+window.layout = c => {
+  const rows = document.getElementById('rows');
+  (c.chapters || []).forEach((t, i) => {
+    const r = document.createElement('div'); r.className = 'row' + (i === c.circle ? ' hit' : '');
+    r.innerHTML = '<span class="n">' + String(i + 1).padStart(2, '0') + '</span><span data-k="chapters.' + i + '">' + t + '</span>';
+    if (i === c.circle) r.innerHTML += '<svg class="ring" viewBox="0 0 100 40" preserveAspectRatio="none"><path d="M6,22 C4,8 40,3 70,4 C92,5 99,13 97,22 C95,33 62,38 34,37 C12,36 2,30 5,19 C7,12 18,7 30,6" fill="none" stroke="#FF4713" stroke-width="2.4" stroke-linecap="round" vector-effect="non-scaling-stroke" style="stroke-width:9px;stroke:var(--accent)"/></svg>';
+    rows.appendChild(r);
+  });
+};
+</script><script src="../../lib/bind.js"></script></body></html>

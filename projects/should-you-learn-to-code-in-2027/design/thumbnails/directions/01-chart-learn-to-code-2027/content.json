@@ -1,0 +1,34 @@
+{
+ "board": "yt-36",
+ "kind": "flat chart, no face",
+ "direction": "Copies board yt-36 (WHAT IS SPACE COMPLEXITY OF ALGORITHMS: flat yellow, heavy caps stacked on the left, a bar chart on the right). The question people search, and the chart that makes it urgent: of US software developer job posts on Indeed in Q1 2026, 69.3% were senior, 4.5% entry level (Indeed Hiring Lab, 23 Jul 2026). Bars to scale.",
+ "thumbnail_text": "LEARN TO CODE IN 2027? + chart: senior jobs 69.3% / junior jobs 4.5%",
+ "fonts": [
+  "thumbs-12 Archivo Black (red #E2262B on yellow #F7F02B, as Thumbnails 89)"
+ ],
+ "colours": "thumbs-12 specimen (#F7F02B ground, #E2262B ink) + #1D1D1D chart ink (yt-36 black axes)",
+ "text": {
+  "hd": "LEARN TO<br>CODE IN<br>2027?",
+  "v1": "69.3%",
+  "v2": "4.5%",
+  "l1": "SENIOR<br>JOBS",
+  "l2": "JUNIOR<br>JOBS",
+  "src": "Share of US developer<br>job posts, Indeed 2026"
+ },
+ "vars": {
+  "--h1": "380px",
+  "--h2": "26px"
+ },
+ "images": {},
+ "class": "",
+ "titles": [
+  "Junior Developer Jobs Are Rare. Should You Still Code?",
+  "Only 4.5% of Developer Job Posts Are Entry Level. Now What?",
+  "I Checked the Junior Developer Job Numbers. Here's My Take"
+ ],
+ "title": "Junior Developer Jobs Are Rare. Should You Still Code?",
+ "titles_2026": [],
+ "recommended": false,
+ "scores": "cold critics (fresh each round, PNG alone / with best title): R1 7 / 8, R2 7 / 8, R3 7 / 7. After R3: bar labels SENIOR JOBS / JUNIOR JOBS at 40 px, source line 34 px (not re-scored)",
+ "scores_2026_11_19": "2026-11-19 cold (YouTube-card feed with picks, fresh critic each round, alone / with title): R1 6/7, R2 7/7, R3 6/7. Fixes: 4.5% label 92 px, source line 'Share of US developer job posts, Indeed 2026'."
+}

@@ -1,0 +1,776 @@
+{
+ "license": "Mixkit Sound Effects Free License: free for commercial and personal use, no attribution required. https://mixkit.co/license/#sfxFree",
+ "sounds": [
+  {
+   "file": "sketch-loop.mp3",
+   "title": "Pencil sketching loop (made from the Mixkit pencil clips below)",
+   "source": "built locally"
+  },
+  {
+   "file": "pencil-explainer-letters.mp3",
+   "title": "Explainer video writing pencil letters",
+   "source": "https://mixkit.co (sound #3011)"
+  },
+  {
+   "file": "pencil-writing.mp3",
+   "title": "Writing pencil",
+   "source": "https://mixkit.co (sound #3194)"
+  },
+  {
+   "file": "pencil-short.mp3",
+   "title": "Short pencil writing",
+   "source": "https://mixkit.co (sound #2376)"
+  },
+  {
+   "file": "pen-on-paper.mp3",
+   "title": "Writing with a pen on paper",
+   "source": "https://mixkit.co (sound #2367)"
+  },
+  {
+   "file": "pencil-fast.mp3",
+   "title": "Fast writing",
+   "source": "https://mixkit.co (sound #3196)"
+  },
+  {
+   "file": "scribble-on-paper.mp3",
+   "title": "Writing scribble on paper",
+   "source": "https://mixkit.co (sound #2369)"
+  },
+  {
+   "file": "marker-line.mp3",
+   "title": "Pen marker line",
+   "source": "https://mixkit.co (sound #2998)"
+  },
+  {
+   "file": "chalk-line.mp3",
+   "title": "Chalk line sound",
+   "source": "https://mixkit.co (sound #2372)"
+  },
+  {
+   "file": "page-turn-single.mp3",
+   "title": "Page turn single",
+   "source": "https://mixkit.co (sound #1104)"
+  },
+  {
+   "file": "book-paging-single.mp3",
+   "title": "Single book paging",
+   "source": "https://mixkit.co (sound #1101)"
+  },
+  {
+   "file": "page-turn-big.mp3",
+   "title": "Big paper page turn",
+   "source": "https://mixkit.co (sound #1105)"
+  },
+  {
+   "file": "book-paging-stiff.mp3",
+   "title": "Stiff paper book paging",
+   "source": "https://mixkit.co (sound #1103)"
+  },
+  {
+   "file": "book-browsing-fast.mp3",
+   "title": "Fast browsing book paging",
+   "source": "https://mixkit.co (sound #1102)"
+  },
+  {
+   "file": "book-browsing.mp3",
+   "title": "Browsing book by pages",
+   "source": "https://mixkit.co (sound #1099)"
+  },
+  {
+   "file": "paper-slide.mp3",
+   "title": "Paper slide",
+   "source": "https://mixkit.co (sound #1530)"
+  },
+  {
+   "file": "paper-quick-move.mp3",
+   "title": "Paper quick movement",
+   "source": "https://mixkit.co (sound #2380)"
+  },
+  {
+   "file": "paper-crumple-quick.mp3",
+   "title": "Quick paper crumple sound",
+   "source": "https://mixkit.co (sound #2996)"
+  },
+  {
+   "file": "explainer-pop-whoosh.mp3",
+   "title": "Explainer video pops whoosh light pop",
+   "source": "https://mixkit.co (sound #3005)"
+  },
+  {
+   "file": "pop-hard-click.mp3",
+   "title": "Hard pop click",
+   "source": "https://mixkit.co (sound #2364)"
+  },
+  {
+   "file": "pop-long.mp3",
+   "title": "Long pop",
+   "source": "https://mixkit.co (sound #2358)"
+  },
+  {
+   "file": "pop-dry.mp3",
+   "title": "Dry pop up notification alert",
+   "source": "https://mixkit.co (sound #2356)"
+  },
+  {
+   "file": "pop-cartoon-bubble.mp3",
+   "title": "Cartoon bubble pop",
+   "source": "https://mixkit.co (sound #731)"
+  },
+  {
+   "file": "whoosh-small-sweep.mp3",
+   "title": "Fast small sweep transition",
+   "source": "https://mixkit.co (sound #166)"
+  },
+  {
+   "file": "whoosh-short-sweep.mp3",
+   "title": "Short transition sweep",
+   "source": "https://mixkit.co (sound #175)"
+  },
+  {
+   "file": "whoosh-air.mp3",
+   "title": "Air woosh",
+   "source": "https://mixkit.co (sound #1489)"
+  },
+  {
+   "file": "wood-hard-hit.mp3",
+   "title": "Wood hard hit",
+   "source": "https://mixkit.co (sound #2182)"
+  },
+  {
+   "file": "punch-soft-quick.mp3",
+   "title": "Soft quick punch",
+   "source": "https://mixkit.co (sound #2151)"
+  },
+  {
+   "file": "hit-weak.mp3",
+   "title": "Weak hit impact",
+   "source": "https://mixkit.co (sound #2148)"
+  },
+  {
+   "file": "falling-hit.mp3",
+   "title": "Falling hit",
+   "source": "https://mixkit.co (sound #757)"
+  },
+  {
+   "file": "click-box-check.mp3",
+   "title": "Modern click box check",
+   "source": "https://mixkit.co (sound #1120)"
+  },
+  {
+   "file": "click-classic.mp3",
+   "title": "Classic click",
+   "source": "https://mixkit.co (sound #1117)"
+  },
+  {
+   "file": "magic-notification-ring.mp3",
+   "title": "Magic notification ring",
+   "source": "https://mixkit.co (sound #2344)"
+  },
+  {
+   "file": "magic-sparkle-touch.mp3",
+   "title": "Magic sparkle touch",
+   "source": "https://mixkit.co (sound #3083)"
+  },
+  {
+   "file": "bell-notification.mp3",
+   "title": "Bell notification",
+   "source": "https://mixkit.co (sound #933)"
+  },
+  {
+   "file": "magic-marimba.mp3",
+   "title": "Magic marimba",
+   "source": "https://mixkit.co (sound #2820)"
+  },
+  {
+   "file": "explainer-reveal.mp3",
+   "title": "Explainer video game reveal",
+   "source": "https://mixkit.co (sound #235)"
+  },
+  {
+   "file": "musical-reveal.mp3",
+   "title": "Musical reveal",
+   "source": "https://mixkit.co (sound #961)"
+  },
+  {
+   "file": "correct-answer.mp3",
+   "title": "Correct answer tone",
+   "source": "https://mixkit.co (sound #2870)"
+  },
+  {
+   "file": "clock-tick-single.mp3",
+   "title": "Clock ticker single",
+   "source": "https://mixkit.co (sound #1061)"
+  },
+  {
+   "file": "clock-wall-tick-tock.mp3",
+   "title": "Wall clock tick tock",
+   "source": "https://mixkit.co (sound #1060)"
+  },
+  {
+   "file": "card-flick.mp3",
+   "title": "Poker card flick",
+   "source": "https://mixkit.co (sound #2002)"
+  },
+  {
+   "file": "card-place.mp3",
+   "title": "Poker card placement",
+   "source": "https://mixkit.co (sound #2001)"
+  },
+  {
+   "file": "tape-rewind.mp3",
+   "title": "Tape rewind transition",
+   "source": "https://mixkit.co (sound #1091)"
+  },
+  {
+   "file": "magic-rewind.mp3",
+   "title": "Magic rewind transition",
+   "source": "https://mixkit.co (sound #1086)"
+  },
+  {
+   "file": "tap-ball.mp3",
+   "title": "Game ball tap",
+   "source": "https://mixkit.co (sound #2073)"
+  },
+  {
+   "file": "tap-small-hit.mp3",
+   "title": "Small hit in a game",
+   "source": "https://mixkit.co (sound #2072)"
+  },
+  {
+   "file": "click-plastic-bubble.mp3",
+   "title": "Plastic bubble click",
+   "source": "https://mixkit.co (sound #1124)"
+  },
+  {
+   "file": "boing.mp3",
+   "title": "Boing hit sound",
+   "source": "https://mixkit.co (sound #2894)"
+  },
+  {
+   "file": "achievement-bubbly.mp3",
+   "title": "Bubbly achievement tone",
+   "source": "https://mixkit.co (sound #3193)"
+  },
+  {
+   "file": "creaky-door-open.mp3",
+   "title": "Creaky door open",
+   "source": "https://mixkit.co (sound #195)"
+  },
+  {
+   "file": "shutter-click.mp3",
+   "title": "Camera shutter click",
+   "source": "https://mixkit.co (sound #1133)",
+   "role": "shutter",
+   "seconds": 0.35,
+   "onset_s": 0.145,
+   "loudest_s": 0.195,
+   "added": "2026-10-12"
+  },
+  {
+   "file": "shutter-hard-click.mp3",
+   "title": "Camera shutter hard click",
+   "source": "https://mixkit.co (sound #1430)",
+   "role": "shutter",
+   "seconds": 0.63,
+   "onset_s": 0.119,
+   "loudest_s": 0.143,
+   "added": "2026-10-12"
+  },
+  {
+   "file": "shutter-digital.mp3",
+   "title": "Camera digital shutter",
+   "source": "https://mixkit.co (sound #1432)",
+   "role": "shutter",
+   "seconds": 1.51,
+   "onset_s": 0.049,
+   "loudest_s": 0.306,
+   "added": "2026-10-12"
+  },
+  {
+   "file": "shutter-vintage.mp3",
+   "title": "Vintage camera shutter",
+   "source": "https://mixkit.co (sound #1438)",
+   "role": "shutter",
+   "seconds": 1.16,
+   "onset_s": 0.069,
+   "loudest_s": 0.118,
+   "added": "2026-10-12"
+  },
+  {
+   "file": "camera-autofocus.mp3",
+   "title": "Camera lens autofocus",
+   "source": "https://mixkit.co (sound #1437)",
+   "role": "shutter",
+   "seconds": 1.19,
+   "onset_s": 0.502,
+   "loudest_s": 0.86,
+   "added": "2026-10-12",
+   "note": "trimmed to the final focus whirr + click (8.4-9.6 s)"
+  },
+  {
+   "file": "riser-cinematic-trailer.mp3",
+   "title": "Cinematic trailer riser",
+   "source": "https://mixkit.co (sound #790)",
+   "role": "riser",
+   "seconds": 2.58,
+   "onset_s": 1.354,
+   "loudest_s": 2.535,
+   "added": "2026-10-12"
+  },
+  {
+   "file": "riser-short-stutter.mp3",
+   "title": "Short space stutter intro riser",
+   "source": "https://mixkit.co (sound #1144)",
+   "role": "riser",
+   "seconds": 6.5,
+   "onset_s": 0.983,
+   "loudest_s": 6.25,
+   "added": "2026-10-12",
+   "note": "re-encoded, 6.5 s"
+  },
+  {
+   "file": "riser-synth.mp3",
+   "title": "Cinematic synth riser",
+   "source": "https://mixkit.co (sound #645)",
+   "role": "riser",
+   "seconds": 9.34,
+   "onset_s": 0.101,
+   "loudest_s": 3.867,
+   "added": "2026-10-12"
+  },
+  {
+   "file": "riser-suspense-swell.mp3",
+   "title": "Cinematic suspense swell",
+   "source": "https://mixkit.co (sound #786)",
+   "role": "riser",
+   "seconds": 11.27,
+   "onset_s": 0.5,
+   "loudest_s": 3.863,
+   "added": "2026-10-12"
+  },
+  {
+   "file": "riser-metallic-sweep.mp3",
+   "title": "Metallic sweep suspense",
+   "source": "https://mixkit.co (sound #670)",
+   "role": "riser",
+   "seconds": 4.15,
+   "onset_s": 0.872,
+   "loudest_s": 2.074,
+   "added": "2026-10-12"
+  },
+  {
+   "file": "drum-roll-tension.mp3",
+   "title": "Tension and suspense drum roll",
+   "source": "https://mixkit.co (sound #577)",
+   "role": "riser",
+   "seconds": 5.6,
+   "onset_s": 0.037,
+   "loudest_s": 5.26,
+   "added": "2026-10-12",
+   "note": "trimmed to the build (0-5.6 s), ends on the hit"
+  },
+  {
+   "file": "glitch-small-electric.mp3",
+   "title": "Small electric glitch",
+   "source": "https://mixkit.co (sound #2595)",
+   "role": "glitch",
+   "seconds": 1.02,
+   "onset_s": 0.002,
+   "loudest_s": 0.231,
+   "added": "2026-10-12"
+  },
+  {
+   "file": "glitch-static.mp3",
+   "title": "Glitch static",
+   "source": "https://mixkit.co (sound #1457)",
+   "role": "glitch",
+   "seconds": 1.4,
+   "onset_s": 0.003,
+   "loudest_s": 0.376,
+   "added": "2026-10-12"
+  },
+  {
+   "file": "glitch-intro-text.mp3",
+   "title": "Intro text glitch",
+   "source": "https://mixkit.co (sound #2950)",
+   "role": "glitch",
+   "seconds": 4.59,
+   "onset_s": 0.125,
+   "loudest_s": 1.011,
+   "added": "2026-10-12"
+  },
+  {
+   "file": "glitch-rewind-transition.mp3",
+   "title": "Glitch sci fi rewind transition",
+   "source": "https://mixkit.co (sound #1093)",
+   "role": "glitch",
+   "seconds": 3.7,
+   "onset_s": 0.05,
+   "loudest_s": 0.831,
+   "added": "2026-10-12"
+  },
+  {
+   "file": "glitch-crackles.mp3",
+   "title": "Glitch crackles",
+   "source": "https://mixkit.co (sound #1044)",
+   "role": "glitch",
+   "seconds": 2.01,
+   "onset_s": 0.142,
+   "loudest_s": 1.208,
+   "added": "2026-10-12"
+  },
+  {
+   "file": "ui-select-click.mp3",
+   "title": "Select click",
+   "source": "https://mixkit.co (sound #1109)",
+   "role": "ui-tick",
+   "seconds": 1.1,
+   "onset_s": 0.0,
+   "loudest_s": 0.069,
+   "added": "2026-10-12"
+  },
+  {
+   "file": "ui-modern-select.mp3",
+   "title": "Modern technology select",
+   "source": "https://mixkit.co (sound #3124)",
+   "role": "ui-tick",
+   "seconds": 0.5,
+   "onset_s": 0.0,
+   "loudest_s": 0.013,
+   "added": "2026-10-12"
+  },
+  {
+   "file": "ui-click-tone.mp3",
+   "title": "Cool interface click tone",
+   "source": "https://mixkit.co (sound #2568)",
+   "role": "ui-tick",
+   "seconds": 0.2,
+   "onset_s": 0.0,
+   "loudest_s": 0.001,
+   "added": "2026-10-12"
+  },
+  {
+   "file": "ui-option-select.mp3",
+   "title": "Interface option select",
+   "source": "https://mixkit.co (sound #2573)",
+   "role": "ui-tick",
+   "seconds": 1.55,
+   "onset_s": 0.105,
+   "loudest_s": 0.121,
+   "added": "2026-10-12"
+  },
+  {
+   "file": "ui-device-click.mp3",
+   "title": "Interface device click",
+   "source": "https://mixkit.co (sound #2577)",
+   "role": "ui-tick",
+   "seconds": 1.05,
+   "onset_s": 0.006,
+   "loudest_s": 0.008,
+   "added": "2026-10-12"
+  },
+  {
+   "file": "mouse-double-click.mp3",
+   "title": "Fast double click on mouse",
+   "source": "https://mixkit.co (sound #275)",
+   "role": "ui-tick",
+   "seconds": 0.46,
+   "onset_s": 0.112,
+   "loudest_s": 0.114,
+   "added": "2026-10-12"
+  },
+  {
+   "file": "switch-tap.mp3",
+   "title": "On or off light switch tap",
+   "source": "https://mixkit.co (sound #2585)",
+   "role": "ui-tick",
+   "seconds": 1.11,
+   "onset_s": 0.001,
+   "loudest_s": 0.002,
+   "added": "2026-10-12"
+  },
+  {
+   "file": "notify-message-pop.mp3",
+   "title": "Message pop alert",
+   "source": "https://mixkit.co (sound #2354)",
+   "role": "notification",
+   "seconds": 1.06,
+   "onset_s": 0.053,
+   "loudest_s": 0.055,
+   "added": "2026-10-12"
+  },
+  {
+   "file": "notify-bubble-pop.mp3",
+   "title": "Bubble pop up alert notification",
+   "source": "https://mixkit.co (sound #2357)",
+   "role": "notification",
+   "seconds": 0.38,
+   "onset_s": 0.014,
+   "loudest_s": 0.128,
+   "added": "2026-10-12"
+  },
+  {
+   "file": "notify-positive.mp3",
+   "title": "Positive notification",
+   "source": "https://mixkit.co (sound #951)",
+   "role": "notification",
+   "seconds": 2.8,
+   "onset_s": 0.05,
+   "loudest_s": 0.224,
+   "added": "2026-10-12"
+  },
+  {
+   "file": "notify-confirmation.mp3",
+   "title": "Confirmation tone",
+   "source": "https://mixkit.co (sound #2867)",
+   "role": "notification",
+   "seconds": 1.3,
+   "onset_s": 0.005,
+   "loudest_s": 0.193,
+   "added": "2026-10-12"
+  },
+  {
+   "file": "typewriter-soft-click.mp3",
+   "title": "Typewriter soft click",
+   "source": "https://mixkit.co (sound #1125)",
+   "role": "typing",
+   "seconds": 0.22,
+   "onset_s": 0.107,
+   "loudest_s": 0.108,
+   "added": "2026-10-12"
+  },
+  {
+   "file": "typewriter-single-hit.mp3",
+   "title": "Mechanical typewriter single hit",
+   "source": "https://mixkit.co (sound #1382)",
+   "role": "typing",
+   "seconds": 0.7,
+   "onset_s": 0.117,
+   "loudest_s": 0.171,
+   "added": "2026-10-12"
+  },
+  {
+   "file": "typewriter-return-bell.mp3",
+   "title": "Typewriter return bell",
+   "source": "https://mixkit.co (sound #1368)",
+   "role": "typing",
+   "seconds": 1.76,
+   "onset_s": 0.115,
+   "loudest_s": 0.553,
+   "added": "2026-10-12"
+  },
+  {
+   "file": "keyboard-typing.mp3",
+   "title": "Keyboard typing",
+   "source": "https://mixkit.co (sound #1386)",
+   "role": "typing",
+   "seconds": 4.0,
+   "onset_s": 0.018,
+   "loudest_s": 3.245,
+   "added": "2026-10-12",
+   "note": "trimmed to 4 s (1.0-5.0 s of the original)"
+  },
+  {
+   "file": "laptop-typing.mp3",
+   "title": "Typing on a laptop keyboard",
+   "source": "https://mixkit.co (sound #2531)",
+   "role": "typing",
+   "seconds": 4.0,
+   "onset_s": 0.006,
+   "loudest_s": 1.492,
+   "added": "2026-10-12",
+   "note": "trimmed to the first 4 s"
+  },
+  {
+   "file": "tape-rewind-fast.mp3",
+   "title": "Fast tape rewind cinematic transition",
+   "source": "https://mixkit.co (sound #1092)",
+   "role": "tape-record",
+   "seconds": 1.92,
+   "onset_s": 0.206,
+   "loudest_s": 1.437,
+   "added": "2026-10-12"
+  },
+  {
+   "file": "tape-switch.mp3",
+   "title": "Tape switch",
+   "source": "https://mixkit.co (sound #3096)",
+   "role": "tape-record",
+   "seconds": 2.0,
+   "onset_s": 0.151,
+   "loudest_s": 0.282,
+   "added": "2026-10-12"
+  },
+  {
+   "file": "record-scratch-stop.mp3",
+   "title": "Vinyl stop fast scratch",
+   "source": "https://mixkit.co (sound #704)",
+   "role": "tape-record",
+   "seconds": 3.73,
+   "onset_s": 0.017,
+   "loudest_s": 0.029,
+   "added": "2026-10-12"
+  },
+  {
+   "file": "tape-stop-slowdown.mp3",
+   "title": "Vinyl record slow down",
+   "source": "https://mixkit.co (sound #711)",
+   "role": "tape-record",
+   "seconds": 3.0,
+   "onset_s": 0.045,
+   "loudest_s": 1.509,
+   "added": "2026-10-12",
+   "note": "trimmed to the first 3 s"
+  },
+  {
+   "file": "needle-drop.mp3",
+   "title": "Record player needle drop on vinyl",
+   "source": "https://mixkit.co (sound #701)",
+   "role": "tape-record",
+   "seconds": 0.33,
+   "onset_s": 0.037,
+   "loudest_s": 0.037,
+   "added": "2026-10-12"
+  },
+  {
+   "file": "coins-clinking.mp3",
+   "title": "Clinking coins",
+   "source": "https://mixkit.co (sound #1993)",
+   "role": "cash-ding",
+   "seconds": 1.02,
+   "onset_s": 0.057,
+   "loudest_s": 0.08,
+   "added": "2026-10-12"
+  },
+  {
+   "file": "coin-win.mp3",
+   "title": "Coin win notification",
+   "source": "https://mixkit.co (sound #1992)",
+   "role": "cash-ding",
+   "seconds": 2.5,
+   "onset_s": 0.001,
+   "loudest_s": 0.214,
+   "added": "2026-10-12"
+  },
+  {
+   "file": "bell-service-ding.mp3",
+   "title": "Service bell",
+   "source": "https://mixkit.co (sound #931)",
+   "role": "cash-ding",
+   "seconds": 1.18,
+   "onset_s": 0.013,
+   "loudest_s": 0.037,
+   "added": "2026-10-12"
+  },
+  {
+   "file": "bell-cooking-ding.mp3",
+   "title": "Cooking bell ding",
+   "source": "https://mixkit.co (sound #1791)",
+   "role": "cash-ding",
+   "seconds": 1.59,
+   "onset_s": 0.005,
+   "loudest_s": 0.007,
+   "added": "2026-10-12"
+  },
+  {
+   "file": "hit-short-bass.mp3",
+   "title": "Short bass hit",
+   "source": "https://mixkit.co (sound #2299)",
+   "role": "soft-hit",
+   "seconds": 1.1,
+   "onset_s": 0.063,
+   "loudest_s": 0.087,
+   "added": "2026-10-12"
+  },
+  {
+   "file": "hit-futuristic-bass.mp3",
+   "title": "Futuristic bass hit",
+   "source": "https://mixkit.co (sound #2303)",
+   "role": "soft-hit",
+   "seconds": 2.75,
+   "onset_s": 0.029,
+   "loudest_s": 0.206,
+   "added": "2026-10-12"
+  },
+  {
+   "file": "bass-quick-switch.mp3",
+   "title": "Quick bass switch",
+   "source": "https://mixkit.co (sound #2301)",
+   "role": "soft-hit",
+   "seconds": 2.0,
+   "onset_s": 0.134,
+   "loudest_s": 0.165,
+   "added": "2026-10-12"
+  },
+  {
+   "file": "drum-joke-accent.mp3",
+   "title": "Drum joke accent",
+   "source": "https://mixkit.co (sound #579)",
+   "role": "soft-hit",
+   "seconds": 2.48,
+   "onset_s": 0.046,
+   "loudest_s": 0.674,
+   "added": "2026-10-12"
+  },
+  {
+   "file": "drum-deep-impact.mp3",
+   "title": "Drum deep impact",
+   "source": "https://mixkit.co (sound #563)",
+   "role": "soft-hit",
+   "seconds": 5.5,
+   "onset_s": 0.158,
+   "loudest_s": 0.168,
+   "added": "2026-10-12"
+  },
+  {
+   "file": "wrong-answer.mp3",
+   "title": "Wrong answer fail notification",
+   "source": "https://mixkit.co (sound #946)",
+   "role": "error",
+   "seconds": 1.95,
+   "onset_s": 0.007,
+   "loudest_s": 0.145,
+   "added": "2026-10-12"
+  },
+  {
+   "file": "buzzer-fail.mp3",
+   "title": "System beep buzzer fail",
+   "source": "https://mixkit.co (sound #2964)",
+   "role": "error",
+   "seconds": 1.23,
+   "onset_s": 0.001,
+   "loudest_s": 0.161,
+   "added": "2026-10-12"
+  },
+  {
+   "file": "swipe-fast-zoom.mp3",
+   "title": "Fast swipe zoom",
+   "source": "https://mixkit.co (sound #2627)",
+   "role": "swipe",
+   "seconds": 1.06,
+   "onset_s": 0.134,
+   "loudest_s": 0.226,
+   "added": "2026-10-12"
+  },
+  {
+   "file": "transition-tech-slide.mp3",
+   "title": "Technology transition slide",
+   "source": "https://mixkit.co (sound #3120)",
+   "role": "swipe",
+   "seconds": 1.65,
+   "onset_s": 0.017,
+   "loudest_s": 0.121,
+   "added": "2026-10-12"
+  },
+  {
+   "file": "air-zoom-vacuum.mp3",
+   "title": "Air zoom vacuum",
+   "source": "https://mixkit.co (sound #2608)",
+   "role": "swipe",
+   "seconds": 1.27,
+   "onset_s": 0.319,
+   "loudest_s": 0.435,
+   "added": "2026-10-12"
+  }
+ ]
+}

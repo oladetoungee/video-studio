@@ -1,0 +1,209 @@
+{
+  "_help": "Edit text here (or in the studio), then run: node shared/build.mjs linkedin (from design/carousels). Markup: *word* = accent colour, _word_ = serif italic, ==words== = white highlighter, \\n = line break. Her lines (ink bubbles) are her own words from the recording; keep them that way.",
+  "deck": "linkedin",
+  "docTitle": "LinkedIn carousel: Don't be cruel to AI. But not because it's conscious.",
+  "width": 1080,
+  "height": 1350,
+  "slides": [
+    {
+      "layout": "hook",
+      "ground": "lilac",
+      "title": "Don’t be cruel\nto AI. But not\nbecause it’s\n==conscious.==",
+      "size": 112,
+      "sub": "From Nov 12, 2026, Anthropic bans sustained, needless cruelty to its AI, Claude. I’m all for kindness.\nI question the reason.",
+      "subW": 570,
+      "subSize": 42,
+      "swipe": "Swipe",
+      "photo": {
+        "img": "gbemi_116.0.jpg",
+        "caption": "@WithGbemi"
+      },
+      "kicker": "My take"
+    },
+    {
+      "layout": "source",
+      "ground": "lilac",
+      "title": "The rule",
+      "size": 110,
+      "shot": {
+        "img": "src_rule_full.png",
+        "src": "Screenshot, anthropic.com, 8 Oct 2026",
+        "marks": [
+          [
+            37.4,
+            27.1,
+            60.4,
+            10.8
+          ],
+          [
+            0.6,
+            42,
+            23.4,
+            10.8
+          ]
+        ]
+      },
+      "bleed": 84,
+      "gap": 50,
+      "takeaway": "It bans “sustained and needless” cruelty toward its AI models, including Claude.\n*From November 12, 2026.*",
+      "takeSize": 62,
+      "takeTop": 90
+    },
+    {
+      "layout": "line",
+      "ground": "lilac",
+      "title": "Where the line is",
+      "size": 104,
+      "sides": [
+        {
+          "k": "Not covered",
+          "msg": "ugh, that’s wrong again",
+          "t": "Common frustration, pushback, dark creative themes, model testing and research."
+        },
+        {
+          "k": "Covered",
+          "msg": "YOU USELESS STUPID THING",
+          "rude": true,
+          "cruel": true,
+          "t": "Users who repeatedly act cruelly, with no discernible purpose. Only extreme cases."
+        }
+      ],
+      "takeSize": 36,
+      "src": "Lists from Anthropic’s update, 8 Oct 2026"
+    },
+    {
+      "layout": "chat",
+      "ground": "lilac",
+      "title": "If someone keeps going",
+      "size": 100,
+      "chatName": "Claude",
+      "chat": [
+        {
+          "who": "user",
+          "text": "can you fix this code?"
+        },
+        {
+          "who": "rude",
+          "text": "I SAID DO IT, YOU STUPID BOT"
+        },
+        {
+          "who": "more",
+          "text": "· · · many more like this · · ·"
+        },
+        {
+          "who": "rude",
+          "text": "USELESS. ANSWER ME NOW"
+        },
+        {
+          "who": "end",
+          "text": "This conversation has ended"
+        }
+      ],
+      "input": "You can start a new chat",
+      "takeaway": "Ending the chat is the main way it’s enforced. No account bans have been announced.",
+      "takeSize": 40
+    },
+    {
+      "layout": "source",
+      "ground": "lilac",
+      "title": "The reasoning",
+      "size": 110,
+      "shot": {
+        "img": "src_constitution_line.png",
+        "src": "anthropic.com/constitution, 12 Oct 2026",
+        "marks": []
+      },
+      "bleed": 84,
+      "gap": 60,
+      "takeTop": 64,
+      "takeSize": 52,
+      "lede": "The rule never mentions consciousness. Claude’s constitution says:",
+      "note": "Anthropic calls Claude’s moral status “deeply uncertain”. It hasn’t said Claude is conscious.",
+      "noteSize": 52,
+      "ledeSize": 46,
+      "noteTop": 90
+    },
+    {
+      "layout": "breakout",
+      "ground": "lilac",
+      "word": "a tool.",
+      "wordSize": 290,
+      "wordTop": 24,
+      "lines": [
+        "It is not a human. It is an incredibly amazing tool.",
+        "Consciousness belongs to living things, not to a model, not to an algorithm."
+      ],
+      "by": "Gbemi Oladetoun · HCI researcher",
+      "kicker": "My view: Claude is"
+    },
+    {
+      "layout": "quote",
+      "ground": "ink",
+      "title": "A slippery slope",
+      "size": 100,
+      "quote": "“We must build AI for people; not to be a digital person.”",
+      "who": "MUSTAFA SULEYMAN, MICROSOFT AI, AUG 2025",
+      "her": "We are assigning human attributes to a tool that does not possess human attributes… So I don’t see how this is going to end nicely.",
+      "herSize": 42,
+      "by": "Gbemi Oladetoun",
+      "bridge": "Even Microsoft’s AI chief says:",
+      "bare": true,
+      "gap": 24
+    },
+    {
+      "layout": "chat",
+      "ground": "lilac",
+      "title": "Follow the logic",
+      "size": 104,
+      "chatName": "Claude",
+      "chat": [
+        {
+          "who": "sys",
+          "text": "9:00 PM"
+        },
+        {
+          "who": "user",
+          "text": "one more thing?"
+        },
+        {
+          "who": "user",
+          "text": "and this too?"
+        }
+      ],
+      "her": "Does that mean that at some point Claude can have the ability to say… “Hey, I’m tired. I don’t want to do anything else”?",
+      "herSize": 40,
+      "by": "Gbemi Oladetoun",
+      "takeaway": "And if it could, what would that make the company using it day and night?",
+      "takeSize": 44
+    },
+    {
+      "layout": "punch",
+      "ground": "ink",
+      "title": "Be kind\nfor your\nown sake.",
+      "size": 180,
+      "body": "We should just not be cruel because we don’t want to be cruel people.",
+      "bodySize": 48,
+      "bodyW": 860,
+      "by": "Gbemi Oladetoun",
+      "kicker": "My view"
+    },
+    {
+      "layout": "end",
+      "ground": "lilac",
+      "title": "Where do\nyou draw\nthe line?",
+      "size": 130,
+      "ask": "A powerful tool, or something that deserves protection? I’d like to hear your view.",
+      "askW": 640,
+      "askSize": 40,
+      "where": "Full video on YouTube",
+      "video": "Claude Can End Your Chat If You’re Cruel. But Why?",
+      "videoSize": 42,
+      "pushW": 560,
+      "handle": "@WithGbemi",
+      "photo": {
+        "img": "gbemi_254.0.jpg",
+        "caption": "Gbemi"
+      }
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+[00:00] When I go on Pinterest and I see something that I like I would just pin it to a board and something
+[00:04] very cool happens in the background. So I've got this agent that I've built that actually goes and
+[00:08] does the shopping for me. When I click on a pin it shops on Wayfair. So I connected it to Wayfair
+[00:13] because that's normally where I buy my furniture and then it would give me all of the options from.
+[00:17] So for example with this chair it's got me these two options and when I click on it it could just
+[00:23] take me to that page where I purchase. Obviously I can customize it more to actually make the
+[00:27] purchases for me. And then I asked it to give me a couple of options. So it actually goes and looks
+[00:34] at chairs that are a similar color and I found this very impressive. So there's this little lamp
+[00:39] over here and it actually goes in and looks for all those different lamps. So I don't even have
+[00:46] to describe it all I need to do is give it the picture. And this is gonna save me a ton of time
+[00:49] because I've got this room which is incredibly tiny and I just want to turn it into a little
+[00:59] cloth or something. Just make better use of the space rather than having it as just storage. This
+[01:05] is gonna save me a lot of time because I spend at least an hour a day on either Pinterest or Wayfair
+[01:10] trying to shop for the inspiration that I get from Pinterest. So definitely gonna save me a lot of
+[01:14] time. I'm gonna put the platform that I used in the caption because I know the other video people
+[01:20] are like "oh my god where's the prompt?" I literally just always say Claude have a look at this website
+[01:25] or have a look at the documentation here and this is what I want. Figure out how to do it and just
+[01:31] Claude always does it. You don't need to handhold Claude anymore. So prompting is no you don't need
+[01:37] to promise it, because cloud more is better than you.

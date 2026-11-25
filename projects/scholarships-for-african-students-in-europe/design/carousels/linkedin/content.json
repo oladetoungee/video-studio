@@ -1,0 +1,241 @@
+{
+  "_help": "Edit text here (or in the studio), then run: node shared/build.mjs linkedin (from design/carousels). Exports PNGs + carousel.pdf.",
+  "deck": "linkedin",
+  "width": 1080,
+  "height": 1350,
+  "accent": "#14955A",
+  "accentOnInk": "#2FD27A",
+  "docTitle": "Scholarships in Europe for Nigerian and African students (2027)",
+  "slides": [
+    {
+      "layout": "cover",
+      "ground": "ink",
+      "title": "Scholarships in Europe for *Nigerian and African* students",
+      "size": 116,
+      "sub": "Some deadlines have already passed. These are the main ones, with the dates I checked on official sites on 2 November.",
+      "city": {
+        "img": "flapboard.jpg",
+        "flap": "*2027* INTAKE",
+        "pos": "50% 40%"
+      },
+      "subSize": 40
+    },
+    {
+      "layout": "ways",
+      "ground": "paper",
+      "title": "They don’t all work the *same way*",
+      "ways": [
+        {
+          "t": "Apply once for both the scholarship and the master’s",
+          "e": "Erasmus Mundus"
+        },
+        {
+          "t": "Get a university offer, then apply for the scholarship",
+          "e": "NL Scholarship and Swedish Institute"
+        },
+        {
+          "t": "Two separate applications, one to each",
+          "e": "Chevening (UK)"
+        }
+      ],
+      "body": "Check which way it works before you start any forms."
+    },
+    {
+      "layout": "passes",
+      "ground": "ink",
+      "title": "Fully funded or *partial*?",
+      "full": {
+        "top": "Fully funded",
+        "k": "",
+        "v": "Your tuition and money to live on every month, like Erasmus Mundus"
+      },
+      "part": {
+        "top": "Partial",
+        "k": "",
+        "v": "Some of it, like €5,000 once from the NL Scholarship"
+      },
+      "body": "Before you apply, check which kind it is and how much you would still pay yourself.",
+      "size": 118
+    },
+    {
+      "layout": "story",
+      "ground": "paper",
+      "tag": "Erasmus Mundus",
+      "date": "Any nationality",
+      "title": "*€1,400* a month for up to 24 months",
+      "size": 96,
+      "body": "It’s the EU scholarship for master’s programmes, open to students from anywhere in the world. Most programmes take applications between October and January.",
+      "shot": {
+        "img": "em-1400-short.png",
+        "credit": "Erasmus+ Programme Guide",
+        "w": 920,
+        "hl": [
+          [
+            62.5,
+            8,
+            37,
+            84
+          ]
+        ]
+      },
+      "rot": -1,
+      "flaprows": [
+        "TUITION *✓*",
+        "TRAVEL  *✓*",
+        "VISA    *✓*",
+        "LIVING  *✓*"
+      ]
+    },
+    {
+      "layout": "story",
+      "ground": "ink",
+      "tag": "Erasmus Mundus",
+      "date": "Tallinn",
+      "title": "An Erasmus Mundus master’s at my university opens on *2 December*",
+      "size": 88,
+      "body": "It’s called AISS, and Tallinn University, where I study, is part of it. I got admission and a partial scholarship for it, but I chose another programme.",
+      "shot": {
+        "img": "aiss-dates.png",
+        "credit": "aissprogram.eu",
+        "w": 880
+      },
+      "rot": 1.5,
+      "shotTop": 50
+    },
+    {
+      "layout": "country",
+      "ground": "paper",
+      "city": {
+        "img": "berlin.jpg",
+        "flap": "GERMANY",
+        "pos": "50% 35%"
+      },
+      "title": "DAAD EPOS needs work experience",
+      "body": "DAAD EPOS is a German scholarship for development-related master’s courses. A lot of the 2027 deadlines have passed, so if you’re aiming for 2028, start now.",
+      "link": "daad.de",
+      "flaprows": [
+        "*2+ YEARS* WORK",
+        "DEGREE IN LAST *6 YEARS*",
+        "*€992* A MONTH"
+      ]
+    },
+    {
+      "layout": "steps",
+      "ground": "ink",
+      "city": {
+        "img": "stockholm.jpg",
+        "flap": "SWEDEN",
+        "pos": "50% 60%"
+      },
+      "title": "The Swedish Institute has *two steps*",
+      "steps": [
+        {
+          "k": "Step 1: apply to the master’s",
+          "f": "BY *15 JAN* 2027"
+        },
+        {
+          "k": "Step 2: apply for the scholarship",
+          "f": "*8-24 FEB* 2027"
+        }
+      ],
+      "body": "It pays your tuition and a monthly allowance. It’s for people with work and leadership experience, and Nigeria is on the list.",
+      "link": "si.se",
+      "size": 76
+    },
+    {
+      "layout": "country",
+      "ground": "paper",
+      "city": {
+        "img": "amsterdam.jpg",
+        "flap": "NETHERLANDS",
+        "pos": "50% 50%"
+      },
+      "title": "*€5,000* for your first year in the Netherlands",
+      "body": "The NL Scholarship is for students from outside the EEA, Nigeria included, at Dutch universities that take part.",
+      "link": "studyinnl.org",
+      "flaprows": [
+        "1  UNIVERSITY OFFER",
+        "2  THEN *€5,000*"
+      ]
+    },
+    {
+      "layout": "country",
+      "ground": "ink",
+      "city": {
+        "img": "budapest.jpg",
+        "flap": "HUNGARY",
+        "pos": "50% 50%"
+      },
+      "title": "Nigerians can apply for Stipendium Hungaricum",
+      "body": "It doesn’t cover all your living costs. The 2027/28 round isn’t open yet, and in Nigeria the Department of Scholarship Awards nominates you.",
+      "link": "stipendiumhungaricum.hu",
+      "flaprows": [
+        "TUITION + STIPEND *✓*",
+        "DORM OR RENT      *✓*",
+        "HEALTH INSURANCE  *✓*"
+      ],
+      "size": 84
+    },
+    {
+      "layout": "country",
+      "ground": "paper",
+      "city": {
+        "img": "tallinn.jpg",
+        "flap": "ESTONIA",
+        "pos": "50% 50%"
+      },
+      "title": "Estonia’s state scholarship is not for Nigerians",
+      "body": "This is where I study. For Nigerians, the realistic options here are these two.",
+      "link": "harno.ee",
+      "flaprows": [
+        "01 UNI TUITION DISCOUNT",
+        "02 ERASMUS MUNDUS"
+      ]
+    },
+    {
+      "layout": "country",
+      "ground": "ink",
+      "city": {
+        "img": "london.jpg",
+        "flap": "UK",
+        "pos": "50% 40%"
+      },
+      "title": "Chevening (UK) reopens around *August 2027*",
+      "size": 110,
+      "body": "It closed on 6 October. The UK isn’t in the EU, but Nigerians do get Chevening, so you can prepare for the next round now.",
+      "link": "chevening.org",
+      "flaprows": [
+        "CLOSED 6 OCT 2026"
+      ]
+    },
+    {
+      "layout": "list",
+      "ground": "ink",
+      "title": "What I’d tell a *friend*",
+      "rows": [
+        "Start preparing a year before you go.",
+        "Make a calendar with every deadline and the documents each one needs.",
+        "Ask for your official transcripts early, because they take time.",
+        "Write a new motivation letter for each programme.",
+        "Apply for more than one.",
+        "Only apply on the official website."
+      ]
+    },
+    {
+      "layout": "end",
+      "ground": "accent",
+      "title": "Which one are you applying for?",
+      "size": 116,
+      "body": "If you apply and get in, please come back and give your testimony.",
+      "where": "Full video on YouTube",
+      "handle": "@WithGbemi",
+      "polaroid": {
+        "img": "her_headshot.jpg",
+        "caption": "Tallinn, Estonia",
+        "pos": "50% 30%"
+      },
+      "polY": 720,
+      "polW": 400
+    }
+  ]
+}

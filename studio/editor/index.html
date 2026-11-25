@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Studio</title>
+<link rel="stylesheet" href="/studio/runtime/fonts.css">
+<link rel="stylesheet" href="/studio/editor/editor.css">
+</head>
+<body>
+<div class="app">
+  <header class="top">
+    <a class="back" href="/">← Studio</a>
+    <h1 id="title">Loading…</h1>
+    <span class="grow"></span>
+    <div class="seg" id="aspectSeg" role="group" aria-label="Frame">
+      <button type="button" data-aspect="16x9" title="YouTube, 1920×1080">16:9</button>
+      <button type="button" data-aspect="9x16" title="TikTok, Reels, Shorts, 1080×1920">9:16</button>
+      <button type="button" data-aspect="4x5" title="Instagram feed, 1080×1350 (follows the 9:16 layout)">4:5</button>
+    </div>
+    <button type="button" id="tCap" aria-pressed="false" title="Captions (C)">Captions</button>
+    <button type="button" class="mode" id="tMode" title="Light or dark, for this screen only (D)">☀ Light</button>
+    <div class="soundbar" role="group" aria-label="Sound in the preview">
+      <span class="vol"><button type="button" id="tVoice" aria-pressed="true" title="Her voice in the preview (on / off)">Voice</button><input type="range" id="vVoice" min="-24" max="12" step="1" value="0" list="zeroDb" aria-label="Voice volume"><output id="vVoiceV" for="vVoice">0 dB</output></span>
+      <span class="vol"><button type="button" id="tMusic" aria-pressed="true" title="Music in the preview (on / off)">Music</button><input type="range" id="vMusic" min="-24" max="12" step="1" value="0" list="zeroDb" aria-label="Music volume"><output id="vMusicV" for="vMusic">0 dB</output></span>
+      <span class="vol"><button type="button" id="tSfx" aria-pressed="true" title="Sound effects in the preview (on / off)">Sound effects</button><input type="range" id="vSfx" min="-24" max="12" step="1" value="0" list="zeroDb" aria-label="Sound effects volume"><output id="vSfxV" for="vSfx">0 dB</output></span>
+      <datalist id="zeroDb"><option value="0"></option></datalist>
+    </div>
+    <button type="button" class="edit" id="tEdit" aria-pressed="false" title="Edit text and positions (E)">✎ Edit</button>
+    <button type="button" id="undo" title="Undo (⌘Z)" disabled>Undo</button>
+    <button type="button" id="redo" title="Redo (⇧⌘Z)" disabled>Redo</button>
+    <span class="save" id="save" aria-live="polite"></span>
+  </header>
+  <div class="body">
+    <aside class="left">
+      <div class="tabs" role="tablist">
+        <button type="button" role="tab" id="tabScenes" aria-selected="true">Screens</button>
+        <button type="button" role="tab" id="tabLines" aria-selected="false">Lines</button>
+      </div>
+      <div class="list" id="scenes"></div>
+      <div class="list" id="lines" hidden></div>
+    </aside>
+    <section class="center">
+      <div class="stagewrap" id="stagewrap">
+        <div class="stage" id="stage">
+          <canvas id="cv" width="1920" height="1080" aria-label="The film, drawn frame by frame"></canvas>
+          <div id="overlay"></div>
+          <div class="editbanner" id="editbanner" hidden>Edit mode · click text to change it · drag to move · changes save by themselves</div>
+          <div class="loading" id="loading">Loading the film…</div>
+        </div>
+      </div>
+      <div class="transport">
+        <button type="button" class="primary" id="play" style="min-width:84px" title="Play the film (Space)">▶ Play</button>
+        <button type="button" class="loop" id="loop" aria-pressed="false" title="Play this screen on repeat (L)">⟲ Play this screen</button>
+        <span class="loopstate" id="loopState" aria-live="polite" hidden></span>
+        <span class="time" id="time">0:00.00 / 0:00</span>
+        <div class="track" id="track" role="slider" tabindex="0" aria-label="Timeline" aria-valuemin="0"><div class="fill" id="fill"></div><div class="mark" id="mark" hidden></div><div class="head" id="head"></div></div>
+      </div>
+      <div class="editbar" id="editbar" hidden>
+        <span class="saveflash" id="flash"></span>
+        <span id="editcount"></span>
+        <span>Text edits apply to every frame size. Moves and sizes apply to this frame size only<span id="moveNote"></span>. Press <b>Done</b> when you are finished: everything is already saved.</span>
+        <span class="grow"></span>
+        <span><kbd>Space</kbd> play · <kbd>←</kbd><kbd>→</kbd> frame · <kbd>[</kbd><kbd>]</kbd> screen · <kbd>L</kbd> this screen on repeat · <kbd>D</kbd> light / dark · <kbd>E</kbd> edit</span>
+      </div>
+    </section>
+    <aside class="right">
+      <section class="pane" id="exportPane">
+        <h2>Export</h2>
+        <label class="field"><span>What</span>
+          <select id="xWhat">
+            <option value="scene">This screen</option>
+            <option value="line">This line</option>
+            <option value="range">Custom in / out</option>
+            <option value="frame">This frame (PNG)</option>
+            <option value="film">Whole film</option>
+          </select></label>
+        <div class="inout" id="xRange" hidden>
+          <input type="text" id="xIn" class="mono" aria-label="In (m:ss.ss)"><button type="button" id="xSetIn">Set in</button>
+          <input type="text" id="xOut" class="mono" aria-label="Out (m:ss.ss)"><button type="button" id="xSetOut">Set out</button>
+        </div>
+        <label class="field"><span>Frame</span>
+          <select id="xAspect"><option value="16x9">16:9 · 1920×1080</option><option value="9x16">9:16 · 1080×1920</option><option value="4x5">4:5 · 1080×1350</option></select></label>
+        <label class="field" title="The exported video plays faster or slower. Your voice keeps its normal tone; music, sound effects, captions and graphics speed up with it. The loudness stays right for YouTube."><span>Speed</span>
+          <select id="xSpeed">
+            <option value="0.9">0.9×</option>
+            <option value="1" selected>1× · as made</option>
+            <option value="1.1">1.1×</option>
+            <option value="1.2">1.2×</option>
+            <option value="1.25">1.25×</option>
+            <option value="1.3">1.3×</option>
+            <option value="1.5">1.5×</option>
+          </select></label>
+        <div class="checks">
+          <label><input type="checkbox" id="xCap"> Burn in captions</label>
+          <label><input type="checkbox" id="xVoice" checked> Voice</label>
+          <label><input type="checkbox" id="xMusic" checked> Music</label>
+          <label><input type="checkbox" id="xSfx" checked> Sound effects</label>
+          <label title="A subtitles file next to the video. Off unless you need it."><input type="checkbox" id="xSrt"> Also save the captions file (.srt)</label>
+        </div>
+        <p class="levels" id="xLevels"></p>
+        <div class="summary" id="xSummary"></div>
+        <button type="button" class="primary" id="xGo">Export</button>
+        <p id="xNote"></p>
+        <div class="soundonly">
+          <h3>Sound only</h3>
+          <p id="sNote"></p>
+          <div class="sbtns">
+            <button type="button" id="sVoice" data-tracks="voice">Download voice</button>
+            <button type="button" id="sMusic" data-tracks="music">Download music</button>
+            <button type="button" id="sSfx" data-tracks="sfx">Download sound effects</button>
+            <button type="button" id="sAll" data-tracks="voice,music,sfx">Download all three</button>
+          </div>
+        </div>
+        <div id="jobs" style="display:flex;flex-direction:column;gap:8px"></div>
+      </section>
+      <section class="pane" id="modePane">
+        <h2>Light / dark</h2>
+        <p id="modeState">Every screen has its own designed look.</p>
+        <details class="adv"><summary>Advanced</summary>
+          <div class="inout"><span class="k">All screens</span><button type="button" id="allLight" title="Every screen that has a light version">☀ Light</button><button type="button" id="allDark" title="Every screen that has a dark version">☾ Dark</button><button type="button" id="allDesign" title="Every screen back to its designed look">As designed</button></div>
+        </details>
+      </section>
+      <section class="pane">
+        <h2>Versions</h2>
+        <p id="saveState">Edits save into the project by themselves.</p>
+        <div class="inout"><input type="text" id="vName" placeholder="Name this version" aria-label="Version name" style="flex:1 1 140px"><button type="button" id="vSave">Save version</button></div>
+        <div class="vlist" id="vlist"></div>
+        <button type="button" id="clearAll">Clear all edits…</button>
+      </section>
+      <section class="pane">
+        <h2>Sound</h2>
+        <p id="audioState">Checking the sound…</p>
+        <details class="adv"><summary>Advanced</summary>
+          <button type="button" id="rebuild">Re-mix the sound (after changing scenes or sound cues)</button>
+        </details>
+      </section>
+      <div class="status" id="status" aria-live="polite"></div>
+    </aside>
+  </div>
+</div>
+<div class="pop" id="pop" hidden role="dialog" aria-label="Edit element">
+  <div class="id" id="popId"></div>
+  <div class="hint" id="popStack" hidden>Something else is under this spot: click the same spot again to pick it.</div>
+  <textarea id="popText" aria-label="Text"></textarea>
+  <div class="hint" id="popHint"><kbd>Enter</kbd> saves · <kbd>⇧</kbd><kbd>Enter</kbd> new line<span id="popMarkup"> · <code>*word*</code> accent colour · <code>~word~</code> serif accent</span></div>
+  <div class="inout" id="popSizeRow" hidden><span class="k">Size</span><input type="range" id="popSize" min="20" max="300" step="1" style="flex:1" aria-label="Size"><span class="mono" id="popSizeV">100%</span></div>
+  <div class="btns">
+    <button type="button" class="primary" id="popApply">Apply</button>
+    <button type="button" id="popHide">Hide</button>
+    <button type="button" id="popHideHere" hidden>Hide in this size</button>
+    <button type="button" id="popResetPos">Reset position</button>
+    <button type="button" id="popReset">Reset all</button>
+    <span class="grow"></span>
+    <button type="button" id="popClose">Close</button>
+  </div>
+</div>
+<audio id="aVoice" preload="auto"></audio>
+<audio id="aMusic" preload="auto"></audio>
+<audio id="aSfx" preload="auto"></audio>
+<script src="/studio/runtime/core.js"></script>
+<script src="/studio/runtime/motion.js"></script>
+<script src="/studio/runtime/house.js"></script>
+<script src="/studio/runtime/boot.js"></script>
+<script src="/studio/editor/shell.js"></script>
+<script src="/studio/editor/canvasedit.js"></script>
+<script src="/studio/editor/editor.js"></script>
+</body></html>

@@ -1,0 +1,27 @@
+{
+  "text": {
+    "a": "Skim.",
+    "b": "Read.",
+    "c": "Deep dive.",
+    "cr": "S. Keshav, \"How to Read a Paper\" (2007)"
+  },
+  "kind": "no face: the same real paper three times, more highlighted each time (title / + key parts / all), + three heavy italic serif words stacked left",
+  "board": "pick1119-34 (\"Scientists studied doomscrolling. Here's what they found.\", \"Brain Rot Research\" stacked left + the object right)",
+  "fonts": [
+    "thumbs-04 Playfair Display Black Italic, cream #EAD9B9 on #2B2724 (Thumbnails 41)"
+  ],
+  "colours": "thumbs-04: #EAD9B9 on #2B2724; underline #F7D51D (the highlighter on the page)",
+  "photo": "none; real pages: S. Keshav, \"How to Read a Paper\", ACM SIGCOMM CCR 2007 (free PDF), credited",
+  "thumbnail_text": "Skim. Read. Deep dive.",
+  "titles": [
+    "A Professor's 3-Pass Method for Reading Research Papers",
+    "How Researchers Actually Read a Paper (3 Passes)",
+    "How to Read a Research Paper (The 3-Pass Method)"
+  ],
+  "direction": "Copies pick1119-34: a \"here's what the expert says\" title; on the picture, the real object big and three stacked heavy italic serif words. Skim / read / rebuild = Keshav's passes (first pass skim, second read with care, third the deep dive she describes, \"virtually re-implement\" the paper).",
+  "nudge": {},
+  "images": {},
+  "vars": {},
+  "class": "no-lift",
+  "title": "A Professor's 3-Pass Method for Reading Research Papers"
+}

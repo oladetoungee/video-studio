@@ -1,0 +1,36 @@
+{
+ "label": "Before this session’s edits",
+ "auto": true,
+ "savedAt": 1794256403067,
+ "content": {
+  "direction": "Other, no face: a big generic browser DevTools Network panel (no brand), four bookstore requests, the Status column coloured by class (200 and 201 mint, 404 amber, 502 tomato) and circled in marker. Everyone has seen this column; the words promise to explain it. References: viral real-screen thumbnails, her database-indexes thumbnail (one object, one marker).",
+  "thumbnail_text": "WHAT THESE NUMBERS MEAN",
+  "titles": [
+   "HTTP Status Codes Explained: Is It You or the Server?",
+   "HTTP Status Codes Explained: 200, 404, 500 and More",
+   "Every HTTP Status Code You Will Actually Use"
+  ],
+  "title": "HTTP Status Codes Explained: Is It You or the Server?",
+  "kind": "other",
+  "text": {
+   "hd": "What these<br>HTTP codes mean",
+   "s1": "200",
+   "n1": "/books/42",
+   "s2": "201",
+   "n2": "/books",
+   "s4": "404",
+   "n4": "/books/9999",
+   "s5": "502",
+   "n5": "/stock"
+  },
+  "images": {},
+  "vars": {
+   "--ground": "#E2BE65",
+   "--fg": "#111114",
+   "--gridc": "rgba(17,17,20,.08)",
+   "--rule": "rgba(17,17,20,.85)"
+  },
+  "recommended": false,
+  "scores": "cold critic R1 6.5 · R2 6.5 · R3 alone 6.5, with title 7 (fixes after R3 not re-scored)"
+ }
+}

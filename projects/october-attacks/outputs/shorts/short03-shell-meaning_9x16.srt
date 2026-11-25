@@ -1,0 +1,39 @@
+1
+00:00:00,063 --> 00:00:02,083
+and two critical loopholes have been found
+
+2
+00:00:02,083 --> 00:00:03,303
+in PHP this month
+
+3
+00:00:03,303 --> 00:00:04,943
+they're calling it the PHP2Shell
+
+4
+00:00:04,943 --> 00:00:06,883
+and the shell part of the name is actually
+
+5
+00:00:06,883 --> 00:00:09,673
+very important getting a shell means that
+
+6
+00:00:09,673 --> 00:00:12,163
+the attack is so bad that an attacker can
+
+7
+00:00:12,163 --> 00:00:14,983
+type commands on your server as if they were
+
+8
+00:00:14,983 --> 00:00:17,093
+on their own personal computer
+
+9
+00:00:17,093 --> 00:00:20,303
+PHP has rated this 9.2 out of 10
+
+10
+00:00:20,303 --> 00:00:21,800
+so it is really terrible

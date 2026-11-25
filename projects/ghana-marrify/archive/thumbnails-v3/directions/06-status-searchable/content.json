@@ -1,0 +1,23 @@
+{
+  "direction": "A marriage certificate (illustration, no names) stamped MARRIED, a search bar laid across it, her earnest look (2:11) in the room; serif italic + condensed caps",
+  "thumbnail_text": "Marriage status: searchable",
+  "title": "Ghana's New App Lets Anyone Check If You're Married",
+  "titles": [
+    "Ghana's New App Lets Anyone Check If You're Married",
+    "Ghana Put Marriage and Divorce Records on One App",
+    "Should Anyone Be Able to Look Up Your Marriage?"
+  ],
+  "text": {
+    "line1": "Marriage status:",
+    "line2": "SEARCHABLE",
+    "s_q": "Search a name",
+    "c_t1": "Republic · Registry",
+    "c_t2": "Certificate of Marriage",
+    "c_stamp": "Married"
+  },
+  "images": {
+    "scene": "../../assets/scene/s_131.63.jpg",
+    "front": "../../assets/scene/mask/s_131.63.png"
+  },
+  "vars": {}
+}

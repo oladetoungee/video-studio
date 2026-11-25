@@ -1,0 +1,20 @@
+{
+  "direction": "Generic search result (labelled ILLUSTRATION, not Marrify's interface) + her side-eye toward it (2:48)",
+  "title": "Ghana Launched an App to Check If Someone Is Married",
+  "text": {
+    "line1": "Anyone can",
+    "line2": "see this.",
+    "query": "Search a name",
+    "r1": "Married",
+    "r2": "Divorced",
+    "label": "Illustration"
+  },
+  "images": {
+    "person": "../../assets/cut/f_168.15.png"
+  },
+  "vars": {
+    "--x": "-178px",
+    "--y": "-109px",
+    "--w": "1012px"
+  }
+}

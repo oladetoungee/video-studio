@@ -1,0 +1,21 @@
+{
+  "direction": "One giant generic app icon with a red 99+ badge, top right; her calm black-and-white cut-out with a red outline, bottom right; the question on the left. The red dot you cannot ignore, drawn huge.",
+  "concept": "v2 (2026-10-16)",
+  "thumbnail_text": "Can you ignore this?",
+  "title": "Why You Keep Picking Up Your Phone Without Thinking",
+  "titles": [
+    "Why You Keep Picking Up Your Phone Without Thinking",
+    "Why Every Notification Badge Is Red (Facebook's Was Blue)",
+    "Why Am I Addicted to My Phone? 5 Design Tricks to Blame"
+  ],
+  "scores": "",
+  "recommended": "",
+  "text": {
+    "words": "Can you<br><span class=\"acc\">ignore</span><br>this?",
+    "badge": "99+"
+  },
+  "images": {
+    "photo": "../../assets/cut/895.75_bw_red.png"
+  },
+  "vars": {}
+}

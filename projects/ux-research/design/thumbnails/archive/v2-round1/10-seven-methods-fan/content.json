@@ -1,0 +1,25 @@
+{
+  "direction": "The methods, as a hand of seven index cards fanned out (numbered 1-7, the front one says Interviews). Full-bleed orange ground, white type; her real-colour cut-out (thoughtful, hand on cheek) with a white outline.",
+  "thumbnail_text": "7 UX research methods",
+  "titles": [
+    "7 UX Research Methods, From Interviews to A/B Tests",
+    "7 Ways to Study Your Users (UX Research for Beginners)",
+    "Types of UX Research Explained: Qualitative vs Quantitative"
+  ],
+  "text": {
+    "hd": "7 UX research<br>methods",
+    "front": "Interviews"
+  },
+  "images": {
+    "me": "../../assets/cut/gbemi-hand-cheek.png"
+  },
+  "vars": {
+    "--ground": "#FF4713",
+    "--fg": "#FFFFFF",
+    "--accent": "#FFFFFF",
+    "--ol": "#FFFFFF"
+  },
+  "scores": "",
+  "recommended": false,
+  "title": "7 UX Research Methods, From Interviews to A/B Tests"
+}

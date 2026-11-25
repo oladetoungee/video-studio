@@ -1,0 +1,180 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>C · Follow the attention</title>
+<style>
+@font-face { font-family: "DM Mono"; src: url(../../../../../../library/fonts/DMMono-Medium.ttf); font-weight: 500; }
+html, body { margin: 0; background: #000; overflow: hidden; }
+#stage { position: relative; overflow: hidden; background: #101012; }
+</style></head>
+<body><div id="stage"></div>
+<script src="../_tools/kit.js"></script>
+<script>window.crisp = () => true; // no sub-frame blending: the bracket label must never double</script>
+<script>
+// C · FOLLOW THE ATTENTION: documentary photographs are the ground (one duotone, deep teal ink to warm paper), and one
+// recurring object tells the story: a yellow focus bracket labelled YOUR ATTENTION. In every scene something grabs it:
+// a phone in a commuter's hand, a slot machine, a TV screen, a glowing phone at night. It snaps there, it gets pulled.
+// At the end it lets go and opens up to the whole horizon. Real sources slide in as paper sheets with a small credit.
+const TEAL = '#4A2210', PAPERC = '#F4EBD2', INKC = '#2A140B';
+function stackType(root, small, big, css, o = {}) {
+  const box = el('div', Object.assign({ color: YEL }, o.panel ? { background: TEAL, padding: V('34px 44px 40px', '30px 40px 36px'), boxSizing: 'border-box' } : {}, css), '', root);
+  const a = el('div', { position: 'relative', font: `700 ${o.ss || 54}px "Helvetica Neue"`, letterSpacing: '-0.03em', lineHeight: 1.05, color: o.sc || PAPERC }, '', box);
+  const b = el('div', { position: 'relative', font: `800 ${o.bs || 140}px "Helvetica Neue"`, letterSpacing: '-0.045em', lineHeight: 0.9, marginTop: '6px', textTransform: o.up ? 'uppercase' : 'none' }, '', box);
+  return { box, a: words(a, small), b: words(b, big) };
+}
+// full-bleed photo with a slow push (cover fit, focal point fx, fy in 0..1)
+function photo(root, src, fx = 0.5, fy = 0.5) {
+  const e = img(src, { left: 0, top: 0, width: W + 'px', height: H + 'px', objectFit: 'cover', objectPosition: `${fx * 100}% ${fy * 100}%`, transformOrigin: `${fx * 100}% ${fy * 100}%` }, root);
+  return e;
+}
+// the focus bracket: 4 corners + its label. rect in frame px.
+function bracket(root) {
+  const B = { e: el('div', { left: 0, top: 0, width: '10px', height: '10px', zIndex: 20 }, '', root), c: [] };
+  for (let i = 0; i < 4; i++) B.c.push(el('div', { width: '54px', height: '54px', boxSizing: 'border-box', borderColor: YEL, borderStyle: 'solid', borderWidth: [`9px 0 0 9px`, `9px 9px 0 0`, `0 9px 9px 0`, `0 0 9px 9px`][i] }, '', B.e));
+  B.tag = el('div', { font: `500 ${V(28, 30)}px "DM Mono"`, letterSpacing: '0.08em', color: INKC, background: YEL, padding: '6px 12px', whiteSpace: 'nowrap', textTransform: 'uppercase' }, 'your attention', B.e);
+  return B;
+}
+function placeB(B, x, y, w, h, o = {}) {
+  const k = Math.min(54, Math.max(26, Math.min(w, h) * 0.28));
+  set(B.e, { transform: `translate(${x}px,${y}px)` });
+  const pos = [[0, 0], [w - k, 0], [w - k, h - k], [0, h - k]];
+  B.c.forEach((c, i) => set(c, { left: pos[i][0] + 'px', top: pos[i][1] + 'px', width: k + 'px', height: k + 'px' }));
+  const below = o.tagBelow; set(B.tag, below ? { left: '0px', top: (h + 12) + 'px' } : { left: '0px', top: '-56px' });
+  B.e.style.opacity = o.o == null ? 1 : o.o;
+}
+// snap from rect a to rect b at time `at` (0.45 s, expo out with a 4 % overshoot)
+function snap(B, lt, keys, o = {}) {
+  let cur = keys[0][1];
+  for (let i = 1; i < keys.length; i++) {
+    const [at, r] = keys[i]; if (lt < at) break;
+    const p = eOut(prog(lt, at, 0.4)), prev = keys[i - 1][1];
+    cur = prev.map((v, j) => lerp(v, r[j], p));
+  }
+  placeB(B, ...cur, o);
+  return cur;
+}
+// cinema bars in the ink colour: captions sit in the bottom bar (her pale-yellow captions stay readable on any photo)
+// one flat, even shade over the photo (no gradient): keeps her pale captions and the yellow readable on any photo
+function shade(root, a = 0.18) { el('div', { left: 0, top: 0, width: W + 'px', height: H + 'px', background: `rgba(8,8,10,${a})` }, '', root);
+  // a flat, even caption strip (no gradient, no blur) so her pale captions read on any photo
+  el('div', { left: 0, top: (H - V(150, 330)) + 'px', width: W + 'px', height: V(150, 330) + 'px', background: 'rgba(8,8,10,0.55)', zIndex: 15 }, '', root); }
+function bars(root) { el('div', { left: 0, top: 0, width: W + 'px', height: V(84, 120) + 'px', background: TEAL, zIndex: 15 }, '', root); el('div', { left: 0, top: (H - V(150, 300)) + 'px', width: W + 'px', height: V(150, 300) + 'px', background: TEAL, zIndex: 15 }, '', root); }
+const sheet = (root, src, css) => { const d = el('div', Object.assign({ zIndex: 5, background: '#fff', boxShadow: '0 24px 60px rgba(0,20,20,0.45)', overflow: 'hidden' }, css), '', root); img(src, { position: 'relative', display: 'block', width: '100%' }, d); return d; };
+
+// ========== C1 · designed to distract (0-10) ==========
+// metro (cover 1920x1080): phones at the woman bottom-left (300-430, 760-880) and the man right (1530-1690, 730-850)
+const MET = V({ a: [110, 600, 380, 300], b: [1470, 560, 330, 300], all: [40, 470, 1840, 390] }, { a: [176, 1330, 150, 140], b: [176, 1330, 150, 140], all: [40, 700, 1000, 880] });
+scene('C1', 0, 10, (r, S) => {
+  S.ph = photo(r, 'raw/metro.jpg', V(0.5, 0.15), 0.6); shade(r, 0.28);
+  S.cr = credit(r, 'Photo: Wilfredor, CC0', { right: '36px', top: V('28px', '44px'), color: PAPERC, opacity: 0.85, zIndex: 16 });
+  S.st = stackType(r, 'your phone was', 'designed to distract you.', { left: V(60, 40) + 'px', top: V(130, 200) + 'px', width: V(1020, 1000) + 'px' }, { bs: V(118, 112) });
+  S.B = bracket(r);
+  caption3(r, ['your phone was', 'designed', 'to distract you'], 1700);
+}, (lt, S) => {
+  S.ph.style.transform = `scale(${1 + 0.05 * eIO(prog(lt, 0, 10))})`;
+  enter(S.st.box, lt, 0.05, 0.45, { x: -60, o: 0, mb: 8 }); typeOn(S.st.a, lt, 0.2); typeOn(S.st.b, lt, 0.6, 0.12, 0.35, 40);
+  const R = snap(S.B, lt, (PORTRAIT ? [[0, MET.a]] : [[0, MET.a]]), { tagBelow: false });
+  S.B.e.style.opacity = lt < 0.4 ? 0 : 1;
+});
+
+// ========== C2 · the bedrock of gambling (10-20) ==========
+const SLOT = V([1345, 430, 140, 95], [560, 820, 200, 130]);
+scene('C2', 10, 20, (r, S) => {
+  S.ph = photo(r, 'raw/slotfloor.jpg', V(0.5, 0.62), 0.5); shade(r);
+  S.cr = credit(r, 'Photo: Marek Ślusarczyk (Tupungato), CC BY 3.0', { right: '36px', top: V('28px', '44px'), color: PAPERC, opacity: 0.85, zIndex: 16 });
+  S.st = stackType(r, 'it is also the bedrock of', 'gambling.', { left: V(60, 40) + 'px', top: V(560, 1260) + 'px', width: V(860, 1000) + 'px' }, { bs: V(170, 160) });
+  S.B = bracket(r);
+  caption3(r, ['sometimes nothing', 'sometimes small things', 'sometimes a big thing'], 1700);
+}, (lt, S) => {
+  S.ph.style.transform = `scale(${1.04 + 0.04 * eIO(prog(lt, 0, 10))})`;
+  snap(S.B, lt, [[0, V([300, 260, 1400, 600], [60, 500, 960, 700])], [0.5, SLOT]]);
+  S.B.e.style.opacity = lt < 0.4 ? 0 : 1;
+  enter(S.st.box, lt, 0.85, 0.45, { x: -60, o: 0, mb: 8 }); typeOn(S.st.a, lt, 1.0); typeOn(S.st.b, lt, 1.4, 0.12, 0.35, 40);
+});
+
+// ========== C3 · persuasive technology, Stanford (20-30) ==========
+scene('C3', 20, 30, (r, S) => {
+  S.ph = photo(r, 'raw/fogg.jpg', 0.5, 0.22); shade(r, 0.45);
+  S.cr1 = credit(r, 'Photo: Kris Krüg, CC BY 2.0', { right: '36px', top: '28px', color: PAPERC, opacity: 0.9, zIndex: 16 });
+  S.book = img('sources/fogg-cover.jpg', { left: V(110, 80) + 'px', top: V(430, 1060) + 'px', width: V(360, 360) + 'px', boxShadow: '0 24px 60px rgba(0,0,0,0.5)', zIndex: 5, transform: 'rotate(-2deg)' }, r);
+  S.cr2 = credit(r, 'B.J. Fogg, 2003 · cover: Open Library', { left: V(510, 80) + 'px', top: V(880, 1550) + 'px', color: PAPERC, opacity: 0.9, zIndex: 16 });
+  S.st = stackType(r, 'B.J. Fogg, Stanford:', 'persuasive technology.', { left: V(90, 60) + 'px', top: V(90, 140) + 'px', width: V(1100, 960) + 'px', zIndex: 6 }, { bs: V(118, 110) });
+  S.B = bracket(r);
+  caption3(r, ['technology can be', 'designed to change', "people's behaviour"], 1700);
+}, (lt, S) => {
+  S.ph.style.transform = `scale(${1 + 0.05 * eIO(prog(lt, 0, 10))})`;
+  enter(S.book, lt, 0.6, 0.55, { y: 70, o: 0, mb: 8 }, { r: -2 }); enter(S.cr2, lt, 0.9, 0.4, { o: 0 });
+  typeOn(S.st.a, lt, 0.3); typeOn(S.st.b, lt, 0.7, 0.12, 0.35, 40);
+  snap(S.B, lt, [[0, V([700, 120, 1100, 760], [40, 600, 1000, 1000])], [1.5, V([90, 412, 400, 452], [60, 1045, 400, 440])]], { tagBelow: false });
+  S.B.e.style.opacity = lt < 1.2 ? 0 : 1;
+});
+
+// ========== C4 · stopping cues: a TV show had episodes (30-40) ==========
+const TVS = V([290, 80, 540, 400], [70, 430, 520, 390]);
+scene('C4', 30, 40, (r, S) => {
+  S.ph = photo(r, 'raw/tv.jpg', V(0.5, 0.18), 0.5); shade(r, 0.36);
+  S.cr = credit(r, 'Photo: Sven Scheuermeier, CC0', { right: '36px', top: V('28px', '44px'), color: PAPERC, opacity: 0.85, zIndex: 16 });
+  // the end card on the TV screen: a generic "next episode" card, flat
+  S.end = el('div', { left: TVS[0] + 30 + 'px', top: TVS[1] + 40 + 'px', width: TVS[2] - 60 + 'px', height: TVS[3] - 80 + 'px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', color: PAPERC, background: 'rgba(16,16,18,0.9)', borderRadius: '30px' }, '', r);
+  el('div', { position: 'relative', font: `500 30px "DM Mono"`, letterSpacing: '0.1em', textTransform: 'uppercase' }, 'next episode', S.end);
+  el('div', { position: 'relative', font: `800 84px "Helvetica Neue"`, letterSpacing: '-0.04em', color: YEL, marginTop: '8px' }, 'next week', S.end);
+  S.st = stackType(r, 'a TV show had', 'episodes.', { left: V(1000, 40) + 'px', top: V(170, 1000) + 'px', width: V(860, 1000) + 'px' }, { bs: V(170, 160) });
+  S.sub = el('div', { left: V(1044, 80) + 'px', top: V(470, 1300) + 'px', width: V(800, 920) + 'px', font: `700 ${V(48, 46)}px "Helvetica Neue"`, letterSpacing: '-0.03em', color: PAPERC, lineHeight: 1.1 }, 'and then you had to wait<br>a week for the next one.', r);
+  S.B = bracket(r);
+  caption3(r, ['you would have to wait', 'for the next episode', 'for like a week'], 1700);
+}, (lt, S) => {
+  S.ph.style.transform = `scale(${1 + 0.04 * eIO(prog(lt, 0, 10))})`;
+  enter(S.end, lt, 1.4, 0.45, { s: 0.92, o: 0, blur: 8 });
+  enter(S.st.box, lt, 0.15, 0.45, { x: 60, o: 0, mb: 8 }); typeOn(S.st.a, lt, 0.3); typeOn(S.st.b, lt, 0.7, 0.12, 0.35, 40); S.sub.style.display = 'none';
+  snap(S.B, lt, [[0, V([0, 0, 1920, 1080], [0, 0, 1080, 1920])], [0.6, TVS]], { tagBelow: true });
+  S.B.e.style.opacity = lt < 0.5 ? 0 : 1;
+});
+
+// ========== C5 · notifications at night + the CHI study (40-50) ==========
+const GLOW = V([665, 790, 120, 110], [415, 1430, 190, 180]);
+scene('C5', 40, 50, (r, S) => {
+  S.ph = photo(r, 'raw/womanphone.jpg', V(0.5, 0.33), 0.6); shade(r); if (PORTRAIT) set(S.ph, { top: '-150px', height: (H + 150) + 'px' });
+  S.cr = credit(r, 'Photo: Tony Lam Hoang, CC0', { right: '36px', top: V('28px', '44px'), color: PAPERC, opacity: 0.85, zIndex: 16 });
+  S.sh = sheet(r, 'sources/chi-title.png', { left: V(980, 60) + 'px', top: V(110, 140) + 'px', width: V(860, 960) + 'px', transform: 'rotate(1.2deg)' });
+  S.hi = el('div', { left: V(15, 17) + 'px', top: V(860 * 0.385, 960 * 0.385) + 'px', width: V(860 * 0.565, 960 * 0.565) + 'px', height: V(860 * 0.095, 960 * 0.095) + 'px', background: YEL, mixBlendMode: 'multiply', transformOrigin: '0 50%' }, '', S.sh);
+  S.cr2 = credit(r, 'Kushlev, Proulx & Dunn · CHI 2016 · via Semantic Scholar', { left: V(980, 60) + 'px', top: V(320, 360) + 'px', color: PAPERC, opacity: 0.9 });
+  S.st = stackType(r, 'notifications on:', 'more inattention.', { left: V(980, 40) + 'px', top: V(420, 450) + 'px', width: V(860, 1000) + 'px' }, { bs: V(112, 112) });
+  S.B = bracket(r);
+  caption3(r, ['in the week where', 'notifications were on', 'more inattention'], 1700);
+}, (lt, S) => {
+  S.ph.style.transform = `scale(${1 + 0.05 * eIO(prog(lt, 0, 10))})`;
+  snap(S.B, lt, [[0, V([380, 420, 700, 640], [100, 900, 880, 900])], [0.5, GLOW]], { tagBelow: false });
+  S.B.e.style.opacity = lt < 0.4 ? 0 : 1;
+  enter(S.sh, lt, 1.0, 0.55, { y: -60, o: 0, mb: 8 }, { r: 1.2 }); marker(S.hi, lt, 1.8, 0.45); enter(S.cr2, lt, 1.3, 0.4, { o: 0 });
+  enter(S.st.box, lt, 1.85, 0.45, { x: 60, o: 0, mb: 8 }); typeOn(S.st.a, lt, 2.0); typeOn(S.st.b, lt, 2.3, 0.12, 0.35, 40);
+});
+
+// ========== C6 · let go: the bracket opens to the horizon (50-60) ==========
+const SCR = V([835, 285, 250, 430], [300, 700, 330, 560]);
+scene('C6', 50, 60, (r, S) => {
+  S.ph = photo(r, 'raw/phonehand3.jpg', 0.5, 0.5); shade(r, 0.28);
+  S.cr = credit(r, 'Photo: Jordan McQueen, CC0', { right: '36px', top: V('28px', '44px'), color: PAPERC, opacity: 0.85, zIndex: 16 });
+  S.st = stackType(r, 'your attention is', 'an asset.', { left: V(1180, 40) + 'px', top: V(220, 180) + 'px', width: V(660, 1000) + 'px' }, { bs: V(170, 170) });
+  S.B = bracket(r);
+  caption3(r, ['your attention', 'is an', 'asset'], 1700);
+}, (lt, S) => {
+  S.ph.style.transform = `scale(${1.06 - 0.06 * eIO(prog(lt, 1.2, 1.4))})`;
+  snap(S.B, lt, [[0, SCR], [1.4, V([40, 120, 1840, 780], [40, 170, 1000, 1560])]], { tagBelow: false });
+  enter(S.st.box, lt, 1.75, 0.45, { x: 60, o: 0, mb: 8 }); typeOn(S.st.a, lt, 1.9); typeOn(S.st.b, lt, 2.2, 0.12, 0.35, 40);
+});
+
+// ========== motion test: the bracket gets pulled (100-107) ==========
+scene('MT', 100, 107, (r, S) => {
+  S.ph = photo(r, 'raw/metro.jpg', V(0.5, 0.42), 0.6); shade(r, 0.22);
+  S.st = stackType(r, 'your phone was', 'designed to distract you.', { left: V(60, 40) + 'px', top: V(130, 200) + 'px', width: V(1020, 1000) + 'px' }, { bs: V(118, 112) });
+  S.B = bracket(r);
+  caption3(r, ['your phone was', 'designed', 'to distract you'], 1700, [100.0, 104.0, 104.84]);
+}, (lt, S) => {
+  // punch-in on each snap: 1.00 -> 1.035 over 0.5 s, then a slow push continues
+  const hops = [0.9, 4.0];
+  let z = 1 + 0.01 * lt; hops.forEach(h => { z += 0.025 * eOut(prog(lt, h, 0.5)); });
+  S.ph.style.transform = `scale(${z})`;
+  const all = MET.all;
+  snap(S.B, lt, [[0, V([560, 300, 800, 560], [140, 700, 800, 700])], [0.9, MET.a], [4.0, all]], { tagBelow: false });
+  S.B.e.style.opacity = lt < 0.3 ? 0 : 1;
+  enter(S.st.box, lt, 0.1, 0.45, { x: -60, o: 0, mb: 8 }); typeOn(S.st.a, lt, 0.2, 0.3); typeOn(S.st.b, lt, 3.95, 0.3, 0.35, 40);
+});
+</script></body></html>

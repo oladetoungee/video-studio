@@ -1,0 +1,27 @@
+{
+ "direction": "The frame split in two flat panels. Left (cream): SIGN UP, a circle with one button and a pointer, '1 click'. Right (orange): CANCEL, a circle with a maze, 'good luck.'. No face.",
+ "thumbnail_text": "SIGN UP 1 click / CANCEL good luck.",
+ "kind": "flat split (simple device)",
+ "recommended": false,
+ "titles": [
+  "Why Is It So Hard to Cancel Subscriptions? (Dark Patterns)",
+  "Easy to Sign Up, Hard to Cancel: The Trick Explained",
+  "Hard to Cancel Subscriptions? 11 Dark Patterns Explained"
+ ],
+ "text": {
+  "lab1": "SIGN UP",
+  "big1": "1 click",
+  "lab2": "CANCEL",
+  "big2": "good luck."
+ },
+ "images": {},
+ "vars": {
+  "--ground": "#0C160C"
+ },
+ "board": "pick1119-45 ('50/10 Pomodoro Timer': two flat panels, FOCUS 50:00 | BREAK 10:00, a line icon in a circle on each)",
+ "fonts": "Font 31 (Inter Tight, Design 406)",
+ "colours": "Font 31 specimen (Design 406): cream #F5EFDE, orange #D16A3C, ink #0C160C",
+ "title": "Why Is It So Hard to Cancel Subscriptions? (Dark Patterns)",
+ "class": "",
+ "scores": "Test & Compare · NEW 2026-11-19 (copies pick1119-45) · cold critic R1 6/7, R2 5/7, R3 7/8"
+}

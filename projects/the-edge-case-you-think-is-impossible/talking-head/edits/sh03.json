@@ -1,0 +1,16 @@
+{
+ "t": {
+  "cover/@her": {
+   "pos": {
+    "9x16": {
+     "hide": true
+    }
+   }
+  }
+ },
+ "mix": {
+  "music": -15,
+  "sfx": -7,
+  "voice": 0
+ }
+}

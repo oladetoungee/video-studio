@@ -1,0 +1,85 @@
+/* database-indexes carousels: the film's "Query Plan" look. Off-black + hairline grid, ONE yellow = the query's path,
+   IBM Plex Sans headlines, IBM Plex Mono for code and labels. Flat grounds only: ink (default), paper (light), accent (yellow). */
+@font-face { font-family: "Plex"; src: url(fonts/IBMPlexSans.ttf); font-weight: 100 700; }
+@font-face { font-family: "Plex Mono"; src: url(fonts/IBMPlexMono-Regular.ttf); font-weight: 400; }
+@font-face { font-family: "Plex Mono"; src: url(fonts/IBMPlexMono-SemiBold.ttf); font-weight: 600; }
+@font-face { font-family: "Instrument Serif"; src: url(fonts/InstrumentSerif-Italic.ttf); font-style: italic; font-weight: 400; }
+
+:root {
+  --W: 1080px; --H: 1350px; --M: 84px;
+  --ink: #0E1013; --panel: #15181D; --hair: #2C313A; --gridl: rgba(255,255,255,.02); --chalk: #ECEAE4; --dim: #9AA0A8;
+  --paper: #EDE9E2; --card: #FFFDF6; --yellow: #FFC53D; --red: #F23D2E; --green: #22C55E;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: #2a2a2e; }
+body { display: flex; flex-direction: column; align-items: center; gap: 40px; padding: 40px 0; -webkit-font-smoothing: antialiased; text-rendering: geometricPrecision; }
+@page { size: var(--W) var(--H); margin: 0; }
+@media print { html, body { background: none; } body { display: block; padding: 0; } .slide { break-after: page; } }
+
+.slide { position: relative; width: var(--W); height: var(--H); overflow: hidden; background: var(--bg); color: var(--fg);
+  font-family: Plex, sans-serif; font-weight: 500; }
+.g-ink    { --bg: var(--ink);   --fg: var(--chalk); --sub: #C5C8CE; --mid: var(--dim); --line: var(--hair); --a: var(--acc); --gl: var(--gridl);
+            --pbg: var(--panel); --pfg: var(--chalk); --pmid: #9AA0AA; --pline: var(--hair); }
+.g-paper  { --bg: var(--paper); --fg: #0E1013; --sub: #34373D; --mid: #6A6D73; --line: #CFC8BA; --a: #0E1013; --gl: rgba(14,16,19,.04);
+            --pbg: var(--card); --pfg: #0E1013; --pmid: #6A6D73; --pline: #D9D2C4; }
+.g-accent { --bg: var(--acc);   --fg: #0E1013; --sub: #0E1013; --mid: rgba(14,16,19,.66); --line: rgba(14,16,19,.3); --a: #0E1013; --gl: rgba(14,16,19,.09);
+            --pbg: var(--ink); --pfg: var(--chalk); --pmid: #9AA0AA; --pline: var(--hair); }
+.grid { position: absolute; inset: 0; background-image: linear-gradient(var(--gl) 2px, transparent 2px), linear-gradient(90deg, var(--gl) 2px, transparent 2px);
+        background-size: 72px 72px; background-position: -2px -2px; }
+
+/* type */
+.disp { font-family: Plex; font-weight: 700; letter-spacing: -0.035em; line-height: 1.04; white-space: nowrap; }
+.serif { font-family: "Instrument Serif"; font-style: italic; font-weight: 400; letter-spacing: -0.01em; }
+.disp .serif { font-size: 1.1em; letter-spacing: -0.02em; }
+.acc { color: var(--a); font-style: normal; }
+.hl { background: var(--yellow); color: #0E1013; padding: 0 .12em .02em; font-style: normal; }
+.disp .hl { display: inline-block; line-height: .9; padding: .02em .1em .06em; }
+.mono { font-family: "Plex Mono"; font-weight: 600; letter-spacing: 0.02em; }
+.body, p, .bal, .sub { text-wrap: balance; }
+.nw { white-space: nowrap; }
+.mono.lab { font-size: 34px; }
+.body { font-size: 42px; line-height: 1.28; letter-spacing: -0.012em; color: var(--sub); font-weight: 500; }
+
+/* chrome: page number + progress meter (no corner labels in this deck unless a slide sets one) */
+.corner { position: absolute; top: 56px; left: var(--M); font-family: "Plex Mono"; font-weight: 600; font-size: 32px; color: var(--mid); }
+.foot { position: absolute; left: var(--M); right: var(--M); bottom: 54px; display: flex; justify-content: space-between; align-items: center; }
+.foot .num { font-family: "Plex Mono"; font-weight: 600; font-size: 32px; color: var(--mid); }
+.foot .num b { color: var(--fg); font-weight: 600; }
+.meter { display: flex; gap: 7px; }
+.meter i { display: block; width: 26px; height: 12px; border: 2px solid var(--mid); opacity: .7; }
+.meter i.on { background: var(--a); border-color: var(--a); opacity: 1; }
+
+.main { position: absolute; left: var(--M); right: var(--M); top: 120px; bottom: 150px; display: flex; flex-direction: column; }
+.push { margin-top: auto; }
+.rule { height: 3px; background: var(--line); }
+
+/* code / terminal panel (the film's panel) */
+.panel { background: var(--pbg); color: var(--pfg); border: 3px solid var(--pline); border-radius: 18px; padding: 34px 38px; font-family: "Plex Mono"; }
+.panel .ln { white-space: pre; font-size: 34px; line-height: 1.38; font-weight: 400; }
+.panel .ln b { font-weight: 600; }
+.panel .p { color: var(--pmid); }
+.panel .cap { font-size: 32px; color: #9AA0A8; font-weight: 600; margin-bottom: 18px; }
+.bad { background: #4A505B; color: #fff; font-weight: 600; padding: 0 .2em; border-radius: 5px; }
+.good { background: var(--yellow); color: #0E1013; font-weight: 600; padding: 0 .2em; border-radius: 5px; }
+.panel.bad-b { border-color: var(--hair); } .panel.good-b { border-color: #6d5520; }
+
+/* polaroid insert */
+.pol { position: absolute; background: var(--card); padding: 14px 14px 0; }
+.pol img { display: block; width: 100%; object-fit: cover; }
+.pol .cap { font-family: "Plex Mono"; font-weight: 600; color: #0E1013; font-size: 32px; height: 62px; white-space: nowrap; overflow: hidden; display: flex; align-items: center; padding-left: 2px; }
+
+/* numbered rows */
+.rows { display: flex; flex-direction: column; }
+.row { display: grid; grid-template-columns: var(--numW, 110px) 1fr; align-items: baseline; padding: 26px 0 24px; border-bottom: 3px solid var(--line); }
+.row:first-child { border-top: 3px solid var(--line); }
+.row .n { font-family: "Plex Mono"; font-weight: 600; font-size: 34px; color: var(--a); }
+.row .head { font-family: Plex; font-weight: 700; letter-spacing: -0.025em; font-size: 54px; line-height: 1.02; }
+.row .sub { font-size: 38px; line-height: 1.25; color: var(--sub); margin-top: 10px; font-weight: 500; }
+.row.no .n, .row.no .head { color: #9AA0A8; }
+
+.ph { display: inline-block; font-family: Plex; font-weight: 700; font-size: 48px; letter-spacing: -0.02em; white-space: nowrap; }
+
+/* studio editor views */
+html.v-slide, html.v-slide body { background: none; }
+html.v-slide body { display: block; padding: 0; }
+html.v-strip body { flex-direction: row; align-items: flex-start; padding: 0; gap: 40px; width: max-content; }

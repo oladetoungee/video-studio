@@ -1,0 +1,180 @@
+{
+  "title": "How to read a research paper (A · The Margin + B Figure 2)",
+  "hud": "",
+  "intro": 0.4,
+  "outro": 2.0,
+  "voiceDuration": 562.21,
+  "words": "data/words.json",
+  "captions": "data/captions.srt",
+  "images": {
+    "keshav_p1": "assets/src/keshav_p1.png",
+    "keshav_p2": "assets/src/keshav_p2.png",
+    "clip_caine-title": "assets/src/caine-title.png",
+    "clip_caine-abs": "assets/src/caine-abs.png",
+    "clip_pubmed-title": "assets/src/pubmed-title.png",
+    "clip_pubmed-conc": "assets/src/pubmed-conc.png",
+    "clip_zotero": "assets/src/zotero.png",
+    "clip_zotero-hero": "assets/src/zotero-hero.png",
+    "px-8553916": "assets/src/px-8553916.jpg",
+    "px-7014408": "assets/src/px-7014408.jpg",
+    "px-4270365": "assets/src/px-4270365.jpg",
+    "px-6129151": "assets/src/px-6129151.jpg",
+    "px-14797855": "assets/src/px-14797855.jpg",
+    "px-6550173": "assets/src/px-6550173.jpg",
+    "px-8197553": "assets/src/px-8197553.jpg",
+    "px-19961775": "assets/src/px-19961775.jpg",
+    "px-6958526": "assets/src/px-6958526.jpg"
+  },
+  "scripts": [
+    "assets/src/clips.js",
+    "scenes/rp.js",
+    "../talking-head/moments/sent.js",
+    "scenes/kit.js",
+    "scenes/film.js"
+  ],
+  "cutSounds": {
+    "cutSounds": false
+  },
+  "fonts": [
+    "800 40px Newsreader",
+    "italic 700 40px Newsreader",
+    "400 40px \"DM Mono\""
+  ],
+  "audio": {
+    "voice": "audio/voice_edit.flac",
+    "voiceFilter": "highpass=f=80,afftdn=nr=8:nf=-52:tn=1,deesser=i=0.3:m=0.5:f=0.5,acompressor=threshold=0.06:ratio=3:attack=6:release=160:knee=3,equalizer=f=3200:t=q:w=1.2:g=1.5",
+    "levels": {
+      "voiceLufs": -16.0,
+      "duckDb": -15.0,
+      "openDb": -10.0,
+      "fullDb": -7.0,
+      "target": -14.0,
+      "ceiling": 0.5
+    },
+    "music": {
+      "dir": "library:music",
+      "xfade": 6.0,
+      "tracks": [
+        [
+          "167",
+          "Mixkit track 167"
+        ],
+        [
+          "135",
+          "Mixkit track 135"
+        ],
+        [
+          "150",
+          "Mixkit track 150"
+        ]
+      ]
+    },
+    "sfx": {
+      "roles": {
+        "paper": {
+          "files": [
+            "library:paper-slide",
+            "library:card-place"
+          ],
+          "db": 19,
+          "align": "peak"
+        },
+        "marker": {
+          "files": [
+            "library:marker-line"
+          ],
+          "db": 8,
+          "align": "start",
+          "maxlen": 0.6
+        },
+        "pencil": {
+          "files": [
+            "library:pencil-short",
+            "library:pencil-fast"
+          ],
+          "db": 9,
+          "align": "start"
+        },
+        "scribble": {
+          "files": [
+            "library:scribble-on-paper",
+            "library:pen-on-paper"
+          ],
+          "db": 9,
+          "align": "start",
+          "maxlen": 0.9
+        },
+        "paperMove": {
+          "files": [
+            "library:paper-quick-move"
+          ],
+          "db": 20,
+          "align": "peak"
+        },
+        "cardPlace": {
+          "files": [
+            "library:card-place",
+            "library:card-flick"
+          ],
+          "db": 16,
+          "align": "peak"
+        },
+        "tap": {
+          "files": [
+            "library:typewriter-single-hit",
+            "library:pop-hard-click"
+          ],
+          "db": 12,
+          "align": "peak"
+        },
+        "shutter": {
+          "files": [
+            "library:shutter-click",
+            "library:shutter-vintage"
+          ],
+          "db": 11,
+          "align": "peak"
+        },
+        "click": {
+          "files": [
+            "library:mouse-double-click",
+            "library:ui-device-click"
+          ],
+          "db": 15,
+          "align": "start"
+        },
+        "typeHit": {
+          "files": [
+            "library:typewriter-single-hit",
+            "library:typewriter-soft-click"
+          ],
+          "db": 15,
+          "align": "start"
+        },
+        "pageTurn": {
+          "files": [
+            "library:page-turn-single",
+            "library:book-paging-single"
+          ],
+          "db": 14,
+          "align": "peak"
+        },
+        "boom": {
+          "files": [
+            "library:drum-deep-impact"
+          ],
+          "db": 2,
+          "align": "start"
+        },
+        "pop": {
+          "files": [
+            "library:pop-dry",
+            "library:pop-hard-click"
+          ],
+          "db": 9,
+          "align": "start"
+        }
+      }
+    }
+  }
+}

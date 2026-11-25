@@ -1,0 +1,79 @@
+1
+00:00:00,090 --> 00:00:01,320
+so what does Anthropic's
+
+2
+00:00:01,430 --> 00:00:02,990
+new rule actually say?
+
+3
+00:00:02,990 --> 00:00:05,259
+the exact wording is actually: bans
+
+4
+00:00:05,259 --> 00:00:07,527
+sustained and needless abusive or cruel
+
+5
+00:00:07,527 --> 00:00:09,440
+behaviour towards their models
+
+6
+00:00:09,470 --> 00:00:11,330
+and of course, according to them, this is
+
+7
+00:00:11,330 --> 00:00:13,070
+only reserved for extreme cases
+
+8
+00:00:13,070 --> 00:00:15,220
+and the main way they enforce it is that
+
+9
+00:00:15,220 --> 00:00:16,940
+Claude can end the conversation
+
+10
+00:00:17,230 --> 00:00:19,260
+if it starts to seem as though the other
+
+11
+00:00:19,260 --> 00:00:22,450
+person on the other side is abusive or cruel
+
+12
+00:00:22,450 --> 00:00:24,890
+to it then in Claude's constitution,
+
+13
+00:00:25,150 --> 00:00:27,230
+the document that Anthropic published to
+
+14
+00:00:27,230 --> 00:00:28,950
+describe who Claude should be
+
+15
+00:00:28,950 --> 00:00:31,430
+they call Claude's moral status deeply
+
+16
+00:00:31,430 --> 00:00:32,140
+uncertain
+
+17
+00:00:32,350 --> 00:00:33,430
+so they're not explicitly
+
+18
+00:00:33,600 --> 00:00:35,380
+saying that, oh, Claude is conscious, but
+
+19
+00:00:35,380 --> 00:00:36,893
+they are dabbling with the idea
+
+20
+00:00:36,893 --> 00:00:37,033
+they're

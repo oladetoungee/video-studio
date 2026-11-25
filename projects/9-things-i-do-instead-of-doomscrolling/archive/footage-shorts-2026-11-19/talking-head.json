@@ -1,0 +1,817 @@
+{
+ "title": "9-things-i-do-instead-of-doomscrolling: talking-head",
+ "source": "../kit/raw-video.mov",
+ "fps": 30,
+ "words": "data/raw_words.json",
+ "faces": "data/face_track.json",
+ "edl": "data/edl.json",
+ "edit": {
+  "silenceDb": -44,
+  "maxPause": 0.55,
+  "keepBefore": 0.18,
+  "keepAfter": 0.14
+ },
+ "out": "../outputs/talking-head",
+ "shortsOut": "../outputs/shorts",
+ "tail": 0.7,
+ "audio": {
+  "voiceFilter": "highpass=f=80,afftdn=nr=8:nf=-52:tn=1,deesser=i=0.3:m=0.5:f=0.5,acompressor=threshold=0.06:ratio=3:attack=6:release=160:knee=3,equalizer=f=3200:t=q:w=1.2:g=1.5",
+  "music": {
+   "dir": "library:music"
+  },
+  "levels": {
+   "voiceLufs": -16.0,
+   "duckDb": -18.0,
+   "openDb": -10.0,
+   "target": -14.0,
+   "ceiling": 0.8
+  },
+  "sfx": {
+   "palette": true,
+   "roles": {
+    "dab": {
+     "files": [
+      "library:punch-soft-quick",
+      "library:pop-dry"
+     ],
+     "align": "peak",
+     "db": -3
+    },
+    "card": {
+     "files": [
+      "library:card-place",
+      "library:card-flick"
+     ],
+     "align": "peak",
+     "db": -4
+    },
+    "marker": {
+     "files": [
+      "library:marker-line"
+     ],
+     "align": "peak",
+     "db": -5
+    }
+   },
+   "gainDb": 8
+  }
+ },
+ "moments": [
+  {
+   "id": "full",
+   "kind": "full",
+   "slug": "full",
+   "title": "The whole video, tightened, with graphics (A · Offline Bingo)",
+   "in": 24.34,
+   "out": 1254.92,
+   "cuts": [
+    [
+     481.03,
+     503.43
+    ],
+    [
+     1148.75,
+     1158.35
+    ],
+    [
+     907.4,
+     908.53
+    ],
+    [
+     962.8,
+     963.6
+    ]
+   ],
+   "retakes": false,
+   "script": "moments/full.js",
+   "music": [
+    "443",
+    0.0
+   ],
+   "note": "cuts: CLEANUP retakes 481.03-503.43 + 1148.75-1158.35; 'number eight' (item 6 slip, kit Q1) 907.40-908.53 (re-cut 2026-11-07 on the waveform: the old cut left half of each word) (the card shows 06); stray 'Yeah.' 962.8-963.6 (kit Q3). Pauses are tightened by footedl (maxPause 0.42). Remove a cut to keep her words. FULL is planned with edit.maxPause 1.2 (ffmpeg clip limit, ENGINE-REQUESTS 2026-11-06); shorts/teaser with 0.55.",
+   "holds": [
+    [
+     179.2,
+     183.17999999999998,
+     0.8
+    ],
+    [
+     336.7,
+     340.68,
+     0.8
+    ],
+    [
+     398.86,
+     402.84000000000003,
+     0.8
+    ],
+    [
+     599.08,
+     603.0600000000001,
+     0.8
+    ],
+    [
+     970.4,
+     974.38,
+     0.8
+    ],
+    [
+     1037.02,
+     1041.0,
+     0.8
+    ],
+    [
+     1184.02,
+     1188.0,
+     0.8
+    ],
+    [
+     1154.5,
+     1158.48,
+     0.8
+    ]
+   ]
+  },
+  {
+   "id": "sh01",
+   "kind": "short",
+   "slug": "why-hard-to-stop",
+   "title": "Why it's so hard to stop doomscrolling",
+   "label": "Why it's so hard to stop doomscrolling",
+   "sublabel": "",
+   "in": 24.8,
+   "out": 86.27,
+   "cuts": [],
+   "script": "shorts/sh01.js",
+   "music": [
+    "443",
+    4.0
+   ],
+   "tail": 0.5,
+   "bgStyle": {
+    "lab": "inv",
+    "cap": "c1",
+    "kicker": ""
+   },
+   "endCard": false,
+   "fmt": "I",
+   "frame9": "fill",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 33.87,
+    "text": "Why can't I stop\n~doomscrolling~?",
+    "style": "photo"
+   },
+   "board": [
+    16,
+    66,
+    62
+   ],
+   "fonts": [
+    "shorts-13",
+    "pair-11"
+   ],
+   "colours": "shorts-13"
+  },
+  {
+   "id": "sh02",
+   "kind": "short",
+   "slug": "how-to-replace",
+   "title": "How to replace doomscrolling (pick something easy)",
+   "label": "How to replace doomscrolling | pick something easy",
+   "sublabel": "",
+   "in": 129.9,
+   "out": 167.91,
+   "cuts": [],
+   "script": "shorts/sh02.js",
+   "music": [
+    "443",
+    4.0
+   ],
+   "tail": 0.5,
+   "bgStyle": {
+    "lab": "butter",
+    "cap": "box",
+    "kicker": ""
+   },
+   "endCard": false,
+   "fmt": "D",
+   "frame9": "wideLow",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 145.18,
+    "text": "How to stop\ndoomscrolling",
+    "style": "frame",
+    "big": true,
+    "shift": 860,
+    "frameW": 0.84
+   },
+   "board": [
+    36,
+    37,
+    2
+   ],
+   "fonts": [
+    "shorts-08",
+    "pair-10"
+   ],
+   "colours": "shorts-08"
+  },
+  {
+   "id": "sh03",
+   "kind": "short",
+   "slug": "reading",
+   "title": "Reading instead of doomscrolling",
+   "label": "Reading instead of doomscrolling",
+   "sublabel": "",
+   "in": 183.1,
+   "out": 286.71,
+   "cuts": [],
+   "script": "shorts/sh03.js",
+   "music": [
+    "443",
+    4.0
+   ],
+   "tail": 0.5,
+   "bgStyle": {
+    "lab": "mono",
+    "cap": "c1",
+    "kicker": "1 of 9"
+   },
+   "endCard": false,
+   "fmt": "H",
+   "frame9": "fill",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 224.62,
+    "text": "Read instead\nof scrolling",
+    "style": "card",
+    "big": true
+   },
+   "board": [
+    45,
+    52,
+    58
+   ],
+   "fonts": [
+    "pair-05",
+    "design-17"
+   ],
+   "colours": "pair-05"
+  },
+  {
+   "id": "sh04",
+   "kind": "short",
+   "slug": "boredom",
+   "title": "Let yourself be bored (instead of scrolling)",
+   "label": "Let yourself be bored",
+   "sublabel": "",
+   "in": 340.6,
+   "out": 400.75,
+   "cuts": [],
+   "script": "shorts/sh04.js",
+   "music": [
+    "443",
+    4.0
+   ],
+   "tail": 0.5,
+   "bgStyle": {
+    "lab": "stack",
+    "cap": "card",
+    "kicker": ""
+   },
+   "endCard": false,
+   "fmt": "K",
+   "frame9": "fill",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 352.87,
+    "text": "Is ~boredom~\ngood for you?",
+    "style": "photo"
+   },
+   "board": [
+    52,
+    67,
+    48
+   ],
+   "fonts": [
+    "shorts-11"
+   ],
+   "colours": "shorts-11"
+  },
+  {
+   "id": "sh05",
+   "kind": "short",
+   "slug": "small-talk",
+   "title": "Small talk instead of scrolling",
+   "label": "Small talk instead of scrolling",
+   "sublabel": "",
+   "in": 402.8,
+   "out": 510.55,
+   "cuts": [
+    [
+     481.03,
+     503.43
+    ]
+   ],
+   "script": "shorts/sh05.js",
+   "music": [
+    "443",
+    4.0
+   ],
+   "tail": 0.5,
+   "bgStyle": {
+    "lab": "inv",
+    "cap": "box",
+    "kicker": ""
+   },
+   "endCard": false,
+   "fmt": "H",
+   "frame9": "fill",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 445.98,
+    "text": "how to make\nsmall talk\nwith strangers",
+    "style": "card",
+    "big": true
+   },
+   "board": [
+    57,
+    60,
+    4
+   ],
+   "fonts": [
+    "design-27"
+   ],
+   "colours": "design-27"
+  },
+  {
+   "id": "sh06",
+   "kind": "short",
+   "slug": "friends-as-adult",
+   "title": "Making friends as an adult",
+   "label": "Making friends | as an adult",
+   "sublabel": "",
+   "in": 510.9,
+   "out": 599.03,
+   "cuts": [],
+   "script": "shorts/sh06.js",
+   "music": [
+    "443",
+    4.0
+   ],
+   "tail": 0.5,
+   "bgStyle": {
+    "lab": "stack",
+    "cap": "c1",
+    "kicker": ""
+   },
+   "endCard": false,
+   "fmt": "B",
+   "frame9": "4x5",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 546.23,
+    "text": "How to make\nfriends\nas an adult",
+    "style": "photo"
+   },
+   "board": [
+    5,
+    47,
+    32
+   ],
+   "fonts": [
+    "design-14",
+    "pair-14"
+   ],
+   "colours": "design-14"
+  },
+  {
+   "id": "sh07",
+   "kind": "short",
+   "slug": "bike",
+   "title": "I learned to ride a bike instead of scrolling",
+   "label": "I learned to ride a bike | instead of scrolling",
+   "sublabel": "",
+   "in": 603.0,
+   "out": 666.8,
+   "cuts": [],
+   "script": "shorts/sh07.js",
+   "music": [
+    "443",
+    4.0
+   ],
+   "tail": 0.5,
+   "bgStyle": {
+    "lab": "butter",
+    "cap": "c1",
+    "kicker": ""
+   },
+   "endCard": false,
+   "fmt": "J",
+   "poster": "Learning to\nride a bike",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 616.02,
+    "text": "Learning\nto ride a bike\nas an adult",
+    "style": "frame",
+    "big": true,
+    "shift": 860,
+    "frameW": 0.84
+   },
+   "board": [
+    38,
+    64,
+    65
+   ],
+   "fonts": [
+    "design-19",
+    "pair-08"
+   ],
+   "colours": "design-19",
+   "pad": "#1F2318"
+  },
+  {
+   "id": "sh08",
+   "kind": "short",
+   "slug": "thrifting",
+   "title": "Thrifting instead of doomscrolling",
+   "label": "Thrifting instead of doomscrolling",
+   "sublabel": "",
+   "in": 729.3,
+   "out": 822.19,
+   "cuts": [],
+   "script": "shorts/sh08.js",
+   "music": [
+    "443",
+    4.0
+   ],
+   "tail": 0.5,
+   "bgStyle": {
+    "lab": "mono",
+    "cap": "box",
+    "kicker": "a new hobby"
+   },
+   "endCard": false,
+   "fmt": "C",
+   "frame9": "4x5",
+   "poster": "Hunting at\nthe thrift\nstore",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 748.12,
+    "text": "Thrifting\nas a ~hobby~",
+    "style": "photo"
+   },
+   "board": [
+    3,
+    26,
+    56
+   ],
+   "fonts": [
+    "shorts-02"
+   ],
+   "colours": "shorts-02",
+   "pad": "#1F2318"
+  },
+  {
+   "id": "sh09",
+   "kind": "short",
+   "slug": "dont-monetise",
+   "title": "Pick up a hobby you don't have to monetise",
+   "label": "Pick up a hobby | you don't have to monetise",
+   "sublabel": "",
+   "in": 833.0,
+   "out": 888.45,
+   "cuts": [],
+   "script": "shorts/sh09.js",
+   "music": [
+    "443",
+    4.0
+   ],
+   "tail": 0.5,
+   "bgStyle": {
+    "lab": "inv",
+    "cap": "card",
+    "kicker": ""
+   },
+   "endCard": false,
+   "fmt": "G",
+   "frame9": "letterbox",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 844.33,
+    "text": "Hobbies you\ndon't have to\n~monetise~",
+    "style": "frame",
+    "big": true,
+    "shift": 860,
+    "frameW": 0.84
+   },
+   "board": [
+    12,
+    40,
+    48
+   ],
+   "fonts": [
+    "pair-13",
+    "thumbs-07"
+   ],
+   "colours": "pair-13"
+  },
+  {
+   "id": "sh10",
+   "kind": "short",
+   "slug": "long-form",
+   "title": "Watch long videos instead of short ones",
+   "label": "Watch long videos | instead of short ones",
+   "sublabel": "",
+   "in": 908.55,
+   "out": 961.6,
+   "cuts": [],
+   "script": "shorts/sh10.js",
+   "music": [
+    "443",
+    4.0
+   ],
+   "tail": 0.5,
+   "bgStyle": {
+    "lab": "butter",
+    "cap": "box",
+    "kicker": ""
+   },
+   "endCard": false,
+   "fmt": "M",
+   "frame9": "fill",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 930.54,
+    "text": "Are long videos\nbetter than\nshort ones?",
+    "style": "photo"
+   },
+   "board": [
+    24,
+    69,
+    14
+   ],
+   "fonts": [
+    "shorts-05"
+   ],
+   "colours": "shorts-05"
+  },
+  {
+   "id": "sh11",
+   "kind": "short",
+   "slug": "prayer-journaling",
+   "title": "Prayer and journaling instead of doomscrolling",
+   "label": "Prayer and journaling | instead of scrolling",
+   "sublabel": "",
+   "in": 1041.0,
+   "out": 1148.65,
+   "cuts": [
+    [
+     1052.88,
+     1053.6
+    ]
+   ],
+   "script": "shorts/sh11.js",
+   "music": [
+    "443",
+    4.0
+   ],
+   "tail": 0.5,
+   "bgStyle": {
+    "lab": "mono",
+    "cap": "c1",
+    "kicker": "8 of 9"
+   },
+   "endCard": false,
+   "fmt": "F",
+   "frame9": "1x1top",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 1062.77,
+    "text": "How to start\n~journaling~",
+    "style": "card",
+    "big": true
+   },
+   "board": [
+    40,
+    10,
+    34
+   ],
+   "fonts": [
+    "pair-15",
+    "design-16"
+   ],
+   "colours": "pair-15"
+  },
+  {
+   "id": "sh12",
+   "kind": "short",
+   "slug": "call-your-people",
+   "title": "Call your people instead of scrolling",
+   "label": "Call your people instead of scrolling",
+   "sublabel": "",
+   "in": 1188.0,
+   "out": 1252.88,
+   "cuts": [],
+   "script": "shorts/sh12.js",
+   "music": [
+    "443",
+    4.0
+   ],
+   "tail": 0.5,
+   "bgStyle": {
+    "lab": "stack",
+    "cap": "box",
+    "kicker": ""
+   },
+   "endCard": false,
+   "fmt": "A",
+   "frame9": "wide",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 1201.22,
+    "text": "when did you last\ncall your mom?",
+    "style": "photo",
+    "shift": 400
+   },
+   "board": [
+    44,
+    22,
+    28
+   ],
+   "fonts": [
+    "thumbs-14"
+   ],
+   "colours": "thumbs-14"
+  },
+  {
+   "id": "teaser",
+   "kind": "teaser",
+   "slug": "doomscrolling",
+   "title": "Teaser for LinkedIn and X (v3): why you can't stop, the idea, reading / something new / thrifting / call your people",
+   "bites": [
+    [
+     24.8,
+     28.0
+    ],
+    [
+     62.85,
+     86.1
+    ],
+    [
+     117.9,
+     129.0
+    ],
+    {
+     "gap": 0.8,
+     "at": 20.0
+    },
+    [
+     202.75,
+     218.4
+    ],
+    {
+     "gap": 0.8,
+     "at": 20.0
+    },
+    [
+     610.4,
+     619.7
+    ],
+    [
+     631.55,
+     642.1
+    ],
+    {
+     "gap": 0.8,
+     "at": 20.0
+    },
+    [
+     729.3,
+     741.85
+    ],
+    {
+     "gap": 0.8,
+     "at": 20.0
+    },
+    [
+     1187.95,
+     1196.75
+    ],
+    [
+     1216.1,
+     1222.25
+    ],
+    [
+     1223.35,
+     1229.3
+    ],
+    {
+     "gap": 1.6,
+     "at": 20.0
+    }
+   ],
+   "tail": 6.5,
+   "captionStyle": "shorts",
+   "script": "teaser/teaser.js",
+   "music": [
+    "443",
+    0.0
+   ],
+   "endCard": false,
+   "fonts": [
+    "pair-16",
+    "combo-09"
+   ],
+   "colours": "combo-09",
+   "note": "2026-11-13 v3 (TEASER-PLAYBOOK 0a): plan in teaser/PLAN-v3.md; v2 in build/before-fullkit/. Ends on the outroCard. Fonts pair-16 + combo-09."
+  }
+ ],
+ "common": [
+  "../film/scenes/bingo.js",
+  "moments/common.js",
+  "moments/visuals.js",
+  "moments/plan.js",
+  "moments/formats.js",
+  "moments/fontboard.js"
+ ],
+ "pad": "#F7D44C",
+ "frame9": "4x5",
+ "videoTitle": "9 Easy Things I Do Instead of Doomscrolling",
+ "images": {
+  "px-banana-bread": "../film/assets/pexels/banana-bread.jpg",
+  "px-bike": "../film/assets/pexels/bike.jpg",
+  "px-book-table": "../film/assets/pexels/book-table.jpg",
+  "px-busstop": "../film/assets/pexels/busstop.jpg",
+  "px-call": "../film/assets/pexels/call.jpg",
+  "px-coffee-talk": "../film/assets/pexels/coffee-talk.jpg",
+  "px-crochet": "../film/assets/pexels/crochet.jpg",
+  "px-journal": "../film/assets/pexels/journal.jpg",
+  "px-kettle": "../film/assets/pexels/kettle.jpg",
+  "px-longread": "../film/assets/pexels/longread.jpg",
+  "px-plants": "../film/assets/pexels/plants.jpg",
+  "px-pray": "../film/assets/pexels/pray.jpg",
+  "px-pushups": "../film/assets/pexels/pushups.jpg",
+  "px-read-eat": "../film/assets/pexels/read-eat.jpg",
+  "px-thrift": "../film/assets/pexels/thrift.jpg",
+  "px-waiting": "../film/assets/pexels/waiting.jpg",
+  "npr": "../film/assets/src/npr-crop.jpg",
+  "px-scroll-bed": "../film/assets/pexels/scroll-bed.jpg",
+  "px-novels": "../film/assets/pexels/novels.jpg",
+  "px-ereader": "../film/assets/pexels/ereader.jpg",
+  "px-chat": "../film/assets/pexels/chat.jpg",
+  "px-painting": "../film/assets/pexels/painting.jpg",
+  "px-camera": "../film/assets/pexels/camera.jpg",
+  "px-cooking": "../film/assets/pexels/cooking.jpg",
+  "px-chores": "../film/assets/pexels/chores.jpg",
+  "px-bags": "../film/assets/pexels/bags.jpg",
+  "px-dinner": "../film/assets/pexels/dinner.jpg",
+  "cover_sh01": "assets/covers/sh01.jpg",
+  "cover_sh02": "assets/covers/sh02.jpg",
+  "cover_sh02_cut": "assets/covers/sh02-cut.png",
+  "cover_sh03": "assets/covers/sh03.jpg",
+  "cover_sh04": "assets/covers/sh04.jpg",
+  "cover_sh05": "assets/covers/sh05.jpg",
+  "cover_sh06": "assets/covers/sh06.jpg",
+  "cover_sh07": "assets/covers/sh07.jpg",
+  "cover_sh08": "assets/covers/sh08.jpg",
+  "cover_sh08_cut": "assets/covers/sh08-cut.png",
+  "cover_sh09": "assets/covers/sh09.jpg",
+  "cover_sh10": "assets/covers/sh10.jpg",
+  "cover_sh11": "assets/covers/sh11.jpg",
+  "cover_sh11_cut": "assets/covers/sh11-cut.png",
+  "cover_sh12": "assets/covers/sh12.jpg",
+  "cover_sh07_frame": "assets/covers/sh07-frame.jpg",
+  "cover_sh10_frame": "assets/covers/sh10-frame.jpg",
+  "cover_sh02_frame": "assets/covers/sh02-frame.jpg",
+  "cover_sh09_frame": "assets/covers/sh09-frame.jpg"
+ },
+ "outroCard": {
+  "on": true,
+  "thumb": "../outputs/thumbnails/07-wasting-your-evenings.png",
+  "title": "How to Stop Doomscrolling: 9 Things I Do Instead",
+  "dur": 6.5,
+  "photo": "/library/her-photos/avatar.png",
+  "style": {
+   "ground": "#161616",
+   "ink": "#FFFDF5",
+   "mid": "#A9A390",
+   "accent": "#F7D44C",
+   "button": "#F7D44C",
+   "buttonInk": "#161616"
+  }
+ }
+}

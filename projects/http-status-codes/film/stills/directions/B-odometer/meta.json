@@ -1,0 +1,124 @@
+{
+ "TOTAL": 529,
+ "INTRO": 0,
+ "OUTRO": 1,
+ "FPS": 30,
+ "CUES": [
+  {
+   "name": "spin",
+   "t": 7,
+   "db": -10,
+   "keep": true
+  },
+  {
+   "name": "spin",
+   "t": 9,
+   "db": -12,
+   "keep": true
+  },
+  {
+   "name": "ratchet",
+   "t": 13.66,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "tick",
+   "t": 14.46,
+   "db": -8,
+   "keep": true
+  },
+  {
+   "name": "pop",
+   "t": 15,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "tick",
+   "t": 74.85,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "ratchet",
+   "t": 78.12,
+   "db": -3,
+   "keep": true
+  },
+  {
+   "name": "type",
+   "t": 79.3,
+   "db": -10,
+   "keep": true
+  },
+  {
+   "name": "ratchet",
+   "t": 81.44,
+   "db": -3,
+   "keep": true
+  },
+  {
+   "name": "type",
+   "t": 82.56,
+   "db": -10,
+   "keep": true
+  },
+  {
+   "name": "shutter",
+   "t": 259,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "marker",
+   "t": 259.6,
+   "db": -8,
+   "keep": true
+  },
+  {
+   "name": "ratchet",
+   "t": 261.32,
+   "db": -5,
+   "keep": true
+  }
+ ],
+ "SCENES": [
+  {
+   "n": 1,
+   "id": "pre",
+   "start": 0,
+   "end": 6.8,
+   "ground": "b5",
+   "label": "pre",
+   "trans": "cut"
+  },
+  {
+   "n": 2,
+   "id": "open",
+   "start": 6.8,
+   "end": 73.9,
+   "ground": "b1",
+   "label": "open",
+   "trans": "cut"
+  },
+  {
+   "n": 3,
+   "id": "first",
+   "start": 73.9,
+   "end": 258.9,
+   "ground": "b2",
+   "label": "first",
+   "trans": "cut"
+  },
+  {
+   "n": 4,
+   "id": "google",
+   "start": 258.9,
+   "end": 529,
+   "ground": "b3",
+   "label": "google",
+   "trans": "cut"
+  }
+ ]
+}

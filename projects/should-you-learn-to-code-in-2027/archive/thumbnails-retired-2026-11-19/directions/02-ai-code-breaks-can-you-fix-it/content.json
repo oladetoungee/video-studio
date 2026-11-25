@@ -1,0 +1,31 @@
+{
+ "board": "yt-25",
+ "kind": "split: generic code editor + her cut-out right (words left / her right 1 of 2)",
+ "direction": "Copies board yt-25 (STOP THIS!: dark ground, heavy caps top-left with one part in a red box, a code screenshot in the middle, a red arrow pointing at the mistake, the creator on the right; the arrow was cut after the cold review as clutter). Here: one line of code an AI wrote, marked red as the broken line, and the question the video answers: can you read and fix it yourself (her skills: reading code, debugging). Generic editor, no brand.",
+ "thumbnail_text": "AI CODE BREAKS. / CAN YOU FIX IT?",
+ "fonts": [
+  "thumbs-16 Anton + red box (white #FFFFFF and red box #D7262B on #222222, as Thumbnails 113)",
+  "thumbs-08 JetBrains Mono for the code on screen"
+ ],
+ "colours": "thumbs-16 specimen (#222222 ground, #FFFFFF, #D7262B)",
+ "text": {
+  "hd": "AI code breaks.<br><span class=\"rb\">Can you fix it?</span>",
+  "code": "<span class=\"err\"><span class=\"k\">const</span> email = form.email.<span class=\"f\">trim</span>()</span>"
+ },
+ "images": {
+  "me": "../../assets/shoot/1618-cut.png"
+ },
+ "vars": {},
+ "class": "no-lift",
+ "titles": [
+  "AI Writes the Code Now. These 4 Skills Still Matter",
+  "Learn to Code With AI: 4 Skills Beginners Need Now",
+  "Should I Learn to Code in 2027? 4 Skills That Matter Now"
+ ],
+ "title": "AI Writes the Code Now. These 4 Skills Still Matter",
+ "titles_2026": [
+  "Should I Learn to Code in 2026? 4 Skills That Matter Now"
+ ],
+ "recommended": false,
+ "scores": "R1 7 / 7.5, R2 6 / 6, R3 7 / 7.5. After R3: one code line only, error line cut, panel clear of her hand (not re-scored)"
+}

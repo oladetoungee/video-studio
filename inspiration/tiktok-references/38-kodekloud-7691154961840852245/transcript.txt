@@ -1,0 +1,23 @@
+[00:00] OpenAI just announced something called DOTS, and it completely changes how we work with AI.
+[00:04] Normally when we use ChatGPT, the interaction starts with our question. We ask something and
+[00:09] ChatGPT gets the work done and replies back to us, and waits for the next instruction or feedback.
+[00:14] A dot is different because you can give it continuous responsibility. Instead of asking
+[00:19] it to do one task, you can tell the dot that, "Keep a check on my email. If somebody from
+[00:24] CodeCloud asks me for something, figure out what needs to be done and prepare the work,
+[00:28] and then send it to me on Slack for approval." And because a dot gets its own cloud computer
+[00:33] and browser, it can keep working even when your laptop is closed. A good workflow you can try is
+[00:38] to connect Gmail, GitHub, and your calendar. You could tell a dot, "Keep watching customer
+[00:44] feedback on email. If several users report the same bug, investigate the bug on GitHub
+[00:49] and then prepare a fix and make sure you test it. After that, bring me a pull request to review."
+[00:54] Now you don't have to keep asking it every day. The dot can check new information on its own,
+[00:59] continue the same work, and come back to you when it has something useful or needs your approval.
+[01:03] Now it doesn't mean the dot can freely change anything or everything in your apps.
+[01:07] When dot proactively looks for work, it gets read-only access. So it can read things like emails,
+[01:13] files, or GitHub issues, but it cannot directly send an email or change something in your repo.
+[01:18] For performing any action, a dot needs to have permissions. You can define which actions can
+[01:23] happen automatically, which require your approval, and which actions should never happen at all.
+[01:28] OpenAI also has another safety layer called Auto Review that checks actions before they happen
+[01:34] and flags sensitive ones to you. So how should you use dots? From my perspective, do not give
+[01:38] it one time task because its purpose is watch things continuously. And when you start with dots,
+[01:43] start with very strict permissions and make things automatic one by one
+[01:47] only after you've seen the dot do it right a few times.

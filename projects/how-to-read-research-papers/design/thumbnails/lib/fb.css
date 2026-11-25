@@ -1,0 +1,39 @@
+/* how-to-read-research-papers thumbnails SET 3 (2026-11-13, FULL-KIT-BRIEF-2026-11-12): FONT BOARD ONLY (inspiration/boards/fonts/),
+   each used with its board item's own colours. Every thumbnail copies a DIFFERENT thumbnail-board composition ("Thumbnails N").
+   Editable: text in content.json "text", photos in "images", colours in "vars", moves in "nudge" (lib/bind.js). */
+@font-face { font-family: 'FBBod'; src: url('../fonts/BodoniModa[opsz,wght].ttf'); font-weight: 400 900; }
+@font-face { font-family: 'FBIS'; src: url('../fonts/InstrumentSerif-Italic.ttf'); font-style: normal; }
+@font-face { font-family: 'FBIT'; src: url('../fonts/InterTightMedium.ttf'); font-weight: 500; }
+@font-face { font-family: 'FBIT'; src: url('../fonts/InterTightBold.ttf'); font-weight: 700; }
+@font-face { font-family: 'FBPF'; src: url('../fonts/PlayfairDisplayBlackItalic.ttf'); font-weight: 900; font-style: normal; }
+@font-face { font-family: 'FBOsw'; src: url('../fonts/Oswald-Variable.ttf'); font-weight: 200 700; }
+@font-face { font-family: 'FBLib'; src: url('../fonts/LibreBaskerville[wght].ttf'); font-weight: 400 700; }
+@font-face { font-family: 'FBLibI'; src: url('../fonts/LibreBaskerville-Italic[wght].ttf'); font-weight: 400 700; }
+@font-face { font-family: 'FBArc'; src: url('../fonts/Archivo.ttf'); font-weight: 100 900; }
+@font-face { font-family: 'FBMon'; src: url('../fonts/Montserrat-Variable.ttf'); font-weight: 100 900; }
+@font-face { font-family: 'FBBric'; src: url('../fonts/BricolageGrotesque.ttf'); font-weight: 200 800; }
+@font-face { font-family: 'FBDM'; src: url('../fonts/DMMono-Medium.ttf'); font-weight: 500; }
+@font-face { font-family: 'FBAnt'; src: url('../fonts/Anton-Regular.ttf'); }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1280px; height: 720px; overflow: hidden; background: #111; }
+.t { position: relative; width: 1280px; height: 720px; overflow: hidden; background: var(--ground, #111); color: var(--fg, #fff); }
+.t > * { position: absolute; }
+.guides .badge { position: absolute; right: 10px; bottom: 10px; width: 150px; height: 70px; border: 3px dashed #0f0; z-index: 99; }
+.z1 { z-index: 1; } .z2 { z-index: 2; } .z3 { z-index: 3; } .z4 { z-index: 4; } .z5 { z-index: 5; } .z6 { z-index: 6; }
+.nw { white-space: nowrap; }
+/* her room photo + her cut-out at the same place on top (face untouched); .dim darkens / washes the room only */
+.room { width: var(--rw, 2000px); left: var(--rx, 0px); top: var(--ry, 0px); display: block; }
+.dim { inset: 0; background: var(--dim, rgba(12,12,12,.5)); }
+.full { inset: 0; width: 1280px; height: 720px; object-fit: cover; display: block; }
+.cut { display: block; }
+.credit { font: 500 13px/1 FBDM, monospace; letter-spacing: .04em; opacity: .75; }
+@font-face { font-family: 'FBSix'; src: url('../fonts/SixCaps.ttf'); }
+@font-face { font-family: 'FBAB'; src: url('../fonts/ArchivoBlack-Regular.ttf'); }
+@font-face { font-family: 'FBIT'; src: url('../fonts/InterTightBlack.ttf'); font-weight: 900; }
+/* a printed page drawn as a prop: white sheet, grey text lines, optional highlighter strips */
+.sheet { background: #FFFFFF; border-radius: 4px; padding: 22px 20px; box-shadow: 0 18px 40px rgba(0,0,0,.35); }
+.sheet i { display: block; height: 9px; background: #C9C7C2; border-radius: 5px; margin: 0 0 13px; }
+.sheet i.t { height: 16px; background: #3A3A3A; width: 70%; margin-bottom: 20px; }
+.sheet i.y { background: #F2D33A; height: 14px; }
+/* 2026-11-19 rework: thumbs-10 Poppins Bold lowercase (white, red key word, from Thumbnails 84) */
+@font-face { font-family: 'FBPop'; src: url('../fonts/Poppins-Bold.ttf'); font-weight: 700; }

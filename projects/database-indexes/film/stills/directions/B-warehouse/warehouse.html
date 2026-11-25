@@ -1,0 +1,141 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face { font-family: Space; src: url(../_fonts/SpaceGrotesk.ttf); font-weight: 300 700; }
+@font-face { font-family: Martian; src: url(../_fonts/MartianMono.ttf); font-weight: 100 800; font-stretch: 75% 112.5%; }
+html, body { margin: 0; background: #DCE2E8; }
+#stage { position: relative; overflow: hidden; background: #DCE2E8; color: #15191E; font-family: Space; }
+</style></head><body>
+<div id="stage"></div>
+<script src="../_tools/kit.js"></script>
+<script>
+// B · INDEX WAREHOUSE: an isometric data film. The database is a building of blocks: a table is a slab of row layers,
+// an index is a slim sorted stack beside it, a query is an orange block that moves. Flat sage ground, no shadows, no gradients.
+const C = { bg: '#DCE2E8', ink: '#15191E', dim: '#56606B', top: '#FBFCFD', left: '#C9D1D9', right: '#AAB5C0', acc: ['#00A86B', '#008F5B', '#00764B'], dark: ['#3F4853', '#323A44', '#272E36'] };
+const P = PORTRAIT;
+function ISO(s, ox, oy) { const cx = 0.866 * s, cy = 0.5 * s; return (x, y, z) => [ox + (x - y) * cx, oy + (x + y) * cy - z * s]; }
+// boxes: list of {x,y,z,w,d,h,col}; drawn back to front
+function drawBoxes(g, P, boxes) {
+  g.innerHTML = '';
+  boxes.slice().sort((a, b) => (a.x + a.y + a.z * 0.01) - (b.x + b.y + b.z * 0.01) || a.z - b.z).forEach(b => {
+    const { x, y, z, w, d, h } = b; const col = b.col || [C.top, C.left, C.right];
+    const pts = (arr) => arr.map(p => P(...p).join(',')).join(' ');
+    const st = { stroke: C.ink, 'stroke-width': b.sw || 2, 'stroke-linejoin': 'round', opacity: b.op == null ? 1 : b.op };
+    sv(g, 'polygon', Object.assign({ points: pts([[x, y + d, z], [x + w, y + d, z], [x + w, y + d, z + h], [x, y + d, z + h]]), fill: col[1] }, st));
+    sv(g, 'polygon', Object.assign({ points: pts([[x + w, y, z], [x + w, y + d, z], [x + w, y + d, z + h], [x + w, y, z + h]]), fill: col[2] }, st));
+    sv(g, 'polygon', Object.assign({ points: pts([[x, y, z + h], [x + w, y, z + h], [x + w, y + d, z + h], [x, y + d, z + h]]), fill: col[0] }, st));
+  });
+}
+function head(root, txt, top, size) { return el('div', { left: V(120, 60) + 'px', top: (top ?? V(104, 370)) + 'px', font: `700 ${size ?? V(80, 76)}px Space`, letterSpacing: '-0.03em', lineHeight: 1.02, width: V(900, 960) + 'px' }, txt, root); }
+function mono(root, x, y, txt, size = 30, color = C.dim) { return el('div', { left: x + 'px', top: y + 'px', font: `400 ${size}px Martian`, fontStretch: '87.5%', letterSpacing: '0.01em', color, whiteSpace: 'pre', lineHeight: 1.35 }, txt, root); }
+const inT = (e, t, t0) => { const a = ein(t, t0, 0.5); set(e, { opacity: a, transform: `translateY(${(1 - a) * 22}px)` }); };
+
+// ---------------- Scene 1 (0-10 s): one new order = the table + six indexes (motion test 0-8 s) ----------------
+scene('writes', 0, 10, (root, S) => {
+  S.s = svg(root); S.g = sv(S.s, 'g', {});
+  S.P = V(ISO(70, 900, 430), ISO(54, 380, 860));
+  S.h = head(root, 'Every write updates every index'); if (P) S.h.style.width = '760px';
+  S.sub = el('div', { left: V(124, 64) + 'px', top: V(290, 540) + 'px', font: `400 ${V(34, 36)}px Space`, color: C.dim, width: V(720, 940) + 'px', lineHeight: 1.3 }, 'One new order: a new row in the table, plus a new entry in each of its six indexes.', root);
+  S.num = el('div', { left: V(124, 64) + 'px', top: V(560, 1150) + 'px', font: `700 ${V(200, 180)}px Space`, letterSpacing: '-0.05em', lineHeight: 1, color: C.ink }, '0', root);
+  S.numL = mono(root, V(130, 70), V(780, 1440), 'writes for\n1 new order', 32);
+  S.tl = mono(root, 0, 0, 'orders', 32, C.ink); S.il = mono(root, 0, 0, '6 indexes', 32, C.ink);
+  if (P) set(S.numL, { top: '1340px', left: '70px' });
+}, (t, S) => {
+  const boxes = [];
+  // the orders table: 4 row layers
+  for (let k = 0; k < 4; k++) boxes.push({ x: 0, y: 0, z: k * 0.34, w: 6, d: 4, h: 0.28 });
+  // the new order falls (gravity in, small bounce), lands at 1.45 s
+  const tf = 0.9, tl = 1.45; let oz;
+  if (t < tf) oz = 7; else if (t < tl) { const u = (t - tf) / (tl - tf); oz = 7 - (7 - 1.36) * u * u; } else { oz = 1.36 + 0.35 * Math.exp(-6 * (t - tl)) * Math.abs(Math.sin(9 * (t - tl))); }
+  if (t >= 0.6) boxes.push({ x: 2.3, y: 1.4, z: oz, w: 1.4, d: 1.2, h: 0.34, col: C.acc, op: ein(t, 0.6, 0.2) });
+  // six indexes, each a slim stack of sorted cards; a new orange card drops into each one after the table
+  let writes = t >= tl ? 1 : 0;
+  for (let i = 0; i < 6; i++) {
+    const cx = 7.6 + (i % 3) * 1.9, cy = (i / 3 | 0) * 2.3;
+    for (let k = 0; k < 3; k++) boxes.push({ x: cx, y: cy, z: k * 0.26, w: 1.3, d: 1.7, h: 0.2 });
+    const ti = 2.0 + i * 0.3, u = prog(t, ti, ti + 0.32);
+    if (t >= ti - 0.05) boxes.push({ x: cx, y: cy, z: 0.78 + 2.2 * (1 - u) * (1 - u), w: 1.3, d: 1.7, h: 0.2, col: C.acc, op: ein(t, ti - 0.05, 0.12) });
+    if (t >= ti + 0.32) writes++;
+  }
+  drawBoxes(S.g, S.P, boxes);
+  S.num.textContent = writes;
+  S.num.style.color = writes === 7 ? C.acc[0] : C.ink;
+  inT(S.h, t, 0); inT(S.sub, t, 0.15); inT(S.num, t, 1.4); inT(S.numL, t, 1.5);
+  const [ax, ay] = S.P(0, 4, 0), [bx, by] = S.P(12.7, 4.0, 0);
+  set(S.tl, { left: (ax - 150) + 'px', top: (ay - 70) + 'px', opacity: ein(t, 0.3, 0.4) });
+  set(S.il, { left: (bx + V(30, -230)) + 'px', top: (by + V(-20, 30)) + 'px', opacity: ein(t, 0.5, 0.4) });
+});
+
+// ---------------- Scene 2 (10-16 s): full table scan ----------------
+scene('scan', 10, 16, (root, S) => {
+  S.s = svg(root); S.g = sv(S.s, 'g', {});
+  S.P = ISO(44, 820, 400);
+  S.h = head(root, 'No index: check every row'); S.h.style.width = '1200px';
+  S.code = mono(root, V(124, 64), V(220, 540), 'SELECT * FROM books\nWHERE author_id = 42;', 30, C.ink);
+  S.num = el('div', { left: '1380px', top: '120px', font: '700 96px Space', letterSpacing: '-0.04em' }, '', root);
+  S.numL = mono(root, 1386, 230, 'rows checked\nof 1,000,000', 30);
+  S.cap = mono(root, 1386, 330, 'Illustration\n1 block = 6,250 rows', 30);
+}, (t, S) => {
+  const NX = 20, NY = 8, boxes = [];
+  const f = Math.min(NX * NY, Math.floor(prog(t, 0.6, 5.6) * NX * NY));
+  for (let j = 0; j < NY; j++) for (let i = 0; i < NX; i++) {
+    const n = j * NX + i, done = n < f;
+    boxes.push({ x: i, y: j, z: 0, w: 0.86, d: 0.86, h: 0.22, col: done ? C.dark : undefined, sw: 1.5 });
+  }
+  const sx = f % NX, sy = Math.floor(f / NX);
+  if (t > 0.6 && f < NX * NY) boxes.push({ x: sx - 0.05, y: sy - 0.05, z: 0.5, w: 0.96, d: 0.96, h: 0.4, col: C.acc });
+  drawBoxes(S.g, S.P, boxes);
+  S.num.textContent = fmt(Math.min(1e6, f * 6250));
+  inT(S.h, t, 0); inT(S.code, t, 0.15); inT(S.num, t, 0.5); inT(S.numL, t, 0.5); S.cap.style.opacity = ein(t, 0.8, 0.4);
+});
+
+// ---------------- Scene 3 (20-26 s): the index is a slim sorted copy with pointers ----------------
+scene('index', 20, 26, (root, S) => {
+  S.s = svg(root); S.lines = sv(S.s, 'g', {}); S.g = sv(S.s, 'g', {}); S.top = sv(S.s, 'g', {});
+  S.P = ISO(54, 1240, 420);
+  S.h = head(root, 'An index is a sorted copy of one column');
+  S.sub = el('div', { left: '124px', top: '300px', font: '400 34px Space', color: C.dim, width: '600px', lineHeight: 1.3 }, 'Each entry keeps a pointer to where its row lives. Usually much smaller than the table.', root);
+  S.l1 = mono(root, 0, 0, 'books · every column', 30, C.ink); S.l2 = mono(root, 0, 0, 'index · author_id, sorted', 30, C.ink); S.l3 = mono(root, 0, 0, '42', 34, C.acc[0]);
+}, (t, S) => {
+  const boxes = []; const hit = [2, 6, 9];
+  for (let k = 0; k < 12; k++) boxes.push({ x: 0, y: 0, z: k * 0.34, w: 5.5, d: 3.4, h: 0.26, col: (t > 2.6 && hit.includes(k)) ? C.acc : undefined, op: ein(t, 0.2 + k * 0.04, 0.3) });
+  for (let k = 0; k < 12; k++) boxes.push({ x: 8.4, y: 0.9, z: k * 0.34, w: 1.1, d: 1.1, h: 0.26, col: (t > 1.6 && (k === 7)) ? C.acc : undefined, op: ein(t, 0.9 + k * 0.04, 0.3) });
+  drawBoxes(S.g, S.P, boxes);
+  S.lines.innerHTML = '';
+  hit.forEach((k, i) => {
+    const [x1, y1] = S.P(8.4, 1.45, 7 * 0.34 + 0.13), [x2, y2] = S.P(5.5, 1.7, k * 0.34 + 0.13);
+    const p = sv(S.top, 'path', { d: `M${x1} ${y1} Q ${(x1 + x2) / 2} ${Math.min(y1, y2) - 70} ${x2} ${y2}`, fill: 'none', stroke: C.acc[0], 'stroke-width': 4, 'stroke-linecap': 'round' });
+    draw(p, ein(t, 1.9 + i * 0.12, 0.5));
+  });
+  if (S.top.childNodes.length > 3) for (let i = 0; i < 3; i++) S.top.removeChild(S.top.firstChild);
+  const [ax, ay] = S.P(0, 3.4, 0), [bx, by] = S.P(9.5, 2.0, 0), [cx, cy] = S.P(9.5, 0.9, 7 * 0.34 + 0.2);
+  set(S.l1, { left: (ax - 460) + 'px', top: (ay - 30) + 'px', opacity: ein(t, 0.6, 0.4) });
+  set(S.l2, { left: (bx - 330) + 'px', top: (by + 30) + 'px', opacity: ein(t, 1.2, 0.4) });
+  set(S.l3, { left: (cx + 26) + 'px', top: (cy - 30) + 'px', opacity: ein(t, 1.6, 0.3) });
+  inT(S.h, t, 0); inT(S.sub, t, 0.15);
+});
+
+// ---------------- Scene 4 (30-36 s): a B-tree is a building with a few floors ----------------
+scene('tower', 30, 36, (root, S) => {
+  S.s = svg(root); S.lines = sv(S.s, 'g', {}); S.g = sv(S.s, 'g', {});
+  S.P = V(ISO(58, 1100, 400), ISO(56, 200, 860));
+  S.h = head(root, 'Millions of rows, only a few levels'); S.h.style.width = V(680, 800) + 'px';
+  S.flo = ['root', 'branches', 'leaves'].map(s => mono(root, 0, 0, s, 30, C.ink));
+  S.cap = mono(root, V(124, 64), V(990, 1370), V('Illustration · real nodes hold hundreds of keys', 'Illustration · real nodes hold\nhundreds of keys'), 30);
+}, (t, S) => {
+  const boxes = [], Z = [6.4, 3.2, 0];
+  const path = [0, 1, 4]; // root, branch 1, leaf 4
+  const lit = (lvl) => t > 1.6 + lvl * 0.7;
+  boxes.push({ x: 3.2, y: 0.4, z: Z[0], w: 3.0, d: 1.2, h: 0.4, col: lit(0) ? C.acc : undefined, op: ein(t, 0.2, 0.3) });
+  for (let i = 0; i < 3; i++) boxes.push({ x: i * 3.3, y: 0.4, z: Z[1], w: 2.8, d: 1.2, h: 0.4, col: (i === path[1] && lit(1)) ? C.acc : undefined, op: ein(t, 0.45 + i * 0.07, 0.3) });
+  for (let i = 0; i < 9; i++) boxes.push({ x: i * 1.1, y: 0.4, z: Z[2], w: 0.9, d: 1.2, h: 0.4, col: (i === path[2] && lit(2)) ? C.acc : undefined, op: ein(t, 0.7 + i * 0.05, 0.3) });
+  drawBoxes(S.g, S.P, boxes);
+  S.lines.innerHTML = '';
+  const ln = (a, b, on, t0) => { const p = sv(S.lines, 'path', { d: `M${a[0]} ${a[1]} L${b[0]} ${b[1]}`, stroke: on ? C.acc[0] : C.dim, 'stroke-width': on ? 4 : 2, fill: 'none' }); draw(p, ein(t, t0, 0.4)); };
+  for (let i = 0; i < 3; i++) ln(S.P(4.7, 1.0, Z[0]), S.P(i * 3.3 + 1.4, 1.0, Z[1] + 0.4), i === 1 && lit(1), 0.6);
+  for (let i = 0; i < 9; i++) ln(S.P(Math.floor(i / 3) * 3.3 + 1.4, 1.0, Z[1]), S.P(i * 1.1 + 0.45, 1.0, Z[2] + 0.4), i === 4 && lit(2), 0.9);
+  const lab = [S.P(6.4, 0.4, Z[0] + 0.2), S.P(9.8, 0.4, Z[1] + 0.2), S.P(10.0, 0.4, Z[2] + 0.2)];
+  S.flo.forEach((e, i) => set(e, { left: (lab[i][0] + 24) + 'px', top: (lab[i][1] - 4) + 'px', opacity: ein(t, 0.5 + i * 0.2, 0.4) }));
+  inT(S.h, t, 0); S.cap.style.opacity = ein(t, 1, 0.4);
+});
+</script></body></html>

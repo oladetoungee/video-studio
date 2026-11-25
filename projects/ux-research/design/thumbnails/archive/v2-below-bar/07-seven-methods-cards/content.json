@@ -1,0 +1,28 @@
+{
+  "direction": "The methods as a small spread of index cards: three big readable ones (1 Interviews, 2 Surveys, 3 A/B tests) and a stack behind them marked '+4 more'. Warm paper, orange only on the 7; her calm cut-out in black and white with an orange outline.",
+  "thumbnail_text": "7 UX research methods",
+  "titles": [
+    "7 Ways to Study Your Users (UX Research for Beginners)",
+    "UX Research Methods Explained: Interviews to A/B Tests",
+    "How UX Researchers Study Users (7 Simple Methods)"
+  ],
+  "text": {
+    "hd": "<span class=\"acc\">7</span> UX research<br>methods",
+    "c1": "Interviews",
+    "c2": "Surveys",
+    "c3": "A/B tests",
+    "more": "+4 more"
+  },
+  "images": {
+    "me": "../../assets/cut/gbemi-direct-hard.png"
+  },
+  "vars": {
+    "--ground": "#EDE9E2",
+    "--fg": "#17140F",
+    "--accent": "#FF4713",
+    "--ol": "#FF4713"
+  },
+  "scores": "",
+  "recommended": false,
+  "title": "7 Ways to Study Your Users (UX Research for Beginners)"
+}

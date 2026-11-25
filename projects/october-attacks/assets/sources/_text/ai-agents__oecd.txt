@@ -1,0 +1,441 @@
+URL: https://oecd.ai/en/incidents/2026-10-19-4666
+STATUS: loaded (http 200)
+FINAL: https://oecd.ai/en/incidents/2026-10-19-4666
+TITLE: AI Agents Used in Large-Scale Autonomous Website Hacking Campaign - OECD.AI
+H1: AI Agents Used in Large-Scale Autonomous Website Hacking Campaign
+OG: AI Agents Used in Large-Scale Autonomous Website Hacking Campaign | 
+PUBLISHED:   MODIFIED: 
+DOC_H: 10080
+
+Home
+AIM
+AI Agents Used in Large-Scale Autonomous Website Hacking Campaign
+AI Agents Used in Large-Scale Autonomous Website Hacking Campaign
+
+The information displayed in the AIM should not be reported as representing the official views of the OECD or of its member countries.
+
+A Chinese-speaking hacker used AI agents on the Cairn platform to autonomously breach over 100 company websites, including Deere, SharkNinja, and Cummins, across the US, Canada, Australia, and Japan. The AI system enabled rapid, large-scale intrusions with minimal human involvement, highlighting new cybersecurity risks.[AI GENERATED]
+
+Why's our monitor labelling this an incident or hazard?
+The article explicitly states that AI agents autonomously conducted cyberattacks compromising over 100 companies' websites, resulting in data theft and unauthorized access. The AI systems' use directly led to harm including breaches of security and theft of sensitive data, which are violations of rights and harm to property. The involvement of AI in the development and use of these attack tools is clear and central to the incident. Hence, this is an AI Incident rather than a hazard or complementary information.[AI GENERATED]
+AI principles
+Robustness & digital security
+Accountability
+Industries
+Agriculture
+Consumer products
+Affected stakeholders
+Business
+Harm types
+Economic/Property
+Reputational
+Business function:
+ICT management and information security
+AI system task:
+Reasoning with knowledge structures/planning
+Goal-driven organisation
+Articles about this incident or hazard
+"Trăim într-o lume nouă". Un singur hacker a compromis site-urile a peste 100 de companii cu ajutorul AI. Cât l-au costat atacurile
+2026-10-20
+Digi24
+Why's our monitor labelling this an incident or hazard?
+Semnal puternic de alarmă: Un singur hacker a reușit să spargă peste 100 de site-uri folosind Inteligența Artificială
+2026-10-20
+Stiri pe surse
+Why's our monitor labelling this an incident or hazard?
+Hackerul care a spart peste 100 de site-uri cu AI. Atacurile au costat 5.000 de dolari
+2026-10-20
+REALITATEA.NET
+Why's our monitor labelling this an incident or hazard?
+Un hacker a spart peste 100 de site-uri folosind inteligența artificială. Atacurile l-au costat doar 5.000 de dolari și au vizat inclusiv companii gigant
+2026-10-20
+Mediafax.ro
+Why's our monitor labelling this an incident or hazard?
+Un singur hacker - peste 100 de site-uri sparte cu ajutorul AI. Totul l-a costat doar 5.000 de dolari
+2026-10-20
+Jurnalul Naţional
+Why's our monitor labelling this an incident or hazard?
+Un singur hacker a spart peste 100 de site-uri folosind agenți AI. Atacurile au costat doar 50 de dolari fiecare, iar printre victime se numără companii uriașe
+2026-10-20
+PLAYTECH.ro
+Why's our monitor labelling this an incident or hazard?
+Un hacker a spart peste 100 de site-uri cu ajutorul inteligenței artificiale. Atacurile au vizat patru țări
+2026-10-20
+Europa FM
+Why's our monitor labelling this an incident or hazard?
+Peste 100 de site-uri, compromise de un singur hacker cu ajutorul agenților AI autonomi
+2026-10-20
+CugetLiber.ro
+Why's our monitor labelling this an incident or hazard?
+Un hacker a spart peste 100 de site-uri cu 5000 de dolari și AI
+2026-10-20
+G4Media.ro
+Why's our monitor labelling this an incident or hazard?
+Un hacker a folosit o armată de agenți AI pentru a sparge peste 100 de site-uri
+2026-10-21
+Libertatea
+Why's our monitor labelling this an incident or hazard?
+Un hacker que habla chino usó un ejército de IA para vulnerar sitios web
+2026-10-19
+infobae
+Why's our monitor labelling this an incident or hazard?
+Un solo hacker usó agentes de IA para infiltrarse en más de 100 sitios web de empresas
+2026-10-21
+infobae
+Why's our monitor labelling this an incident or hazard?
+Cómo un pirata chino usó agentes de IA y US$5000 para entrometerse en decenas de sitios web
+2026-10-19
+La Nacion
+Why's our monitor labelling this an incident or hazard?
+Un hacker usó agentes de IA y unos pocos miles de dólares para acceder a decenas de sitios web
+2026-10-19
+Yahoo!
+Why's our monitor labelling this an incident or hazard?
+Un hacker usa un ejército de agentes de IA para entrar en más de 100 webs, entre ellas las de John Deere, SharkNinja y Cummins, según la firma Norforge
+2026-10-20
+La Razón
+Why's our monitor labelling this an incident or hazard?
+Menos de 100 caracteres, 1.200 webs atacadas y más de 100 comprometidas: así está cambiando la IA la ciberseguridad
+2026-10-20
+Xataka
+Why's our monitor labelling this an incident or hazard?
+Con 5,000 dólares y la IA: así fue como un hacker vulneró más de 100 sitios web
+2026-10-20
+Expansión
+Why's our monitor labelling this an incident or hazard?
+Agentes de IA ampliam riscos após invasões e cobranças indevidas
+2026-10-20
+null
+Why's our monitor labelling this an incident or hazard?
+Un solo hacker lanzó un ejército de agentes de IA contra 1.200 sitios web y logró entrar en más de 100. Le costó unos 5.000 dólares
+2026-10-21
+Gizmodo en Español
+Why's our monitor labelling this an incident or hazard?
+Un hacker vulneró más de 100 empresas internacionales delegando el trabajo en agentes de IA: "Si se utiliza para realizar ataques dañinos, no es mi intención
+2026-10-23
+LaVanguardia
+Why's our monitor labelling this an incident or hazard?
+یک هکر با لشکری از عامل‌های هوش مصنوعی به بیش از ۱۲۰۰ وب‌سایت حمله کرد / تهدیدی فراتر از ابزارهای خودکار قدیمی
+2026-10-20
+خبرآنلاین
+Why's our monitor labelling this an incident or hazard?
+هوش مصنوعی یک تنه بیش از ۱۰۰ شرکت را هک کرد
+2026-10-20
+خبرگزاری مهر | اخبار ایران و جهان | Mehr News Agency
+Why's our monitor labelling this an incident or hazard?
+عامل‌های هوش مصنوعی، ابزار تازه هکرها؛ نفوذ به ۱۰۰ شرکت در چند روز
+2026-10-20
+ana.ir
+Why's our monitor labelling this an incident or hazard?
+وقتی هوش مصنوعی هک می‌کند؛ اخلاق کجاست؟
+2026-10-20
+Jamejam Online
+Why's our monitor labelling this an incident or hazard?
+زنگ خطر در دنیای امنیت سایبری؛ هکر چینی با ایجنت‌های هوش مصنوعی به ۱۰۰ شرکت نفوذ کرد
+2026-10-19
+دیجیاتو
+Why's our monitor labelling this an incident or hazard?
+نفوذ هکر چینی به وب‌سایت بیش از ۱۰۰شرکت با کمک هوش مصنوعی
+2026-10-19
+Technoc
+Why's our monitor labelling this an incident or hazard?
+How A Chinese-Speaking Hacker Used AI Agents To Breach Over 100 Companies
+2026-10-20
+NDTV
+Why's our monitor labelling this an incident or hazard?
+How one hacker used AI agents and a few thousand dollars to break into scores of sites | Mint
+2026-10-19
+mint
+Why's our monitor labelling this an incident or hazard?
+AI Hacker Breaches 100+ Global Companies at $50
+2026-10-20
+Chosun.com
+Why's our monitor labelling this an incident or hazard?
+Chinese-Speaking Hacker Breaches 100+ Companies via AI
+2026-10-20
+Chosun.com
+Why's our monitor labelling this an incident or hazard?
+EXCLUSIVE: How one hacker used AI agents and a few thousand dollars to break into scores of sites
+2026-10-19
+Reuters
+Why's our monitor labelling this an incident or hazard?
+How one hacker used AI agents and a few thousand dollars to break into scores of sites
+2026-10-19
+Economic Times
+Why's our monitor labelling this an incident or hazard?
+A hacker broke into John Deere and SharkNinja with an army of AI agents
+2026-10-19
+The Verge
+Why's our monitor labelling this an incident or hazard?
+The Fear of a One-Man-Band Weaponizing AI Agents Is Becoming Reality
+2026-10-19
+Gizmodo
+Why's our monitor labelling this an incident or hazard?
+AI-powered hackers target over 1,200 websites in automated cyberattacks: Report
+2026-10-19
+Firstpost
+Why's our monitor labelling this an incident or hazard?
+How one hacker used AI agents and a few thousand dollars to break into scores of sites
+2026-10-19
+The Express Tribune
+Why's our monitor labelling this an incident or hazard?
+AI agents targeted 1,200 websites and compromised more than 100: report
+2026-10-19
+The Business Times
+Why's our monitor labelling this an incident or hazard?
+Hacker used AI agents to breach 100+ sites, including John Deere
+2026-10-19
+Quartz
+Why's our monitor labelling this an incident or hazard?
+How one hacker used AI agents to break into over 100 company websites | Honolulu Star-Advertiser
+2026-10-19
+Honolulu Star Advertiser
+Why's our monitor labelling this an incident or hazard?
+Hacker uses AI agents to breach over 100 websites
+2026-10-20
+NewsBytes
+Why's our monitor labelling this an incident or hazard?
+Hackers Use AI Agents to Do Hacking for Them | PYMNTS.com
+2026-10-19
+PYMNTS.com
+Why's our monitor labelling this an incident or hazard?
+'It's Not Script Kiddie Stuff': Hacker Reportedly Uses AI To Breach Corporate Sites for Just $50
+2026-10-19
+International Business Times UK
+Why's our monitor labelling this an incident or hazard?
+Exclusive-How one hacker used AI agents and a few thousand dollars to break into scores of sites
+2026-10-19
+Yahoo
+Why's our monitor labelling this an incident or hazard?
+This is what an AI-run hacking spree looks like
+2026-10-20
+TechCentral
+Why's our monitor labelling this an incident or hazard?
+'It's not script kiddie stuff': AI agents hack 100+ sites for one hacker
+2026-10-19
+The Next Web
+Why's our monitor labelling this an incident or hazard?
+AI Agents Attempt 1,200 Cyber Break-Ins, Compromise More Than 100 Sites - FinanceFeeds
+2026-10-19
+FinanceFeeds
+Why's our monitor labelling this an incident or hazard?
+Exposed Cairn panels show criminals hunting cards, crypto and shell access - Cryptopolitan
+2026-10-19
+Cryptopolitan
+Why's our monitor labelling this an incident or hazard?
+How one hacker used AI agents and a few thousand dollars to break into scores of sites
+2026-10-20
+iTnews
+Why's our monitor labelling this an incident or hazard?
+Exclusive-How One Hacker Used AI Agents and a Few Thousand Dollars to Break Into Scores of Sites
+2026-10-19
+U.S. News & World Report
+Why's our monitor labelling this an incident or hazard?
+AI agents attacked more than 1,200 websites with just a few instructions from a hacker
+2026-10-20
+Albeu.com - Lajmet e fundit dhe jo vetëm!
+Why's our monitor labelling this an incident or hazard?
+AI-powered hackers breach major companies, raising cyber risks
+2026-10-19
+Finance & Commerce
+Why's our monitor labelling this an incident or hazard?
+Hacker Leverages AI Agents to Breach More Than 100 Company Websites
+2026-10-19
+WinBuzzer
+Why's our monitor labelling this an incident or hazard?
+AI Agents Gain Access to Websites of More Than 100 Companies | TokenPost
+2026-10-19
+TokenPost
+Why's our monitor labelling this an incident or hazard?
+One Operator's AI Agents Breach Websites at More Than 100 Companies | EconoTimes
+2026-10-19
+EconoTimes
+Why's our monitor labelling this an incident or hazard?
+A hacker broke into John Deere and SharkNinja with an army of AI agents
+2026-10-19
+RocketNews | Top News Stories From Around the Globe
+Why's our monitor labelling this an incident or hazard?
+Hackers have breached the websites of more than 100 companies using artificial intelligence.
+2026-10-19
+Noyan Tapan Information Center
+Why's our monitor labelling this an incident or hazard?
+AI Agents Hacking: One Hacker Breaches 100+ Sites
+2026-10-20
+en.shafaqna.com
+Why's our monitor labelling this an incident or hazard?
+A Lone Hacker Used AI Agents to Breach More Than 100 Companies - Startup Fortune
+2026-10-19
+Startup Fortune
+Why's our monitor labelling this an incident or hazard?
+AI Autonomous Hacking Campaign Breaches 100+ Company Websites
+2026-10-19
+The Cryptonomist
+Why's our monitor labelling this an incident or hazard?
+How One Hacker Used AI Agents To Target Over 1,200 Websites For Just $5,000
+2026-10-20
+TimesNow
+Why's our monitor labelling this an incident or hazard?
+Chinese hacker hits over 100 company websites using AI agents -- Deere and SharkNinja among top brands affected in attack
+2026-10-20
+TechRadar
+Why's our monitor labelling this an incident or hazard?
+How one hacker used AI agents to break into websites
+2026-10-20
+RTE.ie
+Why's our monitor labelling this an incident or hazard?
+This Hacker Let His Rogue AI Program Do All the Work
+2026-10-20
+Townhall
+Why's our monitor labelling this an incident or hazard?
+Pour 5000 dollars, un hacker s'introduit dans plus de 100 sites d'entreprises grâce à des agents IA
+2026-10-20
+Clubic.com
+Why's our monitor labelling this an incident or hazard?
+" C'est un nouveau monde " : une armée d'IA vient de lancer une cyberattaque " massive ", plus de 100 entreprises piratées
+2026-10-20
+01net
+Why's our monitor labelling this an incident or hazard?
+Un pirate a laissé des IA hacker plus de 100 entreprises pour 5 000 dollars
+2026-10-20
+zonebourse
+Why's our monitor labelling this an incident or hazard?
+Less than 100 Chinese characters: How a hacker used AI to breach over 100 company web
+2026-10-21
+ynetnews
+Why's our monitor labelling this an incident or hazard?
+Un hacker pirate 100 sites avec une armée d'agents IA, presque sans rien faire
+2026-10-20
+PhonAndroid
+Why's our monitor labelling this an incident or hazard?
+How One Hacker Used AI Agents And A Few Thousand Dollars To Break Into Scores Of Sites
+2026-10-20
+Deccan Chronicle
+Why's our monitor labelling this an incident or hazard?
+AI Pen-Test Tool Cairn Abused to Automate Massive Attack Spree
+2026-10-20
+Dark Reading
+Why's our monitor labelling this an incident or hazard?
+Une armée d'agents IA a compromis plus d'une centaine de sites
+2026-10-20
+Génération-NT
+Why's our monitor labelling this an incident or hazard?
+Cyberattaque IA : 50 dollars par site piraté, le nouveau tarif du crime informatique
+2026-10-20
+Economie Matin
+Why's our monitor labelling this an incident or hazard?
+Hackers can now use AI agents, couple thousand dollars to break into websites | New Straits Times
+2026-10-20
+New Straits Times Online
+Why's our monitor labelling this an incident or hazard?
+One Hacker's AI Agents Breached 100+ Websites
+2026-10-20
+Technology Org
+Why's our monitor labelling this an incident or hazard?
+Hacker Used AI Agents to Breach John Deere, SharkNinja and Cummins Sites
+2026-10-20
+WebProNews
+Why's our monitor labelling this an incident or hazard?
+100 sites piratés en 23 heures : l'ère des agents IA autonomes
+2026-10-20
+Les Smartgrids
+Why's our monitor labelling this an incident or hazard?
+AI Agents Hack More Than 100 Websites, Including Australian Targets, for Just US$5,000
+2026-10-20
+Crypto News Australia
+Why's our monitor labelling this an incident or hazard?
+One Hacker Used AI Agents to Break Into 100+ Company Websites, Including John Deere, SharkNinja and Cummins
+2026-10-20
+Gadgets Now
+Why's our monitor labelling this an incident or hazard?
+Une campagne de piratage autonome par IA compromet plus de 100 sites web d'entreprises
+2026-10-19
+The Cryptonomist
+Why's our monitor labelling this an incident or hazard?
+How hacker breached more than 100 companies using AI agent -- Report
+2026-10-21
+Tribune Online
+Why's our monitor labelling this an incident or hazard?
+Man Hires Swarm of AI Agents to Go on Epic Hacking Spree Against Major Companies
+2026-10-22
+Futurism
+Why's our monitor labelling this an incident or hazard?
+Hacker usou IA para invadir mais de 100 sites com baixo custo, diz Reuters
+2026-10-19
+Olhar Digital - O futuro passa primeiro aqui
+Why's our monitor labelling this an incident or hazard?
+Hacker usa IA para invadir 100 empresas com custo de US$ 5 mil
+2026-10-19
+IT Forum
+Why's our monitor labelling this an incident or hazard?
+Hacker usou IA para invadir 100 sites em baixo custo
+2026-10-19
+Vitória Agora
+Why's our monitor labelling this an incident or hazard?
+Hacker usa IA para invadir mais de 100 sites de grandes empresas
+2026-10-19
+hardware.com.br
+Why's our monitor labelling this an incident or hazard?
+Hacker usa IA para invadir mais de 100 sites de grandes empresas - NOVAREJO
+2026-10-19
+NOVAREJO
+Why's our monitor labelling this an incident or hazard?
+Como um hacker usou IA e alguns milhares de dólares para invadir sites | CNN Brasil
+2026-10-20
+CNN Brasil
+Why's our monitor labelling this an incident or hazard?
+Como um hacker usou IA e alguns milhares de dólares para invadir sites
+2026-10-20
+Alô Rondônia
+Why's our monitor labelling this an incident or hazard?
+Κυβερνοεπιθέσεις με AI: 1.200 εταιρικά sites στο στόχαστρο χάκερ - Πάνω από 100 παραβιάστηκαν
+2026-10-20
+SDNA
+Why's our monitor labelling this an incident or hazard?
+Κυβερνοεπιθέσεις με AI: 1.200 εταιρικά sites στο στόχαστρο χάκερ - Πάνω από 100 παραβιάστηκαν
+2026-10-20
+newsbomb.gr
+Why's our monitor labelling this an incident or hazard?
+Reuters: Πώς ένας χάκερ χρησιμοποίησε πράκτορες τεχνητής νοημοσύνης και μερικές χιλιάδες δολάρια για να παραβιάσει δεκάδες ιστοσελίδες
+2026-10-19
+Η Ναυτεμπορική
+Why's our monitor labelling this an incident or hazard?
+Πράκτορες AI σε ρόλο χάκερ: Κυβερνοεπίθεση σε πάνω από 100 εταιρείες
+2026-10-19
+Alfavita
+Why's our monitor labelling this an incident or hazard?
+Reuters: Χάκερ "χτύπησε" πάνω από 100 εταιρείες ξοδεύοντας μόλις 5.000 δολάρια
+2026-10-19
+Liberal.gr
+Why's our monitor labelling this an incident or hazard?
+Reuters: Χάκερ χρησιμοποίησε ΑΙ agents και παραβίασε ιστοσελίδες πάνω από εκατό εταιρειών
+2026-10-19
+HuffPost Greece
+Why's our monitor labelling this an incident or hazard?
+Χάκερ εξαπέλυσε "στρατιά" από AI agents: Παραβίασαν αυτόνομα περισσότερες από 100 εταιρείες
+2026-10-20
+LiFO
+Why's our monitor labelling this an incident or hazard?
+Hacker Sekali Klik, Modal Rp 90 Juta, 1.200 Website Bobol
+2026-10-22
+CNBCindonesia
+Why's our monitor labelling this an incident or hazard?
+Viral Akun Ibu Asih Laundry, Pakar Ungkap Cara Deteksi Agen AI di Medsos
+2026-10-22
+katadata.co.id
+Why's our monitor labelling this an incident or hazard?
+Viral Ibu Asih Laundry, Bagaimana Cara Kerja Agen AI Kelola Akun Medsos?
+2026-10-22
+katadata.co.id
+Why's our monitor labelling this an incident or hazard?
+Adopsi Agen AI Mulai Masif, TrendAI dan Nvidia Perkuat Sistem Keamanan
+2026-10-22
+KOMPAS.com
+Why's our monitor labelling this an incident or hazard?
+Agen AI Dilarang Akses Akun Perbankan, Ini Risiko Keamanan dan Privasinya
+2026-10-19
+gadget.viva.co.id
+Why's our monitor labelling this an incident or hazard?
+TrendAI dan NVIDIA Perkuat Keamanan Implementasi AI Otonom di Indonesia - Industry.co.id
+2026-10-22
+Industry.co.id
+Why's our monitor labelling this an incident or hazard?

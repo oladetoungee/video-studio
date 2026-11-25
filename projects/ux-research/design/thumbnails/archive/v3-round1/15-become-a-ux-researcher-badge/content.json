@@ -1,0 +1,23 @@
+{
+  "direction": "Graphic (refined from set 2): getting into the field drawn literally, a staff badge on a lanyard with her calm face as the badge photo (the one black-and-white use in the set), next to 'Your first UX research job'. Off-black, green only. References: her database-indexes thumbnail, yt 'I QUIT' (5b), 'Zero to Data scientist' (27).",
+  "thumbnail_text": "Your first UX research job",
+  "titles": [
+    "How to Get Into UX Research With No Experience",
+    "How to Become a UX Researcher (From a Master's Student)",
+    "What Is UX Research? A Beginner's Path Into the Field"
+  ],
+  "text": {
+    "hd": "Your first<br><span class=\"acc\">UX research</span><br>job"
+  },
+  "images": {
+    "me": "../../assets/cut/gbemi-direct-hard.png"
+  },
+  "vars": {
+    "--ground": "#111114",
+    "--fg": "#FFFFFF",
+    "--accent": "#22E08A"
+  },
+  "title": "How to Get Into UX Research With No Experience",
+  "set": 3,
+  "kind": "graphic"
+}

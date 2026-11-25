@@ -1,0 +1,226 @@
+URL: https://fourweekmba.com/ai-node-js-fixes-10-flaws-4-high-on-the-same-day-as-php/
+STATUS: error-403 (http 403)
+FINAL: https://fourweekmba.com/ai-node-js-fixes-10-flaws-4-high-on-the-same-day-as-php/
+TITLE: Node.js Fixes 10 Flaws, 4 High, on the Same Day as PHP - FourWeekMBA
+H1: Node.js Fixes 10 Flaws, 4 High, on the Same Day as PHP
+OG: Node.js Fixes 10 Flaws, 4 High, on the Same Day as PHP - FourWeekMBA | FourWeekMBA
+PUBLISHED: 2026-10-21T19:31:33+00:00  MODIFIED: 2026-10-25T17:33:18+00:00
+DOC_H: 7257
+
+FREE · 95,000+ READERS
+Read the full article free
+Add your email to unlock it, and the book is yours too.
+Unlock the article →
+✓ Instant PDF
+✓ No spam
+✓ Unsubscribe anytime
+Node.js Fixes 10 Flaws, 4 High, on the Same Day as PHP
+Upvote
+Readers rank today’s stories. One vote per story.
+AI Business Brief / By Gennaro Cuofano / October 21, 2026
+FROM READING TO DOING
+Upwork
+PARTNER
+Turn this story into a project
+
+You just read Node.js Fixes 10 Flaws, 4 High, on the Same Day as PHP. If the story sparked an AI project of your own, you do not need a new hire to start it. Upwork is a work marketplace where businesses find and hire independent professionals and agencies. Short projects and ongoing work both fit.
+
+SKILLS FOR THIS
+AI & LLM engineering
+AI agents & automation
+Chatbots
+Python
+01
+Post the project
+Describe the work and the budget.
+02
+Get proposals
+People who want the work reply to you.
+03
+Hire and pay through Upwork
+Fixed-price payments sit in escrow until you approve the work.
+See AI engineer profiles →
+3 days
+most clients hire within 3 days of posting
+$0
+to sign up and post a job
+180+
+countries where Upwork talent works
+
+Affiliate link: I may earn a commission if you sign up through it, at no extra cost to you. How we choose partners
+Figures: Upwork
+
+The Node.js Project shipped security releases on 21 October 2026 that fix 10 vulnerabilities in the runtime, four of them rated high, according to its security-release post. The fixed versions are Node.js 22.23.4, 24.22.1 and 26.12.1, and the post says “The highest severity issue fixed in this release is HIGH.”
+
+The releases were published on GitHub at 10:38 UTC. The PHP security team had set 14:00 UTC the same day for its fixes to two critical flaws, about three hours later (our arithmetic). Node.js is the JavaScript runtime used to run many web servers and developer tools, so operators faced two major patch releases in one day.
+
+BUSINESS PILL · EMBEDDED DEPENDENCY
+
+A short Business Engineer explainer on embedded dependencies: the components inside the things you buy or run. It teaches the general idea only and says nothing about Node.js or any vulnerability.
+
+The key insight: As we read it, the detail that travels furthest is in the dependency list: besides its own 10 CVE fixes, the release updates five components Node.js bundles from other projects, c-ares, the ca-cert store, OpenSSL, SQLite and Undici, according to the Node.js post.
+
+Table of Contents
+
+What Node.js Fixed
+What Was Posted on X
+Which Versions Are Affected
+What the Viral Post Got Right
+Connecting the Coverage
+The Structural Read
+Three Implications
+The Business Engineer Lens
+What Is Not Established
+The Bottom Line
+Related
+What Node.js Fixed
+
+The post lists 10 CVE entries, the public IDs used to track security flaws: four rated high, three medium and three low. It says updates are “available for the 26.x, 24.x, 22.x Node.js release lines.”
+
+AI NEWS, RANKED BY READERS
+Should this story rank higher today?
+Upvote
+See the ranking
+
+One high-rated item, CVE-2026-111497, is titled “Node.js Brotli decoder out-of-bounds write permits remote code execution.” Remote code execution means an attacker could get a server to run code of their choosing over the network. Brotli is a compression format used to shrink web traffic. The post says this flaw affects all three supported lines.
+
+Two other high-rated items are TLS certificate hostname bypasses, CVE-2026-105483 and CVE-2026-106069. TLS certificate verification is the check that a secure connection is really talking to the server it says it is. The fourth high-rated item, CVE-2026-105482, is titled “dns.resolve truncates names containing NUL char.”
+
+The same release also updates several components that Node.js bundles from other projects: c-ares, the ca-cert store over an “eMudhra Intermediate CA Compromise,” OpenSSL, SQLite and Undici, the post says.
+
+BUSINESS ENGINEER
+the Map of AI — 200+ companies across 9 layers
+Read →
+The 10 vulnerabilities fixed in the Node.js security releases of 21 October 2026, by the severity the project assigned: four high, three medium and three low. Fixed versions: 22.23.4, 24.22.1 and 26.12.1. Source: Node.js Project security-release post.
+What Was Posted on X
+
+Mark Gadala-Maria’s post on 21 October, which drew about 40,000 views, says 10 security flaws were addressed in that day’s Node.js release, four rated high, including a Brotli remote code execution flaw, and urges users to update to 22.23.4, 24.22.1 or 26.12.1. His counts match the Node.js Project’s post; the word emergency and the Docker advice are his. This piece uses the post as the report that spread the story on X.
+
+Nikesh Arora (@nikesharora) says vulnerabilities “are being found and will continue to be found as models get more capable,” that even with patches available enterprises may not deploy them at speed, and that “virtual patching” is needed alongside direct patching, delivered by cyber companies that can create and push patches quickly.
+
+Which Versions Are Affected
+
+The post says the highest severity issue fixed in each of the 26.x, 24.x and 22.x lines is high. Not every flaw touches every line: the fullwidth-digits TLS bypass, for example, “affects Node.js 26.x and 24.x.”
+
+Older lines get no fix. The post says: “It’s important to note that End-of-Life versions are always affected when a security release occurs.” The Node.js release schedule lists end-of-life dates of 30 April 2025 for Node.js 18 and 30 April 2026 for Node.js 20.
+
+For administrators, the practical step in the post is to move to a supported version: it asks users to “please use an up-to-date version as outlined in our Release Schedule.” In plain terms, a server on Node.js 22, 24 or 26 needs the new point release, and a server on 18 or 20 needs a move to a supported line.
+
+What the Viral Post Got Right
+
+The story spread on X through a post by Mark Gadala-Maria at 17:11 UTC that drew about 40,000 views. Its core numbers match the Node.js post: it says “10 SECURITY FLAWS were addressed in today’s Node.js release, FOUR rated HIGH severity,” names the Brotli remote code execution flaw by its CVE ID, and lists the same three fixed versions.
+
+One word is his, not the project’s. He wrote that “Node.js 22, 24 and 26 all required emergency security updates.” The Node.js post does not call the releases an emergency; it describes scheduled security releases for those lines “on or shortly after, Wednesday, October 21, 2026.” His advice to rebuild and redeploy Docker containers is his own, not in the Node.js post.
+
+The Node.js post credits each flaw to a named reporter and a named fixer by their project user names. It does not say whether any of the 10 flaws were found with AI tools.
+
+Update (24 Oct): the Brotli flaw now carries a 9.2 rating and reaches beyond Node.js. Google, which maintains Brotli, published the CVE record for CVE-2026-111497 on 22 October and scored it 9.2 out of 10, “Critical,” on the CVSS v4 scale. The record says the bug in the Brotli decoder affects versions 1.0.3 through 1.2.0 on all platforms and “allows a remote unauthenticated attacker to corrupt adjacent decoder state memory, disclose sensitive memory contents, cause a denial of service, or potentially execute arbitrary code using a crafted Brotli-compressed stream.” It tells users to update to 1.0.10, 1.1.1 or 1.2.1, which Brotli released on GitHub on 21 October. The record credits “OpenAI Codex Security” as the finder, as the Node.js post does.
+
+Because Brotli is built into other software, each project has to ship its own fix. Two more have published advisories since Node.js:
+
+Software	Affected	Fixed in	Advisory
+Brotli (Google)	1.0.3 to 1.2.0	1.0.10, 1.1.1, 1.2.1	CVE record
+Node.js	26.x, 24.x, 22.x	21 Oct security releases	Node.js post (above)
+Envoy	v1.39.2, v1.38.5, v1.37.7, v1.36.11	v1.40.0, v1.39.3, v1.38.6, v1.37.8, v1.36.12	GHSA-3wvj-j6qm-62mr
+Bun	1.4.3 and earlier	1.4.4	GHSA-663w-cv8g-jj2p
+
+Envoy, a proxy widely used in front of web services, rates the flaw critical, 9.2, and says it affects “Envoy deployments that have Brotli decompressor configured.” Bun’s advisory says its fetch decodes Brotli responses automatically, so “a malicious server” can send data to the decoder, and that executables built with bun build --compile stay affected “until it is rebuilt.” Bun says it has not tested an attack and tells users to “treat this as a remote code execution risk.” The Brotli package for Python on PyPI moved to 1.2.1 on 22 October.
+
+A post on X also named Istio, curl and Python’s requests and httpx as at risk. We found no advisory from those projects in their GitHub security-advisory listings as of 24 October, 16:50 UTC, so we do not list them as affected.
+
+Connecting the Coverage
+
+PHP’s fixes were due the same afternoon. In our PHP preview piece, we reported that the PHP security team set its release for 14:00 UTC on 21 October, with two critical flaws each rated 9.2 on the CVSS v4.0 scale. We also reported that Cloudflare’s chief technology officer wrote that it was “seeing early attacks emerging.”
+
+AI tools were credited with the PHP finds. In our piece on how they were found, security firm Wiz said AI models, including Google’s Gemini 4 Argon, helped its researchers find them. In our piece on AI security finds, we reported that Anthropic says Claude flagged 493 issues across 25 open-source projects, and that OpenAI says security firm Calif found a critical PHP flaw using GPT-5.6 Sol.
+
+And the same day, OpenAI published a policy blueprint titled “Democratic governance of frontier AI, part II: Empowering cyber defenders.” It says: “We are in a defender’s window: a limited opportunity to put advanced AI into defenders’ hands and strengthen protections before advanced cyber offensive capabilities become widely available.” OpenAI says its proposals draw on “misalignment and security incidents involving our own models.” The blueprint does not name specific incidents; one OpenAI published the day before is the agent case in our monitoring piece.
+
+What’s new here: a second widely used web runtime shipped a batch of high-severity fixes on the same day, with no AI credit in its own disclosure.
+
+The Structural Read
+
+As we read it, the release reaches every supported line: the Node.js post says the highest severity issue fixed in each of 26.x, 24.x and 22.x is high.
+
+As we read it, the gap is in older servers: the post says “End-of-Life versions are always affected when a security release occurs,” and the release schedule lists Node.js 20 as end-of-life since 30 April 2026.
+
+As we read it, unlike the PHP finds, which Wiz and OpenAI credited partly to AI models, this disclosure carries no AI credit: the Node.js post names each reporter and fixer and does not say whether AI tools were used.
+
+THE NODE.JS PROJECT, SECURITY-RELEASE POST, 21 OCTOBER 2026
+
+“It’s important to note that End-of-Life versions are always affected when a security release occurs.”
+
+Three Implications
+
+FOR TEAMS RUNNING NODE.JS 22, 24 OR 26 The Node.js post lists the fixed versions as 22.23.4, 24.22.1 and 26.12.1.
+
+FOR TEAMS STILL ON NODE.JS 18 OR 20 The release schedule lists end-of-life dates of 30 April 2025 and 30 April 2026, and the post asks users to “please use an up-to-date version as outlined in our Release Schedule.”
+
+FOR THE AI SECURITY DEBATE OpenAI wrote on the same day: “We are in a defender’s window: a limited opportunity to put advanced AI into defenders’ hands and strengthen protections before advanced cyber offensive capabilities become widely available.”
+
+The Business Engineer Lens
+
+This story maps onto the Business Engineer framework Enterprise AI: From Software to Substrate.
+
+The framework argues that enterprise vendors now “sell irreversibility,” and puts it in one line: “The product is the interconnection.”
+
+As we read it, a runtime like Node.js is that kind of substrate: the release patches five components it carries from other projects, and every application built on it inherits the update. The framework was published in December 2025 and does not discuss Node.js.
+
+What Is Not Established
+
+The Node.js post does not say whether any of the flaws were exploited before the fix, and it does not give severity scores beyond the high, medium and low ratings. The sources we read do not say how the flaws were found.
+
+Neither project’s post links the two releases. We did not contact the Node.js Project.
+
+BUSINESS ENGINEER FRAMEWORK
+
+Enterprise AI: From Software to Substrate
+
+A Business Engineer read on why software that other systems depend on becomes infrastructure, and what that does to switching and upkeep.
+
+Read the Map of AI →
+The Bottom Line
+
+The Node.js Project fixed 10 vulnerabilities on 21 October 2026, four rated high, including a Brotli flaw that it says permits remote code execution, in Node.js 22.23.4, 24.22.1 and 26.12.1. End-of-life versions such as Node.js 18 and 20 get no fix, so the project’s advice is to run a supported line.
+
+95,000+ executives read Business Engineer for the AI strategy frameworks cited by ChatGPT, Claude, and Perplexity.
+
+A note on sourcing. The facts on the fixes come from the Node.js Project’s security-release post of 21 October 2026, its release notes for 22.23.4, 24.22.1 and 26.12.1, and its release schedule. The X post is quoted from its text. PHP, Wiz, Anthropic, Calif and OpenAI context comes from our earlier pieces and OpenAI’s post. We did not contact the Node.js Project. This piece describes fixes and versions only and gives no technical detail of how the flaws work.
+
+Sources: Node.js Project: Wednesday, October 21, 2026 Security Releases · Node.js v22.23.4 release notes · Node.js v24.22.1 release notes · Node.js v26.12.1 release notes · Node.js Release Working Group: release schedule · Mark Gadala-Maria on X (21 Oct 2026) · OpenAI: Empowering cyber defenders (21 Oct 2026)
+
+Related
+Microsoft Says AI-Driven Attack Targeted 2,250+ Tenants
+OpenAI, Anthropic Keys Among Targets in 14 October Incidents
+OpenAI Helped Find PHP Flaw; 758K Servers Lack Official Fix
+Was this worth your time?
+Your vote decides which stories we follow up tomorrow.
+Upvote
+Read the full analysis
+
+We publish 12+ AI analyses every day — sourced, structured, no hype. Unlock this one and every story we break. Plus The New Roles of the Agentic Era (full book) free.
+
+ Unlock
+
+Instant access. No spam. Join 95,000+ operators.
+
+Read The Business Engineer — free on Substack →
+
+Keep reading
+More Resources
+Cloudflare Sees Early Attacks as PHP Readies Critical Fixes
+Zscaler Q4 FY26 Beat and the Expectations Regime:…
+Gemini and GPT Helped Find PHP Flaws in Up to 70% of Sites
+Synopsys Signs OpenAI and Amazon on the Same Day
+OpenAI Declared the AGI Era. The Same Day, Congress…
+High Mismatch = High Risk: What to Do When Your AI…
+Cohere to Buy AISLE, Whose AI Found 18 of 24 Curl Flaws
+Google Stops Taking OSS Bounty Reports on Product Flaws
+RANKED BY READERS
+See today’s AI News, ranked by readers
+About The Author
+Gennaro Cuofano
+Gennaro Cuofano is a CRO and tech executive who has worked in AI since late 2015, starting with bringing NLP, natural-language generation, voice and chatbot products to the marketing industry. His background is in law and finance: he holds a Master's degree in Law and an International MBA with an emphasis on corporate finance (LUISS Business School and the University of San Diego, 2012), and worked as a financial analyst at a real-estate investment firm in San Diego and as an assistant controller. His work focuses on business model strategy, business engineering and, more broadly, structural analysis: how companies make money, read from their own filings. He created FourWeekMBA and leads research there and at The Business Engineer, his newsletter on AI and business strategy, with over 95,000 subscribers and more than 1,000 published analyses. His writing has also appeared on Entrepreneur (for example, How to Digitize a Family Business in Europe) and HackerNoon. Find him on LinkedIn and Substack. See how we source.
+Post navigation
+← Previous Post
+Next Post →

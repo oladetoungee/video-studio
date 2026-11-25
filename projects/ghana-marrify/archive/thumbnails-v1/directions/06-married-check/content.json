@@ -1,0 +1,18 @@
+{
+  "direction": "News hook: Ghana flag (flat) + 'Married? Divorced? Look it up.' + her incredulous look (1:15)",
+  "title": "Should Marriage and Divorce Records Be Public?",
+  "text": {
+    "tag": "Ghana",
+    "line1": "Married?",
+    "line2": "Divorced?",
+    "line3": "Look it up."
+  },
+  "images": {
+    "person": "../../assets/cut/f_74.90.png"
+  },
+  "vars": {
+    "--x": "390px",
+    "--y": "-146px",
+    "--w": "1263px"
+  }
+}

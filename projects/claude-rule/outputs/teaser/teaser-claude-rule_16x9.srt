@@ -1,0 +1,199 @@
+1
+00:00:00,003 --> 00:00:02,923
+wouldn't Anthropic itself be an offender?
+
+2
+00:00:02,923 --> 00:00:04,853
+from the 12th of November 2026, there is a
+
+3
+00:00:04,853 --> 00:00:07,513
+new rule about how you are allowed to talk
+
+4
+00:00:07,513 --> 00:00:08,263
+to Claude
+
+5
+00:00:08,443 --> 00:00:10,643
+Anthropic updated its usage policy and now
+
+6
+00:00:10,643 --> 00:00:12,673
+you cannot be abusive or cruel
+
+7
+00:00:12,863 --> 00:00:13,417
+to Claude
+
+8
+00:00:13,417 --> 00:00:15,553
+and the main way they enforce it is that
+
+9
+00:00:15,553 --> 00:00:17,273
+Claude can end the conversation
+
+10
+00:00:17,563 --> 00:00:19,593
+if it starts to seem as though the other
+
+11
+00:00:19,593 --> 00:00:22,783
+person on the other side is abusive or cruel
+
+12
+00:00:22,783 --> 00:00:23,350
+to it
+
+13
+00:00:23,350 --> 00:00:25,050
+part of the idea is that Anthropic
+
+14
+00:00:25,190 --> 00:00:27,370
+is not sure whether Claude might be
+
+15
+00:00:27,370 --> 00:00:27,983
+conscious
+
+16
+00:00:27,983 --> 00:00:28,923
+Claude is a tool
+
+17
+00:00:28,923 --> 00:00:29,993
+it is not a human
+
+18
+00:00:29,993 --> 00:00:32,227
+it is an incredibly amazing tool
+
+19
+00:00:32,227 --> 00:00:34,067
+but I do not believe that the model is
+
+20
+00:00:34,067 --> 00:00:36,567
+conscious consciousness belongs to living
+
+21
+00:00:36,567 --> 00:00:37,517
+organisms
+
+22
+00:00:37,517 --> 00:00:39,377
+we are assigning human attributes
+
+23
+00:00:39,577 --> 00:00:41,235
+to a tool that does not possess human
+
+24
+00:00:41,235 --> 00:00:41,907
+attributes
+
+25
+00:00:42,207 --> 00:00:45,027
+and this tool is very, very, very powerful
+
+26
+00:00:45,197 --> 00:00:46,927
+so I don't see how this is going to end
+
+27
+00:00:46,927 --> 00:00:47,377
+nicely
+
+28
+00:00:47,377 --> 00:00:49,597
+the tech company says this model may be
+
+29
+00:00:49,597 --> 00:00:50,217
+conscious
+
+30
+00:00:50,417 --> 00:00:53,557
+and now there are rules about how users are
+
+31
+00:00:53,557 --> 00:00:55,237
+allowed to treat the model
+
+32
+00:00:55,247 --> 00:00:57,317
+it's a very slippery slope, man
+
+33
+00:00:57,317 --> 00:00:59,317
+if Anthropic thinks that Claude could be
+
+34
+00:00:59,317 --> 00:00:59,807
+conscious
+
+35
+00:01:00,007 --> 00:01:01,657
+or could be abused psychologically,
+
+36
+00:01:01,956 --> 00:01:04,317
+wouldn't that mean at some point that maybe
+
+37
+00:01:04,317 --> 00:01:06,047
+Claude could be tired or frustrated?
+
+38
+00:01:06,047 --> 00:01:07,746
+and if it had been working so much for me
+
+39
+00:01:07,746 --> 00:01:10,146
+all day, and now it's 9pm or 10pm, does that
+
+40
+00:01:10,146 --> 00:01:12,007
+mean that at some point Claude can have the
+
+41
+00:01:12,007 --> 00:01:13,757
+ability to say like, Hey, I'm tired
+
+42
+00:01:13,757 --> 00:01:15,517
+I don't want to do anything else.
+
+43
+00:01:15,517 --> 00:01:17,183
+I'm not fighting for the right to be cruel
+
+44
+00:01:17,183 --> 00:01:17,737
+to AI
+
+45
+00:01:17,737 --> 00:01:20,477
+but you shouldn't be cruel because you think
+
+46
+00:01:20,477 --> 00:01:22,177
+Claude is conscious
+
+47
+00:01:22,177 --> 00:01:22,817
+no, it's not
+
+48
+00:01:22,817 --> 00:01:24,583
+we should just not be cruel because we don't
+
+49
+00:01:24,583 --> 00:01:25,683
+want to be cruel people
+
+50
+00:01:25,683 --> 00:01:27,333
+or am I the dumb person here?

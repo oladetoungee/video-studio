@@ -1,0 +1,21 @@
+{
+  "direction": "A big plain app icon with a paper price tag reading FREE; her sceptical look (8:12).",
+  "concept": "TH11",
+  "follows": "viral sample 2 (one object) + Pinterest editorial",
+  "thumbnail_text": "YOU'RE NOT THE CUSTOMER",
+  "title": "Attention Economy Explained: Who Pays for Free Apps?",
+  "titles": [
+    "Attention Economy Explained: Who Pays for Free Apps?",
+    "If the App Is Free, Who Pays? The Attention Economy"
+  ],
+  "scores": "A topic (image only) 7/6 · B with best title 8.5 · C taste 5 (round 2; fixes from round 2 applied after)",
+  "text": {
+    "words": "You're not the <span class=\"acc\">customer</span>",
+    "tag": "FREE"
+  },
+  "images": {
+    "scene": "../../../../assets/scene/warm/s_492.5.jpg",
+    "front": "../../../../assets/scene/warm/mask/s_492.5.png"
+  },
+  "vars": {}
+}

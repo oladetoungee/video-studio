@@ -1,0 +1,22 @@
+{
+  "direction": "Her on the left, hand at her temple, thinking (closed mouth); the line on the right in two black boxes, \"accident\" in yellow; under it a generic dark screen-time card whose bars climb all week to a red last day (no numbers).",
+  "kind": "photo",
+  "concept": "v3 (2026-10-16)",
+  "references": "Never get distracted again (card beside the face) · Space complexity (chart) · stop lying to yourself (boxed words)",
+  "thumbnail_text": "Your screen time isn’t an accident",
+  "title": "How Apps Are Designed to Be Addictive, a Researcher Explains",
+  "titles": [
+    "How Apps Are Designed to Be Addictive, a Researcher Explains",
+    "Why You Can’t Stop Scrolling: 5 Features Designed on Purpose"
+  ],
+  "scores": "fresh critics vs her bar: r1 7.5 · r2 7.5 · r3 7.5 · r4 6.5",
+  "recommended": "",
+  "text": {
+    "words": "<span class=\"bx k\">Your screen time</span><br><span class=\"bx k\">isn’t an <span class=\"yel\">accident</span></span>",
+    "card": "Screen time this week"
+  },
+  "images": {
+    "photo": "../../assets/scene/warm/s_350.9.jpg"
+  },
+  "vars": {}
+}

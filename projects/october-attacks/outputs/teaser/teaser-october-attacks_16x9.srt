@@ -1,0 +1,191 @@
+1
+00:00:00,080 --> 00:00:01,830
+october is supposed to be cybersecurity
+
+2
+00:00:01,830 --> 00:00:04,410
+awareness month and it has ironically been
+
+3
+00:00:04,410 --> 00:00:06,190
+one attack after the other
+
+4
+00:00:06,190 --> 00:00:06,530
+PHP,
+
+5
+00:00:06,530 --> 00:00:08,550
+And two critical loopholes have been found
+
+6
+00:00:08,550 --> 00:00:09,770
+in PHP this month
+
+7
+00:00:09,770 --> 00:00:09,950
+they're
+
+8
+00:00:09,950 --> 00:00:12,500
+Getting a shell means that the attack is so
+
+9
+00:00:12,500 --> 00:00:14,990
+bad that an attacker can type commands on
+
+10
+00:00:14,990 --> 00:00:17,500
+your server as if they were on their own
+
+11
+00:00:17,500 --> 00:00:19,310
+personal computer PHP has
+
+12
+00:00:19,310 --> 00:00:21,760
+The thing about PHP2Shell and why it's
+
+13
+00:00:21,760 --> 00:00:24,300
+really so crazy is that it happens before
+
+14
+00:00:24,300 --> 00:00:25,790
+your code even runs
+
+15
+00:00:25,790 --> 00:00:26,147
+So
+
+16
+00:00:26,147 --> 00:00:28,117
+You can have the best login in the world and
+
+17
+00:00:28,117 --> 00:00:29,067
+it wouldn't matter
+
+18
+00:00:29,067 --> 00:00:29,363
+even
+
+19
+00:00:29,363 --> 00:00:30,207
+shown the padlock
+
+20
+00:00:30,207 --> 00:00:32,247
+railway, which is also a popular platform
+
+21
+00:00:32,247 --> 00:00:34,917
+among developers where we deploy apps, has
+
+22
+00:00:34,917 --> 00:00:37,187
+had to literally tell their users to change
+
+23
+00:00:37,187 --> 00:00:38,223
+their secret keys
+
+24
+00:00:38,223 --> 00:00:40,773
+there is also another platform, Zeabur, that
+
+25
+00:00:40,773 --> 00:00:42,753
+is literally shutting down after being
+
+26
+00:00:42,753 --> 00:00:43,863
+hacked twice, like
+
+27
+00:00:43,863 --> 00:00:46,103
+their admin token had no expiry date
+
+28
+00:00:46,103 --> 00:00:48,213
+So they had not changed this token since
+
+29
+00:00:48,213 --> 00:00:49,730
+January 2024 So after
+
+30
+00:00:49,730 --> 00:00:52,150
+A few of them were even over a thousand
+
+31
+00:00:52,150 --> 00:00:54,650
+dollars for AI usage that users did not run
+
+32
+00:00:54,650 --> 00:00:57,110
+like imagine getting alerts for things you
+
+33
+00:00:57,110 --> 00:00:58,197
+didn't use openCode
+
+34
+00:00:58,197 --> 00:00:58,917
+shown the padlock
+
+35
+00:00:58,917 --> 00:01:01,380
+The keys were so weak that one of them
+
+36
+00:01:01,380 --> 00:01:03,560
+literally was the number four
+
+37
+00:01:03,560 --> 00:01:04,880
+just number four
+
+38
+00:01:04,880 --> 00:01:05,210
+that's
+
+39
+00:01:05,210 --> 00:01:07,450
+it's so crazy that we've gotten to the point
+
+40
+00:01:07,450 --> 00:01:09,300
+where it's costing $50 to hack into a
+
+41
+00:01:09,300 --> 00:01:10,160
+company it's
+
+42
+00:01:10,160 --> 00:01:11,710
+So the same tools that are helping the
+
+43
+00:01:11,710 --> 00:01:13,920
+defenders find the bugs faster are also
+
+44
+00:01:13,920 --> 00:01:16,370
+helping the attackers break in faster
+
+45
+00:01:16,370 --> 00:01:16,663
+So it's
+
+46
+00:01:16,663 --> 00:01:17,487
+shown the padlock
+
+47
+00:01:17,487 --> 00:01:19,727
+the attackers went straight for the place
+
+48
+00:01:19,727 --> 00:01:21,833
+where developers keep their secret keys

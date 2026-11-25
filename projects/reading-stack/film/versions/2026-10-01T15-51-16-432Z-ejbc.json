@@ -1,0 +1,29 @@
+{
+ "label": "Editor test (agent)",
+ "auto": false,
+ "savedAt": 1790869876432,
+ "edits": {
+  "t": {
+   "memorising/Memorising *sticks.*": {
+    "pos": {
+     "9x16": {
+      "dx": 252.1,
+      "dy": 33.5
+     }
+    }
+   },
+   "three-books/@cover baratta": {
+    "pos": {
+     "16x9": {
+      "k": 1.294,
+      "hide": true
+     }
+    }
+   },
+   "three-books/Right now: *three books.*": {
+    "s": "Editor test"
+   }
+  },
+  "captions": {}
+ }
+}

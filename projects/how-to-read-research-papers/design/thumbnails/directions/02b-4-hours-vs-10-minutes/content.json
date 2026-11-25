@@ -1,0 +1,32 @@
+{
+  "text": {
+    "a": "4 hours",
+    "b": "10 minutes",
+    "tag": "same research paper"
+  },
+  "images": {
+    "a": "../../assets/photo/shoot/room-1595.jpg",
+    "acut": "../../assets/photo/shoot/room-1595-cut.png",
+    "b": "../../assets/photo/shoot/room-1603.jpg",
+    "bcut": "../../assets/photo/shoot/room-1603-cut.png"
+  },
+  "kind": "split (her twice: buried in pages / at ease with one highlighted page) + one line joining them",
+  "board": "Thumbnails 69 (yt-16 \"12:30 PM | 7:30 PM\", one of her likes)",
+  "fonts": [
+    "thumbs-02 Inter Tight Black / Bold (white on #1C1C1C, #1C1C1C on the yellow box #F7D51D, from Thumbnails 21)"
+  ],
+  "colours": "thumbs-02: #1C1C1C / #FFFFFF / #F7D51D",
+  "thumbnail_text": "4 hours | 10 minutes + \"same research paper\"",
+  "titles": [
+    "Don't Spend 4 Hours on the Wrong Research Paper",
+    "How to Read Research Papers Faster as a Student",
+    "How to Know if a Paper Is Worth Reading in 10 Minutes"
+  ],
+  "direction": "Rework of 02 (2026-11-16). Copies Thumbnails 69: two photos side by side, one big time label each. Left: her, stressed, a pile of real printed pages, \"4 hours\"; right: her at ease with one page, title and abstract highlighted, \"10 minutes\"; \"same research paper\" joins them. Numbers from Keshav 2007 (detailed pass 4-5 hours for beginners, first pass 5-10 minutes).",
+  "nudge": {},
+  "vars": {},
+  "class": "no-lift",
+  "title": "Don't Spend 4 Hours on the Wrong Research Paper",
+  "scores": "cold critic 2026-11-19, 3 rounds, alone / with title: 7/7, 6/7, 7/7 (11-16: 7/7/7 alone)",
+  "recommended": false
+}

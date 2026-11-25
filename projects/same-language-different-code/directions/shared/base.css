@@ -1,0 +1,59 @@
+/* Shared stage + motion for the v2 direction tests. No colours or type here: each direction brings its own. */
+:root {
+  --ease: cubic-bezier(.16, 1, .3, 1);
+  --back: cubic-bezier(.34, 1.36, .64, 1);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 100%; height: 100%; background: #000; overflow: hidden; }
+body { -webkit-font-smoothing: antialiased; cursor: none; }
+body.cursor { cursor: default; }
+#stage { position: absolute; left: 50%; top: 50%; width: 1920px; height: 1080px; overflow: hidden; }
+.slide { position: absolute; inset: 0; display: none; overflow: hidden; background: var(--bg); color: var(--fg); }
+.slide.cur { display: block; }
+.abs { position: absolute; }
+
+/* motion: [data-a] arrives at its step (data-s), delay data-d. Small, soft moves: crisp, never bouncy unless asked. */
+[data-a] { transition-property: opacity, transform, clip-path, filter; transition-duration: .5s, .75s, .75s, .55s;
+  transition-timing-function: ease-out, var(--ease), var(--ease), var(--ease); transition-delay: var(--d, 0ms); }
+[data-a]:not(.on) { opacity: 0; }
+[data-a="up"]:not(.on)    { transform: translateY(28px); filter: blur(6px); }
+[data-a="down"]:not(.on)  { transform: translateY(-28px); filter: blur(6px); }
+[data-a="left"]:not(.on)  { transform: translateX(48px); filter: blur(6px); }
+[data-a="right"]:not(.on) { transform: translateX(-48px); filter: blur(6px); }
+[data-a="pop"]:not(.on)   { transform: scale(.8); }
+[data-a="pop"] { transition-timing-function: ease-out, var(--back), var(--ease), var(--ease); }
+[data-a="drop"]:not(.on)  { transform: translateY(-90px); }
+[data-a="drop"] { transition-timing-function: ease-out, var(--back), var(--ease), var(--ease); transition-duration: .3s, .8s, .8s, .5s; }
+[data-a="blur"]:not(.on)  { filter: blur(16px); transform: scale(1.03); }
+[data-a="wipe"]:not(.on)  { opacity: 1; clip-path: inset(0 100% 0 0); }
+[data-a="wipe"].on        { clip-path: inset(0 0 0 0); }
+[data-a="rise"]:not(.on)  { opacity: 1; clip-path: inset(0 0 100% 0); transform: translateY(35%); }
+[data-a="rise"].on        { clip-path: inset(-20% -5% -25% -5%); }
+[data-a="fade"] { transition-duration: .8s, .8s, .8s, .8s; }
+[data-a="type"]:not(.on), [data-a="count"]:not(.on) { opacity: 0; }
+[data-a="draw"] { opacity: 1; }
+.dimmed { opacity: .22 !important; transition: opacity .6s ease !important; }
+.instant, .instant *, .instant *::before, .instant *::after { transition: none !important; }
+
+@keyframes push { from { transform: scale(1); } to { transform: scale(1.06); } }
+.slide.cur .push { animation: push 26s linear both; }
+@keyframes blink { 50% { opacity: 0; } }
+.caret { display: inline-block; width: .5em; height: 1em; background: currentColor; vertical-align: -.12em; animation: blink 1.05s steps(1) infinite; }
+
+/* highlighter behind a word: a flat block that sweeps in */
+.hl { position: relative; display: inline-block; z-index: 0; }
+.hl::before { content: ''; position: absolute; left: -.1em; right: -.1em; top: .08em; bottom: .02em; background: var(--hlc); z-index: -1;
+  transform: scaleX(0); transform-origin: left; transition: transform .6s var(--ease); transition-delay: var(--hd, 0ms); }
+.hl.on::before { transform: scaleX(1); }
+.strike { position: relative; display: inline-block; }
+.strike::after { content: ''; position: absolute; left: -3%; right: -3%; top: 54%; height: .07em; background: currentColor; transform: scaleX(0); transform-origin: left; transition: transform .55s var(--ease); transition-delay: var(--d, 0ms); }
+.strike.on::after { transform: scaleX(1); }
+
+#overview { position: fixed; inset: 0; background: #0b0b0c; overflow: auto; display: none; z-index: 50; padding: 30px; cursor: default; }
+#overview.open { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; align-content: start; }
+#overview .th { position: relative; aspect-ratio: 16/9; overflow: hidden; outline: 2px solid #333; cursor: pointer; }
+#overview .th.cur { outline: 4px solid #fff; }
+#overview .th .lab { position: absolute; left: 8px; bottom: 6px; font: 500 13px monospace; color: #fff; background: rgba(0,0,0,.6); padding: 2px 6px; }
+#overview .th .inner { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; transform-origin: 0 0; pointer-events: none; }
+#blackout { position: fixed; inset: 0; background: #000; display: none; z-index: 60; }
+#blackout.on { display: block; }

@@ -1,0 +1,22 @@
+{
+  "direction": "Everyday object fills the frame: a phone map (illustration, no real app) with coffee pins, a dashed circle round \"you\", only the pins inside lit. What a spatial index does. Round 2: calm frame, no cylinder, title made spatial-only.",
+  "concept": "T11",
+  "thumbnail_text": "How \"near me\" works",
+  "title": "Spatial Index Explained: How 'Near Me' Search Works",
+  "titles": [
+    "Spatial Index Explained: How 'Near Me' Search Works",
+    "Database Index Types: Which One Should You Use?",
+    "Spatial and Full-Text Indexes: How Apps Search Fast"
+  ],
+  "text": {
+    "a": "How <span class=\"mark\">\"near me\"</span>",
+    "b": "search works",
+    "lab": ""
+  },
+  "images": {
+    "scene": "../../assets/scene/f_22.7.jpg"
+  },
+  "frame": "0:22.7 (calm, mouth closed)",
+  "vars": {},
+  "scores": "final gate (round 4): A topic/click 1/6 · B pair 7 · C taste 6 · not for the main upload: reads as a maps video; only for a spatial-index short"
+}

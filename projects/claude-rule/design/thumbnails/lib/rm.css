@@ -1,0 +1,31 @@
+/* ghana-marrify thumbnail REMAKES (2026-10-06): her 8 viral samples (inspiration/viral-samples/) remade one to one,
+   same design, new subject. Specs: design/thumbnails/REMAKES.md. Builds on r4.css (photo + person mask, phone, flags). */
+@import url('r4.css');
+@font-face { font-family: 'Montserrat'; src: url('../fonts/Montserrat.ttf') format('truetype'); font-weight: 100 900; }
+@font-face { font-family: 'Montserrat'; src: url('../fonts/Montserrat-Italic.ttf') format('truetype'); font-weight: 100 900; font-style: italic; }
+@font-face { font-family: 'Inter'; src: url('../fonts/Inter.ttf') format('truetype'); font-weight: 100 900; }
+@font-face { font-family: 'Fell'; src: url('../fonts/IMFellEnglish.ttf') format('truetype'); }
+@font-face { font-family: 'Fell'; src: url('../fonts/IMFellEnglish-Italic.ttf') format('truetype'); font-style: italic; }
+@font-face { font-family: 'Fell SC'; src: url('../fonts/IMFellEnglishSC.ttf') format('truetype'); }
+@font-face { font-family: 'Patrick Hand'; src: url('../fonts/PatrickHand.ttf') format('truetype'); }
+@font-face { font-family: 'Kalam'; src: url('../fonts/Kalam.ttf') format('truetype'); }
+@font-face { font-family: 'Gochi'; src: url('../fonts/GochiHand.ttf') format('truetype'); }
+@font-face { font-family: 'Instrument Serif'; src: url('../fonts/InstrumentSerif-Regular.ttf') format('truetype'); font-style: normal; }
+
+.nw { white-space: nowrap; }
+.mont { font-family: 'Montserrat', sans-serif; }
+.inter { font-family: 'Inter', sans-serif; }
+.fell { font-family: 'Fell', serif; } .fellsc { font-family: 'Fell SC', serif; }
+.ph-hand { font-family: 'Patrick Hand', cursive; } .kalam { font-family: 'Kalam', cursive; } .gochi { font-family: 'Gochi', cursive; }
+.ill { font-family: 'DM Mono', monospace; font-weight: 500; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; }
+
+/* a photo or object in a frame of its own (collage tiles, stickers) */
+.tile { position: absolute; overflow: hidden; }
+.tile img { position: absolute; display: block; }
+.stk { position: absolute; }
+.stk img { display: block; width: 100%; }
+/* a person cut-out (her full-frame mask) placed anywhere: --cx/--cy/--cw like .photo */
+.cut2 { position: absolute; inset: 0; pointer-events: none; }
+.cut2 img { position: absolute; left: var(--cx); top: var(--cy); width: var(--cw); display: block; }
+/* pixelated word: the word is drawn small on a canvas and blown up (lib/rm.js) */
+canvas.pix { display: block; image-rendering: pixelated; }

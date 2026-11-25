@@ -1,0 +1,71 @@
+1
+00:00:00,010 --> 00:00:02,527
+you also hear about clustered and
+
+2
+00:00:02,527 --> 00:00:03,787
+non-clustered
+
+3
+00:00:03,897 --> 00:00:05,877
+indexes and the difference between those is
+
+4
+00:00:05,877 --> 00:00:08,565
+very simple the clustered index decides the
+
+5
+00:00:08,565 --> 00:00:11,037
+order the table's rows are actually stored
+
+6
+00:00:11,037 --> 00:00:12,827
+think of this as a phone book again, the
+
+7
+00:00:12,827 --> 00:00:14,183
+data itself is sorted by surname
+
+8
+00:00:14,183 --> 00:00:16,041
+so once you find the name, you find
+
+9
+00:00:16,041 --> 00:00:17,437
+everything a table can only have one
+
+10
+00:00:17,437 --> 00:00:19,605
+clustered index because the rows can only be
+
+11
+00:00:19,605 --> 00:00:20,817
+stored in one order
+
+12
+00:00:20,817 --> 00:00:22,817
+a non-clustered index is a separate
+
+13
+00:00:22,827 --> 00:00:23,397
+structure
+
+14
+00:00:23,647 --> 00:00:24,957
+that points back to the row
+
+15
+00:00:24,957 --> 00:00:26,703
+think that as the index at the back of the
+
+16
+00:00:26,703 --> 00:00:29,053
+book, it tells you where to go and go there
+
+17
+00:00:29,053 --> 00:00:31,513
+so a table can have lots of non-clustered
+
+18
+00:00:31,513 --> 00:00:31,733
+indexes

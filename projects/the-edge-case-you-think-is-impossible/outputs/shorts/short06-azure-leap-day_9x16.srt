@@ -1,0 +1,63 @@
+1
+00:00:00,050 --> 00:00:01,840
+leap years are an edge case that will show
+
+2
+00:00:01,840 --> 00:00:03,590
+up every four years, which is exactly why
+
+3
+00:00:03,590 --> 00:00:04,410
+they get missed
+
+4
+00:00:05,317 --> 00:00:07,549
+on the 29th of February, Microsoft's cloud,
+
+5
+00:00:07,549 --> 00:00:10,102
+Windows Azure, had an outage because of a
+
+6
+00:00:10,102 --> 00:00:11,417
+leap year bug
+
+7
+00:00:11,817 --> 00:00:14,337
+part of their system made security
+
+8
+00:00:14,587 --> 00:00:16,317
+certificates that were valid for one year
+
+9
+00:00:16,427 --> 00:00:19,047
+and the system worked out the end dates by
+
+10
+00:00:19,047 --> 00:00:20,687
+taking today's date and just adding one to
+
+11
+00:00:20,687 --> 00:00:21,387
+the year
+
+12
+00:00:21,757 --> 00:00:24,537
+so on the 29th of February, 2012, that
+
+13
+00:00:24,587 --> 00:00:27,367
+system, that logic gave 29th of February,
+
+14
+00:00:27,457 --> 00:00:29,417
+2013, and that date doesn't exist
+
+15
+00:00:29,457 --> 00:00:31,267
+so creating the certificate
+
+16
+00:00:31,397 --> 00:00:33,867
+failed and part of Azure went down with it

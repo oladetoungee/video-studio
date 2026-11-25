@@ -1,0 +1,107 @@
+1
+00:00:00,090 --> 00:00:01,770
+another design that keeps you stuck on your
+
+2
+00:00:01,770 --> 00:00:03,390
+phone is the autoplay
+
+3
+00:00:03,400 --> 00:00:05,330
+if you notice on YouTube, when a video ends,
+
+4
+00:00:05,330 --> 00:00:06,620
+you don't have to do anything
+
+5
+00:00:06,620 --> 00:00:08,190
+the next one starts playing on its own
+
+6
+00:00:08,190 --> 00:00:09,350
+within a few seconds
+
+7
+00:00:09,350 --> 00:00:11,270
+when a video is coming to an end, you have
+
+8
+00:00:11,270 --> 00:00:12,670
+two decisions to make
+
+9
+00:00:12,720 --> 00:00:14,810
+you can keep watching or you can decide to
+
+10
+00:00:14,810 --> 00:00:17,950
+stop watching the problem with autoplay or
+
+11
+00:00:17,950 --> 00:00:19,830
+what autoplay introduces is that you don't
+
+12
+00:00:19,830 --> 00:00:21,580
+have to decide to keep watching
+
+13
+00:00:21,580 --> 00:00:23,680
+that decision has been made for you
+
+14
+00:00:24,000 --> 00:00:25,890
+it is where you want to stop watching that
+
+15
+00:00:25,890 --> 00:00:27,610
+you now have to put in the efforts
+
+16
+00:00:27,820 --> 00:00:28,820
+to stop watching
+
+17
+00:00:28,820 --> 00:00:31,450
+so deciding to stop takes efforts, but
+
+18
+00:00:31,450 --> 00:00:33,490
+deciding to continue does not take any
+
+19
+00:00:33,490 --> 00:00:35,370
+effort on the end of the user at all
+
+20
+00:00:35,370 --> 00:00:37,190
+so you can guess which one happens more
+
+21
+00:00:37,190 --> 00:00:38,350
+continuing, of course
+
+22
+00:00:38,350 --> 00:00:40,230
+and another thing that powers this is
+
+23
+00:00:40,230 --> 00:00:41,070
+defaults on YouTube
+
+24
+00:00:41,070 --> 00:00:43,130
+for example, autoplay is on by default
+
+25
+00:00:43,130 --> 00:00:44,630
+and most people don't change the settings
+
+26
+00:00:44,630 --> 00:00:46,330
+that their app comes with
+
+27
+00:00:46,330 --> 00:00:48,000
+so it just keeps going on like that

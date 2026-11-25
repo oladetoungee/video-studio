@@ -1,0 +1,24 @@
+{
+  "direction": "Two jobs, two tools: a magnifying glass (research) and a pencil (design), drawn big on either side of her real-colour cut-out (thoughtful, hand on cheek, blue outline). Warm paper, electric blue as the only colour.",
+  "thumbnail_text": "UX Researcher vs UX Designer",
+  "titles": [
+    "UX Researcher or UX Designer: Which Job Fits You?",
+    "UX Researcher vs UX Designer: Who Does What on a Team?",
+    "UX Researcher or UX Designer? Here's the Real Difference"
+  ],
+  "text": {
+    "hd": "UX Researcher<br><span class=\"it\">vs</span> UX Designer"
+  },
+  "images": {
+    "me": "../../assets/cut/gbemi-hand-cheek.png"
+  },
+  "vars": {
+    "--ground": "#EDE9E2",
+    "--fg": "#17140F",
+    "--accent": "#1B3FD8",
+    "--ol": "#1B3FD8"
+  },
+  "scores": "",
+  "recommended": false,
+  "title": "UX Researcher or UX Designer: Which Job Fits You?"
+}

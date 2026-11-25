@@ -1,0 +1,18 @@
+/* Direction B · "The Kitchen"
+   The talk's own metaphor, drawn: flat illustrated objects with thick ink outlines act out each idea.
+   Cream ground, jollof colours (tomato, pepper green, turmeric), charcoal ink. Onest. Very few words. */
+@font-face { font-family: 'Onest'; src: url('../shared/fonts/Onest-500.ttf'); font-weight: 500; }
+@font-face { font-family: 'Onest'; src: url('../shared/fonts/Onest-800.ttf'); font-weight: 800; }
+
+:root { --cream: #F4ECDF; --ink: #1E1B18; --tomato: #E4472D; --green: #1F7A4D; --turmeric: #F2B230; --rice: #FFF8EC; --sky: #9DC3E6; --soft: #E8DCC8; }
+.bg-cream { --bg: var(--cream); --fg: var(--ink); --hlc: var(--turmeric); }
+.bg-green { --bg: var(--green); --fg: var(--rice); --hlc: var(--tomato); }
+.slide { font-family: 'Onest', sans-serif; }
+
+.t-xl { font-weight: 800; font-size: 120px; line-height: 1; letter-spacing: -.04em; }
+.t-l  { font-weight: 800; font-size: 88px; line-height: 1.02; letter-spacing: -.035em; }
+.t-m  { font-weight: 800; font-size: 50px; line-height: 1.08; letter-spacing: -.02em; }
+.tag  { font-weight: 500; font-size: 30px; letter-spacing: -.005em; }
+svg .o { stroke: var(--ink); stroke-width: 5; stroke-linejoin: round; stroke-linecap: round; }
+.label { position: absolute; background: var(--rice); border: 4px solid var(--ink); padding: 6px 16px; font-weight: 800; font-size: 32px; letter-spacing: -.01em; white-space: nowrap; }
+@font-face { font-family: 'GeistMono'; src: url('../shared/fonts/GeistMono.ttf'); font-weight: 100 900; }

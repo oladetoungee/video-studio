@@ -1,0 +1,24 @@
+{
+ "t": {
+  "card-the-product/title": {
+   "s": "YOUR\nATTENTION"
+  },
+  "card-the-tricks/title": {
+   "s": "UNPREDICTABLE\nREWARDS"
+  },
+  "card-the-proof/title": {
+   "s": "APP\nNOTIFICATIONS"
+  },
+  "card-the-cost/title": {
+   "s": "SOCIAL\nAPPROVAL"
+  }
+ },
+ "captions16": {
+  "y": 994
+ },
+ "mix": {
+  "voice": 3,
+  "music": -5,
+  "sfx": 0
+ }
+}

@@ -1,0 +1,25 @@
+{
+  "direction": "Photo-led: her real frame (warm grade, the room softly out of focus, never flipped), calm, with two sticky notes on the wall beside her like a research wall: a big canary one with the topic, a white one with a user's complaint.",
+  "thumbnail_text": "UX Research, for beginners",
+  "titles": [
+    "UX Research for Beginners: What It Is and How It Works",
+    "What Is UX Research? Explained With Real App Examples",
+    "UX Research Explained by an HCI Master's Student"
+  ],
+  "text": {
+    "hd": "UX<br>Research",
+    "sub": "for beginners",
+    "n2": "Where do I tap?"
+  },
+  "images": {
+    "photo": "../../assets/photo/room-643-wide.jpg"
+  },
+  "vars": {
+    "--ground": "#2A2E28",
+    "--fg": "#17140F",
+    "--accent": "#FFE15A"
+  },
+  "scores": "",
+  "recommended": false,
+  "title": "UX Research for Beginners: What It Is and How It Works"
+}

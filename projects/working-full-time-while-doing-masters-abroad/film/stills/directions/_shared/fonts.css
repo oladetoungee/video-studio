@@ -1,0 +1,12 @@
+@font-face{font-family:"Familjen Grotesk";font-weight:400 700;src:url(../_fonts/FamiljenGrotesk.ttf)}
+@font-face{font-family:"JetBrains Mono";font-weight:100 800;src:url(../_fonts/JetBrainsMono.ttf)}
+@font-face{font-family:"Source Serif 4";font-style:italic;font-weight:200 900;src:url(../_fonts/SourceSerif4-Italic.ttf)}
+@font-face{font-family:"Bebas Neue";src:url(../_fonts/BebasNeue.ttf)}
+@font-face{font-family:"Work Sans";font-weight:100 900;src:url(../_fonts/WorkSans.ttf)}
+@font-face{font-family:"Cutive Mono";src:url(../_fonts/CutiveMono.ttf)}
+@font-face{font-family:"DSEG14";src:url(../_fonts/DSEG14.ttf)}
+@font-face{font-family:"DSEG7";src:url(../_fonts/DSEG7.ttf)}
+@font-face{font-family:"Caveat";font-weight:400 700;src:url(../_fonts/Caveat.ttf)}
+@font-face{font-family:"Instrument Sans";font-weight:400 700;src:url(../_fonts/InstrumentSans.ttf)}
+@font-face{font-family:"Instrument Serif";src:url(../_fonts/InstrumentSerif-Regular.ttf)}
+html,body{margin:0;background:#000;overflow:hidden}canvas{display:block}

@@ -1,0 +1,32 @@
+{
+ "direction": "Her shoot photo (cream knit, 29 Oct, Enhance photo) on the amber ground, chin on hand; the topic name huge across the top and one big browser window that says 404 Not Found. The topic plainly + one literal picture.",
+ "thumbnail_text": "HTTP STATUS CODES",
+ "titles": [
+  "HTTP Status Codes Explained: 200, 404, 500 and More",
+  "Every HTTP Status Code You Will Actually Use",
+  "HTTP Status Codes Explained: Is It You or the Server?"
+ ],
+ "title": "HTTP Status Codes Explained: 200, 404, 500 and More",
+ "kind": "photo",
+ "text": {
+  "hd": "HTTP status codes",
+  "code": "404",
+  "msg": "Not Found"
+ },
+ "images": {
+  "room": "../../assets/photo/shoot/1605.png",
+  "me": "../../assets/photo/shoot/1605-person.png"
+ },
+ "vars": {
+  "--wash": "#FFA51F",
+  "--ground": "#FFA51F",
+  "--bgb": "1.3",
+  "--sc": "1.3",
+  "--sc-x": "-60px",
+  "--sc-y": "0px",
+  "--ph": "700px",
+  "--py": "125px",
+  "--px": "46%"
+ },
+ "class": "no-lift"
+}

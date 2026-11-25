@@ -1,0 +1,32 @@
+{
+  "direction": "Straight eye contact (2:45), words behind her shoulders; a phone held out towards the viewer with a name typed and the result 'Married, 2019' (illustration). Follows viral sample 8 (eye contact, the title carries it) + the phone as the object.",
+  "concept": "T7 (top pair 2)",
+  "thumbnail_text": "Type a name.",
+  "title": "Married? In Ghana, Anyone Can Now Look You Up",
+  "titles": [
+    "Married? In Ghana, Anyone Can Now Look You Up",
+    "You Can Now Check If Someone Is Married in Ghana",
+    "Ghana Made Marriages Searchable. Anyone Can Check Yours"
+  ],
+  "scores": "a 3/6 · 2/4 · 3/6 | b 7/7 · 8/7 · 8/7 | c 5 · 5 · 5",
+  "recommended": false,
+  "text": {
+    "line1": "Type a",
+    "line2": "name.",
+    "p_app": "Marriage records",
+    "p_q": "[name]",
+    "p_lab": "Status",
+    "p_big": "Married,<br>2019"
+  },
+  "images": {
+    "scene": "../../assets/scene/warm/s_165.00.jpg",
+    "front": "../../assets/scene/warm/mask/s_165.00.png"
+  },
+  "vars": {},
+  "nudge": {
+    "phone": {
+      "dx": -55,
+      "dy": -129
+    }
+  }
+}

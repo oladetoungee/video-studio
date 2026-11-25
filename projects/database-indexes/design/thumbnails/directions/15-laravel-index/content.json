@@ -1,0 +1,22 @@
+{
+  "direction": "For Laravel developers (she uses Laravel; \"laravel database indexing\" is a search phrase): only the one migration line that adds the index, 46 px in the film's terminal panel; her thinking on the right. Round 2: one line instead of three, closed-mouth frame. Round 3: code 44 px, caption removed. Round 4 (composition): words behind her head (her board's \"big word behind the head\"), the migration line as a bar across the bottom.",
+  "concept": "T18",
+  "thumbnail_text": "Slow Laravel app?",
+  "title": "Laravel Database Indexing: Fix Slow Queries in One Line",
+  "titles": [
+    "Laravel Database Indexing: Fix Slow Queries in One Line",
+    "Database Indexing for Beginners: Fix Slow SQL Queries"
+  ],
+  "text": {
+    "a": "<span class=\"markr\">Slow</span>",
+    "b": "Laravel app?",
+    "c2": "<span class=\"good\">$table->index('author_id');</span>"
+  },
+  "images": {
+    "scene": "../../assets/scene/f_533.6.jpg",
+    "front": "../../assets/cut/f_533.6.png"
+  },
+  "frame": "8:53.6 (finger at temple, mouth closed)",
+  "vars": {},
+  "scores": "final gate (round 4): A topic/click 4/6 · B pair 7 · C taste 5 · not for the main upload: Laravel-only audience"
+}

@@ -1,0 +1,83 @@
+1
+00:00:00,050 --> 00:00:02,740
+as you get more users, your database grows
+
+2
+00:00:02,740 --> 00:00:04,503
+and your tables get bigger
+
+3
+00:00:04,503 --> 00:00:06,183
+now it might take a little bit longer for
+
+4
+00:00:06,183 --> 00:00:07,803
+your app to load and you're now having
+
+5
+00:00:07,803 --> 00:00:10,083
+performance issues one thing that you can
+
+6
+00:00:10,083 --> 00:00:12,127
+always use to fix this is a database index
+
+7
+00:00:12,127 --> 00:00:14,447
+say we have a bookstore, and the books table
+
+8
+00:00:14,447 --> 00:00:17,297
+in our database has a million rows, we have
+
+9
+00:00:17,297 --> 00:00:18,367
+a million books
+
+10
+00:00:18,477 --> 00:00:20,207
+in there, and we run this query
+
+11
+00:00:20,207 --> 00:00:22,637
+without an index, the database has no idea
+
+12
+00:00:22,637 --> 00:00:25,407
+where author 42's books are, so it does the
+
+13
+00:00:25,407 --> 00:00:26,557
+only thing it can do
+
+14
+00:00:26,557 --> 00:00:28,697
+it starts at the first row and it checks
+
+15
+00:00:28,697 --> 00:00:31,527
+every single row, all one million of them,
+
+16
+00:00:31,617 --> 00:00:34,077
+and that is called a full table scan
+
+17
+00:00:34,137 --> 00:00:36,297
+and in many cases, it can be very
+
+18
+00:00:36,297 --> 00:00:38,779
+problematic when your table has maybe 10,
+
+19
+00:00:38,779 --> 00:00:40,997
+100 rows, maybe it wouldn't be a problem,
+
+20
+00:00:40,997 --> 00:00:42,457
+maybe you wouldn't notice,
+
+21
+00:00:42,687 --> 00:00:45,167
+but at a million rows, then it's a problem

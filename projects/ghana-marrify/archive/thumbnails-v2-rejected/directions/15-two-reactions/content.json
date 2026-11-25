@@ -1,0 +1,22 @@
+{
+  "direction": "Two-sided split of her own reactions (like her saved 'Before / After' splits): the African tech fan (smile, 5:11) vs the HCI researcher (frown, 1:35)",
+  "title": "Ghana Put Marriage Records Online. I Have Mixed Feelings",
+  "titles": [
+    "Ghana Put Marriage Records Online. I Have Mixed Feelings",
+    "Ghana's Public Marriage Records: Exciting and Worrying",
+    "An HCI Researcher Reacts to Ghana's Marriage Records App"
+  ],
+  "text": {
+    "labL": "as an African",
+    "labR": "as a researcher",
+    "capL": "love it!",
+    "capR": "hmm… wait",
+    "chip": "Ghana: divorce record found",
+    "chipLabel": "illustration"
+  },
+  "images": {
+    "left": "../../assets/scene/s_311.00.jpg",
+    "right": "../../assets/scene/s_95.63.jpg"
+  },
+  "vars": {}
+}

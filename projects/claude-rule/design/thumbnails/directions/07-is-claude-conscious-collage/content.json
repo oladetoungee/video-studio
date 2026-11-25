@@ -1,0 +1,30 @@
+{
+  "direction": "Collage over the creator (her requested style, \"Time to lock in.\" / \"Capsule wardrobe\"): her full room photo, calm and direct; three cut-outs float on top: the REAL line from Claude's constitution \"Claude's moral status is deeply uncertain.\" highlighted (credited), a yellow note \"tool?\", a small \"Claude\" chat with a typing indicator; one big serif line across her chest. Refs: the collage samples, sample 9. Scores: Round 3: cold 5 · best pair (title 1) 7/7 · taste 7.5 (closest to her collage samples).",
+  "concept": "consciousness family (collage)",
+  "thumbnail_text": "is Claude conscious?",
+  "title": "Anthropic Says Claude Might Be Hurt. I Don't Buy It",
+  "titles": [
+    "Anthropic Says Claude Might Be Hurt. I Don't Buy It",
+    "AI Can't Feel. So Why Protect Claude From Cruelty?"
+  ],
+  "scores": "Round 3: cold 5 · best pair (title 1) 7/7 · taste 7.5 (closest to her collage samples).",
+  "text": {
+    "l1": "is Claude conscious?",
+    "note": "just a tool?",
+    "src": "Screenshot · anthropic.com/constitution",
+    "chat_name": "Claude",
+    "chat_in": "Message…",
+    "rude": "YOU ARE USELESS, ANSWER ME NOW",
+    "ended": "This chat has ended"
+  },
+  "images": {
+    "scene": "../../assets/scene/s_45.0.jpg",
+    "cut": "../../assets/cut/c_45.0.png",
+    "page": "../../assets/props/constitution_line.png"
+  },
+  "vars": {
+    "--px": "-163px",
+    "--py": "-152px",
+    "--pw": "1566px"
+  }
+}

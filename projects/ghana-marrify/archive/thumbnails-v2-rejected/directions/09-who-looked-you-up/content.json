@@ -1,0 +1,21 @@
+{
+  "direction": "Her sceptical squint, hand at her face (0:56) + one question about who searched you, with a small notification (illustration, the film's searcher eyes)",
+  "title": "Someone Searched Your Marriage Record. Should You Know?",
+  "titles": [
+    "Someone Searched Your Marriage Record. Should You Know?",
+    "Ghana's Public Marriage Records Need One Feature Estonia Has",
+    "If Someone Searches Your Marriage Record, Should You Know?"
+  ],
+  "text": {
+    "line1": "who looked",
+    "line2": "you",
+    "line3": "up?",
+    "notice": "Someone searched your name",
+    "label": "Illustration"
+  },
+  "images": {
+    "scene": "../../assets/scene/s_56.17.jpg",
+    "front": "../../assets/scene/mask/s_56.17.png"
+  },
+  "vars": {}
+}

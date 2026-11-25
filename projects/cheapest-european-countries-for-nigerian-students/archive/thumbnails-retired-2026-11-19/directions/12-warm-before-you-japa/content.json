@@ -1,0 +1,29 @@
+{
+  "board": "pick1119-17",
+  "pick": "pick1119-17 (i stopped doomscrolling 6 months ago and i'm NEVER going back!: The brain rot is real / THAT PHONE IS THE PROBLEM)",
+  "kind": "her real warm photo (Øredev 2026, orange top, speaking, warm lights behind), face alive in the right half; a small yellow line over one big white caps line across the bottom",
+  "direction": "Copies pick1119-17: a warm real moment, the face close and talking, a small coloured line + one big white caps line. The words are a second message to the title (a feeling a Nigerian student recognises: think about the money before you move).",
+  "thumbnail_text": "before you japa... + DO THE MATHS",
+  "titles": [
+    "Cheapest Countries to Study in Europe for Nigerians (2027)",
+    "What Studying in Europe Really Costs a Nigerian in 2027",
+    "I Added Up What It Costs to Study in Europe as a Nigerian"
+  ],
+  "title": "Cheapest Countries to Study in Europe for Nigerians (2027)",
+  "class": "no-lift",
+  "text": {
+    "small": "before you japa...",
+    "big": "do the maths"
+  },
+  "images": {
+    "bg": "../../assets/oredev/55642297769.jpg"
+  },
+  "vars": {},
+  "recommended": false,
+  "fonts": [
+    "thumbs-18 Montserrat ExtraBold, white + yellow #F6C343 (Thumbnails 162)"
+  ],
+  "colours": "thumbs-18: white + #F6C343 over a warm dark photo",
+  "photo": "library/her-photos/oredev-2026-11-10/55642297769_394ffa4e3f_o.jpg through Enhance photo (--bg keep)",
+  "built": "2026-11-19 rework (projects/THUMBS-REWORK-BRIEF-2026-11-19.md)"
+}

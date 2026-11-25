@@ -1,0 +1,30 @@
+{
+  "direction": "Her photo 16 with flat photo crops of different sizes around her like in-defense-of-being-online: the Baratta cover, a notebook of handwritten notes, Convivial Toolbox, the real contents page. Serif line \"Read like a researcher\"; labels \"remember more\", \"uni and thesis reading\".",
+  "concept": "T4",
+  "sample": "in-defense-of-being-online (photo crops of different sizes around her, offset, two with a white edge) + her channel line TECH | CAREER | RESEARCH",
+  "thumbnail_text": "Read like a researcher",
+  "title": "How to Study a Book Before You Read It (and Remember More)",
+  "titles": [
+    "How to Study a Book Before You Read It (and Remember More)",
+    "A 1940 Reading Method That Helps You Remember Books",
+    "How to Read Non-Fiction and Actually Remember It"
+  ],
+  "text": {
+    "big": "Read like a researcher",
+    "l1": "remember more"
+  },
+  "images": {
+    "photo": "../../assets/photo/gbemi16_warm.jpg",
+    "baratta": "../../assets/collage/cover_baratta_clean.jpg",
+    "notebook": "../../assets/collage/notebook_notes.png",
+    "convivial": "../../assets/collage/cover_convivial_clean.jpg",
+    "contents": "../../assets/collage/baratta_contents_page.png"
+  },
+  "vars": {},
+  "gates": {
+    "round3": "a 3/5 · b 7/7 · c 5.5",
+    "pass": false,
+    "note": "fails: crops read as pasted screenshots",
+    "key": "a = cold image-only topic confidence/5 and click/10; b = in a mocked feed with the title, clarity/click (pass 8/8); c = taste vs her collage samples (pass 8)"
+  }
+}

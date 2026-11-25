@@ -1,0 +1,22 @@
+{
+  "direction": "Two tables joined by a foreign key; orders.customer_id (the column PostgreSQL does not index for you; MySQL InnoDB does) ringed red with a NO INDEX tag. Her sceptical on the left. Real behaviour (BRIEF). Follows PlanetScale \"Postgres and MySQL Indexes Are Completely Different\" (28x). Round 2: tag in mono instead of a script caption, no cut hand. Round 3: NO INDEX tag moved outside the ring; her moved right off the edge.",
+  "concept": "T15",
+  "thumbnail_text": "Postgres doesn't index this",
+  "title": "Postgres Foreign Key Index: Why Your Joins Got Slow",
+  "titles": [
+    "Postgres Foreign Key Index: Why Your Joins Got Slow",
+    "2 Database Index Mistakes (and a Postgres Gotcha)",
+    "Added an Index and It's Still Slow? Check This First"
+  ],
+  "text": {
+    "a": "Postgres doesn't",
+    "b": "<span class=\"markr\">index this</span>",
+    "n": "NO INDEX"
+  },
+  "images": {
+    "scene": "../../assets/scene/f_148.0.jpg"
+  },
+  "frame": "2:28 (sceptical side look, mouth closed)",
+  "vars": {},
+  "scores": "final gate (round 4): A topic/click 4/7 · B pair 8 · C taste 6"
+}

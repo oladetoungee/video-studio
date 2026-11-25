@@ -1,0 +1,36 @@
+{
+  "direction": "Photo background (kit T12): her room washed deep green-black, she calm in colour in the middle; three big numbered cards in front of her: the elephant (update PHP), a key (change your API keys), an AI bill (set spending alerts). A to-do order for a busy developer. References: her ux-research thumbnail (three big objects in front of her), viral 3 'Fitness sales framework' (the steps drawn).",
+  "thumbnail_text": "WHAT TO FIX FIRST",
+  "titles": [
+    "Developers Had a Rough October: PHP, Railway, OpenCode",
+    "What October's Hacks Mean for Your PHP and API Keys",
+    "PHP2Shell, Railway and OpenCode: What Developers Should Do"
+  ],
+  "title": "Developers Had a Rough October: PHP, Railway, OpenCode",
+  "kind": "photo",
+  "text": {
+    "hd": "What to fix <span class=\"acc\">first</span>",
+    "l1": "PHP",
+    "l2": "API KEYS",
+    "l3": "AI ALERTS",
+    "bill": "$1,000?"
+  },
+  "images": {
+    "bg": "../../assets/scene/gbemi-410.0.jpg",
+    "me": "../../assets/scene/gbemi-410.0-person.png",
+    "elephant": "../../assets/draw/elephant.svg",
+    "key": "../../assets/draw/key.svg"
+  },
+  "vars": {
+    "--ground": "#16110D",
+    "--fg": "#EFE7D8",
+    "--accent": "#F2541B",
+    "--wash": "#3E6B55",
+    "--dim": "rgba(10,20,16,.45)",
+    "--sc": "1.0",
+    "--sc-x": "-0px",
+    "--sc-y": "-0px"
+  },
+  "scores": "cold critic R1 6.5 · R2 7",
+  "recommended": false
+}

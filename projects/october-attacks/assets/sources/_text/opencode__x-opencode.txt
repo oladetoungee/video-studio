@@ -1,0 +1,79 @@
+URL: https://x.com/opencode/status/2111519637049319818
+STATUS: loaded (http 200)
+FINAL: https://x.com/opencode/status/2111519637049319818
+TITLE: OpenCode on X: "We had a security breach last night related to a large scale distillation attack that impacted 1.4% of OpenCode Console users We have notified them all this morning via email. If you did not get an email you were not impacted, it was a subset of users who had external providers lin… / X
+H1: OpenCode on X: "We had a security breach last night related to a large scale distillation attack that impacted 1.4% of OpenCode Console users We have notified them all this morning via email. If you did not get an email you were not impacted, it was a subset of users who had external providers linked The incident is ongoing so we cannot share more details at this point but we are working with Anthropic, OpenAI, and Google to remediate"
+OG: OpenCode (@opencode) on X | X (formerly Twitter)
+PUBLISHED: 2026-10-17T18:08:06.000Z  MODIFIED: 
+DOC_H: 900
+
+Post
+OpenCode on X: "We had a security breach last night related to a large scale distillation attack that impacted 1.4% of OpenCode Console users We have notified them all this morning via email. If you did not get an email you were not impacted, it was a subset of users who had external providers linked The incident is ongoing so we cannot share more details at this point but we are working with Anthropic, OpenAI, and Google to remediate"
+OpenCode
+@opencode
+We had a security breach last night related to a large scale distillation attack that impacted 1.4% of OpenCode Console users
+
+We have notified them all this morning via email. If you did not get an email you were not impacted, it was a subset of users who had external providers linked
+
+The incident is ongoing so we cannot share more details at this point but we are working with Anthropic, OpenAI, and Google to remediate
+Last edited 21:08 · 17 Oct 2026
+·
+2.9m
+Views
+774
+2.8k
+12k
+1.9k
+lewington
+@lewingtonpitsos
+17 Oct
+who even has the heart to hack open code when theyre literally giving out everything for free
+29
+18
+1.7k
+130k
+am.will
+@LLMJunky
+17 Oct
+why is it the nicest people get screwed first?
+13
+5
+520
+64k
+Vishal Singh
+@vishalsingh2972
+17 Oct
+FUCK OpenCode got hacked 😳
+
+how will they compensate us for the losses?
+13
+17
+405
+69k
+Log in or sign up for X
+
+See what’s happening and join the conversation
+
+Continue with phone
+Continue with Apple
+Continue with Google
+Jätka Google'iga
+or
+Log in with username or email
+Relevant people
+OpenCode
+@opencode
+Follow
+The open source coding agent
+Terms
+·
+Privacy
+·
+Cookies
+·
+Accessibility
+·
+Ads Info
+·
+More
+© 2026 X Corp.

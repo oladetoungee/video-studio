@@ -1,0 +1,196 @@
+<title>Øredev Q&amp;A Prep</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@500&display=swap">
+<style>
+  /* Layout: one reading column like the talk's paper slides; sticky bar with search + jump links; answers always open */
+  :root {
+    --bg: #F6F4EF; --card: #FFFFFF; --ink: #141416; --sub: #5E5A53; --line: #D8D4CB;
+    --accent: #2B50FF; --warn: #D9431F; --chip: #E9E6DF;
+    --display: 'Geist', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+    --body: 'Geist', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+    --mono: 'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+  }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+    --bg: #141416; --card: #1C1C1F; --ink: #EEECE7; --sub: #A7A39B; --line: #34333A;
+    --accent: #8EA2FF; --warn: #FF8466; --chip: #26262B; color-scheme: dark } }
+  :root[data-theme="dark"] {
+    --bg: #141416; --card: #1C1C1F; --ink: #EEECE7; --sub: #A7A39B; --line: #34333A;
+    --accent: #8EA2FF; --warn: #FF8466; --chip: #26262B; color-scheme: dark }
+
+  body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 18px; line-height: 1.55;
+    padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 0 80px; }
+  body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+  .wrap { max-width: 760px; margin: 0 auto; }
+
+  header { padding-block: 40px 20px; }
+  h1 { font-family: var(--display); font-weight: 700; font-size: clamp(34px, 6vw, 52px); line-height: 1.02; letter-spacing: -0.04em; margin: 0; text-wrap: balance; }
+  .lede { color: var(--sub); margin: 14px 0 0; max-width: 62ch; }
+
+  .bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); padding-block: 12px; border-bottom: 1px solid var(--line); display: flex; flex-direction: column; gap: 10px; }
+  .bar input { width: 100%; box-sizing: border-box; font: 500 17px var(--body); color: var(--ink); background: var(--card); border: 1.5px solid var(--line); padding: 11px 14px; border-radius: 0; }
+  .bar input:focus { outline: 2px solid var(--accent); outline-offset: 1px; border-color: var(--accent); }
+  .bar nav { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; }
+  .bar nav::-webkit-scrollbar { display: none; }
+  .bar nav a { flex: none; font-size: 15px; font-weight: 500; color: var(--ink); text-decoration: none; background: var(--chip); padding: 6px 11px; }
+  .bar nav a:hover, .bar nav a:focus-visible { background: var(--accent); color: var(--bg); outline: none; }
+
+  section { padding-top: 34px; scroll-margin-top: 130px; }
+  h2 { font-family: var(--display); font-weight: 700; font-size: 28px; letter-spacing: -0.03em; margin: 0 0 4px; }
+  .sec-note { color: var(--sub); font-size: 16px; margin: 0 0 8px; }
+
+  .qa { border-top: 1.5px solid var(--ink); padding-block: 16px 18px; display: flex; flex-direction: column; gap: 6px; }
+  .q { font-weight: 600; font-size: 20px; line-height: 1.3; letter-spacing: -0.01em; margin: 0; text-wrap: balance; }
+  .a { margin: 0; max-width: 65ch; }
+  .a + .a { margin-top: 6px; }
+  .cut { align-self: flex-start; font-size: 14px; font-weight: 500; color: var(--warn); }
+  .tip { color: var(--sub); font-size: 16px; margin: 0; }
+
+  .nums { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 0; border-top: 1.5px solid var(--ink); }
+  .num { padding: 14px 14px 14px 0; border-bottom: 1px solid var(--line); min-width: 0; }
+  .num b { display: block; font-family: var(--display); font-weight: 700; font-size: 30px; letter-spacing: -0.03em; color: var(--accent); font-variant-numeric: tabular-nums; line-height: 1.1; }
+  .num span { font-size: 15px; color: var(--sub); }
+
+  .say { background: var(--card); border-left: 3px solid var(--accent); padding: 12px 16px; margin: 0; }
+  .empty { color: var(--sub); padding-top: 30px; }
+  footer { color: var(--sub); font-size: 14px; padding-top: 40px; }
+  footer a { color: var(--sub); }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  html { scroll-behavior: smooth; }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>Questions people might ask</h1>
+    <p class="lede">For the Q&amp;A after “How moving from Nigeria to Estonia rewired how I build software”. Short answers in plain words, ready to say out loud. Orange notes mean the answer comes from a slide we cut, so it's fine to bring it back here.</p>
+  </header>
+
+  <div class="bar">
+    <input id="search" type="search" placeholder="Search a word, like Flutter, GDPR or SIM" aria-label="Search the questions" autocomplete="off">
+    <nav aria-label="Sections">
+      <a href="#stuck">If you're stuck</a><a href="#numbers">Numbers</a><a href="#idea">The big idea</a><a href="#uber">Uber</a><a href="#ussd">USSD</a><a href="#law">Data and the law</a><a href="#money">Money</a><a href="#identity">Identity</a><a href="#testing">Testing</a><a href="#you">About you</a>
+    </nav>
+  </div>
+
+  <section id="stuck">
+    <h2>If you're stuck</h2>
+    <p class="sec-note">Lines that always work.</p>
+    <div class="qa"><p class="q">You don't know the answer</p><p class="a say">“That's a really good question, and I don't want to guess. Can we talk after? I'll be at the speaker corner.”</p></div>
+    <div class="qa"><p class="q">It's outside what you've built</p><p class="a say">“I haven't built that myself, so I'd be careful. But the first thing I'd do is fill in the Environment Profile for it and see which rows change.”</p></div>
+    <div class="qa"><p class="q">The question is long or hard to hear</p><p class="a">Repeat it out loud in one short sentence, so the whole room hears it and you get a few seconds to think.</p></div>
+    <div class="qa"><p class="q">Someone asks two questions at once</p><p class="a">Answer the first one, then say: “And what was your second part?”</p></div>
+    <div class="qa"><p class="q">Someone disagrees with you</p><p class="a say">“That's fair. It depends a lot on the environment, and that's really the point of the profile. In your case, which row would you change?”</p></div>
+  </section>
+
+  <section id="numbers">
+    <h2>Numbers to remember</h2>
+    <p class="sec-note">Every number from the talk, in one place.</p>
+    <div class="nums">
+      <div class="num"><b>56%</b><span>of Uber's riders on phones of Year Class 2015 or older</span></div>
+      <div class="num"><b>46M</b><span>riders in one market on 2013-class phones</span></div>
+      <div class="num"><b>1 in 3</b><span>rides booked on networks slower than 3G</span></div>
+      <div class="num"><b>&lt; 5 MB</b><span>Uber Lite's download budget</span></div>
+      <div class="num"><b>6–8 MB</b><span>the framework library alone, at the time</span></div>
+      <div class="num"><b>1,500 B</b><span>one packet on Ethernet (budget about 1,200 for the body)</span></div>
+      <div class="num"><b>36% vs 94%</b><span>people online: Africa vs high-income countries, 2025 (ITU)</span></div>
+      <div class="num"><b>7×</b><span>share of income a mobile data plan takes in lower-middle-income countries (ITU)</span></div>
+      <div class="num"><b>April 2018</b><span>India's rule: payment data stored only in India, six months to comply</span></div>
+      <div class="num"><b>Jul 2021 → Jun 2022</b><span>Mastercard blocked from new customers in India</span></div>
+      <div class="num"><b>40%+</b><span>of online transactions in Brazil use Pix (Stripe)</span></div>
+      <div class="num"><b>11 digits</b><span>Estonian ID code, and Nigeria's BVN</span></div>
+    </div>
+  </section>
+
+  <section id="idea">
+    <h2>The big idea</h2>
+    <div class="qa"><p class="q">What exactly is the Environment Profile?</p><p class="a">It's one page with six rows: connectivity, devices, money rails, identity rails, jurisdiction and forgiveness. You fill it in for where your system was built and for where it's going. Every row that's different is a question: does this change a setting, or a decision?</p></div>
+    <div class="qa"><p class="q">Isn't this just non-functional requirements?</p><p class="a">It sits next to them. Non-functional requirements say what the system must achieve, like 99.9% uptime. The Environment Profile describes the world those targets have to survive in. It tells you whether the targets are realistic, and what it takes to hit them.</p></div>
+    <div class="qa"><p class="q">What's the difference between a setting and a decision?</p><p class="a">A setting lives in a config or translation file: a currency symbol, a date format, the language on the screen. Your architecture doesn't notice. A decision is baked into the shape of the system: your payment states, where your data lives, what happens on a timeout, how people sign in. Those are expensive to change later.</p></div>
+    <div class="qa"><p class="q">I only build for one country. Does this apply to me?</p><p class="a">Yes. Your users' environment is still built into your code. You just can't see it, because you've never left it. Writing it down helps the day you get a new market, a big new customer or a new law, and it helps new people on your team who come from somewhere else.</p></div>
+    <div class="qa"><p class="q">Who should fill it in, and when?</p><p class="a">Ideally someone on the team who has lived there. They know what the network is like, how people pay and what ID they carry. If nobody has, talk to users there or read the local rules. It's one page, so it fits into a normal planning meeting.</p></div>
+    <div class="qa"><p class="q">Why these six rows? What about accessibility, or language?</p><p class="a">These are the rows I had to learn myself, moving between Nigeria and Estonia. The list isn't complete, so add your own. Accessibility is a really good one. I almost added it this morning.</p></div>
+    <div class="qa"><p class="q">Is this only about Africa versus Europe?</p><p class="a">No. Those are my two examples because I've built in both. The same thing happens between any two environments: the US and the EU, a big city and the countryside, even two customers with different contracts.</p></div>
+    <div class="qa"><p class="q">What does “forgiveness” mean?</p><p class="a">What users have learned to tolerate, and what can't be undone. A wrong car wash check can be fixed, so we can sample one in five. A wrong payment can't, so we check every one. Forgiveness tells you where to spend your engineering.</p></div>
+  </section>
+
+  <section id="uber">
+    <h2>Uber</h2>
+    <div class="qa"><p class="q">Why did Uber say no to React Native and Flutter? Are they bad?</p><p class="a">They're not bad. At the time, the framework library alone was six to eight megabytes, and Uber's whole budget was five. It was a size decision for that environment, not a judgement on the frameworks.</p></div>
+    <div class="qa"><p class="q">Are those frameworks smaller today?</p><p class="a">Yes. Flutter's own docs now say a few megabytes compressed. But the lesson stays the same: you measure against your own users' budget, not against what's normal elsewhere.</p></div>
+    <div class="qa"><p class="q">So what did Uber build Uber Lite with?</p><p class="a">A native Android app, built on Uber's own architecture called RIBs. Their blog post doesn't say which language. To stay small, they used ProGuard and dropped parts of their usual setup, like their plugin framework.</p></div>
+    <div class="qa"><p class="q">What is Year Class?</p><p class="a">Facebook's way of scoring a phone by the year it would have been a high-end phone. So a “Year Class 2015” phone performs like a top phone from 2015. Uber used it to see what their riders actually held, instead of guessing.</p></div>
+    <div class="qa"><p class="q">Is under 5 MB still realistic today?</p><p class="a">The exact number matters less than having one. Uber's real lesson was: pick a budget from your users' reality, then make the build fail in CI when you go over it, so the app can't quietly grow one dependency at a time.</p></div>
+    <div class="qa"><p class="q">What is Backends for Frontends?</p><p class="a">A thin backend layer shaped for one app. The phone asks one question, and that layer talks to all the other services inside the data centre, where the network is fast. So the phone pays for one round trip instead of five. Sam Newman gave the pattern its name.</p></div>
+    <div class="qa"><p class="q">Why a 1,200-byte budget and not 1,500?</p><p class="a">One packet on Ethernet carries up to 1,500 bytes, but the headers use some of that space. A body budget of about 1,200 bytes leaves room for them, so the whole response still fits in one packet.</p><p class="cut">From a cut slide (budgets)</p></div>
+    <div class="qa"><p class="q">Why landmarks instead of addresses?</p><p class="a">In many cities, people give directions by landmark, and typing a full address on a slow phone is painful. So Uber Lite let riders pick points of interest instead.</p></div>
+  </section>
+
+  <section id="ussd">
+    <h2>USSD</h2>
+    <div class="qa"><p class="q">What is USSD, in simple words?</p><p class="a">You dial a short code like *123#, and a small text menu pops up. It works on any phone with a SIM, even with no data plan. The mobile operator passes each step to your server, usually as a normal web request.</p></div>
+    <div class="qa"><p class="q">Do people really still use it?</p><p class="a">Every day, in Nigeria, Kenya, Rwanda and many other places, for airtime, banking and mobile money. In 2025 only 36% of people in Africa used the internet, so USSD reaches the people an app can't.</p></div>
+    <div class="qa"><p class="q">How long does a session last?</p><p class="a">Each operator sets its own limit, and it's short. So you design as if the session can drop at any moment.</p></div>
+    <div class="qa"><p class="q">How does the server know it's the same person when they dial again?</p><p class="a">The operator sends the phone number with every request. So the first thing the server does is look for a recent transaction from that number, and show its status: “Your transfer of 5,000 naira is being processed.”</p></div>
+    <div class="qa"><p class="q">Where can I read more?</p><p class="a">Werner Vogels wrote a post in 2025 called “What is USSD (and who cares)?”. The interface is from the 1990s, but behind it is a modern cloud system.</p><p class="cut">From a cut slide (Vogels)</p></div>
+  </section>
+
+  <section id="law">
+    <h2>Data and the law</h2>
+    <div class="qa"><p class="q">Residency, localisation, sovereignty: what's the difference?</p><p class="a">Residency is where your data is stored. Localisation is a law that forces data to stay inside a country. Sovereignty is about whose laws apply to the data, and who can force you to hand it over. Your data can sit in Germany and still be reachable by a foreign government, if the company running the servers falls under that government's laws.</p><p class="cut">From a cut slide (three words)</p></div>
+    <div class="qa"><p class="q">Doesn't GDPR say data has to stay in the EU?</p><p class="a">Not exactly. GDPR protects personal data and allows it to leave the EU, but only with safeguards, like an adequacy decision or standard contract clauses. India's rule for payment data was stricter: store it only in India.</p></div>
+    <div class="qa"><p class="q">What happened to Mastercard in the end?</p><p class="a">The Reserve Bank of India stopped Mastercard from taking new customers in July 2021. It lifted that in June 2022, once it was satisfied Mastercard had complied. So almost a year without growth in one of its biggest markets.</p></div>
+    <div class="qa"><p class="q">What is the “atom” again?</p><p class="a">The unit of data that always lives together, in one region. For a B2B product, it's usually the company. Everything about one company lives in one region, so no normal query needs data from two places, and the law is satisfied by design.</p><p class="a">On top, there's a small global layer that knows which region each company lives in. Just IDs and regions, no personal data.</p></div>
+    <div class="qa"><p class="q">How does a request find the right region?</p><p class="a">Every request carries the company's ID, and a gateway sends it to the region that holds that company.</p><p class="cut">From a cut slide (routing)</p></div>
+    <div class="qa"><p class="q">What about data that isn't about one customer, like a product catalogue?</p><p class="a">Not everything has to be regional. You decide dataset by dataset what stays regional and what can be global, and you write that choice down. The Volvo Cars talk here at Øredev last year covers exactly this.</p></div>
+    <div class="qa"><p class="q">Isn't running many regions expensive?</p><p class="a">Yes. More regions means more infrastructure, more deployments and more to monitor. That's why you decide per dataset, and go multi-region only where a law or a promise to a customer asks for it.</p></div>
+    <div class="qa"><p class="q">What about sending data to AI APIs?</p><p class="a">That counts too. Data leaks through side doors: logs, error trackers, analytics, backups, support tools, and now AI APIs. If customer data goes to a model, where that model runs belongs in your jurisdiction row. At work, when we looked at using an AI model to check documents like driving licences, the first question was what the law and our terms allow.</p><p class="cut">From a cut slide (side doors)</p></div>
+  </section>
+
+  <section id="money">
+    <h2>Money</h2>
+    <div class="qa"><p class="q">What's the difference between a push and a pull payment?</p><p class="a">With a card, the merchant pulls money using your card details, and you can dispute it with a chargeback. With a push payment, like a bank transfer or Pix, your own bank sends the money after you approve it. Once it's gone, it's usually gone.</p></div>
+    <div class="qa"><p class="q">How does that change the code?</p><p class="a">Your payment needs more states. With a push, the customer leaves your app to approve it and may never come back, so you need “waiting for the customer”. The result arrives later, through a webhook. A cash voucher like OXXO can stay pending for days, so it needs an expiry. And refunding an instant transfer means sending a brand new payment the other way.</p><p class="cut">From a cut slide (payment state machine)</p></div>
+    <div class="qa"><p class="q">How do you stop someone being charged twice when they retry?</p><p class="a">Make the payment safe to repeat. Create the transaction with its own ID the moment the user confirms. If the same request comes in again, return the result you already have instead of charging again. That's what the USSD example does.</p></div>
+  </section>
+
+  <section id="identity">
+    <h2>Identity</h2>
+    <div class="qa"><p class="q">So how would you protect against SIM swap?</p><p class="a">Put the defences in the architecture. Tie each account to the user's own phone, so a new phone has to prove itself first. Ask for stronger proof before risky actions, like changing where payouts go. And slow things down right after a SIM change.</p><p class="cut">From a cut slide (defences)</p></div>
+    <div class="qa"><p class="q">How would one product support Smart-ID and phone numbers?</p><p class="a">Make identity pluggable. Your system talks to one interface that answers two questions: who is this, and how sure are we? The EU's eIDAS rules give the levels: low, substantial and high. Then your payment code asks “is the assurance high enough?”, never “did they use Smart-ID?”.</p><p class="a">But every method brings its own sign-up, recovery and support work, so add one only when a market really needs it.</p><p class="cut">From cut slides (identity interface and its cost)</p></div>
+    <div class="qa"><p class="q">What is Smart-ID?</p><p class="a">An app for proving who you are, used in Estonia, Latvia and Lithuania. The website shows a short code, your phone shows the same code, and you confirm with a PIN. So a bank or a startup gets a strong answer to “who is this?” without building identity checks themselves.</p></div>
+    <div class="qa"><p class="q">Why is the Estonian ID code personal data?</p><p class="a">It isn't random. It contains your date of birth, and the first digit tells your gender and the century you were born in. So you treat it as personal data, not just an ID.</p></div>
+    <div class="qa"><p class="q">Doesn't Nigeria have a national ID?</p><p class="a">Yes, the NIN, and SIM cards have to be linked to it. Banks use the BVN, the Bank Verification Number. But for most everyday apps, the phone number is still what people sign up with.</p></div>
+  </section>
+
+  <section id="testing">
+    <h2>Testing</h2>
+    <div class="qa"><p class="q">Are there alternatives to Toxiproxy?</p><p class="a">Yes. Browser developer tools can slow the network down, the Android emulator can simulate a slow network, and on Linux, a tool called tc netem can add delay and packet loss. Toxiproxy is nice because it runs inside your automated tests.</p></div>
+    <div class="qa"><p class="q">What do Open Policy Agent and Checkov do?</p><p class="a">They check your infrastructure code before it's deployed. You write a rule like “regional data can only be stored in these regions”, and the build fails when someone breaks it. Checkov scans infrastructure files like Terraform. Open Policy Agent is a general engine for rules like these.</p></div>
+    <div class="qa"><p class="q">How do I get my team or my manager to care?</p><p class="a">Start small: one row, one budget, one test in CI. Then show one real failure from your users' environment. A number like Uber's “56% of riders on old phones” usually does the convincing for you.</p></div>
+  </section>
+
+  <section id="you">
+    <h2>About you</h2>
+    <div class="qa"><p class="q">You said you're open to work. Why are you leaving?</p><p class="a say">“I'm looking for my next challenge, ideally somewhere I can do more of this kind of architecture work. If that sounds like your team, come and find me after.”</p><p class="tip">Keep it forward-looking. No need to say anything about your current company.</p></div>
+    <div class="qa"><p class="q">What do you research?</p><p class="a">I'm doing my master's in Human-Computer Interaction at Tallinn University. That's a big part of why I look at software through the people using it and the world they live in.</p></div>
+    <div class="qa"><p class="q">Where can I get the slides?</p><p class="a">The QR code on the slide near the end. They're yours to keep, with every source I used.</p></div>
+  </section>
+
+  <p class="empty" id="empty" hidden>No questions match that word. Try a shorter one.</p>
+
+  <footer>Sources for the numbers: Uber Engineering, “Engineering Uber Lite” (2019); ITU, Facts and Figures 2025; Reserve Bank of India; Stripe on Pix.</footer>
+</div>
+
+<script>
+  const input = document.getElementById('search');
+  const items = [...document.querySelectorAll('.qa, .num')];
+  const sections = [...document.querySelectorAll('section')];
+  input.addEventListener('input', () => {
+    const q = input.value.trim().toLowerCase();
+    let any = false;
+    items.forEach(el => { const hit = !q || el.textContent.toLowerCase().includes(q); el.hidden = !hit; if (hit) any = true; });
+    sections.forEach(s => { s.hidden = !!q && !s.querySelector('.qa:not([hidden]), .num:not([hidden])'); });
+    document.getElementById('empty').hidden = any;
+  });
+</script>

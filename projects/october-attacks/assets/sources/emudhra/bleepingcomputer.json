@@ -1,0 +1,226 @@
+{
+ "story": "emudhra",
+ "outlet": "BleepingComputer",
+ "slug": "bleepingcomputer",
+ "url": "https://www.bleepingcomputer.com/news/security/mozilla-google-apple-block-compromised-emudhra-ca-certificates/",
+ "finalUrl": "https://www.bleepingcomputer.com/news/security/mozilla-google-apple-block-compromised-emudhra-ca-certificates/",
+ "status": "loaded",
+ "http": 200,
+ "title": "Mozilla, Google, Apple block compromised eMudhra CA certificates",
+ "h1": "Mozilla, Google, Apple block compromised eMudhra CA certificates",
+ "published": "",
+ "files": {
+  "fold": "emudhra/bleepingcomputer_fold.png",
+  "full": "emudhra/bleepingcomputer_full.jpg",
+  "scroll": "emudhra/bleepingcomputer_scroll.mp4"
+ },
+ "full": {
+  "width": 1440,
+  "height": 5768,
+  "pageHeight": 5768,
+  "zoom": 1,
+  "quotes": [
+   {
+    "quote": "Mozilla, Google, Apple block compromised eMudhra CA certificates",
+    "box": {
+     "x": 135,
+     "y": 456,
+     "w": 832,
+     "h": 27
+    },
+    "lines": [
+     {
+      "x": 135,
+      "y": 456,
+      "w": 832,
+      "h": 27
+     }
+    ]
+   },
+   {
+    "quote": "the private key for eMudhra's \"EM OV TLS CA - G3C\" certificate had a value of just 4",
+    "box": {
+     "x": 135,
+     "y": 1415,
+     "w": 823,
+     "h": 46
+    },
+    "lines": [
+     {
+      "x": 335,
+      "y": 1415,
+      "w": 623,
+      "h": 21
+     },
+     {
+      "x": 135,
+      "y": 1440,
+      "w": 44,
+      "h": 21
+     }
+    ]
+   },
+   {
+    "quote": "eMudhra blamed the issue on an error in a script used to generate the certificates in April 2025",
+    "box": {
+     "x": 135,
+     "y": 1521,
+     "w": 751,
+     "h": 46
+    },
+    "lines": [
+     {
+      "x": 334,
+      "y": 1521,
+      "w": 552,
+      "h": 21
+     },
+     {
+      "x": 135,
+      "y": 1546,
+      "w": 197,
+      "h": 21
+     }
+    ]
+   }
+  ]
+ },
+ "scroll": {
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "seconds": 8,
+  "keyframes": [
+   {
+    "t": 0,
+    "y": 312
+   },
+   {
+    "t": 1,
+    "y": 312
+   },
+   {
+    "t": 2.224,
+    "y": 1005
+   },
+   {
+    "t": 8,
+    "y": 1005
+   }
+  ],
+  "zoom": 1,
+  "easing": "easeInOutCubic between keyframes, holds where y is equal",
+  "capped": false,
+  "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)",
+  "quotes": [
+   {
+    "quote": "Mozilla, Google, Apple block compromised eMudhra CA certificates",
+    "inVideo": true,
+    "still": true,
+    "t": 0.53,
+    "visibleStill": [
+     0,
+     1.07
+    ],
+    "scrollY": 312,
+    "box": {
+     "x": 375,
+     "y": 144,
+     "w": 832,
+     "h": 27
+    },
+    "lines": [
+     {
+      "x": 375,
+      "y": 144,
+      "w": 832,
+      "h": 27
+     }
+    ],
+    "docBox": {
+     "x": 375,
+     "y": 456,
+     "w": 832,
+     "h": 27
+    },
+    "layoutDriftPx": 0
+   },
+   {
+    "quote": "the private key for eMudhra's \"EM OV TLS CA - G3C\" certificate had a value of just 4",
+    "inVideo": true,
+    "still": true,
+    "t": 5.1,
+    "visibleStill": [
+     2.17,
+     8.03
+    ],
+    "scrollY": 1005,
+    "box": {
+     "x": 375,
+     "y": 410,
+     "w": 823,
+     "h": 46
+    },
+    "lines": [
+     {
+      "x": 575,
+      "y": 410,
+      "w": 623,
+      "h": 21
+     },
+     {
+      "x": 375,
+      "y": 435,
+      "w": 44,
+      "h": 21
+     }
+    ],
+    "docBox": {
+     "x": 375,
+     "y": 1415,
+     "w": 823,
+     "h": 46
+    },
+    "layoutDriftPx": 0
+   },
+   {
+    "quote": "eMudhra blamed the issue on an error in a script used to generate the certificates in April 2025",
+    "inVideo": true,
+    "still": true,
+    "t": 5.1,
+    "visibleStill": [
+     2.17,
+     8.03
+    ],
+    "scrollY": 1005,
+    "box": {
+     "x": 375,
+     "y": 516,
+     "w": 751,
+     "h": 46
+    },
+    "lines": [
+     {
+      "x": 574,
+      "y": 516,
+      "w": 552,
+      "h": 21
+     },
+     {
+      "x": 375,
+      "y": 541,
+      "w": 197,
+      "h": 21
+     }
+    ],
+    "docBox": {
+     "x": 375,
+     "y": 1521,
+     "w": 751,
+     "h": 46
+    },
+    "layoutDriftPx": 0
+   }
+  ]
+ }
+}

@@ -1,0 +1,325 @@
+{
+  "title": "Dark patterns: the tricks in apps and online shops (C · Blown up + B's split)",
+  "hud": "",
+  "intro": 0.4,
+  "outro": 2.0,
+  "voiceDuration": 448.617,
+  "words": "data/words.json",
+  "captions": "data/captions.srt",
+  "images": {
+    "clip_cms-dfa": "assets/src/cms-dfa.png",
+    "clip_crd-22": "assets/src/crd-22.png",
+    "clip_dd-cancel": "assets/src/dd-cancel.png",
+    "clip_dd-confirm": "assets/src/dd-confirm.png",
+    "clip_dd-nagging": "assets/src/dd-nagging.png",
+    "clip_dd-origin": "assets/src/dd-origin.png",
+    "clip_dd-scarcity": "assets/src/dd-scarcity.png",
+    "clip_dd-sneak": "assets/src/dd-sneak.png",
+    "clip_dd-urgency": "assets/src/dd-urgency.png",
+    "clip_ec-42": "assets/src/ec-42.png",
+    "clip_ec-head": "assets/src/ec-head.png",
+    "clip_ftc-76-lens": "assets/src/ftc-76-lens.png",
+    "clip_ftc-76": "assets/src/ftc-76.png",
+    "clip_ftc-amazon-q1": "assets/src/ftc-amazon-q1.png",
+    "clip_ftc-amazon-q2": "assets/src/ftc-amazon-q2.png",
+    "clip_gdpr-32": "assets/src/gdpr-32.png",
+    "px-1181370": "assets/src/px-1181370.jpg",
+    "px-13975271": "assets/src/px-13975271.jpg",
+    "px-17177368": "assets/src/px-17177368.jpg",
+    "px-22046935": "assets/src/px-22046935.jpg",
+    "px-37125633": "assets/src/px-37125633.jpg",
+    "px-3865639": "assets/src/px-3865639.jpg",
+    "px-4979123": "assets/src/px-4979123.jpg",
+    "px-4980430": "assets/src/px-4980430.jpg",
+    "px-5699374": "assets/src/px-5699374.jpg",
+    "px-5717969": "assets/src/px-5717969.jpg",
+    "px-5872362": "assets/src/px-5872362.jpg",
+    "px-6214362": "assets/src/px-6214362.jpg",
+    "px-7588163": "assets/src/px-7588163.jpg",
+    "clip_ucpd-7": "assets/src/ucpd-7.png"
+  },
+  "scripts": [
+    "assets/src/clips.js",
+    "scenes/dp.js",
+    "../talking-head/moments/plan.js",
+    "scenes/nudges.js",
+    "scenes/kit.js",
+    "scenes/film.js"
+  ],
+  "cutSounds": {
+    "cutSounds": false
+  },
+  "fonts": [
+    "500 40px \"Geist Mono\""
+  ],
+  "audio": {
+    "voice": "audio/voice_edit.flac",
+    "voiceFilter": "highpass=f=80,afftdn=nr=8:nf=-52:tn=1,deesser=i=0.3:m=0.5:f=0.5,acompressor=threshold=0.06:ratio=3:attack=6:release=160:knee=3,equalizer=f=3200:t=q:w=1.2:g=1.5",
+    "music": {
+      "dir": "library:music",
+      "xfade": 6.0,
+      "tracks": [
+        [
+          "1009",
+          "Mixkit track 1009"
+        ],
+        [
+          "443",
+          "Mixkit track 443"
+        ],
+        [
+          "175",
+          "Mixkit track 175"
+        ]
+      ]
+    },
+    "sfx": {
+      "roles": {
+        "hit": {
+          "files": [
+            "library:punch-soft-quick",
+            "library:hit-futuristic-bass",
+            "library:wood-hard-hit"
+          ],
+          "align": "start",
+          "db": 4
+        },
+        "slide": {
+          "files": [
+            "library:paper-slide",
+            "library:paper-quick-move"
+          ],
+          "align": "peak",
+          "db": 15
+        },
+        "place": {
+          "files": [
+            "library:card-place",
+            "library:card-flick"
+          ],
+          "align": "peak",
+          "db": 14
+        },
+        "marker": {
+          "files": [
+            "library:marker-line",
+            "library:pencil-short"
+          ],
+          "align": "start",
+          "db": 8,
+          "maxlen": 0.7
+        },
+        "pop": {
+          "files": [
+            "library:pop-dry",
+            "library:pop-hard-click",
+            "library:notify-bubble-pop",
+            "library:pop-cartoon-bubble"
+          ],
+          "align": "start",
+          "db": 9
+        },
+        "tick": {
+          "files": [
+            "library:ui-select-click",
+            "library:ui-modern-select",
+            "library:ui-click-tone",
+            "library:switch-tap"
+          ],
+          "align": "start",
+          "db": 10
+        },
+        "check": {
+          "files": [
+            "library:click-box-check",
+            "library:ui-option-select"
+          ],
+          "align": "start",
+          "db": 4
+        },
+        "shutter": {
+          "files": [
+            "library:shutter-click",
+            "library:shutter-hard-click",
+            "library:shutter-digital",
+            "library:shutter-vintage"
+          ],
+          "align": "peak",
+          "db": 11
+        },
+        "swipe": {
+          "files": [
+            "library:swipe-fast-zoom",
+            "library:transition-tech-slide",
+            "library:air-zoom-vacuum"
+          ],
+          "align": "peak",
+          "db": 9
+        },
+        "type": {
+          "files": [
+            "library:keyboard-typing",
+            "library:laptop-typing"
+          ],
+          "align": "start",
+          "db": 18,
+          "maxlen": 1.4
+        },
+        "typeHit": {
+          "files": [
+            "library:typewriter-single-hit",
+            "library:typewriter-soft-click"
+          ],
+          "align": "start",
+          "db": 17
+        },
+        "glitch": {
+          "files": [
+            "library:glitch-small-electric",
+            "library:glitch-static",
+            "library:glitch-intro-text"
+          ],
+          "align": "start",
+          "db": 10
+        },
+        "error": {
+          "files": [
+            "library:wrong-answer",
+            "library:buzzer-fail"
+          ],
+          "align": "start",
+          "db": 7
+        },
+        "notify": {
+          "files": [
+            "library:notify-message-pop",
+            "library:notify-positive",
+            "library:bell-notification"
+          ],
+          "align": "start",
+          "db": 3
+        },
+        "cash": {
+          "files": [
+            "library:coins-clinking",
+            "library:coin-win"
+          ],
+          "align": "start",
+          "db": 7
+        },
+        "clock": {
+          "files": [
+            "library:clock-tick-single",
+            "library:clock-wall-tick-tock"
+          ],
+          "align": "start",
+          "db": 19,
+          "maxlen": 1.5
+        },
+        "riser": {
+          "files": [
+            "library:riser-cinematic-trailer",
+            "library:riser-metallic-sweep"
+          ],
+          "align": "peak",
+          "db": -2
+        },
+        "stamp": {
+          "files": [
+            "library:wood-hard-hit",
+            "library:typewriter-single-hit"
+          ],
+          "align": "start",
+          "db": 9
+        },
+        "tape": {
+          "files": [
+            "library:tape-switch",
+            "library:record-scratch-stop"
+          ],
+          "align": "peak",
+          "db": 8
+        },
+        "ding": {
+          "files": [
+            "library:bell-service-ding",
+            "library:correct-answer"
+          ],
+          "align": "start",
+          "db": -2
+        },
+        "page": {
+          "files": [
+            "library:page-turn-single",
+            "library:book-paging-single"
+          ],
+          "align": "peak",
+          "db": 14
+        },
+        "tap": {
+          "files": [
+            "library:tap-small-hit",
+            "library:click-plastic-bubble"
+          ],
+          "align": "start",
+          "db": 7
+        },
+        "focus": {
+          "files": [
+            "library:camera-autofocus"
+          ],
+          "align": "start",
+          "db": 24
+        },
+        "coin": {
+          "files": [
+            "library:coins-clinking",
+            "library:coin-win"
+          ],
+          "align": "start",
+          "db": 7
+        },
+        "paper": {
+          "files": [
+            "library:paper-slide",
+            "library:paper-quick-move"
+          ],
+          "align": "peak",
+          "db": 14
+        },
+        "click": {
+          "files": [
+            "library:mouse-double-click",
+            "library:click-classic"
+          ],
+          "align": "start",
+          "db": 9
+        },
+        "boom": {
+          "files": [
+            "library:drum-deep-impact",
+            "library:hit-short-bass"
+          ],
+          "align": "start",
+          "db": 2
+        },
+        "wrong": {
+          "files": [
+            "library:wrong-answer",
+            "library:buzzer-fail"
+          ],
+          "align": "start",
+          "db": 7
+        }
+      }
+    },
+    "levels": {
+      "voiceLufs": -16.0,
+      "duckDb": -15.0,
+      "openDb": -10.0,
+      "fullDb": -7.0,
+      "target": -14.0,
+      "ceiling": 0.5
+    }
+  }
+}

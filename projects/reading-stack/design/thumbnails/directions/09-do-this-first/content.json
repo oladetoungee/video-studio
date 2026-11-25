@@ -1,0 +1,27 @@
+{
+  "direction": "Plain instruction for non-fiction readers + calm eye contact",
+  "title": "How to Remember What You Read (It Takes a Few Minutes)",
+  "text": {
+    "line1": "Non-fiction?",
+    "line2": "Do this",
+    "line3": "<span class=\"acc\">first.</span>"
+  },
+  "images": {
+    "person": "../../assets/cut/neutral.png"
+  },
+  "vars": {
+    "--x": "420px",
+    "--y": "20px",
+    "--w": "1100px",
+    "--ground": "#111114",
+    "--fg": "#F7F5F0",
+    "--accent": "#22E08A"
+  },
+  "nudge": {
+    "headline": {
+      "s": 0.84,
+      "dx": -70,
+      "dy": -28
+    }
+  }
+}

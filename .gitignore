@@ -1,0 +1,56 @@
+# ── Media: pictures, videos, sound (kept on this Mac only) ──
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.webp
+*.heic
+*.heif
+*.bmp
+*.tif
+*.tiff
+*.psd
+*.mp4
+*.mov
+*.m4v
+*.webm
+*.mkv
+*.avi
+*.wav
+*.m4a
+*.mp3
+*.flac
+*.aac
+*.ogg
+*.opus
+*.aiff
+*.pdf
+
+# ── Generated / heavy ──
+node_modules/
+build/
+__pycache__/
+*.pyc
+*.npy
+*.bin
+*.param
+*.log
+*.err
+*.bak
+*.before-*
+.DS_Store
+
+# Fonts: only the master set in library/fonts/ is tracked
+*.ttf
+*.otf
+*.woff
+*.woff2
+!library/fonts/**
+
+# Third-party tools (re-download, see RESOURCES.md)
+studio/vendor/enhance/
+studio/vendor/claude-motion-design/
+
+# Private / local settings
+.env*
+.claude/settings.local.json

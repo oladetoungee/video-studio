@@ -1,0 +1,79 @@
+1
+00:00:00,070 --> 00:00:02,780
+now what mechanism does a database index use
+
+2
+00:00:02,780 --> 00:00:04,080
+to find things so fast?
+
+3
+00:00:04,080 --> 00:00:06,190
+say you have an index on the email column,
+
+4
+00:00:06,190 --> 00:00:08,010
+and you're looking for bob@email.com
+
+5
+00:00:08,290 --> 00:00:10,810
+the database opens the index in the middle,
+
+6
+00:00:10,810 --> 00:00:12,160
+and maybe sees dave@email.com
+
+7
+00:00:13,100 --> 00:00:15,850
+bob comes before dave, so it moves to the
+
+8
+00:00:15,850 --> 00:00:19,130
+left now it sees alice@email.com
+
+9
+00:00:19,130 --> 00:00:21,208
+bob comes after Alice, so it moves to the
+
+10
+00:00:21,208 --> 00:00:22,850
+right, and it keeps moving
+
+11
+00:00:22,990 --> 00:00:23,540
+strategically
+
+12
+00:00:23,690 --> 00:00:25,620
+like this until it finds bob@email.com
+
+13
+00:00:25,830 --> 00:00:26,820
+in the index
+
+14
+00:00:26,830 --> 00:00:28,920
+Bob's entry in the index has a pointer
+
+15
+00:00:29,080 --> 00:00:31,490
+to where Bob's row is in the table
+
+16
+00:00:31,490 --> 00:00:32,830
+so with this strategy,
+
+17
+00:00:33,110 --> 00:00:35,600
+even with a million rows, you can get to the
+
+18
+00:00:35,600 --> 00:00:38,430
+row you're looking for in about 20 steps or
+
+19
+00:00:38,430 --> 00:00:41,203
+so without an index, you will do up to a
+
+20
+00:00:41,203 --> 00:00:43,100
+million checks in the worst case scenario

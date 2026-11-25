@@ -1,0 +1,178 @@
+{
+  "_help": "Edit text here (or in the studio), then run: node shared/build.mjs instagram (from design/carousels). Markup: *word* = accent colour, _word_ = serif italic, \\n = line break.",
+  "deck": "instagram",
+  "docTitle": "Why you can't stop scrolling: Instagram carousel",
+  "width": 1080,
+  "height": 1350,
+  "accent": "#FF4433",
+  "slides": [
+    {
+      "layout": "hook",
+      "ground": "ink",
+      "title": "Books end.\nYour feed\n*doesn't.*",
+      "size": 144,
+      "sub": "That's not an accident. 5 design choices that keep you scrolling, and what to switch off.",
+      "subSize": 42,
+      "visual": "bookfeed",
+      "end": "The End",
+      "gap": 30,
+      "swipe": "Swipe →"
+    },
+    {
+      "layout": "visual",
+      "ground": "ink",
+      "title": "You don't pay.\nYour *time* does.",
+      "size": 108,
+      "lede": "Most social apps earn from ads. The longer you stay, the more ads you see.",
+      "visual": "banners",
+      "banners": [
+        {
+          "from": "Sponsored",
+          "when": "",
+          "text": "An ad, between two posts"
+        },
+        {
+          "from": "Sponsored",
+          "when": "",
+          "text": "Another ad, two posts later"
+        }
+      ],
+      "tag": "",
+      "gap": 44,
+      "takeaway": "Your attention is,\nin a way, the product.",
+      "takeSize": 56
+    },
+    {
+      "layout": "visual",
+      "ground": "paper",
+      "corner": "01 · Pull-to-refresh",
+      "title": "Pull down.\nMaybe something.\nMaybe _nothing._",
+      "size": 104,
+      "visual": "reels",
+      "gap": 54,
+      "takeaway": "Not knowing what you'll get is what keeps you pulling. It works like a slot machine.",
+      "takeSize": 44,
+      "source": "Loren Brichter, who made it:\n“Pull-to-refresh is addictive.”\nThe Guardian, 2017",
+      "reelLabels": [
+        "a like",
+        "a message",
+        "nothing"
+      ],
+      "takeTop": 50
+    },
+    {
+      "layout": "visual",
+      "ground": "paper",
+      "corner": "02 · Infinite scroll",
+      "title": "Websites had a\n*Next page* button.",
+      "size": 100,
+      "visual": "pager",
+      "next": "Next page →",
+      "gap": 50,
+      "takeaway": "That click was a stopping point:\na moment to ask, do I want to keep going?\nYour feed never gives you one.",
+      "takeSize": 42,
+      "gone": "Gone"
+    },
+    {
+      "layout": "visual",
+      "ground": "ink",
+      "corner": "03 · Autoplay",
+      "title": "Stopping takes effort.\nGoing on takes _none._",
+      "size": 94,
+      "visual": "upnext",
+      "upLabel": "Up next in",
+      "count": "5",
+      "gap": 50,
+      "takeaway": "Autoplay is on by default, and most people never change their default settings.",
+      "takeSize": 44,
+      "source": "Default effect · Jared Spool, UIE 2011"
+    },
+    {
+      "layout": "visual",
+      "ground": "ink",
+      "corner": "04 · Red badges",
+      "title": "The badge was\nonce _blue._",
+      "size": 120,
+      "visual": "badge",
+      "blueLabel": "Barely noticed",
+      "redLabel": "Hard to ignore",
+      "gap": 70,
+      "takeaway": "Facebook's notification icon reportedly started blue. People barely noticed it, so it was changed to red.",
+      "takeSize": 42,
+      "source": "As told by Tristan Harris (The Guardian, 2017)"
+    },
+    {
+      "layout": "visual",
+      "ground": "ink",
+      "corner": "05 · Likes",
+      "title": "You post.\nThen you *keep\nchecking.*",
+      "size": 112,
+      "visual": "likes",
+      "likes": "128",
+      "likesWord": "likes",
+      "note": "how many now?",
+      "gap": 40,
+      "takeaway": "Every like is a small burst of approval from other people. So you check again, and again.",
+      "takeSize": 44
+    },
+    {
+      "layout": "visual",
+      "ground": "paper",
+      "title": "Europe says this\ndesign may break\n*the law.*",
+      "size": 96,
+      "visual": "source",
+      "from": "European Commission",
+      "date": "10 Jul 2026",
+      "img": "eu-meta-lead.png",
+      "credit": "Screenshot, ec.europa.eu",
+      "gap": 30,
+      "takeaway": "Preliminary findings against TikTok (Feb 2026) and Instagram and Facebook (Jul 2026) name infinite scroll, autoplay and push notifications. Not final yet.",
+      "takeSize": 36,
+      "takeTop": 36
+    },
+    {
+      "layout": "visual",
+      "ground": "ink",
+      "title": "Make your phone\n_boring._",
+      "size": 104,
+      "visual": "checks",
+      "rows": [
+        {
+          "head": "Grayscale on",
+          "sub": "iPhone: in Accessibility, find Color Filters.\nAndroid: search Settings for “grayscale”."
+        },
+        {
+          "head": "Autoplay off"
+        },
+        {
+          "head": "Unneeded notifications off"
+        },
+        {
+          "head": "Apps off the home screen"
+        }
+      ],
+      "gap": 30,
+      "takeaway": "Save this for tonight.",
+      "takeSize": 44,
+      "takeTop": 36,
+      "lede": "One study: students in grayscale spent about 38 minutes a day less on their phones."
+    },
+    {
+      "layout": "end",
+      "ground": "accent",
+      "title": "Your attention\nis worth\ntaking back.",
+      "size": 128,
+      "bodySize": 44,
+      "where": "Full video on YouTube",
+      "video": "Why Can't I Stop Scrolling? It Was Designed That Way",
+      "handle": "@WithGbemi",
+      "pushW": 500,
+      "polaroid": {
+        "img": "her_157.0.jpg",
+        "caption": ""
+      },
+      "cta": "Send this to someone who scrolls in bed.",
+      "ctaSize": 40
+    }
+  ]
+}

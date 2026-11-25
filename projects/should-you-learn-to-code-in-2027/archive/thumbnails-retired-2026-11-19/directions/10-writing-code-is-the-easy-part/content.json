@@ -1,0 +1,18 @@
+{
+ "board": "pick1119-04",
+ "kind": "photo: you mid-gesture on a dark stage (right), a bold serif headline (left)",
+ "direction": "Copies pick1119-04 (The Kind of Thinker Who Will Thrive in the AI Era + 'The Rise of Systems Thinkers': a dark stage, the speaker on the right mid-explanation with both hands, a heavy serif headline in three short lines on the left). Here: you explaining with both hands (Øredev), and the idea the video turns on as a headline: writing code is the easy part now (AI writes it fast; reading it, debugging it and knowing the system are what's left for you).",
+ "thumbnail_text": "Writing code / is the easy / part now.",
+ "fonts": [
+  "thumbs-05 Libre Baskerville Bold (white #FFFFFF on dark #2D2B2A, as Thumbnails 48)"
+ ],
+ "colours": "thumbs-05 (#FFFFFF on #2D2B2A); ground #0D0D0E to meet the photo's dark stage",
+ "text": {
+  "hd": "Writing code<br>is the easy<br>part now."
+ },
+ "images": {
+  "photo": "../../assets/oredev/55642239799.jpg"
+ },
+ "vars": {},
+ "class": "no-lift"
+}

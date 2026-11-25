@@ -1,0 +1,21 @@
+{
+  "direction": "Viral sample 1 (\"FINANCIAL LITERACY\"): the topic full width, huge, partly behind her head; her direct look in her room, background darkened; one elegant serif line across her chest (her collage samples). Also Aliena Cai's \"UX UI\" outlier (285K, 17x).",
+  "concept": "T01",
+  "thumbnail_text": "UX RESEARCH, explained simply",
+  "title": "What Is UX Research? Explained From Scratch",
+  "titles": [
+    "What Is UX Research? Explained From Scratch",
+    "What Is UX Research? Explained With Real App Examples"
+  ],
+  "text": {
+    "l1": "UX RESEARCH",
+    "l2": "<i>explained simply</i>"
+  },
+  "images": {
+    "scene": "../../assets/scene/g/s_628.jpg",
+    "front": "../../assets/scene/g/mask/s_628.png"
+  },
+  "vars": {},
+  "scores": "a 5/6 · 4/5 · 5/6 | b 5/4 · 6/4 · 8/5 | c 7 · 6 · 7",
+  "recommended": false
+}

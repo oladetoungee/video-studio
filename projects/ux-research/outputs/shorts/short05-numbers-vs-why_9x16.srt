@@ -1,0 +1,59 @@
+1
+00:00:00,403 --> 00:00:03,153
+quantitative UX research is about numbers
+
+2
+00:00:03,173 --> 00:00:04,883
+how many people completed the task?
+
+3
+00:00:04,883 --> 00:00:06,823
+what percentage dropped off at checkout?
+
+4
+00:00:06,823 --> 00:00:08,063
+how long did it take?
+
+5
+00:00:08,183 --> 00:00:10,403
+it tells you what is happening and how much
+
+6
+00:00:10,403 --> 00:00:13,323
+of it qualitative UX research is about
+
+7
+00:00:13,463 --> 00:00:15,723
+understanding why did the users drop off?
+
+8
+00:00:15,723 --> 00:00:16,852
+what were they thinking?
+
+9
+00:00:16,903 --> 00:00:18,213
+what confused them?
+
+10
+00:00:18,283 --> 00:00:20,223
+it's usually smaller and more in depth
+
+11
+00:00:20,223 --> 00:00:21,573
+it tells you the why
+
+12
+00:00:21,573 --> 00:00:23,083
+usually, you want both
+
+13
+00:00:23,083 --> 00:00:24,963
+you want the numbers to show where the
+
+14
+00:00:24,963 --> 00:00:27,183
+problem is, and you want the conversation to
+
+15
+00:00:27,183 --> 00:00:29,133
+show why the problem is happening

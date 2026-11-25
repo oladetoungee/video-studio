@@ -1,0 +1,34 @@
+{
+  "board": "yt-31",
+  "kind": "her full shoot photo, room dimmed, euro notes on her palms; white Clash Display words, 'cheapest' in a red highlight box (board 68 yt-15), red hand-drawn arrow to the euros. Fixed 2026-11-12 after her note on the font + arrow.",
+  "direction": "Copies board yt-31 (\"you're wasting your 20s\": the creator in a dim room holding the thing toward us, 4 short lines of soft bold lowercase white words on the left, one word in red). Her shoot photo (palms up, face untouched), room dimmed, euro notes (Pexels) resting on her palms. Words: cheapest places to study abroad (\"cheapest\" red).",
+  "thumbnail_text": "cheapest places to study abroad",
+  "titles": [
+    "Where I'd Study in Europe on a Nigerian Budget",
+    "Cheapest Countries to Study in Europe for Nigerians (2027)",
+    "Cheapest Country to Study in Europe? 9 Countries Compared"
+  ],
+  "title": "Where I'd Study in Europe on a Nigerian Budget",
+  "class": "no-lift",
+  "text": {
+    "w": "<span class=\"hl\">cheapest</span><br>places to<br>study<br>abroad"
+  },
+  "images": {
+    "bg": "../../assets/shoot/room-1589.jpg",
+    "me": "../../assets/shoot/room-1589-cut.png",
+    "cash": "../../assets/collage/euro-fan-cut.png"
+  },
+  "vars": {},
+  "recommended": false,
+  "scores": "font-board round 2 (2026-11-13, fonts with their source colours; fresh cold critic, PNG alone, 4 rounds): 6/10; earlier: round 2 (2026-11-12 night, fresh cold critics, alone / with title): R1 7 / 6.5, R2 6.5 / 5.5, R3 6.5 / 6; earlier: cold rounds 1-3: 7 / 7.5, 7 / 7, 6.5 / 7 (with \"Cheapest Countries to Study in Europe for Nigerians (2027)\")",
+  "fonts": [
+    "thumbs-09 Inter Tight Bold lowercase + red box (white + #DA443D on dark #111, Thumbnails 68)"
+  ],
+  "colours": "thumbs-09 pairing: white + red box #DA443D on a dark (#111) veil",
+  "fontboard_note": "fontboard 2026-11-12: Clash Display (not on board) -> General Sans 600 (closest board face); red box + arrow kept",
+  "titles_before_2026_11_19": [
+    "Cheapest Countries to Study in Europe for Nigerians (2027)",
+    "Cheapest Country to Study in Europe? 9 Countries Compared",
+    "Study in Europe for Free? What Nigerians Really Pay"
+  ]
+}

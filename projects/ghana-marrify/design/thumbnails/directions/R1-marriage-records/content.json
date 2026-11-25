@@ -1,0 +1,18 @@
+{
+  "direction": "REMAKE of viral sample 1 (\"FINANCIAL LITERACY\", Tina Huang): the topic in two huge white words behind her head, her hand at her head, the topic's object flying past her shoulder. Money -> flat drawn marriage certificates (Ghana stripe, red seal, two rings).",
+  "concept": "R1",
+  "sample": "1",
+  "thumbnail_text": "MARRIAGE RECORDS",
+  "title": "You Can Now Check If Someone Is Married in Ghana",
+  "titles": [
+    "You Can Now Check If Someone Is Married in Ghana",
+    "Is He Already Married? Ghana Built an App to Check",
+    "Married? In Ghana, Anyone Can Now Look You Up"
+  ],
+  "text": { "line1": "MARRIAGE", "line2": "RECORDS" },
+  "images": {
+    "scene": "../../assets/scene/warm/s_92.90.jpg",
+    "front": "../../assets/scene/warm/mask/s_92.90.png"
+  },
+  "vars": {}
+}

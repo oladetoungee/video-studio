@@ -1,0 +1,58 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../lib/rm.css"><style>
+/* sample 9 measured: left half dark navy painted canvas (#2B2D48) with a chalk-white painting, tiles along the top
+   (30,15 110x150 · 148,50 197x115 · 358,50 142x115), a sticker at 0,190 150x110; right side pale paper (#ECEBE7) from x ~880
+   with pencil sketches, a dictionary card 885,10 140x145 and a photo 1045,10 180x145; person cut-out with a white sticker
+   edge, face box 356 px centred 688,347; "Thought of these?" bold italic sans, cream fill, black outline + black offset
+   shadow, x 15-700, baseline ~550, ~85 px. */
+.t{--ground:#2B2D48;--fg:#F3E9CF;--accent:#111;--cx:-299px;--cy:-185px;--cw:1763px}
+.navy{position:absolute;left:0;top:0;width:700px;height:720px;background:var(--ground)}
+.paper{position:absolute;left:700px;top:0;right:0;height:720px;background:#ECEBE7}
+svg.tex{position:absolute;left:0;top:0}
+.tl{position:absolute;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,.35)}
+.tl img{position:absolute;display:block}
+.cut2{z-index:3}
+.cut2 img{filter:drop-shadow(3px 0 0 #fff) drop-shadow(-3px 0 0 #fff) drop-shadow(0 3px 0 #fff) drop-shadow(0 -3px 0 #fff) drop-shadow(2px 2px 0 #fff) drop-shadow(-2px -2px 0 #fff)}
+.q{position:absolute;left:10px;top:500px;font-family:'Montserrat';font-style:italic;font-weight:800;font-size:60px;color:var(--fg);letter-spacing:-.01em;
+   -webkit-text-stroke:3px #111;paint-order:stroke fill;text-shadow:4px 5px 0 #111;white-space:nowrap;z-index:4}
+.dict{position:absolute;left:885px;top:10px;width:142px;height:146px;background:#E9DCC0;padding:10px 10px;color:#2b2418;box-shadow:0 2px 5px rgba(0,0,0,.2)}
+.dict .w{font-family:'Playfair';font-weight:800;font-size:26px;line-height:1}
+.dict .p{font-family:'DM Mono';font-size:9px;color:#6d6450;margin:3px 0 6px}
+.dict .d{font-family:'Archivo';font-size:11px;line-height:1.35}
+.dict mark{background:#F6E04A;color:#111}
+.flag.stk2{position:absolute;left:14px;top:196px;width:130px;height:87px;transform:rotate(-12deg);border:4px solid #fff;box-shadow:0 4px 10px rgba(0,0,0,.4)}
+</style></head><body><div class="t">
+<div class="navy"></div><div class="paper"></div>
+<svg class="tex" width="1280" height="720" viewBox="0 0 1280 720">
+  <defs>
+    <filter id="paint"><feTurbulence type="fractalNoise" baseFrequency=".012 .03" numOctaves="4" seed="7"/><feColorMatrix values="0 0 0 0 .55  0 0 0 0 .57  0 0 0 0 .78  0 0 0 .55 -.12"/><feComposite in2="SourceGraphic" operator="in"/></filter>
+    <filter id="chalk" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="3" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="12"/><feGaussianBlur stdDeviation=".6"/></filter>
+    <filter id="pencil"><feTurbulence type="fractalNoise" baseFrequency="1.2" numOctaves="1" seed="9" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.5"/></filter>
+  </defs>
+  <rect x="0" y="0" width="700" height="720" fill="#fff" filter="url(#paint)" opacity=".5"/>
+  <!-- chalk-white painting: two big interlocked rings (like the sample's white whale) -->
+  <g filter="url(#chalk)" fill="none" stroke="#E9E9EF" stroke-linecap="round" opacity=".8" stroke-dasharray="60 6 140 4">
+    <ellipse cx="190" cy="390" rx="135" ry="120" stroke-width="30"/>
+    <ellipse cx="340" cy="400" rx="135" ry="120" stroke-width="30"/>
+    <path d="M300 300 l18 -40 l18 40" stroke-width="10"/>
+  </g>
+  <!-- pencil sketches on the paper side: a torn certificate and a broken ring -->
+  <g filter="url(#pencil)" fill="none" stroke="#555" stroke-width="2.6" transform="translate(-470 -150) scale(1.4)" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M905 230 L1010 214 L1022 268 L1004 300 L1026 336 L1012 382 L915 398 Z"/>
+    <path d="M1036 222 L1150 236 L1140 400 L1032 386 L1046 344 L1024 306 L1040 270 Z"/>
+    <path d="M928 260 H990 M928 282 H984 M930 330 H990 M934 352 H992" stroke="#9a9a9a" stroke-width="1.4"/>
+    <path d="M1056 262 H1122 M1052 330 H1120 M1054 352 H1118" stroke="#9a9a9a" stroke-width="1.4"/>
+    <circle cx="975" cy="372" r="11" stroke-width="1.6"/><circle cx="1090" cy="374" r="11" stroke-width="1.6"/>
+    <path d="M1150 470 A 46 46 0 1 1 1100 440" stroke-width="3"/><path d="M1158 478 A 34 34 0 1 1 1108 452" stroke-width="1.5"/>
+    <path d="M1180 500 A 46 46 0 0 1 1214 560 M1176 508 A 34 34 0 0 1 1202 552" stroke-width="2.4"/>
+    <path d="M1150 470 l8 -4 l4 10 M1100 440 l-4 10 l8 2" stroke-width="1.6"/>
+  </g>
+</svg>
+<div class="tl" style="left:30px;top:15px;width:110px;height:150px;background:#1a1a1f" data-move="tile-box"><img data-img="box" alt="" style="left:-6px;top:4px;width:122px"></div>
+<div class="tl" style="left:148px;top:50px;width:197px;height:115px;background:#fff" data-move="tile-news"><img data-img="news" alt="" style="left:-10px;top:-14px;width:200px"></div>
+<div class="tl" style="left:358px;top:50px;width:142px;height:115px" data-move="tile-hands"><img data-img="hands" alt="" style="left:-40px;top:-40px;width:230px"></div>
+<div class="flag stk2" data-flag="gh" data-move="sticker"></div>
+<div class="dict" data-move="dictionary"><div class="w" data-k="dw"></div><div class="p" data-k="dp"></div><div class="d" data-k="dd"></div></div>
+<div class="tl" style="left:1045px;top:10px;width:180px;height:146px" data-move="tile-rings"><img data-img="rings" alt="" style="left:-150px;top:-40px;width:420px"></div>
+<div class="cut2" data-move="her"><img data-img="front" alt=""></div>
+<div class="q" data-k="q"></div>
+</div><script src="../../lib/flags.js"></script><script src="../../lib/rm.js"></script><script src="../../lib/bind.js"></script></body></html>

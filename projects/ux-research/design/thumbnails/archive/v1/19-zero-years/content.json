@@ -1,0 +1,23 @@
+{
+  "direction": "Her favourite ghana-marrify edit (10b): a newspaper job-ad clipping (generic, no company, Illustration), UX Researcher highlighted in yellow, \"3+ years\" struck through and \"0 years?\" written under it in red marker, all on the card; her hands-at-face look stays clear.",
+  "concept": "T20",
+  "thumbnail_text": "0 YEARS?",
+  "title": "How to Become a UX Researcher With No Experience",
+  "titles": [
+    "How to Become a UX Researcher With No Experience",
+    "How to Get Into UX Research With No Experience"
+  ],
+  "text": {
+    "k": "Now hiring",
+    "role": "<mark>UX Researcher</mark>",
+    "req": "<s>3+ years</s> experience",
+    "yrs": "0 years?"
+  },
+  "images": {
+    "scene": "../../assets/scene/g/s_601.jpg",
+    "front": "../../assets/scene/g/mask/s_601.png"
+  },
+  "vars": {},
+  "scores": "a 4/7 · 3/6 · 3/6 | b 9/8 · 9/8 · 8/8 | c 5 · 7 · 6",
+  "recommended": true
+}

@@ -1,0 +1,166 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Edge cases: 8 real bugs from things users really type (Instagram)</title>
+<link rel="stylesheet" href="../shared/base.css">
+<style>:root{--W:1080px;--H:1350px;--acc:#D4F04A;--accInk:#D4F04A;}</style></head><body>
+<section class="slide g-accent l-cover" id="s1">
+  
+  
+    <div class="main">
+      <div class="disp fit" data-k="title" data-max="100" style="font-size:100px;">Her surname is Null, and websites say she <em class="acc" style="font-style:normal">left it blank</em></div>
+      <p class="body bal" data-k="sub" style="margin-top:30px;color:var(--fg);font-size:38px">This is an edge case, the kind of input we're sure no user will ever type. Here are seven more that really happened.</p>
+      <div style="margin-top:60px"><div class="form" data-move="form"><div class="fl"><div class="lab" data-k="fields.0.label" data-plain>First name</div><div class="box" data-k="fields.0.value" data-plain>Jennifer</div></div><div class="fl err"><div class="lab" data-k="fields.1.label" data-plain>Surname</div><div class="box" data-k="fields.1.value" data-plain>Null</div><div class="msg"><span class="bang">!</span><span data-k="fields.1.msg" data-plain>Surname is required.</span></div></div></div></div>
+    </div>
+  <div class="foot"><span class="num"><b>01</b> / 10</span><span class="meter"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></div>
+</section>
+<section class="slide g-red l-punch" id="s2">
+  
+  
+    <div class="main">
+      <div class="disp fit" data-k="title" data-max="112" style="font-size:112px;">Real users <span class="nw">double-click,</span> switch tabs and lose their network halfway</div>
+      <p class="body bal" data-k="body" style="margin-top:56px;color:var(--fg)">They're not doing anything strange. They are just being users.</p>
+    </div>
+  <div class="foot"><span class="num"><b>02</b> / 10</span><span class="meter"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></div>
+</section>
+<section class="slide g-accent l-visual" id="s3">
+  
+  
+    <div class="main">
+      <div><div data-move="orders"><div class="btnx" data-k="button" data-plain>Place order</div><svg class="cur" viewBox="0 0 30 40"><path d="M2,2 L2,32 L10,25 L15,37 L21,34 L16,23 L27,23 Z" fill="#fff" stroke="#0C0C0C" stroke-width="2.6" stroke-linejoin="round"/></svg>
+    <div class="ui ord"><div class="mono" style="opacity:.6" data-k="ordersLabel" data-plain>Orders</div><div class="rowx"><span data-k="orders.0.k" data-plain>#1041  Running shoes</span><span class="v" data-k="orders.0.v" data-plain>€40</span></div><div class="rowx dup"><span data-k="orders.1.k" data-plain>#1042  Running shoes</span><span class="v" data-k="orders.1.v" data-plain>€40</span></div></div></div></div>
+      
+      <div class="disp fit" data-k="title" data-max="96" style="font-size:96px;margin-top:56px">One double click, two orders</div>
+      <p class="body bal" data-k="body" style="margin-top:40px;color:var(--fg)">The fix is to give each order its own key, so the same order sent twice only counts once.</p>
+    </div>
+  <div class="foot"><span class="num"><b>03</b> / 10</span><span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></div>
+</section>
+<section class="slide g-card l-trick" id="s4">
+  
+  
+    <div class="main">
+      <div class="chip" data-move="tag"><b data-k="tag" data-plain>Starbucks, 2015</b></div>
+      <div class="disp fit" data-k="title" data-max="96" style="font-size:96px;margin-top:36px">$15 of gift cards became <em class="acc" style="font-style:normal">$20</em></div>
+      <div style="margin-top:56px"><div class="ui led" data-move="ledger"><div class="mono" style="opacity:.6" data-k="ledgerLabel" data-plain>Same transfer, sent twice at once</div><div class="rowx"><span data-k="rows.0.k" data-plain>$5 from card 1 to card 2</span><span class="v" data-k="rows.0.v" data-plain>✓</span></div><div class="rowx dup"><span data-k="rows.1.k" data-plain>$5 from card 1 to card 2</span><span class="v" data-k="rows.1.v" data-plain>✓</span></div><div class="ltot"><span class="mono" data-k="totalLabel" data-plain>All cards</span><span class="was" data-k="was" data-plain>$15</span><span class="now" data-k="now" data-plain>$20</span></div></div></div>
+      <p class="body bal" data-k="body" style="margin-top:56px;color:var(--fg)">Egor Homakov, a researcher, found this race condition in Starbucks gift cards. The code assumed the two transfers would happen one after the other.</p>
+    </div>
+  <div class="foot"><span class="num"><b>04</b> / 10</span><span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></div>
+</section>
+<section class="slide g-accent l-trick" id="s5">
+  
+  
+    <div class="main">
+      
+      <div class="disp fit" data-k="title" data-max="96" style="font-size:96px;margin-top:36px">1 left in stock, <em class="acc" style="font-style:normal">2 sold</em></div>
+      <div style="margin-top:56px"><div class="stk2" data-move="stock"><div class="ui prod"><div class="ph"></div><b data-k="item" data-plain>Running shoes</b><div class="mono left" data-k="left" data-plain>Only 1 left</div></div>
+    <div class="oks"><div class="ui ok"><div class="mono" data-k="okLabel" data-plain>Order confirmed</div><b data-k="buyers.0" data-plain>Buyer A</b></div><div class="ui ok r"><div class="mono" data-k="okLabel" data-plain>Order confirmed</div><b data-k="buyers.1" data-plain>Buyer B</b></div></div></div></div>
+      <p class="body bal" data-k="body" style="margin-top:56px;color:var(--fg)">Two people click buy in the same second. Both see one item left, and now we have sold an item that we do not have.</p>
+    </div>
+  <div class="foot"><span class="num"><b>05</b> / 10</span><span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></div>
+</section>
+<section class="slide g-ink l-trick" id="s6">
+  
+  
+    <div class="main">
+      <div class="chip" data-move="tag"><b data-k="tag" data-plain>Names</b></div>
+      <div class="disp fit" data-k="title" data-max="96" style="font-size:96px;margin-top:36px">The name O'Brien can break a query</div>
+      <div style="margin-top:56px"><div data-move="code"><div class="form"><div class="fl err"><div class="lab" data-k="fields.0.label" data-plain>Surname</div><div class="box" data-k="fields.0.value" data-plain>O'Brien</div></div></div><div class="codex" data-k="code">WHERE surname = <b>'O</b><span class="r">'</span><span class="g">Brien'</span></div></div></div>
+      <p class="body bal" data-k="body" style="margin-top:56px;color:var(--fg)">The apostrophe is the character that starts and ends text in SQL. If your code glues the name straight into the query, it breaks.</p>
+    </div>
+  <div class="foot"><span class="num"><b>06</b> / 10</span><span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></div>
+</section>
+<section class="slide g-accent l-trick" id="s7">
+  
+  
+    <div class="main">
+      
+      <div class="disp fit" data-k="title" data-max="96" style="font-size:96px;margin-top:36px">His licence plate said NULL</div>
+      <div style="margin-top:40px"><div class="pl" data-move="plate"><div class="plate"><div class="ps" data-k="plateLabel" data-plain>Licence plate</div><div class="pt" data-k="plate" data-plain>NULL</div></div>
+    <div class="tks"><div class="tk" style="left:0px;top:0px;transform:rotate(-8deg)"><div class="band" data-k="ticket" data-plain>FINE</div><div class="ln"></div><div class="ln s"></div><div class="bc"></div></div><div class="tk" style="left:60px;top:30px;transform:rotate(3deg)"><div class="band" data-k="ticket" data-plain>FINE</div><div class="ln"></div><div class="ln s"></div><div class="bc"></div></div><div class="tk" style="left:120px;top:60px;transform:rotate(12deg)"><div class="band" data-k="ticket" data-plain>FINE</div><div class="ln"></div><div class="ln s"></div><div class="bc"></div></div></div>
+    <div class="fine" data-k="fine" data-plain>$12,000 in fines</div></div></div>
+      <p class="body bal" data-k="body" style="margin-top:56px;color:var(--fg)">Security researcher Joseph Tartaro got the plate in California. Then tickets that were not his started coming to him. He told the story at DEF CON in 2019.</p>
+    </div>
+  <div class="foot"><span class="num"><b>07</b> / 10</span><span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span></div>
+</section>
+<section class="slide g-card l-trick" id="s8">
+  
+  
+    <div class="main">
+      
+      <div class="disp fit" data-k="title" data-max="84" style="font-size:84px;margin-top:36px">29 February 2012 + 1 year = a date that doesn't exist</div>
+      <div style="margin-top:56px"><div class="form" data-move="form"><div class="fl"><div class="lab" data-k="fields.0.label" data-plain>Valid from</div><div class="box m" data-k="fields.0.value" data-plain>29 FEB 2012</div></div><div class="fl err"><div class="lab" data-k="fields.1.label" data-plain>Valid to</div><div class="box m" data-k="fields.1.value" data-plain>29 FEB 2013</div><div class="msg"><span class="bang">!</span><span data-k="fields.1.msg" data-plain>Invalid date</span></div></div></div></div>
+      <p class="body bal" data-k="body" style="margin-top:56px;color:var(--fg)">That's how part of Microsoft's cloud, Azure, went down on leap day in 2012. The code added one to the year.</p>
+    </div>
+  <div class="foot"><span class="num"><b>08</b> / 10</span><span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span></div>
+</section>
+<section class="slide g-ink l-trick" id="s9">
+  
+  
+    <div class="main">
+      <div class="chip" data-move="tag"><b data-k="tag" data-plain>Unicode</b></div>
+      <div class="disp fit" data-k="title" data-max="92" style="font-size:92px;margin-top:36px">Adébáy<span class="cmb">ọ̀</span> has 7 letters. Some code counts 13 bytes</div>
+      <div style="margin-top:56px"><div data-move="bytes"><div class="form"><div class="fl"><div class="lab" data-k="fields.0.label" data-plain>First name</div><div class="box" data-k="fields.0.value" data-plain>Adébáy<span class="cmb">ọ̀</span></div></div></div><div class="cnt"><div class="ui c"><div class="mono" data-k="counts.0.k" data-plain>Letters</div><div class="n" data-k="counts.0.n" data-plain>7</div></div><div class="ui c r"><div class="mono" data-k="counts.1.k" data-plain>strlen()</div><div class="n" data-k="counts.1.n" data-plain>13</div></div></div></div></div>
+      <p class="body bal" data-k="body" style="margin-top:56px;color:var(--fg)">Letters with accents and tone marks take more than one byte each. So a 10-character limit can turn away a short Yorùbá name.</p>
+    </div>
+  <div class="foot"><span class="num"><b>09</b> / 10</span><span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span></div>
+</section>
+<section class="slide g-accent l-end" id="s10">
+  
+  
+    <div class="main">
+      <div class="disp fit" data-k="title" data-max="96" style="font-size:96px;">Which edge case have you seen in production?</div>
+      <p class="body bal" data-k="body" style="margin-top:34px">You can't predict every single one. If you wait till you can, you probably wouldn't ship anything.</p>
+      <div class="push" data-move="push" style="width:540px">
+        <div class="mono lab" data-k="where" data-plain style="color:var(--mid)">Full video on YouTube</div>
+        <div style="margin-top:22px"><span class="handle" data-k="handle" data-plain>@WithGbemi</span></div>
+      </div>
+    </div>
+    <div class="pol" data-move="polaroid" style="left:640px;top:700px;width:360px;transform:rotate(4deg)"><img data-img="polaroid.img" src="../shared/assets/headshot.png" style="height:400px;object-position:50% 30%"><div class="cap" data-k="polaroid.caption" data-plain>Edge cases</div></div>
+  <div class="foot"><span class="num"><b>10</b> / 10</span><span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></div>
+</section>
+<script>
+function fitAll(){ document.querySelectorAll('.fit').forEach(el=>{ let s=+el.dataset.max; el.style.fontSize=s+'px';
+  const box=el.parentElement.getBoundingClientRect().width; const lim=Math.min(el.clientWidth||box, box);
+  while((el.scrollWidth>lim+1) && s>24){ s-=2; el.style.fontSize=s+'px'; } }); }
+(function(){ var q=new URLSearchParams(location.search), v=q.get('view'); if(!v) return; document.documentElement.classList.add('v-'+v);
+  if(v==='slide'){ var n=+q.get('n')||1; document.querySelectorAll('.slide').forEach(function(s,i){ if(i+1!==n) s.style.display='none'; }); } })();
+window.__checks = function checks(MONO_MIN) {
+  const res = [];
+  document.querySelectorAll('.slide').forEach((sl, i) => {
+    if (getComputedStyle(sl).display === 'none') return;
+    const R = sl.getBoundingClientRect(); const foot = sl.querySelector('.foot').getBoundingClientRect();
+    const tag = el => `<${el.tagName.toLowerCase()} ${el.className}> "${(el.textContent || '').trim().slice(0, 30)}"`;
+    sl.querySelectorAll('.main *').forEach(el => {
+      if (el.closest('.pol') || el.closest('.cal') || !el.childNodes.length) return;
+      const r = el.getBoundingClientRect(); if (!r.width) return;
+      if (r.bottom > foot.top - 24) res.push(`slide ${i + 1}: ${tag(el)} runs into the footer`);
+      if (r.right > R.right - 50 || r.left < R.left + 50) res.push(`slide ${i + 1}: ${tag(el)} outside the margins`);
+    });
+    sl.querySelectorAll('.cal').forEach(el => { if (el.getBoundingClientRect().bottom > foot.top - 16) res.push(`slide ${i + 1}: calendar runs into the footer`); });
+    sl.querySelectorAll('*').forEach(el => {
+      const cs = getComputedStyle(el);
+      if (!/Mono/.test(cs.fontFamily) || el.closest('.meter')) return;
+      const own = [...el.childNodes].some(c => c.nodeType === 3 && c.textContent.trim());
+      if (own && parseFloat(cs.fontSize) < MONO_MIN - 0.5) res.push(`slide ${i + 1}: mono ${parseFloat(cs.fontSize)}px ${tag(el)}`);
+    });
+    sl.querySelectorAll('.pol, .shot').forEach(pe => {
+      const a = pe.getBoundingClientRect();
+      sl.querySelectorAll('.main .disp, .main p, .main .lab, .main .row, .main .handle').forEach(el => {
+        if (el.closest('.pol') || el.closest('.shot')) return;
+        const rg = document.createRange(); rg.selectNodeContents(el); const g = 24;
+        if ([...rg.getClientRects()].some(r => a.left < r.right + g && a.right > r.left - g && a.top < r.bottom + g && a.bottom > r.top - g))
+          res.push(`slide ${i + 1}: ${pe.className} within 24 px of ${tag(el)}`);
+      });
+    });
+    sl.querySelectorAll('p, .body, .bal, .head, .v').forEach(el => {
+      const words = []; const tw = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+      while (tw.nextNode()) { const t = tw.currentNode; const re = /\S+/g; let m;
+        while ((m = re.exec(t.textContent))) { const rg = document.createRange(); rg.setStart(t, m.index); rg.setEnd(t, m.index + m[0].length);
+          const rr = rg.getClientRects()[0]; if (rr) words.push({ w: m[0], top: Math.round(rr.top) }); } }
+      if (words.length < 3) return;
+      const lines = []; words.forEach(w => { const l = lines.find(l => Math.abs(l.top - w.top) < 8); if (l) l.n++; else lines.push({ top: w.top, n: 1 }); });
+      lines.sort((a, b) => a.top - b.top);
+      if (lines.length > 1 && lines[lines.length - 1].n === 1) res.push(`slide ${i + 1}: one-word last line "${words[words.length - 1].w}" in ${tag(el)}`);
+    });
+  });
+  return res.slice(0, 60);
+};
+document.fonts.ready.then(()=>{ fitAll(); document.body.dataset.ready=1; });
+</script></body></html>

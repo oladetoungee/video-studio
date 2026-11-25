@@ -1,0 +1,1016 @@
+1
+00:00:00,750 --> 00:00:05,100
+As you get more users, your database
+grows and your tables get bigger.
+
+2
+00:00:05,470 --> 00:00:08,280
+Now it might take a little bit longer
+for your app to load and you're
+
+3
+00:00:08,300 --> 00:00:09,790
+now having performance issues.
+
+4
+00:00:09,810 --> 00:00:13,090
+One thing that you can always use
+to fix this is a database index.
+
+5
+00:00:13,170 --> 00:00:15,240
+In this video, we'll go over what your
+
+6
+00:00:15,710 --> 00:00:18,860
+database does when there is no
+index, what an index actually is,
+
+7
+00:00:18,880 --> 00:00:21,790
+how it helps find things so
+fast and helps performance,
+
+8
+00:00:22,090 --> 00:00:25,830
+and the different types of indexes,
+the mistakes that people make when
+
+9
+00:00:25,850 --> 00:00:27,340
+they use database indexes.
+
+10
+00:00:27,360 --> 00:00:29,430
+To understand why a
+database index matters,
+
+11
+00:00:29,640 --> 00:00:32,480
+especially for performance,
+you first have to understand
+
+12
+00:00:32,870 --> 00:00:34,870
+what your database does without an index.
+
+13
+00:00:35,060 --> 00:00:38,850
+Say we have a bookstore, and the
+books table in our database has a
+
+14
+00:00:38,870 --> 00:00:41,980
+million rows, we have a
+million books in there,
+
+15
+00:00:42,280 --> 00:00:43,280
+and we run this query.
+
+16
+00:00:43,300 --> 00:00:47,540
+Without an index, the database has
+no idea where author 42's books
+
+17
+00:00:47,560 --> 00:00:49,630
+are, so it does the only thing it can do.
+
+18
+00:00:49,650 --> 00:00:52,740
+It starts at the first row and
+it checks every single row,
+
+19
+00:00:52,760 --> 00:00:57,020
+all one million of them, and that
+is called a full table scan.
+
+20
+00:00:57,230 --> 00:01:00,040
+And in many cases, it
+can be very problematic.
+
+21
+00:01:00,180 --> 00:01:03,570
+When your table has maybe 10,
+100 rows, maybe it wouldn't be a
+
+22
+00:01:03,590 --> 00:01:05,400
+problem, maybe you wouldn't notice,
+
+23
+00:01:05,780 --> 00:01:08,280
+but at a million rows,
+then it's a problem.
+
+24
+00:01:08,300 --> 00:01:11,980
+What is a database index and how
+does it solve this problem of speed
+
+25
+00:01:12,000 --> 00:01:13,000
+and performance?
+
+26
+00:01:13,040 --> 00:01:16,690
+The easiest way to think about it
+is the index at the back of a book.
+
+27
+00:01:16,740 --> 00:01:19,150
+If you want to find every page
+that mentions a particular word,
+
+28
+00:01:19,170 --> 00:01:20,960
+you don't read the whole
+book from the beginning.
+
+29
+00:01:20,980 --> 00:01:23,690
+You go to the index at the back,
+it's sorted alphabetically,
+
+30
+00:01:23,710 --> 00:01:26,420
+you find the word, and it
+tells you the page number.
+
+31
+00:01:26,470 --> 00:01:28,720
+A database index works the same way.
+
+32
+00:01:28,740 --> 00:01:32,340
+It's a separate structure that
+stores the values from a column in
+
+33
+00:01:32,360 --> 00:01:36,670
+sorted order, and for each value, it
+keeps a pointer to where that row
+
+34
+00:01:36,690 --> 00:01:37,500
+actually lives.
+
+35
+00:01:37,520 --> 00:01:39,550
+And it only stores the
+column and the pointer,
+
+36
+00:01:39,640 --> 00:01:42,910
+so it's way much more smaller
+than the table itself.
+
+37
+00:01:42,930 --> 00:01:46,770
+Now what mechanism does a database
+index use to find things so fast?
+
+38
+00:01:46,790 --> 00:01:50,180
+I read an article on this, and I love
+the way the writer explained it,
+
+39
+00:01:50,200 --> 00:01:51,260
+and I'm going to use the example.
+
+40
+00:01:51,280 --> 00:01:53,420
+I will link the article in
+the description box as well.
+
+41
+00:01:53,440 --> 00:01:55,530
+Say you have an index on the email column,
+
+42
+00:01:55,550 --> 00:01:57,220
+and you're looking for bob@email.com.
+
+43
+00:01:57,650 --> 00:02:00,150
+The database opens the
+index in the middle,
+
+44
+00:02:00,170 --> 00:02:01,370
+and maybe sees dave@email.com.
+
+45
+00:02:02,460 --> 00:02:05,740
+Bob comes before dave,
+so it moves to the left.
+
+46
+00:02:05,970 --> 00:02:08,470
+Now it sees alice@email.com.
+
+47
+00:02:08,490 --> 00:02:10,980
+Bob comes after Alice, so
+it moves to the right,
+
+48
+00:02:11,070 --> 00:02:14,830
+and it keeps moving strategically like
+this until it finds bob@email.com
+
+49
+00:02:15,190 --> 00:02:19,390
+in the index. Bob's entry in the
+index has a pointer to where Bob's
+
+50
+00:02:19,410 --> 00:02:20,830
+row is in the table.
+
+51
+00:02:20,850 --> 00:02:22,040
+So with this strategy,
+
+52
+00:02:22,470 --> 00:02:26,470
+even with a million rows, you can
+get to the row you're looking for in
+
+53
+00:02:26,490 --> 00:02:28,130
+about 20 steps or so.
+
+54
+00:02:28,150 --> 00:02:32,040
+Without an index, you will do up to
+a million checks in the worst case
+
+55
+00:02:32,060 --> 00:02:36,313
+scenario. Most databases store their
+indexes in a structure called a
+
+56
+00:02:36,333 --> 00:02:40,520
+B-tree, and a B-tree works the way
+that the example from the article
+
+57
+00:02:40,660 --> 00:02:44,340
+showed. So even with a
+table with millions of rows,
+
+58
+00:02:44,470 --> 00:02:48,550
+you usually only need a few
+levels to get to the right place.
+
+59
+00:02:48,840 --> 00:02:52,156
+Adding a database index will
+literally up your query optimisation
+
+60
+00:02:52,176 --> 00:02:54,200
+game, and it's kind of a one-liner.
+
+61
+00:02:54,220 --> 00:02:56,040
+In SQL, it looks something like this.
+
+62
+00:02:56,060 --> 00:02:58,890
+If you are using Laravel, for
+example, you simply add it in your
+
+63
+00:02:58,910 --> 00:03:00,160
+migration like this.
+
+64
+00:03:00,280 --> 00:03:03,480
+Now when you search books by author,
+the database goes to the index
+
+65
+00:03:03,500 --> 00:03:06,770
+first, finds author 42, and
+goes straight to those rows.
+
+66
+00:03:06,790 --> 00:03:10,170
+Once you've added your database
+index, you can confirm whether your
+
+67
+00:03:10,190 --> 00:03:11,670
+query is actually using it or not.
+
+68
+00:03:11,690 --> 00:03:12,820
+You can ask the database.
+
+69
+00:03:12,920 --> 00:03:15,290
+Just put the word EXPLAIN
+in front of your query.
+
+70
+00:03:15,540 --> 00:03:18,240
+In PostgreSQL, you will see "Seq Scan".
+
+71
+00:03:18,260 --> 00:03:21,740
+It means that the database
+is reading every single row,
+
+72
+00:03:21,760 --> 00:03:25,300
+and if you see "Index Scan", it
+means that the database is using your
+
+73
+00:03:25,320 --> 00:03:28,200
+index. "Seq Scan", "sequential scan".
+
+74
+00:03:28,430 --> 00:03:31,550
+In MySQL, the results
+will come back in a small
+
+75
+00:03:31,990 --> 00:03:34,110
+table, so there are
+two columns to look at.
+
+76
+00:03:34,130 --> 00:03:37,180
+If it says "ALL", that means
+it's doing a full table scan.
+
+77
+00:03:37,240 --> 00:03:38,820
+If it says something
+like "ref" or "range",
+
+78
+00:03:38,840 --> 00:03:39,940
+then it's using an index.
+
+79
+00:03:39,990 --> 00:03:42,910
+So if your query is slow, and you
+first want to confirm what is going
+
+80
+00:03:42,930 --> 00:03:45,020
+on, you can use, and that confirms to you,
+
+81
+00:03:45,040 --> 00:03:47,950
+is this query doing a full
+scan, or is it using an index?
+
+82
+00:03:48,030 --> 00:03:49,930
+There are a few types of database index.
+
+83
+00:03:49,950 --> 00:03:52,690
+You hear people talk about
+B-tree, hash, bitmap,
+
+84
+00:03:52,710 --> 00:03:54,400
+and many, many like that.
+
+85
+00:03:54,620 --> 00:03:57,710
+I'm just only going to focus
+on three in this video.
+
+86
+00:03:57,800 --> 00:03:59,580
+The first one is B-tree.
+
+87
+00:03:59,600 --> 00:04:03,820
+B-tree. The B-tree is the default
+one, so when you create an index
+
+88
+00:04:03,840 --> 00:04:06,730
+without saying what type it is,
+this is the one that you get.
+
+89
+00:04:06,900 --> 00:04:07,900
+So it's very common.
+
+90
+00:04:07,920 --> 00:04:11,420
+It can find exact matches,
+like the user with this email.
+
+91
+00:04:11,440 --> 00:04:15,200
+It can find ranges, like books
+priced between 10 and 15.
+
+92
+00:04:15,220 --> 00:04:17,780
+It can sort, like showing
+the newest order first,
+
+93
+00:04:17,800 --> 00:04:19,920
+and it can find values by how they start,
+
+94
+00:04:20,010 --> 00:04:21,960
+like every book title
+that starts with "Harry".
+
+95
+00:04:21,980 --> 00:04:24,000
+And that works because
+the index is sorted,
+
+96
+00:04:24,020 --> 00:04:27,160
+so all the titles that start with
+"Harry" sit next to each other.
+
+97
+00:04:27,210 --> 00:04:29,890
+The second commonly used type of database
+
+98
+00:04:30,250 --> 00:04:31,390
+index is the unique index.
+
+99
+00:04:31,410 --> 00:04:33,660
+It makes sure that no two
+rows have the same value.
+
+100
+00:04:33,860 --> 00:04:36,750
+For example, no two user can
+sign up with the same email.
+
+101
+00:04:36,770 --> 00:04:39,280
+Your primary key already has one.
+
+102
+00:04:39,420 --> 00:04:41,700
+And the third one, this one
+kind of always confuses me.
+
+103
+00:04:41,720 --> 00:04:45,440
+The third one is the composite index,
+which is an index on more than
+
+104
+00:04:45,460 --> 00:04:49,690
+one column. So say you index last
+name and first name together in that
+
+105
+00:04:49,710 --> 00:04:51,960
+order. It helps you when
+you search by last name,
+
+106
+00:04:51,980 --> 00:04:54,590
+and it helps you when you search
+by last name and first name.
+
+107
+00:04:54,610 --> 00:04:57,230
+But when you search by only first
+name, it usually doesn't help.
+
+108
+00:04:57,250 --> 00:04:59,870
+A little bit of a reason, let's
+use the example with phone books to
+
+109
+00:04:59,890 --> 00:05:02,550
+understand it. Think of a
+phone book sorted by surname.
+
+110
+00:05:02,570 --> 00:05:07,330
+All the Adeyemis are together,
+and all the Okafors are together.
+
+111
+00:05:07,420 --> 00:05:11,130
+And inside each surname, it
+is sorted by first name.
+
+112
+00:05:11,380 --> 00:05:15,160
+So in the Okafors, Ada Okafor
+will come before Chidi Okafor.
+
+113
+00:05:15,180 --> 00:05:17,570
+So if I'm looking for
+Ada Okafor, it's easy.
+
+114
+00:05:17,590 --> 00:05:20,710
+I go to the O's, I find
+Okafor, and then I find Ada.
+
+115
+00:05:20,740 --> 00:05:23,380
+But what if I want everyone
+whose first name is Ada?
+
+116
+00:05:23,470 --> 00:05:25,756
+There's probably Ada Adeyemi in the front,
+
+117
+00:05:25,776 --> 00:05:29,720
+and Ada Okafor in the middle,
+and Ada Williams near the end.
+
+118
+00:05:29,770 --> 00:05:33,120
+They are spread across the whole
+phone book because the book is sorted
+
+119
+00:05:33,140 --> 00:05:34,310
+by surname first.
+
+120
+00:05:34,330 --> 00:05:37,570
+So nothing groups the Adas together,
+and I would have to read every
+
+121
+00:05:37,590 --> 00:05:38,420
+page to find them.
+
+122
+00:05:38,440 --> 00:05:43,870
+So that's exactly what happens with
+the composite index on last name, first
+
+123
+00:05:44,530 --> 00:05:49,940
+name. So the tip is to put the column
+you search by most often first.
+
+124
+00:05:50,070 --> 00:05:52,930
+And for the rest, there are
+different kinds of searches.
+
+125
+00:05:52,950 --> 00:05:55,820
+For the rest of the database index types,
+
+126
+00:05:55,840 --> 00:05:59,638
+we have the hash index, which
+is for exact matches only,
+
+127
+00:05:59,658 --> 00:06:04,480
+you know, like looking up someone's
+login session by its exact token,
+
+128
+00:06:04,500 --> 00:06:06,420
+it cannot do range or sorting.
+
+129
+00:06:06,440 --> 00:06:08,210
+So most people just use B-tree.
+
+130
+00:06:08,370 --> 00:06:10,960
+A bitmap is for columns
+with only a few values,
+
+131
+00:06:10,980 --> 00:06:14,220
+like a status column, that's only
+active or inactive or banned.
+
+132
+00:06:14,290 --> 00:06:16,930
+You mostly see it in databases
+that are built for reports,
+
+133
+00:06:17,310 --> 00:06:20,241
+yeah. And then we have spatial index,
+that one is mostly for location
+
+134
+00:06:20,261 --> 00:06:22,231
+data, like when you
+search a restaurant name,
+
+135
+00:06:22,251 --> 00:06:26,330
+a coffee shop near me, or when a
+ride app looks for drivers close to
+
+136
+00:06:26,350 --> 00:06:31,040
+you. So it's groups, places that
+are near each other on the map,
+
+137
+00:06:31,060 --> 00:06:33,480
+so the app only checks places around you,
+
+138
+00:06:33,500 --> 00:06:36,740
+instead of every coffee shop or
+every restaurant in the world.
+
+139
+00:06:36,760 --> 00:06:38,650
+And then we have the
+full-text index as well.
+
+140
+00:06:38,670 --> 00:06:40,380
+It is for searching inside text.
+
+141
+00:06:40,450 --> 00:06:44,000
+For example, when you search an
+online store for wireless headphones,
+
+142
+00:06:44,150 --> 00:06:47,000
+it finds every product description
+with those words in it,
+
+143
+00:06:47,020 --> 00:06:50,502
+right? So it works by indexing each
+word in the text instead of the
+
+144
+00:06:50,522 --> 00:06:54,043
+whole value. And there's also
+covering index and partial index.
+
+145
+00:06:54,063 --> 00:06:58,160
+You also hear about clustered
+and non-clustered indexes.
+
+146
+00:06:58,180 --> 00:07:00,840
+And the difference between
+those is very simple.
+
+147
+00:07:00,860 --> 00:07:04,708
+The clustered index decides the
+order the table's rows are actually
+
+148
+00:07:04,728 --> 00:07:06,690
+stored. Think of this
+as a phone book again,
+
+149
+00:07:06,780 --> 00:07:08,216
+the data itself is sorted by surname.
+
+150
+00:07:08,236 --> 00:07:10,306
+So once you find the
+name, you find everything.
+
+151
+00:07:10,326 --> 00:07:13,638
+A table can only have one clustered
+index because the rows can only be
+
+152
+00:07:13,658 --> 00:07:14,840
+stored in one order.
+
+153
+00:07:14,870 --> 00:07:17,300
+A non-clustered index
+is a separate structure
+
+154
+00:07:17,700 --> 00:07:18,990
+that points back to the row.
+
+155
+00:07:19,010 --> 00:07:21,220
+Think of that as the index
+at the back of the book,
+
+156
+00:07:21,240 --> 00:07:23,280
+it tells you where to go and go there.
+
+157
+00:07:23,340 --> 00:07:26,130
+So a table can have lots
+of non-clustered indexes.
+
+158
+00:07:26,540 --> 00:07:30,330
+So this is the difference between
+clustered and non-clustered indexes.
+
+159
+00:07:30,550 --> 00:07:34,580
+So now that begs the question, if
+database indexes makes queries so
+
+160
+00:07:34,600 --> 00:07:38,830
+fast, why don't we just index
+every column and be done with it?
+
+161
+00:07:38,850 --> 00:07:41,371
+We cannot, because every index has a cost.
+
+162
+00:07:41,391 --> 00:07:43,840
+Every time you insert,
+update and delete a row,
+
+163
+00:07:43,860 --> 00:07:47,320
+the database also has to update
+every index on that table.
+
+164
+00:07:47,370 --> 00:07:50,720
+So if your orders table has six
+indexes, every new order means
+
+165
+00:07:50,740 --> 00:07:52,860
+updating the whole table
+and all six indexes.
+
+166
+00:07:53,200 --> 00:07:56,950
+So the more database indexes you
+have, the slower your writes get.
+
+167
+00:07:56,970 --> 00:07:59,680
+And also indexes also
+take up storage space.
+
+168
+00:07:59,700 --> 00:08:03,850
+And for a small table, the database
+will often skip your index and
+
+169
+00:08:03,870 --> 00:08:07,090
+just scan the table anyway, because
+that's faster for a small table,
+
+170
+00:08:07,110 --> 00:08:09,860
+you have just like 10 rows, it's
+faster to read them than to go
+
+171
+00:08:09,880 --> 00:08:11,430
+through an index first.
+
+172
+00:08:11,450 --> 00:08:15,660
+So what you do is that you only
+index the columns that you actually
+
+173
+00:08:15,710 --> 00:08:17,960
+search on or filter on or join or sort by,
+
+174
+00:08:17,980 --> 00:08:19,380
+you don't index everything.
+
+175
+00:08:19,480 --> 00:08:22,340
+But because as good as it is,
+it can also get costly too.
+
+176
+00:08:22,360 --> 00:08:25,050
+And there are several mistakes
+you can make that can stop your
+
+177
+00:08:25,070 --> 00:08:26,190
+database index from
+
+178
+00:08:26,590 --> 00:08:27,230
+working as well.
+
+179
+00:08:27,250 --> 00:08:31,350
+You can have a database index and
+the database still won't use it.
+
+180
+00:08:31,560 --> 00:08:33,910
+And these are the common
+mistakes that cause it.
+
+181
+00:08:33,970 --> 00:08:36,180
+The first one is wrapping
+your column in a function.
+
+182
+00:08:36,200 --> 00:08:40,550
+For example, in this case, a normal
+index on email is sorted by the
+
+183
+00:08:40,570 --> 00:08:42,860
+emails exactly as they were stored.
+
+184
+00:08:43,320 --> 00:08:45,880
+The lowercase versions
+are not in that index.
+
+185
+00:08:46,210 --> 00:08:50,220
+So the database can't use it here,
+unless you create an index on the
+
+186
+00:08:50,240 --> 00:08:51,240
+same expression.
+
+187
+00:08:51,520 --> 00:08:56,224
+The second is you can also be
+adding a wildcard at the start of a
+
+188
+00:08:56,244 --> 00:08:59,350
+LIKE. The index is sorted
+by how each value starts.
+
+189
+00:08:59,370 --> 00:09:03,010
+And if you don't know how it starts,
+the index cannot help you find
+
+190
+00:09:03,030 --> 00:09:07,010
+it. Another database index
+gotcha is that in MySQL,
+
+191
+00:09:07,460 --> 00:09:10,940
+when you add a foreign key, the
+database creates an index on that
+
+192
+00:09:10,980 --> 00:09:14,150
+column for you automatically,
+if there isn't one already.
+
+193
+00:09:14,210 --> 00:09:16,180
+But in PostgreSQL, it doesn't.
+
+194
+00:09:16,200 --> 00:09:19,480
+So if you're on Postgres, or you've
+moved from MySQL to Postgres,
+
+195
+00:09:19,580 --> 00:09:23,160
+you have to check and confirm that
+your foreign key columns actually
+
+196
+00:09:23,180 --> 00:09:27,038
+have indexes. And it's one of the
+common reasons why joins suddenly
+
+197
+00:09:27,058 --> 00:09:30,810
+get slow. So again, to reiterate
+when to actually use a database
+
+198
+00:09:30,830 --> 00:09:32,220
+index, use it when
+
+199
+00:09:32,910 --> 00:09:35,898
+a column keeps showing up
+in your WHERE clauses,
+
+200
+00:09:35,918 --> 00:09:37,700
+your joins or your ORDER BY.
+
+201
+00:09:37,720 --> 00:09:40,500
+So say you are sorting a
+million orders by date,
+
+202
+00:09:40,520 --> 00:09:42,300
+and you only show the first 10.
+
+203
+00:09:42,320 --> 00:09:46,550
+If there's no index, the database
+has to look at a million rows and
+
+204
+00:09:46,570 --> 00:09:49,880
+sort them before it can give you those 10.
+
+205
+00:09:50,390 --> 00:09:53,382
+But with an index, it reads them
+in order and stops after the first
+
+206
+00:09:53,402 --> 00:09:57,570
+10. Also, when you use EXPLAIN, and
+you realize that a query is doing
+
+207
+00:09:57,590 --> 00:10:02,740
+a full table scan, and it is slow,
+then maybe you need an index there.
+
+208
+00:10:02,910 --> 00:10:05,770
+So if your query is slow,
+you probably should consider
+
+209
+00:10:06,210 --> 00:10:07,820
+adding an index there.
+
+210
+00:10:07,840 --> 00:10:09,470
+And if it's doing a full scan.
+
+211
+00:10:09,490 --> 00:10:14,500
+Also, when a table gets more read,
+like you read it a lot more than
+
+212
+00:10:14,520 --> 00:10:17,160
+you write it, that's also a good
+situation for a database index.
+
+213
+00:10:17,180 --> 00:10:19,310
+But you shouldn't do that
+when the table is small.
+
+214
+00:10:19,330 --> 00:10:22,270
+Or when the table is constantly
+written to and rarely searched,
+
+215
+00:10:22,290 --> 00:10:25,110
+then you probably don't need a
+database index in that situation.
+
+216
+00:10:25,500 --> 00:10:27,810
+So that's it with database indexes. Bye.

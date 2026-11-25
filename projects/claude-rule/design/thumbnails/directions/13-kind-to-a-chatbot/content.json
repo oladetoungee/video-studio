@@ -1,0 +1,29 @@
+{
+  "direction": "TH06, white-and-red editorial (Pinterest \"how to be consistent\"): \"be kind to\" in white and \"a chatbot?\" huge in red, behind her head; her hand on her heart, warm half-smile; a drawn \"Claude\" chat with her message \"thank you so much!\" bottom left. Refs: Pinterest \"how to be consistent\", sample 5. Scores: Round 3: cold 6 · best pair (title 1) 8/8 · taste 5.",
+  "concept": "TH06",
+  "thumbnail_text": "BE KIND TO A CHATBOT?",
+  "title": "Why I'm Kind to AI, Even Though It Can't Feel",
+  "titles": [
+    "Why I'm Kind to AI, Even Though It Can't Feel",
+    "Should You Be Nice to AI? Yes, But Not for Its Sake"
+  ],
+  "scores": "Round 3: cold 6 · best pair (title 1) 8/8 · taste 5.",
+  "text": {
+    "l1": "be kind to",
+    "l2": "a chatbot?",
+    "msg": "thank you so much!",
+    "chat_name": "Claude",
+    "chat_in": "Message…",
+    "rude": "YOU ARE USELESS, ANSWER ME NOW",
+    "ended": "This chat has ended"
+  },
+  "images": {
+    "scene": "../../assets/scene/s_247.8.jpg",
+    "cut": "../../assets/cut/c_247.8.png"
+  },
+  "vars": {
+    "--px": "0px",
+    "--py": "-189px",
+    "--pw": "1795px"
+  }
+}

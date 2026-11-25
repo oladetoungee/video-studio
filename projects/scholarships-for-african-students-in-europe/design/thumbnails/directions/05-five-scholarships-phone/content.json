@@ -1,0 +1,30 @@
+{
+ "direction": "Her shoot photo on the left (head tilted, arms crossed), room calmed. A realistic phone (lib/phone.js) on the right: the five scholarships the video covers, ticked, big enough for a phone screen. Headline: the plain count. Follows: board c-kind (creator + the objects of the topic), \"UI UX Complete Roadmap\" (the list is the picture).",
+ "thumbnail_text": "5 SCHOLARSHIPS IN EUROPE + the names on a phone",
+ "titles": [
+  "Fully Funded Scholarships in Europe for Africans (2027)",
+  "Scholarships for Nigerian Students in Europe 2027",
+  "Scholarships Nigerians Can Still Apply For in 2027"
+ ],
+ "kind": "photo",
+ "class": "no-lift",
+ "text": {
+  "head": "5 scholarships<br>in Europe",
+  "l1": "Erasmus Mundus",
+  "l2": "DAAD EPOS",
+  "l3": "Swedish Institute",
+  "l4": "NL Scholarship",
+  "l5": "Stipendium Hungaricum"
+ },
+ "images": {
+  "room": "../../assets/shoot/room-1610.jpg",
+  "me": "../../assets/shoot/room-1610-cut.png"
+ },
+ "vars": {
+  "--rw": "1915px",
+  "--rx": "-458px",
+  "--ry": "-203px",
+  "--dim": "rgba(8,8,10,.58)"
+ },
+ "title": "Fully Funded Scholarships in Europe for Africans (2027)"
+}

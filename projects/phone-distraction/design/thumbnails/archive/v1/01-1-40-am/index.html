@@ -1,0 +1,16 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../../../lib/pd.css"><style>
+.t{--ground:#0C0D10;--fg:#F4F1EA;--accent:#FF4433;--px:0px;--py:-196px;--pw:1760px}
+.photo{left:620px;overflow:hidden} .photo img{left:calc(var(--px) - 620px)}
+.photo::after{content:'';position:absolute;inset:0;background:rgba(10,12,20,.16)}
+.clk{left:50px;top:40px;font-size:300px;font-weight:300}
+.am{left:62px;top:316px;font-size:52px;font-weight:700;letter-spacing:.02em;color:var(--mut)}
+.ag{left:50px;top:440px;font-size:172px;color:var(--accent);text-transform:uppercase}
+.b1{left:870px;top:34px;width:380px;z-index:4} .b1 .bd{font-size:32px}
+</style></head><body><div class="t">
+<div class="photo" data-move="photo"><img data-img="scene" alt=""><div class="dim"></div></div>
+<div class="abs clock clk z4" data-k="clock"></div>
+<div class="abs am z4" data-k="ampm"></div>
+<div class="abs it ag" data-k="again"></div>
+<div class="abs ban big b1" data-move="banner1"><div class="hd"><span data-k="b1h"></span><span>now</span></div><div class="bd" data-k="b1"></div></div>
+
+</div><script src="../../../../lib/bind.js"></script></body></html>

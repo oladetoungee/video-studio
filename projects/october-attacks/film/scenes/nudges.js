@@ -1,0 +1,27 @@
+/* cue sync nudges (seconds), written by tools/nudges.py from build/qa/audit_16x9.json: the sound lands where the picture changes */
+Object.assign(NUDGE, {
+"tap@8.12": -0.133,
+"door@26.52": 0.1,
+"tick@36.14": -0.133,
+"tick@43.54": 0.067,
+"pop@54.92": -0.233,
+"type@147.78": -0.133,
+"marker@187.20": -0.266,
+"type@187.30": -0.366,
+"tick@194.48": 0.067,
+"marker@194.70": -0.133,
+"marker@211.94": -0.067,
+"tick@233.63": -0.2,
+"tick@236.86": -0.1,
+"pop@253.78": -0.133,
+"marker@257.32": -0.2,
+"door@285.66": -0.1,
+"notify@290.11": 0.067,
+"shutter@293.68": 0.067,
+"check@347.40": 0.067,
+"swipe@462.14": 0.067,
+"tape@224.48": -0.133,
+"shutter@447.10": -0.2,
+"stamp@104.95": -0.399,
+"shutter@447.28": -0.133
+});

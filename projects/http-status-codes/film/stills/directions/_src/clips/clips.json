@@ -1,0 +1,84 @@
+{
+ "rfc-first": {
+  "w": 1120,
+  "h": 470,
+  "hl": [
+   [
+    14,
+    188,
+    610,
+    34
+   ]
+  ],
+  "source": "RFC 9110 \u00b7 HTTP Semantics \u00b7 \u00a715",
+  "url": "https://www.rfc-editor.org/rfc/rfc9110.html#name-status-codes"
+ },
+ "gh-404": {
+  "w": 1110,
+  "h": 215,
+  "hl": [
+   [
+    195,
+    175,
+    735,
+    34
+   ]
+  ],
+  "source": "GitHub Docs \u00b7 Troubleshooting the REST API",
+  "url": "https://docs.github.com/en/rest/using-the-rest-api/troubleshooting-the-rest-api"
+ },
+ "google-4xx": {
+  "w": 760,
+  "h": 382,
+  "hl": [
+   [
+    240,
+    8,
+    460,
+    34
+   ],
+   [
+    8,
+    278,
+    196,
+    34
+   ],
+   [
+    8,
+    345,
+    134,
+    34
+   ]
+  ],
+  "source": "Google Search Central \u00b7 HTTP status codes",
+  "url": "https://developers.google.com/search/docs/crawling-indexing/http-network-errors"
+ },
+ "google-line": {
+  "w": 476,
+  "h": 42,
+  "hl": [
+   [
+    8,
+    6,
+    460,
+    34
+   ]
+  ],
+  "source": "Google Search Central \u00b7 HTTP status codes",
+  "url": "https://developers.google.com/search/docs/crawling-indexing/http-network-errors"
+ },
+ "gh-line": {
+  "w": 1110,
+  "h": 80,
+  "hl": [
+   [
+    195,
+    42,
+    735,
+    34
+   ]
+  ],
+  "source": "GitHub Docs \u00b7 Troubleshooting the REST API",
+  "url": "https://docs.github.com/en/rest/using-the-rest-api/troubleshooting-the-rest-api"
+ }
+}

@@ -1,0 +1,28 @@
+{
+  "direction": "Other, no face (kit T15): warm paper ground, a pile of three REAL headlines (BleepingComputer, TechCrunch; untouched crops, credited) and the plain topic on the left. Reads as a briefing for developers. References: ghana-marrify 10b (real clipping on plain paper).",
+  "thumbnail_text": "OCTOBER 2026 SECURITY NEWS",
+  "titles": [
+    "The October 2026 Hacks Every Developer Should Know",
+    "Is PHP Patched? PHP2Shell and the October 2026 Hacks"
+  ],
+  "title": "The October 2026 Hacks Every Developer Should Know",
+  "kind": "other",
+  "text": {
+    "hd": "October<br>2026<br><span class=\"acc\">security</span><br>news",
+    "cr1": "BleepingComputer · Oct 21",
+    "cr2": "TechCrunch · Oct 22",
+    "cr3": "BleepingComputer · Oct 20"
+  },
+  "images": {
+    "c1": "../../assets/src/bc-php.png",
+    "c2": "../../assets/src/tc-railway.png",
+    "c3": "../../assets/src/bc-zeabur.png"
+  },
+  "vars": {
+    "--ground": "#EFE7D8",
+    "--fg": "#16110D",
+    "--accent": "#F2541B"
+  },
+  "scores": "cold critic R1 6.5 · R2 7",
+  "recommended": false
+}

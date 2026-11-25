@@ -1,0 +1,319 @@
+{
+ "story": "railway",
+ "outlet": "TechCrunch",
+ "slug": "techcrunch",
+ "url": "https://techcrunch.com/2026/10/22/developer-platform-railway-urges-all-users-to-revoke-secret-keys-after-cyberattack/",
+ "finalUrl": "https://techcrunch.com/2026/10/22/developer-platform-railway-urges-all-users-to-revoke-secret-keys-after-cyberattack/",
+ "status": "loaded",
+ "http": 200,
+ "title": "Developer platform Railway urges 'all users' to revoke secret keys after cyberattack | TechCrunch",
+ "h1": "Developer platform Railway urges ‘all users’ to revoke secret keys after cyberattack",
+ "published": "2026-10-22T14:03:00+00:00",
+ "files": {
+  "fold": "railway/techcrunch_fold.png",
+  "full": "railway/techcrunch_full.jpg",
+  "scroll": "railway/techcrunch_scroll.mp4"
+ },
+ "full": {
+  "width": 1440,
+  "height": 6000,
+  "pageHeight": 10975,
+  "zoom": 1,
+  "quotes": [
+   {
+    "quote": "Developer platform Railway urges 'all users' to revoke secret keys after cyberattack",
+    "box": {
+     "x": 729,
+     "y": 362,
+     "w": 539,
+     "h": 128
+    },
+    "lines": [
+     {
+      "x": 729,
+      "y": 362,
+      "w": 503,
+      "h": 40
+     },
+     {
+      "x": 729,
+      "y": 406,
+      "w": 471,
+      "h": 40
+     },
+     {
+      "x": 729,
+      "y": 450,
+      "w": 539,
+      "h": 40
+     }
+    ]
+   },
+   {
+    "quote": "may have accessed encrypted environment variables and, for some of them, obtained the decrypted contents",
+    "box": {
+     "x": 226,
+     "y": 995,
+     "w": 658,
+     "h": 45
+    },
+    "lines": [
+     {
+      "x": 307,
+      "y": 995,
+      "w": 577,
+      "h": 19
+     },
+     {
+      "x": 226,
+      "y": 1021,
+      "w": 356,
+      "h": 19
+     }
+    ]
+   },
+   {
+    "quote": "Railway did not say how many specific users were affected, or what was identified as the root cause",
+    "box": {
+     "x": 226,
+     "y": 1383,
+     "w": 609,
+     "h": 46
+    },
+    "lines": [
+     {
+      "x": 226,
+      "y": 1383,
+      "w": 609,
+      "h": 19
+     },
+     {
+      "x": 226,
+      "y": 1410,
+      "w": 233,
+      "h": 19
+     }
+    ]
+   },
+   {
+    "quote": "the company plans to publish a post-mortem on the incident",
+    "box": {
+     "x": 226,
+     "y": 1489,
+     "w": 588,
+     "h": 46
+    },
+    "lines": [
+     {
+      "x": 372,
+      "y": 1489,
+      "w": 442,
+      "h": 19
+     },
+     {
+      "x": 226,
+      "y": 1516,
+      "w": 71,
+      "h": 19
+     }
+    ]
+   }
+  ]
+ },
+ "scroll": {
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "seconds": 8,
+  "keyframes": [
+   {
+    "t": 0,
+    "y": 220
+   },
+   {
+    "t": 1,
+    "y": 220
+   },
+   {
+    "t": 2.012,
+    "y": 585
+   },
+   {
+    "t": 3.112,
+    "y": 585
+   },
+   {
+    "t": 4.141,
+    "y": 973
+   },
+   {
+    "t": 8,
+    "y": 973
+   }
+  ],
+  "zoom": 1,
+  "easing": "easeInOutCubic between keyframes, holds where y is equal",
+  "capped": false,
+  "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)",
+  "quotes": [
+   {
+    "quote": "Developer platform Railway urges 'all users' to revoke secret keys after cyberattack",
+    "inVideo": true,
+    "still": true,
+    "t": 0.53,
+    "visibleStill": [
+     0,
+     1.07
+    ],
+    "scrollY": 220,
+    "box": {
+     "x": 936,
+     "y": 142,
+     "w": 539,
+     "h": 128
+    },
+    "lines": [
+     {
+      "x": 936,
+      "y": 142,
+      "w": 503,
+      "h": 40
+     },
+     {
+      "x": 936,
+      "y": 186,
+      "w": 471,
+      "h": 40
+     },
+     {
+      "x": 936,
+      "y": 230,
+      "w": 539,
+      "h": 40
+     }
+    ],
+    "docBox": {
+     "x": 936,
+     "y": 362,
+     "w": 539,
+     "h": 128
+    },
+    "layoutDriftPx": 0
+   },
+   {
+    "quote": "may have accessed encrypted environment variables and, for some of them, obtained the decrypted contents",
+    "inVideo": true,
+    "still": true,
+    "t": 2.57,
+    "visibleStill": [
+     1.93,
+     3.2
+    ],
+    "scrollY": 585,
+    "box": {
+     "x": 466,
+     "y": 410,
+     "w": 658,
+     "h": 45
+    },
+    "lines": [
+     {
+      "x": 547,
+      "y": 410,
+      "w": 577,
+      "h": 19
+     },
+     {
+      "x": 466,
+      "y": 436,
+      "w": 356,
+      "h": 19
+     }
+    ],
+    "docBox": {
+     "x": 466,
+     "y": 995,
+     "w": 658,
+     "h": 45
+    },
+    "layoutDriftPx": 0
+   },
+   {
+    "quote": "Railway did not say how many specific users were affected, or what was identified as the root cause",
+    "inVideo": true,
+    "still": true,
+    "t": 6.05,
+    "visibleStill": [
+     4.07,
+     8.03
+    ],
+    "scrollY": 973,
+    "box": {
+     "x": 466,
+     "y": 410,
+     "w": 609,
+     "h": 46
+    },
+    "lines": [
+     {
+      "x": 466,
+      "y": 410,
+      "w": 609,
+      "h": 19
+     },
+     {
+      "x": 466,
+      "y": 437,
+      "w": 233,
+      "h": 19
+     }
+    ],
+    "docBox": {
+     "x": 466,
+     "y": 1383,
+     "w": 609,
+     "h": 46
+    },
+    "layoutDriftPx": 0
+   },
+   {
+    "quote": "the company plans to publish a post-mortem on the incident",
+    "inVideo": true,
+    "still": true,
+    "t": 6.05,
+    "visibleStill": [
+     4.07,
+     8.03
+    ],
+    "scrollY": 973,
+    "box": {
+     "x": 466,
+     "y": 516,
+     "w": 588,
+     "h": 46
+    },
+    "lines": [
+     {
+      "x": 612,
+      "y": 516,
+      "w": 442,
+      "h": 19
+     },
+     {
+      "x": 466,
+      "y": 543,
+      "w": 71,
+      "h": 19
+     }
+    ],
+    "docBox": {
+     "x": 466,
+     "y": 1489,
+     "w": 588,
+     "h": 46
+    },
+    "layoutDriftPx": 0
+   }
+  ]
+ }
+}

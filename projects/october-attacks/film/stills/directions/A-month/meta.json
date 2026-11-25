@@ -1,0 +1,295 @@
+{
+ "TOTAL": 482,
+ "INTRO": 0,
+ "OUTRO": 2,
+ "FPS": 30,
+ "CUES": [
+  {
+   "name": "slide",
+   "t": 0.95,
+   "db": -12,
+   "keep": true
+  },
+  {
+   "name": "thud",
+   "t": 2.93,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "marker",
+   "t": 3.78,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "scribble",
+   "t": 6.43,
+   "db": -9,
+   "keep": true
+  },
+  {
+   "name": "place",
+   "t": 7.26,
+   "db": -5,
+   "keep": true
+  },
+  {
+   "name": "tap",
+   "t": 7.58,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "pop",
+   "t": 7.9,
+   "db": -5,
+   "keep": true
+  },
+  {
+   "name": "zoom",
+   "t": 8.49,
+   "db": -8,
+   "keep": true
+  },
+  {
+   "name": "shutter",
+   "t": 12.68,
+   "db": -7,
+   "keep": true
+  },
+  {
+   "name": "punch",
+   "t": 13.15,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "slide2",
+   "t": 14.89,
+   "db": -8,
+   "keep": true
+  },
+  {
+   "name": "shutter",
+   "t": 18.24,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "marker",
+   "t": 21.97,
+   "db": -5,
+   "keep": true
+  },
+  {
+   "name": "thud",
+   "t": 113.75,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "shutter",
+   "t": 114.64,
+   "db": -8,
+   "keep": true
+  },
+  {
+   "name": "marker",
+   "t": 116.89,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "type",
+   "t": 147.61,
+   "db": -10,
+   "keep": true
+  },
+  {
+   "name": "check",
+   "t": 149.46,
+   "db": -5,
+   "keep": true
+  },
+  {
+   "name": "check2",
+   "t": 154.85,
+   "db": -5,
+   "keep": true
+  },
+  {
+   "name": "check",
+   "t": 158.18,
+   "db": -5,
+   "keep": true
+  },
+  {
+   "name": "shutter",
+   "t": 186.32,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "type",
+   "t": 186.72,
+   "db": -9,
+   "keep": true
+  },
+  {
+   "name": "marker",
+   "t": 187.48,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "thud",
+   "t": 199.18,
+   "db": -7,
+   "keep": true
+  },
+  {
+   "name": "tick",
+   "t": 240.28,
+   "db": -12,
+   "keep": true
+  },
+  {
+   "name": "thud",
+   "t": 246.64,
+   "db": -5,
+   "keep": true
+  },
+  {
+   "name": "riser",
+   "t": 249.63,
+   "db": -10,
+   "keep": true
+  },
+  {
+   "name": "pop",
+   "t": 253.06,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "punch",
+   "t": 254.96,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "shutter",
+   "t": 256.72,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "marker",
+   "t": 257.86,
+   "db": -5,
+   "keep": true
+  },
+  {
+   "name": "shutter",
+   "t": 382.32,
+   "db": -7,
+   "keep": true
+  },
+  {
+   "name": "marker",
+   "t": 382.96,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "thud",
+   "t": 386.7,
+   "db": -2,
+   "keep": true
+  }
+ ],
+ "SCENES": [
+  {
+   "n": 1,
+   "id": "month",
+   "start": 0,
+   "end": 8.44,
+   "ground": "oct",
+   "label": "month",
+   "trans": "cut"
+  },
+  {
+   "n": 2,
+   "id": "php",
+   "start": 8.44,
+   "end": 14.87,
+   "ground": "night",
+   "label": "php",
+   "trans": "cut"
+  },
+  {
+   "n": 3,
+   "id": "railway",
+   "start": 14.87,
+   "end": 108.06,
+   "ground": "night",
+   "label": "railway",
+   "trans": "whip"
+  },
+  {
+   "n": 4,
+   "id": "before",
+   "start": 108.06,
+   "end": 146.49,
+   "ground": "night",
+   "label": "before",
+   "trans": "whip"
+  },
+  {
+   "n": 5,
+   "id": "fix",
+   "start": 146.49,
+   "end": 185.32,
+   "ground": "bone",
+   "label": "fix",
+   "trans": "cut"
+  },
+  {
+   "n": 6,
+   "id": "env",
+   "start": 185.32,
+   "end": 239.88,
+   "ground": "bone",
+   "label": "env",
+   "trans": "whip"
+  },
+  {
+   "n": 7,
+   "id": "zeabur",
+   "start": 239.88,
+   "end": 256.62,
+   "ground": "night",
+   "label": "zeabur",
+   "trans": "cut"
+  },
+  {
+   "n": 8,
+   "id": "zeabur-src",
+   "start": 256.62,
+   "end": 378.41,
+   "ground": "bone",
+   "label": "zeabur-src",
+   "trans": "cut"
+  },
+  {
+   "n": 9,
+   "id": "four",
+   "start": 378.41,
+   "end": 482,
+   "ground": "bone",
+   "label": "four",
+   "trans": "whip"
+  }
+ ]
+}

@@ -1,0 +1,43 @@
+1
+00:00:00,000 --> 00:00:01,900
+for example, say someone says, GET book
+
+2
+00:00:01,900 --> 00:00:04,877
+9999, and you use find instead of findOrFail
+
+3
+00:00:04,877 --> 00:00:06,477
+so the book comes back as null, and then
+
+4
+00:00:06,477 --> 00:00:08,637
+your code tries to read the title from null,
+
+5
+00:00:08,637 --> 00:00:10,627
+and then it crashes, and the client gets a
+
+6
+00:00:10,627 --> 00:00:13,917
+500 the right answer is a 404, not a 500,
+
+7
+00:00:13,917 --> 00:00:15,597
+because the book does not exist
+
+8
+00:00:15,597 --> 00:00:17,197
+in this scenario, a 500 is the wrong code,
+
+9
+00:00:17,197 --> 00:00:19,277
+because 500 says that the server is broken
+
+10
+00:00:19,277 --> 00:00:20,517
+meanwhile, the server is not broken
+
+11
+00:00:20,517 --> 00:00:22,300
+that can just set off an alarm for nothing

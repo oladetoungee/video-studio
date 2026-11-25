@@ -1,0 +1,28 @@
+{
+  "direction": "The topic huge on the research-wall green, and one literal picture of what UX research finds: a generic checkout screen stuck at 'Step 3 of 7', with two users' sticky-note complaints on its edges. Her calm cut-out (black and white, canary outline) bottom-left; the 'Where do I tap?' note bridges her and the phone.",
+  "thumbnail_text": "UX Research",
+  "titles": [
+    "What Is UX Research? Why Some Apps Are So Confusing",
+    "UX Research for Beginners: What It Is and How It Works",
+    "What Is UX Research? The Step Bad Apps Skip"
+  ],
+  "text": {
+    "hd": "UX<br>Research",
+    "step": "Step 3 of 7",
+    "btn": "Pay",
+    "n1": "Where do I tap?",
+    "n2": "Too many steps!"
+  },
+  "images": {
+    "me": "../../assets/cut/gbemi-direct-hard.png"
+  },
+  "vars": {
+    "--ground": "#1D3A32",
+    "--fg": "#F4F0E6",
+    "--accent": "#FFE15A",
+    "--ol": "#FFE15A"
+  },
+  "scores": "critic vs her thumbnail: R1 7 · R2 8 · R3 7 · R4 7.5 · R5 7 · R6 7 · R7 7 (alternate: below the 8 bar)",
+  "recommended": false,
+  "title": "What Is UX Research? Why Some Apps Are So Confusing"
+}

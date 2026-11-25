@@ -1,0 +1,105 @@
+URL: https://en.paperjam.lu/article/php2shell-thousands-of-websites-exposed-in-luxembourg
+STATUS: loaded (http 200)
+FINAL: https://en.paperjam.lu/article/php2shell-thousands-of-websites-exposed-in-luxembourg
+TITLE: PHP2Shell: thousands of websites exposed in Luxembourg | Paperjam English News
+H1: PHP2Shell: thousands of websites exposed in Luxembourg
+OG: PHP2Shell: thousands of websites exposed in Luxembourg | 
+PUBLISHED:   MODIFIED: 
+DOC_H: 9388
+
+POLITICS & INSTITUTIONS - POLITICS
+A GLOBAL RISK
+PHP2Shell: thousands of websites exposed in Luxembourg
+
+Written by Thierry Labro
+
+Published on 21.10.2026 • Edited on 21.10.2026 at 22:29
+
+Share
+
+The Government’s Information Technology Centre (CTIE) has “temporarily taken certain services offline as a precautionary measure”, according to a statement from the Cyber Risk Assessment Cell. The government has not specified which services are affected, how many have been taken offline, or how long the interruptions will last. It has reported no confirmed compromise. Photo: Shutterstock
+
+PHP, the programming language that powers a large proportion of websites and web applications, has been hit by two critical vulnerabilities. Luxembourg proactively suspended certain public services on 21 October, while more than 15,000 websites associated with the country may be exposed. The first attempts to exploit the flaws illustrate how artificial intelligence is accelerating cyberattacks.
+
+“Don’t make people panic!” From the hackers who took control of Israel’s most secure hospital nearly a decade ago to demonstrate how someone could be killed in an operating theatre, during a presentation at ICT Spring, to the critical PHP vulnerabilities disclosed yesterday, which have affected millions of websites worldwide and could concern as many as 15,000 sites in Luxembourg, the “experts” have remained consistent: they become irritated whenever they are asked to make concrete what amounts to an official communication that retreats behind carefully managed silence “for security reasons”.
+
+But let’s start with the facts. On Wednesday, PHP did not crash. Four patched versions of PHP were urgently released. They fix two vulnerabilities that could allow remote command execution without authentication. An attacker can therefore target a server accessible from the internet without first needing an account or password.
+
+Publicité
+End of ad break in 9 s
+Vous pouvez fermer cette publicité dans 4 s
+
+The two vulnerabilities, collectively referred to as PHP2Shell, have received a severity rating of 9.2 out of 10. They are not located in a particular WordPress extension or in the code of a poorly maintained website, but in the core PHP engine itself. WordPress, Drupal, Joomla, Magento, WooCommerce, Symfony, Laravel, Nextcloud and Roundcube may therefore all be affected, even if their own code contains no errors.
+
+The potential scale is considerable. PHP powers nearly 70% of websites worldwide for which the server-side programming language can be identified, according to W3Techs. According to Pascal Steichen, director of the Luxembourg House of Cybersecurity, speaking to RTL, well over 5,000 websites in Luxembourg are affected. Technology-detection tools suggest an even higher figure, identifying approximately 10,600 websites associated with the country on which PHP has been directly detected, according to BuiltWith. Another extract from the same service listed 15,177 WordPress websites associated with Luxembourg, as well as 438 sites using Drupal.
+
+These figures overlap and correspond neither to the number of distinct companies nor to the number of servers that remain vulnerable. A single organisation may operate several domains, and the same website may appear in multiple categories. Nevertheless, the figures show that the alert in Luxembourg concerns thousands of services, rather than just a handful of isolated infrastructures.
+
+Among the publicly identifiable users of PHP-based technologies are the University of Luxembourg, Lux-Airport, Foyer, Luxtram, the Chamber of Commerce and an online learning service operated by the City of Luxembourg. The provider that developed the university’s website describes, in particular, a WordPress Multisite network comprising 11 websites available in three languages.
+
+This detection does not mean that these organisations have been attacked or were still running a vulnerable version of PHP on 21 October. A website’s publicly detectable technology generally reveals neither the exact version of PHP running on its server nor any security patches backported by a Linux vendor, nor the status of processes running in memory. It also says nothing about business applications, which may be entirely separate from an organisation’s public-facing website.
+
+Emergency response in Luxembourg
+
+In Luxembourg, the Cyber Risk Assessment Cell met following the premature disclosure of the vulnerabilities, then convened again after the patches were released. Luxembourg’s incident response teams contacted organisations in their respective sectors. The CSSF asked financial institutions to treat all PHP-based services as potentially exposed until the affected versions could be officially identified.
+
+The Government’s Information Technology Centre has, meanwhile, “temporarily taken certain services offline as a precautionary measure”, according to a statement from the cell. The government has not specified which services are affected, how many have been taken offline, or how long the interruptions will last. It has reported no confirmed compromise.
+
+CIRCL, Luxembourg’s Computer Incident Response Center, is asking operators to verify the version actually in use, install the patched versions and restart all PHP processes. This last step is essential: simply placing the updated files on a server is not enough if older, vulnerable processes continue running in memory. Checks must also cover hosting platforms, containers, services managed by third-party providers and software that embeds PHP without making it visible to end users.
+
+If an immediate fix is not possible, CIRCL recommends combining network restrictions with measures tailored to each vulnerability. The organisation warns that none of these temporary safeguards can replace the update itself. Taking a service offline should be considered when the risk cannot be sufficiently reduced.
+
+No financial institution has been infiltrated so far
+
+The CSSF has highlighted an additional regulatory consequence for Luxembourg’s financial sector. A successful exploit resulting in malicious, unauthorised access constitutes a major information and communication technology incident. Such an incident must be reported to the supervisor under CSSF Circular 25/893, which governs reporting under the Digital Operational Resilience Act (DORA), or under CSSF Circular 24/847, depending on the institution’s status.
+
+However, no Luxembourg financial institution, public service or operator has announced that it has actually been infiltrated through PHP2Shell. The authorities are asking operators to investigate retrospectively for possible signs of compromise and preserve evidence in the event of suspicious activity. Installing the patch closes the door to future exploitation, but does not establish whether anyone has already walked through it.
+
+The first attempts to exploit the vulnerabilities have already been observed worldwide. Cloudflare reported exploitation activity even before the patches were officially released. Researchers at watchTowr also detected attempts to exploit the flaws against their honeypot servers. So far, no major infrastructure has publicly documented a successful intrusion conclusively attributed to PHP2Shell.
+
+Service disruptions reported in the Netherlands, Finland, France, Germany, Belgium and Denmark, as well as at Wikimedia, have mainly resulted from precautionary shutdowns. German and Belgian authorities, in particular, said they were not aware of any successful attacks against their systems at the time of their statements.
+
+Cyberattacks in the age of reverse engineering
+
+The crisis takes on a new dimension because of the role played by artificial intelligence. The vulnerabilities were discovered with the help of AI models. Those same tools can now help attackers compare patched versions with the previous code, reconstruct the vulnerability and automate the search for unprotected servers. The publication of a fix thus becomes the starting signal for a global race between patching systems and exploiting the flaws.
+
+“There are two aspects to consider,” says a “genuine” expert, speaking anonymously. “First, when a company discloses a vulnerability rated between 9 and 10 [the maximum, ed.], it is not necessarily extraordinary. It happens. People in the industry are used to these announcements, monitor them and now know what measures to take.
+
+“But two other factors come into play. When people tell you they are going to patch very quickly, it is not that simple. Patching can introduce problems into the technology deployed in your environment, and IT teams generally start by checking that the fix will not cause more harm than the problem it is supposed to solve.
+
+“Then there is the fact that disclosing critical vulnerabilities is like firing the starting gun in a competition between hackers, who use AI to work out how they can exploit a flaw as quickly as possible” to shut down institutions, steal data or money, and destabilise individuals, companies or governments.
+
+The vulnerabilities disclosed on Tuesday are not the first to make it possible to target a service or organisation without a login or even a password. In early October, SAP disclosed what it described as the two worst security vulnerabilities in its history, rated 9.8 and 10. The researchers who identified them said they had found at least ten million servers at risk, although they declined to clarify, when asked by this publication, whether they had identified any risks in Luxembourg.
+
+SAP is, for example, and quite logically, the backbone of the government’s payment systems. It has been used regularly for more than 20 years by over 1,200 civil servants and 300 institutions in Luxembourg. The government uses it, among other things, to transfer unemployment benefits to Adem, the national employment agency.
+
+When contacted at the time, the CTIE responded: “For reasons relating to the protection of our infrastructure, we do not disclose technical details. However, we confirm that the necessary checks have been carried out and the patches applied. Aware of its role as the state’s IT service provider, the CTIE relies on a systematic, cross-cutting approach to information security, which also includes identifying and addressing vulnerabilities, as well as implementing layered security models.”
+
+The issue today is no longer simply resilience in the form of a “72-hour survival kit” containing water, food and blankets. The question is how to rapidly scale up detection, incident response and mitigation capabilities to meet these new threats: vulnerabilities, hackers-as-a-service and low-cost AI. A step change is needed.
+
+“Any authorities that told you they were ready and had procedures in place would simply be showing that they had failed to understand the scale of what they are going to have to face.”
+
+Let’s not make people panic. It is not as though the Federation of Hospitals had finally acknowledged the scale of the cyber risk in a study published at the end of September. It is not as though the Grand Ducal Police had once again urged caution over fake LuxTrust links sent by SMS to steal bank customers’ credentials. It is not as though scammers had tried to exploit the transition from Payconiq to Wero to steal money. Nor is it as though Horesca had warned of phishing attempts targeting customers of Luxembourg hotels. And it is certainly not as though some ministers had failed to follow the protocols designed to prevent them from compromising national security by carrying and using their ministerial and personal phones interchangeably in the same context…
+
+CTIE
+CSSF
+CIRCL
+SAP
+PHP
+TOP
+RECOMMENDATIONS
+1
+Politics
+Energy tripartite: another round of talks… and wage indexation
+2
+Politics
+According to Tom Haas, the deadline cannot be extended beyond June
+3
+Foodzilla
+Loiseau de Lorraine: bold flavours at the foot of the cathedral
+4
+Markets
+French debt: a warning from the markets
+5
+Funds
+State Street «plans to launch a tokenized money market fund»

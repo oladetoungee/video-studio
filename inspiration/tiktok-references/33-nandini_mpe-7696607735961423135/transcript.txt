@@ -1,0 +1,67 @@
+[00:00] a lot of conversation about how AI agents are changing entry-level work, but there's very
+[00:03] little exposure as to how exactly those industries are changing. What exactly can these AI agents do
+[00:09] and how can you build from the work that they've already done? So what I want us to look at today
+[00:13] is how can you gain more exposure to how AI is actually changing the real industries that people
+[00:19] work in? This is a very important conversation because since AI became a big thing, employers
+[00:23] are consistently looking for people who are very fluent in AI. It used to be people who can prompt
+[00:28] people who know how to use gen AI and now it's people who can manage agents. EY for example is
+[00:33] trading the eight-week internship for actual part-time employment. So in your last year of university
+[00:37] you're going to work at EY as an employee part-time for eight to twelve months and during this time
+[00:42] they assess your ability to integrate and use AI systems and at the end of this you start off with
+[00:49] a promotion. So you no longer start off at what is the entry-level job, you start off at the next level
+[00:54] with the higher pay and during this time it gives them enough time to vet you and see if you actually
+[01:00] have the practical skills and you're able to build the judgment to actually start adding value from
+[01:04] day one as a full-time employee. And this is not just limited to EY, every company is rethinking in
+[01:09] some shape or form their graduate insight. With UBS they're saying that they want people at interview
+[01:15] stage to talk about how they're able to use AI tools and with Goldman Sachs they want people
+[01:20] coming in on day one knowing how to manage AI agents. So AI agents produce the work, what are
+[01:26] you as an employee able to do with the work that is produced by AI agents? So the starting line is
+[01:31] way further. What are some of the work that you can do in the meantime to prepare yourself and
+[01:35] expose yourself to the work that is done by agents? For exposure to the full stack of an AI audit,
+[01:41] PADEO is a very good one to look at. So what you have here is the full audit experience. So instead
+[01:47] of being presented with like a case study or a lightened version of what the audit actually is,
+[01:53] this exposes you to the full engagement process from start to finish across six phases and 51
+[01:58] procedures. And then I thought this was pretty cool. So instead of just being exposed to like
+[02:03] tons and tons of words, there's a visualization of the entire group as well as how everything
+[02:09] fits together and where all of the different transactions originate and who's in charge of
+[02:13] what where. And for example, here there's 36,000 lines. So really a full experience suite rather
+[02:20] than being given a case study that is very light and not reflective of like real world experiences.
+[02:25] And then you get to open the working paper and the working paper would be something that the agent
+[02:29] would have prepared for you to review, which is what they mean at Goldman Sachs and at UBS,
+[02:35] that they want you to come in knowing what to do with what has been produced by these AI agents.
+[02:41] The working paper is done, but is it correct? And that's the work that you do on day one,
+[02:46] evaluating the output from the work that has been prepared by the AI agent and seeing if it
+[02:50] actually meets all of the objectives that you're trying to reach for the audit. Then another thing
+[02:54] that I think is pretty cool is that you're able to call the client and you're able to call your
+[02:58] teammates. So in as much as some of this might look abstract or futuristic, this part here,
+[03:04] the capability legend actually makes everything very tied to reality because it tells you where
+[03:09] exactly this has been used in practice today. So even if you're someone who doesn't have exposure
+[03:15] to it or the company that you're going to doesn't have that specific thing, you have a very good
+[03:19] understanding of everything that is happening across different countries, across different
+[03:23] companies. And then for legal work, one that you have to have a look at is Havi. Havi is the most
+[03:29] funded legal startup in the world. And they came out actually before ChachiPT and they got funded
+[03:35] by the founder of ChachiPT. They got their first check from the OpenAI startup fund. So they've
+[03:42] been in the game for a very long time. They have very deep relationships with the entire venture
+[03:47] capital industry. I think they were about 11 billion. So they really at the forefront of AI
+[03:53] in law. So they would be a very good one to look at. So the thing about their library is that it's
+[03:59] more explanation and courses. It's almost like Coursera. But what I like about it is every time
+[04:05] they release something new as the people who are at the frontier of AI in law, they include a course
+[04:12] on exactly what that entails and they try and do it in a model agnostic way. So regardless of whether
+[04:18] or not you're using Havi, you're able to get a good understanding of how the industry is moving,
+[04:23] which I think is very beneficial because whether or not you end up with a company that uses Havi,
+[04:28] you still get a very good understanding of how AI is being used in the legal industry.
+[04:32] Again, La Gora incorporates it into the school curriculum. So then your school is able to
+[04:38] assess you based on some of the actual interactions that you have with the La Gora platform. And you
+[04:44] have access to the actual La Gora platform, which I think is pretty cool. But if you're not going to
+[04:48] be able to get it through your university's access, Havi Academy is an incredible place to start.
+[04:53] And then just under general, another very good academy is the OpenAI Academy. OpenAI Academy is
+[05:01] one that is focused on teaching you how to use AI and how to understand AI from the lens of
+[05:07] chat GPT and how to get the most out of their products and how can you interact with it from
+[05:11] the perspective of different industries. So they have chat GPT for work, how to get the most out
+[05:16] of chat GPT at work, for education, they have it for building, they have it for software engineering,
+[05:23] so with your codecs. And they also host webinars where you're able to send questions and you're
+[05:29] able to interact with the people from OpenAI who work in the consumer education department.
+[05:34] And I'll do my best to get more from other industries because I think it's very important
+[05:38] to get as hands on with AI as possible. Learning from a curriculum or learning from a course is not
+[05:44] as beneficial as doing the actual work. So the more you can do the actual work, I would really
+[05:49] encourage you to get as close to that as possible.

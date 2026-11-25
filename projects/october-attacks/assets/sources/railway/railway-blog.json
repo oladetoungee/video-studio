@@ -1,0 +1,348 @@
+{
+ "story": "railway",
+ "outlet": "Railway (official blog)",
+ "slug": "railway-blog",
+ "url": "https://blog.railway.com/p/security-disclosure-wednesday-october-21st",
+ "finalUrl": "https://blog.railway.com/p/security-disclosure-wednesday-october-21st",
+ "status": "loaded",
+ "http": 200,
+ "title": "Security Disclosure: Wednesday October 21st | Railway Blog",
+ "h1": "Security Disclosure: Wednesday October 21st",
+ "published": "2026-10-21T20:44:02.118Z",
+ "files": {
+  "fold": "railway/railway-blog_fold.png",
+  "full": "railway/railway-blog_full.jpg",
+  "scroll": "railway/railway-blog_scroll.mp4"
+ },
+ "full": {
+  "width": 1440,
+  "height": 2407,
+  "pageHeight": 2407,
+  "zoom": 1,
+  "quotes": [
+   {
+    "quote": "Security Disclosure: Wednesday October 21st",
+    "box": {
+     "x": 368,
+     "y": 218,
+     "w": 548,
+     "h": 118
+    },
+    "lines": [
+     {
+      "x": 368,
+      "y": 218,
+      "w": 443,
+      "h": 62
+     },
+     {
+      "x": 368,
+      "y": 274,
+      "w": 548,
+      "h": 62
+     }
+    ]
+   },
+   {
+    "quote": "an unauthorized third party may have accessed encrypted environment variables and, for some of them, obtained the decrypted contents",
+    "box": {
+     "x": 368,
+     "y": 454,
+     "w": 679,
+     "h": 48
+    },
+    "lines": [
+     {
+      "x": 551,
+      "y": 454,
+      "w": 496,
+      "h": 21
+     },
+     {
+      "x": 368,
+      "y": 481,
+      "w": 669,
+      "h": 21
+     }
+    ]
+   },
+   {
+    "quote": "We believe this is part of a series of attacks recently targeting platform companies with the aim of compromising AI inference providers",
+    "box": {
+     "x": 368,
+     "y": 578,
+     "w": 699,
+     "h": 48
+    },
+    "lines": [
+     {
+      "x": 368,
+      "y": 578,
+      "w": 699,
+      "h": 21
+     },
+     {
+      "x": 368,
+      "y": 605,
+      "w": 444,
+      "h": 21
+     }
+    ]
+   },
+   {
+    "quote": "we strongly recommend that you immediately roll all environment variables",
+    "box": {
+     "x": 368,
+     "y": 799,
+     "w": 680,
+     "h": 48
+    },
+    "lines": [
+     {
+      "x": 630,
+      "y": 799,
+      "w": 418,
+      "h": 21
+     },
+     {
+      "x": 368,
+      "y": 826,
+      "w": 212,
+      "h": 21
+     }
+    ]
+   },
+   {
+    "quote": "All deployments are paused while we investigate",
+    "box": {
+     "x": 368,
+     "y": 896,
+     "w": 413,
+     "h": 21
+    },
+    "lines": [
+     {
+      "x": 368,
+      "y": 896,
+      "w": 413,
+      "h": 21
+     }
+    ]
+   }
+  ]
+ },
+ "scroll": {
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "seconds": 8,
+  "keyframes": [
+   {
+    "t": 0,
+    "y": 81
+   },
+   {
+    "t": 1,
+    "y": 81
+   },
+   {
+    "t": 1.966,
+    "y": 389
+   },
+   {
+    "t": 8,
+    "y": 389
+   }
+  ],
+  "zoom": 1,
+  "easing": "easeInOutCubic between keyframes, holds where y is equal",
+  "capped": false,
+  "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)",
+  "quotes": [
+   {
+    "quote": "Security Disclosure: Wednesday October 21st",
+    "inVideo": true,
+    "still": true,
+    "t": 0.53,
+    "visibleStill": [
+     0,
+     1.07
+    ],
+    "scrollY": 81,
+    "box": {
+     "x": 608,
+     "y": 137,
+     "w": 548,
+     "h": 118
+    },
+    "lines": [
+     {
+      "x": 608,
+      "y": 137,
+      "w": 443,
+      "h": 62
+     },
+     {
+      "x": 608,
+      "y": 193,
+      "w": 548,
+      "h": 62
+     }
+    ],
+    "docBox": {
+     "x": 608,
+     "y": 218,
+     "w": 548,
+     "h": 118
+    },
+    "layoutDriftPx": 0
+   },
+   {
+    "quote": "an unauthorized third party may have accessed encrypted environment variables and, for some of them, obtained the decrypted contents",
+    "inVideo": true,
+    "still": true,
+    "t": 0.53,
+    "visibleStill": [
+     0,
+     1.07
+    ],
+    "scrollY": 81,
+    "box": {
+     "x": 608,
+     "y": 373,
+     "w": 679,
+     "h": 48
+    },
+    "lines": [
+     {
+      "x": 791,
+      "y": 373,
+      "w": 496,
+      "h": 21
+     },
+     {
+      "x": 608,
+      "y": 400,
+      "w": 669,
+      "h": 21
+     }
+    ],
+    "docBox": {
+     "x": 608,
+     "y": 454,
+     "w": 679,
+     "h": 48
+    },
+    "layoutDriftPx": 0
+   },
+   {
+    "quote": "We believe this is part of a series of attacks recently targeting platform companies with the aim of compromising AI inference providers",
+    "inVideo": true,
+    "still": true,
+    "t": 0.53,
+    "visibleStill": [
+     0,
+     1.07
+    ],
+    "scrollY": 81,
+    "box": {
+     "x": 608,
+     "y": 497,
+     "w": 699,
+     "h": 48
+    },
+    "lines": [
+     {
+      "x": 608,
+      "y": 497,
+      "w": 699,
+      "h": 21
+     },
+     {
+      "x": 608,
+      "y": 524,
+      "w": 444,
+      "h": 21
+     }
+    ],
+    "docBox": {
+     "x": 608,
+     "y": 578,
+     "w": 699,
+     "h": 48
+    },
+    "layoutDriftPx": 0
+   },
+   {
+    "quote": "we strongly recommend that you immediately roll all environment variables",
+    "inVideo": true,
+    "still": true,
+    "t": 4.97,
+    "visibleStill": [
+     1.9,
+     8.03
+    ],
+    "scrollY": 389,
+    "box": {
+     "x": 608,
+     "y": 410,
+     "w": 680,
+     "h": 48
+    },
+    "lines": [
+     {
+      "x": 870,
+      "y": 410,
+      "w": 418,
+      "h": 21
+     },
+     {
+      "x": 608,
+      "y": 437,
+      "w": 212,
+      "h": 21
+     }
+    ],
+    "docBox": {
+     "x": 608,
+     "y": 799,
+     "w": 680,
+     "h": 48
+    },
+    "layoutDriftPx": 0
+   },
+   {
+    "quote": "All deployments are paused while we investigate",
+    "inVideo": true,
+    "still": true,
+    "t": 4.97,
+    "visibleStill": [
+     1.9,
+     8.03
+    ],
+    "scrollY": 389,
+    "box": {
+     "x": 608,
+     "y": 507,
+     "w": 413,
+     "h": 21
+    },
+    "lines": [
+     {
+      "x": 608,
+      "y": 507,
+      "w": 413,
+      "h": 21
+     }
+    ],
+    "docBox": {
+     "x": 608,
+     "y": 896,
+     "w": 413,
+     "h": 21
+    },
+    "layoutDriftPx": 0
+   }
+  ]
+ }
+}

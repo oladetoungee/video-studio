@@ -1,0 +1,21 @@
+{
+  "direction": "Before / now split (her saved 'Before / After', 'Day 1 / Day 900' thumbnails): a paper archive vs a phone search, drawn flat",
+  "title": "Ghana's Marriage and Divorce Records Are Now Online",
+  "titles": [
+    "Ghana's Marriage and Divorce Records Are Now Online",
+    "Ghana Moved Its Marriage Records Online. What Changes?",
+    "From Court Files to Phone Searches: Ghana's Marriage Records"
+  ],
+  "text": {
+    "left": "Before",
+    "right": "Now",
+    "capL": "your divorce: in a court archive",
+    "capR": "your divorce: one search away",
+    "query": "[any name]",
+    "r1": "Married",
+    "r2": "Divorced",
+    "label": "Illustration"
+  },
+  "images": {},
+  "vars": {}
+}

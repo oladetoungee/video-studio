@@ -1,0 +1,74 @@
+{
+ "title": "FTC, ICPEN, GPEN Announce Results of Review of Use of Dark Patterns Affecting Subscription Services, Privacy | Federal Trade Commission",
+ "h1": "FTC, ICPEN, GPEN Announce Results of Review of Use of Dark Patterns Affecting Subscription Services, Privacy",
+ "h1y": 364.3125,
+ "found": {
+  "642": [
+   [
+    993.90625,
+    1093.421875,
+    31.90625,
+    20
+   ]
+  ],
+  "nearly 76": [
+   [
+    848.03125,
+    1159.703125,
+    77.546875,
+    20
+   ]
+  ],
+  "nearly 67": [
+   [
+    957.234375,
+    1192.84375,
+    75.046875,
+    20
+   ]
+  ]
+ },
+ "H": 3587,
+ "focus": {
+  "642": {
+   "file": "ftc-sweep__642.png",
+   "top": 573.421875,
+   "rects": [
+    [
+     993.90625,
+     520,
+     31.90625,
+     20
+    ]
+   ]
+  },
+  "nearly 76": {
+   "file": "ftc-sweep__nearly-76.png",
+   "top": 639.703125,
+   "rects": [
+    [
+     848.03125,
+     520,
+     77.546875,
+     20
+    ]
+   ]
+  },
+  "nearly 67": {
+   "file": "ftc-sweep__nearly-67.png",
+   "top": 672.84375,
+   "rects": [
+    [
+     957.234375,
+     520,
+     75.046875,
+     20
+    ]
+   ]
+  }
+ },
+ "clipTop": 244.3125,
+ "scale": 1.5,
+ "url": "https://www.ftc.gov/news-events/news/press-releases/2024/07/ftc-icpen-gpen-announce-results-review-use-dark-patterns-affecting-subscription-services-privacy",
+ "captured": "2026-11-02T12:51:01.919Z"
+}

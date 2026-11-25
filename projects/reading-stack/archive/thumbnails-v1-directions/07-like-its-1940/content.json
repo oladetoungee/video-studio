@@ -1,0 +1,24 @@
+{
+  "direction": "Big number on full-bleed blue + calm face (lineage hook)",
+  "title": "How to Read a Book So It Actually Sticks",
+  "text": {
+    "line1": "Read like it’s",
+    "year": "1940",
+    "caption": ""
+  },
+  "images": {
+    "person": "../../assets/cut/neutral.png"
+  },
+  "vars": {
+    "--x": "560px",
+    "--y": "60px",
+    "--w": "1000px",
+    "--ys": "430px"
+  },
+  "nudge": {
+    "img:person": {
+      "dx": -60,
+      "dy": -45
+    }
+  }
+}

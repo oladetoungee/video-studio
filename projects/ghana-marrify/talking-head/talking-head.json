@@ -1,0 +1,306 @@
+{
+ "title": "Ghana's Marrify: talking-head clips (Blink look)",
+ "hud": "",
+ "source": "../kit/ghana-marrify.mov",
+ "fps": 30,
+ "words": "data/raw_words.json",
+ "faces": "data/face_track.json",
+ "edl": "data/edl.json",
+ "common": [
+  "../film/scenes/blink.js",
+  "moments/common.js"
+ ],
+ "images": {
+  "tc_column": "../film/assets/src_tc_column.jpg",
+  "mf_search": "../film/assets/src_mf_search.png",
+  "mf_banner": "../film/assets/src_mf_banner.png",
+  "news_graphic": "../film/assets/src_news_graphic.png",
+  "news_technext": "../film/assets/src_news_technext.png",
+  "news_itweb": "../film/assets/src_news_itweb.png",
+  "news_ghanaweb": "../film/assets/src_news_ghanaweb.png"
+ },
+ "edit": {
+  "silenceDb": -44,
+  "maxPause": 0.4,
+  "keepBefore": 0.14,
+  "keepAfter": 0.1
+ },
+ "out": "../outputs/talking-head",
+ "tail": 1.5,
+ "audio": {
+  "voiceFilter": "highpass=f=80,afftdn=nr=8:nf=-52:tn=1,deesser=i=0.3:m=0.5:f=0.5,acompressor=threshold=0.06:ratio=3:attack=6:release=160:knee=3,equalizer=f=3200:t=q:w=1.2:g=1.5",
+  "music": {
+   "dir": "library:music"
+  },
+  "levels": {
+   "voiceLufs": -16.0,
+   "duckDb": -10.0,
+   "openDb": -6.0,
+   "target": -14.0,
+   "ceiling": 0.8
+  },
+  "sfx": {
+   "keys": "audio/sfx/keys",
+   "roles": {
+    "whoosh": {
+     "files": [
+      "library:whoosh-small-sweep",
+      "mk164",
+      "library:whoosh-short-sweep"
+     ],
+     "align": "peak",
+     "db": -6
+    },
+    "click": {
+     "files": [
+      "library:click-classic",
+      "mk2568"
+     ],
+     "align": "peak",
+     "db": -3
+    },
+    "tick": {
+     "files": [
+      "library:click-box-check",
+      "library:tap-small-hit"
+     ],
+     "align": "peak",
+     "db": -4
+    },
+    "pop": {
+     "files": [
+      "library:pop-dry",
+      "library:pop-cartoon-bubble",
+      "library:explainer-pop-whoosh",
+      "library:pop-hard-click"
+     ],
+     "align": "peak",
+     "db": -4
+    },
+    "ding": {
+     "files": [
+      "library:bell-notification",
+      "library:magic-notification-ring"
+     ],
+     "align": "start",
+     "db": -8
+    },
+    "yes": {
+     "files": [
+      "library:correct-answer"
+     ],
+     "align": "start",
+     "db": -9
+    },
+    "type": {
+     "files": [
+      "KEYS"
+     ],
+     "align": "start",
+     "db": -6
+    },
+    "blink": {
+     "files": [
+      "library:click-plastic-bubble",
+      "library:tap-small-hit"
+     ],
+     "align": "peak",
+     "db": -3
+    },
+    "lid": {
+     "files": [
+      "library:whoosh-short-sweep",
+      "mk164"
+     ],
+     "align": "peak",
+     "db": -5
+    },
+    "impact": {
+     "files": [
+      "mk1143"
+     ],
+     "align": "peak",
+     "db": -9
+    },
+    "crowd": {
+     "files": [
+      "library:explainer-pop-whoosh",
+      "library:pop-long"
+     ],
+     "align": "start",
+     "db": -5
+    },
+    "pen": {
+     "files": [
+      "library:marker-line",
+      "library:pencil-short"
+     ],
+     "align": "start",
+     "db": -4,
+     "maxlen": 0.9
+    }
+   }
+  }
+ },
+ "moments": [
+  {
+   "id": "m01",
+   "slug": "marrify",
+   "kit": "C1",
+   "title": "Ghana just made marriages searchable",
+   "in": 0.0,
+   "out": 43.45,
+   "cuts": [],
+   "script": "moments/m01-marrify.js",
+   "music": [
+    "175",
+    6.0
+   ]
+  },
+  {
+   "id": "m02",
+   "slug": "estonia",
+   "kit": "C2",
+   "title": "In Estonia you can divorce online",
+   "in": 53.82,
+   "out": 100.98,
+   "cuts": [
+    [
+     67.35,
+     69.1
+    ],
+    [
+     90.78,
+     92.22
+    ]
+   ],
+   "script": "moments/m02-estonia.js",
+   "music": [
+    "150",
+    14.0
+   ]
+  },
+  {
+   "id": "m03",
+   "slug": "one-search-away",
+   "kit": "C4",
+   "title": "Your divorce, searchable by anyone with your name",
+   "in": 104.2,
+   "out": 166.98,
+   "cuts": [
+    [
+     110.28,
+     111.04
+    ],
+    [
+     124.44,
+     126.98,
+     "exact"
+    ],
+    [
+     136.68,
+     139.56
+    ],
+    [
+     141.8,
+     150.12
+    ],
+    [
+     152.66,
+     156.6
+    ],
+    [
+     161.86,
+     163.62
+    ]
+   ],
+   "script": "moments/m03-one-search-away.js",
+   "music": [
+    "766",
+    20.0
+   ]
+  },
+  {
+   "id": "m04",
+   "slug": "yes-or-no",
+   "kit": "C5 + C6b",
+   "title": "Free to marry? That's a yes or no",
+   "in": 169.19,
+   "out": 221.46,
+   "cuts": [
+    [
+     187.96,
+     197.3
+    ]
+   ],
+   "script": "moments/m04-yes-or-no.js",
+   "music": [
+    "443",
+    8.0
+   ]
+  },
+  {
+   "id": "m05",
+   "slug": "not-neutral",
+   "kit": "C6",
+   "title": "Technology is not neutral",
+   "in": 225.72,
+   "out": 259.6,
+   "cuts": [
+    [
+     226.86,
+     227.62
+    ],
+    [
+     248.4,
+     250.76
+    ]
+   ],
+   "script": "moments/m05-not-neutral.js",
+   "music": [
+    "234",
+    6.0
+   ]
+  },
+  {
+   "id": "m06",
+   "slug": "reciprocity",
+   "kit": "C7",
+   "title": "Do you get to see who looked you up?",
+   "in": 262.78,
+   "out": 284.62,
+   "cuts": [],
+   "script": "moments/m06-reciprocity.js",
+   "music": [
+    "282",
+    10.0
+   ]
+  },
+  {
+   "id": "m07",
+   "slug": "build-it",
+   "kit": "C8",
+   "title": "Build it, and question it",
+   "in": 285.42,
+   "out": 310.55,
+   "cuts": [
+    [
+     292.6,
+     293.84,
+     "exact"
+    ]
+   ],
+   "script": "moments/m07-build-it.js",
+   "music": [
+    "135",
+    30.0
+   ]
+  }
+ ],
+ "fonts": [
+  "600 40px \"Instrument Sans\"",
+  "500 40px \"Instrument Sans\"",
+  "700 40px \"Instrument Sans\"",
+  "500 40px \"Geist Mono\""
+ ]
+}

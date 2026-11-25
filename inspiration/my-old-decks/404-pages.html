@@ -1,0 +1,1972 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>404 Pages - Slide Studio v2</title>
+    <!--
+      404 PAGES - YouTube deck, 1920x1080, poster system, dark default.
+      Palette: paper #EDE9E2 / ink #111114 / electric blue #1B3FD8 / safety orange #FF4713
+      Fonts: Archivo Black (ULTRA) / Space Grotesk (GROTESK) / DM Mono (MONO)
+      Motif: THE DEAD LINK - the path that stops. Status codes as physical objects:
+        404 = orange stamp · 200 = blue stamp (same shape, the lie) ·
+        301 = blue arrow plaque · 410 = ink tombstone card
+      Three sides of a good 404 page: UI = orange · UX = blue · ENGINEERING = ink
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* ══════════════════ PALETTE - 404 PAGES ══════════════════ */
+      :root {
+        --paper: #EDE9E2;
+        --ink:   #111114;
+        --panel: #DED8CD;
+        --mid:   #6C6A66;
+        --line:  #CEC6B8;
+        --card:  #FFFDF6;
+
+        --acc1:  #FF4713;   /* safety orange - 404, UI       */
+        --acc2:  #1B3FD8;   /* electric blue - 200, 301, UX  */
+        --acc3:  #FF4713;   /* alias, keeps base parts on-palette */
+        --acc2t: #1B3FD8;   /* blue as TEXT (lightens in dark) */
+
+        --font-u: 'Archivo Black', 'Impact', sans-serif;
+        --font-g: 'Space Grotesk', system-ui, sans-serif;
+        --font-m: 'DM Mono', ui-monospace, monospace;
+      }
+      body.dark {
+        --paper: #111114; --ink: #EDE9E2; --panel: #1B1B20; --mid: #8A8780; --line: #2B2B31;
+        --card: #1E1E23; --acc2t: #6E8CFF;
+      }
+
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 100%; height: 100%; overflow: hidden; background: #0A0A0A; font-family: var(--font-g); }
+      #viewport { position: fixed; inset: 0; display: grid; place-items: center; background: #0A0A0A; }
+      #stage { position: relative; width: 1920px; height: 1080px; background: var(--paper); color: var(--ink); overflow: hidden; transform-origin: center center; }
+      body.portrait #stage { width: 1080px; height: 1920px; }
+
+      /* ══════════════════ SLIDE FRAME ══════════════════ */
+      .slide { position: absolute; inset: 0; display: none; padding: 110px 120px; text-align: left; }
+      .slide.active { display: grid; align-content: center; justify-items: stretch; grid-template-columns: minmax(0, 1fr); row-gap: 24px; grid-auto-flow: row; }
+      body.portrait .slide { padding: 120px 60px; }
+      body.portrait .slide.active { row-gap: 18px; }
+      .slide.center { text-align: center; }
+      .slide.center.active { justify-items: center; }
+      .slide.tight { padding: 64px 70px; }
+      body.portrait .slide.tight { padding: 70px 40px; }
+      .slide.top.active { align-content: start; }
+      .slide.bottom.active { align-content: end; }
+
+      .slide.ink  { background: var(--ink);  color: var(--paper); }
+      .slide.a1   { background: var(--acc1); color: #FFF4EF; }
+      .slide.a2   { background: var(--acc2); color: #F1F4FF; }
+      .slide.a3   { background: var(--acc1); color: #FFF4EF; }
+      .slide.pnl  { background: var(--panel); }
+      .slide.paper { background: var(--paper); color: var(--ink); }
+
+      /* ══════════════════ TYPE ══════════════════ */
+      .u { font-family: var(--font-u); line-height: 0.9; letter-spacing: -2px; text-transform: uppercase; }
+      .u.xs   { font-size: 96px;  letter-spacing: -1px; }
+      .u.sm   { font-size: 150px; letter-spacing: -2px; }
+      .u.md   { font-size: 215px; letter-spacing: -4px; }
+      .u.lg   { font-size: 300px; letter-spacing: -6px; }
+      .u.mega { font-size: 410px; letter-spacing: -9px; }
+      .u.low  { text-transform: none; }
+      body.portrait .u.xs   { font-size: 60px;  letter-spacing: -1px; }
+      body.portrait .u.sm   { font-size: 92px;  letter-spacing: -1px; }
+      body.portrait .u.md   { font-size: 132px; letter-spacing: -2px; }
+      body.portrait .u.lg   { font-size: 184px; letter-spacing: -4px; }
+      body.portrait .u.mega { font-size: 244px; letter-spacing: -5px; }
+
+      .t { font-family: var(--font-g); font-weight: 500; line-height: 1.24; }
+      .t.xs { font-size: 32px; } .t.sm { font-size: 46px; }
+      .t.md { font-size: 62px; font-weight: 600; } .t.lg { font-size: 86px; font-weight: 700; }
+      body.portrait .t.xs { font-size: 26px; } body.portrait .t.sm { font-size: 34px; }
+      body.portrait .t.md { font-size: 42px; } body.portrait .t.lg { font-size: 56px; }
+
+      .eyebrow { font-family: var(--font-m); font-size: 26px; font-weight: 500; letter-spacing: 0.24em; text-transform: uppercase; color: var(--mid); }
+      body.portrait .eyebrow { font-size: 20px; }
+      .slide.ink .eyebrow, .slide.a1 .eyebrow, .slide.a2 .eyebrow, .slide.a3 .eyebrow { color: currentColor; opacity: 0.74; }
+      .slide.photo .eyebrow { color: #E7E3DA; opacity: 0.8; }
+
+      .c1 { color: var(--acc1); } .c2 { color: var(--acc2t); } .c3 { color: var(--acc1); }
+      .cmid { color: var(--mid); } .cink { color: var(--ink); } .cpaper { color: var(--paper); }
+      .w7 { font-weight: 700; } .w4 { font-weight: 400; } .it { font-style: italic; }
+      .lc { text-transform: none; }
+
+      /* ══════════════════ STACK / BREAK ══════════════════ */
+      .stack { display: flex; flex-direction: column; }
+      .stack > div { font-family: var(--font-u); line-height: 0.84; letter-spacing: -4px; text-transform: uppercase; }
+      body.portrait .stack > div { letter-spacing: -2px; }
+      .stack.gap > div { margin-bottom: 8px; }
+      .stack.low > div { text-transform: none; }
+
+      /* ══════════════════ SWISS ══════════════════ */
+      .swiss { position: absolute; inset: 0; }
+      .rule { height: 4px; background: var(--ink); width: 100%; }
+      .rule.thin { height: 2px; opacity: 0.45; }
+      .rule.acc { background: var(--acc1); height: 10px; }
+      .rule.acc2 { background: var(--acc2); height: 10px; }
+      .blockfill { background: var(--acc1); }
+      .meta { position: absolute; font-family: var(--font-m); font-size: 24px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--mid); z-index: 4; }
+      .slide.ink .meta, .slide.a1 .meta, .slide.a2 .meta, .slide.a3 .meta { color: currentColor; opacity: 0.6; }
+      .slide.photo .meta { color: #E7E3DA; opacity: 0.72; }
+      .meta.tl { top: 52px; left: 60px; } .meta.tr { top: 52px; right: 60px; text-align: right; }
+      .meta.bl { bottom: 52px; left: 60px; } .meta.br { bottom: 52px; right: 60px; text-align: right; }
+      body.portrait .meta { font-size: 18px; }
+      body.portrait .meta.tl, body.portrait .meta.tr { top: 40px; }
+      body.portrait .meta.bl, body.portrait .meta.br { bottom: 40px; }
+      body.portrait .meta.tl, body.portrait .meta.bl { left: 36px; }
+      body.portrait .meta.tr, body.portrait .meta.br { right: 36px; }
+      .gridlines { position: absolute; inset: 0; pointer-events: none; opacity: 0.13;
+        background-image:
+          repeating-linear-gradient(to right, var(--ink) 0 1px, transparent 1px 160px),
+          repeating-linear-gradient(to bottom, var(--ink) 0 1px, transparent 1px 160px); }
+      .slide.a1 .gridlines, .slide.a2 .gridlines, .slide.ink .gridlines {
+        opacity: 0.16;
+        background-image:
+          repeating-linear-gradient(to right, currentColor 0 1px, transparent 1px 160px),
+          repeating-linear-gradient(to bottom, currentColor 0 1px, transparent 1px 160px); }
+
+      /* ══════════════════ MARKER ══════════════════ */
+      .mk { position: relative; display: inline-block; padding: 0 16px; z-index: 1; color: #FFF4EF; }
+      .mk::before { content: ""; position: absolute; inset: 6% -1% 4% -1%; background: var(--acc1); z-index: -1; }
+      .mk.m2::before { background: var(--acc2); } .mk.m2 { color: #F1F4FF; }
+      .mk.mink::before { background: var(--ink); } .mk.mink { color: var(--paper); }
+      .mk.mpaper::before { background: var(--paper); } .mk.mpaper { color: var(--ink); }
+      .ul { position: relative; }
+      .ul::after { content: ""; position: absolute; left: -1%; right: -1%; bottom: -14px; height: 14px; background: var(--acc1); }
+      .ul.u2::after { background: var(--acc2); }
+      .strike { position: relative; display: inline-block; }
+      .strike::after { content: ""; position: absolute; left: -4%; right: -4%; top: 52%; height: 10px; background: var(--acc1); transform: translateY(-50%) rotate(-2deg); }
+
+      /* ══════════════════ REPEAT ══════════════════ */
+      .rep { display: flex; flex-direction: column; }
+      .rep > div { font-family: var(--font-u); font-size: 168px; line-height: 0.9; letter-spacing: -4px; text-transform: uppercase; opacity: 0.22; }
+      .rep > div.on { opacity: 1; color: var(--acc1); }
+      .rep > div.on2 { opacity: 1; color: var(--acc2t); }
+      body.portrait .rep > div { font-size: 104px; letter-spacing: -2px; }
+
+      /* ══════════════════ ROTATE ══════════════════ */
+      /* The resting rotation lives on the inner <span>; data-anim goes on the .rw
+         wrapper, because the engine writes style.transform and would flatten it. */
+      .rot { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
+      .rot > .rw { display: block; }
+      .rot > .rw > span { display: inline-block; background: var(--ink); color: var(--paper); font-family: var(--font-u);
+        font-size: 116px; line-height: 1; letter-spacing: -3px; text-transform: uppercase; padding: 12px 30px 20px; }
+      .rot > .rw:nth-child(odd) > span  { transform: rotate(-2.2deg); }
+      .rot > .rw:nth-child(even) > span { transform: rotate(1.6deg); }
+      .rot > .rw:nth-child(even) { margin-left: 46px; }
+      .rot > .rw > span.on  { background: var(--acc1); color: #FFF4EF; }
+      .rot > .rw > span.on2 { background: var(--acc2); color: #F1F4FF; }
+      .rot.sm > .rw > span { font-size: 84px; }
+      body.portrait .rot > .rw > span { font-size: 66px; padding: 8px 18px 12px; }
+      body.portrait .rot.sm > .rw > span { font-size: 50px; }
+      body.portrait .rot > .rw:nth-child(even) { margin-left: 24px; }
+
+      /* ══════════════════ PHOTO / DUOTONE ══════════════════ */
+      .slide.photo { color: #F3F1EA; }
+      .bleed { position: absolute; inset: 0; z-index: 0; }
+      .bleed img { width: 100%; height: 100%; object-fit: cover; display: block; }
+      .bleed.duo img { filter: grayscale(1) contrast(1.5); }
+      .veil { position: absolute; inset: 0; z-index: 1; background: rgba(10, 11, 14, 0.62); }
+      .veil.soft { background: rgba(10, 11, 14, 0.42); }
+      .veil.heavy { background: rgba(10, 11, 14, 0.78); }
+      .veil.tint1 { background: rgba(255, 71, 19, 0.58); }
+      .veil.tint2 { background: rgba(27, 63, 216, 0.58); }
+      .slide.photo > *:not(.bleed):not(.veil) { position: relative; z-index: 2; }
+
+      /* ══════════════ PHOTO TREATMENTS - POSTER-SYSTEM 4b ══════════════
+         The photo is the SUBJECT of the slide, not wallpaper behind the words.
+         Export-safe: hard borders, no offset shadows, flat veils only. */
+
+      /* OBJECT: one thing cut to a shape, sitting on a flat field */
+      .obj { justify-self: center; overflow: hidden; border: 9px solid var(--ink); position: relative; }
+      .obj img { width: 100%; height: 100%; object-fit: cover; display: block; }
+      .obj.duo img { filter: grayscale(1) contrast(1.32); }
+      .obj.circle { border-radius: 50%; }
+      .obj.arch { border-radius: 50% 50% 0 0 / 42% 42% 0 0; }
+      .obj.s { width: 340px; height: 340px; }
+      .obj.m { width: 470px; height: 470px; }
+      .obj.l { width: 600px; height: 600px; }
+      .obj.tall { width: 430px; height: 620px; }
+      .obj.wide { width: 960px; height: 440px; }
+      .slide.ink .obj, .slide.a1 .obj, .slide.a2 .obj { border-color: currentColor; }
+      body.portrait .obj { border-width: 6px; }
+      body.portrait .obj.s { width: 220px; height: 220px; }
+      body.portrait .obj.m { width: 300px; height: 300px; }
+      body.portrait .obj.l { width: 380px; height: 380px; }
+      body.portrait .obj.tall { width: 270px; height: 400px; }
+      body.portrait .obj.wide { width: 560px; height: 270px; }
+
+      /* PAIR: two photos, hard edge between them, one word under each */
+      .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 0; justify-self: center; width: 100%; max-width: 1500px; }
+      .pair > figure { margin: 0; position: relative; }
+      .pair > figure > .fr { overflow: hidden; border: 9px solid var(--ink); }
+      .pair > figure:last-child > .fr { border-left-width: 0; }
+      .pair img { width: 100%; height: 430px; object-fit: cover; display: block; }
+      .pair .then img { filter: grayscale(1) contrast(1.35); }
+      .pair figcaption { font-family: var(--font-u); font-size: 58px; line-height: 1; text-transform: uppercase;
+        letter-spacing: -2px; padding: 22px 4px 0; }
+      .slide.ink .pair > figure > .fr, .slide.a1 .pair > figure > .fr, .slide.a2 .pair > figure > .fr { border-color: currentColor; }
+      body.portrait .pair img { height: 250px; }
+      body.portrait .pair > figure > .fr { border-width: 6px; }
+      body.portrait .pair figcaption { font-size: 32px; padding: 12px 2px 0; }
+
+      /* INSET: a pasted print dropped onto a type slide. The wrapper carries the
+         rotation so the engine's inline transform on .inset cannot flatten it. */
+      .insetw { position: absolute; z-index: 3; }
+      .insetw > .inset { width: 100%; height: 100%; position: relative; overflow: hidden; border: 8px solid var(--ink); background: var(--ink); }
+      .insetw > .inset > img { width: 100%; height: 100%; object-fit: cover; display: block; }
+      .insetw .icap { position: absolute; left: 0; right: 0; bottom: 0; font-family: var(--font-m); font-size: 19px;
+        letter-spacing: 0.12em; text-transform: uppercase; background: #141414; color: #FFFDF6; padding: 7px 12px; }
+      .insetw.tr { top: 104px; right: 112px; width: 430px; height: 320px; transform: rotate(2.4deg); }
+      .insetw.br { bottom: 110px; right: 112px; width: 430px; height: 320px; transform: rotate(-2deg); }
+      .insetw.bl { bottom: 110px; left: 112px; width: 430px; height: 320px; transform: rotate(2deg); }
+      body.portrait .insetw { width: 250px; height: 190px; }
+      body.portrait .insetw.tr { top: 70px; right: 44px; }
+      body.portrait .insetw.br { bottom: 76px; right: 44px; }
+      body.portrait .insetw.bl { bottom: 76px; left: 44px; }
+      body.portrait .insetw > .inset { border-width: 5px; }
+      body.portrait .insetw .icap { font-size: 13px; padding: 4px 8px; }
+
+      /* STRIP: a wide letterbox crop, full width, type above and below */
+      .strip { width: 100%; justify-self: stretch; overflow: hidden;
+        border-top: 9px solid var(--ink); border-bottom: 9px solid var(--ink); }
+      .strip img { width: 100%; height: 290px; object-fit: cover; display: block; }
+      .strip.duo img { filter: grayscale(1) contrast(1.45); }
+      .slide.ink .strip, .slide.a1 .strip, .slide.a2 .strip { border-color: currentColor; }
+      body.portrait .strip img { height: 180px; }
+      body.portrait .strip { border-width: 6px; }
+
+      /* shared mono caption for any photo treatment */
+      .pcap { font-family: var(--font-m); font-size: 26px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--mid); }
+      .slide.ink .pcap, .slide.a1 .pcap, .slide.a2 .pcap { color: currentColor; opacity: 0.78; }
+      body.portrait .pcap { font-size: 18px; }
+
+      /* ══════════════════ WINDOW ══════════════════ */
+      .win { justify-self: center; border: 8px solid var(--ink); overflow: hidden; max-width: 100%; }
+      .win img { width: 100%; display: block; }
+      .win.w-sm { width: 560px; } .win.w-md { width: 800px; } .win.w-lg { width: 1080px; }
+      body.portrait .win { border-width: 6px; }
+      body.portrait .win.w-sm { width: 380px; } body.portrait .win.w-md { width: 520px; } body.portrait .win.w-lg { width: 620px; }
+      .cap { font-family: var(--font-m); font-size: 24px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--mid); }
+      .slide.ink .cap, .slide.a1 .cap, .slide.a2 .cap { color: currentColor; opacity: 0.72; }
+      body.portrait .cap { font-size: 18px; }
+
+      /* ══════════════════ BAUHAUS geometry ══════════════════ */
+      .geo { display: flex; align-items: center; justify-content: center; gap: 48px; flex-wrap: wrap; }
+      .geo svg { height: 340px; width: auto; }
+      .geo.sm svg { height: 210px; } .geo.lg svg { height: 460px; } .geo.xl svg { height: 560px; }
+      .geo.wide svg { height: auto; width: 100%; max-width: 1620px; }
+      body.portrait .geo svg { height: 220px; }
+      body.portrait .geo.sm svg { height: 140px; } body.portrait .geo.lg svg { height: 290px; }
+      body.portrait .geo.xl svg { height: 340px; }
+      body.portrait .geo.wide svg { height: auto; width: 100%; }
+      .f-ink { fill: var(--ink); } .s-ink { stroke: var(--ink); }
+      .f-paper { fill: var(--paper); } .f-card { fill: var(--card); } .f-mid { fill: var(--mid); } .s-mid { stroke: var(--mid); }
+      .f-a1 { fill: var(--acc1); } .f-a2 { fill: var(--acc2); } .f-a3 { fill: var(--acc1); }
+      .s-a1 { stroke: var(--acc1); } .s-a2 { stroke: var(--acc2); } .s-a3 { stroke: var(--acc1); }
+      .f-none { fill: none; } .f-cur { fill: currentColor; } .s-cur { stroke: currentColor; }
+      /* SVG children rotate about their own centre, not the viewBox origin.
+         Required by the rotation presets (twist/spin/orbit/tilt/flick). */
+      #stage svg [data-anim] { transform-box: fill-box; transform-origin: center; }
+
+      /* ══════════════════ INDEX ══════════════════ */
+      .idx { display: flex; flex-direction: column; gap: 18px; width: 100%; }
+      .idx .row { display: flex; align-items: baseline; gap: 34px; border-bottom: 3px solid var(--line); padding-bottom: 16px; }
+      .idx .row .n { font-family: var(--font-m); font-size: 34px; color: var(--acc1); min-width: 82px; letter-spacing: 0.06em; }
+      .idx .row .x { font-family: var(--font-u); font-size: 76px; line-height: 1; letter-spacing: -2px; text-transform: uppercase; }
+      .idx .row .x.lc { text-transform: none; font-family: var(--font-g); font-weight: 700; letter-spacing: -1px; font-size: 62px; }
+      .idx .row.dim { opacity: 0.16; }
+      .idx .row.dim .n { color: var(--mid); }
+      .idx.tightrows .row .x { font-size: 62px; }
+      .idx.tightrows .row { padding-bottom: 12px; } .idx.tightrows { gap: 13px; }
+      .slide.ink .idx .row, .slide.a1 .idx .row, .slide.a2 .idx .row { border-bottom-color: currentColor; }
+      body.portrait .idx .row { gap: 18px; padding-bottom: 10px; }
+      body.portrait .idx .row .n { font-size: 22px; min-width: 52px; }
+      body.portrait .idx .row .x { font-size: 46px; letter-spacing: -1px; }
+      body.portrait .idx .row .x.lc { font-size: 38px; }
+      body.portrait .idx.tightrows .row .x { font-size: 38px; }
+
+      /* ══════════════════ SPLIT ══════════════════ */
+      .slide.split { padding: 0; }
+      .slide.split.active { display: grid; grid-template-columns: 1fr 1fr; align-content: stretch; row-gap: 0; }
+      .slide.split > .half { display: grid; align-content: center; padding: 110px 90px; position: relative; }
+      body.portrait .slide.split.active { grid-template-columns: 1fr; grid-template-rows: 1fr 1fr; }
+      body.portrait .slide.split > .half { padding: 60px 50px; }
+      .half.hi { background: var(--ink); color: var(--paper); }
+      .half.h1 { background: var(--acc1); color: #FFF4EF; }
+      .half.h2 { background: var(--acc2); color: #F1F4FF; }
+      .half.hp { background: var(--paper); color: var(--ink); }
+      .half.h2 .stamp.s200 { border-color: #F1F4FF; color: #F1F4FF; }
+      .half.h2 .code { border-color: #14140F; }
+      .half.h1 .eyebrow, .half.h2 .eyebrow, .half.hi .eyebrow,
+      .half.h1 .cap, .half.h2 .cap, .half.hi .cap { color: currentColor; opacity: 0.75; }
+      .half.hn { background: var(--panel); color: var(--ink); }
+
+      /* ══════════════════ TAPE ══════════════════ */
+      .tape { display: inline-block; background: var(--acc1); color: #FFF4EF; font-family: var(--font-u);
+        font-size: 96px; letter-spacing: -1px; text-transform: uppercase; padding: 18px 60px; transform: rotate(-3deg); justify-self: center; }
+      .tape.t2 { background: var(--acc2); color: #F1F4FF; }
+      .tape.ti { background: var(--ink); color: var(--paper); }
+      .tape.sm { font-size: 58px; padding: 12px 38px; }
+      body.portrait .tape { font-size: 54px; padding: 12px 32px; }
+      body.portrait .tape.sm { font-size: 36px; padding: 8px 22px; }
+      /* tape strips crossing a word, from her board. Same wrapper trick as .rot. */
+      .tapes { display: flex; flex-direction: column; align-items: flex-start; gap: 14px; }
+      .tapes > .tw { display: block; }
+      .tapes > .tw > span { display: inline-block; background: var(--acc1); color: #FFF4EF; font-family: var(--font-m);
+        font-size: 34px; letter-spacing: 0.14em; text-transform: uppercase; padding: 12px 30px; }
+      .tapes > .tw:nth-child(odd) > span { transform: rotate(-2deg); }
+      .tapes > .tw:nth-child(even) > span { transform: rotate(1.6deg); background: var(--acc2); color: #F1F4FF; }
+      .tapes > .tw:nth-child(even) { margin-left: 60px; }
+      body.portrait .tapes > .tw > span { font-size: 22px; padding: 8px 18px; }
+
+      /* ══════════════════ OUTLINE ══════════════════ */
+      .out { font-family: var(--font-u); text-transform: uppercase; -webkit-text-fill-color: transparent; -webkit-text-stroke: 5px currentColor; letter-spacing: -3px; line-height: 0.9; }
+      .out.oa1 { -webkit-text-stroke-color: var(--acc1); }
+      .out.oa2 { -webkit-text-stroke-color: var(--acc2t); }
+      .out.ocur { -webkit-text-stroke-color: currentColor; }
+      .out.filled { color: var(--acc1); -webkit-text-stroke: 0; -webkit-text-fill-color: currentColor; }
+      body.portrait .out { -webkit-text-stroke-width: 3px; }
+
+      /* ══════════════════ CIRCLE ══════════════════ */
+      .circs { display: flex; gap: 34px; justify-content: center; flex-wrap: wrap; }
+      .circ { width: 250px; height: 250px; border-radius: 50%; background: var(--acc1); color: #FFF4EF;
+        display: grid; place-items: center; font-family: var(--font-u); font-size: 108px; line-height: 1; }
+      .circ.o { background: transparent; border: 8px solid var(--ink); color: var(--ink); }
+      .circ.c2 { background: var(--acc2); color: #F1F4FF; } .circ.ci { background: var(--ink); color: var(--paper); }
+      body.portrait .circs { gap: 18px; }
+      body.portrait .circ { width: 150px; height: 150px; font-size: 64px; border-width: 6px; }
+
+      /* ══════════════════ QUOTE ══════════════════ */
+      .quote { max-width: 1500px; justify-self: center; }
+      .quote .qt { font-family: var(--font-g); font-weight: 700; font-size: 96px; line-height: 1.1; letter-spacing: -2px; }
+      .quote .qa { font-family: var(--font-m); font-size: 26px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--mid); margin-top: 30px; }
+      .slide.ink .quote .qa, .slide.a1 .quote .qa, .slide.a2 .quote .qa { color: currentColor; opacity: 0.7; }
+      body.portrait .quote .qt { font-size: 56px; }
+      body.portrait .quote .qa { font-size: 19px; margin-top: 18px; }
+
+      /* ══════════════════ SHARED - light cards, LITERAL colours, no offset shadow ══════════════════ */
+      .card { background: #FFFDF6; color: #141414; border: 6px solid #141414; padding: 34px 42px; width: 100%; max-width: 1500px; justify-self: center; text-align: left; }
+      body.portrait .card { border-width: 4px; padding: 22px 26px; }
+
+      .browser { width: 100%; max-width: 1460px; justify-self: center; border: 6px solid #141414; overflow: hidden; background: #FFFDF6; text-align: left; }
+      .browser .chrome { display: flex; align-items: center; gap: 12px; padding: 20px 26px; background: #E4DFD1; border-bottom: 5px solid #141414; }
+      .browser .dot { width: 16px; height: 16px; border-radius: 50%; background: #141414; }
+      .browser .url { margin-left: 16px; font-family: var(--font-m); font-size: 28px; color: #4A4740; background: #FFFDF6; border: 3px solid #141414; padding: 8px 26px; flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; }
+      .browser .url b { color: #141414; font-weight: 500; }
+      .browser .body { padding: 40px 44px; font-family: var(--font-m); font-size: 34px; color: #141414; line-height: 1.5; }
+      body.portrait .browser { border-width: 4px; }
+      body.portrait .browser .chrome { padding: 12px 16px; }
+      body.portrait .browser .url { font-size: 18px; padding: 6px 14px; border-width: 2px; }
+      body.portrait .browser .body { padding: 22px 24px; font-size: 21px; }
+
+      /* code window: dark bg, literal colours */
+      .code { width: 100%; max-width: 1500px; justify-self: center; background: #14140F; color: #EDE9E2; border: 6px solid #FF4713; padding: 32px 40px; text-align: left; font-family: var(--font-m); font-size: 34px; line-height: 1.62; white-space: pre; overflow-x: hidden; }
+      .half.h1 .code { border-color: #14140F; }
+      .code .kk { color: #8B8778; } .code .k1 { color: #FF6B3D; } .code .k2 { color: #7E9BFF; } .code .k3 { color: #EDE9E2; }
+      .code .fname { display: block; font-size: 24px; letter-spacing: 0.14em; text-transform: uppercase; color: #8B8778; margin-bottom: 22px; }
+      .code.sm { font-size: 26px; } .code.tiny { font-size: 21px; }
+      body.portrait .code { font-size: 20px; padding: 20px 22px; }
+      body.portrait .code.sm { font-size: 16px; } body.portrait .code.tiny { font-size: 13px; }
+      body.portrait .code .fname { font-size: 15px; margin-bottom: 14px; }
+
+      .chips { display: flex; flex-wrap: wrap; gap: 16px; }
+      .slide.center .chips { justify-content: center; }
+      .chip { font-family: var(--font-m); font-size: 30px; padding: 15px 32px; border: 4px solid var(--mid); color: var(--ink); }
+      .slide.ink .chip, .slide.a1 .chip, .slide.a2 .chip { color: currentColor; border-color: currentColor; }
+      .chip.on  { background: var(--acc1); border-color: var(--acc1); color: #FFF4EF; }
+      .chip.on2 { background: var(--acc2); border-color: var(--acc2); color: #F1F4FF; }
+      .chip.on3 { background: var(--ink); border-color: var(--ink); color: var(--paper); }
+      .chip.off { opacity: 0.34; text-decoration: line-through; text-decoration-thickness: 3px; }
+      body.portrait .chip { font-size: 21px; padding: 10px 20px; border-width: 3px; }
+
+      .cmp { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+      .cmp > div { border: 6px solid var(--line); padding: 34px; }
+      .cmp .h { font-family: var(--font-m); font-size: 24px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--mid); margin-bottom: 16px; }
+      .cmp .b { font-family: var(--font-u); font-size: 82px; line-height: 0.98; text-transform: uppercase; letter-spacing: -2px; }
+      .cmp .bad { border-color: var(--acc1); } .cmp .good { border-color: var(--acc2); }
+      body.portrait .cmp { grid-template-columns: 1fr; gap: 14px; }
+      body.portrait .cmp > div { padding: 20px; border-width: 4px; }
+      body.portrait .cmp .b { font-size: 46px; }
+      body.portrait .cmp .h { font-size: 18px; }
+
+      .col2 { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+      .col2.tightgap { gap: 40px; }
+      body.portrait .col2 { grid-template-columns: 1fr; gap: 24px; }
+      .row { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; }
+      .slide.center .row { justify-content: center; }
+
+      /* ══════════════════ KIT COMPONENTS - 404 PAGES ══════════════════ */
+
+      /* --- flat recreated 404-page mock. LIGHT CARD: literal colours, no shadow --- */
+      .mock { background: #FFFDF6; color: #141414; border: 6px solid #141414; overflow: hidden; text-align: left; position: relative; }
+      .mock .top { display: flex; align-items: center; gap: 9px; padding: 13px 18px; background: #E4DFD1; border-bottom: 5px solid #141414; }
+      .mock .top i { width: 12px; height: 12px; border-radius: 50%; background: #141414; display: block; flex: none; }
+      .mock .top .addr { margin-left: 12px; flex: 1; min-width: 0; height: 20px; background: #D2CCBC; }
+      .mock .pane { padding: 40px 34px 46px; display: grid; row-gap: 18px; justify-items: center; text-align: center; position: relative; }
+      .mock .pane.lft { justify-items: start; text-align: left; }
+      .mock .n404 { font-family: var(--font-u); font-size: 104px; line-height: 0.9; letter-spacing: -3px; color: #FF4713; }
+      .mock .n404.blue { color: #1B3FD8; }
+      .mock .n404.ghosted { color: #E7E1D1; }
+      .mock .msg { font-family: var(--font-g); font-weight: 700; font-size: 32px; line-height: 1.2; color: #141414; letter-spacing: -0.5px; }
+      .mock .msg.sm { font-size: 24px; font-weight: 600; }
+      .mock .bar { height: 15px; background: #D9D3C3; width: 72%; }
+      .mock .bar.s { width: 40%; } .mock .bar.l { width: 90%; } .mock .bar.xs { width: 26%; }
+      .mock .btn { font-family: var(--font-m); font-size: 21px; background: #141414; color: #FFFDF6; padding: 12px 28px; letter-spacing: 0.08em; }
+      .mock .btn.o { background: #FF4713; color: #FFF4EF; }
+      .mock .navbar { display: flex; align-items: center; gap: 14px; padding: 16px 22px; border-bottom: 4px solid #141414; background: #FFFDF6; }
+      .mock .navbar .logo { width: 34px; height: 34px; background: #1B3FD8; flex: none; }
+      .mock .navbar .nb { height: 12px; background: #D9D3C3; width: 66px; }
+      .mock .footbar { display: flex; align-items: center; gap: 14px; padding: 16px 22px; border-top: 4px solid #141414; background: #FFFDF6; }
+      .mock .footbar .nb { height: 11px; background: #D9D3C3; width: 58px; }
+      /* huge faint 404 sitting behind the real message */
+      .mock .ghost404 { position: absolute; inset: 0; display: grid; place-items: center; font-family: var(--font-u);
+        font-size: 300px; line-height: 1; letter-spacing: -10px; color: #E9E3D3; z-index: 0; pointer-events: none; }
+      .mock .pane > *:not(.ghost404) { position: relative; z-index: 1; }
+      /* framework default-error look: plain, generic, name printed on it */
+      .mock.fw { background: #FFFDF6; }
+      .mock.fw .pane { justify-items: start; text-align: left; row-gap: 14px; padding: 34px 30px; }
+      .mock.fw .fwname { font-family: var(--font-m); font-size: 26px; letter-spacing: 0.16em; text-transform: uppercase; color: #6C6A66; }
+      .mock.fw .fwmsg { font-family: var(--font-m); font-size: 30px; color: #141414; }
+      .mock.fw .fwrule { height: 4px; background: #D2CCBC; width: 100%; }
+      .mock.fw .fwtrace { height: 11px; background: #E2DCCC; width: 100%; }
+      .mock.fw .fwtrace.s { width: 62%; } .mock.fw .fwtrace.m { width: 84%; }
+      /* scales */
+      .mock.mini .pane { padding: 22px 16px 26px; row-gap: 11px; }
+      .mock.mini .n404 { font-size: 58px; letter-spacing: -2px; }
+      .mock.mini .msg { font-size: 19px; } .mock.mini .msg.sm { font-size: 15px; }
+      .mock.mini .bar { height: 10px; } .mock.mini .btn { font-size: 14px; padding: 8px 16px; }
+      .mock.mini .top { padding: 9px 12px; } .mock.mini .top i { width: 8px; height: 8px; }
+      .mock.mini .top .addr { height: 14px; }
+      .mock.mini .ghost404 { font-size: 150px; letter-spacing: -5px; }
+      .mock.mini .navbar, .mock.mini .footbar { padding: 10px 14px; gap: 9px; }
+      .mock.mini .navbar .logo { width: 22px; height: 22px; }
+      .mock.mini .navbar .nb, .mock.mini .footbar .nb { height: 8px; width: 42px; }
+      .mock.mini .fwname { font-size: 15px; } .mock.mini .fwmsg { font-size: 17px; }
+      .mock.mini .fwtrace { height: 8px; }
+      .mock.mini .pane { min-height: 236px; align-content: center; }
+      .mock.md .pane { padding: 34px 28px 38px; row-gap: 16px; min-height: 300px; align-content: start; }
+      .mock.md .n404 { font-size: 82px; letter-spacing: -3px; }
+      .mock.md .msg { font-size: 26px; }
+      .mock.md .top { padding: 11px 15px; } .mock.md .top i { width: 10px; height: 10px; }
+      .mock.md .top .addr { height: 17px; }
+      .mock.md .fwname { font-size: 21px; } .mock.md .fwmsg { font-size: 25px; }
+      .mock.md .fwtrace { height: 10px; } .mock.md .bar { height: 12px; }
+      .mock.md .btn { font-size: 17px; padding: 10px 20px; }
+      .mock.md .ghost404 { font-size: 210px; letter-spacing: -7px; }
+      .mock.big .pane { padding: 66px 50px 74px; row-gap: 26px; }
+      .mock.big .n404 { font-size: 168px; letter-spacing: -6px; }
+      .mock.big .msg { font-size: 46px; }
+      .mock.big .ghost404 { font-size: 420px; letter-spacing: -14px; }
+      body.portrait .mock { border-width: 4px; }
+      body.portrait .mock .n404 { font-size: 64px; }
+      body.portrait .mock .msg { font-size: 21px; }
+      body.portrait .mock.big .n404 { font-size: 104px; }
+      body.portrait .mock.big .msg { font-size: 30px; }
+      body.portrait .mock .ghost404 { font-size: 180px; }
+      body.portrait .mock.big .ghost404 { font-size: 250px; }
+
+      .grid5 { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; width: 100%; }
+      .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; width: 100%; }
+      .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 34px; width: 100%; }
+      body.portrait .grid5 { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+      body.portrait .grid3 { grid-template-columns: 1fr; gap: 16px; }
+      body.portrait .grid2 { grid-template-columns: 1fr; gap: 16px; }
+
+      /* --- STATUS CODES AS OBJECTS --- */
+      /* 404 stamp = safety orange · 200 stamp = electric blue (same shape, that is the point) */
+      .stamp { display: inline-block; font-family: var(--font-u); text-transform: uppercase; text-align: center;
+        border: 9px double var(--acc1); color: var(--acc1); padding: 20px 44px 26px; transform: rotate(-6deg); }
+      .stamp .n { font-size: 132px; line-height: 0.92; letter-spacing: -4px; display: block; }
+      .stamp .l { font-family: var(--font-m); font-size: 26px; letter-spacing: 0.22em; display: block; margin-top: 8px; }
+      .stamp.s200 { border-color: var(--acc2t); color: var(--acc2t); transform: rotate(4deg); }
+      .stamp.sm .n { font-size: 84px; } .stamp.sm { padding: 14px 30px 18px; border-width: 7px; }
+      .stamp.sm .l { font-size: 19px; }
+      .stamp.lg .n { font-size: 210px; letter-spacing: -7px; } .stamp.lg { padding: 26px 62px 34px; border-width: 12px; }
+      .stamp.lg .l { font-size: 34px; }
+      .stamp.flat { transform: none; }
+      body.portrait .stamp .n { font-size: 84px; } body.portrait .stamp { padding: 14px 28px 18px; border-width: 7px; }
+      body.portrait .stamp .l { font-size: 18px; }
+      body.portrait .stamp.lg .n { font-size: 124px; } body.portrait .stamp.sm .n { font-size: 54px; }
+
+      /* 301 = blue arrow plaque (road sign) */
+      .plaque { display: inline-flex; align-items: center; gap: 28px; background: var(--acc2); color: #F1F4FF;
+        font-family: var(--font-u); font-size: 118px; line-height: 1; letter-spacing: -3px; padding: 26px 46px; }
+      .plaque svg { height: 78px; width: auto; flex: none; }
+      .plaque .l { font-family: var(--font-m); font-size: 24px; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0.8; }
+      .plaque.sm { font-size: 76px; padding: 18px 30px; gap: 18px; } .plaque.sm svg { height: 52px; }
+      body.portrait .plaque { font-size: 66px; padding: 16px 24px; gap: 16px; } body.portrait .plaque svg { height: 44px; }
+
+      /* 410 = ink tombstone card (percentage radii, per the export rule) */
+      .tomb { display: grid; place-items: center; align-content: center; row-gap: 12px; background: var(--ink); color: var(--paper);
+        border-radius: 46% 46% 0 0 / 26% 26% 0 0; padding: 76px 54px 42px; min-width: 340px; }
+      .tomb .n { font-family: var(--font-u); font-size: 118px; line-height: 1; letter-spacing: -3px; }
+      .tomb .l { font-family: var(--font-m); font-size: 24px; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0.78; text-align: center; }
+      .tomb.sm { padding: 54px 36px 30px; min-width: 250px; } .tomb.sm .n { font-size: 76px; } .tomb.sm .l { font-size: 18px; }
+      body.portrait .tomb { padding: 48px 30px 26px; min-width: 210px; }
+      body.portrait .tomb .n { font-size: 62px; } body.portrait .tomb .l { font-size: 17px; }
+
+      .objrow { display: flex; align-items: flex-end; justify-content: center; gap: 70px; flex-wrap: wrap; }
+      .objcell { display: grid; justify-items: center; row-gap: 26px; }
+      .objcell .cap { text-align: center; max-width: 460px; font-size: 27px; }
+      body.portrait .objrow { gap: 34px; }
+
+      /* --- three sides of a good 404 page: UI orange / UX blue / ENGINEERING ink --- */
+      .tri { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; width: 100%; }
+      .tri > div { border: 9px solid var(--line); padding: 56px 44px; display: grid; align-content: start; row-gap: 26px; min-height: 520px; }
+      .tri > div.dim { opacity: 0.16; }
+      .tri .k { font-family: var(--font-u); font-size: 122px; line-height: 0.9; letter-spacing: -4px; text-transform: uppercase; }
+      .tri .d { font-family: var(--font-g); font-weight: 600; font-size: 40px; line-height: 1.26; }
+      .tri .sUI { border-color: var(--acc1); } .tri .sUI .k { color: var(--acc1); }
+      .tri .sUX { border-color: var(--acc2); } .tri .sUX .k { color: var(--acc2t); }
+      .tri .sEN { border-color: var(--ink); } .tri .sEN .k { color: var(--ink); }
+      .slide.ink .tri .sEN { border-color: var(--paper); } .slide.ink .tri .sEN .k { color: var(--paper); }
+      body.portrait .tri { grid-template-columns: 1fr; gap: 14px; }
+      body.portrait .tri > div { padding: 20px 18px; border-width: 5px; row-gap: 10px; min-height: 0; }
+      body.portrait .tri .k { font-size: 54px; } body.portrait .tri .d { font-size: 22px; }
+
+      /* --- Search Console style dashboard mock: LIGHT CARD, literal colours --- */
+      .dash { background: #FFFDF6; color: #141414; border: 6px solid #141414; width: 100%; max-width: 1440px; justify-self: center; text-align: left; overflow: hidden; }
+      .dash .dh { display: flex; align-items: center; justify-content: space-between; padding: 22px 30px; background: #E4DFD1; border-bottom: 5px solid #141414; font-family: var(--font-m); font-size: 25px; letter-spacing: 0.14em; text-transform: uppercase; color: #141414; }
+      .dash .dr { display: flex; align-items: center; justify-content: space-between; gap: 30px; padding: 20px 30px; border-bottom: 3px solid #E2DCCC; }
+      .dash .dr:last-child { border-bottom: 0; }
+      .dash .dr .ub { height: 15px; background: #D9D3C3; flex: 1; min-width: 0; }
+      .dash .dr .ub.s { max-width: 44%; } .dash .dr .ub.m { max-width: 66%; } .dash .dr .ub.l { max-width: 88%; }
+      .dash .dr .sc { font-family: var(--font-m); font-size: 25px; color: #FFF4EF; background: #FF4713; padding: 7px 20px; flex: none; letter-spacing: 0.1em; }
+      .dash .dr .sc.blue { background: #1B3FD8; color: #F1F4FF; }
+      body.portrait .dash { border-width: 4px; }
+      body.portrait .dash .dh { font-size: 17px; padding: 14px 18px; }
+      body.portrait .dash .dr { padding: 13px 18px; gap: 16px; }
+      body.portrait .dash .dr .sc { font-size: 17px; padding: 5px 13px; }
+
+      /* --- phone / chat, for the WhatsApp beat. LIGHT CARD, no shadow --- */
+      .phone { width: 560px; justify-self: center; background: #FFFDF6; color: #141414; border: 8px solid #141414; border-radius: 44px; padding: 30px 24px 34px; text-align: left; }
+      .phone .notch { width: 130px; height: 12px; background: #141414; border-radius: 8px; margin: 0 auto 26px; }
+      .phone .msg { background: #E4DFD1; color: #141414; font-family: var(--font-m); font-size: 23px; line-height: 1.45; padding: 16px 20px; margin-bottom: 14px; word-break: break-all; }
+      .phone .msg.me { background: #1B3FD8; color: #F1F4FF; }
+      .phone .msg .cut { color: #FF4713; }
+      body.portrait .phone { width: 380px; border-width: 6px; border-radius: 34px; padding: 22px 16px 24px; }
+      body.portrait .phone .msg { font-size: 18px; padding: 12px 15px; }
+
+      /* --- big url string that stops dead --- */
+      .urlstop { display: flex; align-items: center; flex-wrap: wrap; gap: 0; font-family: var(--font-m); font-size: 64px; letter-spacing: -1px; }
+      .urlstop .live { color: var(--ink); }
+      .slide.ink .urlstop .live, .slide.a1 .urlstop .live, .slide.a2 .urlstop .live { color: currentColor; }
+      .urlstop .dead { color: var(--acc1); text-decoration: line-through; text-decoration-thickness: 6px; }
+      body.portrait .urlstop { font-size: 32px; }
+
+      /* ══════════════════ PORTRAIT inline-size fallbacks ══════════════════ */
+      body.portrait [style*="font-size: 400px"], body.portrait [style*="font-size: 410px"],
+      body.portrait [style*="font-size: 420px"], body.portrait [style*="font-size: 380px"],
+      body.portrait [style*="font-size: 440px"], body.portrait [style*="font-size: 460px"] { font-size: 216px !important; letter-spacing: -5px !important; }
+      body.portrait [style*="font-size: 300px"], body.portrait [style*="font-size: 320px"],
+      body.portrait [style*="font-size: 340px"], body.portrait [style*="font-size: 360px"] { font-size: 184px !important; letter-spacing: -4px !important; }
+      body.portrait [style*="font-size: 240px"], body.portrait [style*="font-size: 260px"],
+      body.portrait [style*="font-size: 280px"] { font-size: 152px !important; letter-spacing: -3px !important; }
+      body.portrait [style*="font-size: 200px"], body.portrait [style*="font-size: 215px"],
+      body.portrait [style*="font-size: 220px"], body.portrait [style*="font-size: 230px"] { font-size: 130px !important; letter-spacing: -2px !important; }
+      body.portrait [style*="font-size: 160px"], body.portrait [style*="font-size: 168px"],
+      body.portrait [style*="font-size: 180px"], body.portrait [style*="font-size: 190px"] { font-size: 108px !important; letter-spacing: -2px !important; }
+      body.portrait [style*="font-size: 132px"], body.portrait [style*="font-size: 140px"],
+      body.portrait [style*="font-size: 150px"], body.portrait [style*="font-size: 120px"] { font-size: 92px !important; letter-spacing: -1px !important; }
+      body.portrait [style*="font-size: 96px"], body.portrait [style*="font-size: 100px"],
+      body.portrait [style*="font-size: 108px"], body.portrait [style*="font-size: 112px"] { font-size: 62px !important; }
+      body.portrait [style*="font-size: 80px"], body.portrait [style*="font-size: 86px"],
+      body.portrait [style*="font-size: 90px"] { font-size: 54px !important; }
+      body.portrait [style*="font-size: 58px"], body.portrait [style*="font-size: 62px"],
+      body.portrait [style*="font-size: 64px"], body.portrait [style*="font-size: 70px"],
+      body.portrait [style*="font-size: 72px"] { font-size: 42px !important; }
+      body.portrait [style*="font-size: 44px"], body.portrait [style*="font-size: 46px"],
+      body.portrait [style*="font-size: 48px"], body.portrait [style*="font-size: 52px"] { font-size: 31px !important; }
+
+      /* ══════════════════ CHROME ══════════════════ */
+      #pb { position: fixed; top: 0; left: 0; height: 5px; background: var(--acc1); width: 0; z-index: 50; transition: width 0.3s ease; }
+      #controls { position: fixed; bottom: 18px; left: 50%; transform: translateX(-50%); display: flex; align-items: center; gap: 10px; padding: 10px 14px; background: rgba(20,20,20,0.82); backdrop-filter: blur(8px); border-radius: 14px; z-index: 60; font-family: var(--font-m); color: #eee; font-size: 14px; user-select: none; }
+      #controls button { font-family: var(--font-m); font-size: 13px; color: #eee; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.14); border-radius: 8px; padding: 8px 12px; cursor: pointer; white-space: nowrap; }
+      #controls button:hover { background: rgba(255,255,255,0.16); }
+      #controls .sep { width: 1px; height: 22px; background: rgba(255,255,255,0.16); margin: 0 2px; }
+      #controls input { width: 46px; font-family: var(--font-m); font-size: 13px; text-align: center; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.14); color: #eee; border-radius: 8px; padding: 7px 4px; }
+      #counter { min-width: 58px; text-align: center; }
+      #toast { position: fixed; bottom: 84px; left: 50%; transform: translateX(-50%); background: rgba(20,20,20,0.92); color: #fff; font-family: var(--font-m); font-size: 14px; padding: 12px 18px; border-radius: 10px; z-index: 70; opacity: 0; transition: opacity 0.25s ease; pointer-events: none; }
+      #toast.show { opacity: 1; }
+    </style>
+  </head>
+  <body class="dark">
+    <div id="pb"></div>
+    <div id="viewport">
+      <div id="stage">
+
+        <!-- ══════════════ A. OPEN ══════════════ -->
+
+        <!-- 01  OBJECT / cover - "your 404 page" + the number as the image -->
+        <section class="slide a2 tight" data-dur="5.0">
+          <div class="gridlines"></div>
+          <div class="meta tl">STATUS 404<br />NOT FOUND</div>
+          <div class="meta tr">DEAD LINK / 01</div>
+          <div style="position: absolute; left: 100px; top: 168px; z-index: 3;" data-anim="up">
+            <div class="t" style="font-size: 108px; font-weight: 700; letter-spacing: -4px; line-height: 1;">your 404 page</div>
+          </div>
+          <div style="position: absolute; left: -30px; right: -30px; bottom: -70px; z-index: 2; text-align: center;" data-anim="scale" data-delay="0.3">
+            <span class="u" style="font-size: 620px; letter-spacing: -28px; color: #FF4713;">404</span>
+          </div>
+        </section>
+
+        <!-- 02  SLAB - the opening claim, full orange field -->
+        <section class="slide a1 tight" data-dur="4.6">
+          <div class="stack" data-anim="rise">
+            <div style="font-size: 172px;">IS ONE OF THE</div>
+            <div style="font-size: 172px;">MOST IMPORTANT</div>
+            <div style="font-size: 172px;">PAGES IN YOUR</div>
+            <div style="font-size: 172px;">WEB APP</div>
+          </div>
+        </section>
+
+        <!-- 04  SWISS - "if you don't know what a 404 page looks like" -->
+        <section class="slide" data-dur="4.0">
+          <div class="eyebrow" data-anim="fade">IF YOU DON'T KNOW WHAT A 404 PAGE LOOKS LIKE</div>
+          <div class="rule acc" data-anim="left" data-delay="0.15"></div>
+          <div class="u" style="font-size: 180px;" data-anim="up" data-delay="0.3">IT LOOKS<br />SOMETHING<br />LIKE THIS</div>
+          <div class="meta br">FIG. 01</div>
+        </section>
+
+        <!-- 05  WINDOW / montage - CASCADE. five mocks arrive one after another on
+             alternating presets, each one's numeral punching in just behind its frame. -->
+        <section class="slide center" data-dur="6.0">
+          <div class="grid5">
+            <div class="mock mini" data-anim="drop">
+              <div class="top"><i></i><i></i><i></i><div class="addr"></div></div>
+              <div class="pane"><div class="n404" data-anim="punch" data-delay="0.20">404</div><div class="bar" data-anim="left" data-delay="0.28"></div><div class="bar s" data-anim="left" data-delay="0.32"></div><div class="btn" data-anim="pop" data-delay="0.36">HOME</div></div>
+            </div>
+            <div class="mock mini" data-anim="tilt" data-delay="0.09">
+              <div class="top"><i></i><i></i><i></i><div class="addr"></div></div>
+              <div class="pane lft"><div class="n404 blue" data-anim="punch" data-delay="0.29">404</div><div class="bar l" data-anim="left" data-delay="0.37"></div><div class="bar" data-anim="left" data-delay="0.41"></div><div class="btn o" data-anim="pop" data-delay="0.45">GO BACK</div></div>
+            </div>
+            <div class="mock mini" data-anim="slam" data-delay="0.18">
+              <div class="navbar"><div class="logo" data-anim="grow" data-delay="0.40"></div><div class="nb"></div><div class="nb"></div></div>
+              <div class="pane"><div class="n404" data-anim="punch" data-delay="0.38">404</div><div class="bar s" data-anim="left" data-delay="0.46"></div><div class="btn" data-anim="pop" data-delay="0.50">HOME</div></div>
+            </div>
+            <div class="mock mini" data-anim="tilt" data-delay="0.27">
+              <div class="top"><i></i><i></i><i></i><div class="addr"></div></div>
+              <div class="pane"><div class="ghost404" data-anim="zoom" data-delay="0.47">404</div><div class="bar" data-anim="left" data-delay="0.55"></div><div class="bar s" data-anim="left" data-delay="0.59"></div><div class="btn o" data-anim="pop" data-delay="0.63">HOME</div></div>
+            </div>
+            <div class="mock mini" data-anim="drop" data-delay="0.36">
+              <div class="top"><i></i><i></i><i></i><div class="addr"></div></div>
+              <div class="pane"><div class="n404" data-anim="punch" data-delay="0.56">404</div><div class="bar xs" data-anim="left" data-delay="0.64"></div></div>
+            </div>
+          </div>
+          <div class="cap" style="margin-top: 26px;" data-anim="fade" data-delay="0.86">THIS, THIS, THIS, THIS, AND THIS</div>
+        </section>
+
+        <!-- 06  MARKER - the definition, key words in solid blocks -->
+        <section class="slide" data-dur="5.0">
+          <div class="t" style="font-size: 92px; font-weight: 700; line-height: 1.26; letter-spacing: -2px;" data-anim="up">
+            It is the page a user sees when they<br />
+            navigate to a URL on your domain<br />
+            that <span class="mk">does not exist</span>
+          </div>
+        </section>
+
+        <!-- 07  PHOTO / OBJECT - the motif made literal. A road that ends, cut to a
+             tall slot on a flat ink field. The photo is the subject, not the wallpaper. -->
+        <section class="slide ink" data-dur="4.6">
+          <div class="col2 tightgap">
+            <div class="obj tall" style="width: 480px; height: 720px; justify-self: start;" data-anim="zoom">
+              <img src="https://images.pexels.com/photos/237189/pexels-photo-237189.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt="a dead end sign" />
+            </div>
+            <div style="align-self: end;">
+              <div class="rule acc" data-anim="left" data-delay="0.3"></div>
+              <div class="pcap" style="margin-top: 24px;" data-anim="up" data-delay="0.42">A URL ON YOUR DOMAIN<br />THAT DOES NOT EXIST</div>
+            </div>
+          </div>
+          <div class="meta tr">THE DEAD LINK</div>
+        </section>
+
+        <!-- 08  WINDOW - static browser mock, the gibberish route (no typewriter) -->
+        <section class="slide center" data-dur="5.0">
+          <div class="eyebrow" data-anim="fade" style="justify-self: center;">SO IF I GO TO</div>
+          <div class="browser" data-anim="up" data-delay="0.2">
+            <div class="chrome">
+              <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+              <div class="url">www.youtube.com<b>/624ABCD-gibberish</b></div>
+            </div>
+            <div class="pane" style="padding: 54px 44px; display: grid; row-gap: 20px; justify-items: center;">
+              <div class="n404" style="font-family: 'Archivo Black', Impact, sans-serif; font-size: 150px; color: #FF4713; line-height: 0.9; letter-spacing: -5px;">404</div>
+              <div class="bar" style="height: 15px; background: #D9D3C3; width: 54%;"></div>
+              <div class="bar" style="height: 15px; background: #D9D3C3; width: 32%;"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 09  ROTATE - three rotated slabs -->
+        <section class="slide" data-dur="4.2">
+          <div class="rot">
+            <div class="rw" data-anim="swipeL"><span>THIS URL</span></div>
+            <div class="rw" data-anim="swipeR" data-delay="0.14"><span>THIS ROUTE</span></div>
+            <div class="rw" data-anim="slam" data-delay="0.3"><span class="on">DOESN'T EXIST</span></div>
+          </div>
+        </section>
+
+        <!-- 10  WINDOW - "if I click it, YouTube gives me a page" -->
+        <section class="slide center" data-dur="4.4">
+          <div class="col2 tightgap" style="align-items: center;">
+            <div class="t" style="font-size: 70px; font-weight: 700; line-height: 1.18; letter-spacing: -1px; text-align: left;" data-anim="left">
+              If I click it,<br />YouTube gives me<br />a page.
+            </div>
+            <div class="mock" data-anim="scale" data-delay="0.2">
+              <div class="top"><i></i><i></i><i></i><div class="addr"></div></div>
+              <div class="pane"><div class="n404">404</div><div class="bar"></div><div class="bar s"></div><div class="btn o">HOME</div></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 11  SLAB - the name of the thing -->
+        <section class="slide ink tight" data-dur="4.0">
+          <div class="stack" data-anim="rise">
+            <div style="font-size: 240px;">THAT IS A</div>
+            <div style="font-size: 240px; color: #FF4713;">404 PAGE</div>
+          </div>
+          <div class="meta br">FIG. 02</div>
+        </section>
+
+        <!-- 12  SLAB - the mandate -->
+        <section class="slide a1 tight" data-dur="4.4">
+          <div class="gridlines"></div>
+          <div class="stack" data-anim="up">
+            <div style="font-size: 200px;">AND THIS PAGE</div>
+            <div style="font-size: 200px;">NEEDS TO EXIST</div>
+            <div style="font-size: 200px;">IN YOUR WEB APP</div>
+          </div>
+        </section>
+
+        <!-- 13  INDEX - what the video covers -->
+        <!-- CUMULATIVE BUILD 1 of 3: the first thing I will go over.
+             The other two are held as faint placeholders so the layout never jumps
+             and each of these can be exported as its own frame. -->
+        <section class="slide" data-dur="4.2">
+          <div class="eyebrow" data-anim="fade">IN THIS VIDEO I WILL GO OVER</div>
+          <div class="idx tightrows" style="margin-top: 24px;">
+            <div class="row" data-anim="pop" data-delay="0.18">
+              <div class="n">01</div>
+              <div class="x lc">how people even end up on links that don't exist</div>
+            </div>
+            <div class="row dim">
+              <div class="n">02</div>
+              <div class="x lc">how you can set up a proper 404 page</div>
+            </div>
+            <div class="row dim">
+              <div class="n">03</div>
+              <div class="x lc">the mistake that might ruin their SEO</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CUMULATIVE BUILD 2 of 3: the second joins it. -->
+        <section class="slide" data-dur="4.2">
+          <div class="eyebrow">IN THIS VIDEO I WILL GO OVER</div>
+          <div class="idx tightrows" style="margin-top: 24px;">
+            <div class="row">
+              <div class="n">01</div>
+              <div class="x lc">how people even end up on links that don't exist</div>
+            </div>
+            <div class="row" data-anim="pop" data-delay="0.18">
+              <div class="n">02</div>
+              <div class="x lc">how you can set up a proper 404 page</div>
+            </div>
+            <div class="row dim">
+              <div class="n">03</div>
+              <div class="x lc">the mistake that might ruin their SEO</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CUMULATIVE BUILD 3 of 3: and the third. -->
+        <section class="slide" data-dur="4.8">
+          <div class="eyebrow">IN THIS VIDEO I WILL GO OVER</div>
+          <div class="idx tightrows" style="margin-top: 24px;">
+            <div class="row">
+              <div class="n">01</div>
+              <div class="x lc">how people even end up on links that don't exist</div>
+            </div>
+            <div class="row">
+              <div class="n">02</div>
+              <div class="x lc">how you can set up a proper 404 page</div>
+            </div>
+            <div class="row" data-anim="pop" data-delay="0.18">
+              <div class="n">03</div>
+              <div class="x lc">the mistake that might ruin their SEO</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 14  SLAB - the sting on the third item -->
+        <section class="slide ink center tight" data-dur="4.0">
+          <div class="u" style="font-size: 168px;" data-anim="scale">EVEN IF THEIR<br />404 PAGE<br /><span style="color: #FF4713;">LOOKS PERFECT</span></div>
+        </section>
+
+        <!-- ══════════════ B. HOW DO PEOPLE EVEN GET THESE LINKS ══════════════ -->
+
+        <!-- 15  SWISS + TRACE - the question, and the route drawing itself segment by
+             segment until it stops dead. Nine strokes on flick at 0.05s steps. -->
+        <section class="slide" data-dur="6.0">
+          <div class="rule acc2" data-anim="left"></div>
+          <div class="t" style="font-size: 88px; font-weight: 700; line-height: 1.14; letter-spacing: -2px; margin-top: 18px;" data-anim="up" data-delay="0.18">
+            how does a user even arrive<br />at a link that does not exist?
+          </div>
+          <div class="geo wide" style="margin-top: 26px;">
+            <svg viewBox="0 0 1600 230" role="img" aria-label="a route drawing itself and then stopping dead">
+              <circle class="f-a2" cx="46" cy="182" r="18" data-anim="grow" data-delay="0.34" />
+              <g class="s-ink f-none" stroke-width="15" stroke-linecap="round">
+                <path d="M46 182 H214"  data-anim="flick" data-delay="0.40" />
+                <path d="M214 182 L296 112" data-anim="flick" data-delay="0.45" />
+                <path d="M296 112 H462"  data-anim="flick" data-delay="0.50" />
+                <path d="M462 112 L544 182" data-anim="flick" data-delay="0.55" />
+                <path d="M544 182 H722"  data-anim="flick" data-delay="0.60" />
+                <path d="M722 182 L804 104" data-anim="flick" data-delay="0.65" />
+                <path d="M804 104 H978"  data-anim="flick" data-delay="0.70" />
+                <path d="M978 104 L1050 152" data-anim="flick" data-delay="0.75" />
+                <path d="M1050 152 H1186" data-anim="flick" data-delay="0.80" />
+              </g>
+              <g class="s-mid f-none" stroke-width="12" stroke-linecap="round" stroke-dasharray="6 34" opacity="0.6">
+                <path d="M1216 152 H1332" data-anim="fade" data-delay="0.92" />
+              </g>
+              <g class="s-a1 f-none" stroke-width="20" stroke-linecap="round">
+                <path d="M1362 118 L1442 190" data-anim="punch" data-delay="1.04" />
+                <path d="M1442 118 L1362 190" data-anim="punch" data-delay="1.12" />
+              </g>
+            </svg>
+          </div>
+          <div class="meta bl">QUESTION 01</div>
+        </section>
+
+        <!-- 16  SLAB - the follow-up question, blue field -->
+        <section class="slide a2 center tight" data-dur="3.8">
+          <div class="u" style="font-size: 196px;" data-anim="rise">WHERE DID<br />THEY GET IT<br />FROM?</div>
+        </section>
+
+        <!-- 17  SLAB - the one-word answer. optically cropped. -->
+        <section class="slide a1 tight" data-dur="4.6">
+          <div style="position: absolute; left: -34px; right: -34px; top: 50%; transform: translateY(-50%); text-align: center;" data-anim="scale">
+            <span class="u" style="font-size: 232px; letter-spacing: -10px;">EVERYWHERE.</span>
+          </div>
+          <div class="meta bl">ANSWER 01</div>
+          <div class="meta br">EVERYWHERE</div>
+        </section>
+
+        <!-- 18  PHOTO / OBJECT - the catalogue itself, cut to a circle on a blue field -->
+        <section class="slide a2" data-dur="4.8">
+          <div class="col2 tightgap">
+            <div class="obj circle m" data-anim="zoom">
+              <img src="https://images.pexels.com/photos/10689371/pexels-photo-10689371.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt="dresses on hangers in a boutique" />
+            </div>
+            <div>
+              <div class="u" style="font-size: 132px;" data-anim="swipeR" data-delay="0.22">FASHION<br />NOVA</div>
+              <div class="pcap" style="margin-top: 26px;" data-anim="up" data-delay="0.44">I BOOKMARK AN OUTFIT FROM THEIR CATALOGUE</div>
+            </div>
+          </div>
+          <div class="meta tl">DEAD END / 01</div>
+        </section>
+
+        <!-- 19  INDEX build 1/6 -->
+        <section class="slide" data-dur="4.0">
+          <div class="eyebrow" data-anim="fade">WHERE DEAD LINKS COME FROM</div>
+          <div class="idx tightrows" style="margin-top: 20px;">
+            <div class="row" data-anim="pop" data-delay="0.15"><div class="n">01</div><div class="x">BOOKMARKED OUTFITS THAT SOLD OUT</div></div>
+            <div class="row dim"><div class="n">02</div><div class="x">LINKS CUT OFF IN WHATSAPP</div></div>
+            <div class="row dim"><div class="n">03</div><div class="x">TRUNCATED LINKS FROM EMAILS</div></div>
+            <div class="row dim"><div class="n">04</div><div class="x">BLOGS POINTING AT POSTS YOU RENAMED</div></div>
+            <div class="row dim"><div class="n">05</div><div class="x">PEOPLE MISSPELL URLS BY HAND</div></div>
+            <div class="row dim"><div class="n">06</div><div class="x">CLAUDE AND CHATGPT</div></div>
+          </div>
+        </section>
+
+        <!-- 20  OBJECT / device: phone - the link parked in a chat -->
+        <section class="slide center" data-dur="4.6">
+          <div class="col2 tightgap">
+            <div class="t" style="font-size: 66px; font-weight: 700; line-height: 1.2; letter-spacing: -1px; text-align: left;" data-anim="swipeL">
+              the link somewhere<br />in my WhatsApp chat
+            </div>
+            <div class="phone" data-anim="settle" data-delay="0.2">
+              <div class="notch"></div>
+              <div class="msg me" data-anim="swipeR" data-delay="0.52">fashionnova.com/outfit/8842</div>
+              <div class="msg" style="width: 62%; height: 44px;" data-anim="swipeL" data-delay="0.64"></div>
+              <div class="msg" style="width: 78%; height: 44px; margin-bottom: 0;" data-anim="swipeL" data-delay="0.74"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 21  PHOTO / PAIR - page exists vs page gone. Hard edge, one word under each. -->
+        <section class="slide center" data-dur="5.8">
+          <div class="pair">
+            <figure>
+              <div class="fr" data-anim="swipeL"><img src="https://images.pexels.com/photos/19518876/pexels-photo-19518876.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt="an open sign in a shop window" /></div>
+              <figcaption data-anim="up" data-delay="0.36">ON THEIR SITE</figcaption>
+            </figure>
+            <figure class="then">
+              <div class="fr" data-anim="swipeR" data-delay="0.12"><img src="https://images.pexels.com/photos/22882019/pexels-photo-22882019.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt="a closed shuttered storefront" /></div>
+              <figcaption data-anim="up" data-delay="0.48">NO LONGER UP</figcaption>
+            </figure>
+          </div>
+          <div class="u" style="font-size: 100px; text-align: center; margin-top: 22px;" data-anim="slam" data-delay="0.72">A PLACE THAT DOES<br />NOT EXIST ANYMORE</div>
+          <div class="meta tr">AND I NAVIGATE TO<br />THAT URL LATER</div>
+        </section>
+
+        <!-- 23  INDEX build 2/6 -->
+        <section class="slide" data-dur="4.0">
+          <div class="eyebrow" data-anim="fade">WHERE DEAD LINKS COME FROM</div>
+          <div class="idx tightrows" style="margin-top: 20px;">
+            <div class="row"><div class="n">01</div><div class="x">BOOKMARKED OUTFITS THAT SOLD OUT</div></div>
+            <div class="row" data-anim="pop" data-delay="0.15"><div class="n">02</div><div class="x">LINKS CUT OFF IN WHATSAPP</div></div>
+            <div class="row dim"><div class="n">03</div><div class="x">TRUNCATED LINKS FROM EMAILS</div></div>
+            <div class="row dim"><div class="n">04</div><div class="x">BLOGS POINTING AT POSTS YOU RENAMED</div></div>
+            <div class="row dim"><div class="n">05</div><div class="x">PEOPLE MISSPELL URLS BY HAND</div></div>
+            <div class="row dim"><div class="n">06</div><div class="x">CLAUDE AND CHATGPT</div></div>
+          </div>
+        </section>
+
+        <!-- 24  OBJECT - the link string that stops mid-air -->
+        <section class="slide" data-dur="4.8">
+          <div class="eyebrow" data-anim="fade">SOMEONE CAN SHARE A LINK ON WHATSAPP</div>
+          <div class="urlstop" style="margin-top: 30px;">
+            <span class="live" data-anim="swipeL" data-delay="0.22">fashionnova.com/catalogue/out</span><span class="dead" data-anim="flick" data-delay="0.44">fit/8842</span>
+          </div>
+          <div class="u" style="font-size: 132px; margin-top: 34px;" data-anim="slam" data-delay="0.62">AND IT GETS<br /><span style="color: #FF4713;">CUT OFF HALFWAY</span></div>
+        </section>
+
+        <!-- 25  INDEX build 3/6 -->
+        <section class="slide" data-dur="4.0">
+          <div class="eyebrow" data-anim="fade">WHERE DEAD LINKS COME FROM</div>
+          <div class="idx tightrows" style="margin-top: 20px;">
+            <div class="row"><div class="n">01</div><div class="x">BOOKMARKED OUTFITS THAT SOLD OUT</div></div>
+            <div class="row"><div class="n">02</div><div class="x">LINKS CUT OFF IN WHATSAPP</div></div>
+            <div class="row" data-anim="pop" data-delay="0.15"><div class="n">03</div><div class="x">TRUNCATED LINKS FROM EMAILS</div></div>
+            <div class="row dim"><div class="n">04</div><div class="x">BLOGS POINTING AT POSTS YOU RENAMED</div></div>
+            <div class="row dim"><div class="n">05</div><div class="x">PEOPLE MISSPELL URLS BY HAND</div></div>
+            <div class="row dim"><div class="n">06</div><div class="x">CLAUDE AND CHATGPT</div></div>
+          </div>
+        </section>
+
+        <!-- 26  OBJECT - the renamed post, old route struck through -->
+        <section class="slide" data-dur="5.0">
+          <div class="eyebrow" data-anim="fade">A BLOG THAT LINKED TO A POST YOU WROTE SOME YEARS AGO</div>
+          <div class="row" style="margin-top: 34px; gap: 30px;">
+            <div class="card" style="max-width: 720px; padding: 26px 32px;" data-anim="swipeL" data-delay="0.2">
+              <div style="font-family: 'DM Mono', monospace; font-size: 30px; color: #141414; text-decoration: line-through; text-decoration-thickness: 5px; text-decoration-color: #FF4713;">/blog/my-first-post</div>
+            </div>
+            <div class="card" style="max-width: 720px; padding: 26px 32px;" data-anim="swipeR" data-delay="0.34">
+              <div style="font-family: 'DM Mono', monospace; font-size: 30px; color: #141414;">/blog/how-i-started</div>
+            </div>
+          </div>
+          <div class="u" style="font-size: 116px; margin-top: 34px;" data-anim="slam" data-delay="0.56">THAT YOU'VE PROBABLY<br /><span style="color: #FF4713;">RENAMED</span></div>
+        </section>
+
+        <!-- 27  INDEX build 4/6 -->
+        <section class="slide" data-dur="4.0">
+          <div class="eyebrow" data-anim="fade">WHERE DEAD LINKS COME FROM</div>
+          <div class="idx tightrows" style="margin-top: 20px;">
+            <div class="row"><div class="n">01</div><div class="x">BOOKMARKED OUTFITS THAT SOLD OUT</div></div>
+            <div class="row"><div class="n">02</div><div class="x">LINKS CUT OFF IN WHATSAPP</div></div>
+            <div class="row"><div class="n">03</div><div class="x">TRUNCATED LINKS FROM EMAILS</div></div>
+            <div class="row" data-anim="pop" data-delay="0.15"><div class="n">04</div><div class="x">BLOGS POINTING AT POSTS YOU RENAMED</div></div>
+            <div class="row dim"><div class="n">05</div><div class="x">PEOPLE MISSPELL URLS BY HAND</div></div>
+            <div class="row dim"><div class="n">06</div><div class="x">CLAUDE AND CHATGPT</div></div>
+          </div>
+        </section>
+
+        <!-- 28  PHOTO / INSET - the hands doing it, pasted onto the type slide like a print -->
+        <section class="slide" data-dur="5.0">
+          <div class="col2 tightgap">
+            <div class="u" style="font-size: 78px;" data-anim="up">IF SOMEONE<br />TYPES THAT<br />URL BY HAND<br />AND<br /><span style="color: #FF4713;">MISSPELLS IT</span></div>
+            <div class="insetw" style="position: relative; width: 100%; height: 360px; transform: rotate(2.4deg);">
+              <div class="inset" data-anim="tilt" data-delay="0.42">
+                <img src="https://images.pexels.com/photos/1181644/pexels-photo-1181644.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt="hands typing on a laptop keyboard" />
+                <div class="icap">THEY GET A 404</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 29  INDEX build 5/6 -->
+        <section class="slide" data-dur="4.0">
+          <div class="eyebrow" data-anim="fade">WHERE DEAD LINKS COME FROM</div>
+          <div class="idx tightrows" style="margin-top: 20px;">
+            <div class="row"><div class="n">01</div><div class="x">BOOKMARKED OUTFITS THAT SOLD OUT</div></div>
+            <div class="row"><div class="n">02</div><div class="x">LINKS CUT OFF IN WHATSAPP</div></div>
+            <div class="row"><div class="n">03</div><div class="x">TRUNCATED LINKS FROM EMAILS</div></div>
+            <div class="row"><div class="n">04</div><div class="x">BLOGS POINTING AT POSTS YOU RENAMED</div></div>
+            <div class="row" data-anim="pop" data-delay="0.15"><div class="n">05</div><div class="x">PEOPLE MISSPELL URLS BY HAND</div></div>
+            <div class="row dim"><div class="n">06</div><div class="x">CLAUDE AND CHATGPT</div></div>
+          </div>
+        </section>
+
+        <!-- 31  BAUHAUS - the internet full of links pointing nowhere -->
+        <section class="slide ink" data-dur="4.8">
+          <div class="u" style="font-size: 120px;" data-anim="up">AND THE INTERNET IS FULL OF<br />LINKS POINTING TO PAGES<br />THAT <span style="color: #FF4713;">NO LONGER EXIST</span></div>
+          <!-- SWEEP: twelve links flick out in sequence, then twelve dead ends bloom -->
+          <div class="geo wide" style="margin-top: 26px;">
+            <svg viewBox="0 0 1600 150" role="img" aria-label="lines running to points that are gone">
+              <g class="s-cur" stroke-width="6" fill="none" opacity="0.5">
+                <path d="M0 26 H250"    data-anim="flick" data-delay="0.30" />
+                <path d="M0 62 H420"    data-anim="flick" data-delay="0.33" />
+                <path d="M0 98 H320"    data-anim="flick" data-delay="0.36" />
+                <path d="M0 134 H540"   data-anim="flick" data-delay="0.39" />
+                <path d="M600 26 H860"  data-anim="flick" data-delay="0.42" />
+                <path d="M600 62 H720"  data-anim="flick" data-delay="0.45" />
+                <path d="M600 98 H960"  data-anim="flick" data-delay="0.48" />
+                <path d="M600 134 H800" data-anim="flick" data-delay="0.51" />
+                <path d="M1060 26 H1300"  data-anim="flick" data-delay="0.54" />
+                <path d="M1060 62 H1180"  data-anim="flick" data-delay="0.57" />
+                <path d="M1060 98 H1420"  data-anim="flick" data-delay="0.60" />
+                <path d="M1060 134 H1240" data-anim="flick" data-delay="0.63" />
+              </g>
+              <g class="s-a1" stroke-width="9" stroke-linecap="round">
+                <path d="M262 14 L286 38 M286 14 L262 38"     data-anim="grow" data-delay="0.66" />
+                <path d="M432 50 L456 74 M456 50 L432 74"     data-anim="grow" data-delay="0.69" />
+                <path d="M332 86 L356 110 M356 86 L332 110"   data-anim="grow" data-delay="0.72" />
+                <path d="M552 122 L576 146 M576 122 L552 146" data-anim="grow" data-delay="0.75" />
+                <path d="M872 14 L896 38 M896 14 L872 38"     data-anim="grow" data-delay="0.78" />
+                <path d="M732 50 L756 74 M756 50 L732 74"     data-anim="grow" data-delay="0.81" />
+                <path d="M972 86 L996 110 M996 86 L972 110"   data-anim="grow" data-delay="0.84" />
+                <path d="M812 122 L836 146 M836 122 L812 146" data-anim="grow" data-delay="0.87" />
+                <path d="M1312 14 L1336 38 M1336 14 L1312 38"     data-anim="grow" data-delay="0.90" />
+                <path d="M1192 50 L1216 74 M1216 50 L1192 74"     data-anim="grow" data-delay="0.93" />
+                <path d="M1432 86 L1456 110 M1456 86 L1432 110"   data-anim="grow" data-delay="0.96" />
+                <path d="M1252 122 L1276 146 M1276 122 L1252 146" data-anim="grow" data-delay="0.99" />
+              </g>
+            </svg>
+          </div>
+          <div class="cap" style="margin-top: 18px;" data-anim="fade" data-delay="1.12">IT HAPPENS.</div>
+        </section>
+
+        <!-- 32  MARKER - Claude and ChatGPT -->
+        <section class="slide" data-dur="4.8">
+          <div class="t" style="font-size: 82px; font-weight: 700; line-height: 1.24; letter-spacing: -1px;" data-anim="up">
+            Sometimes, if you use <span class="mk m2">Claude</span> or<br />
+            <span class="mk">ChatGPT</span>, they even give you links<br />
+            to pages that don't exist anymore.
+          </div>
+          <div class="meta br">DEAD END / 06</div>
+        </section>
+
+        <!-- 33  INDEX build 6/6 - the ledger complete -->
+        <section class="slide" data-dur="4.6">
+          <div class="eyebrow" data-anim="fade">WHERE DEAD LINKS COME FROM</div>
+          <div class="idx tightrows" style="margin-top: 20px;">
+            <div class="row"><div class="n">01</div><div class="x">BOOKMARKED OUTFITS THAT SOLD OUT</div></div>
+            <div class="row"><div class="n">02</div><div class="x">LINKS CUT OFF IN WHATSAPP</div></div>
+            <div class="row"><div class="n">03</div><div class="x">TRUNCATED LINKS FROM EMAILS</div></div>
+            <div class="row"><div class="n">04</div><div class="x">BLOGS POINTING AT POSTS YOU RENAMED</div></div>
+            <div class="row"><div class="n">05</div><div class="x">PEOPLE MISSPELL URLS BY HAND</div></div>
+            <div class="row" data-anim="pop" data-delay="0.15"><div class="n">06</div><div class="x">CLAUDE AND CHATGPT</div></div>
+          </div>
+        </section>
+
+        <!-- 34  SLAB - the reassurance -->
+        <section class="slide a2 tight" data-dur="4.6">
+          <div class="stack" data-anim="rise">
+            <div style="font-size: 150px;">SO GETTING A 404</div>
+            <div style="font-size: 150px;">DOESN'T MEAN</div>
+            <div style="font-size: 150px;">SOMETHING HAS</div>
+            <div style="font-size: 150px;">GONE WRONG</div>
+            <div style="font-size: 150px;">PER SE</div>
+          </div>
+        </section>
+
+        <!-- 35  STACK - it's just how the internet moves -->
+        <section class="slide tight" data-dur="4.2">
+          <div class="stack">
+            <div data-anim="left" style="font-size: 200px;">IT'S JUST</div>
+            <div data-anim="left" data-delay="0.15" style="font-size: 200px;">PART OF HOW</div>
+            <div data-anim="left" data-delay="0.3" style="font-size: 200px; color: #FF4713;">THE INTERNET</div>
+            <div data-anim="left" data-delay="0.45" style="font-size: 200px;">MOVES</div>
+          </div>
+        </section>
+
+        <!-- 36  SPLIT - pages come and go, links stay behind -->
+        <section class="slide split" data-dur="5.0">
+          <div class="half hi">
+            <div class="u" style="font-size: 116px;" data-anim="left">PAGES<br />COME<br />AND GO</div>
+            <div class="geo sm" style="margin-top: 34px; justify-content: flex-start;">
+              <svg viewBox="0 0 420 120" role="img" aria-label="pages leaving">
+                <rect class="f-cur" x="0" y="20" width="70" height="90" fill-opacity="0.34" data-anim="swipeL" data-delay="0.28" />
+                <rect class="f-cur" x="96" y="20" width="70" height="90" fill-opacity="0.34" data-anim="swipeL" data-delay="0.36" />
+                <rect class="f-cur" x="192" y="20" width="70" height="90" fill-opacity="0.14" data-anim="swipeL" data-delay="0.44" />
+                <rect class="f-cur" x="288" y="20" width="70" height="90" fill-opacity="0.06" data-anim="swipeL" data-delay="0.52" />
+              </svg>
+            </div>
+          </div>
+          <div class="half h1">
+            <div class="meta br">RIGHT?</div>
+            <div class="u" style="font-size: 116px;" data-anim="right" data-delay="0.15">LINKS<br />STAY<br />BEHIND</div>
+            <!-- PHOTO / INSET - a bookmark left in a book. The link stays behind. -->
+            <div class="insetw br" style="bottom: 56px; right: 66px; width: 372px; height: 268px;">
+              <div class="inset" data-anim="tilt" data-delay="0.46">
+                <img src="https://images.pexels.com/photos/6958523/pexels-photo-6958523.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt="a hand placing a marker in an open book" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ══════════════ C. WHAT A 404 ACTUALLY IS ══════════════ -->
+
+        <!-- 38  SWISS - the question -->
+        <section class="slide" data-dur="4.0">
+          <div class="meta tl">SECTION 02</div>
+          <div class="eyebrow" data-anim="fade">NOW, WHAT ACTUALLY IS A 404?</div>
+          <div class="rule" data-anim="left" data-delay="0.15"></div>
+          <div class="out" style="font-size: 300px; margin-top: 20px;" data-anim="up" data-delay="0.3">404</div>
+        </section>
+
+        <!-- 39  SLAB - a status code, nothing more -->
+        <section class="slide a1 tight" data-dur="4.4">
+          <div class="stack" data-anim="rise">
+            <div style="font-size: 190px;">A 404 IS</div>
+            <div style="font-size: 190px;">ACTUALLY JUST</div>
+            <div style="font-size: 190px;">A STATUS CODE</div>
+          </div>
+        </section>
+
+        <!-- 40  SCENE - a person asking, a server answering -->
+        <section class="slide center" data-dur="5.0">
+          <div class="t" style="font-size: 66px; font-weight: 700; letter-spacing: -1px; text-align: center;" data-anim="up">
+            The browser asks your server for a URL.
+          </div>
+          <div class="geo lg" style="margin-top: 20px;">
+            <svg viewBox="0 0 1300 420" role="img" aria-label="a person at a laptop asking a server for a url">
+              <!-- person -->
+              <g data-anim="swipeL" data-delay="0.22">
+                <path class="f-ink" d="M196 168 c0 -50 32 -84 74 -84 c42 0 74 34 74 84 c0 6 -6 10 -12 10 h-124 c-6 0 -12 -4 -12 -10 z" />
+                <ellipse class="f-ink" cx="270" cy="150" rx="52" ry="58" />
+                <g class="s-a1" stroke-width="8" stroke-linecap="round" fill="none">
+                  <path d="M226 104 c14 -22 34 -32 44 -32" /><path d="M254 92 c16 -16 38 -20 52 -12" />
+                  <path d="M300 100 c14 6 22 20 24 34" />
+                </g>
+                <circle class="f-paper" cx="252" cy="152" r="7" /><circle class="f-paper" cx="290" cy="152" r="7" />
+                <path class="s-paper f-none" d="M252 176 c10 10 26 10 36 0" stroke="currentColor" stroke-width="6" stroke-linecap="round" style="stroke: var(--paper);" />
+                <rect class="f-ink" x="256" y="206" width="28" height="26" />
+                <path class="f-ink" d="M196 300 c0 -42 34 -70 74 -70 c40 0 74 28 74 70 v38 h-148 z" />
+                <!-- laptop -->
+                <rect class="f-ink" x="188" y="338" width="164" height="14" />
+                <rect class="f-a2 s-ink" x="206" y="262" width="128" height="80" stroke-width="7" />
+              </g>
+              <!-- request arrow: TRACE. six dashes flick across at 0.05s steps. -->
+              <g class="s-a2" fill="none" stroke-width="9" stroke-linecap="round">
+                <path d="M400 268 H452" data-anim="flick" data-delay="0.44" />
+                <path d="M478 268 H530" data-anim="flick" data-delay="0.49" />
+                <path d="M556 268 H608" data-anim="flick" data-delay="0.54" />
+                <path d="M634 268 H686" data-anim="flick" data-delay="0.59" />
+                <path d="M712 268 H764" data-anim="flick" data-delay="0.64" />
+                <path d="M790 268 H840" data-anim="flick" data-delay="0.69" />
+              </g>
+              <path class="f-a2" d="M840 250 l44 18 l-44 18 z" data-anim="punch" data-delay="0.76" />
+              <text x="410" y="238" class="f-a2" style="font-family: 'DM Mono', monospace; font-size: 30px; letter-spacing: 2px;" data-anim="fade" data-delay="0.40">GET /a-url</text>
+              <!-- server: REVEAL IN PLACE. the racks populate one row at a time. -->
+              <g>
+                <rect class="f-none s-ink" x="940" y="90" width="270" height="300" stroke-width="10" data-anim="grow" data-delay="0.30" />
+                <rect class="f-ink" x="972" y="126" width="206" height="34" data-anim="grow" data-delay="0.86" />
+                <rect class="f-ink" x="972" y="182" width="206" height="34" data-anim="grow" data-delay="0.94" />
+                <rect class="f-ink" x="972" y="238" width="206" height="34" data-anim="grow" data-delay="1.02" />
+                <circle class="f-a1" cx="1152" cy="143" r="9" data-anim="grow" data-delay="0.92" />
+                <circle class="f-a1" cx="1152" cy="199" r="9" data-anim="grow" data-delay="1.00" />
+                <circle class="f-a1" cx="1152" cy="255" r="9" data-anim="grow" data-delay="1.08" />
+                <rect class="f-none s-ink" x="972" y="294" width="206" height="60" stroke-width="8" data-anim="grow" data-delay="1.14" />
+              </g>
+              <text x="940" y="60" class="f-mid" style="font-family: 'DM Mono', monospace; font-size: 28px; letter-spacing: 4px;" data-anim="fade" data-delay="0.34">YOUR SERVER</text>
+            </svg>
+          </div>
+        </section>
+
+        <!-- 41  DUOTONE - the page is not there -->
+        <section class="slide photo bottom" data-dur="4.6">
+          <div class="bleed duo"><img src="https://images.pexels.com/photos/18132311/pexels-photo-18132311.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt="" /></div>
+          <div class="veil"></div>
+          <div class="eyebrow" data-anim="fade">YOUR SERVER CHECKS</div>
+          <div class="u" style="font-size: 190px;" data-anim="rise" data-delay="0.2">THE PAGE IS<br />NOT THERE</div>
+        </section>
+
+        <!-- 42  OBJECT - the 404 stamp, the code as a physical thing -->
+        <section class="slide center" data-dur="4.6">
+          <div class="t" style="font-size: 60px; font-weight: 600; text-align: center;" data-anim="fade">Your server responds with</div>
+          <div style="margin-top: 26px;" data-anim="pop" data-delay="0.25">
+            <div class="stamp lg"><span class="n">404</span><span class="l">STATUS CODE / NOT FOUND</span></div>
+          </div>
+        </section>
+
+        <!-- 43  MARKER - if you don't set it up -->
+        <section class="slide" data-dur="4.8">
+          <div class="t" style="font-size: 86px; font-weight: 700; line-height: 1.24; letter-spacing: -1px;" data-anim="up">
+            if you don't <span class="mk">set up your 404 page</span>,<br />
+            your framework or your server<br />
+            will show the <span class="mk m2">default error page</span>
+          </div>
+        </section>
+
+        <!-- 44  WINDOW / grid - the default framework error pages -->
+        <section class="slide center" data-dur="5.4">
+          <!-- CASCADE: three defaults land one after another, each stamping its own name -->
+          <div class="grid3">
+            <div class="mock fw md" data-anim="drop">
+              <div class="top"><i></i><i></i><i></i><div class="addr"></div></div>
+              <div class="pane"><div class="fwname" data-anim="flick" data-delay="0.26">LARAVEL</div><div class="fwmsg" data-anim="left" data-delay="0.32">404 | Not Found</div><div class="fwrule" data-anim="left" data-delay="0.36"></div><div class="fwtrace" data-anim="left" data-delay="0.40"></div><div class="fwtrace s" data-anim="left" data-delay="0.44"></div></div>
+            </div>
+            <div class="mock fw md" data-anim="tilt" data-delay="0.14">
+              <div class="top"><i></i><i></i><i></i><div class="addr"></div></div>
+              <div class="pane"><div class="fwname" data-anim="flick" data-delay="0.40">NEXT.JS</div><div class="fwmsg" data-anim="left" data-delay="0.46">404 | This page could not be found.</div><div class="fwrule" data-anim="left" data-delay="0.50"></div><div class="fwtrace m" data-anim="left" data-delay="0.54"></div><div class="fwtrace s" data-anim="left" data-delay="0.58"></div></div>
+            </div>
+            <div class="mock fw md" data-anim="drop" data-delay="0.28">
+              <div class="top"><i></i><i></i><i></i><div class="addr"></div></div>
+              <div class="pane"><div class="fwname" data-anim="flick" data-delay="0.54">DJANGO</div><div class="fwmsg" data-anim="left" data-delay="0.60">Page not found (404)</div><div class="fwrule" data-anim="left" data-delay="0.64"></div><div class="fwtrace" data-anim="left" data-delay="0.68"></div><div class="fwtrace m" data-anim="left" data-delay="0.72"></div></div>
+            </div>
+          </div>
+          <div class="cap" style="margin-top: 26px;" data-anim="fade" data-delay="0.86">DEPENDING ON THE FRAMEWORK YOU'RE USING</div>
+        </section>
+
+        <!-- 47  INDEX - what is wrong with it -->
+        <section class="slide" data-dur="4.4">
+          <div class="idx" style="margin-top: 0;">
+            <div class="row" data-anim="swipeL"><div class="n">A</div><div class="x">IT IS PLAIN</div></div>
+            <div class="row" data-anim="swipeR" data-delay="0.14"><div class="n">B</div><div class="x">IT IS GENERIC</div></div>
+            <div class="row" data-anim="swipeL" data-delay="0.28"><div class="n">C</div><div class="x">IT HAS THE FRAMEWORK NAME PRINTED ON IT</div></div>
+          </div>
+        </section>
+
+        <!-- 48  SLAB - the job -->
+        <section class="slide a2 tight" data-dur="4.6">
+          <div class="gridlines"></div>
+          <div class="stack" data-anim="rise">
+            <div style="font-size: 160px;">YOUR GOAL AS</div>
+            <div style="font-size: 160px;">A DEVELOPER IS</div>
+            <div style="font-size: 160px;">TO FIX THAT WITH</div>
+            <div style="font-size: 160px;">A CUSTOM 404 PAGE</div>
+          </div>
+        </section>
+
+        <!-- ══════════════ D. START FROM THE GOAL ══════════════ -->
+
+        <!-- 49  SWISS - all kinds of examples -->
+        <section class="slide" data-dur="4.4">
+          <div class="eyebrow" data-anim="fade">WE HAVE ALL KINDS OF EXAMPLES OF 404 PAGES</div>
+          <div class="rule acc" data-anim="left" data-delay="0.15"></div>
+          <div class="t" style="font-size: 104px; font-weight: 700; line-height: 1.1; letter-spacing: -2px; margin-top: 22px;" data-anim="up" data-delay="0.3">
+            Which one is actually good?<br />Which one can be used?
+          </div>
+        </section>
+
+        <!-- 48  SLAB - start from the goal -->
+        <section class="slide ink center tight" data-dur="4.0">
+          <div class="u" style="font-size: 190px;" data-anim="scale">LET'S START<br />FROM THE GOAL<br />OF A <span style="color: #FF4713;">404 PAGE</span></div>
+        </section>
+
+        <!-- 52  QUOTE - the question to yourself -->
+        <section class="slide center" data-dur="4.2">
+          <div class="quote" style="text-align: center;">
+            <div class="qt" style="font-size: 110px;" data-anim="up">What do you want your<br />404 page to <span class="c1">do</span>?</div>
+          </div>
+        </section>
+
+        <!-- 53  CIRCLE - goal one -->
+        <section class="slide center" data-dur="4.4">
+          <div class="circs" data-anim="pop">
+            <div class="circ">01</div>
+          </div>
+          <div class="u" style="font-size: 132px; text-align: center; margin-top: 22px;" data-anim="up" data-delay="0.2">KEEP THE<br />USER INFORMED</div>
+        </section>
+
+        <!-- 54  QUOTE - we see you -->
+        <section class="slide a1 tight" data-dur="5.0">
+          <div class="quote">
+            <div class="qt" style="font-size: 104px;" data-anim="rise">Like, yeah, this link is not here,<br />but we want you to know<br />that we see you.</div>
+          </div>
+        </section>
+
+        <!-- 55  CIRCLE - goal two -->
+        <section class="slide center" data-dur="4.4">
+          <div class="circs" data-anim="pop">
+            <div class="circ c2">02</div>
+          </div>
+          <div class="u" style="font-size: 132px; text-align: center; margin-top: 22px;" data-anim="up" data-delay="0.2">AND ALSO,<br />TO KEEP THEM<br />ON OUR SITE</div>
+        </section>
+
+        <!-- 56  BAUHAUS - bounce rate as a shape -->
+        <section class="slide center" data-dur="4.6">
+          <div class="eyebrow" style="justify-self: center;" data-anim="fade">THERE'S SOMETHING CALLED</div>
+          <div class="u" style="font-size: 168px; text-align: center;" data-anim="up" data-delay="0.15">BOUNCE RATE</div>
+          <!-- TRACE: the user drops in, hits the page, and is thrown straight back off -->
+          <div class="geo" style="margin-top: 10px;">
+            <svg viewBox="0 0 900 300" role="img" aria-label="a user arriving and bouncing straight back off">
+              <rect class="f-ink" x="0" y="268" width="900" height="14" data-anim="swipeL" data-delay="0.30" />
+              <circle class="f-a1" cx="60" cy="20" r="20" data-anim="grow" data-delay="0.38" />
+              <g class="s-a1 f-none" stroke-width="12" stroke-linecap="round">
+                <path d="M60 20 L140 96"   data-anim="flick" data-delay="0.44" />
+                <path d="M140 96 L220 172" data-anim="flick" data-delay="0.50" />
+                <path d="M220 172 L300 250" data-anim="flick" data-delay="0.56" />
+                <path d="M300 250 L386 197" data-anim="flick" data-delay="0.66" />
+                <path d="M386 197 L472 143" data-anim="flick" data-delay="0.72" />
+                <path d="M472 143 L560 90"  data-anim="flick" data-delay="0.78" />
+              </g>
+              <g transform="rotate(180 560 90)"><path class="f-a1" d="M560 90 l14 52 l-52 -14 z" data-anim="punch" data-delay="0.86" /></g>
+              <g class="s-mid f-none" stroke-width="8" stroke-dasharray="16 14"><path d="M300 250 V60" data-anim="fade" data-delay="0.60" /></g>
+              <text x="316" y="52" class="f-mid" style="font-family: 'DM Mono', monospace; font-size: 26px; letter-spacing: 3px;" data-anim="fade" data-delay="0.64">YOUR SITE</text>
+            </svg>
+          </div>
+        </section>
+
+        <!-- 57  STACK - as low as possible -->
+        <section class="slide tight" data-dur="4.2">
+          <div class="stack">
+            <div data-anim="left" style="font-size: 190px;">YOU WANT YOUR</div>
+            <div data-anim="left" data-delay="0.15" style="font-size: 190px; color: #FF4713;">BOUNCE RATE</div>
+            <div data-anim="left" data-delay="0.3" style="font-size: 190px;">TO BE AS LOW</div>
+            <div data-anim="left" data-delay="0.45" style="font-size: 190px;">AS POSSIBLE</div>
+          </div>
+        </section>
+
+        <!-- 58  SLAB - that is the whole job -->
+        <section class="slide a2 tight" data-dur="4.6">
+          <div class="u" style="font-size: 128px;" data-anim="rise">SO BASICALLY, YOU STILL<br />WANT TO KEEP THEM<br />ON YOUR PAGE</div>
+          <div class="meta br">THAT'S WHAT A GOOD<br />404 PAGE SHOULD DO</div>
+        </section>
+
+        <!-- ══════════════ E. WHAT A GOOD ONE HAS ══════════════ -->
+
+        <!-- 59  SWISS - clear, simple language -->
+        <section class="slide" data-dur="4.8">
+          <div class="meta tl">SECTION 03</div>
+          <div class="rule acc" data-anim="left"></div>
+          <div class="t" style="font-size: 88px; font-weight: 700; line-height: 1.2; letter-spacing: -1px; margin-top: 22px;" data-anim="up" data-delay="0.2">
+            It should address what happened in<br /><span class="mk">clear, simple language</span>.<br />Mostly in a simple sentence.
+          </div>
+        </section>
+
+        <!-- 60  WINDOW - a mock carrying her example sentence -->
+        <section class="slide center" data-dur="4.6">
+          <div class="mock big" style="width: 100%; max-width: 1320px; justify-self: center;" data-anim="up">
+            <div class="navbar"><div class="logo"></div><div class="nb"></div><div class="nb"></div><div class="nb"></div></div>
+            <div class="pane">
+              <div class="msg" style="font-size: 52px;">the link you are looking for is not here.</div>
+              <div class="btn o">BACK TO HOME</div>
+            </div>
+          </div>
+          <div class="cap" style="margin-top: 24px;" data-anim="fade" data-delay="0.3">LIKE</div>
+        </section>
+
+        <!-- 61  WINDOW - Spotify's line, her quoted example -->
+        <section class="slide center" data-dur="5.0">
+          <div class="eyebrow" style="justify-self: center;" data-anim="fade">LOOK AT THIS. SPOTIFY'S 404 PAGE SAYS</div>
+          <div class="mock big" style="width: 100%; max-width: 1320px; justify-self: center;" data-anim="scale" data-delay="0.2">
+            <div class="navbar"><div class="logo"></div><div class="nb"></div><div class="nb"></div></div>
+            <div class="pane">
+              <div class="msg" style="font-size: 58px;">this link is out of tune</div>
+              <div class="bar" style="width: 38%;"></div>
+              <div class="btn">HOME</div>
+            </div>
+          </div>
+          <div class="cap" style="margin-top: 22px;" data-anim="fade" data-delay="0.45">STRAIGHTFORWARD. SIMPLE.</div>
+        </section>
+
+        <!-- 59  WINDOW - the bare 404 page, the counter-example -->
+        <section class="slide center" data-dur="4.8">
+          <div class="eyebrow" style="justify-self: center;" data-anim="fade">NOW LOOK AT THIS ONE</div>
+          <div class="mock big" style="width: 100%; max-width: 1100px; justify-self: center;" data-anim="up" data-delay="0.18">
+            <div class="top"><i></i><i></i><i></i><div class="addr"></div></div>
+            <div class="pane" style="min-height: 380px; align-content: center;">
+              <div class="n404" style="font-size: 210px;">404</div>
+            </div>
+          </div>
+          <div class="u" style="font-size: 88px; text-align: center; margin-top: 26px;" data-anim="slam" data-delay="0.5"><span class="strike">THIS IS NOT EXACTLY</span><br />A GOOD 404 PAGE</div>
+        </section>
+
+        <!-- 65  SCENE - the average user, in front of a screen that says 404 -->
+        <section class="slide center" data-dur="5.0">
+          <div class="geo xl">
+            <svg viewBox="0 0 1180 480" role="img" aria-label="a person looking at a screen that says 404, confused">
+              <!-- screen -->
+              <rect class="f-card s-ink" x="620" y="60" width="480" height="320" stroke-width="12" data-anim="grow" data-delay="0.24" />
+              <text x="860" y="250" text-anchor="middle" class="f-a1" style="font-family: 'Archivo Black', Impact, sans-serif; font-size: 150px; letter-spacing: -6px;" data-anim="punch" data-delay="0.46">404</text>
+              <rect class="f-ink" x="820" y="380" width="80" height="46" data-anim="drop" data-delay="0.34" />
+              <rect class="f-ink" x="742" y="426" width="236" height="16" data-anim="drop" data-delay="0.38" />
+              <!-- person, turned to the screen -->
+              <g data-anim="swipeL" data-delay="0.16">
+                <ellipse class="f-ink" cx="300" cy="188" rx="60" ry="66" />
+                <g class="s-a2" stroke-width="9" stroke-linecap="round" fill="none">
+                  <path d="M248 134 c16 -26 40 -38 52 -38" /><path d="M280 120 c18 -18 44 -22 60 -14" />
+                  <path d="M334 130 c16 8 26 24 28 40" />
+                </g>
+                <circle class="f-paper" cx="316" cy="190" r="8" /><circle class="f-paper" cx="278" cy="190" r="8" />
+                <path class="f-none" d="M276 222 c14 -10 32 -10 46 0" style="stroke: var(--paper);" stroke-width="7" stroke-linecap="round" />
+                <rect class="f-ink" x="284" y="252" width="32" height="30" />
+                <path class="f-ink" d="M212 400 c0 -60 40 -100 88 -100 c48 0 88 40 88 100 v58 h-176 z" />
+              </g>
+              <!-- question mark -->
+              <g>
+                <text x="446" y="140" class="f-a1" style="font-family: 'Archivo Black', Impact, sans-serif; font-size: 132px;" data-anim="twist" data-delay="0.60">?</text>
+                <text x="524" y="96" class="f-a1" style="font-family: 'Archivo Black', Impact, sans-serif; font-size: 72px; fill-opacity: 0.55;" data-anim="twist" data-delay="0.70">?</text>
+              </g>
+            </svg>
+          </div>
+          <div class="t" style="font-size: 62px; font-weight: 700; text-align: center; margin-top: 6px;" data-anim="up" data-delay="0.82">
+            the average user doesn't even know what 404 means
+          </div>
+        </section>
+
+        <!-- 66  SLAB - plain language -->
+        <section class="slide a2 tight" data-dur="4.8">
+          <div class="eyebrow" data-anim="fade">ON YOUR 404 PAGE, YOU WANT THE MESSAGE TO BE CLEAR</div>
+          <div class="stack" style="margin-top: 18px;" data-anim="rise" data-delay="0.2">
+            <div style="font-size: 150px;">IN PLAIN LANGUAGE</div>
+            <div style="font-size: 150px;">THAT EVEN YOUR</div>
+            <div style="font-size: 150px;">GRANDMOTHER</div>
+            <div style="font-size: 150px;">WILL UNDERSTAND</div>
+          </div>
+        </section>
+
+        <!-- 67  WINDOW - header, footer, branding all still there -->
+        <section class="slide center" data-dur="5.2">
+          <div class="u" style="font-size: 96px; text-align: center;" data-anim="up">THE HEADER, THE FOOTER,<br />THE BRANDING</div>
+          <!-- ASSEMBLE: the chrome of the site arrives around the message -->
+          <div class="mock" style="width: 100%; max-width: 1240px; justify-self: center; margin-top: 16px;" data-anim="settle" data-delay="0.28">
+            <div class="navbar" data-anim="drop" data-delay="0.62"><div class="logo"></div><div class="nb"></div><div class="nb"></div><div class="nb"></div><div class="nb"></div></div>
+            <div class="pane" style="padding: 46px 34px;">
+              <div class="msg" data-anim="fade" data-delay="0.50">the link you are looking for is not here.</div>
+              <div class="btn o" data-anim="pop" data-delay="0.56">BACK TO HOME</div>
+            </div>
+            <div class="footbar" data-anim="drop" data-delay="0.70"><div class="nb"></div><div class="nb"></div><div class="nb"></div><div class="nb"></div></div>
+          </div>
+          <div class="pcap" style="margin-top: 20px;" data-anim="fade" data-delay="0.84">THE SAME AS THE REST OF THE SITE</div>
+        </section>
+
+        <!-- 68  ROTATE - the user still knows where they are -->
+        <section class="slide tight" data-dur="5.0">
+          <div class="eyebrow" data-anim="fade">SO THE USER STILL KNOWS MENTALLY THAT</div>
+          <div class="rot sm" style="margin-top: 20px;">
+            <div class="rw" data-anim="swipeL" data-delay="0.1"><span>I MIGHT NOT BE WHERE I WANT TO BE</span></div>
+            <div class="rw" data-anim="swipeR" data-delay="0.24"><span class="on">BUT I'M STILL ON FASHION NOVA</span></div>
+            <div class="rw" data-anim="swipeL" data-delay="0.38"><span class="on2">I'M STILL IN DISNEY</span></div>
+            <div class="rw" data-anim="swipeR" data-delay="0.52"><span>I'M STILL ON YOUTUBE</span></div>
+          </div>
+          <div class="meta br">THEY NEED TO KNOW THAT</div>
+        </section>
+
+        <!-- 65  SLAB - give them somewhere to go -->
+        <section class="slide a1 tight" data-dur="4.4">
+          <div class="stack" data-anim="rise">
+            <div style="font-size: 172px;">AND ALSO, YOU</div>
+            <div style="font-size: 172px;">HAVE TO GIVE THEM</div>
+            <div style="font-size: 172px;">A DESTINATION</div>
+            <div style="font-size: 172px;">TO GO</div>
+          </div>
+        </section>
+
+        <!-- 71  PHOTO / OBJECT - a doorway cut to an arch, standing on the orange field -->
+        <section class="slide a1" data-dur="5.0">
+          <div class="col2 tightgap">
+            <div>
+              <div class="u" style="font-size: 84px;" data-anim="swipeL">SEND THEM<br />TO A NEW<br />DESTINATION</div>
+              <div class="pcap" style="margin-top: 26px;" data-anim="up" data-delay="0.42">YOU CANNOT OFFER THEM WHAT THEY ARE ASKING FOR</div>
+            </div>
+            <div class="obj arch tall" data-anim="rise" data-delay="0.2">
+              <img src="https://images.pexels.com/photos/14685268/pexels-photo-14685268.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt="an open doorway leading through to a hallway" />
+            </div>
+          </div>
+        </section>
+
+        <!-- 72  WINDOW - something they can click -->
+        <section class="slide center" data-dur="5.0">
+          <div class="t" style="font-size: 62px; font-weight: 700; text-align: center;" data-anim="up">
+            There has to be something they will click.
+          </div>
+          <!-- CASCADE: the destinations land one at a time, each slightly askew -->
+          <div class="row" style="justify-content: center; gap: 24px; margin-top: 20px;">
+            <div class="chip on" data-anim="tilt" data-delay="0.24">BACK TO HOME</div>
+            <div class="chip on2" data-anim="tilt" data-delay="0.36">BACK TO THIS</div>
+            <div class="chip on3" data-anim="tilt" data-delay="0.48">BACK TO THAT</div>
+          </div>
+          <div class="cap" style="margin-top: 24px; text-align: center;" data-anim="fade" data-delay="0.66">STILL ON YOUR SITE</div>
+        </section>
+
+        <!-- 73  SLAB - the number is not the point -->
+        <section class="slide tight" data-dur="4.4">
+          <div class="eyebrow" data-anim="fade">AND AGAIN, LIKE I SAID</div>
+          <div class="stack" style="margin-top: 16px;" data-anim="up" data-delay="0.18">
+            <div style="font-size: 168px;">THE WORD <span style="color: #FF4713;">404</span></div>
+            <div style="font-size: 168px;">ITSELF DOESN'T</div>
+            <div style="font-size: 168px;">HAVE TO BE THE</div>
+            <div style="font-size: 168px;">MAIN THING</div>
+            <div style="font-size: 168px; color: #FF4713;">IN FACT, IT</div>
+            <div style="font-size: 168px; color: #FF4713;">SHOULDN'T BE</div>
+          </div>
+        </section>
+
+        <!-- 70  SPLIT - the one exception -->
+        <section class="slide split" data-dur="5.2">
+          <div class="half hi">
+            <div class="eyebrow" data-anim="fade">EXCEPT, OF COURSE</div>
+            <div class="u" style="font-size: 92px; margin-top: 16px;" data-anim="left" data-delay="0.15">YOU'RE BUILDING<br />SOMETHING FOR<br />DEVELOPERS WHO<br />UNDERSTAND WHAT<br />A 404 MEANS</div>
+          </div>
+          <div class="half h1">
+            <div class="eyebrow" data-anim="fade" data-delay="0.2">IF YOU'RE BUILDING FOR THE AVERAGE USER</div>
+            <div class="u" style="font-size: 92px; margin-top: 16px;" data-anim="right" data-delay="0.32">THEY PROBABLY<br />DON'T EVEN<br />KNOW WHAT<br />404 MEANS</div>
+          </div>
+        </section>
+
+        <!-- 76  WINDOW - the 404 huge and faint behind the real message -->
+        <section class="slide center" data-dur="5.4">
+          <div class="eyebrow" style="justify-self: center;" data-anim="fade">IT CAN BE IN THE BACKGROUND</div>
+          <!-- REVEAL: the message lands first, the 404 zooms in behind it, late and quiet -->
+          <div class="mock big" style="width: 100%; max-width: 1320px; justify-self: center;" data-anim="up" data-delay="0.2">
+            <div class="navbar"><div class="logo"></div><div class="nb"></div><div class="nb"></div></div>
+            <div class="pane" style="min-height: 360px; align-content: center;">
+              <div class="ghost404" data-anim="zoom" data-delay="0.74">404</div>
+              <div class="msg" style="font-size: 50px;" data-anim="up" data-delay="0.44">the link you are looking for is not here.</div>
+              <div class="btn o" data-anim="pop" data-delay="0.54">BACK TO HOME</div>
+            </div>
+          </div>
+          <div class="cap" style="margin-top: 22px;" data-anim="fade" data-delay="1.02">NOT THE MAIN THING ON THE PAGE</div>
+        </section>
+
+        <!-- 73  TAPE strips - personality -->
+        <section class="slide tight" data-dur="5.0">
+          <div class="u" style="font-size: 132px;" data-anim="up">ADD A LITTLE BIT<br />OF <span style="color: #FF4713;">PERSONALITY</span></div>
+          <div class="tapes" style="margin-top: 40px;">
+            <div class="tw" data-anim="twist" data-delay="0.24"><span>HUMOUR</span></div>
+            <div class="tw" data-anim="twist" data-delay="0.36"><span>ILLUSTRATION</span></div>
+            <div class="tw" data-anim="twist" data-delay="0.48"><span>BRAND ELEMENTS</span></div>
+          </div>
+          <div class="meta br">IF YOU'RE BUILDING A 404 PAGE</div>
+        </section>
+
+        <!-- 79  SLAB - playful -->
+        <section class="slide a1 center tight" data-dur="3.6">
+          <div class="u low" style="font-size: 240px;" data-anim="scale">Let it be<br />a little<br />playful</div>
+        </section>
+
+        <!-- 80  QUOTE - doomed -->
+        <section class="slide ink tight" data-dur="4.8">
+          <div class="quote">
+            <div class="qt" style="font-size: 100px;" data-anim="rise">Don't let users feel like<br />they are <span class="c1">doomed</span> because<br />a page does not exist.</div>
+          </div>
+        </section>
+
+        <!-- 81  INDEX / chips - test it everywhere -->
+        <section class="slide center" data-dur="4.6">
+          <div class="u" style="font-size: 116px; text-align: center;" data-anim="up">AND CHECK YOUR 404 PAGES<br />ACROSS DEVICES AND BROWSERS</div>
+          <!-- CASCADE: six chips on tilt at 0.10s steps -->
+          <div class="chips" style="margin-top: 20px;">
+            <div class="chip on" data-anim="tilt" data-delay="0.26">MOBILE</div><div class="chip on2" data-anim="tilt" data-delay="0.36">TABLET</div><div class="chip on3" data-anim="tilt" data-delay="0.46">DESKTOP</div>
+            <div class="chip" data-anim="tilt" data-delay="0.56">CHROME</div><div class="chip" data-anim="tilt" data-delay="0.66">SAFARI</div><div class="chip" data-anim="tilt" data-delay="0.76">FIREFOX</div>
+          </div>
+          <div class="cap" style="margin-top: 22px;" data-anim="fade" data-delay="0.92">ACROSS BOARD</div>
+        </section>
+
+        <!-- ══════════════ F. THE TRAP ══════════════ -->
+
+        <!-- 75  SLAB - the most important part -->
+        <section class="slide ink tight" data-dur="4.8">
+          <div class="meta tl">SECTION 04</div>
+          <div class="u" style="font-size: 190px;" data-anim="rise">NOW, TO THE<br />MOST <span style="color: #FF4713;">IMPORTANT</span><br />PART</div>
+          <div class="row" style="margin-top: 34px; gap: 20px;" data-anim="pop" data-delay="0.3">
+            <div class="chip on">WE'VE TALKED ABOUT THE UI PART</div>
+            <div class="chip on2">THE UX PART</div>
+          </div>
+        </section>
+
+        <!-- 76  SLAB - the trap -->
+        <section class="slide a1 tight" data-dur="4.4">
+          <div style="position: absolute; left: -30px; right: -30px; top: 50%; transform: translateY(-50%); text-align: center;" data-anim="scale">
+            <span class="u" style="font-size: 340px; letter-spacing: -14px;">A TRAP</span>
+          </div>
+          <div class="meta tl">THIS ONE IS VERY IMPORTANT</div>
+          <div class="meta br">THAT A LOT OF PEOPLE<br />FALL INTO</div>
+        </section>
+
+        <!-- 77  WINDOW - the beautiful page that ticks every box -->
+        <section class="slide center" data-dur="5.4">
+          <div class="u" style="font-size: 82px; text-align: center;" data-anim="up">BEAUTIFUL CUSTOM 404 PAGES<br />THAT TICK ALL THOSE BOXES</div>
+          <div class="col2 tightgap" style="margin-top: 10px; align-items: center;">
+            <div class="mock md" data-anim="swipeL" data-delay="0.22">
+              <div class="navbar"><div class="logo"></div><div class="nb"></div><div class="nb"></div></div>
+              <div class="pane" style="padding: 40px 30px; min-height: 340px; align-content: center;">
+                <div class="ghost404">404</div>
+                <div class="msg" style="font-size: 30px;">the link you are looking for is not here.</div>
+                <div class="btn o">BACK TO HOME</div>
+              </div>
+              <div class="footbar"><div class="nb"></div><div class="nb"></div><div class="nb"></div></div>
+            </div>
+            <div class="idx tightrows">
+              <div class="row" data-anim="swipeR" data-delay="0.34"><div class="n" style="color: #1B3FD8;">OK</div><div class="x lc">clear, simple language</div></div>
+              <div class="row" data-anim="swipeR" data-delay="0.44"><div class="n" style="color: #1B3FD8;">OK</div><div class="x lc">header, footer, branding</div></div>
+              <div class="row" data-anim="swipeR" data-delay="0.54"><div class="n" style="color: #1B3FD8;">OK</div><div class="x lc">a destination to go</div></div>
+              <div class="row" data-anim="swipeR" data-delay="0.64"><div class="n" style="color: #1B3FD8;">OK</div><div class="x lc">a little bit of personality</div></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 78  SLAB - and still get it wrong -->
+        <section class="slide ink center tight" data-dur="3.8">
+          <div class="u" style="font-size: 260px;" data-anim="scale">AND STILL<br /><span style="color: #FF4713;">GET IT WRONG</span></div>
+        </section>
+
+        <!-- 79  MARKER - the engineering rule -->
+        <section class="slide" data-dur="5.0">
+          <div class="eyebrow" data-anim="fade">ENGINEERING-WISE</div>
+          <div class="t" style="font-size: 88px; font-weight: 700; line-height: 1.22; letter-spacing: -1px; margin-top: 12px;" data-anim="up" data-delay="0.18">
+            your 404 page must actually<br /><span class="mk">return status code 404</span>
+          </div>
+        </section>
+
+        <!-- 80  SPLIT - say it vs return it -->
+        <section class="slide split" data-dur="5.0">
+          <div class="half hn">
+            <div class="eyebrow" data-anim="fade">IT SHOULDN'T JUST</div>
+            <div class="u" style="font-size: 168px; margin-top: 14px;" data-anim="left" data-delay="0.15">SAY<br />404</div>
+            <div class="mock" style="margin-top: 34px;" data-anim="left" data-delay="0.3">
+              <div class="pane" style="padding: 26px 20px;"><div class="n404" style="font-size: 62px;">404</div><div class="bar s"></div></div>
+            </div>
+          </div>
+          <div class="half h1">
+            <div class="eyebrow" data-anim="fade" data-delay="0.2">IT HAS TO</div>
+            <div class="u" style="font-size: 168px; margin-top: 14px;" data-anim="right" data-delay="0.32">RETURN<br />404</div>
+            <div class="code" style="margin-top: 34px; max-width: 100%; font-size: 30px;" data-anim="right" data-delay="0.46"><span class="k1">HTTP/1.1 404 Not Found</span></div>
+          </div>
+        </section>
+
+        <!-- 81  SLAB - not 200 -->
+        <section class="slide a2 tight" data-dur="4.2">
+          <div class="gridlines"></div>
+          <div class="stack" data-anim="rise">
+            <div style="font-size: 190px;">IT SHOULD NOT</div>
+            <div style="font-size: 190px;">RETURN STATUS</div>
+            <div style="font-size: 190px;">CODE 200</div>
+          </div>
+        </section>
+
+        <!-- 82  SPLIT - THE CLIMAX. the lovely page on one side, the response header on the other -->
+        <section class="slide split" data-dur="6.4">
+          <!-- THE SOFT 404. The page assembles and looks completely fine, and only then
+               does the response header land, late and wrong, and the 200 slams down. -->
+          <div class="half hp">
+            <div class="eyebrow" data-anim="fade">A FINE, LOVELY CUSTOM ERROR PAGE</div>
+            <div class="mock md" style="margin-top: 28px;" data-anim="settle" data-delay="0.16">
+              <div class="navbar" data-anim="drop" data-delay="0.44"><div class="logo"></div><div class="nb"></div><div class="nb"></div><div class="nb"></div></div>
+              <div class="pane" style="min-height: 420px; align-content: center;">
+                <div class="ghost404" data-anim="zoom" data-delay="0.62">404</div>
+                <div class="msg" style="font-size: 34px;" data-anim="up" data-delay="0.50">the link you are looking for is not here.</div>
+                <div class="btn o" data-anim="pop" data-delay="0.56">BACK TO HOME</div>
+              </div>
+              <div class="footbar" data-anim="drop" data-delay="0.48"><div class="nb"></div><div class="nb"></div><div class="nb"></div></div>
+            </div>
+          </div>
+          <div class="half h2">
+            <div class="eyebrow" data-anim="fade" data-delay="0.90">BUT THE SERVER IS RESPONDING WITH</div>
+            <div class="code" style="margin-top: 28px; max-width: 100%; font-size: 42px;" data-anim="swipeR" data-delay="1.04"><span class="kk">HTTP/1.1</span> <span class="k2">200 OK</span>
+<span class="kk">content-type: text/html</span></div>
+            <div style="margin-top: 40px;" data-anim="slam" data-delay="1.38">
+              <div class="stamp s200 lg"><span class="n">200</span><span class="l">OK</span></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 83  SPLIT - THE CLIMAX, part two. the same page, two readers. -->
+        <section class="slide split" data-dur="6.0">
+          <div class="half hp">
+            <div class="eyebrow" data-anim="fade">TO A HUMAN BEING</div>
+            <div class="u" style="font-size: 172px; margin-top: 16px;" data-anim="left" data-delay="0.18">THAT<br />LOOKS<br />FINE</div>
+          </div>
+          <div class="half h1">
+            <div class="eyebrow" data-anim="fade" data-delay="0.26">TO GOOGLE, FOR EXAMPLE</div>
+            <div class="u" style="font-size: 172px; margin-top: 16px;" data-anim="slam" data-delay="0.44">YOU<br />ARE<br />LYING</div>
+          </div>
+        </section>
+
+        <!-- 84  SLAB - the name of the trap -->
+        <section class="slide tight center" data-dur="4.2">
+          <div class="eyebrow" style="justify-self: center;" data-anim="fade">AND IT'S CALLED A</div>
+          <div class="u" style="font-size: 300px; color: #FF4713;" data-anim="scale" data-delay="0.18">SOFT 404</div>
+        </section>
+
+        <!-- 85  WINDOW / dashboard - Search Console flags it -->
+        <section class="slide center" data-dur="5.0">
+          <!-- ASSEMBLE: the console populates, then each flag stamps on -->
+          <div class="dash" data-anim="up">
+            <div class="dh"><span>SEARCH CONSOLE / PAGE INDEXING</span><span>ISSUES</span></div>
+            <div class="dr"><div class="ub l" data-anim="swipeL" data-delay="0.30"></div><div class="sc" data-anim="punch" data-delay="0.54">SOFT 404</div></div>
+            <div class="dr"><div class="ub m" data-anim="swipeL" data-delay="0.38"></div><div class="sc" data-anim="punch" data-delay="0.64">SOFT 404</div></div>
+            <div class="dr"><div class="ub s" data-anim="swipeL" data-delay="0.46"></div><div class="sc" data-anim="punch" data-delay="0.74">SOFT 404</div></div>
+          </div>
+          <div class="cap" style="margin-top: 24px;" data-anim="fade" data-delay="0.90">GOOGLE FLAGS THAT IN SEARCH CONSOLE</div>
+        </section>
+
+        <!-- 86  SLAB - her verdict -->
+        <section class="slide a1 center tight" data-dur="3.6">
+          <div class="u" style="font-size: 300px;" data-anim="scale">SO DON'T<br />DO THAT.</div>
+        </section>
+
+        <!-- ══════════════ G. THE THREE SIDES ══════════════ -->
+
+        <!-- 87  SLAB - the recap frame -->
+        <section class="slide tight" data-dur="4.2">
+          <div class="stack" data-anim="up">
+            <div style="font-size: 190px;">SO A GOOD</div>
+            <div style="font-size: 190px;">404 PAGE HAS</div>
+            <div style="font-size: 190px;"><span style="color: #FF4713;">THREE</span> SIDES</div>
+          </div>
+          <div class="meta br">RECAP</div>
+        </section>
+
+        <!-- 88  INDEX build 1/3 - UI, orange -->
+        <section class="slide" data-dur="4.8">
+          <div class="tri">
+            <div class="sUI" data-anim="pop">
+              <div class="k">GOOD<br />UI</div>
+              <div class="d">a little bit of personality</div>
+            </div>
+            <div class="sUX dim"><div class="k">GOOD<br />UX</div><div class="d">don't put a big 404 in front of people</div></div>
+            <div class="sEN dim"><div class="k">ENG<br />WISE</div><div class="d">actually return status code 404</div></div>
+          </div>
+        </section>
+
+        <!-- 89  INDEX build 2/3 - UX, blue -->
+        <section class="slide" data-dur="4.8">
+          <div class="tri">
+            <div class="sUI"><div class="k">GOOD<br />UI</div><div class="d">a little bit of personality</div></div>
+            <div class="sUX" data-anim="pop"><div class="k">GOOD<br />UX</div><div class="d">don't put a big 404 in front of people</div></div>
+            <div class="sEN dim"><div class="k">ENG<br />WISE</div><div class="d">actually return status code 404</div></div>
+          </div>
+        </section>
+
+        <!-- 90  INDEX build 3/3 - engineering, ink -->
+        <section class="slide" data-dur="5.2">
+          <div class="tri">
+            <div class="sUI"><div class="k">GOOD<br />UI</div><div class="d">a little bit of personality</div></div>
+            <div class="sUX"><div class="k">GOOD<br />UX</div><div class="d">don't put a big 404 in front of people</div></div>
+            <div class="sEN" data-anim="pop"><div class="k">ENG<br />WISE</div><div class="d">actually return status code 404</div></div>
+          </div>
+        </section>
+
+        <!-- ══════════════ H. 404 vs 301 vs 410 ══════════════ -->
+
+        <!-- 92  OBJECT - the 404 stamp -->
+        <section class="slide center" data-dur="4.2">
+          <div class="eyebrow" style="justify-self: center;" data-anim="fade">AND ONE MORE RULE</div>
+          <div class="u" style="font-size: 132px; text-align: center;" data-anim="up" data-delay="0.15">IF THE PAGE<br />DOESN'T EXIST</div>
+          <div style="margin-top: 20px;" data-anim="pop" data-delay="0.24">
+            <div class="stamp"><span class="n">404</span><span class="l">NOT FOUND</span></div>
+          </div>
+        </section>
+
+        <!-- 93  PHOTO / OBJECT - the page packed up and moved. A wide slot on paper. -->
+        <section class="slide center" data-dur="5.0">
+          <div class="obj wide duo" data-anim="swipeR">
+            <img src="https://images.pexels.com/photos/7203701/pexels-photo-7203701.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt="a pile of cardboard boxes packed for a move" />
+          </div>
+          <div class="u" style="font-size: 122px; text-align: center; margin-top: 22px;" data-anim="slam" data-delay="0.34">IF THE PAGE<br />HAS MOVED<br /><span style="color: #FF4713;">DON'T 404 IT</span></div>
+        </section>
+
+        <!-- 94  OBJECT - the 301 arrow plaque -->
+        <section class="slide center" data-dur="4.4">
+          <div class="t" style="font-size: 58px; font-weight: 600; text-align: center;" data-anim="fade">redirect it to the new location with a</div>
+          <div style="margin-top: 24px;" data-anim="pop" data-delay="0.24">
+            <div class="plaque">
+              <svg viewBox="0 0 120 60" role="img" aria-label="arrow pointing right"><path fill="currentColor" d="M0 22 H74 V4 L120 30 L74 56 V38 H0 Z" /></svg>
+              <span>301</span>
+            </div>
+          </div>
+          <div class="cap" style="margin-top: 22px;" data-anim="fade" data-delay="0.44">MOVED PERMANENTLY</div>
+        </section>
+
+        <!-- 95  PHOTO / STRIP - torn paper, a letterbox band with the code above it -->
+        <section class="slide ink center" data-dur="5.0">
+          <div class="u" style="font-size: 215px;" data-anim="punch">410</div>
+          <div class="strip duo" style="margin-top: 6px;" data-anim="swipeL" data-delay="0.26">
+            <img src="https://images.pexels.com/photos/7017620/pexels-photo-7017620.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt="a building being demolished, rubble where it stood" />
+          </div>
+          <div class="u" style="font-size: 100px; text-align: center; margin-top: 20px;" data-anim="up" data-delay="0.5">FOR A PAGE THAT'S<br /><span style="color: #FF4713;">GONE FOREVER</span></div>
+        </section>
+
+        <!-- 96  OBJECT - the three codes as three objects, side by side -->
+        <section class="slide center" data-dur="6.0">
+          <div class="objrow">
+            <div class="objcell" data-anim="drop">
+              <div class="stamp flat"><span class="n">404</span><span class="l">NOT FOUND</span></div>
+              <div class="cap">IF THE PAGE DOESN'T EXIST</div>
+            </div>
+            <div class="objcell" data-anim="drop" data-delay="0.16">
+              <div class="plaque">
+                <svg viewBox="0 0 120 60" role="img" aria-label="arrow pointing right"><path fill="currentColor" d="M0 22 H74 V4 L120 30 L74 56 V38 H0 Z" /></svg>
+                <span>301</span>
+              </div>
+              <div class="cap">IF THE PAGE HAS MOVED SOMEWHERE ELSE</div>
+            </div>
+            <div class="objcell" data-anim="drop" data-delay="0.32">
+              <div class="tomb"><span class="n">410</span><span class="l">GONE</span></div>
+              <div class="cap">FOR A PAGE THAT'S GONE FOREVER</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ══════════════ I. SETTING IT UP ══════════════ -->
+
+        <!-- 97  SLAB - the setup -->
+        <section class="slide a2 tight" data-dur="4.4">
+          <div class="meta tl">SECTION 05</div>
+          <div class="u" style="font-size: 150px;" data-anim="rise">SO IF I'M SETTING UP<br />A 404 PAGE, I HAVE A<br />LARAVEL PROJECT HERE,<br />LET ME GO OVER<br />THE SETUP</div>
+        </section>
+
+        <!-- 98  CODE - the Laravel view file -->
+        <section class="slide center" data-dur="4.6">
+          <div class="eyebrow" style="justify-self: center;" data-anim="fade">LARAVEL</div>
+          <div class="code" data-anim="up" data-delay="0.18"><span class="k3">resources/views/errors/404.blade.php</span></div>
+        </section>
+
+        <!-- 99  CODE - abort(404) -->
+        <section class="slide center" data-dur="4.8">
+          <div class="code" data-anim="up">
+<span class="fname">LARAVEL</span><span class="kk">{{-- anywhere in your app, this triggers it --}}</span>
+<span class="k1">abort</span>(<span class="k2">404</span>);</div>
+        </section>
+
+        <!-- 100  CODE - the Next.js not-found component -->
+        <section class="slide center" data-dur="6.0">
+          <div class="code sm" data-anim="up">
+<span class="fname">NEXT.JS</span><span class="kk">// app/not-found.tsx</span>
+<span class="k1">export default function</span> <span class="k2">NotFound</span>() {
+  <span class="k1">return</span> (
+    &lt;<span class="k2">main</span>&gt;
+      &lt;<span class="k2">h1</span>&gt;The link you're looking for is not here&lt;/<span class="k2">h1</span>&gt;
+      &lt;<span class="k2">a</span> <span class="k1">href</span>=<span class="k3">"/"</span>&gt;Back to home&lt;/<span class="k2">a</span>&gt;
+    &lt;/<span class="k2">main</span>&gt;
+  );
+}</div>
+        </section>
+
+        <!-- ══════════════ J. WATCH YOUR 404s ══════════════ -->
+
+        <!-- 101  SLAB - your 404s are data -->
+        <section class="slide tight" data-dur="4.4">
+          <div class="stack" data-anim="up">
+            <div style="font-size: 215px;">YOUR 404s</div>
+            <div style="font-size: 215px; color: #FF4713;">ARE DATA</div>
+          </div>
+          <div class="t" style="font-size: 62px; font-weight: 600; margin-top: 34px;" data-anim="up" data-delay="0.28">You need to watch them.</div>
+          <div class="meta tl">AND LAST BUT NOT THE LEAST</div>
+        </section>
+
+        <!-- 102  WINDOW / dashboard - the free list of 404 URLs -->
+        <section class="slide center" data-dur="5.6">
+          <div class="eyebrow" style="justify-self: center;" data-anim="fade">GOOGLE SEARCH CONSOLE LITERALLY GIVES YOU A LIST OF URLS ON YOUR SITE</div>
+          <div class="dash" data-anim="up" data-delay="0.2">
+            <div class="dh"><span>NOT FOUND (404)</span><span>STATUS</span></div>
+            <div class="dr"><div class="ub l" data-anim="swipeL" data-delay="0.30"></div><div class="sc" data-anim="punch" data-delay="0.42">404</div></div>
+            <div class="dr"><div class="ub m" data-anim="swipeL" data-delay="0.36"></div><div class="sc" data-anim="punch" data-delay="0.48">404</div></div>
+            <div class="dr"><div class="ub s" data-anim="swipeL" data-delay="0.42"></div><div class="sc" data-anim="punch" data-delay="0.54">404</div></div>
+            <div class="dr"><div class="ub m" data-anim="swipeL" data-delay="0.48"></div><div class="sc" data-anim="punch" data-delay="0.60">404</div></div>
+            <div class="dr"><div class="ub l" data-anim="swipeL" data-delay="0.54"></div><div class="sc" data-anim="punch" data-delay="0.66">404</div></div>
+          </div>
+          <div class="row" style="justify-content: center; margin-top: 26px;" data-anim="twist" data-delay="0.72">
+            <div class="tape sm">FOR FREE</div>
+          </div>
+        </section>
+
+        <!-- ══════════════ K. OUTRO ══════════════ -->
+
+        <!-- 104  SLAB - sign off into the challenge -->
+        <section class="slide ink center tight" data-dur="3.8">
+          <div class="u" style="font-size: 215px;" data-anim="scale">SO THAT IS IT<br />WITH <span style="color: #FF4713;">404 PAGES</span></div>
+        </section>
+
+        <!-- 105  WINDOW - the closing dare, static browser mock -->
+        <section class="slide center" data-dur="5.6">
+          <div class="t" style="font-size: 62px; font-weight: 700; text-align: center; letter-spacing: -1px;" data-anim="up">
+            Type some nonsense after your domain URL today
+          </div>
+          <div class="browser" style="max-width: 1240px;" data-anim="scale" data-delay="0.24">
+            <div class="chrome">
+              <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+              <div class="url">yourdomain.com<b>/kjhsdfkjh2839</b></div>
+            </div>
+            <div class="pane" style="padding: 46px 40px; display: grid; row-gap: 18px; justify-items: center;">
+              <div style="font-family: 'Archivo Black', Impact, sans-serif; font-size: 120px; color: #FF4713; line-height: 0.9; letter-spacing: -4px;">404</div>
+              <div style="height: 15px; background: #D9D3C3; width: 48%;"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 106  SLAB - the last promise -->
+        <section class="slide a1 tight" data-dur="4.8">
+          <div class="stack" data-anim="rise">
+            <div style="font-size: 150px;">IF YOU DON'T LIKE</div>
+            <div style="font-size: 150px;">EXACTLY WHAT</div>
+            <div style="font-size: 150px;">YOU SEE, NOW YOU</div>
+            <div style="font-size: 150px;">KNOW EXACTLY</div>
+            <div style="font-size: 150px;">HOW TO FIX IT</div>
+          </div>
+        </section>
+
+        <!-- 108  SLAB - Bye. -->
+        <section class="slide a2 center tight" data-dur="4.0">
+          <div style="position: absolute; left: -30px; right: -30px; top: 50%; transform: translateY(-50%); text-align: center;" data-anim="scale">
+            <span class="u low" style="font-size: 410px; letter-spacing: -18px;">Bye.</span>
+          </div>
+          <div class="meta bl">SEE YOU IN MY NEXT VIDEO.</div>
+          <div class="meta br">END / 404</div>
+        </section>
+
+      </div>
+    </div>
+
+    <div id="toast"></div>
+
+    <div id="controls">
+      <button id="prevBtn" title="Previous (&#8592;)">&#8249;</button>
+      <span id="counter">1 / 1</span>
+      <button id="nextBtn" title="Next (&#8594;)">&#8250;</button>
+      <div class="sep"></div>
+      <button id="replayBtn" title="Replay (R)">Replay</button>
+      <input id="jump" type="number" min="1" title="Jump to slide" />
+      <div class="sep"></div>
+      <button id="themeBtn">Light</button>
+      <button id="layoutBtn">Portrait</button>
+      <button id="muteBtn">Unmute</button>
+      <div class="sep"></div>
+      <button id="imgBtn">Image</button>
+      <button id="vidBtn">Video</button>
+      <button id="ovrBtn">Overlay</button>
+    </div>
+
+    <script src="../../../../html2canvas.min.js"></script>
+    <script src="../../../../studio-v2/lib/mp4-muxer.min.js"></script>
+    <script src="../../../../studio-v2/lib/sfx-data.js"></script>
+    <script src="../../../../studio-v2/lib/editor.js"></script>
+    <script src="../../../../studio-v2/lib/engine.js"></script>
+    <script>
+      // Export fix: html2canvas serializes inline SVGs WITHOUT the page stylesheet, so
+      // class-based fills/strokes fall back to black in downloads. Bake computed colors
+      // in as presentation attributes on the visible slide right before capture.
+      (function () {
+        var PROPS = ["fill", "stroke", "stroke-width", "opacity", "fill-opacity", "stroke-opacity"];
+        function bakeSvgColors() {
+          document.querySelectorAll("#stage .slide.active svg").forEach(function (svg) {
+            var els = [svg].concat(Array.prototype.slice.call(svg.querySelectorAll("*")));
+            els.forEach(function (el) {
+              var cs = getComputedStyle(el);
+              PROPS.forEach(function (p) {
+                var v = cs.getPropertyValue(p);
+                if (v) el.setAttribute(p, v);
+              });
+            });
+          });
+        }
+        ["imgBtn", "vidBtn", "ovrBtn"].forEach(function (id) {
+          var b = document.getElementById(id);
+          if (b) b.addEventListener("click", bakeSvgColors, true);
+        });
+      })();
+    </script>
+  </body>
+</html>

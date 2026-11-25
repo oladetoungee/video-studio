@@ -1,0 +1,104 @@
+{
+ "story": "opencode",
+ "outlet": "DevOps.com",
+ "slug": "devops",
+ "url": "https://devops.com/opencode-breach-puts-spotlight-on-ai-distillation-threats/",
+ "finalUrl": "https://devops.com/opencode-breach-puts-spotlight-on-ai-distillation-threats",
+ "status": "loaded",
+ "http": 200,
+ "title": "OpenCode Breach Puts Spotlight on AI Distillation Threats",
+ "h1": "OpenCode Breach Puts Spotlight on AI Distillation Threats",
+ "published": "2026-10-19T08:08:45+00:00",
+ "files": {
+  "fold": "opencode/devops_fold.png",
+  "full": "opencode/devops_full.jpg",
+  "scroll": "opencode/devops_scroll.mp4"
+ },
+ "full": {
+  "width": 1440,
+  "height": 4696,
+  "pageHeight": 4696,
+  "zoom": 1,
+  "quotes": [
+   {
+    "quote": "Stolen keys can lead to unexpected bills and greater risk",
+    "box": {
+     "x": 132,
+     "y": 917,
+     "w": 392,
+     "h": 19
+    },
+    "lines": [
+     {
+      "x": 132,
+      "y": 917,
+      "w": 392,
+      "h": 19
+     }
+    ]
+   }
+  ]
+ },
+ "scroll": {
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "seconds": 8,
+  "keyframes": [
+   {
+    "t": 0,
+    "y": 196
+   },
+   {
+    "t": 1,
+    "y": 196
+   },
+   {
+    "t": 1.969,
+    "y": 507
+   },
+   {
+    "t": 8,
+    "y": 507
+   }
+  ],
+  "zoom": 1,
+  "easing": "easeInOutCubic between keyframes, holds where y is equal",
+  "capped": false,
+  "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)",
+  "quotes": [
+   {
+    "quote": "Stolen keys can lead to unexpected bills and greater risk",
+    "inVideo": true,
+    "still": true,
+    "t": 4.97,
+    "visibleStill": [
+     1.9,
+     8.03
+    ],
+    "scrollY": 507,
+    "box": {
+     "x": 372,
+     "y": 410,
+     "w": 392,
+     "h": 19
+    },
+    "lines": [
+     {
+      "x": 372,
+      "y": 410,
+      "w": 392,
+      "h": 19
+     }
+    ],
+    "docBox": {
+     "x": 372,
+     "y": 917,
+     "w": 392,
+     "h": 19
+    },
+    "layoutDriftPx": 0
+   }
+  ]
+ }
+}

@@ -1,0 +1,26 @@
+{
+  "direction": "She raises a finger (0:46) beside a big phone showing ONE row: 'Officiant: Licensed ✓' (the platform also verifies licensed officiants; illustration). LICENSED? in a red box. Follows viral sample 9 ('Thought of these?' + the thing itself). For people who heard the name Marrify.",
+  "concept": "T4",
+  "thumbnail_text": "Is your pastor licensed?",
+  "title": "Marrify: Ghana's App to Check If Someone Is Married",
+  "titles": [
+    "Marrify: Ghana's App to Check If Someone Is Married",
+    "You Can Now Check If Someone Is Married in Ghana",
+    "Check Marital Status Online: Ghana's New App"
+  ],
+  "scores": "a 4/5 · 4/6 · 4/6 | b 5/6 · 6/5 · 6/6 | c 6 · 6 · 6",
+  "recommended": false,
+  "text": {
+    "line1": "Is your pastor",
+    "line2": "licensed?",
+    "p_app": "Marriage records",
+    "p_lab": "Officiant check",
+    "p_row": "Your pastor",
+    "p_big": "Licensed ✓"
+  },
+  "images": {
+    "scene": "../../assets/scene/warm/s_46.13.jpg",
+    "front": "../../assets/scene/warm/mask/s_46.13.png"
+  },
+  "vars": {}
+}

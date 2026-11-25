@@ -1,0 +1,25 @@
+/* Direction A · "The Same System"
+   One precise system drawing that never changes; the world around it does.
+   Warm white, ink hairlines, ONE accent (electric blue) that always means "the environment". Geist + Geist Mono. */
+@font-face { font-family: 'Geist'; src: url('../shared/fonts/Geist.ttf'); font-weight: 100 900; }
+@font-face { font-family: 'GeistMono'; src: url('../shared/fonts/GeistMono.ttf'); font-weight: 100 900; }
+
+:root { --paper: #F6F4EF; --ink: #141416; --mid: #8B877F; --hair: #D8D4CB; --env: #2B50FF; --env-soft: #DCE3FF; --warn: #FF5A36; }
+.bg-paper { --bg: var(--paper); --fg: var(--ink); --hlc: var(--env-soft); }
+.bg-ink   { --bg: #121214; --fg: #F2F0EB; --hair: #2E2E33; --mid: #8E8B86; --hlc: #26307A; }
+.slide { font-family: 'Geist', sans-serif; }
+
+.t-xl { font-weight: 600; font-size: 120px; line-height: 1.02; letter-spacing: -.045em; }
+.t-l  { font-weight: 600; font-size: 84px;  line-height: 1.05; letter-spacing: -.04em; }
+.t-m  { font-weight: 500; font-size: 52px;  line-height: 1.12; letter-spacing: -.025em; }
+.lab  { font-family: 'GeistMono'; font-weight: 500; font-size: 26px; letter-spacing: .02em; color: var(--mid); }
+.mono { font-family: 'GeistMono'; font-weight: 500; }
+.env  { color: var(--env); }
+.mid  { color: var(--mid); }
+
+/* system boxes: hairline, square corners, mono names */
+.box { position: absolute; border: 2.5px solid var(--fg); background: var(--bg); display: flex; align-items: center; justify-content: center;
+  font-family: 'GeistMono'; font-weight: 500; font-size: 28px; letter-spacing: .01em; }
+svg .ln { fill: none; stroke: var(--fg); stroke-width: 2.5; }
+svg .ln-env { fill: none; stroke: var(--env); stroke-width: 2.5; }
+svg .ln-hair { fill: none; stroke: var(--hair); stroke-width: 2; }

@@ -1,0 +1,22 @@
+{
+  "direction": "Faceless, the film's A3 still made bold: the same query EXPLAINed before the index (Seq Scan, red) and after (Index Scan, yellow). Real PostgreSQL output (COSTS OFF). Round 2: not two equal cards any more: a red strike across the slow line, the fast result larger.",
+  "concept": "new (pairs S8, C2)",
+  "thumbnail_text": "Same query. Slow / fast",
+  "title": "Seq Scan vs Index Scan: Is Your Query Using the Index?",
+  "titles": [
+    "Seq Scan vs Index Scan: Is Your Query Using the Index?",
+    "Added an Index and It's Still Slow? Check This First"
+  ],
+  "text": {
+    "a": "Same query.",
+    "r1": "Seq Scan on orders",
+    "l1": "before",
+    "l2": "after CREATE INDEX",
+    "r2": "Index Scan",
+    "r2b": "using orders_customer_id_idx"
+  },
+  "images": {},
+  "frame": "none (faceless, Query Plan look)",
+  "vars": {},
+  "scores": "final gate (round 4): A topic/click 3/5 · B pair 5 · C taste 6"
+}

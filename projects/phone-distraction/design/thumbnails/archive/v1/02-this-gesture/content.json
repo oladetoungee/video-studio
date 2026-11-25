@@ -1,0 +1,21 @@
+{
+  "direction": "Her pointing (13:13) at a big generic phone mid pull-to-refresh: the spinner circled in red pen, an arrow and a handwritten \"pull\". THIS GESTURE sits behind her head.",
+  "concept": "TH04",
+  "follows": "Pinterest annotation (red circles) + viral sample 4 (a drawing beside her)",
+  "thumbnail_text": "THIS GESTURE",
+  "title": "He Invented Pull-to-Refresh. Later He Called It Addictive",
+  "titles": [
+    "He Invented Pull-to-Refresh. Later He Called It Addictive",
+    "Pull-to-Refresh Explained: Why You Keep Pulling Down"
+  ],
+  "scores": "A topic (image only) 6/6 · B with best title 8.5 · C taste 4 (round 2; fixes from round 2 applied after)",
+  "text": {
+    "words": "This <span class=\"acc\">gesture</span>",
+    "pull": "pull"
+  },
+  "images": {
+    "scene": "../../../../assets/scene/warm/s_793.0.jpg",
+    "front": "../../../../assets/scene/warm/mask/s_793.0.png"
+  },
+  "vars": {}
+}

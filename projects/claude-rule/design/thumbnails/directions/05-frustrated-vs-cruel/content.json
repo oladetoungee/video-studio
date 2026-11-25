@@ -1,0 +1,31 @@
+{
+  "direction": "TH17: the line the rule actually draws. Lilac on the left with two messages \"to Claude\": \"ugh, wrong again\" (fine) under FRUSTRATED, a blurred red all-caps message under CRUEL, a thick red line between; her real room on the right half, sceptical frown, mouth closed. Refs: sample 4 (a diagram), sample 3 (the framework drawn). Scores: Round 3: cold 5 · best pair (title 1) 8/7 (the most accurate about the rule) · taste 5.5.",
+  "concept": "TH17",
+  "thumbnail_text": "FRUSTRATED VS CRUEL",
+  "title": "Is It Okay to Be Mean to AI? Anthropic's New Rule",
+  "titles": [
+    "Is It Okay to Be Mean to AI? Anthropic's New Rule",
+    "Claude Can End Your Chat If You're Cruel. But Why?"
+  ],
+  "scores": "Round 3: cold 5 · best pair (title 1) 8/7 (the most accurate about the rule) · taste 5.5.",
+  "text": {
+    "to": "Messages to Claude, an AI:",
+    "l1": "FRUSTRATED",
+    "l2": "CRUEL",
+    "soft": "ugh, wrong again",
+    "rude": "YOU USELESS STUPID THING"
+  },
+  "images": {
+    "scene": "../../assets/scene/s_134.75.jpg",
+    "cut": "../../assets/cut/c_134.75.png"
+  },
+  "vars": {
+    "--ground": "#CDBFF3",
+    "--fg": "#15131C",
+    "--accent": "#E8352B",
+    "--px": "-13px",
+    "--py": "-258px",
+    "--pw": "1988px",
+    "--clip": "inset(0px 695px 0px 673px)"
+  }
+}

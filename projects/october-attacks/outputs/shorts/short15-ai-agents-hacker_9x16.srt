@@ -1,0 +1,51 @@
+1
+00:00:00,070 --> 00:00:03,130
+reuters reported that one attacker used AI
+
+2
+00:00:03,130 --> 00:00:05,950
+agents to break into more than a hundred
+
+3
+00:00:05,950 --> 00:00:08,090
+company websites these include sites
+
+4
+00:00:08,090 --> 00:00:10,480
+belonging to SharkNinja, Cummins, all of
+
+5
+00:00:10,480 --> 00:00:12,850
+those so in this case what the attackers did
+
+6
+00:00:12,850 --> 00:00:14,170
+was that it gave the agent short
+
+7
+00:00:14,170 --> 00:00:16,110
+instructions and just let them run on for
+
+8
+00:00:16,110 --> 00:00:17,410
+hours on their own
+
+9
+00:00:17,410 --> 00:00:20,230
+and the cost estimated to about $50 in AI
+
+10
+00:00:20,230 --> 00:00:22,170
+tokens per successful hack
+
+11
+00:00:22,170 --> 00:00:24,480
+like it's so crazy that we've gotten to the
+
+12
+00:00:24,480 --> 00:00:26,600
+point where it's costing $50 to hack into a
+
+13
+00:00:26,600 --> 00:00:27,133
+company

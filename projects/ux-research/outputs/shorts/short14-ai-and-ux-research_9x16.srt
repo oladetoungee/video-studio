@@ -1,0 +1,43 @@
+1
+00:00:00,042 --> 00:00:01,995
+will AI replace UX research?
+
+2
+00:00:01,995 --> 00:00:04,145
+AI tools are already doing a lot of the slow
+
+3
+00:00:04,145 --> 00:00:05,645
+work they can transcribe interviews
+
+4
+00:00:05,645 --> 00:00:07,385
+they can summarise hours of notes
+
+5
+00:00:07,436 --> 00:00:09,895
+it saves UX researchers a lot of time
+
+6
+00:00:09,955 --> 00:00:12,145
+I cannot even imagine having to do my thesis
+
+7
+00:00:12,145 --> 00:00:13,225
+four years ago
+
+8
+00:00:13,225 --> 00:00:14,665
+I probably would do it, but oh my God, it
+
+9
+00:00:14,665 --> 00:00:15,895
+would be a lot of work
+
+10
+00:00:15,905 --> 00:00:17,891
+so AI is changing how UX research gets done,
+
+11
+00:00:17,891 --> 00:00:19,933
+in a good way, I think, if you use it well

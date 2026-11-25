@@ -1,0 +1,87 @@
+1
+00:00:00,043 --> 00:00:02,623
+the first big way to split UX research is
+
+2
+00:00:02,623 --> 00:00:04,853
+generative versus evaluative
+
+3
+00:00:04,963 --> 00:00:07,503
+generative UX research happens early before
+
+4
+00:00:07,503 --> 00:00:08,623
+anything is designed
+
+5
+00:00:08,623 --> 00:00:10,623
+it asks questions like, what is the real
+
+6
+00:00:10,623 --> 00:00:12,142
+problem? what do people need?
+
+7
+00:00:12,183 --> 00:00:13,862
+how do they get by right now without this
+
+8
+00:00:13,862 --> 00:00:15,302
+thing that we are about to build?
+
+9
+00:00:15,302 --> 00:00:18,063
+it generates ideas for what to build
+
+10
+00:00:18,063 --> 00:00:19,703
+for example, for my thesis, I'm doing
+
+11
+00:00:19,703 --> 00:00:21,003
+generative research
+
+12
+00:00:21,153 --> 00:00:22,923
+evaluative research, on the other hand,
+
+13
+00:00:22,923 --> 00:00:25,203
+happens later after there is a design
+
+14
+00:00:25,203 --> 00:00:28,083
+it asks questions like, does this product
+
+15
+00:00:28,083 --> 00:00:30,193
+actually work? can users use it?
+
+16
+00:00:30,193 --> 00:00:32,643
+where do the users get stuck while using it?
+
+17
+00:00:32,643 --> 00:00:34,943
+so you're evaluating something that already
+
+18
+00:00:34,943 --> 00:00:37,703
+exists so generative UX research helps you
+
+19
+00:00:37,703 --> 00:00:39,043
+decide what to build
+
+20
+00:00:39,043 --> 00:00:41,963
+and evaluative UX research tells you whether
+
+21
+00:00:41,963 --> 00:00:42,963
+what you build
+
+22
+00:00:43,223 --> 00:00:43,567
+works

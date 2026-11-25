@@ -1,0 +1,24 @@
+{
+  "direction": "Her on the left, calm, raised finger; a paper-white settings card on the right IS the text: \"Turn off these addictive settings\" over three switches, each marked OFF in red (Autoplay, Notifications, App badges).",
+  "kind": "photo",
+  "concept": "v3 (2026-10-16)",
+  "references": "Everything done by 2pm (checklist card) · Boring way (notification cards beside the face) · Forget about going viral (tweet card)",
+  "thumbnail_text": "Turn off these addictive settings",
+  "title": "Why Am I Addicted to My Phone? 5 Design Tricks to Blame",
+  "titles": [
+    "Why Am I Addicted to My Phone? 5 Design Tricks to Blame",
+    "Why Can’t I Stop Scrolling? It Was Designed That Way"
+  ],
+  "scores": "fresh critics vs her bar: r1 7 · r2 7.5 · r3 7.8 · r4 7.5",
+  "recommended": "",
+  "text": {
+    "words": "Turn off these<br><span class=\"red\">addictive settings</span>",
+    "r1": "Autoplay",
+    "r2": "Notifications",
+    "r3": "App badges"
+  },
+  "images": {
+    "photo": "../../assets/scene/warm/s_238.5.jpg"
+  },
+  "vars": {}
+}

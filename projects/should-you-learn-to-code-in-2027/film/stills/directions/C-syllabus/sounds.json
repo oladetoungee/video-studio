@@ -1,0 +1,3 @@
+{"music": "722", "musicAt": 3, "musicDb": -23, "sfxDb": -4,
+ "roles": {"pen": "pencil-writing", "tick": "pencil-short", "pen2": "pen-on-paper", "scrib": "scribble-on-paper", "mark": "marker-line"},
+ "cues": [[332.8, "pen", -6], [333.54, "tick"], [334.5, "pen2", -6], [337.01, "scrib"], [338.92, "mark"]]}

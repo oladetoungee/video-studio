@@ -1,0 +1,144 @@
+{
+ "php2shell/php-net": {
+  "date": "2026-10-21",
+  "headline": "Security advisory: Critical remote code execution vulnerabilities, update now",
+  "note": "php.net home page news column; the 21 Oct advisory sits below a newer 23 Oct informational advisory",
+  "credit": "Source: php.net, 21 Oct 2026"
+ },
+ "php2shell/datadog": {
+  "credit": "Source: Datadog Security Labs, 21 Oct 2026 (updated 23 Oct)"
+ },
+ "php2shell/bleepingcomputer": {
+  "date": "2026-10-21"
+ },
+ "php2shell/thehackernews": {
+  "date": "2026-10-22"
+ },
+ "php2shell/github-advisory-109618": {
+  "date": "2026-10-21",
+  "headline": "RCE via OOM corruption (CVE-2026-109618)",
+  "credit": "Source: PHP security advisory on GitHub, 21 Oct 2026"
+ },
+ "php2shell/github-advisory-109619": {
+  "date": "2026-10-21",
+  "headline": "RCE via stale global state (CVE-2026-109619)",
+  "credit": "Source: PHP security advisory on GitHub, 21 Oct 2026"
+ },
+ "php2shell/vercel": {
+  "date": "2026-10-21"
+ },
+ "php2shell/darkreading": {
+  "date": "2026-10-21"
+ },
+ "php2shell/paperjam": {
+  "date": "2026-10-21"
+ },
+ "php2shell/wiz": {
+  "date": "",
+  "note": "Wiz vulnerability database entry (reference page, no article date)",
+  "credit": "Source: Wiz vulnerability database"
+ },
+ "php2shell/hn-thread": {
+  "date": "2026-10-21",
+  "headline": "PHP2Shell: AI uncovers critical RCE in PHP (454 points, 185 comments)",
+  "note": "Hacker News discussion of the Wiz blog post"
+ },
+ "php2shell/deseret-reuters": {
+  "note": "Deseret News story citing Reuters and the Wall Street Journal",
+  "credit": "Source: Deseret News (citing Reuters), 21 Oct 2026"
+ },
+ "php2shell/wikipedia": {
+  "credit": "Source: Wikipedia, PHP2Shell article (viewed 26 Oct 2026)",
+  "date": ""
+ },
+ "php2shell/php2shell-site": {
+  "date": "",
+  "note": "the discoverers' explainer site"
+ },
+ "railway/railway-status": {
+  "date": "2026-10-23",
+  "headline": "Railway Status page",
+  "note": "live status page as of 26 Oct 2026; shows the 23 Oct notice that new account signups remain paused",
+  "credit": "Source: status.railway.com, viewed 26 Oct 2026"
+ },
+ "railway/hn-thread": {
+  "date": "2026-10-21",
+  "headline": "Security Disclosure (Railway) (602 points, 340 comments)"
+ },
+ "railway/railway-prelim-report": {
+  "date": "2026-10-22",
+  "headline": "Preliminary Report: Oct 21st Security Incident"
+ },
+ "zeabur/zeabur-incident-report": {
+  "date": "2026-10-19"
+ },
+ "zeabur/bleepingcomputer": {
+  "date": "2026-10-20"
+ },
+ "opencode/bleepingcomputer": {
+  "date": "2026-10-19"
+ },
+ "opencode/x-opencode": {
+  "date": "2026-10-17",
+  "headline": "OpenCode on X: \"We had a security breach last night...\"",
+  "note": "logged-out view of the post; replies below it include one with a swear word, so crop to the post",
+  "credit": "Source: @opencode on X, 17 Oct 2026"
+ },
+ "opencode/hn-thread": {
+  "date": "2026-10-18",
+  "headline": "OpenCode has a security breach ... impacted 1.4% of console users (55 points)"
+ },
+ "emudhra/bleepingcomputer": {
+  "date": "2026-10-20"
+ },
+ "emudhra/thehackernews": {
+  "date": "2026-10-20"
+ },
+ "emudhra/openwall": {
+  "date": "2026-10-20",
+  "headline": "NSS 3.131.1 Release - Important Security Updates (Mozilla, via oss-security)",
+  "credit": "Source: Mozilla NSS release notice (oss-security), 20 Oct 2026"
+ },
+ "emudhra/we-have-a-problem": {
+  "date": "2026-10-20",
+  "headline": "eMudhra Intermediate CA Compromise",
+  "credit": "Source: emudhra.we-have-a-problem.com (Mozilla's Dennis Jackson), 20 Oct 2026"
+ },
+ "emudhra/scotthelme": {
+  "date": "2026-10-20"
+ },
+ "emudhra/google-blog": {
+  "date": "2026-10-20",
+  "credit": "Source: Google Chrome Security blog, 20 Oct 2026"
+ },
+ "emudhra/emudhra-press": {
+  "date": "2026-10-22"
+ },
+ "emudhra/hn-thread": {
+  "date": "2026-10-20",
+  "headline": "eMudhra intermediate CA compromise (1,281 points, 504 comments)"
+ },
+ "nodejs/nodejs-blog": {
+  "date": "2026-10-21",
+  "credit": "Source: nodejs.org, 21 Oct 2026"
+ },
+ "ai-agents/staradvertiser-reuters": {
+  "credit": "Source: Reuters (via Honolulu Star-Advertiser), 19 Oct 2026",
+  "note": "Reuters story by Raphael Satter, syndicated; reuters.com itself blocks automated browsers"
+ },
+ "ai-agents/sbs-reuters": {
+  "credit": "Source: SBS News citing Reuters, 20 Oct 2026",
+  "note": "AI-translated Korean article (the page says so)"
+ },
+ "ai-agents/reuters": {
+  "date": "2026-10-19",
+  "headline": "How one hacker used AI agents and a few thousand dollars to break into scores of sites"
+ },
+ "ai-agents/thenextweb": {},
+ "php2shell/newsweek": {
+  "note": "long page; key lines are far down (full image extended to 8600 px)"
+ },
+ "php2shell/wiz-blog": {
+  "credit": "Source: Wiz Research, 21 Oct 2026"
+ }
+}

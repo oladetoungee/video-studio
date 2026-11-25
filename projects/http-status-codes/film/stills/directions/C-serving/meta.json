@@ -1,0 +1,133 @@
+{
+ "TOTAL": 529,
+ "INTRO": 0,
+ "OUTRO": 1,
+ "FPS": 30,
+ "CUES": [
+  {
+   "name": "print",
+   "t": 13.05,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "ding",
+   "t": 13.66,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "tick",
+   "t": 14.46,
+   "db": -9,
+   "keep": true
+  },
+  {
+   "name": "shutter",
+   "t": 325.05,
+   "db": -7,
+   "keep": true
+  },
+  {
+   "name": "ding",
+   "t": 326.76,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "buzz",
+   "t": 329.8,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "print",
+   "t": 359.45,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "tear",
+   "t": 360.5,
+   "db": -5,
+   "keep": true
+  },
+  {
+   "name": "ding",
+   "t": 361.07,
+   "db": -3,
+   "keep": true
+  },
+  {
+   "name": "marker",
+   "t": 362.3,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "type",
+   "t": 363.26,
+   "db": -10,
+   "keep": true
+  },
+  {
+   "name": "tape",
+   "t": 365.35,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "marker",
+   "t": 365.9,
+   "db": -7,
+   "keep": true
+  }
+ ],
+ "SCENES": [
+  {
+   "n": 1,
+   "id": "pre",
+   "start": 0,
+   "end": 13,
+   "ground": "c5",
+   "label": "pre",
+   "trans": "cut"
+  },
+  {
+   "n": 2,
+   "id": "serve",
+   "start": 13,
+   "end": 325,
+   "ground": "c3",
+   "label": "serve",
+   "trans": "cut"
+  },
+  {
+   "n": 3,
+   "id": "keycard",
+   "start": 325,
+   "end": 359.3,
+   "ground": "c4",
+   "label": "keycard",
+   "trans": "cut"
+  },
+  {
+   "n": 4,
+   "id": "hide",
+   "start": 359.3,
+   "end": 365.3,
+   "ground": "c1",
+   "label": "hide",
+   "trans": "cut"
+  },
+  {
+   "n": 5,
+   "id": "github",
+   "start": 365.3,
+   "end": 529,
+   "ground": "c2",
+   "label": "github",
+   "trans": "cut"
+  }
+ ]
+}

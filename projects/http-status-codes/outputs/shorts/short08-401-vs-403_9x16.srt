@@ -1,0 +1,131 @@
+1
+00:00:00,123 --> 00:00:02,663
+401 versus 403 are two status codes that
+
+2
+00:00:02,663 --> 00:00:04,643
+people mix up together a lot
+
+3
+00:00:04,643 --> 00:00:07,373
+say our bookstore has an admin route, DELETE
+
+4
+00:00:07,373 --> 00:00:10,003
+book 42 only admins can delete book
+
+5
+00:00:10,003 --> 00:00:11,483
+case one, now let's look at two scenarios
+
+6
+00:00:11,483 --> 00:00:13,153
+case one, a request comes in with no token
+
+7
+00:00:13,153 --> 00:00:14,443
+at all, or the token has expired
+
+8
+00:00:14,443 --> 00:00:16,378
+the server has no idea who's sending this
+
+9
+00:00:16,378 --> 00:00:19,143
+request that is a 401 Unauthorized
+
+10
+00:00:19,143 --> 00:00:20,823
+case two, the request has a valid token
+
+11
+00:00:20,823 --> 00:00:22,543
+so the server knows exactly who it is
+
+12
+00:00:22,543 --> 00:00:24,463
+it's a customer, and customers cannot delete
+
+13
+00:00:24,463 --> 00:00:26,023
+book that is a 403 Forbidden
+
+14
+00:00:26,023 --> 00:00:27,943
+so two different cases, right?
+
+15
+00:00:27,943 --> 00:00:29,743
+it's like when you have a hotel keycard
+
+16
+00:00:29,743 --> 00:00:31,463
+401 is when you don't even have a keycard at
+
+17
+00:00:31,463 --> 00:00:32,783
+all or your card doesn't work
+
+18
+00:00:32,783 --> 00:00:34,843
+403 is when your card works fine, but it's
+
+19
+00:00:34,843 --> 00:00:36,283
+for another room and you're trying to enter
+
+20
+00:00:36,283 --> 00:00:38,383
+another room so 401 is kind of who are you?
+
+21
+00:00:38,383 --> 00:00:40,223
+while 403 is kind of, I know who you are,
+
+22
+00:00:40,223 --> 00:00:41,463
+but you can't do this
+
+23
+00:00:41,463 --> 00:00:43,133
+the part that confuses people mostly is the
+
+24
+00:00:43,133 --> 00:00:45,013
+name 401 is called Unauthorized
+
+25
+00:00:45,013 --> 00:00:46,653
+and meanwhile, it's really about
+
+26
+00:00:46,653 --> 00:00:49,303
+authentication 403, on the other hand, is
+
+27
+00:00:49,303 --> 00:00:50,743
+the one that is about permission
+
+28
+00:00:50,743 --> 00:00:53,133
+on a 401, the right move is to send the user
+
+29
+00:00:53,133 --> 00:00:54,903
+to login or refresh their token
+
+30
+00:00:54,903 --> 00:00:57,103
+on a 403, logging in again won't help
+
+31
+00:00:57,103 --> 00:00:58,783
+because the server already knows who they
+
+32
+00:00:58,783 --> 00:01:00,383
+are you just need to show them a message
+
+33
+00:01:00,383 --> 00:01:02,167
+that they don't have the access to do this

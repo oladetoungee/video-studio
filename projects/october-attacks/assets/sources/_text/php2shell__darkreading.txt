@@ -1,0 +1,195 @@
+URL: https://www.darkreading.com/application-security/php2shell-bugs-red-alert-security-industry
+STATUS: loaded (http 200)
+FINAL: https://www.darkreading.com/application-security/php2shell-bugs-red-alert-security-industry
+TITLE: 'PHP2Shell' Bugs Signal Red Alert for Security Industry
+H1: 'PHP2Shell' Bugs Signal Red Alert for Security Industry
+OG: 'PHP2Shell' Bugs Signal Red Alert for Security Industry | Dark Reading
+PUBLISHED:   MODIFIED: 
+DOC_H: 7334
+
+Informa TechTarget
+|
+Cybersecurity Dive
+InformationWeek
+Channel Dive
+TechTarget: Cybersecurity
+Explore our brands
+Dark Reading Resource Library
+Black Hat News
+Omdia Cybersecurity
+Advertise
+NEWSLETTER SIGN-UP
+Cybersecurity Topics
+World
+The Edge
+DR Technology
+Events
+Resources
+APPLICATION SECURITY
+IDENTITY & ACCESS MANAGEMENT SECURITY
+CYBER RISK
+THREAT INTELLIGENCE
+NEWS
+'PHP2Shell' Bugs Signal Red Alert for Security Industry
+
+Security teams are scrambling to remediate two critical PHP vulnerabilities following leaked details and reports of exploitation attempts.
+
+Alexander Culafi,Senior News Writer,Dark Reading
+
+October 21, 2026
+
+4 Min Read
+CREDIT: DSGPRO VIA GETTY IMAGES
+
+A pair of critical vulnerabilities tied to open source scripting language PHP appear to have significant consequences for much of the server infrastructure holding the Internet afloat.
+
+These vulnerabilities, dubbed "php2shell" by some researchers, include CVE-2026-109618 and CVE-2026-109619. CVE-2026-109618 enables remote code execution (RCE) via out-of-memory corruption, and CVE-2026-109619 enables RCE via a stale global state. The vulnerabilities, discovered by infosec consulting firm Calif, were designated with a critical CVSS v4.0 score of 9.2.
+
+According to a WatchTowr blog post, both PHP vulnerabilities let an attacker run their own code on a Web server without logging in. "It stems from stale internal data that survives after its memory is freed; a later request handled by the same worker can use that leftover data, and PHP confirms this can let an attacker run their own code on the server without logging in. Reaching the server over the network is enough; no account or prior access is needed," researchers said in the blog post.
+
+Related:Exposed to PHP2Shell? Cyber Experts Weigh in With Advice
+
+Patch Your Web-Facing PHP Servers Now
+
+Organizations should update affected servers to PHP 8.5.12, 8.4.27, 8.3.36, or 8.2.35 to protect against the flaws. As 8.2 through 8.5 are the supported versions of PHP, lower-numbered versions do not have a patch available, meaning organizations must either upgrade their PHP versions to a supported branch or use a backported fix. PHP's security advisory urges that while only an update is a complete solution, organizations can take certain actions to reduce exposure until that time.
+
+PHP's maintainers initially said yesterday that an emergency security release was scheduled for Oct. 22 at 14:00 UTC alongside coordinated disclosure, but as WatchTowr's blog post explained, the embargo broke. A proof-of-concept tool called "PHP2Shell" came to light, and WatchTowr claimed to be able to recreate both vulnerabilities.
+
+John Hammond, senior principal security researcher for Huntress, tells Dark Reading that there was a silver lining in the leak in that it "pushed defenders to inventory systems, prepare mitigations, and get ready to patch sooner."
+
+On the other hand, "that same early warning was available to attackers, who were undoubtedly spinning up AI and LLMs to find the vulnerabilities, identify targets, and start developing or adapting exploits," Hammond adds.
+
+This may not be theoretical risk, either; WatchTowr reported it has observed exploitation attempts of both flaws in the wild. Jake Knott, head of threat intelligence for WatchTowr, tells Dark Reading that while no one has been successful yet, the company does not expect this to be the case for very long.
+
+Related:Close Identity Gaps in Software Development Before Unleashing AI
+
+The vendor said the potential for exploitation is broad across vulnerable PHP installations, and security teams should prioritize "internet-facing servers running PHP as an Apache module," as the PHP Foundation highlighted that configuration as having the highest risk.
+
+"Every PHP installation that serves web requests is in scope, including PHP-FPM, Apache’s mod_php, php-cgi, FrankenPHP, and LiteSpeed, and PHP says the risk is highest on mod_php, where an attack can succeed before any application code runs," WatchTowr's blog post read. "Session Upload Progress, a feature turned on by default, offers one confirmed path to the problem, so most default deployments meet that precondition."
+
+More Critical Bugs Involving Open Source Projects
+
+PHP is a common, highly supported programming language run on servers across the globe and used for Web development. The scope of organizations using PHP spans the Internet, from enterprises to small businesses, critical infrastructure, and municipalities. Many organizations, like the Netherlands' National Cyber Security Centre (NCSC), took websites and services down to limit exposure and/or facilitate emergency patching.
+
+Related:Fake Claude, ChatGPT Attacks Surge, Putting Developers at Risk
+
+As the Independent Federated Intelligence Network, a not-for-profit cyber intelligence group, warned in a Mastodon post, "If you are able to contact folks at local schools, governments, nonprofits, and other services to warn them about the PHP vulnerabilities, please consider doing so. These locations often do not have dedicated security staff and almost certainly have PHP assets exposed."
+
+In a blog post, Huntress' Hammond recommended inventorying every PHP install, identifying end-of-life PHP installs, and alerting on "PHP worker processes launching shells, interpreters, or download tools."
+
+Despite the leak and the resulting chaos, PHP maintainers acted quickly to give organizations lead time for two challenging vulnerabilities. Patrick Münch, chief security officer at Mondoo, praised the PHP Foundation's response. He worries, however, about the resources of open source organizations, which have to support this kind of work, often on a volunteer basis.
+
+"I think the PHP team handled this well. They warned people a day ahead, Linux distributions got the patches early, and they even wrote fixes for old versions they don't support anymore. A lot of commercial vendors wouldn't do that," he says. "Where it gets harder is everything after php.net. PHP gets packaged and shipped by distributions, hosting companies, and software vendors, and a lot of those are volunteers or very small teams."
+
+Indeed, the PHP2Shell flaws echo the Log4Shell vulnerability in Log4j 2 nearly five years ago, which similarly required the security industry to come together to collectively patch a major flaw in a popular open source project.
+
+About the Author
+
+Alexander Culafi
+
+Senior News Writer, Dark Reading
+
+Alex is an award-winning writer, journalist, and podcast host based in Boston. After cutting his teeth writing for independent gaming publications as a teenager, he graduated from Emerson College in 2016 with a Bachelor of Science in journalism. He has previously been published on VentureFizz, Search Security, Nintendo World Report, and elsewhere.
+
+At Dark Reading, he covers a variety of cybersecurity topics, including the cybercrime ecosystem, open source security, and the intersection between AI and threat actors. In his spare time, Alex hosts the weekly Nintendo podcast, "Talk Nintendo Podcast," and works on personal writing projects, including two previously self-published science fiction novels.
+
+He has received numerous awards, including TechTarget's Writer of the Year in 2022 as well as more than 10 Azbee awards for his reporting between 2022 and today.
+
+Want more Dark Reading stories in your Google search results?
+ADD US NOW
+More Insights
+Industry Reports
+
+The State of Cloud Security: The Latest Challenges
+
+How Organizations Are Managing Incident Response
+
+How Enterprises Are Developing Secure Applications
+
+Inside RSAC 2026: security leaders reveal the risks redefining your defense strategy
+
+Essential News & Insights from Black Hat USA 2025
+
+Access More Research
+Webinars
+
+Prompt Injection 101: What It Is and How to Stay Ahead
+
+The Long Tail Is Now the Front Line: Reducing Frontier-AI & Third-Party App Risk
+
+How to Harness your Security Operations Data for Enterprise Defense
+
+Building Cyber Resilience: Beyond Prevention to Recovery
+
+The Frontier AI Threat: Closing the Mobile Gap in Your Exposure Management Strategy
+
+More Webinars
+You May Also Like
+APPLICATION SECURITY
+Supply Chain Attack Secretly Installs OpenClaw for Cline Users
+by Rob Wright
+FEB 19, 2026
+APPLICATION SECURITY
+Chinese Hackers Hijack Notepad++ Updates for 6 Months
+by Jai Vijayan
+FEB 02, 2026
+APPLICATION SECURITY
+Trump Administration Rescinds Biden-Era Software Guidance
+by Alexander Culafi
+JAN 29, 2026
+APPLICATION SECURITY
+Microsoft Fixes Exploited Zero Day in Light Patch Tuesday
+by Jai Vijayan
+DEC 09, 2025
+Featured
+
+Check out the Black Hat USA 2026 Conference Guide for coverage and intel from — and about — the show!
+
+Editor's Choice
+APPLICATION SECURITY
+Close Identity Gaps in Software Development Before Unleashing AI
+byArielle Waldman
+OCT 20, 2026
+INSIDER THREATS
+Prominent Ransomware Negotiator Faces Extortion Charges
+byAlexander Culafi
+OCT 12, 2026
+3 MIN READ
+VULNERABILITIES & THREATS
+OnlyFans Copyright Takedowns Expose Compromised Websites
+byKristina Beek
+OCT 19, 2026
+
+DECEMBER 3, 2026 | VIRTUAL
+
+Cybersecurity Outlook 2027
+SECURE YOUR SPOT
+Keep up with the latest cybersecurity threats, newly discovered vulnerabilities, data breach information, and emerging trends. Delivered daily or weekly right to your email inbox.
+SUBSCRIBE
+
+DEC 7-10, 2026 | LONDON
+
+Offering two-and four-day specialized cybersecurity Trainings, with courses of all skill levels. Use the code: DARKREADING and get 10% off your pass.
+LEARN MORE
+
+Want more Dark Reading stories in your Google search results?
+
+Discover More
+Black Hat
+Omdia
+Working With Us
+About Us
+Meet the Editors
+Advertise
+Reprints
+Join Us
+NEWSLETTER SIGN-UP
+Follow Us
+
+Copyright © 2026 TechTarget, Inc. d/b/a Informa TechTarget. This website is owned and operated by Informa TechTarget, part of a global network that informs, influences and connects the world’s technology buyers and sellers. All copyright resides with them. Informa PLC’s registered office is 5 Howick Place, London SW1P 1WG. Registered in England and Wales. TechTarget, Inc.’s registered office is 275 Grove St. Newton, MA 02466.
+
+Home|
+Cookie Policy|
+Privacy|
+Terms of Use
+Your Privacy Choices

@@ -1,0 +1,165 @@
+URL: https://www.insurancebusinessmag.com/uk/news/cyber/uk-councils-and-met-police-among-sites-pulled-offline-after-ncsc-alert-594424.aspx
+STATUS: loaded (http 200)
+FINAL: https://www.insurancebusinessmag.com/uk/news/cyber/uk-councils-and-met-police-among-sites-pulled-offline-after-ncsc-alert-594424.aspx
+TITLE: UK councils and Met Police among sites pulled offline after NCSC alert | Insurance Business
+H1: UK councils and Met Police among sites pulled offline after NCSC alert
+OG: UK councils and Met Police among sites pulled offline after NCSC alert | Insurance Business
+PUBLISHED: 2026-10-21T17:25:58+00:00  MODIFIED: 2026-10-21T19:01:53+00:00
+DOC_H: 10135
+
+SELECT REGION
+UNITED STATES
+CANADA
+UNITED KINGDOM
+AUSTRALIA
+NEW ZEALAND
+ASIA
+NEWS
+TV
+DIGITAL TRANSFORMATION
+RISK MANAGEMENT
+RESOURCES
+BEST IN INSURANCE
+SPECIALTY
+IBMARKETS
+CONTACT US
+ Cyber
+UK councils and Met Police among sites pulled offline after NCSC alert
+Organisations across the UK and Europe are taking websites offline as emergency fixes arrive for “PHP2Shell”, two critical bugs in software that runs around 70% of the web. Insurers are watching for an aggregation event
+CYBER
+By Matthew Sellers
+21 Oct 2026
+Share
+
+Websites belonging to UK councils, the Metropolitan Police and governments across Europe went dark on Wednesday after the disclosure of two critical flaws in PHP, the code behind most of the internet.
+
+In the UK, the sites reported unavailable included those of Edinburgh and Oxford councils and the Met Police. Error messages also appeared on the Bristol, Lambeth and Barnet council websites.
+
+The bugs are tracked as CVE-2026-109618 and CVE-2026-109619 and have been nicknamed “PHP2Shell”. They can let an attacker take control of a web server without logging in. Both are rated 9.2 out of 10 for severity.
+
+PHP’s developers released emergency fixes at around 3pm UK time on Wednesday, in versions 8.5.12, 8.4.27, 8.3.36 and 8.2.35. They are available from php.net. Details of the flaws had leaked online before the planned disclosure date.
+
+Explainer: PHP2Shell
+What is PHP?
+PHP is the behind-the-scenes code that builds a web page each time someone visits it. It is free, maintained largely by volunteers, and runs underneath much of the internet.
+How a page gets built
+Your browser
+asks for a page
+Web server
+PHP builds the page
+Database
+products, accounts, logins
+1
+Request
+2
+Fetch data
+3
+Finished page
+The PHP2Shell flaws sit in the web server step, so a site can be at risk even if its own code has no bugs.
+~70%
+of websites whose server-side
+language is known use PHP
+WordPress
+plus Drupal, Magento and many
+hosting control panels run on it
+8.2 to 8.5
+are the only versions with
+official fixed releases
+What to check: who manages PHP on your site, and has it been updated to 8.5.12, 8.4.27, 8.3.36 or 8.2.35?
+Sources: W3Techs (August 2026); PHP security advisory and NCSC alert, 21 October 2026
+Patch now or go offline, says NCSC
+
+Britain’s National Cyber Security Centre has issued an alert telling organisations to update immediately. If they can’t, they should apply temporary fixes published by PHP’s developers. If those can’t be put in place quickly either, the NCSC says organisations should consider taking affected systems offline. CERT-EU, the EU’s cyber emergency team, has given similar advice.
+
+Cloudflare’s chief technology officer, Dane Knecht, said before the fixes landed that the firm was seeing early attacks. He told site owners to treat its emergency firewall rules as a “STOPGAP only”.
+
+No successful break-ins had been confirmed as of Wednesday afternoon. Security specialists expect attack attempts to increase now that the fix is public, because attackers can use the patch to pinpoint the weakness and then target servers that haven’t been updated.
+
+Read next: Insurers know a mega cyber-loss is coming. So why is capacity still growing?
+
+Europe goes dark
+
+The Netherlands saw the most disruption. The Dutch National Cyber Security Centre took its own site offline as a precaution, as did the following:
+
+the DigiD login service
+the MijnOverheid citizen portal
+the House of Representatives
+the Port of Rotterdam
+the national football association, KNVB
+several hospitals
+
+Elsewhere in Europe:
+
+Finland: state IT provider Valtori took government public network services offline.
+France: the Interior Ministry suspended local government administration sites.
+Denmark: municipal IT body Kombit shut down services, including the national school communication platform.
+Germany: the federal IT provider, ITZBund, took several websites down.
+Scale of exposure
+
+According to W3Techs, PHP runs around 70% of websites whose server-side language can be identified. Palo Alto Networks’ Unit 42 has counted more than 22.6 million internet-facing systems that could be vulnerable. Security firm Wiz called the bugs among the most severe ever found in PHP.
+
+Official fixed releases cover only PHP 8.2 to 8.5. Sites on older, unsupported versions have no simple update to install. One scan of the top 15 million websites found that nearly half of the PHP sites showing their version number were running these older releases.
+
+What it means for insurers
+
+PHP2Shell is close to the scenario cyber underwriters have long modelled: one piece of shared software that leaves thousands of policyholders exposed at once. It comes as shared technology dependencies push aggregation up the underwriting agenda. The market is also soft: DUAL says international rates are down 43% since late 2023.
+
+Brokers can expect questions in four areas:
+
+Precautionary shutdowns. Will business interruption cover respond when a client took its own site offline without a breach? That depends on the policy wording and the waiting period.
+
+Patching. Underwriters may ask how quickly a client updated once the fix was available.
+Hosting providers. Small businesses on shared hosting rely on their provider to apply the fix.
+Uninsured firms. Small businesses are the most exposed and also the least likely to have cyber cover. GlobalData puts take-up among UK SMEs at around 40%, as Insurance Business reported in its look at three years of falling cyber prices.
+
+Read next: Revealed - what’s changing about cyber claims
+
+What clients should do now
+
+Clients should do four things:
+
+Find out who manages PHP on their website.
+Confirm in writing that it has been updated to a fixed version.
+Have the server checked for signs of a break-in.
+Tell their insurer early if anything looks wrong.
+
+Insurance Business will update this story as it develops.
+
+Read next: UK cyber insurance reaches a turning point in SME adoption
+
+Related Stories
+Millions of AI files exposed in leak that caught a sex doll maker’s chatbot
+Google Cloud outage hits UK banks, retailers and public services simultaneously
+Free newsletter
+
+We'll keep you up-to-date with the latest breaking news, cutting edge opinion, and expert analysis affecting both your business and the industry as whole.
+
+SIGN UP
+LATEST NEWS
+£17.5M in fake returns, a flight to Dubai, and a fraud judgment that survives bankruptcy
+LEGAL INSIGHTS
+Low catastrophe losses drive Munich Re guidance raise ahead of soft renewal
+INSURANCE NEWS
+'Scotland is a foreign country' for insurers, and UK divergence could widen the gap
+CLAIMS
+Distraction is slipping through crash records, putting more weight on vehicle data
+MOTOR & FLEET
+Aon, Marsh, WTW: are they really brokerages any more?
+INSURANCE NEWS
+Free newsletter
+
+Our daily newsletter is FREE and keeps you up - to - date with the world of Insurance. Please complete the form below and click on subscribe for daily newsletters from IB UK.
+
+SIGN UP
+People
+Glossary
+Terms & conditions
+Privacy policy
+Cookie policy
+Consent Preferences
+Conditions of Use
+About us
+Contact us
+Sitemap
+Rss
+Copyright © 2026 KM Business Information UK Ltd

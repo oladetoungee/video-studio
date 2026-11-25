@@ -1,0 +1,24 @@
+{
+  "direction": "A hard 50/50 split like \"THE 9-5 COLLAPSE\" / \"JOBS ARE DEAD\" on her board: left half a flat panel, the same lookup twice, without an index (1,000,000 rows read, red) and with one (1 row, yellow); right half her real photo pointing at it. Round 3: one accent (the million line grey), no tiny query line, wider frame.",
+  "concept": "new (taste critic: \"a before/after split\")",
+  "thumbnail_text": "without an index / with an index",
+  "title": "How Database Indexes Find 1 Row in a Million",
+  "titles": [
+    "How Database Indexes Find 1 Row in a Million",
+    "No Index? Your Database Reads Every Single Row",
+    "Database Indexes: Why Your App Slows Down as It Grows"
+  ],
+  "text": {
+    "l1": "without an index",
+    "v1": "1,000,000 rows read",
+    "l2": "with an index",
+    "v2": "1 row",
+    "q": ""
+  },
+  "images": {
+    "scene": "../../assets/scene/f_496.8.jpg"
+  },
+  "frame": "8:16.8 (pointing at the panel, mouth closed)",
+  "vars": {},
+  "scores": "final gate (round 4): A topic/click 5/7 · B pair 7 · C taste 6"
+}

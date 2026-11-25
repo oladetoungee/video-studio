@@ -1,0 +1,28 @@
+{
+  "text": {
+    "h": "Test these first",
+    "r0": "Double click",
+    "r1": "Two tabs open",
+    "r2": "29 February"
+  },
+  "images": {
+    "me": "../../assets/shoot/cut-1586.png"
+  },
+  "kind": "flat + her cut-out on the LEFT, hand-drawn list",
+  "board": "Thumbnails 63 (yt-10: SAVE 4 HOURS A DAY, heading on top, him beside a hand-drawn tick / cross table)",
+  "fonts": [
+    "design-20 Permanent Marker (#E8EAF4 on blue #0D24C5, Design 363)"
+  ],
+  "colours": "Design 363: #0D24C5 / #E8EAF4",
+  "thumbnail_text": "TEST THESE FIRST + Double click, Two tabs open, 29 February (empty boxes)",
+  "scores": "cold critic r5: 8 alone / 8.5 with title",
+  "titles": [
+    "Edge Cases Every Developer Should Test Before Shipping",
+    "What Is an Edge Case? 8 Real Examples"
+  ],
+  "title": "Edge Cases Every Developer Should Test Before Shipping",
+  "direction": "Copies Thumbnails 63: a marker heading across the top and a hand-drawn list of the cases nobody tests, she thinks it over from the left. Permanent Marker pale on blue, as Design 363.",
+  "nudge": {},
+  "vars": {},
+  "class": "no-lift"
+}

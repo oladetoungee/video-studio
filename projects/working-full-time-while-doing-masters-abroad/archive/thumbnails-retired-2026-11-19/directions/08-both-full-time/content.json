@@ -1,0 +1,28 @@
+{
+  "text": {
+    "h": "work 9-5.<br>class at 6."
+  },
+  "images": {
+    "room": "../../assets/p1119/1597-room.jpg",
+    "me": "../../assets/p1119/1597-person.png"
+  },
+  "kind": "photo-led real room (her home office with the bookshelf, cream knit, mid-gesture), room dimmed behind the words, her natural on top",
+  "layout": "her centre, words top left over the dimmed wall",
+  "board": "pick1119-36 (\"Realistic habits that will save you 10 hours each week\": 10 HOURS BACK, white heavy caps top left over a cosy real room, her mid-gesture)",
+  "fonts": [
+    "thumbs-18 Montserrat ExtraBold, the white line (#FFFFFF on #3A3A38, Thumbnails 162)"
+  ],
+  "colours": "Thumbnails 162: #3A3A38 / #FFFFFF",
+  "photo": "library/her-photos/shoot-2026-10-29/C-cream-knit-headband/IMG_1597.jpg (Enhance photo 0.5, person layer)",
+  "thumbnail_text": "WORK 9-5. CLASS AT 6.",
+  "titles": [
+    "How I Work Full Time While Doing a Master's Abroad",
+    "I Work a Full-Time Job and Study Full Time. Here's How",
+    "Full-Time Job and Full-Time Master's: How I Do Both"
+  ],
+  "title": "How I Work Full Time While Doing a Master's Abroad",
+  "direction": "Copies pick1119-36: her real room (bookshelf, plant, desk), her mid-gesture like she is telling you, two short heavy white lines top left. The title says job + master's; the thumbnail adds the twist: both, and both full time.",
+  "nudge": {},
+  "vars": {},
+  "class": "no-lift"
+}

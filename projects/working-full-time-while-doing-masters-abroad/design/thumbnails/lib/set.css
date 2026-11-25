@@ -1,0 +1,39 @@
+/* working-full-time thumbnails, SET 2026-11-13 (FULL-KIT-BRIEF-2026-11-12): FONT BOARD ONLY (inspiration/boards/fonts/, each used
+   with its board item's own text + ground colours); every thumbnail copies a DIFFERENT thumbnail-board composition ("Thumbnails N",
+   studio /ideas/boards/thumbnails/); content.json "board", "fonts", "colours" name them. Photos: her 29 Oct shoot, outfit B (white tee,
+   red headband), through Enhance photo + cut-out, face untouched (no-lift). No gradients, glow, outlines on text, line patterns.
+   Editable: text in content.json "text", photos in "images", colours in "vars", moves in "nudge" (lib/bind.js). */
+@font-face { font-family: 'FIT'; src: url('../fonts/InterTightMedium.ttf'); font-weight: 500; }
+@font-face { font-family: 'FIT'; src: url('../fonts/InterTightSemiBold.ttf'); font-weight: 600; }
+@font-face { font-family: 'FIT'; src: url('../fonts/InterTightBold.ttf'); font-weight: 700; }
+@font-face { font-family: 'FIT'; src: url('../fonts/InterTightExtraBold.ttf'); font-weight: 800; }
+@font-face { font-family: 'FIT'; src: url('../fonts/InterTightBlack.ttf'); font-weight: 900; }
+@font-face { font-family: 'FIS'; src: url('../fonts/InstrumentSerif-Italic.ttf'); font-style: normal; }
+@font-face { font-family: 'FLB'; src: url('../fonts/LibreBaskerville[wght].ttf'); font-weight: 400 700; }
+@font-face { font-family: 'FBO'; src: url('../fonts/BodoniModa[opsz,wght].ttf'); font-weight: 400 900; }
+@font-face { font-family: 'FOS'; src: url('../fonts/Oswald-Variable.ttf'); font-weight: 200 700; }
+@font-face { font-family: 'FSC'; src: url('../fonts/SixCaps.ttf'); }
+@font-face { font-family: 'FPO'; src: url('../fonts/Poppins-Bold.ttf'); font-weight: 700; }
+@font-face { font-family: 'FAN'; src: url('../fonts/Anton-Regular.ttf'); }
+@font-face { font-family: 'FKA'; src: url('../fonts/KaushanScript-Regular.ttf'); }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1280px; height: 720px; overflow: hidden; background: #111; }
+.t { position: relative; width: 1280px; height: 720px; overflow: hidden; background: var(--ground, #111); color: var(--fg, #fff); }
+.t > * { position: absolute; }
+.guides .badge { position: absolute; right: 10px; bottom: 10px; width: 150px; height: 70px; border: 3px dashed #0f0; z-index: 99; }
+.z1 { z-index: 1; } .z2 { z-index: 2; } .z3 { z-index: 3; } .z4 { z-index: 4; } .z5 { z-index: 5; } .z6 { z-index: 6; }
+.nw { white-space: nowrap; }
+/* her room photo + her cut-out at the same place on top (face untouched); .dim darkens the room only */
+.room { width: var(--rw, 1700px); left: var(--rx, 0px); top: var(--ry, 0px); display: block; }
+.dim { inset: 0; background: var(--dim, rgba(12,12,12,.5)); }
+.cut { display: block; filter: drop-shadow(0 18px 40px rgba(0,0,0,.55)); }
+.ph { object-fit: cover; display: block; }
+@font-face { font-family: 'FBS'; src: url('../fonts/BigShouldersDisplay[wght].ttf'); font-weight: 100 900; }
+@font-face { font-family: 'FCB'; src: url('../fonts/CaveatBrush-Regular.ttf'); }
+@font-face { font-family: 'FPF'; src: url('../fonts/PlayfairDisplayBlackItalic.ttf'); font-weight: 900; }
+@font-face { font-family: 'FOSW'; src: url('../fonts/Oswald-Variable.ttf'); font-weight: 200 700; }
+/* set 2026-11-19 (THUMBS-REWORK-BRIEF-2026-11-19): Montserrat for thumbs-18 / shorts-08 */
+@font-face { font-family: 'FMO'; src: url('../fonts/Montserrat-Variable.ttf'); font-weight: 100 900; }
+.ph2 { display: block; position: absolute; }
+.panel { overflow: hidden; }
+.panel img { position: absolute; display: block; }

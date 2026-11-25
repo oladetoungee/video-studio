@@ -1,0 +1,28 @@
+{
+ "label": "Before this session’s edits",
+ "auto": true,
+ "savedAt": 1791270625295,
+ "content": {
+  "direction": "The Ghana flag pinned on the wall behind her (she sits in front of it), her smile (5:11), a phone with a marriage search (illustration); condensed GHANA + serif italic",
+  "thumbnail_text": "Ghana: check any marriage",
+  "title": "Ghana's New App Lets Anyone Look Up a Marriage",
+  "titles": [
+   "Ghana's New App Lets Anyone Look Up a Marriage",
+   "I Love This Idea From Ghana. I Also Have Questions",
+   "Ghana's Marriage Search App: What It Gets Right (and Wrong)"
+  ],
+  "text": {
+   "line1": "GHANA:",
+   "line2": "check <em>any</em> marriage",
+   "p_app": "Marriage records",
+   "p_q": "Search a name",
+   "p_rl": "Record found",
+   "p_res": "Married"
+  },
+  "images": {
+   "scene": "../../assets/scene/s_311.00.jpg",
+   "front": "../../assets/scene/mask/s_311.00.png"
+  },
+  "vars": {}
+ }
+}

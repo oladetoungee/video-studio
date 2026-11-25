@@ -1,0 +1,61 @@
+{
+ "title": "http-status-codes direction TH",
+ "hud": "",
+ "intro": 0,
+ "outro": 1,
+ "voiceDuration": 528,
+ "words": "../_shared/words.json",
+ "images": {
+  "clip_gh-404": "../_src/clips/gh-404.png",
+  "clip_gh-line": "../_src/clips/gh-line.png",
+  "clip_google-4xx": "../_src/clips/google-4xx.png",
+  "clip_google-line": "../_src/clips/google-line.png",
+  "clip_rfc-first": "../_src/clips/rfc-first.png",
+  "px_17489152": "../_src/pexels/px-17489152.jpg",
+  "px_4907178": "../_src/pexels/px-4907178.jpg",
+  "px_5865624": "../_src/pexels/px-5865624.jpg",
+  "f_matte_111_9": "../_src/footage/matte_111.9.png",
+  "f_matte_236_0": "../_src/footage/matte_236.0.png",
+  "f_matte_334_9": "../_src/footage/matte_334.9.png",
+  "f_matte_340_5": "../_src/footage/matte_340.5.png",
+  "f_matte_366_0": "../_src/footage/matte_366.0.png",
+  "f_matte_76_0": "../_src/footage/matte_76.0.png",
+  "f_matte_81_5": "../_src/footage/matte_81.5.png",
+  "f_raw_111_9": "../_src/footage/raw_111.9.jpg",
+  "f_raw_236_0": "../_src/footage/raw_236.0.jpg",
+  "f_raw_334_9": "../_src/footage/raw_334.9.jpg",
+  "f_raw_340_5": "../_src/footage/raw_340.5.jpg",
+  "f_raw_366_0": "../_src/footage/raw_366.0.jpg",
+  "f_raw_491_6": "../_src/footage/raw_491.6.jpg",
+  "f_raw_6_0": "../_src/footage/raw_6.0.jpg",
+  "f_raw_76_0": "../_src/footage/raw_76.0.jpg",
+  "f_raw_81_5": "../_src/footage/raw_81.5.jpg"
+ },
+ "scripts": [
+  "../_shared/clips.js",
+  "../_shared/hs.js",
+  "../A-line/kit.js",
+  "../B-odometer/kit.js",
+  "../C-serving/kit.js",
+  "scenes.js"
+ ],
+ "cutSounds": {
+  "cutSounds": false
+ },
+ "fonts": [
+  "700 40px Kalam",
+  "400 40px Kalam",
+  "800 40px \"Funnel Display\"",
+  "600 40px \"Funnel Display\"",
+  "400 40px \"Funnel Sans\"",
+  "600 40px \"Funnel Sans\"",
+  "400 40px \"Fragment Mono\"",
+  "400 40px \"Reddit Sans\"",
+  "700 40px \"Reddit Sans\"",
+  "900 40px \"Reddit Sans\"",
+  "500 40px \"Reddit Mono\"",
+  "700 40px \"Reddit Mono\"",
+  "400 40px \"Instrument Serif\"",
+  "italic 400 40px \"Instrument Serif\""
+ ]
+}

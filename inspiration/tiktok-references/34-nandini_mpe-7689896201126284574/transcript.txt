@@ -1,0 +1,28 @@
+[00:00] what I feel is one of the most dangerous things going on right now is the responsibility gap between
+[00:05] what these AI agents are doing, all these rogue agents, all the things that they've been doing.
+[00:10] So yesterday they reported that 53 images from TryGPT users were leaked by these agents. There
+[00:16] was also an attack on the SEC, there was an attack on the Chamber of Commerce, and there was an attack
+[00:22] on the Australian government Medicare statistics portal. And there's been like 24 or so reports of
+[00:30] real rogue AI agents from OpenAI. And then there's been some reports from Entropic, reports from
+[00:35] Gemini as well. And it's getting more and more serious. So initially, you know, it was the
+[00:40] Hiking Face incident. And then there was a couple of other websites that we don't know about. And
+[00:45] then now it's government websites. And the SEC is literally like the key regulator when it comes to
+[00:51] financial markets, because the US financial markets make up the bulk of the financial markets in the
+[00:57] world. So all of that, I feel like the reporting framing it as these agents have done this almost
+[01:07] makes these companies that make these AI agents bystanders to the outcomes or the capabilities of
+[01:16] these agents. And because they've repeatedly told regulators that these agents are getting out of
+[01:22] control, we need you to step in, we need more regulation, and nothing is happening. I feel
+[01:28] like a lot of serious things are going to happen in the meantime. And because we're allowing this
+[01:34] framing of the agents did this rather than saying that OpenAI or Entropic did this, I feel like it's
+[01:42] gonna lead to a point where there's no one to hold liable, because we told the regulators that this
+[01:49] was going on, and these agents have been acting autonomously. And so there's no legal person to
+[01:56] hold accountable. I feel like we're, we're headed in that direction. And like Jensen Huang said,
+[02:03] you know, these companies are the ones that are making all of these agents, if they feel like
+[02:08] the capabilities are far greater than their ability to do the safety testing, like if they're
+[02:14] not able to align that, if they feel like the job of running an AI lab is too much for them,
+[02:18] maybe they should shut it down. And I think that sort of, you know, placing a responsibility on
+[02:26] these labs becomes very important. And the media is feeding into this. There's been so many reports
+[02:32] of like, you know, framing it as the agents did this, oh my God, the labs are just as shocked as
+[02:39] we are. And that is very dangerous, because this attack on the Australian government, for example,
+[02:44] in a couple of US government departments, tomorrow, it's going to be critical infrastructure for
+[02:50] possibly a country that can't even fight back. And then what happens then?

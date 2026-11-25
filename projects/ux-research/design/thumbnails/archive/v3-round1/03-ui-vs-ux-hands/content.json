@@ -1,0 +1,27 @@
+{
+  "direction": "'UI vs UX' giant behind her head, her two raised hands in front of it: one hand is 'how it looks', the other 'how it feels'. Text woven into the photo, no panel. References: yt 'FAVOR' (4) and 'UI UX roadmap' (26) (big word behind the head), Pinterest 'COOK'.",
+  "thumbnail_text": "UI vs UX",
+  "text": {
+    "hd": "UI<span class=\"gap\"></span>UX",
+    "vs": "vs",
+    "l1": "how it looks",
+    "l2": "how it feels"
+  },
+  "images": {
+    "bg": "../../assets/scene/g/s_300.6.jpg",
+    "cut": "../../assets/scene/g/mask3/s_300.6.png"
+  },
+  "vars": {
+    "--accent": "#E8501E",
+    "--bgb": "0.92",
+    "--meb": "1.05"
+  },
+  "titles": [
+    "UI vs UX vs UX Research: The Difference Explained",
+    "UI vs UX Explained: What Users See vs How It Feels",
+    "UI vs UX: Why a Pretty App Can Still Fail"
+  ],
+  "title": "UI vs UX vs UX Research: The Difference Explained",
+  "set": 3,
+  "kind": "photo"
+}

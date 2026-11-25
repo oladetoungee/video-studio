@@ -1,0 +1,44 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="lib/pd.css">
+<style>
+html,body{width:2000px;height:auto;overflow:visible;background:var(--ink)}
+.wrap{padding:56px 56px 40px}
+.top{display:flex;justify-content:space-between;align-items:baseline;color:#F4F1EA;margin-bottom:40px}
+.top h1{font-family:'IT';font-weight:800;font-size:64px;letter-spacing:-.03em;text-transform:uppercase}
+.top .mono{color:rgba(255,255,255,.55)}
+.g{display:grid;grid-template-columns:repeat(3,1fr);gap:44px 36px}
+.c img{width:100%;display:block;border-radius:10px}
+.c .n{font-family:'Plex';font-weight:500;font-size:15px;letter-spacing:.12em;text-transform:uppercase;color:var(--red);margin:14px 0 6px}
+.c .ti{font-family:'IT';font-weight:700;font-size:21px;line-height:1.25;color:#F4F1EA;margin-top:6px;display:flex;gap:10px}
+.c .ti .k{font-family:'Plex';font-weight:500;font-size:15px;color:var(--red);padding-top:3px}
+.c .sc{font-family:'Plex';font-weight:500;font-size:15px;color:#FFD23F;margin-top:8px}
+.c .d{font-family:'IT';font-weight:400;font-size:16px;color:rgba(255,255,255,.55);margin-top:4px}
+.sec{font-family:'IT';font-weight:800;font-size:40px;letter-spacing:-.02em;text-transform:uppercase;color:#F4F1EA;margin:10px 0 26px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:48px 40px;margin-bottom:70px}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.pair .lb{font-family:'Plex';font-weight:500;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-top:6px}
+</style></head><body><div class="wrap">
+<div class="top"><h1>Why you can’t stop scrolling / thumbnails</h1><span class="mono">v3 · 2026-10-16 · a mix: photo 01-08 · collage 09-12 · graphic 13-17 · other 18-20 · titles under each · fresh critic scores vs her own thumbnail</span></div>
+<div class="sec">Recommended first (1-3), then the rest</div><div class="g" id="g"></div></div>
+<script>
+(async () => {
+  const dirs = await (await fetch('directions/index.json')).json();
+  const g = document.getElementById('g');
+  const cs = {}; for (const d of dirs) cs[d] = await (await fetch('directions/' + d + '/content.json')).json();
+  const order = [...dirs.filter(d => cs[d].recommended).sort((a, b) => cs[a].recommended.localeCompare(cs[b].recommended)), ...dirs.filter(d => !cs[d].recommended)];
+  for (const d of order) {
+    const c = cs[d];
+    const el = document.createElement('div'); el.className = 'c';
+    if (c.sample) {
+      const ts2 = (c.titles || [c.title]).map((t, i) => '<div class="ti"><span class="k">' + (i + 1) + '</span>' + t + '</div>').join('');
+      el.innerHTML = '<div class="pair"><div><img src="assets/samples/s' + c.sample + '.jpg"><div class="lb">your sample ' + c.sample + '</div></div><div><img src="../../outputs/thumbnails/' + d + '.png"><div class="lb">remake</div></div></div><div class="n">' + d + ' · words: ' + c.thumbnail_text + '</div>' + ts2 + (c.scores ? '<div class="sc">' + c.scores + '</div>' : '') + '<div class="d">' + c.direction + '</div>';
+      document.getElementById('g2').appendChild(el); continue;
+    }
+    const ts = (c.titles && c.titles.length ? c.titles : [c.title]).map((t, i) => '<div class="ti"><span class="k">' + (i + 1) + '</span>' + t + '</div>').join('');
+    el.innerHTML = '<img src="../../outputs/thumbnails/' + d + '.png"><div class="n">' + d + (c.recommended ? ' · RECOMMENDED ' + c.recommended : '') + (c.needs_photo ? ' · better with a new photo' : '') + '</div>' + ts + (c.scores ? '<div class="sc">' + c.scores + '</div>' : '') + '<div class="d">' + c.direction + '</div>';
+    g.appendChild(el);
+  }
+  await document.fonts.ready;
+  await Promise.all([...document.images].map(i => i.complete ? 0 : new Promise(r => { i.onload = i.onerror = r; })));
+  window.__ready = true;
+})();
+</script></body></html>

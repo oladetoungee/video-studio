@@ -1,0 +1,81 @@
+URL: https://www.helpnetsecurity.com/2026/10/21/php2shell-php-vulnerabilities-patched-cve-2026-109618-cve-2026-109619/
+STATUS: loaded (http 200)
+FINAL: https://www.helpnetsecurity.com/2026/10/21/php2shell-php-vulnerabilities-patched-cve-2026-109618-cve-2026-109619/
+TITLE: PHP2Shell: Critical PHP vulnerabilities patched, update now! - Help Net Security
+H1: PHP2Shell: Critical PHP vulnerabilities patched, update now!
+OG: PHP2Shell: Critical PHP vulnerabilities patched, update now! - Help Net Security | Help Net Security
+PUBLISHED: 2026-10-21T13:51:05+00:00  MODIFIED: 2026-10-22T12:05:54+00:00
+DOC_H: 4563
+
+Mirko Zorz, Director of Content, Help Net Security
+October 21, 2026
+Share
+PHP2Shell: Critical PHP vulnerabilities patched, update now!
+
+The PHP development team has released emergency security updates to fix PHP2Shell, two critical vulnerabilities (CVE-2026-109618 and CVE-2026-109619) that could let attackers execute code remotely on web servers without logging in. The fixes are in PHP 8.5.12, 8.4.27, 8.3.36 and 8.2.35, and the team is strongly urging all PHP users to update immediately.
+
+“These findings rank among the most severe vulnerabilities discovered in PHP, and arguably in software history. The underlying flaws had been present for decades, but demonstrating their exploitability required an exceptionally complex chain of steps, at the edge of what human researchers could practically achieve. Frontier AI models substantially reduced that barrier, turning a longstanding flaw into an exploit,” Wiz researchers explained.
+
+Who is affected?
+
+Every PHP installation that serves web requests is affected, including PHP-FPM, Apache with mod_php, php-cgi, FrankenPHP and LiteSpeed. Setups using mod_php face the greatest danger. A working exploit has already shown that a single unauthenticated request can trigger the attack before any application code runs.
+
+“The PHP situation will lead to a mass of incidents – it’s one of the biggest vulns in years,” noted security researcher Kevin Beaumont.
+
+The vulnerabilities
+
+CVE-2026-109618 – RCE via OOM corruption: out-of-memory handling can interrupt PHP while internal request data is only partially initialized. Request cleanup may then treat the invalid data as valid.
+
+CVE-2026-109619 – RCE via stale global state: request-owned internal state can survive after its backing memory has been freed. A later request handled by the same worker may use that stale state before normal initialization resets it.
+
+The UK’s National Cyber Security Centre (NCSC) is urging organizations to consider taking offline any system that can’t be fixed right away.
+
+“So many embedded installations out there that will never be patched. Too many forgotten, unmaintained apps. There will be a long tail for this one,” commented computer forensics expert Hal Pomeranz.
+
+How can you fix CVE-2026-109618 and CVE-2026-109619?
+
+Update to PHP 8.5.12, 8.4.27, 8.3.36 or 8.2.35. Downloads are available here.
+
+Linux distributions and long-term support (LTS) vendors got the patches ahead of the public release, so admins should check with their vendor for updated packages.
+
+The PHP project no longer supports PHP 8.1 and earlier versions. Some distributions and LTS vendors offer backported fixes, so users on these versions should contact their vendor or upgrade to a supported release.
+
+Anyone who relies on rpms.remirepo.net, a volunteer-maintained repository, is advised to switch to distribution packages or build PHP from source so they can patch immediately. The repository will not have updates available today.
+
+Because the vulnerabilities are so severe, the PHP security team has also released minimal source backports for PHP 7.4, 8.0 and 8.1. These are meant for people who build from source or who don’t have an LTS vendor.
+
+“PHP sites behind Cloudflare already have an initial set of WAF rules deployed for the known exploit vectors in these vulnerabilities. The rules are available to all customers, including free,” said Dane Knecht, CTO at Cloudflare.
+
+UPDATE: Thursday, October 22, 2026 – 08:05 AM ET
+
+Searchlight Cyber released php2shell-scanner, an open-source tool that tests whether a host is exposed to CVE-2026-109618 and CVE-2026-109619.
+
+UPDATE: Thursday, October 22, 2026 – 06:25 AM ET
+
+Palo Alto Networks confirmed that all versions of PAN-OS and Panorama are affected by PHP2Shell. Palo Alto has not shipped fixed PAN-OS releases yet. Fortinet and Cisco published their own advisories, and neither company has confirmed a vulnerable product so far: Fortinet is checking 12 products, Cisco 31 products and cloud services. Read more here.
+
+UPDATE: Thursday, October 22, 2026 – 01:17 AM ET
+
+According to Amazon Threat Intelligence, its MadPot honeypot network recorded a PHP2Shell exploitation attempt on Oct. 17, 2026, four days before CVE-2026-109618 and CVE-2026-109619 were publicly disclosed. The attempt came from an IP address tied to a commercial anonymization service. Because the vulnerabilities were still under embargo at the time, Amazon believes a threat actor was behind the activity, given that it targeted a honeypot and was routed through an anonymized address. How the attacker obtained exploit details before disclosure is still unknown.
+
+More about
+Cloudflare
+ 
+CVE
+ 
+cybersecurity
+ 
+patch
+ 
+PHP
+ 
+PHP2Shell
+ 
+security update
+ 
+UK NCSC
+ 
+vulnerability
+ 
+Wiz
+Share

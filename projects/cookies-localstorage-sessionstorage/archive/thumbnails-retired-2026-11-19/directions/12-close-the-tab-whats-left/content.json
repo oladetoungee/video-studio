@@ -1,0 +1,28 @@
+{
+ "direction": "No face. Light grey ground. Left: a big generic browser window whose tab has a large close X (a cursor on it); inside, a list with hand-drawn marks: still logged in (tick), cart still there (tick), half-typed form (red cross, struck in red). Right: one serif line, Close the tab. What's left?",
+ "thumbnail_text": "Close the tab. What's left?",
+ "kind": "flat",
+ "recommended": false,
+ "titles": [
+  "Close the Tab: What Your Browser Keeps (Cookies vs localStorage vs sessionStorage)",
+  "Why Your Cart Stays but Your Checkout Form Disappears",
+  "localStorage vs sessionStorage vs Cookies (What Goes Where)"
+ ],
+ "text": {
+  "hd": "Close<br>the tab.<br>What&rsquo;s<br>left?",
+  "tab": "shop.example",
+  "r1": "still logged in",
+  "r2": "cart still there",
+  "r3": "half-typed form"
+ },
+ "images": {},
+ "vars": {
+  "--ground": "#E8E7E5"
+ },
+ "board": "Thumbnails 36 (pin-03-08 \"Everything done by 2pm.\": a hand-ticked list on the left, one calm serif line on the right, plain light ground)",
+ "fonts": "Font 17 (design-17: Libre Baskerville Bold, black on light grey, Design 399)",
+ "colours": "Font 17 specimen: #111111 on #E8E7E5 (the one cross in a dark red for \"gone\")",
+ "title": "Close the Tab: What Your Browser Keeps (Cookies vs localStorage vs sessionStorage)",
+ "class": "no-lift",
+ "scores": "fresh cold critic round 6 (alone / with title): 6 / 7"
+}

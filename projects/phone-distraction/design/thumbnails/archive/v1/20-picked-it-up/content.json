@@ -1,0 +1,23 @@
+{
+  "direction": "Editorial: \"picked it up again?\" in big lowercase serif behind her head (Pinterest woven type), her steady look (9:22), one generic lock screen with one red badge.",
+  "concept": "TH01",
+  "follows": "Pinterest woven type (\"alone in korea\", \"COOK\") + Hazel Thayer (phone lit)",
+  "needs_photo": "her on the sofa at night, face lit by the phone",
+  "thumbnail_text": "picked it up again?",
+  "title": "Why You Can't Put Your Phone Down at Night",
+  "titles": [
+    "Why You Can't Put Your Phone Down at Night",
+    "Why Am I Addicted to My Phone? 5 Design Tricks to Blame"
+  ],
+  "scores": "A topic (image only) 8/8 · B with best title 8 · C taste 8 (round 2; fixes from round 2 applied after)",
+  "recommended": "3 · pair with \"Why You Can't Put Your Phone Down at Night\" (best photo-led; even better with a night photo of her)",
+  "text": {
+    "words": "picked it up <i>again?</i>",
+    "badge": "12"
+  },
+  "images": {
+    "scene": "../../../../assets/scene/warm/s_562.5.jpg",
+    "front": "../../../../assets/scene/warm/mask/s_562.5.png"
+  },
+  "vars": {}
+}

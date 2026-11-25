@@ -1,0 +1,24 @@
+{
+ "music": "766",
+ "musicAt": 0,
+ "musicDb": -22,
+ "sfxDb": -4,
+ "roles": {
+  "notify": "notify-message-pop",
+  "notify2": "notify-bubble-pop",
+  "tick": "clock-tick-single",
+  "tick2": "ui-click-tone",
+  "alarm": "bass-quick-switch",
+  "thud": "hit-short-bass",
+  "type": [
+   "keyboard-typing",
+   -6
+  ],
+  "check": "click-box-check",
+  "check2": "ui-select-click",
+  "shutter": "shutter-click",
+  "pop": "pop-dry",
+  "glitch": "glitch-small-electric",
+  "marker": "marker-line"
+ }
+}

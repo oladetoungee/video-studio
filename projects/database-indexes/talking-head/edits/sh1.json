@@ -1,0 +1,22 @@
+{
+ "t": {
+  "label/label": {
+   "s": "You should not \nadd a databse index \non every column",
+   "pos": {
+    "9x16": {
+     "dy": -34,
+     "dx": 14.9,
+     "k": 0.74
+    }
+   }
+  }
+ },
+ "captions9": {
+  "y": 1688
+ },
+ "mix": {
+  "voice": 4,
+  "music": 3,
+  "sfx": 0
+ }
+}

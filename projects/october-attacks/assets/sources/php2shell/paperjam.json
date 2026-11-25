@@ -1,0 +1,185 @@
+{
+ "story": "php2shell",
+ "outlet": "Paperjam",
+ "slug": "paperjam",
+ "url": "https://en.paperjam.lu/article/php2shell-thousands-of-websites-exposed-in-luxembourg",
+ "finalUrl": "https://en.paperjam.lu/article/php2shell-thousands-of-websites-exposed-in-luxembourg",
+ "status": "loaded",
+ "http": 200,
+ "title": "PHP2Shell: thousands of websites exposed in Luxembourg",
+ "h1": "PHP2Shell: thousands of websites exposed in Luxembourg",
+ "published": "",
+ "files": {
+  "fold": "php2shell/paperjam_fold.png",
+  "full": "php2shell/paperjam_full.jpg",
+  "scroll": "php2shell/paperjam_scroll.mp4"
+ },
+ "full": {
+  "width": 1440,
+  "height": 6000,
+  "pageHeight": 8693,
+  "zoom": 1,
+  "quotes": [
+   {
+    "quote": "temporarily taken certain services offline as a precautionary measure",
+    "box": {
+     "x": 236,
+     "y": 3382,
+     "w": 558,
+     "h": 56
+    },
+    "lines": [
+     {
+      "x": 245,
+      "y": 3382,
+      "w": 549,
+      "h": 27
+     },
+     {
+      "x": 236,
+      "y": 3411,
+      "w": 78,
+      "h": 27
+     }
+    ]
+   },
+   {
+    "quote": "So far, no major infrastructure has publicly documented a successful intrusion conclusively attributed to PHP2Shell",
+    "box": {
+     "x": 236,
+     "y": 4688,
+     "w": 601,
+     "h": 56
+    },
+    "lines": [
+     {
+      "x": 310,
+      "y": 4688,
+      "w": 527,
+      "h": 27
+     },
+     {
+      "x": 236,
+      "y": 4717,
+      "w": 526,
+      "h": 27
+     }
+    ]
+   }
+  ]
+ },
+ "scroll": {
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "seconds": 8,
+  "keyframes": [
+   {
+    "t": 0,
+    "y": 208
+   },
+   {
+    "t": 1,
+    "y": 208
+   },
+   {
+    "t": 2.996,
+    "y": 2972
+   },
+   {
+    "t": 4.096,
+    "y": 2972
+   },
+   {
+    "t": 5.609,
+    "y": 4278
+   },
+   {
+    "t": 8,
+    "y": 4278
+   }
+  ],
+  "zoom": 1,
+  "easing": "easeInOutCubic between keyframes, holds where y is equal",
+  "capped": false,
+  "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)",
+  "quotes": [
+   {
+    "quote": "temporarily taken certain services offline as a precautionary measure",
+    "inVideo": true,
+    "still": true,
+    "t": 3.55,
+    "visibleStill": [
+     2.93,
+     4.17
+    ],
+    "scrollY": 2972,
+    "box": {
+     "x": 476,
+     "y": 410,
+     "w": 558,
+     "h": 56
+    },
+    "lines": [
+     {
+      "x": 485,
+      "y": 410,
+      "w": 549,
+      "h": 27
+     },
+     {
+      "x": 476,
+      "y": 439,
+      "w": 78,
+      "h": 27
+     }
+    ],
+    "docBox": {
+     "x": 476,
+     "y": 3382,
+     "w": 558,
+     "h": 56
+    },
+    "layoutDriftPx": 0
+   },
+   {
+    "quote": "So far, no major infrastructure has publicly documented a successful intrusion conclusively attributed to PHP2Shell",
+    "inVideo": true,
+    "still": true,
+    "t": 6.78,
+    "visibleStill": [
+     5.53,
+     8.03
+    ],
+    "scrollY": 4278,
+    "box": {
+     "x": 476,
+     "y": 410,
+     "w": 601,
+     "h": 56
+    },
+    "lines": [
+     {
+      "x": 550,
+      "y": 410,
+      "w": 527,
+      "h": 27
+     },
+     {
+      "x": 476,
+      "y": 439,
+      "w": 526,
+      "h": 27
+     }
+    ],
+    "docBox": {
+     "x": 476,
+     "y": 4688,
+     "w": 601,
+     "h": 56
+    },
+    "layoutDriftPx": 0
+   }
+  ]
+ }
+}

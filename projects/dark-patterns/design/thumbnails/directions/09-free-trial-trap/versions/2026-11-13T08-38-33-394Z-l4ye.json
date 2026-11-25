@@ -1,0 +1,35 @@
+{
+ "label": "Before this session’s edits",
+ "auto": true,
+ "savedAt": 1794559113394,
+ "content": {
+  "direction": "Flat navy. FREE TRIAL TRAP in heavy condensed cream caps across the top. Underneath on the left a phone with a generic sign-up screen: \"7 days FREE\", a \"Start free trial\" button and \"cancel anytime*\", and beside it, with an arrow: \"then €79.99 a year\". Her cut-out on the right (photo 1557, calm side-eye).",
+  "thumbnail_text": "FREE TRIAL TRAP",
+  "kind": "cut-out",
+  "recommended": false,
+  "titles": [
+   "Dark Patterns Explained: 11 Tricks Websites Use on You",
+   "Hard to Cancel Subscriptions? 11 Dark Patterns Explained",
+   "The Tricks Online Shops Use to Make You Say Yes"
+  ],
+  "text": {
+   "hd": "FREE TRIAL TRAP",
+   "big": "7 days<br>FREE",
+   "btn": "Start free trial",
+   "fine": "",
+   "note": "then €79.99<br>a year"
+  },
+  "images": {
+   "cut": "../../assets/shoot/1557-cut.png"
+  },
+  "vars": {
+   "--ground": "#17357B"
+  },
+  "board": "Thumbnails 98 (yt-45 \"IT'S A TRAP\": three chunky words in one line across the top, the picture of the trap underneath on the left, the creator on the right)",
+  "fonts": "Font 5 (Anton, Design 368) + Font 112 (Inter Tight, Design 116: white on navy) for the note; phone text = Font 58",
+  "colours": "Font 5 specimen (Design 368): ground #17357B, words #D8CDBB; note #FFFFFF (Font 112)",
+  "title": "Dark Patterns Explained: 11 Tricks Websites Use on You",
+  "class": "no-lift",
+  "scores": "Test & Compare · cold critic 8 alone / 7.5-8 with title"
+ }
+}

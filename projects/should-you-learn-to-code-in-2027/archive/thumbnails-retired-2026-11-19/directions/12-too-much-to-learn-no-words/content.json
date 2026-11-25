@@ -1,0 +1,19 @@
+{
+ "board": "pick1119-32",
+ "kind": "no words: a dense screen of code and an error (left), you looking at it (right)",
+ "direction": "Copies pick1119-32 (Theres' too much sh*t to learn in tech: no words, a dense technical screen on the left two thirds, the person on the right looking at it, a real moment). Here: a generic editor with code an AI wrote and a red error in the terminal, and your Øredev photo in profile, speaking, turned toward it. The title carries the words.",
+ "thumbnail_text": "(no words)",
+ "fonts": [
+  "thumbs-08 JetBrains Mono for the code on screen only"
+ ],
+ "colours": "editor #1E1F22, terminal #111214, error red #FF6B6B; your warm photo",
+ "text": {
+  "code": "<span class=\"n\">12</span><span class=\"k\">export async function</span> <span class=\"f\">handleWebhook</span>(req) {\n<span class=\"n\">13</span>  <span class=\"k\">const</span> event = req.body;\n<span class=\"n\">14</span>  <span class=\"k\">if</span> (event.type === <span class=\"s\">\"payment.success\"</span>) {\n<span class=\"n\">15</span>    <span class=\"k\">await</span> db.orders.<span class=\"f\">insert</span>({\n<span class=\"n\">16</span>      id: event.orderId,\n<span class=\"n\">17</span>      amount: event.amount,\n<span class=\"n\">18</span>      status: <span class=\"s\">\"paid\"</span>,\n<span class=\"n\">19</span>    });\n<span class=\"n\">20</span>  }\n<span class=\"n\">21</span>  <span class=\"k\">return</span> { received: <span class=\"k\">true</span> };\n<span class=\"n\">22</span>}",
+  "term": "$ npm test\n<span class=\"r\">✕ saves one order per payment</span>\n<span class=\"r\">  Expected 1 row, received 2</span>\n  at handleWebhook (webhook.js:15)"
+ },
+ "images": {
+  "photo": "../../assets/oredev/55642297769.jpg"
+ },
+ "vars": {},
+ "class": "no-lift"
+}

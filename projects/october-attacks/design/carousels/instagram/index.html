@@ -1,0 +1,172 @@
+<!doctype html><html><head><meta charset="utf-8"><title>October 2026 developer security news (Instagram)</title>
+<link rel="stylesheet" href="../shared/base.css">
+<style>:root{--W:1080px;--H:1350px;--acc:#F2541B;--accInk:#F2541B;--onAInk:#16110D;--onAccent:#16110D;--onAcc:#16110D;--onAccMid:rgba(22,17,13,.7);--onAccLine:rgba(22,17,13,.3);--onAccAcc:#16110D;}</style></head><body>
+<section class="slide g-accent l-cover" id="s1">
+  
+  
+    <div class="main">
+      <div class="disp fit" data-k="title" data-max="104" style="font-size:104px;">October 2026 was a rough month for developer security</div>
+      <p class="body bal" data-k="sub" style="margin-top:30px;color:var(--fg);font-size:44px">Here is what happened, in plain words. Swipe →</p>
+      <div class="cal push" data-move="calendar" style="transform:rotate(-1.5deg)"><div class="m" data-k="month" data-plain>October 2026</div><div class="g">
+        <b>M</b><b>T</b><b>W</b><b>T</b><b>F</b><b>S</b><b>S</b><span></span><span></span><span></span>
+        <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span class="x">14<img data-img="marks.0.img" src="../shared/assets/key.svg" alt=""></span><span>15</span><span>16</span><span class="x">17<img data-img="marks.1.img" src="../shared/assets/padlock.svg" alt=""></span><span>18</span><span class="x">19<img data-img="marks.2.img" src="../shared/assets/robot.svg" alt=""></span><span>20</span><span class="x">21<img data-img="marks.3.img" src="../shared/assets/elephant.svg" alt=""></span><span>22</span><span>23</span><span>24</span><span>25</span><span>26</span><span>27</span><span>28</span><span>29</span><span>30</span><span>31</span>
+      </div></div>
+    </div>
+  <div class="foot"><span class="num"><b>01</b> / 10</span><span class="meter"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></div>
+</section>
+<section class="slide g-ink l-story" id="s2">
+  
+  
+    <div class="main">
+      <div class="chip" data-move="tag"><b data-k="tag" data-plain>PHP2Shell</b><span class="mono" data-k="date" data-plain>Oct 21</span></div>
+      <div class="disp fit" data-k="title" data-max="104" style="font-size:104px;margin-top:34px">PHP had two <em class="acc" style="font-style:normal">critical</em> security holes</div>
+      <p class="body bal" data-k="body" style="margin-top:30px">They're called PHP2Shell. PHP runs nearly three quarters of the websites in the world.</p>
+      <div class="shot" data-move="screenshot" style="width:740px;margin-top:auto;margin-bottom:58px;transform:rotate(-1.2deg)"><img data-img="shot.img" src="../shared/assets/bc-php-hero.png"><div class="cr" data-k="shot.credit" data-plain>BleepingComputer · Oct 21, 2026</div></div>
+    </div>
+  <div class="foot"><span class="num"><b>02</b> / 10</span><span class="meter"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></div>
+</section>
+<section class="slide g-paper l-flow" id="s3">
+  
+  
+    <div class="main">
+      
+      <div class="disp fit" data-k="title" data-max="104" style="font-size:104px;">It happens before your code <em class="acc" style="font-style:normal">even runs</em></div>
+      <div class="flow" data-move="flow" style="margin-top:50px"><div class="st"><span data-k="steps.0.t" data-plain>A request comes in</span></div><div class="st hole"><span data-k="steps.1.t" data-plain>PHP reads it</span><span class="mono" data-k="steps.1.note" data-plain>the hole</span></div><div class="st off"><span data-k="steps.2.t" data-plain>Your login</span><span class="mono" data-k="steps.2.note" data-plain>never reached</span></div><div class="st off"><span data-k="steps.3.t" data-plain>Your code</span><span class="mono" data-k="steps.3.note" data-plain>never reached</span></div></div>
+      <p class="body bal" data-k="body" style="margin-top:auto;color:var(--fg)">PHP2Shell happens while PHP reads the request, so your login can't stop it.</p>
+    </div>
+  <div class="foot"><span class="num"><b>03</b> / 10</span><span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></div>
+</section>
+<section class="slide g-ink l-terminal" id="s4">
+  
+  
+    <div class="main">
+      <div class="disp fit" data-k="title" data-max="110" style="font-size:110px;">Update PHP, then <em class="acc" style="font-style:normal">restart</em> it</div>
+      <div class="term" data-move="terminal" style="margin-top:44px"><div class="bar"><i></i><i></i><i></i></div><div class="in">
+        <div><span class="p">$</span> <span data-k="cmd" data-plain>php -v</span></div>
+        <div><span data-k="lines.0" data-plain>PHP 8.5.12</span> <span class="ok">✓</span></div><div><span data-k="lines.1" data-plain>PHP 8.4.27</span> <span class="ok">✓</span></div><div><span data-k="lines.2" data-plain>PHP 8.3.36</span> <span class="ok">✓</span></div><div><span data-k="lines.3" data-plain>PHP 8.2.35</span> <span class="ok">✓</span></div>
+      </div></div>
+      
+      <p class="body bal" data-k="body" style="margin-top:auto;color:var(--fg)">Any of these versions (or newer) has the fix. After updating, restart <span class="nw">PHP-FPM</span> or Apache.</p>
+    </div>
+  <div class="foot"><span class="num"><b>04</b> / 10</span><span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></div>
+</section>
+<section class="slide g-paper l-story" id="s5">
+  
+  
+    <div class="main">
+      <div class="chip" data-move="tag"><b data-k="tag" data-plain>Railway</b><span class="mono" data-k="date" data-plain>Oct 22</span></div>
+      <div class="disp fit" data-k="title" data-max="104" style="font-size:104px;margin-top:34px">Railway told its users to change their <em class="acc" style="font-style:normal">secret keys</em></div>
+      <p class="body bal" data-k="body" style="margin-top:30px">Railway is a platform developers deploy apps on. Someone may have reached customers' environment variables, where those keys live.</p>
+      <div class="shot" data-move="screenshot" style="width:640px;margin-top:auto;margin-bottom:58px;transform:rotate(1.5deg)"><img data-img="shot.img" src="../shared/assets/tc-railway.png"><div class="cr" data-k="shot.credit" data-plain>TechCrunch · Oct 22, 2026</div></div>
+    </div>
+  <div class="foot"><span class="num"><b>05</b> / 10</span><span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></div>
+</section>
+<section class="slide g-ink l-story" id="s6">
+  
+  
+    <div class="main">
+      <div class="chip" data-move="tag"><b data-k="tag" data-plain>Zeabur</b><span class="mono" data-k="date" data-plain>Oct 20</span></div>
+      <div class="disp fit" data-k="title" data-max="104" style="font-size:104px;margin-top:34px">Zeabur is shutting down after <em class="acc" style="font-style:normal">two breaches</em></div>
+      <p class="body bal" data-k="body" style="margin-top:30px">The second one came through an admin token that never expired.</p>
+      <div class="shot" data-move="screenshot" style="width:600px;margin-top:auto;margin-bottom:58px;transform:rotate(-1.2deg)"><img data-img="shot.img" src="../shared/assets/bc-zeabur-hero.png"><div class="cr" data-k="shot.credit" data-plain>BleepingComputer · Oct 20, 2026</div></div>
+    </div>
+  <div class="foot"><span class="num"><b>06</b> / 10</span><span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></div>
+</section>
+<section class="slide g-paper l-bill" id="s7">
+  
+  
+    <div class="main">
+      <div class="chip" data-move="tag"><b data-k="tag" data-plain>OpenCode</b><span class="mono" data-k="date" data-plain>Oct 19</span></div>
+      <div class="disp fit" data-k="title" data-max="100" style="font-size:100px;margin-top:34px">Some people found out from their <em class="acc" style="font-style:normal">AI bills</em></div>
+      <div class="rc" data-move="receipt" style="margin-top:44px;transform:rotate(1.5deg)">
+        <div class="ln"><span data-k="lines.0.k" data-plain>Your usage</span><span data-k="lines.0.v" data-plain>$20</span></div><div class="ln"><span data-k="lines.1.k" data-plain>Not you</span><span data-k="lines.1.v" data-plain>$480</span></div><div class="ln"><span data-k="lines.2.k" data-plain>Not you</span><span data-k="lines.2.v" data-plain>$560</span></div>
+        <div class="tot"><span data-k="totalLabel" data-plain>Total</span><b data-k="total" data-plain>$1,060</b></div>
+      </div>
+      <p class="body bal" data-k="body" style="margin-top:auto;color:var(--fg)">Attackers took AI keys stored in OpenCode. A few bills went over $1,000 for usage people never ran.</p>
+    </div>
+  <div class="foot"><span class="num"><b>07</b> / 10</span><span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span></div>
+</section>
+<section class="slide g-accent l-list" id="s8">
+  
+  
+    <div class="main">
+      <div class="disp fit" data-k="title" data-max="110" style="font-size:110px;">What you can do with <em class="acc" style="font-style:normal">your keys</em></div>
+      
+      <div class="rows" data-move="rows" style="margin-top:48px"><div class="row"><div class="n">01</div><div class="head" data-k="rows.0">Change keys you're unsure about</div></div><div class="row"><div class="n">02</div><div class="head" data-k="rows.1">Give every key an expiry date</div></div><div class="row"><div class="n">03</div><div class="head" data-k="rows.2">Give each key only what it needs</div></div><div class="row"><div class="n">04</div><div class="head" data-k="rows.3">Turn on spending alerts</div></div></div>
+      <p class="body bal" data-k="body" style="margin-top:auto;color:var(--fg)">Three of this month's breaches went for the place developers keep these keys.</p>
+    </div>
+  <div class="foot"><span class="num"><b>08</b> / 10</span><span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span></div>
+</section>
+<section class="slide g-ink l-duo" id="s9">
+  
+  
+    <div class="main">
+      <div class="disp fit" data-k="title" data-max="150" style="font-size:150px;">AI is on <em class="acc" style="font-style:normal">both sides</em></div>
+      <div class="cols2" data-move="cols" style="margin-top:60px"><div><div class="k" data-k="cols.0.k" data-plain>Finding holes</div><div class="v" data-k="cols.0.v">AI helped find PHP2Shell.</div></div><div><div class="k" data-k="cols.1.k" data-plain>Breaking in</div><div class="v" data-k="cols.1.v">One hacker used AI agents to break into 100+ company websites.</div></div></div>
+      
+    </div>
+  <div class="foot"><span class="num"><b>09</b> / 10</span><span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span></div>
+</section>
+<section class="slide g-paper l-end" id="s10">
+  
+  
+    <div class="main">
+      <div class="disp fit" data-k="title" data-max="130" style="font-size:130px;">Did you have to patch or change keys this month?</div>
+      <p class="body bal" data-k="body" style="margin-top:34px">I put all of it in one video, in plain words.</p>
+      <div class="push" data-move="push" style="width:560px">
+        <div class="mono lab" data-k="where" data-plain style="color:var(--mid)">Full video on YouTube</div>
+        <div style="margin-top:22px"><span class="handle" data-k="handle" data-plain>@WithGbemi</span></div>
+      </div>
+    </div>
+    <div class="pol" data-move="polaroid" style="left:560px;top:720px;width:420px;transform:rotate(4deg)"><img data-img="polaroid.img" src="../shared/assets/gbemi_9.jpg" style="height:420px;object-position:50% 30%"><div class="cap" data-k="polaroid.caption" data-plain>Gbemi</div></div>
+  <div class="foot"><span class="num"><b>10</b> / 10</span><span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></div>
+</section>
+<script>
+function fitAll(){ document.querySelectorAll('.fit').forEach(el=>{ let s=+el.dataset.max; el.style.fontSize=s+'px';
+  const box=el.parentElement.getBoundingClientRect().width; const lim=Math.min(el.clientWidth||box, box);
+  while((el.scrollWidth>lim+1) && s>24){ s-=2; el.style.fontSize=s+'px'; } }); }
+(function(){ var q=new URLSearchParams(location.search), v=q.get('view'); if(!v) return; document.documentElement.classList.add('v-'+v);
+  if(v==='slide'){ var n=+q.get('n')||1; document.querySelectorAll('.slide').forEach(function(s,i){ if(i+1!==n) s.style.display='none'; }); } })();
+window.__checks = function checks(MONO_MIN) {
+  const res = [];
+  document.querySelectorAll('.slide').forEach((sl, i) => {
+    if (getComputedStyle(sl).display === 'none') return;
+    const R = sl.getBoundingClientRect(); const foot = sl.querySelector('.foot').getBoundingClientRect();
+    const tag = el => `<${el.tagName.toLowerCase()} ${el.className}> "${(el.textContent || '').trim().slice(0, 30)}"`;
+    sl.querySelectorAll('.main *').forEach(el => {
+      if (el.closest('.pol') || el.closest('.cal') || !el.childNodes.length) return;
+      const r = el.getBoundingClientRect(); if (!r.width) return;
+      if (r.bottom > foot.top - 24) res.push(`slide ${i + 1}: ${tag(el)} runs into the footer`);
+      if (r.right > R.right - 50 || r.left < R.left + 50) res.push(`slide ${i + 1}: ${tag(el)} outside the margins`);
+    });
+    sl.querySelectorAll('.cal').forEach(el => { if (el.getBoundingClientRect().bottom > foot.top - 16) res.push(`slide ${i + 1}: calendar runs into the footer`); });
+    sl.querySelectorAll('*').forEach(el => {
+      const cs = getComputedStyle(el);
+      if (!/Mono/.test(cs.fontFamily) || el.closest('.meter')) return;
+      const own = [...el.childNodes].some(c => c.nodeType === 3 && c.textContent.trim());
+      if (own && parseFloat(cs.fontSize) < MONO_MIN - 0.5) res.push(`slide ${i + 1}: mono ${parseFloat(cs.fontSize)}px ${tag(el)}`);
+    });
+    sl.querySelectorAll('.pol, .shot').forEach(pe => {
+      const a = pe.getBoundingClientRect();
+      sl.querySelectorAll('.main .disp, .main p, .main .lab, .main .row, .main .handle').forEach(el => {
+        if (el.closest('.pol') || el.closest('.shot')) return;
+        const rg = document.createRange(); rg.selectNodeContents(el); const g = 24;
+        if ([...rg.getClientRects()].some(r => a.left < r.right + g && a.right > r.left - g && a.top < r.bottom + g && a.bottom > r.top - g))
+          res.push(`slide ${i + 1}: ${pe.className} within 24 px of ${tag(el)}`);
+      });
+    });
+    sl.querySelectorAll('p, .body, .bal, .head, .v').forEach(el => {
+      const words = []; const tw = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+      while (tw.nextNode()) { const t = tw.currentNode; const re = /\S+/g; let m;
+        while ((m = re.exec(t.textContent))) { const rg = document.createRange(); rg.setStart(t, m.index); rg.setEnd(t, m.index + m[0].length);
+          const rr = rg.getClientRects()[0]; if (rr) words.push({ w: m[0], top: Math.round(rr.top) }); } }
+      if (words.length < 3) return;
+      const lines = []; words.forEach(w => { const l = lines.find(l => Math.abs(l.top - w.top) < 8); if (l) l.n++; else lines.push({ top: w.top, n: 1 }); });
+      lines.sort((a, b) => a.top - b.top);
+      if (lines.length > 1 && lines[lines.length - 1].n === 1) res.push(`slide ${i + 1}: one-word last line "${words[words.length - 1].w}" in ${tag(el)}`);
+    });
+  });
+  return res.slice(0, 60);
+};
+document.fonts.ready.then(()=>{ fitAll(); document.body.dataset.ready=1; });
+</script></body></html>

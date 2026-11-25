@@ -1,0 +1,32 @@
+{
+  "board": "yt-79",
+  "kind": "object-led: a map of Europe with 4 prices, her cut-out in front of it",
+  "direction": "Copies board yt-79 (the creator in front of a big wall calendar: the thing she talks about fills the wall behind her). A flat paper map of Europe (Natural Earth, public domain) with three countries in orange (Germany, Austria, Estonia) and what year one costs there (tuition + one year of the money you must show, kit 7f; Austria under 24 = €10,177 is hidden as \"€?\" so the cheapest is the question, Germany €11,904, France €14,480, Estonia €14,560); her shoot cut-out bottom-right in front of it. Words: \"cheapest place to study?\" in serif, a small italic line under it.",
+  "thumbnail_text": "cheapest place to study? + Europe map with 4 prices",
+  "titles": [
+    "Cheapest Country to Study in Europe? 9 Countries Compared",
+    "9 European Countries Compared for Nigerian Students",
+    "Cheapest Countries to Study in Europe for Nigerians (2027)"
+  ],
+  "title": "Cheapest Country to Study in Europe? 9 Countries Compared",
+  "class": "no-lift",
+  "text": {
+    "q": "Cheapest place to study?",
+    "n": "",
+    "p_de": "<small>Germany</small>€11,904",
+    "p_fr": "",
+    "p_at": "<small>Austria (under 24)</small>€?",
+    "p_ee": "<small>Estonia</small>€14,560"
+  },
+  "images": {
+    "me": "../../assets/shoot/room-1578-cut.png"
+  },
+  "vars": {},
+  "recommended": false,
+  "scores": "font-board round 2 (2026-11-13, fonts with their source colours; fresh cold critic, PNG alone, 4 rounds): 7/10; earlier: round 2 (2026-11-12 night, fresh cold critics, alone / with title): R2 7.5 / 7.5, R3 7.5 / 7.5; earlier: cold rounds 1-3: 7 / 7.5, 7 / 7.5, 7.5 / 8 (with \"Cheapest Country to Study in Europe? 9 Countries Compared\"); France label + highlight removed after",
+  "fonts": [
+    "design-18 Gloock (red #B8331F on black, as Design 391)"
+  ],
+  "colours": "combo-08 (Design 391: #010101 black + #B8331F red) on a paper map",
+  "fontboard_note": "fontboard 2026-11-12: Newsreader + Archivo Black -> Gloock + DM Mono; orange -> Design 367 palette"
+}

@@ -1,0 +1,45 @@
+{
+  "board": "yt-10",
+  "kind": "her full shoot photo; words on a white card with FREE in a red box (board 54 yt-01 + 68 yt-15); the chart as coloured sticky notes with hand-drawn arrows to ticks/crosses (board 15 pin-01-15). Fixed 2026-11-12 after her note: the yellow words blended into the room.",
+  "direction": "Copies board yt-10 (\"SAVE 4 HOURS A DAY\": the creator in his room in front of a hand-drawn chart full of ticks and crosses, heavy yellow italic caps across the top). Her shoot photo (pointing at the chart, face untouched), room dimmed, a paper chart behind her: free tuition? Germany yes (most public universities), France, Norway, Estonia no (all from the kit). Words: FREE TUITION IN EUROPE?",
+  "thumbnail_text": "FREE TUITION IN EUROPE? + chart: Germany tick, France / Norway / Estonia crosses",
+  "titles": [
+    "Free Tuition in Europe for Nigerians: What I Found",
+    "Study in Europe for Free? What Nigerians Really Pay",
+    "Tuition Free Universities in Europe Need Proof of Funds"
+  ],
+  "title": "Free Tuition in Europe for Nigerians: What I Found",
+  "class": "no-lift",
+  "text": {
+    "w": "<span class=\"hl\">Free</span> tuition<br>in Europe?",
+    "r0": "Germany",
+    "r1": "France",
+    "r2": "Norway",
+    "r3": "Estonia"
+  },
+  "images": {
+    "bg": "../../assets/shoot/room-1591.jpg",
+    "me": "../../assets/shoot/room-1591-cut.png"
+  },
+  "vars": {},
+  "recommended": false,
+  "scores": "font-board round 2 (2026-11-13, fonts with their source colours; fresh cold critic, PNG alone, 4 rounds): 6/10; earlier: round 2 (2026-11-12 night, fresh cold critics, alone / with title): R1 7 / 6.5, R2 6.5 / 6.5, R3 6.5 / 6; earlier: cold rounds 1-3: 7.5 / 8, 8 / 8, 7 / 7 (with \"Study in Europe for Free? What Nigerians Really Pay\"); table enlarged to 4 rows after round 2",
+  "nudge": {
+    "img:me": {
+      "dx": 2
+    }
+  },
+  "fonts": [
+    "thumbs-03 Inter Tight (ink on light grey #E8E6E2, Thumbnails 31)",
+    "thumbs-09 Inter Tight + red box (white on #DA443D, Thumbnails 68)",
+    "thumbs-01 Anton caps (white on red box #D9262B / on dark #1A1A1A, Thumbnails 10) for the country names (2026-11-19, was Permanent Marker: her note, not readable)"
+  ],
+  "colours": "thumbs-03 card (#E8E6E2 + #111) with the thumbs-09 red box (#DA443D + white); country notes thumbs-01 red #D9262B + dark #1A1A1A, white Anton",
+  "fontboard_note": "fontboard 2026-11-12: Cabinet Grotesk (not on board) -> Figtree 900; Caveat -> Permanent Marker; her composition kept",
+  "fix_2026_11_19": "Her note: 'I love number seven... the font used to write the names of the countries is not really clear.' Country names now Anton caps (font board thumbs-01). Old folder + PNG: archive/thumbnails-2026-11-19-07-before-font-fix/.",
+  "titles_before_2026_11_19": [
+    "Study in Europe for Free? What Nigerians Really Pay",
+    "Tuition Free Universities in Europe Need Proof of Funds",
+    "Cheapest Country to Study in Europe? 9 Countries Compared"
+  ]
+}

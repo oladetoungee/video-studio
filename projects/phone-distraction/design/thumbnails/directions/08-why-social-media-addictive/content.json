@@ -1,0 +1,21 @@
+{
+  "direction": "Her on the right, calm; two big generic icons (a like with 24, comments with 9) grouped by her head on the right; the question on the left in heavy sentence case, \"addictive?\" in yellow.",
+  "kind": "photo",
+  "concept": "v3 (2026-10-16)",
+  "references": "you’re in a war (icons around the head) · Why we can’t focus (sentence case) · I CAN’T DO THIS",
+  "thumbnail_text": "Why is social media addictive?",
+  "title": "Why You Keep Picking Up Your Phone Without Thinking",
+  "titles": [
+    "Why You Keep Picking Up Your Phone Without Thinking",
+    "Why Can’t I Stop Scrolling? It Was Designed That Way"
+  ],
+  "scores": "fresh critics vs her bar: r1 6 · r2 7 · r3 6.8 · r4 7",
+  "recommended": "",
+  "text": {
+    "words": "Why is social media <span class=\"yel\">addictive?</span>"
+  },
+  "images": {
+    "photo": "../../assets/scene/warm/s_152.0.jpg"
+  },
+  "vars": {}
+}

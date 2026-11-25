@@ -1,0 +1,23 @@
+{
+  "direction": "Collage over the creator (her viral-samples/collage): her full natural photo, lightly blurred room, three sticky notes floating round her naming methods she covers, one big line across her chest with a heavy orange 7.",
+  "concept": "T09",
+  "thumbnail_text": "7 ways to study users",
+  "title": "7 UX Research Methods, From Interviews to A/B Tests",
+  "titles": [
+    "7 UX Research Methods, From Interviews to A/B Tests",
+    "7 Ways to Study Your Users (UX Research for Beginners)"
+  ],
+  "text": {
+    "line": "<b>7</b>ways to study users",
+    "m1": "Interviews",
+    "m2": "Surveys",
+    "m3": "A/B tests"
+  },
+  "images": {
+    "scene": "../../assets/scene/g/s_41.5.jpg",
+    "front": "../../assets/scene/g/mask/s_41.5.png"
+  },
+  "vars": {},
+  "scores": "a 3/5 · 3/4 · 3/4 | b 8/7 · 8/5 · 7/6 | c 6 · 7 · 7",
+  "recommended": false
+}

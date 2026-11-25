@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ideas board</title>
+<link rel="stylesheet" href="/studio/runtime/fonts.css">
+<style>
+:root{--bg:#111114;--fg:#EDE9E2;--mid:#8A8780;--line:#2B2B31;--card:#18181D;--acc:#6E8CFF;--make:#22E08A;--later:#F5B83D;--skip:#6B6A66}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 Archivo,system-ui,sans-serif}
+main{padding:40px clamp(16px,4vw,56px) 96px}
+a{color:var(--acc)}
+h1{font:800 64px/0.92 "Bricolage Grotesque",sans-serif;letter-spacing:-0.03em;text-transform:uppercase;margin:0 0 10px}
+.k{font:500 13px "DM Mono",monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--mid);margin:0 0 6px}
+.filters{display:flex;gap:18px;flex-wrap:wrap;margin:28px 0 8px;border-bottom:1px solid var(--line);padding-bottom:12px}
+.filters button{background:none;border:0;color:var(--mid);font:500 13px "DM Mono",monospace;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;padding:4px 0}
+.filters button[aria-pressed=true]{color:var(--fg);border-bottom:2px solid var(--fg)}
+.day{font:500 13px "DM Mono",monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--mid);margin:40px 0 0}
+a.row{display:flex;align-items:baseline;gap:14px;padding:16px 0;border-top:1px solid var(--line);color:var(--fg);text-decoration:none}
+a.row .t{font:700 21px/1.25 Archivo,sans-serif;letter-spacing:-0.01em;flex:1;min-width:0}a.row:hover .t{color:var(--acc)}
+a.row .m{font:500 12px "DM Mono",monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);white-space:nowrap}
+a.row .st{font:500 12px "DM Mono",monospace;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap}
+a.row.skip .t{color:var(--mid)}
+@media (max-width:760px){a.row{flex-wrap:wrap}a.row .m{white-space:normal}}
+details.idea{border-top:1px solid var(--line)}
+details.idea>summary{display:flex;align-items:baseline;gap:14px;padding:16px 0;cursor:pointer;list-style:none;user-select:none;margin:0;font:inherit;color:var(--fg);text-transform:none;letter-spacing:0}
+details.idea>summary::-webkit-details-marker{display:none}
+details.idea>summary::before{content:"+";font:500 22px "DM Mono",monospace;color:var(--mid);width:20px;flex:none}
+details.idea[open]>summary::before{content:"\2212"}
+details.idea>summary .t{font:700 21px/1.25 Archivo,sans-serif;letter-spacing:-0.01em;flex:1;min-width:0}
+details.idea>summary:hover .t{color:var(--acc)}
+details.idea>summary .m{font:500 12px "DM Mono",monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);white-space:nowrap}
+details.idea>summary .st{font:500 12px "DM Mono",monospace;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap}
+.st.make{color:var(--make)}.st.later{color:var(--later)}.st.recorded{color:var(--fg)}.st.skip{color:var(--skip)}
+details.idea.skip>summary .t{color:var(--mid)}
+.body{display:grid;grid-template-columns:1fr 300px;gap:32px;padding:4px 0 28px 34px}
+@media (max-width:760px){.body{grid-template-columns:1fr;padding-left:0}h1{font-size:44px}details.idea>summary{flex-wrap:wrap}details.idea>summary .m{white-space:normal}}
+.meta{font:500 12px "DM Mono",monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--mid)}
+.meta b{color:var(--fg);font-weight:500}
+h2{font:800 34px/1 "Bricolage Grotesque",sans-serif;letter-spacing:-0.02em;margin:8px 0 14px}
+.hook{font:italic 400 24px/1.25 "Instrument Serif",Georgia,serif;margin:0 0 18px;padding-left:14px;border-left:3px solid var(--acc)}
+h3{font:500 12px "DM Mono",monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--mid);margin:18px 0 4px}
+p{margin:0 0 8px}
+details summary{cursor:pointer;font:500 12px "DM Mono",monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);margin-top:18px}
+pre{white-space:pre-wrap;font:15px/1.55 Archivo,sans-serif;background:var(--card);padding:16px;margin:10px 0 0}
+.refs img{width:100%;display:block;background:var(--card)}
+.refs figure{margin:0 0 16px}
+.refs figcaption{font:500 12px/1.5 "DM Mono",monospace;color:var(--mid);margin-top:6px}
+.act{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.act button{background:none;border:1px solid var(--line);color:var(--fg);font:600 14px Archivo,sans-serif;padding:8px 14px;cursor:pointer}
+.act button:hover{border-color:var(--fg)}
+.act button.on[data-s=make]{background:var(--make);border-color:var(--make);color:#111}
+.act button.on[data-s=later]{background:var(--later);border-color:var(--later);color:#111}
+.act button.on[data-s=skip]{background:var(--skip);border-color:var(--skip);color:#111}
+.act button.on[data-s=recorded]{background:var(--fg);border-color:var(--fg);color:#111}
+textarea{width:100%;min-height:64px;margin-top:12px;background:var(--card);color:var(--fg);border:1px solid var(--line);font:15px Archivo,sans-serif;padding:10px}
+.saved{font:500 12px "DM Mono",monospace;color:var(--make);margin-left:8px}
+.empty{color:var(--mid);margin-top:40px}
+</style>
+</head>
+<body>
+<main>
+  <p class="k"><a href="/">← Studio</a> &nbsp;·&nbsp; <a href="/ideas/formats/">Shorts formats: real examples to like or skip →</a></p>
+  <h1>Ideas board</h1>
+  <p class="k" id="sub">New ideas every day · open an idea to read the script, mark it and leave a note</p>
+  <div class="filters" id="filters"></div>
+  <div id="list"></div>
+</main>
+<script>
+const LABEL = { all: 'All', new: 'New', make: 'Making it', later: 'Later', recorded: 'Recorded', skip: 'Skipped' };
+const ACTIONS = [['make', 'Make it'], ['later', 'Later'], ['recorded', 'Recorded'], ['skip', 'Skip']];
+let db = { ideas: [] }, filter = 'all';
+try { filter = localStorage.getItem('ideas.filter') || 'all'; } catch (e) {}
+const rank = i => !i.source || /^New ideas/.test(i.source) ? 1 : /^Ready/.test(i.source) ? 0 : 2;
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+async function save(id, body) {
+  const r = await fetch('/api/ideas/' + encodeURIComponent(id), { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(body) });
+  if (!r.ok) throw new Error('save failed');
+  Object.assign(db.ideas.find(x => x.id === id), await r.json());
+}
+
+function card(i) {
+  const st = i.status || 'new';
+  const meta = [i.kind, String(i.length || '').replace(/\s*\(.*?\)/g, '')].filter(Boolean).map(esc).join(' · ');
+  return `<a class="row ${st}" href="/ideas/idea/${encodeURIComponent(i.id)}/"><span class="t">${esc(i.title)}</span>${st !== 'new' ? `<span class="st ${st}">${LABEL[st]}</span>` : ''}<span class="m">${meta}</span></a>`;
+}
+
+const OPEN = new Set();
+function render() {
+  const counts = { all: db.ideas.length };
+  for (const i of db.ideas) counts[i.status || 'new'] = (counts[i.status || 'new'] || 0) + 1;
+  document.getElementById('filters').innerHTML = Object.keys(LABEL).map(k => `<button data-f="${k}" aria-pressed="${k === filter}">${LABEL[k]} ${counts[k] || 0}</button>`).join('');
+  const shown = db.ideas.filter(i => filter === 'all' || (i.status || 'new') === filter).sort((a, b) => (rank(a) - rank(b)) || String(b.date).localeCompare(String(a.date)));
+  let html = '', day = '';
+  for (const i of shown) {
+    const g = i.source || ("New ideas · " + i.date); if (g !== day) { day = g; html += `<p class="day">${esc(g)}</p>`; }
+    html += card(i);
+  }
+  const list = document.getElementById('list'); list.innerHTML = html || '<p class="empty">No ideas here yet.</p>';
+}
+
+document.addEventListener('toggle', async e => {
+  const d = e.target;
+  if (d.classList && d.classList.contains('idea')) { d.open ? OPEN.add(d.dataset.id) : OPEN.delete(d.dataset.id); }
+  if (d.classList && d.classList.contains('kit') && d.open && !d.dataset.done) {
+    d.dataset.done = 1;
+    try { const r = await fetch(d.dataset.kit); d.querySelector('pre').textContent = r.ok ? await r.text() : 'Could not load the kit.'; } catch (er) { d.querySelector('pre').textContent = 'Could not load the kit.'; }
+  }
+}, true);
+document.addEventListener('click', async e => {
+  const f = e.target.closest('[data-f]');
+  if (f) { filter = f.dataset.f; try { localStorage.setItem('ideas.filter', filter); } catch (er) {} return render(); }
+  const b = e.target.closest('.act button'); if (!b) return;
+  const id = b.closest('details.idea').dataset.id; const i = db.ideas.find(x => x.id === id);
+  const s = (i.status || 'new') === b.dataset.s ? 'new' : b.dataset.s;
+  try { await save(id, { status: s }); render(); } catch (er) { alert('Could not save. Is the studio still running?'); }
+});
+let timer;
+document.addEventListener('input', e => {
+  if (e.target.tagName !== 'TEXTAREA') return;
+  const a = e.target.closest('details.idea'); clearTimeout(timer);
+  timer = setTimeout(async () => {
+    try { await save(a.dataset.id, { note: e.target.value }); const s = a.querySelector('.saved'); s.hidden = false; setTimeout(() => s.hidden = true, 1200); } catch (er) {}
+  }, 600);
+});
+
+fetch('/api/ideas').then(r => r.json()).then(d => {
+  db = d && d.ideas ? d : { ideas: [] };
+  if (db.updated) document.getElementById('sub').textContent = 'Last updated ' + db.updated + ' · open an idea to read the script, mark it and leave a note';
+  render();
+});
+</script>
+</body>
+</html>

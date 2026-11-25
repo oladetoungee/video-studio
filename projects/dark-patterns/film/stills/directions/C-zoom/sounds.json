@@ -1,0 +1,3 @@
+{"music": "766", "musicAt": 70, "musicDb": -23, "sfxDb": -4,
+ "roles": {"pop": "pop-dry", "pop2": "pop-hard-click", "type": "typewriter-soft-click", "focus": "camera-autofocus", "marker": "marker-line", "swipe": "swipe-fast-zoom", "hit": "hit-short-bass",
+  "cash": "coins-clinking", "tick": "ui-select-click", "tick2": "ui-modern-select", "tick3": "click-box-check", "clock": "clock-tick-single", "click": "mouse-double-click", "tape": "tape-rewind-fast", "shutter": "shutter-click"}}

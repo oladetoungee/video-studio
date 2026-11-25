@@ -1,0 +1,29 @@
+{
+  "direction": "Collage over her photo: the index page at the back of a book (everyone has used one), one entry highlighted, an arrow to the matching row of a database table. She points at it. Topic named plainly + its object. Round 2: no cylinder, no scribble, arrow ends clear of the table header. Round 3: the index entry and the row now match (index says 48, the row is row 48); new frame (the old one read as \"shh\").",
+  "concept": "T02",
+  "thumbnail_text": "A database index is this",
+  "title": "Database Indexing for Beginners: Fix Slow SQL Queries",
+  "titles": [
+    "Database Indexing for Beginners: Fix Slow SQL Queries",
+    "What Is a Database Index? (And Why Your App Needs One)",
+    "How Database Indexes Find 1 Row in a Million"
+  ],
+  "text": {
+    "a": "A database index",
+    "b": "is <span class=\"mark\">this.</span>",
+    "h": "Index"
+  },
+  "images": {
+    "scene": "../../assets/scene/f_141.9.jpg"
+  },
+  "frame": "2:21.9 (both hands in, mouth closed)",
+  "vars": {},
+  "scores": "final gate (round 4): A topic/click 5/7 · B pair 8 · C taste 7 · RECOMMENDED",
+  "recommended": true,
+  "nudge": {
+    "table": {
+      "dx": 17,
+      "dy": -39
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "text": {
+    "pre": "for Nigerian students",
+    "w": "STUDY IN EUROPE<br>ON A BUDGET"
+  },
+  "images": {
+    "photo": "../../assets/px/oldtown-suitcases.jpg"
+  },
+  "vars": {},
+  "class": null,
+  "nudge": {},
+  "board": "yt-11 (\"MOVING ABROAD\": a real street scene of the topic, full bleed, one big caps serif line with a small italic line above it; no face)",
+  "kind": "real scene, no face: students with suitcases in a European old-town street (Pexels), washed in olive so the gold caps pop",
+  "direction": "NEW 2026-11-16 (06b, rework of 06 which scored 4). Copies board yt-11 and its own font-board specimen thumbs-07 (Bodoni Moda caps + Instrument Serif italic, gold #E0B04A + cream #F4EBD0 on olive #4F5A3E, from Thumbnails 64 = the yt-11 thumbnail). The picture carries the topic (moving to a European city to study, suitcases); words are what the video gives a stranger, in search words.",
+  "thumbnail_text": "for Nigerian students + STUDY IN EUROPE ON A BUDGET",
+  "titles": [
+    "Cheapest Countries to Study in Europe for Nigerians (2027)",
+    "Study in Europe for Free? What Nigerians Really Pay",
+    "What Studying in Europe Really Costs a Nigerian in 2027"
+  ],
+  "fonts": [
+    "thumbs-07 Bodoni Moda caps 600 (gold #E0B04A on olive #4F5A3E, as Thumbnails 64)",
+    "thumbs-07 Instrument Serif italic (cream #F4EBD0)"
+  ],
+  "colours": "thumbs-07 specimen (Thumbnails 64): olive #4F5A3E, gold #E0B04A, cream #F4EBD0",
+  "title": "Cheapest Countries to Study in Europe for Nigerians (2027)",
+  "recommended": false,
+  "credit": "assets/px/oldtown-suitcases.jpg: Vinicius Vieira ft / Pexels (see README credits)",
+  "scores": "2026-11-16 weakest pass: R1 5 / R2 5.5 / R3 6 (old 06: 5 / 4.5 / 5.5)"
+}

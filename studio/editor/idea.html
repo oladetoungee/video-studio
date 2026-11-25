@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Idea</title>
+<link rel="stylesheet" href="/studio/runtime/fonts.css">
+<script src="/studio/editor/vendor/marked.min.js"></script>
+<script src="/studio/editor/vendor/purify.min.js"></script>
+<style>
+:root{--bg:#111114;--fg:#EDE9E2;--mid:#8A8780;--line:#2B2B31;--card:#18181D;--acc:#6E8CFF;--make:#22E08A;--later:#F5B83D;--skip:#6B6A66}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.6 Archivo,system-ui,sans-serif}
+main{padding:32px clamp(16px,4vw,56px) 120px}
+a{color:var(--acc)}
+.k{font:500 13px "DM Mono",monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--mid);margin:0}
+.nav{display:flex;gap:24px;flex-wrap:wrap;align-items:baseline}.nav .sp{flex:1}
+h1{font:800 clamp(36px,5vw,68px)/0.98 "Bricolage Grotesque",sans-serif;letter-spacing:-0.025em;margin:22px 0 10px;text-wrap:balance;max-width:28ch}
+.meta{font:500 13px "DM Mono",monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--mid)}
+.top{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px 40px;align-items:end;margin-top:20px}
+@media (max-width:900px){.top{grid-template-columns:1fr}}
+.act{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.act button{background:none;border:1px solid var(--line);color:var(--fg);font:600 15px Archivo,sans-serif;padding:9px 16px;cursor:pointer}
+.act button:hover{border-color:var(--fg)}
+.act button.on[data-s=make]{background:var(--make);border-color:var(--make);color:#111}
+.act button.on[data-s=later]{background:var(--later);border-color:var(--later);color:#111}
+.act button.on[data-s=skip]{background:var(--skip);border-color:var(--skip);color:#111}
+.act button.on[data-s=recorded]{background:var(--fg);border-color:var(--fg);color:#111}
+.saved{font:500 12px "DM Mono",monospace;color:var(--make)}
+textarea{width:100%;min-height:76px;background:var(--card);color:var(--fg);border:1px solid var(--line);font:16px/1.5 Archivo,sans-serif;padding:12px}
+.look{display:flex;gap:16px;overflow-x:auto;margin-top:36px;padding-bottom:6px}
+.look figure{margin:0;flex:0 0 auto;width:min(300px,70vw)}.look img{width:100%;display:block;background:var(--card)}
+.look figcaption{font:500 12px/1.5 "DM Mono",monospace;color:var(--mid);margin-top:6px}
+.grid{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:56px;margin-top:40px}
+@media (max-width:1000px){.grid{grid-template-columns:1fr}}
+section{margin-bottom:40px}
+h2{font:500 13px "DM Mono",monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--mid);margin:0 0 14px;padding-top:14px;border-top:1px solid var(--line)}
+.hook{font:italic 400 30px/1.25 "Instrument Serif",Georgia,serif;margin:0;padding-left:16px;border-left:3px solid var(--acc)}
+.md{max-width:78ch}
+.script{font-size:19px;line-height:1.75}
+.md p{margin:0 0 1em}
+.md h1,.md h2,.md h3,.md h4{font:700 20px/1.3 Archivo,sans-serif;letter-spacing:0;text-transform:none;color:var(--fg);border:0;padding:0;margin:1.6em 0 .6em}
+.md h1{font:800 30px/1.1 "Bricolage Grotesque",sans-serif}.md h2{font:800 24px/1.15 "Bricolage Grotesque",sans-serif}
+.script h3{font:500 13px "DM Mono",monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--acc)}
+.md em{color:var(--mid)}
+.md ol,.md ul{padding-left:1.4em;margin:0 0 1em}.md li{margin:0 0 .5em}
+.md blockquote{margin:0 0 1em;padding:10px 16px;background:var(--card);border-left:3px solid var(--line)}
+.md code{font:14px "DM Mono",monospace;background:var(--card);padding:1px 5px}
+.md pre{background:var(--card);padding:14px;overflow-x:auto}.md pre code{padding:0}
+.md hr{border:0;border-top:1px solid var(--line);margin:2em 0}
+.md table{border-collapse:collapse;font-size:15px;margin:0 0 1.2em;display:block;overflow-x:auto;max-width:100%}
+.md th,.md td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+.md th{font:500 12px "DM Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--mid)}
+.rec p{margin:0 0 10px}
+.short{background:var(--card);padding:18px 20px;margin:0 0 16px}
+.short h3{font:700 18px Archivo,sans-serif;margin:0 0 8px}
+.short .hk{font:italic 400 20px/1.3 "Instrument Serif",Georgia,serif;margin:0 0 10px}
+.short .rc{font-size:14px;color:var(--mid);margin:10px 0 0}
+details.kit>summary{cursor:pointer;font:500 13px "DM Mono",monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);padding:14px 0;border-top:1px solid var(--line)}
+details.kit .md{max-width:110ch;margin-top:12px}
+.src p{margin:0 0 8px;font-size:15px}
+.empty{color:var(--mid)}
+</style>
+</head>
+<body>
+<main>
+  <div class="nav"><a class="k" href="/ideas/">← All ideas</a><span class="sp"></span><a class="k" id="prev" hidden>← Previous</a><a class="k" id="next" hidden>Next →</a></div>
+  <div id="page"><p class="empty">Loading…</p></div>
+</main>
+<script>
+const LABEL = { new: 'New', make: 'Making it', later: 'Later', recorded: 'Recorded', skip: 'Skipped' };
+const ACTIONS = [['make', 'Make it'], ['later', 'Later'], ['recorded', 'Recorded'], ['skip', 'Skip']];
+const rank = i => !i.source || /^New ideas/.test(i.source) ? 1 : /^Ready/.test(i.source) ? 0 : 2;
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const md = s => { if (!s) return ''; const h = window.marked ? marked.parse(String(s), { gfm: true, breaks: false }) : '<p>' + esc(s).replace(/\n\n/g, '</p><p>') + '</p>'; return window.DOMPurify ? DOMPurify.sanitize(h) : h; };
+const id = decodeURIComponent(location.pathname.split('/').filter(Boolean)[2] || '');
+let idea;
+
+async function save(body) {
+  const r = await fetch('/api/ideas/' + encodeURIComponent(id), { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(body) });
+  if (!r.ok) throw new Error('save failed');
+  Object.assign(idea, await r.json());
+}
+function flash() { const s = document.querySelector('.saved'); s.hidden = false; setTimeout(() => s.hidden = true, 1200); }
+function buttons(st) { return ACTIONS.map(([s, l]) => `<button data-s="${s}" class="${st === s ? 'on' : ''}">${l}</button>`).join('') + '<span class="saved" hidden>saved</span>'; }
+
+function render() {
+  const i = idea, st = i.status || 'new', rec = i.record || {};
+  document.title = i.title;
+  const meta = [i.kind, i.length, i.pillar].filter(Boolean).map(esc).join(' · ');
+  const recRows = typeof rec === 'string' ? `<p>${esc(rec)}</p>` : [['Where', rec.where], ['How', rec.how], ['Props', rec.props], ['Wear', rec.wear]].filter(x => x[1]).map(([k, v]) => `<p><b>${k}:</b> ${esc(v)}</p>`).join('');
+  const refs = (i.refs || []).map(r => `<figure>${r.img ? `<img src="${esc(r.img)}" alt="${esc(r.caption || 'reference')}">` : ''}<figcaption>${esc(r.caption || '')}${r.url ? ` · <a href="${esc(r.url)}" target="_blank" rel="noopener">open</a>` : ''}</figcaption></figure>`).join('');
+  const src = (i.sources || []).map(s => { const u = String(s).match(/https?:\/\/\S+/); return `<p>${u ? `<a href="${esc(u[0])}" target="_blank" rel="noopener">${esc(s)}</a>` : esc(s)}</p>`; }).join('');
+  const shorts = (i.record_shorts || []).map(s => `<div class="short"><h3>${esc(s.title || 'Short')}</h3>${s.hook ? `<p class="hk">“${esc(s.hook)}”</p>` : ''}<div class="md">${md(s.script)}</div>${s.record ? `<p class="rc">${esc(s.record)}</p>` : ''}</div>`).join('');
+  document.getElementById('page').innerHTML = `
+    <h1>${esc(i.title)}</h1>
+    <p class="meta">${meta}</p>
+    <div class="top"><div class="act">${buttons(st)}</div><textarea placeholder="Your note (I read these)">${esc(i.note || '')}</textarea></div>
+    ${refs ? `<div class="look">${refs}</div>` : ''}
+    <div class="grid">
+      <div>
+        ${i.hook ? `<section><h2>First words</h2><p class="hook">“${esc(i.hook)}”</p></section>` : ''}
+        ${i.script ? `<section><h2>Script: read it word for word</h2><div class="md script">${md(i.script)}</div></section>` : ''}
+      </div>
+      <div>
+        ${recRows ? `<section><h2>How to record it</h2><div class="rec">${recRows}</div></section>` : ''}
+        ${i.format ? `<section><h2>Format and look</h2><p>${esc(i.format)}</p></section>` : ''}
+        ${i.summary ? `<section><h2>What it is</h2><p>${esc(i.summary)}</p></section>` : ''}
+        ${shorts ? `<section><h2>Shorts to record separately</h2>${shorts}</section>` : ''}
+        ${i.ournote ? `<section><h2>Notes from me</h2><div class="md">${md(i.ournote)}</div></section>` : ''}
+        ${i.changes ? `<section><h2>What I changed from your words</h2><div class="md">${md(i.changes)}</div></section>` : ''}
+        ${src ? `<section><h2>Sources</h2><div class="src">${src}</div></section>` : ''}
+      </div>
+    </div>
+    ${i.kit ? `<details class="kit"><summary>Full kit: titles, thumbnails, captions, tags</summary><div class="md" id="kit">Loading…</div></details>` : ''}`;
+  if (i.kit) fetch(i.kit).then(r => r.ok ? r.text() : 'Could not load the kit.').then(t => document.getElementById('kit').innerHTML = md(t)).catch(() => {});
+}
+
+document.addEventListener('click', async e => {
+  const b = e.target.closest('.act button'); if (!b) return;
+  const s = (idea.status || 'new') === b.dataset.s ? 'new' : b.dataset.s;
+  try { await save({ status: s }); document.querySelector('.act').innerHTML = buttons(idea.status || 'new'); flash(); } catch (er) { alert('Could not save. Is the studio still running?'); }
+});
+let timer;
+document.addEventListener('input', e => {
+  if (e.target.tagName !== 'TEXTAREA') return;
+  clearTimeout(timer);
+  timer = setTimeout(async () => { try { await save({ note: e.target.value }); flash(); } catch (er) {} }, 600);
+});
+
+fetch('/api/ideas').then(r => r.json()).then(d => {
+  const all = (d.ideas || []).slice().sort((a, b) => (rank(a) - rank(b)) || String(b.date).localeCompare(String(a.date)));
+  const n = all.findIndex(x => x.id === id);
+  if (n < 0) { document.getElementById('page').innerHTML = '<p class="empty">This idea is not on the board any more.</p>'; return; }
+  idea = all[n];
+  for (const [el, j] of [['prev', n - 1], ['next', n + 1]]) if (all[j]) { const a = document.getElementById(el); a.href = '/ideas/idea/' + encodeURIComponent(all[j].id) + '/'; a.hidden = false; }
+  render();
+});
+</script>
+</body>
+</html>

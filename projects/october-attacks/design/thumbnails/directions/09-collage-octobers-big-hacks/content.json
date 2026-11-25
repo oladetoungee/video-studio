@@ -1,0 +1,33 @@
+{
+  "direction": "Collage over her full natural photo (her 10-07 collage style): two REAL headlines taped above her (BleepingComputer on PHP2Shell, TechCrunch on Railway; crops untouched, each credited), one big elegant serif line across her chest naming the topic. References: viral collage samples ('Time to lock in.', 'Capsule wardrobe'), ghana-marrify 10b (real clipping). Round 2: the thin serif line was the weakest text in the set at phone size, so the words are now in the heavy condensed face.",
+  "thumbnail_text": "October's big hacks",
+  "titles": [
+    "The October 2026 Hacks Every Developer Should Know",
+    "PHP2Shell, Railway and OpenCode: What Developers Should Do",
+    "Is PHP Patched? PHP2Shell and the October 2026 Hacks"
+  ],
+  "title": "The October 2026 Hacks Every Developer Should Know",
+  "kind": "collage",
+  "text": {
+    "line": "October's <span class=\"acc\">dev hacks</span>",
+    "cr1": "BleepingComputer · Oct 21",
+    "cr2": "TechCrunch · Oct 22"
+  },
+  "images": {
+    "bg": "../../assets/scene/gbemi-3.0.jpg",
+    "me": "../../assets/scene/gbemi-3.0-person.png",
+    "c1": "../../assets/src/bc-php.png",
+    "c2": "../../assets/src/tc-railway.png"
+  },
+  "vars": {
+    "--ground": "#16110D",
+    "--fg": "#fff",
+    "--accent": "#F2541B",
+    "--dim": "rgba(22,17,13,.3)",
+    "--sc": "1.0",
+    "--sc-x": "0px",
+    "--sc-y": "0px"
+  },
+  "scores": "cold critic R1 4.5 · R2 5.5 · fixes from R2 applied after scoring",
+  "recommended": false
+}

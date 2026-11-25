@@ -1,0 +1,29 @@
+{
+ "label": "Before this session’s edits",
+ "auto": true,
+ "savedAt": 1791312331810,
+ "content": {
+  "direction": "The real Graphic Online headline (3 Sep 2026), cut to its key phrase so it reads at feed size, credited: '…verify prospective partners' marital status…' (exact words, cut with ellipses); she glances up, one eyebrow raised (4:33). Follows her board's news-clipping / tweet-card thumbnails.",
+  "concept": "T8",
+  "thumbnail_text": "Anyone can check",
+  "title": "Ghana Made Marriages Searchable. Anyone Can Check Yours",
+  "titles": [
+   "Ghana Made Marriages Searchable. Anyone Can Check Yours",
+   "You Can Now Check If Someone Is Married in Ghana",
+   "Should Marriage Records Be Public? Ghana Just Made Them"
+  ],
+  "scores": "a 5/8 · 4/7 · 4/7 | b 8/7 · 7/6 · 7/6 | c 6.5 · 7 · 6.5",
+  "recommended": false,
+  "text": {
+   "line1": "Anyone",
+   "line2": "can check",
+   "n_src": "Graphic Online · 3 Sep 2026",
+   "n_hl": "“…verify <mark>prospective partners’ marital status</mark>…”"
+  },
+  "images": {
+   "scene": "../../assets/scene/warm/s_273.60.jpg",
+   "front": "../../assets/scene/warm/mask/s_273.60.png"
+  },
+  "vars": {}
+ }
+}

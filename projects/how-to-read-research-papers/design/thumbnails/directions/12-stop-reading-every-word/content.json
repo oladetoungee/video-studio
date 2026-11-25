@@ -1,0 +1,30 @@
+{
+  "text": {
+    "a": "stop reading",
+    "b": "every<br>word"
+  },
+  "images": {
+    "room": "../../assets/photo/oredev/od-55642441705.png",
+    "cut": "../../assets/photo/oredev/od-55642441705-cut.png"
+  },
+  "kind": "her alive (speaking, hand out) on the right + serif words stacked left + a pile of real pages (words left / her right #2)",
+  "board": "pick1119-24 (\"I Started A Book Club...\": condensed serif caps left, books bottom-left, him talking right)",
+  "fonts": [
+    "thumbs-05 Libre Baskerville Bold, white on dark (Thumbnails 48)"
+  ],
+  "colours": "white on the room darkened to ~#1E1F22",
+  "photo": "Øredev 2026 photo 55642441705 (lectern, smiling mid-sentence, close), Enhance photo --bg keep --strength 0.5 + cut-out; logo cropped",
+  "thumbnail_text": "STOP READING EVERY WORD",
+  "titles": [
+    "I'm a Researcher. This Is How I Read a Paper",
+    "How to Read a Research Paper Without Reading It All",
+    "Stop Reading Research Papers From Start to Finish"
+  ],
+  "direction": "Copies pick1119-24: the creator alive and talking on the right, big serif words stacked on the left, the topic's objects (a pile of real printed pages) bottom-left.",
+  "nudge": {},
+  "vars": {},
+  "class": "no-lift",
+  "title": "I'm a Researcher. This Is How I Read a Paper",
+  "scores": "cold critic 2026-11-19, 3 rounds, alone / with title: 6/7, 6/7, 6/7",
+  "recommended": false
+}

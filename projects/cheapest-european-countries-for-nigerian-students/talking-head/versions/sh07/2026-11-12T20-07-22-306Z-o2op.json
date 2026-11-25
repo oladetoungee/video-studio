@@ -1,0 +1,16 @@
+{
+ "label": "Before this session’s edits",
+ "auto": true,
+ "savedAt": 1794514042306,
+ "edits": {
+  "t": {},
+  "captions": {},
+  "capShort": {},
+  "cap16": {},
+  "mix": {
+   "voice": 0,
+   "music": -15,
+   "sfx": -7
+  }
+ }
+}

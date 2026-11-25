@@ -1,0 +1,19 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../lib/r2.css"><style>
+.t{--ground:#0f1513;--fg:#111114;--accent:#FFD23F;--ax:-465px;--ay:-78px;--aw:1508px;--bx:-476px;--by:-73px;--bw:1500px}
+.half{position:absolute;top:0;width:640px;height:720px;overflow:hidden}
+.half img{position:absolute}
+.h1{left:0} .h1 img{left:var(--ax);top:var(--ay);width:var(--aw)}
+.h2{left:640px} .h2 img{left:var(--bx);top:var(--by);width:var(--bw)}
+.div{position:absolute;left:637px;top:0;width:6px;height:720px;background:#111114}
+.lab{top:34px;font-size:50px;background:var(--accent);color:#111114;padding:8px 18px 2px}
+.lab.a{left:34px} .lab.b{left:674px}
+.cap{top:520px;font-size:104px;color:#F7F5F0;text-shadow:0 3px 16px rgba(0,0,0,.6)}
+.cap.a{left:44px} .cap.b{left:684px}
+.chip{position:absolute;left:400px;top:330px;width:480px;background:#FFFDF6;border-radius:10px;padding:16px 22px;box-shadow:0 12px 34px rgba(0,0,0,.5);font-family:'Archivo';font-weight:700;font-size:34px;color:#111114;display:flex;align-items:center;justify-content:space-between}
+.chip em{font-family:'DM Mono';font-style:normal;font-weight:500;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:rgba(17,17,20,.5)}
+</style></head><body><div class="t">
+<div class="half h1" data-move="photoL"><img data-img="left" alt=""></div><div class="half h2" data-move="photoR"><img data-img="right" alt=""></div><div class="div"></div>
+<div class="abs lab a anton nw" data-k="labL"></div><div class="abs lab b anton nw" data-k="labR"></div>
+<div class="abs cap a hand nw" data-k="capL"></div><div class="abs cap b hand nw" data-k="capR"></div>
+<div class="chip" data-move="chip"><span data-k="chip"></span><em data-k="chipLabel"></em></div>
+</div><script src="../../lib/bind.js"></script></body></html>

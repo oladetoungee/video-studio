@@ -1,0 +1,75 @@
+1
+00:00:00,023 --> 00:00:01,643
+so how is UX research actually done?
+
+2
+00:00:01,643 --> 00:00:03,370
+there There's user interview, where you sit
+
+3
+00:00:03,370 --> 00:00:04,830
+down with people, you talk to them about
+
+4
+00:00:04,830 --> 00:00:06,330
+their lives, their work, their frustration
+
+5
+00:00:06,330 --> 00:00:07,949
+maybe how they use a product and all of that
+
+6
+00:00:07,949 --> 00:00:09,010
+There's usability testing
+
+7
+00:00:09,010 --> 00:00:11,050
+you give someone a task to do with your
+
+8
+00:00:11,050 --> 00:00:12,630
+design maybe with your app, you watch how
+
+9
+00:00:12,630 --> 00:00:14,729
+they do the tasks, usually while they think
+
+10
+00:00:14,729 --> 00:00:16,550
+out loud then we have surveys
+
+11
+00:00:16,550 --> 00:00:18,090
+you can reach a lot of people quickly with
+
+12
+00:00:18,090 --> 00:00:20,590
+surveys but surveys usually have less depth
+
+13
+00:00:20,790 --> 00:00:22,670
+and then there's contextual inquiry, where
+
+14
+00:00:22,670 --> 00:00:24,390
+you go to where people work and live and
+
+15
+00:00:24,390 --> 00:00:26,059
+watch them in their real environment
+
+16
+00:00:26,059 --> 00:00:28,530
+there are also diary studies, where people
+
+17
+00:00:28,530 --> 00:00:31,330
+record their experiences over days or weeks
+
+18
+00:00:31,330 --> 00:00:33,650
+so you see patterns that maybe a single
+
+19
+00:00:33,650 --> 00:00:34,800
+session would have missed

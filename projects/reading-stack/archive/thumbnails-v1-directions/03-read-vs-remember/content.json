@@ -1,0 +1,18 @@
+{
+  "direction": "Before / after: ideas scattered vs ideas filed in order (faceless)",
+  "title": "Why You Forget What You Read (and How to Fix It)",
+  "text": {
+    "left": "<span style=\"font-size:122px\">Forgot it.</span>",
+    "right": "<span style=\"font-size:122px\">Kept it.</span>"
+  },
+  "ideas": [
+    "the main idea",
+    "chapter 3",
+    "that example",
+    "the key quote"
+  ],
+  "note": "Illustrative words (not from a specific book): ideas scattered vs the same ideas in order.",
+  "vars": {
+    "--accent": "#FF4713"
+  }
+}

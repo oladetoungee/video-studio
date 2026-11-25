@@ -1,0 +1,26 @@
+{
+ "direction": "Her room photo, calmed. The one code everybody knows, 404, huge in white BEHIND her head (word behind the subject, like the Pinterest COOK / SEMINARU pins), she in front looking at the viewer. One small line at the bottom names the topic. Follows: pin \"COOK\" (fpt.doc), \"SEMINARU\", her ux-research thumbnail (photo + one colour).",
+ "thumbnail_text": "404 (behind her) + status codes, explained",
+ "titles": [
+  "HTTP Status Codes: Is It You or the Server?",
+  "What 404, 500 and 200 Actually Mean",
+  "Every HTTP Status Code, Explained Simply"
+ ],
+ "title": "HTTP Status Codes: Is It You or the Server?",
+ "kind": "photo",
+ "text": {
+  "big": "404",
+  "low": "http status codes,<br>explained"
+ },
+ "images": {
+  "room": "../../assets/photo/shoot/room-1603.jpg",
+  "me": "../../assets/photo/shoot/room-1603-cut.png"
+ },
+ "vars": {
+  "--rw": "1900px",
+  "--rx": "-20px",
+  "--ry": "-420px",
+  "--dim": "rgba(10,10,12,.22)"
+ },
+ "class": "no-lift"
+}

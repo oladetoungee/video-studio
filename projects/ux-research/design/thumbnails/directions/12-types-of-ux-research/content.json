@@ -1,0 +1,26 @@
+{
+  "kind": "other",
+  "direction": "Full-bleed electric blue, no face: the two types of UX research as two big cards: numbers (a bar chart; quantitative) and reasons (a speech bubble asking 'Why?'; qualitative). References: her decks (one full-bleed accent for a punchline), yt 'Space complexity' (34), her database-indexes sample (two things side by side, drawn literally).",
+  "thumbnail_text": "Types of UX research",
+  "text": {
+    "hd": "Types of UX research",
+    "n1": "Numbers",
+    "d1": "quantitative",
+    "why": "Why?",
+    "n2": "Reasons",
+    "d2": "qualitative"
+  },
+  "images": {},
+  "vars": {
+    "--ground": "#1B3FD8"
+  },
+  "titles": [
+    "Types of UX Research Explained: Qualitative vs Quantitative",
+    "3 Types of UX Research, Explained Simply",
+    "UX Research for Beginners: What It Is and How It Works"
+  ],
+  "title": "Types of UX Research Explained: Qualitative vs Quantitative",
+  "set": 3,
+  "scores": "critic scores new in R4 (blue graphic): R5 8",
+  "recommended": true
+}

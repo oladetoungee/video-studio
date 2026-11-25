@@ -1,0 +1,53 @@
+{
+ "story": "php2shell",
+ "outlet": "Wikipedia",
+ "slug": "wikipedia",
+ "url": "https://en.wikipedia.org/wiki/PHP2Shell",
+ "finalUrl": "https://en.wikipedia.org/wiki/PHP2Shell",
+ "status": "loaded",
+ "http": 200,
+ "title": "PHP2Shell - Wikipedia",
+ "h1": "PHP2Shell",
+ "published": "",
+ "files": {
+  "fold": "php2shell/wikipedia_fold.png",
+  "full": "php2shell/wikipedia_full.jpg",
+  "scroll": "php2shell/wikipedia_scroll.mp4"
+ },
+ "full": {
+  "width": 1440,
+  "height": 5636,
+  "pageHeight": 5636,
+  "zoom": 1,
+  "quotes": []
+ },
+ "scroll": {
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "seconds": 8,
+  "keyframes": [
+   {
+    "t": 0,
+    "y": 0
+   },
+   {
+    "t": 1,
+    "y": 0
+   },
+   {
+    "t": 2.55,
+    "y": 1400
+   },
+   {
+    "t": 8,
+    "y": 1400
+   }
+  ],
+  "zoom": 1,
+  "easing": "easeInOutCubic between keyframes, holds where y is equal",
+  "capped": false,
+  "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)",
+  "quotes": []
+ }
+}

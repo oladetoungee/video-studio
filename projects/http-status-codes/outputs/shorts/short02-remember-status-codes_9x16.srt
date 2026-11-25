@@ -1,0 +1,99 @@
+1
+00:00:00,000 --> 00:00:02,790
+is the easiest way to think of them is to
+
+2
+00:00:02,790 --> 00:00:05,100
+think of asking for a book at a bookshop
+
+3
+00:00:05,100 --> 00:00:08,360
+counter 1xx means, hold on, I'm working on
+
+4
+00:00:08,360 --> 00:00:10,110
+it like the attendant telling you, hey, give
+
+5
+00:00:10,110 --> 00:00:11,270
+me a second, let me check
+
+6
+00:00:11,270 --> 00:00:12,903
+2xx means success
+
+7
+00:00:12,903 --> 00:00:14,483
+I've got your book, right?
+
+8
+00:00:14,483 --> 00:00:15,563
+yeah, it is
+
+9
+00:00:15,563 --> 00:00:17,723
+and 3xx means redirection
+
+10
+00:00:17,723 --> 00:00:20,453
+we moved that book to our other branch, go
+
+11
+00:00:20,453 --> 00:00:22,463
+there 4xx means client error
+
+12
+00:00:22,463 --> 00:00:24,583
+something is wrong with what you asked for
+
+13
+00:00:24,583 --> 00:00:25,963
+maybe you asked for a book that doesn't
+
+14
+00:00:25,963 --> 00:00:27,493
+exist or you didn't show your Bookshop
+
+15
+00:00:27,493 --> 00:00:29,983
+membership card 5xx means server error
+
+16
+00:00:29,983 --> 00:00:32,023
+your request was fine, but something broke
+
+17
+00:00:32,023 --> 00:00:32,663
+on our end
+
+18
+00:00:32,663 --> 00:00:34,703
+our bookstore computer system went down,
+
+19
+00:00:34,703 --> 00:00:35,723
+whatever it is
+
+20
+00:00:35,723 --> 00:00:38,153
+so when something fails or succeeds, look at
+
+21
+00:00:38,153 --> 00:00:40,433
+the first digit of this three-digit number
+
+22
+00:00:40,433 --> 00:00:42,413
+first if we start with a four, we start by
+
+23
+00:00:42,413 --> 00:00:44,223
+checking the request the client sends
+
+24
+00:00:44,223 --> 00:00:45,893
+if we start with a five, we start by
+
+25
+00:00:45,893 --> 00:00:46,600
+checking the server

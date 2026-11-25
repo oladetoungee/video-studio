@@ -1,0 +1,78 @@
+/* Carousel system: same grounds, type and chrome as the film (film/src/lib.js).
+   Flat grounds only. One accent per deck (set from content.json as --acc). */
+@font-face { font-family: "Bricolage Grotesque"; src: url(fonts/BricolageGrotesque.ttf); font-weight: 200 800; font-stretch: 75% 100%; }
+@font-face { font-family: "Archivo"; src: url(fonts/Archivo.ttf); font-weight: 100 900; font-stretch: 62% 125%; }
+@font-face { font-family: "DM Mono"; src: url(fonts/DMMono-Regular.ttf); font-weight: 400; }
+@font-face { font-family: "DM Mono"; src: url(fonts/DMMono-Medium.ttf); font-weight: 500; }
+@font-face { font-family: "Instrument Serif"; src: url(fonts/InstrumentSerif-Italic.ttf); font-style: italic; font-weight: 400; }
+
+:root {
+  --W: 1080px; --H: 1350px; --M: 88px;
+  --paper: #EDE9E2; --ink: #111114; --card: #FFFDF6; --mid: #6C6A66; --line: #CEC6B8;
+  --inkMid: #8A8780; --inkLine: #3A3A42;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: #2a2a2e; }
+body { display: flex; flex-direction: column; align-items: center; gap: 40px; padding: 40px 0; -webkit-font-smoothing: antialiased; text-rendering: geometricPrecision; }
+@page { size: var(--W) var(--H); margin: 0; }
+@media print { html, body { background: none; } body { display: block; padding: 0; } .slide { break-after: page; } }
+
+.slide { position: relative; width: var(--W); height: var(--H); overflow: hidden; background: var(--bg); color: var(--fg);
+  font-family: Archivo, sans-serif; font-weight: 500; }
+.g-paper  { --bg: var(--paper); --fg: var(--ink); --sub: #3B3A37; --mid: #6C6A66; --line: #CEC6B8; --a: var(--acc); --chip: var(--card); }
+.g-card   { --bg: var(--card);  --fg: var(--ink); --sub: #3B3A37; --mid: #6C6A66; --line: #DDD6C9; --a: var(--acc); --chip: var(--paper); }
+.g-ink    { --bg: var(--ink);   --fg: var(--paper); --sub: #C9C4BB; --mid: var(--inkMid); --line: var(--inkLine); --a: var(--accInk); --chip: #1E1E23; }
+.g-accent { --bg: var(--acc);   --fg: var(--onAcc); --sub: var(--onAcc); --mid: var(--onAccMid); --line: var(--onAccLine); --a: var(--onAccAcc); --chip: var(--card); }
+
+/* type */
+.disp { font-family: "Bricolage Grotesque"; font-weight: 800; text-transform: uppercase; letter-spacing: -0.035em; line-height: 0.88; white-space: nowrap; }
+.disp .serif { text-transform: none; }
+.serif { font-family: "Instrument Serif"; font-style: italic; font-weight: 400; letter-spacing: -0.01em; }
+.disp .serif { font-size: 1.12em; line-height: 0.7; letter-spacing: -0.02em; display: inline-block; padding-bottom: 0.2em; }
+.acc { color: var(--a); font-style: normal; }
+.mono { font-family: "DM Mono"; font-weight: 500; text-transform: uppercase; letter-spacing: 0.14em; }
+.body, p, .bal, .sub { text-wrap: balance; }
+.nw { white-space: nowrap; }
+.mono.lab { font-size: 32px; }
+.body { font-size: 40px; line-height: 1.3; letter-spacing: -0.01em; color: var(--sub); font-weight: 500; }
+.strong { font-weight: 750; color: var(--fg); }
+
+/* chrome: one corner label + page number and progress meter */
+.corner { position: absolute; top: 58px; left: var(--M); font-family: "DM Mono"; font-weight: 500; font-size: 32px; letter-spacing: 0.04em; color: var(--mid); }
+.foot { position: absolute; left: var(--M); right: var(--M); bottom: 56px; display: flex; justify-content: space-between; align-items: center; }
+.foot .num { font-family: "DM Mono"; font-weight: 500; font-size: 32px; letter-spacing: 0.08em; color: var(--mid); }
+.foot .num b { color: var(--fg); font-weight: 500; }
+.meter { display: flex; gap: 7px; }
+.meter i { display: block; width: 26px; height: 14px; border: 2px solid var(--mid); opacity: .7; }
+.meter i.on { background: var(--a); border-color: var(--a); opacity: 1; }
+.g-accent .meter i.on { background: var(--fg); border-color: var(--fg); }
+
+/* main column: everything between the corner label and the foot */
+.main { position: absolute; left: var(--M); right: var(--M); top: 140px; bottom: 128px; display: flex; flex-direction: column; }
+.push { margin-top: auto; }
+.rule { height: 3px; background: var(--line); }
+
+/* polaroid insert: card frame, photo, mono caption in the bottom margin */
+.pol { position: absolute; background: var(--card); padding: 14px 14px 0; box-shadow: 0 0 0 2px rgba(17,17,20,.16); }
+.g-ink .pol, .g-accent .pol { box-shadow: none; }
+.pol img { display: block; width: 100%; object-fit: cover; }
+.pol .cap { font-family: "DM Mono"; font-weight: 500; text-transform: uppercase; letter-spacing: .05em; color: var(--ink); font-size: 32px; height: 66px; white-space: nowrap; overflow: hidden; display: flex; align-items: center; padding-left: 2px; }
+
+/* numbered rows: mono number + line + hairline */
+.rows { display: flex; flex-direction: column; }
+.row { display: grid; grid-template-columns: var(--numW, 120px) 1fr; align-items: baseline; padding: 26px 0 24px; border-bottom: 3px solid var(--line); }
+.row:first-child { border-top: 3px solid var(--line); }
+.row .n { font-family: "DM Mono"; font-weight: 500; font-size: 32px; letter-spacing: .06em; color: var(--a); text-transform: uppercase; }
+.row .head { font-family: "Bricolage Grotesque"; font-weight: 800; text-transform: uppercase; letter-spacing: -0.03em; font-size: 60px; line-height: .95; }
+.row .sub { font-size: 36px; line-height: 1.25; color: var(--sub); margin-top: 10px; font-weight: 500; }
+.row.hi .head { color: var(--a); }
+
+/* placeholder (end slide): dashed while it is still a placeholder */
+.ph { display: inline-block; font-family: "Bricolage Grotesque"; font-weight: 800; font-size: 46px; text-transform: uppercase; letter-spacing: -0.02em; padding: 14px 22px; white-space: nowrap; border: 4px dashed currentColor; }
+.ph.real { border: none; padding: 0; }
+.phnote { font-size: 22px; margin-top: 12px; color: var(--mid); }
+
+/* studio editor views (index.html?view=slide&n=3 | ?view=strip); never used by the renders */
+html.v-slide, html.v-slide body { background: none; }
+html.v-slide body { display: block; padding: 0; }
+html.v-strip body { flex-direction: row; align-items: flex-start; padding: 0; gap: 40px; width: max-content; }

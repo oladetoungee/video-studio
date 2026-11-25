@@ -1,0 +1,24 @@
+{
+ "direction": "Flat signal green (the video's \"you can still apply\" colour) with fine same-hue diagonal lines (THUMBNAIL-STUDY §7). Top: the promise in plain words. A paper card with one real date, big (si.se: the Swedish Institute scholarship portal closes 24 February 2027). Her cut-out on the right, head tilted, arms crossed. Follows: HTTP 02 (the list IS the picture), \"48 HOURS\" (a time as the hook).",
+ "thumbnail_text": "SCHOLARSHIP DEADLINES + 24 Feb 2027, last day for Sweden's full scholarship (si.se)",
+ "titles": [
+  "Scholarships Nigerians Can Still Apply For in 2027",
+  "Fully Funded Scholarships in Europe for Africans (2027)",
+  "Scholarships for African Students in Europe: 2027 Deadlines"
+ ],
+ "kind": "flat",
+ "class": "no-lift",
+ "text": {
+  "head": "Scholarship<br>deadlines",
+  "d2": "24 Feb 2027",
+  "w2": "last day for Sweden's<br>full scholarship"
+ },
+ "images": {
+  "me": "../../assets/shoot/cut-1610.png"
+ },
+ "vars": {
+  "--ground": "#2FD27A",
+  "--pa": ".07"
+ },
+ "title": "Scholarships Nigerians Can Still Apply For in 2027"
+}

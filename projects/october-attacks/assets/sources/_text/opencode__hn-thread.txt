@@ -1,0 +1,288 @@
+URL: https://news.ycombinator.com/item?id=50139083
+STATUS: loaded (http 200)
+FINAL: https://news.ycombinator.com/item?id=50139083
+TITLE: OpenCode has a security breach last that impacted 1.4% of console users | Hacker News
+H1: 
+OG:  | 
+PUBLISHED:   MODIFIED: 
+DOC_H: 2855
+
+	Hacker Newsnew | past | comments | ask | show | jobs | submit	login
+
+	
+	OpenCode has a security breach last that impacted 1.4% of console users (twitter.com/opencode)
+	55 points by notmine1337 7 days ago | hide | past | favorite | 28 comments
+	
+
+	
+ help
+
+	
+	
+nl 7 days ago | next [–]
+
+> We had a security breach last night related to a large scale distillation attack that impacted 1.4% of OpenCode Console users
+
+> We have notified them all this morning via email. If you did not get an email you were not impacted, it was a subset of users who had external providers linked
+
+Further:
+
+> Third party keys saved in your workspace may have been exposed
+
+https://x.com/WispyWinter/status/2111542806099722698/photo/1
+
+Does anyone understand why they are calling this a distillation attack?
+
+reply
+
+	
+	
+duhhhhh1212 7 days ago | parent | next [–]
+
+> Does anyone understand why they are calling this a distillation attack?
+
+They think their customers reading that post are idiots so it's easy to convince them of the distillation boogeyman instead of owning the breach.
+
+reply
+
+	
+	
+vikramkr 7 days ago | root | parent | next [–]
+
+The first sentence of the link is "We had a security breach." For distillation is just like saying it was a ransomware attack or similar - the attackers had a motivation. Are they supposed to not explain what happened? This is also one of the go to harnesses for using open source models with and a huge part of usership for them is that. Kind of the exact opposite incentives to Anthropic and co here.
+
+reply
+
+	
+	
+smileybarry 7 days ago | root | parent | next [–]
+
+The low percentage combined with "distillation attack" makes it sound like it was a few scattered requests across a bunch of attacks, and not the hundreds of dollars in third-party usage billed to random users. There's countless reports of OpenCode users impacted by this who woke up to $300-$1700 bills from Anthropic and OpenAI, but OpenCode didn't mention this or offer to compensate users. (Compensation can still come later of course but it's still worth noting right now)
+
+reply
+
+	
+	
+searealist 7 days ago | parent | prev | next [–]
+
+> Does anyone understand why they are calling this a distillation attack?
+
+I once had my credit card stolen and it was used to purchase gift cards.
+
+Interestingly, no one referred to it as a “gift card attack”.
+
+Between "distillation attack" and "under attack by agent swarms", it's probably to absolve themselves of responsibility by making it seem like an unavoidable arms race.
+
+I wouldn't expect a post-mortem anytime soon.
+
+reply
+
+	
+	
+verdverm 7 days ago | parent | prev | next [–]
+
+The vendor keys compromised in this, Ant/Oai, have been beating the "distillation attack" drum this year. They have provided no evidence, they need to provide an open dataset with queries and other data so that we can analyze and decide for ourselves. These companies are not trustworthy.
+
+reply
+
+	
+	
+coldtea 6 days ago | parent | prev | next [–]
+
+Could it be because some hacker network hijacked OpenCode accounts, taking advantage of their OpenAI, Anthropic, API credentials, for distillation?
+
+reply
+
+	
+	
+Macha 7 days ago | parent | prev | next [–]
+
+I guess that was what they believe the attacker intended to use the stolen keys for?
+
+reply
+
+	
+	
+verdverm 7 days ago | root | parent | next [–]
+
+Narrative shaping is probably more accurate than guess or understand. Do note that the other Ai vendors involved have been chanting the distillation song for a while.
+
+reply
+
+	
+	
+cdurth 7 days ago | prev | next [–]
+
+So a breach occurs and they recommend people rotate keys? But they claim fraud and break everyone's access with existing keys?
+
+Why anyone uses their services, or even the harness product at this point is beyond me. They just shill cheap and crappy models for training and make boneheaded decisions and "mistakes".
+
+reply
+
+	
+	
+verdverm 7 days ago | parent | next [–]
+
+What other open source harnesses are there which have a good, albeit opinionated, experience out-of-the-box?
+
+The $10/40 monthly subscriptions are a great deal. Don't proxy your subs through any one vendor, own your keys, because this is just one of many such events.
+
+reply
+
+	
+	
+radeeyate 7 days ago | root | parent | next [–]
+
+I'm a big fan of Crush: https://github.com/charmbracelet/crush
+
+It's all BYOK but the also have Hyper (https://hyper.charm.land/) which is their hosted inference of OSS models.
+
+reply
+
+	
+	
+verdverm 6 days ago | root | parent | next [–]
+
+crush has outdated docs and abstract credit based pricing, both big red flags for me
+
+reply
+
+	
+	
+nevernothing 7 days ago | root | parent | prev | next [–]
+
+I recently switched to ccgui, so far I like it
+
+reply
+
+	
+	
+verdverm 6 days ago | root | parent | next [–]
+
+It seems I should have noted that my questions was rhetorical, I'm not personally looking for a new harness right now.
+
+reply
+
+	
+	
+mickeyp 7 days ago | root | parent | prev | next [–]
+
+Plug: Try dreamcoder.ai. It's not foss but it is opinionated.
+
+Very different experience from all the other harnesses.
+
+reply
+
+	
+	
+verdverm 7 days ago | root | parent | next [–]
+
+Big nope, I want a terminal application, and only of the open source variety.
+
+I have my own too, needs a refresh since it was written before I made the rounds with all the popular harnesses.
+
+reply
+
+	
+	
+unrented7977 7 days ago | root | parent | prev | next [–]
+
+Oh-my-pi
+
+reply
+
+	
+	
+verdverm 7 days ago | root | parent | next [–]
+
+Too heavy handed and opinionated, not interested in the "agent team" setup found therein. I have a set of plugins I prefer, building blocks assembled to create my own take, with some custom ones on the horizon.
+
+I'm generally disappointed with the Pi team and their dismissal of a major security gap
+
+https://github.com/earendil-works/pi/issues/10895
+
+reply
+
+	
+	
+coldtea 6 days ago | parent | prev | next [–]
+
+>So a breach occurs and they recommend people rotate keys? But they claim fraud and break everyone's access with existing keys?
+
+That's what you do when you have a breach. What exactly did you expected? Keys continue to work and everybody gets a box of chocolates too?
+
+reply
+
+	
+	
+sixothree 6 days ago | parent | prev | next [–]
+
+I'm pretty sure their timeline of the breach is also not correct. I think information about my account was exposed over a month ago.
+
+reply
+
+	
+	
+geye1234 7 days ago | prev | next [–]
+
+I use Pi, but I think its updates and its extensions' updates are the biggest security gap I have right now. I'm not even sure what they keep updating TBH.
+
+Any recommendations?
+
+reply
+
+	
+	
+kadoban 7 days ago | parent | next [–]
+
+Put it in a container with a build step and lock down versions. That's what I did. Then you can choose what to update, audit code, etc.
+
+Whatever agent will be more than capable of wiring that up.
+
+reply
+
+	
+	
+anygivnthursday 7 days ago | prev [–]
+
+Also discussed earlier here: https://news.ycombinator.com/item?id=50133401
+
+reply
+
+	
+	
+verdverm 7 days ago | parent [–]
+
+With almost 900 upvotes
+
+reply
+
+	
+	
+WalterGR 7 days ago | root | parent [–]
+
+It’s the most-upvoted submission of the last 24 hours, according to https://hn.algolia.com/?dateRange=last24h&sort=byPopularity&...
+
+reply
+
+	
+	
+verdverm 7 days ago | root | parent [–]
+
+yup, lots of people are sus about how fast it fell from the front page given the metrics, OpenCode is a YC company
+
+reply
+
+	
+	
+r_lee 7 days ago | root | parent [–]
+
+wow, I didn't even see it
+
+reply
+
+Consider applying for YC's Winter 2027 batch! Applications are open till November 2.
+
+Guidelines | FAQ | Lists | API | Security | Legal | Apply to YC | Contact
+
+Search: 

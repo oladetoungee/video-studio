@@ -1,0 +1,31 @@
+{
+ "label": "Before this session’s edits",
+ "auto": true,
+ "savedAt": 1791312299386,
+ "content": {
+  "direction": "TAKEN OR / SINGLE? huge beside her face (viral sample 1 'FINANCIAL LITERACY'; behind her head was tried and hid 'SINGLE'); she side-eyes a phone (2:47) whose search says '1 marriage on record' (illustration). Pinax: phone with the app.",
+  "concept": "T1",
+  "thumbnail_text": "Taken or single?",
+  "title": "You Can Now Check If Someone Is Married in Ghana",
+  "titles": [
+   "You Can Now Check If Someone Is Married in Ghana",
+   "Check Marital Status Online: Ghana's New App",
+   "Is He Already Married? Ghana Built an App to Check"
+  ],
+  "scores": "a 4/7 · 2/5 · 2/5 | b 9/7 · 9/7 · 9/7 | c 7 · 6 · 6",
+  "recommended": false,
+  "text": {
+   "line1": "Taken or",
+   "line2": "single?",
+   "p_app": "Marriage records",
+   "p_q": "[name]",
+   "p_lab": "Result",
+   "p_big": "1 marriage on record"
+  },
+  "images": {
+   "scene": "../../assets/scene/warm/s_167.90.jpg",
+   "front": "../../assets/scene/warm/mask/s_167.90.png"
+  },
+  "vars": {}
+ }
+}

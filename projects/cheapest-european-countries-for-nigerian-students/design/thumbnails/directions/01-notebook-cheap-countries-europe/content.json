@@ -1,0 +1,66 @@
+{
+  "board": "yt-38",
+  "kind": "real photo (Unsplash: spiral notepad on a wooden desk), hand-written list, huge white caps (no face) (2026-11-12: notebook smaller and lower, building on her nudge, so the title sits fully on the wood)",
+  "direction": "Copies board yt-38 (\"TWO SUM\": a real notepad on a wooden desk seen from above, the problem hand-written on it, the topic in huge white caps across the top). Notepad photo by Kelly Sikkema (Unsplash). On the left page, in pen: tuition + proof of funds + visa + rent; on the right page a red \"= ?\" circled. Words: STUDY IN EUROPE.",
+  "thumbnail_text": "CHEAP COUNTRIES TO STUDY IN EUROPE + notepad: tuition + proof of funds + visa + rent = ?",
+  "titles": [
+    "I Added Up the Real Cost of Studying in Europe",
+    "What Studying in Europe Really Costs a Nigerian in 2027",
+    "Cheapest Countries in Europe: Tuition + Proof of Funds"
+  ],
+  "title": "I Added Up the Real Cost of Studying in Europe",
+  "text": {
+    "w": "<span style=\"color:#E5322D\">Cheap</span> countries to<br>study in Europe",
+    "list": "tuition<br>+ proof of funds<br>+ visa<br>+ rent",
+    "sum": "= ?"
+  },
+  "images": {
+    "bg": "../../assets/px/notebook-wood.jpg"
+  },
+  "vars": {
+    "--ws": "92px",
+    "--wy": "18px",
+    "--bw": "1496px",
+    "--bx": "-171px",
+    "--by": "-115px",
+    "--lx": "322px",
+    "--ly": "328px",
+    "--hs": "47px",
+    "--rx": "717px",
+    "--ry": "374px",
+    "--rs": "140px",
+    "--gx": "682px",
+    "--gy": "291px",
+    "--gw": "271px",
+    "--gh": "224px"
+  },
+  "recommended": true,
+  "scores": "font-board round 2 (2026-11-13, fonts with their source colours; fresh cold critic, PNG alone, 4 rounds): 4/10; earlier: round 2 (2026-11-12 night, fresh cold critics, alone / with title): R1 6 / 6.5, R2 6.5 / 6.5, R3 6 / 6 (her favourite: kept exactly as she liked it); earlier: cold rounds 1-3: 7 / 7, 6 / 6, 6 / 6.5 (with \"Cheapest Countries in Europe: Tuition + Proof of Funds\")",
+  "nudge": {
+    "img:bg": {
+      "dy": 85,
+      "dx": -1
+    },
+    "w": {
+      "dy": -12
+    },
+    "ring": {
+      "dx": -3,
+      "dy": 53
+    },
+    "list": {
+      "dy": -5
+    }
+  },
+  "fonts": [
+    "thumbs-10 Poppins Bold (white, red key word, on dark)",
+    "design-19 Caveat Brush (dark green #18480E)"
+  ],
+  "colours": "thumbs-10 pairing: white + red #E5322D on a dark veil (#292422); pen #18480E as design-19 (Design 362)",
+  "fontboard_note": "fontboard 2026-11-12: Caveat -> Caveat Brush (design board), colours from Design 395; her moves kept, pen size 52->47 so 'proof of funds' clears the spiral",
+  "titles_before_2026_11_19": [
+    "What Studying in Europe Really Costs a Nigerian in 2027",
+    "Cheapest Countries in Europe: Tuition + Proof of Funds",
+    "Cheapest Countries to Study in Europe for Nigerians (2027)"
+  ]
+}

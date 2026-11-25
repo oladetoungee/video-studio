@@ -1,0 +1,25 @@
+{
+  "direction": "Flat graphic (kit T9, top 3): night ground, three flat robots (the AI agents) on the left sending dotted lines into a block of 100 tiny website tiles, almost all lit orange; a price tag '$50 each' marked as the researcher's estimate. No face: the number and the robots carry it. References: viral 4 (a diagram of the idea), viral 2 (one object = the stakes).",
+  "thumbnail_text": "AI AGENTS HACKED 100+ SITES",
+  "titles": [
+    "AI Hacking News: One Hacker, AI Agents, 100+ Companies",
+    "PHP2Shell Explained: The PHP Flaw and October's Other Hacks (Test & Compare only: same title for all three)"
+  ],
+  "title": "AI Hacking News: One Hacker, AI Agents, 100+ Companies",
+  "kind": "graphic",
+  "recommended": true,
+  "text": {
+    "hd": "AI agents hacked<br><span class=\"acc\">100+ sites</span>",
+    "price": "$50 per hack",
+    "pricenote": "researcher's estimate"
+  },
+  "images": {
+    "robot": "../../assets/draw/robot.svg"
+  },
+  "vars": {
+    "--ground": "#16110D",
+    "--fg": "#EFE7D8",
+    "--accent": "#F2541B"
+  },
+  "scores": "cold critic R1 7 · R2 8 · fixes from R2 applied after scoring"
+}

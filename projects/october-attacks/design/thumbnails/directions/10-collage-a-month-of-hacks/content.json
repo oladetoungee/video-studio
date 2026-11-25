@@ -1,0 +1,30 @@
+{
+  "direction": "Collage over her full natural photo (kit T8): a big October 2026 calendar page in front of her, four dates circled in orange with small objects on them (a key on the 14th for Zeabur, a padlock on the 17th for eMudhra, a robot on the 19th for the AI-agents hacker, the elephant on the 21st for PHP2Shell); mixed type top right. References: viral 7 'A Portland vlog' (collage of the things), the film's calendar (look A). Round 2: the thin serif line was the weakest text in the set at phone size, so the words are now in the heavy condensed face.",
+  "thumbnail_text": "A MONTH OF HACKS",
+  "titles": [
+    "Cybersecurity Awareness Month 2026 Went Badly for Developers",
+    "Developers Had a Rough October: PHP, Railway, OpenCode",
+    "The October 2026 Hacks Every Developer Should Know"
+  ],
+  "title": "Cybersecurity Awareness Month 2026 Went Badly for Developers",
+  "kind": "collage",
+  "text": {
+    "hd": "A month<br>of <span class=\"acc\">hacks</span>",
+    "month": "October 2026"
+  },
+  "images": {
+    "bg": "../../assets/scene/gbemi-410.0.jpg",
+    "me": "../../assets/scene/gbemi-410.0-person.png"
+  },
+  "vars": {
+    "--ground": "#16110D",
+    "--fg": "#fff",
+    "--accent": "#F2541B",
+    "--dim": "rgba(22,17,13,.42)",
+    "--sc": "1.0",
+    "--sc-x": "0px",
+    "--sc-y": "0px"
+  },
+  "scores": "cold critic R1 5.5 · R2 6 · fixes from R2 applied after scoring",
+  "recommended": false
+}

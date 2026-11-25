@@ -1,0 +1,15 @@
+{
+  "direction": "The topic huge on the research-wall green, and one literal picture of what UX research does: a generic app screen with two users' sticky-note findings stuck on it. Her calm cut-out (black and white, canary outline) bottom-left as the signature.",
+  "thumbnail_text": "UX Research",
+  "title": "What Is UX Research? Why Some Apps Are So Confusing",
+  "titles": [
+    "What Is UX Research? Why Some Apps Are So Confusing",
+    "UX Research for Beginners: What It Is and How It Works",
+    "What Is UX Research? Explained With Real App Examples"
+  ],
+  "text": { "hd": "UX<br>Research", "btn": "Pay", "n1": "Where do I tap?", "n2": "Too many steps!" },
+  "images": { "me": "../../assets/cut/gbemi-calm-steeple.png" },
+  "vars": { "--ground": "#1D3A32", "--fg": "#F4F0E6", "--accent": "#FFE15A", "--ol": "#FFE15A" },
+  "scores": "",
+  "recommended": false
+}

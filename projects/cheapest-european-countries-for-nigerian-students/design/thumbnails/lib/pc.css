@@ -1,0 +1,110 @@
+/* cheapest-european-countries thumbnails, look A "Price Check" (her pick 2026-11-02):
+   shelf grey #E4E6E3, label yellow #FFD60A, ink #121212, sticker red #E4002B (red = "costs more than it looks"), rail #2A2B2E.
+   Fonts: Sofia Sans Extra Condensed 900 (prices, big words), Sofia Sans (words), Martian Mono (small lines). */
+@font-face{font-family:"SofiaX";font-weight:100 900;font-stretch:62% 125%;src:url(../fonts/Archivo.ttf)}
+@font-face{font-family:"Sofia";font-weight:400;src:url(../fonts/InterTightRegular.ttf)}
+@font-face{font-family:"Sofia";font-weight:500;src:url(../fonts/InterTightMedium.ttf)}
+@font-face{font-family:"Sofia";font-weight:600;src:url(../fonts/InterTightSemiBold.ttf)}
+@font-face{font-family:"Sofia";font-weight:700;src:url(../fonts/InterTightBold.ttf)}
+@font-face{font-family:"Sofia";font-weight:800;src:url(../fonts/InterTightExtraBold.ttf)}
+@font-face{font-family:"Sofia";font-weight:900;src:url(../fonts/InterTightBlack.ttf)}
+@font-face{font-family:"Martian";font-weight:100 900;src:url(../fonts/DMMono-Medium.ttf)}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1280px;height:720px;overflow:hidden;background:#000}
+.t{--ground:#E4E6E3;--fg:#121212;--lab:#FFD60A;--ink:#121212;--red:#E4002B;--rail:#2A2B2E;--wash:#1d2a33;--ol:#FFD60A;
+  position:relative;width:1280px;height:720px;overflow:hidden;background:var(--ground);color:var(--fg);font-family:Sofia,sans-serif}
+.t>*{position:absolute}
+.z1{z-index:1}.z2{z-index:2}.z3{z-index:3}.z4{z-index:4}.z5{z-index:5}.z6{z-index:6}.z7{z-index:7}
+
+/* photo: her room washed in one colour, she in full colour on top (aligned person layer) */
+.bg{left:0;top:0;width:1280px;height:720px;object-fit:cover;filter:grayscale(1) contrast(var(--bg-c,1.15)) brightness(var(--bg-b,1.7))}
+.washc{left:0;top:0;width:1280px;height:720px;background:var(--wash);mix-blend-mode:multiply}
+.washs{left:0;top:0;width:1280px;height:720px;background:var(--wash);opacity:var(--wash-op,.35)}
+.person{left:0;top:0;width:1280px;height:720px;object-fit:cover}
+.nat{left:0;top:0;width:1280px;height:720px;object-fit:cover}
+.cut{bottom:0;height:520px}
+.ol{filter:drop-shadow(5px 0 0 var(--ol)) drop-shadow(-5px 0 0 var(--ol)) drop-shadow(0 5px 0 var(--ol)) drop-shadow(0 -5px 0 var(--ol))}
+.bw{filter:grayscale(1) contrast(1.08)}
+.bw.ol{filter:grayscale(1) contrast(1.08) drop-shadow(5px 0 0 var(--ol)) drop-shadow(-5px 0 0 var(--ol)) drop-shadow(0 5px 0 var(--ol)) drop-shadow(0 -5px 0 var(--ol))}
+
+/* type */
+.big{font-family:SofiaX;font-weight:900;text-transform:uppercase;line-height:.84;letter-spacing:-.005em;white-space:nowrap}
+.big .acc{color:var(--lab)} .big .r{color:var(--red)}
+.big .box{background:var(--lab);color:var(--ink);padding:0 .1em}
+.big .rbox{background:var(--red);color:#fff;padding:0 .1em}
+.words{font-family:Sofia;font-weight:900;line-height:1.02}
+.mono{font-family:Martian;font-stretch:87.5%;font-weight:600;letter-spacing:.01em}
+.serif{font-family:Gloock;font-weight:400;line-height:.95}
+.it{font-family:DMSI;font-style:italic}
+.shadow{text-shadow:0 4px 0 rgba(0,0,0,.35)}
+
+/* the shelf label (the film's main object) */
+.label{background:var(--lab);color:var(--ink);box-shadow:0 10px 0 rgba(0,0,0,.18)}
+.label .strip{background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:space-between;
+  font-family:Sofia;font-weight:900;text-transform:uppercase;letter-spacing:.02em;padding:0 22px}
+.label .kind{font-family:Sofia;font-weight:900;text-transform:uppercase;padding:14px 22px 0}
+.label .price{font-family:SofiaX;font-weight:900;line-height:.8;white-space:nowrap;padding:0 18px 18px;letter-spacing:-.01em}
+.label .price sup{color:var(--red);font-size:.62em;vertical-align:top;position:relative;top:.02em;margin-left:.02em}
+.label.redl{background:var(--red);color:#fff}
+.label .bar{position:absolute;right:20px;bottom:20px;height:70px;width:150px}
+.sticker{background:var(--red);color:#fff;font-family:Sofia;font-weight:900;line-height:1.02;padding:14px 22px}
+.sticker.y{background:var(--lab);color:var(--ink)}
+.tag{background:#fff;color:var(--ink);font-family:Martian;font-stretch:87.5%;font-weight:700;padding:8px 14px}
+
+/* rail */
+.rail{left:0;width:1280px;background:var(--rail)}
+.rail:before{content:"";position:absolute;left:0;right:0;top:0;height:8px;background:#45474B}
+
+/* flags (drawn by pc.js) */
+.flag{display:inline-block;vertical-align:middle}
+.flag svg{display:block;width:100%;height:100%}
+
+/* real page card */
+.page{background:#fff;padding:16px 18px 12px;box-shadow:0 12px 0 rgba(0,0,0,.2)}
+.page img{display:block;width:100%}
+.page .cr{font-family:Martian;font-stretch:87.5%;font-weight:600;font-size:22px;color:#55565A;margin-top:8px}
+
+/* collage */
+.obj{filter:drop-shadow(0 10px 14px rgba(0,0,0,.35))}
+.pol{background:#fff;padding:12px 12px 0;box-shadow:0 12px 24px rgba(0,0,0,.35)}
+.pol img{display:block;width:100%;object-fit:cover}
+.pol .cap{font-family:Martian;font-stretch:87.5%;font-weight:700;font-size:24px;color:var(--ink);padding:10px 2px 12px}
+.string{background:#d9d4c7;width:3px}
+
+.guides .badge{right:8px;bottom:8px;width:120px;height:36px;background:rgba(255,0,0,.5);z-index:99}
+.bg,.washc,.washs,.person,.nat{position:absolute}
+
+/* ---- 2026-11-07 her type pick: set 01 Swiss poster (inspiration/know-how/TYPE-SYSTEM.md). The old family names now load
+   Archivo (condensed, via font-stretch) / Inter Tight / DM Mono; no thick borders, no shadows, no outlines, no boxes around text. ---- */
+.big,.price,.label .price,.disp,.handle,.label .p,.rank .n,.rank .v,.label .was,.verd .vv,[style*="SofiaX"]{font-stretch:62.5% !important}
+.label,.page,.pol,.shot{box-shadow:none !important}
+.label .strip,.label .k{background:transparent !important;color:inherit !important;font-family:Martian !important;font-weight:500 !important;letter-spacing:.08em !important}
+.shadow{text-shadow:none !important}
+.ol,.bw.ol{filter:none !important}
+.bw.ol{filter:grayscale(1) contrast(1.08) !important}
+.big .box{background:none !important;color:var(--lab) !important;padding:0 !important}
+.big .rbox{background:none !important;color:var(--red) !important;padding:0 !important}
+.obj{filter:none !important}
+.verd{border-top-width:1px !important}.verd .vr{border-bottom-width:1px !important}
+.shelf:after{border-top:0 !important}
+.serif,.it{font-family:Sofia !important;font-style:normal !important;font-weight:700 !important}
+
+/* ---- 2026-11-07 (her second note): set 06 Ultra condensed + her house palette. "SofiaX" now loads League Gothic (caps), body Inter Tight,
+   labels DM Mono. Grounds: warm paper #EDE9E2 / off-black #111114. ONE accent: safety orange #FF4713, only for "costs more".
+   No label shapes: plain type on the ground. ---- */
+@font-face{font-family:"LG";src:url(../fonts/LeagueGothicRegular.ttf)}
+.big,.price,.label .price,.disp,.handle,.label .p,.rank .n,.rank .v,.label .was,.verd .vv,.was{font-family:"LG" !important;font-weight:400 !important;font-stretch:100% !important;letter-spacing:0 !important}
+.t{--ground:#EDE9E2 !important;--fg:#111114 !important;--lab:#111114 !important;--ink:#111114 !important;--red:#FF4713 !important;--rail:#111114 !important}
+.label,.label.redl{background:transparent !important;color:var(--fg) !important}
+.label.redl,.label.redl *{color:#FF4713 !important}
+.label .price sup{color:#FF4713 !important}
+.sticker,.sticker.y{background:transparent !important;color:#FF4713 !important;transform:none !important;rotate:0deg !important;padding:0 !important}
+.rail,.shelf:after{background:transparent !important;border:0 !important;height:0 !important}
+.rail:before{display:none !important}
+.barcode,.label .bar{display:none !important}
+.g-shelf{--bg:#EDE9E2 !important;--fg:#111114 !important;--acc2:#FF4713 !important}
+.g-ink{--bg:#111114 !important;--fg:#EDE9E2 !important;--acc2:#FF4713 !important;--sub:rgba(237,233,226,.84) !important;--mid:rgba(237,233,226,.6) !important}
+.g-yellow{--bg:#EDE9E2 !important;--fg:#111114 !important;--acc2:#FF4713 !important;--sub:rgba(17,17,20,.84) !important;--mid:rgba(17,17,20,.62) !important}
+.slide .label{background:transparent !important}
+.slide .label .k{color:inherit !important}
+.disp .acc{color:inherit !important}

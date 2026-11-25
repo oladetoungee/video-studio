@@ -1,0 +1,202 @@
+{
+  "_help": "Edit text here (or in the studio), then run: node shared/build.mjs linkedin (from design/carousels). Markup: *word* = the red error marker, \\n = line break. Also writes carousel.pdf for LinkedIn.",
+  "deck": "linkedin",
+  "width": 1080,
+  "height": 1350,
+  "accent": "#D4F04A",
+  "accentOnInk": "#D4F04A",
+  "docTitle": "8 edge cases that break real apps (with the real stories)",
+  "slides": [
+    {
+      "layout": "cover",
+      "ground": "accent",
+      "title": "8 edge cases that *break real apps*",
+      "size": 104,
+      "sub": "Each one is a real story, from a woman named Null to the leap day that took down part of Azure.",
+      "subSize": 40,
+      "ui": "form",
+      "fields": [
+        {
+          "label": "Surname",
+          "value": "Null",
+          "err": true,
+          "msg": "Surname is required"
+        },
+        {
+          "label": "Date",
+          "value": "29 / 02 / 2013",
+          "mono": true,
+          "err": true,
+          "msg": "Invalid date"
+        }
+      ],
+      "gap": 60
+    },
+    {
+      "layout": "punch",
+      "ground": "ink",
+      "title": "We test the form the way we hope people will use it",
+      "size": 104,
+      "body": "Real users double-click, open different tabs and lose their network halfway. I promise you, someone is going to report the edge case you never thought of."
+    },
+    {
+      "layout": "trick",
+      "ground": "accent",
+      "tag": "1 · Duplicate submission",
+      "title": "One double click, two orders",
+      "size": 96,
+      "ui": "orders",
+      "code": "POST /orders\n<b>Idempotency-Key:</b> 7f3c-9a21-…",
+      "body": "Disabling the button stops the double click. An idempotency key (a unique ID per request) also stops retries and second tabs.",
+      "button": "Place order",
+      "ordersLabel": "Orders",
+      "orders": [
+        {
+          "k": "#1041  Running shoes",
+          "v": "€40"
+        },
+        {
+          "k": "#1042  Running shoes",
+          "v": "€40",
+          "dup": true
+        }
+      ]
+    },
+    {
+      "layout": "trick",
+      "ground": "card",
+      "tag": "2 · Race condition",
+      "title": "1 left, *2 sold*",
+      "size": 104,
+      "ui": "code",
+      "code": "UPDATE products\nSET stock = stock - 1\nWHERE id = 42 <span class=\"r\">AND stock > 0</span>\n<span class=\"g\">-- 0 rows updated = sold out</span>",
+      "body": "If two requests arrive at the same time, only one of them can take the last item. The other one gets zero rows updated. In 2015 a researcher used this kind of bug to turn $15 of Starbucks gift cards into $20."
+    },
+    {
+      "layout": "trick",
+      "ground": "accent",
+      "tag": "3 · Names",
+      "title": "The name O'Brien can break your query",
+      "ui": "form",
+      "fields": [
+        {
+          "label": "Surname",
+          "value": "O'Brien",
+          "err": true,
+          "msg": "The apostrophe breaks the SQL query"
+        }
+      ],
+      "body": "The apostrophe is the character that starts and ends text in SQL. If your code glues the name straight into the query, it breaks. The BBC also wrote about Jennifer Null, whose surname gets read as empty."
+    },
+    {
+      "layout": "trick",
+      "ground": "ink",
+      "tag": "4 · NULL",
+      "title": "A licence plate that said NULL got *$12,000 in fines*",
+      "size": 84,
+      "ui": "shot",
+      "shot": {
+        "img": "wired-head.png",
+        "credit": "WIRED, Brian Barrett, 13 Aug 2019"
+      },
+      "body": "Security researcher Joseph Tartaro told the story at DEF CON in 2019. Tickets with no plate on them ended up with his name, because the system read NULL as a plate.",
+      "gap": 48
+    },
+    {
+      "layout": "trick",
+      "ground": "card",
+      "tag": "5 · Leap year",
+      "title": "29 February 2012 + 1 year = a date that doesn't exist",
+      "size": 84,
+      "ui": "form",
+      "body": "Microsoft's own summary says the code was “simply taking the current date and adding one to its year”. Creating the certificate failed, and part of Azure went down with it.",
+      "fields": [
+        {
+          "label": "Valid from",
+          "value": "29 FEB 2012",
+          "mono": true
+        },
+        {
+          "label": "Valid to",
+          "value": "29 FEB 2013",
+          "mono": true,
+          "err": true,
+          "msg": "Invalid date"
+        }
+      ]
+    },
+    {
+      "layout": "trick",
+      "ground": "accent",
+      "tag": "6 · Daylight saving time",
+      "title": "In Tallinn, 3:30 a.m. happened twice",
+      "size": 92,
+      "ui": "clocks",
+      "clocks": [
+        {
+          "k": "29 March 2026",
+          "t": "03:30",
+          "n": "never happened"
+        },
+        {
+          "k": "25 October 2026",
+          "t": "03:30",
+          "n": "happened twice",
+          "err": true
+        }
+      ],
+      "body": "In Estonia where I live, the clock changes twice a year. A job scheduled for 3:30 skips one day and runs twice on another."
+    },
+    {
+      "layout": "trick",
+      "ground": "card",
+      "tag": "7 · Unicode",
+      "title": "Adébáyọ̀ is 7 letters and 13 bytes",
+      "size": 92,
+      "ui": "bytes",
+      "fields": [
+        {
+          "label": "First name",
+          "value": "Adébáyọ̀"
+        }
+      ],
+      "counts": [
+        {
+          "k": "Letters",
+          "n": "7"
+        },
+        {
+          "k": "strlen()",
+          "n": "13",
+          "err": true
+        }
+      ],
+      "body": "In PHP, strlen counts bytes and mb_strlen counts characters. Normalise the text before you save it, too."
+    },
+    {
+      "layout": "trick",
+      "ground": "ink",
+      "tag": "8 · Hyrum's law",
+      "title": "Whatever your API does, someone *depends on it*",
+      "size": 92,
+      "ui": "quote",
+      "quote": "With a sufficient number of users of an API, it does not matter what you promise in the contract: all observable behaviors of your system will be depended on by somebody.",
+      "by": "Hyrum's law, named after Hyrum Wright",
+      "body": "If your API always returned a list in the same order, someone's code now depends on that order, even though you never promised it."
+    },
+    {
+      "layout": "end",
+      "ground": "accent",
+      "title": "Which edge case would you add?",
+      "size": 92,
+      "body": "You can't predict every single one. If you wait till you can, you probably wouldn't ship anything.",
+      "where": "Full video on YouTube",
+      "handle": "@WithGbemi",
+      "polaroid": {
+        "img": "headshot.png",
+        "caption": "Edge cases"
+      },
+      "polY": 760
+    }
+  ]
+}

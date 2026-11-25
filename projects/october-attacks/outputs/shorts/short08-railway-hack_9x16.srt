@@ -1,0 +1,67 @@
+1
+00:00:00,063 --> 00:00:02,323
+if you don't know what Railway is, Railway
+
+2
+00:00:02,323 --> 00:00:04,113
+is a deployment platform where you can
+
+3
+00:00:04,113 --> 00:00:05,053
+deploy your apps
+
+4
+00:00:05,053 --> 00:00:07,203
+so basically, Railway says someone may have
+
+5
+00:00:07,203 --> 00:00:08,823
+accessed their customers' encrypted
+
+6
+00:00:08,823 --> 00:00:10,443
+environment variables and if you're a
+
+7
+00:00:10,443 --> 00:00:12,433
+developer, you know how important it is to
+
+8
+00:00:12,433 --> 00:00:14,373
+keep your environment variables safe
+
+9
+00:00:14,373 --> 00:00:16,423
+so Railway paused deployments for a while,
+
+10
+00:00:16,423 --> 00:00:18,993
+this even affected me, and they asked their
+
+11
+00:00:18,993 --> 00:00:21,613
+users to revoke and change their API keys
+
+12
+00:00:21,613 --> 00:00:22,293
+and cloud keys
+
+13
+00:00:22,293 --> 00:00:24,363
+there's still no full details from Railway
+
+14
+00:00:24,363 --> 00:00:25,843
+on how the attack has gotten
+
+15
+00:00:25,843 --> 00:00:28,733
+they did say however, that it's part of a
+
+16
+00:00:28,733 --> 00:00:31,753
+series of attacks on platforms like theirs
+
+17
+00:00:31,753 --> 00:00:33,867
+with the goal of getting to AI companies

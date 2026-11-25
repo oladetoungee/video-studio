@@ -1,0 +1,20 @@
+{
+ "board": "pick1119-22",
+ "kind": "photo collage: your face close and alive in the middle, a laptop of code left, you on stage right, one lowercase line with a gold end",
+ "direction": "Copies pick1119-22 (I'm 45. If you're in your 30s, watch this. + 'girl, it's not too late.': the person's face close and alive in the middle, real photos either side, one lowercase line across the bottom with the last words in gold). Here: your Øredev smile in the middle, a laptop of code on the left (Pexels; the stage photo on the right was cut after cold round 2: no focal point), and the answer to the question in the title: it's not too late.",
+ "thumbnail_text": "it's not too late.",
+ "fonts": [
+  "thumbs-18 Montserrat ExtraBold (white #FFFFFF + yellow-gold #F6C343 key words, as Thumbnails 162)"
+ ],
+ "colours": "thumbs-18 (#FFFFFF, #F6C343; there on #3A3D3A, here on photos)",
+ "text": {
+  "hd": "it's not <span class=\"g\">too late.</span>"
+ },
+ "images": {
+  "face": "../../assets/oredev/55642240014.jpg",
+  "left": "../../assets/pexels/laptop-574069.jpg",
+  "right": ""
+ },
+ "vars": {},
+ "class": "no-lift"
+}

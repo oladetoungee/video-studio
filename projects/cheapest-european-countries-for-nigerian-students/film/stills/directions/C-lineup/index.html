@@ -1,0 +1,108 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../_shared/fonts.css">
+<style>
+:root{--bg:#1B1C1F;--chalk:#EDEBE4;--dim:rgba(237,235,228,.16);--mint:#2EE59D;--ink:#121212}
+#stage{background:var(--bg);font-family:Franklin,sans-serif;color:var(--chalk)}
+.ln{position:absolute;left:0;height:2px;background:var(--dim)}.ln.maj{height:3px;background:rgba(237,235,228,.42)}
+.tick{position:absolute;font-family:League;font-size:46px;color:rgba(237,235,228,.75);line-height:1}
+.col{position:absolute;bottom:0;border:4px solid var(--chalk);border-bottom:0}
+.col.mint{background:var(--mint);border-color:var(--mint)}
+.val{position:absolute;font-family:League;line-height:.9;white-space:nowrap;text-align:center}
+.nm{position:absolute;font-family:OverMono;font-weight:600;letter-spacing:.06em;text-transform:uppercase;text-align:center;white-space:nowrap}
+.mono{font-family:OverMono;font-weight:500}
+.card{position:absolute;background:#fff;padding:16px 16px 12px}
+.cred{font-family:OverMono;font-weight:500;font-size:24px;color:#55565A;margin-top:10px}
+.serif{font-family:Gloock;line-height:1.02}
+.box{background:#000;color:#fff;font-family:Franklin;font-weight:600;padding:.12em .4em;border-radius:10px;display:inline-block}
+.photo{position:absolute;overflow:hidden}.photo img{width:100%;height:100%;object-fit:cover}
+</style></head><body><div id="stage"></div>
+<script src="../_shared/lib.js"></script><script src="../_shared/kit.js"></script><script src="../_shared/rcpt.js"></script>
+<script>
+const W = +Q.get('w') || 1920, H = +Q.get('h') || 1080; const S = $('#stage'); st(S, { width: W + 'px', height: H + 'px' });
+// height chart: floor at y0 (px from top), top at y1, max euros, step for majors
+function chart(x0, x1, y0, y1, max, step, lab = true) {
+  let h = ''; const minor = step / 2;
+  for (let v = 0; v <= max + 1; v += minor) { const y = y0 - (y0 - y1) * v / max; const maj = Math.abs(v / step - Math.round(v / step)) < 1e-6;
+    h += `<div class="ln ${maj ? 'maj' : ''}" style="left:${x0}px;width:${x1 - x0}px;top:${y}px"></div>`;
+    if (maj && lab) h += `<div class="tick" style="left:${x0 - 150}px;width:132px;text-align:right;top:${y - 22}px">${v ? '€' + (v / 1000) + 'k' : '€0'}</div>`; }
+  return h;
+}
+// a column standing on the floor; value label above, name + flag under the floor
+function col(cx, w, y0, y1, max, v, c, name, label, o = {}) {
+  const hh = (y0 - y1) * Math.min(v, max * 1.08) / max * (o.k ?? 1);
+  return `<div class="col ${o.mint ? 'mint' : ''}" data-v="${v}" style="left:${cx - w / 2}px;width:${w}px;height:${hh}px;top:${y0 - hh}px;bottom:auto"></div>
+    <div class="val" style="left:${cx - 200}px;width:400px;top:${y0 - hh - (o.vs || 76) - 14}px;font-size:${o.vs || 76}px;color:${o.mint ? 'var(--mint)' : 'var(--chalk)'};opacity:${o.k === 0 ? 0 : 1}">${label}</div>
+    <div style="position:absolute;left:${cx - (o.fw || 54) / 2}px;top:${y0 + 18}px">${flag(c, o.fw || 54)}</div>
+    <div class="nm" style="left:${cx - 160}px;width:320px;top:${y0 + 18 + (o.fw || 54) * .67 + 10}px;font-size:${o.ns || 30}px">${name}</div>`;
+}
+const TUW = () => receipt('tuw', [350, 288, 900, 36], 1100, [[780, 300, 56, 20]]);
+const scenes = {
+  c1: () => { const y0 = 860, y1 = 150, M = 20000, xs = [380, 590, 800, 1010, 1220, 1430, 1660];
+    return chart(240, 1840, y0, y1, M, 4000) + `<div style="position:absolute;left:240px;right:80px;top:${y0}px;height:5px;background:var(--chalk)"></div>` +
+    col(xs[0], 150, y0, y1, M, 10177, 'AT', 'Austria*', '€10,177', { mint: 1 }) +
+    col(xs[1], 150, y0, y1, M, 10180, 'IT', 'Italy*', '€10,180+', { mint: 1 }) +
+    col(xs[2], 150, y0, y1, M, 11904, 'DE', 'Germany', '€11,904') +
+    col(xs[3], 150, y0, y1, M, 14480, 'FR', 'France', '€14,480') +
+    col(xs[4], 150, y0, y1, M, 14560, 'EE', 'Estonia', '€14,560') +
+    col(xs[5], 150, y0, y1, M, 19600, 'FI', 'Finland', '€19,600') +
+    `<div class="col" style="left:${xs[6] - 75}px;width:150px;top:40px;height:${y0 - 40}px;bottom:auto;border-style:dashed;border-top:0"></div>
+     
+     <div class="val" style="left:${xs[6] - 100}px;width:200px;top:70px;font-size:60px">NOK<br>374k</div><div class="mono" style="position:absolute;left:${xs[6] - 70}px;width:140px;text-align:center;top:200px;font-size:26px;line-height:1.2">kroner,<br>off the<br>scale</div>
+     <div style="position:absolute;left:${xs[6] - 27}px;top:${y0 + 18}px">${flag('NO', 54)}</div><div class="nm" style="left:${xs[6] - 160}px;width:320px;top:${y0 + 64}px;font-size:30px">Norway</div>
+     <div class="mono" style="position:absolute;left:60px;top:40px;font-size:34px;font-weight:600;letter-spacing:.04em">FIRST YEAR: TUITION + ONE YEAR OF PROOF OF FUNDS</div>
+     <div class="mono" style="position:absolute;left:60px;top:980px;font-size:38px;opacity:.9">*Austria under 24, Italy plus an income-based fee · 2 Nov 2026</div>`; },
+  c2: () => `
+   <div class="photo" style="left:0;top:0;width:${W}px;height:${H}px"><img src="../_src/pexels/paris.jpg" style="object-position:50% 40%"></div>
+   <div style="position:absolute;left:0;top:0;width:820px;height:${H}px;background:var(--bg)"></div>
+   <div class="serif" style="position:absolute;left:110px;top:250px;font-size:96px;width:680px">“If you’re schooling in a city like Paris, rent is gonna <span style="color:var(--mint)">choke</span> you.”</div>
+   <div class="mono" style="position:absolute;left:114px;top:800px;font-size:42px;width:660px;line-height:1.3">Rent comes on top of tuition and proof of funds.</div>
+   <div class="mono" style="position:absolute;right:24px;bottom:20px;font-size:22px;color:#fff">Photo: Kenrick Baksh / Pexels</div>`,
+  c3: () => { const y0 = 900, y1 = 170, M = 20000;
+    return chart(380, 1500, y0, y1, M, 4000) + `<div style="position:absolute;left:380px;width:1120px;top:${y0}px;height:5px;background:var(--chalk)"></div>` +
+    col(700, 260, y0, y1, M, 10177, 'AT', 'Under 24', '€10,177', { mint: 1, vs: 96, ns: 36 }) +
+    col(1180, 260, y0, y1, M, 17206, 'AT', '24 and over', '€17,206', { vs: 96, ns: 36 }) +
+    `<div class="serif" style="position:absolute;left:1560px;top:300px;font-size:96px;width:340px;color:var(--mint)">+€7,029</div>
+     <div class="mono" style="position:absolute;left:1562px;top:440px;font-size:30px;width:330px;line-height:1.35;opacity:.85">the difference for the first year: same fees, proof of funds by age</div>
+     <div class="mono" style="position:absolute;left:60px;top:40px;font-size:34px;font-weight:600;letter-spacing:.04em">AUSTRIA · FIRST YEAR</div>`; },
+  c4: () => `
+   ${chart(0, W, 1040, 40, 20, 4, false)}
+   <div style="position:absolute;left:110px;top:130px"><span class="box" style="font-size:52px;background:var(--mint);color:var(--ink)">Correction</span></div>
+   <div class="mono" style="position:absolute;left:114px;top:260px;font-size:36px;font-weight:600;letter-spacing:.04em">AUSTRIA · FEES FOR A YEAR, NON-EU STUDENTS</div>
+   <div class="val" style="left:100px;top:320px;font-size:330px;text-align:left">€1,505.84</div>
+   <div style="position:absolute;left:114px;top:640px;font-size:46px;font-weight:500;line-height:1.3;width:1400px">Tuition €726.72 + student union fee €26.20, each semester: about €1,506 a year in total.</div>
+   <div class="card" style="left:560px;top:880px;transform:rotate(-1deg)">${TUW()}<div class="cred">tuwien.at · 2 Nov 2026</div></div>`,
+  p1: () => { const y0 = 1640, y1 = 720, M = 20000, xs = [190, 365, 540, 715, 890];
+    return `<div style="position:absolute;left:0;right:0;top:170px;text-align:center;line-height:1.5">
+      <span class="box" style="font-size:50px">Cost of studying in Europe</span><br><span class="box" style="font-size:64px;font-weight:700">Which country is cheapest?</span><br><span class="box" style="font-size:46px">(Part 9)</span></div>` +
+    chart(120, 1000, y0, y1, M, 5000, false) + `<div style="position:absolute;left:80px;width:940px;top:${y0}px;height:5px;background:var(--chalk)"></div>` +
+    col(xs[0], 130, y0, y1, M, 10177, 'AT', 'AT*', '€10.2k', { mint: 1, vs: 64 }) + col(xs[1], 130, y0, y1, M, 10180, 'IT', 'IT', '€10.2k+', { vs: 64 }) +
+    col(xs[2], 130, y0, y1, M, 11904, 'DE', 'DE', '€11.9k', { vs: 64 }) + col(xs[3], 130, y0, y1, M, 14480, 'FR', 'FR', '€14.5k', { vs: 64 }) +
+    col(xs[4], 130, y0, y1, M, 19600, 'FI', 'FI', '€19.6k', { vs: 64 }) +
+    `<div class="mono" style="position:absolute;left:80px;top:1800px;font-size:30px;opacity:.8">*under 24 · first year, starting numbers</div>`; },
+  p2: () => { const y0 = 1600, y1 = 1060, M = 8000;
+    return `<div class="photo" style="left:0;top:0;width:${W}px;height:620px"><img src="../_src/pexels/tallinn-street.jpg"></div>
+    <div class="mono" style="position:absolute;left:24px;top:578px;font-size:22px;color:#fff">Photo: Argo Allvee / Pexels</div>
+    <div class="serif" style="position:absolute;left:70px;top:670px;font-size:88px;width:940px">“I’m paying <span style="color:var(--mint)">6,000 euros</span> a year.”</div>` +
+    chart(110, 1000, y0, y1, M, 2000, false) + `<div style="position:absolute;left:80px;width:940px;top:${y0}px;height:5px;background:var(--chalk)"></div>` +
+    col(330, 240, y0, y1, M, 6000, 'EE', 'My fee', '€6,000', { vs: 84, ns: 34 }) + col(760, 240, y0, y1, M, 7000, 'EE', 'New non-EU', '€7,000', { mint: 1, vs: 84, ns: 34 }) +
+    `<div class="mono" style="position:absolute;left:80px;top:1790px;font-size:30px;width:920px;line-height:1.35;opacity:.8">Tallinn University, HCI master’s, a year</div>`; },
+};
+// ---- motion test: raw 435.6 - 444.6 (Austria, your age matters) ----
+function seekT(t) {
+  const y0 = 900, y1 = 170, M = 20000;
+  const k1 = P(t, 440.32, 0.7, E.outQuint), k2 = P(t, 443.6, 1.6, E.outCubic);
+  S.innerHTML = `<div id="world" style="position:absolute;inset:0;transform-origin:50% 80%">` + chart(380, 1500, y0, y1, M, 4000) + `<div style="position:absolute;left:380px;width:1120px;top:${y0}px;height:5px;background:var(--chalk)"></div>` +
+    col(700, 260, y0, y1, M, 10177, 'AT', 'Under 24', '€722.58 a month', { mint: 1, vs: 64, ns: 36, k: k1 }) +
+    col(1180, 260, y0, y1, M, 17206, 'AT', '24 and over', '', { vs: 64, ns: 36, k: k2 }) +
+    `<div class="mono" style="position:absolute;left:60px;top:40px;font-size:34px;font-weight:600;letter-spacing:.04em">AUSTRIA · PROOF OF FUNDS</div>
+     <div class="serif" id="age" style="position:absolute;left:1560px;top:300px;font-size:110px;width:330px">your<br><span style="color:var(--mint)">age</span></div></div>`;
+  const nm = $$('.nm'); nm[0].style.opacity = P(t, 438.16, .3); nm[1].style.opacity = P(t, 443.6, .3);
+  $$('.val')[0].style.opacity = P(t, 440.5, .25); $('#age').style.opacity = P(t, 435.93, .35);
+  enter('#age', P(t, 435.93, .45, E.outQuint), 40, 0, 6);
+  $$('.col').forEach((c, i) => { const k = i ? k2 : k1; c.style.opacity = k > 0.002 ? 1 : 0; });
+  $('#world').style.transform = `scale(${1 + 0.035 * P(t, 435.6, 9, E.inOutQuart)})`;
+}
+window.seek = async t => { seekT(t); await imagesReady(); };
+window.show = async n => { if (n[0] === "t") { delete S.dataset.sc; seekT(+n.slice(1)); await imagesReady(); return; } S.innerHTML = scenes[n](); await imagesReady(); };
+imagesReady().then(() => window.READY = true);
+</script></body></html>

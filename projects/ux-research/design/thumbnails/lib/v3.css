@@ -1,0 +1,80 @@
+/* ux-research thumbnails, set 3 (2026-10-16). A MIX, not a formula: her photo as the scene, collage over her photo,
+   flat graphic ideas, and a few others. Every option has its own layout and type.
+   Photo options: .scene holds two images of the SAME frame, the graded room (data-img="bg") and her person cut-out
+   (data-img="cut", same size, aligned), so text can sit between them (behind her head). Swap both together.
+   Crop: --sw (scene width), --sx / --sy (offset). Grade: --bgb / --bgs (room brightness / saturation), --meb / --mes (her).
+   Editable: text in content.json "text", photos in "images", colours in "vars", moves in "nudge" (lib/bind.js).
+   Every screen, card and badge is generic (no real brand). No "Illustration" stamps (her rule 2026-10-14). */
+@font-face { font-family: 'Grot'; src: url('../fonts/SchibstedGrotesk.ttf') format('truetype'); font-weight: 400 900; }
+@font-face { font-family: 'Brico'; src: url('../fonts/BricolageGrotesque.ttf') format('truetype'); font-weight: 200 800; }
+@font-face { font-family: 'Anton'; src: url('../fonts/Anton-Regular.ttf') format('truetype'); }
+@font-face { font-family: 'ArchBlack'; src: url('../fonts/ArchivoBlack-Regular.ttf') format('truetype'); }
+@font-face { font-family: 'Archivo'; src: url('../fonts/Archivo.ttf') format('truetype'); font-weight: 100 900; }
+@font-face { font-family: 'Serif'; src: url('../fonts/InstrumentSerif-Regular.ttf') format('truetype'); }
+@font-face { font-family: 'SerifIt'; src: url('../fonts/InstrumentSerif-Italic.ttf') format('truetype'); }
+@font-face { font-family: 'Play'; src: url('../fonts/PlayfairDisplay.ttf') format('truetype'); font-weight: 400 900; }
+@font-face { font-family: 'PlayIt'; src: url('../fonts/PlayfairDisplay-Italic.ttf') format('truetype'); font-weight: 400 900; }
+@font-face { font-family: 'Young'; src: url('../fonts/YoungSerif-Regular.ttf') format('truetype'); }
+@font-face { font-family: 'Marker'; src: url('../fonts/PermanentMarker-Regular.ttf') format('truetype'); }
+@font-face { font-family: 'Caveat'; src: url('../fonts/Caveat.ttf') format('truetype'); font-weight: 400 700; }
+@font-face { font-family: 'Mono'; src: url('../fonts/DMMono-Medium.ttf') format('truetype'); }
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1280px; height: 720px; overflow: hidden; background: #111; }
+.t { position: relative; width: 1280px; height: 720px; overflow: hidden; background: var(--ground, #111114); color: var(--fg, #fff); }
+.guides .badge { position: absolute; right: 10px; bottom: 10px; width: 150px; height: 70px; border: 3px dashed #f0f; z-index: 99; }
+.z1 { z-index: 1; } .z2 { z-index: 2; } .z3 { z-index: 3; } .z4 { z-index: 4; } .z5 { z-index: 5; } .z6 { z-index: 6; }
+.abs { position: absolute; }
+
+/* her photo as the scene */
+.scene { position: absolute; left: var(--sx, 0px); top: var(--sy, 0px); width: var(--sw, 1280px); aspect-ratio: 16 / 9; }
+.scene img { position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: block; }
+.scene .bg { z-index: 1; filter: brightness(var(--bgb, 1)) saturate(var(--bgs, 1)) contrast(var(--bgc, 1)) grayscale(var(--gs, 0)); }
+.scene .cut { z-index: 3; filter: brightness(var(--meb, 1.04)) saturate(var(--mes, 1.04)) contrast(var(--mec, 1.02)) grayscale(var(--gs, 0)); }
+.scene .mid { position: absolute; z-index: 2; }            /* text placed behind her (between room and cut-out) */
+.wash { position: absolute; inset: 0; z-index: 1; background: var(--wash, transparent); pointer-events: none; }
+
+/* type */
+.hd { position: absolute; white-space: nowrap; line-height: .9; }
+.grot { font-family: 'Grot', sans-serif; font-weight: 900; letter-spacing: -0.045em; }
+.brico { font-family: 'Brico', sans-serif; font-weight: 800; letter-spacing: -0.04em; }
+.anton { font-family: 'Anton', sans-serif; letter-spacing: -0.01em; text-transform: uppercase; }
+.arch { font-family: 'ArchBlack', sans-serif; letter-spacing: -0.03em; }
+.serif { font-family: 'Serif', serif; letter-spacing: -0.02em; }
+.serifit, .it { font-family: 'SerifIt', serif; font-style: normal; letter-spacing: -0.02em; }
+.play { font-family: 'Play', serif; font-weight: 800; letter-spacing: -0.03em; }
+.playit { font-family: 'PlayIt', serif; font-weight: 600; letter-spacing: -0.02em; }
+.young { font-family: 'Young', serif; letter-spacing: -0.03em; }
+.marker { font-family: 'Marker', cursive; line-height: 1; }
+.hand { font-family: 'Caveat', cursive; font-weight: 700; line-height: 1; }
+.mono { font-family: 'Mono', monospace; letter-spacing: .02em; }
+.acc { color: var(--accent); }
+.hl { background: var(--hlb, var(--accent)); color: var(--hlc, #111); padding: 0 .12em; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+.shadow { text-shadow: 0 3px 18px rgba(0,0,0,.35); }
+
+/* sticky note (paper: a faint fibre noise + a curl shadow, no glow) */
+.note { position: absolute; width: var(--s, 230px); height: var(--s, 230px); background: var(--nb, #FFE15A); color: #17140F;
+  font-family: 'Marker', cursive; font-size: var(--fs, 40px); line-height: 1.05; display: flex; align-items: center; justify-content: center;
+  text-align: center; padding: 20px; box-shadow: 0 16px 26px rgba(0,0,0,.28), 0 2px 3px rgba(0,0,0,.18); }
+.note::after { content: ''; position: absolute; inset: 0; background: linear-gradient(170deg, rgba(255,255,255,.18), rgba(0,0,0,0) 40%, rgba(0,0,0,.07)); pointer-events: none; }
+.tape { position: absolute; width: 110px; height: 34px; background: rgba(240,236,222,.82); box-shadow: 0 2px 4px rgba(0,0,0,.15); }
+
+/* generic phone */
+.phone { position: absolute; width: var(--pw, 300px); height: var(--ph, 600px); border-radius: 44px; background: #121316; padding: 11px;
+  box-shadow: 0 26px 44px rgba(0,0,0,.38); }
+.phone .scr { position: relative; width: 100%; height: 100%; border-radius: 34px; background: var(--scr, #FFFDF6); overflow: hidden; color: #17140F; }
+.phone .isl { position: absolute; top: 12px; left: 50%; width: 76px; height: 22px; margin-left: -38px; border-radius: 11px; background: #121316; z-index: 5; }
+.bar { position: absolute; height: var(--bh, 20px); border-radius: 10px; background: var(--bc, #DDD8CC); }
+.btn { position: absolute; border-radius: 16px; background: var(--btn, #17140F); color: #fff; font: 800 30px/1 'Archivo', sans-serif;
+  display: flex; align-items: center; justify-content: center; }
+
+/* card / paper */
+.card { position: absolute; background: var(--cb, #FFFDF6); color: #17140F; border-radius: 10px; box-shadow: 0 18px 32px rgba(0,0,0,.30); }
+.prop { position: absolute; display: block; filter: drop-shadow(0 18px 22px rgba(0,0,0,.32)); }
+
+svg.draw { position: absolute; left: 0; top: 0; overflow: visible; pointer-events: none; }
+
+/* round 2 (2026-10-16): paper label strips for collages (readable at 320 px: >= 40 px, dark on paper) */
+.strip { position: absolute; background: #FFFDF6; color: #17140F; font: 800 42px/1 'Archivo', sans-serif; letter-spacing: -.01em;
+  padding: 12px 20px 14px; box-shadow: 0 10px 18px rgba(0,0,0,.25); white-space: nowrap; }
+.strip.y { background: #FFE15A; } .strip.k { background: #17140F; color: #FFFDF6; }

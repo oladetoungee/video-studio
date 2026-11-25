@@ -1,0 +1,22 @@
+{
+  "direction": "One huge line of real SQL, WHERE title LIKE '%fall%', the first % ringed red (a leading wildcard, so a normal B-tree index cannot help). Her hands open, \"why?\". Round 2: the code sits below her face (round 1 covered her eyes), ring centred on the %. Round 3: code lifted 30 px.",
+  "concept": "T20",
+  "thumbnail_text": "Why your index gets ignored",
+  "title": "Database Index Mistakes (and How to Check with EXPLAIN)",
+  "titles": [
+    "Database Index Mistakes (and How to Check with EXPLAIN)",
+    "Why Your Database Ignores Your Index (2 Common Mistakes)",
+    "2 Database Index Mistakes (and a Postgres Gotcha)"
+  ],
+  "text": {
+    "a": "Why your index",
+    "b": "gets <span class=\"markr\">ignored</span>",
+    "c": "WHERE title LIKE '<span class=\"pc\">%</span>fall%'"
+  },
+  "images": {
+    "scene": "../../assets/scene/f_38.6.jpg"
+  },
+  "frame": "0:38.6 (hands open: why?, mouth closed)",
+  "vars": {},
+  "scores": "final gate (round 4): A topic/click 4/6 · B pair 7 · C taste 6"
+}

@@ -1,0 +1,112 @@
+/* scholarships-for-african-students-in-europe thumbnails (2026-11-02). Her pick: B "Now Boarding" (a departures board for the
+   2027 intake) + C's city photos. Graphite #1B1D21, flap tiles #0E0F11 with a split line, letters #F3F0E8, closed rows grey
+   #7A7F87, signal green #2FD27A (only ever "you can still apply" / money). Barlow Condensed (flaps, headlines), Barlow, DM Mono
+   labels, Instrument Serif italic for one accent word, Caveat for hand notes.
+   Editable: text in content.json "text" (a .flaps element turns each letter into a tile; <span class="acc"> = green tiles),
+   photos in "images", colours in "vars" (--ground, --fg, --accent, --wash), moves in "nudge" (lib/bind.js). */
+/* type set 06 Ultra condensed (her pick 2026-11-07, TYPE-SYSTEM.md): League Gothic headlines + Inter Tight body. The old family NAMES are kept as aliases so every direction re-types at once. */
+@font-face { font-family: 'BarlowC'; src: url('../fonts/LeagueGothicRegular.ttf') format('truetype'); font-weight: 500; }
+@font-face { font-family: 'BarlowC'; src: url('../fonts/LeagueGothicRegular.ttf') format('truetype'); font-weight: 600; }
+@font-face { font-family: 'BarlowC'; src: url('../fonts/LeagueGothicRegular.ttf') format('truetype'); font-weight: 800; }
+@font-face { font-family: 'Barlow'; src: url('../fonts/InterTightMedium.ttf') format('truetype'); font-weight: 400 600; }
+@font-face { font-family: 'Serif'; src: url('../fonts/InterTightSemiBold.ttf') format('truetype'); font-style: normal; }
+@font-face { font-family: 'Serif'; src: url('../fonts/InterTightSemiBold.ttf') format('truetype'); font-style: italic; }
+@font-face { font-family: 'SerifR'; src: url('../fonts/InterTightSemiBold.ttf') format('truetype'); font-style: normal; }
+@font-face { font-family: 'SerifR'; src: url('../fonts/InterTightSemiBold.ttf') format('truetype'); font-style: italic; }
+@font-face { font-family: 'Hand'; src: url('../fonts/InterTightSemiBold.ttf') format('truetype'); font-style: normal; }
+@font-face { font-family: 'Hand'; src: url('../fonts/InterTightSemiBold.ttf') format('truetype'); font-style: italic; }
+@font-face { font-family: 'Mono'; src: url('../fonts/DMMono-Medium.ttf') format('truetype'); font-weight: 500; }
+
+:root { --graphite: #1B1D21; --tile: #0E0F11; --split: #2A2D33; --let: #F3F0E8; --dimc: #7A7F87; --go: #2FD27A; --card: #F3F0E8; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1280px; height: 720px; overflow: hidden; background: #111; }
+.t { position: relative; width: 1280px; height: 720px; overflow: hidden; background: var(--ground, #1B1D21); color: var(--fg, #F3F0E8); font-family: 'Barlow', sans-serif; }
+.guides .badge { position: absolute; right: 10px; bottom: 10px; width: 150px; height: 70px; border: 3px dashed #f0f; z-index: 99; }
+.z1 { z-index: 1; } .z2 { z-index: 2; } .z3 { z-index: 3; } .z4 { z-index: 4; } .z5 { z-index: 5; } .z6 { z-index: 6; }
+.abs { position: absolute; }
+
+/* headline: heavy condensed caps, huge */
+.hd { position: absolute; font-family: 'BarlowC', sans-serif; font-weight: 800; text-transform: uppercase; line-height: .86; letter-spacing: -.005em; white-space: nowrap; color: var(--fg, #F3F0E8); }
+.acc { color: var(--accent, #2FD27A); }
+.hl { background: var(--accent, #2FD27A); color: #0E0F11; padding: 0 .1em; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+.serif { font-family: 'Serif', serif; font-style: italic; font-weight: 400; text-transform: none; letter-spacing: -0.01em; }
+.mono { font-family: 'Mono', monospace; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; }
+.hand { font-family: 'Hand', cursive; font-weight: 700; }
+.dimt { color: var(--dimc); }
+.shadow-t { text-shadow: 0 8px 28px rgba(0,0,0,.45); }
+.outline-t { -webkit-text-stroke: 0; text-shadow: 0 2px 18px rgba(0,0,0,.55); }
+
+/* split-flap row: every letter is a tile (lib/flaps.js builds the tiles from the text) */
+.flaps { position: absolute; display: flex; gap: var(--gap, 5px); white-space: nowrap; font-family: 'BarlowC', sans-serif; font-weight: 600; text-transform: uppercase; color: var(--let); }
+.flaps i { position: relative; display: flex; align-items: center; justify-content: center; font-style: normal; width: var(--cw, 40px); height: var(--ch, 64px); font-size: var(--fs, 46px); line-height: 1; background: var(--tile); border-radius: 4px; overflow: hidden; box-shadow: inset 0 -2px 0 rgba(255,255,255,.04); }
+.flaps i:after { content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 2px; background: var(--split); }
+.flaps i.go { color: var(--go); } .flaps i.dim { color: var(--dimc); } .flaps i.sp { background: rgba(14,15,17,.72); }
+.flaps.dim i { color: var(--dimc); } .flaps.go i { color: var(--go); }
+.flaps.bare i.sp { background: transparent; } .flaps.bare i.sp:after { display: none; }
+
+/* a board panel (rows of flaps on graphite) */
+.board { position: absolute; background: var(--graphite); border-radius: 10px; box-shadow: 0 26px 50px rgba(0,0,0,.5); }
+.board .lab { position: absolute; font: 500 22px/1 'Mono', monospace; letter-spacing: .1em; color: var(--dimc); text-transform: uppercase; }
+
+/* photo of her: room washed in one colour, she in colour on top (her ux-research method). Never flipped. */
+.scene { position: absolute; left: 0; top: 0; width: 1280px; height: 720px; transform-origin: var(--sc-o, 50% 0%); scale: var(--sc, 1); translate: var(--sc-x, 0px) var(--sc-y, 0px); }
+.scene img { position: absolute; left: 0; top: 0; width: 1280px; height: 720px; display: block; }
+.scene .bg { filter: grayscale(1) contrast(1.05) brightness(var(--bgb, .9)); }
+.scene .wash { position: absolute; inset: 0; background: var(--wash, #2B3A4A); mix-blend-mode: multiply; }
+.scene .dim { position: absolute; inset: 0; background: var(--dim, rgba(14,15,17,.2)); }
+.scene .me-c { filter: brightness(var(--meb, 1.14)) contrast(1.05) saturate(.95); }
+.scene.nat .bg { filter: brightness(var(--bgb, 1.1)) saturate(.9) contrast(1.03); }
+.scene.nat .wash { display: none; }
+
+/* a cut-out of her standing on the bottom edge */
+.cut { position: absolute; bottom: 0; display: block; filter: none; }   /* her new photos (2026-11-07) are lit already */
+.cut.ol { filter: none; }   /* no sticker outline (her rule 2026-11-07) */
+.cut.bw { filter: grayscale(1) contrast(1.08); }
+
+/* boarding pass (cream card) */
+.pass { position: absolute; background: var(--card); color: #16181B; border-radius: 16px; overflow: hidden; box-shadow: 0 24px 46px rgba(0,0,0,.45); }
+.pass .top { position: absolute; left: 0; right: 0; top: 0; background: var(--go); color: #0E0F11; font: 800 34px/1 'BarlowC'; text-transform: uppercase; padding: 14px 24px; letter-spacing: .01em; }
+.pass .top.grey { background: #2B2E33; color: #F3F0E8; }
+.pass .k { font: 500 17px/1 'Mono'; letter-spacing: .1em; color: #6A6760; text-transform: uppercase; }
+.pass .v { font: 600 40px/1 'BarlowC'; text-transform: uppercase; color: #16181B; margin-top: 6px; }
+.pass .perf { position: absolute; top: 0; bottom: 0; border-left: 1px dashed #B9B4A8; }
+.pass .bars { position: absolute; height: 54px; background: repeating-linear-gradient(90deg, #16181B 0 3px, transparent 3px 6px, #16181B 6px 7px, transparent 7px 11px, #16181B 11px 15px, transparent 15px 17px); }
+
+/* a card / letter */
+.card { position: absolute; background: #FBF9F4; color: #16181B; border-radius: 6px; box-shadow: 0 22px 44px rgba(0,0,0,.45); }
+/* a real official page crop: never altered, a small source line under it */
+.clip { position: absolute; background: #fff; padding: 10px; box-shadow: 0 20px 40px rgba(0,0,0,.45); }
+.clip img { display: block; width: 100%; }
+.clip .cr { position: absolute; left: 0; top: 100%; margin-top: 8px; font: 500 16px/1 'Mono', monospace; letter-spacing: .06em; color: var(--crc, #9AA0A8); text-transform: uppercase; white-space: nowrap; }
+.mark { position: absolute; background: rgba(47,210,122,.45); mix-blend-mode: multiply; }
+
+/* polaroid city photo (collage) */
+.pol { position: absolute; background: #FBF9F4; padding: 10px 10px 0; box-shadow: 0 16px 30px rgba(0,0,0,.45); }
+.pol img { display: block; width: 100%; object-fit: cover; }
+.pol .cap { font: 500 20px/1 'Mono'; letter-spacing: .08em; color: #16181B; padding: 10px 2px 12px; text-transform: uppercase; white-space: nowrap; }
+.obj { position: absolute; display: block; filter: drop-shadow(0 14px 18px rgba(0,0,0,.45)); }
+.lab { position: absolute; font: 500 24px/1 'Mono', monospace; letter-spacing: .06em; color: #F3F0E8; background: rgba(14,15,17,.86); padding: 9px 13px; white-space: nowrap; text-transform: uppercase; }
+.pic { position: absolute; display: block; object-fit: cover; }
+svg.draw { position: absolute; left: 0; top: 0; overflow: visible; }
+
+/* 2026-11-07 (her type rules: no boxes around letters): the "flap" words are plain League Gothic words now, no tile per letter */
+.flaps { gap: 0 !important; }
+.flaps i { width: auto !important; background: transparent !important; border-radius: 0 !important; letter-spacing: .02em; }
+.flaps i:after { display: none !important; }
+.flaps i.sp { width: .32em !important; }
+.flaps { color: inherit !important; } .flaps i:not(.go):not(.dim) { color: inherit !important; opacity: 1 !important; }
+
+/* 2026-11-10 set: her shoot photos (Enhance photo, no extra light on her) */
+.t.no-lift .scene .me-c, .t.no-lift .cut { filter: none; }
+.room { position: absolute; width: var(--rw, 1500px); left: var(--rx, 0px); top: var(--ry, 0px); display: block; }
+.room.gr { filter: grayscale(1) brightness(var(--bgb, .95)) contrast(1.02); }
+.washl { position: absolute; inset: 0; background: var(--wash, #2B3A4A); mix-blend-mode: multiply; }
+.shd { text-shadow: 0 2px 6px rgba(0,0,0,.55), 0 6px 34px rgba(0,0,0,.65); }
+/* bold colour + a quiet same-hue pattern (THUMBNAIL-STUDY §7): static fine diagonal lines a few % darker */
+.pat { background-color: var(--ground); background-image: repeating-linear-gradient(135deg, rgba(0,0,0,var(--pa, .045)) 0 2px, transparent 2px 11px); }
+.pat-h { background-color: var(--ground); background-image: radial-gradient(rgba(0,0,0,var(--pa, .06)) 1.4px, transparent 1.6px); background-size: 10px 10px; }
+@font-face { font-family: 'IT'; src: url('../fonts/InterTightSemiBold.ttf') format('truetype'); font-weight: 600; }
+@font-face { font-family: 'IT'; src: url('../fonts/InterTightBold.ttf') format('truetype'); font-weight: 700; }
+@font-face { font-family: 'IT'; src: url('../fonts/InterTightExtraBold.ttf') format('truetype'); font-weight: 800 900; }
+.lg { font-family: 'BarlowC', sans-serif; font-weight: 800; text-transform: uppercase; line-height: .86; white-space: nowrap; }
+.it { font-family: 'IT', sans-serif; font-weight: 800; letter-spacing: -.025em; }

@@ -1,0 +1,22 @@
+{
+  "direction": "Flat graphic on the minimum-data idea: the full record crossed out vs a single yes/no answer (illustration)",
+  "title": "Marriage Records Should Say Yes or No, Not Your Whole Story",
+  "titles": [
+    "Marriage Records Should Say Yes or No, Not Your Whole Story",
+    "How Ghana's Marriage Registry Could Protect Privacy",
+    "A Better Design for Ghana's Public Marriage Records"
+  ],
+  "text": {
+    "line1": "why show",
+    "line2": "everything?",
+    "f1": "Spouse",
+    "f2": "Wedding date",
+    "f3": "Divorce",
+    "f4": "Court",
+    "q": "Currently married?",
+    "a": "<b>Yes.</b>",
+    "label": "Illustration"
+  },
+  "images": {},
+  "vars": {}
+}

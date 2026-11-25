@@ -1,0 +1,30 @@
+{
+  "text": {
+    "h": "work + study week",
+    "small": ""
+  },
+  "images": {
+    "a": "../../assets/p1119/lectern.jpg",
+    "b": "../../assets/px/laptop.jpg",
+    "c": "../../assets/p1119/1597-room.jpg"
+  },
+  "kind": "two real photo panels: her speaking at work (Øredev) | her at home in her room; huge condensed cream caps across the top",
+  "layout": "4 vertical panels, words across the top",
+  "board": "pick1119-12 (\"i stopped scrolling for a week… productive university vlog\": PRODUCTIVE UNI WEEK, huge yellow condensed caps over four real photo panels)",
+  "fonts": [
+    "shorts-06 Oswald Bold caps (huge cream/yellow condensed caps over her, Formats 26) + thumbs-17 Instrument Serif italic aside"
+  ],
+  "colours": "Formats 26: cream #F4EBD3 caps over the photos",
+  "photo": "library/her-photos/oredev-2026-11-10/55641049957_9dac08b9f2_o.jpg + shoot C IMG_1597 (Enhance photo). Desk + lecture room: Pexels (film/assets/CREDITS.md)",
+  "thumbnail_text": "WORK + STUDY WEEK / a full-time job and a full-time master's",
+  "titles": [
+    "A Week of My Full-Time Job and Full-Time Master's",
+    "My Week as a Developer and a Full-Time Master's Student",
+    "How I Work Full Time While Doing a Master's Abroad"
+  ],
+  "title": "A Week of My Full-Time Job and Full-Time Master's",
+  "direction": "Copies pick1119-12: a vlog-style week in four real pictures (work, code at night, class, home), one huge yellow condensed line.",
+  "nudge": {},
+  "vars": {},
+  "class": "no-lift"
+}

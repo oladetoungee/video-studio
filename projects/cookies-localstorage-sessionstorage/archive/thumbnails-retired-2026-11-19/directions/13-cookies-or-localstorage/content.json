@@ -1,0 +1,31 @@
+{
+ "direction": "No face. Ground split down the middle: black left, red right. COOKIES on the black half, LOCALSTORAGE on the red half, a big \"vs\" on the line. Under each one real thing: a cookie with a paper tag \"user: Ada\" (what a cookie carries), a shop cart with a tag \"cart: 2 items\" (what localStorage keeps).",
+ "thumbnail_text": "COOKIES vs LOCALSTORAGE",
+ "kind": "split",
+ "recommended": false,
+ "titles": [
+  "Cookies vs localStorage: Which Should You Use?",
+  "localStorage vs Cookies: Where Should Your Data Go?",
+  "Cookies vs localStorage (Explained With an Online Shop)"
+ ],
+ "text": {
+  "w1": "COOKIES",
+  "or": "vs",
+  "w2": "LOCALSTORAGE",
+  "t1": "user: Ada",
+  "t2": "cart: 2 items"
+ },
+ "images": {
+  "o1": "../../assets/collage/cookie-pair-clean.png",
+  "o2": "../../assets/collage/cart-yellow-clean.png"
+ },
+ "vars": {
+  "--ground": "#1A1A1A"
+ },
+ "board": "Thumbnails 13 (pin-01-13 \"LOCKED / FOCUS\": the creator centred, two words in the top corners) on a split ground like Thumbnails 55 (yt-02 before / after)",
+ "fonts": "Font 56 (thumbs-01: Anton, Thumbnails 10) + Font 63 (thumbs-08: JetBrains Mono ExtraBold) on the tags",
+ "colours": "Font 56 specimen: #FFFFFF words; ground split in its two box colours, #1A1A1A left and #D9262B right; tags in Font 63 (JetBrains Mono, black on light)",
+ "title": "Cookies vs localStorage: Which Should You Use?",
+ "class": "no-lift",
+ "scores": "fresh cold critic round 6 (alone / with title): 6 / 7"
+}

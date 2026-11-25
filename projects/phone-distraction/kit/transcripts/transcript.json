@@ -1,0 +1,2342 @@
+{
+	"systeminfo": "WHISPER : COREML = 0 | OPENVINO = 0 | MTL : EMBED_LIBRARY = 1 | CPU : NEON = 1 | ARM_FMA = 1 | FP16_VA = 1 | MATMUL_INT8 = 1 | DOTPROD = 1 | SME = 1 | ACCELERATE = 1 | OPENMP = 1 | REPACK = 1 | ",
+	"model": {
+		"type": "small",
+		"multilingual": false,
+		"vocab": 51864,
+		"audio": {
+			"ctx": 1500,
+			"state": 768,
+			"head": 12,
+			"layer": 12
+		},
+		"text": {
+			"ctx": 448,
+			"state": 768,
+			"head": 12,
+			"layer": 12
+		},
+		"mels": 80,
+		"ftype": 1
+	},
+	"params": {
+		"model": "/Users/gbemi/.cache/whisper/ggml-small.en.bin",
+		"language": "en",
+		"translate": false
+	},
+	"result": {
+		"language": "en"
+	},
+	"transcription": [
+		{
+			"timestamps": {
+				"from": "00:00:00,000",
+				"to": "00:00:05,520"
+			},
+			"offsets": {
+				"from": 0,
+				"to": 5520
+			},
+			"text": " your phone was intentionally and strategically designed to distract you"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:05,520",
+				"to": "00:00:09,300"
+			},
+			"offsets": {
+				"from": 5520,
+				"to": 9300
+			},
+			"text": " is the reason why you pick it up to do one thing and 20 minutes later you're"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:09,300",
+				"to": "00:00:13,360"
+			},
+			"offsets": {
+				"from": 9300,
+				"to": 13360
+			},
+			"text": " doing a million and one other thing and you're forgetting the one thing that you"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:13,360",
+				"to": "00:00:17,520"
+			},
+			"offsets": {
+				"from": 13360,
+				"to": 17520
+			},
+			"text": " wanted to do my name is Ben Salah and I'm currently doing my masters in human"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:17,520",
+				"to": "00:00:22,640"
+			},
+			"offsets": {
+				"from": 17520,
+				"to": 22640
+			},
+			"text": " computer interaction in this video in this video I'm gonna show you first of"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:22,640",
+				"to": "00:00:28,520"
+			},
+			"offsets": {
+				"from": 22640,
+				"to": 28520
+			},
+			"text": " all why your attention is worth so much money and as so much value in the first"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:28,520",
+				"to": "00:00:32,420"
+			},
+			"offsets": {
+				"from": 28520,
+				"to": 32420
+			},
+			"text": " place because people and corporations make a lot of money just from you"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:32,420",
+				"to": "00:00:36,520"
+			},
+			"offsets": {
+				"from": 32420,
+				"to": 36520
+			},
+			"text": " scrolling and then I will talk about why we are the design ideas that keep you"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:36,520",
+				"to": "00:00:41,180"
+			},
+			"offsets": {
+				"from": 36520,
+				"to": 41180
+			},
+			"text": " stuck on your phone come from the actual features that make this happen and the"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:41,180",
+				"to": "00:00:45,840"
+			},
+			"offsets": {
+				"from": 41180,
+				"to": 45840
+			},
+			"text": " people will beat them and finally what you can actually do about it so"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:45,840",
+				"to": "00:00:48,600"
+			},
+			"offsets": {
+				"from": 45840,
+				"to": 48600
+			},
+			"text": " understand why your phone is designed to distract you you first have to"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:48,600",
+				"to": "00:00:52,840"
+			},
+			"offsets": {
+				"from": 48600,
+				"to": 52840
+			},
+			"text": " understand something called the attention economy back in 1971 an"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:52,840",
+				"to": "00:00:58,200"
+			},
+			"offsets": {
+				"from": 52840,
+				"to": 58200
+			},
+			"text": " economist called Albert Simon who later won a Nobel Prize wrote that the wealth"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:58,200",
+				"to": "00:01:01,880"
+			},
+			"offsets": {
+				"from": 58200,
+				"to": 61880
+			},
+			"text": " of information creates a poverty of attention what he meant was that"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:01,880",
+				"to": "00:01:07,080"
+			},
+			"offsets": {
+				"from": 61880,
+				"to": 67080
+			},
+			"text": " information is everywhere the thing that has now becomes scarce is your attention"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:07,080",
+				"to": "00:01:11,400"
+			},
+			"offsets": {
+				"from": 67080,
+				"to": 71400
+			},
+			"text": " and there is only so much of human attention to go around so the attention"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:11,400",
+				"to": "00:01:14,680"
+			},
+			"offsets": {
+				"from": 71400,
+				"to": 74680
+			},
+			"text": " economy is a system where human attention is treated as a scarce"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:14,680",
+				"to": "00:01:19,400"
+			},
+			"offsets": {
+				"from": 74680,
+				"to": 79400
+			},
+			"text": " valuable thing and it's traded like currency now think about our social media"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:19,400",
+				"to": "00:01:22,600"
+			},
+			"offsets": {
+				"from": 79400,
+				"to": 82600
+			},
+			"text": " hubs make their money you don't pay Instagram to use Instagram"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:22,600",
+				"to": "00:01:24,960"
+			},
+			"offsets": {
+				"from": 82600,
+				"to": 84960
+			},
+			"text": " except you are you won't start it majority of people that use Instagram"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:24,960",
+				"to": "00:01:28,160"
+			},
+			"offsets": {
+				"from": 84960,
+				"to": 88160
+			},
+			"text": " don't pay Instagram you don't pay tiktok you don't pay Facebook right people call"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:28,160",
+				"to": "00:01:33,740"
+			},
+			"offsets": {
+				"from": 88160,
+				"to": 93740
+			},
+			"text": " it a free service but in a way it is monetized they make money from your"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:33,740",
+				"to": "00:01:39,080"
+			},
+			"offsets": {
+				"from": 93740,
+				"to": 99080
+			},
+			"text": " engagement and your attention by selling targeted advertisement so the more time"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:39,080",
+				"to": "00:01:44,080"
+			},
+			"offsets": {
+				"from": 99080,
+				"to": 104080
+			},
+			"text": " you spend on the hub the more hard part you see the model app lends about you"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:44,080",
+				"to": "00:01:48,680"
+			},
+			"offsets": {
+				"from": 104080,
+				"to": 108680
+			},
+			"text": " it's your time and your attention that are actually being sold in a way and"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:48,680",
+				"to": "00:01:52,920"
+			},
+			"offsets": {
+				"from": 108680,
+				"to": 112920
+			},
+			"text": " that's why so many of these apps are built to keep you in them for as long as"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:52,920",
+				"to": "00:01:58,080"
+			},
+			"offsets": {
+				"from": 112920,
+				"to": 118080
+			},
+			"text": " possible so your attention is in a way the product now technology can be"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:58,080",
+				"to": "00:02:01,120"
+			},
+			"offsets": {
+				"from": 118080,
+				"to": 121120
+			},
+			"text": " designed in a way that changes people's behavior and this idea is called"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:01,120",
+				"to": "00:02:07,360"
+			},
+			"offsets": {
+				"from": 121120,
+				"to": 127360
+			},
+			"text": " persuasive technology a lot of it raises back to a very interesting concept there"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:07,360",
+				"to": "00:02:11,660"
+			},
+			"offsets": {
+				"from": 127360,
+				"to": 131660
+			},
+			"text": " is scratch that a lot of it raises back to a researcher at Stanford University"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:11,660",
+				"to": "00:02:17,240"
+			},
+			"offsets": {
+				"from": 131660,
+				"to": 137240
+			},
+			"text": " called BJ fog he ran a lab there called the pursue a sieve technology lab and he"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:17,240",
+				"to": "00:02:20,800"
+			},
+			"offsets": {
+				"from": 137240,
+				"to": 140800
+			},
+			"text": " later published a book on using computers to change what people think"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:20,800",
+				"to": "00:02:28,160"
+			},
+			"offsets": {
+				"from": 140800,
+				"to": 148160
+			},
+			"text": " and do to make it more interesting in 2007 BJ fog thought a famous class at"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:28,160",
+				"to": "00:02:34,240"
+			},
+			"offsets": {
+				"from": 148160,
+				"to": 154240
+			},
+			"text": " Stanford where students use these ideas to build apps within weeks they are"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:34,240",
+				"to": "00:02:38,120"
+			},
+			"offsets": {
+				"from": 154240,
+				"to": 158120
+			},
+			"text": " halfs add millions of users some of these students went on to build some of"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:38,120",
+				"to": "00:02:43,040"
+			},
+			"offsets": {
+				"from": 158120,
+				"to": 163040
+			},
+			"text": " the popular apps that we now know BJ fog also described a simple model of"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:43,040",
+				"to": "00:02:48,840"
+			},
+			"offsets": {
+				"from": 163040,
+				"to": 168840
+			},
+			"text": " behavior for someone to do something one they need motivation to they need the"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:48,840",
+				"to": "00:02:53,920"
+			},
+			"offsets": {
+				"from": 168840,
+				"to": 173920
+			},
+			"text": " ability to do it and three they need a prompt now thinking in terms of social"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:53,920",
+				"to": "00:02:58,400"
+			},
+			"offsets": {
+				"from": 173920,
+				"to": 178400
+			},
+			"text": " haps think about a notification the notification is the prompt opening the"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:58,400",
+				"to": "00:03:03,520"
+			},
+			"offsets": {
+				"from": 178400,
+				"to": 183520
+			},
+			"text": " hub is the ability to do it and that just takes a single tap so it's an easy"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:03,520",
+				"to": "00:03:07,920"
+			},
+			"offsets": {
+				"from": 183520,
+				"to": 187920
+			},
+			"text": " ability and then the motivation the motivation especially with social apps"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:07,920",
+				"to": "00:03:12,640"
+			},
+			"offsets": {
+				"from": 187920,
+				"to": 192640
+			},
+			"text": " is the curiosity about what is waiting for you there and again some of these"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:12,640",
+				"to": "00:03:16,540"
+			},
+			"offsets": {
+				"from": 192640,
+				"to": 196540
+			},
+			"text": " people who studied with BJ Fox went on to shape the haps that we use today so"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:16,540",
+				"to": "00:03:20,860"
+			},
+			"offsets": {
+				"from": 196540,
+				"to": 200860
+			},
+			"text": " you can link how everything works together yeah Mike Krieger one of the"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:20,860",
+				"to": "00:03:24,640"
+			},
+			"offsets": {
+				"from": 200860,
+				"to": 204640
+			},
+			"text": " co-founders of Instagram was a student of ease and so was Tristan Harris who"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:24,640",
+				"to": "00:03:28,480"
+			},
+			"offsets": {
+				"from": 204640,
+				"to": 208480
+			},
+			"text": " later became one of the loudest critics of this kind of design actually this is"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:28,480",
+				"to": "00:03:32,560"
+			},
+			"offsets": {
+				"from": 208480,
+				"to": 212560
+			},
+			"text": " not a demonized all of the things that these people did or taught but the ideas"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:32,560",
+				"to": "00:03:36,400"
+			},
+			"offsets": {
+				"from": 212560,
+				"to": 216400
+			},
+			"text": " that he found and taught we are real and of course the industry picked up on them"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:36,400",
+				"to": "00:03:42,320"
+			},
+			"offsets": {
+				"from": 216400,
+				"to": 222320
+			},
+			"text": " and made a shitload of money out of that so in the model of behavior that BJ fog"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:42,320",
+				"to": "00:03:45,760"
+			},
+			"offsets": {
+				"from": 222320,
+				"to": 225760
+			},
+			"text": " described for someone to do something don't forget they need a motivation they"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:45,760",
+				"to": "00:03:49,940"
+			},
+			"offsets": {
+				"from": 225760,
+				"to": 229940
+			},
+			"text": " need the ability to do it and they need a prompt we talked about picking up the"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:49,940",
+				"to": "00:03:54,280"
+			},
+			"offsets": {
+				"from": 229940,
+				"to": 234280
+			},
+			"text": " phone going back to the motivation yeah the motivation is a very important one"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:54,280",
+				"to": "00:03:59,720"
+			},
+			"offsets": {
+				"from": 234280,
+				"to": 239720
+			},
+			"text": " is the curiosity that something on that app is waiting for you now the most"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:59,720",
+				"to": "00:04:04,400"
+			},
+			"offsets": {
+				"from": 239720,
+				"to": 244400
+			},
+			"text": " powerful part of all of this is the unpredictable reward at the end of it it"
+		},
+		{
+			"timestamps": {
+				"from": "00:04:04,400",
+				"to": "00:04:08,520"
+			},
+			"offsets": {
+				"from": 244400,
+				"to": 248520
+			},
+			"text": " is the bedrock of so many things it is also the bedrock of gambling for example"
+		},
+		{
+			"timestamps": {
+				"from": "00:04:08,520",
+				"to": "00:04:11,600"
+			},
+			"offsets": {
+				"from": 248520,
+				"to": 251600
+			},
+			"text": " you don't know what you will get out of it sometimes nothing sometimes it's"
+		},
+		{
+			"timestamps": {
+				"from": "00:04:11,600",
+				"to": "00:04:15,800"
+			},
+			"offsets": {
+				"from": 251600,
+				"to": 255800
+			},
+			"text": " small things sometimes a big thing the same principle kind of applies to social media and"
+		},
+		{
+			"timestamps": {
+				"from": "00:04:15,800",
+				"to": "00:04:18,920"
+			},
+			"offsets": {
+				"from": 255800,
+				"to": 258920
+			},
+			"text": " psychologists have known this for a long time that reward that you cannot"
+		},
+		{
+			"timestamps": {
+				"from": "00:04:18,920",
+				"to": "00:04:23,560"
+			},
+			"offsets": {
+				"from": 258920,
+				"to": 263560
+			},
+			"text": " predict things to make you come back strongly even more strongly than reward"
+		},
+		{
+			"timestamps": {
+				"from": "00:04:23,560",
+				"to": "00:04:26,760"
+			},
+			"offsets": {
+				"from": 263560,
+				"to": 266760
+			},
+			"text": " that you can predict if I know that if I do this thing I would get this thing I"
+		},
+		{
+			"timestamps": {
+				"from": "00:04:26,760",
+				"to": "00:04:30,640"
+			},
+			"offsets": {
+				"from": 266760,
+				"to": 270640
+			},
+			"text": " probably won't come back to it as much as I would if there was an unpredictable"
+		},
+		{
+			"timestamps": {
+				"from": "00:04:30,640",
+				"to": "00:04:34,480"
+			},
+			"offsets": {
+				"from": 270640,
+				"to": 274480
+			},
+			"text": " reward waiting for me and this is exactly how your phone works you don't"
+		},
+		{
+			"timestamps": {
+				"from": "00:04:34,480",
+				"to": "00:04:38,600"
+			},
+			"offsets": {
+				"from": 274480,
+				"to": 278600
+			},
+			"text": " know if there is a new message a new like on your video a new video for you to"
+		},
+		{
+			"timestamps": {
+				"from": "00:04:38,600",
+				"to": "00:04:44,120"
+			},
+			"offsets": {
+				"from": 278600,
+				"to": 284120
+			},
+			"text": " see a new gist and that's not knowing is exactly why you keep picking up your"
+		},
+		{
+			"timestamps": {
+				"from": "00:04:44,120",
+				"to": "00:04:47,840"
+			},
+			"offsets": {
+				"from": 284120,
+				"to": 287840
+			},
+			"text": " phone to check and there's so many design that are now put in place to make"
+		},
+		{
+			"timestamps": {
+				"from": "00:04:47,840",
+				"to": "00:04:53,000"
+			},
+			"offsets": {
+				"from": 287840,
+				"to": 293000
+			},
+			"text": " sure they are constantly on your phone and distracted by hate the first of many"
+		},
+		{
+			"timestamps": {
+				"from": "00:04:53,000",
+				"to": "00:04:57,600"
+			},
+			"offsets": {
+				"from": 293000,
+				"to": 297600
+			},
+			"text": " is the pool to refresh you know that gesture where you drag your feet down I"
+		},
+		{
+			"timestamps": {
+				"from": "00:04:57,600",
+				"to": "00:05:02,000"
+			},
+			"offsets": {
+				"from": 297600,
+				"to": 302000
+			},
+			"text": " let it go to see if something new has appeared that's the pool to refresh that"
+		},
+		{
+			"timestamps": {
+				"from": "00:05:02,000",
+				"to": "00:05:05,920"
+			},
+			"offsets": {
+				"from": 302000,
+				"to": 305920
+			},
+			"text": " feature was developed by a developer called Lauren for a Twitter happy build"
+		},
+		{
+			"timestamps": {
+				"from": "00:05:05,920",
+				"to": "00:05:10,120"
+			},
+			"offsets": {
+				"from": 305920,
+				"to": 310120
+			},
+			"text": " Scott city around two thousand and hates and he himself later said that this thing"
+		},
+		{
+			"timestamps": {
+				"from": "00:05:10,120",
+				"to": "00:05:14,600"
+			},
+			"offsets": {
+				"from": 310120,
+				"to": 314600
+			},
+			"text": " is really addictive right so it's an addictive feature an addictive gesture"
+		},
+		{
+			"timestamps": {
+				"from": "00:05:14,600",
+				"to": "00:05:18,720"
+			},
+			"offsets": {
+				"from": 314600,
+				"to": 318720
+			},
+			"text": " and it has this unpredictable reward again at the hand of it when you pull"
+		},
+		{
+			"timestamps": {
+				"from": "00:05:18,720",
+				"to": "00:05:21,640"
+			},
+			"offsets": {
+				"from": 318720,
+				"to": 321640
+			},
+			"text": " down your fridge to refresh you don't know what's coming but you know"
+		},
+		{
+			"timestamps": {
+				"from": "00:05:21,640",
+				"to": "00:05:25,840"
+			},
+			"offsets": {
+				"from": 321640,
+				"to": 325840
+			},
+			"text": " something new will pop up right so you keep pulling down another intentional"
+		},
+		{
+			"timestamps": {
+				"from": "00:05:25,840",
+				"to": "00:05:30,200"
+			},
+			"offsets": {
+				"from": 325840,
+				"to": 330200
+			},
+			"text": " design that keeps you stuck on your phone is the infinite scroll if you don't"
+		},
+		{
+			"timestamps": {
+				"from": "00:05:30,200",
+				"to": "00:05:33,840"
+			},
+			"offsets": {
+				"from": 330200,
+				"to": 333840
+			},
+			"text": " know what the infinite scroll is is just the ability to keep scrolling infinitely"
+		},
+		{
+			"timestamps": {
+				"from": "00:05:33,840",
+				"to": "00:05:38,760"
+			},
+			"offsets": {
+				"from": 333840,
+				"to": 338760
+			},
+			"text": " before this feature or this design was made websites used to have pages when"
+		},
+		{
+			"timestamps": {
+				"from": "00:05:38,760",
+				"to": "00:05:42,280"
+			},
+			"offsets": {
+				"from": 338760,
+				"to": 342280
+			},
+			"text": " you get to the bottom and you wanted to see more content you would have to click"
+		},
+		{
+			"timestamps": {
+				"from": "00:05:42,280",
+				"to": "00:05:47,240"
+			},
+			"offsets": {
+				"from": 342280,
+				"to": 347240
+			},
+			"text": " next page that click was a stopping point is a very important moment where"
+		},
+		{
+			"timestamps": {
+				"from": "00:05:47,240",
+				"to": "00:05:52,240"
+			},
+			"offsets": {
+				"from": 347240,
+				"to": 352240
+			},
+			"text": " your brain has the chance to ask do I actually want to keep going infinite"
+		},
+		{
+			"timestamps": {
+				"from": "00:05:52,240",
+				"to": "00:05:57,920"
+			},
+			"offsets": {
+				"from": 352240,
+				"to": 357920
+			},
+			"text": " scroll was designed in 2006 and it's removed that moment so you don't have to"
+		},
+		{
+			"timestamps": {
+				"from": "00:05:57,920",
+				"to": "00:06:02,400"
+			},
+			"offsets": {
+				"from": 357920,
+				"to": 362400
+			},
+			"text": " click anything the content just keeps loading and there is now no natural"
+		},
+		{
+			"timestamps": {
+				"from": "00:06:02,400",
+				"to": "00:06:07,880"
+			},
+			"offsets": {
+				"from": 362400,
+				"to": 367880
+			},
+			"text": " place or chance for you to stop there is no cue sends to your brain to stop if"
+		},
+		{
+			"timestamps": {
+				"from": "00:06:07,880",
+				"to": "00:06:11,840"
+			},
+			"offsets": {
+				"from": 367880,
+				"to": 371840
+			},
+			"text": " there's a button to load them on that button will send a cue to my brain like"
+		},
+		{
+			"timestamps": {
+				"from": "00:06:11,840",
+				"to": "00:06:15,080"
+			},
+			"offsets": {
+				"from": 371840,
+				"to": 375080
+			},
+			"text": " okay don't load more but I want to drop my freaking phone but what that is no"
+		},
+		{
+			"timestamps": {
+				"from": "00:06:15,080",
+				"to": "00:06:20,640"
+			},
+			"offsets": {
+				"from": 375080,
+				"to": 380640
+			},
+			"text": " longer there if you notice all that form of media add stopping cues for example a"
+		},
+		{
+			"timestamps": {
+				"from": "00:06:20,640",
+				"to": "00:06:24,560"
+			},
+			"offsets": {
+				"from": 380640,
+				"to": 384560
+			},
+			"text": " book at chapters I do this when I read book where I try to get to the end of one"
+		},
+		{
+			"timestamps": {
+				"from": "00:06:24,560",
+				"to": "00:06:27,560"
+			},
+			"offsets": {
+				"from": 384560,
+				"to": 387560
+			},
+			"text": " chapter so that I can drop the book and maybe get to something so a book at"
+		},
+		{
+			"timestamps": {
+				"from": "00:06:27,560",
+				"to": "00:06:32,160"
+			},
+			"offsets": {
+				"from": 387560,
+				"to": 392160
+			},
+			"text": " chapters as a stopping cue a TV show TV shows used to end and then you"
+		},
+		{
+			"timestamps": {
+				"from": "00:06:32,160",
+				"to": "00:06:35,480"
+			},
+			"offsets": {
+				"from": 392160,
+				"to": 395480
+			},
+			"text": " would have to wait like for the next episode for like a week I remember when"
+		},
+		{
+			"timestamps": {
+				"from": "00:06:35,480",
+				"to": "00:06:39,280"
+			},
+			"offsets": {
+				"from": 395480,
+				"to": 399280
+			},
+			"text": " I was a kid I would buy movies you'd buy season one either and if you wanted to"
+		},
+		{
+			"timestamps": {
+				"from": "00:06:39,280",
+				"to": "00:06:42,280"
+			},
+			"offsets": {
+				"from": 399280,
+				"to": 402280
+			},
+			"text": " watch this into you'd have to go back to buy season two or wait for season two"
+		},
+		{
+			"timestamps": {
+				"from": "00:06:42,280",
+				"to": "00:06:46,200"
+			},
+			"offsets": {
+				"from": 402280,
+				"to": 406200
+			},
+			"text": " those stock those are stopping cues but in the case of social apps that is"
+		},
+		{
+			"timestamps": {
+				"from": "00:06:46,200",
+				"to": "00:06:50,360"
+			},
+			"offsets": {
+				"from": 406200,
+				"to": 410360
+			},
+			"text": " taken away right your feet does not have a last page and it's intentionally"
+		},
+		{
+			"timestamps": {
+				"from": "00:06:50,360",
+				"to": "00:06:54,560"
+			},
+			"offsets": {
+				"from": 410360,
+				"to": 414560
+			},
+			"text": " designed that way so that you can keep scrolling forever if you can not a design"
+		},
+		{
+			"timestamps": {
+				"from": "00:06:54,560",
+				"to": "00:06:58,360"
+			},
+			"offsets": {
+				"from": 414560,
+				"to": 418360
+			},
+			"text": " that keeps you stuck on your phone is the auto play if you notice on YouTube"
+		},
+		{
+			"timestamps": {
+				"from": "00:06:58,360",
+				"to": "00:07:01,800"
+			},
+			"offsets": {
+				"from": 418360,
+				"to": 421800
+			},
+			"text": " when a video ends you don't have to do anything the next one starts playing on"
+		},
+		{
+			"timestamps": {
+				"from": "00:07:01,800",
+				"to": "00:07:05,440"
+			},
+			"offsets": {
+				"from": 421800,
+				"to": 425440
+			},
+			"text": " its own within a few seconds when a video is coming to an end you have two"
+		},
+		{
+			"timestamps": {
+				"from": "00:07:05,440",
+				"to": "00:07:09,960"
+			},
+			"offsets": {
+				"from": 425440,
+				"to": 429960
+			},
+			"text": " decisions to make you can keep watching or you can decide to stop watching the"
+		},
+		{
+			"timestamps": {
+				"from": "00:07:09,960",
+				"to": "00:07:14,120"
+			},
+			"offsets": {
+				"from": 429960,
+				"to": 434120
+			},
+			"text": " problem with auto play or what auto play introduces is that you don't have to"
+		},
+		{
+			"timestamps": {
+				"from": "00:07:14,120",
+				"to": "00:07:18,480"
+			},
+			"offsets": {
+				"from": 434120,
+				"to": 438480
+			},
+			"text": " decide to keep watching that decision has been made for you it is where you"
+		},
+		{
+			"timestamps": {
+				"from": "00:07:18,480",
+				"to": "00:07:22,960"
+			},
+			"offsets": {
+				"from": 438480,
+				"to": 442960
+			},
+			"text": " want to stop watching that you now have to put in the effort to stop watching so"
+		},
+		{
+			"timestamps": {
+				"from": "00:07:22,960",
+				"to": "00:07:27,240"
+			},
+			"offsets": {
+				"from": 442960,
+				"to": 447240
+			},
+			"text": " deciding to stop takes effort but deciding to continue does not take any"
+		},
+		{
+			"timestamps": {
+				"from": "00:07:27,240",
+				"to": "00:07:30,840"
+			},
+			"offsets": {
+				"from": 447240,
+				"to": 450840
+			},
+			"text": " effort on the end of the user at all so you can guess which one happens more"
+		},
+		{
+			"timestamps": {
+				"from": "00:07:30,840",
+				"to": "00:07:34,920"
+			},
+			"offsets": {
+				"from": 450840,
+				"to": 454920
+			},
+			"text": " continuing of course and another thing is the powers this is default on YouTube"
+		},
+		{
+			"timestamps": {
+				"from": "00:07:34,920",
+				"to": "00:07:38,320"
+			},
+			"offsets": {
+				"from": 454920,
+				"to": 458320
+			},
+			"text": " for example auto play is on by default and most people don't change the"
+		},
+		{
+			"timestamps": {
+				"from": "00:07:38,320",
+				"to": "00:07:42,840"
+			},
+			"offsets": {
+				"from": 458320,
+				"to": 462840
+			},
+			"text": " settings that they have comes with so it just keeps going on like that next up on"
+		},
+		{
+			"timestamps": {
+				"from": "00:07:42,840",
+				"to": "00:07:47,200"
+			},
+			"offsets": {
+				"from": 462840,
+				"to": 467200
+			},
+			"text": " the list of things that are designed to keep you on your phone is notifications"
+		},
+		{
+			"timestamps": {
+				"from": "00:07:47,200",
+				"to": "00:07:51,520"
+			},
+			"offsets": {
+				"from": 467200,
+				"to": 471520
+			},
+			"text": " and red badges most apps show notifications as red badges and that"
+		},
+		{
+			"timestamps": {
+				"from": "00:07:51,520",
+				"to": "00:07:55,280"
+			},
+			"offsets": {
+				"from": 471520,
+				"to": 475280
+			},
+			"text": " does not did not happen by accident they were intentionally designed a"
+		},
+		{
+			"timestamps": {
+				"from": "00:07:55,280",
+				"to": "00:07:59,280"
+			},
+			"offsets": {
+				"from": 475280,
+				"to": 479280
+			},
+			"text": " notification is an interruption that someone else or something else decides"
+		},
+		{
+			"timestamps": {
+				"from": "00:07:59,280",
+				"to": "00:08:04,760"
+			},
+			"offsets": {
+				"from": 479280,
+				"to": 484760
+			},
+			"text": " to send you and the color matters Facebook's notification icon used to be"
+		},
+		{
+			"timestamps": {
+				"from": "00:08:04,760",
+				"to": "00:08:08,200"
+			},
+			"offsets": {
+				"from": 484760,
+				"to": 488200
+			},
+			"text": " blue to match the rest of the side because you know Facebook and that blue"
+		},
+		{
+			"timestamps": {
+				"from": "00:08:08,200",
+				"to": "00:08:13,880"
+			},
+			"offsets": {
+				"from": 488200,
+				"to": 493880
+			},
+			"text": " vibe according to reports people barely noticed the blue one so it was changed"
+		},
+		{
+			"timestamps": {
+				"from": "00:08:13,880",
+				"to": "00:08:19,560"
+			},
+			"offsets": {
+				"from": 493880,
+				"to": 499560
+			},
+			"text": " to red to grab your attention now if you look at your phone almost every app uses"
+		},
+		{
+			"timestamps": {
+				"from": "00:08:19,560",
+				"to": "00:08:24,120"
+			},
+			"offsets": {
+				"from": 499560,
+				"to": 504120
+			},
+			"text": " a red badge now with the number on it that red badge direct color and that"
+		},
+		{
+			"timestamps": {
+				"from": "00:08:24,120",
+				"to": "00:08:28,320"
+			},
+			"offsets": {
+				"from": 504120,
+				"to": 508320
+			},
+			"text": " number is creates a small feeling in your brain that something is unfinished"
+		},
+		{
+			"timestamps": {
+				"from": "00:08:28,320",
+				"to": "00:08:32,960"
+			},
+			"offsets": {
+				"from": 508320,
+				"to": 512960
+			},
+			"text": " I need to go clear it's like a sense of urgency if that makes sense there's a"
+		},
+		{
+			"timestamps": {
+				"from": "00:08:32,960",
+				"to": "00:08:40,880"
+			},
+			"offsets": {
+				"from": 512960,
+				"to": 520880
+			},
+			"text": " study from Chi Chi CHI which is the main conference in my field human computer"
+		},
+		{
+			"timestamps": {
+				"from": "00:08:40,880",
+				"to": "00:08:45,240"
+			},
+			"offsets": {
+				"from": 520880,
+				"to": 525240
+			},
+			"text": " interaction we are researchers at people keep their phone notifications on for"
+		},
+		{
+			"timestamps": {
+				"from": "00:08:45,240",
+				"to": "00:08:48,560"
+			},
+			"offsets": {
+				"from": 525240,
+				"to": 528560
+			},
+			"text": " one week and off for the other week in the week where the phone notifications"
+		},
+		{
+			"timestamps": {
+				"from": "00:08:48,560",
+				"to": "00:08:54,560"
+			},
+			"offsets": {
+				"from": 528560,
+				"to": 534560
+			},
+			"text": " were on the people add more symptoms of inattention and hyperactivity because"
+		},
+		{
+			"timestamps": {
+				"from": "00:08:54,560",
+				"to": "00:08:57,780"
+			},
+			"offsets": {
+				"from": 534560,
+				"to": 537780
+			},
+			"text": " that's what's notifications are meant to do to call your attention to make you"
+		},
+		{
+			"timestamps": {
+				"from": "00:08:57,780",
+				"to": "00:09:00,920"
+			},
+			"offsets": {
+				"from": 537780,
+				"to": 540920
+			},
+			"text": " feel like something audience is waiting for you you need to open your phone"
+		},
+		{
+			"timestamps": {
+				"from": "00:09:00,920",
+				"to": "00:09:05,040"
+			},
+			"offsets": {
+				"from": 540920,
+				"to": 545040
+			},
+			"text": " right another reason why you cannot let go of your phone is likes and social"
+		},
+		{
+			"timestamps": {
+				"from": "00:09:05,040",
+				"to": "00:09:09,080"
+			},
+			"offsets": {
+				"from": 545040,
+				"to": 549080
+			},
+			"text": " approval again this is intentional design there was a time when likes on"
+		},
+		{
+			"timestamps": {
+				"from": "00:09:09,080",
+				"to": "00:09:13,600"
+			},
+			"offsets": {
+				"from": 549080,
+				"to": 553600
+			},
+			"text": " your posts didn't exist the like button launched on Facebook in 2009 and it has"
+		},
+		{
+			"timestamps": {
+				"from": "00:09:13,600",
+				"to": "00:09:17,360"
+			},
+			"offsets": {
+				"from": 553600,
+				"to": 557360
+			},
+			"text": " spread across every social media hub since then as a like or a love or"
+		},
+		{
+			"timestamps": {
+				"from": "00:09:17,360",
+				"to": "00:09:21,960"
+			},
+			"offsets": {
+				"from": 557360,
+				"to": 561960
+			},
+			"text": " something of that kind and it is also a design that is put to play put in place"
+		},
+		{
+			"timestamps": {
+				"from": "00:09:21,960",
+				"to": "00:09:26,240"
+			},
+			"offsets": {
+				"from": 561960,
+				"to": 566240
+			},
+			"text": " to keep you coming back the like button gives you a small burst of social"
+		},
+		{
+			"timestamps": {
+				"from": "00:09:26,240",
+				"to": "00:09:31,300"
+			},
+			"offsets": {
+				"from": 566240,
+				"to": 571300
+			},
+			"text": " approval I make a post someone sees what I posted and they like it when I make"
+		},
+		{
+			"timestamps": {
+				"from": "00:09:31,300",
+				"to": "00:09:35,880"
+			},
+			"offsets": {
+				"from": 571300,
+				"to": 575880
+			},
+			"text": " that post again again this goes back to the idea of unpredictable rewards yeah"
+		},
+		{
+			"timestamps": {
+				"from": "00:09:35,880",
+				"to": "00:09:40,160"
+			},
+			"offsets": {
+				"from": 575880,
+				"to": 580160
+			},
+			"text": " when I make a post and I drop my phone I don't know how many likes I will get"
+		},
+		{
+			"timestamps": {
+				"from": "00:09:40,160",
+				"to": "00:09:44,320"
+			},
+			"offsets": {
+				"from": 580160,
+				"to": 584320
+			},
+			"text": " and I don't know how many likes I've already gotten so again is an"
+		},
+		{
+			"timestamps": {
+				"from": "00:09:44,320",
+				"to": "00:09:48,040"
+			},
+			"offsets": {
+				"from": 584320,
+				"to": 588040
+			},
+			"text": " unpredictable reward that I am looking forward to and it keeps me coming back"
+		},
+		{
+			"timestamps": {
+				"from": "00:09:48,040",
+				"to": "00:09:51,680"
+			},
+			"offsets": {
+				"from": 588040,
+				"to": 591680
+			},
+			"text": " I've ever made a post on Chi Chi Media and you keep going back to check it to"
+		},
+		{
+			"timestamps": {
+				"from": "00:09:51,680",
+				"to": "00:09:56,000"
+			},
+			"offsets": {
+				"from": 591680,
+				"to": 596000
+			},
+			"text": " see how many likes or reaction it has gotten that's intentional design in a"
+		},
+		{
+			"timestamps": {
+				"from": "00:09:56,000",
+				"to": "00:09:59,320"
+			},
+			"offsets": {
+				"from": 596000,
+				"to": 599320
+			},
+			"text": " way to you keep coming back there's a whole lot of research and a lot of"
+		},
+		{
+			"timestamps": {
+				"from": "00:09:59,320",
+				"to": "00:10:04,160"
+			},
+			"offsets": {
+				"from": 599320,
+				"to": 604160
+			},
+			"text": " claims about phone and our attention and distraction I was really one study that"
+		},
+		{
+			"timestamps": {
+				"from": "00:10:04,160",
+				"to": "00:10:08,960"
+			},
+			"offsets": {
+				"from": 604160,
+				"to": 608960
+			},
+			"text": " even says that having your phone on your desk even if it's switched off it makes"
+		},
+		{
+			"timestamps": {
+				"from": "00:10:08,960",
+				"to": "00:10:12,680"
+			},
+			"offsets": {
+				"from": 608960,
+				"to": 612680
+			},
+			"text": " you what I thinking they call it the brain drain or something so it's a very"
+		},
+		{
+			"timestamps": {
+				"from": "00:10:12,680",
+				"to": "00:10:17,200"
+			},
+			"offsets": {
+				"from": 612680,
+				"to": 617200
+			},
+			"text": " interesting topic that just attracts a lot of claims especially because it"
+		},
+		{
+			"timestamps": {
+				"from": "00:10:17,200",
+				"to": "00:10:21,600"
+			},
+			"offsets": {
+				"from": 617200,
+				"to": 621600
+			},
+			"text": " affects a lot of people I was also reading that in February 2026 the"
+		},
+		{
+			"timestamps": {
+				"from": "00:10:21,600",
+				"to": "00:10:27,000"
+			},
+			"offsets": {
+				"from": 621600,
+				"to": 627000
+			},
+			"text": " European Commission made a preliminary finding that's tiktok designs break EU"
+		},
+		{
+			"timestamps": {
+				"from": "00:10:27,000",
+				"to": "00:10:31,360"
+			},
+			"offsets": {
+				"from": 627000,
+				"to": 631360
+			},
+			"text": " digital services act now when it comes to regulation I think the EU deserves"
+		},
+		{
+			"timestamps": {
+				"from": "00:10:31,360",
+				"to": "00:10:35,120"
+			},
+			"offsets": {
+				"from": 631360,
+				"to": 635120
+			},
+			"text": " like a global Howard some of the regulations sometimes can feel overbearing"
+		},
+		{
+			"timestamps": {
+				"from": "00:10:35,120",
+				"to": "00:10:39,360"
+			},
+			"offsets": {
+				"from": 635120,
+				"to": 639360
+			},
+			"text": " but some of them are actually very helpful in this finding the EU named"
+		},
+		{
+			"timestamps": {
+				"from": "00:10:39,360",
+				"to": "00:10:43,680"
+			},
+			"offsets": {
+				"from": 639360,
+				"to": 643680
+			},
+			"text": " infinite scroll or to play push notification tiktok's highly personalized"
+		},
+		{
+			"timestamps": {
+				"from": "00:10:43,680",
+				"to": "00:10:50,000"
+			},
+			"offsets": {
+				"from": 643680,
+				"to": 650000
+			},
+			"text": " recommendation there's a list of things that they named in the findings and also"
+		},
+		{
+			"timestamps": {
+				"from": "00:10:50,000",
+				"to": "00:10:53,960"
+			},
+			"offsets": {
+				"from": 650000,
+				"to": 653960
+			},
+			"text": " in July they made the same kind of preliminary findings against meta for"
+		},
+		{
+			"timestamps": {
+				"from": "00:10:53,960",
+				"to": "00:10:58,440"
+			},
+			"offsets": {
+				"from": 653960,
+				"to": 658440
+			},
+			"text": " the addictive design of Instagram and Facebook and I think this is one of the"
+		},
+		{
+			"timestamps": {
+				"from": "00:10:58,440",
+				"to": "00:11:02,960"
+			},
+			"offsets": {
+				"from": 658440,
+				"to": 662960
+			},
+			"text": " first time that a regulator has formally said that these features like infinite"
+		},
+		{
+			"timestamps": {
+				"from": "00:11:02,960",
+				"to": "00:11:07,920"
+			},
+			"offsets": {
+				"from": 662960,
+				"to": 667920
+			},
+			"text": " scroll like auto play and stuff like that can be a legal problem I mean it's"
+		},
+		{
+			"timestamps": {
+				"from": "00:11:07,920",
+				"to": "00:11:11,520"
+			},
+			"offsets": {
+				"from": 667920,
+				"to": 671520
+			},
+			"text": " not like this a final decisions yet but I live in the EU and I'm very curious to"
+		},
+		{
+			"timestamps": {
+				"from": "00:11:11,520",
+				"to": "00:11:15,760"
+			},
+			"offsets": {
+				"from": 671520,
+				"to": 675760
+			},
+			"text": " see how this all go the fact that regulators are starting to see these"
+		},
+		{
+			"timestamps": {
+				"from": "00:11:15,760",
+				"to": "00:11:19,560"
+			},
+			"offsets": {
+				"from": 675760,
+				"to": 679560
+			},
+			"text": " designs as a problem is something that I really want to see the end of so we've"
+		},
+		{
+			"timestamps": {
+				"from": "00:11:19,560",
+				"to": "00:11:24,000"
+			},
+			"offsets": {
+				"from": 679560,
+				"to": 684000
+			},
+			"text": " gone over the fact that you are addicted we are addicted to our phones and their"
+		},
+		{
+			"timestamps": {
+				"from": "00:11:24,000",
+				"to": "00:11:28,400"
+			},
+			"offsets": {
+				"from": 684000,
+				"to": 688400
+			},
+			"text": " intentional features put in place to keep us talk on it infinite scroll auto"
+		},
+		{
+			"timestamps": {
+				"from": "00:11:28,400",
+				"to": "00:11:33,880"
+			},
+			"offsets": {
+				"from": 688400,
+				"to": 693880
+			},
+			"text": " play notification so what exactly can we you mean do about this this is something"
+		},
+		{
+			"timestamps": {
+				"from": "00:11:33,880",
+				"to": "00:11:37,760"
+			},
+			"offsets": {
+				"from": 693880,
+				"to": 697760
+			},
+			"text": " that I started to think about like yes way back we might even understood this"
+		},
+		{
+			"timestamps": {
+				"from": "00:11:37,760",
+				"to": "00:11:41,480"
+			},
+			"offsets": {
+				"from": 697760,
+				"to": 701480
+			},
+			"text": " thing I remember when I was nice thing I used to use Instagram a lot I feel like"
+		},
+		{
+			"timestamps": {
+				"from": "00:11:41,480",
+				"to": "00:11:45,000"
+			},
+			"offsets": {
+				"from": 701480,
+				"to": 705000
+			},
+			"text": " about continue using Instagram at that rate I would have turned out to be one"
+		},
+		{
+			"timestamps": {
+				"from": "00:11:45,000",
+				"to": "00:11:51,400"
+			},
+			"offsets": {
+				"from": 705000,
+				"to": 711400
+			},
+			"text": " influenza or something but even around that time at 19 I just felt strongly"
+		},
+		{
+			"timestamps": {
+				"from": "00:11:51,400",
+				"to": "00:11:55,600"
+			},
+			"offsets": {
+				"from": 711400,
+				"to": 715600
+			},
+			"text": " that it was very dysfunctional to the life that I wanted to leave and at this"
+		},
+		{
+			"timestamps": {
+				"from": "00:11:55,600",
+				"to": "00:11:59,520"
+			},
+			"offsets": {
+				"from": 715600,
+				"to": 719520
+			},
+			"text": " time it wasn't even as popular as it is now but I was if you're like nah so I"
+		},
+		{
+			"timestamps": {
+				"from": "00:11:59,520",
+				"to": "00:12:05,480"
+			},
+			"offsets": {
+				"from": 719520,
+				"to": 725480
+			},
+			"text": " left Instagram and I do use the app for six good years these days my personal"
+		},
+		{
+			"timestamps": {
+				"from": "00:12:05,480",
+				"to": "00:12:09,420"
+			},
+			"offsets": {
+				"from": 725480,
+				"to": 729420
+			},
+			"text": " rule for social media is neat this is the rule I keep for myself and of course I"
+		},
+		{
+			"timestamps": {
+				"from": "00:12:09,420",
+				"to": "00:12:13,000"
+			},
+			"offsets": {
+				"from": 729420,
+				"to": 733000
+			},
+			"text": " break it sometimes the idea rule is that I should only open Twitter when I need"
+		},
+		{
+			"timestamps": {
+				"from": "00:12:13,000",
+				"to": "00:12:17,400"
+			},
+			"offsets": {
+				"from": 733000,
+				"to": 737400
+			},
+			"text": " something for Twitter from Twitter and in many cases my need could be or what"
+		},
+		{
+			"timestamps": {
+				"from": "00:12:17,400",
+				"to": "00:12:19,880"
+			},
+			"offsets": {
+				"from": 737400,
+				"to": 739880
+			},
+			"text": " are people saying about this topic or maybe I want to like get up to date"
+		},
+		{
+			"timestamps": {
+				"from": "00:12:19,880",
+				"to": "00:12:24,560"
+			},
+			"offsets": {
+				"from": 739880,
+				"to": 744560
+			},
+			"text": " information or people's you know and sometimes just post my own content I"
+		},
+		{
+			"timestamps": {
+				"from": "00:12:24,560",
+				"to": "00:12:27,720"
+			},
+			"offsets": {
+				"from": 744560,
+				"to": 747720
+			},
+			"text": " should only open Instagram as well when I need something from there I should"
+		},
+		{
+			"timestamps": {
+				"from": "00:12:27,720",
+				"to": "00:12:30,840"
+			},
+			"offsets": {
+				"from": 747720,
+				"to": 750840
+			},
+			"text": " only open to talk when I lean something from there and all my notifications are"
+		},
+		{
+			"timestamps": {
+				"from": "00:12:30,840",
+				"to": "00:12:34,760"
+			},
+			"offsets": {
+				"from": 750840,
+				"to": 754760
+			},
+			"text": " turned off even was up it's only strange to reach me and they don't have my mobile"
+		},
+		{
+			"timestamps": {
+				"from": "00:12:34,760",
+				"to": "00:12:38,160"
+			},
+			"offsets": {
+				"from": 754760,
+				"to": 758160
+			},
+			"text": " number to call me directly I'll sit when I open the app and this sounds a little"
+		},
+		{
+			"timestamps": {
+				"from": "00:12:38,160",
+				"to": "00:12:41,520"
+			},
+			"offsets": {
+				"from": 758160,
+				"to": 761520
+			},
+			"text": " bit hypocritical because I post content on these apps myself and I want people"
+		},
+		{
+			"timestamps": {
+				"from": "00:12:41,520",
+				"to": "00:12:44,960"
+			},
+			"offsets": {
+				"from": 761520,
+				"to": 764960
+			},
+			"text": " to watch it but it would do nobody any good if you're all just stuck on our"
+		},
+		{
+			"timestamps": {
+				"from": "00:12:44,960",
+				"to": "00:12:48,480"
+			},
+			"offsets": {
+				"from": 764960,
+				"to": 768480
+			},
+			"text": " phones so if you want to push back on your phone use there are few things you"
+		},
+		{
+			"timestamps": {
+				"from": "00:12:48,480",
+				"to": "00:12:52,960"
+			},
+			"offsets": {
+				"from": 768480,
+				"to": 772960
+			},
+			"text": " can do that are actually backed up by research you can try grayscale most"
+		},
+		{
+			"timestamps": {
+				"from": "00:12:52,960",
+				"to": "00:12:57,060"
+			},
+			"offsets": {
+				"from": 772960,
+				"to": 777060
+			},
+			"text": " phones let you turn your screen black and white is in the accessibility setting"
+		},
+		{
+			"timestamps": {
+				"from": "00:12:57,060",
+				"to": "00:13:00,340"
+			},
+			"offsets": {
+				"from": 777060,
+				"to": 780340
+			},
+			"text": " there's a study that shows that when people use grayscale they spend less"
+		},
+		{
+			"timestamps": {
+				"from": "00:13:00,340",
+				"to": "00:13:03,720"
+			},
+			"offsets": {
+				"from": 780340,
+				"to": 783720
+			},
+			"text": " time on their phone so you take the color away and your phone becomes a"
+		},
+		{
+			"timestamps": {
+				"from": "00:13:03,720",
+				"to": "00:13:08,160"
+			},
+			"offsets": {
+				"from": 783720,
+				"to": 788160
+			},
+			"text": " little less rewarding turn off autoplay on YouTube and Netflix it puts the"
+		},
+		{
+			"timestamps": {
+				"from": "00:13:08,160",
+				"to": "00:13:12,480"
+			},
+			"offsets": {
+				"from": 788160,
+				"to": 792480
+			},
+			"text": " stopping point back after episode 1 please you should get the chance to"
+		},
+		{
+			"timestamps": {
+				"from": "00:13:12,480",
+				"to": "00:13:15,320"
+			},
+			"offsets": {
+				"from": 792480,
+				"to": 795320
+			},
+			"text": " choose whether you want to continue watching or you want to stop one of the"
+		},
+		{
+			"timestamps": {
+				"from": "00:13:15,320",
+				"to": "00:13:18,360"
+			},
+			"offsets": {
+				"from": 795320,
+				"to": 798360
+			},
+			"text": " notifications you don't need don't turn off slack let's get your I mean"
+		},
+		{
+			"timestamps": {
+				"from": "00:13:18,360",
+				"to": "00:13:21,360"
+			},
+			"offsets": {
+				"from": 798360,
+				"to": 801360
+			},
+			"text": " notification that you know that you do not need you would not die if you don't"
+		},
+		{
+			"timestamps": {
+				"from": "00:13:21,360",
+				"to": "00:13:26,520"
+			},
+			"offsets": {
+				"from": 801360,
+				"to": 806520
+			},
+			"text": " get these notifications immediately coming turn it off move your"
+		},
+		{
+			"timestamps": {
+				"from": "00:13:26,520",
+				"to": "00:13:30,960"
+			},
+			"offsets": {
+				"from": 806520,
+				"to": 810960
+			},
+			"text": " distracting app off your home screen I use an app a software app block that I've"
+		},
+		{
+			"timestamps": {
+				"from": "00:13:30,960",
+				"to": "00:13:34,360"
+			},
+			"offsets": {
+				"from": 810960,
+				"to": 814360
+			},
+			"text": " been using since the start of this year I pay for like the ESO description in"
+		},
+		{
+			"timestamps": {
+				"from": "00:13:34,360",
+				"to": "00:13:37,840"
+			},
+			"offsets": {
+				"from": 814360,
+				"to": 817840
+			},
+			"text": " January it helps you to like if I want to use this diagram right now I have to"
+		},
+		{
+			"timestamps": {
+				"from": "00:13:37,840",
+				"to": "00:13:41,800"
+			},
+			"offsets": {
+				"from": 817840,
+				"to": 821800
+			},
+			"text": " like click like go through like several mountains are some valleys to assess"
+		},
+		{
+			"timestamps": {
+				"from": "00:13:41,800",
+				"to": "00:13:46,080"
+			},
+			"offsets": {
+				"from": 821800,
+				"to": 826080
+			},
+			"text": " Instagram so that that stops me and also before you open it and have I know that"
+		},
+		{
+			"timestamps": {
+				"from": "00:13:46,080",
+				"to": "00:13:49,440"
+			},
+			"offsets": {
+				"from": 826080,
+				"to": 829440
+			},
+			"text": " this is a lot of work mental work but just simply ask yourself I'm opening"
+		},
+		{
+			"timestamps": {
+				"from": "00:13:49,440",
+				"to": "00:13:52,800"
+			},
+			"offsets": {
+				"from": 829440,
+				"to": 832800
+			},
+			"text": " Instagram what do I need from Instagram right now or don't need from TikTok"
+		},
+		{
+			"timestamps": {
+				"from": "00:13:52,800",
+				"to": "00:13:55,840"
+			},
+			"offsets": {
+				"from": 832800,
+				"to": 835840
+			},
+			"text": " right now do I want to reply someone I want post something or do I just want to"
+		},
+		{
+			"timestamps": {
+				"from": "00:13:55,840",
+				"to": "00:14:00,680"
+			},
+			"offsets": {
+				"from": 835840,
+				"to": 840680
+			},
+			"text": " scroll your attention is an asset your phone is designed designed to hold your"
+		},
+		{
+			"timestamps": {
+				"from": "00:14:00,680",
+				"to": "00:14:05,120"
+			},
+			"offsets": {
+				"from": 840680,
+				"to": 845120
+			},
+			"text": " attention your attention is what space for a lot of these apps and the"
+		},
+		{
+			"timestamps": {
+				"from": "00:14:05,120",
+				"to": "00:14:09,400"
+			},
+			"offsets": {
+				"from": 845120,
+				"to": 849400
+			},
+			"text": " techniques that are being used to hold your attention they are intentionally"
+		},
+		{
+			"timestamps": {
+				"from": "00:14:09,400",
+				"to": "00:14:13,000"
+			},
+			"offsets": {
+				"from": 849400,
+				"to": 853000
+			},
+			"text": " crafted you need to know that so the next time you're scrolling for one hour"
+		},
+		{
+			"timestamps": {
+				"from": "00:14:13,000",
+				"to": "00:14:16,240"
+			},
+			"offsets": {
+				"from": 853000,
+				"to": 856240
+			},
+			"text": " two hour I hope you able to remember that there are people that intentionally"
+		},
+		{
+			"timestamps": {
+				"from": "00:14:16,240",
+				"to": "00:14:22,280"
+			},
+			"offsets": {
+				"from": 856240,
+				"to": 862280
+			},
+			"text": " put beautiful things in place they all thing working so hard for you to stay on"
+		},
+		{
+			"timestamps": {
+				"from": "00:14:22,280",
+				"to": "00:14:25,120"
+			},
+			"offsets": {
+				"from": 862280,
+				"to": 865120
+			},
+			"text": " Instagram they are working so hard for you to stay on TikTok and I hope they're"
+		},
+		{
+			"timestamps": {
+				"from": "00:14:25,120",
+				"to": "00:14:28,000"
+			},
+			"offsets": {
+				"from": 865120,
+				"to": 868000
+			},
+			"text": " able to drop it when you want to it's not something that I've completely"
+		},
+		{
+			"timestamps": {
+				"from": "00:14:28,000",
+				"to": "00:14:31,200"
+			},
+			"offsets": {
+				"from": 868000,
+				"to": 871200
+			},
+			"text": " figured out either but I would think that I use social media a little less"
+		},
+		{
+			"timestamps": {
+				"from": "00:14:31,200",
+				"to": "00:14:35,760"
+			},
+			"offsets": {
+				"from": 871200,
+				"to": 875760
+			},
+			"text": " than the average person at least from this year last year you know but I"
+		},
+		{
+			"timestamps": {
+				"from": "00:14:35,760",
+				"to": "00:14:38,680"
+			},
+			"offsets": {
+				"from": 875760,
+				"to": 878680
+			},
+			"text": " really do hope that everyone gets into this idea and understand that your"
+		},
+		{
+			"timestamps": {
+				"from": "00:14:38,680",
+				"to": "00:14:43,680"
+			},
+			"offsets": {
+				"from": 878680,
+				"to": 883680
+			},
+			"text": " attention is an asset okay and it is literally been fought over by different"
+		},
+		{
+			"timestamps": {
+				"from": "00:14:43,680",
+				"to": "00:14:47,440"
+			},
+			"offsets": {
+				"from": 883680,
+				"to": 887440
+			},
+			"text": " cooperation and you need to take it back for yourself for the people who love you"
+		},
+		{
+			"timestamps": {
+				"from": "00:14:47,440",
+				"to": "00:14:52,160"
+			},
+			"offsets": {
+				"from": 887440,
+				"to": 892160
+			},
+			"text": " the people that you love for the things that are important in your life"
+		}
+	]
+}

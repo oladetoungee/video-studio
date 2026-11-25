@@ -1,0 +1,19 @@
+{
+  "direction": "Words behind her head (editorial serif, only a small overlap), her real 'shh' gesture in the room (0:32), one handwritten note",
+  "title": "Ghana Put Marriage Records Online. Anyone Can Search Them.",
+  "titles": [
+    "Ghana Put Marriage Records Online. Anyone Can Search Them.",
+    "An HCI Researcher Reacts to Ghana's Public Marriage Records",
+    "Should Marriage and Divorce Records Be This Easy to Find?"
+  ],
+  "text": {
+    "line1": "your marriage is now",
+    "line2": "searchable",
+    "note": "(your divorce too)"
+  },
+  "images": {
+    "scene": "../../assets/scene/s_32.37.jpg",
+    "front": "../../assets/scene/mask/s_32.37.png"
+  },
+  "vars": {}
+}

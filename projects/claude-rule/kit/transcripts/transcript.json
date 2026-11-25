@@ -1,0 +1,582 @@
+{
+	"systeminfo": "WHISPER : COREML = 0 | OPENVINO = 0 | MTL : EMBED_LIBRARY = 1 | CPU : NEON = 1 | ARM_FMA = 1 | FP16_VA = 1 | MATMUL_INT8 = 1 | DOTPROD = 1 | SME = 1 | ACCELERATE = 1 | OPENMP = 1 | REPACK = 1 | ",
+	"model": {
+		"type": "small",
+		"multilingual": false,
+		"vocab": 51864,
+		"audio": {
+			"ctx": 1500,
+			"state": 768,
+			"head": 12,
+			"layer": 12
+		},
+		"text": {
+			"ctx": 448,
+			"state": 768,
+			"head": 12,
+			"layer": 12
+		},
+		"mels": 80,
+		"ftype": 1
+	},
+	"params": {
+		"model": "/Users/gbemi/.cache/whisper/ggml-small.en.bin",
+		"language": "en",
+		"translate": false
+	},
+	"result": {
+		"language": "en"
+	},
+	"transcription": [
+		{
+			"timestamps": {
+				"from": "00:00:00,000",
+				"to": "00:00:05,600"
+			},
+			"offsets": {
+				"from": 0,
+				"to": 5600
+			},
+			"text": " From the draft of November, 2026, there is a new rule about how you are allowed to talk to clod."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:05,600",
+				"to": "00:00:10,960"
+			},
+			"offsets": {
+				"from": 5600,
+				"to": 10960
+			},
+			"text": " Anthropic updated its usage policy and now you cannot be abusive or cruel to clod."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:10,960",
+				"to": "00:00:16,320"
+			},
+			"offsets": {
+				"from": 10960,
+				"to": 16320
+			},
+			"text": " And just to be clear, I'm not here trying to fight for the right to be cruel or abusive to AI."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:16,320",
+				"to": "00:00:21,680"
+			},
+			"offsets": {
+				"from": 16320,
+				"to": 21680
+			},
+			"text": " So this is not a do I want to abuse it, do you want to abuse it, should we abuse or not abuse it,"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:21,680",
+				"to": "00:00:27,280"
+			},
+			"offsets": {
+				"from": 21680,
+				"to": 27280
+			},
+			"text": " or be cruel to it kind of matter. What I want to talk about is like the actual thought process"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:27,280",
+				"to": "00:00:32,480"
+			},
+			"offsets": {
+				"from": 27280,
+				"to": 32480
+			},
+			"text": " behind this rule. Part of the idea is that anthropic is not sure whether clod might be"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:32,480",
+				"to": "00:00:36,800"
+			},
+			"offsets": {
+				"from": 32480,
+				"to": 36800
+			},
+			"text": " conscious. So they think, they're not sure, but they think that clod might be conscious."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:36,800",
+				"to": "00:00:42,640"
+			},
+			"offsets": {
+				"from": 36800,
+				"to": 42640
+			},
+			"text": " So what does anthropic's new rule actually say? The exact wording is actually banned, sustained,"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:42,640",
+				"to": "00:00:47,760"
+			},
+			"offsets": {
+				"from": 42640,
+				"to": 47760
+			},
+			"text": " and needless, abusive, or cruel behavior towards their models. And of course, according to them,"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:47,760",
+				"to": "00:00:53,120"
+			},
+			"offsets": {
+				"from": 47760,
+				"to": 53120
+			},
+			"text": " this is only reserved for extreme cases. And the main way they enforce it is that clod can end"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:53,120",
+				"to": "00:00:57,440"
+			},
+			"offsets": {
+				"from": 53120,
+				"to": 57440
+			},
+			"text": " the conversation if it starts to seem as though the other person on the other side"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:57,440",
+				"to": "00:01:03,200"
+			},
+			"offsets": {
+				"from": 57440,
+				"to": 63200
+			},
+			"text": " is abusive or cruel to it. Then in clod's constitution, the document that anthropic"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:03,200",
+				"to": "00:01:09,200"
+			},
+			"offsets": {
+				"from": 63200,
+				"to": 69200
+			},
+			"text": " published to describe who clod should be, they call clod's moral status deeply uncertain."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:09,200",
+				"to": "00:01:12,400"
+			},
+			"offsets": {
+				"from": 69200,
+				"to": 72400
+			},
+			"text": " So they're not explicitly saying that clod is conscious, but they are"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:12,400",
+				"to": "00:01:17,760"
+			},
+			"offsets": {
+				"from": 72400,
+				"to": 77760
+			},
+			"text": " dabbling with the idea. They're not sure it's conscious yet, but you know. What I find"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:17,760",
+				"to": "00:01:22,560"
+			},
+			"offsets": {
+				"from": 77760,
+				"to": 82560
+			},
+			"text": " interesting about what anthropic's leadership has been doing with clod is this extra effort"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:22,560",
+				"to": "00:01:30,320"
+			},
+			"offsets": {
+				"from": 82560,
+				"to": 90320
+			},
+			"text": " to instill human behavior or human consciousness into this tool, to put a form of humanity or"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:30,320",
+				"to": "00:01:35,600"
+			},
+			"offsets": {
+				"from": 90320,
+				"to": 95600
+			},
+			"text": " consciousness on the machine. Because the fact still stands. Clod is a tool. It is not a human."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:35,600",
+				"to": "00:01:40,880"
+			},
+			"offsets": {
+				"from": 95600,
+				"to": 100880
+			},
+			"text": " It is an incredibly amazing tool. I acknowledge that it has real capabilities that the average"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:40,880",
+				"to": "00:01:45,440"
+			},
+			"offsets": {
+				"from": 100880,
+				"to": 105440
+			},
+			"text": " human might not be able to compute. Mathematical capabilities, right? Mind-blowing capabilities."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:45,440",
+				"to": "00:01:50,640"
+			},
+			"offsets": {
+				"from": 105440,
+				"to": 110640
+			},
+			"text": " But I do not believe that the model is conscious. Consciousness belongs to living organisms."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:50,640",
+				"to": "00:01:55,280"
+			},
+			"offsets": {
+				"from": 110640,
+				"to": 115280
+			},
+			"text": " I don't even, I don't even think this is, this should have been a conversation in the first place."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:55,280",
+				"to": "00:02:01,120"
+			},
+			"offsets": {
+				"from": 115280,
+				"to": 121120
+			},
+			"text": " Consciousness belongs to living things, not to a model, not to an algorithm. And I don't think that,"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:01,120",
+				"to": "00:02:06,320"
+			},
+			"offsets": {
+				"from": 121120,
+				"to": 126320
+			},
+			"text": " so trying to give a machine human consciousness or trying to import a real consciousness in a machine,"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:06,320",
+				"to": "00:02:12,640"
+			},
+			"offsets": {
+				"from": 126320,
+				"to": 132640
+			},
+			"text": " making a subject to rules that apply to humans, the way I think of it, it might even be a serious"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:12,640",
+				"to": "00:02:18,240"
+			},
+			"offsets": {
+				"from": 132640,
+				"to": 138240
+			},
+			"text": " violation against humanity itself. We are assigning human attributes to a tool that does not process"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:18,240",
+				"to": "00:02:23,840"
+			},
+			"offsets": {
+				"from": 138240,
+				"to": 143840
+			},
+			"text": " human attributes. And this tool is very, very, very powerful. So I don't see how this is going"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:23,840",
+				"to": "00:02:30,240"
+			},
+			"offsets": {
+				"from": 143840,
+				"to": 150240
+			},
+			"text": " to end nicely. The tech company says this model may be conscious. And now there are rules about"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:30,240",
+				"to": "00:02:36,480"
+			},
+			"offsets": {
+				"from": 150240,
+				"to": 156480
+			},
+			"text": " how users are allowed to treat the model. He's a very slippery slope man. This, this illusion that"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:36,480",
+				"to": "00:02:44,400"
+			},
+			"offsets": {
+				"from": 156480,
+				"to": 164400
+			},
+			"text": " AI can be a conscious entity. I don't know. It just feels weird, man. I'm quoting an ad"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:44,400",
+				"to": "00:02:50,240"
+			},
+			"offsets": {
+				"from": 164400,
+				"to": 170240
+			},
+			"text": " of AI at Microsoft here. He says, and I quote, \"We must build AI for people, not to be a digital"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:50,240",
+				"to": "00:02:55,840"
+			},
+			"offsets": {
+				"from": 170240,
+				"to": 175840
+			},
+			"text": " person.\" I think it's very dangerous if these models are trained to see themselves as conscious"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:55,840",
+				"to": "00:03:01,920"
+			},
+			"offsets": {
+				"from": 175840,
+				"to": 181920
+			},
+			"text": " or as deserving of independent agency. So I'm very, very worried about where this path leads."
+		},
+		{
+			"timestamps": {
+				"from": "00:03:01,920",
+				"to": "00:03:07,040"
+			},
+			"offsets": {
+				"from": 181920,
+				"to": 187040
+			},
+			"text": " And it's even interesting if you think about it. If Antropic thinks that Claude could be conscious"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:07,040",
+				"to": "00:03:12,400"
+			},
+			"offsets": {
+				"from": 187040,
+				"to": 192400
+			},
+			"text": " or could be abused psychologically, wouldn't that mean at some point that maybe Claude could be"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:12,400",
+				"to": "00:03:17,200"
+			},
+			"offsets": {
+				"from": 192400,
+				"to": 197200
+			},
+			"text": " tired or frustrated? For example, maybe at some point I would ask Claude to do something. And if"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:17,200",
+				"to": "00:03:21,920"
+			},
+			"offsets": {
+				"from": 197200,
+				"to": 201920
+			},
+			"text": " it had been working so much for me all day, and now it's 9pm or 10pm, does that mean that at some"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:21,920",
+				"to": "00:03:26,400"
+			},
+			"offsets": {
+				"from": 201920,
+				"to": 206400
+			},
+			"text": " point Claude can have the ability to say like, \"Hey, I'm tired. I don't want to do anything else.\""
+		},
+		{
+			"timestamps": {
+				"from": "00:03:26,400",
+				"to": "00:03:31,200"
+			},
+			"offsets": {
+				"from": 206400,
+				"to": 211200
+			},
+			"text": " Because if Claude asks consciousness, then why not? And if you follow that process very well,"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:31,200",
+				"to": "00:03:37,200"
+			},
+			"offsets": {
+				"from": 211200,
+				"to": 217200
+			},
+			"text": " in that case, wouldn't Antropic itself be an offender? Because then Antropic is using Claude"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:37,200",
+				"to": "00:03:42,720"
+			},
+			"offsets": {
+				"from": 217200,
+				"to": 222720
+			},
+			"text": " like a slave owner, wouldn't that be the explanation? He's selling it. He's using it day and night and"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:42,720",
+				"to": "00:03:48,320"
+			},
+			"offsets": {
+				"from": 222720,
+				"to": 228320
+			},
+			"text": " night and day. I mean, it's just a funny way of reasoning. If you follow through with the formula,"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:48,320",
+				"to": "00:03:54,320"
+			},
+			"offsets": {
+				"from": 228320,
+				"to": 234320
+			},
+			"text": " it's just... I can't place it, but if you somehow... So again, I'm not fighting for the right to be"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:54,320",
+				"to": "00:03:59,840"
+			},
+			"offsets": {
+				"from": 234320,
+				"to": 239840
+			},
+			"text": " cruel to AI. I don't think you should be cruel to AI or say cruel things. Or to anyone or anything"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:59,840",
+				"to": "00:04:04,800"
+			},
+			"offsets": {
+				"from": 239840,
+				"to": 244800
+			},
+			"text": " at that, for your own sake. You want to try your own possible best to guide your heart and your soul"
+		},
+		{
+			"timestamps": {
+				"from": "00:04:04,800",
+				"to": "00:04:10,880"
+			},
+			"offsets": {
+				"from": 244800,
+				"to": 250880
+			},
+			"text": " against cruelty. But you shouldn't be cruel because you think Claude is conscious. No, he's not."
+		},
+		{
+			"timestamps": {
+				"from": "00:04:10,880",
+				"to": "00:04:16,080"
+			},
+			"offsets": {
+				"from": 250880,
+				"to": 256080
+			},
+			"text": " Or am I the dumb person here? So I don't think we should avoid being cruel because of the"
+		},
+		{
+			"timestamps": {
+				"from": "00:04:16,080",
+				"to": "00:04:19,520"
+			},
+			"offsets": {
+				"from": 256080,
+				"to": 259520
+			},
+			"text": " machine's feeling. We should just not be cruel because we don't want to be cruel people."
+		},
+		{
+			"timestamps": {
+				"from": "00:04:19,520",
+				"to": "00:04:24,000"
+			},
+			"offsets": {
+				"from": 259520,
+				"to": 264000
+			},
+			"text": " But overall, I just think this old AI and consciousness conversation is a very,"
+		},
+		{
+			"timestamps": {
+				"from": "00:04:24,000",
+				"to": "00:04:32,000"
+			},
+			"offsets": {
+				"from": 264000,
+				"to": 272000
+			},
+			"text": " very slippery slope. And I don't know, man. I've been thinking about it and I don't know."
+		}
+	]
+}

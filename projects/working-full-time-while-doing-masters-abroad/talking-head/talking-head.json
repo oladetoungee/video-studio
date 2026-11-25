@@ -1,0 +1,713 @@
+{
+ "title": "working-full-time-while-doing-masters-abroad: talking-head",
+ "source": "../kit/raw-video.mov",
+ "fps": 30,
+ "words": "data/raw_words.json",
+ "faces": "data/face_track.json",
+ "edl": "data/edl.json",
+ "edit": {
+  "silenceDb": -44,
+  "maxPause": 0.42,
+  "keepBefore": 0.14,
+  "keepAfter": 0.1
+ },
+ "out": "../outputs/talking-head",
+ "shortsOut": "../outputs/shorts",
+ "tail": 0.7,
+ "audio": {
+  "voiceFilter": "highpass=f=80,afftdn=nr=8:nf=-52:tn=1,deesser=i=0.3:m=0.5:f=0.5,acompressor=threshold=0.06:ratio=3:attack=6:release=160:knee=3,equalizer=f=3200:t=q:w=1.2:g=1.5",
+  "music": {
+   "dir": "library:music"
+  },
+  "levels": {
+   "voiceLufs": -16.0,
+   "duckDb": -18.0,
+   "openDb": -10.0,
+   "target": -14.0,
+   "ceiling": 0.8
+  },
+  "sfx": {
+   "palette": true,
+   "roles": {
+    "stamp": {
+     "files": [
+      "library:wood-hard-hit",
+      "library:typewriter-single-hit",
+      "library:punch-soft-quick"
+     ],
+     "align": "peak",
+     "db": -5
+    },
+    "paper": {
+     "files": [
+      "library:card-place",
+      "library:card-flick",
+      "library:paper-quick-move"
+     ],
+     "align": "peak",
+     "db": -2
+    },
+    "marker": {
+     "files": [
+      "library:marker-line"
+     ],
+     "align": "peak",
+     "db": -5
+    },
+    "clock": {
+     "files": [
+      "library:clock-tick-single",
+      "library:clock-wall-tick-tock"
+     ],
+     "align": "peak",
+     "db": -6
+    },
+    "focus": {
+     "files": [
+      "library:camera-autofocus"
+     ],
+     "align": "peak",
+     "db": -4
+    },
+    "typeHit": {
+     "files": [
+      "library:typewriter-single-hit"
+     ],
+     "align": "peak",
+     "db": -4
+    },
+    "bell": {
+     "files": [
+      "library:typewriter-return-bell",
+      "library:bell-service-ding"
+     ],
+     "align": "peak",
+     "db": -7
+    },
+    "tick": {
+     "files": [
+      "library:click-classic",
+      "library:ui-select-click",
+      "library:switch-tap"
+     ],
+     "align": "peak",
+     "db": -4
+    }
+   },
+   "gainDb": 8
+  }
+ },
+ "moments": [
+  {
+   "id": "full",
+   "kind": "full",
+   "slug": "full",
+   "title": "The whole video, tightened, with graphics (B Clock in / clock out + the 24-hour dial)",
+   "in": 0,
+   "out": 604.81,
+   "cuts": [
+    [
+     5.63,
+     7.47
+    ],
+    [
+     12.0,
+     16.55
+    ],
+    [
+     121.38,
+     124.79
+    ],
+    [
+     227.7,
+     230.89
+    ],
+    [
+     232.48,
+     234.77
+    ],
+    [
+     431.54,
+     434.06
+    ],
+    [
+     487.4,
+     493.27
+    ]
+   ],
+   "retakes": false,
+   "script": "moments/full.js",
+   "music": [
+    "150",
+    0.0
+   ],
+   "captionStyle": "shorts",
+   "note": "cuts = CLEANUP.md (6 retakes + the end) + kit Q2 'This month makes it a year' (12.0-16.55, her line dates the video). Remove [12.0, 16.55] to keep it. The optional sleep cut (581.90-586.58, kit Q5) is NOT applied."
+  },
+  {
+   "id": "sh01",
+   "kind": "short",
+   "slug": "work-rules-estonia",
+   "title": "Can international students work in Estonia?",
+   "label": "Can international students work in Estonia?",
+   "sublabel": "",
+   "in": 34.17,
+   "out": 72.93,
+   "cuts": [],
+   "script": "shorts/sh01.js",
+   "music": [
+    "1168",
+    4.0
+   ],
+   "tail": 0.5,
+   "endCard": false,
+   "fmt": "I",
+   "frame9": "fill",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 42.22,
+    "text": "Can international students work in Estonia?",
+    "kind": "photo"
+   },
+   "board": [
+    16,
+    10,
+    8
+   ],
+   "fonts": [
+    "shorts-01"
+   ],
+   "colours": "shorts-01"
+  },
+  {
+   "id": "sh02",
+   "kind": "short",
+   "slug": "real-ghetto",
+   "title": "Working full time while studying full time abroad",
+   "label": "Full-time job + full-time master's",
+   "sublabel": "",
+   "in": 77.81,
+   "out": 112.62,
+   "cuts": [],
+   "script": "shorts/sh02.js",
+   "music": [
+    "1168",
+    13.0
+   ],
+   "tail": 0.5,
+   "endCard": false,
+   "fmt": "A",
+   "frame9": "wide",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 78.5,
+    "text": "Working full time while studying abroad",
+    "kind": "big"
+   },
+   "board": [
+    62,
+    36,
+    4
+   ],
+   "fonts": [
+    "shorts-13"
+   ],
+   "colours": "shorts-13"
+  },
+  {
+   "id": "sh03",
+   "kind": "short",
+   "slug": "plan-credits",
+   "title": "How to plan your credits every semester",
+   "label": "How to plan your credits | every semester",
+   "sublabel": "",
+   "in": 118.25,
+   "out": 180.36,
+   "cuts": [
+    [
+     121.38,
+     124.79
+    ]
+   ],
+   "script": "shorts/sh03.js",
+   "music": [
+    "1168",
+    22.0
+   ],
+   "tail": 0.5,
+   "endCard": false,
+   "fmt": "B",
+   "frame9": "4x5",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 155.57,
+    "text": "How to plan\nyour master's credits",
+    "kind": "frame"
+   },
+   "board": [
+    5,
+    65,
+    31
+   ],
+   "fonts": [
+    "design-27"
+   ],
+   "colours": "design-27"
+  },
+  {
+   "id": "sh04",
+   "kind": "short",
+   "slug": "thesis-time",
+   "title": "Give your thesis and internship more time than you think",
+   "label": "Plan more time for your thesis",
+   "sublabel": "",
+   "in": 184.41,
+   "out": 225.29,
+   "cuts": [],
+   "script": "shorts/sh04.js",
+   "music": [
+    "1168",
+    31.0
+   ],
+   "tail": 0.5,
+   "endCard": false,
+   "fmt": "K",
+   "frame9": "fill",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 216.95,
+    "text": "Master's thesis\nwhile working\nfull time",
+    "kind": "big"
+   },
+   "board": [
+    52,
+    22,
+    67
+   ],
+   "fonts": [
+    "shorts-11"
+   ],
+   "colours": "shorts-11"
+  },
+  {
+   "id": "sh05",
+   "kind": "short",
+   "slug": "time-blocking",
+   "title": "Time blocking with a full-time job",
+   "label": "Time blocking with a full-time job",
+   "sublabel": "",
+   "in": 226.14,
+   "out": 287.44,
+   "cuts": [
+    [
+     227.7,
+     230.89
+    ],
+    [
+     232.48,
+     234.77
+    ]
+   ],
+   "script": "shorts/sh05.js",
+   "music": [
+    "1168",
+    40.0
+   ],
+   "tail": 0.5,
+   "endCard": false,
+   "fmt": "J",
+   "poster": "Time *blocking*",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 287.13,
+    "text": "Time blocking for working students",
+    "kind": "photo"
+   },
+   "board": [
+    64,
+    63,
+    19
+   ],
+   "fonts": [
+    "design-19",
+    "pair-08"
+   ],
+   "colours": "design-19 + combo-11"
+  },
+  {
+   "id": "sh06",
+   "kind": "short",
+   "slug": "class-time",
+   "title": "Use class time so you study less after work",
+   "label": "Study in class, not after work",
+   "sublabel": "",
+   "in": 289.33,
+   "out": 323.46,
+   "cuts": [],
+   "script": "shorts/sh06.js",
+   "music": [
+    "1168",
+    49.0
+   ],
+   "tail": 0.5,
+   "endCard": false,
+   "fmt": "H",
+   "frame9": "fill",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 323.13,
+    "text": "How to\nstudy less\nafter work",
+    "kind": "big"
+   },
+   "board": [
+    13,
+    20,
+    11
+   ],
+   "fonts": [
+    "design-32"
+   ],
+   "colours": "design-32"
+  },
+  {
+   "id": "sh07",
+   "kind": "short",
+   "slug": "one-calendar",
+   "title": "Use one calendar for work and school",
+   "label": "Use one calendar | for work and school",
+   "sublabel": "",
+   "in": 328.74,
+   "out": 384.45,
+   "cuts": [],
+   "script": "shorts/sh07.js",
+   "music": [
+    "1168",
+    58.0
+   ],
+   "tail": 0.5,
+   "endCard": false,
+   "fmt": "M",
+   "frame9": "fill",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 340.35,
+    "text": "One calendar for work and school",
+    "kind": "frame"
+   },
+   "board": [
+    24,
+    69,
+    17
+   ],
+   "fonts": [
+    "shorts-05"
+   ],
+   "colours": "shorts-05"
+  },
+  {
+   "id": "sh08",
+   "kind": "short",
+   "slug": "study-leave",
+   "title": "Study leave in Estonia",
+   "label": "Study leave in Estonia",
+   "sublabel": "",
+   "in": 409.24,
+   "out": 440.86,
+   "cuts": [
+    [
+     431.54,
+     434.06
+    ]
+   ],
+   "script": "shorts/sh08.js",
+   "music": [
+    "1168",
+    7.0
+   ],
+   "tail": 0.5,
+   "endCard": false,
+   "fmt": "G",
+   "frame9": "letterbox",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 440.63,
+    "text": "Paid study leave in Estonia",
+    "kind": "big"
+   },
+   "board": [
+    12,
+    48,
+    45
+   ],
+   "fonts": [
+    "design-16",
+    "pair-15"
+   ],
+   "colours": "combo-15"
+  },
+  {
+   "id": "sh09",
+   "kind": "short",
+   "slug": "kind-of-job",
+   "title": "Fixed-hours job vs flexible job while studying",
+   "label": "Fixed-hours job vs | flexible job",
+   "sublabel": "",
+   "in": 473.35,
+   "out": 524.33,
+   "cuts": [
+    [
+     487.4,
+     493.27
+    ]
+   ],
+   "script": "shorts/sh09.js",
+   "music": [
+    "1168",
+    16.0
+   ],
+   "tail": 0.5,
+   "endCard": false,
+   "fmt": "F",
+   "frame9": "1x1top",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 509.71,
+    "text": "Fixed hours or flexible job while studying?",
+    "kind": "frame"
+   },
+   "board": [
+    47,
+    51,
+    13
+   ],
+   "fonts": [
+    "design-15"
+   ],
+   "colours": "combo-04"
+  },
+  {
+   "id": "sh10",
+   "kind": "short",
+   "slug": "meal-prep",
+   "title": "Meal prep for working students",
+   "label": "Meal prep for working students",
+   "sublabel": "",
+   "in": 526.04,
+   "out": 560.37,
+   "cuts": [],
+   "script": "shorts/sh10.js",
+   "music": [
+    "1168",
+    25.0
+   ],
+   "tail": 0.5,
+   "endCard": false,
+   "fmt": "C",
+   "frame9": "4x5",
+   "poster": "Meal *prep*",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 540.0,
+    "text": "Meal prep for working students",
+    "kind": "pic"
+   },
+   "board": [
+    33,
+    56,
+    3
+   ],
+   "fonts": [
+    "design-23"
+   ],
+   "colours": "design-23"
+  },
+  {
+   "id": "teaser",
+   "kind": "teaser",
+   "slug": "working-full-time",
+   "title": "Teaser for LinkedIn and X (v3, 2026-11-13): one relatable stretch -> the idea -> 4 named tips -> her takeaway",
+   "bites": [
+    {
+     "in": 0.05,
+     "out": 9.4,
+     "cuts": [
+      [
+       5.63,
+       7.47
+      ]
+     ]
+    },
+    [
+     82.18,
+     88.16
+    ],
+    [
+     93.12,
+     105.75
+    ],
+    [
+     17.96,
+     22.2
+    ],
+    {
+     "gap": 0.8,
+     "at": 605.2
+    },
+    {
+     "in": 234.91,
+     "out": 256.65,
+     "cuts": [
+      [
+       250.85,
+       255.15
+      ]
+     ]
+    },
+    {
+     "gap": 0.8,
+     "at": 605.2
+    },
+    [
+     330.18,
+     332.45
+    ],
+    [
+     339.05,
+     345.1
+    ],
+    {
+     "gap": 0.8,
+     "at": 605.2
+    },
+    [
+     423.26,
+     430.4
+    ],
+    [
+     434.2,
+     440.8
+    ],
+    {
+     "gap": 0.8,
+     "at": 605.2
+    },
+    [
+     526.05,
+     529.9
+    ],
+    {
+     "in": 542.4,
+     "out": 549.74,
+     "cuts": [
+      [
+       547.56,
+       547.92,
+       "exact"
+      ]
+     ]
+    },
+    [
+     598.74,
+     603.91
+    ]
+   ],
+   "tail": 6.5,
+   "captionStyle": "shorts",
+   "script": "teaser/teaser.js",
+   "music": [
+    "766",
+    0.0
+   ],
+   "endCard": {
+    "title": "How I Work Full Time While Doing a Master's Abroad"
+   },
+   "fonts": [
+    "pair-01"
+   ],
+   "colours": "combo-01 (Design 368: navy / cream / ink)"
+  }
+ ],
+ "common": [
+  "assets/src/clips.js",
+  "../film/scenes/wfkit.js",
+  "../film/scenes/wfsent.js",
+  "moments/common.js",
+  "moments/visuals.js",
+  "moments/formats.js",
+  "moments/plan.js",
+  "moments/looks.js"
+ ],
+ "pad": "#23201B",
+ "frame9": "4x5",
+ "videoTitle": "How I Work Full Time While Doing a Master's Abroad",
+ "images": {
+  "clip_sie-hours": "assets/src/sie-hours.png",
+  "clip_sie-balance": "assets/src/sie-balance.png",
+  "clip_sie-ects": "assets/src/sie-ects.png",
+  "clip_sie-hard": "assets/src/sie-hard.png",
+  "clip_rt13-30": "assets/src/rt13-30.png",
+  "clip_rt13-20": "assets/src/rt13-20.png",
+  "clip_rt13-15": "assets/src/rt13-15.png",
+  "clip_rt13-leave": "assets/src/rt13-leave.png",
+  "clip_tt-45": "assets/src/tt-45.png",
+  "clip_tt-cancel": "assets/src/tt-cancel.png",
+  "px_mealprep": "assets/px/mealprep.jpg",
+  "px_mealprep2": "assets/px/mealprep2.jpg",
+  "px_lecture": "assets/px/lecture.jpg",
+  "px_laptop": "assets/px/laptop.jpg",
+  "px_tallinn": "assets/px/tallinn.jpg",
+  "clip_sie-hours-p": "assets/src/sie-hours-p.png",
+  "clip_sie-ects-p": "assets/src/sie-ects-p.png",
+  "clip_rt13-30-p": "assets/src/rt13-30-p.png",
+  "clip_tt-45-p": "assets/src/tt-45-p.png",
+  "clip_tt-cancel-p": "assets/src/tt-cancel-p.png",
+  "cover_sh01": "assets/covers/sh01.jpg",
+  "cover_sh02": "assets/covers/sh02.jpg",
+  "cover_sh03": "assets/covers/sh03.jpg",
+  "cover_sh03_cut": "assets/covers/sh03-cut.png",
+  "cover_sh04": "assets/covers/sh04.jpg",
+  "cover_sh05": "assets/covers/sh05.jpg",
+  "cover_sh06": "assets/covers/sh06.jpg",
+  "cover_sh07": "assets/covers/sh07.jpg",
+  "cover_sh07_cut": "assets/covers/sh07-cut.png",
+  "cover_sh08": "assets/covers/sh08.jpg",
+  "cover_sh09": "assets/covers/sh09.jpg",
+  "cover_sh10": "assets/covers/sh10.jpg",
+  "cover_sh10_cut": "assets/covers/sh10-cut.png",
+  "cover_sh03_frame": "assets/covers/sh03-frame.jpg",
+  "cover_sh05_frame": "assets/covers/sh05-frame.jpg",
+  "cover_sh07_frame": "assets/covers/sh07-frame.jpg",
+  "cover_sh09_frame": "assets/covers/sh09-frame.jpg"
+ },
+ "pauses": [
+  {
+   "id": "fix-45",
+   "at": 66.55,
+   "d": 4.5,
+   "text": "Quick correction: the 45 ECTS rule is Estonia's,\nby the end of each study year. Your own school checks it in its own way."
+  }
+ ],
+ "outroCard": {
+  "on": true,
+  "thumb": "../outputs/thumbnails/03-9am-job-9pm-masters.png",
+  "title": "How I Work Full Time While Doing a Master's Abroad",
+  "dur": 6.5,
+  "photo": "/library/her-photos/avatar.png",
+  "style": {
+   "ground": "#23201B",
+   "ink": "#F4EBD3",
+   "mid": "#B9AD92",
+   "accent": "#C8102E"
+  }
+ }
+}

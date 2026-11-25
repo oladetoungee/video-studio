@@ -1,0 +1,104 @@
+{
+ "story": "emudhra",
+ "outlet": "Hacker News (thread)",
+ "slug": "hn-thread",
+ "url": "https://news.ycombinator.com/item?id=50166579",
+ "finalUrl": "https://news.ycombinator.com/item?id=50166579",
+ "status": "loaded",
+ "http": 200,
+ "title": "eMudhra intermediate CA compromise | Hacker News",
+ "h1": "",
+ "published": "",
+ "files": {
+  "fold": "emudhra/hn-thread_fold.png",
+  "full": "emudhra/hn-thread_full.jpg",
+  "scroll": "emudhra/hn-thread_scroll.mp4"
+ },
+ "full": {
+  "width": 1440,
+  "height": 6000,
+  "pageHeight": 108973,
+  "zoom": 1.75,
+  "quotes": [
+   {
+    "quote": "eMudhra intermediate CA compromise",
+    "box": {
+     "x": 58,
+     "y": 82,
+     "w": 450,
+     "h": 28
+    },
+    "lines": [
+     {
+      "x": 58,
+      "y": 82,
+      "w": 450,
+      "h": 28
+     }
+    ]
+   }
+  ]
+ },
+ "scroll": {
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "seconds": 8,
+  "keyframes": [
+   {
+    "t": 0,
+    "y": 0
+   },
+   {
+    "t": 1,
+    "y": 0
+   },
+   {
+    "t": 2.55,
+    "y": 2450
+   },
+   {
+    "t": 8,
+    "y": 2450
+   }
+  ],
+  "zoom": 1.75,
+  "easing": "easeInOutCubic between keyframes, holds where y is equal",
+  "capped": false,
+  "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)",
+  "quotes": [
+   {
+    "quote": "eMudhra intermediate CA compromise",
+    "inVideo": true,
+    "still": true,
+    "t": 0.53,
+    "visibleStill": [
+     0,
+     1.07
+    ],
+    "scrollY": 0,
+    "box": {
+     "x": 200,
+     "y": 82,
+     "w": 450,
+     "h": 28
+    },
+    "lines": [
+     {
+      "x": 200,
+      "y": 82,
+      "w": 450,
+      "h": 28
+     }
+    ],
+    "docBox": {
+     "x": 200,
+     "y": 82,
+     "w": 450,
+     "h": 28
+    },
+    "layoutDriftPx": 0
+   }
+  ]
+ }
+}

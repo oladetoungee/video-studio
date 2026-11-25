@@ -1,0 +1,2 @@
+All fonts: SIL Open Font License 1.1, from github.com/google/fonts (ofl/): IBM Plex Sans, IBM Plex Mono, Space Grotesk, Martian Mono, Schibsted Grotesk, Oswald.
+Helvetica Neue (shorts captions) is the macOS system font, loaded with local() only, never copied.

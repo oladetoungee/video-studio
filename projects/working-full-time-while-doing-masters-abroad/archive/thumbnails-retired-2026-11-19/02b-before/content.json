@@ -1,0 +1,35 @@
+{
+  "text": {
+    "h": "my week: job + master's",
+    "days": "Mon,Tue,Wed,Thu,Fri",
+    "work": "Work<br>9-5",
+    "class": "Class",
+    "unlabelled": "3,4"
+  },
+  "images": {
+    "me": "../../assets/shoot2/cut-1590c-clean.png"
+  },
+  "kind": "her week calendar fills the frame (work all day, class every evening), she stands in front presenting it",
+  "layout": "her centre in front of a full-frame calendar, words in a top band",
+  "board": "Thumbnails 51 (yt-79 \"How I have time for everything with a full time job\": her in front of her full week calendar)",
+  "fonts": [
+    "thumbs-19 Inter Tight Medium, very tight (ink #111111 on cream #EFEDE6, Thumbnails 174)"
+  ],
+  "colours": "Thumbnails 174: #EFEDE6 / #111111 (+ white calendar, class blocks red #D7262B = her headband)",
+  "thumbnail_text": "my week: job + master's (a week calendar: Work all day, Class every evening)",
+  "titles": [
+    "Full-Time Job and Full-Time Master's: How I Plan My Week",
+    "My Week as a Developer and a Full-Time Master's Student",
+    "Working a 9-5 While Doing a Master's Abroad"
+  ],
+  "title": "Full-Time Job and Full-Time Master's: How I Plan My Week",
+  "direction": "New version of 02 (2026-11-16, 02 stays as it was): copies Thumbnails 51 properly, the whole week as a real calendar behind her (Work blocks all day, Class blocks every evening, as in her first two semesters), she presents it with an open palm. Inter Tight Medium very tight, ink on cream, as Thumbnails 174.",
+  "nudge": {},
+  "vars": {
+    "--mw": "640px",
+    "--mx": "395px",
+    "--my": "214px"
+  },
+  "class": "no-lift",
+  "scores": "2026-11-16 blind critic: R1 7 / R2 7 / R3 7 (old 02 in the same rounds: 5.5 / 4.5 / 5)"
+}

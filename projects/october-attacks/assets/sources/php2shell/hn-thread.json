@@ -1,0 +1,104 @@
+{
+ "story": "php2shell",
+ "outlet": "Hacker News (thread)",
+ "slug": "hn-thread",
+ "url": "https://news.ycombinator.com/item?id=50180836",
+ "finalUrl": "https://news.ycombinator.com/item?id=50180836",
+ "status": "loaded",
+ "http": 200,
+ "title": "PHP2Shell: AI uncovers critical RCE in PHP | Hacker News",
+ "h1": "",
+ "published": "",
+ "files": {
+  "fold": "php2shell/hn-thread_fold.png",
+  "full": "php2shell/hn-thread_full.jpg",
+  "scroll": "php2shell/hn-thread_scroll.mp4"
+ },
+ "full": {
+  "width": 1440,
+  "height": 6000,
+  "pageHeight": 35527,
+  "zoom": 1.75,
+  "quotes": [
+   {
+    "quote": "PHP2Shell: AI uncovers critical RCE in PHP",
+    "box": {
+     "x": 68,
+     "y": 82,
+     "w": 499,
+     "h": 28
+    },
+    "lines": [
+     {
+      "x": 68,
+      "y": 82,
+      "w": 499,
+      "h": 28
+     }
+    ]
+   }
+  ]
+ },
+ "scroll": {
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "seconds": 8,
+  "keyframes": [
+   {
+    "t": 0,
+    "y": 0
+   },
+   {
+    "t": 1,
+    "y": 0
+   },
+   {
+    "t": 2.55,
+    "y": 2450
+   },
+   {
+    "t": 8,
+    "y": 2450
+   }
+  ],
+  "zoom": 1.75,
+  "easing": "easeInOutCubic between keyframes, holds where y is equal",
+  "capped": false,
+  "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)",
+  "quotes": [
+   {
+    "quote": "PHP2Shell: AI uncovers critical RCE in PHP",
+    "inVideo": true,
+    "still": true,
+    "t": 0.53,
+    "visibleStill": [
+     0,
+     1.07
+    ],
+    "scrollY": 0,
+    "box": {
+     "x": 200,
+     "y": 82,
+     "w": 499,
+     "h": 28
+    },
+    "lines": [
+     {
+      "x": 200,
+      "y": 82,
+      "w": 499,
+      "h": 28
+     }
+    ],
+    "docBox": {
+     "x": 200,
+     "y": 82,
+     "w": 499,
+     "h": 28
+    },
+    "layoutDriftPx": 0
+   }
+  ]
+ }
+}

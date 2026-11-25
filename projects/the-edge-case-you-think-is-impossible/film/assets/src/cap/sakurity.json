@@ -1,0 +1,34 @@
+{
+ "title": "Hacking Starbucks for unlimited coffee",
+ "h1": "Hacking Starbucks for unlimited coffee",
+ "h1y": 100,
+ "found": {
+  "race condition": [
+   [
+    672.34375,
+    1269.40625,
+    109.359375,
+    18
+   ]
+  ]
+ },
+ "H": 4300,
+ "focus": {
+  "race condition": {
+   "file": "sakurity__race-condition.png",
+   "top": 749.40625,
+   "rects": [
+    [
+     672.34375,
+     520,
+     109.359375,
+     18
+    ]
+   ]
+  }
+ },
+ "clipTop": 0,
+ "scale": 1.5,
+ "url": "https://sakurity.com/blog/2015/05/21/starbucks.html",
+ "captured": "2026-11-05T23:08:54.860Z"
+}

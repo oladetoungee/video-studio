@@ -1,0 +1,34 @@
+{
+ "title": "Troubleshooting the REST API - GitHub Docs",
+ "h1": "Troubleshooting the REST API",
+ "h1y": 24,
+ "found": {
+  "to avoid confirming the existence of private repositories": [
+   [
+    476.28125,
+    1082.40625,
+    411.03125,
+    22
+   ]
+  ]
+ },
+ "H": 7573,
+ "focus": {
+  "to avoid confirming the existence of private repositories": {
+   "file": "github__to-avoid-confirming-the-.png",
+   "top": 562.40625,
+   "rects": [
+    [
+     476.28125,
+     520,
+     411.03125,
+     22
+    ]
+   ]
+  }
+ },
+ "clipTop": 0,
+ "scale": 1.5,
+ "url": "https://docs.github.com/en/rest/using-the-rest-api/troubleshooting-the-rest-api",
+ "captured": "2026-11-02T19:34:01.433Z"
+}

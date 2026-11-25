@@ -1,0 +1,34 @@
+{
+ "title": "Full Third-Party Cookie Blocking and More | WebKit",
+ "h1": "Full Third-Party Cookie Blocking and More",
+ "h1y": 111,
+ "found": {
+  "seven days": [
+   [
+    263.796875,
+    2706.515625,
+    87.03125,
+    20
+   ]
+  ]
+ },
+ "H": 4815,
+ "focus": {
+  "seven days": {
+   "file": "webkit-7days__seven-days.png",
+   "top": 2186.515625,
+   "rects": [
+    [
+     263.796875,
+     520,
+     87.03125,
+     20
+    ]
+   ]
+  }
+ },
+ "clipTop": 0,
+ "scale": 1.5,
+ "url": "https://webkit.org/blog/10218/full-third-party-cookie-blocking-and-more/",
+ "captured": "2026-11-02T19:33:02.375Z"
+}

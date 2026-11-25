@@ -1,0 +1,66 @@
+{
+ "title": "Inside the EU’s planned Digital Fairness Act: digital design, subscription traps, and influencer marketing",
+ "h1": "Inside the EU’s planned Digital Fairness Act: digital design, subscription traps, and influencer marketing",
+ "h1y": 678,
+ "found": {
+  "11 November 2026": [
+   [
+    853.390625,
+    2260.828125,
+    141.984375,
+    22
+   ]
+  ],
+  "Digital Fairness Act": [
+   [
+    751.078125,
+    677,
+    138.25,
+    59
+   ],
+   [
+    219,
+    735,
+    276.0625,
+    59
+   ]
+  ]
+ },
+ "H": 8081,
+ "focus": {
+  "11 November 2026": {
+   "file": "cms-dfa__11-november-2026.png",
+   "top": 1740.828125,
+   "rects": [
+    [
+     853.390625,
+     520,
+     141.984375,
+     22
+    ]
+   ]
+  },
+  "Digital Fairness Act": {
+   "file": "cms-dfa__digital-fairness-act.png",
+   "top": 157,
+   "rects": [
+    [
+     751.078125,
+     520,
+     138.25,
+     59
+    ],
+    [
+     219,
+     578,
+     276.0625,
+     59
+    ]
+   ]
+  }
+ },
+ "clipTop": 558,
+ "scale": 1.5,
+ "url": "https://cms.law/en/aut/legal-updates/inside-the-eu-s-planned-digital-fairness-act-digital-design-subscription-traps-and-influencer-marketing",
+ "captured": "2026-11-02T19:27:22.863Z"
+}

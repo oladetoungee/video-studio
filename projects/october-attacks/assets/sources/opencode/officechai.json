@@ -1,0 +1,104 @@
+{
+ "story": "opencode",
+ "outlet": "OfficeChai",
+ "slug": "officechai",
+ "url": "https://officechai.com/ai/opencode-discloses-security-breach-says-attackers-may-have-accessed-users-openai-anthropic-and-google-api-keys/",
+ "finalUrl": "https://officechai.com/ai/opencode-discloses-security-breach-says-attackers-may-have-accessed-users-openai-anthropic-and-google-api-keys/",
+ "status": "loaded",
+ "http": 200,
+ "title": "OpenCode Discloses Security Breach, Says Attackers May Have Accessed Users' OpenAI, Anthropic And Google API Keys",
+ "h1": "OpenCode Discloses Security Breach, Says Attackers May Have Accessed Users’ OpenAI, Anthropic And Google API Keys",
+ "published": "2026-10-17T19:03:00+00:00",
+ "files": {
+  "fold": "opencode/officechai_fold.png",
+  "full": "opencode/officechai_full.jpg",
+  "scroll": "opencode/officechai_scroll.mp4"
+ },
+ "full": {
+  "width": 1440,
+  "height": 5012,
+  "pageHeight": 5012,
+  "zoom": 1,
+  "quotes": [
+   {
+    "quote": "Whole new world with AI-powered hacking",
+    "box": {
+     "x": 274,
+     "y": 1224,
+     "w": 355,
+     "h": 20
+    },
+    "lines": [
+     {
+      "x": 274,
+      "y": 1224,
+      "w": 355,
+      "h": 20
+     }
+    ]
+   }
+  ]
+ },
+ "scroll": {
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "seconds": 8,
+  "keyframes": [
+   {
+    "t": 0,
+    "y": 77
+   },
+   {
+    "t": 1,
+    "y": 77
+   },
+   {
+    "t": 2.248,
+    "y": 814
+   },
+   {
+    "t": 8,
+    "y": 814
+   }
+  ],
+  "zoom": 1,
+  "easing": "easeInOutCubic between keyframes, holds where y is equal",
+  "capped": false,
+  "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)",
+  "quotes": [
+   {
+    "quote": "Whole new world with AI-powered hacking",
+    "inVideo": true,
+    "still": true,
+    "t": 5.1,
+    "visibleStill": [
+     2.17,
+     8.03
+    ],
+    "scrollY": 814,
+    "box": {
+     "x": 514,
+     "y": 410,
+     "w": 355,
+     "h": 20
+    },
+    "lines": [
+     {
+      "x": 514,
+      "y": 410,
+      "w": 355,
+      "h": 20
+     }
+    ],
+    "docBox": {
+     "x": 514,
+     "y": 1224,
+     "w": 355,
+     "h": 20
+    },
+    "layoutDriftPx": 0
+   }
+  ]
+ }
+}

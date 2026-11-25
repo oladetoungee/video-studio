@@ -1,0 +1,57 @@
+{
+ "music": "160",
+ "musicAt": 2,
+ "musicDb": -22,
+ "sfxDb": -4,
+ "roles": {
+  "slide": "paper-slide",
+  "stamp": "wood-hard-hit",
+  "stamp2": "typewriter-single-hit",
+  "tick": "typewriter-soft-click",
+  "tick2": "click-classic",
+  "pop": "card-flick",
+  "marker": "marker-line",
+  "clock": "clock-wall-tick-tock",
+  "swipe": "camera-autofocus"
+ },
+ "cues": [
+  [
+   515.0,
+   "slide"
+  ],
+  [
+   517.38,
+   "stamp"
+  ],
+  [
+   518.02,
+   "tick"
+  ],
+  [
+   518.94,
+   "tick2"
+  ],
+  [
+   519.6,
+   "pop"
+  ],
+  [
+   521.34,
+   "swipe",
+   -4
+  ],
+  [
+   521.6,
+   "marker"
+  ],
+  [
+   522.48,
+   "clock",
+   -6
+  ],
+  [
+   523.36,
+   "stamp2"
+  ]
+ ]
+}

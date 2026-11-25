@@ -1,0 +1,844 @@
+{
+ "slug": "phone-distraction",
+ "aspect": "16x9",
+ "note": "Transition board. Fill carrier (what brings the next shot in: a shape, a line, a word, the camera, or \"hard cut\") and why (>= 20 characters: the reason, e.g. \"cut on the beat of 'licensed', new idea\"). Re-running lab.mjs board keeps them.",
+ "cuts": [
+  {
+   "from": "hook",
+   "to": "later",
+   "frame": 188,
+   "t": 6.25,
+   "kind": "cut",
+   "lands_on": "It's @ 6.41 s (f192)",
+   "carrier": "pull-to-refresh: the old screen is dragged down 22 %, the 12-tick spinner holds, the new screen springs back",
+   "why": "the signature move of the look: a new chapter or idea arrives the way a feed refreshes"
+  },
+  {
+   "from": "later",
+   "to": "plan",
+   "frame": 439,
+   "t": 14.63,
+   "kind": "cut",
+   "lands_on": "In @ 14.75 s (f443)",
+   "carrier": "",
+   "why": ""
+  },
+  {
+   "from": "plan",
+   "to": "economy",
+   "frame": 1224,
+   "t": 40.79,
+   "kind": "cut",
+   "lands_on": "So @ 40.89 s (f1227)",
+   "carrier": "pull-to-refresh: the old screen is dragged down 22 %, the 12-tick spinner holds, the new screen springs back",
+   "why": "the signature move of the look: a new chapter or idea arrives the way a feed refreshes"
+  },
+  {
+   "from": "economy",
+   "to": "simon",
+   "frame": 1395,
+   "t": 46.48,
+   "kind": "cut",
+   "lands_on": "Back @ 46.60 s (f1398)",
+   "carrier": "hard cut on her word; the next screen opens with its first card or line already on",
+   "why": "same ink lock screen on both sides; the new content lands on the spoken word"
+  },
+  {
+   "from": "simon",
+   "to": "quote",
+   "frame": 1585,
+   "t": 52.82,
+   "kind": "cut",
+   "lands_on": "a @ 53.07 s (f1592)",
+   "carrier": "hard cut on her word; the next screen opens with its first card or line already on",
+   "why": "same ink lock screen on both sides; the new content lands on the spoken word"
+  },
+  {
+   "from": "quote",
+   "to": "flood",
+   "frame": 1684,
+   "t": 56.11,
+   "kind": "cut",
+   "lands_on": "What @ 56.23 s (f1687)",
+   "carrier": "hard cut on her word; the next screen opens with its first card or line already on",
+   "why": "same ink lock screen on both sides; the new content lands on the spoken word"
+  },
+  {
+   "from": "flood",
+   "to": "currency",
+   "frame": 1972,
+   "t": 65.71,
+   "kind": "cut",
+   "lands_on": "So @ 65.83 s (f1975)",
+   "carrier": "hard cut on her word; the next screen opens with its first card or line already on",
+   "why": "same ink lock screen on both sides; the new content lands on the spoken word"
+  },
+  {
+   "from": "currency",
+   "to": "free",
+   "frame": 2189,
+   "t": 72.94,
+   "kind": "cut",
+   "lands_on": "Now @ 73.06 s (f2192)",
+   "carrier": "hard cut on her word; the next screen opens with its first card or line already on",
+   "why": "same ink lock screen on both sides; the new content lands on the spoken word"
+  },
+  {
+   "from": "free",
+   "to": "ads",
+   "frame": 2600,
+   "t": 86.64,
+   "kind": "cut",
+   "lands_on": "They @ 86.79 s (f2604)",
+   "carrier": "hard cut on her word; the next screen opens with its first card or line already on",
+   "why": "same ink lock screen on both sides; the new content lands on the spoken word"
+  },
+  {
+   "from": "ads",
+   "to": "sold",
+   "frame": 2956,
+   "t": 98.52,
+   "kind": "cut",
+   "lands_on": "It's @ 98.67 s (f2960)",
+   "carrier": "hard cut on her word; the next screen opens with its first card or line already on",
+   "why": "same ink lock screen on both sides; the new content lands on the spoken word"
+  },
+  {
+   "from": "sold",
+   "to": "product",
+   "frame": 3229,
+   "t": 107.61,
+   "kind": "cut",
+   "lands_on": "So @ 107.69 s (f3231)",
+   "carrier": "badge burst: a red badge grows from the previous screen until it fills the frame",
+   "why": "her biggest claims get the red punch card, at most one a minute"
+  },
+  {
+   "from": "product",
+   "to": "persuasive",
+   "frame": 3325,
+   "t": 110.83,
+   "kind": "cut",
+   "lands_on": "Now @ 110.93 s (f3328)",
+   "carrier": "pull-to-refresh: the old screen is dragged down 22 %, the 12-tick spinner holds, the new screen springs back",
+   "why": "the signature move of the look: a new chapter or idea arrives the way a feed refreshes"
+  },
+  {
+   "from": "persuasive",
+   "to": "fogg",
+   "frame": 3488,
+   "t": 116.26,
+   "kind": "cut",
+   "lands_on": "A @ 116.38 s (f3491)",
+   "carrier": "hard cut on her word; the next screen opens with its first card or line already on",
+   "why": "same ink lock screen on both sides; the new content lands on the spoken word"
+  },
+  {
+   "from": "fogg",
+   "to": "class",
+   "frame": 3881,
+   "t": 129.35,
+   "kind": "cut",
+   "lands_on": "To @ 129.47 s (f3884)",
+   "carrier": "hard cut on her word; the next screen opens with its first card or line already on",
+   "why": "same ink lock screen on both sides; the new content lands on the spoken word"
+  },
+  {
+   "from": "class",
+   "to": "model",
+   "frame": 4434,
+   "t": 147.77,
+   "kind": "cut",
+   "lands_on": "B.J. @ 147.89 s (f4437)",
+   "carrier": "hard cut on her word; the next screen opens with its first card or line already on",
+   "why": "same ink lock screen on both sides; the new content lands on the spoken word"
+  },
+  {
+   "from": "model",
+   "to": "prompt",
+   "frame": 4792,
+   "t": 159.73,
+   "kind": "cut",
+   "lands_on": "Now @ 159.85 s (f4796)",
+   "carrier": "hard cut on her word; the next screen opens with its first card or line already on",
+   "why": "same ink lock screen on both sides; the new content lands on the spoken word"
+  },
+  {
+   "from": "prompt",
+   "to": "students",
+   "frame": 5360,
+   "t": 178.64,
+   "kind": "cut",
+   "lands_on": "And @ 178.76 s (f5363)",
+   "carrier": "hard cut on her word; the next screen opens with its first card or line already on",
+   "why": "same ink lock screen on both sides; the new content lands on the spoken word"
+  },
+  {
+   "from": "students",
+   "to": "real",
+   "frame": 5862,
+   "t": 195.38,
+   "kind": "cut",
+   "lands_on": "This @ 195.50 s (f5865)",
+   "carrier": "hard cut on her word; the next screen opens with its first card or line already on",
+   "why": "same ink lock screen on both sides; the new content lands on the spoken word"
+  },
+  {
+   "from": "real",
+   "to": "curiosity",
+   "frame": 6169,
+   "t": 205.63,
+   "kind": "cut",
+   "lands_on": "The @ 205.75 s (f6173)",
+   "carrier": "hard cut on her word; the next screen opens with its first card or line already on",
+   "why": "same ink lock screen on both sides; the new content lands on the spoken word"
+  },
+  {
+   "from": "curiosity",
+   "to": "reward",
+   "frame": 6373,
+   "t": 212.43,
+   "kind": "cut",
+   "lands_on": "Now, @ 212.53 s (f6376)",
+   "carrier": "pull-to-refresh: the old screen is dragged down 22 %, the 12-tick spinner holds, the new screen springs back",
+   "why": "the signature move of the look: a new chapter or idea arrives the way a feed refreshes"
+  },
+  {
+   "from": "reward",
+   "to": "gamble",
+   "frame": 6526,
+   "t": 217.51,
+   "kind": "cut",
+   "lands_on": "It @ 217.63 s (f6529)",
+   "carrier": "hard cut on her word; the next screen opens with its first card or line already on",
+   "why": "same ink lock screen on both sides; the new content lands on the spoken word"
+  },
+  {
+   "from": "gamble",
+   "to": "psych",
+   "frame": 6802,
+   "t": 226.73,
+   "kind": "cut",
+   "lands_on": "The @ 226.85 s (f6806)",
+   "carrier": "hard cut on her word; the next screen opens with its first card or line already on",
+   "why": "same ink lock screen on both sides; the new content lands on the spoken word"
+  },
+  {
+   "from": "psych",
+   "to": "predict",
+   "frame": 7138,
+   "t": 237.93,
+   "kind": "cut",
+   "lands_on": "If @ 238.05 s (f7142)",
+   "carrier": "hard cut on her word; the next screen opens with its first card or line already on",
+   "why": "same ink lock screen on both sides; the new content lands on the spoken word"
+  },
+  {
+   "from": "predict",
+   "to": "phoneworks",
+   "frame": 7360,
+   "t": 245.31,
+   "kind": "cut",
+   "lands_on": "And @ 245.43 s (f7363)",
+   "carrier": "hard cut on her word; the next screen opens with its first card or line already on",
+   "why": "same ink lock screen on both sides; the new content lands on the spoken word"
+  },
+  {
+   "from": "phoneworks",
+   "to": "designs",
+   "frame": 7755,
+   "t": 258.47,
+   "kind": "cut",
+   "lands_on": "And @ 258.59 s (f7758)",
+   "carrier": "hard cut on her word; the next screen opens with its first card or line already on",
+   "why": "same ink lock screen on both sides; the new content lands on the spoken word"
+  },
+  {
+   "from": "designs",
+   "to": "ptr",
+   "frame": 7965,
+   "t": 265.47,
+   "kind": "cut",
+   "lands_on": "The @ 265.59 s (f7968)",
+   "carrier": "pull-to-refresh: the old screen is dragged down 22 %, the 12-tick spinner holds, the new screen springs back",
+   "why": "the signature move of the look: a new chapter or idea arrives the way a feed refreshes"
+  },
+  {
+   "from": "ptr",
+   "to": "patent",
+   "frame": 8250,
+   "t": 274.99,
+   "kind": "cut",
+   "lands_on": "That @ 275.19 s (f8256)",
+   "carrier": "hard cut on her word; the next screen opens with its first card or line already on",
+   "why": "same ink lock screen on both sides; the new content lands on the spoken word"
+  },
+  {
+   "from": "patent",
+   "to": "pulls",
+   "frame": 8648,
+   "t": 288.25,
+   "kind": "cut",
+   "lands_on": "and @ 288.37 s (f8651)",
+   "carrier": "hard cut on her word; the next screen opens with its first card or line already on",
+   "why": "same ink lock screen on both sides; the new content lands on the spoken word"
+  },
+  {
+   "from": "pulls",
+   "to": "scroll",
+   "frame": 8948,
+   "t": 298.25,
+   "kind": "cut",
+   "lands_on": "Another @ 298.35 s (f8950)",
+   "carrier": "pull-to-refresh: the old screen is dragged down 22 %, the 12-tick spinner holds, the new screen springs back",
+   "why": "the signature move of the look: a new chapter or idea arrives the way a feed refreshes"
+  },
+  {
+   "from": "scroll",
+   "to": "pages",
+   "frame": 9219,
+   "t": 307.27,
+   "kind": "cut",
+   "lands_on": "Before @ 307.39 s (f9222)",
+   "carrier": "hard cut on her word; the next screen opens with its first card or line already on",
+   "why": "same ink lock screen on both sides; the new content lands on the spoken word"
+  },
+  {
+   "from": "pages",
+   "to": "ask",
+   "frame": 9564,
+   "t": 318.79,
+   "kind": "cut",
+   "lands_on": "It's @ 318.91 s (f9567)",
+   "carrier": "hard cut on her word; the next screen opens with its first card or line already on",
+   "why": "same ink lock screen on both sides; the new content lands on the spoken word"
+  },
+  {
+   "from": "ask",
+   "to": "removed",
+   "frame": 9753,
+   "t": 325.08,
+   "kind": "cut",
+   "lands_on": "infinite @ 325.20 s (f9756)",
+   "carrier": "hard cut on her word; the next screen opens with its first card or line already on",
+   "why": "same ink lock screen on both sides; the new content lands on the spoken word"
+  },
+  {
+   "from": "removed",
+   "to": "loadmore",
+   "frame": 10233,
+   "t": 341.09,
+   "kind": "cut",
+   "lands_on": "If @ 341.21 s (f10236)",
+   "carrier": "hard cut on her word; the next screen opens with its first card or line already on",
+   "why": "same ink lock screen on both sides; the new content lands on the spoken word"
+  },
+  {
+   "from": "loadmore",
+   "to": "cues",
+   "frame": 10475,
+   "t": 349.15,
+   "kind": "cut",
+   "lands_on": "If @ 349.27 s (f10478)",
+   "carrier": "hard cut on her word; the next screen opens with its first card or line already on",
+   "why": "same ink lock screen on both sides; the new content lands on the spoken word"
+  },
+  {
+   "from": "cues",
+   "to": "lastpage",
+   "frame": 11425,
+   "t": 380.81,
+   "kind": "cut",
+   "lands_on": "Your @ 380.89 s (f11427)",
+   "carrier": "badge burst: a red badge grows from the previous screen until it fills the frame",
+   "why": "her biggest claims get the red punch card, at most one a minute"
+  },
+  {
+   "from": "lastpage",
+   "to": "autoplay",
+   "frame": 11622,
+   "t": 387.37,
+   "kind": "cut",
+   "lands_on": "Another @ 387.47 s (f11624)",
+   "carrier": "pull-to-refresh: the old screen is dragged down 22 %, the 12-tick spinner holds, the new screen springs back",
+   "why": "the signature move of the look: a new chapter or idea arrives the way a feed refreshes"
+  },
+  {
+   "from": "autoplay",
+   "to": "decide",
+   "frame": 11899,
+   "t": 396.61,
+   "kind": "cut",
+   "lands_on": "When @ 396.73 s (f11902)",
+   "carrier": "hard cut on her word; the next screen opens with its first card or line already on",
+   "why": "same ink lock screen on both sides; the new content lands on the spoken word"
+  },
+  {
+   "from": "decide",
+   "to": "effort",
+   "frame": 12338,
+   "t": 411.26,
+   "kind": "cut",
+   "lands_on": "It @ 411.38 s (f12341)",
+   "carrier": "hard cut on her word; the next screen opens with its first card or line already on",
+   "why": "same ink lock screen on both sides; the new content lands on the spoken word"
+  },
+  {
+   "from": "effort",
+   "to": "defaults",
+   "frame": 12769,
+   "t": 425.61,
+   "kind": "cut",
+   "lands_on": "And @ 425.73 s (f12772)",
+   "carrier": "hard cut on her word; the next screen opens with its first card or line already on",
+   "why": "same ink lock screen on both sides; the new content lands on the spoken word"
+  },
+  {
+   "from": "defaults",
+   "to": "badges",
+   "frame": 13064,
+   "t": 435.44,
+   "kind": "cut",
+   "lands_on": "Next @ 435.54 s (f13066)",
+   "carrier": "pull-to-refresh: the old screen is dragged down 22 %, the 12-tick spinner holds, the new screen springs back",
+   "why": "the signature move of the look: a new chapter or idea arrives the way a feed refreshes"
+  },
+  {
+   "from": "badges",
+   "to": "accident",
+   "frame": 13330,
+   "t": 444.31,
+   "kind": "cut",
+   "lands_on": "and @ 444.43 s (f13333)",
+   "carrier": "pull-to-refresh: the old screen is dragged down 22 %, the 12-tick spinner holds, the new screen springs back",
+   "why": "the signature move of the look: a new chapter or idea arrives the way a feed refreshes"
+  },
+  {
+   "from": "accident",
+   "to": "bluered",
+   "frame": 13607,
+   "t": 453.55,
+   "kind": "cut",
+   "lands_on": "And @ 453.67 s (f13610)",
+   "carrier": "hard cut on her word; the next screen opens with its first card or line already on",
+   "why": "same ink lock screen on both sides; the new content lands on the spoken word"
+  },
+  {
+   "from": "bluered",
+   "to": "grab",
+   "frame": 14042,
+   "t": 468.05,
+   "kind": "cut",
+   "lands_on": "to @ 468.35 s (f14050)",
+   "carrier": "badge burst: a red badge grows from the previous screen until it fills the frame",
+   "why": "her biggest claims get the red punch card, at most one a minute"
+  },
+  {
+   "from": "grab",
+   "to": "everyapp",
+   "frame": 14139,
+   "t": 471.28,
+   "kind": "cut",
+   "lands_on": "phone, @ 471.27 s (f14138)",
+   "carrier": "hard cut on her word; the next screen opens with its first card or line already on",
+   "why": "same ink lock screen on both sides; the new content lands on the spoken word"
+  },
+  {
+   "from": "everyapp",
+   "to": "unfinished",
+   "frame": 14252,
+   "t": 475.06,
+   "kind": "cut",
+   "lands_on": "That @ 475.18 s (f14255)",
+   "carrier": "hard cut on her word; the next screen opens with its first card or line already on",
+   "why": "same ink lock screen on both sides; the new content lands on the spoken word"
+  },
+  {
+   "from": "unfinished",
+   "to": "chi",
+   "frame": 14580,
+   "t": 485.97,
+   "kind": "cut",
+   "lands_on": "There's @ 486.09 s (f14583)",
+   "carrier": "hard cut on her word; the next screen opens with its first card or line already on",
+   "why": "same ink lock screen on both sides; the new content lands on the spoken word"
+  },
+  {
+   "from": "chi",
+   "to": "urgent",
+   "frame": 15224,
+   "t": 507.44,
+   "kind": "cut",
+   "lands_on": "Because @ 507.56 s (f15227)",
+   "carrier": "hard cut on her word; the next screen opens with its first card or line already on",
+   "why": "same ink lock screen on both sides; the new content lands on the spoken word"
+  },
+  {
+   "from": "urgent",
+   "to": "likes",
+   "frame": 15444,
+   "t": 514.8,
+   "kind": "cut",
+   "lands_on": "Another @ 514.90 s (f15447)",
+   "carrier": "pull-to-refresh: the old screen is dragged down 22 %, the 12-tick spinner holds, the new screen springs back",
+   "why": "the signature move of the look: a new chapter or idea arrives the way a feed refreshes"
+  },
+  {
+   "from": "likes",
+   "to": "approval",
+   "frame": 15969,
+   "t": 532.27,
+   "kind": "cut",
+   "lands_on": "And @ 532.39 s (f15972)",
+   "carrier": "hard cut on her word; the next screen opens with its first card or line already on",
+   "why": "same ink lock screen on both sides; the new content lands on the spoken word"
+  },
+  {
+   "from": "approval",
+   "to": "howmany",
+   "frame": 16320,
+   "t": 543.98,
+   "kind": "cut",
+   "lands_on": "When @ 544.10 s (f16323)",
+   "carrier": "hard cut on her word; the next screen opens with its first card or line already on",
+   "why": "same ink lock screen on both sides; the new content lands on the spoken word"
+  },
+  {
+   "from": "howmany",
+   "to": "check",
+   "frame": 16852,
+   "t": 561.73,
+   "kind": "cut",
+   "lands_on": "Have @ 561.85 s (f16856)",
+   "carrier": "hard cut on her word; the next screen opens with its first card or line already on",
+   "why": "same ink lock screen on both sides; the new content lands on the spoken word"
+  },
+  {
+   "from": "check",
+   "to": "braindrain",
+   "frame": 17132,
+   "t": 571.06,
+   "kind": "cut",
+   "lands_on": "There's @ 571.18 s (f17135)",
+   "carrier": "hard cut on her word; the next screen opens with its first card or line already on",
+   "why": "same ink lock screen on both sides; the new content lands on the spoken word"
+  },
+  {
+   "from": "braindrain",
+   "to": "eu-tiktok",
+   "frame": 17768,
+   "t": 592.24,
+   "kind": "cut",
+   "lands_on": "I @ 592.36 s (f17771)",
+   "carrier": "pull-to-refresh: the old screen is dragged down 22 %, the 12-tick spinner holds, the new screen springs back",
+   "why": "the signature move of the look: a new chapter or idea arrives the way a feed refreshes"
+  },
+  {
+   "from": "eu-tiktok",
+   "to": "award",
+   "frame": 18060,
+   "t": 601.99,
+   "kind": "cut",
+   "lands_on": "Now, @ 602.11 s (f18063)",
+   "carrier": "hard cut on her word; the next screen opens with its first card or line already on",
+   "why": "same ink lock screen on both sides; the new content lands on the spoken word"
+  },
+  {
+   "from": "award",
+   "to": "eu-named",
+   "frame": 18327,
+   "t": 610.89,
+   "kind": "cut",
+   "lands_on": "In @ 611.01 s (f18330)",
+   "carrier": "hard cut on her word; the next screen opens with its first card or line already on",
+   "why": "same ink lock screen on both sides; the new content lands on the spoken word"
+  },
+  {
+   "from": "eu-named",
+   "to": "eu-meta",
+   "frame": 18654,
+   "t": 621.778,
+   "kind": "cut",
+   "lands_on": "And @ 621.90 s (f18657)",
+   "carrier": "hard cut on her word; the next screen opens with its first card or line already on",
+   "why": "same ink lock screen on both sides; the new content lands on the spoken word"
+  },
+  {
+   "from": "eu-meta",
+   "to": "legal",
+   "frame": 18920,
+   "t": 630.66,
+   "kind": "cut",
+   "lands_on": "I @ 630.78 s (f18923)",
+   "carrier": "hard cut on her word; the next screen opens with its first card or line already on",
+   "why": "same ink lock screen on both sides; the new content lands on the spoken word"
+  },
+  {
+   "from": "legal",
+   "to": "curious",
+   "frame": 19277,
+   "t": 642.55,
+   "kind": "cut",
+   "lands_on": "yet, @ 642.47 s (f19274)",
+   "carrier": "hard cut on her word; the next screen opens with its first card or line already on",
+   "why": "same ink lock screen on both sides; the new content lands on the spoken word"
+  },
+  {
+   "from": "curious",
+   "to": "whatnow",
+   "frame": 19562,
+   "t": 652.05,
+   "kind": "cut",
+   "lands_on": "So, @ 652.15 s (f19565)",
+   "carrier": "pull-to-refresh: the old screen is dragged down 22 %, the 12-tick spinner holds, the new screen springs back",
+   "why": "the signature move of the look: a new chapter or idea arrives the way a feed refreshes"
+  },
+  {
+   "from": "whatnow",
+   "to": "nineteen",
+   "frame": 19998,
+   "t": 666.59,
+   "kind": "cut",
+   "lands_on": "This @ 666.71 s (f20001)",
+   "carrier": "hard cut on her word; the next screen opens with its first card or line already on",
+   "why": "same ink lock screen on both sides; the new content lands on the spoken word"
+  },
+  {
+   "from": "nineteen",
+   "to": "left",
+   "frame": 20655,
+   "t": 688.48,
+   "kind": "cut",
+   "lands_on": "And @ 688.60 s (f20658)",
+   "carrier": "hard cut on her word; the next screen opens with its first card or line already on",
+   "why": "same ink lock screen on both sides; the new content lands on the spoken word"
+  },
+  {
+   "from": "left",
+   "to": "need",
+   "frame": 20923,
+   "t": 697.43,
+   "kind": "cut",
+   "lands_on": "These @ 697.55 s (f20927)",
+   "carrier": "pull-to-refresh: the old screen is dragged down 22 %, the 12-tick spinner holds, the new screen springs back",
+   "why": "the signature move of the look: a new chapter or idea arrives the way a feed refreshes"
+  },
+  {
+   "from": "need",
+   "to": "rule",
+   "frame": 21108,
+   "t": 703.59,
+   "kind": "cut",
+   "lands_on": "The @ 703.71 s (f21111)",
+   "carrier": "hard cut on her word; the next screen opens with its first card or line already on",
+   "why": "same ink lock screen on both sides; the new content lands on the spoken word"
+  },
+  {
+   "from": "rule",
+   "to": "notifoff",
+   "frame": 21690,
+   "t": 722.97,
+   "kind": "cut",
+   "lands_on": "there @ 722.95 s (f21688)",
+   "carrier": "hard cut on her word; the next screen opens with its first card or line already on",
+   "why": "same ink lock screen on both sides; the new content lands on the spoken word"
+  },
+  {
+   "from": "notifoff",
+   "to": "hypocritical",
+   "frame": 21927,
+   "t": 730.87,
+   "kind": "cut",
+   "lands_on": "And @ 730.99 s (f21930)",
+   "carrier": "hard cut on her word; the next screen opens with its first card or line already on",
+   "why": "same ink lock screen on both sides; the new content lands on the spoken word"
+  },
+  {
+   "from": "hypocritical",
+   "to": "try",
+   "frame": 22167,
+   "t": 738.87,
+   "kind": "cut",
+   "lands_on": "So, @ 738.97 s (f22169)",
+   "carrier": "pull-to-refresh: the old screen is dragged down 22 %, the 12-tick spinner holds, the new screen springs back",
+   "why": "the signature move of the look: a new chapter or idea arrives the way a feed refreshes"
+  },
+  {
+   "from": "try",
+   "to": "grayscale",
+   "frame": 22330,
+   "t": 744.33,
+   "kind": "cut",
+   "lands_on": "You @ 744.43 s (f22333)",
+   "carrier": "hard cut on her word; the next screen opens with its first card or line already on",
+   "why": "same ink lock screen on both sides; the new content lands on the spoken word"
+  },
+  {
+   "from": "grayscale",
+   "to": "autoplayoff",
+   "frame": 22764,
+   "t": 758.79,
+   "kind": "cut",
+   "lands_on": "Turn @ 758.89 s (f22767)",
+   "carrier": "pull-to-refresh: the old screen is dragged down 22 %, the 12-tick spinner holds, the new screen springs back",
+   "why": "the signature move of the look: a new chapter or idea arrives the way a feed refreshes"
+  },
+  {
+   "from": "autoplayoff",
+   "to": "notifneed",
+   "frame": 23046,
+   "t": 768.2,
+   "kind": "cut",
+   "lands_on": "Turn @ 768.30 s (f23049)",
+   "carrier": "hard cut on her word; the next screen opens with its first card or line already on",
+   "why": "same ink lock screen on both sides; the new content lands on the spoken word"
+  },
+  {
+   "from": "notifneed",
+   "to": "homescreen",
+   "frame": 23378,
+   "t": 779.26,
+   "kind": "cut",
+   "lands_on": "Move @ 779.36 s (f23381)",
+   "carrier": "hard cut on her word; the next screen opens with its first card or line already on",
+   "why": "same ink lock screen on both sides; the new content lands on the spoken word"
+  },
+  {
+   "from": "homescreen",
+   "to": "blocker",
+   "frame": 23470,
+   "t": 782.31,
+   "kind": "cut",
+   "lands_on": "I @ 782.43 s (f23473)",
+   "carrier": "hard cut on her word; the next screen opens with its first card or line already on",
+   "why": "same ink lock screen on both sides; the new content lands on the spoken word"
+  },
+  {
+   "from": "blocker",
+   "to": "askyourself",
+   "frame": 23910,
+   "t": 797,
+   "kind": "cut",
+   "lands_on": "And @ 797.12 s (f23914)",
+   "carrier": "hard cut on her word; the next screen opens with its first card or line already on",
+   "why": "same ink lock screen on both sides; the new content lands on the spoken word"
+  },
+  {
+   "from": "askyourself",
+   "to": "asset",
+   "frame": 24280,
+   "t": 809.31,
+   "kind": "cut",
+   "lands_on": "scroll? @ 809.33 s (f24280)",
+   "carrier": "badge burst: a red badge grows from the previous screen until it fills the frame",
+   "why": "her biggest claims get the red punch card, at most one a minute"
+  },
+  {
+   "from": "asset",
+   "to": "pays",
+   "frame": 24456,
+   "t": 815.17,
+   "kind": "cut",
+   "lands_on": "Your @ 815.32 s (f24460)",
+   "carrier": "hard cut on her word; the next screen opens with its first card or line already on",
+   "why": "same ink lock screen on both sides; the new content lands on the spoken word"
+  },
+  {
+   "from": "pays",
+   "to": "hours",
+   "frame": 24732,
+   "t": 824.37,
+   "kind": "cut",
+   "lands_on": "So, @ 824.47 s (f24734)",
+   "carrier": "pull-to-refresh: the old screen is dragged down 22 %, the 12-tick spinner holds, the new screen springs back",
+   "why": "the signature move of the look: a new chapter or idea arrives the way a feed refreshes"
+  },
+  {
+   "from": "hours",
+   "to": "dropit",
+   "frame": 25132,
+   "t": 837.71,
+   "kind": "cut",
+   "lands_on": "And @ 837.81 s (f25134)",
+   "carrier": "hard cut on her word; the next screen opens with its first card or line already on",
+   "why": "same ink lock screen on both sides; the new content lands on the spoken word"
+  },
+  {
+   "from": "dropit",
+   "to": "fought",
+   "frame": 25464,
+   "t": 848.79,
+   "kind": "cut",
+   "lands_on": "But @ 848.89 s (f25467)",
+   "carrier": "hard cut on her word; the next screen opens with its first card or line already on",
+   "why": "same ink lock screen on both sides; the new content lands on the spoken word"
+  },
+  {
+   "from": "fought",
+   "to": "takeback",
+   "frame": 25731,
+   "t": 857.69,
+   "kind": "cut",
+   "lands_on": "And @ 857.77 s (f25733)",
+   "carrier": "badge burst: a red badge grows from the previous screen until it fills the frame",
+   "why": "her biggest claims get the red punch card, at most one a minute"
+  },
+  {
+   "from": "takeback",
+   "to": "end",
+   "frame": 26039,
+   "t": 867.957,
+   "kind": "cut",
+   "lands_on": null,
+   "carrier": "hard cut on her word; the next screen opens with its first card or line already on",
+   "why": "same ink lock screen on both sides; the new content lands on the spoken word"
+  }
+ ],
+ "flags": [
+  {
+   "frame": 439,
+   "kind": "blank after cut",
+   "detail": "later -> plan: frames +1,+2,+3,+5 show under 30 % of the settled shot's detail (empty ground): bring the next shot in with something on screen"
+  },
+  {
+   "frame": 5360,
+   "kind": "blank after cut",
+   "detail": "prompt -> students: frames +1,+2,+3,+5 show under 30 % of the settled shot's detail (empty ground): bring the next shot in with something on screen"
+  },
+  {
+   "frame": 5862,
+   "kind": "blank after cut",
+   "detail": "students -> real: frames +1,+2,+3,+5 show under 30 % of the settled shot's detail (empty ground): bring the next shot in with something on screen"
+  },
+  {
+   "frame": 9753,
+   "kind": "blank after cut",
+   "detail": "ask -> removed: frames +1,+2,+3,+5 show under 30 % of the settled shot's detail (empty ground): bring the next shot in with something on screen"
+  },
+  {
+   "frame": 14139,
+   "kind": "blank after cut",
+   "detail": "grab -> everyapp: frames +1,+2,+3,+5 show under 30 % of the settled shot's detail (empty ground): bring the next shot in with something on screen"
+  },
+  {
+   "frame": 18920,
+   "kind": "blank after cut",
+   "detail": "eu-meta -> legal: frames +1,+2,+3,+5 show under 30 % of the settled shot's detail (empty ground): bring the next shot in with something on screen"
+  },
+  {
+   "frame": 23470,
+   "kind": "blank after cut",
+   "detail": "homescreen -> blocker: frames +1,+2,+3,+5 show under 30 % of the settled shot's detail (empty ground): bring the next shot in with something on screen"
+  },
+  {
+   "frame": 23910,
+   "kind": "blank after cut",
+   "detail": "blocker -> askyourself: frames +1,+2,+3,+5 show under 30 % of the settled shot's detail (empty ground): bring the next shot in with something on screen"
+  },
+  {
+   "frame": 25731,
+   "kind": "blank after cut",
+   "detail": "fought -> takeback: frames +1,+2,+3,+5 show under 30 % of the settled shot's detail (empty ground): bring the next shot in with something on screen"
+  }
+ ]
+}

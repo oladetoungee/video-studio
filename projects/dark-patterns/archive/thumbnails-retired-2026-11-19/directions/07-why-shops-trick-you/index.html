@@ -1,0 +1,21 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../lib/set.css"><style>
+.hd{left:60px;top:44px;font-family:'Inter Tight';font-weight:900;font-size:150px;line-height:.9;letter-spacing:-.05em;color:#000000}
+.win{left:640px;top:100px;width:560px;height:520px;border:8px solid #000000;border-radius:26px;background:#D9F44F}
+.bar{position:absolute;left:0;right:0;top:0;height:58px;border-bottom:8px solid #000000}
+.bar i{position:absolute;top:18px;width:18px;height:18px;border:5px solid #000000;border-radius:50%}
+.in{position:absolute;font-family:'Inter Tight';font-weight:900;color:#000000}
+.clock{left:40px;top:104px;font-size:76px;letter-spacing:-.02em;line-height:1;color:#000000}
+.chk{left:40px;top:256px;font-size:52px;display:flex;align-items:center;gap:20px}
+.chk b{display:inline-block;width:58px;height:58px;border:6px solid #000000;border-radius:8px;position:relative;background:#000000}
+.chk b::after{content:"";position:absolute;left:14px;top:2px;width:16px;height:32px;border:solid #D9F44F;border-width:0 8px 8px 0;transform:rotate(45deg)}
+.tag{left:316px;top:-30px;font-size:38px;background:#E4262B;color:#fff;padding:8px 16px;transform:rotate(8deg);border:5px solid #111}
+.pay{left:40px;right:40px;top:368px;height:104px;border:8px solid #000000;border-radius:18px;background:transparent;color:#000000;font-size:58px;display:flex;align-items:center;justify-content:center}
+</style></head><body><div class="t">
+<div class="a hd z3 nw" data-k="hd"></div>
+<div class="a win z2" data-move="checkout"><div class="bar"><i style="left:22px"></i><i style="left:56px"></i><i style="left:90px"></i></div>
+ <div class="in clock" data-k="clock"></div>
+ <div class="in chk"><b></b><span data-k="gift"></span></div>
+ <div class="in pay" data-k="pay"></div>
+ <div class="in tag nw" data-k="left"></div>
+</div>
+</div><script src="../../lib/bind.js"></script></body></html>

@@ -1,0 +1,1768 @@
+{
+ "TOTAL": 480.236,
+ "INTRO": 0.3,
+ "OUTRO": 2.5,
+ "FPS": 30,
+ "CUES": [
+  {
+   "name": "slide",
+   "t": 0.4,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "thud",
+   "t": 3.23,
+   "db": -3,
+   "keep": true
+  },
+  {
+   "name": "marker",
+   "t": 4.64,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "scribble",
+   "t": 6.68,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "place",
+   "t": 7.8,
+   "db": -3,
+   "keep": true
+  },
+  {
+   "name": "tap",
+   "t": 7.987,
+   "db": -2,
+   "keep": true
+  },
+  {
+   "name": "pop",
+   "t": 8.44,
+   "db": -3,
+   "keep": true
+  },
+  {
+   "name": "swipe",
+   "t": 9.16,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "shutter",
+   "t": 12.88,
+   "db": -2,
+   "keep": true
+  },
+  {
+   "name": "thud",
+   "t": 15.33,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "slide",
+   "t": 15.97,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "tick",
+   "t": 16.44,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "fall",
+   "t": 22.32,
+   "db": -2,
+   "keep": true
+  },
+  {
+   "name": "pop",
+   "t": 22.87,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "door",
+   "t": 26.62,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "stamp",
+   "t": 27.92,
+   "db": -2,
+   "keep": true
+  },
+  {
+   "name": "stamp",
+   "t": 28.4,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "place",
+   "t": 29.9,
+   "db": -2,
+   "keep": true
+  },
+  {
+   "name": "glitch",
+   "t": 33.14,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "typeHit",
+   "t": 34.84,
+   "db": -2,
+   "keep": true
+  },
+  {
+   "name": "tick",
+   "t": 36.007,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "thud",
+   "t": 37.44,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "scribble",
+   "t": 41.08,
+   "db": -2,
+   "keep": true
+  },
+  {
+   "name": "tick",
+   "t": 43.607,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "place",
+   "t": 46.56,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "place",
+   "t": 48.2,
+   "db": -2,
+   "keep": true
+  },
+  {
+   "name": "marker",
+   "t": 50.26,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "pop",
+   "t": 54.687,
+   "db": -2,
+   "keep": true
+  },
+  {
+   "name": "pop",
+   "t": 55.34,
+   "db": -3,
+   "keep": true
+  },
+  {
+   "name": "thud",
+   "t": 58.62,
+   "db": -2,
+   "keep": true
+  },
+  {
+   "name": "marker",
+   "t": 61.28,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "type",
+   "t": 66.78,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "type",
+   "t": 67.76,
+   "db": -8,
+   "keep": true
+  },
+  {
+   "name": "tick",
+   "t": 69.76,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "riser",
+   "t": 73.6,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "hit",
+   "t": 73.7,
+   "db": -2,
+   "keep": true
+  },
+  {
+   "name": "thud",
+   "t": 76.06,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "pop",
+   "t": 76.46,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "tick",
+   "t": 78.98,
+   "db": -2,
+   "keep": true
+  },
+  {
+   "name": "error",
+   "t": 80.56,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "type",
+   "t": 83.76,
+   "db": -8,
+   "keep": true
+  },
+  {
+   "name": "glitch",
+   "t": 86.4,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "swipe",
+   "t": 89.04,
+   "db": -10,
+   "keep": true
+  },
+  {
+   "name": "check",
+   "t": 91.16,
+   "db": -2,
+   "keep": true
+  },
+  {
+   "name": "type",
+   "t": 92.76,
+   "db": -8,
+   "keep": true
+  },
+  {
+   "name": "place",
+   "t": 98.62,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "slide",
+   "t": 99.56,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "pop",
+   "t": 99.76,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "marker",
+   "t": 102.03,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "shutter",
+   "t": 102.73,
+   "db": -2,
+   "keep": true
+  },
+  {
+   "name": "stamp",
+   "t": 104.551,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "scribble",
+   "t": 107.62,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "thud",
+   "t": 113.92,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "marker",
+   "t": 118.977,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "shutter",
+   "t": 120.92,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "error",
+   "t": 124.2,
+   "db": -8,
+   "keep": true
+  },
+  {
+   "name": "check",
+   "t": 127.14,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "check",
+   "t": 127.44,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "slide",
+   "t": 129.17,
+   "db": -2,
+   "keep": true
+  },
+  {
+   "name": "shutter",
+   "t": 130.02,
+   "db": -2,
+   "keep": true
+  },
+  {
+   "name": "tick",
+   "t": 132.7,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "place",
+   "t": 134.66,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "tap",
+   "t": 136.78,
+   "db": -2,
+   "keep": true
+  },
+  {
+   "name": "scribble",
+   "t": 137.08,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "shutter",
+   "t": 138.72,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "tick",
+   "t": 141.34,
+   "db": -2,
+   "keep": true
+  },
+  {
+   "name": "tick",
+   "t": 141.82,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "glitch",
+   "t": 143.76,
+   "db": -10,
+   "keep": true
+  },
+  {
+   "name": "type",
+   "t": 147.647,
+   "db": -8,
+   "keep": true
+  },
+  {
+   "name": "check",
+   "t": 151.52,
+   "db": -2,
+   "keep": true
+  },
+  {
+   "name": "check",
+   "t": 153.06,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "error",
+   "t": 153.64,
+   "db": -10,
+   "keep": true
+  },
+  {
+   "name": "check",
+   "t": 155.78,
+   "db": -2,
+   "keep": true
+  },
+  {
+   "name": "check",
+   "t": 158.5,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "place",
+   "t": 159.5,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "place",
+   "t": 165.66,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "glitch",
+   "t": 165.72,
+   "db": -8,
+   "keep": true
+  },
+  {
+   "name": "place",
+   "t": 167.82,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "place",
+   "t": 169.52,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "shutter",
+   "t": 170.76,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "check",
+   "t": 174.12,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "pop",
+   "t": 178.04,
+   "db": -2,
+   "keep": true
+  },
+  {
+   "name": "scribble",
+   "t": 178.74,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "place",
+   "t": 179.65,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "pop",
+   "t": 180.05,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "shutter",
+   "t": 186.9,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "type",
+   "t": 186.934,
+   "db": -10,
+   "keep": true
+  },
+  {
+   "name": "marker",
+   "t": 186.934,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "fall",
+   "t": 191.38,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "tick",
+   "t": 194.547,
+   "db": -2,
+   "keep": true
+  },
+  {
+   "name": "marker",
+   "t": 194.567,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "pop",
+   "t": 196.54,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "fall",
+   "t": 199.32,
+   "db": -2,
+   "keep": true
+  },
+  {
+   "name": "pop",
+   "t": 200.08,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "door",
+   "t": 203.46,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "place",
+   "t": 209.71,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "swipe",
+   "t": 211.84,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "marker",
+   "t": 211.873,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "place",
+   "t": 213.13,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "tick",
+   "t": 215.02,
+   "db": -8,
+   "keep": true
+  },
+  {
+   "name": "tick",
+   "t": 216.22,
+   "db": -10,
+   "keep": true
+  },
+  {
+   "name": "shutter",
+   "t": 216.78,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "tape",
+   "t": 224.347,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "page",
+   "t": 224.92,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "stamp",
+   "t": 225.92,
+   "db": -2,
+   "keep": true
+  },
+  {
+   "name": "page",
+   "t": 226.44,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "tap",
+   "t": 226.95,
+   "db": -2,
+   "keep": true
+  },
+  {
+   "name": "tap",
+   "t": 227.68,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "shutter",
+   "t": 232.96,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "tick",
+   "t": 233.43,
+   "db": -2,
+   "keep": true
+  },
+  {
+   "name": "cash",
+   "t": 234.83,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "tick",
+   "t": 236.76,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "tick",
+   "t": 240.94,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "tap",
+   "t": 246.26,
+   "db": -2,
+   "keep": true
+  },
+  {
+   "name": "riser",
+   "t": 251.04,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "ding",
+   "t": 251.04,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "fall",
+   "t": 253.38,
+   "db": -2,
+   "keep": true
+  },
+  {
+   "name": "pop",
+   "t": 253.647,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "scribble",
+   "t": 254.88,
+   "db": 0,
+   "keep": true
+  },
+  {
+   "name": "shutter",
+   "t": 257.1,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "marker",
+   "t": 257.12,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "door",
+   "t": 259,
+   "db": -2,
+   "keep": true
+  },
+  {
+   "name": "page",
+   "t": 264.07,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "tap",
+   "t": 264.33,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "stamp",
+   "t": 266.62,
+   "db": -2,
+   "keep": true
+  },
+  {
+   "name": "tick",
+   "t": 268.03,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "error",
+   "t": 273.88,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "pop",
+   "t": 276.16,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "place",
+   "t": 277.95,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "door",
+   "t": 285.9,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "fall",
+   "t": 286.88,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "notify",
+   "t": 289.47,
+   "db": -2,
+   "keep": true
+  },
+  {
+   "name": "notify",
+   "t": 290.18,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "notify",
+   "t": 290.757,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "shutter",
+   "t": 293.747,
+   "db": -8,
+   "keep": true
+  },
+  {
+   "name": "cash",
+   "t": 295.08,
+   "db": -2,
+   "keep": true
+  },
+  {
+   "name": "notify",
+   "t": 299.5,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "notify",
+   "t": 300.6,
+   "db": -8,
+   "keep": true
+  },
+  {
+   "name": "shutter",
+   "t": 302.88,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "typeHit",
+   "t": 306.7,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "pop",
+   "t": 309.24,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "cash",
+   "t": 315.14,
+   "db": -8,
+   "keep": true
+  },
+  {
+   "name": "stamp",
+   "t": 317.4,
+   "db": 2,
+   "keep": true
+  },
+  {
+   "name": "check",
+   "t": 319.04,
+   "db": -2,
+   "keep": true
+  },
+  {
+   "name": "place",
+   "t": 320.75,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "pop",
+   "t": 321.25,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "place",
+   "t": 321.873,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "pop",
+   "t": 322.373,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "place",
+   "t": 322.74,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "pop",
+   "t": 323.24,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "scribble",
+   "t": 331.58,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "fall",
+   "t": 335.38,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "pop",
+   "t": 335.88,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "tap",
+   "t": 337.14,
+   "db": -2,
+   "keep": true
+  },
+  {
+   "name": "place",
+   "t": 344.8,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "slide",
+   "t": 346.86,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "check",
+   "t": 347.467,
+   "db": -2,
+   "keep": true
+  },
+  {
+   "name": "notify",
+   "t": 352.32,
+   "db": -2,
+   "keep": true
+  },
+  {
+   "name": "pop",
+   "t": 356.14,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "scribble",
+   "t": 358.24,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "tape",
+   "t": 362.66,
+   "db": -8,
+   "keep": true
+  },
+  {
+   "name": "place",
+   "t": 363.64,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "tick",
+   "t": 367.48,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "pop",
+   "t": 373.42,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "scribble",
+   "t": 373.82,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "tick",
+   "t": 377.46,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "stamp",
+   "t": 384.64,
+   "db": 2,
+   "keep": true
+  },
+  {
+   "name": "swipe",
+   "t": 385.68,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "thud",
+   "t": 386.2,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "shutter",
+   "t": 387.03,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "page",
+   "t": 390.96,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "type",
+   "t": 391.38,
+   "db": -8,
+   "keep": true
+  },
+  {
+   "name": "tap",
+   "t": 393.6,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "type",
+   "t": 395.24,
+   "db": -8,
+   "keep": true
+  },
+  {
+   "name": "place",
+   "t": 399.58,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "stamp",
+   "t": 399.9,
+   "db": -2,
+   "keep": true
+  },
+  {
+   "name": "scribble",
+   "t": 402.3,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "shutter",
+   "t": 406.56,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "ding",
+   "t": 411.82,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "pop",
+   "t": 412.04,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "pop",
+   "t": 412.48,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "pop",
+   "t": 413.72,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "pop",
+   "t": 416.58,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "shutter",
+   "t": 420.32,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "glitch",
+   "t": 422.4,
+   "db": -2,
+   "keep": true
+  },
+  {
+   "name": "typeHit",
+   "t": 427.96,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "place",
+   "t": 432.84,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "clock",
+   "t": 434.56,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "cash",
+   "t": 438.26,
+   "db": 0,
+   "keep": true
+  },
+  {
+   "name": "shutter",
+   "t": 438.94,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "scribble",
+   "t": 442.4,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "hit",
+   "t": 444.62,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "shutter",
+   "t": 446.48,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "shutter",
+   "t": 446.88,
+   "db": -10,
+   "keep": true
+  },
+  {
+   "name": "shutter",
+   "t": 447.147,
+   "db": -8,
+   "keep": true
+  },
+  {
+   "name": "place",
+   "t": 450.84,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "place",
+   "t": 451.24,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "marker",
+   "t": 458.07,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "glitch",
+   "t": 460.84,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "swipe",
+   "t": 462.207,
+   "db": -8,
+   "keep": true
+  },
+  {
+   "name": "pop",
+   "t": 469.3,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "pop",
+   "t": 469.9,
+   "db": -8,
+   "keep": true
+  },
+  {
+   "name": "pop",
+   "t": 470.5,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "swipe",
+   "t": 473.16,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "page",
+   "t": 473.56,
+   "db": -2,
+   "keep": true
+  },
+  {
+   "name": "thud",
+   "t": 477.22,
+   "db": -6,
+   "keep": true
+  }
+ ],
+ "SCENES": [
+  {
+   "n": 1,
+   "id": "month",
+   "start": 0,
+   "end": 8.86,
+   "ground": "oct",
+   "label": "month",
+   "trans": "cut"
+  },
+  {
+   "n": 2,
+   "id": "php",
+   "start": 8.86,
+   "end": 15.9,
+   "ground": "night",
+   "label": "php",
+   "trans": "cut"
+  },
+  {
+   "n": 3,
+   "id": "railway",
+   "start": 15.9,
+   "end": 23.21,
+   "ground": "night",
+   "label": "railway",
+   "trans": "whip"
+  },
+  {
+   "n": 4,
+   "id": "zeabur-open",
+   "start": 23.21,
+   "end": 30.76,
+   "ground": "bone",
+   "label": "zeabur-open",
+   "trans": "cut"
+  },
+  {
+   "n": 5,
+   "id": "agents-open",
+   "start": 30.76,
+   "end": 36.62,
+   "ground": "night",
+   "label": "agents-open",
+   "trans": "cut"
+  },
+  {
+   "n": 6,
+   "id": "overflow",
+   "start": 36.62,
+   "end": 42.64,
+   "ground": "oct",
+   "label": "overflow",
+   "trans": "cut"
+  },
+  {
+   "n": 7,
+   "id": "share",
+   "start": 42.64,
+   "end": 54.57,
+   "ground": "bone",
+   "label": "share",
+   "trans": "cut"
+  },
+  {
+   "n": 8,
+   "id": "found",
+   "start": 54.57,
+   "end": 59.64,
+   "ground": "night",
+   "label": "found",
+   "trans": "cut"
+  },
+  {
+   "n": 9,
+   "id": "shell",
+   "start": 59.64,
+   "end": 71.56,
+   "ground": "night",
+   "label": "shell",
+   "trans": "whip"
+  },
+  {
+   "n": 10,
+   "id": "score",
+   "start": 71.56,
+   "end": 76.46,
+   "ground": "oct",
+   "label": "score",
+   "trans": "cut"
+  },
+  {
+   "n": 11,
+   "id": "bug1",
+   "start": 76.46,
+   "end": 87.39,
+   "ground": "bone",
+   "label": "bug1",
+   "trans": "cut"
+  },
+  {
+   "n": 12,
+   "id": "bug1b",
+   "start": 87.39,
+   "end": 94.35,
+   "ground": "bone",
+   "label": "bug1b",
+   "trans": "whip"
+  },
+  {
+   "n": 13,
+   "id": "bug2",
+   "start": 94.35,
+   "end": 102.73,
+   "ground": "bone",
+   "label": "bug2",
+   "trans": "whip"
+  },
+  {
+   "n": 14,
+   "id": "exploit",
+   "start": 102.73,
+   "end": 108.38,
+   "ground": "night",
+   "label": "exploit",
+   "trans": "cut"
+  },
+  {
+   "n": 15,
+   "id": "before",
+   "start": 108.38,
+   "end": 126.46,
+   "ground": "night",
+   "label": "before",
+   "trans": "whip"
+  },
+  {
+   "n": 16,
+   "id": "login",
+   "start": 126.46,
+   "end": 129.61,
+   "ground": "bone",
+   "label": "login",
+   "trans": "cut"
+  },
+  {
+   "n": 17,
+   "id": "amazon",
+   "start": 129.61,
+   "end": 138.72,
+   "ground": "bone",
+   "label": "amazon",
+   "trans": "whip"
+  },
+  {
+   "n": 18,
+   "id": "offline",
+   "start": 138.72,
+   "end": 144.7,
+   "ground": "night",
+   "label": "offline",
+   "trans": "cut"
+  },
+  {
+   "n": 19,
+   "id": "fix",
+   "start": 144.7,
+   "end": 159.5,
+   "ground": "bone",
+   "label": "fix",
+   "trans": "cut"
+  },
+  {
+   "n": 20,
+   "id": "laravel",
+   "start": 159.5,
+   "end": 167.82,
+   "ground": "night",
+   "label": "laravel",
+   "trans": "cut"
+  },
+  {
+   "n": 21,
+   "id": "node",
+   "start": 167.82,
+   "end": 175.06,
+   "ground": "night",
+   "label": "node",
+   "trans": "whip"
+  },
+  {
+   "n": 22,
+   "id": "busy",
+   "start": 175.06,
+   "end": 179.65,
+   "ground": "oct",
+   "label": "busy",
+   "trans": "cut"
+  },
+  {
+   "n": 23,
+   "id": "deploy",
+   "start": 179.65,
+   "end": 184.14,
+   "ground": "bone",
+   "label": "deploy",
+   "trans": "cut"
+  },
+  {
+   "n": 24,
+   "id": "env",
+   "start": 184.14,
+   "end": 193.8,
+   "ground": "night",
+   "label": "env",
+   "trans": "cut"
+  },
+  {
+   "n": 25,
+   "id": "paused",
+   "start": 193.8,
+   "end": 201.4,
+   "ground": "bone",
+   "label": "paused",
+   "trans": "cut"
+  },
+  {
+   "n": 26,
+   "id": "unknown",
+   "start": 201.4,
+   "end": 204.94,
+   "ground": "night",
+   "label": "unknown",
+   "trans": "cut"
+  },
+  {
+   "n": 27,
+   "id": "series",
+   "start": 204.94,
+   "end": 213.13,
+   "ground": "bone",
+   "label": "series",
+   "trans": "cut"
+  },
+  {
+   "n": 28,
+   "id": "zeabur",
+   "start": 213.13,
+   "end": 224.92,
+   "ground": "night",
+   "label": "zeabur",
+   "trans": "cut"
+  },
+  {
+   "n": 29,
+   "id": "breaches",
+   "start": 224.92,
+   "end": 231.6,
+   "ground": "bone",
+   "label": "breaches",
+   "trans": "cut"
+  },
+  {
+   "n": 30,
+   "id": "count",
+   "start": 231.6,
+   "end": 240.44,
+   "ground": "oct",
+   "label": "count",
+   "trans": "cut"
+  },
+  {
+   "n": 31,
+   "id": "zeabur-keys",
+   "start": 240.44,
+   "end": 256.46,
+   "ground": "night",
+   "label": "zeabur-keys",
+   "trans": "cut"
+  },
+  {
+   "n": 32,
+   "id": "gates",
+   "start": 256.46,
+   "end": 263.97,
+   "ground": "night",
+   "label": "gates",
+   "trans": "whip"
+  },
+  {
+   "n": 33,
+   "id": "december",
+   "start": 263.97,
+   "end": 268.03,
+   "ground": "bone",
+   "label": "december",
+   "trans": "cut"
+  },
+  {
+   "n": 34,
+   "id": "bills",
+   "start": 268.03,
+   "end": 277.95,
+   "ground": "bone",
+   "label": "bills",
+   "trans": "whip"
+  },
+  {
+   "n": 35,
+   "id": "console",
+   "start": 277.95,
+   "end": 287.68,
+   "ground": "night",
+   "label": "console",
+   "trans": "cut"
+  },
+  {
+   "n": 36,
+   "id": "alerts",
+   "start": 287.68,
+   "end": 299.2,
+   "ground": "bone",
+   "label": "alerts",
+   "trans": "cut"
+  },
+  {
+   "n": 37,
+   "id": "imagine",
+   "start": 299.2,
+   "end": 301.83,
+   "ground": "oct",
+   "label": "imagine",
+   "trans": "cut"
+  },
+  {
+   "n": 38,
+   "id": "distill",
+   "start": 301.83,
+   "end": 316.19,
+   "ground": "night",
+   "label": "distill",
+   "trans": "cut"
+  },
+  {
+   "n": 39,
+   "id": "blocked",
+   "start": 316.19,
+   "end": 320.75,
+   "ground": "bone",
+   "label": "blocked",
+   "trans": "cut"
+  },
+  {
+   "n": 40,
+   "id": "pattern",
+   "start": 320.75,
+   "end": 332.42,
+   "ground": "oct",
+   "label": "pattern",
+   "trans": "cut"
+  },
+  {
+   "n": 41,
+   "id": "do-change",
+   "start": 332.42,
+   "end": 335.84,
+   "ground": "bone",
+   "label": "do-change",
+   "trans": "cut"
+  },
+  {
+   "n": 42,
+   "id": "do-expiry",
+   "start": 335.84,
+   "end": 340.54,
+   "ground": "bone",
+   "label": "do-expiry",
+   "trans": "whip"
+  },
+  {
+   "n": 43,
+   "id": "do-access",
+   "start": 340.54,
+   "end": 348.98,
+   "ground": "bone",
+   "label": "do-access",
+   "trans": "whip"
+  },
+  {
+   "n": 44,
+   "id": "do-limits",
+   "start": 348.98,
+   "end": 353.91,
+   "ground": "bone",
+   "label": "do-limits",
+   "trans": "whip"
+  },
+  {
+   "n": 45,
+   "id": "do-store",
+   "start": 353.91,
+   "end": 357.27,
+   "ground": "bone",
+   "label": "do-store",
+   "trans": "whip"
+  },
+  {
+   "n": 46,
+   "id": "one-more",
+   "start": 357.27,
+   "end": 363.54,
+   "ground": "oct",
+   "label": "one-more",
+   "trans": "cut"
+  },
+  {
+   "n": 47,
+   "id": "trust",
+   "start": 363.54,
+   "end": 375.75,
+   "ground": "bone",
+   "label": "trust",
+   "trans": "cut"
+  },
+  {
+   "n": 48,
+   "id": "four",
+   "start": 375.75,
+   "end": 390.96,
+   "ground": "bone",
+   "label": "four",
+   "trans": "whip"
+  },
+  {
+   "n": 49,
+   "id": "april",
+   "start": 390.96,
+   "end": 397.71,
+   "ground": "night",
+   "label": "april",
+   "trans": "cut"
+  },
+  {
+   "n": 50,
+   "id": "fake",
+   "start": 397.71,
+   "end": 404.24,
+   "ground": "bone",
+   "label": "fake",
+   "trans": "cut"
+  },
+  {
+   "n": 51,
+   "id": "updated",
+   "start": 404.24,
+   "end": 411.41,
+   "ground": "night",
+   "label": "updated",
+   "trans": "cut"
+  },
+  {
+   "n": 52,
+   "id": "ai-sides",
+   "start": 411.41,
+   "end": 420.32,
+   "ground": "oct",
+   "label": "ai-sides",
+   "trans": "cut"
+  },
+  {
+   "n": 53,
+   "id": "hundred",
+   "start": 420.32,
+   "end": 430.27,
+   "ground": "night",
+   "label": "hundred",
+   "trans": "cut"
+  },
+  {
+   "n": 54,
+   "id": "run-hours",
+   "start": 430.27,
+   "end": 436.47,
+   "ground": "bone",
+   "label": "run-hours",
+   "trans": "cut"
+  },
+  {
+   "n": 55,
+   "id": "fifty",
+   "start": 436.47,
+   "end": 446.48,
+   "ground": "oct",
+   "label": "fifty",
+   "trans": "cut"
+  },
+  {
+   "n": 56,
+   "id": "news",
+   "start": 446.48,
+   "end": 450.84,
+   "ground": "bone",
+   "label": "news",
+   "trans": "cut"
+  },
+  {
+   "n": 57,
+   "id": "both",
+   "start": 450.84,
+   "end": 468.3,
+   "ground": "night",
+   "label": "both",
+   "trans": "cut"
+  },
+  {
+   "n": 58,
+   "id": "end",
+   "start": 468.3,
+   "end": 480.236,
+   "ground": "oct",
+   "label": "end",
+   "trans": "cut"
+  }
+ ]
+}

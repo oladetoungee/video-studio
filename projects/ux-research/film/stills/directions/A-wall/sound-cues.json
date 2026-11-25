@@ -1,0 +1,5 @@
+{"music": "library/music/282.mp3", "music_db": -20, "cues": [
+ [0.20,"card-place",-2,"peak"], [0.90,"pop-dry",-6,"peak"], [1.90,"pop-hard-click",-8,"peak"], [2.40,"marker-line",-2,"start"],
+ [3.10,"card-place",-2,"peak"], [3.70,"pop-dry",-6,"peak"], [4.60,"pop-hard-click",-8,"peak"], [5.20,"marker-line",-2,"start"],
+ [6.75,"swipe-fast-zoom",-10,"peak"], [6.87,"marker-line",-2,"start"], [7.57,"card-place",-2,"peak"], [8.27,"marker-line",-2,"start"],
+ [9.07,"pop-dry",-6,"peak"], [9.87,"shutter-click",-4,"peak"]]}

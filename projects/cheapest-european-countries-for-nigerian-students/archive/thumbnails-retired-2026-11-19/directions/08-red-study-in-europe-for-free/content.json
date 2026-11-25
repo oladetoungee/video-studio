@@ -1,0 +1,33 @@
+{
+  "text": {
+    "w": "Study in<br>Europe: the<br><em>real</em> cost",
+    "sub": "for Nigerian students",
+    "cap": "",
+    "price": "€11,904",
+    "note": "in the bank first"
+  },
+  "images": {
+    "photo": "../../assets/px/students-backpacks.jpg"
+  },
+  "vars": {},
+  "class": null,
+  "nudge": {},
+  "fonts": [
+    "design-16 Bodoni Moda (cream #FBF3EC on red #990915, as Design 1)",
+    "pair-15 Bodoni Moda + italic + Archivo"
+  ],
+  "colours": "combo-15 (Design 1: #990915, #FBF3EC, #FCBFBA)",
+  "fontboard_note": "NEW 2026-11-12 (font board): replaces the room-photo 'is it really free' (too many room photos)",
+  "board": "Design 1 / font pair-15 (\"Study in Europe for free?\")",
+  "kind": "flat Design 1 red, Bodoni serif with italic accent, a polaroid of students walking in Helsinki (Pexels, Margo Evardson) with a €11,904 price tag; no face",
+  "direction": "Copies the design-board composition of Design 1 / font pair-15 (big Bodoni serif lines, one italic accent word, a small sans line) with a picture: students walking in a European city (Pexels) as a polaroid with a price tag. Words: Study in Europe: the real cost + for Nigerian students; tag €11,904 in the bank first (Germany blocked account, kit 7f).",
+  "thumbnail_text": "Study in Europe: the real cost + for Nigerian students + polaroid of students in a European city + tag €11,904 in the bank first",
+  "titles": [
+    "What Studying in Europe Really Costs a Nigerian in 2027",
+    "Study in Europe for Free? What Nigerians Really Pay",
+    "Cheapest Countries to Study in Europe for Nigerians (2027)"
+  ],
+  "title": "What Studying in Europe Really Costs a Nigerian in 2027",
+  "recommended": false,
+  "scores": "font-board round 2 (2026-11-13, fonts with their source colours; fresh cold critic, PNG alone, 4 rounds): 5/10"
+}

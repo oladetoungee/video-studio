@@ -1,0 +1,63 @@
+1
+00:00:00,090 --> 00:00:02,020
+from the 12th of November 2026, there is a
+
+2
+00:00:02,020 --> 00:00:04,680
+new rule about how you are allowed to talk
+
+3
+00:00:04,680 --> 00:00:05,430
+to Claude
+
+4
+00:00:05,610 --> 00:00:07,810
+Anthropic updated its usage policy and now
+
+5
+00:00:07,810 --> 00:00:09,840
+you cannot be abusive or cruel
+
+6
+00:00:10,030 --> 00:00:10,770
+to Claude
+
+7
+00:00:11,090 --> 00:00:12,890
+and just to be clear, I'm not here trying to
+
+8
+00:00:12,890 --> 00:00:15,390
+fight for the right to be cruel or abusive
+
+9
+00:00:15,390 --> 00:00:18,063
+to AI what I want to talk about is like the
+
+10
+00:00:18,063 --> 00:00:19,163
+actual thought
+
+11
+00:00:19,867 --> 00:00:21,217
+process behind this rule
+
+12
+00:00:21,217 --> 00:00:22,917
+part of the idea is that Anthropic
+
+13
+00:00:23,057 --> 00:00:25,237
+is not sure whether Claude might be
+
+14
+00:00:25,237 --> 00:00:27,207
+conscious so they think, they are not sure,
+
+15
+00:00:27,207 --> 00:00:28,707
+but they think that Claude might be
+
+16
+00:00:28,707 --> 00:00:29,197
+conscious

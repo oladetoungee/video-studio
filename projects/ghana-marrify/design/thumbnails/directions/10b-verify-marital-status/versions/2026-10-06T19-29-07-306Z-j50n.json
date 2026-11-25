@@ -1,0 +1,26 @@
+{
+ "label": "Before this session’s edits",
+ "auto": true,
+ "savedAt": 1791314947306,
+ "content": {
+  "direction": "Her edit of 10 (2026-10-06): 10's newspaper-clipping look kept (serif headline, yellow highlight, slight tilt, tape) but no source and no date, so it is no longer a quote: 'You can now verify marital status online', 'marital status' highlighted. Plain white ground, 09's phone (illustration) on the right, no photo of her, no 'Anyone can check'.",
+  "concept": "T8",
+  "thumbnail_text": "You can now verify marital status online",
+  "title": "You Can Now Check If Someone Is Married in Ghana",
+  "titles": [
+   "You Can Now Check If Someone Is Married in Ghana",
+   "Ghana Made Marriages Searchable. Anyone Can Check Yours",
+   "Should Marriage Records Be Public? Ghana Just Made Them"
+  ],
+  "recommended": false,
+  "text": {
+   "n_hl": "You can now verify <mark>marital status</mark> online",
+   "p_app": "Marriage records",
+   "p_q": "[your name]",
+   "p_lab": "Marital status",
+   "p_big": "Married"
+  },
+  "images": {},
+  "vars": {}
+ }
+}

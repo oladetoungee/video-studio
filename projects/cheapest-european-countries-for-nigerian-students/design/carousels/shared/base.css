@@ -1,0 +1,146 @@
+@font-face{font-family:"SofiaX";font-weight:100 900;font-stretch:62% 125%;src:url(fonts/Archivo.ttf)}
+@font-face{font-family:"Sofia";font-weight:400;src:url(fonts/InterTightRegular.ttf)}
+@font-face{font-family:"Sofia";font-weight:500;src:url(fonts/InterTightMedium.ttf)}
+@font-face{font-family:"Sofia";font-weight:600;src:url(fonts/InterTightSemiBold.ttf)}
+@font-face{font-family:"Sofia";font-weight:700;src:url(fonts/InterTightBold.ttf)}
+@font-face{font-family:"Sofia";font-weight:800;src:url(fonts/InterTightExtraBold.ttf)}
+@font-face{font-family:"Sofia";font-weight:900;src:url(fonts/InterTightBlack.ttf)}
+@font-face{font-family:"Martian";font-weight:100 900;src:url(fonts/DMMono-Medium.ttf)}
+/* cheapest-european-countries carousels (2026-11-03): the film's look A "Price Check".
+   Grounds: shelf = #E4E6E3, ink = #121212, yellow = label yellow #FFD60A (one punchline slide). Sticker red #E4002B only means
+   "this costs more than it looks". Sofia Sans Extra Condensed 900 (prices, headings), Sofia Sans (body), Martian Mono (labels >= 32 px).
+   Real pages are never altered (cropped, highlighted) and always credited. */
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { background: #2a2a2e; }
+body { font-family: 'Sofia', sans-serif; padding: 40px; display: flex; flex-direction: column; gap: 40px; align-items: flex-start; }
+html.v-slide body, html.v-strip body { padding: 0; gap: 0; }
+html.v-strip body { flex-direction: row; }
+@media print { body { padding: 0; gap: 0; } .slide { break-after: page; } }
+@page { margin: 0; }
+
+.slide { position: relative; width: var(--W); height: var(--H); overflow: hidden; background: var(--bg); color: var(--fg); flex: none; }
+.g-shelf  { --bg: #E4E6E3; --fg: #121212; --sub: rgba(18,18,18,.82); --mid: rgba(18,18,18,.6); --line: rgba(18,18,18,.18); --a: #121212; --hl: #FFD60A; }
+.g-ink    { --bg: #121212; --fg: #FFFFFF; --sub: rgba(255,255,255,.84); --mid: rgba(255,255,255,.6); --line: rgba(255,255,255,.2); --a: #FFD60A; --hl: #FFD60A; }
+.g-yellow { --bg: #FFD60A; --fg: #121212; --sub: rgba(18,18,18,.84); --mid: rgba(18,18,18,.62); --line: rgba(18,18,18,.22); --a: #121212; --hl: #fff; }
+
+.main { position: absolute; left: 80px; right: 80px; top: 90px; bottom: 150px; display: flex; flex-direction: column; }
+.push { margin-top: auto; }
+.disp { font-family: 'SofiaX', sans-serif; font-weight: 900; text-transform: uppercase; line-height: .88; letter-spacing: -.005em; color: var(--fg); }
+.disp .acc { background: linear-gradient(transparent 6%, var(--hl) 6%, var(--hl) 94%, transparent 94%); color: #121212; padding: 0 .08em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.g-yellow .disp .acc { background: linear-gradient(transparent 6%, #121212 6%, #121212 94%, transparent 94%); color: #FFD60A; }
+.disp .red { color: #E4002B; }
+.body { font-size: 42px; line-height: 1.28; font-weight: 600; letter-spacing: -0.005em; color: var(--sub); text-wrap: pretty; }
+.body b { color: var(--fg); font-weight: 850; }
+.bal { text-wrap: balance; }
+.nw { white-space: nowrap; }
+.mono { font-family: 'Martian', monospace; font-stretch: 87.5%; font-weight: 600; font-size: 32px; letter-spacing: .01em; }
+.lab { line-height: 1.25; }
+.handle { font-family: 'SofiaX'; font-weight: 900; font-size: 120px; line-height: 1; color: var(--fg); }
+
+.foot { position: absolute; left: 80px; right: 80px; bottom: 56px; display: flex; justify-content: space-between; align-items: center; font-family: 'Martian'; font-stretch: 87.5%; font-weight: 600; font-size: 32px; color: var(--mid); }
+.foot .num b { color: var(--fg); }
+.meter { display: flex; gap: 6px; }
+.meter i { width: 24px; height: 8px; background: var(--line); }
+.meter i.on { background: var(--fg); }
+
+/* country heading: flag + name */
+.ctry { display: flex; align-items: center; gap: 26px; }
+.ctry .flag { width: 120px; height: 80px; flex: none; box-shadow: inset 0 0 0 2px rgba(0,0,0,.12); }
+.flag svg { display: block; width: 100%; height: 100%; }
+
+/* the shelf: a dark rail with labels sitting on it */
+.shelf { position: relative; display: flex; gap: 24px; align-items: flex-end; padding: 0 0 34px; }
+.shelf:after { content: ''; position: absolute; left: -80px; right: -80px; bottom: 0; height: 34px; background: #2A2B2E; border-top: 6px solid #45474B; z-index: 0; }
+.label { position: relative; z-index: 1; background: #FFD60A; color: #121212; flex: 1; min-width: 0; }
+.label.red { background: #E4002B; color: #fff; }
+.label .k { font-family: 'Sofia'; font-weight: 900; text-transform: uppercase; font-size: 34px; letter-spacing: .02em; background: #121212; color: #fff; padding: 12px 22px; }
+.label .p { font-family: 'SofiaX'; font-weight: 900; font-size: 190px; line-height: .86; padding: 18px 22px 8px; white-space: nowrap; }
+.label .p sup { color: #E4002B; font-size: .6em; vertical-align: top; }
+.label.red .p sup { color: #fff; }
+.label .s { font-family: 'Martian'; font-stretch: 87.5%; font-weight: 700; font-size: 32px; padding: 0 22px 20px; line-height: 1.25; }
+.label .was { font-family: 'SofiaX'; font-weight: 900; font-size: 64px; padding: 14px 22px 0; text-decoration: line-through; text-decoration-thickness: 6px; text-decoration-color: #E4002B; opacity: 1; color: rgba(255,255,255,.7); }
+
+/* ranked list */
+.rank { display: flex; flex-direction: column; gap: 14px; margin-top: 44px; }
+.rank .r { display: grid; grid-template-columns: 70px 90px 1fr auto; align-items: center; gap: 20px; background: #FFD60A; color: #121212; padding: 10px 24px 10px 18px; }
+.rank .r.red { background: #121212; color: #fff; }
+.rank .n { font-family: 'SofiaX'; font-weight: 900; font-size: 64px; line-height: 1; }
+.rank .c { font-family: 'Sofia'; font-weight: 900; font-size: 42px; text-transform: uppercase; }
+.rank .v { font-family: 'SofiaX'; font-weight: 900; font-size: 76px; line-height: 1; }
+.rank .flag { width: 84px; height: 56px; box-shadow: inset 0 0 0 2px rgba(0,0,0,.12); }
+
+/* red sticker */
+.sticker { align-self: flex-start; background: #E4002B; color: #fff; font-family: 'Sofia'; font-weight: 900; font-size: 46px; line-height: 1.1; padding: 16px 26px; transform: rotate(-2deg); }
+
+/* real page, untouched, credited */
+.shot { position: relative; background: #fff; padding: 16px 18px; box-shadow: 0 16px 0 rgba(0,0,0,.14); }
+.shot img { display: block; width: 100%; }
+.shot .cr { position: absolute; left: 0; top: 100%; margin-top: 14px; font-family: 'Martian'; font-stretch: 87.5%; font-weight: 600; font-size: 32px; color: var(--mid); white-space: nowrap; }
+
+/* polaroid */
+.pol { position: absolute; background: #fff; padding: 16px 16px 0; box-shadow: 0 18px 0 rgba(0,0,0,.16); }
+.pol img { display: block; width: 100%; object-fit: cover; }
+.pol .cap { font-family: 'Martian'; font-stretch: 87.5%; font-weight: 700; font-size: 32px; color: #121212; padding: 14px 4px 16px; }
+.obj img { display: block; }
+
+.stack { display: flex; flex-direction: column; gap: 22px; margin-top: 50px; }
+.stack .label { flex: none; display: grid; grid-template-columns: 300px 1fr; align-items: stretch; }
+.stack .label .k { grid-row: span 2; display: flex; align-items: center; font-size: 40px; }
+.stack .label .p { font-size: 92px; padding: 16px 22px 4px; }
+.stack .label .s { padding: 0 22px 16px; }
+.verd { display: flex; flex-direction: column; gap: 0; margin-top: 50px; border-top: 4px solid #121212; }
+.verd .vr { display: flex; justify-content: space-between; align-items: baseline; gap: 30px; padding: 22px 0; border-bottom: 4px solid #121212; }
+.verd .vk { font-family: 'Martian'; font-stretch: 87.5%; font-weight: 700; font-size: 34px; }
+.verd .vv { font-family: 'SofiaX'; font-weight: 900; font-size: 84px; line-height: .9; text-transform: uppercase; text-align: right; }
+
+.l-country .body { font-size: 50px; line-height: 1.24; }
+.l-country .label .k { font-size: 38px; }
+.l-country .label .s { font-size: 34px; }
+
+/* ---- 2026-11-07 her type pick: set 01 Swiss poster (inspiration/know-how/TYPE-SYSTEM.md). The old family names now load
+   Archivo (condensed, via font-stretch) / Inter Tight / DM Mono; no thick borders, no shadows, no outlines, no boxes around text. ---- */
+.big,.price,.label .price,.disp,.handle,.label .p,.rank .n,.rank .v,.label .was,.verd .vv,[style*="SofiaX"]{font-stretch:62.5% !important}
+.label,.page,.pol,.shot{box-shadow:none !important}
+.label .strip,.label .k{background:transparent !important;color:inherit !important;font-family:Martian !important;font-weight:500 !important;letter-spacing:.08em !important}
+.shadow{text-shadow:none !important}
+.ol,.bw.ol{filter:none !important}
+.bw.ol{filter:grayscale(1) contrast(1.08) !important}
+.big .box{background:none !important;color:var(--lab) !important;padding:0 !important}
+.big .rbox{background:none !important;color:var(--red) !important;padding:0 !important}
+.obj{filter:none !important}
+.verd{border-top-width:1px !important}.verd .vr{border-bottom-width:1px !important}
+.shelf:after{border-top:0 !important}
+.serif,.it{font-family:Sofia !important;font-style:normal !important;font-weight:700 !important}
+
+.g-shelf{--acc2:#E4002B}.g-ink{--acc2:#FFD60A}.g-yellow{--acc2:#E4002B}
+.disp .acc{background:none !important;color:var(--acc2) !important;padding:0 !important}
+.slide .main{z-index:1}
+
+.stack .label .s{font-size:32px !important}
+.label .was{font-size:64px !important}
+
+.was{font-size:64px !important;line-height:1}
+
+/* ---- 2026-11-07 (her second note): set 06 Ultra condensed + her house palette. "SofiaX" now loads League Gothic (caps), body Inter Tight,
+   labels DM Mono. Grounds: warm paper #EDE9E2 / off-black #111114. ONE accent: safety orange #FF4713, only for "costs more".
+   No label shapes: plain type on the ground. ---- */
+@font-face{font-family:"LG";src:url(fonts/LeagueGothicRegular.ttf)}
+.big,.price,.label .price,.disp,.handle,.label .p,.rank .n,.rank .v,.label .was,.verd .vv,.was{font-family:"LG" !important;font-weight:400 !important;font-stretch:100% !important;letter-spacing:0 !important}
+.t{--ground:#EDE9E2 !important;--fg:#111114 !important;--lab:#EDE9E2 !important;--ink:#111114 !important;--red:#FF4713 !important;--rail:#111114 !important}
+.label,.label.redl{background:transparent !important;color:var(--fg) !important}
+.label.redl,.label.redl *{color:#FF4713 !important}
+.label .price sup{color:#FF4713 !important}
+.sticker,.sticker.y{background:transparent !important;color:#FF4713 !important;transform:none !important;rotate:0deg !important;padding:0 !important}
+.rail,.shelf:after{background:transparent !important;border:0 !important;height:0 !important}
+.rail:before{display:none !important}
+.barcode,.label .bar{display:none !important}
+.g-shelf{--bg:#EDE9E2 !important;--fg:#111114 !important;--acc2:#FF4713 !important}
+.g-ink{--bg:#111114 !important;--fg:#EDE9E2 !important;--acc2:#FF4713 !important;--sub:rgba(237,233,226,.84) !important;--mid:rgba(237,233,226,.6) !important}
+.g-yellow{--bg:#EDE9E2 !important;--fg:#111114 !important;--acc2:#FF4713 !important;--sub:rgba(17,17,20,.84) !important;--mid:rgba(17,17,20,.62) !important}
+.slide .label{background:transparent !important}
+.slide .label .k{color:inherit !important}
+.disp .acc{color:inherit !important}
+.rank .r{background:transparent !important;color:var(--fg) !important;border-bottom:1px solid var(--line);padding:6px 0 !important}
+.rank .r.red{background:transparent !important;color:#FF4713 !important}
+.rank .n,.rank .v{font-size:84px !important}

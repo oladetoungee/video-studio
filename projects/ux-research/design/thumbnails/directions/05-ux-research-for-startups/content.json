@@ -1,0 +1,25 @@
+{
+  "direction": "The widest shot: her whole bright room, her hands framing an idea like a founder before launch; the topic in heavy type with one orange highlight bar top-left. Nothing else: title, her hands, the room. References: Pinterest 'JOBS ARE DEAD' / 'THE 9-5 COLLAPSE' (highlight bars), yt 'stop lying to yourself' (14).",
+  "thumbnail_text": "UX research for startups",
+  "text": {
+    "hd": "<span>UX research</span><br><b>for startups</b>",
+    "note": "Test it<br>first"
+  },
+  "images": {
+    "bg": "../../assets/scene/g2/s_246.8.jpg",
+    "cut": "../../assets/scene/g2/cut/s_246.8.png"
+  },
+  "vars": {
+    "--meb": "1.02"
+  },
+  "titles": [
+    "UX Research on a Small Budget: Start With 5 Users",
+    "Can't Afford UX Research? Start With 5 Conversations",
+    "Test Your App Idea Before You Build It (UX Research)"
+  ],
+  "title": "UX Research on a Small Budget: Start With 5 Users",
+  "set": 3,
+  "kind": "photo",
+  "scores": "critic scores R1 6 · R2 6.5 · R3 6.5 · R4 7 · R5 6.5 · below the 7.5 bar (alternate)",
+  "recommended": false
+}

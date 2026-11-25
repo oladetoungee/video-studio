@@ -1,0 +1,244 @@
+{
+  "_help": "Edit text here (or in the studio), then run: node shared/build.mjs linkedin (from design/carousels). Markup: *word* = the amber box, ~word~ = struck in red, \\n = line break.",
+  "deck": "linkedin",
+  "width": 1080,
+  "height": 1350,
+  "accent": "#F2A900",
+  "docTitle": "Should you still learn to code in 2026? 4 skills that matter now",
+  "slides": [
+    {
+      "layout": "cover",
+      "ground": "paper",
+      "title": "Should you learn to code if only *4.5%* of US dev job posts are entry level?",
+      "size": 80,
+      "sub": "I'm a software developer. This is what I'd tell a beginner in 2026.",
+      "subSize": 42,
+      "shot": {
+        "img": "ind-title.png",
+        "quote": "*4.5% in software development*\nin Q1 2026",
+        "credit": "Indeed Hiring Lab (US), 23 Jul 2026",
+        "w": 900
+      }
+    },
+    {
+      "layout": "skill",
+      "ground": "card",
+      "title": "Software had the smallest entry-level share",
+      "size": 72,
+      "ui": "bars",
+      "bars": [
+        {
+          "k": "Personal care & home health",
+          "v": 91.3,
+          "label": "91.3%"
+        },
+        {
+          "k": "Software development",
+          "v": 4.5,
+          "label": "4.5%",
+          "hi": true
+        }
+      ],
+      "shot": {
+        "img": "ind-title.png",
+        "quote": "ranging from *91.3%* in personal care & home health to *4.5%* in software development in Q1 2026",
+        "credit": "Indeed Hiring Lab (US), 23 Jul 2026",
+        "w": 920
+      }
+    },
+    {
+      "layout": "statement",
+      "ground": "ink",
+      "title": "Developer job posts went up. {*71%* of the new ones were senior.}",
+      "size": 92,
+      "shotTop": "64px",
+      "shot": {
+        "img": "ind-ai-title.png",
+        "quote": "*71%* of the increase in software development job postings between May 2025 and May 2026 is from senior roles",
+        "credit": "Indeed Hiring Lab (US), 8 Jul 2026",
+        "w": 920
+      }
+    },
+    {
+      "layout": "statement",
+      "ground": "paper",
+      "title": "I'd still learn to code. {I'd just change what I focus on.}",
+      "size": 96,
+      "sheet": {
+        "file": "learning-to-code.md",
+        "by": "my plan",
+        "lines": [
+          {
+            "t": "learn syntax",
+            "k": "del"
+          },
+          {
+            "t": "write a for loop",
+            "k": "del"
+          },
+          {
+            "t": "read code",
+            "k": "add"
+          },
+          {
+            "t": "debug",
+            "k": "add"
+          },
+          {
+            "t": "fundamentals",
+            "k": "add"
+          },
+          {
+            "t": "domain knowledge",
+            "k": "add"
+          }
+        ]
+      },
+      "body": "Three or four years ago, most of the focus was syntax and for loops."
+    },
+    {
+      "layout": "skill",
+      "ground": "card",
+      "tag": "Skill 1 of 4: Reading code",
+      "title": "Read the code AI writes for you",
+      "ui": "sheet",
+      "sheet": {
+        "file": "signup.js",
+        "by": "written by AI",
+        "lines": [
+          {
+            "t": "async function signUp(user) {"
+          },
+          {
+            "t": "  await db.insert(user)",
+            "k": "hl"
+          },
+          {
+            "t": "  return { ok: true }"
+          },
+          {
+            "t": "}"
+          }
+        ]
+      },
+      "body": "AI writes a lot of code now, and a lot of people don't even read it. Reading it is how you tell what it does and if it's what you asked for.",
+      "note": {
+        "who": "You, reading it",
+        "say": "What if this email already has an account?"
+      }
+    },
+    {
+      "layout": "skill",
+      "ground": "paper",
+      "tag": "Skill 2 of 4: Debugging",
+      "title": "An AI fix can hide the real problem",
+      "size": 96,
+      "ui": "ba",
+      "ba": [
+        {
+          "label": "Before: sign-up fails",
+          "t": "Error: this email already has an account",
+          "k": "bad"
+        },
+        {
+          "label": "After the AI's quick fix",
+          "t": "No error shown. The user still isn't signed up.",
+          "k": ""
+        }
+      ],
+      "body": "Debugging is how you know if a fix is for the actual problem."
+    },
+    {
+      "layout": "skill",
+      "ground": "card",
+      "tag": "Skill 3 of 4: Fundamentals",
+      "title": "The same payment can reach your server twice",
+      "size": 84,
+      "ui": "webhook",
+      "hook": {
+        "from": "Payment provider",
+        "to": "Your server",
+        "msgs": [
+          "Payment successful",
+          "Payment successful"
+        ],
+        "times": [
+          "12:00",
+          "12:03, again"
+        ],
+        "orders": [
+          "Order #1042",
+          "Order #1042"
+        ],
+        "dup": "Duplicate"
+      },
+      "body": "Many payment providers send the message again if your server doesn't reply in time. So learn how webhooks and retries work."
+    },
+    {
+      "layout": "skill",
+      "ground": "paper",
+      "tag": "Skill 4 of 4: Domain knowledge",
+      "title": "Know the business your code is for",
+      "ui": "batches",
+      "batches": [
+        {
+          "k": "Batch A",
+          "v": "Exp 03/2027",
+          "first": true,
+          "flag": "Sell first"
+        },
+        {
+          "k": "Batch B",
+          "v": "Exp 11/2027"
+        }
+      ],
+      "body": "AI can build a stock app for a pharmacy very quickly. It won't always know that the pharmacy has to sell the medicine that expires first.",
+      "photo": {
+        "img": "pharmacy-8657301.jpg",
+        "credit": "cottonbro studio, Pexels"
+      }
+    },
+    {
+      "layout": "list",
+      "ground": "card",
+      "title": "Free places to learn {these 4 skills}",
+      "size": 96,
+      "rows": [
+        {
+          "t": "MDN Web Docs",
+          "d": "how the web works"
+        },
+        {
+          "t": "freeCodeCamp",
+          "d": "courses with projects"
+        },
+        {
+          "t": "The Odin Project",
+          "d": "a full web development path"
+        },
+        {
+          "t": "Harvard's CS50",
+          "d": "computer science basics"
+        },
+        {
+          "t": "The System Design Primer",
+          "d": "how big apps are built"
+        }
+      ]
+    },
+    {
+      "layout": "end",
+      "ground": "accent",
+      "title": "Learn to code, {but don't count on it to hand you a junior role.}",
+      "size": 88,
+      "body": "If you hire developers: are you still hiring juniors?",
+      "where": "Full video on YouTube",
+      "handle": "@WithGbemi",
+      "polaroid": {
+        "img": "gbemi_headshot.jpg",
+        "caption": "Gbemi"
+      },
+      "polY": 600
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+ "story": "php2shell",
+ "outlet": "Wiz",
+ "slug": "wiz",
+ "url": "https://www.wiz.io/vulnerability-database/cve/cve-2026-109618",
+ "finalUrl": "https://www.wiz.io/vulnerability-database/cve/cve-2026-109618",
+ "status": "loaded",
+ "http": 200,
+ "title": "CVE-2026-109618 Impact, Exploitability, and Mitigation Steps | Wiz",
+ "h1": "CVE-2026-109618: \nPHP vulnerability analysis and mitigation",
+ "published": "",
+ "files": {
+  "fold": "php2shell/wiz_fold.png",
+  "full": "php2shell/wiz_full.jpg",
+  "scroll": "php2shell/wiz_scroll.mp4"
+ },
+ "full": {
+  "width": 1440,
+  "height": 6000,
+  "pageHeight": 7265,
+  "zoom": 1,
+  "quotes": []
+ },
+ "scroll": {
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "seconds": 8,
+  "keyframes": [
+   {
+    "t": 0,
+    "y": 93
+   },
+   {
+    "t": 1,
+    "y": 93
+   },
+   {
+    "t": 2.55,
+    "y": 1493
+   },
+   {
+    "t": 8,
+    "y": 1493
+   }
+  ],
+  "zoom": 1,
+  "easing": "easeInOutCubic between keyframes, holds where y is equal",
+  "capped": false,
+  "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)",
+  "quotes": []
+ }
+}

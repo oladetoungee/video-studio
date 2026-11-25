@@ -1,0 +1,27 @@
+{
+ "direction": "No face. A real photo of two hands holding a long shop receipt (Pexels 4959926, free licence) on the cream of the Archivo specimen. HIDDEN FEES huge on the right; a blue marker circle on one line of the receipt with a note on a yellow tag \"€40 → €52\" (the price that grows at checkout, her shoe example).",
+ "thumbnail_text": "HIDDEN FEES",
+ "kind": "object",
+ "recommended": false,
+ "titles": [
+  "Why Your Total Is Always Higher at Checkout",
+  "Dark Patterns in E-Commerce: 11 Checkout Tricks to Spot",
+  "Hidden Fees at Checkout? Here's the Trick Behind Them"
+ ],
+ "text": {
+  "hd": "HIDDEN<br>FEES",
+  "note": "€40 → €52"
+ },
+ "images": {
+  "obj": "../../assets/pexels/px-4959926.jpg"
+ },
+ "vars": {
+  "--ground": "#E6DFCD"
+ },
+ "board": "Thumbnails 91 (yt-38 \"TWO SUM\": a real object photo (a notepad and a hand drawing on it) fills the frame, two huge heavy words on top, a red hand-drawn mark on the object)",
+ "fonts": "Font 77 (Archivo 900 condensed, Design 351) for the words and the note",
+ "colours": "Font 77 / Font 97 colour combo (Design 351): ground #E6DFCD (photo multiplied onto it), ink #101114, note on yellow #E5C63A, ring #173DAF",
+ "title": "Why Your Total Is Always Higher at Checkout",
+ "class": "no-lift",
+ "scores": "rework 2026-11-19 cold critic R1 7/7, R2 6/7, R3 7/8; '?' dropped from the tag"
+}

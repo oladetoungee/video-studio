@@ -1,0 +1,28 @@
+{
+ "direction": "Three photo panels side by side: she in her room (left), a browser showing 404 Not Found (middle), a phone showing an error 500 screen (right). Across the middle, one white line: the three codes everyone has seen, and a small line in brackets. Follows: \"Living in Finland diaries\", \"PhD Vlog (Mathematics & Astrophysics)\", \"the art of offline living\".",
+ "thumbnail_text": "404, 500, 200\u2026 (what they actually mean)",
+ "titles": [
+  "HTTP Status Codes: Why Websites Show 404 and 500",
+  "HTTP Status Codes Explained: Is It You or the Server?",
+  "HTTP Status Codes Explained (With Real API Examples)"
+ ],
+ "title": "HTTP Status Codes: Why Websites Show 404 and 500",
+ "kind": "collage",
+ "text": {
+  "h1": "404, 500, 200\u2026",
+  "h2": "(what they<br>actually mean)",
+  "w1": "404 Not Found",
+  "u1": "example.com/books/9999",
+  "p1": "Something went wrong",
+  "p2": "Error 500"
+ },
+ "images": {
+  "room": "../../assets/photo/shoot/room-1596.jpg"
+ },
+ "vars": {
+  "--rw": "1100px",
+  "--rx": "-330px",
+  "--ry": "-60px"
+ },
+ "class": "no-lift"
+}

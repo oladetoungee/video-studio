@@ -1,0 +1,35 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../lib/rm.css"><style>
+/* sample 1 measured: line 1 cap top 22 / baseline 192 (cap 170 px) spanning x 15-1270; line 2 cap top 222 / baseline 390,
+   x 95-1200; Montserrat-like heavy wide sans, white #FAFAFA, no shadow, both lines behind her head.
+   Face (Vision box) 248 px wide centred at 630,296 -> here 298 px (frame has to fill 1280x720). */
+.t{--ground:#1d1f1c;--fg:#FAFAF7;--accent:#C8102E;--px:-40px;--py:-40px;--pw:1360px;--dim:0}
+.wd{position:absolute;left:0;right:0;text-align:center;font-family:'Montserrat';font-weight:700;color:var(--fg);
+    text-transform:uppercase;line-height:1;white-space:nowrap;z-index:1}
+.wd.a{top:4px;font-size:212px;letter-spacing:0}
+.wd.b{top:202px;font-size:212px;letter-spacing:.03em}
+.photo img{filter:blur(12px) saturate(.45) brightness(1.12)}
+.fly{position:absolute;inset:0;z-index:3;pointer-events:none}
+.fly svg{position:absolute;overflow:visible;filter:drop-shadow(0 2px 2px rgba(0,0,0,.25))}
+</style></head><body><div class="t">
+<div class="photo" data-move="photo"><img data-img="scene" alt=""><div class="dim"></div></div>
+<div class="wd a" data-k="line1"></div>
+<div class="wd b" data-k="line2"></div>
+<div class="front"><img data-img="front" alt=""></div>
+<svg width="0" height="0" style="position:absolute"><defs>
+  <!-- a flat drawn marriage certificate, drawn like the sample's cartoon bills: flat fill, dark outline -->
+  <g id="cert">
+    <rect x="0" y="0" width="96" height="64" rx="3" fill="#F1E6C8" stroke="#2A2A22" stroke-width="3"/>
+    <rect x="7" y="7" width="82" height="50" fill="none" stroke="#2A2A22" stroke-width="1.6"/>
+    <rect x="7" y="7" width="82" height="5" fill="#CE1126"/><rect x="7" y="12" width="82" height="4" fill="#FCD116"/><rect x="7" y="16" width="82" height="4" fill="#006B3F"/>
+    <circle cx="40" cy="36" r="8" fill="none" stroke="#B8892E" stroke-width="3"/><circle cx="52" cy="36" r="8" fill="none" stroke="#B8892E" stroke-width="3"/>
+    <line x1="14" y1="49" x2="38" y2="49" stroke="#2A2A22" stroke-width="2"/><line x1="58" y1="49" x2="72" y2="49" stroke="#2A2A22" stroke-width="2"/>
+    <circle cx="80" cy="47" r="6.5" fill="#C8102E" stroke="#2A2A22" stroke-width="1.6"/>
+  </g></defs></svg>
+<div class="fly" data-move="certificates" id="fly"></div>
+</div>
+<script>
+// positions copied from the sample's flying bills (centre x, centre y, rotation, scale), measured on the 1280x720 crop
+const P=[[892,350,28,.58],[968,396,-14,.7],[1046,384,40,.64],[1012,446,-32,.78],[1110,452,12,.74],[1066,520,-6,.88],[984,560,22,.84],[1120,596,-40,.92],[1030,628,8,1],[930,650,-24,.95],[1170,664,30,1.02],[840,690,14,1],[760,700,-70,1.04],[990,712,-4,1.06]];
+const s=document.getElementById('fly');
+for(const [x,y,r,k] of P){s.insertAdjacentHTML('beforeend',`<svg width="96" height="64" style="left:${x-48}px;top:${y-32}px;transform:rotate(${r}deg) scale(${k})"><use href="#cert"/></svg>`)}
+</script><script src="../../lib/flags.js"></script><script src="../../lib/rm.js"></script><script src="../../lib/bind.js"></script></body></html>

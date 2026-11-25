@@ -1,0 +1,21 @@
+{
+  "direction": "Her finger up (3:58) towards one giant red notification badge on a plain generic app icon. WHY THIS DOT? across the top.",
+  "concept": "TH05",
+  "follows": "viral sample 1 (the object huge beside her) + sample 5",
+  "thumbnail_text": "WHY THIS DOT?",
+  "title": "Why Every Notification Badge Is Red (Facebook's Was Blue)",
+  "titles": [
+    "Why Every Notification Badge Is Red (Facebook's Was Blue)",
+    "Why Notifications Are Red, and Why You Can't Ignore Them"
+  ],
+  "scores": "A topic (image only) 8/7 · B with best title 8.5 · C taste 5 (round 2; fixes from round 2 applied after)",
+  "text": {
+    "words": "Why this <span class=\"acc\">dot?</span>",
+    "badge": "1"
+  },
+  "images": {
+    "scene": "../../../../assets/scene/warm/s_238.5.jpg",
+    "front": "../../../../assets/scene/warm/mask/s_238.5.png"
+  },
+  "vars": {}
+}

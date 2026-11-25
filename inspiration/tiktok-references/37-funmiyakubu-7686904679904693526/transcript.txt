@@ -1,0 +1,85 @@
+[00:00] A fake traffic fine is draining people's entire bank accounts in Nigeria this week.
+[00:03] A huge number of Nigerians got the same kind of text, all claiming to be from the FRSC,
+[00:09] saying a traffic offense had been recorded against them, with a link to go and check
+[00:12] the details.
+[00:13] The link takes you to a website that looks like the FRSC's, except the address is slightly
+[00:17] off.
+[00:18] One of the websites was frcgov.top instead of the real frcgov.ng.
+[00:23] You type in your plate number, it brings up an offense with a small fine and a discount
+[00:27] if you pay right now, and then it asks for your card details to pay.
+[00:31] You should note that the website wasn't even checking if your plate number was real, because
+[00:35] there was one article that I read, I can't remember which one, but I'll put it up here.
+[00:38] They ended up putting fake plate numbers in there to test, and the website still brought
+[00:42] the same fine.
+[00:43] One of the people who got scammed paid what looked like a small fine, and minutes later
+[00:47] over 360,000 NERA left the account and landed with a company she had never heard of.
+[00:52] One man was shown a fine of 2,500 NERA, he agreed to pay for it and got charged $2,500.
+[00:59] Another woman went public asking her bank how a coach here approved for a tiny fine,
+[01:03] ended with over a million NERA gone from her account.
+[01:06] Which is a valid question, because if I approve something small, how did they take everything?
+[01:10] Shouldn't there be another approver request for a second charge?
+[01:13] Let me explain what's actually happening behind the screen.
+[01:15] What they're doing is called Smition, which is just fishing that reaches you via SMS instead
+[01:19] of an email.
+[01:20] The goal is the same, which is to get you onto a fake website, and get you to hand over
+[01:24] something valuable.
+[01:25] These fake domains usually only stay up for a few days before they are taken down, so
+[01:29] by the time one is being reported and shared around in one end, the people running it have
+[01:33] already put up another one, and there is slightly different names.
+[01:35] And while you're on that website typing, they are watching it happen, because the website
+[01:39] captures what you enter in real time.
+[01:41] When you put in your card details and the site asks for the code your bank just sent
+[01:44] you, you'd think that code is confirming the traffic fine on your screen, but it isn't.
+[01:49] At that exact moment, the person on the other side is using your card details to start their
+[01:53] own payment, which is the real one, and your bank sends a code to approve it.
+[01:57] So the code was never for the 2500 NARA you were looking at, it was for the transaction
+[02:01] they were making with your card, which is why the man who saw NARA got charged in dollars.
+[02:05] The numbers on his screen and the payments his code approved were two completely different
+[02:09] things.
+[02:10] Also, once you've entered that code over, you've basically given them the key, because
+[02:13] your card details on their own can be used again and again anywhere online that doesn't
+[02:18] ask for a code.
+[02:19] And plenty of websites, especially outside Nigeria, don't ask for one at all.
+[02:22] So the first charge goes through, and then more can follow at places that never stop
+[02:26] to check.
+[02:27] In a lot of these cases, the money goes to a business, the scammers set up themselves
+[02:30] to look like a normal online shop, registered with stolen or fake details.
+[02:34] So the merchants in this screenshot here, probably isn't in Dubai.
+[02:37] The money moves into an account they control, and they pull it out before anyone can reverse
+[02:41] it.
+[02:42] Also, you should know that the people who sent you that text mostly did not build any of
+[02:45] this themselves, the fake FRC page, the checkout, all of it, is something they most likely bought.
+[02:51] There's a whole industry behind this, and a lot of it runs on Telegram, where developers
+[02:55] sell ready-made fishing kits like a product.
+[02:57] So fake pages that already copy hundreds of real companies out there, like banks, delivery
+[03:02] services, government agencies, rent it for as little as under $100 a week.
+[03:07] So someone with no real technical skills can pay a subscription, pick the brand they want
+[03:11] to impersonate, and get a working fake site handed to them.
+[03:14] And it isn't one person in your room somewhere, it's organized like an actual company where
+[03:18] the people will build the kits, the people will sell the phone number lists, the people
+[03:21] will blast out the texts, the people will cash out the cards, and even support staff
+[03:25] to help the buyers get stock.
+[03:27] Security researchers will dog into one of these operations, trace nearly 200,000 fake
+[03:31] domains back to it, most of them registered through a single company based in Hong Kong.
+[03:36] This FRC one, the Foundation for Investigative Journalism, traced where the domains were
+[03:40] hosted to somewhere in the US, but all of it's still linked back to China.
+[03:44] So I think that's where they believe most of these attacks are coming from.
+[03:47] So if you ever get any message like this, please go to the FRC website itself, or call
+[03:52] 122.
+[03:53] And if it's a different company out there, please make sure that you check.
+[03:56] Some of the people they sent it to, they don't even have cards, so those ones are lucky because
+[03:59] they know that it definitely doesn't apply to me.
+[04:01] But for the people who have cards, I think there was a lady, the one who got charged
+[04:06] almost 400k, for her, she had been stopped by FRC that a few days or a few weeks ago,
+[04:11] so she actually felt it was real.
+[04:13] Anybody that was a victim of this, I am really, really sorry, do not let anybody make you
+[04:17] feel ashamed for this, people get scammed all the time.
+[04:20] Not everybody actually looks at the website's domain, I mean, I rarely ever look at it except
+[04:25] I am worried that, okay, there is something wrong, please stay safe out there.
+[04:28] It is very easy to fall victim to things like this, besides your personal life, it could
+[04:32] be at work as well.
+[04:33] I receive phishing emails at work and they are falling for quite a bit, like my IT team,
+[04:37] I am sure they are tired of me, they are always sending me cyber security training.
+[04:41] So a lot of these things, they are very, very sophisticated and obviously they are the ones
+[04:45] that are not really sophisticated, so please just take a little extra time to read whatever
+[04:49] is sent to you.

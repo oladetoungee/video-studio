@@ -1,0 +1,29 @@
+{
+  "text": {
+    "h": "job + master's? <b>doable.</b>"
+  },
+  "images": {
+    "me": "../../assets/p1119/talk.jpg",
+    "right": "../../assets/px/laptop.jpg"
+  },
+  "kind": "her talking (Øredev, open smile, mid-sentence) big on the left, a desk with code at night on the right; bold lowercase line on a dark band at the bottom",
+  "layout": "her centre, picture panels either side, words across the bottom",
+  "board": "pick1119-22 (\"I'm 45. If you're in your 30s, watch this.\": girl, it's not too late. her talking in the middle, book covers left, a photo right, white bold line, key words in colour)",
+  "fonts": [
+    "thumbs-10 Poppins Bold lowercase, red key word (white #FFFFFF + red #E5352B on #2B2725, Thumbnails 84)"
+  ],
+  "colours": "Thumbnails 84: #2B2725 / #FFFFFF / #E5352B",
+  "photo": "library/her-photos/oredev-2026-11-10/55642240014_e5eed9d2e7_o.jpg (Enhance photo 0.4; lectern logo and laptop sticker kept out of frame). Books + lecture room: Pexels (film/assets/CREDITS.md)",
+  "thumbnail_text": "job + master's? doable.",
+  "titles": [
+    "Can You Work Full Time and Do a Master's? Yes, Here's How",
+    "How I Work Full Time While Doing a Master's Abroad",
+    "Working Full Time While Studying Abroad: What I Wish I Knew"
+  ],
+  "title": "Can You Work Full Time and Do a Master's? Yes, Here's How",
+  "direction": "Copies pick1119-22: she is mid-sentence, warm and sure, between the two halves of her life (books = study, lecture room = class; she is at work, speaking at a developer conference), with one reassuring line at the bottom.",
+  "nudge": {},
+  "vars": {},
+  "class": "no-lift",
+  "scores": "2026-11-19 feed critic (alone / with title): R1 4/6 (3 panels, 'both') · R2 6/7 · R3 6/7, the R3 critic's pick to upload"
+}

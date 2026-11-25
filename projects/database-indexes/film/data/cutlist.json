@@ -1,0 +1,145 @@
+{
+ "sample_rate": 48000,
+ "original_duration": 657.1,
+ "edited_duration": 628.93,
+ "manual_cuts": [
+  {
+   "start": 0.06,
+   "end": 19.51,
+   "seconds": 19.45,
+   "reason": "silence before she starts speaking (BRIEF: trim the first 20 s)"
+  },
+  {
+   "start": 171.94,
+   "end": 174.19,
+   "seconds": 2.25,
+   "reason": "slip at 2:52: 'Without an index, you will do way less than that' (means 'with'; BRIEF)"
+  },
+  {
+   "start": 198.91,
+   "end": 200.8,
+   "seconds": 1.89,
+   "reason": "garbled aside: 'you're using Laravel for the past one year' -> 'If you're using Laravel, for example, you simply add it'"
+  },
+  {
+   "start": 231.91,
+   "end": 232.66,
+   "seconds": 0.75,
+   "reason": "third repeat of the name ('sex scan'): keeps 'Seq Scan, sequential scan'"
+  },
+  {
+   "start": 606.9,
+   "end": 608.12,
+   "seconds": 1.22,
+   "reason": "repeat: 'you only show the first,' (keeps 'you only show the first 10')"
+  },
+  {
+   "start": 619.79,
+   "end": 620.37,
+   "seconds": 0.58,
+   "reason": "repeat: 'stops at the first,' (keeps 'stops after the first 10')"
+  }
+ ],
+ "manual_seconds_removed": 26.14,
+ "pauses_tightened": 6,
+ "pause_seconds_removed": 2.03,
+ "pauses": [
+  {
+   "orig_at": 60.58,
+   "was": 1.09,
+   "now": 0.55
+  },
+  {
+   "orig_at": 270.66,
+   "was": 0.87,
+   "now": 0.52
+  },
+  {
+   "orig_at": 366.74,
+   "was": 1.04,
+   "now": 0.54
+  },
+  {
+   "orig_at": 524.76,
+   "was": 0.72,
+   "now": 0.5
+  },
+  {
+   "orig_at": 536.41,
+   "was": 0.71,
+   "now": 0.5
+  },
+  {
+   "orig_at": 597.53,
+   "was": 0.71,
+   "now": 0.5
+  }
+ ],
+ "segments": [
+  {
+   "orig_start": 0.0,
+   "orig_end": 0.0775,
+   "edit_start": 0.0
+  },
+  {
+   "orig_start": 19.4925,
+   "orig_end": 60.8175,
+   "edit_start": 0.0425
+  },
+  {
+   "orig_start": 61.3225,
+   "orig_end": 171.9575,
+   "edit_start": 41.3325
+  },
+  {
+   "orig_start": 174.1725,
+   "orig_end": 198.9275,
+   "edit_start": 151.9325
+  },
+  {
+   "orig_start": 200.7825,
+   "orig_end": 231.9275,
+   "edit_start": 176.6525
+  },
+  {
+   "orig_start": 232.6425,
+   "orig_end": 270.8975,
+   "edit_start": 207.7625
+  },
+  {
+   "orig_start": 271.2125,
+   "orig_end": 366.9775,
+   "edit_start": 245.9825
+  },
+  {
+   "orig_start": 367.4425,
+   "orig_end": 524.9975,
+   "edit_start": 341.7125
+  },
+  {
+   "orig_start": 525.1825,
+   "orig_end": 536.6475,
+   "edit_start": 499.2325
+  },
+  {
+   "orig_start": 536.8225,
+   "orig_end": 597.7675,
+   "edit_start": 510.6625
+  },
+  {
+   "orig_start": 597.9425,
+   "orig_end": 606.9175,
+   "edit_start": 571.5725
+  },
+  {
+   "orig_start": 608.1025,
+   "orig_end": 619.8075,
+   "edit_start": 580.5125
+  },
+  {
+   "orig_start": 620.3525,
+   "orig_end": 657.1001,
+   "edit_start": 592.1825
+  }
+ ]
+}

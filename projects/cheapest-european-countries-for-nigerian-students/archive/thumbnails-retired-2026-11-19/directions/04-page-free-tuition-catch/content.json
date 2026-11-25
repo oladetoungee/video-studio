@@ -1,0 +1,30 @@
+{
+  "text": {
+    "w": "Free tuition<b>*</b><br>in Germany",
+    "src": "source: daad.de, Jan 2025"
+  },
+  "images": {
+    "page": "../../assets/src/de-992-page.png"
+  },
+  "vars": {},
+  "class": null,
+  "nudge": {},
+  "board": "yt-21 / yt-44 (a real page/card is the picture, one big line over it)",
+  "kind": "flat Design 351 blue, huge FREE TUITION* caps, the real DAAD page (screenshot, credited) with \"992 euros per month\" highlighted; no face",
+  "direction": "Copies the \"card is the picture\" boards (yt-21 \"Forget about going viral\", yt-44 post card) but with a REAL source: the DAAD page on studying in Germany (daad.de, captured 2026-11-02), \"992 euros per month\" highlighted. Words: FREE TUITION* (the asterisk is the catch: proof of funds, kit 7f). Source credit bottom right.",
+  "thumbnail_text": "FREE TUITION* IN GERMANY + DAAD page: you must prove that you have 992 euros per month (highlighted)",
+  "titles": [
+    "Germany Is Free to Study In. The Visa Isn't",
+    "Tuition Free Universities in Europe Need Proof of Funds",
+    "What Studying in Europe Really Costs a Nigerian in 2027"
+  ],
+  "fonts": [
+    "design-06 Archivo 62% width (ink #101114 on cream #E6DFCD, as Design 351)",
+    "pair-02 Archivo 62% + DM Mono"
+  ],
+  "colours": "combo-06 (Design 351: #E6DFCD cream, #101114 ink, #E5C63A highlight, #173DAF accent)",
+  "fontboard_note": "NEW 2026-11-12 (font board round 2): replaces a \"words left, her right\" layout",
+  "scores": "font-board round 2 (2026-11-13, fonts with their source colours; fresh cold critic, PNG alone, 4 rounds): 6/10",
+  "recommended": false,
+  "title": "Germany Is Free to Study In. The Visa Isn't"
+}

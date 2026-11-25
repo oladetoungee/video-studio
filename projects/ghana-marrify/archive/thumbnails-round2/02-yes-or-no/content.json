@@ -1,0 +1,7 @@
+{
+  "direction": "Her data-minimisation answer as a redacted record: 'Married? YES', the rest blacked out (illustration) + her smile (5:11)",
+  "title": "Should Marriage and Divorce Records Be Public?",
+  "text": { "line1": "All it needs", "line2": "to say:", "label": "Illustration", "head": "Marriage record", "q": "Married?", "yes": "YES", "k1": "Spouse", "k2": "Dates", "k3": "Court" },
+  "images": { "person": "../../assets/cut/f_311.32.png" },
+  "vars": { "--x": "468px", "--y": "-188px", "--w": "1314px" }
+}

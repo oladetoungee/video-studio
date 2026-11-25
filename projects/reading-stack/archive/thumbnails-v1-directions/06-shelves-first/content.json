@@ -1,0 +1,7 @@
+{
+  "direction": "Her numbered-list structure as shelves + face (the mechanism)",
+  "title": "Why Some Books Stick and Others Don't",
+  "text": { "line1": "Build the", "line2": "shelves", "line3": "first." },
+  "images": { "person": "../../assets/cut/explain.png" },
+  "vars": { "--x": "560px", "--y": "40px", "--w": "1000px" }
+}

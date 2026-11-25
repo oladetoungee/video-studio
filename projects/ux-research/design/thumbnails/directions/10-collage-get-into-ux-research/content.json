@@ -1,0 +1,25 @@
+{
+  "direction": "Collage: her calm in her bright room, a wooden clipboard floating top-right holding a short plan (learn, practise, volunteer: the ways in from the video), the topic as one elegant serif line on a paper band at the bottom. References: viral collage 'How to be Feminine', 'in defense of being online', Pinterest 'new york city writing'.",
+  "thumbnail_text": "How to get into UX research",
+  "text": {
+    "hd": "How to get into<b>UX research</b>",
+    "plan": "1. learn<br>2. practise<br>3. volunteer"
+  },
+  "images": {
+    "bg": "../../assets/scene/g2/s_692.7.jpg",
+    "cut": "../../assets/scene/g2/cut/s_692.7.png"
+  },
+  "vars": {
+    "--meb": "1.02"
+  },
+  "titles": [
+    "How to Get Into UX Research With No Experience",
+    "How to Become a UX Researcher (From a Master's Student)",
+    "What Is UX Research? A Beginner's Path Into the Field"
+  ],
+  "title": "How to Get Into UX Research With No Experience",
+  "set": 3,
+  "kind": "collage",
+  "scores": "critic scores new in R2: R2 5.5 · R3 5 · R4 6.5 · R5 7 · below the 7.5 bar (alternate)",
+  "recommended": false
+}

@@ -1,0 +1,109 @@
+URL: https://www.deseret.com/business/2026/10/21/website-computer-server-security-flaw-artificial-intelligence-hackers-cybersecurity-php-programming-language/
+STATUS: loaded (http 200)
+FINAL: https://www.deseret.com/business/2026/10/21/website-computer-server-security-flaw-artificial-intelligence-hackers-cybersecurity-php-programming-language/
+TITLE: A just-revealed security flaw is hitting computer systems around the world – Deseret News
+H1: A just-revealed security flaw is hitting computer systems around the world
+OG: A just-revealed security flaw is hitting computer systems around the world  | Deseret News
+PUBLISHED: 2026-10-21T17:57:07.259Z  MODIFIED: 2026-10-21T17:57:07.421Z
+DOC_H: 900
+
+TECH
+U.S. & WORLD
+A just-revealed security flaw is hitting computer systems around the world
+Flaws in widely used programming language was discovered years ago but deemed too complex to worry about
+Published: Oct 21, 2026, 11:57 a.m. MDT
+See More Deseret News Stories In Search
+VIEW 8 COMMENTS
+SHARE
+Paul Pirosca, Adobe Stock
+By Art Raymond
+
+Art is an award-winning reporter who covers advanced industry and technology on the Deseret News' special projects team.
+
+KEY POINTS
+A coding flaw in a widely used web programming language is causing a global scramble to secure websites and servers.
+While the issue was uncovered decades ago, security experts at the time believed it was too complex to be exploited.
+Researchers recently discovered the flaw could be exploited easily using AI-driven tools.
+
+Security experts using AI-powered analysis tools just revealed a pair of serious coding flaws that potentially impact 70% of the world’s computer systems, making them vulnerable to hackers who could use their own AI programs to exploit the weaknesses on a massive scale.
+
+First reported by the Wall Street Journal on Wednesday, the revelation has systems managers across the globe scrambling to install a just-released patch that experts say should thwart attempts by nefarious actors to gain control of websites and systems, most of which use the so-called PHP technology to power digital tools.
+
+Reuters reports web operators around the world were taking measures to secure their systems, including numerous government websites across Europe that went dark Wednesday, to execute fixes. European Union cybersecurity experts are warning organizations unable to apply the code patches to take affected websites offline.
+
+How the U.S. responded
+
+The National Security Agency issued similar direction Wednesday in a post on X on and said it would follow up with more specific guidance.
+
+The White House said federal agencies were working with leading AI labs to speed up a fix to the security flaws, according to a report from the BBC.
+
+The issue, now being identified as the PHP2Shell, represents a class of problems in the way the PHP programming language manages a computer’s memory, according to the Journal report. The flaw can be exploited in numerous ways with some strategies requiring just a few seconds to execute by hackers who could use it to run unauthorized software on any unpatched web server.
+
+As is typical when any digital vulnerability is made public, IT experts are now engaged in a race against hackers who have the opportunity to assess the patch code for new workarounds while also seeking out systems that have yet to install the security fix. And they’re likely to employ AI-driven tools to expedite the intrusion efforts.
+
+“Some dude on Twitter could take the patches and run AI against it and post some exploit script,” Thai Duong, the chief executive of Calif, the security company that first discovered the issue, told the Wall Street Journal. “All hell will break loose.”
+
+RELATED
+Series of new security incidents reveals startling behavior by rogue AI agents
+What is PHP?
+
+PHP is a free, open-source programming language that works behind the scenes to run websites, according to Reuters. When a user loads a website, the server running PHP assembles the content and sends the finished page to the user’s web browser.
+
+According to web technology tracker W3Techs, per Reuters, PHP powers nearly three-quarters of the world’s websites and is the software behind pages hosted by WordPress, which includes 40% of all websites, which includes blogs, small business pages, government portals, online shops and news outlets.
+
+The PHP2Shell flaws are rated 9.2 out of 10 on the CVSS v4.0 severity scale, an industry standard for assessing security issues. A single flaw in PHP opens the same door on millions of servers at once and whoever exploits the flaw controls the website, according to the Reuters report.
+
+When was the problem discovered?
+8
+Comments
+
+The flaws in the PHP code had been present for years, according to the Wall Street Journal, and had been flagged as in issue decades ago. But security experts at the time believed it was too difficult to exploit and the problem was deprioritized.
+
+Ryan Austin, a digital security researcher at Calif, uncovered the PHP problems with assistance from OpenAI’s GPT-5.6 Sol platform, one of the AI developer’s most advanced models, during an audit conducted in August. A working group was formed to address the security flaw with efforts in place to keep the exploit concealed in an attempt to keep hackers at bay until a solution was found. The work led to the new patch, originally scheduled to be released on Oct. 22 but news of the work leaked Tuesday.
+
+Volker Dusch, a security engineer with the nonprofit foundation that manages the PHP project, led the team tasked with assembling a security fix. Dusch’s team, according to the Journal report, decided to rush out the patch. On Tuesday, they warned the world to stand by and expect a critical security update on Wednesday.
+
+It was “a good balance to inform defenders,” Dusch said, “and not give attackers too much time to develop exploits.”
+
+RELATED
+AI agents are wreaking havoc. We break down these emerging tools
+Recommended For You
+From ice cream maker in the basement to nationwide chain: The story of Salt & Straw
+3 takeaways from No. 2 BYU’s devastating double overtime loss at UCF
+What UCF coach Scott Frost said after beating No. 2 BYU
+Humbled BYU returns home after loss to UCF with plenty to unpack
+How social media reacted to No. 2 BYU’s double-overtime loss to UCF
+Kyle Whittingham’s last act
+Myles Garrett breaks down missionary’s viral homecoming tackle
+BYU backup linebacker Ephraim Asiata arrested on suspicion of DUI, other charges
+Looking for comments?
+Find comments in their new home! Click the buttons at the top or within the article to view them — or use the button below for quick access.
+VIEW COMMENTS
+Most Popular
+1
+In praise of Notre Dame: What a football coach’s kindness to a BYU player teaches about sportsmanship 
+2
+Is this really Joseph Smith? I watched 10 hours of research, and here’s what I think
+3
+Latest Latter-day Saint handbook update adds guidance for weekly Sunday meetings
+4
+‘BYU changed my life’: Danny Ainge glows with gratitude at College Basketball Hall of Fame induction
+5
+Tears flow as Gifford Nielsen sees premonition come to pass against Notre Dame
+Most Commented
+165
+Live coverage: Follow along as BYU faces UCF
+72
+Utah jumps BYU in latest AP top 25 poll
+61
+Humbled Cougars return home from loss to UCF with plenty to unpack
+58
+Analysis: No. 10 Utes sit alone atop Big 12 after statement win over No. 14 Houston
+51
+Poll data reveals widening divide over Israel that could reshape Senate control
+Recommended For You
+Getting older and getting braver at trying new things
+Watch: 3 key misses in BYU’s overtime loss to UCF
+What started out with an ice cream maker purchased
+Utah jumps BYU in latest AP top 25 poll
+Latest Latter-day Saint handbook update adds guidance for weekly Sunday meetings

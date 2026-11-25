@@ -1,0 +1,27 @@
+{
+  "text": {
+    "lead": "",
+    "a": "finally, it makes sense."
+  },
+  "images": {
+    "bg": "../../assets/photo/oredev/od-55642230148.png"
+  },
+  "kind": "real warm moment (her, thinking over a printed paper) + one lowercase italic serif line, no box",
+  "board": "pick1119-27 (\"study with a sleep-deprived doctor\", warm night desk + italic serif \"tired, but still here.\")",
+  "fonts": [
+    "thumbs-17 / design-26 Instrument Serif italic, white on a dark warm photo (Thumbnails 152 / Design 20)"
+  ],
+  "colours": "white on the photo (soft shadow)",
+  "photo": "Øredev 2026 photo 55642230148 (orange top, hand at chin), Enhance photo --bg keep --strength 0.5; page: Keshav 2007 p1",
+  "thumbnail_text": "finally, it makes sense.",
+  "titles": [
+    "How I Read Research Papers as a Master's Student",
+    "How I Read Research Papers So They Actually Make Sense",
+    "Research Papers Confusing You? Read Them Like This"
+  ],
+  "direction": "Copies pick1119-27: a calm, warm, real moment; the words are a feeling (lowercase italic serif), not the topic. The title says what the video is.",
+  "nudge": {},
+  "vars": {},
+  "class": "no-lift",
+  "title": "How I Read Research Papers as a Master's Student"
+}

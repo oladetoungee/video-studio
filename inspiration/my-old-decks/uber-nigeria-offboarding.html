@@ -1,0 +1,1662 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Uber Left Nigeria / What a Platform Owes Its Users / Slide Studio v2</title>
+    <!--
+      POSTER SYSTEM DECK , 1920x1080, dark default.
+      Kit: uber-nigeria-offboarding.
+      Motif: THE DRAIN , in-flight work that should reach zero before the switch flips.
+             Second device: THE FLAG , the boolean somebody in a room set to false.
+      Register: systems, incident report. Cold in the middle, moral at the edges.
+      Palette is DARK-LED: void #0E1116 / signal #E9ECEE.
+      Colour code, kept across all three files:
+        live mint       #22E08A = LIVE. a trip still running, money still owed, the user's side
+        notice amber    #FFB020 = NOTICE. the warning that should have come first. timing
+        machine periwinkle #7C8CFF = the platform's own machinery. the flag, the funnel, London
+      THERE IS NO RED IN THIS KIT ON PURPOSE. The shutdown is drawn as ABSENCE:
+      an empty outlined box, a hollow track, a count at zero, a line that stops.
+      Fonts: Bricolage Grotesque 800 / Archivo / DM Mono / Instrument Serif (three lines only).
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Archivo:wght@400;500;600;700;800;900&family=DM+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --paper: #EDEFF1; --ink: #0E1116; --panel: #DDE1E5; --mid: #697480; --line: #C9CFD6; --card: #FFFDF6;
+        --acc1: #22E08A; --acc2: #FFB020; --acc3: #7C8CFF;
+        --acc1v: #0E8F55; --acc2v: #9A6300; --acc3v: #3F4FCF;
+        --font-u: 'Bricolage Grotesque', 'Archivo Black', system-ui, sans-serif;
+        --font-g: 'Archivo', system-ui, sans-serif;
+        --font-m: 'DM Mono', ui-monospace, monospace;
+        --font-s: 'Instrument Serif', Georgia, serif;
+      }
+      body.dark {
+        --paper: #0E1116; --ink: #E9ECEE; --panel: #171C23; --mid: #7E8996; --line: #232A33; --card: #191F27;
+        --acc1v: #3DEE9A; --acc2v: #FFC44D; --acc3v: #9AA6FF;
+      }
+
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 100%; height: 100%; overflow: hidden; background: #08090C; font-family: var(--font-g); }
+      #viewport { position: fixed; inset: 0; display: grid; place-items: center; background: #08090C; }
+      #stage { position: relative; width: 1920px; height: 1080px; background: var(--paper); color: var(--ink); overflow: hidden; transform-origin: center center; }
+      body.portrait #stage { width: 1080px; height: 1920px; }
+
+      /* ══════════════════ SLIDE FRAME ══════════════════ */
+      .slide { position: absolute; inset: 0; display: none; padding: 110px 120px; text-align: left; }
+      .slide.active { display: grid; align-content: center; justify-items: stretch; grid-template-columns: minmax(0, 1fr); row-gap: 24px; grid-auto-flow: row; }
+      body.portrait .slide { padding: 120px 60px; }
+      body.portrait .slide.active { row-gap: 18px; }
+      .slide.center { text-align: center; }
+      .slide.center.active { justify-items: center; }
+      .slide.tight { padding: 64px 70px; }
+      body.portrait .slide.tight { padding: 70px 40px; }
+      .slide.top.active { align-content: start; }
+      .slide.bottom.active { align-content: end; }
+
+      .slide.ink { background: var(--ink); color: var(--paper); }
+      .slide.a1  { background: var(--acc1); color: #05120B; }
+      .slide.a2  { background: var(--acc2); color: #1A1204; }
+      .slide.a3  { background: var(--acc3); color: #0B1026; }
+      .slide.pnl { background: var(--panel); }
+
+      /* ══════════════════ TYPE ══════════════════ */
+      .u { font-family: var(--font-u); font-weight: 800; line-height: 0.9; letter-spacing: -2px; text-transform: uppercase; }
+      .u.xs   { font-size: 96px;  letter-spacing: -1px; }
+      .u.sm   { font-size: 150px; letter-spacing: -2px; }
+      .u.md   { font-size: 215px; letter-spacing: -4px; }
+      .u.lg   { font-size: 300px; letter-spacing: -6px; }
+      .u.mega { font-size: 410px; letter-spacing: -9px; }
+      .u.low  { text-transform: none; }
+      body.portrait .u.xs   { font-size: 60px;  letter-spacing: -1px; }
+      body.portrait .u.sm   { font-size: 92px;  letter-spacing: -1px; }
+      body.portrait .u.md   { font-size: 132px; letter-spacing: -2px; }
+      body.portrait .u.lg   { font-size: 184px; letter-spacing: -4px; }
+      body.portrait .u.mega { font-size: 244px; letter-spacing: -5px; }
+
+      .t { font-family: var(--font-g); font-weight: 500; line-height: 1.24; }
+      .t.xs { font-size: 34px; } .t.sm { font-size: 46px; }
+      .t.md { font-size: 62px; font-weight: 600; } .t.lg { font-size: 86px; font-weight: 700; }
+      body.portrait .t.xs { font-size: 36px; } body.portrait .t.sm { font-size: 44px; }
+      body.portrait .t.md { font-size: 54px; } body.portrait .t.lg { font-size: 70px; }
+
+      /* the serif is used for EXACTLY three lines, the ones where she stops being an engineer */
+      .ser { font-family: var(--font-s); font-weight: 400; line-height: 1.02; letter-spacing: -1px; text-transform: none; }
+      .ser.sm { font-size: 120px; } .ser.md { font-size: 168px; } .ser.lg { font-size: 215px; }
+      body.portrait .ser.sm { font-size: 72px; } body.portrait .ser.md { font-size: 100px; } body.portrait .ser.lg { font-size: 130px; }
+
+      .eyebrow { font-family: var(--font-m); font-size: 26px; font-weight: 500; letter-spacing: 0.24em; text-transform: uppercase; color: var(--mid); }
+      body.portrait .eyebrow { font-size: 30px; letter-spacing: 0.16em; }
+      .slide.ink .eyebrow { color: currentColor; opacity: 0.66; }
+      .slide.a1 .eyebrow, .slide.a2 .eyebrow, .slide.a3 .eyebrow { color: currentColor; opacity: 0.62; }
+
+      .c1 { color: var(--acc1v); } .c2 { color: var(--acc2v); } .c3 { color: var(--acc3v); }
+      .slide.ink .c1 { color: var(--acc1); } .slide.ink .c2 { color: var(--acc2); } .slide.ink .c3 { color: var(--acc3); }
+      .cmid { color: var(--mid); } .cink { color: var(--ink); } .cpaper { color: var(--paper); }
+      .w9 { font-weight: 900; } .w4 { font-weight: 400; } .it { font-style: italic; }
+
+      /* ══════════════════ STACK / BREAK ══════════════════ */
+      .stack { display: flex; flex-direction: column; }
+      .stack > div { font-family: var(--font-u); font-weight: 800; line-height: 1; letter-spacing: -4px; text-transform: uppercase; }
+      /* line-height BELOW 1 makes glyphs overflow their own box, so a larger line lands on
+         the smaller one above it. Full box + a negative margin scaled to each line's own
+         size keeps the crowding and can never collide, whatever sizes are mixed. */
+      .stack > div + div { margin-top: -0.08em; }
+      body.portrait .stack > div { letter-spacing: -2px; }
+      .stack.gap > div { margin-bottom: 10px; }
+      .stack.low > div { text-transform: none; }
+
+      /* ══════════════════ SWISS / META ══════════════════ */
+      .swiss { position: absolute; inset: 0; }
+      .rule { height: 4px; background: var(--ink); width: 100%; }
+      .rule.thin { height: 2px; opacity: 0.45; }
+      .rule.acc { background: var(--acc1); height: 10px; }
+      .meta { position: absolute; font-family: var(--font-m); font-size: 24px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--mid); }
+      .meta.tl { top: 52px; left: 60px; } .meta.tr { top: 52px; right: 60px; }
+      .meta.bl { bottom: 52px; left: 60px; } .meta.br { bottom: 52px; right: 60px; }
+      body.portrait .meta { font-size: 19px; }
+      body.portrait .meta.tl, body.portrait .meta.tr { top: 40px; }
+      body.portrait .meta.bl, body.portrait .meta.br { bottom: 40px; }
+      body.portrait .meta.tl, body.portrait .meta.bl { left: 36px; }
+      body.portrait .meta.tr, body.portrait .meta.br { right: 36px; }
+      .gridlines { position: absolute; inset: 0; pointer-events: none; opacity: 0.12;
+        background-image:
+          repeating-linear-gradient(to right, var(--mid) 0 1px, transparent 1px 160px),
+          repeating-linear-gradient(to bottom, var(--mid) 0 1px, transparent 1px 160px); }
+
+      /* ══════════════════ MARKER / STRIKE ══════════════════ */
+      .mk { position: relative; display: inline-block; padding: 0 16px; z-index: 1; color: #05120B; }
+      .mk::before { content: ""; position: absolute; inset: 6% -1% 4% -1%; background: var(--acc1); z-index: -1; }
+      .mk.m2::before { background: var(--acc2); } .mk.m2 { color: #1A1204; }
+      .mk.m3::before { background: var(--acc3); } .mk.m3 { color: #0B1026; }
+      .mk.mink::before { background: var(--ink); } .mk.mink { color: var(--paper); }
+      .strike { position: relative; display: inline-block; }
+      .strike::after { content: ""; position: absolute; left: -4%; right: -4%; top: 52%; height: 9px; background: var(--acc2); transform: translateY(-50%) rotate(-2deg); }
+
+      /* ══════════════════ REPEAT / ECHO ══════════════════ */
+      .rep { display: flex; flex-direction: column; }
+      .rep > div { font-family: var(--font-u); font-weight: 800; font-size: 168px; line-height: 0.9; letter-spacing: -4px; text-transform: uppercase; opacity: 0.2; }
+      .rep > div.on { opacity: 1; color: var(--acc1v); }
+      body.portrait .rep > div { font-size: 104px; letter-spacing: -2px; }
+
+      /* ══════════════════ ROTATE (rotation on the wrapper, data-anim on the child) ══════════════════ */
+      .rot { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
+      .rot > .rw { display: inline-block; }
+      .rot > .rw:nth-child(odd)  { transform: rotate(-2.2deg); }
+      .rot > .rw:nth-child(even) { transform: rotate(1.6deg); margin-left: 46px; }
+      .rot > .rw > span { display: inline-block; background: var(--ink); color: var(--paper); font-family: var(--font-u); font-weight: 800;
+        font-size: 120px; line-height: 1; letter-spacing: -3px; text-transform: uppercase; padding: 12px 30px 20px; }
+      .rot > .rw > span.on { background: var(--acc1); color: #05120B; }
+      body.portrait .rot > .rw > span { font-size: 62px; padding: 8px 18px 12px; }
+      body.portrait .rot > .rw:nth-child(even) { margin-left: 24px; }
+
+      /* ══════════════════ PHOTO ══════════════════ */
+      .slide.photo { color: #EDEFF1; }
+      .bleed { position: absolute; inset: 0; z-index: 0; }
+      .bleed img { width: 100%; height: 100%; object-fit: cover; display: block; }
+      .veil { position: absolute; inset: 0; z-index: 1; background: rgba(9, 11, 15, 0.64); }
+      .veil.soft { background: rgba(9, 11, 15, 0.44); }
+      .veil.heavy { background: rgba(9, 11, 15, 0.80); }
+      .slide.photo > *:not(.bleed):not(.veil) { position: relative; z-index: 2; }
+
+      .cap { font-family: var(--font-m); font-size: 24px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--mid); }
+      body.portrait .cap { font-size: 28px; }
+
+      /* PAIR: two photos, hard edge, one word under each */
+      .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 0; justify-self: center; width: 100%; max-width: 1600px; }
+      .pair > figure { margin: 0; }
+      .pair img { width: 100%; height: 520px; object-fit: cover; display: block; }
+      .pair figcaption { font-family: var(--font-u); font-weight: 800; font-size: 62px; line-height: 1; text-transform: uppercase; letter-spacing: -2px; padding: 20px 4px 0; }
+      body.portrait .pair { grid-template-columns: 1fr 1fr; }
+      body.portrait .pair img { height: 260px; }
+      body.portrait .pair figcaption { font-size: 34px; }
+
+      /* INSET: a pasted print on a type slide. Rotation on .insetw, data-anim on .inset */
+      .insetw { position: absolute; z-index: 3; }
+      .insetw.tr { top: 92px; right: 100px; } .insetw.br { bottom: 92px; right: 100px; } .insetw.bl { bottom: 92px; left: 100px; }
+      .insetw.tr { transform: rotate(2.4deg); } .insetw.br { transform: rotate(-2deg); } .insetw.bl { transform: rotate(2deg); }
+      .inset { width: 420px; height: 310px; overflow: hidden; border: 7px solid var(--ink); position: relative; }
+      .inset img { width: 100%; height: 100%; object-fit: cover; display: block; }
+      .inset .ic { position: absolute; bottom: 0; left: 0; right: 0; font-family: var(--font-m); font-size: 17px;
+        letter-spacing: 0.1em; text-transform: uppercase; background: var(--ink); color: var(--paper); padding: 6px 10px; }
+      body.portrait .insetw.tr, body.portrait .insetw.br { right: 44px; } body.portrait .insetw.bl { left: 44px; }
+      body.portrait .inset { width: 250px; height: 186px; border-width: 5px; }
+
+      /* ══════════════════ INDEX ══════════════════ */
+      .idx { display: flex; flex-direction: column; gap: 18px; width: 100%; }
+      .idx .row { display: flex; align-items: baseline; gap: 34px; border-bottom: 3px solid var(--line); padding-bottom: 16px; }
+      .idx .row .n { font-family: var(--font-m); font-size: 34px; color: var(--acc1v); min-width: 90px; letter-spacing: 0.06em; flex: 0 0 auto; }
+      .idx .row .x { font-family: var(--font-u); font-weight: 800; font-size: 82px; line-height: 1; letter-spacing: -2px; text-transform: uppercase; flex: 1 1 auto; min-width: 0; }
+      .idx .row.dim { opacity: 0.16; }
+      .slide.ink .idx .row { border-bottom-color: rgba(233,236,238,0.2); }
+      .slide.ink .idx .row .n { color: var(--acc1); }
+      body.portrait .idx .row { gap: 18px; padding-bottom: 10px; }
+      body.portrait .idx .row .n { font-size: 32px; min-width: 60px; }
+      body.portrait .idx .row .x { font-size: 50px; letter-spacing: -1px; }
+
+      /* ══════════════════ SPLIT ══════════════════ */
+      .slide.split { padding: 0; }
+      .slide.split.active { display: grid; grid-template-columns: 1fr 1fr; align-content: stretch; row-gap: 0; }
+      .slide.split > .half { display: grid; align-content: center; padding: 110px 80px; }
+      body.portrait .slide.split.active { grid-template-columns: 1fr; grid-template-rows: 1fr 1fr; }
+      body.portrait .slide.split > .half { padding: 60px 50px; }
+      .half.hi { background: var(--ink); color: var(--paper); }
+      .half.h1 { background: var(--acc1); color: #05120B; }
+      .half.h2 { background: var(--acc2); color: #1A1204; }
+      .half.h3 { background: var(--acc3); color: #0B1026; }
+
+      /* ══════════════════ OUTLINE ══════════════════ */
+      .out { font-family: var(--font-u); font-weight: 800; text-transform: uppercase; -webkit-text-fill-color: transparent; -webkit-text-stroke: 4px currentColor; letter-spacing: -3px; line-height: 0.9; }
+      .out.filled { -webkit-text-stroke: 0; -webkit-text-fill-color: currentColor; }
+      body.portrait .out { -webkit-text-stroke-width: 3px; }
+
+      /* ══════════════════ SHARED ══════════════════ */
+      .chips { display: flex; flex-wrap: wrap; gap: 16px; }
+      .slide.center .chips { justify-content: center; }
+      .chip { font-family: var(--font-m); font-size: 30px; padding: 15px 30px; border: 4px solid var(--mid); color: var(--ink); }
+      .slide.ink .chip:not(.on):not(.on2):not(.on3) { color: var(--paper); }
+      .chip.on  { background: var(--acc1); border-color: var(--acc1); color: #05120B; }
+      .chip.on2 { background: var(--acc2); border-color: var(--acc2); color: #1A1204; }
+      .chip.on3 { background: var(--acc3); border-color: var(--acc3); color: #0B1026; }
+      .chip.dim { opacity: 0.16; }
+      body.portrait .chip { font-size: 30px; padding: 14px 20px; border-width: 3px; }
+
+      .stat { font-family: var(--font-u); font-weight: 800; font-size: 400px; letter-spacing: -12px; line-height: 0.86; }
+      body.portrait .stat { font-size: 216px !important; letter-spacing: -6px; }
+
+      .col2 { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+      body.portrait .col2 { grid-template-columns: 1fr; gap: 24px; }
+      .row { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; }
+      .slide.center .row { justify-content: center; }
+
+      .cover-line { display: none; }
+      body.portrait .cover-line { display: block; }
+
+      /* ═══════════════════════════════════════════════════════════════════
+         THE DEVICES THIS KIT OWNS
+         Built in HTML rather than one wide SVG wherever possible, so a row can
+         become a column in portrait (2026-09-12). Nothing here is red: where a
+         thing is gone, it is drawn HOLLOW.
+         ═══════════════════════════════════════════════════════════════════ */
+
+      /* ── THE DRAIN. In-flight work that should reach zero before the switch flips.
+            A filled mint unit is a trip still running. A hollow unit has finished. ── */
+      .drain { display: flex; flex-direction: column; gap: 20px; width: 100%; }
+      .drain .dh { display: flex; align-items: baseline; justify-content: space-between; gap: 24px;
+        font-family: var(--font-m); font-size: 26px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--mid); }
+      .drain .dh .n { color: var(--acc1v); font-size: 34px; letter-spacing: 0.04em; }
+      .drain .track { display: flex; flex-wrap: wrap; gap: 11px; border: 5px solid var(--mid); padding: 22px; }
+      .drain .un { width: 52px; height: 52px; background: var(--acc1); flex: 0 0 auto; }
+      .drain .un.gone { background: transparent; border: 3px solid var(--mid); }
+      .drain.closed .track { border-color: var(--acc1); }
+      body.portrait .drain .track { gap: 8px; padding: 14px; border-width: 4px; }
+      body.portrait .drain .un { width: 40px; height: 40px; }
+      body.portrait .drain .dh { font-size: 24px; } body.portrait .drain .dh .n { font-size: 30px; }
+
+      /* ── THE FLAG. The boolean somebody in a room set to false.
+            Hard edges, no radius, so nothing can blob on export. ── */
+      .flag { display: flex; align-items: center; gap: 40px; justify-self: center; flex-wrap: wrap;
+        border: 6px solid var(--mid); padding: 34px 44px; }
+      .flag .key { font-family: var(--font-m); font-size: 46px; letter-spacing: 0.04em; }
+      .flag .sw { width: 190px; height: 84px; border: 6px solid var(--mid); display: flex; align-items: center; padding: 7px; }
+      .flag .sw .knob { width: 70px; height: 56px; background: var(--acc1); }
+      .flag .sw.on  { justify-content: flex-end; }
+      .flag .sw.off { justify-content: flex-start; }
+      .flag .sw.off .knob { background: transparent; border: 4px solid var(--mid); }
+      .flag .val { font-family: var(--font-u); font-weight: 800; font-size: 76px; letter-spacing: -1px; text-transform: uppercase; color: var(--acc1v); }
+      .flag .val.no { color: var(--mid); }
+      body.portrait .flag { gap: 20px; padding: 20px 22px; border-width: 4px; }
+      body.portrait .flag .key { font-size: 32px; }
+      body.portrait .flag .sw { width: 130px; height: 62px; border-width: 4px; }
+      body.portrait .flag .sw .knob { width: 48px; height: 40px; }
+      body.portrait .flag .val { font-size: 52px; }
+
+      /* ── THE WINDOW ON THE WRONG SIDE OF THE EVENT.
+            A timeline with a vertical event rule, and a window sitting AFTER it
+            instead of before. This one image is the whole of point one. ── */
+      .tline { position: relative; width: 100%; height: 300px; justify-self: stretch; }
+      .tline .axis { position: absolute; left: 0; right: 0; top: 152px; height: 6px; background: var(--mid); }
+      .tline .evt { position: absolute; top: 40px; bottom: 40px; width: 9px; background: var(--ink); }
+      .slide.ink .tline .evt { background: var(--paper); }
+      .tline .evtlab { position: absolute; top: 0; font-family: var(--font-m); font-size: 26px;
+        letter-spacing: 0.16em; text-transform: uppercase; white-space: nowrap; }
+      .tline .win2 { position: absolute; top: 96px; height: 118px; border: 5px solid var(--acc2);
+        color: var(--acc2v); display: flex; align-items: center; padding: 0 22px;
+        font-family: var(--font-m); font-size: 27px; letter-spacing: 0.1em; text-transform: uppercase; }
+      .slide.ink .tline .win2 { color: var(--acc2); }
+      .tline .win2.good { border-color: var(--acc1); color: var(--acc1v); }
+      .slide.ink .tline .win2.good { color: var(--acc1); }
+      .tline .foot { position: absolute; left: 0; right: 0; bottom: 0; display: flex; justify-content: space-between;
+        font-family: var(--font-m); font-size: 23px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--mid); }
+      body.portrait .tline { height: 250px; }
+      body.portrait .tline .axis { top: 126px; }
+      body.portrait .tline .win2 { top: 74px; height: 100px; font-size: 24px; padding: 0 12px; border-width: 4px; }
+      body.portrait .tline .evtlab { font-size: 24px; } body.portrait .tline .foot { font-size: 21px; }
+
+      /* ── THE LEDGER OF WHAT IS OWED. Her four line items. No invented figures. ── */
+      .owed { width: 100%; border: 6px solid var(--mid); }
+      .owed .orow { display: flex; align-items: center; gap: 30px; border-bottom: 3px solid var(--line);
+        padding: 26px 34px; font-family: var(--font-g); font-weight: 700; font-size: 62px; }
+      .slide.ink .owed .orow { border-bottom-color: rgba(233,236,238,0.16); }
+      .owed .orow:last-child { border-bottom: none; }
+      .owed .orow .tick { width: 34px; height: 34px; background: var(--acc1); flex: 0 0 auto; }
+      .owed .orow.dim { opacity: 0.16; }
+      .owed .orow.dim .tick { background: transparent; border: 3px solid var(--mid); }
+      body.portrait .owed { border-width: 4px; }
+      body.portrait .owed .orow { font-size: 40px; padding: 16px 18px; gap: 16px; }
+      body.portrait .owed .orow .tick { width: 24px; height: 24px; }
+
+      /* ── THE PROOF-OF-INCOME DOCUMENT. A form parody, which is a different member
+            of the boards' information-panel family from the .spec nutrition label
+            that three other kits already use. LITERAL colours, no theme vars. ── */
+      .doc { background: #FFFDF6; color: #14161A; border: 6px solid #14161A;
+        width: 100%; max-width: 1240px; justify-self: center; text-align: left; }
+      .doc .dhead { border-bottom: 9px solid #14161A; padding: 24px 34px 18px; display: flex;
+        align-items: flex-end; justify-content: space-between; gap: 20px; }
+      .doc .dtitle { font-family: var(--font-u); font-weight: 800; font-size: 74px; line-height: 0.94; letter-spacing: -2px; text-transform: uppercase; }
+      .doc .dkick { font-family: var(--font-m); font-size: 21px; letter-spacing: 0.16em; text-transform: uppercase; color: #5A6169; }
+      .doc .dfield { display: flex; align-items: center; gap: 22px; border-bottom: 2px solid #C7CCD2; padding: 20px 34px;
+        font-family: var(--font-g); font-weight: 600; font-size: 40px; }
+      .doc .dfield .box { width: 44px; height: 44px; border: 4px solid #14161A; flex: 0 0 auto; }
+      .doc .dfield .box.x { background: #22E08A; }
+      .doc .dfield.dim { opacity: 0.2; }
+      .doc .dfoot { border-top: 9px solid #14161A; padding: 18px 34px; display: flex; justify-content: space-between; gap: 18px;
+        font-family: var(--font-m); font-size: 21px; letter-spacing: 0.12em; text-transform: uppercase; color: #5A6169; }
+      body.portrait .doc { border-width: 4px; }
+      body.portrait .doc .dtitle { font-size: 46px; }
+      body.portrait .doc .dfield { font-size: 30px; padding: 13px 18px; gap: 14px; }
+      body.portrait .doc .dfield .box { width: 30px; height: 30px; border-width: 3px; }
+      body.portrait .doc .dkick, body.portrait .doc .dfoot { font-size: 19px; }
+
+      /* ── THE DOWNLOAD BUTTON, as a physical object. Her words: it is a download button. ── */
+      .dl { display: inline-flex; align-items: center; gap: 34px; justify-self: center;
+        background: var(--acc1); color: #05120B; font-family: var(--font-u); font-weight: 800;
+        font-size: 92px; letter-spacing: -2px; text-transform: uppercase; padding: 30px 60px; }
+      .dl .arw { width: 58px; height: 58px; flex: 0 0 auto; }
+      .dl .arw svg { width: 100%; height: 100%; display: block; }
+      body.portrait .dl { font-size: 52px; padding: 18px 30px; gap: 18px; }
+      body.portrait .dl .arw { width: 36px; height: 36px; }
+
+      /* ── THE ROW GRID. Trip history as rows that fill, and then go hollow. ── */
+      .rows { display: flex; flex-direction: column; gap: 7px; width: 100%; }
+      .rows .r { display: flex; gap: 7px; }
+      .rows .r > i { display: block; height: 30px; background: var(--acc1); }
+      .rows .r > i.k1 { flex: 1 1 0; } .rows .r > i.k2 { flex: 2 1 0; } .rows .r > i.k3 { flex: 3 1 0; }
+      .rows .r > i.gone { background: transparent; border: 2px solid var(--mid); }
+      .rows .r > i.mach { background: var(--acc3); }
+      body.portrait .rows .r > i { height: 22px; }
+
+      /* ── THE FUNNEL, and THE EXIT beside it as an empty box.
+            Onboarding is fully built. The exit was never anybody's ticket. ── */
+      .funnel { display: flex; flex-direction: column; align-items: center; gap: 13px; width: 100%; }
+      .funnel .fs { border: 5px solid var(--acc3); color: var(--acc3v); font-family: var(--font-m); font-size: 29px;
+        letter-spacing: 0.12em; text-transform: uppercase; padding: 17px 0; text-align: center; }
+      .slide.ink .funnel .fs { color: var(--acc3); }
+      .empty { border: 6px dashed var(--mid); color: var(--mid); min-height: 300px; display: grid; place-items: center;
+        font-family: var(--font-m); font-size: 32px; letter-spacing: 0.2em; text-transform: uppercase; width: 100%; }
+      body.portrait .funnel .fs { font-size: 25px; padding: 12px 0; border-width: 4px; }
+      body.portrait .empty { min-height: 220px; font-size: 26px; border-width: 4px; }
+
+      /* ── THE PHONE, carrying the banner that should have been there ── */
+      .phone { width: 430px; height: 780px; border: 10px solid var(--ink); justify-self: center;
+        background: var(--panel); display: flex; flex-direction: column; overflow: hidden; }
+      .slide.ink .phone { border-color: var(--paper); }
+      .phone .bnr { background: var(--acc2); color: #1A1204; font-family: var(--font-g); font-weight: 700;
+        font-size: 30px; line-height: 1.24; padding: 22px 24px; text-align: left; }
+      .phone .scr { flex: 1 1 auto; display: flex; flex-direction: column; gap: 14px; padding: 24px; }
+      .phone .scr > i { display: block; height: 26px; background: var(--mid); opacity: 0.4; }
+      .phone .scr > i.w7 { width: 70%; } .phone .scr > i.w5 { width: 50%; } .phone .scr > i.w9 { width: 90%; }
+      .phone .scr > i.blk { flex: 1 1 auto; height: auto; opacity: 0.22; }
+      body.portrait .phone { width: 330px; height: 600px; border-width: 7px; }
+      body.portrait .phone .bnr { font-size: 26px; padding: 16px 16px; }
+
+      /* ── THE PREVIEW OF FIVE. Each of her five points gets its own small working
+            picture in one frame (2026-09-11), in the order she will talk about them. ── */
+      .five { display: grid; grid-template-columns: repeat(5, 1fr); gap: 22px; width: 100%; justify-self: stretch; }
+      .five .fp { border: 5px solid var(--mid); padding: 24px 20px; display: flex; flex-direction: column; gap: 18px; min-width: 0; }
+      .five .fp .fn { font-family: var(--font-m); font-size: 30px; color: var(--acc1v); letter-spacing: 0.06em; }
+      .slide.ink .five .fp .fn { color: var(--acc1); }
+      .five .fp .fw { flex: 1 1 auto; display: grid; place-items: center; min-height: 190px; }
+      .five .fp .fw svg { width: 100%; height: auto; display: block; }
+      .five .fp .ft { font-family: var(--font-g); font-weight: 700; font-size: 34px; line-height: 1.14; }
+      body.portrait .five { grid-template-columns: 1fr 1fr; gap: 12px; }
+      body.portrait .five .fp { padding: 14px 12px; gap: 10px; border-width: 3px; }
+      body.portrait .five .fp .fw { min-height: 120px; }
+      body.portrait .five .fp .ft { font-size: 26px; }
+      body.portrait .five .fp .fn { font-size: 24px; }
+
+      /* ornament glyphs used as punctuation, straight off the boards */
+      .orn { display: inline-block; vertical-align: middle; line-height: 0; }
+      .orn svg { display: block; width: 1em; height: 1em; overflow: visible; }
+      .orn .o-f { fill: currentColor; }
+      .orn.c1 { color: var(--acc1); } .orn.c2 { color: var(--acc2); } .orn.c3 { color: var(--acc3); }
+
+      /* SVG colour helpers */
+      .f-ink { fill: var(--ink); } .s-ink { stroke: var(--ink); }
+      .f-paper { fill: var(--paper); } .f-mid { fill: var(--mid); } .s-mid { stroke: var(--mid); }
+      .f-a1 { fill: var(--acc1); } .f-a2 { fill: var(--acc2); } .f-a3 { fill: var(--acc3); }
+      .s-a1 { stroke: var(--acc1); } .s-a2 { stroke: var(--acc2); } .s-a3 { stroke: var(--acc3); }
+      .f-none { fill: none; }
+      .slide.ink .f-ink { fill: var(--paper); } .slide.ink .s-ink { stroke: var(--paper); }
+      #stage svg [data-anim] { transform-box: fill-box; transform-origin: center; }
+      .scene { width: 100%; justify-self: stretch; }
+      .scene svg { width: 100%; height: auto; display: block; }
+      .scene.h-s svg { max-height: 300px; } .scene.h-m svg { max-height: 430px; } .scene.h-l svg { max-height: 560px; }
+      body.portrait .scene.h-s svg { max-height: 220px; }
+      body.portrait .scene.h-m svg { max-height: 320px; }
+      body.portrait .scene.h-l svg { max-height: 420px; }
+
+      /* ══════════════════ PORTRAIT inline-size fallbacks ══════════════════ */
+      body.portrait [style*="font-size: 400px"], body.portrait [style*="font-size: 410px"],
+      body.portrait [style*="font-size: 420px"], body.portrait [style*="font-size: 380px"] { font-size: 216px !important; letter-spacing: -5px !important; }
+      body.portrait [style*="font-size: 300px"], body.portrait [style*="font-size: 320px"],
+      body.portrait [style*="font-size: 340px"], body.portrait [style*="font-size: 360px"] { font-size: 184px !important; letter-spacing: -4px !important; }
+      body.portrait [style*="font-size: 240px"], body.portrait [style*="font-size: 260px"],
+      body.portrait [style*="font-size: 280px"] { font-size: 152px !important; letter-spacing: -3px !important; }
+      body.portrait [style*="font-size: 200px"], body.portrait [style*="font-size: 215px"],
+      body.portrait [style*="font-size: 220px"] { font-size: 130px !important; letter-spacing: -2px !important; }
+      body.portrait [style*="font-size: 160px"], body.portrait [style*="font-size: 168px"],
+      body.portrait [style*="font-size: 180px"] { font-size: 108px !important; letter-spacing: -2px !important; }
+      body.portrait [style*="font-size: 132px"], body.portrait [style*="font-size: 140px"],
+      body.portrait [style*="font-size: 150px"] { font-size: 92px !important; letter-spacing: -1px !important; }
+      body.portrait [style*="font-size: 112px"], body.portrait [style*="font-size: 120px"],
+      body.portrait [style*="font-size: 124px"] { font-size: 76px !important; letter-spacing: -1px !important; }
+      body.portrait [style*="font-size: 96px"], body.portrait [style*="font-size: 100px"],
+      body.portrait [style*="font-size: 108px"] { font-size: 62px !important; }
+      body.portrait [style*="font-size: 80px"], body.portrait [style*="font-size: 86px"],
+      body.portrait [style*="font-size: 90px"] { font-size: 54px !important; }
+      body.portrait [style*="font-size: 58px"], body.portrait [style*="font-size: 62px"],
+      body.portrait [style*="font-size: 64px"], body.portrait [style*="font-size: 70px"] { font-size: 44px !important; }
+      body.portrait [style*="font-size: 44px"], body.portrait [style*="font-size: 46px"],
+      body.portrait [style*="font-size: 48px"], body.portrait [style*="font-size: 52px"] { font-size: 36px !important; }
+
+      /* ══════════════════ CHROME ══════════════════ */
+      #pb { position: fixed; top: 0; left: 0; height: 5px; background: var(--acc1); width: 0; z-index: 50; transition: width 0.3s ease; }
+      #controls { position: fixed; bottom: 18px; left: 50%; transform: translateX(-50%); display: flex; align-items: center; gap: 10px; padding: 10px 14px; background: rgba(16,18,22,0.86); backdrop-filter: blur(8px); border-radius: 14px; z-index: 60; font-family: var(--font-m); color: #eee; font-size: 14px; user-select: none; }
+      #controls button { font-family: var(--font-m); font-size: 13px; color: #eee; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.14); border-radius: 8px; padding: 8px 12px; cursor: pointer; white-space: nowrap; }
+      #controls button:hover { background: rgba(255,255,255,0.16); }
+      #controls .sep { width: 1px; height: 22px; background: rgba(255,255,255,0.16); margin: 0 2px; }
+      #controls input { width: 52px; font-family: var(--font-m); font-size: 13px; text-align: center; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.14); color: #eee; border-radius: 8px; padding: 7px 4px; }
+      #counter { min-width: 66px; text-align: center; }
+      #toast { position: fixed; bottom: 84px; left: 50%; transform: translateX(-50%); background: rgba(16,18,22,0.94); color: #fff; font-family: var(--font-m); font-size: 14px; padding: 12px 18px; border-radius: 10px; z-index: 70; opacity: 0; transition: opacity 0.25s ease; pointer-events: none; }
+      #toast.show { opacity: 1; }
+    </style>
+    <link rel="stylesheet" href="../../../studio-v2/lib/devices.css" />
+  </head>
+  <body class="dark">
+    <div id="pb"></div>
+    <div id="viewport">
+      <div id="stage">
+
+        <!-- ══════════════════════ OPEN ══════════════════════ -->
+
+        <!-- 01  STACK -->
+        <section class="slide tight" data-dur="4.4">
+          <div class="gridlines"></div>
+          <div class="meta br">02 / 09 / 2026</div>
+          <div class="stack">
+            <div style="font-size: 132px" data-anim="creep">So</div>
+            <div style="font-size: 300px" data-anim="hammer" data-delay="0.16">Uber left</div>
+            <div class="c1" style="font-size: 300px" data-anim="hammer" data-delay="0.34">Nigeria.</div>
+          </div>
+        </section>
+
+        <!-- 02  the aside, serif -->
+        <section class="slide ink center" data-dur="3.4">
+          <p class="ser md" data-anim="glide">I&rsquo;m always late to these things.</p>
+        </section>
+
+        <!-- 03  SWISS , the date -->
+        <section class="slide tight" data-dur="4.6">
+          <p class="eyebrow" data-anim="fade">THE SECOND OF SEPTEMBER</p>
+          <div class="stack" style="margin-top: 18px">
+            <div style="font-size: 160px" data-anim="wipeY" class="growB" data-delay="0.14">After</div>
+            <div class="c2 growT" style="font-size: 340px" data-anim="unfold" data-delay="0.28">twelve years</div>
+            <div style="font-size: 132px" data-anim="up" data-delay="0.5">of operating.</div>
+          </div>
+        </section>
+
+        <!-- 04  PHOTO , full bleed. The single establishing shot in this deck. -->
+        <section class="slide photo center bottom" data-dur="4.6">
+          <div class="bleed"><img src="https://images.pexels.com/photos/36703363/pexels-photo-36703363.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt="" /></div>
+          <div class="veil"></div>
+          <p class="u xs" data-anim="rise" style="max-width: 1500px">Uber set foot in Lagos in 2014,</p>
+        </section>
+
+        <!-- 05  and they left just like that -->
+        <section class="slide tight" data-dur="4.0">
+          <div class="stack">
+            <div style="font-size: 240px" data-anim="shear">and they left</div>
+            <div class="out" style="font-size: 300px" data-anim="skewUp" data-delay="0.2">just like that.</div>
+          </div>
+        </section>
+
+        <!-- 06  SPLIT , Uganda the same day -->
+        <section class="slide split" data-dur="4.2">
+          <div class="half hi">
+            <p class="eyebrow" data-anim="fade">02 SEPT</p>
+            <p class="u sm" data-anim="swipeL" data-delay="0.12" style="margin-top: 14px">Nigeria</p>
+          </div>
+          <div class="half h3">
+            <p class="eyebrow" data-anim="fade" data-delay="0.2">02 SEPT</p>
+            <p class="u sm" data-anim="swipeR" data-delay="0.32" style="margin-top: 14px">Uganda</p>
+            <p class="t xs" data-anim="up" data-delay="0.5" style="margin-top: 26px">They left Uganda the same day too.</p>
+          </div>
+        </section>
+
+        <!-- 07  OBJECT , the tweets -->
+        <section class="slide center" data-dur="4.2">
+          <div class="col2" style="max-width: 1560px; justify-self: center">
+            <div class="obj tall ph-print" data-anim="elastic"><img src="https://images.pexels.com/photos/5699830/pexels-photo-5699830.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt="" /></div>
+            <p class="u xs" style="text-align: left" data-anim="up" data-delay="0.22">I was reading the tweets about it.</p>
+          </div>
+        </section>
+
+        <!-- 08  OBJECT , mid trip -->
+        <section class="slide tight" data-dur="5.2">
+          <p class="eyebrow" data-anim="fade">PEOPLE WERE SAYING THEY WERE LITERALLY</p>
+          <div class="row" style="margin-top: 16px">
+            <div class="obj wide ph-flat growL" data-anim="wipeX" style="width: 780px; height: 360px"><img src="https://images.pexels.com/photos/10731974/pexels-photo-10731974.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt="" /></div>
+            <div class="stack" style="flex: 1 1 320px; min-width: 0">
+              <div style="font-size: 112px" data-anim="up" data-delay="0.2">in the middle</div>
+              <div style="font-size: 112px" data-anim="up" data-delay="0.3">of a trip</div>
+            </div>
+          </div>
+          <p class="u xs c2" data-anim="slam" data-delay="0.55" style="margin-top: 20px">and it just stopped working.</p>
+        </section>
+
+        <!-- 09  STACK , real time -->
+        <section class="slide tight" data-dur="4.4">
+          <div class="meta tr">DRIVERS SAID</div>
+          <div class="stack">
+            <div style="font-size: 160px" data-anim="drop">Drivers were</div>
+            <div style="font-size: 160px" data-anim="drop" data-delay="0.12">finding out</div>
+            <div class="c1" style="font-size: 260px" data-anim="punch" data-delay="0.3">in real time.</div>
+          </div>
+        </section>
+
+        <!-- 10  MARKER , the business side -->
+        <section class="slide" data-dur="4.6">
+          <p class="t md" data-anim="up" style="max-width: 1560px">Now everybody has been talking about
+            <span class="mk m3">the business side</span> of it.</p>
+        </section>
+
+        <!-- 11  SLAB a3 -->
+        <section class="slide a3 tight" data-dur="4.2">
+          <div class="stack">
+            <div style="font-size: 132px" data-anim="left">I want to talk about it</div>
+            <div style="font-size: 300px" data-anim="hammer" data-delay="0.18">as an engineer,</div>
+          </div>
+        </section>
+
+        <!-- 12  serif , the personal line -->
+        <section class="slide center ink" data-dur="4.0">
+          <p class="ser md" data-anim="glide" style="max-width: 1500px">because that&rsquo;s where my brain went when I saw it.</p>
+        </section>
+
+        <!-- 13  THE QUESTION. A giant mint circle behind it. -->
+        <section class="slide tight" data-dur="6.2">
+          <div class="bigshape" style="left: 1330px; top: 70px; width: 560px; height: 560px">
+            <svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="50" class="f-a1" fill-opacity="0.14" data-anim="grow" /></svg>
+          </div>
+          <p class="eyebrow" data-anim="fade">THE QUESTION</p>
+          <div class="stack" style="margin-top: 16px">
+            <div style="font-size: 124px" data-anim="up" data-delay="0.12">What does</div>
+            <div style="font-size: 124px" data-anim="up" data-delay="0.24">an engineering team,</div>
+            <div class="c1" style="font-size: 180px; margin-top: 0.18em; margin-bottom: 0.06em" data-anim="pop" data-delay="0.42">owe its users</div>
+            <div style="font-size: 124px" data-anim="up" data-delay="0.62">when the company exits a market?</div>
+          </div>
+        </section>
+
+        <!-- ══════════════════════ WHY THIS IS AN ENGINEERING QUESTION ══════════════════════ -->
+
+        <!-- 14  SLAB -->
+        <section class="slide tight" data-dur="4.4">
+          <p class="eyebrow" data-anim="fade">AND THIS IS AN ENGINEERING QUESTION, BECAUSE</p>
+          <div class="stack" style="margin-top: 18px">
+            <div style="font-size: 300px" data-anim="punch" data-delay="0.16">engineers</div>
+            <div class="c1" style="font-size: 300px" data-anim="punch" data-delay="0.3">did this.</div>
+          </div>
+        </section>
+
+        <!-- 15  SOMEONE , cumulative build 1 of 4 -->
+        <section class="slide tight" data-dur="4.0">
+          <div class="meta tr">SOMEONE</div>
+          <div class="idx">
+            <div class="row" data-anim="swipeL"><div class="n">01</div><div class="x">Someone had to build the shutdown.</div></div>
+            <div class="row dim"><div class="n">02</div><div class="x">Someone wrote the code that turned off booking in Nigeria for Uber.</div></div>
+            <div class="row dim"><div class="n">03</div><div class="x">Someone set the date.</div></div>
+            <div class="row dim"><div class="n">04</div><div class="x">Someone flipped the flag, and all of that.</div></div>
+          </div>
+        </section>
+
+        <!-- 16  SOMEONE , 2 of 4 -->
+        <section class="slide tight" data-dur="4.6">
+          <div class="meta tr">SOMEONE</div>
+          <div class="idx">
+            <div class="row"><div class="n">01</div><div class="x">Someone had to build the shutdown.</div></div>
+            <div class="row" data-anim="pop"><div class="n">02</div><div class="x">Someone wrote the code that turned off booking in Nigeria for Uber.</div></div>
+            <div class="row dim"><div class="n">03</div><div class="x">Someone set the date.</div></div>
+            <div class="row dim"><div class="n">04</div><div class="x">Someone flipped the flag, and all of that.</div></div>
+          </div>
+          <div class="insetw br"><div class="inset" data-anim="tilt" data-delay="0.3"><img src="https://images.pexels.com/photos/34803969/pexels-photo-34803969.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt="" /><span class="ic">the code</span></div></div>
+        </section>
+
+        <!-- 17  SOMEONE , 3 of 4 -->
+        <section class="slide tight" data-dur="4.0">
+          <div class="meta tr">SOMEONE</div>
+          <div class="idx">
+            <div class="row"><div class="n">01</div><div class="x">Someone had to build the shutdown.</div></div>
+            <div class="row"><div class="n">02</div><div class="x">Someone wrote the code that turned off booking in Nigeria for Uber.</div></div>
+            <div class="row" data-anim="pop"><div class="n">03</div><div class="x">Someone set the date.</div></div>
+            <div class="row dim"><div class="n">04</div><div class="x">Someone flipped the flag, and all of that.</div></div>
+          </div>
+        </section>
+
+        <!-- 18  SOMEONE , 4 of 4 -->
+        <section class="slide tight" data-dur="4.2">
+          <div class="meta tr">SOMEONE</div>
+          <div class="idx">
+            <div class="row"><div class="n">01</div><div class="x">Someone had to build the shutdown.</div></div>
+            <div class="row"><div class="n">02</div><div class="x">Someone wrote the code that turned off booking in Nigeria for Uber.</div></div>
+            <div class="row"><div class="n">03</div><div class="x">Someone set the date.</div></div>
+            <div class="row" data-anim="pop"><div class="n">04</div><div class="x">Someone flipped the flag, and all of that.</div></div>
+          </div>
+        </section>
+
+        <!-- 19  THE FLAG. The boolean, no caption. -->
+        <section class="slide center ink" data-dur="4.6">
+          <div class="meta tl">THE FLAG</div>
+          <div class="flag">
+            <span class="key" data-anim="fade">booking_enabled</span>
+            <span class="sw off" data-anim="wipeX"><i class="knob"></i></span>
+            <span class="val no" data-anim="pop" data-delay="0.34">false</span>
+          </div>
+        </section>
+
+        <!-- 20  PHOTO , the room. People like you and me. -->
+        <section class="slide center" data-dur="4.4">
+          <div class="obj wide ph-flat" data-anim="glide"><img src="https://images.pexels.com/photos/8761313/pexels-photo-8761313.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt="" /></div>
+          <p class="u sm c1" data-anim="slam" data-delay="0.3" style="margin-top: 26px">People like you and me.</p>
+        </section>
+
+        <!-- 21  onboarding , we all know what it is -->
+        <section class="slide" data-dur="5.0">
+          <p class="t md" data-anim="up" style="max-width: 1620px">If you are a software developer, or a designer,
+            we all know what <span class="mk m3">onboarding</span> is.</p>
+        </section>
+
+        <!-- 22  INSET , the onboarding screen -->
+        <section class="slide tight" data-dur="4.6">
+          <div class="stack" style="max-width: 1180px">
+            <div style="font-size: 124px" data-anim="up">We spend so much time</div>
+            <div class="c3" style="font-size: 124px" data-anim="up" data-delay="0.14">working on the</div>
+            <div class="c3" style="font-size: 180px" data-anim="slam" data-delay="0.28">onboarding screen.</div>
+          </div>
+          <div class="insetw tr"><div class="inset" data-anim="tilt" data-delay="0.5"><img src="https://images.pexels.com/photos/5990265/pexels-photo-5990265.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt="" /><span class="ic">the signup funnel</span></div></div>
+        </section>
+
+        <!-- 23  THE FUNNEL , fully built -->
+        <section class="slide tight" data-dur="5.4">
+          <p class="eyebrow" data-anim="fade">THERE ARE WHOLE TEAMS THAT ARE ALWAYS LOOKING AT THE SIGNUP FUNNEL</p>
+          <div class="funnel" style="margin-top: 22px">
+            <div class="fs" style="width: 100%"    data-anim="wipeX" data-delay="0.10">step one</div>
+            <div class="fs" style="width: 86%"     data-anim="wipeX" data-delay="0.20">step two</div>
+            <div class="fs" style="width: 72%"     data-anim="wipeX" data-delay="0.30">step three</div>
+            <div class="fs" style="width: 58%"     data-anim="wipeX" data-delay="0.40">step four</div>
+            <div class="fs" style="width: 44%"     data-anim="wipeX" data-delay="0.50">step five</div>
+            <div class="fs" style="width: 30%; border-color: var(--acc1); color: var(--acc1v)" data-anim="pop" data-delay="0.64">signed up</div>
+          </div>
+        </section>
+
+        <!-- 24  the three questions , cumulative 1 of 3 -->
+        <section class="slide tight" data-dur="3.4">
+          <div class="chips" style="flex-direction: column; align-items: flex-start">
+            <div class="chip on3" style="font-size: 54px; padding: 24px 40px" data-anim="peek">Where did people drop off?</div>
+            <div class="chip dim" style="font-size: 54px; padding: 24px 40px">Why did you drop off at step three?</div>
+            <div class="chip dim" style="font-size: 54px; padding: 24px 40px">Can we make it one screen instead of two?</div>
+          </div>
+        </section>
+
+        <!-- 25  cumulative 2 of 3 -->
+        <section class="slide tight" data-dur="3.6">
+          <div class="chips" style="flex-direction: column; align-items: flex-start">
+            <div class="chip on3" style="font-size: 54px; padding: 24px 40px">Where did people drop off?</div>
+            <div class="chip on3" style="font-size: 54px; padding: 24px 40px" data-anim="pop">Why did you drop off at step three?</div>
+            <div class="chip dim" style="font-size: 54px; padding: 24px 40px">Can we make it one screen instead of two?</div>
+          </div>
+        </section>
+
+        <!-- 26  cumulative 3 of 3 -->
+        <section class="slide tight" data-dur="3.8">
+          <div class="chips" style="flex-direction: column; align-items: flex-start">
+            <div class="chip on3" style="font-size: 54px; padding: 24px 40px">Where did people drop off?</div>
+            <div class="chip on3" style="font-size: 54px; padding: 24px 40px">Why did you drop off at step three?</div>
+            <div class="chip on3" style="font-size: 54px; padding: 24px 40px" data-anim="pop">Can we make it one screen instead of two?</div>
+          </div>
+        </section>
+
+        <!-- 27  REPEAT , everybody is always about the onboarding -->
+        <section class="slide a3 tight" data-dur="4.2">
+          <div class="rep">
+            <div data-anim="left" data-delay="0.04">onboarding</div>
+            <div data-anim="left" data-delay="0.10">onboarding</div>
+            <div class="on" style="color: #0B1026; opacity: 1" data-anim="punch" data-delay="0.18">onboarding</div>
+            <div data-anim="left" data-delay="0.26">onboarding</div>
+          </div>
+          <p class="t xs" data-anim="fade" data-delay="0.5" style="margin-top: 18px">Everybody is always about the onboarding.</p>
+        </section>
+
+        <!-- 28  THE EXIT , the empty box -->
+        <section class="slide tight" data-dur="5.6">
+          <div class="meta tr">THE EXIT</div>
+          <p class="u xs" data-anim="up" style="max-width: 1500px">But when last did anyone ask you to design the exit of users?</p>
+          <div class="empty" data-anim="fade" data-delay="0.4" style="margin-top: 26px"></div>
+        </section>
+
+        <!-- 29  Nobody has. -->
+        <section class="slide center" data-dur="3.4">
+          <p class="u lg" data-anim="hammer">Nobody has.</p>
+        </section>
+
+        <!-- 30  the sprint -->
+        <section class="slide tight" data-dur="5.4">
+          <p class="t md" data-anim="up" style="max-width: 1560px">At least, I have never had someone talk about an
+            <span class="mk">offboarding flow</span> in a sprint.</p>
+        </section>
+
+        <!-- 31  QUOTE , the question nobody asks -->
+        <section class="slide ink center" data-dur="5.2">
+          <div class="meta tl">THE QUESTION</div>
+          <p class="t lg" data-anim="creep" style="max-width: 1500px">Like, what happens to this user&rsquo;s data if we ever leave this country?</p>
+        </section>
+
+        <!-- ══════════════════════ SO I DID MY FINDINGS ══════════════════════ -->
+
+        <!-- 32  the thought -->
+        <section class="slide tight" data-dur="5.6">
+          <div class="stack" style="max-width: 1640px">
+            <div style="font-size: 96px" data-anim="up">So I thought, okay.</div>
+            <div style="font-size: 96px" data-anim="up" data-delay="0.14">Let me ask myself, if I was on the Uber team,</div>
+            <div class="c1" style="font-size: 132px" data-anim="slam" data-delay="0.32">what is the proper way to deal with this situation?</div>
+          </div>
+        </section>
+
+        <!-- 33  the notes -->
+        <section class="slide center ink" data-dur="4.0">
+          <p class="u xs" data-anim="rise" style="max-width: 1500px">And I did my findings and I wrote my notes,</p>
+        </section>
+
+        <!-- 34  Five things, actually. -->
+        <section class="slide center" data-dur="3.6">
+          <p class="stat c1" data-anim="hammer">5</p>
+          <p class="u sm" data-anim="up" data-delay="0.26">Five things, actually.</p>
+        </section>
+
+        <!-- 35  THE PREVIEW OF FIVE. Each point gets its own small working picture,
+                 in the order she will talk about them (2026-09-11 rule). -->
+        <section class="slide tight" data-dur="8.0">
+          <div class="meta tl">WHAT A PLATFORM OWES ITS USERS</div>
+          <div class="five" style="margin-top: 46px">
+
+            <div class="fp" data-anim="unfold" data-delay="0.06">
+              <div class="fn">01</div>
+              <div class="fw">
+                <svg viewBox="0 0 100 74" aria-hidden="true">
+                  <rect x="4" y="18" width="48" height="26" class="f-none s-a2 growL" stroke-width="3" data-anim="wipeX" />
+                  <rect x="60" y="6" width="4" height="56" class="f-mid" data-anim="wipeY" data-delay="0.1" />
+                  <rect x="0" y="52" width="100" height="3" class="f-mid" data-anim="wipeX" data-delay="0.16" />
+                </svg>
+              </div>
+              <div class="ft">real notice</div>
+            </div>
+
+            <div class="fp" data-anim="unfold" data-delay="0.16">
+              <div class="fn">02</div>
+              <div class="fw">
+                <svg viewBox="0 0 100 74" aria-hidden="true">
+                  <rect x="4" y="16" width="30" height="42" class="f-none s-mid" stroke-width="3" />
+                  <path d="M40 37 L86 37" class="f-none s-a1" stroke-width="5" data-anim="wipeX" data-delay="0.12" />
+                  <path d="M74 25 L88 37 L74 49" class="f-none s-a1" stroke-width="5" data-anim="flick" data-delay="0.24" />
+                  <circle cx="19" cy="37" r="7" class="f-a1" data-anim="grow" data-delay="0.3" />
+                </svg>
+              </div>
+              <div class="ft">their money</div>
+            </div>
+
+            <div class="fp" data-anim="unfold" data-delay="0.26">
+              <div class="fn">03</div>
+              <div class="fw">
+                <svg viewBox="0 0 100 74" aria-hidden="true">
+                  <path d="M50 4 L50 44" class="f-none s-a1" stroke-width="6" data-anim="wipeY" data-delay="0.1" />
+                  <path d="M34 30 L50 48 L66 30" class="f-none s-a1" stroke-width="6" data-anim="flick" data-delay="0.2" />
+                  <rect x="12" y="54" width="76" height="14" class="f-none s-mid" stroke-width="3" data-anim="wipeX" data-delay="0.3" />
+                </svg>
+              </div>
+              <div class="ft">data export</div>
+            </div>
+
+            <div class="fp" data-anim="unfold" data-delay="0.36">
+              <div class="fn">04</div>
+              <div class="fw">
+                <svg viewBox="0 0 100 74" aria-hidden="true">
+                  <rect x="4" y="22" width="92" height="30" class="f-none s-mid" stroke-width="3" />
+                  <rect x="11" y="29" width="14" height="16" class="f-a1" data-anim="grow" data-delay="0.08" />
+                  <rect x="29" y="29" width="14" height="16" class="f-a1" data-anim="grow" data-delay="0.16" />
+                  <rect x="47" y="29" width="14" height="16" class="f-none s-mid" stroke-width="2.5" data-anim="fade" data-delay="0.24" />
+                  <rect x="65" y="29" width="14" height="16" class="f-none s-mid" stroke-width="2.5" data-anim="fade" data-delay="0.3" />
+                </svg>
+              </div>
+              <div class="ft">drain first</div>
+            </div>
+
+            <div class="fp" data-anim="unfold" data-delay="0.46">
+              <div class="fn">05</div>
+              <div class="fw">
+                <svg viewBox="0 0 100 74" aria-hidden="true">
+                  <circle cx="16" cy="37" r="8" class="f-mid" />
+                  <path d="M26 37 L54 16 M26 37 L54 58" class="f-none s-a1" stroke-width="4" data-anim="wipeX" data-delay="0.12" />
+                  <circle cx="64" cy="14" r="8" class="f-none s-a1" stroke-width="4" data-anim="grow" data-delay="0.22" />
+                  <circle cx="64" cy="60" r="8" class="f-none s-a1" stroke-width="4" data-anim="grow" data-delay="0.3" />
+                </svg>
+              </div>
+              <div class="ft">where to go</div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- ══════════════════════ ONE, REAL NOTICE ══════════════════════ -->
+
+        <!-- 36  section card 01 -->
+        <section class="slide a1 tight" data-dur="4.6">
+          <p class="eyebrow" data-anim="fade">NUMBER ONE</p>
+          <div class="stack" style="margin-top: 16px">
+            <div style="font-size: 160px" data-anim="left">You have to give</div>
+            <div style="font-size: 340px" data-anim="hammer" data-delay="0.2">real notice.</div>
+          </div>
+        </section>
+
+        <!-- 37  not support notice -->
+        <section class="slide tight center" data-dur="3.8">
+          <div class="rot">
+            <span class="rw"><span data-anim="tilt"><span class="strike">Not support notice.</span></span></span>
+            <span class="rw"><span class="on" data-anim="slam" data-delay="0.22">Actual notice.</span></span>
+          </div>
+        </section>
+
+        <!-- 38  THE WINDOW ON THE WRONG SIDE OF THE EVENT -->
+        <section class="slide tight" data-dur="6.4">
+          <p class="eyebrow" data-anim="fade">UBER KEPT THEIR HELP CENTRE OPEN FOR NIGERIANS FOR</p>
+          <p class="u sm c2" data-anim="punch" data-delay="0.16" style="margin-top: 6px">twenty-one days</p>
+          <p class="t sm" data-anim="up" data-delay="0.3">after they shut down.</p>
+          <div class="tline" style="margin-top: 24px">
+            <div class="axis" data-anim="wipeX" data-delay="0.4"></div>
+            <div class="evt" style="left: 40%" data-anim="wipeY" data-delay="0.5"></div>
+            <div class="evtlab" style="left: 40%; margin-left: 20px" data-anim="fade" data-delay="0.6">02 SEPT, THE APP STOPS</div>
+            <div class="win2" style="left: 44%; right: 6%" data-anim="wipeX" data-delay="0.76">21 days of help centre</div>
+            <div class="foot"><span>BEFORE</span><span>AFTER</span></div>
+          </div>
+        </section>
+
+        <!-- 39  which is not exactly what it should be -->
+        <section class="slide center" data-dur="3.6">
+          <p class="u xs cmid" data-anim="creep">Which is not exactly what it should be.</p>
+        </section>
+
+        <!-- 40  a complaint window -->
+        <section class="slide tight" data-dur="6.0">
+          <p class="t sm" data-anim="up" style="max-width: 1640px">That&rsquo;s just twenty-one days that they opened their door for people to complain about something that has already happened.</p>
+          <div class="stack" style="margin-top: 28px">
+            <div style="font-size: 132px" data-anim="left" data-delay="0.3">That&rsquo;s not a notice,</div>
+            <div class="c2" style="font-size: 132px" data-anim="slam" data-delay="0.46">that&rsquo;s more like a complaint window.</div>
+          </div>
+        </section>
+
+        <!-- 41  TAPE -->
+        <section class="slide ink center" data-dur="3.8">
+          <div class="rot">
+            <span class="rw"><span class="on" data-anim="hammer">What has happened</span></span>
+            <span class="rw"><span class="on" data-anim="hammer" data-delay="0.18">has happened.</span></span>
+          </div>
+        </section>
+
+        <!-- 42  THE WINDOW, MOVED. Same drawing, the window now sits before the event. -->
+        <section class="slide tight" data-dur="5.6">
+          <div class="meta tr">WHERE IT SHOULD SIT</div>
+          <p class="u sm c1" data-anim="punch">Notice should be before.</p>
+          <div class="tline" style="margin-top: 28px">
+            <div class="axis" data-anim="wipeX" data-delay="0.22"></div>
+            <div class="evt" style="left: 72%" data-anim="wipeY" data-delay="0.3"></div>
+            <div class="evtlab" style="right: 0; text-align: right" data-anim="fade" data-delay="0.4">THE APP STOPS</div>
+            <div class="win2 good growL" style="left: 4%; width: 64%" data-anim="wipeX" data-delay="0.5">notice, where the app still works</div>
+            <div class="foot"><span>BEFORE</span><span>AFTER</span></div>
+          </div>
+        </section>
+
+        <!-- 43  thirty days, sixty days -->
+        <section class="slide tight" data-dur="5.2">
+          <div class="stack">
+            <div style="font-size: 96px" data-anim="up">Notice is</div>
+            <div class="c2" style="font-size: 260px" data-anim="bounce" data-delay="0.14">thirty days,</div>
+            <div class="c2" style="font-size: 260px" data-anim="bounce" data-delay="0.28">sixty days,</div>
+            <div style="font-size: 96px" data-anim="up" data-delay="0.46">whatever it is, where the app still works,</div>
+          </div>
+        </section>
+
+        <!-- 44  THE PHONE with the banner -->
+        <section class="slide center" data-dur="6.0">
+          <div class="col2" style="max-width: 1620px; justify-self: center">
+            <div class="phone" data-anim="rise">
+              <div class="bnr" data-anim="unfold" data-delay="0.3">what is coming<br />and what they need to do</div>
+              <div class="scr">
+                <i class="w9" data-anim="wipeX" data-delay="0.42"></i>
+                <i class="w7" data-anim="wipeX" data-delay="0.48"></i>
+                <i class="blk" data-anim="fade" data-delay="0.56"></i>
+                <i class="w5" data-anim="wipeX" data-delay="0.62"></i>
+              </div>
+            </div>
+            <p class="t sm" style="text-align: left" data-anim="up" data-delay="0.2">and there&rsquo;s maybe a banner in the app telling the user what is coming and what they need to do.</p>
+          </div>
+        </section>
+
+        <!-- 45  specifically the drivers -->
+        <section class="slide tight" data-dur="4.6">
+          <p class="t xs" data-anim="fade">And especially in this Uber case,</p>
+          <div class="stack" style="margin-top: 10px">
+            <div class="c1" style="font-size: 300px" data-anim="punch" data-delay="0.2">specifically the drivers.</div>
+          </div>
+        </section>
+
+        <!-- 46  OBJECT , income on the platform -->
+        <section class="slide center" data-dur="4.6">
+          <div class="col2" style="max-width: 1620px; justify-self: center">
+            <div class="obj circle ph-print" style="width: 520px; height: 520px" data-anim="elastic"><img src="https://images.pexels.com/photos/5835306/pexels-photo-5835306.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt="" /></div>
+            <p class="u xs" style="text-align: left; font-size: 80px" data-anim="up" data-delay="0.24">These are people whose income is on the platform.</p>
+          </div>
+        </section>
+
+        <!-- 47  OBJECT , bought cars for this -->
+        <section class="slide tight" data-dur="4.8">
+          <div class="obj wide ph-flat" style="width: 100%; height: 420px" data-anim="wipeX"><img src="https://images.pexels.com/photos/97079/pexels-photo-97079.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt="" /></div>
+          <p class="u sm" data-anim="slam" data-delay="0.3" style="margin-top: 22px">Some people actively bought cars for this.</p>
+        </section>
+
+        <!-- 48  today, today -->
+        <section class="slide a2 tight" data-dur="5.4">
+          <div class="stack">
+            <div style="font-size: 112px" data-anim="up">You cannot just tell someone</div>
+            <div style="font-size: 112px" data-anim="up" data-delay="0.12">that their job ended</div>
+            <div style="font-size: 300px" data-anim="hammer" data-delay="0.3">today, today.</div>
+          </div>
+        </section>
+
+        <!-- 49  it doesn't make sense -->
+        <section class="slide center ink" data-dur="3.2">
+          <p class="u md" data-anim="shear">It doesn&rsquo;t make sense.</p>
+        </section>
+
+        <!-- ══════════════════════ TWO, GET PEOPLE THEIR MONEY ══════════════════════ -->
+
+        <!-- 50  section card 02 -->
+        <section class="slide a1 tight" data-dur="4.2">
+          <p class="eyebrow" data-anim="fade">OKAY, NUMBER TWO</p>
+          <div class="stack" style="margin-top: 16px">
+            <div style="font-size: 340px" data-anim="hammer" data-delay="0.16">Get people</div>
+            <div style="font-size: 340px" data-anim="hammer" data-delay="0.3">their money.</div>
+          </div>
+        </section>
+
+        <!-- 51  THE LEDGER , cumulative 1 of 4 -->
+        <section class="slide tight" data-dur="3.4">
+          <div class="meta tl">WHAT THE SYSTEM ALREADY KNOWS IT OWES</div>
+          <div class="owed" style="margin-top: 40px">
+            <div class="orow" data-anim="swipeL"><span class="tick"></span>Wallet balances.</div>
+            <div class="orow dim"><span class="tick"></span>Pending payouts.</div>
+            <div class="orow dim"><span class="tick"></span>Trips that were completed but not yet paid out.</div>
+            <div class="orow dim"><span class="tick"></span>Any promotions or bonuses that are owed.</div>
+          </div>
+        </section>
+
+        <!-- 52  cumulative 2 of 4 -->
+        <section class="slide tight" data-dur="3.4">
+          <div class="meta tl">WHAT THE SYSTEM ALREADY KNOWS IT OWES</div>
+          <div class="owed" style="margin-top: 40px">
+            <div class="orow"><span class="tick"></span>Wallet balances.</div>
+            <div class="orow" data-anim="pop"><span class="tick"></span>Pending payouts.</div>
+            <div class="orow dim"><span class="tick"></span>Trips that were completed but not yet paid out.</div>
+            <div class="orow dim"><span class="tick"></span>Any promotions or bonuses that are owed.</div>
+          </div>
+        </section>
+
+        <!-- 53  cumulative 3 of 4 -->
+        <section class="slide tight" data-dur="4.0">
+          <div class="meta tl">WHAT THE SYSTEM ALREADY KNOWS IT OWES</div>
+          <div class="owed" style="margin-top: 40px">
+            <div class="orow"><span class="tick"></span>Wallet balances.</div>
+            <div class="orow"><span class="tick"></span>Pending payouts.</div>
+            <div class="orow" data-anim="pop"><span class="tick"></span>Trips that were completed but not yet paid out.</div>
+            <div class="orow dim"><span class="tick"></span>Any promotions or bonuses that are owed.</div>
+          </div>
+        </section>
+
+        <!-- 54  cumulative 4 of 4 -->
+        <section class="slide tight" data-dur="4.2">
+          <div class="meta tl">WHAT THE SYSTEM ALREADY KNOWS IT OWES</div>
+          <div class="owed" style="margin-top: 40px">
+            <div class="orow"><span class="tick"></span>Wallet balances.</div>
+            <div class="orow"><span class="tick"></span>Pending payouts.</div>
+            <div class="orow"><span class="tick"></span>Trips that were completed but not yet paid out.</div>
+            <div class="orow" data-anim="pop"><span class="tick"></span>Any promotions or bonuses that are owed.</div>
+          </div>
+        </section>
+
+        <!-- 55  SCENE , all of this is in the database -->
+        <section class="slide tight center" data-dur="4.6">
+          <div class="scene h-m" data-anim="fade">
+            <svg viewBox="0 0 900 300" aria-hidden="true">
+              <ellipse cx="170" cy="70" rx="110" ry="34" class="f-none s-mid" stroke-width="6" data-anim="grow" />
+              <path d="M60 70 L60 210" class="f-none s-mid" stroke-width="6" data-anim="wipeY" data-delay="0.06" />
+              <path d="M280 70 L280 210" class="f-none s-mid" stroke-width="6" data-anim="wipeY" data-delay="0.06" />
+              <path d="M60 210 A110 34 0 0 0 280 210" class="f-none s-mid" stroke-width="6" data-anim="fade" data-delay="0.12" />
+              <ellipse cx="170" cy="128" rx="110" ry="30" class="f-none s-mid" stroke-width="4" opacity="0.5" data-anim="fade" data-delay="0.16" />
+              <rect x="120" y="160" width="26" height="26" class="f-a1" data-anim="grow" data-delay="0.24" />
+              <rect x="158" y="160" width="26" height="26" class="f-a1" data-anim="grow" data-delay="0.3" />
+              <rect x="196" y="160" width="26" height="26" class="f-a1" data-anim="grow" data-delay="0.36" />
+              <path d="M320 140 L790 140" class="f-none s-a1" stroke-width="9" data-anim="wipeX" data-delay="0.44" />
+              <path d="M760 114 L796 140 L760 166" class="f-none s-a1" stroke-width="9" data-anim="flick" data-delay="0.6" />
+            </svg>
+          </div>
+          <p class="u xs" data-anim="up" data-delay="0.5" style="margin-top: 14px">All of this is in the database.</p>
+        </section>
+
+        <!-- 56  it's a query -->
+        <section class="slide a1 center" data-dur="3.6">
+          <p class="u lg" data-anim="hammer">It&rsquo;s not hard,</p>
+          <p class="u lg" data-anim="hammer" data-delay="0.2">it&rsquo;s a query.</p>
+        </section>
+
+        <!-- 57  we know exactly -->
+        <section class="slide tight" data-dur="4.6">
+          <div class="stack" style="max-width: 1660px">
+            <div style="font-size: 132px" data-anim="left">We know exactly</div>
+            <div class="c1" style="font-size: 200px" data-anim="slam" data-delay="0.18">how much you&rsquo;re owing</div>
+            <div style="font-size: 132px" data-anim="left" data-delay="0.36">every driver.</div>
+          </div>
+        </section>
+
+        <!-- 58  the money should just move -->
+        <section class="slide tight" data-dur="5.2">
+          <p class="t md" data-anim="up" style="max-width: 1620px">The money should just
+            <span class="mk">move automatically</span> if we&rsquo;re going to close down that market.</p>
+        </section>
+
+        <!-- 59  not email support -->
+        <section class="slide tight" data-dur="5.4">
+          <p class="t sm" data-anim="up" style="max-width: 1640px">It shouldn&rsquo;t be that the user then has to reach out to email support,</p>
+          <div class="chips" style="margin-top: 26px">
+            <div class="chip" data-anim="flick" data-delay="0.26" style="opacity: 0.9">da</div>
+            <div class="chip" data-anim="flick" data-delay="0.32" style="opacity: 0.72">da</div>
+            <div class="chip" data-anim="flick" data-delay="0.38" style="opacity: 0.54">da</div>
+            <div class="chip" data-anim="flick" data-delay="0.44" style="opacity: 0.36">da</div>
+            <div class="chip" data-anim="flick" data-delay="0.5" style="opacity: 0.2">da</div>
+          </div>
+        </section>
+
+        <!-- 60  that makes no sense -->
+        <section class="slide center" data-dur="3.0">
+          <p class="u md cmid" data-anim="shear">That makes no sense.</p>
+        </section>
+
+        <!-- ══════════════════════ THREE, DATA EXPORT ══════════════════════ -->
+
+        <!-- 61  section card 03 -->
+        <section class="slide a1 tight" data-dur="4.8">
+          <p class="eyebrow" data-anim="fade">NUMBER THREE, AND THIS IS THE BIG ONE</p>
+          <div class="stack" style="margin-top: 16px">
+            <div style="font-size: 380px" data-anim="hammer" data-delay="0.18">Data</div>
+            <div style="font-size: 380px" data-anim="hammer" data-delay="0.32">exports.</div>
+          </div>
+        </section>
+
+        <!-- 62  the right to take your data -->
+        <section class="slide tight" data-dur="6.6">
+          <p class="t sm" data-anim="up" style="max-width: 1660px">I strongly believe, more than ever before, especially in this age that we are in now, that users should have</p>
+          <div class="stack" style="margin-top: 20px">
+            <div class="c1" style="font-size: 160px" data-anim="slam" data-delay="0.3">the right to take their data with them</div>
+            <div style="font-size: 96px" data-anim="up" data-delay="0.5">at every point.</div>
+          </div>
+        </section>
+
+        <!-- 63  OBJECT , data should leave with them -->
+        <section class="slide center" data-dur="5.0">
+          <div class="col2" style="max-width: 1600px; justify-self: center">
+            <p class="t sm" style="text-align: left" data-anim="up">Even in a situation where the platform closed down the market, their data should leave with them.</p>
+            <div class="obj circle ph-print" style="width: 480px; height: 480px" data-anim="counter"><img src="https://images.pexels.com/photos/5951759/pexels-photo-5951759.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt="" /></div>
+          </div>
+        </section>
+
+        <!-- 64  for a rider -->
+        <section class="slide tight" data-dur="5.0">
+          <p class="eyebrow" data-anim="fade">FOR A RIDER, FOR EXAMPLE, THAT&rsquo;S</p>
+          <div class="chips" style="margin-top: 26px">
+            <div class="chip on" style="font-size: 52px; padding: 24px 40px" data-anim="peek" data-delay="0.12">your trip history</div>
+            <div class="chip on" style="font-size: 52px; padding: 24px 40px" data-anim="peek" data-delay="0.24">your receipts</div>
+            <div class="chip on" style="font-size: 52px; padding: 24px 40px" data-anim="peek" data-delay="0.36">your addresses</div>
+          </div>
+        </section>
+
+        <!-- 65  for a driver -->
+        <section class="slide tight" data-dur="4.8">
+          <p class="t xs" data-anim="fade">For a driver, that&rsquo;s pretty much</p>
+          <div class="stack" style="margin-top: 12px">
+            <div class="c1" style="font-size: 260px" data-anim="punch" data-delay="0.18">their entire</div>
+            <div class="c1" style="font-size: 260px" data-anim="punch" data-delay="0.3">work history.</div>
+          </div>
+        </section>
+
+        <!-- 66  THE ROWS , filling -->
+        <section class="slide tight" data-dur="6.4">
+          <div class="meta tr">EVERY ROW</div>
+          <div class="chips" style="margin-bottom: 24px">
+            <div class="chip on" data-anim="flick" data-delay="0.1">Every trip they&rsquo;ve done.</div>
+            <div class="chip on" data-anim="flick" data-delay="0.2">Their ratings.</div>
+            <div class="chip on" data-anim="flick" data-delay="0.3">Their earnings, month by month,</div>
+            <div class="chip on" data-anim="flick" data-delay="0.4">for some of them even years.</div>
+          </div>
+          <div class="rows">
+            <div class="r"><i class="k2" data-anim="wipeX" data-delay="0.50"></i><i class="k1" data-anim="wipeX" data-delay="0.52"></i><i class="k3" data-anim="wipeX" data-delay="0.54"></i><i class="k1" data-anim="wipeX" data-delay="0.56"></i></div>
+            <div class="r"><i class="k3" data-anim="wipeX" data-delay="0.56"></i><i class="k1" data-anim="wipeX" data-delay="0.58"></i><i class="k2" data-anim="wipeX" data-delay="0.60"></i><i class="k1" data-anim="wipeX" data-delay="0.62"></i></div>
+            <div class="r"><i class="k1" data-anim="wipeX" data-delay="0.62"></i><i class="k3" data-anim="wipeX" data-delay="0.64"></i><i class="k1" data-anim="wipeX" data-delay="0.66"></i><i class="k2" data-anim="wipeX" data-delay="0.68"></i></div>
+            <div class="r"><i class="k2" data-anim="wipeX" data-delay="0.68"></i><i class="k2" data-anim="wipeX" data-delay="0.70"></i><i class="k1" data-anim="wipeX" data-delay="0.72"></i><i class="k3" data-anim="wipeX" data-delay="0.74"></i></div>
+            <div class="r"><i class="k1" data-anim="wipeX" data-delay="0.74"></i><i class="k3" data-anim="wipeX" data-delay="0.76"></i><i class="k2" data-anim="wipeX" data-delay="0.78"></i><i class="k1" data-anim="wipeX" data-delay="0.80"></i></div>
+            <div class="r"><i class="k3" data-anim="wipeX" data-delay="0.80"></i><i class="k1" data-anim="wipeX" data-delay="0.82"></i><i class="k1" data-anim="wipeX" data-delay="0.84"></i><i class="k2" data-anim="wipeX" data-delay="0.86"></i></div>
+          </div>
+        </section>
+
+        <!-- 67  the only proof of income -->
+        <section class="slide tight" data-dur="6.2">
+          <p class="t xs" data-anim="fade" style="max-width: 1500px">And if you think about it from the driver&rsquo;s perspective, that is</p>
+          <div class="stack" style="margin-top: 14px">
+            <div style="font-size: 200px" data-anim="slam" data-delay="0.22">the only</div>
+            <div class="c1" style="font-size: 260px" data-anim="slam" data-delay="0.36">proof of income</div>
+            <div style="font-size: 132px" data-anim="up" data-delay="0.56">that they have.</div>
+          </div>
+        </section>
+
+        <!-- 68  that is it -->
+        <section class="slide center ink" data-dur="3.8">
+          <p class="u xs" data-anim="up">If someone is doing full-time Uber,</p>
+          <p class="u md c1" data-anim="hammer" data-delay="0.22">that is it.</p>
+        </section>
+
+        <!-- 69  THE DOCUMENT , cumulative 1 of 3 -->
+        <section class="slide center" data-dur="4.0">
+          <div class="doc" data-anim="rise">
+            <div class="dhead">
+              <div class="dtitle">that is the document</div>
+              <div class="dkick">PROOF OF INCOME</div>
+            </div>
+            <div class="dfield"><span class="box x"></span>If they want a loan,</div>
+            <div class="dfield dim"><span class="box"></span>If they want to join another platform and argue that they should not start at zero rating,</div>
+            <div class="dfield dim"><span class="box"></span>If there&rsquo;s a tax question, if there&rsquo;s a dispute,</div>
+            <div class="dfoot"><span>GENERATED BY THE DRIVER</span><span>HELD BY THE PLATFORM</span></div>
+          </div>
+        </section>
+
+        <!-- 70  cumulative 2 of 3 -->
+        <section class="slide center" data-dur="5.0">
+          <div class="doc">
+            <div class="dhead">
+              <div class="dtitle">that is the document</div>
+              <div class="dkick">PROOF OF INCOME</div>
+            </div>
+            <div class="dfield"><span class="box x"></span>If they want a loan,</div>
+            <div class="dfield" data-anim="pop"><span class="box x"></span>If they want to join another platform and argue that they should not start at zero rating,</div>
+            <div class="dfield dim"><span class="box"></span>If there&rsquo;s a tax question, if there&rsquo;s a dispute,</div>
+            <div class="dfoot"><span>GENERATED BY THE DRIVER</span><span>HELD BY THE PLATFORM</span></div>
+          </div>
+        </section>
+
+        <!-- 71  cumulative 3 of 3 -->
+        <section class="slide center" data-dur="4.6">
+          <div class="doc">
+            <div class="dhead">
+              <div class="dtitle">that is the document</div>
+              <div class="dkick">PROOF OF INCOME</div>
+            </div>
+            <div class="dfield"><span class="box x"></span>If they want a loan,</div>
+            <div class="dfield"><span class="box x"></span>If they want to join another platform and argue that they should not start at zero rating,</div>
+            <div class="dfield" data-anim="pop"><span class="box x"></span>If there&rsquo;s a tax question, if there&rsquo;s a dispute,</div>
+            <div class="dfoot"><span>GENERATED BY THE DRIVER</span><span>HELD BY THE PLATFORM</span></div>
+          </div>
+        </section>
+
+        <!-- 72  OBJECT , the loan document itself -->
+        <section class="slide tight" data-dur="4.2">
+          <div class="obj wide ph-flat" style="width: 100%; height: 400px" data-anim="wipeX"><img src="https://images.pexels.com/photos/7821513/pexels-photo-7821513.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt="" /></div>
+          <p class="u sm c1" data-anim="slam" data-delay="0.3" style="margin-top: 22px">That data is about them.</p>
+        </section>
+
+        <!-- 73  every single row -->
+        <section class="slide tight" data-dur="4.6">
+          <div class="stack" style="max-width: 1680px">
+            <div style="font-size: 132px" data-anim="left">Their actions generated</div>
+            <div class="c1" style="font-size: 260px" data-anim="punch" data-delay="0.2">every single row of it.</div>
+          </div>
+        </section>
+
+        <!-- 74  THE ROWS , going hollow. The platform went, and it went with it. -->
+        <section class="slide tight" data-dur="5.4">
+          <div class="meta tr">AND IT WENT WITH IT</div>
+          <div class="rows">
+            <div class="r"><i class="k2 gone" data-anim="fade" data-delay="0.08"></i><i class="k1 gone" data-anim="fade" data-delay="0.11"></i><i class="k3 gone" data-anim="fade" data-delay="0.14"></i><i class="k1 gone" data-anim="fade" data-delay="0.17"></i></div>
+            <div class="r"><i class="k3 gone" data-anim="fade" data-delay="0.14"></i><i class="k1 gone" data-anim="fade" data-delay="0.17"></i><i class="k2 gone" data-anim="fade" data-delay="0.20"></i><i class="k1 gone" data-anim="fade" data-delay="0.23"></i></div>
+            <div class="r"><i class="k1 gone" data-anim="fade" data-delay="0.20"></i><i class="k3 gone" data-anim="fade" data-delay="0.23"></i><i class="k1 gone" data-anim="fade" data-delay="0.26"></i><i class="k2 gone" data-anim="fade" data-delay="0.29"></i></div>
+            <div class="r"><i class="k2 gone" data-anim="fade" data-delay="0.26"></i><i class="k2 gone" data-anim="fade" data-delay="0.29"></i><i class="k1 gone" data-anim="fade" data-delay="0.32"></i><i class="k3 gone" data-anim="fade" data-delay="0.35"></i></div>
+            <div class="r"><i class="k1 gone" data-anim="fade" data-delay="0.32"></i><i class="k3 gone" data-anim="fade" data-delay="0.35"></i><i class="k2 gone" data-anim="fade" data-delay="0.38"></i><i class="k1 gone" data-anim="fade" data-delay="0.41"></i></div>
+            <div class="r"><i class="k3 gone" data-anim="fade" data-delay="0.38"></i><i class="k1 gone" data-anim="fade" data-delay="0.41"></i><i class="k1 gone" data-anim="fade" data-delay="0.44"></i><i class="k2 gone" data-anim="fade" data-delay="0.47"></i></div>
+          </div>
+          <p class="u xs" data-anim="creep" data-delay="0.6" style="margin-top: 30px">And when the platform went, it went with it.</p>
+        </section>
+
+        <!-- 75  it shouldn't be like that -->
+        <section class="slide tight" data-dur="4.8">
+          <div class="stack">
+            <div style="font-size: 180px" data-anim="shear">It shouldn&rsquo;t be like that.</div>
+            <div class="c1" style="font-size: 180px" data-anim="slam" data-delay="0.22">They should be able to get their data.</div>
+          </div>
+        </section>
+
+        <!-- 76  not a hard feature -->
+        <section class="slide center" data-dur="3.4">
+          <p class="u sm" data-anim="punch">It&rsquo;s not a hard feature to build.</p>
+        </section>
+
+        <!-- 77  THE DOWNLOAD BUTTON -->
+        <section class="slide center ink" data-dur="5.2">
+          <div class="meta tl">THE FEATURE</div>
+          <div class="dl" data-anim="elastic">
+            <span class="arw"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3 L20 26 M9 17 L20 29 L31 17 M5 36 L35 36" fill="none" stroke="#05120B" stroke-width="5" stroke-linecap="square" /></svg></span>
+            <span>a CSV of everything</span>
+          </div>
+          <p class="t xs" data-anim="up" data-delay="0.36" style="margin-top: 34px">It&rsquo;s a download button that gives them a CSV of everything.</p>
+        </section>
+
+        <!-- 78  I don't know why it isn't there -->
+        <section class="slide center" data-dur="3.6">
+          <p class="u sm cmid" data-anim="creep">I don&rsquo;t know why it isn&rsquo;t there.</p>
+        </section>
+
+        <!-- ══════════════════════ FOUR, DON'T CUT PEOPLE OFF MID-TRANSACTION ══════════════════════ -->
+
+        <!-- 79  section card 04 -->
+        <section class="slide a1 tight" data-dur="5.2">
+          <p class="eyebrow" data-anim="fade">NUMBER FOUR</p>
+          <div class="stack" style="margin-top: 16px">
+            <div style="font-size: 112px" data-anim="left" data-delay="0.12">I don&rsquo;t think it&rsquo;s proper that users are</div>
+            <div style="font-size: 180px; margin-top: 0.18em; margin-bottom: 0.06em" data-anim="pop" data-delay="0.28">cut short mid-transaction.</div>
+          </div>
+        </section>
+
+        <!-- 80  OBJECT , the app died -->
+        <section class="slide tight" data-dur="4.6">
+          <div class="obj wide ph-flat growL" style="width: 100%; height: 420px" data-anim="wipeX"><img src="https://images.pexels.com/photos/5834947/pexels-photo-5834947.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt="" /></div>
+          <p class="u sm" data-anim="slam" data-delay="0.3" style="margin-top: 22px">Someone was in the car and the app died.</p>
+        </section>
+
+        <!-- 81  now what -->
+        <section class="slide center ink" data-dur="2.8">
+          <p class="u lg c2" data-anim="hammer">Now what?</p>
+        </section>
+
+        <!-- 82  the three questions , cumulative 1 of 3 -->
+        <section class="slide tight" data-dur="3.2">
+          <div class="idx">
+            <div class="row" data-anim="swipeL"><div class="n">?</div><div class="x">Who pays the driver?</div></div>
+            <div class="row dim"><div class="n">?</div><div class="x">Does the trip get counted?</div></div>
+            <div class="row dim"><div class="n">?</div><div class="x">What is the fare?</div></div>
+          </div>
+        </section>
+
+        <!-- 83  cumulative 2 of 3 -->
+        <section class="slide tight" data-dur="3.2">
+          <div class="idx">
+            <div class="row"><div class="n">?</div><div class="x">Who pays the driver?</div></div>
+            <div class="row" data-anim="pop"><div class="n">?</div><div class="x">Does the trip get counted?</div></div>
+            <div class="row dim"><div class="n">?</div><div class="x">What is the fare?</div></div>
+          </div>
+        </section>
+
+        <!-- 84  cumulative 3 of 3 -->
+        <section class="slide tight" data-dur="3.4">
+          <div class="idx">
+            <div class="row"><div class="n">?</div><div class="x">Who pays the driver?</div></div>
+            <div class="row"><div class="n">?</div><div class="x">Does the trip get counted?</div></div>
+            <div class="row" data-anim="pop"><div class="n">?</div><div class="x">What is the fare?</div></div>
+          </div>
+        </section>
+
+        <!-- 85  the tweets, again -->
+        <section class="slide tight" data-dur="5.6">
+          <p class="t sm" data-anim="up" style="max-width: 1180px">I saw tweets of people actively saying this happened, that they were mid-trip and Uber just stopped working.</p>
+          <div class="insetw br"><div class="inset" data-anim="tilt" data-delay="0.3"><img src="https://images.pexels.com/photos/5835467/pexels-photo-5835467.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt="" /><span class="ic">mid-trip</span></div></div>
+        </section>
+
+        <!-- 86  drain first -->
+        <section class="slide tight" data-dur="4.8">
+          <p class="t xs" data-anim="fade">If you are shutting down at a timestamp,</p>
+          <div class="stack" style="margin-top: 12px">
+            <div class="c1" style="font-size: 180px" data-anim="hammer" data-delay="0.2">you should drain first.</div>
+          </div>
+        </section>
+
+        <!-- 87  THE DRAIN , 1 of 3. Stop new bookings hours before. -->
+        <section class="slide tight" data-dur="4.4">
+          <div class="meta tl">THE DRAIN</div>
+          <p class="u xs" data-anim="up">Stop new bookings hours before.</p>
+          <div class="drain" style="margin-top: 34px">
+            <div class="dh"><span>IN FLIGHT</span></div>
+            <div class="track" data-anim="wipeX" data-delay="0.2">
+              <i class="un"></i><i class="un"></i><i class="un"></i><i class="un"></i><i class="un"></i><i class="un"></i><i class="un"></i>
+              <i class="un"></i><i class="un"></i><i class="un"></i><i class="un"></i><i class="un"></i><i class="un"></i><i class="un"></i>
+            </div>
+            <div class="dh"><span>NEW BOOKINGS</span><span class="n" style="color: var(--mid)">closed</span></div>
+          </div>
+        </section>
+
+        <!-- 88  THE DRAIN , 2 of 3. Let the trips that are running finish. -->
+        <section class="slide tight" data-dur="4.8">
+          <div class="meta tl">THE DRAIN</div>
+          <p class="u xs" data-anim="up">Let the trips that are running finish.</p>
+          <div class="drain" style="margin-top: 34px">
+            <div class="dh"><span>IN FLIGHT</span></div>
+            <div class="track">
+              <i class="un gone" data-anim="fade" data-delay="0.10"></i><i class="un gone" data-anim="fade" data-delay="0.14"></i>
+              <i class="un gone" data-anim="fade" data-delay="0.18"></i><i class="un gone" data-anim="fade" data-delay="0.22"></i>
+              <i class="un gone" data-anim="fade" data-delay="0.26"></i><i class="un gone" data-anim="fade" data-delay="0.30"></i>
+              <i class="un gone" data-anim="fade" data-delay="0.34"></i><i class="un gone" data-anim="fade" data-delay="0.38"></i>
+              <i class="un gone" data-anim="fade" data-delay="0.42"></i><i class="un gone" data-anim="fade" data-delay="0.46"></i>
+              <i class="un"></i><i class="un"></i><i class="un"></i><i class="un"></i>
+            </div>
+            <div class="dh"><span>NEW BOOKINGS</span><span class="n" style="color: var(--mid)">closed</span></div>
+          </div>
+        </section>
+
+        <!-- 89  THE DRAIN , 3 of 3. And you only close when the system is empty. -->
+        <section class="slide tight" data-dur="5.0">
+          <div class="meta tl">THE DRAIN</div>
+          <p class="u xs c1" data-anim="up">And you only close when the system is empty.</p>
+          <div class="drain closed" style="margin-top: 34px">
+            <div class="dh"><span>IN FLIGHT</span><span class="n">0</span></div>
+            <div class="track">
+              <i class="un gone"></i><i class="un gone"></i><i class="un gone"></i><i class="un gone"></i><i class="un gone"></i>
+              <i class="un gone"></i><i class="un gone"></i><i class="un gone"></i><i class="un gone"></i><i class="un gone"></i>
+              <i class="un gone" data-anim="fade" data-delay="0.12"></i><i class="un gone" data-anim="fade" data-delay="0.2"></i>
+              <i class="un gone" data-anim="fade" data-delay="0.28"></i><i class="un gone" data-anim="fade" data-delay="0.36"></i>
+            </div>
+            <div class="dh"><span>NOW YOU CAN CLOSE</span><span class="n">empty</span></div>
+          </div>
+        </section>
+
+        <!-- 90  OBJECT , the server -->
+        <section class="slide tight" data-dur="5.0">
+          <div class="obj wide ph-flat" style="width: 100%; height: 400px" data-anim="glide"><img src="https://images.pexels.com/photos/37730212/pexels-photo-37730212.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt="" /></div>
+          <p class="u xs" data-anim="slam" data-delay="0.32" style="margin-top: 22px">You don&rsquo;t just kill a server with requests in flight.</p>
+        </section>
+
+        <!-- ══════════════════════ FIVE, TELL PEOPLE WHERE TO GO ══════════════════════ -->
+
+        <!-- 91  section card 05 -->
+        <section class="slide a1 tight" data-dur="5.0">
+          <p class="eyebrow" data-anim="fade">AND NUMBER FIVE, IF YOU&rsquo;RE BEING KIND ENOUGH</p>
+          <div class="stack" style="margin-top: 16px">
+            <div style="font-size: 300px" data-anim="hammer" data-delay="0.18">tell people</div>
+            <div style="font-size: 300px" data-anim="hammer" data-delay="0.32">where to go.</div>
+          </div>
+        </section>
+
+        <!-- 92  the other platforms -->
+        <section class="slide tight" data-dur="4.6">
+          <p class="u xs" data-anim="up">There are other platforms.</p>
+          <div class="chips" style="margin-top: 30px">
+            <div class="chip on3" style="font-size: 62px; padding: 26px 46px" data-anim="rollL" data-delay="0.16">Bolt</div>
+            <div class="chip on3" style="font-size: 62px; padding: 26px 46px" data-anim="rollR" data-delay="0.28">inDrive</div>
+            <div class="chip" style="font-size: 62px; padding: 26px 46px" data-anim="flick" data-delay="0.42">blah blah blah</div>
+          </div>
+        </section>
+
+        <!-- 93  the honest caveat -->
+        <section class="slide tight" data-dur="5.0">
+          <p class="t md" data-anim="up" style="max-width: 1620px">I mean, I don&rsquo;t think this is something
+            <span class="mk m2">a business would want to do</span>.</p>
+        </section>
+
+        <!-- 94  the impossible sentence -->
+        <section class="slide ink tight" data-dur="6.0">
+          <p class="t sm" data-anim="creep" style="max-width: 1660px">Like, oh yeah, we&rsquo;re closing down in this market, go to this other person who used to be our competitor.</p>
+        </section>
+
+        <!-- 95  yeah. I get it. -->
+        <section class="slide center" data-dur="3.0">
+          <p class="u md cmid" data-anim="fade">Yeah. I get it.</p>
+        </section>
+
+        <!-- 96  serif , the moral line -->
+        <section class="slide a1 center" data-dur="4.6">
+          <p class="ser lg" data-anim="glide" style="max-width: 1620px">But yeah. I just think that users deserve better, man.</p>
+        </section>
+
+        <!-- 97  and even though I'm a developer -->
+        <section class="slide tight" data-dur="5.0">
+          <div class="stack" style="max-width: 1680px">
+            <div style="font-size: 112px" data-anim="left">And even though I&rsquo;m a developer,</div>
+            <div class="c1" style="font-size: 200px" data-anim="slam" data-delay="0.2">I think users deserve better.</div>
+          </div>
+        </section>
+
+        <!-- ══════════════════════ THE FUNNY PART ══════════════════════ -->
+
+        <!-- 98  the setup -->
+        <section class="slide tight" data-dur="5.8">
+          <p class="t sm" data-anim="up" style="max-width: 1680px">And what is even funny about this whole Uber thing is that Uber shut down in Nigeria on the second of September,</p>
+        </section>
+
+        <!-- 99  PAIR , one day apart -->
+        <section class="slide tight" data-dur="6.2">
+          <div class="meta tl">ONE DAY APART</div>
+          <div class="pair" data-anim="fade">
+            <figure>
+              <img src="https://images.pexels.com/photos/36703363/pexels-photo-36703363.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt="" data-anim="wipeX" />
+              <figcaption class="cmid" data-anim="up" data-delay="0.2">02 Sept</figcaption>
+            </figure>
+            <figure>
+              <img src="https://images.pexels.com/photos/10960261/pexels-photo-10960261.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt="" data-anim="wipeX" data-delay="0.16" />
+              <figcaption class="c3" data-anim="up" data-delay="0.36">03 Sept</figcaption>
+            </figure>
+          </div>
+          <p class="t xs" data-anim="up" data-delay="0.5" style="margin-top: 20px">and then the next day they launched a driverless robotaxi service in London.</p>
+        </section>
+
+        <!-- 100  a whole other conversation -->
+        <section class="slide center ink" data-dur="4.0">
+          <p class="u xs cmid" data-anim="creep" style="max-width: 1560px">But that&rsquo;s a whole other conversation that I don&rsquo;t want to get into.</p>
+        </section>
+
+        <!-- ══════════════════════ IT'S NOT JUST ABOUT UBER ══════════════════════ -->
+
+        <!-- 101  not just Uber -->
+        <section class="slide tight" data-dur="3.8">
+          <div class="stack">
+            <div style="font-size: 200px" data-anim="shear">And this is</div>
+            <div class="out" style="font-size: 260px" data-anim="skewUp" data-delay="0.18">not just about Uber.</div>
+          </div>
+        </section>
+
+        <!-- 102  getting better at the job -->
+        <section class="slide tight" data-dur="5.4">
+          <p class="t sm" data-anim="up" style="max-width: 1180px">I also took my time to work through it as a software developer that wants to get better at their job.</p>
+          <div class="insetw br"><div class="inset" data-anim="tilt" data-delay="0.3"><img src="https://images.pexels.com/photos/6694560/pexels-photo-6694560.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt="" /><span class="ic">the notes</span></div></div>
+        </section>
+
+        <!-- 103  anyone could be here -->
+        <section class="slide a2 center" data-dur="3.8">
+          <p class="u sm" data-anim="punch">Because anyone could be in this position.</p>
+        </section>
+
+        <!-- 104  cumulative 1 of 3 -->
+        <section class="slide tight" data-dur="3.0">
+          <div class="idx">
+            <div class="row" data-anim="swipeL"><div class="n">01</div><div class="x">Your startup could close.</div></div>
+            <div class="row dim"><div class="n">02</div><div class="x">Your company could exit a market.</div></div>
+            <div class="row dim"><div class="n">03</div><div class="x">Your product could get sunset.</div></div>
+          </div>
+        </section>
+
+        <!-- 105  cumulative 2 of 3 -->
+        <section class="slide tight" data-dur="3.0">
+          <div class="idx">
+            <div class="row"><div class="n">01</div><div class="x">Your startup could close.</div></div>
+            <div class="row" data-anim="pop"><div class="n">02</div><div class="x">Your company could exit a market.</div></div>
+            <div class="row dim"><div class="n">03</div><div class="x">Your product could get sunset.</div></div>
+          </div>
+        </section>
+
+        <!-- 106  cumulative 3 of 3 -->
+        <section class="slide tight" data-dur="3.4">
+          <div class="idx">
+            <div class="row"><div class="n">01</div><div class="x">Your startup could close.</div></div>
+            <div class="row"><div class="n">02</div><div class="x">Your company could exit a market.</div></div>
+            <div class="row" data-anim="pop"><div class="n">03</div><div class="x">Your product could get sunset.</div></div>
+          </div>
+        </section>
+
+        <!-- 107  it happens all the time -->
+        <section class="slide center" data-dur="3.0">
+          <p class="u sm cmid" data-anim="fade">It happens all the time.</p>
+        </section>
+
+        <!-- 108  THE QUESTION, turned on the viewer -->
+        <section class="slide tight" data-dur="7.0">
+          <div class="bigshape" style="left: 1340px; top: 60px; width: 540px; height: 540px">
+            <svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="50" class="f-a1" fill-opacity="0.13" data-anim="grow" /></svg>
+          </div>
+          <p class="eyebrow" data-anim="fade">THE QUESTION IS</p>
+          <div class="stack" style="margin-top: 16px">
+            <div style="font-size: 96px" data-anim="up" data-delay="0.12">whether the people that have trusted you</div>
+            <div style="font-size: 96px" data-anim="up" data-delay="0.24">with their data and their income,</div>
+            <div class="c1" style="font-size: 200px" data-anim="slam" data-delay="0.44">what do they walk away with?</div>
+          </div>
+        </section>
+
+        <!-- 109  standardised -->
+        <section class="slide center" data-dur="3.6">
+          <p class="u sm" data-anim="punch">And I think this should be standardised.</p>
+        </section>
+
+        <!-- 110  the same way we expect -->
+        <section class="slide tight" data-dur="5.6">
+          <p class="eyebrow" data-anim="fade">THE SAME WAY WE EXPECT AN APP TO HAVE</p>
+          <div class="chips" style="margin-top: 26px">
+            <div class="chip on3" style="font-size: 52px; padding: 24px 40px" data-anim="peek" data-delay="0.14">a privacy policy</div>
+            <div class="chip on3" style="font-size: 52px; padding: 24px 40px" data-anim="peek" data-delay="0.28">or to let you delete your account</div>
+          </div>
+        </section>
+
+        <!-- 111  a standard practice -->
+        <section class="slide tight" data-dur="5.4">
+          <p class="t md" data-anim="up" style="max-width: 1660px">In a case like this, there should be a standard practice that
+            <span class="mk">actively supports the user</span>.</p>
+        </section>
+
+        <!-- 112  SLAB , exit design -->
+        <section class="slide a1 tight" data-dur="4.4">
+          <div class="stack">
+            <div style="font-size: 240px" data-anim="hammer">Exit design</div>
+            <div style="font-size: 240px" data-anim="hammer" data-delay="0.18">should be a thing.</div>
+          </div>
+        </section>
+
+        <!-- 113  before we plan on building anything -->
+        <section class="slide tight" data-dur="4.8">
+          <p class="t md" data-anim="up" style="max-width: 1660px">It should actively be a thing before we plan on building anything.</p>
+        </section>
+
+        <!-- 114  the ticket that should exist. THE EXIT box, now filled. -->
+        <section class="slide tight" data-dur="5.4">
+          <div class="meta tr">ASK</div>
+          <div class="empty" style="border-style: solid; border-color: var(--acc1); color: var(--acc1v); min-height: 340px; padding: 40px" data-anim="unfold">
+            <span class="u xs" style="letter-spacing: -1px; text-transform: none; text-align: center" data-anim="up" data-delay="0.26">if we leave, what happens to the user?</span>
+          </div>
+        </section>
+
+        <!-- ══════════════════════ CLOSING ══════════════════════ -->
+
+        <!-- 115  that's my take -->
+        <section class="slide center" data-dur="2.8">
+          <p class="u md" data-anim="fade">That&rsquo;s my take.</p>
+        </section>
+
+        <!-- 116  the business decision -->
+        <section class="slide tight" data-dur="4.4">
+          <div class="stack" style="max-width: 1700px">
+            <div class="cmid" style="font-size: 180px" data-anim="left">The business decision</div>
+            <div class="cmid" style="font-size: 180px" data-anim="left" data-delay="0.16">is the business decision.</div>
+          </div>
+        </section>
+
+        <!-- 117  serif , the fair line -->
+        <section class="slide ink center" data-dur="4.6">
+          <p class="ser md" data-anim="glide" style="max-width: 1600px">I don&rsquo;t have business experience, I have no argument there.</p>
+        </section>
+
+        <!-- 118  built by engineers, by people -->
+        <section class="slide tight" data-dur="4.8">
+          <div class="stack" style="max-width: 1700px">
+            <div style="font-size: 112px" data-anim="up">But I think the shutdown was</div>
+            <div class="c1" style="font-size: 240px" data-anim="slam" data-delay="0.2">built by engineers,</div>
+            <div class="c1" style="font-size: 240px" data-anim="slam" data-delay="0.34">by people.</div>
+          </div>
+        </section>
+
+        <!-- 119  it could have been built differently -->
+        <section class="slide a1 tight" data-dur="4.6">
+          <div class="stack">
+            <div style="font-size: 132px" data-anim="left">And I believe it could have been</div>
+            <div style="font-size: 300px" data-anim="hammer" data-delay="0.2">built differently.</div>
+          </div>
+        </section>
+
+        <!-- 120  the comments -->
+        <section class="slide tight" data-dur="6.0">
+          <p class="t sm" data-anim="up" style="max-width: 1680px">Tell me in the comments if you were affected, or if you&rsquo;ve ever had to build a shutdown from the inside.</p>
+        </section>
+
+        <!-- 121  see you -->
+        <section class="slide center" data-dur="3.0">
+          <p class="u sm" data-anim="up">See you in my next video.</p>
+        </section>
+
+        <!-- 122  bye -->
+        <section class="slide center" data-dur="3.4">
+          <p class="ser lg c1" data-anim="elastic">Bye.</p>
+        </section>
+
+      </div>
+    </div>
+
+    <div id="toast"></div>
+    <div id="controls">
+      <button id="prevBtn">Prev</button>
+      <button id="playBtn">Play</button>
+      <button id="nextBtn">Next</button>
+      <span id="counter" class="sc">1 / 122</span>
+      <span class="sep"></span>
+      <input id="jump" type="number" min="1" max="122" value="1" />
+      <span class="sep"></span>
+      <button id="themeBtn">Light</button>
+      <button id="layoutBtn">Portrait</button>
+      <span class="sep"></span>
+      <button id="editBtn">Edit text</button>
+      <button id="imgBtn">Image</button>
+      <button id="vidBtn">Video</button>
+      <button id="ovrBtn">Overlay</button>
+      <button id="muteBtn">Unmute</button>
+    </div>
+
+    <script src="../../../html2canvas.min.js"></script>
+    <script src="../../../studio-v2/lib/mp4-muxer.min.js"></script>
+    <script src="../../../studio-v2/lib/sfx-data.js"></script>
+    <script src="../../../studio-v2/lib/editor.js"></script>
+    <script src="../../../studio-v2/lib/engine.js"></script>
+    <script>
+      // html2canvas serializes inline SVGs WITHOUT the page stylesheet, so any SVG coloured
+      // through a CSS class exports black. Bake the computed values in as presentation
+      // attributes on the visible slide, right before capture.
+      (function () {
+        function bake() {
+          document.querySelectorAll("#stage .slide.active svg").forEach(function (svg) {
+            var all = [svg].concat(Array.prototype.slice.call(svg.querySelectorAll("*")));
+            all.forEach(function (el) {
+              var cs = getComputedStyle(el);
+              ["fill", "stroke", "stroke-width", "opacity", "fill-opacity", "stroke-opacity"].forEach(function (p) {
+                var v = cs.getPropertyValue(p);
+                if (v && v !== "none" && v !== "") el.setAttribute(p, v.trim());
+              });
+            });
+            var r = svg.getBoundingClientRect();
+            if (r.width && r.height) { svg.setAttribute("width", r.width); svg.setAttribute("height", r.height); }
+          });
+        }
+        ["imgBtn", "vidBtn", "ovrBtn"].forEach(function (id) {
+          var b = document.getElementById(id);
+          if (b) b.addEventListener("click", bake, true);
+        });
+      })();
+    </script>
+  </body>
+</html>

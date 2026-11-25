@@ -1,0 +1,24 @@
+{
+  "direction": "Collage over her full photo: her calm on the right, one elegant serif line on the clean wall ('UX research / for beginners'), one cut-out object (a coffee cup: a beginner's first study session) floating below. No other labels. References: viral collage 'Capsule wardrobe', 'Time to lock in.', 'Thought of these?'.",
+  "thumbnail_text": "UX research for beginners",
+  "text": {
+    "hd": "UX research<i>for beginners</i>"
+  },
+  "images": {
+    "bg": "../../assets/scene/g2/s_9.5.jpg",
+    "cut": "../../assets/scene/g2/cut/s_9.5.png"
+  },
+  "vars": {
+    "--meb": "1.02"
+  },
+  "titles": [
+    "UX Research for Beginners: What It Is and How It Works",
+    "What Is UX Research? Explained From Scratch",
+    "UX Research Explained Simply (No Jargon, Just Examples)"
+  ],
+  "title": "UX Research for Beginners: What It Is and How It Works",
+  "set": 3,
+  "kind": "collage",
+  "scores": "critic scores new in R2: R2 6 · R3 6 · R4 6 · R5 6.5 · below the 7.5 bar (alternate)",
+  "recommended": false
+}

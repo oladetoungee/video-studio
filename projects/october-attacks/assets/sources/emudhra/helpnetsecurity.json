@@ -1,0 +1,116 @@
+{
+ "story": "emudhra",
+ "outlet": "Help Net Security",
+ "slug": "helpnetsecurity",
+ "url": "https://www.helpnetsecurity.com/?p=388647",
+ "finalUrl": "https://www.helpnetsecurity.com/2026/10/21/emudhra-certificates-private-keys-compromised/",
+ "status": "loaded",
+ "http": 200,
+ "title": "eMudhra security blunder left trusted CA signing keys exposed to anyone - Help Net Security",
+ "h1": "eMudhra security blunder left trusted CA signing keys exposed to anyone",
+ "published": "2026-10-21T14:11:24+00:00",
+ "files": {
+  "fold": "emudhra/helpnetsecurity_fold.png",
+  "full": "emudhra/helpnetsecurity_full.jpg",
+  "scroll": "emudhra/helpnetsecurity_scroll.mp4"
+ },
+ "full": {
+  "width": 1440,
+  "height": 5172,
+  "pageHeight": 5172,
+  "zoom": 1,
+  "quotes": [
+   {
+    "quote": "eMudhra announced it will leave the global SSL/TLS certificate business",
+    "box": {
+     "x": 215,
+     "y": 3699,
+     "w": 574,
+     "h": 48
+    },
+    "lines": [
+     {
+      "x": 375,
+      "y": 3699,
+      "w": 414,
+      "h": 21
+     },
+     {
+      "x": 215,
+      "y": 3726,
+      "w": 157,
+      "h": 21
+     }
+    ]
+   }
+  ]
+ },
+ "scroll": {
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "seconds": 8,
+  "keyframes": [
+   {
+    "t": 0,
+    "y": 224
+   },
+   {
+    "t": 1,
+    "y": 224
+   },
+   {
+    "t": 3.078,
+    "y": 3289
+   },
+   {
+    "t": 8,
+    "y": 3289
+   }
+  ],
+  "zoom": 1,
+  "easing": "easeInOutCubic between keyframes, holds where y is equal",
+  "capped": false,
+  "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)",
+  "quotes": [
+   {
+    "quote": "eMudhra announced it will leave the global SSL/TLS certificate business",
+    "inVideo": true,
+    "still": true,
+    "t": 5.52,
+    "visibleStill": [
+     3,
+     8.03
+    ],
+    "scrollY": 3289,
+    "box": {
+     "x": 455,
+     "y": 410,
+     "w": 574,
+     "h": 48
+    },
+    "lines": [
+     {
+      "x": 615,
+      "y": 410,
+      "w": 414,
+      "h": 21
+     },
+     {
+      "x": 455,
+      "y": 437,
+      "w": 157,
+      "h": 21
+     }
+    ],
+    "docBox": {
+     "x": 455,
+     "y": 3699,
+     "w": 574,
+     "h": 48
+    },
+    "layoutDriftPx": 0
+   }
+  ]
+ }
+}

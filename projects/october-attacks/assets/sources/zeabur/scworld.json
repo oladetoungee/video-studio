@@ -1,0 +1,128 @@
+{
+ "story": "zeabur",
+ "outlet": "SC Media",
+ "slug": "scworld",
+ "url": "https://www.scworld.com/brief/zeabur-to-shut-down-following-major-security-breach",
+ "finalUrl": "https://www.scworld.com/brief/zeabur-to-shut-down-following-major-security-breach",
+ "status": "loaded",
+ "http": 200,
+ "title": "Zeabur to shut down following major security breach",
+ "h1": "Zeabur to shut down following major security breach",
+ "published": "2026-10-21T17:54:04-04:00",
+ "files": {
+  "fold": "zeabur/scworld_fold.png",
+  "full": "zeabur/scworld_full.jpg",
+  "scroll": "zeabur/scworld_scroll.mp4"
+ },
+ "full": {
+  "width": 1440,
+  "height": 2858,
+  "pageHeight": 2858,
+  "zoom": 1,
+  "quotes": [
+   {
+    "quote": "The company failed to rotate administrator tokens, which had remained unchanged since January 2024",
+    "box": {
+     "x": 188,
+     "y": 1123,
+     "w": 690,
+     "h": 78
+    },
+    "lines": [
+     {
+      "x": 848,
+      "y": 1123,
+      "w": 30,
+      "h": 21
+     },
+     {
+      "x": 188,
+      "y": 1151,
+      "w": 674,
+      "h": 21
+     },
+     {
+      "x": 188,
+      "y": 1180,
+      "w": 109,
+      "h": 21
+     }
+    ]
+   }
+  ]
+ },
+ "scroll": {
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "seconds": 8,
+  "keyframes": [
+   {
+    "t": 0,
+    "y": 0
+   },
+   {
+    "t": 1,
+    "y": 0
+   },
+   {
+    "t": 2.235,
+    "y": 713
+   },
+   {
+    "t": 8,
+    "y": 713
+   }
+  ],
+  "zoom": 1,
+  "easing": "easeInOutCubic between keyframes, holds where y is equal",
+  "capped": false,
+  "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)",
+  "quotes": [
+   {
+    "quote": "The company failed to rotate administrator tokens, which had remained unchanged since January 2024",
+    "inVideo": true,
+    "still": true,
+    "t": 5.1,
+    "visibleStill": [
+     2.17,
+     8.03
+    ],
+    "scrollY": 713,
+    "box": {
+     "x": 428,
+     "y": 410,
+     "w": 690,
+     "h": 78
+    },
+    "lines": [
+     {
+      "x": 1088,
+      "y": 410,
+      "w": 30,
+      "h": 21
+     },
+     {
+      "x": 428,
+      "y": 438,
+      "w": 674,
+      "h": 21
+     },
+     {
+      "x": 428,
+      "y": 467,
+      "w": 109,
+      "h": 21
+     }
+    ],
+    "docBox": {
+     "x": 428,
+     "y": 1123,
+     "w": 690,
+     "h": 78
+    },
+    "layoutDriftPx": 0
+   }
+  ]
+ }
+}

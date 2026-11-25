@@ -1,0 +1,79 @@
+1
+00:00:00,000 --> 00:00:01,337
+see and to pick the right one, you just need
+
+2
+00:00:01,337 --> 00:00:02,117
+to answer two questions
+
+3
+00:00:02,117 --> 00:00:04,057
+question one, is the move permanent or
+
+4
+00:00:04,057 --> 00:00:06,317
+temporary? if a bookshop moves that book to
+
+5
+00:00:06,317 --> 00:00:09,597
+the other branch for good, that's a 301 or a
+
+6
+00:00:09,597 --> 00:00:11,927
+308 if the book is only there for now and
+
+7
+00:00:11,927 --> 00:00:14,357
+it's coming back, that's a 302 or 307
+
+8
+00:00:14,357 --> 00:00:17,027
+the second question, does the request stay
+
+9
+00:00:17,027 --> 00:00:18,577
+the same when the client follows the
+
+10
+00:00:18,577 --> 00:00:20,847
+redirect so you come to the counter to hand
+
+11
+00:00:20,847 --> 00:00:22,657
+in an order form, and they send it to the
+
+12
+00:00:22,657 --> 00:00:25,397
+other branch with 307 or 308, you take the
+
+13
+00:00:25,397 --> 00:00:27,297
+same form to the other branch, and you hand
+
+14
+00:00:27,297 --> 00:00:27,977
+it in there
+
+15
+00:00:27,977 --> 00:00:30,527
+with 301 and 302, the browser is allowed to
+
+16
+00:00:30,527 --> 00:00:31,917
+switch from POST to GET
+
+17
+00:00:31,917 --> 00:00:33,997
+that so for normal web pages, 301 and 302
+
+18
+00:00:33,997 --> 00:00:36,067
+are fine if you're redirecting an API where
+
+19
+00:00:36,067 --> 00:00:38,747
+POST requests matter, I would use 307 and
+
+20
+00:00:38,747 --> 00:00:39,533
+308

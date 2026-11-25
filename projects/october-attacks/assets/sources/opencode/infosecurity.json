@@ -1,0 +1,116 @@
+{
+ "story": "opencode",
+ "outlet": "Infosecurity Magazine",
+ "slug": "infosecurity",
+ "url": "https://www.infosecurity-magazine.com/news/opencode-breach-openai-anthropic/",
+ "finalUrl": "https://www.infosecurity-magazine.com/news/opencode-breach-openai-anthropic/",
+ "status": "loaded",
+ "http": 200,
+ "title": "OpenCode Breach Could Affect OpenAI, Anthropic and Google",
+ "h1": "OpenCode Breach Could Affect OpenAI, Anthropic and Google",
+ "published": "2026-10-19T13:30:00",
+ "files": {
+  "fold": "opencode/infosecurity_fold.png",
+  "full": "opencode/infosecurity_full.jpg",
+  "scroll": "opencode/infosecurity_scroll.mp4"
+ },
+ "full": {
+  "width": 1440,
+  "height": 3190,
+  "pageHeight": 3190,
+  "zoom": 1,
+  "quotes": [
+   {
+    "quote": "identified unauthorized access to a legacy system that we were in the process of decommissioning",
+    "box": {
+     "x": 222,
+     "y": 1462,
+     "w": 660,
+     "h": 43
+    },
+    "lines": [
+     {
+      "x": 432,
+      "y": 1462,
+      "w": 450,
+      "h": 19
+     },
+     {
+      "x": 222,
+      "y": 1486,
+      "w": 224,
+      "h": 19
+     }
+    ]
+   }
+  ]
+ },
+ "scroll": {
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "seconds": 8,
+  "keyframes": [
+   {
+    "t": 0,
+    "y": 360
+   },
+   {
+    "t": 1,
+    "y": 360
+   },
+   {
+    "t": 2.224,
+    "y": 1052
+   },
+   {
+    "t": 8,
+    "y": 1052
+   }
+  ],
+  "zoom": 1,
+  "easing": "easeInOutCubic between keyframes, holds where y is equal",
+  "capped": false,
+  "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)",
+  "quotes": [
+   {
+    "quote": "identified unauthorized access to a legacy system that we were in the process of decommissioning",
+    "inVideo": true,
+    "still": true,
+    "t": 5.1,
+    "visibleStill": [
+     2.17,
+     8.03
+    ],
+    "scrollY": 1052,
+    "box": {
+     "x": 462,
+     "y": 410,
+     "w": 660,
+     "h": 43
+    },
+    "lines": [
+     {
+      "x": 672,
+      "y": 410,
+      "w": 450,
+      "h": 19
+     },
+     {
+      "x": 462,
+      "y": 434,
+      "w": 224,
+      "h": 19
+     }
+    ],
+    "docBox": {
+     "x": 462,
+     "y": 1462,
+     "w": 660,
+     "h": 43
+    },
+    "layoutDriftPx": 0
+   }
+  ]
+ }
+}

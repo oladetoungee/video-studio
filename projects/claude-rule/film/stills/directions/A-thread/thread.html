@@ -1,0 +1,191 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>A · The Thread</title>
+<style>
+@font-face { font-family: 'Schibsted'; src: url(../_fonts/SchibstedGrotesk.ttf); font-weight: 400 900; }
+@font-face { font-family: 'Plex Mono'; src: url(../_fonts/IBMPlexMono-Regular.ttf); font-weight: 400; }
+@font-face { font-family: 'Plex Mono'; src: url(../_fonts/IBMPlexMono-Medium.ttf); font-weight: 500; }
+:root { --ground: #CDBFF3; --ink: #15131C; --her: #15131C; --herText: #F4F1FA; --card: #FFFFFF; --mute: #3E3852; --rule: #A99BD6; }
+html, body { margin: 0; background: var(--ground); }
+#stage { position: relative; overflow: hidden; background: var(--ground); font-family: 'Schibsted', sans-serif; color: var(--ink); }
+.mono { font-family: 'Plex Mono', monospace; letter-spacing: 0.02em; }
+.bub { position: absolute; font-weight: 500; line-height: 1.18; letter-spacing: -0.012em; padding: 24px 34px 26px; border-radius: 34px; box-sizing: border-box; }
+.her { background: var(--her); color: var(--herText); border-bottom-right-radius: 10px; right: 0; }
+.them { background: var(--card); border: 2px solid var(--rule); border-bottom-left-radius: 10px; left: 0; }
+.w { opacity: 0.22; }
+.dots { position: absolute; right: 0; background: var(--her); border-radius: 30px; border-bottom-right-radius: 10px; width: 120px; height: 64px; }
+.dots i { position: absolute; top: 25px; width: 14px; height: 14px; border-radius: 7px; background: var(--herText); }
+.sys { position: absolute; left: 0; right: 0; text-align: center; color: var(--mute); white-space: nowrap; }
+.end { font-family: 'Schibsted', sans-serif !important; font-weight: 600; letter-spacing: -0.01em; }
+.sys::before, .sys::after { content: ''; display: inline-block; vertical-align: middle; width: var(--hw, 140px); height: 2px; background: var(--rule); margin: 0 22px; }
+.card { position: absolute; left: 0; background: var(--card); border: 2px solid var(--rule); border-radius: 18px; overflow: hidden; }
+.card .cred { position: absolute; left: 0; right: 0; bottom: 0; padding: 0 26px; color: var(--mute); border-top: 2px solid var(--rule); background: var(--card); white-space: nowrap; }
+.hl { position: absolute; background: #B9A5F5; mix-blend-mode: multiply; transform-origin: left center; }
+.input { position: absolute; border-top: 2px solid var(--rule); color: var(--mute); }
+.big { position: absolute; font-weight: 800; letter-spacing: -0.045em; line-height: 0.86; white-space: nowrap; transform-origin: 50% 50%; }
+</style></head>
+<body><div id="stage"></div>
+<script src="../_tools/kit.js"></script>
+<script src="../_tools/words.js"></script>
+<script src="../_tools/sources.js"></script>
+<script>
+// A · THE THREAD: the whole film is one chat thread. Her lines arrive as her messages (word by word on her voice),
+// sources arrive as cards from the other side (real captures, credited), the model never speaks: only system lines.
+// Every chat element is a generic ILLUSTRATION (BRIEF.md), never Claude's real interface.
+const FS = V(58, 56), PAD = V(34, 32);
+const COL = V({ x: 340, w: 1240, anchor: 850 }, { x: 56, w: 968, anchor: 1230 });
+const LBL = V(34, 34);
+
+function input(root) {
+  const row = el('div', { left: COL.x + 'px', width: COL.w + 'px', top: (COL.anchor + V(84, 90)) + 'px', height: V(90, 96) + 'px', fontSize: LBL + 'px', lineHeight: V(90, 96) + 'px' }, '', root);
+  row.className = 'input mono';
+  const i = el('span', { position: 'absolute', left: 0 }, 'Message…', row);
+  el('span', { position: 'absolute', right: 0 }, 'ILLUSTRATION', row);
+  return i;
+}
+// thread: items [{k, a(appear time), ...}], measured once; scroll = sum of heights of arrived items (outQuint 14 f each)
+function thread(root, items) {
+  const col = el('div', { left: COL.x + 'px', top: '0px', width: COL.w + 'px', height: '10px' }, '', root);
+  let y = 0; const GAP = V(26, 28);
+  for (const it of items) {
+    if (it.k === 'her' || it.k === 'them') {
+      const b = el('div', { fontSize: (it.fs || FS) + 'px', maxWidth: (it.mw || V(1060, 900)) + 'px' }, '', col);
+      b.className = 'bub ' + it.k;
+      if (it.label) { const l = el('div', { position: 'relative', fontSize: LBL + 'px', color: 'var(--mute)', marginBottom: '10px', fontWeight: 400 }, it.label, b); l.className = 'mono'; }
+      const tx = el('div', { position: 'relative' }, '', b);
+      it.spans = it.words.map(w => { const s = document.createElement('span'); s.className = it.k === 'her' ? 'w' : ''; s.textContent = w.w + ' '; tx.appendChild(s); return s; });
+      it.el = b;
+    } else if (it.k === 'sys' || it.k === 'end') {
+      const s = el('div', { fontSize: LBL + 'px', '--hw': V(140, 70) + 'px' }, '', col); s.className = 'sys mono'; s.dataset.text = it.text; it.el = s;
+      if (it.k === 'end') { s.style.color = 'var(--ink)'; s.classList.add('end'); s.style.fontSize = V(66, 56) + 'px'; s.style.setProperty('--hw', V(160, 60) + 'px'); }
+    } else if (it.k === 'card') {
+      const ch = V(60, 64), ih = it.w * it.ih / it.iw;
+      const c = el('div', { width: it.w + 'px', height: (it.w * (it.vh || it.ih) / it.iw + ch) + 'px' }, '', col); c.className = 'card';
+      const img = el('img', { left: 0, top: 0, width: it.w + 'px', height: ih + 'px' }, '', c); img.src = it.src;
+      it.hls = (it.hl || []).map(r => { const k = it.w / it.cw; const h = el('div', { left: (r.x * k - 3) + 'px', top: (r.y * k - 2) + 'px', width: (r.w * k + 6) + 'px', height: (r.h * k + 4) + 'px' }, '', c); h.className = 'hl'; h._t = r.t; return h; });
+      const cr = el('div', { fontSize: V(30, 30) + 'px', height: ch + 'px', lineHeight: ch + 'px' }, it.credit, c); cr.className = 'cred mono';
+      it.el = c;
+    }
+    it.h = it.el.offsetHeight; it.y = y; y += it.h + GAP; it.el.style.top = it.y + 'px';
+  }
+  const dots = el('div', {}, '<i style="left:30px"></i><i style="left:53px"></i><i style="left:76px"></i>', col); dots.className = 'dots';
+  return { col, items, dots, GAP };
+}
+function updThread(T, t, dim = 1) {
+  let scroll = 0, last = null;
+  for (const it of T.items) {
+    const p = eOutQ((t - it.a) / F(14));
+    scroll += (it.h + T.GAP) * p;
+    const on = t >= it.a; it.el.style.visibility = on ? 'visible' : 'hidden';
+    if (!on) continue; last = it;
+    const q = eOutQ((t - it.a) / F(12)), o = clamp((t - it.a + F(1)) / F(3));
+    if (it.k === 'her' || it.k === 'them') {
+      it.el.style.opacity = o; it.el.style.transformOrigin = it.k === 'her' ? '100% 100%' : '0% 100%';
+      it.el.style.transform = `translateY(${(1 - q) * 30}px) scale(${0.94 + 0.06 * q})`;
+      if (it.k === 'her') it.spans.forEach((s, i) => { s.style.opacity = 0.16 + 0.84 * clamp((t - it.words[i].s + F(1)) / F(3)); });
+    } else if (it.k === 'sys' || it.k === 'end') {
+      const n = Math.round(it.text.length * clamp((t - it.a + F(1)) / 0.3)); it.el.textContent = it.text.slice(0, n) || ' ';
+      it.el.style.opacity = o;
+    } else if (it.k === 'card') {
+      // shutter-in: the card unrolls from its top edge (clip), 12 f outQuint
+      it.el.style.clipPath = `inset(0 0 ${(1 - q) * 100}% 0)`; it.el.style.transform = `translateY(${(1 - q) * 18}px)`;
+      it.hls.forEach(h => { h.style.transform = `scaleX(${eOutQ((t - h._t) / F(10))})`; });
+    }
+    it.el.style.opacity = (parseFloat(it.el.style.opacity) || 1) * (it.fade != null && t > it.fade ? 1 - 0.55 * eOutQ((t - it.fade) / F(12)) : 1);
+  }
+  T.col.style.transform = `translateY(${COL.anchor - scroll}px)`; T.col.style.opacity = dim;
+  // typing indicator before each of her messages (from it.typing seconds before it.a)
+  const nx = T.items.find(it => it.k === 'her' && t < it.a && t >= it.a - (it.typing || 0));
+  if (nx) {
+    T.dots.style.display = 'block'; T.dots.style.top = (scroll + 0) + 'px';
+    const o = clamp((t - (nx.a - nx.typing)) / F(6)); T.dots.style.opacity = o;
+    [...T.dots.children].forEach((d, i) => { d.style.transform = `translateY(${-7 * Math.max(0, Math.sin((t * 1.6 - i * 0.18) * 2 * Math.PI))}px)`; });
+  } else T.dots.style.display = 'none';
+}
+// giant breakout word: flies from its bubble word to the centre, outExpo 15 f, the thread dims to 0.14
+function breakout(root, text, opts = {}) {
+  const b = el('div', { fontSize: (opts.fs || V(560, 330)) + 'px', left: '0px', top: '0px' }, text, root); b.className = 'big';
+  const hl = el('div', { background: '#FFFFFF', transformOrigin: 'left center' }, '', root);
+  root.insertBefore(hl, b);
+  return { b, hl, w: b.offsetWidth, h: b.offsetHeight };
+}
+function updBreakout(B, t, t0, from, to) {
+  const p = eOutX((t - t0) / F(15));
+  B.b.style.visibility = B.hl.style.visibility = t >= t0 ? 'visible' : 'hidden';
+  const s = lerp(from.s, 1, p), x = lerp(from.x, to.x, p), y = lerp(from.y, to.y, p);
+  B.b.style.transform = `translate(${x - B.w / 2}px, ${y - B.h / 2}px) scale(${s})`;
+  const hp = eOutQ((t - t0 - F(10)) / F(6));
+  set(B.hl, { left: (to.x - B.w / 2 - 18) + 'px', top: (to.y + B.h * 0.06) + 'px', width: (B.w + 36) + 'px', height: (B.h * 0.34) + 'px', transform: `scaleX(${hp})` });
+}
+
+window.crisp = (t) => (t >= 9.5 && t < 10.1) || (t >= 94.0 && t < 94.6);
+// ---------- scene 1: the rule (0.0 - 11.4) ----------
+scene('open', 0, 11.4, (r, S) => {
+  S.T = thread(r, [
+    { k: 'sys', a: 0.0, text: 'Usage policy · from November 12, 2026' },
+    { k: 'her', a: 0.1, typing: 0, words: Wt(0.1, 'From the 12th of November 2026,') },
+    { k: 'her', a: 2.0, typing: 0.5, words: Wt(2.0, 'there is a new rule about how you are allowed to talk to Claude.') },
+    { k: 'her', a: 5.6, typing: 0.45, words: Wt(5.6, 'Anthropic updated its usage policy') },
+    { k: 'her', a: 7.7, typing: 0, words: Wt(7.7, 'and now you cannot be abusive or cruel to Claude.') },
+  ]);
+  input(r);
+  S.B = breakout(r, 'cruel.');
+}, (lt, S, t) => {
+  const dim = t >= 9.5 ? 0 : 1;
+  updThread(S.T, t, dim);
+  const it = S.T.items[4], sp = it.spans[7].getBoundingClientRect();
+  updBreakout(S.B, t, 9.5, { x: sp.x + sp.width / 2, y: sp.y + sp.height / 2, s: 0.6 }, { x: CX, y: V(560, 900) });
+});
+
+// ---------- scene 2: the exact wording, with the real page as a card (39.6 - 50.5) ----------
+scene('wording', 39.6, 50.5, (r, S) => {
+  const g = SRC.ap, c = g.shots.crop_rule.clip_doc_css, L = g.phrases.rule_short.lines;
+  const hl = L.map((l, i) => ({ x: l.x - c.x, y: l.y - c.y, w: l.w, h: l.h, t: i === 0 ? 41.9 : 44.4 }));
+  S.T = thread(r, [
+    { k: 'her', a: 36.8, typing: 0, words: Wt(36.8, 'So what does Anthropic’s new rule actually say?') },
+    { k: 'her', a: 39.8, typing: 0, words: Wt(39.8, 'The exact wording is actually:') },
+    { k: 'card', a: 41.3, src: '../../../assets/sources/anthropic/ap_crop_rule.png', iw: 1408, ih: 392, vh: 366, cw: c.width, w: V(1240, 968), hl,
+      credit: 'Screenshot · anthropic.com · 8 Oct 2026' },
+    { k: 'her', a: 46.2, typing: 0, words: Wt(46.2, 'And of course, according to them, this is only reserved for extreme cases.') },
+  ]);
+  input(r);
+}, (lt, S, t) => updThread(S.T, t));
+
+// ---------- scene 3: Claude can end the conversation (49.9 - 58) ----------
+scene('ended', 50.5, 60, (r, S) => {
+  S.T = thread(r, [
+    { k: 'her', a: 40, words: Wt(46.2, 'And of course, according to them, this is only reserved for extreme cases.'), fade: 40 },
+    { k: 'her', a: 49.9, typing: 0, words: Wt(49.9, 'And the main way they enforce it is that Claude can end the conversation'), fade: 53.6 },
+    { k: 'end', a: 53.4, text: 'This conversation has ended' },
+  ]);
+  S.I = input(r);
+}, (lt, S, t) => {
+  updThread(S.T, t);
+  // the input field locks when the chat ends: its text swaps on the frame the divider lands
+  S.I.textContent = t >= 53.6 ? 'You can start a new chat' : 'Message…';
+  S.I.style.opacity = t >= 53.6 ? 0.55 : 1;
+});
+
+// ---------- scene 4: Claude is a tool (92.0 - 97.5) ----------
+scene('tool', 92.0, 97.5, (r, S) => {
+  S.T = thread(r, [
+    { k: 'sys', a: 80, text: 'New chat' },
+    { k: 'her', a: 92.0, typing: 0, words: Wt(92.0, 'Because the fact still stands. Claude is a tool. It is not a human.') },
+  ]);
+  input(r);
+  S.B = breakout(r, 'a tool.', { fs: V(470, 270) });
+}, (lt, S, t) => {
+  updThread(S.T, t, t >= 94.0 ? 0 : 1);
+  const sp = S.T.items[1].spans[8].getBoundingClientRect();
+  updBreakout(S.B, t, 94.0, { x: sp.x + sp.width / 2, y: sp.y + sp.height / 2, s: 0.6 }, { x: CX, y: V(560, 900) });
+});
+
+// ---------- scene 5: her what-if at 9pm (196.9 - 207) ----------
+scene('tired', 196.9, 207, (r, S) => {
+  S.T = thread(r, [
+    { k: 'sys', a: 150, text: '9:00 PM' },
+    { k: 'her', a: 196.9, typing: 0, words: Wt(196.9, 'And if it had been working so much for me all day, and now it’s 9pm or 10pm,') },
+    { k: 'them', a: 203.9, label: 'her what-if · not a real reply', words: Wt(203.9, '“Hey, I’m tired. I don’t want to do anything else.”') },
+  ]);
+  input(r);
+}, (lt, S, t) => updThread(S.T, t));
+</script></body></html>

@@ -1,0 +1,30 @@
+{
+ "board": "yt-29",
+ "kind": "flat bold orange + one dark bar with a red cross + her cut-out on the left",
+ "direction": "Copies board yt-29 (my-project.vercel.app (cross) / myproject.com (tick): a bold orange ground, two dark rounded bars stacked, a red cross on one and a green tick on the other, the creator beside them). Here one bar (the tick bar was cut after the cold review: it gave the answer away): a coding course is no longer a promise of a junior job (cross). The title carries the rest.",
+ "thumbnail_text": "A coding course = a junior job (red cross)",
+ "fonts": [
+  "design-31 Inter Tight ExtraBold, words in bars (cream #F5EFDE on dark #0C160C bars, orange #D16A3C ground, as Design 406)"
+ ],
+ "colours": "design-31 / combo-20 (Design 406: #D16A3C, #0C160C, #F5EFDE) + yt-29's red cross / green tick",
+ "text": {
+  "b1": "A coding course<br>= a junior job"
+ },
+ "images": {
+  "me": "../../assets/shoot/1615-cut.png"
+ },
+ "vars": {},
+ "class": "no-lift",
+ "titles": [
+  "Should You Still Learn to Code in 2027? A Developer's Answer",
+  "Is Learning to Code Still Worth It in 2027? (Honest Answer)",
+  "Junior Developer Jobs Are Rare. Should You Still Code?"
+ ],
+ "title": "Should You Still Learn to Code in 2027? A Developer's Answer",
+ "titles_2026": [
+  "Should You Still Learn to Code in 2026? A Developer's Answer",
+  "Is Learning to Code Still Worth It in 2026? (Honest Answer)"
+ ],
+ "recommended": false,
+ "scores": "R2 6 / 7, R3 5 / 6 (two bars gave the answer away). After R3: one bar, red cross, 74 px (not re-scored)"
+}

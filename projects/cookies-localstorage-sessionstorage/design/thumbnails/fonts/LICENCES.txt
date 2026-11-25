@@ -1,0 +1,4 @@
+All fonts SIL Open Font License 1.1 (Google Fonts): Saira Condensed, Chivo Mono, Onest, Gloock, Bowlby One, Archivo Black, Familjen Grotesk, Inter Tight, JetBrains Mono, Red Hat Mono, Source Serif 4, Work Sans.
+
+BricolageGrotesque.ttf, CaveatBrush-Regular.ttf: Google Fonts, SIL Open Font License 1.1 (copied from library/fonts, 2026-11-16).
+BigShouldersDisplay.ttf, Poppins-Bold.ttf, TikTokSans.ttf: SIL Open Font License 1.1 (copied from library/fonts, 2026-11-19).

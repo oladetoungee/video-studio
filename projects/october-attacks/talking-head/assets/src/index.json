@@ -1,0 +1,1653 @@
+{
+ "php2shell-bleepingcomputer-head": {
+  "file": "assets/src/php2shell-bleepingcomputer-head.jpg",
+  "w": 1280,
+  "h": 524,
+  "lines": [],
+  "quote": "PHP ships emergency patches for critical PHP2Shell flaws",
+  "outlet": "BleepingComputer",
+  "date": "Oct 21, 2026",
+  "url": "https://www.bleepingcomputer.com/news/security/php-ships-emergency-patches-for-critical-php2shell-flaws/",
+  "story": "php2shell"
+ },
+ "php2shell-bleepingcomputer-q2": {
+  "file": "assets/src/php2shell-bleepingcomputer-q2.jpg",
+  "w": 1280,
+  "h": 1032,
+  "lines": [
+   [
+    30,
+    600,
+    1100,
+    42
+   ],
+   [
+    30,
+    650,
+    130,
+    42
+   ]
+  ],
+  "quote": "Admins should install PHP 8.5.12, 8.4.27, 8.3.36, or 8.2.35 as soon as possible",
+  "outlet": "BleepingComputer",
+  "date": "Oct 21, 2026",
+  "url": "https://www.bleepingcomputer.com/news/security/php-ships-emergency-patches-for-critical-php2shell-flaws/",
+  "story": "php2shell"
+ },
+ "railway-techcrunch-head": {
+  "file": "assets/src/railway-techcrunch-head.jpg",
+  "w": 1252,
+  "h": 595,
+  "lines": [],
+  "quote": "Developer platform Railway urges ‘all users’ to revoke secret keys after cyberattack",
+  "outlet": "TechCrunch",
+  "date": "Oct 22, 2026",
+  "url": "https://techcrunch.com/2026/10/22/developer-platform-railway-urges-all-users-to-revoke-secret-keys-after-cyberattack/",
+  "story": "railway"
+ },
+ "railway-techcrunch-q1": {
+  "file": "assets/src/railway-techcrunch-q1.jpg",
+  "w": 1264,
+  "h": 1084,
+  "lines": [
+   [
+    786,
+    600,
+    338,
+    38
+   ],
+   [
+    56,
+    654,
+    1118,
+    38
+   ],
+   [
+    56,
+    706,
+    402,
+    38
+   ]
+  ],
+  "quote": "may have accessed encrypted environment variables and, for some of them, obtained the decrypted contents",
+  "outlet": "TechCrunch",
+  "date": "Oct 22, 2026",
+  "url": "https://techcrunch.com/2026/10/22/developer-platform-railway-urges-all-users-to-revoke-secret-keys-after-cyberattack/",
+  "story": "railway"
+ },
+ "railway-techcrunch-q2": {
+  "file": "assets/src/railway-techcrunch-q2.jpg",
+  "w": 1264,
+  "h": 1032,
+  "lines": [
+   [
+    56,
+    600,
+    1142,
+    38
+   ],
+   [
+    56,
+    654,
+    542,
+    38
+   ]
+  ],
+  "quote": "Railway did not say how many specific users were affected, or what was identified as the root cause",
+  "outlet": "TechCrunch",
+  "date": "Oct 22, 2026",
+  "url": "https://techcrunch.com/2026/10/22/developer-platform-railway-urges-all-users-to-revoke-secret-keys-after-cyberattack/",
+  "story": "railway"
+ },
+ "zeabur-bleepingcomputer-head": {
+  "file": "assets/src/zeabur-bleepingcomputer-head.jpg",
+  "w": 1280,
+  "h": 524,
+  "lines": [],
+  "quote": "Zeabur shutting down after second security breach in two months",
+  "outlet": "BleepingComputer",
+  "date": "Oct 20, 2026",
+  "url": "https://www.bleepingcomputer.com/news/security/zeabur-shutting-down-after-second-security-breach-in-two-months/",
+  "story": "zeabur"
+ },
+ "zeabur-bleepingcomputer-q1": {
+  "file": "assets/src/zeabur-bleepingcomputer-q1.jpg",
+  "w": 1280,
+  "h": 1034,
+  "lines": [
+   [
+    772,
+    600,
+    334,
+    42
+   ],
+   [
+    30,
+    652,
+    1074,
+    42
+   ]
+  ],
+  "quote": "steal over 3.2 million environment variable records and information for 321,810 accounts",
+  "outlet": "BleepingComputer",
+  "date": "Oct 20, 2026",
+  "url": "https://www.bleepingcomputer.com/news/security/zeabur-shutting-down-after-second-security-breach-in-two-months/",
+  "story": "zeabur"
+ },
+ "zeabur-bleepingcomputer-q2": {
+  "file": "assets/src/zeabur-bleepingcomputer-q2.jpg",
+  "w": 1280,
+  "h": 1082,
+  "lines": [
+   [
+    44,
+    600,
+    1112,
+    42
+   ],
+   [
+    30,
+    650,
+    1060,
+    42
+   ],
+   [
+    30,
+    700,
+    128,
+    42
+   ]
+  ],
+  "quote": "The admin tokens had no expiry, had not been rotated since they were created in January 2024, and were not included in the post-August rotation",
+  "outlet": "BleepingComputer",
+  "date": "Oct 20, 2026",
+  "url": "https://www.bleepingcomputer.com/news/security/zeabur-shutting-down-after-second-security-breach-in-two-months/",
+  "story": "zeabur"
+ },
+ "zeabur-bleepingcomputer-q3": {
+  "file": "assets/src/zeabur-bleepingcomputer-q3.jpg",
+  "w": 1280,
+  "h": 1034,
+  "lines": [
+   [
+    252,
+    600,
+    952,
+    42
+   ],
+   [
+    30,
+    652,
+    454,
+    42
+   ]
+  ],
+  "quote": "it will shut down its services starting December 1, 2026, and finish by December 31, 2026",
+  "outlet": "BleepingComputer",
+  "date": "Oct 20, 2026",
+  "url": "https://www.bleepingcomputer.com/news/security/zeabur-shutting-down-after-second-security-breach-in-two-months/",
+  "story": "zeabur"
+ },
+ "ai-agents-staradvertiser-reuters-head": {
+  "file": "assets/src/ai-agents-staradvertiser-reuters-head.jpg",
+  "w": 1176,
+  "h": 603,
+  "lines": [],
+  "quote": "How one hacker used AI agents to break into over 100 company websites",
+  "outlet": "Honolulu Star-Advertiser (Reuters)",
+  "date": "Oct 19, 2026",
+  "url": "https://www.staradvertiser.com/2026/10/19/breaking-news/how-one-hacker-used-ai-agents-to-break-into-over-100-company-websites/",
+  "story": "ai-agents"
+ },
+ "ai-agents-staradvertiser-reuters-q1": {
+  "file": "assets/src/ai-agents-staradvertiser-reuters-q1.jpg",
+  "w": 1144,
+  "h": 1144,
+  "lines": [
+   [
+    174,
+    600,
+    756,
+    42
+   ],
+   [
+    56,
+    654,
+    1024,
+    42
+   ],
+   [
+    56,
+    708,
+    974,
+    42
+   ],
+   [
+    56,
+    762,
+    220,
+    42
+   ]
+  ],
+  "quote": "broke into websites belonging to more than 100 companies, including farm equipment maker Deere & Co., home appliance company SharkNinja Inc. and engine manufacturer Cummins Inc.",
+  "outlet": "Honolulu Star-Advertiser (Reuters)",
+  "date": "Oct 19, 2026",
+  "url": "https://www.staradvertiser.com/2026/10/19/breaking-news/how-one-hacker-used-ai-agents-to-break-into-over-100-company-websites/",
+  "story": "ai-agents"
+ },
+ "ai-agents-staradvertiser-reuters-q3": {
+  "file": "assets/src/ai-agents-staradvertiser-reuters-q3.jpg",
+  "w": 1144,
+  "h": 1036,
+  "lines": [
+   [
+    660,
+    600,
+    400,
+    42
+   ],
+   [
+    56,
+    654,
+    76,
+    42
+   ]
+  ],
+  "quote": "about $50 per successful hack",
+  "outlet": "Honolulu Star-Advertiser (Reuters)",
+  "date": "Oct 19, 2026",
+  "url": "https://www.staradvertiser.com/2026/10/19/breaking-news/how-one-hacker-used-ai-agents-to-break-into-over-100-company-websites/",
+  "story": "ai-agents"
+ },
+ "php2shell-deseret-reuters-head": {
+  "file": "assets/src/php2shell-deseret-reuters-head.jpg",
+  "w": 1280,
+  "h": 543,
+  "lines": [],
+  "quote": "A just-revealed security flaw is hitting computer systems around the world",
+  "outlet": "Deseret News (Reuters)",
+  "date": "Oct 21, 2026",
+  "url": "https://www.deseret.com/business/2026/10/21/website-computer-server-security-flaw-artificial-intelligence-hackers-cybersecurity-php-programming-language/",
+  "story": "php2shell"
+ },
+ "php2shell-deseret-reuters-q0": {
+  "file": "assets/src/php2shell-deseret-reuters-q0.jpg",
+  "w": 1414,
+  "h": 1040,
+  "lines": [
+   [
+    358,
+    600,
+    1008,
+    44
+   ],
+   [
+    48,
+    656,
+    454,
+    44
+   ]
+  ],
+  "quote": "numerous government websites across Europe that went dark Wednesday, to execute fixes",
+  "outlet": "Deseret News (Reuters)",
+  "date": "Oct 21, 2026",
+  "url": "https://www.deseret.com/business/2026/10/21/website-computer-server-security-flaw-artificial-intelligence-hackers-cybersecurity-php-programming-language/",
+  "story": "php2shell"
+ },
+ "php2shell-deseret-reuters-q1": {
+  "file": "assets/src/php2shell-deseret-reuters-q1.jpg",
+  "w": 1510,
+  "h": 1040,
+  "lines": [
+   [
+    1040,
+    600,
+    422,
+    44
+   ],
+   [
+    48,
+    656,
+    520,
+    44
+   ]
+  ],
+  "quote": "PHP powers nearly three-quarters of the world's websites",
+  "outlet": "Deseret News (Reuters)",
+  "date": "Oct 21, 2026",
+  "url": "https://www.deseret.com/business/2026/10/21/website-computer-server-security-flaw-artificial-intelligence-hackers-cybersecurity-php-programming-language/",
+  "story": "php2shell"
+ },
+ "php2shell-deseret-reuters-q2": {
+  "file": "assets/src/php2shell-deseret-reuters-q2.jpg",
+  "w": 1120,
+  "h": 984,
+  "lines": [
+   [
+    48,
+    600,
+    700,
+    44
+   ]
+  ],
+  "quote": "The PHP2Shell flaws are rated 9.2 out of 10",
+  "outlet": "Deseret News (Reuters)",
+  "date": "Oct 21, 2026",
+  "url": "https://www.deseret.com/business/2026/10/21/website-computer-server-security-flaw-artificial-intelligence-hackers-cybersecurity-php-programming-language/",
+  "story": "php2shell"
+ },
+ "php2shell-deseret-reuters-q3": {
+  "file": "assets/src/php2shell-deseret-reuters-q3.jpg",
+  "w": 1474,
+  "h": 1042,
+  "lines": [
+   [
+    864,
+    600,
+    562,
+    44
+   ],
+   [
+    48,
+    658,
+    764,
+    44
+   ]
+  ],
+  "quote": "uncovered the PHP problems with assistance from OpenAI's GPT-5.6 Sol platform",
+  "outlet": "Deseret News (Reuters)",
+  "date": "Oct 21, 2026",
+  "url": "https://www.deseret.com/business/2026/10/21/website-computer-server-security-flaw-artificial-intelligence-hackers-cybersecurity-php-programming-language/",
+  "story": "php2shell"
+ },
+ "php2shell-php-net-q0": {
+  "file": "assets/src/php2shell-php-net-q0.jpg",
+  "w": 1118,
+  "h": 1092,
+  "lines": [
+   [
+    48,
+    600,
+    834,
+    56
+   ],
+   [
+    48,
+    696,
+    816,
+    56
+   ]
+  ],
+  "quote": "Security advisory: Critical remote code execution vulnerabilities, update now",
+  "outlet": "PHP.net",
+  "date": "Oct 23, 2026",
+  "url": "https://www.php.net/",
+  "story": "php2shell"
+ },
+ "php2shell-php-net-q1": {
+  "file": "assets/src/php2shell-php-net-q1.jpg",
+  "w": 1280,
+  "h": 1032,
+  "lines": [
+   [
+    48,
+    600,
+    1136,
+    38
+   ],
+   [
+    48,
+    654,
+    584,
+    38
+   ]
+  ],
+  "quote": "PHP 8.5.12, 8.4.27, 8.3.36 and 8.2.35 fix two critical vulnerabilities that can allow unauthenticated remote code execution",
+  "outlet": "PHP.net",
+  "date": "Oct 23, 2026",
+  "url": "https://www.php.net/",
+  "story": "php2shell"
+ },
+ "php2shell-php-net-q2": {
+  "file": "assets/src/php2shell-php-net-q2.jpg",
+  "w": 1280,
+  "h": 1088,
+  "lines": [
+   [
+    918,
+    600,
+    294,
+    38
+   ],
+   [
+    48,
+    656,
+    1118,
+    38
+   ],
+   [
+    48,
+    710,
+    914,
+    38
+   ]
+  ],
+  "quote": "We consider the risk highest for mod_php, with a demonstrated exploit where an unauthenticated request can trigger the attack before any application code runs",
+  "outlet": "PHP.net",
+  "date": "Oct 23, 2026",
+  "url": "https://www.php.net/",
+  "story": "php2shell"
+ },
+ "php2shell-php-net-q3": {
+  "file": "assets/src/php2shell-php-net-q3.jpg",
+  "w": 1240,
+  "h": 978,
+  "lines": [
+   [
+    56,
+    600,
+    948,
+    38
+   ]
+  ],
+  "quote": "PHP 8.1 and older no longer receive updates from the PHP project",
+  "outlet": "PHP.net",
+  "date": "Oct 23, 2026",
+  "url": "https://www.php.net/",
+  "story": "php2shell"
+ },
+ "php2shell-datadog-head": {
+  "file": "assets/src/php2shell-datadog-head.jpg",
+  "w": 1176,
+  "h": 668,
+  "lines": [],
+  "quote": "PHP2Shell - Critical vulnerabilities in PHP (CVE-2026-109618, CVE-2026-109619): detection, analysis, and remediation",
+  "outlet": "Datadog Security Labs",
+  "date": "Oct 21, 2026",
+  "url": "https://securitylabs.datadoghq.com/articles/php2shell-critical-vulnerabilities-in-php/",
+  "story": "php2shell"
+ },
+ "php2shell-datadog-q0": {
+  "file": "assets/src/php2shell-datadog-q0.jpg",
+  "w": 1180,
+  "h": 980,
+  "lines": [
+   [
+    56,
+    600,
+    434,
+    40
+   ]
+  ],
+  "quote": "each with a CVSS v4.0 score of 9.2",
+  "outlet": "Datadog Security Labs",
+  "date": "Oct 21, 2026",
+  "url": "https://securitylabs.datadoghq.com/articles/php2shell-critical-vulnerabilities-in-php/",
+  "story": "php2shell"
+ },
+ "php2shell-datadog-q1": {
+  "file": "assets/src/php2shell-datadog-q1.jpg",
+  "w": 1180,
+  "h": 1028,
+  "lines": [
+   [
+    252,
+    600,
+    746,
+    40
+   ],
+   [
+    56,
+    648,
+    832,
+    40
+   ]
+  ],
+  "quote": "application-level authentication can't block an attack: PHP processes the malicious request before any application code runs",
+  "outlet": "Datadog Security Labs",
+  "date": "Oct 21, 2026",
+  "url": "https://securitylabs.datadoghq.com/articles/php2shell-critical-vulnerabilities-in-php/",
+  "story": "php2shell"
+ },
+ "php2shell-datadog-q3": {
+  "file": "assets/src/php2shell-datadog-q3.jpg",
+  "w": 1180,
+  "h": 1028,
+  "lines": [
+   [
+    302,
+    600,
+    796,
+    40
+   ],
+   [
+    56,
+    648,
+    420,
+    40
+   ]
+  ],
+  "quote": "After a memory allocation fails, PHP leaves invalid data behind for its cleanup routine to process",
+  "outlet": "Datadog Security Labs",
+  "date": "Oct 21, 2026",
+  "url": "https://securitylabs.datadoghq.com/articles/php2shell-critical-vulnerabilities-in-php/",
+  "story": "php2shell"
+ },
+ "php2shell-datadog-q4": {
+  "file": "assets/src/php2shell-datadog-q4.jpg",
+  "w": 1180,
+  "h": 980,
+  "lines": [
+   [
+    304,
+    600,
+    748,
+    40
+   ]
+  ],
+  "quote": "A PHP worker can reuse stale state from a previous request",
+  "outlet": "Datadog Security Labs",
+  "date": "Oct 21, 2026",
+  "url": "https://securitylabs.datadoghq.com/articles/php2shell-critical-vulnerabilities-in-php/",
+  "story": "php2shell"
+ },
+ "php2shell-datadog-q5": {
+  "file": "assets/src/php2shell-datadog-q5.jpg",
+  "w": 1172,
+  "h": 980,
+  "lines": [
+   [
+    56,
+    600,
+    778,
+    40
+   ]
+  ],
+  "quote": "Restart or replace every worker that still runs the old runtime",
+  "outlet": "Datadog Security Labs",
+  "date": "Oct 21, 2026",
+  "url": "https://securitylabs.datadoghq.com/articles/php2shell-critical-vulnerabilities-in-php/",
+  "story": "php2shell"
+ },
+ "php2shell-github-advisory-109618-head": {
+  "file": "assets/src/php2shell-github-advisory-109618-head.jpg",
+  "w": 1176,
+  "h": 452,
+  "lines": [],
+  "quote": "RCE via OOM corruption",
+  "outlet": "GitHub (php-src advisory)",
+  "date": "",
+  "url": "https://github.com/php/php-src/security/advisories/GHSA-w8hw-w9fx-j79w",
+  "story": "php2shell"
+ },
+ "php2shell-github-advisory-109618-q0": {
+  "file": "assets/src/php2shell-github-advisory-109618-q0.jpg",
+  "w": 1280,
+  "h": 1016,
+  "lines": [
+   [
+    32,
+    480,
+    672,
+    76
+   ]
+  ],
+  "quote": "RCE via OOM corruption",
+  "outlet": "GitHub (php-src advisory)",
+  "date": "",
+  "url": "https://github.com/php/php-src/security/advisories/GHSA-w8hw-w9fx-j79w",
+  "story": "php2shell"
+ },
+ "php2shell-github-advisory-109619-head": {
+  "file": "assets/src/php2shell-github-advisory-109619-head.jpg",
+  "w": 1176,
+  "h": 452,
+  "lines": [],
+  "quote": "RCE via stale global state",
+  "outlet": "GitHub (php-src advisory)",
+  "date": "",
+  "url": "https://github.com/php/php-src/security/advisories/GHSA-6wmf-4rv5-p3rp",
+  "story": "php2shell"
+ },
+ "php2shell-github-advisory-109619-q0": {
+  "file": "assets/src/php2shell-github-advisory-109619-q0.jpg",
+  "w": 1280,
+  "h": 1016,
+  "lines": [
+   [
+    32,
+    480,
+    688,
+    76
+   ]
+  ],
+  "quote": "RCE via stale global state",
+  "outlet": "GitHub (php-src advisory)",
+  "date": "",
+  "url": "https://github.com/php/php-src/security/advisories/GHSA-6wmf-4rv5-p3rp",
+  "story": "php2shell"
+ },
+ "php2shell-securityweek-head": {
+  "file": "assets/src/php2shell-securityweek-head.jpg",
+  "w": 1280,
+  "h": 553,
+  "lines": [],
+  "quote": "PHP2Shell Patches Land as First Exploitation Attempts Hit Sensors",
+  "outlet": "SecurityWeek",
+  "date": "Oct 21, 2026",
+  "url": "https://www.securityweek.com/php2shell-patches-land-as-first-exploitation-attempts-hit-sensors/",
+  "story": "php2shell"
+ },
+ "php2shell-securityweek-q1": {
+  "file": "assets/src/php2shell-securityweek-q1.jpg",
+  "w": 1280,
+  "h": 994,
+  "lines": [
+   [
+    54,
+    600,
+    876,
+    54
+   ]
+  ],
+  "quote": "We are now seeing php2shell exploited in the wild at scale",
+  "outlet": "SecurityWeek",
+  "date": "Oct 21, 2026",
+  "url": "https://www.securityweek.com/php2shell-patches-land-as-first-exploitation-attempts-hit-sensors/",
+  "story": "php2shell"
+ },
+ "php2shell-vercel-q0": {
+  "file": "assets/src/php2shell-vercel-q0.jpg",
+  "w": 1280,
+  "h": 1030,
+  "lines": [
+   [
+    48,
+    600,
+    1110,
+    42
+   ],
+   [
+    48,
+    648,
+    492,
+    42
+   ]
+  ],
+  "quote": "Working public exploits are already available, and exploitation attempts have been reported across the industry",
+  "outlet": "Vercel",
+  "date": "Oct 21, 2026",
+  "url": "https://vercel.com/kb/bulletin/php2shell-security-bulletin",
+  "story": "php2shell"
+ },
+ "php2shell-thehackernews-head": {
+  "file": "assets/src/php2shell-thehackernews-head.jpg",
+  "w": 1280,
+  "h": 516,
+  "lines": [],
+  "quote": "Someone Tried to Exploit PHP2Shell 4 Days Before the Vulnerabilities Were Publicly Disclosed",
+  "outlet": "The Hacker News",
+  "date": "Oct 22, 2026",
+  "url": "https://thehackernews.com/2026/10/someone-tried-to-exploit-php2shell-4.html",
+  "story": "php2shell"
+ },
+ "php2shell-thehackernews-q0": {
+  "file": "assets/src/php2shell-thehackernews-q0.jpg",
+  "w": 1280,
+  "h": 1080,
+  "lines": [
+   [
+    804,
+    600,
+    400,
+    36
+   ],
+   [
+    48,
+    652,
+    1148,
+    36
+   ],
+   [
+    48,
+    704,
+    380,
+    36
+   ]
+  ],
+  "quote": "detected an attempt to exploit the newly disclosed PHP2Shell vulnerabilities dating back to October 17, 2026, against its MadPot honeypot service",
+  "outlet": "The Hacker News",
+  "date": "Oct 22, 2026",
+  "url": "https://thehackernews.com/2026/10/someone-tried-to-exploit-php2shell-4.html",
+  "story": "php2shell"
+ },
+ "php2shell-thehackernews-q1": {
+  "file": "assets/src/php2shell-thehackernews-q1.jpg",
+  "w": 1280,
+  "h": 1028,
+  "lines": [
+   [
+    58,
+    600,
+    1154,
+    36
+   ],
+   [
+    48,
+    652,
+    110,
+    36
+   ]
+  ],
+  "quote": "There is no authentication to bypass, no session to steal, and no vulnerable endpoint to discover",
+  "outlet": "The Hacker News",
+  "date": "Oct 22, 2026",
+  "url": "https://thehackernews.com/2026/10/someone-tried-to-exploit-php2shell-4.html",
+  "story": "php2shell"
+ },
+ "php2shell-aws-blog-head": {
+  "file": "assets/src/php2shell-aws-blog-head.jpg",
+  "w": 1176,
+  "h": 567,
+  "lines": [],
+  "quote": "Amazon Threat Intelligence identifies PHP2Shell exploitation prior to public disclosure in MadPot",
+  "outlet": "AWS Security Blog",
+  "date": "Oct 21, 2026",
+  "url": "https://aws.amazon.com/blogs/security/amazon-threat-intelligence-identifies-php2shell-exploitation-prior-to-public-disclosure-in-madpot/",
+  "story": "php2shell"
+ },
+ "php2shell-aws-blog-q0": {
+  "file": "assets/src/php2shell-aws-blog-q0.jpg",
+  "w": 1592,
+  "h": 1018,
+  "lines": [
+   [
+    48,
+    600,
+    1496,
+    34
+   ],
+   [
+    48,
+    644,
+    426,
+    34
+   ]
+  ],
+  "quote": "Amazon Threat Intelligence identified a PHP2Shell exploitation attempt dating to Oct. 17, 2026, in MadPot telemetry, four days before public disclosure",
+  "outlet": "AWS Security Blog",
+  "date": "Oct 21, 2026",
+  "url": "https://aws.amazon.com/blogs/security/amazon-threat-intelligence-identifies-php2shell-exploitation-prior-to-public-disclosure-in-madpot/",
+  "story": "php2shell"
+ },
+ "php2shell-aws-blog-q2": {
+  "file": "assets/src/php2shell-aws-blog-q2.jpg",
+  "w": 1262,
+  "h": 1018,
+  "lines": [
+   [
+    206,
+    600,
+    940,
+    34
+   ],
+   [
+    56,
+    644,
+    196,
+    34
+   ]
+  ],
+  "quote": "AI-assisted analysis makes it cheaper to turn a patch diff or advisory into a working exploit",
+  "outlet": "AWS Security Blog",
+  "date": "Oct 21, 2026",
+  "url": "https://aws.amazon.com/blogs/security/amazon-threat-intelligence-identifies-php2shell-exploitation-prior-to-public-disclosure-in-madpot/",
+  "story": "php2shell"
+ },
+ "php2shell-insurancebusiness-q0": {
+  "file": "assets/src/php2shell-insurancebusiness-q0.jpg",
+  "w": 1280,
+  "h": 1036,
+  "lines": [
+   [
+    20,
+    600,
+    1054,
+    42
+   ],
+   [
+    20,
+    654,
+    900,
+    42
+   ]
+  ],
+  "quote": "Websites belonging to UK councils, the Metropolitan Police and governments across Europe went dark on Wednesday",
+  "outlet": "Insurance Business UK",
+  "date": "Oct 21, 2026",
+  "url": "https://www.insurancebusinessmag.com/uk/news/cyber/uk-councils-and-met-police-among-sites-pulled-offline-after-ncsc-alert-594424.aspx",
+  "story": "php2shell"
+ },
+ "php2shell-wiz-blog-head": {
+  "file": "assets/src/php2shell-wiz-blog-head.jpg",
+  "w": 1264,
+  "h": 608,
+  "lines": [],
+  "quote": "PHP2Shell: AI uncovers critical RCE vulnerabilities affecting 70% of the Internet",
+  "outlet": "Wiz",
+  "date": "Oct 21, 2026",
+  "url": "https://www.wiz.io/blog/php2shell-php-rce",
+  "story": "php2shell"
+ },
+ "php2shell-wiz-blog-q1": {
+  "file": "assets/src/php2shell-wiz-blog-q1.jpg",
+  "w": 1264,
+  "h": 1116,
+  "lines": [
+   [
+    440,
+    600,
+    608,
+    48
+   ],
+   [
+    56,
+    664,
+    1080,
+    48
+   ],
+   [
+    56,
+    728,
+    336,
+    48
+   ]
+  ],
+  "quote": "how frontier AI helped us find and fix vulnerabilities that had remained hidden in the PHP codebase for more than a decade",
+  "outlet": "Wiz",
+  "date": "Oct 21, 2026",
+  "url": "https://www.wiz.io/blog/php2shell-php-rce",
+  "story": "php2shell"
+ },
+ "nodejs-nodejs-blog-q0": {
+  "file": "assets/src/nodejs-nodejs-blog-q0.jpg",
+  "w": 1280,
+  "h": 1094,
+  "lines": [
+   [
+    32,
+    562,
+    1076,
+    82
+   ],
+   [
+    32,
+    634,
+    244,
+    82
+   ]
+  ],
+  "quote": "Wednesday, October 21, 2026 Security Releases",
+  "outlet": "Node.js (official blog)",
+  "date": "Oct 21, 2026",
+  "url": "https://nodejs.org/en/blog/vulnerability/october-2026-security-releases",
+  "story": "nodejs"
+ },
+ "nodejs-securityonline-head": {
+  "file": "assets/src/nodejs-securityonline-head.jpg",
+  "w": 1176,
+  "h": 514,
+  "lines": [],
+  "quote": "Node.js Fixes 10 Flaws, Including Brotli RCE and TLS Hostname Bypasses",
+  "outlet": "SecurityOnline",
+  "date": "Oct 21, 2026",
+  "url": "https://securityonline.info/nodejs-security-release-october-2026/",
+  "story": "nodejs"
+ },
+ "nodejs-securityonline-q0": {
+  "file": "assets/src/nodejs-securityonline-q0.jpg",
+  "w": 1136,
+  "h": 1046,
+  "lines": [
+   [
+    56,
+    600,
+    952,
+    48
+   ],
+   [
+    56,
+    658,
+    828,
+    48
+   ]
+  ],
+  "quote": "On October 21, 2026, the Node.js project shipped versions 22.23.4, 24.22.1 and 26.12.1 to fix 10 vulnerabilities",
+  "outlet": "SecurityOnline",
+  "date": "Oct 21, 2026",
+  "url": "https://securityonline.info/nodejs-security-release-october-2026/",
+  "story": "nodejs"
+ },
+ "railway-railway-blog-q0": {
+  "file": "assets/src/railway-railway-blog-q0.jpg",
+  "w": 1280,
+  "h": 1176,
+  "lines": [
+   [
+    40,
+    436,
+    886,
+    124
+   ],
+   [
+    40,
+    548,
+    1096,
+    124
+   ]
+  ],
+  "quote": "Security Disclosure: Wednesday October 21st",
+  "outlet": "Railway (official blog)",
+  "date": "Oct 21, 2026",
+  "url": "https://blog.railway.com/p/security-disclosure-wednesday-october-21st",
+  "story": "railway"
+ },
+ "railway-railway-blog-q1": {
+  "file": "assets/src/railway-railway-blog-q1.jpg",
+  "w": 1280,
+  "h": 1090,
+  "lines": [
+   [
+    934,
+    600,
+    276,
+    42
+   ],
+   [
+    40,
+    654,
+    1178,
+    42
+   ],
+   [
+    40,
+    708,
+    868,
+    42
+   ]
+  ],
+  "quote": "an unauthorized third party may have accessed encrypted environment variables and, for some of them, obtained the decrypted contents",
+  "outlet": "Railway (official blog)",
+  "date": "Oct 21, 2026",
+  "url": "https://blog.railway.com/p/security-disclosure-wednesday-october-21st",
+  "story": "railway"
+ },
+ "railway-railway-blog-q2": {
+  "file": "assets/src/railway-railway-blog-q2.jpg",
+  "w": 1280,
+  "h": 1090,
+  "lines": [
+   [
+    40,
+    600,
+    1050,
+    42
+   ],
+   [
+    40,
+    654,
+    1066,
+    42
+   ],
+   [
+    40,
+    708,
+    160,
+    42
+   ]
+  ],
+  "quote": "We believe this is part of a series of attacks recently targeting platform companies with the aim of compromising AI inference providers",
+  "outlet": "Railway (official blog)",
+  "date": "Oct 21, 2026",
+  "url": "https://blog.railway.com/p/security-disclosure-wednesday-october-21st",
+  "story": "railway"
+ },
+ "railway-railway-blog-q3": {
+  "file": "assets/src/railway-railway-blog-q3.jpg",
+  "w": 1280,
+  "h": 1036,
+  "lines": [
+   [
+    564,
+    600,
+    560,
+    42
+   ],
+   [
+    40,
+    654,
+    702,
+    42
+   ]
+  ],
+  "quote": "we strongly recommend that you immediately roll all environment variables",
+  "outlet": "Railway (official blog)",
+  "date": "Oct 21, 2026",
+  "url": "https://blog.railway.com/p/security-disclosure-wednesday-october-21st",
+  "story": "railway"
+ },
+ "railway-railway-blog-q4": {
+  "file": "assets/src/railway-railway-blog-q4.jpg",
+  "w": 1280,
+  "h": 982,
+  "lines": [
+   [
+    40,
+    600,
+    826,
+    42
+   ]
+  ],
+  "quote": "All deployments are paused while we investigate",
+  "outlet": "Railway (official blog)",
+  "date": "Oct 21, 2026",
+  "url": "https://blog.railway.com/p/security-disclosure-wednesday-october-21st",
+  "story": "railway"
+ },
+ "railway-railway-prelim-report-head": {
+  "file": "assets/src/railway-railway-prelim-report-head.jpg",
+  "w": 1280,
+  "h": 604,
+  "lines": [],
+  "quote": "Preliminary Report: Oct 21st Security Incident",
+  "outlet": "Railway (preliminary report)",
+  "date": "Oct 22, 2026",
+  "url": "https://blog.railway.com/p/preliminary-report-october-security-incident",
+  "story": "railway"
+ },
+ "railway-railway-prelim-report-q0": {
+  "file": "assets/src/railway-railway-prelim-report-q0.jpg",
+  "w": 1280,
+  "h": 1090,
+  "lines": [
+   [
+    960,
+    600,
+    86,
+    42
+   ],
+   [
+    40,
+    654,
+    1156,
+    42
+   ],
+   [
+    40,
+    708,
+    652,
+    42
+   ]
+  ],
+  "quote": "Early investigations tell us this attack was attempting to obtain AI provider API keys to perform distillation attacks",
+  "outlet": "Railway (preliminary report)",
+  "date": "Oct 22, 2026",
+  "url": "https://blog.railway.com/p/preliminary-report-october-security-incident",
+  "story": "railway"
+ },
+ "railway-railway-prelim-report-q2": {
+  "file": "assets/src/railway-railway-prelim-report-q2.jpg",
+  "w": 1280,
+  "h": 1036,
+  "lines": [
+   [
+    258,
+    600,
+    948,
+    42
+   ],
+   [
+    40,
+    654,
+    582,
+    42
+   ]
+  ],
+  "quote": "at most 1.85% of all workspaces had some environment variables potentially compromised",
+  "outlet": "Railway (preliminary report)",
+  "date": "Oct 22, 2026",
+  "url": "https://blog.railway.com/p/preliminary-report-october-security-incident",
+  "story": "railway"
+ },
+ "zeabur-zeabur-blog-head": {
+  "file": "assets/src/zeabur-zeabur-blog-head.jpg",
+  "w": 1280,
+  "h": 572,
+  "lines": [],
+  "quote": "Zeabur is shutting down: what happens next",
+  "outlet": "Zeabur (official blog)",
+  "date": "Oct 17, 2026",
+  "url": "https://zeabur.com/blogs/zeabur-is-shutting-down",
+  "story": "zeabur"
+ },
+ "zeabur-zeabur-blog-q1": {
+  "file": "assets/src/zeabur-zeabur-blog-q1.jpg",
+  "w": 1280,
+  "h": 1030,
+  "lines": [
+   [
+    1032,
+    600,
+    186,
+    42
+   ],
+   [
+    182,
+    648,
+    908,
+    42
+   ]
+  ],
+  "quote": "all dedicated servers and shared clusters will be shut down by December 31",
+  "outlet": "Zeabur (official blog)",
+  "date": "Oct 17, 2026",
+  "url": "https://zeabur.com/blogs/zeabur-is-shutting-down",
+  "story": "zeabur"
+ },
+ "zeabur-zeabur-blog-q2": {
+  "file": "assets/src/zeabur-zeabur-blog-q2.jpg",
+  "w": 1280,
+  "h": 976,
+  "lines": [
+   [
+    48,
+    600,
+    948,
+    36
+   ]
+  ],
+  "quote": "Today, I have a difficult decision to share: we will be winding down Zeabur",
+  "outlet": "Zeabur (official blog)",
+  "date": "Oct 17, 2026",
+  "url": "https://zeabur.com/blogs/zeabur-is-shutting-down",
+  "story": "zeabur"
+ },
+ "zeabur-zeabur-incident-report-head": {
+  "file": "assets/src/zeabur-zeabur-incident-report-head.jpg",
+  "w": 1280,
+  "h": 572,
+  "lines": [],
+  "quote": "Zeabur October 2026 security incident (preliminary report)",
+  "outlet": "Zeabur (incident report)",
+  "date": "Oct 19, 2026",
+  "url": "https://zeabur.com/blogs/october-2026-security-incident",
+  "story": "zeabur"
+ },
+ "zeabur-zeabur-incident-report-q0": {
+  "file": "assets/src/zeabur-zeabur-incident-report-q0.jpg",
+  "w": 1224,
+  "h": 1022,
+  "lines": [
+   [
+    282,
+    600,
+    886,
+    36
+   ],
+   [
+    56,
+    646,
+    508,
+    36
+   ]
+  ],
+  "quote": "On October 14–15, 2026, an attacker used leaked Zeabur internal credentials to break into the shared cluster",
+  "outlet": "Zeabur (incident report)",
+  "date": "Oct 19, 2026",
+  "url": "https://zeabur.com/blogs/october-2026-security-incident",
+  "story": "zeabur"
+ },
+ "zeabur-zeabur-incident-report-q2": {
+  "file": "assets/src/zeabur-zeabur-incident-report-q2.jpg",
+  "w": 1224,
+  "h": 1020,
+  "lines": [
+   [
+    56,
+    600,
+    1072,
+    36
+   ],
+   [
+    56,
+    644,
+    400,
+    36
+   ]
+  ],
+  "quote": "The shared cluster's admin interface was open to the public internet at the time, and the admin tokens had no expiry",
+  "outlet": "Zeabur (incident report)",
+  "date": "Oct 19, 2026",
+  "url": "https://zeabur.com/blogs/october-2026-security-incident",
+  "story": "zeabur"
+ },
+ "opencode-techcrunch-head": {
+  "file": "assets/src/opencode-techcrunch-head.jpg",
+  "w": 1252,
+  "h": 595,
+  "lines": [],
+  "quote": "Hackers hit AI coding tool OpenCode, running up charges on users’ AI accounts",
+  "outlet": "TechCrunch",
+  "date": "Oct 19, 2026",
+  "url": "https://techcrunch.com/2026/10/19/hackers-hit-ai-coding-tool-opencode-running-up-charges-on-users-ai-accounts/",
+  "story": "opencode"
+ },
+ "opencode-techcrunch-q1": {
+  "file": "assets/src/opencode-techcrunch-q1.jpg",
+  "w": 1264,
+  "h": 1084,
+  "lines": [
+   [
+    508,
+    600,
+    622,
+    38
+   ],
+   [
+    56,
+    652,
+    1126,
+    38
+   ],
+   [
+    56,
+    706,
+    140,
+    38
+   ]
+  ],
+  "quote": "attackers broke into an older system overnight, affecting 1.4% of users of its online platform, OpenCode Console",
+  "outlet": "TechCrunch",
+  "date": "Oct 19, 2026",
+  "url": "https://techcrunch.com/2026/10/19/hackers-hit-ai-coding-tool-opencode-running-up-charges-on-users-ai-accounts/",
+  "story": "opencode"
+ },
+ "opencode-techcrunch-q2": {
+  "file": "assets/src/opencode-techcrunch-q2.jpg",
+  "w": 1264,
+  "h": 1086,
+  "lines": [
+   [
+    744,
+    600,
+    296,
+    38
+   ],
+   [
+    56,
+    654,
+    1078,
+    38
+   ],
+   [
+    56,
+    708,
+    66,
+    38
+   ]
+  ],
+  "quote": "I saw my Open AI, Anthropic, and Google AI spend alerts all fire off before going to bed",
+  "outlet": "TechCrunch",
+  "date": "Oct 19, 2026",
+  "url": "https://techcrunch.com/2026/10/19/hackers-hit-ai-coding-tool-opencode-running-up-charges-on-users-ai-accounts/",
+  "story": "opencode"
+ },
+ "opencode-techcrunch-q3": {
+  "file": "assets/src/opencode-techcrunch-q3.jpg",
+  "w": 1264,
+  "h": 1032,
+  "lines": [
+   [
+    56,
+    600,
+    1004,
+    38
+   ],
+   [
+    56,
+    654,
+    968,
+    38
+   ]
+  ],
+  "quote": "Other users reported charges in the hundreds of dollars on individual accounts; a few described totals above $1,000",
+  "outlet": "TechCrunch",
+  "date": "Oct 19, 2026",
+  "url": "https://techcrunch.com/2026/10/19/hackers-hit-ai-coding-tool-opencode-running-up-charges-on-users-ai-accounts/",
+  "story": "opencode"
+ },
+ "opencode-techcrunch-q4": {
+  "file": "assets/src/opencode-techcrunch-q4.jpg",
+  "w": 1264,
+  "h": 978,
+  "lines": [
+   [
+    56,
+    600,
+    1086,
+    38
+   ]
+  ],
+  "quote": "OpenCode said refunds for unauthorized charges are underway",
+  "outlet": "TechCrunch",
+  "date": "Oct 19, 2026",
+  "url": "https://techcrunch.com/2026/10/19/hackers-hit-ai-coding-tool-opencode-running-up-charges-on-users-ai-accounts/",
+  "story": "opencode"
+ },
+ "opencode-bleepingcomputer-head": {
+  "file": "assets/src/opencode-bleepingcomputer-head.jpg",
+  "w": 1280,
+  "h": 524,
+  "lines": [],
+  "quote": "OpenCode hack exposes API keys amid AI distillation attacks",
+  "outlet": "BleepingComputer",
+  "date": "Oct 19, 2026",
+  "url": "https://www.bleepingcomputer.com/news/security/opencode-hack-exposes-api-keys-amid-ai-distillation-attacks/",
+  "story": "opencode"
+ },
+ "opencode-bleepingcomputer-q2": {
+  "file": "assets/src/opencode-bleepingcomputer-q2.jpg",
+  "w": 1280,
+  "h": 1034,
+  "lines": [
+   [
+    30,
+    600,
+    1212,
+    42
+   ],
+   [
+    30,
+    652,
+    956,
+    42
+   ]
+  ],
+  "quote": "Distillation is a legitimate machine-learning technique that trains smaller AI models using responses generated by more powerful models",
+  "outlet": "BleepingComputer",
+  "date": "Oct 19, 2026",
+  "url": "https://www.bleepingcomputer.com/news/security/opencode-hack-exposes-api-keys-amid-ai-distillation-attacks/",
+  "story": "opencode"
+ },
+ "opencode-x-opencode-q0": {
+  "file": "assets/src/opencode-x-opencode-q0.jpg",
+  "w": 1716,
+  "h": 830,
+  "lines": [
+   [
+    48,
+    358,
+    1620,
+    60
+   ],
+   [
+    48,
+    430,
+    1276,
+    60
+   ]
+  ],
+  "quote": "We had a security breach last night related to a large scale distillation attack that impacted 1.4% of OpenCode Console users",
+  "outlet": "OpenCode on X",
+  "date": "Oct 17, 2026",
+  "url": "https://x.com/opencode/status/2111519637049319818",
+  "story": "opencode"
+ },
+ "emudhra-bleepingcomputer-head": {
+  "file": "assets/src/emudhra-bleepingcomputer-head.jpg",
+  "w": 1280,
+  "h": 524,
+  "lines": [],
+  "quote": "Mozilla, Google, Apple block compromised eMudhra CA certificates",
+  "outlet": "BleepingComputer",
+  "date": "Oct 20, 2026",
+  "url": "https://www.bleepingcomputer.com/news/security/mozilla-google-apple-block-compromised-emudhra-ca-certificates/",
+  "story": "emudhra"
+ },
+ "emudhra-bleepingcomputer-q1": {
+  "file": "assets/src/emudhra-bleepingcomputer-q1.jpg",
+  "w": 1280,
+  "h": 1032,
+  "lines": [
+   [
+    916,
+    600,
+    288,
+    42
+   ],
+   [
+    30,
+    650,
+    1044,
+    42
+   ]
+  ],
+  "quote": "the private key for eMudhra's \"EM OV TLS CA - G3C\" certificate had a value of just 4",
+  "outlet": "BleepingComputer",
+  "date": "Oct 20, 2026",
+  "url": "https://www.bleepingcomputer.com/news/security/mozilla-google-apple-block-compromised-emudhra-ca-certificates/",
+  "story": "emudhra"
+ },
+ "emudhra-bleepingcomputer-q2": {
+  "file": "assets/src/emudhra-bleepingcomputer-q2.jpg",
+  "w": 1280,
+  "h": 1034,
+  "lines": [
+   [
+    428,
+    600,
+    774,
+    42
+   ],
+   [
+    30,
+    652,
+    722,
+    42
+   ]
+  ],
+  "quote": "eMudhra blamed the issue on an error in a script used to generate the certificates in April 2025",
+  "outlet": "BleepingComputer",
+  "date": "Oct 20, 2026",
+  "url": "https://www.bleepingcomputer.com/news/security/mozilla-google-apple-block-compromised-emudhra-ca-certificates/",
+  "story": "emudhra"
+ },
+ "emudhra-thenextweb-head": {
+  "file": "assets/src/emudhra-thenextweb-head.jpg",
+  "w": 1176,
+  "h": 412,
+  "lines": [],
+  "quote": "",
+  "outlet": "The Next Web",
+  "date": "Oct 21, 2026",
+  "url": "https://thenextweb.com/news/emudhra-certificates-weak-keys-browsers-block",
+  "story": "emudhra"
+ },
+ "emudhra-thenextweb-q1": {
+  "file": "assets/src/emudhra-thenextweb-q1.jpg",
+  "w": 1280,
+  "h": 1070,
+  "lines": [
+   [
+    64,
+    600,
+    1152,
+    58
+   ],
+   [
+    96,
+    672,
+    550,
+    58
+   ]
+  ],
+  "quote": "Chrome, Firefox, Apple and Microsoft have blocked the eMudhra certificates",
+  "outlet": "The Next Web",
+  "date": "Oct 21, 2026",
+  "url": "https://thenextweb.com/news/emudhra-certificates-weak-keys-browsers-block",
+  "story": "emudhra"
+ },
+ "emudhra-scotthelme-q0": {
+  "file": "assets/src/emudhra-scotthelme-q0.jpg",
+  "w": 1056,
+  "h": 1044,
+  "lines": [
+   [
+    56,
+    600,
+    900,
+    42
+   ],
+   [
+    56,
+    662,
+    164,
+    42
+   ]
+  ],
+  "quote": "One of eMudhra's certificate authority private keys is the number 4.",
+  "outlet": "Scott Helme",
+  "date": "Oct 20, 2026",
+  "url": "https://scotthelme.co.uk/eight-bits-of-trust-emudhras-ca-keys-cracked-in-milliseconds/",
+  "story": "emudhra"
+ },
+ "emudhra-scotthelme-q1": {
+  "file": "assets/src/emudhra-scotthelme-q1.jpg",
+  "w": 1056,
+  "h": 1044,
+  "lines": [
+   [
+    56,
+    600,
+    920,
+    42
+   ],
+   [
+    56,
+    662,
+    652,
+    42
+   ]
+  ],
+  "quote": "Not a number that starts with 4, or the number 4 followed by a few hundred random digits, just, 4...",
+  "outlet": "Scott Helme",
+  "date": "Oct 20, 2026",
+  "url": "https://scotthelme.co.uk/eight-bits-of-trust-emudhras-ca-keys-cracked-in-milliseconds/",
+  "story": "emudhra"
+ },
+ "emudhra-google-blog-head": {
+  "file": "assets/src/emudhra-google-blog-head.jpg",
+  "w": 1200,
+  "h": 940,
+  "lines": [],
+  "quote": "Protecting Chrome and Android Users from Compromised eMudhra Intermediate CA Certificates",
+  "outlet": "Google (Chrome Security)",
+  "date": "Oct 20, 2026",
+  "url": "https://blog.google/security/protecting-chrome-and-android-users-from-compromised-emudhra-intermediate-ca-certificates/",
+  "story": "emudhra"
+ },
+ "emudhra-google-blog-q1": {
+  "file": "assets/src/emudhra-google-blog-q1.jpg",
+  "w": 1200,
+  "h": 1028,
+  "lines": [
+   [
+    56,
+    600,
+    1028,
+    40
+   ],
+   [
+    56,
+    648,
+    114,
+    40
+   ]
+  ],
+  "quote": "enabling anyone to forge trusted HTTPS certificates to impersonate any website",
+  "outlet": "Google (Chrome Security)",
+  "date": "Oct 20, 2026",
+  "url": "https://blog.google/security/protecting-chrome-and-android-users-from-compromised-emudhra-intermediate-ca-certificates/",
+  "story": "emudhra"
+ },
+ "emudhra-thehackernews-q0": {
+  "file": "assets/src/emudhra-thehackernews-q0.jpg",
+  "w": 1280,
+  "h": 976,
+  "lines": [
+   [
+    152,
+    600,
+    826,
+    36
+   ]
+  ],
+  "quote": "Chrome and Firefox blocked the eight certificates within hours",
+  "outlet": "The Hacker News",
+  "date": "Oct 20, 2026",
+  "url": "https://thehackernews.com/2026/10/eight-emudhra-ca-keys-compromised.html",
+  "story": "emudhra"
+ },
+ "ai-agents-thenextweb-head": {
+  "file": "assets/src/ai-agents-thenextweb-head.jpg",
+  "w": 1176,
+  "h": 412,
+  "lines": [],
+  "quote": "",
+  "outlet": "The Next Web",
+  "date": "Oct 19, 2026",
+  "url": "https://thenextweb.com/news/ai-agents-hacker-cairn-100-sites-deere-norforge",
+  "story": "ai-agents"
+ },
+ "php2shell-techcrunch-phpocalypse-head": {
+  "file": "assets/src/php2shell-techcrunch-phpocalypse-head.jpg",
+  "w": 1252,
+  "h": 524,
+  "lines": [],
+  "quote": "PHP-ocalypse: How two critical web bugs almost broke the internet",
+  "outlet": "TechCrunch",
+  "date": "Oct 24, 2026",
+  "url": "https://techcrunch.com/2026/10/24/php-ocalypse-how-two-critical-web-bugs-almost-broke-the-internet/",
+  "story": "php2shell"
+ },
+ "php2shell-techcrunch-phpocalypse-q2": {
+  "file": "assets/src/php2shell-techcrunch-phpocalypse-q2.jpg",
+  "w": 1264,
+  "h": 1086,
+  "lines": [
+   [
+    1072,
+    600,
+    118,
+    38
+   ],
+   [
+    56,
+    654,
+    982,
+    38
+   ],
+   [
+    56,
+    708,
+    1100,
+    38
+   ]
+  ],
+  "quote": "Banks, retailers, gaming sites, online stores, hospitals, and some government agencies took down their servers to prevent attacks",
+  "outlet": "TechCrunch",
+  "date": "Oct 24, 2026",
+  "url": "https://techcrunch.com/2026/10/24/php-ocalypse-how-two-critical-web-bugs-almost-broke-the-internet/",
+  "story": "php2shell"
+ }
+}

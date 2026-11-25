@@ -1,0 +1,28 @@
+{
+  "text": {
+    "a": "you're not <em>slow.</em>"
+  },
+  "images": {
+    "l": "../../assets/stock/px-5185082.jpg",
+    "me": "../../assets/photo/oredev/od-55642441705.png",
+    "r": "../../assets/stock/px-8553916.jpg"
+  },
+  "kind": "3-panel collage (real study scenes either side, her alive in the middle) + one reassuring lowercase line, one word red",
+  "board": "pick1119-22 (\"I'm 45. If you're in your 30s, watch this.\" + \"girl, it's not too late.\" over a 3-panel collage)",
+  "fonts": [
+    "thumbs-10 Poppins Bold lowercase, white + red key word (Thumbnails 84)"
+  ],
+  "colours": "thumbs-10: #FFFFFF + red #E8352B on the photos (bottom darkened flat)",
+  "photo": "Øredev 2026 photo 55642441705 (lectern, smiling, close; logo/sticker cropped) + Pexels 5185082, 8553916 (free licence)",
+  "thumbnail_text": "you're not slow.",
+  "titles": [
+    "Research Papers Feel Hard? You're Reading Them Wrong",
+    "If Research Papers Overwhelm You, Watch This",
+    "How to Read Research Papers Effectively for Beginners"
+  ],
+  "direction": "Copies pick1119-22: a warm talking face in the middle of a 3-photo collage and one lowercase line of comfort, one word coloured. The title names the problem and the promise.",
+  "nudge": {},
+  "vars": {},
+  "class": "no-lift",
+  "title": "Research Papers Feel Hard? You're Reading Them Wrong"
+}

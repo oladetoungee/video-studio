@@ -1,0 +1,20 @@
+{
+  "direction": "Her sceptical look (1:35) in her room; her face big on the right, 'is he already / MARRIED?' fully readable on the left (italic serif over condensed caps, like 'Capsule wardrobe' / 'THIS IS WAR' on her board); Ghana flag on the hook line; a search-bar sticker (illustration)",
+  "thumbnail_text": "Is he already married?",
+  "title": "Ghana Launched an App to Check If Someone Is Married",
+  "titles": [
+    "Ghana Launched an App to Check If Someone Is Married",
+    "You Can Now Look Up Marriages in Ghana. Should You?",
+    "Ghana's New Marriage Search App: Good Idea or Privacy Risk?"
+  ],
+  "text": {
+    "line1": "is he already",
+    "line2": "MARRIED?",
+    "s_q": "Search Ghana's records"
+  },
+  "images": {
+    "scene": "../../assets/scene/s_95.63.jpg",
+    "front": "../../assets/scene/mask/s_95.63.png"
+  },
+  "vars": {}
+}

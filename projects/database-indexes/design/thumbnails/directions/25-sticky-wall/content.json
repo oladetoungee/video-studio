@@ -1,0 +1,22 @@
+{
+  "direction": "Text woven into the scene: three sticky notes on the empty wall of her room, written in marker, the fix as a 3-step path (slow query? -> add an index -> check EXPLAIN), one red arrow. Her thinking beside them. Close to her Pinterest board (handwritten words, real room), not used in any earlier project. Round 3: the steps in the right order (check with EXPLAIN before adding the index), thicker arrows, plain words.",
+  "concept": "new (taste critic: \"handwritten marker on paper or sticky notes\")",
+  "thumbnail_text": "slow query? → run EXPLAIN → add an index",
+  "title": "Don't Add a Database Index Before You Run EXPLAIN",
+  "titles": [
+    "Don't Add a Database Index Before You Run EXPLAIN",
+    "Added an Index and It's Still Slow? Check This First",
+    "Database Indexing for Beginners: Fix Slow SQL Queries"
+  ],
+  "text": {
+    "n1": "slow query?",
+    "n2": "run EXPLAIN",
+    "n3": "add an index"
+  },
+  "images": {
+    "scene": "../../assets/scene/f_533.6.jpg"
+  },
+  "frame": "8:53.6 (finger at temple, mouth closed)",
+  "vars": {},
+  "scores": "final gate (round 4): A topic/click 4/6 · B pair 7 · C taste 7"
+}

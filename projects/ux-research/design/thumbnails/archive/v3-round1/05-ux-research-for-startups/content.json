@@ -1,0 +1,27 @@
+{
+  "direction": "Wide shot of her calm, hands together, the words on white and orange highlight bars (the bold editorial look from her board), a new app on a phone with a sticky note 'test it first'. References: Pinterest 'JOBS ARE DEAD' / 'THE 9-5 COLLAPSE' (highlight bars), yt 'stop lying to yourself' (14).",
+  "thumbnail_text": "UX research for startups",
+  "text": {
+    "hd": "<span>UX research</span><br><b>for startups</b>",
+    "app": "Our new app",
+    "btn": "Launch",
+    "note": "Test it first!"
+  },
+  "images": {
+    "bg": "../../assets/scene/g/s_287.9.jpg",
+    "cut": "../../assets/scene/g/mask3/s_287.9.png"
+  },
+  "vars": {
+    "--accent": "#E8501E",
+    "--bgb": "0.95",
+    "--meb": "1.05"
+  },
+  "titles": [
+    "UX Research on a Small Budget: Start With 5 Users",
+    "Can't Afford UX Research? Start With 5 Conversations",
+    "Test Your App Idea Before You Build It (UX Research)"
+  ],
+  "title": "UX Research on a Small Budget: Start With 5 Users",
+  "set": 3,
+  "kind": "photo"
+}

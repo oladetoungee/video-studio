@@ -1,0 +1,33 @@
+{
+  "direction": "Photo background, kit T1 (top 3): her room washed slate so it goes quiet, she calm in colour on the left; the instruction huge on the right; one literal mechanism: a terminal asking 'php -v' and answering a fixed version with a green tick, the generic elephant (not the PHP logo) with a plaster on top. References: her ux-research thumbnail (washed room, her in colour), her database-indexes (one mechanism, few big things).",
+  "thumbnail_text": "PATCH YOUR PHP",
+  "titles": [
+    "PHP2Shell Explained: The PHP Flaw and October's Other Hacks",
+    "PHP Vulnerability 2026: How to Check and Patch PHP2Shell"
+  ],
+  "title": "PHP2Shell Explained: The PHP Flaw and October's Other Hacks",
+  "kind": "photo",
+  "recommended": true,
+  "text": {
+    "hd": "Patch your<span class=\"big acc\">PHP</span>",
+    "cmd": "<span class=\"p\">$</span> php -v",
+    "out": "PHP 8.4.27 <span class=\"ok\">✓ patched</span>"
+  },
+  "images": {
+    "bg": "../../assets/scene/gbemi-9.0.jpg",
+    "me": "../../assets/scene/gbemi-9.0-person.png",
+    "elephant": "../../assets/draw/elephant.svg"
+  },
+  "vars": {
+    "--ground": "#16110D",
+    "--fg": "#EFE7D8",
+    "--accent": "#F2541B",
+    "--wash": "#5A6A8C",
+    "--dim": "rgba(16,18,26,.32)",
+    "--sc": "1.28",
+    "--sc-x": "-175px",
+    "--sc-y": "0px",
+    "--bgb": "1.12"
+  },
+  "scores": "cold critic R1 7.5 · R2 7"
+}

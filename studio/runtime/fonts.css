@@ -1,0 +1,99 @@
+/* House fonts: full font files (google/fonts repo) in library/fonts, served by the studio at /library/fonts */
+@font-face{font-family:"Bricolage Grotesque";font-weight:200 800;font-stretch:75% 100%;src:url(/library/fonts/BricolageGrotesque.ttf) format("truetype")}
+@font-face{font-family:Archivo;font-weight:100 900;font-stretch:62% 125%;src:url(/library/fonts/Archivo.ttf) format("truetype")}
+@font-face{font-family:"DM Mono";font-weight:400;src:url(/library/fonts/DMMono-Regular.ttf) format("truetype")}
+@font-face{font-family:"DM Mono";font-weight:500;src:url(/library/fonts/DMMono-Medium.ttf) format("truetype")}
+@font-face{font-family:"Instrument Serif";font-style:italic;font-weight:400;src:url(/library/fonts/InstrumentSerif-Italic.ttf) format("truetype")}
+@font-face{font-family:"Instrument Serif";font-style:normal;font-weight:400;src:url(/library/fonts/InstrumentSerif-Regular.ttf) format("truetype")}
+/* Added 2026-10-02 for ghana-marrify (Blink look). OFL. Loaded on demand by a film/moment manifest "fonts" list. */
+@font-face{font-family:"Instrument Sans";font-weight:400 700;font-stretch:75% 100%;src:url(/library/fonts/InstrumentSans.ttf) format("truetype")}
+@font-face{font-family:"Geist Mono";font-weight:100 900;src:url(/library/fonts/GeistMono.ttf) format("truetype")}
+/* Added 2026-10-13 for claude-rule ("The Thread" look). OFL. Loaded on demand (film.json / talking-head.json "fonts"). */
+@font-face{font-family:"Schibsted Grotesk";font-weight:400 900;src:url(/library/fonts/SchibstedGrotesk.ttf) format("truetype")}
+@font-face{font-family:"IBM Plex Mono";font-weight:400;src:url(/library/fonts/IBMPlexMono-Regular.ttf) format("truetype")}
+@font-face{font-family:"IBM Plex Mono";font-weight:500;src:url(/library/fonts/IBMPlexMono-Medium.ttf) format("truetype")}
+@font-face{font-family:"Newsreader";font-weight:200 800;src:url(/library/fonts/Newsreader.ttf) format("truetype")}
+@font-face{font-family:"Newsreader";font-style:italic;font-weight:200 800;src:url(/library/fonts/Newsreader-Italic.ttf) format("truetype")}
+/* Added 2026-10-26 for october-attacks ("The Month" look). OFL 1.1 (checked in each file's name table). Loaded on demand (film.json "fonts"). */
+@font-face{font-family:Anton;font-weight:400;src:url(/library/fonts/Anton-Regular.ttf) format("truetype")}
+@font-face{font-family:Manrope;font-weight:200 800;src:url(/library/fonts/Manrope.ttf) format("truetype")}
+@font-face{font-family:"Spline Sans Mono";font-weight:300 700;src:url(/library/fonts/SplineSansMono.ttf) format("truetype")}
+/* Added 2026-11-12: her own "Full video on YouTube" end screen font (Poppins, OFL, google/fonts). Used by the outro card. */
+@font-face{font-family:Poppins;font-weight:500;src:url(/library/fonts/Poppins-Medium.ttf) format("truetype")}
+@font-face{font-family:Poppins;font-weight:600;src:url(/library/fonts/Poppins-SemiBold.ttf) format("truetype")}
+@font-face{font-family:Poppins;font-weight:700;src:url(/library/fonts/Poppins-Bold.ttf) format("truetype")}
+
+/* Added 2026-11-12 (her note: "we don't have enough nice fonts"): Fontshare (ITF Free Font License, free for commercial use; licences in library/fonts/licences/) + Google Fonts (OFL). */
+@font-face{font-family:"Clash Display";font-weight:200 700;src:url(/library/fonts/ClashDisplay-Variable.ttf) format("truetype")}
+@font-face{font-family:"Satoshi";font-weight:300 900;src:url(/library/fonts/Satoshi-Variable.ttf) format("truetype")}
+@font-face{font-family:"Satoshi";font-weight:300 900;font-style:italic;src:url(/library/fonts/Satoshi-VariableItalic.ttf) format("truetype")}
+@font-face{font-family:"General Sans";font-weight:200 700;src:url(/library/fonts/GeneralSans-Variable.ttf) format("truetype")}
+@font-face{font-family:"General Sans";font-weight:200 700;font-style:italic;src:url(/library/fonts/GeneralSans-VariableItalic.ttf) format("truetype")}
+@font-face{font-family:"Cabinet Grotesk";font-weight:100 900;src:url(/library/fonts/CabinetGrotesk-Variable.ttf) format("truetype")}
+@font-face{font-family:"Boska";font-weight:200 900;src:url(/library/fonts/Boska-Variable.ttf) format("truetype")}
+@font-face{font-family:"Boska";font-weight:200 900;font-style:italic;src:url(/library/fonts/Boska-VariableItalic.ttf) format("truetype")}
+@font-face{font-family:"Zodiak";font-weight:100 900;src:url(/library/fonts/Zodiak-Variable.ttf) format("truetype")}
+@font-face{font-family:"Zodiak";font-weight:100 900;font-style:italic;src:url(/library/fonts/Zodiak-VariableItalic.ttf) format("truetype")}
+@font-face{font-family:"Gambetta";font-weight:300 700;src:url(/library/fonts/Gambetta-Variable.ttf) format("truetype")}
+@font-face{font-family:"Gambetta";font-weight:300 700;font-style:italic;src:url(/library/fonts/Gambetta-VariableItalic.ttf) format("truetype")}
+@font-face{font-family:"Switzer";font-weight:100 900;src:url(/library/fonts/Switzer-Variable.ttf) format("truetype")}
+@font-face{font-family:"Switzer";font-weight:100 900;font-style:italic;src:url(/library/fonts/Switzer-VariableItalic.ttf) format("truetype")}
+@font-face{font-family:"Sentient";font-weight:200 700;src:url(/library/fonts/Sentient-Variable.ttf) format("truetype")}
+@font-face{font-family:"Sentient";font-weight:200 700;font-style:italic;src:url(/library/fonts/Sentient-VariableItalic.ttf) format("truetype")}
+@font-face{font-family:"Panchang";font-weight:200 800;src:url(/library/fonts/Panchang-Variable.ttf) format("truetype")}
+@font-face{font-family:"Syne";font-weight:400 800;src:url(/library/fonts/Syne%5Bwght%5D.ttf) format("truetype")}
+@font-face{font-family:"Unbounded";font-weight:200 900;src:url(/library/fonts/Unbounded%5Bwght%5D.ttf) format("truetype")}
+@font-face{font-family:"Young Serif";font-weight:400;src:url(/library/fonts/YoungSerif-Regular.ttf) format("truetype")}
+@font-face{font-family:"Gloock";font-weight:400;src:url(/library/fonts/Gloock-Regular.ttf) format("truetype")}
+@font-face{font-family:"Bebas Neue";font-weight:400;src:url(/library/fonts/BebasNeue-Regular.ttf) format("truetype")}
+@font-face{font-family:"Space Grotesk";font-weight:300 700;src:url(/library/fonts/SpaceGrotesk%5Bwght%5D.ttf) format("truetype")}
+@font-face{font-family:"Familjen Grotesk";font-weight:400 700;src:url(/library/fonts/FamiljenGrotesk%5Bwght%5D.ttf) format("truetype")}
+
+/* Added 2026-11-12 (font board, /ideas/boards/fonts/): matches for the type on her idea boards (design, shorts formats, thumbnails). Google Fonts, OFL 1.1
+   (Permanent Marker: Apache 2.0). Licence texts in library/fonts/licences/. Font-board numbers in inspiration/boards/fonts/README.md. */
+@font-face{font-family:"Big Shoulders Display";font-weight:100 900;src:url("/library/fonts/BigShouldersDisplay%5Bwght%5D.ttf") format("truetype")}
+@font-face{font-family:"Six Caps";font-weight:400;src:url(/library/fonts/SixCaps.ttf) format("truetype")}
+@font-face{font-family:"Bagel Fat One";font-weight:400;src:url(/library/fonts/BagelFatOne-Regular.ttf) format("truetype")}
+@font-face{font-family:"Bodoni Moda";font-weight:400 900;src:url("/library/fonts/BodoniModa%5Bopsz,wght%5D.ttf") format("truetype")}
+@font-face{font-family:"Bodoni Moda";font-weight:400 900;font-style:italic;src:url("/library/fonts/BodoniModa-Italic%5Bopsz,wght%5D.ttf") format("truetype")}
+@font-face{font-family:"Libre Baskerville";font-weight:400 700;src:url("/library/fonts/LibreBaskerville%5Bwght%5D.ttf") format("truetype")}
+@font-face{font-family:"Libre Baskerville";font-weight:400 700;font-style:italic;src:url("/library/fonts/LibreBaskerville-Italic%5Bwght%5D.ttf") format("truetype")}
+@font-face{font-family:"Caveat Brush";font-weight:400;src:url(/library/fonts/CaveatBrush-Regular.ttf) format("truetype")}
+@font-face{font-family:"Permanent Marker";font-weight:400;src:url(/library/fonts/PermanentMarker-Regular.ttf) format("truetype")}
+@font-face{font-family:"Shrikhand";font-weight:400;src:url(/library/fonts/Shrikhand-Regular.ttf) format("truetype")}
+@font-face{font-family:"Londrina Solid";font-weight:900;src:url(/library/fonts/LondrinaSolid-Black.ttf) format("truetype")}
+@font-face{font-family:"TikTok Sans";font-weight:300 900;font-stretch:75% 150%;src:url("/library/fonts/TikTokSans%5Bopsz,slnt,wdth,wght%5D.ttf") format("truetype")}
+@font-face{font-family:"Silkscreen";font-weight:400;src:url(/library/fonts/Silkscreen-Regular.ttf) format("truetype")}
+@font-face{font-family:"Kaushan Script";font-weight:400;src:url(/library/fonts/KaushanScript-Regular.ttf) format("truetype")}
+
+/* Added 2026-11-12: files that were already in library/fonts but had no @font-face here (OFL, google/fonts). */
+@font-face{font-family:"Archivo Black";font-weight:400 900;src:url(/library/fonts/ArchivoBlack-Regular.ttf) format("truetype")}
+@font-face{font-family:"Inter Tight";font-weight:300;src:url(/library/fonts/InterTightLight.ttf) format("truetype")}
+@font-face{font-family:"Inter Tight";font-weight:400;src:url(/library/fonts/InterTightRegular.ttf) format("truetype")}
+@font-face{font-family:"Inter Tight";font-weight:500;src:url(/library/fonts/InterTightMedium.ttf) format("truetype")}
+@font-face{font-family:"Inter Tight";font-weight:600;src:url(/library/fonts/InterTightSemiBold.ttf) format("truetype")}
+@font-face{font-family:"Inter Tight";font-weight:700;src:url(/library/fonts/InterTightBold.ttf) format("truetype")}
+@font-face{font-family:"Inter Tight";font-weight:800;src:url(/library/fonts/InterTightExtraBold.ttf) format("truetype")}
+@font-face{font-family:"Inter Tight";font-weight:900;src:url(/library/fonts/InterTightBlack.ttf) format("truetype")}
+@font-face{font-family:"Caveat";font-weight:400 700;src:url(/library/fonts/Caveat.ttf) format("truetype")}
+@font-face{font-family:"DM Serif Display";font-weight:400;src:url(/library/fonts/DMSerifDisplay-Regular.ttf) format("truetype")}
+@font-face{font-family:"DM Serif Display";font-weight:400;font-style:italic;src:url(/library/fonts/DMSerifDisplay-Italic.ttf) format("truetype")}
+@font-face{font-family:"Dela Gothic One";font-weight:400;src:url(/library/fonts/DelaGothicOne-Regular.ttf) format("truetype")}
+@font-face{font-family:"League Gothic";font-weight:400;src:url(/library/fonts/LeagueGothicRegular.ttf) format("truetype")}
+@font-face{font-family:"Oswald";font-weight:200 700;src:url(/library/fonts/Oswald-Variable.ttf) format("truetype")}
+@font-face{font-family:"Montserrat";font-weight:100 900;src:url(/library/fonts/Montserrat-Variable.ttf) format("truetype")}
+@font-face{font-family:"Nunito";font-weight:200 1000;src:url(/library/fonts/Nunito-Variable.ttf) format("truetype")}
+@font-face{font-family:"Barlow Condensed";font-weight:600;src:url(/library/fonts/BarlowCondensed-SemiBold.ttf) format("truetype")}
+@font-face{font-family:"Barlow Condensed";font-weight:800;src:url(/library/fonts/BarlowCondensed-ExtraBold.ttf) format("truetype")}
+@font-face{font-family:"Saira Condensed";font-weight:600;src:url(/library/fonts/SairaCondensed-SemiBold.ttf) format("truetype")}
+@font-face{font-family:"Saira Condensed";font-weight:900;src:url(/library/fonts/SairaCondensed-Black.ttf) format("truetype")}
+@font-face{font-family:"Figtree";font-weight:300 900;src:url(/library/fonts/Figtree.ttf) format("truetype")}
+@font-face{font-family:"Geist";font-weight:100 900;src:url(/library/fonts/Geist.ttf) format("truetype")}
+@font-face{font-family:"Onest";font-weight:500;src:url(/library/fonts/Onest-500.ttf) format("truetype")}
+@font-face{font-family:"Onest";font-weight:800;src:url(/library/fonts/Onest-800.ttf) format("truetype")}
+@font-face{font-family:"Playfair Display";font-weight:800;font-style:italic;src:url(/library/fonts/PlayfairDisplayExtraBoldItalic.ttf) format("truetype")}
+@font-face{font-family:"Playfair Display";font-weight:900;font-style:italic;src:url(/library/fonts/PlayfairDisplayBlackItalic.ttf) format("truetype")}
+@font-face{font-family:"Chivo Mono";font-weight:100 900;src:url(/library/fonts/ChivoMono.ttf) format("truetype")}
+@font-face{font-family:"Red Hat Mono";font-weight:300 700;src:url(/library/fonts/RedHatMono.ttf) format("truetype")}
+@font-face{font-family:"JetBrains Mono";font-weight:500;src:url(/library/fonts/JBMono-500.ttf) format("truetype")}
+@font-face{font-family:"JetBrains Mono";font-weight:800;src:url(/library/fonts/JBMono-800.ttf) format("truetype")}

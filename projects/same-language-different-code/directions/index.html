@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Talk deck directions</title>
+<style>
+  @font-face { font-family: 'Geist'; src: url('shared/fonts/Geist.ttf'); font-weight: 100 900; }
+  :root { --bg: #F4F2ED; --fg: #141416; --mid: #77736B; --line: #DAD6CD; }
+  * { box-sizing: border-box; margin: 0; }
+  body { background: var(--bg); color: var(--fg); font-family: 'Geist', system-ui, sans-serif; padding: 56px 16px 80px; }
+  main { max-width: 1240px; margin: 0 auto; }
+  h1 { font-size: 40px; letter-spacing: -.03em; font-weight: 600; }
+  .intro { color: var(--mid); font-size: 18px; margin-top: 10px; max-width: 760px; line-height: 1.5; }
+  section { margin-top: 64px; border-top: 1px solid var(--line); padding-top: 28px; }
+  .head { display: flex; justify-content: space-between; align-items: baseline; gap: 20px; flex-wrap: wrap; }
+  h2 { font-size: 30px; letter-spacing: -.025em; font-weight: 600; }
+  h2 span { color: var(--mid); font-weight: 500; margin-right: 10px; }
+  .idea { color: var(--mid); font-size: 17px; line-height: 1.5; margin-top: 8px; max-width: 820px; }
+  a.open { display: inline-block; background: var(--fg); color: var(--bg); text-decoration: none; padding: 12px 20px; font-size: 16px; font-weight: 500; }
+  .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 22px; }
+  .grid img { width: 100%; display: block; border: 1px solid var(--line); }
+  @media (max-width: 700px) { .grid { grid-template-columns: 1fr; } }
+</style></head>
+<body><main>
+  <h1>Three directions for your Øredev deck</h1>
+  <p class="intro">The same four moments in three different looks, so you can compare them fairly: the big idea, the 03:30 cron job, the Environment Profile, and Uber's "one response, one packet". Words are kept to what matters; the picture and the motion carry each slide. Open each one to see the motion: press → to go forward, R to replay a slide.</p>
+
+  <section>
+    <div class="head"><h2><span>A</span>The Same System</h2><a class="open" href="A/index.html">Open with motion →</a></div>
+    <p class="idea">One precise system drawing that never changes, while the world under it does. Warm white, fine lines, one blue that always means "the environment". Feels like a beautifully drawn architecture diagram. Font: Geist.</p>
+    <div class="grid"><img src="stills/01-A1-hidden-model.jpg" alt=""><img src="stills/02-A2-clock.jpg" alt=""><img src="stills/03-A3-profile.jpg" alt=""><img src="stills/04-A4-packet.jpg" alt=""></div>
+  </section>
+
+  <section>
+    <div class="head"><h2><span>B</span>The Kitchen</h2><a class="open" href="B/index.html">Open with motion →</a></div>
+    <p class="idea">Your jollof metaphor, drawn. Flat illustrated objects act out each idea: ingredients fall into the pot, the clock hands spin back an hour, packets ride a conveyor and one falls off. Cream ground, jollof colours. Warm and memorable. Font: Onest.</p>
+    <div class="grid"><img src="stills/01-B1-kitchen.jpg" alt=""><img src="stills/02-B2-clocks.jpg" alt=""><img src="stills/03-B3-pantry.jpg" alt=""><img src="stills/04-B4-conveyor.jpg" alt=""></div>
+  </section>
+
+  <section>
+    <div class="head"><h2><span>C</span>One World</h2><a class="open" href="C/index.html">Open with motion →</a></div>
+    <p class="idea">The environment is a place. One calm map is the stage and the camera travels: close on Lagos, out to Tallinn, the real night shadow moving over Europe and Africa while the 03:30 job runs, packets travelling from Frankfurt to Lagos. Each row of your model lights up the countries where it mattered. Font: Instrument Sans.</p>
+    <div class="grid"><img src="stills/01-C1-travel.jpg" alt=""><img src="stills/02-C2-night.jpg" alt=""><img src="stills/03-C3-profile.jpg" alt=""><img src="stills/04-C4-packets.jpg" alt=""></div>
+  </section>
+</main></body></html>

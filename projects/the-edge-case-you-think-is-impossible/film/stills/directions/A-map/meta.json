@@ -1,0 +1,172 @@
+{
+ "TOTAL": 504,
+ "INTRO": 0,
+ "OUTRO": 1,
+ "FPS": 30,
+ "CUES": [
+  {
+   "name": "paper",
+   "t": 2.2,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "pen",
+   "t": 2.45,
+   "db": -8,
+   "keep": true
+  },
+  {
+   "name": "hit",
+   "t": 4.86,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "pencil",
+   "t": 8.92,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "pencil2",
+   "t": 9.64,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "pencil",
+   "t": 10.38,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "stamp",
+   "t": 11.26,
+   "db": -3,
+   "keep": true
+  },
+  {
+   "name": "pencil",
+   "t": 51,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "pencil2",
+   "t": 55.1,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "pencil",
+   "t": 57.2,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "pencil2",
+   "t": 59.6,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "paper",
+   "t": 256.2,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "stamp",
+   "t": 260.4,
+   "db": -3,
+   "keep": true
+  },
+  {
+   "name": "card",
+   "t": 263.8,
+   "db": -8,
+   "keep": true
+  },
+  {
+   "name": "card2",
+   "t": 264.2,
+   "db": -8,
+   "keep": true
+  },
+  {
+   "name": "card",
+   "t": 264.6,
+   "db": -8,
+   "keep": true
+  },
+  {
+   "name": "card2",
+   "t": 265,
+   "db": -8,
+   "keep": true
+  },
+  {
+   "name": "paper",
+   "t": 326.9,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "pencil",
+   "t": 329.4,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "marker",
+   "t": 330,
+   "db": -8,
+   "keep": true
+  },
+  {
+   "name": "wrong",
+   "t": 331.7,
+   "db": -6,
+   "keep": true
+  }
+ ],
+ "SCENES": [
+  {
+   "n": 1,
+   "id": "open",
+   "start": 2,
+   "end": 44.1,
+   "ground": "chart",
+   "label": "open",
+   "trans": "cut"
+  },
+  {
+   "n": 2,
+   "id": "users",
+   "start": 44.1,
+   "end": 255.1,
+   "ground": "chart2",
+   "label": "users",
+   "trans": "cut"
+  },
+  {
+   "n": 3,
+   "id": "null",
+   "start": 255.1,
+   "end": 325.3,
+   "ground": "chart",
+   "label": "null",
+   "trans": "cut"
+  },
+  {
+   "n": 4,
+   "id": "leap",
+   "start": 325.3,
+   "end": 504,
+   "ground": "chart2",
+   "label": "leap",
+   "trans": "cut"
+  }
+ ]
+}

@@ -1,0 +1,26 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../lib/set.css"><style>
+/* 06b (2026-11-16): her own Database Indexes thumbnail's composition (Thumbnails 125): grid ground, topic name huge top left,
+   one idea drawn big (the thing -> arrow -> the row where it lives), her small at the bottom right. Font 91 colours. */
+@font-face { font-family: 'Bricolage Grotesque'; src: url('../../fonts/BricolageGrotesque.ttf') format('truetype'); font-weight: 200 800; }
+.t{background-color:var(--ground,#F2F3C4);background-image:linear-gradient(var(--grid,#E2E3AE) 2px,transparent 2px),linear-gradient(90deg,var(--grid,#E2E3AE) 2px,transparent 2px);background-size:64px 64px}
+.hd{left:58px;top:36px;font-family:'Bricolage Grotesque';font-weight:800;font-size:104px;line-height:.95;letter-spacing:-.045em;color:var(--ink,#2A1F6E);z-index:5}
+.card{left:60px;top:392px;width:380px;background:#FFFFFF;border-radius:10px;box-shadow:0 16px 30px rgba(42,31,110,.18);transform:rotate(-4deg);padding:22px 30px 26px;font-family:'Bricolage Grotesque';color:#2A1F6E;z-index:4}
+.card .h{font-weight:800;font-size:52px;letter-spacing:-.04em;margin-bottom:8px}
+.card .it{display:flex;align-items:center;gap:18px;font-weight:600;font-size:36px;letter-spacing:-.02em;padding:10px 0;border-top:2px solid #ECECF4}
+.card .it i{width:46px;height:46px;border-radius:10px;background:#E9E8F2;display:block}
+.tb{left:50px;top:300px;width:720px;background:#2A1F6E;border-radius:12px;transform:rotate(-4deg);box-shadow:0 18px 34px rgba(42,31,110,.28);font-family:'DM Mono';font-weight:500;overflow:hidden;z-index:4}
+.tb .rw{display:flex;justify-content:space-between;align-items:center;padding:22px 34px;font-size:58px;color:#F2F3C4;letter-spacing:-.02em}
+.tb .rw + .rw{border-top:2px solid rgba(242,243,196,.18)}
+.tb .rw.hot{background:#F2F3C4;color:#2A1F6E;margin:0 10px;border-radius:8px}
+.tb .rw .v{color:#F2F3C4}.tb .rw.hot .v{color:#2A1F6E}
+.arr{left:430px;top:300px;width:200px;height:240px;z-index:5}
+.her{position:absolute;display:block;z-index:3}
+</style></head><body><div class="t">
+<div class="a hd nw" data-k="hd"></div>
+<div class="a tb" data-move="table">
+ <div class="rw nw"><span data-k="k1"></span><span class="v" data-k="v1"></span></div>
+ <div class="rw hot nw"><span data-k="k2"></span><span class="v" data-k="v2"></span></div>
+ <div class="rw nw"><span data-k="k3"></span><span class="v" data-k="v3"></span></div>
+</div>
+<img class="her" data-img="me" data-move="her" src="../../assets/shoot/1558-hard.png" alt="" style="left:560px;top:60px;width:960px">
+</div><script src="../../lib/bind.js"></script></body></html>

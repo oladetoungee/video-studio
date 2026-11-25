@@ -1,0 +1,68 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Talking-head frames</title>
+<link rel="stylesheet" href="../_shared/fonts.css">
+<style>
+#stage{background:#111}
+.her{position:absolute;object-fit:cover}
+.row{position:absolute;display:flex;gap:5px}
+.cell{position:relative;background:#0E0F11;display:flex;align-items:center;justify-content:center;font-family:"Barlow Condensed";font-weight:600;color:#F3F0E8;border-radius:3px;overflow:hidden}
+.cell:after{content:"";position:absolute;left:0;right:0;top:50%;height:2px;background:#25282D}
+.go{color:#2FD27A}.dim{color:#7A7F87}
+.lab{position:absolute;font-family:"DM Mono";font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:#7A7F87}
+.capC1{position:absolute;left:0;right:0;text-align:center;font-family:"Barlow Condensed";font-weight:800;text-transform:uppercase;color:#fff;text-shadow:0 0 1px #000,0 3px 0 #000,0 -3px 0 #000,3px 0 0 #000,-3px 0 0 #000,2px 2px 0 #000,-2px -2px 0 #000,2px -2px 0 #000,-2px 2px 0 #000}
+.capC1 b{color:#2FD27A}
+.capA{position:absolute;text-align:center}
+.capA span{display:inline-block;background:#5A1424;color:#F7EFE0;font-family:"DM Serif Display";padding:6px 22px 10px;line-height:1.15}
+.page{position:absolute;background:#F2E8D5;overflow:hidden}
+.stamp{position:absolute;border:6px solid #8E1B2E;color:#8E1B2E;padding:14px 26px 12px;font-family:"Azeret Mono";font-weight:800;letter-spacing:.06em;text-transform:uppercase;border-radius:6px;mix-blend-mode:multiply}
+.stamp:after{content:"";position:absolute;inset:6px;border:2px solid currentColor;border-radius:3px}
+.clip{position:absolute;background:#fff;overflow:hidden;box-shadow:0 18px 40px rgba(0,0,0,.35);border-radius:14px}
+.clip img{position:absolute}
+.hl{position:absolute;background:#F5D47A;mix-blend-mode:multiply}
+</style></head>
+<body><div id="stage"></div>
+<script src="../_shared/lib.js"></script>
+<script>
+const W = +Q.get('w') || 1920, H = +Q.get('h') || 1080;
+const S = $('#stage'); st(S, { width: W + 'px', height: H + 'px' });
+function flaps(x, y, n, cw, ch, fs, text, cls = '') { let h = `<div class="row" style="left:${x}px;top:${y}px">`; for (let i = 0; i < n; i++) h += `<div class="cell ${cls}" style="width:${cw}px;height:${ch}px;font-size:${fs}px">${text[i] || ''}</div>`; return h + '</div>'; }
+// her real frame (never flipped): img of the 1920x1080 frame, shown inside a box at scale k with offset
+const frame = (n, x, y, w, h, k, ox, oy) => `<div class="abs" style="left:${x}px;top:${y}px;width:${w}px;height:${h}px;overflow:hidden"><img src="../_src/raw_${n}.jpg" style="position:absolute;width:${1920 * k}px;left:${-ox * k}px;top:${-oy * k}px"></div>`;
+const SHOTS = {};
+// TH1 (A · Stamped): half and half. Her on the left (crop only), the passport page on the right. Raw 0:38.6.
+SHOTS.th1 = () => {
+  S.innerHTML = frame(40, 0, 0, 900, 1080, 1, 500, 0) + `<div class="abs" style="left:900px;top:0;width:1020px;height:1080px;background:#5A1424"></div>
+   <div class="page" style="left:960px;top:110px;width:900px;height:860px">
+     <div class="abs" style="left:56px;top:50px;font-family:'Azeret Mono';font-weight:600;font-size:30px;letter-spacing:.08em;color:#6E5B55">HOW YOU APPLY</div>
+     <div class="stamp" style="left:56px;top:130px;font-size:72px;transform:rotate(-4deg)">Together</div>
+     <div class="abs" style="left:60px;top:330px;width:780px;font-family:'Hanken Grotesk';font-weight:600;font-size:46px;line-height:1.2;color:#1A1416">The scholarship and the master's, at the same time, through the programme.</div>
+     <div class="abs" style="left:60px;top:620px;font-family:'DM Serif Display';font-size:96px;color:#1A1416">Erasmus Mundus</div></div>
+   <div class="capA" style="left:0;width:900px;top:900px"><span style="font-size:46px">"for the scholarship and then for<br>the master's degree at the same time"</span></div>`;
+};
+// TH2 (B · Now Boarding): the board behind her (her cut-out in front), a side tile for the next deadline. Raw 0:05.
+SHOTS.th2 = () => {
+  const R = [['ERASMUS MUNDUS', 'OPEN', 'go'], ['AISS (TALLINN)', 'OPENS 2 DEC', ''], ['SWEDISH INSTITUTE', 'ADMISSION OPEN', 'go'], ['NL SCHOLARSHIP', 'PER UNI', ''], ['DAAD EPOS', 'MANY PASSED', 'dim'], ['STIPENDIUM HUNG.', 'NOT OPEN', 'dim'], ['CHEVENING', 'CLOSED', 'dim']];
+  let b = `<div class="abs" style="inset:0;background:#1B1D21"></div><div class="abs" style="left:60px;top:60px;font-family:'Barlow Condensed';font-weight:800;font-size:80px;color:#F3F0E8;text-transform:uppercase">Departures · 2027</div>`;
+  R.forEach((r, i) => { b += flaps(96, 200 + i * 92, 17, 30, 76, 48, r[0], r[2] === 'dim' ? 'dim' : '') + flaps(96 + 17 * 35 + 26, 200 + i * 92, 14, 30, 76, 48, r[1], r[2]); });
+  S.innerHTML = b + `<img src="../_src/her_2.png" class="abs" style="left:660px;top:30px;width:1920px">
+   <div class="lab" style="right:60px;top:66px;font-size:34px;color:#F3F0E8">Next to close</div>` + flaps(1500, 116, 6, 54, 92, 66, '15 JAN', 'go') +
+   `<div class="capC1" style="left:900px;right:0;top:900px;font-size:66px">some scholarship deadlines<br>have <b>already passed</b></div>`;
+};
+// TH3 (C · Postcards): her cut-out over a city photo (green-screen background), the country name behind her. Raw 4:58.
+SHOTS.th3 = () => {
+  S.innerHTML = `<img src="../_src/pexels/amsterdam.jpg" class="abs" style="inset:0;width:100%;height:100%;object-fit:cover">
+   <div class="abs" style="left:0;right:0;top:130px;text-align:center;font-family:'Big Shoulders Display';font-weight:900;font-size:330px;line-height:.85;color:#FFD43B;text-transform:uppercase">Netherlands</div>
+   <img src="../_src/her_300.png" class="abs" style="left:0;top:40px;width:1920px">
+   <div class="abs" style="right:28px;bottom:20px;font-family:'DM Mono';font-size:22px;color:rgba(255,255,255,.85)">Photo: Magda Ehlers / Pexels</div>
+   <div class="abs" style="left:0;right:0;top:852px;height:150px;background:rgba(10,10,10,.55)"></div><div class="abs" style="left:0;right:0;top:870px;text-align:center;color:#fff"><span style="font-family:'Plus Jakarta Sans';font-weight:700;font-size:54px">What is still available is the </span><span style="font-family:'Instrument Serif';font-style:italic;font-size:96px;color:#FFD43B">NL Scholarship</span></div>`;
+};
+// TH4 (A · Stamped): a receipt card over her full frame, her words highlighted. Raw 1:56.
+SHOTS.th4 = () => {
+  const k = 1.15, sx = 680, sy = 752, sw = 730, sh = 130;
+  S.innerHTML = frame(112, 0, 0, 1920, 1080, 1, 0, 0) + `<div class="clip" style="left:${(1920 - sw * k) / 2}px;top:60px;width:${sw * k}px;height:${sh * k}px"><img src="../_src/cap/em-guide__1-400-euros-month.png" style="width:${1920 * k}px;left:${-sx * k}px;top:${-sy * k}px"><div class="hl" style="left:${(1079 - sx) * k - 4}px;top:${28 * k - 2}px;width:${238 * k + 8}px;height:${36 * k + 4}px"></div></div>
+   <div class="abs" style="left:0;right:0;top:${60 + sh * k + 14}px;text-align:center;font-family:'Azeret Mono';font-weight:500;font-size:26px;color:#F7EFE0;text-shadow:0 1px 6px rgba(0,0,0,.6)">Erasmus+ Programme Guide, EU · checked 2 Nov 2026</div>
+   <div class="capA" style="left:0;right:0;top:930px"><span style="font-size:48px">"your travel, your visa, and a living&nbsp;allowance"</span></div>`;
+};
+window.show = async (n) => { SHOTS[n](); await imagesReady(); };
+window.READY = true;
+</script></body></html>

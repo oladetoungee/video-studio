@@ -1,0 +1,34 @@
+{
+  "direction": "A proposal (stock photo of hands holding an open ring box, Pexels) as a polaroid; she side-eyes the phone in her raised hand (3:14), where a marriage search says MARRIED (illustration). Follows viral sample 1 + Pinax: the proposal and the phone in one picture.",
+  "concept": "T10 (top pair 1)",
+  "thumbnail_text": "Before you say yes",
+  "title": "Is He Already Married? Ghana Built an App to Check",
+  "titles": [
+    "Is He Already Married? Ghana Built an App to Check",
+    "You Can Now Check If Someone Is Married in Ghana",
+    "Married? In Ghana, Anyone Can Now Look You Up"
+  ],
+  "scores": "a 4/7 · 4/7 · 3/6 | b 8/8 · 8/8 · 8/8 | c 5 · 6 · 5",
+  "recommended": true,
+  "text": {
+    "line1": "Before you",
+    "line2": "say yes",
+    "p_app": "Marriage records",
+    "p_q": "[name]",
+    "p_lab": "Record found",
+    "p_big": "Married"
+  },
+  "images": {
+    "scene": "../../assets/scene/warm/s_194.30.jpg",
+    "front": "../../assets/scene/warm/mask/s_194.30.png",
+    "proposal": "../../assets/stock/proposal_hands.jpg"
+  },
+  "vars": {},
+  "nudge": {
+    "phone": {
+      "dx": 29,
+      "dy": -118,
+      "s": 1.219
+    }
+  }
+}

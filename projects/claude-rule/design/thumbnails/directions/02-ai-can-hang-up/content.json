@@ -1,0 +1,29 @@
+{
+  "direction": "TH03: her real room, palm up (\"stop\"), lips pressed; a big drawn phone on the right: \"Claude\" at the top, ONE big blurred red all-caps message and the grey \"This chat has ended\" bar. Words in lilac boxes, bottom left. Refs: sample 6, Derk's chatbot + one word (32x). Scores: Round 3: cold 7 · best pair (title 1) 8/8 (a top-3 pair) · taste 7.",
+  "concept": "TH03",
+  "thumbnail_text": "AI CAN HANG UP",
+  "title": "Can You Hurt a Chatbot? Why Claude Ends Cruel Chats",
+  "titles": [
+    "Can You Hurt a Chatbot? Why Claude Ends Cruel Chats",
+    "Is It Okay to Be Mean to AI? Anthropic's New Rule",
+    "Claude Can End Your Chat If You're Cruel. But Why?"
+  ],
+  "scores": "Round 3: cold 7 · best pair (title 1) 8/8 (a top-3 pair) · taste 7.",
+  "text": {
+    "l1": "<span class=\"boxl l\">AI CAN</span>",
+    "l2": "<span class=\"boxl l\">HANG UP</span>",
+    "chat_name": "Claude",
+    "chat_in": "You can start a new chat",
+    "rude": "YOU USELESS STUPID BOT",
+    "ended": "This chat has ended"
+  },
+  "images": {
+    "scene": "../../assets/scene/s_101.75.jpg",
+    "cut": "../../assets/cut/c_101.75.png"
+  },
+  "vars": {
+    "--px": "-423px",
+    "--py": "-172px",
+    "--pw": "1804px"
+  }
+}

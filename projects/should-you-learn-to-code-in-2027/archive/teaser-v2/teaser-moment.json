@@ -1,0 +1,89 @@
+{
+ "id": "teaser",
+ "kind": "teaser",
+ "slug": "learn-to-code",
+ "title": "Teaser for LinkedIn and X: her best lines, B You are the reviewer",
+ "bites": [
+  [
+   0.36,
+   9.5
+  ],
+  {
+   "in": 9.52,
+   "out": 24.45,
+   "cuts": [
+    [
+     16.98,
+     20.08
+    ]
+   ]
+  },
+  [
+   27.09,
+   32.42
+  ],
+  {
+   "gap": 0.8,
+   "at": 401.8
+  },
+  [
+   112.77,
+   119.36
+  ],
+  [
+   119.4,
+   123.78
+  ],
+  [
+   155.48,
+   161.28
+  ],
+  [
+   172.1,
+   182.0
+  ],
+  {
+   "gap": 0.8,
+   "at": 401.8
+  },
+  [
+   251.28,
+   254.28
+  ],
+  [
+   285.61,
+   293.55
+  ],
+  [
+   318.98,
+   323.08
+  ],
+  [
+   332.56,
+   333.6
+  ],
+  [
+   383.56,
+   396.27
+  ],
+  {
+   "gap": 1.3,
+   "at": 401.8
+  },
+  [
+   60.47,
+   66.98
+  ]
+ ],
+ "tail": 6.5,
+ "captionStyle": "shorts",
+ "script": "teaser/teaser.js",
+ "music": [
+  "1009",
+  0.0
+ ],
+ "pauses": false,
+ "endCard": {
+  "title": "Junior Developer Jobs Are Rare. Should You Still Code?"
+ }
+}

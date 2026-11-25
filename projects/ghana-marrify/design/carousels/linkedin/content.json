@@ -1,0 +1,253 @@
+{
+  "_help": "Edit text here (or in the studio), then run: node shared/build.mjs linkedin (from design/carousels). Markup: *word* = accent colour, _word_ = serif italic, \\n = line break. docTitle = the document title LinkedIn asks for on upload. A slide's own \"accent\" overrides the deck accent for that page only.",
+  "deck": "linkedin",
+  "docTitle": "4 design questions before you make personal records searchable",
+  "width": 1080,
+  "height": 1350,
+  "accent": "#1B3FD8",
+  "accentOnInk": "#6E8CFF",
+  "slides": [
+    {
+      "layout": "cover",
+      "ground": "accent",
+      "title": "Ghana made\nmarriages\nsearchable\nby _name._",
+      "size": 150,
+      "sub": "4 design questions it raises for any public registry, from an HCI researcher living in Estonia.",
+      "subW": 560,
+      "polaroid": {
+        "img": "gbemi_305s.jpg",
+        "caption": ""
+      },
+      "lh": 0.9,
+      "subSize": 46
+    },
+    {
+      "layout": "list",
+      "ground": "paper",
+      "title": "What is\n*Marrify?*",
+      "size": 104,
+      "rows": [
+        {
+          "n": "01",
+          "head": "Launched August 2026",
+          "sub": "A public app to search and verify marriages, divorces and licensed marriage officers in Ghana."
+        },
+        {
+          "n": "02",
+          "head": "Four official sources",
+          "sub": "Registrar-General’s Department, courts, local assemblies, the Ghana Gazette."
+        },
+        {
+          "n": "03",
+          "head": "Records back to 1886",
+          "sub": "Divorce records, as reported by Ghanamma."
+        },
+        {
+          "n": "04",
+          "head": "Search isn’t proof",
+          "sub": "Records are still being added. An empty search doesn’t prove someone is unmarried."
+        }
+      ],
+      "head": 52,
+      "foot": "Via Graphic Online, GhanaWeb, Ghanamma",
+      "numW": 96,
+      "pad": "18px 0 16px"
+    },
+    {
+      "layout": "compare",
+      "ground": "ink",
+      "title": "Public record.\nNow one search\n*away.*",
+      "size": 100,
+      "cols": [
+        "Paper record",
+        "Public search"
+      ],
+      "rows": [
+        {
+          "k": "Who can find it",
+          "a": "Someone who knows where to look",
+          "b": "Anyone who has your name"
+        },
+        {
+          "k": "How fast",
+          "a": "A trip to the right office",
+          "b": "Seconds, on a phone"
+        }
+      ],
+      "takeaway": "Same record. Far more people can reach it.",
+      "takeSize": 46,
+      "note": "Design questions, not a review"
+    },
+    {
+      "layout": "visual",
+      "visual": "minimal",
+      "ground": "paper",
+      "step": 1,
+      "of": 4,
+      "title": "Answer yes or no,\nnot the whole\n*history.*",
+      "size": 90,
+      "qLabel": "A proposal",
+      "q": "Is this person free to marry?",
+      "aLabel": "Answer",
+      "a": "No. Active marriage on record.",
+      "hidden": [
+        "Spouse’s name",
+        "Dates",
+        "History",
+        "Which court"
+      ],
+      "hiddenLabel": "Left out",
+      "tag": "Illustration",
+      "gap": 34,
+      "takeaway": "Data minimisation: the answer carries only what the question needs.",
+      "takeSize": 42
+    },
+    {
+      "layout": "visual",
+      "visual": "levels",
+      "ground": "paper",
+      "step": 2,
+      "of": 4,
+      "title": "Who sees\n*how much?*",
+      "size": 110,
+      "fields": [
+        "Status",
+        "Spouse",
+        "Dates",
+        "Court"
+      ],
+      "status": "Married",
+      "views": [
+        {
+          "who": "An\nindividual",
+          "shown": 1
+        },
+        {
+          "who": "Certain\norganisations",
+          "shown": 4
+        }
+      ],
+      "tag": "Illustration: a proposal",
+      "gap": 44,
+      "takeaway": "Decide which organisations get the fuller view, and why, before anyone searches.",
+      "takeSize": 42,
+      "shownWord": "Shown"
+    },
+    {
+      "layout": "punch",
+      "ground": "accent",
+      "accent": "#FF4713",
+      "accentOnInk": "#FF4713",
+      "step": 3,
+      "of": 4,
+      "title": "Does a record\nmean the same\nthing *everywhere?*",
+      "size": 118,
+      "body": "",
+      "note": "“It’s not just a privacy engineering conversation. It’s also a cultural design thing.”",
+      "noteSize": 52,
+      "bodySize": 40,
+      "cols": [
+        {
+          "k": "Estonia",
+          "v": "A divorce record can be just administrative."
+        },
+        {
+          "k": "Many African contexts",
+          "v": "Divorce still carries stigma, especially for women."
+        }
+      ],
+      "noteBy": "— Gbemi, @WithGbemi",
+      "bodyW": 904
+    },
+    {
+      "layout": "visual",
+      "visual": "log",
+      "ground": "ink",
+      "accent": "#22E08A",
+      "accentOnInk": "#22E08A",
+      "step": 4,
+      "of": 4,
+      "title": "Can people see\nwho looked them *up?*",
+      "size": 100,
+      "head": "Imagined access log",
+      "rows": [
+        {
+          "who": "A private individual",
+          "s": "searched your name",
+          "t": "Today 14:02"
+        },
+        {
+          "who": "An organisation",
+          "s": "checked your marital status",
+          "t": "Mon 09:15"
+        },
+        {
+          "who": "A private individual",
+          "s": "opened your record",
+          "t": "Sun 21:40"
+        }
+      ],
+      "tag": "Illustration",
+      "gap": 60,
+      "takeaway": "In Estonia, I can see what happens to my data in the system. A registry could show people who looked them up.",
+      "takeSize": 40
+    },
+    {
+      "layout": "checklist",
+      "ground": "card",
+      "title": "Before you make\npersonal records\n*searchable.*",
+      "size": 96,
+      "rows": [
+        {
+          "n": "01",
+          "head": "Return the smallest answer.",
+          "sub": "“Active marriage on record”. No spouse, no dates."
+        },
+        {
+          "n": "02",
+          "head": "Set access levels.",
+          "sub": "Individuals see status, approved organisations see more."
+        },
+        {
+          "n": "03",
+          "head": "Check what it means locally.",
+          "sub": "How does a divorce record land for a woman here?"
+        },
+        {
+          "n": "04",
+          "head": "Show people who looked.",
+          "sub": "A log of every search on your name."
+        }
+      ],
+      "head": 50,
+      "corner": "The checklist"
+    },
+    {
+      "layout": "end",
+      "ground": "accent",
+      "title": "Which question\nwould you _add?_",
+      "size": 130,
+      "body": "I want more African countries building infrastructure like this, and questioning it while we do.",
+      "bodyW": 880,
+      "where": "Full video on YouTube",
+      "video": "Ghana Launched an App to Check If Someone Is Married",
+      "handle": "@WithGbemi",
+      "polaroid": {
+        "img": "gbemi_311s.jpg",
+        "caption": ""
+      },
+      "ask": "",
+      "askSize": 54,
+      "videoSize": 36,
+      "bodySize": 48,
+      "nudge": {
+        "polaroid": {
+          "s": 1.18,
+          "dy": -80,
+          "dx": -40
+        }
+      },
+      "lh": 0.98
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+{"music": 722, "musicDb": -24, "sfxDb": -4,
+ "cues": [[0.55, "typewriter-soft-click", -6], [0.75, "typewriter-soft-click", -6], [0.95, "typewriter-soft-click", -6], [1.2, "typewriter-soft-click", -6], [1.45, "ui-select-click", -6],
+          [5.08, "shutter-hard-click", -2], [5.25, "typewriter-soft-click", -4], [5.45, "typewriter-soft-click", -4], [5.65, "typewriter-soft-click", -4], [5.85, "typewriter-soft-click", -4], [6.05, "ui-select-click", -4],
+          [6.6, "tape-switch", -4], [8.62, "notify-positive", -6]]}

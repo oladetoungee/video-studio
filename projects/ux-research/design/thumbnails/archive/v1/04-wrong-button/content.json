@@ -1,0 +1,21 @@
+{
+  "direction": "What a usability test finds: on a checkout (Illustration) the tap lands on the big green \"Add a cookie?\" card, ringed in red marker, while the real pay button is a faint word nobody sees. She studies it, hand on cheek. Follows viral sample 2 (one object shows the finding).",
+  "concept": "T15",
+  "thumbnail_text": "USERS TAP THE WRONG BUTTON",
+  "title": "Why Beautiful Apps Can Be Awful to Use (UX Research)",
+  "titles": [
+    "Why Beautiful Apps Can Be Awful to Use (UX Research)",
+    "What Is UX Research? Why Good-Looking Apps Still Fail"
+  ],
+  "text": {
+    "l1": "USERS TAP THE",
+    "l2": "<span class=\"acc\">WRONG</span> BUTTON"
+  },
+  "images": {
+    "scene": "../../assets/scene/g/s_670.jpg",
+    "front": "../../assets/scene/g/mask/s_670.png"
+  },
+  "vars": {},
+  "scores": "a 3/6 · 4/7 · 4/6 | b 7/7 · 6/6 · 8/7 | c 5 · 6 · 6",
+  "recommended": false
+}

@@ -1,0 +1,572 @@
+1
+00:00:00,000 --> 00:00:24,620
+ Research papers are not written to be read from start to finish, like a novel.
+
+2
+00:00:24,620 --> 00:00:29,780
+ So in this video, I will show you the parts of a paper and the order to read them in.
+
+3
+00:00:29,780 --> 00:00:32,180
+ There's this method I like, it's called a three-pass method.
+
+4
+00:00:32,180 --> 00:00:35,180
+ And that's the method I'm going to be focusing on in this video.
+
+5
+00:00:35,180 --> 00:00:38,140
+ Most research papers are built from the same parts.
+
+6
+00:00:38,140 --> 00:00:40,860
+ And you need to know what each part is for,
+
+7
+00:00:40,860 --> 00:00:44,820
+ so that you can stop reading it like one big block of text.
+
+8
+00:00:44,820 --> 00:00:48,300
+ In a lot of fields, the main body follows a pattern called IMRAD.
+
+9
+00:00:48,300 --> 00:00:52,340
+ It stands for introduction, methods, results, and discussion.
+
+10
+00:00:52,340 --> 00:00:54,060
+ And around those, you usually would
+
+11
+00:00:54,060 --> 00:00:58,660
+ see a title, an abstract, related work, background section,
+
+12
+00:00:58,660 --> 00:01:02,700
+ a limitation section, a conclusion, and the references.
+
+13
+00:01:02,700 --> 00:01:05,020
+ The names will change a little from field to field
+
+14
+00:01:05,020 --> 00:01:07,180
+ in HCI, which is my field.
+
+15
+00:01:07,180 --> 00:01:09,700
+ The results section is often called findings.
+
+16
+00:01:09,700 --> 00:01:12,340
+ You don't need to read every part of a research paper
+
+17
+00:01:12,340 --> 00:01:13,100
+ closely.
+
+18
+00:01:13,100 --> 00:01:15,580
+ There are three major parts that do most of the work for you.
+
+19
+00:01:15,580 --> 00:01:17,100
+ The first one is the abstract.
+
+20
+00:01:17,100 --> 00:01:20,380
+ The abstract is a short paragraph right under the title.
+
+21
+00:01:20,380 --> 00:01:24,100
+ It's the old papers squeezed into one paragraph.
+
+22
+00:01:24,100 --> 00:01:26,940
+ What they asked, what they did, what they found,
+
+23
+00:01:26,940 --> 00:01:28,420
+ summarized in the abstract.
+
+24
+00:01:28,420 --> 00:01:29,860
+ The second one is the method.
+
+25
+00:01:29,860 --> 00:01:31,540
+ The method is where the authors tells you
+
+26
+00:01:31,540 --> 00:01:34,660
+ exactly what they did, who took part, how many people,
+
+27
+00:01:34,660 --> 00:01:36,780
+ what they measure, how they measured it.
+
+28
+00:01:36,780 --> 00:01:38,060
+ This is the path that tells you
+
+29
+00:01:38,060 --> 00:01:40,460
+ whether you can trust everything else in the paper.
+
+30
+00:01:40,460 --> 00:01:41,860
+ And the third path is the discussion
+
+31
+00:01:41,860 --> 00:01:43,140
+ to get out with the limitation.
+
+32
+00:01:43,140 --> 00:01:45,420
+ The discussion is where the authors explain
+
+33
+00:01:45,420 --> 00:01:47,340
+ what their results mean.
+
+34
+00:01:47,340 --> 00:01:49,380
+ And the limitation section is where they say
+
+35
+00:01:49,380 --> 00:01:52,620
+ what their study cannot tell you.
+
+36
+00:01:52,620 --> 00:01:55,300
+ Like, hey, this study does not provide this,
+
+37
+00:01:55,300 --> 00:01:56,360
+ something like that.
+
+38
+00:01:56,360 --> 00:01:58,080
+ And I think the limitation is one of the most useful parts
+
+39
+00:01:58,080 --> 00:02:02,400
+ paper when you're writing your thesis. For example, because it shows what is still open and you can
+
+40
+00:02:02,400 --> 00:02:06,640
+ often find your research gap there. One of the best known methods for reading research paper comes
+
+41
+00:02:06,640 --> 00:02:16,160
+ from a two-page paper called "How to Read a Paper." It was written by S. Keshav. In his word,
+
+42
+00:02:16,160 --> 00:02:21,600
+ you should read the paper in up to three passes, and each pass has a different job. The first pass
+
+43
+00:02:21,600 --> 00:02:25,760
+ tells you what the research paper is about and whether you even need this paper at all.
+
+44
+00:02:25,760 --> 00:02:32,720
+ and the second part tells you what the paper found and what evidence it has and the third part is for
+
+45
+00:02:32,720 --> 00:02:38,960
+ the third part is for the papers you need to understand completely. Pass one of Keshev's
+
+46
+00:02:38,960 --> 00:02:44,320
+ three-pass method takes about five to ten minutes and it also gives you the order to read the paper
+
+47
+00:02:44,320 --> 00:02:50,800
+ in. List it up in four steps. First you carefully read the title of the paper, you read the abstract
+
+48
+00:02:50,800 --> 00:02:55,760
+ of the paper, you read the introduction. Then second, you read the section and the
+
+49
+00:02:55,760 --> 00:03:00,400
+ sub-section heading, but ignore every other thing. Then third, you read the conclusion,
+
+50
+00:03:00,400 --> 00:03:04,720
+ and fourth, you glance over the references. Just manually tick off the ones that you
+
+51
+00:03:04,720 --> 00:03:08,240
+ have already read or you've already seen. If you watch my video on how to read the book,
+
+52
+00:03:08,240 --> 00:03:12,800
+ this is kind of the same idea of reading the structure first, same idea kind of applied to
+
+53
+00:03:12,800 --> 00:03:17,680
+ research papers. At the end of the first pass, according to Keshav's method, you should be able
+
+54
+00:03:17,680 --> 00:03:21,680
+ to answer five questions, and he calls them the five Cs. So when you've done the first
+
+55
+00:03:21,680 --> 00:03:25,120
+ pass of reading a research paper, according to this method, you should be able to answer
+
+56
+00:03:25,120 --> 00:03:26,040
+ these five questions.
+
+57
+00:03:26,040 --> 00:03:30,760
+ Category is what kind of research paper is this? Is it a study? Is it a new system? Is
+
+58
+00:03:30,760 --> 00:03:37,000
+ it a review of other papers? Number two, context. What other papers is this paper related to?
+
+59
+00:03:37,000 --> 00:03:42,240
+ Number three, correctness. No. Number three, correctness is whether the assumptions seem
+
+60
+00:03:42,240 --> 00:03:48,000
+ valid. Number four, contribution is what the paper has that was not in this
+
+61
+00:03:48,000 --> 00:03:53,160
+ subject of study before. And clarity is whether the paper is well written. A lot
+
+62
+00:03:53,160 --> 00:03:57,060
+ of time after those five, ten minutes you would find that maybe the paper is not
+
+63
+00:03:57,060 --> 00:04:01,260
+ relevant to what you're doing. At this point you stop, save yourself an
+
+64
+00:04:01,260 --> 00:04:04,560
+ old evening. You just do five, ten minutes to save yourself a whole evening. You don't
+
+65
+00:04:04,560 --> 00:04:08,340
+ want to dedicate three hours, four hours, five hours to reading a research paper that is
+
+66
+00:04:08,340 --> 00:04:13,380
+ relevant to your own study. So the first pass is usually enough for papers that are not in your
+
+67
+00:04:13,380 --> 00:04:18,980
+ research area but maybe they might matter to you someday, who knows. Now pass two, the second pass
+
+68
+00:04:18,980 --> 00:04:23,620
+ of Keshav's method for reading research paper takes up to an hour. After you've gone through the
+
+69
+00:04:23,620 --> 00:04:27,780
+ first pass in five to ten minutes you decided that this research paper is relevant to you,
+
+70
+00:04:27,780 --> 00:04:32,180
+ then you move on to reading the paper with more care but you still ignore the detail. So you can
+
+71
+00:04:32,180 --> 00:04:37,140
+ ignore something like a long table of statistics and you come back to that later. While you read
+
+72
+00:04:37,140 --> 00:04:42,420
+ during the second pass. Keshav suggests writing down the key point or making comments in the
+
+73
+00:04:42,420 --> 00:04:47,780
+ margin. So if you're not, you can print out your research paper, this is something that I do now,
+
+74
+00:04:47,780 --> 00:04:51,380
+ instead of just having it virtual, you could print it out so you can mark it up.
+
+75
+00:04:51,380 --> 00:04:55,540
+ Now this is the part where you look properly at the figures, you look at the, you look at the
+
+76
+00:04:55,540 --> 00:05:00,180
+ figures, the diagrams or the illustration in the paper, you know, pay some attentions to the graph.
+
+77
+00:05:00,180 --> 00:05:03,620
+ And on the second pass, you mark some of the references that you haven't read that looks
+
+78
+00:05:03,620 --> 00:05:09,620
+ relevant to you. That's how one good research paper can lead you to another one. So by the
+
+79
+00:05:09,620 --> 00:05:14,420
+ time you're at the end of the second pass, you should be able to explain the main point of the
+
+80
+00:05:14,420 --> 00:05:19,380
+ paper and the evidence for it to someone else. Now, if you still don't understand the research
+
+81
+00:05:19,380 --> 00:05:24,020
+ paper at this point, you can put it aside and come back to it later after reading some background,
+
+82
+00:05:24,020 --> 00:05:28,820
+ or you can move to the third pass. The third pass of Keshev's method for reading research papers
+
+83
+00:05:28,820 --> 00:05:32,740
+ is for papers that you need to understand completely. The ones that, for example,
+
+84
+00:05:32,740 --> 00:05:38,740
+ your thesis is built on. Kesha writes that the key to the third pass is to attempt to virtually
+
+85
+00:05:38,740 --> 00:05:43,380
+ re-implement the paper. That means that you make the same assumptions as the authors of the research
+
+86
+00:05:43,380 --> 00:05:48,740
+ paper, you review the work in your head, kind of, and then you compare your version with their
+
+87
+00:05:48,740 --> 00:05:53,860
+ version. For a study in HCI that looks something, it looks something like you're imagining, you're
+
+88
+00:05:53,860 --> 00:05:58,500
+ running the study yourself. Who would you recruit? What would you ask them? Would you measure the same
+
+89
+00:05:58,500 --> 00:06:03,300
+ thing that the authors of this paper measure, you compare that answer with what the authors do.
+
+90
+00:06:03,300 --> 00:06:09,140
+ Every place where your version is different from the version in the paper is either a weak spot in
+
+91
+00:06:09,140 --> 00:06:14,660
+ the paper or an idea for you for your own research work. And the third part takes time. According to
+
+92
+00:06:14,660 --> 00:06:19,380
+ the person that started this method, that wrote about this method, it can take about three,
+
+93
+00:06:19,380 --> 00:06:23,620
+ four, five hours for beginners and about an hour for an experienced reader. I would say
+
+94
+00:06:23,620 --> 00:06:29,220
+ a student, based on my experience, you should just be on the higher side, just project like 3-4-5 hours.
+
+95
+00:06:29,220 --> 00:06:32,420
+ But of course you don't deep dive into a paper like that if you haven't first gone through the
+
+96
+00:06:32,420 --> 00:06:36,420
+ first and the second pass to know that it is actually relevant for your work. Again you don't
+
+97
+00:06:36,420 --> 00:06:41,620
+ want to commit 5-4 hours to a paper that is not going to help your thesis. Now reading a research
+
+98
+00:06:41,620 --> 00:06:46,820
+ paper critically means checking whether you should believe it because the fact that a paper is
+
+99
+00:06:46,820 --> 00:06:50,900
+ published doesn't also make it the right paper to reference or to build your own research on.
+
+100
+00:06:50,900 --> 00:06:53,860
+ So there are three things that I would check on every research paper.
+
+101
+00:06:53,860 --> 00:06:57,860
+ The first is the sample size, which is how many people or things that the authors of
+
+102
+00:06:57,860 --> 00:06:58,860
+ the paper study.
+
+103
+00:06:58,860 --> 00:07:01,340
+ Bigger sample size doesn't automatically means better.
+
+104
+00:07:01,340 --> 00:07:02,340
+ Keep this in mind.
+
+105
+00:07:02,340 --> 00:07:05,420
+ In HCI, for example, small studies are very common.
+
+106
+00:07:05,420 --> 00:07:10,820
+ Kelly Caine looked at every paper published in 2014 and found that the most common sample
+
+107
+00:07:10,820 --> 00:07:12,500
+ size was 12.
+
+108
+00:07:12,500 --> 00:07:17,860
+ So 12 people in a long interview can tell you a lot about how people experience something.
+
+109
+00:07:17,860 --> 00:07:24,980
+ But traffic people can't tell you what percentage of all students do something.
+
+110
+00:07:24,980 --> 00:07:28,000
+ So the question is whether the number fits the size of the claim.
+
+111
+00:07:28,000 --> 00:07:31,880
+ The second thing to look out for is the method, which is how they got their answer.
+
+112
+00:07:31,880 --> 00:07:33,980
+ And confirm whether it matches the question.
+
+113
+00:07:33,980 --> 00:07:38,340
+ Say a research paper claims that switching between apps stresses people.
+
+114
+00:07:38,340 --> 00:07:40,560
+ Did they have people in a survey?
+
+115
+00:07:40,560 --> 00:07:42,940
+ Did they watch people work?
+
+116
+00:07:42,940 --> 00:07:46,620
+ Did they measure something like time or heart rates?
+
+117
+00:07:46,620 --> 00:07:47,720
+ Was it in a lab?
+
+118
+00:07:47,720 --> 00:07:52,180
+ it at these people's offices and jobs, who were the participants. If everyone in the
+
+119
+00:07:52,180 --> 00:07:57,440
+ study was a university student, I'd be very careful applying the results of that study
+
+120
+00:07:57,440 --> 00:08:03,280
+ to say no-sees on a night shift. The third thing I'd look out for is who funded it. Look
+
+121
+00:08:03,280 --> 00:08:08,360
+ for a funding section if there is, maybe acknowledgement or a conflict of interest statement. Funding
+
+122
+00:08:08,360 --> 00:08:15,840
+ doesn't exactly make the study wrong. But in 2017, a cultural review looked at a drug
+
+123
+00:08:15,840 --> 00:08:22,320
+ medical device study and they found that a study sponsored by the companies that made the product,
+
+124
+00:08:22,320 --> 00:08:27,440
+ we are more likely to report results or conclusion that favored that product. So when the funder
+
+125
+00:08:27,440 --> 00:08:32,080
+ benefits from one particular answer, you need to pay a little bit more attention. And coming back
+
+126
+00:08:32,080 --> 00:08:36,000
+ to the idea of whether printing out your research papers or not, how do you keep notes on your
+
+127
+00:08:36,000 --> 00:08:39,200
+ research papers? Keeping notes on your research papers matter. How do you even read them? Do you
+
+128
+00:08:39,200 --> 00:08:44,640
+ read them digitally? I have started to print them out, to read them physically, because I think that
+
+129
+00:08:44,640 --> 00:08:48,400
+ works better for me. There are just a few papers that are relevant to my thesis and like they are
+
+130
+00:08:48,400 --> 00:08:53,200
+ really really major for me. So you might want to print those kinds of papers out and just
+
+131
+00:08:53,200 --> 00:08:57,520
+ have them at hand or you can just read them digitally whichever works for you. But keeping
+
+132
+00:08:57,520 --> 00:09:01,840
+ notes on the research papers that you're using matters because you don't write anything down you
+
+133
+00:09:01,840 --> 00:09:06,240
+ you'll not remember a lot of it. One of the tools that is always recommended in my school is Zotero.
+
+134
+00:09:06,240 --> 00:09:12,080
+ Zotero is a very good research tool and I think it is free and open source. You can open your PDF
+
+135
+00:09:12,080 --> 00:09:16,720
+ inside these highlights, you know, write notes and it and all of that. But after all of this,
+
+136
+00:09:16,720 --> 00:09:22,320
+ if you think that a research paper is relevant to your research topic, but it still doesn't make
+
+137
+00:09:22,320 --> 00:09:26,640
+ sense after following all of the steps, then there are a few things you can do. You can look up some
+
+138
+00:09:26,640 --> 00:09:30,640
+ of the terms that you don't know first of all, because if there are like terms, a lot of terms
+
+139
+00:09:30,640 --> 00:09:35,440
+ in a section that you don't know, it can make the whole section feel impossible to understand.
+
+140
+00:09:35,440 --> 00:09:39,680
+ Or you can find a survey paper on the same topic and read it before you go back to the research
+
+141
+00:09:39,680 --> 00:09:44,960
+ paper. So web paper is kind of like a paper that reviews the research on a topic. Also,
+
+142
+00:09:44,960 --> 00:09:50,640
+ you can use AI to explain like dense paragraphs. I do this a lot. Just check what it tells you
+
+143
+00:09:50,640 --> 00:09:56,160
+ against the paper itself, right? Because they are getting things wrong sometimes. But yeah, that's it.
+

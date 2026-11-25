@@ -1,0 +1,26 @@
+{
+  "direction": "News-led: her real room, palm out, mouth closed, on the right; on the left ONE real Anthropic clipping (\"Addressing abusive behavior toward our models\", with \"sustained and needless abusive or cruel behavior toward our models\" highlighted in yellow, like her ghana-marrify 10b), with a source line. Words: what this is, plainly. Refs: Dan Grib's printed page (33x), her 10b clipping. Scores: Round 3: cold 6 · best pair (title 1) 8/7 · taste 7.",
+  "concept": "rule family (real page)",
+  "thumbnail_text": "NEW RULE FOR CLAUDE",
+  "title": "Is It Okay to Be Mean to AI? Anthropic's New Rule",
+  "titles": [
+    "Is It Okay to Be Mean to AI? Anthropic's New Rule",
+    "Mean to Claude? It Can End the Chat. Is That Right?"
+  ],
+  "scores": "Round 3: cold 6 · best pair (title 1) 8/7 · taste 7.",
+  "text": {
+    "l1": "<span class=\"boxl\">NEW RULE</span>",
+    "l2": "<span class=\"boxl l\">FOR CLAUDE</span>",
+    "src": "Screenshot · anthropic.com · 8 Oct 2026"
+  },
+  "images": {
+    "scene": "../../assets/scene/s_134.75.jpg",
+    "cut": "../../assets/cut/c_134.75.png",
+    "page": "../../assets/props/policy_rule_2lines.png"
+  },
+  "vars": {
+    "--px": "0px",
+    "--py": "-226px",
+    "--pw": "1883px"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "direction": "A habit everyone has: her steady look (9:22) at a generic post whose like count is blurred, circled in red pen. Best with a photo of her peeking at her phone over a cup (flagged).",
+  "concept": "TH16",
+  "follows": "Pinterest editorial (wry face, real prop)",
+  "needs_photo": "her peeking at her phone over a cup",
+  "thumbnail_text": "5 MINUTES LATER...",
+  "title": "Why You Keep Checking the Likes on Your Own Post",
+  "titles": [
+    "Why You Keep Checking the Likes on Your Own Post",
+    "Why You Keep Checking Your Phone for Likes"
+  ],
+  "text": {
+    "words": "5 minutes <span class=\"acc\">later...</span>",
+    "likes": "128"
+  },
+  "images": {
+    "scene": "../../assets/scene/warm/s_562.5.jpg",
+    "front": "../../assets/scene/warm/mask/s_562.5.png"
+  },
+  "vars": {}
+}

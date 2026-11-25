@@ -1,0 +1,295 @@
+{
+ "story": "ai-agents",
+ "outlet": "Honolulu Star-Advertiser (Reuters)",
+ "slug": "staradvertiser-reuters",
+ "url": "https://www.staradvertiser.com/2026/10/19/breaking-news/how-one-hacker-used-ai-agents-to-break-into-over-100-company-websites/",
+ "finalUrl": "https://www.staradvertiser.com/2026/10/19/breaking-news/how-one-hacker-used-ai-agents-to-break-into-over-100-company-websites/",
+ "status": "loaded",
+ "http": 200,
+ "title": "How one hacker used AI agents to break into over 100 company websites | Honolulu Star-Advertiser",
+ "h1": "How one hacker used AI agents to break into over 100 company websites",
+ "published": "2026-10-19T17:58:00+00:00",
+ "files": {
+  "fold": "ai-agents/staradvertiser-reuters_fold.png",
+  "full": "ai-agents/staradvertiser-reuters_full.jpg",
+  "scroll": "ai-agents/staradvertiser-reuters_scroll.mp4"
+ },
+ "full": {
+  "width": 1440,
+  "height": 4303,
+  "pageHeight": 4303,
+  "zoom": 1,
+  "quotes": [
+   {
+    "quote": "How one hacker used AI agents to break into over 100 company websites",
+    "box": {
+     "x": 72,
+     "y": 368,
+     "w": 724,
+     "h": 90
+    },
+    "lines": [
+     {
+      "x": 72,
+      "y": 368,
+      "w": 724,
+      "h": 50
+     },
+     {
+      "x": 72,
+      "y": 408,
+      "w": 573,
+      "h": 50
+     }
+    ]
+   },
+   {
+    "quote": "broke into websites belonging to more than 100 companies, including farm equipment maker Deere & Co., home appliance company SharkNinja Inc. and engine manufacturer Cummins Inc.",
+    "box": {
+     "x": 140,
+     "y": 1252,
+     "w": 702,
+     "h": 75
+    },
+    "lines": [
+     {
+      "x": 363,
+      "y": 1252,
+      "w": 475,
+      "h": 21
+     },
+     {
+      "x": 140,
+      "y": 1279,
+      "w": 702,
+      "h": 21
+     },
+     {
+      "x": 140,
+      "y": 1306,
+      "w": 315,
+      "h": 21
+     }
+    ]
+   },
+   {
+    "quote": "Yet the hacker did almost none of the work.",
+    "box": {
+     "x": 140,
+     "y": 1353,
+     "w": 345,
+     "h": 21
+    },
+    "lines": [
+     {
+      "x": 140,
+      "y": 1353,
+      "w": 345,
+      "h": 21
+     }
+    ]
+   },
+   {
+    "quote": "about $50 per successful hack",
+    "box": {
+     "x": 417,
+     "y": 2777,
+     "w": 243,
+     "h": 21
+    },
+    "lines": [
+     {
+      "x": 417,
+      "y": 2777,
+      "w": 243,
+      "h": 21
+     }
+    ]
+   }
+  ]
+ },
+ "scroll": {
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "seconds": 8,
+  "keyframes": [
+   {
+    "t": 0,
+    "y": 233
+   },
+   {
+    "t": 1,
+    "y": 233
+   },
+   {
+    "t": 2.176,
+    "y": 842
+   },
+   {
+    "t": 3.276,
+    "y": 842
+   },
+   {
+    "t": 4.874,
+    "y": 2367
+   },
+   {
+    "t": 8,
+    "y": 2367
+   }
+  ],
+  "zoom": 1,
+  "easing": "easeInOutCubic between keyframes, holds where y is equal",
+  "capped": false,
+  "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)",
+  "quotes": [
+   {
+    "quote": "How one hacker used AI agents to break into over 100 company websites",
+    "inVideo": true,
+    "still": true,
+    "t": 0.53,
+    "visibleStill": [
+     0,
+     1.07
+    ],
+    "scrollY": 233,
+    "box": {
+     "x": 312,
+     "y": 135,
+     "w": 724,
+     "h": 90
+    },
+    "lines": [
+     {
+      "x": 312,
+      "y": 135,
+      "w": 724,
+      "h": 50
+     },
+     {
+      "x": 312,
+      "y": 175,
+      "w": 573,
+      "h": 50
+     }
+    ],
+    "docBox": {
+     "x": 312,
+     "y": 368,
+     "w": 724,
+     "h": 90
+    },
+    "layoutDriftPx": 0
+   },
+   {
+    "quote": "broke into websites belonging to more than 100 companies, including farm equipment maker Deere & Co., home appliance company SharkNinja Inc. and engine manufacturer Cummins Inc.",
+    "inVideo": true,
+    "still": true,
+    "t": 2.72,
+    "visibleStill": [
+     2.1,
+     3.33
+    ],
+    "scrollY": 842,
+    "box": {
+     "x": 380,
+     "y": 410,
+     "w": 702,
+     "h": 75
+    },
+    "lines": [
+     {
+      "x": 603,
+      "y": 410,
+      "w": 475,
+      "h": 21
+     },
+     {
+      "x": 380,
+      "y": 437,
+      "w": 702,
+      "h": 21
+     },
+     {
+      "x": 380,
+      "y": 464,
+      "w": 315,
+      "h": 21
+     }
+    ],
+    "docBox": {
+     "x": 380,
+     "y": 1252,
+     "w": 702,
+     "h": 75
+    },
+    "layoutDriftPx": 0
+   },
+   {
+    "quote": "Yet the hacker did almost none of the work.",
+    "inVideo": true,
+    "still": true,
+    "t": 2.72,
+    "visibleStill": [
+     2.1,
+     3.33
+    ],
+    "scrollY": 842,
+    "box": {
+     "x": 380,
+     "y": 511,
+     "w": 345,
+     "h": 21
+    },
+    "lines": [
+     {
+      "x": 380,
+      "y": 511,
+      "w": 345,
+      "h": 21
+     }
+    ],
+    "docBox": {
+     "x": 380,
+     "y": 1353,
+     "w": 345,
+     "h": 21
+    },
+    "layoutDriftPx": 0
+   },
+   {
+    "quote": "about $50 per successful hack",
+    "inVideo": true,
+    "still": true,
+    "t": 6.42,
+    "visibleStill": [
+     4.8,
+     8.03
+    ],
+    "scrollY": 2367,
+    "box": {
+     "x": 657,
+     "y": 410,
+     "w": 243,
+     "h": 21
+    },
+    "lines": [
+     {
+      "x": 657,
+      "y": 410,
+      "w": 243,
+      "h": 21
+     }
+    ],
+    "docBox": {
+     "x": 657,
+     "y": 2777,
+     "w": 243,
+     "h": 21
+    },
+    "layoutDriftPx": 0
+   }
+  ]
+ }
+}

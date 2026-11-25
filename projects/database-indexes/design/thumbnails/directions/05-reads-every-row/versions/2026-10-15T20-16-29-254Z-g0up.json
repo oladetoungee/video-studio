@@ -1,0 +1,28 @@
+{
+ "label": "Before this session’s edits",
+ "auto": true,
+ "savedAt": 1792095389254,
+ "content": {
+  "direction": "Photo-led now (round 1 was the flat cut-out formula): she points at a tall printout of a books table pinned over the wall of her room; a red line runs down every row, the one row it wanted in yellow. The slow behaviour drawn as an object (viral sample 2). Round 3: her moved right so \"every row\" no longer touches her eye; \"No index?\" white; table header no longer clipped.",
+  "concept": "T03",
+  "thumbnail_text": "No index? It reads every row",
+  "title": "Database Indexes: Why Your App Slows Down as It Grows",
+  "titles": [
+   "Database Indexes: Why Your App Slows Down as It Grows",
+   "No Index? Your Database Reads Every Single Row",
+   "Database Indexing for Beginners: Fix Slow SQL Queries"
+  ],
+  "text": {
+   "a": "No index?",
+   "b": "It reads",
+   "c": "<span class=\"markr\">every row</span>"
+  },
+  "images": {
+   "scene": "../../assets/scene/f_496.8.jpg"
+  },
+  "frame": "8:16.8 (pointing at the table, mouth closed)",
+  "vars": {},
+  "scores": "final gate (round 4): A topic/click 5/7 · B pair 8 · C taste 7 · RECOMMENDED",
+  "recommended": true
+ }
+}

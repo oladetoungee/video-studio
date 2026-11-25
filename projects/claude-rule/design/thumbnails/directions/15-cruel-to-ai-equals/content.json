@@ -1,0 +1,21 @@
+{
+  "direction": "TH21, the flat one in the film's Thread look: lilac ground, \"CRUEL TO AI =\" in huge ink type, and the answer is a white \"CHAT ENDED\" bar as wide as the frame; the block centred vertically. Refs: her deck look (flat ground, heavy type), the flat \"no one cares.\" pin. Scores: Round 3: cold 4 · best pair (title 1) 7/6 · taste 6.5.",
+  "concept": "TH21",
+  "thumbnail_text": "CRUEL TO AI = CHAT ENDED",
+  "title": "Can You Hurt a Chatbot? Why Claude Ends Cruel Chats",
+  "titles": [
+    "Can You Hurt a Chatbot? Why Claude Ends Cruel Chats",
+    "Mean to Claude? It Can End the Chat. Is That Right?"
+  ],
+  "scores": "Round 3: cold 4 · best pair (title 1) 7/6 · taste 6.5.",
+  "text": {
+    "l1": "CRUEL TO AI <span class=\"acc\">=</span>",
+    "ended": "CHAT ENDED"
+  },
+  "images": {},
+  "vars": {
+    "--ground": "#CDBFF3",
+    "--fg": "#15131C",
+    "--accent": "#E8352B"
+  }
+}

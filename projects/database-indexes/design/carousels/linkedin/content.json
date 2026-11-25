@@ -1,0 +1,188 @@
+{
+  "_help": "Edit text here (or in the studio), then run: node shared/build.mjs <deck> (from design/carousels). Markup: *word* = accent colour, ==word== = yellow highlight, _word_ = serif italic, \\n = line break. In code lines: [[x]] = yellow (works / the query's path), {{x}} = red (slow / wrong). Grounds: ink (default), paper (light), accent (yellow).",
+  "deck": "linkedin",
+  "docTitle": "Your index exists. Your database ignores it.",
+  "width": 1080,
+  "height": 1350,
+  "accent": "#FFC53D",
+  "slides": [
+    {
+      "layout": "cover",
+      "ground": "ink",
+      "title": "Your index exists.\nYour database\n==ignores== it.",
+      "size": 120,
+      "sub": "2 reasons Postgres skips your index, 1 index it never creates for you, and how to check.",
+      "subW": 560,
+      "polaroid": {
+        "img": "gbemi_448s.jpg",
+        "caption": ""
+      },
+      "polY": 640
+    },
+    {
+      "layout": "visual",
+      "ground": "ink",
+      "title": "First, ask\nthe database",
+      "size": 100,
+      "lede": "You added an index on email. Put EXPLAIN in front of the slow query.",
+      "visual": "code",
+      "panels": [
+        {
+          "cap": "PostgreSQL",
+          "lines": [
+            "EXPLAIN SELECT * FROM users",
+            "  WHERE email = 'bob@email.com';"
+          ]
+        },
+        {
+          "cap": "two possible outcomes",
+          "lines": [
+            "bad:  {{Seq Scan on users}}",
+            "good: [[Index Scan using idx_users_email]]"
+          ],
+          "verdict": "Seq Scan = every row read.\nIndex Scan or Bitmap Index Scan = index used."
+        }
+      ],
+      "takeTop": 20,
+      "takeSize": 36,
+      "tag": "MySQL: ALL = full scan; ref/range = index."
+    },
+    {
+      "layout": "visual",
+      "ground": "ink",
+      "title": "Mistake 1:\na function on\nthe column",
+      "size": 92,
+      "lede": "The index stores emails as they are.",
+      "visual": "code",
+      "panels": [
+        {
+          "cap": "PostgreSQL, index on users (email)",
+          "kind": "bad",
+          "lines": [
+            "WHERE LOWER(email) = 'bob@email.com'",
+            "{{Seq Scan on users}}"
+          ]
+        },
+        {
+          "cap": "fix: index the same expression",
+          "kind": "good",
+          "lines": [
+            "CREATE INDEX idx_users_lower_email",
+            "  ON users (LOWER(email));",
+            "[[Index Scan]]"
+          ]
+        }
+      ],
+      "gap": 24,
+      "tag": "MySQL's default collation ignores case, so LOWER() is rarely needed."
+    },
+    {
+      "layout": "visual",
+      "ground": "ink",
+      "title": "Mistake 2:\na wildcard\nat the start",
+      "size": 100,
+      "visual": "code",
+      "panels": [
+        {
+          "kind": "bad",
+          "lines": [
+            "WHERE title LIKE '%fall%'",
+            "{{Seq Scan}}"
+          ]
+        },
+        {
+          "kind": "good",
+          "cap": "fix: a trigram index",
+          "lines": [
+            "CREATE EXTENSION IF NOT EXISTS pg_trgm;",
+            "CREATE INDEX idx_title_trgm ON posts",
+            "  USING gin (title gin_trgm_ops);",
+            "[[Bitmap Index Scan]]"
+          ]
+        }
+      ],
+      "tag": "Prefix only ('fall%')? A B-tree with text_pattern_ops works.",
+      "gap": 30
+    },
+    {
+      "layout": "visual",
+      "ground": "ink",
+      "title": "The index Postgres\nnever made for you",
+      "size": 96,
+      "lede": "MySQL (InnoDB) creates an index on a foreign key column for you. PostgreSQL doesn't.",
+      "visual": "code",
+      "panels": [
+        {
+          "cap": "PostgreSQL",
+          "lines": [
+            "CREATE INDEX idx_orders_customer_id",
+            "  ON orders (customer_id);"
+          ]
+        },
+        {
+          "cap": "Laravel",
+          "lines": [
+            "$table->foreignId('customer_id')",
+            "  ->index()->constrained();"
+          ]
+        }
+      ],
+      "takeaway": "A common reason joins suddenly get slow after a move to Postgres.",
+      "takeTop": 16,
+      "tag": "Live table? Add CONCURRENTLY (no write lock).",
+      "takeSize": 38
+    },
+    {
+      "layout": "list",
+      "ground": "ink",
+      "title": "When to add\nan index",
+      "size": 100,
+      "rows": [
+        {
+          "n": "01",
+          "head": "Searched often",
+          "sub": "In WHERE, JOIN or ORDER BY."
+        },
+        {
+          "n": "02",
+          "head": "EXPLAIN shows a full scan",
+          "sub": "On a query that is slow."
+        },
+        {
+          "n": "✗",
+          "head": "Not on every column",
+          "sub": "A table with 6 indexes: 1 row + 6 indexes = 7 writes per insert.",
+          "no": true
+        },
+        {
+          "n": "✗",
+          "head": "Not on tiny tables",
+          "sub": "With about 10 rows, the database scans anyway.",
+          "no": true
+        }
+      ],
+      "head": 52,
+      "sub": 36,
+      "pad": "20px 0 18px",
+      "foot": "Every index speeds up some reads and *slows down every insert*.",
+      "footTop": 30
+    },
+    {
+      "layout": "end",
+      "ground": "ink",
+      "title": "The full video",
+      "size": 120,
+      "body": "How a B-tree finds one row in a million, the index types, and these mistakes, in plain words.",
+      "where": "ON YOUTUBE",
+      "video": "Database Indexes: Why Your App Slows Down as It Grows",
+      "handle": "@WithGbemi",
+      "polaroid": {
+        "img": "gbemi_22s.jpg",
+        "caption": ""
+      },
+      "ask": "Which of these have you hit? Tell me in the comments.",
+      "pushTop": 110,
+      "polY": 700
+    }
+  ]
+}

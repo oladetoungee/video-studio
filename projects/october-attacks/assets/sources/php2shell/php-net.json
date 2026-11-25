@@ -1,0 +1,297 @@
+{
+ "story": "php2shell",
+ "outlet": "PHP.net",
+ "slug": "php-net",
+ "url": "https://www.php.net/",
+ "finalUrl": "https://www.php.net/",
+ "status": "loaded",
+ "http": 200,
+ "title": "PHP",
+ "h1": "",
+ "published": "2026-10-23T10:12:28+00:00",
+ "files": {
+  "fold": "php2shell/php-net_fold.png",
+  "full": "php2shell/php-net_full.jpg",
+  "scroll": "php2shell/php-net_scroll.mp4"
+ },
+ "full": {
+  "width": 1440,
+  "height": 6000,
+  "pageHeight": 11888,
+  "zoom": 1,
+  "quotes": [
+   {
+    "quote": "Security advisory: Critical remote code execution vulnerabilities, update now",
+    "box": {
+     "x": 159,
+     "y": 991,
+     "w": 697,
+     "h": 76
+    },
+    "lines": [
+     {
+      "x": 159,
+      "y": 991,
+      "w": 697,
+      "h": 28
+     },
+     {
+      "x": 159,
+      "y": 1039,
+      "w": 128,
+      "h": 28
+     }
+    ]
+   },
+   {
+    "quote": "PHP 8.5.12, 8.4.27, 8.3.36 and 8.2.35 fix two critical vulnerabilities that can allow unauthenticated remote code execution",
+    "box": {
+     "x": 159,
+     "y": 1106,
+     "w": 789,
+     "h": 46
+    },
+    "lines": [
+     {
+      "x": 159,
+      "y": 1106,
+      "w": 789,
+      "h": 19
+     },
+     {
+      "x": 159,
+      "y": 1133,
+      "w": 71,
+      "h": 19
+     }
+    ]
+   },
+   {
+    "quote": "We consider the risk highest for mod_php, with a demonstrated exploit where an unauthenticated request can trigger the attack before any application code runs",
+    "box": {
+     "x": 159,
+     "y": 1212,
+     "w": 788,
+     "h": 46
+    },
+    "lines": [
+     {
+      "x": 362,
+      "y": 1212,
+      "w": 585,
+      "h": 19
+     },
+     {
+      "x": 159,
+      "y": 1239,
+      "w": 582,
+      "h": 19
+     }
+    ]
+   },
+   {
+    "quote": "PHP 8.1 and older no longer receive updates from the PHP project",
+    "box": {
+     "x": 183,
+     "y": 1654,
+     "w": 474,
+     "h": 19
+    },
+    "lines": [
+     {
+      "x": 183,
+      "y": 1654,
+      "w": 474,
+      "h": 19
+     }
+    ]
+   }
+  ]
+ },
+ "scroll": {
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "seconds": 8,
+  "keyframes": [
+   {
+    "t": 0,
+    "y": 0
+   },
+   {
+    "t": 1,
+    "y": 0
+   },
+   {
+    "t": 2.125,
+    "y": 527
+   },
+   {
+    "t": 3.225,
+    "y": 527
+   },
+   {
+    "t": 4.029,
+    "y": 672
+   },
+   {
+    "t": 5.129,
+    "y": 672
+   },
+   {
+    "t": 6.166,
+    "y": 1070
+   },
+   {
+    "t": 8,
+    "y": 1070
+   }
+  ],
+  "zoom": 1,
+  "easing": "easeInOutCubic between keyframes, holds where y is equal",
+  "capped": false,
+  "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)",
+  "quotes": [
+   {
+    "quote": "Security advisory: Critical remote code execution vulnerabilities, update now",
+    "inVideo": true,
+    "still": true,
+    "t": 2.68,
+    "visibleStill": [
+     2.07,
+     3.3
+    ],
+    "scrollY": 527,
+    "box": {
+     "x": 264,
+     "y": 410,
+     "w": 832,
+     "h": 28
+    },
+    "lines": [
+     {
+      "x": 264,
+      "y": 410,
+      "w": 832,
+      "h": 28
+     }
+    ],
+    "docBox": {
+     "x": 264,
+     "y": 937,
+     "w": 832,
+     "h": 28
+    },
+    "layoutDriftPx": 0
+   },
+   {
+    "quote": "PHP 8.5.12, 8.4.27, 8.3.36 and 8.2.35 fix two critical vulnerabilities that can allow unauthenticated remote code execution",
+    "inVideo": true,
+    "still": true,
+    "t": 2.68,
+    "visibleStill": [
+     2.07,
+     3.3
+    ],
+    "scrollY": 527,
+    "box": {
+     "x": 264,
+     "y": 477,
+     "w": 864,
+     "h": 19
+    },
+    "lines": [
+     {
+      "x": 264,
+      "y": 477,
+      "w": 864,
+      "h": 19
+     }
+    ],
+    "docBox": {
+     "x": 264,
+     "y": 1004,
+     "w": 864,
+     "h": 19
+    },
+    "layoutDriftPx": 0
+   },
+   {
+    "quote": "We consider the risk highest for mod_php, with a demonstrated exploit where an unauthenticated request can trigger the attack before any application code runs",
+    "inVideo": true,
+    "still": true,
+    "t": 4.57,
+    "visibleStill": [
+     3.93,
+     5.2
+    ],
+    "scrollY": 672,
+    "box": {
+     "x": 264,
+     "y": 410,
+     "w": 1018,
+     "h": 73
+    },
+    "lines": [
+     {
+      "x": 1261,
+      "y": 410,
+      "w": 21,
+      "h": 19
+     },
+     {
+      "x": 264,
+      "y": 437,
+      "w": 984,
+      "h": 19
+     },
+     {
+      "x": 264,
+      "y": 464,
+      "w": 158,
+      "h": 19
+     }
+    ],
+    "docBox": {
+     "x": 264,
+     "y": 1082,
+     "w": 1018,
+     "h": 73
+    },
+    "layoutDriftPx": 0
+   },
+   {
+    "quote": "PHP 8.1 and older no longer receive updates from the PHP project",
+    "inVideo": true,
+    "still": true,
+    "t": 7.07,
+    "visibleStill": [
+     6.1,
+     8.03
+    ],
+    "scrollY": 1070,
+    "box": {
+     "x": 288,
+     "y": 410,
+     "w": 474,
+     "h": 19
+    },
+    "lines": [
+     {
+      "x": 288,
+      "y": 410,
+      "w": 474,
+      "h": 19
+     }
+    ],
+    "docBox": {
+     "x": 288,
+     "y": 1480,
+     "w": 474,
+     "h": 19
+    },
+    "layoutDriftPx": 0
+   }
+  ]
+ }
+}

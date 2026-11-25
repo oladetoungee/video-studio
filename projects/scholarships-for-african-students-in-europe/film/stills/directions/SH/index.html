@@ -1,0 +1,39 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Short frames</title>
+<link rel="stylesheet" href="../_shared/fonts.css">
+<style>
+#stage{background:#1B1D21}
+.row{position:absolute;display:flex;gap:5px}
+.cell{position:relative;background:#0E0F11;display:flex;align-items:center;justify-content:center;font-family:"Barlow Condensed";font-weight:600;color:#F3F0E8;border-radius:3px;overflow:hidden}
+.cell:after{content:"";position:absolute;left:0;right:0;top:50%;height:2px;background:#25282D}
+.go{color:#2FD27A}
+.lab{position:absolute;font-family:"DM Mono";font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:#9AA0A8}
+.cap{position:absolute;left:40px;right:40px;text-align:center;font-family:"Barlow Condensed";font-weight:800;text-transform:uppercase;color:#fff;line-height:1.02;text-shadow:0 0 1px #000,0 4px 0 #000,0 -4px 0 #000,4px 0 0 #000,-4px 0 0 #000,3px 3px 0 #000,-3px -3px 0 #000,3px -3px 0 #000,-3px 3px 0 #000}
+.cap b{color:#2FD27A}
+.clip{position:absolute;background:#fff;overflow:hidden;border-radius:14px}
+.clip img{position:absolute}
+.hl{position:absolute;background:#7FE9AE;mix-blend-mode:multiply}
+</style></head>
+<body><div id="stage"></div>
+<script src="../_shared/lib.js"></script>
+<script>
+const W = 1080, H = 1920; const S = $('#stage'); st(S, { width: W + 'px', height: H + 'px' });
+function flaps(x, y, n, cw, ch, fs, text, cls = '') { let h = `<div class="row" style="left:${x}px;top:${y}px">`; for (let i = 0; i < n; i++) h += `<div class="cell ${cls}" style="width:${cw}px;height:${ch}px;font-size:${fs}px">${text[i] || ''}</div>`; return h + '</div>'; }
+// the top label: two rows of flaps (the only top text); a side timer counts the short (her #16 reference)
+const label = () => flaps(60, 110, 17, 52, 88, 66, 'SWEDISH INSTITUTE') + flaps(60, 206, 17, 52, 88, 66, 'FOR NIGERIANS', '') ;
+const timer = (s) => `<div class="lab" style="right:60px;top:318px;font-size:30px;color:#F3F0E8">00:${String(s).padStart(2, '0')} / 00:40</div>`;
+// her 3:4 window (crop only, never flipped): 810x1080 of the 1920x1080 frame scaled to 1080x1440
+const her = (n, y, ox) => `<div class="abs" style="left:0;top:${y}px;width:1080px;height:1440px;overflow:hidden"><img src="../_src/raw_${n}.jpg" style="position:absolute;height:1440px;left:${-ox * 1.3333}px;top:0"></div>`;
+const SHOTS = {};
+SHOTS.s1 = () => { S.innerHTML = her(245, 480, 520) + label() + timer(2) + `<div class="cap" style="top:1560px;font-size:84px">Then there's the <b>Swedish Institute</b> scholarship</div>`; };
+SHOTS.s2 = () => {
+  const k = 1.0, sx = 320, sy = 770, sw = 960, sh = 222;
+  S.innerHTML = label() + timer(31) + `<div class="lab" style="left:60px;top:380px;font-size:30px;color:#F3F0E8">Step 1 · University Admissions</div>` + flaps(60, 428, 12, 70, 120, 92, 'BY 15 JAN 27', 'go') +
+    `<div class="lab" style="left:60px;top:590px;font-size:30px;color:#F3F0E8">Step 2 · The scholarship</div>` + flaps(60, 638, 12, 70, 120, 92, '8-24 FEB 27', 'go') +
+    `<div class="lab" style="left:60px;top:800px;font-size:30px">Dates: si.se · checked 2 Nov 2026</div>` +
+    `<div class="abs" style="left:0;top:880px;width:1080px;height:1040px;overflow:hidden"><img src="../_src/raw_245.jpg" style="position:absolute;height:1300px;left:-${470 * 1.204}px;top:-120px"></div>` +
+    `<div class="cap" style="top:1700px;font-size:80px">in the short window<br><b>in February</b></div>`;
+};
+window.show = async (n) => { SHOTS[n](); await imagesReady(); };
+window.READY = true;
+</script></body></html>

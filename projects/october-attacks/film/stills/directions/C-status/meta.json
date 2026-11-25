@@ -1,0 +1,247 @@
+{
+ "TOTAL": 482,
+ "INTRO": 0,
+ "OUTRO": 2,
+ "FPS": 30,
+ "CUES": [
+  {
+   "name": "notify",
+   "t": 3.78,
+   "db": -8,
+   "keep": true
+  },
+  {
+   "name": "tick",
+   "t": 7.26,
+   "db": -7,
+   "keep": true
+  },
+  {
+   "name": "tick2",
+   "t": 7.71,
+   "db": -7,
+   "keep": true
+  },
+  {
+   "name": "tick",
+   "t": 8.16,
+   "db": -7,
+   "keep": true
+  },
+  {
+   "name": "alarm",
+   "t": 8.36,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "tick2",
+   "t": 8.61,
+   "db": -7,
+   "keep": true
+  },
+  {
+   "name": "thud",
+   "t": 113.75,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "alarm",
+   "t": 115.68,
+   "db": -8,
+   "keep": true
+  },
+  {
+   "name": "type",
+   "t": 147.61,
+   "db": -10,
+   "keep": true
+  },
+  {
+   "name": "check",
+   "t": 149.46,
+   "db": -5,
+   "keep": true
+  },
+  {
+   "name": "check2",
+   "t": 154.85,
+   "db": -5,
+   "keep": true
+  },
+  {
+   "name": "check",
+   "t": 158.18,
+   "db": -5,
+   "keep": true
+  },
+  {
+   "name": "tick",
+   "t": 183.47,
+   "db": -10,
+   "keep": true
+  },
+  {
+   "name": "notify",
+   "t": 185.37,
+   "db": -8,
+   "keep": true
+  },
+  {
+   "name": "alarm",
+   "t": 186.32,
+   "db": -9,
+   "keep": true
+  },
+  {
+   "name": "type",
+   "t": 186.97,
+   "db": -12,
+   "keep": true
+  },
+  {
+   "name": "shutter",
+   "t": 189.3,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "pop",
+   "t": 193.84,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "notify2",
+   "t": 198.45,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "glitch",
+   "t": 199.18,
+   "db": -10,
+   "keep": true
+  },
+  {
+   "name": "pop",
+   "t": 245.69,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "thud",
+   "t": 246.64,
+   "db": -5,
+   "keep": true
+  },
+  {
+   "name": "type",
+   "t": 249.73,
+   "db": -9,
+   "keep": true
+  },
+  {
+   "name": "check",
+   "t": 253.06,
+   "db": -7,
+   "keep": true
+  },
+  {
+   "name": "alarm",
+   "t": 254.96,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "shutter",
+   "t": 256.72,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "marker",
+   "t": 257.86,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "pop",
+   "t": 378.51,
+   "db": -8,
+   "keep": true
+  },
+  {
+   "name": "thud",
+   "t": 386.7,
+   "db": -2,
+   "keep": true
+  }
+ ],
+ "SCENES": [
+  {
+   "n": 1,
+   "id": "status",
+   "start": 0,
+   "end": 108.06,
+   "ground": "page",
+   "label": "status",
+   "trans": "cut"
+  },
+  {
+   "n": 2,
+   "id": "before",
+   "start": 108.06,
+   "end": 146.49,
+   "ground": "page",
+   "label": "before",
+   "trans": "whip"
+  },
+  {
+   "n": 3,
+   "id": "fix",
+   "start": 146.49,
+   "end": 183.27,
+   "ground": "page",
+   "label": "fix",
+   "trans": "whip"
+  },
+  {
+   "n": 4,
+   "id": "env",
+   "start": 183.27,
+   "end": 239.88,
+   "ground": "page",
+   "label": "env",
+   "trans": "whip"
+  },
+  {
+   "n": 5,
+   "id": "zeabur",
+   "start": 239.88,
+   "end": 256.62,
+   "ground": "page",
+   "label": "zeabur",
+   "trans": "whip"
+  },
+  {
+   "n": 6,
+   "id": "zeabur-src",
+   "start": 256.62,
+   "end": 378.41,
+   "ground": "page",
+   "label": "zeabur-src",
+   "trans": "whip"
+  },
+  {
+   "n": 7,
+   "id": "four",
+   "start": 378.41,
+   "end": 482,
+   "ground": "page",
+   "label": "four",
+   "trans": "whip"
+  }
+ ]
+}

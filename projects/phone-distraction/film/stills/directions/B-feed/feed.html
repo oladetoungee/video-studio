@@ -1,0 +1,115 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:UB;src:url(../_fonts/Unbounded.ttf)}
+@font-face{font-family:IT;src:url(../_fonts/InterTight.ttf)}
+html,body{margin:0;background:#111;overflow:hidden}
+#stage{position:relative;overflow:hidden;background:#111;font-family:IT;color:#111}
+.hl{font-family:UB;font-weight:800;text-transform:uppercase;letter-spacing:-.025em;line-height:.98}
+.w{display:inline-block;white-space:pre}
+.lab{font-family:IT;font-weight:600;letter-spacing:.12em;font-size:32px}
+</style></head><body><div id="stage"></div>
+<script src="../_tools/kit.js"></script>
+<script>
+// B · THE FEED. 0-9.75 = motion test (her 6:43.2-6:52.95). Later scenes are stills only.
+const BONE = '#F2EFE9', INK = '#111111', TOM = '#FF4F2E', YEL = '#FFE14D', MINT = '#9FF0C8';
+const T0 = 403.2, wt = s => s - T0;
+const HS = V(124, 104);  // headline size
+function svg(parent, x, y, s, path, col, fill = 'none') { const d = el('div', { left: x + 'px', top: y + 'px', width: s + 'px', height: s + 'px' }, `<svg viewBox="0 0 48 48" width="${s}" height="${s}"><path d="${path}" fill="${fill}" stroke="${col}" stroke-width="3.6" stroke-linejoin="round" stroke-linecap="round"/></svg>`, parent); return d; }
+const HEART = 'M24 40 C10 30 5 23 5 16 a9.5 9.5 0 0 1 19 -3 a9.5 9.5 0 0 1 19 3 c0 7 -5 14 -19 24z';
+const BUBBLE = 'M8 10h32a3 3 0 0 1 3 3v18a3 3 0 0 1 -3 3H20l-9 7v-7H8a3 3 0 0 1 -3 -3V13a3 3 0 0 1 3 -3z';
+const SHARE = 'M27 8l15 14 -15 14v-8C16 28 10 32 6 40c1 -12 7 -22 21 -23z';
+// a feed post: full-bleed ground + rail + handle + progress bar. Returns the root.
+function post(R, bg, fg, opt = {}) {
+  const p = el('div', { left: 0, top: 0, width: W + 'px', height: H + 'px', background: bg, color: fg }, '', R);
+  if (opt.rail !== false) {
+    const rx = V(1730, 940), ry = V(470, 1080), s = V(76, 84);
+    const h = svg(p, rx, ry, s, HEART, fg); p.heart = h;
+    p.count = el('div', { left: rx - 40 + 'px', top: ry + s + 6 + 'px', width: s + 80 + 'px', height: '40px', overflow: 'hidden', textAlign: 'center', fontSize: '32px', fontWeight: 700 }, '', p);
+    p.count.innerHTML = '<div style="position:absolute;left:0;width:100%">?</div>';
+    svg(p, rx, ry + s + 70, s, BUBBLE, fg); svg(p, rx, ry + 2 * s + 140, s, SHARE, fg);
+    el('div', { left: V(120, 60) + 'px', top: V(960, 1700) + 'px', fontSize: V(34, 38) + 'px', fontWeight: 700 }, '@WithGbemi', p);
+    p.bar = el('div', { left: 0, top: H - 10 + 'px', width: W + 'px', height: '10px', background: fg, opacity: 0.2 }, '', p);
+    p.fill = el('div', { left: 0, top: H - 10 + 'px', width: '0px', height: '10px', background: fg }, '', p);
+  }
+  el('div', { left: V(1440, 60) + 'px', top: V(974, 1780) + 'px', color: fg, opacity: 0.7 }, 'ILLUSTRATION', p).className = 'lab';
+  return p;
+}
+function head(p, x, y, w, list, size = HS, extra = {}) {
+  const b = el('div', Object.assign({ left: x + 'px', top: y + 'px', width: w + 'px', fontSize: size + 'px' }, extra), '', p); b.className = 'hl';
+  b.ws = list.map(([t, txt, col]) => { const s = document.createElement('span'); s.className = 'w'; s.textContent = txt + ' '; if (col) s.style.color = col; b.appendChild(s); return [t, s]; });
+  return b;
+}
+function showHead(b, t) { for (const [t0, s] of b.ws) { const p = prog(t, t0 - 0.03, t0 + 0.14); s.style.opacity = p; s.style.transform = `translateY(${(1 - eOut(p)) * 26}px) scale(${0.94 + 0.06 * eOut(p)})`; s.style.filter = `blur(${(1 - p) * 8}px)`; } }
+// swipe-up: returns y offset for a post that is shown from tin to tout (spring zeta 0.78, 1.9 Hz)
+function swipeY(t, tin, tout) {
+  const a = tin <= 0 ? 0 : H * (1 - spring(t - tin, 1.9, 0.78));
+  const b = tout == null ? 0 : -H * spring(t - tout, 1.9, 0.78);
+  return t < tin ? H : a + (t >= tout ? b : 0);
+}
+// ---------------- the motion test ----------------
+scene('test', 0, 9.75, (R, S) => {
+  // P1: stopping cues (old media, no rail)
+  const p1 = S.p1 = post(R, BONE, INK, { rail: false });
+  S.h1 = head(p1, V(120, 60), V(110, 180), V(1300, 960), [[wt(403.80), 'Stopping'], [wt(404.05), 'cues']], V(132, 112));
+  const cues = [['The end of a chapter', 'BOOK'], ['Next episode: next week', 'TV'], ['‹ 1 2 3 Next page ›', 'WEB']];
+  S.cues = cues.map(([a, b], i) => {
+    const c = el('div', { left: V(120, 60) + 'px', top: V(420 + i * 170, 560 + i * 240) + 'px', width: V(1100, 960) + 'px', height: V(140, 200) + 'px', borderTop: `4px solid ${INK}`, boxSizing: 'border-box' }, '', p1);
+    el('div', { left: 0, top: '22px', fontSize: '32px', fontWeight: 700, letterSpacing: '.12em' }, b, c);
+    el('div', { left: V(180, 0) + 'px', top: V('8px', '70px'), fontSize: V(64, 60) + 'px', fontWeight: 600, letterSpacing: '-.02em' }, a, c);
+    return c;
+  });
+  // P2: the feed has no last page
+  const p2 = S.p2 = post(R, TOM, INK);
+  S.h2 = head(p2, V(120, 60), V(150, 300), V(1450, 880), [[wt(407.16), 'Your'], [wt(407.69), 'feed'], [wt(407.72), 'does'], [wt(407.97), 'not', '#FFFFFF'], [wt(408.16), 'have'], [wt(408.43), 'a'], [wt(408.56), 'last'], [wt(408.76), 'page.']]);
+  S.track = el('div', { left: V(1880, 1046) + 'px', top: V(60, 200) + 'px', width: '12px', height: V(880, 1400) + 'px', borderRadius: '6px', background: 'rgba(17,17,17,.15)' }, '', p2);
+  S.thumb = el('div', { left: 0, top: 0, width: '12px', borderRadius: '6px', background: INK }, '', S.track);
+  // P3, P4: blur-by feed posts; P5: forever
+  S.p3 = post(R, MINT, INK); S.h3 = head(S.p3, V(120, 60), V(150, 300), V(1400, 880), [[wt(409.40), "It's"], [wt(409.60), 'intentionally', '#FFFFFF'], [wt(410.36), 'designed'], [wt(410.86), 'that'], [wt(411.12), 'way.']]);
+  S.p4 = post(R, YEL, INK);
+  const p5 = S.p5 = post(R, INK, '#F2EFE9');
+  S.h5 = head(p5, V(120, 60), V(150, 300), V(1450, 900), [[wt(411.84), 'so'], [wt(411.88), 'you'], [wt(411.88), 'can'], [wt(412.13), 'keep'], [wt(412.27), 'scrolling'], [wt(412.83), 'forever.', YEL]], HS, { color: BONE });
+}, (t, S) => {
+  // P1 cues: in on "stopping" (0.6), flicked away left on "taken away" (3.0..)
+  S.cues.forEach((c, i) => { const a = eOut(prog(t, 0.0 + i * 0.1, 0.5 + i * 0.1)), out = t < 3.0 + i * 0.1 ? 0 : 1 - Math.pow(1 - prog(t, 3.0 + i * 0.1, 3.4 + i * 0.1), 3); c.style.opacity = a; c.style.transform = `translateX(${(1 - a) * 80 - out * (W + 200) * eIn(prog(t, 3.0 + i * 0.1, 3.35 + i * 0.1))}px)`; });
+  showHead(S.h1, t);
+  const sw1 = wt(407.0), sw2 = wt(409.25), sw3 = wt(411.2), sw4 = wt(411.5);
+  S.p1.style.transform = `translateY(${t < sw1 ? 0 : -H * spring(t - sw1, 1.9, 0.78)}px)`;
+  S.p2.style.transform = `translateY(${swipeY(t, sw1, sw2)}px)`;
+  S.p3.style.transform = `translateY(${swipeY(t, sw2, sw3)}px)`;
+  S.p4.style.transform = `translateY(${swipeY(t, sw3, sw4)}px)`;
+  S.p5.style.transform = `translateY(${swipeY(t, sw4, null)}px)`;
+  showHead(S.h2, t); showHead(S.h3, t); showHead(S.h5, t);
+  // the scrollbar thumb shrinks as the feed keeps loading ("no last page")
+  const th = V(880, 1400), k = prog(t, wt(408.3), wt(409.25)); const hh = th * 0.42 * Math.pow(0.08, eIO(k)); S.thumb.style.height = Math.max(10, hh) + 'px'; S.thumb.style.top = (th - hh) * (0.25 + 0.75 * eIO(k)) + 'px';
+  // progress bars run on each post (autoplay)
+  [[S.p2, sw1], [S.p3, sw2], [S.p4, sw3], [S.p5, sw4]].forEach(([p, a]) => { p.fill.style.width = clamp((t - a) / 6) * W + 'px'; });
+});
+// ---------------- still: the hook post ----------------
+scene('hook', 20, 30, (R, S) => {
+  const p = post(R, YEL, INK);
+  S.h = head(p, V(120, 60), V(150, 260), V(1500, 900), [[0, 'Your phone was'], [0, 'intentionally and'], [0, 'strategically'], [0, 'designed to'], [0, 'distract', TOM], [0, 'you.']], V(112, 70));
+  p.fill.style.width = W * 0.31 + 'px';
+}, (lt, S) => showHead(S.h, 1));
+// ---------------- still: the unpredictable reward (slot reels of like counts) ----------------
+scene('slot', 30, 40, (R, S) => {
+  const p = post(R, MINT, INK);
+  head(p, V(120, 60), V(110, 260), V(1500, 900), [[0, 'Sometimes'], [0, 'nothing.']], V(96, 88));
+  head(p, V(120, 60), V(330, 520), V(1500, 900), [[0, 'Sometimes'], [0, 'small things.']], V(96, 88));
+  head(p, V(120, 60), V(550, 780), V(1500, 900), [[0, 'Sometimes a'], [0, 'big thing.', TOM]], V(96, 88));
+  const reels = ['0', '4', '2,318'];
+  p.count.innerHTML = '';
+  // reel under the heart: numbers stacked, mid-spin
+  S.reel = el('div', { left: 0, top: 0, width: '100%', textAlign: 'center' }, ['?', '?', '?', '?', '?'].map(n => `<div style="height:40px">${n}</div>`).join(''), p.count);
+  showHead; S.p = p;
+}, (lt, S) => { S.reel.style.transform = 'translateY(-118px)'; S.reel.style.filter = 'blur(1.5px)'; S.p.querySelectorAll('.hl').forEach(b => b.querySelectorAll('.w').forEach(s => s.style.opacity = 1)); });
+// ---------------- still: autoplay countdown ----------------
+scene('auto', 40, 50, (R, S) => {
+  const p = post(R, INK, BONE);
+  head(p, V(120, 60), V(150, 260), V(1200, 940), [[0, 'Deciding'], [0, 'to'], [0, 'stop'], [0, 'takes'], [0, 'effort.', YEL]], V(112, 104), { color: BONE }).querySelectorAll('.w').forEach(s => s.style.opacity = 1);
+  const cx = V(1370, 540), cy = V(720, 1250), r = V(120, 150);
+  el('div', { left: cx - r + 'px', top: cy - r + 'px', width: 2 * r + 'px', height: 2 * r + 'px' }, `<svg width="${2 * r}" height="${2 * r}" viewBox="0 0 100 100"><circle cx="50" cy="50" r="46" fill="none" stroke="rgba(242,239,233,.2)" stroke-width="5"/><circle cx="50" cy="50" r="46" fill="none" stroke="${YEL}" stroke-width="5" stroke-dasharray="289" stroke-dashoffset="${289 * 0.62}" transform="rotate(-90 50 50)" stroke-linecap="round"/><path d="M42 36 L64 50 L42 64z" fill="${BONE}"/></svg>`, p);
+  el('div', { left: cx - 300 + 'px', top: cy + r + 30 + 'px', width: '600px', textAlign: 'center', fontSize: '40px', fontWeight: 600, color: BONE }, 'Up next in 3', p);
+  p.fill.style.width = W * 0.97 + 'px';
+}, () => {});
+window.crisp = () => true; // hard-edged swipes: no frame blending across posts
+</script></body></html>

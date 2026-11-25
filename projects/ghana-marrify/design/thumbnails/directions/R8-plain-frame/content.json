@@ -1,0 +1,17 @@
+{
+  "direction": "REMAKE of viral sample 8 (\"Why Nobody Can Read a Book Anymore\", Casey Simpson): a plain, tight talking frame, face big and right of centre, one hand up mid-gesture, no words and no props; the title does all the work. (Her room has no microphone in shot, so none is added.)",
+  "concept": "R8",
+  "sample": "8",
+  "thumbnail_text": "(no words: the title carries it)",
+  "title": "You Can Now Check If Someone Is Married in Ghana",
+  "titles": [
+    "You Can Now Check If Someone Is Married in Ghana",
+    "Is He Already Married? Ghana Built an App to Check",
+    "Married? In Ghana, Anyone Can Now Look You Up"
+  ],
+  "text": { "optional": "" },
+  "images": {
+    "scene": "../../assets/scene/warm/s_123.40.jpg"
+  },
+  "vars": {}
+}

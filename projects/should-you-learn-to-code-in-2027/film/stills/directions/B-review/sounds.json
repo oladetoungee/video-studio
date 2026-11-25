@@ -1,0 +1,46 @@
+{
+ "music": "480",
+ "musicAt": 6,
+ "musicDb": -23,
+ "sfxDb": -4,
+ "roles": {
+  "type": "typewriter-soft-click",
+  "strike": "marker-line",
+  "add": "typewriter-single-hit",
+  "glitch": "glitch-small-electric",
+  "ui": "ui-modern-select",
+  "note": "notify-message-pop"
+ },
+ "cues": [
+  [
+   173.95,
+   "type"
+  ],
+  [
+   174.46,
+   "strike"
+  ],
+  [
+   175.15,
+   "add"
+  ],
+  [
+   175.45,
+   "add",
+   -3
+  ],
+  [
+   177.43,
+   "glitch",
+   -4
+  ],
+  [
+   179.3,
+   "ui"
+  ],
+  [
+   180.4,
+   "note"
+  ]
+ ]
+}

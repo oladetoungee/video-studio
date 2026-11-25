@@ -1,0 +1,83 @@
+1
+00:00:00,017 --> 00:00:02,407
+when to actually use a database index, use
+
+2
+00:00:02,407 --> 00:00:03,147
+it when
+
+3
+00:00:03,563 --> 00:00:06,299
+a column keeps showing up in your WHERE
+
+4
+00:00:06,299 --> 00:00:08,373
+clauses, your joins or your ORDER BY
+
+5
+00:00:08,373 --> 00:00:10,833
+so say you are sorting a million orders by
+
+6
+00:00:10,833 --> 00:00:12,727
+date, and you only show the first 10
+
+7
+00:00:12,727 --> 00:00:15,137
+if there's no index, the database has to
+
+8
+00:00:15,137 --> 00:00:18,237
+look at a million rows and sort them before
+
+9
+00:00:18,237 --> 00:00:20,437
+it can give you those 10
+
+10
+00:00:20,797 --> 00:00:22,668
+but with an index, it reads them in order
+
+11
+00:00:22,668 --> 00:00:24,350
+and stops after the first 10
+
+12
+00:00:24,350 --> 00:00:27,070
+also, when you use EXPLAIN, and you realize
+
+13
+00:00:27,070 --> 00:00:29,703
+that a query doing a full table scan, and it
+
+14
+00:00:29,703 --> 00:00:32,977
+is slow, then maybe you need an index there
+
+15
+00:00:32,977 --> 00:00:36,347
+also, when a table gets more read, like you
+
+16
+00:00:36,347 --> 00:00:38,937
+read it a lot more than you write it, that's
+
+17
+00:00:38,937 --> 00:00:40,667
+also a good situation for a database index
+
+18
+00:00:40,667 --> 00:00:42,457
+but you shouldn't do that when the table is
+
+19
+00:00:42,457 --> 00:00:44,362
+small or when table is constantly written to
+
+20
+00:00:44,362 --> 00:00:46,817
+and rarely searched, then you probably don't
+
+21
+00:00:46,817 --> 00:00:48,167
+need a database index in that situation

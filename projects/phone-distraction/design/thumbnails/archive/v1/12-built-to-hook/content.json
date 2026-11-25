@@ -1,0 +1,22 @@
+{
+  "direction": "One bold object, one face, the claim: a generic home screen with one oversized red 99+ badge on its corner; her finger up (2:37). Best with a photo of her holding the phone up (flagged).",
+  "concept": "TH12",
+  "follows": "her collage-over-creator samples, reduced to one object",
+  "needs_photo": "her holding her phone up to the camera",
+  "thumbnail_text": "BUILT TO HOOK YOU",
+  "title": "Why You Keep Picking Up Your Phone Without Thinking",
+  "titles": [
+    "Why You Keep Picking Up Your Phone Without Thinking",
+    "Phone Addiction Isn't an Accident: The 5 Features Behind It"
+  ],
+  "scores": "A topic (image only) 8/7 · B with best title 8.5 · C taste 6 (round 2; fixes from round 2 applied after)",
+  "text": {
+    "words": "Built to <span class=\"acc\">hook</span> you",
+    "badge": "99+"
+  },
+  "images": {
+    "scene": "../../../../assets/scene/warm/s_157.0.jpg",
+    "front": "../../../../assets/scene/warm/mask/s_157.0.png"
+  },
+  "vars": {}
+}

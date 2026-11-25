@@ -1,0 +1,560 @@
+{
+ "title": "october-attacks: talking-head",
+ "source": "../kit/october internet attacks.mov",
+ "fps": 30,
+ "words": "data/raw_words.json",
+ "faces": "data/face_track.json",
+ "edl": "data/edl.json",
+ "edit": {
+  "silenceDb": -44,
+  "maxPause": 0.42,
+  "keepBefore": 0.14,
+  "keepAfter": 0.1
+ },
+ "out": "../outputs/talking-head",
+ "shortsOut": "../outputs/shorts",
+ "tail": 0.7,
+ "audio": {
+  "voiceFilter": "highpass=f=80,afftdn=nr=8:nf=-52:tn=1,deesser=i=0.3:m=0.5:f=0.5,acompressor=threshold=0.06:ratio=3:attack=6:release=160:knee=3,equalizer=f=3200:t=q:w=1.2:g=1.5",
+  "music": {
+   "dir": "library:music"
+  },
+  "levels": {
+   "voiceLufs": -16.0,
+   "duckDb": -18.0,
+   "openDb": -10.0,
+   "target": -14.0,
+   "ceiling": 0.8
+  },
+  "sfx": {
+   "palette": true,
+   "roles": {},
+   "gainDb": 11
+  }
+ },
+ "moments": [
+  {
+   "id": "full",
+   "kind": "full",
+   "slug": "full",
+   "title": "The whole video, tightened, with graphics (The Month look)",
+   "in": 0,
+   "out": "end",
+   "retakes": true,
+   "script": "moments/full.js",
+   "music": [
+    "160",
+    0.0
+   ],
+   "cuts": [],
+   "keep": [
+    [
+     47.0,
+     48.6
+    ],
+    [
+     102.3,
+     104.2
+    ],
+    [
+     180.3,
+     181.3
+    ],
+    [
+     385.9,
+     387.4
+    ]
+   ],
+   "captionStyle": "shorts"
+  },
+  {
+   "id": "lab",
+   "kind": "moment",
+   "slug": "layout-lab",
+   "title": "LAYOUT LAB (engine test, not her edit): new face + graphic layouts",
+   "in": 101.9,
+   "out": 145.6,
+   "cuts": [],
+   "script": "moments/lab.js"
+  },
+  {
+   "id": "sh01",
+   "kind": "short",
+   "slug": "october-security-news",
+   "title": "A PHP flaw and 3 hacks in one month",
+   "label": "A PHP flaw and 3 hacks in one month",
+   "sublabel": "",
+   "in": 0.0,
+   "out": 39.5,
+   "cuts": [],
+   "script": "shorts/sh01.js",
+   "music": [
+    "282",
+    4.0
+   ],
+   "tail": 0.1
+  },
+  {
+   "id": "sh02",
+   "kind": "short",
+   "slug": "what-is-php2shell",
+   "title": "PHP2Shell: a PHP flaw that lets hackers in",
+   "label": "PHP2Shell: a PHP flaw that lets hackers in",
+   "sublabel": "",
+   "in": 42.35,
+   "out": 108.12,
+   "cuts": [
+    [
+     76.05,
+     104.06
+    ]
+   ],
+   "script": "shorts/sh02.js",
+   "music": [
+    "750",
+    4.0
+   ],
+   "tail": 0.1
+  },
+  {
+   "id": "sh03",
+   "kind": "short",
+   "slug": "shell-meaning",
+   "title": "PHP2Shell: hackers could run commands on your server",
+   "label": "PHP2Shell: hackers could run commands on your server",
+   "sublabel": "",
+   "in": 54.26,
+   "out": 76.07,
+   "cuts": [],
+   "script": "shorts/sh03.js",
+   "music": [
+    "766",
+    4.0
+   ],
+   "tail": 0.1
+  },
+  {
+   "id": "sh04",
+   "kind": "short",
+   "slug": "login-cant-stop-it",
+   "title": "This PHP attack happens before your code runs",
+   "label": "This PHP attack happens before your code runs",
+   "sublabel": "",
+   "in": 108.04,
+   "out": 144.08,
+   "cuts": [],
+   "script": "shorts/sh04.js",
+   "music": [
+    "1009",
+    4.0
+   ],
+   "tail": 0.1
+  },
+  {
+   "id": "sh05",
+   "kind": "short",
+   "slug": "before-the-fix",
+   "title": "Someone tried this PHP attack 4 days early",
+   "label": "Someone tried this PHP attack 4 days early",
+   "sublabel": "",
+   "in": 126.01,
+   "out": 138.21,
+   "cuts": [],
+   "script": "shorts/sh05.js",
+   "music": [
+    "480",
+    4.0
+   ],
+   "tail": 0.1
+  },
+  {
+   "id": "sh06",
+   "kind": "short",
+   "slug": "fix-php2shell",
+   "title": "Fixing PHP2Shell: update, then restart",
+   "label": "Fixing PHP2Shell: update, then restart",
+   "sublabel": "",
+   "in": 144.0,
+   "out": 174.77,
+   "cuts": [],
+   "script": "shorts/sh06.js",
+   "music": [
+    "27",
+    4.0
+   ],
+   "tail": 0.1
+  },
+  {
+   "id": "sh07",
+   "kind": "short",
+   "slug": "laravel-php2shell",
+   "title": "Laravel devs: updating Laravel won't fix this",
+   "label": "Laravel devs: updating Laravel won't fix this",
+   "sublabel": "",
+   "in": 159.02,
+   "out": 167.62,
+   "cuts": [],
+   "script": "shorts/sh07.js",
+   "music": [
+    "102",
+    4.0
+   ],
+   "tail": 0.1
+  },
+  {
+   "id": "sh08",
+   "kind": "short",
+   "slug": "railway-hack",
+   "title": "The platform I deploy on got hacked (Railway)",
+   "label": "The platform I deploy on got hacked (Railway)",
+   "sublabel": "",
+   "in": 179.06,
+   "out": 212.95,
+   "cuts": [],
+   "script": "shorts/sh08.js",
+   "music": [
+    "135",
+    4.0
+   ],
+   "tail": 0.1
+  },
+  {
+   "id": "sh09",
+   "kind": "short",
+   "slug": "zeabur-shutting-down",
+   "title": "Zeabur: hacked twice, now shutting down",
+   "label": "Zeabur: hacked twice, now shutting down",
+   "sublabel": "",
+   "in": 212.87,
+   "out": 267.88,
+   "cuts": [],
+   "script": "shorts/sh09.js",
+   "music": [
+    "157",
+    4.0
+   ],
+   "tail": 0.1
+  },
+  {
+   "id": "sh10",
+   "kind": "short",
+   "slug": "zeabur-token",
+   "title": "Hackers got back in with a token from 2024",
+   "label": "Hackers got back in with a token from 2024",
+   "sublabel": "",
+   "in": 239.86,
+   "out": 267.0,
+   "cuts": [],
+   "script": "shorts/sh10.js",
+   "music": [
+    "167",
+    4.0
+   ],
+   "tail": 0.1
+  },
+  {
+   "id": "sh11",
+   "kind": "short",
+   "slug": "opencode-hack",
+   "title": "People found out they were hacked from their AI bill",
+   "label": "People found out they were hacked from their AI bill",
+   "sublabel": "",
+   "in": 267.8,
+   "out": 320.59,
+   "cuts": [],
+   "script": "shorts/sh11.js",
+   "music": [
+    "175",
+    4.0
+   ],
+   "tail": 0.1
+  },
+  {
+   "id": "sh12",
+   "kind": "short",
+   "slug": "distillation-attack",
+   "title": "Stolen AI keys used to train another AI?",
+   "label": "Stolen AI keys used to train another AI?",
+   "sublabel": "",
+   "in": 275.07,
+   "out": 315.52,
+   "cuts": [],
+   "script": "shorts/sh12.js",
+   "music": [
+    "234",
+    4.0
+   ],
+   "tail": 0.1
+  },
+  {
+   "id": "sh13",
+   "kind": "short",
+   "slug": "protect-api-keys",
+   "title": "3 hacks this month wanted your API keys",
+   "label": "3 hacks this month wanted your API keys",
+   "sublabel": "",
+   "in": 320.51,
+   "out": 357.23,
+   "cuts": [],
+   "script": "shorts/sh13.js",
+   "music": [
+    "443",
+    4.0
+   ],
+   "tail": 0.1
+  },
+  {
+   "id": "sh14",
+   "kind": "short",
+   "slug": "key-number-4",
+   "title": "A security key that was the number 4",
+   "label": "A security key that was the number 4",
+   "sublabel": "",
+   "in": 357.15,
+   "out": 413.23,
+   "cuts": [
+    [
+     365.2,
+     366.57
+    ],
+    [
+     380.61,
+     382.49
+    ]
+   ],
+   "script": "shorts/sh14.js",
+   "music": [
+    "722",
+    4.0
+   ],
+   "tail": 0.1
+  },
+  {
+   "id": "sh15",
+   "kind": "short",
+   "slug": "ai-agents-hacker",
+   "title": "One hacker + AI agents broke into 100+ sites",
+   "label": "One hacker + AI agents broke into 100+ sites",
+   "sublabel": "",
+   "in": 420.8,
+   "out": 447.95,
+   "cuts": [],
+   "script": "shorts/sh15.js",
+   "music": [
+    "1168",
+    4.0
+   ],
+   "tail": 0.1
+  },
+  {
+   "id": "sh16",
+   "kind": "short",
+   "slug": "ai-both-sides",
+   "title": "AI found the PHP bug, and AI helps hackers too",
+   "label": "AI found the PHP bug, and AI helps hackers too",
+   "sublabel": "",
+   "in": 452.61,
+   "out": 472.38,
+   "cuts": [],
+   "script": "shorts/sh16.js",
+   "music": [
+    "150",
+    4.0
+   ],
+   "tail": 0.1
+  },
+  {
+   "id": "teaser",
+   "kind": "teaser",
+   "slug": "october-attacks",
+   "title": "Teaser for LinkedIn and X: her best lines, The Month look",
+   "bites": [
+    [
+     2.81,
+     9.26
+    ],
+    [
+     54.26,
+     57.66
+    ],
+    [
+     62.28,
+     71.63
+    ],
+    [
+     108.04,
+     114.86
+    ],
+    [
+     126.01,
+     129.27
+    ],
+    {
+     "gap": 0.8,
+     "at": 404.3
+    },
+    [
+     14.87,
+     22.9
+    ],
+    [
+     22.92,
+     28.57
+    ],
+    [
+     245.26,
+     251.13
+    ],
+    [
+     293.46,
+     301.98
+    ],
+    {
+     "gap": 0.8,
+     "at": 404.3
+    },
+    [
+     382.37,
+     388.55
+    ],
+    [
+     443.24,
+     448.21
+    ],
+    [
+     463.49,
+     470.04
+    ],
+    {
+     "gap": 0.8,
+     "at": 404.3
+    },
+    [
+     327.85,
+     332.28
+    ]
+   ],
+   "tail": 6.5,
+   "captionStyle": "shorts",
+   "script": "teaser/teaser.js",
+   "music": [
+    "750",
+    0.0
+   ],
+   "endCard": {
+    "title": "PHP2Shell Explained: The PHP Flaw and October's Other Hacks"
+   }
+  }
+ ],
+ "common": [
+  "assets/src/index.js",
+  "moments/common.js",
+  "moments/plan.js"
+ ],
+ "pad": "#111114",
+ "frame9": "3x4",
+ "videoTitle": "PHP2Shell, Railway and stolen API keys: October 2026",
+ "fonts": [
+  "400 40px Anton",
+  "700 40px Manrope",
+  "500 40px \"Spline Sans Mono\""
+ ],
+ "images": {
+  "php2shell-bleepingcomputer-head": "assets/src/php2shell-bleepingcomputer-head.jpg",
+  "php2shell-bleepingcomputer-q2": "assets/src/php2shell-bleepingcomputer-q2.jpg",
+  "railway-techcrunch-head": "assets/src/railway-techcrunch-head.jpg",
+  "railway-techcrunch-q1": "assets/src/railway-techcrunch-q1.jpg",
+  "railway-techcrunch-q2": "assets/src/railway-techcrunch-q2.jpg",
+  "zeabur-bleepingcomputer-head": "assets/src/zeabur-bleepingcomputer-head.jpg",
+  "zeabur-bleepingcomputer-q1": "assets/src/zeabur-bleepingcomputer-q1.jpg",
+  "zeabur-bleepingcomputer-q2": "assets/src/zeabur-bleepingcomputer-q2.jpg",
+  "zeabur-bleepingcomputer-q3": "assets/src/zeabur-bleepingcomputer-q3.jpg",
+  "ai-agents-staradvertiser-reuters-head": "assets/src/ai-agents-staradvertiser-reuters-head.jpg",
+  "ai-agents-staradvertiser-reuters-q1": "assets/src/ai-agents-staradvertiser-reuters-q1.jpg",
+  "ai-agents-staradvertiser-reuters-q3": "assets/src/ai-agents-staradvertiser-reuters-q3.jpg",
+  "php2shell-deseret-reuters-head": "assets/src/php2shell-deseret-reuters-head.jpg",
+  "php2shell-deseret-reuters-q0": "assets/src/php2shell-deseret-reuters-q0.jpg",
+  "php2shell-deseret-reuters-q1": "assets/src/php2shell-deseret-reuters-q1.jpg",
+  "php2shell-deseret-reuters-q2": "assets/src/php2shell-deseret-reuters-q2.jpg",
+  "php2shell-deseret-reuters-q3": "assets/src/php2shell-deseret-reuters-q3.jpg",
+  "php2shell-php-net-q0": "assets/src/php2shell-php-net-q0.jpg",
+  "php2shell-php-net-q1": "assets/src/php2shell-php-net-q1.jpg",
+  "php2shell-php-net-q2": "assets/src/php2shell-php-net-q2.jpg",
+  "php2shell-php-net-q3": "assets/src/php2shell-php-net-q3.jpg",
+  "php2shell-datadog-head": "assets/src/php2shell-datadog-head.jpg",
+  "php2shell-datadog-q0": "assets/src/php2shell-datadog-q0.jpg",
+  "php2shell-datadog-q1": "assets/src/php2shell-datadog-q1.jpg",
+  "php2shell-datadog-q3": "assets/src/php2shell-datadog-q3.jpg",
+  "php2shell-datadog-q4": "assets/src/php2shell-datadog-q4.jpg",
+  "php2shell-datadog-q5": "assets/src/php2shell-datadog-q5.jpg",
+  "php2shell-github-advisory-109618-head": "assets/src/php2shell-github-advisory-109618-head.jpg",
+  "php2shell-github-advisory-109618-q0": "assets/src/php2shell-github-advisory-109618-q0.jpg",
+  "php2shell-github-advisory-109619-head": "assets/src/php2shell-github-advisory-109619-head.jpg",
+  "php2shell-github-advisory-109619-q0": "assets/src/php2shell-github-advisory-109619-q0.jpg",
+  "php2shell-securityweek-head": "assets/src/php2shell-securityweek-head.jpg",
+  "php2shell-securityweek-q1": "assets/src/php2shell-securityweek-q1.jpg",
+  "php2shell-vercel-q0": "assets/src/php2shell-vercel-q0.jpg",
+  "php2shell-thehackernews-head": "assets/src/php2shell-thehackernews-head.jpg",
+  "php2shell-thehackernews-q0": "assets/src/php2shell-thehackernews-q0.jpg",
+  "php2shell-thehackernews-q1": "assets/src/php2shell-thehackernews-q1.jpg",
+  "php2shell-aws-blog-head": "assets/src/php2shell-aws-blog-head.jpg",
+  "php2shell-aws-blog-q0": "assets/src/php2shell-aws-blog-q0.jpg",
+  "php2shell-aws-blog-q2": "assets/src/php2shell-aws-blog-q2.jpg",
+  "php2shell-insurancebusiness-q0": "assets/src/php2shell-insurancebusiness-q0.jpg",
+  "php2shell-wiz-blog-head": "assets/src/php2shell-wiz-blog-head.jpg",
+  "php2shell-wiz-blog-q1": "assets/src/php2shell-wiz-blog-q1.jpg",
+  "nodejs-nodejs-blog-q0": "assets/src/nodejs-nodejs-blog-q0.jpg",
+  "nodejs-securityonline-head": "assets/src/nodejs-securityonline-head.jpg",
+  "nodejs-securityonline-q0": "assets/src/nodejs-securityonline-q0.jpg",
+  "railway-railway-blog-q0": "assets/src/railway-railway-blog-q0.jpg",
+  "railway-railway-blog-q1": "assets/src/railway-railway-blog-q1.jpg",
+  "railway-railway-blog-q2": "assets/src/railway-railway-blog-q2.jpg",
+  "railway-railway-blog-q3": "assets/src/railway-railway-blog-q3.jpg",
+  "railway-railway-blog-q4": "assets/src/railway-railway-blog-q4.jpg",
+  "railway-railway-prelim-report-head": "assets/src/railway-railway-prelim-report-head.jpg",
+  "railway-railway-prelim-report-q0": "assets/src/railway-railway-prelim-report-q0.jpg",
+  "railway-railway-prelim-report-q2": "assets/src/railway-railway-prelim-report-q2.jpg",
+  "zeabur-zeabur-blog-head": "assets/src/zeabur-zeabur-blog-head.jpg",
+  "zeabur-zeabur-blog-q1": "assets/src/zeabur-zeabur-blog-q1.jpg",
+  "zeabur-zeabur-blog-q2": "assets/src/zeabur-zeabur-blog-q2.jpg",
+  "zeabur-zeabur-incident-report-head": "assets/src/zeabur-zeabur-incident-report-head.jpg",
+  "zeabur-zeabur-incident-report-q0": "assets/src/zeabur-zeabur-incident-report-q0.jpg",
+  "zeabur-zeabur-incident-report-q2": "assets/src/zeabur-zeabur-incident-report-q2.jpg",
+  "opencode-techcrunch-head": "assets/src/opencode-techcrunch-head.jpg",
+  "opencode-techcrunch-q1": "assets/src/opencode-techcrunch-q1.jpg",
+  "opencode-techcrunch-q2": "assets/src/opencode-techcrunch-q2.jpg",
+  "opencode-techcrunch-q3": "assets/src/opencode-techcrunch-q3.jpg",
+  "opencode-techcrunch-q4": "assets/src/opencode-techcrunch-q4.jpg",
+  "opencode-bleepingcomputer-head": "assets/src/opencode-bleepingcomputer-head.jpg",
+  "opencode-bleepingcomputer-q2": "assets/src/opencode-bleepingcomputer-q2.jpg",
+  "opencode-x-opencode-q0": "assets/src/opencode-x-opencode-q0.jpg",
+  "emudhra-bleepingcomputer-head": "assets/src/emudhra-bleepingcomputer-head.jpg",
+  "emudhra-bleepingcomputer-q1": "assets/src/emudhra-bleepingcomputer-q1.jpg",
+  "emudhra-bleepingcomputer-q2": "assets/src/emudhra-bleepingcomputer-q2.jpg",
+  "emudhra-thenextweb-head": "assets/src/emudhra-thenextweb-head.jpg",
+  "emudhra-thenextweb-q1": "assets/src/emudhra-thenextweb-q1.jpg",
+  "emudhra-scotthelme-q0": "assets/src/emudhra-scotthelme-q0.jpg",
+  "emudhra-scotthelme-q1": "assets/src/emudhra-scotthelme-q1.jpg",
+  "emudhra-google-blog-head": "assets/src/emudhra-google-blog-head.jpg",
+  "emudhra-google-blog-q1": "assets/src/emudhra-google-blog-q1.jpg",
+  "emudhra-thehackernews-q0": "assets/src/emudhra-thehackernews-q0.jpg",
+  "ai-agents-thenextweb-head": "assets/src/ai-agents-thenextweb-head.jpg",
+  "php2shell-techcrunch-phpocalypse-head": "assets/src/php2shell-techcrunch-phpocalypse-head.jpg",
+  "php2shell-techcrunch-phpocalypse-q2": "assets/src/php2shell-techcrunch-phpocalypse-q2.jpg"
+ },
+ "film": "october-attacks",
+ "teaserOut": "../outputs/teaser",
+ "outro": {
+  "16x9": {
+   "src": "../kit/landscape - full video on youtube (1).mp4",
+   "dur": 6.267,
+   "poster": "assets/outro_16x9.jpg"
+  },
+  "9x16": {
+   "src": "../kit/portrait - full video on youtube (1).mp4",
+   "dur": 6.867,
+   "poster": "assets/outro_9x16.jpg"
+  },
+  "note": "her 'FULL VIDEO ON YOUTUBE' clip (added 2026-10-26): ends every short and the teaser (moment \"outro\": false opts out); 1:1 / 4:5 use the 16:9 clip's centre; the 16:9 clip turns plain white from 6.30 s, so only its first 6.267 s (188 frames) are used; the 9:16 clip is good to its last frame"
+ }
+}

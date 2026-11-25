@@ -1,0 +1,22 @@
+{
+ "t": {
+  "teaser/label": {
+   "s": "Database indexes"
+  },
+  "card-the-catch/title": {
+   "s": "DATABASE INDEXES"
+  }
+ },
+ "cap16": {
+  "23": "adding a database index* will literally"
+ },
+ "captions16": {
+  "size": 65,
+  "y": 948
+ },
+ "mix": {
+  "voice": 7,
+  "music": 0,
+  "sfx": 0
+ }
+}

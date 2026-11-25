@@ -1,0 +1,30 @@
+{
+ "board": "yt-38",
+ "kind": "flat desk, no face: the topic huge across the top + a code printout with one bug circled in red",
+ "direction": "Copies board yt-38 (TWO SUM: a flat tan desk seen from above, the topic in huge white caps with a black outline across the top, a sheet of paper below with a hand-drawn working). Here the paper is a printout of a short piece of code an AI wrote, being read with a red pen (a line circled, one underlined, a question mark): skill 1 of the video, reading the code AI writes. Rework of 04 (2026-11-16): no face, no words-left / her-right, the picture is the skill. Round 2: four lines of code at 50 px with one bug a beginner can see (the card is charged twice, the video's own payment example), circled in red. Round 3: pencils cut (clip-art), paper and code bigger (56 px).",
+ "thumbnail_text": "READ THE CODE / AI WRITES + CHARGED TWICE tag",
+ "fonts": [
+  "thumbs-13 Archivo Black with black outline (white #FFFFFF, outline #111111, on tan #C79A5E, as Thumbnails 91)",
+  "thumbs-08 JetBrains Mono for the code on the paper"
+ ],
+ "colours": "thumbs-13 specimen (#C79A5E ground, #FFFFFF, #111111, paper #F9F5EF) + a red pen #D7262B",
+ "text": {
+  "hd": "Read the code<br>AI writes",
+  "code": "<span class=\"k\">function</span> pay(order) {\n  charge(order.card);\n  charge(order.card);\n  <span class=\"k\">return</span> <span class=\"s\">\"Paid!\"</span>;\n}",
+  "tag": "Charged twice"
+ },
+ "images": {},
+ "vars": {},
+ "class": "no-lift",
+ "titles": [
+  "Coding With AI? Learn to Read the Code It Writes",
+  "AI Writes the Code Now. These 4 Skills Still Matter",
+  "Learning to Code With AI? Don't Skip This Skill"
+ ],
+ "title": "Coding With AI? Learn to Read the Code It Writes",
+ "titles_2026": [],
+ "recommended": false,
+ "rework_of": "04-copying-ai-code-vs-understanding",
+ "scores": "2026-11-16 cold (alone, fresh critic each round, whole set): R1 6.5, R2 7, R3 7; the old 04 scored 6.5 / 6 / 6 in the same rounds. R3 note (not applied): spell out the consequence, e.g. a small red CHARGED TWICE beside the circle.",
+ "scores_2026_11_19": "2026-11-19 cold (feed): R1 6/6, R2 6/7, R3 7/7 (after the CHARGED TWICE tag). Earlier 2026-11-16: 6.5, 7, 7 alone."
+}

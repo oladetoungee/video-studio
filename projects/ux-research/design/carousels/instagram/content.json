@@ -1,0 +1,267 @@
+{
+  "_help": "Edit text here (or in the studio), then run: node shared/build.mjs instagram (from design/carousels). Markup: *word* = accent colour, _word_ = serif italic, ~word~ = struck through in marker, {word} = circled in marker, \\n = line break.",
+  "deck": "instagram",
+  "width": 1080,
+  "height": 1350,
+  "accent": "#F26A2E",
+  "accentOnInk": "#F26A2E",
+  "docTitle": "What is UX research (Instagram)",
+  "slides": [
+    {
+      "layout": "hook",
+      "ground": "ink",
+      "title": "That app you\nhate using?",
+      "size": 150,
+      "sub": "Someone could have caught it before launch. That's UX research.",
+      "subW": 540,
+      "subSize": 46,
+      "swipe": "Swipe",
+      "polaroid": {
+        "img": "gbemi_757.jpg",
+        "caption": "Gbemi"
+      },
+      "corner": "UX research, explained",
+      "notes": [
+        {
+          "t": "Where's the pay button?"
+        },
+        {
+          "t": "Where did my cart go?",
+          "o": true
+        }
+      ],
+      "noteSize": 280,
+      "noteFont": 38,
+      "gap": 70
+    },
+    {
+      "layout": "cards",
+      "ground": "paper",
+      "noteSize": 230,
+      "noteFont": 34,
+      "cards": [
+        {
+          "h": "UI",
+          "s": "What you see and touch.",
+          "notes": [
+            {
+              "t": "The buttons"
+            },
+            {
+              "t": "The colours"
+            },
+            {
+              "t": "The layout"
+            }
+          ]
+        },
+        {
+          "h": "UX",
+          "s": "How it feels to use.",
+          "o": true,
+          "notes": [
+            {
+              "t": "Can you find it?"
+            },
+            {
+              "t": "Does it make sense?"
+            },
+            {
+              "t": "Would you come back?",
+              "circle": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layout": "phone",
+      "ground": "ink",
+      "title": "Great UI.\n*Terrible* UX.",
+      "size": 130,
+      "phone": "tiny",
+      "callout": "Pay button:\na tiny grey word.",
+      "takeaway": "People can't find how to pay, so they give up.",
+      "corner": "",
+      "zoom": "pay ›"
+    },
+    {
+      "layout": "notes",
+      "ground": "paper",
+      "title": "UX research is\nhow you get to\nknow your users.",
+      "size": 100,
+      "cols": 3,
+      "noteSize": 276,
+      "noteFont": 38,
+      "notes": [
+        {
+          "t": "What do they need?"
+        },
+        {
+          "t": "Where do they struggle?"
+        },
+        {
+          "t": "What matters most to them?",
+          "o": true
+        }
+      ],
+      "takeaway": "The real question: who is this app for?",
+      "gap": 80,
+      "takeSize": 58,
+      "takeUp": 90
+    },
+    {
+      "layout": "notes",
+      "ground": "ink",
+      "title": "Apps fail\ntwo ways.",
+      "size": 150,
+      "cols": 2,
+      "noteSize": 380,
+      "noteFont": 56,
+      "gap": 80,
+      "notes": [
+        {
+          "t": "Nobody needs it."
+        },
+        {
+          "t": "Nobody can use it.",
+          "o": true,
+          "circle": false
+        }
+      ],
+      "takeaway": "Research catches both early, while a sketch is still cheap to change."
+    },
+    {
+      "layout": "notes",
+      "ground": "ink",
+      "title": "Users don't do\nwhat they *say.*",
+      "size": 120,
+      "cols": 2,
+      "noteSize": 400,
+      "noteFont": 52,
+      "corner": "// an example",
+      "notes": [
+        {
+          "t": "Says: “I always use search.”"
+        },
+        {
+          "t": "Does: taps the menu instead.",
+          "o": true,
+          "circle": false
+        }
+      ],
+      "takeaway": "People aren't lying. Good UX research watches as much as it asks.",
+      "takeSize": 50
+    },
+    {
+      "layout": "pairs",
+      "ground": "paper",
+      "title": "3 choices every\nstudy makes",
+      "size": 110,
+      "pairs": [
+        {
+          "k": "When",
+          "a": "Before you build",
+          "as": "",
+          "b": "After you build",
+          "bs": ""
+        },
+        {
+          "k": "What",
+          "a": "The why",
+          "as": "",
+          "b": "The numbers",
+          "bs": ""
+        },
+        {
+          "k": "How",
+          "a": "What they say",
+          "as": "",
+          "b": "What they do",
+          "bs": ""
+        }
+      ],
+      "takeaway": "Usually, you want both sides."
+    },
+    {
+      "layout": "methods",
+      "ground": "ink",
+      "title": "7 ways to study users",
+      "size": 96,
+      "methods": [
+        {
+          "h": "User interviews",
+          "g": "Hear their story.",
+          "o": false
+        },
+        {
+          "h": "Usability tests",
+          "g": "Watch them try it.",
+          "o": true
+        },
+        {
+          "h": "Surveys",
+          "g": "Many people, briefly.",
+          "o": false
+        },
+        {
+          "h": "Contextual inquiry",
+          "g": "Watch them at work.",
+          "o": true
+        },
+        {
+          "h": "Diary studies",
+          "g": "They log their days.",
+          "o": false
+        },
+        {
+          "h": "Card sorting",
+          "g": "They group topics.",
+          "o": false
+        },
+        {
+          "h": "A/B tests",
+          "g": "Compare 2 versions.",
+          "o": true
+        }
+      ],
+      "key": "Yellow: ask them. Orange: watch them."
+    },
+    {
+      "layout": "notes",
+      "ground": "paper",
+      "title": "No budget?\nStart *here.*",
+      "size": 150,
+      "cols": 2,
+      "noteSize": 380,
+      "noteFont": 46,
+      "gap": 80,
+      "notes": [
+        {
+          "t": "Talk to 5 future users."
+        },
+        {
+          "t": "Watch 3 friends try your app.",
+          "o": true
+        }
+      ],
+      "takeaway": "A video call counts. Some research is always better than no research."
+    },
+    {
+      "layout": "quote",
+      "ground": "ink",
+      "kicker": "",
+      "quote": "Good design doesn't start with ~screens~.\nIt starts with {people.}",
+      "qSize": 72,
+      "credit": "A line I found in a Medium article.",
+      "where": "Full video on YouTube",
+      "video": "What is UX research?",
+      "handle": "@WithGbemi",
+      "polaroid": {
+        "img": "gbemi_586.jpg",
+        "caption": "Gbemi"
+      },
+      "cta": "Save this for your next app idea."
+    }
+  ]
+}

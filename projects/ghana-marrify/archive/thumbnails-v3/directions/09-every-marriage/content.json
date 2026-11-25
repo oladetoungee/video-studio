@@ -1,0 +1,20 @@
+{
+  "direction": "A real stack of old paper records (stock) full-bleed, one search bar across it, her sceptical hand-at-face look (0:56) as a photo insert; serif italic + yellow condensed caps, flag on the first line",
+  "thumbnail_text": "Every marriage, one search away",
+  "title": "Ghana Put Its Marriage and Divorce Records on an App",
+  "titles": [
+    "Ghana Put Its Marriage and Divorce Records on an App",
+    "Should Anyone Be Able to Look Up Your Marriage?",
+    "Ghana's Records App: Great Idea, Real Privacy Question"
+  ],
+  "text": {
+    "line1": "Every marriage,",
+    "line2": "ONE SEARCH AWAY",
+    "s_q": "Search a name"
+  },
+  "images": {
+    "files": "../../assets/stock/file_stack.jpg",
+    "her": "../../assets/scene/s_56.17.jpg"
+  },
+  "vars": {}
+}

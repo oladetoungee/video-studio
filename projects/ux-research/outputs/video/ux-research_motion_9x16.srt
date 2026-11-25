@@ -1,0 +1,1083 @@
+1
+00:00:00,680 --> 00:00:03,940
+If you're building an app, there's one
+very simple question you need to ask
+
+2
+00:00:03,960 --> 00:00:06,880
+yourself before anything
+else. Who is this app for,
+
+3
+00:00:07,030 --> 00:00:09,310
+and what do they actually need it for?
+
+4
+00:00:09,430 --> 00:00:13,780
+That question is the heart of UX research
+and is a big part of what I study
+
+5
+00:00:13,800 --> 00:00:16,660
+in my master's degree in
+human-computer interaction.
+
+6
+00:00:16,800 --> 00:00:18,440
+In this video, I'm going
+to start from the scratch,
+
+7
+00:00:18,460 --> 00:00:23,240
+from the beginning, UI, UX, and then we'll
+walk it all the way up to UX research,
+
+8
+00:00:23,320 --> 00:00:26,530
+how it is done, where UX
+research is, and all of that.
+
+9
+00:00:26,720 --> 00:00:28,030
+You've probably heard people
+
+10
+00:00:28,400 --> 00:00:32,800
+say UI/UX, like one word,
+UI/UX designer, UI/UX course.
+
+11
+00:00:32,820 --> 00:00:35,590
+But UI and UX are two different things.
+
+12
+00:00:35,820 --> 00:00:39,000
+UI stands for user interface. It
+is what you can see and touch,
+
+13
+00:00:39,020 --> 00:00:42,450
+the button, the colours, the
+layout, the icons, the screen.
+
+14
+00:00:42,780 --> 00:00:45,280
+UX, on the other hand,
+stands for user experience.
+
+15
+00:00:45,300 --> 00:00:48,100
+It is how the whole product feels to use.
+
+16
+00:00:48,120 --> 00:00:50,050
+Can a user find what they're looking for?
+
+17
+00:00:50,150 --> 00:00:51,760
+Does it make sense to the user?
+
+18
+00:00:51,780 --> 00:00:53,870
+Did users get frustrated using it?
+
+19
+00:00:54,020 --> 00:00:55,830
+Did the user come back to use it?
+
+20
+00:00:56,080 --> 00:01:01,080
+So you can have a beautiful app with a
+beautiful interface that is a nightmare
+
+21
+00:01:01,100 --> 00:01:04,680
+to use. In that case, you have
+a great UI, but terrible UX.
+
+22
+00:01:04,950 --> 00:01:07,120
+So your UI is kind of part of your UX.
+
+23
+00:01:07,140 --> 00:01:08,300
+The experience is
+
+24
+00:01:08,660 --> 00:01:11,240
+just much bigger than
+what is on the screen.
+
+25
+00:01:11,310 --> 00:01:17,480
+Now, what is UX? User experience or UX
+covers everything about how a person
+
+26
+00:01:17,500 --> 00:01:19,160
+experiences a product or a service.
+
+27
+00:01:19,190 --> 00:01:22,460
+The term was popularised by Don
+Norman when he was at Apple.
+
+28
+00:01:22,720 --> 00:01:28,033
+And the way he and Jakob Nielsen describe
+it is that user experience covers
+
+29
+00:01:28,053 --> 00:01:31,440
+every part of a person's
+interaction with a company,
+
+30
+00:01:31,460 --> 00:01:35,640
+its services and its products. And all
+of this connects back to an idea called
+
+31
+00:01:35,660 --> 00:01:37,960
+human-centred design. The idea is simple.
+
+32
+00:01:37,980 --> 00:01:41,216
+You can make sense of it in... I
+love this phrase that I found on,
+
+33
+00:01:41,236 --> 00:01:44,700
+like, a Medium article. It says that
+good design doesn't start with screens,
+
+34
+00:01:44,800 --> 00:01:48,790
+it starts with people. So you start
+from the people who use a product,
+
+35
+00:01:49,000 --> 00:01:52,840
+their needs, their abilities, their
+limitations, their real lives,
+
+36
+00:01:52,860 --> 00:01:56,950
+and you design around them.
+So now, we know what UX is.
+
+37
+00:01:57,080 --> 00:02:01,260
+Now, what is UX research? UX research
+is how you get to know your users.
+
+38
+00:02:01,280 --> 00:02:04,730
+It is the work of understanding
+the people who would use a product,
+
+39
+00:02:04,780 --> 00:02:07,640
+what they need, where they
+struggle, what they prioritise,
+
+40
+00:02:07,660 --> 00:02:10,780
+so that you can build the product the right
+way and build it in a way that actually
+
+41
+00:02:10,800 --> 00:02:11,620
+works
+
+42
+00:02:11,640 --> 00:02:15,220
+for them. Why are we
+doing all this research?
+
+43
+00:02:15,350 --> 00:02:18,160
+The idea is simple. You don't
+want to build the wrong thing.
+
+44
+00:02:18,290 --> 00:02:20,490
+You could choose to not do it
+and guess your way through,
+
+45
+00:02:20,900 --> 00:02:22,240
+but you don't want to
+build the wrong thing.
+
+46
+00:02:22,260 --> 00:02:25,580
+Building is very expensive. Even with
+AI, you still spend your time and your
+
+47
+00:02:25,600 --> 00:02:28,300
+tokens. And in some cases, you
+probably still need a team.
+
+48
+00:02:28,320 --> 00:02:32,980
+A lot of products fail because the team
+built something that maybe nobody actually
+
+49
+00:02:33,000 --> 00:02:36,400
+needs. Some other products fail
+because they build the right thing,
+
+50
+00:02:36,420 --> 00:02:39,410
+but they build it in a way that people
+just couldn't find their way around it,
+
+51
+00:02:39,540 --> 00:02:41,080
+or people just couldn't figure it out.
+
+52
+00:02:41,140 --> 00:02:44,380
+UX research helps to catch
+both problems early on.
+
+53
+00:02:44,480 --> 00:02:47,570
+It is cheaper to change your idea
+or change your sketch than it is to
+
+54
+00:02:47,970 --> 00:02:49,980
+rebuild an app that is already live.
+
+55
+00:02:50,000 --> 00:02:54,580
+And doing UX research means that decisions
+about a product come from what the
+
+56
+00:02:54,600 --> 00:02:57,040
+users, the real people, actually do.
+
+57
+00:02:57,440 --> 00:02:59,600
+Otherwise, they just come from
+a random person on the team.
+
+58
+00:02:59,970 --> 00:03:04,170
+Now, who is a UX researcher? Well, I
+mean, a UX researcher does UX research.
+
+59
+00:03:04,220 --> 00:03:07,800
+A UX researcher works closely
+with designers, product managers,
+
+60
+00:03:07,900 --> 00:03:09,800
+engineers, and the people
+running the business.
+
+61
+00:03:09,870 --> 00:03:13,920
+Their job is to bring real
+users into those conversations.
+
+62
+00:03:14,320 --> 00:03:17,320
+A typical week for a UX researcher
+might look like planning a study,
+
+63
+00:03:17,340 --> 00:03:21,500
+recruiting people to take part, running
+user interviews or usability testing,
+
+64
+00:03:21,520 --> 00:03:25,430
+then sitting down with the notes or
+the recordings to find patterns.
+
+65
+00:03:25,490 --> 00:03:29,180
+And finally, sharing what they found,
+which is found from these users or about
+
+66
+00:03:29,200 --> 00:03:33,770
+these users, with the team in a way
+that actually changes what gets built.
+
+67
+00:03:33,900 --> 00:03:38,210
+People usually mix up who a UX researcher
+is and who a UX designer is a lot.
+
+68
+00:03:38,480 --> 00:03:42,270
+A UX researcher's job is to
+understand the users, what they need.
+
+69
+00:03:42,340 --> 00:03:46,180
+A UX designer's job is to take that
+understanding and design the product around
+
+70
+00:03:46,200 --> 00:03:50,940
+it. In smaller teams, there's usually
+just one person that ends up doing both
+
+71
+00:03:50,960 --> 00:03:53,820
+jobs. And there are also a lot of
+product managers that do research as part
+
+72
+00:03:53,840 --> 00:03:59,520
+of their jobs as well. What you need to
+dive into UX research is just genuine
+
+73
+00:03:59,620 --> 00:04:01,440
+curiosity about users, about people.
+
+74
+00:04:01,540 --> 00:04:04,140
+You have to be really good at
+taking the time to study people,
+
+75
+00:04:04,160 --> 00:04:06,740
+find patterns, and just be
+really good at listening.
+
+76
+00:04:07,040 --> 00:04:08,680
+Basically, you must be
+interested in people.
+
+77
+00:04:08,780 --> 00:04:10,960
+When I started reading and
+studying about UX research,
+
+78
+00:04:10,980 --> 00:04:13,790
+I kept running into different
+ways that people categorise it.
+
+79
+00:04:13,970 --> 00:04:16,360
+You go on Coursera. Coursera
+has quite a number.
+
+80
+00:04:16,380 --> 00:04:17,770
+You go to different places. It's
+
+81
+00:04:18,360 --> 00:04:20,120
+a different kind of
+categorization everywhere.
+
+82
+00:04:20,140 --> 00:04:24,040
+You see generative and evaluative,
+qualitative and quantitative,
+
+83
+00:04:24,060 --> 00:04:27,240
+behavioural and attitudinal
+primary and secondary, remote,
+
+84
+00:04:27,260 --> 00:04:29,240
+in-person, moderated, unmoderated.
+
+85
+00:04:29,470 --> 00:04:33,440
+But the useful way to think about it is
+that some of these pairs describe what
+
+86
+00:04:33,460 --> 00:04:36,190
+kind of information you get, like
+quantitative and qualitative.
+
+87
+00:04:36,360 --> 00:04:40,640
+And others describe how you run the
+research, like remote or in-person.
+
+88
+00:04:41,120 --> 00:04:42,560
+Anyways, there's a lot of categorization.
+
+89
+00:04:42,580 --> 00:04:45,700
+I will focus on the first
+three big pairs in this video,
+
+90
+00:04:45,720 --> 00:04:48,380
+generative and evaluative,
+qualitative and quantitative,
+
+91
+00:04:48,400 --> 00:04:53,000
+behavioural and attitudinal. The first
+big way to split UX research is generative
+
+92
+00:04:53,020 --> 00:04:58,150
+versus evaluative. Generative UX research
+happens early before anything is designed.
+
+93
+00:04:58,260 --> 00:05:00,660
+It asks questions like,
+what is the real problem?
+
+94
+00:05:00,680 --> 00:05:03,840
+What do people need? How do they get by
+right now without this thing that we
+
+95
+00:05:03,860 --> 00:05:07,680
+are about to build? It generates
+ideas for what to build.
+
+96
+00:05:07,700 --> 00:05:10,490
+For example, for my thesis,
+I'm doing generative research.
+
+97
+00:05:10,790 --> 00:05:14,820
+Evaluative research, on the other hand,
+happens later after there is a design.
+
+98
+00:05:14,840 --> 00:05:18,360
+It asks questions like, does
+this product actually work?
+
+99
+00:05:18,460 --> 00:05:22,260
+Can users use it? Where do the
+users get stuck while using it?
+
+100
+00:05:22,280 --> 00:05:24,920
+So you're evaluating
+something that already exists.
+
+101
+00:05:25,040 --> 00:05:28,530
+So generative UX research
+helps you decide what to build.
+
+102
+00:05:28,680 --> 00:05:32,450
+And evaluative UX research
+tells you whether what you build
+
+103
+00:05:32,860 --> 00:05:37,730
+works. The second way to split UX research
+is qualitative versus quantitative.
+
+104
+00:05:38,140 --> 00:05:40,740
+Quantitative UX research is about numbers.
+
+105
+00:05:40,910 --> 00:05:42,600
+How many people completed the task?
+
+106
+00:05:42,620 --> 00:05:44,540
+What percentage dropped off at checkout?
+
+107
+00:05:44,560 --> 00:05:48,830
+How long did it take? It tells you
+what is happening and how much of it.
+
+108
+00:05:48,990 --> 00:05:51,820
+Qualitative UX research
+is about understanding.
+
+109
+00:05:51,920 --> 00:05:54,440
+Why did the users drop off?
+What were they thinking?
+
+110
+00:05:54,640 --> 00:05:57,940
+What confused them? It's usually
+smaller and more in depth.
+
+111
+00:05:57,960 --> 00:06:00,730
+It tells you the why.
+Usually, you want both.
+
+112
+00:06:00,820 --> 00:06:04,560
+You want the numbers to show where the
+problem is, and you want the conversation
+
+113
+00:06:04,580 --> 00:06:06,860
+to show why the problem is happening.
+
+114
+00:06:06,920 --> 00:06:11,220
+Now, the third big way to split UX research
+is behavioural versus attitudinal.
+
+115
+00:06:11,860 --> 00:06:15,820
+Attitudinal UX research is about
+what users say, what they think,
+
+116
+00:06:15,840 --> 00:06:18,750
+what they feel, what they
+tell you that they do.
+
+117
+00:06:19,000 --> 00:06:21,290
+Surveys and interviews
+are mostly attitudinal.
+
+118
+00:06:22,120 --> 00:06:26,000
+behavioural UX research, on the other
+hand, is about what people actually do.
+
+119
+00:06:26,020 --> 00:06:27,480
+So you watch them use the thing.
+
+120
+00:06:27,500 --> 00:06:29,470
+You look at the data and what they click.
+
+121
+00:06:29,660 --> 00:06:33,530
+And the reason why I want to hammer on
+this, because this is one of the things
+
+122
+00:06:33,740 --> 00:06:36,530
+that was so hammered into my
+ears during my first semester,
+
+123
+00:06:36,740 --> 00:06:41,060
+that what people say and what
+people do are often very different.
+
+124
+00:06:41,090 --> 00:06:44,520
+What people say, what they give you in
+a survey, is usually different from what
+
+125
+00:06:44,540 --> 00:06:49,020
+they do when you watch them. If you
+ask someone how they use an app,
+
+126
+00:06:49,040 --> 00:06:51,460
+they will give you an answer.
+If you watch them use the app,
+
+127
+00:06:51,480 --> 00:06:53,980
+they could end up doing something
+completely different from the answer that
+
+128
+00:06:54,000 --> 00:06:56,900
+they gave you. And they might
+genuinely believe what they told you.
+
+129
+00:06:56,920 --> 00:07:00,620
+We are human beings. We are just not very
+good at noticing our own behaviours.
+
+130
+00:07:00,640 --> 00:07:04,300
+So good UX research
+watches as much as it asks.
+
+131
+00:07:04,320 --> 00:07:08,480
+What people say still matters. Sometimes
+they do exactly what they tell you.
+
+132
+00:07:08,500 --> 00:07:11,000
+But when what they say and
+what they do don't match,
+
+133
+00:07:11,020 --> 00:07:14,880
+then working out why they don't
+match is also a very useful finding.
+
+134
+00:07:14,930 --> 00:07:17,150
+Now, there are a few more
+categories of UX research
+
+135
+00:07:17,700 --> 00:07:19,120
+that I'll go over very quickly.
+
+136
+00:07:19,300 --> 00:07:21,880
+The primary research is the
+research you do yourself,
+
+137
+00:07:21,900 --> 00:07:23,540
+like running your own interview.
+
+138
+00:07:23,560 --> 00:07:27,280
+Secondary research uses what already
+exists, like published studies,
+
+139
+00:07:27,300 --> 00:07:28,620
+industry reports and all of that.
+
+140
+00:07:28,700 --> 00:07:32,180
+Remote UX research happens over a
+video call through an online tool.
+
+141
+00:07:32,320 --> 00:07:35,240
+In-person research happens in the same
+room where you can notice things like
+
+142
+00:07:35,260 --> 00:07:38,500
+body language and all of that. And
+then we have moderated research,
+
+143
+00:07:38,520 --> 00:07:43,020
+where a researcher is there, guiding
+the session, asking follow-up questions.
+
+144
+00:07:43,040 --> 00:07:46,720
+And unmoderated research, where
+people complete tasks on their own,
+
+145
+00:07:46,740 --> 00:07:48,730
+usually through a tool that records them.
+
+146
+00:07:48,860 --> 00:07:50,460
+So how is UX research actually done?
+
+147
+00:07:50,480 --> 00:07:53,950
+There are a lot of methods that I've
+actually mentioned in the earlier part.
+
+148
+00:07:54,000 --> 00:07:55,900
+There's user interview, where
+you sit down with people,
+
+149
+00:07:55,920 --> 00:07:58,320
+you talk to them about their lives,
+their work, their frustration.
+
+150
+00:07:58,400 --> 00:08:00,000
+Maybe how they use a
+product and all of that.
+
+151
+00:08:00,020 --> 00:08:03,560
+There's usability testing. You give
+someone a task to do with your design.
+
+152
+00:08:03,580 --> 00:08:05,630
+Maybe with your app, you
+watch how they do the tasks,
+
+153
+00:08:05,860 --> 00:08:07,560
+usually while they think out loud.
+
+154
+00:08:07,770 --> 00:08:10,770
+Then we have surveys. You can reach
+a lot of people quickly with surveys.
+
+155
+00:08:10,950 --> 00:08:12,510
+But surveys usually have less depth.
+
+156
+00:08:12,860 --> 00:08:16,220
+And then there's contextual inquiry,
+where you go to where people work and live
+
+157
+00:08:16,240 --> 00:08:18,080
+and watch them in their real environment.
+
+158
+00:08:18,130 --> 00:08:22,840
+There are also diary studies, where
+people record their experiences over days
+
+159
+00:08:22,860 --> 00:08:26,970
+or weeks. So you see patterns that maybe
+a single session would have missed.
+
+160
+00:08:27,340 --> 00:08:30,380
+There's card sorting. There's A/B testing.
+
+161
+00:08:30,400 --> 00:08:33,700
+There's all kinds of UX research methods
+that we can't go over in this video.
+
+162
+00:08:33,870 --> 00:08:37,200
+You might be thinking that UX research sounds
+like something that only big companies
+
+163
+00:08:37,220 --> 00:08:40,530
+with big budgets can do.
+But even as a small startup,
+
+164
+00:08:40,760 --> 00:08:43,290
+some research is always
+better than no research.
+
+165
+00:08:43,530 --> 00:08:46,510
+You don't need a lab. Talk to five people
+who would actually use your product
+
+166
+00:08:46,560 --> 00:08:50,660
+before you start to build maybe
+yourself and a few friends.
+
+167
+00:08:51,140 --> 00:08:54,880
+Watch three of your friends try your
+app on a video call with messages,
+
+168
+00:08:54,900 --> 00:08:59,000
+with feedback. That also counts, because
+good design goes so much deeper than
+
+169
+00:08:59,020 --> 00:09:02,860
+just a nice visual. It's about whether
+the thing actually works for the people
+
+170
+00:09:02,880 --> 00:09:07,580
+using it. Now, another question I wanted
+to answer is that is UX research the
+
+171
+00:09:07,600 --> 00:09:09,980
+same as user research? Most of the
+time, people use these two terms.
+
+172
+00:09:10,000 --> 00:09:13,470
+They mean the same thing. You will
+see even in job titles that use
+
+173
+00:09:14,200 --> 00:09:17,040
+either one. Now, user
+research is the broader one.
+
+174
+00:09:17,200 --> 00:09:19,200
+UX research sits under it.
+
+175
+00:09:19,560 --> 00:09:22,000
+User research is about
+understanding the users themselves,
+
+176
+00:09:22,020 --> 00:09:23,810
+the users, their needs,
+their habits, their lives.
+
+177
+00:09:23,900 --> 00:09:27,300
+And it can feed into a lot of
+decisions that go beyond design.
+
+178
+00:09:27,320 --> 00:09:31,820
+For example, research into how customers
+feel about your prices or your delivery
+
+179
+00:09:31,840 --> 00:09:35,570
+time is user research. It isn't really
+about the experience of your product.
+
+180
+00:09:36,040 --> 00:09:40,510
+UX research is more focused on how people
+experience a specific product or service.
+
+181
+00:09:40,530 --> 00:09:44,310
+Either way, they share the same goal,
+which is making sure that decisions are
+
+182
+00:09:44,330 --> 00:09:48,200
+based on real users. And again, both of
+them also differ from market research.
+
+183
+00:09:48,220 --> 00:09:51,240
+For example, market research is
+more about what people would buy.
+
+184
+00:09:51,260 --> 00:09:55,270
+UX research is about how people use
+the product, how it makes them feel,
+
+185
+00:09:55,340 --> 00:09:59,060
+how it feels to them as well.
+Will AI replace UX research?
+
+186
+00:09:59,080 --> 00:10:00,900
+Very good question that
+I also wanted to answer.
+
+187
+00:10:00,990 --> 00:10:03,490
+AI tools are already doing
+a lot of the slow work.
+
+188
+00:10:03,560 --> 00:10:04,620
+They can transcribe interviews.
+
+189
+00:10:04,640 --> 00:10:06,230
+They can summarise hours of notes.
+
+190
+00:10:06,430 --> 00:10:08,740
+It saves UX researchers a lot of time.
+
+191
+00:10:08,950 --> 00:10:12,200
+I cannot even imagine having to
+do my thesis four years ago.
+
+192
+00:10:12,220 --> 00:10:14,740
+I probably would do it, but oh my
+God, it would be a lot of work.
+
+193
+00:10:14,900 --> 00:10:17,820
+So AI is changing how UX research
+gets done, in a good way,
+
+194
+00:10:17,840 --> 00:10:22,410
+I think, if you use it well. Now, if you're
+thinking about a career in UX research,
+
+195
+00:10:22,750 --> 00:10:26,460
+I'm still a student. I'm currently doing
+my master's in human computer interaction.
+
+196
+00:10:26,560 --> 00:10:30,040
+And from what I've noticed, the number
+of jobs with the title UX researcher
+
+197
+00:10:30,060 --> 00:10:33,180
+is actually small compared
+to other design roles.
+
+198
+00:10:33,200 --> 00:10:35,980
+I think it's because a lot of companies
+expect their designers and maybe their
+
+199
+00:10:36,000 --> 00:10:38,510
+product managers to just do
+some research work themselves.
+
+200
+00:10:38,760 --> 00:10:42,120
+So companies have fewer people
+whose whole job is research,
+
+201
+00:10:42,260 --> 00:10:43,600
+but it's still a very much needed skill.
+
+202
+00:10:43,620 --> 00:10:47,020
+I think it's just the entry level
+that might be hard to break into.
+
+203
+00:10:47,090 --> 00:10:51,110
+I wouldn't know yet, honestly. I'm not
+in the job market for UX research yet,
+
+204
+00:10:51,400 --> 00:10:55,040
+but that much I do know now. And
+as far as to get into UX research,
+
+205
+00:10:55,060 --> 00:10:57,840
+the way I'm getting into it is
+by getting a master's degree,
+
+206
+00:10:57,910 --> 00:10:59,390
+but I want to believe you can get into it
+
+207
+00:11:00,400 --> 00:11:02,760
+different ways. You can
+learn the basics, the method,
+
+208
+00:11:02,780 --> 00:11:04,840
+when to use one way, how to ask questions.
+
+209
+00:11:04,990 --> 00:11:08,250
+There are free guides from places
+like Nielsen Norman Group,
+
+210
+00:11:08,900 --> 00:11:10,520
+Maze, Interaction Design Foundation.
+
+211
+00:11:10,540 --> 00:11:11,540
+You want a book,
+
+212
+00:11:11,890 --> 00:11:13,400
+you know, there are a
+lot of books as well.
+
+213
+00:11:13,420 --> 00:11:16,840
+And also try to do real research,
+something that nobody's paying you for.
+
+214
+00:11:16,860 --> 00:11:19,960
+Just pick an app you use, interview
+a few people, watch them use it,
+
+215
+00:11:19,980 --> 00:11:22,780
+write what you find, write your first
+case study or something like that.
+
+216
+00:11:22,800 --> 00:11:25,240
+You can also volunteer to do
+research with small business,
+
+217
+00:11:25,260 --> 00:11:29,400
+you know, things like that. A lot of UX
+researchers from what I've noticed come
+
+218
+00:11:29,420 --> 00:11:32,320
+from other fields, psychology,
+teaching, marketing,
+
+219
+00:11:32,340 --> 00:11:35,760
+journalism, computer science. So if your
+job already involves talking to people,
+
+220
+00:11:35,780 --> 00:11:38,360
+figuring out what they need, maybe
+this is something you might love.
+
+221
+00:11:38,380 --> 00:11:42,260
+And of course, degrees going to
+school, like the way I'm doing,
+
+222
+00:11:42,460 --> 00:11:46,050
+is actually also a very valid route,
+maybe even the most common one.
+
+223
+00:11:46,480 --> 00:11:50,772
+So that's UX research. It's a very long
+video, so if you got bored in the middle
+
+224
+00:11:50,792 --> 00:11:52,330
+and skipped through a lot of it.
+
+225
+00:11:52,540 --> 00:11:55,808
+Just don't forget this phrase. Good
+design doesn't start with screens.
+
+226
+00:11:55,828 --> 00:11:57,790
+Good design starts with people.

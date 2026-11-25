@@ -1,0 +1,24 @@
+{
+ "label": "Before this session’s edits",
+ "auto": true,
+ "savedAt": 1792094283515,
+ "edits": {
+  "t": {
+   "stack-4/Without an index": {
+    "s": "Your DB without an index"
+   }
+  },
+  "captions": {},
+  "capShort": {},
+  "cap16": {},
+  "mix": {
+   "voice": 5,
+   "music": -14,
+   "sfx": 0
+  },
+  "captions16": {
+   "size": 62,
+   "y": 982
+  }
+ }
+}

@@ -1,0 +1,118 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>B Junk Journal</title>
+<link rel="stylesheet" href="../_shared/fonts.css">
+<style>
+:root{--kraft:#CDB38E;--paper:#F4EEE1;--ink:#2A2522;--tape:#8FD3BE;--mute:#7C6F5E}
+#stage{background:var(--kraft);font-family:"Instrument Sans";color:var(--ink)}
+.page{position:absolute;background:var(--paper);box-shadow:0 10px 24px rgba(60,40,20,.22)}
+.print{position:absolute;background:#fff;padding:16px 16px 16px;box-shadow:0 8px 18px rgba(50,35,20,.28)}
+.print img{display:block;width:100%;height:100%;object-fit:cover}
+.tape{position:absolute;background:var(--tape);opacity:.88;clip-path:polygon(0 8%,4% 0,8% 8%,12% 0,88% 0,92% 8%,96% 0,100% 8%,100% 92%,96% 100%,92% 92%,88% 100%,12% 100%,8% 92%,4% 100%,0 92%)}
+.hand{position:absolute;font-family:"Reenie Beanie";line-height:.95;color:var(--ink)}
+.serif{position:absolute;font-family:"Gloock";line-height:1.02;letter-spacing:-.01em}
+.no{position:absolute;font-family:"Gloock";color:var(--ink)}
+.cr{position:absolute;font-family:"Red Hat Mono";font-size:22px;color:#5E5242}
+.scrap{position:absolute}
+.feed{position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover}
+</style></head>
+<body><div id="stage"></div>
+<script src="../_shared/lib.js"></script>
+<script>
+const W = +Q.get('w') || 1920, H = +Q.get('h') || 1080, PORT = H > W;
+const S = $('#stage'); st(S, { width: W + 'px', height: H + 'px' });
+// faint dot grid on a page (an SVG pattern, not a gradient)
+const dots = (w, h) => `<svg class="abs" style="left:0;top:0" width="${w}" height="${h}"><defs><pattern id="dg" width="38" height="38" patternUnits="userSpaceOnUse"><circle cx="19" cy="19" r="2.2" fill="#D6CCB7"/></pattern></defs><rect width="${w}" height="${h}" fill="url(#dg)"/></svg>`;
+// torn edge: a polygon clip with a seeded jagged bottom/top
+function torn(seed, top = false) { const p = []; const n = 34; for (let i = 0; i <= n; i++) p.push(`${(i / n * 100).toFixed(2)}% ${(100 - 3.5 * hash(seed + i * 1.37)).toFixed(2)}%`);
+  const q = []; for (let i = n; i >= 0; i--) q.push(`${(i / n * 100).toFixed(2)}% ${(top ? 3.5 * hash(seed * 3 + i) : 0).toFixed(2)}%`); return `clip-path:polygon(${p.join(',')},${q.join(',')})`; }
+const print = (id, src, x, y, w, h, rot) => `<div class="print" id="${id}" style="left:${x}px;top:${y}px;width:${w}px;height:${h}px;transform:rotate(${rot}deg)"><img src="${src}"></div>`;
+const tape = (id, x, y, w, rot) => `<div class="tape" id="${id}" style="left:${x}px;top:${y}px;width:${w}px;height:46px;transform:rotate(${rot}deg)"></div>`;
+const SHOTS = {};
+// b1 · 05 Something new: a page with taped prints (bike, banana bread, thrift) and her handwritten list (raw 10:03-10:45)
+SHOTS.b1 = () => {
+  S.innerHTML = `<div class="page" style="left:70px;top:60px;width:1780px;height:960px">${dots(1780, 960)}</div>
+   <div class="no" style="left:150px;top:120px;font-size:64px">No. 05</div>
+   <div class="serif" style="left:146px;top:200px;width:700px;font-size:120px">Something new</div>
+   <div class="hand" style="left:156px;top:450px;font-size:100px;width:720px">learned to ride<br>a bike ✓</div>
+   <div class="hand" style="left:156px;top:665px;font-size:96px;width:720px">banana bread:<br>"one failure after<br>the other"</div>` +
+   print('p1', PX('bike'), 900, 120, 560, 380, -3) + tape('t1', 1080, 96, 200, 4) +
+   print('p2', PX('banana-bread'), 1300, 470, 470, 330, 4) + tape('t2', 1440, 446, 180, -6) +
+   print('p3', PX('thrift'), 880, 590, 420, 300, -1.5) + tape('t3', 990, 570, 170, 2) +
+   `<div class="cr" style="left:1560px;top:1036px">Photos: Pexels</div>`;
+};
+// b2 · junk journaling: "a journal out of scraps" (raw 18:32)
+SHOTS.b2 = () => {
+  S.innerHTML = `<div class="page" style="left:70px;top:60px;width:1780px;height:960px">${dots(1780, 960)}</div>` +
+   print('p1', PX('journal'), 160, 330, 820, 560, -2.5) + tape('t1', 440, 304, 240, 3) +
+   `<div class="hand" style="left:150px;top:90px;font-size:200px;white-space:nowrap">junk journaling</div>
+   <div class="serif" style="left:1080px;top:380px;width:700px;font-size:84px">"People make a journal out of scraps."</div>
+   <div class="scrap" style="left:1090px;top:740px;width:700px;height:150px;background:#fff;${torn(4, true)};transform:rotate(-2deg)"><div class="hand" style="left:34px;top:28px;font-size:100px;white-space:nowrap">just a brain dump</div></div>` + tape('t2', 1070, 730, 120, -14) +
+   `<div class="cr" style="left:166px;top:930px">Photo: Pexels</div>`;
+};
+// b3 · phrase page: torn strip on kraft, her line (raw 14:12)
+SHOTS.b3 = () => {
+  S.innerHTML = `<div class="scrap" style="left:120px;top:210px;width:1680px;height:470px;background:var(--paper);${torn(9, true)};transform:rotate(-1deg)">
+     <div class="serif" style="left:90px;top:80px;width:1500px;font-size:118px">"We are not picking up habits that we cannot monetize."</div></div>` +
+   tape('t1', 90, 196, 220, -10) + tape('t2', 1640, 640, 220, 8) +
+   `<div class="hand" style="left:1100px;top:760px;font-size:120px;transform:rotate(-3deg)">so, follow your curiosity.</div>`;
+};
+// b4 · the opening with a receipt: a clipping taped into the page (raw 0:43-0:57)
+SHOTS.b4 = () => {
+  const k = 0.46;
+  S.innerHTML = `<div class="page" style="left:70px;top:60px;width:1780px;height:960px">${dots(1780, 960)}</div>
+   <div class="serif" style="left:150px;top:140px;width:780px;font-size:96px">Why is it so hard to stop doomscrolling?</div>
+   <div class="scrap" style="left:130px;top:620px;width:820px;height:300px;background:#fff;clip-path:polygon(0 4%,100% 0,99% 96%,1% 100%);transform:rotate(-1.5deg)"><div class="hand" style="left:36px;top:26px;font-size:124px;width:760px">"the feed that never stops"</div></div>` + tape('tq', 420, 600, 200, 3) + `
+   <div class="scrap" style="left:980px;top:230px;width:${1780 * k + 40}px;height:${230 * k + 40}px;background:#fff;${torn(2, true)};transform:rotate(2deg)"><img src="../_src/cap/npr-head.png" class="abs" style="left:20px;top:30px;width:${1780 * k}px"></div>` +
+   tape('t1', 1020, 214, 180, -5) + tape('t2', 1620, 340, 180, 7) +
+   `<div class="cr" style="left:1000px;top:410px;font-size:26px">NPR · The Indicator, 7 April 2026</div>
+   <div class="hand" style="left:1000px;top:500px;font-size:100px;width:800px;transform:rotate(-2deg)">↑ the man who designed infinite scroll</div>`;
+};
+// portrait p1 · 01 reading (raw 3:25)
+SHOTS.p1 = () => {
+  S.innerHTML = `<div class="page" style="left:50px;top:80px;width:980px;height:1760px">${dots(980, 1760)}</div>
+   <div class="no" style="left:110px;top:150px;font-size:60px">No. 01</div>
+   <div class="serif" style="left:106px;top:220px;font-size:130px">Reading</div>` +
+   print('p1', PX('read-eat'), 110, 470, 860, 760, -2) + tape('t1', 420, 446, 240, 3) +
+   `<div class="hand" style="left:120px;top:1340px;width:860px;font-size:150px;transform:rotate(-1.5deg)">"you'll barely see me without a book"</div>
+   <div class="cr" style="left:120px;top:1780px">Photo: Pexels</div>`;
+};
+// portrait p2 · 09 call your people (raw 20:00)
+SHOTS.p2 = () => {
+  S.innerHTML = `<div class="page" style="left:50px;top:80px;width:980px;height:1760px">${dots(980, 1760)}</div>
+   <div class="no" style="left:110px;top:150px;font-size:60px">No. 09</div>
+   <div class="serif" style="left:106px;top:220px;width:860px;font-size:118px">Call your people</div>` +
+   print('p1', PX('call'), 110, 560, 860, 700, 2) + tape('t1', 460, 536, 220, -4) +
+   `<div class="hand" style="left:120px;top:1360px;width:860px;font-size:136px;transform:rotate(-1.5deg)">"call your mom, your dad, your brother, sister..."</div>
+   <div class="cr" style="left:120px;top:1780px">Photo: Pexels</div>`;
+};
+// motion test (raw 1110.0 -> 1120.0): "There's even something called junk journaling ... a journal out of scraps. So if journaling feels like a far-fetched thing"
+function buildTest() {
+  S.innerHTML = `<div id="cam" class="abs" style="inset:0;transform-origin:56% 48%"><div class="page" style="left:70px;top:60px;width:1780px;height:960px">${dots(1780, 960)}</div>
+   <div class="no" id="no" style="left:150px;top:100px;font-size:56px">No. 08</div><div class="serif" id="pj" style="left:150px;top:160px;font-size:104px">Prayer &amp; journaling</div>
+   <div class="hand" id="title" style="left:146px;top:290px;font-size:130px;white-space:nowrap;clip-path:inset(0 100% 0 0)">junk journaling</div>
+   <div class="serif" id="line" style="left:156px;top:450px;width:700px;font-size:66px"></div>` +
+   print('p1', PX('journal'), 1160, 150, 660, 460, -2.5) + tape('t1', 1380, 124, 220, 3) +
+   `<div class="scrap" id="s2" style="left:1240px;top:600px;width:470px;height:260px;background:#fff;${torn(6, true)}"><img src="${PX('crochet')}" class="abs" style="left:14px;top:14px;width:442px;height:220px;object-fit:cover"></div>` + tape('t2', 1520, 590, 170, 12) +
+   `<div class="scrap" id="s3" style="left:520px;top:700px;width:330px;height:150px;background:#F7E7A8;${torn(11, true)}"><div class="hand" style="left:24px;top:30px;font-size:84px">scraps!</div></div>` + tape('t3', 500, 690, 110, -16) +
+   `<div class="hand" id="note" style="left:160px;top:890px;font-size:90px;transform:rotate(-2deg);clip-path:inset(0 100% 0 0)">if journaling feels far-fetched...</div>
+   <div class="cr" style="left:946px;top:1032px">Photos: Pexels</div></div>`;
+  const land = (id, t, t0, dx, dy, r0) => { const el = $('#' + id); const k = P(t, t0, 0.42, E.outQuint); el.style.opacity = t >= t0 ? 1 : 0;
+    const base = el.style.transform.replace(/translate\([^)]*\)\s*|scale\([^)]*\)\s*/g, '');
+    el.dataset.base = el.dataset.base || base; el.style.transform = `translate(${dx * (1 - k)}px, ${dy * (1 - k)}px) scale(${lerp(1.08, 1, k)}) ${el.dataset.base}`; el.style.filter = k < .5 ? `blur(${(4 * (1 - 2 * k)).toFixed(1)}px)` : 'none'; };
+  const slap = (id, t, t0) => { const el = $('#' + id); const k = P(t, t0, 0.16, E.outCubic); el.style.opacity = t >= t0 ? .88 : 0; el.dataset.base = el.dataset.base || el.style.transform; el.style.transform = `${el.dataset.base} scaleX(${lerp(0.4, 1, k)})`; };
+  return t => {
+    st('#cam', { transform: `scale(${1 + 0.035 * clamp((t - 1110) / 10)})` });
+    enter('#no', P(t, 1110.05, .4), 0, 20, 4); enter('#pj', P(t, 1110.15, .45), 0, 24, 6);
+    st('#title', { clipPath: `inset(0 ${100 - 100 * P(t, 1112.05, 1.05, E.outCubic)}% 0 0)` });
+    $('#line').textContent = '"People make a journal out of scraps."'; land('line', t, 1115.35, 0, 60);
+    land('p1', t, 1110.2, 0, -160); slap('t1', t, 1110.55);
+    land('s2', t, 1116.15, 220, 60); slap('t2', t, 1116.5);
+    land('s3', t, 1117.25, -120, 140); slap('t3', t, 1117.55);
+    st('#note', { clipPath: `inset(0 ${100 - 100 * P(t, 1118.4, 1.4, E.outCubic)}% 0 0)` });
+  };
+}
+let TEST = null;
+window.show = async (n) => { SHOTS[n](); await imagesReady(); };
+window.seek = async (t) => { if (!TEST) { TEST = buildTest(); await imagesReady(); } TEST(t); };
+window.READY = true;
+</script></body></html>

@@ -1,0 +1,51 @@
+1
+00:00:00,140 --> 00:00:02,010
+a lot of edge case
+
+2
+00:00:02,550 --> 00:00:04,010
+situations in production can also happen
+
+3
+00:00:04,010 --> 00:00:06,143
+with names Take the name O'Brien,
+
+4
+00:00:06,283 --> 00:00:08,283
+for example, the apostrophe is the same
+
+5
+00:00:08,283 --> 00:00:09,743
+character that starts an empty piece of text
+
+6
+00:00:09,743 --> 00:00:12,393
+in SQL so if your code glues the name
+
+7
+00:00:12,393 --> 00:00:14,453
+straight into the query, the apostrophe
+
+8
+00:00:14,683 --> 00:00:16,943
+ends the text early, and the query breaks
+
+9
+00:00:17,013 --> 00:00:19,413
+and if an apostrophe can break your query by
+
+10
+00:00:19,413 --> 00:00:21,463
+accident, it means that someone can type
+
+11
+00:00:21,463 --> 00:00:22,653
+something after the apostrophe
+
+12
+00:00:22,943 --> 00:00:23,703
+on purpose,
+
+13
+00:00:24,063 --> 00:00:25,433
+and that will be SQL injection

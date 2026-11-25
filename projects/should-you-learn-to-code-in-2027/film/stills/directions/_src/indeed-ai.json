@@ -1,0 +1,54 @@
+{
+ "title": "AI and Job Postings: From Destruction to Creation? - Indeed Hiring Lab",
+ "h1": "AI and Job Postings: From Destruction to Creation?",
+ "h1y": 866.6875,
+ "found": {
+  "almost 15%": [
+   [
+    628.453125,
+    1145.6875,
+    86.96875,
+    22
+   ]
+  ],
+  "71%": [
+   [
+    220.453125,
+    1313.6875,
+    31.609375,
+    22
+   ]
+  ]
+ },
+ "H": 7440,
+ "focus": {
+  "almost 15%": {
+   "file": "indeed-ai__almost-15-.png",
+   "top": 625.6875,
+   "rects": [
+    [
+     628.453125,
+     520,
+     86.96875,
+     22
+    ]
+   ]
+  },
+  "71%": {
+   "file": "indeed-ai__71-.png",
+   "top": 793.6875,
+   "rects": [
+    [
+     220.453125,
+     520,
+     31.609375,
+     22
+    ]
+   ]
+  }
+ },
+ "clipTop": 746.6875,
+ "scale": 1.5,
+ "url": "https://hiringlab.indeed.com/?p=20708",
+ "captured": "2026-11-02T19:31:34.720Z"
+}

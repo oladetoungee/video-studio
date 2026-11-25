@@ -1,0 +1,8 @@
+[00:00] If you're using chat keep to your cloud to build apps, here are the three things you need to actually understand.
+[00:04] First, understand where your data goes.
+[00:06] If someone signs up for your app, where is their information stored, who can access it, and what happens if that information gets leaked.
+[00:12] Second, understand how your app talks to other services.
+[00:14] If you're using an API, you should know what you're sending, what you're getting back, and what happens when something fails.
+[00:19] And third, understand what happens when your app has actual users.
+[00:22] Because something working perfectly on your laptop does not mean it'll work when a thousand people start using it.
+[00:27] I can write a lot of your code, but if you don't understand what it's building, you're basically putting yourself in charge of a restaurant where you've never even seen the kitchen.

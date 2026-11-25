@@ -1,0 +1,138 @@
+/* set 02 Bold condensed (TYPE-SYSTEM.md, her pick 2026-11-07): the old family names now point at Anton / Inter Tight / DM Mono */
+@font-face { font-family: 'Bebas'; src: url('../fonts/Anton-Regular.ttf') format('truetype'); size-adjust: 84%; }
+@font-face { font-family: 'Work'; src: url('../fonts/InterTightRegular.ttf') format('truetype'); font-weight: 100 450; }
+@font-face { font-family: 'Work'; src: url('../fonts/InterTightMedium.ttf') format('truetype'); font-weight: 451 550; }
+@font-face { font-family: 'Work'; src: url('../fonts/InterTightSemiBold.ttf') format('truetype'); font-weight: 551 650; }
+@font-face { font-family: 'Work'; src: url('../fonts/InterTightBold.ttf') format('truetype'); font-weight: 651 900; }
+@font-face { font-family: 'Cutive'; src: url('../fonts/DMMono-Medium.ttf') format('truetype'); size-adjust: 86%; }
+@font-face { font-family: 'Cutive Mono'; src: url('../fonts/DMMono-Medium.ttf') format('truetype'); size-adjust: 86%; }
+@font-face { font-family: 'Fam'; src: url('../fonts/InterTightMedium.ttf') format('truetype'); }
+@font-face { font-family: 'JB'; src: url('../fonts/DMMono-Medium.ttf') format('truetype'); size-adjust: 86%; }
+@font-face { font-family: 'DMS'; src: url('../fonts/Anton-Regular.ttf') format('truetype'); size-adjust: 84%; }
+@font-face { font-family: 'DMSi'; src: url('../fonts/Anton-Regular.ttf') format('truetype'); size-adjust: 84%; }
+@font-face { font-family: 'Hand'; src: url('../fonts/InterTightMedium.ttf') format('truetype'); }
+/* working-full-time thumbnails (2026-11-02). Look: her pick, B "Clock in / Clock out" (charcoal wall #23201B, manila card
+   #E7D7AE, card rules #A08A5E, stamp ink #1D1A15, ONE accent stamp red #C8102E = her headband) + A's 24-hour dial.
+   Type: Bebas Neue (headlines, times), Work Sans (sentences), Cutive Mono (stamps, credits), DM Serif Display + Caveat (collage only).
+   Bar: her own thumbnails (topic huge, one literal picture, few big things, one accent).
+   Editable: text in content.json "text", photos "images", colours "vars" (--ground, --fg, --accent, --wash), moves "nudge" (lib/bind.js). */
+
+:root { --charcoal: #23201B; --manila: #E7D7AE; --rules: #A08A5E; --ink: #1D1A15; --red: #C8102E; --card: #F3E8C8; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1280px; height: 720px; overflow: hidden; background: #111; }
+.t { position: relative; width: 1280px; height: 720px; overflow: hidden; background: var(--ground, #1A1713); color: var(--fg, #E7D7AE); font-family: 'Work', sans-serif; }
+.guides .badge { position: absolute; right: 10px; bottom: 10px; width: 150px; height: 70px; border: 1px dashed #f0f; z-index: 99; }
+.z1 { z-index: 1; } .z2 { z-index: 2; } .z3 { z-index: 3; } .z4 { z-index: 4; } .z5 { z-index: 5; } .z6 { z-index: 6; } .z7 { z-index: 7; }
+.abs { position: absolute; }
+
+/* headline: Bebas, huge, tight */
+.hd { position: absolute; font-family: 'Bebas', sans-serif; text-transform: uppercase; line-height: .86; letter-spacing: .005em; white-space: nowrap; color: var(--fg); }
+.acc { color: var(--accent, #C8102E); }
+.ink { color: var(--ink); }
+.hl { background: var(--accent, #C8102E); color: #F6EEDB; padding: 0 .1em; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+.sub { position: absolute; font-family: 'Work'; font-weight: 600; white-space: nowrap; }
+.mono { font-family: 'Cutive', monospace; letter-spacing: .04em; }
+.hand { font-family: 'Hand', cursive; font-weight: 700; }
+.serif { font-family: 'DMS', serif; text-transform: none; letter-spacing: -.01em; }
+.serif i, i.serif { font-family: 'DMSi', serif; font-style: normal; }
+.shadow-t { text-shadow: 0 10px 30px rgba(0,0,0,.4); }
+
+/* photo of her: room washed in one colour, she in full colour (her ux-research method). Footage is never flipped. */
+.scene { position: absolute; left: 0; top: 0; width: 1280px; height: 720px; transform-origin: var(--sc-o, 50% 0%); scale: var(--sc, 1); translate: var(--sc-x, 0px) var(--sc-y, 0px); }
+.scene img { position: absolute; left: 0; top: 0; width: 1280px; height: 720px; display: block; object-fit: cover; object-position: 50% var(--sc-fy, 30%); }   /* her photos are portrait: cover, never stretched */
+.scene .bg { filter: grayscale(1) contrast(1.05) brightness(var(--bgb, .95)); }
+.scene .wash { position: absolute; inset: 0; background: var(--wash, #6E5A3A); mix-blend-mode: multiply; }
+.scene .dim { position: absolute; inset: 0; background: var(--dim, rgba(20,17,13,.25)); }
+.scene .me-c { filter: brightness(var(--meb, 1.14)) contrast(1.05) saturate(1.08); }
+.scene.nat .bg { filter: brightness(var(--bgb, 1.05)) contrast(1.04) saturate(.9); }
+.scene.nat .wash, .scene.nat .dim { display: none; }
+.half { position: absolute; top: 0; height: 720px; overflow: hidden; }
+.half .scene { position: absolute; }
+
+/* cut-out of her (frame edge at the bottom) */
+.cut { position: absolute; bottom: 0; display: block; filter: brightness(1.12) contrast(1.05); }
+.cut.ol { filter: drop-shadow(0 16px 28px rgba(0,0,0,.35)); }
+.cut.bw { filter: grayscale(1) contrast(1.08) drop-shadow(0 16px 28px rgba(0,0,0,.35)); }
+
+/* the time card (manila, printed rules, stamped times) */
+.tc { position: absolute; background: var(--manila); color: var(--ink); padding: 26px 28px 30px; box-shadow: 0 24px 50px rgba(0,0,0,.5); }
+.tc .top { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--rules); padding-bottom: 10px; }
+.tc .ti { font: 400 64px/1 'Bebas'; letter-spacing: .01em; }
+.tc .wk { font: 30px/1 'Cutive'; letter-spacing: .06em; }
+.tc .nm { font: 26px/1 'Cutive'; letter-spacing: .08em; margin: 12px 0 6px; }
+.tc table { border-collapse: collapse; width: 100%; margin-top: 8px; }
+.tc th { font: 700 22px/1.1 'Work'; letter-spacing: .1em; text-transform: uppercase; padding: 6px 4px; border-left: 2px solid var(--rules); }
+.tc th small { display: block; font: 18px/1.2 'Cutive'; font-weight: 400; letter-spacing: .08em; }
+.tc td { border-top: 2px solid var(--rules); border-left: 2px solid var(--rules); font: 38px/1 'Cutive'; letter-spacing: .02em; text-align: center; padding: 10px 6px; white-space: nowrap; }
+.tc td:first-child, .tc th:first-child { border-left: none; text-align: left; font: 700 26px/1 'Work'; letter-spacing: .06em; }
+.tc td.r { color: var(--red); font-weight: 400; }
+.tc tr.on td { background: rgba(200,16,46,.13); }
+
+/* a rubber stamp: red ink box, slightly uneven (SVG filter #ink, added by wf.js) */
+.stamp { position: absolute; font: 400 64px/1 'Bebas'; letter-spacing: .04em; color: var(--accent, #C8102E); border: 0 solid currentColor; padding: 8px 18px 2px; white-space: nowrap; filter: url(#ink); text-transform: uppercase; }
+.stamp.fill { background: var(--accent, #C8102E); color: #F6EEDB; border-color: var(--accent, #C8102E); }
+.stamp.inkc { color: var(--ink); }
+
+/* a generic laptop (no brand) with code on the screen */
+.lap { position: absolute; width: var(--lw, 420px); }
+.lap .scr { background: #15130F; border: 0 solid #2C2925; border-radius: 16px 16px 4px 4px; aspect-ratio: 16 / 10; padding: 18px 20px; font: 500 calc(var(--lw, 420px) * .045)/1.55 'JB', monospace; color: #E7D7AE; overflow: hidden; white-space: nowrap; }
+.lap .scr .k { color: #F06A7E; } .lap .scr .s { color: #9FD08A; } .lap .scr .c { color: #8A8170; } .lap .scr .f { color: #F2C46D; }
+.lap .base { height: calc(var(--lw, 420px) * .05); margin: 0 -7%; background: #3A3631; border-radius: 0 0 22px 22px; box-shadow: 0 18px 30px rgba(0,0,0,.45); }
+
+/* lecture notes / a printed page */
+.page { position: absolute; background: #F6F0E0; color: var(--ink); padding: 22px 26px; box-shadow: 0 20px 40px rgba(0,0,0,.45);
+  background-image: repeating-linear-gradient(to bottom, transparent 0 43px, rgba(160,138,94,.45) 43px 45px); }
+.page .h { font: 400 54px/1 'Bebas'; letter-spacing: .02em; }
+.page .l { font: 600 30px/45px 'Hand'; }
+
+/* week calendar (generic), built by wf.js from data-week */
+.week { position: absolute; background: var(--manila); color: var(--ink); box-shadow: 0 24px 50px rgba(0,0,0,.5); padding: 18px; }
+.week .g { position: relative; }
+.week .dh { position: absolute; top: 0; font: 400 40px/1 'Bebas'; text-align: center; letter-spacing: .03em; }
+.week .col { position: absolute; border-left: 2px solid var(--rules); }
+.week .hr { position: absolute; left: 0; right: 0; border-top: 1px solid rgba(160,138,94,.55); }
+.week .hl2 { position: absolute; left: 0; font: 20px/1 'Cutive'; color: #6E5E3E; }
+.week .b { position: absolute; border-radius: 6px; font: 700 22px/1.05 'Work'; padding: 6px 8px; overflow: hidden; letter-spacing: .02em; text-transform: uppercase; }
+.week .b.w { background: var(--ink); color: var(--manila); }
+.week .b.c { background: var(--accent, #C8102E); color: #F6EEDB; }
+.week .b.s { background: transparent; color: var(--ink); border: 1px dashed var(--ink); }
+.week .ring { position: absolute; border: 0 solid var(--accent, #C8102E); border-radius: 50%; filter: url(#ink); }
+
+/* 24-hour dial (A's device), drawn by wf.js into <svg class="dial"> */
+svg.dial { position: absolute; overflow: visible; }
+svg.dial text { font-family: 'Bebas'; }
+
+/* real source crop: never altered; highlight drawn on top; credit under it */
+.clip { position: absolute; background: #fff; padding: 14px 16px; box-shadow: 0 20px 40px rgba(0,0,0,.45); }
+.clip .im { position: relative; }
+.clip img { display: block; width: 100%; }
+.clip .mk { position: absolute; background: #FFE14D; mix-blend-mode: multiply; }
+.clip .cr { position: absolute; left: 0; top: 100%; margin-top: 8px; font: 18px/1 'Cutive'; letter-spacing: .06em; color: var(--crc, #E7D7AE); white-space: nowrap; }
+
+/* ID cards (generic, no logos) */
+.idc { position: absolute; width: 400px; height: 252px; border-radius: 18px; padding: 22px 24px; box-shadow: 0 24px 46px rgba(0,0,0,.5); display: grid; grid-template-columns: 120px 1fr; gap: 20px; }
+.idc .ph { width: 120px; height: 150px; border-radius: 8px; overflow: hidden; background: #8A8170; }
+.idc .ph img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 20%; }
+.idc .k { font: 400 46px/1 'Bebas'; letter-spacing: .03em; }
+.idc .v { font: 20px/1.35 'Cutive'; letter-spacing: .04em; margin-top: 8px; }
+.idc .bar { grid-column: 1 / 3; height: 34px; background: repeating-linear-gradient(90deg, currentColor 0 3px, transparent 3px 7px, currentColor 7px 8px, transparent 8px 12px); opacity: .8; }
+
+/* collage bits */
+.obj { position: absolute; display: block; filter: drop-shadow(0 14px 18px rgba(0,0,0,.45)); }
+.lab { position: absolute; font: 700 34px/1 'Hand'; color: #fff; background: rgba(29,26,21,.82); padding: 6px 14px 8px; white-space: nowrap; }
+.tag { position: absolute; font: 400 40px/1 'Bebas'; letter-spacing: .04em; background: var(--manila); color: var(--ink); padding: 10px 16px 6px; white-space: nowrap; box-shadow: 0 10px 20px rgba(0,0,0,.35); }
+.band { position: absolute; background: rgba(29,26,21,.86); padding: 14px 28px 18px; }
+.flag { position: absolute; display: flex; box-shadow: 0 14px 24px rgba(0,0,0,.4); }
+.flag.h { flex-direction: column; }
+.flag i { flex: 1; }
+.pic { position: absolute; display: block; }
+svg.draw { position: absolute; left: 0; top: 0; overflow: visible; pointer-events: none; }
+/* 2026-11-07: her new photos are portrait studio shots: show them whole-width (no video-frame zoom), head and shoulders in view */
+.scene { scale: 1 !important; translate: none !important; }
+.scene img { object-fit: contain !important; object-position: var(--ph-x, 74%) 100% !important; height: 760px !important; top: -40px !important; }
+.scene .bg { visibility: hidden; }   /* the studio's grey backdrop is not a room: the thumbnail's own ground shows around her */
+/* 2026-11-07 critic: no tag boxes, no rubber-stamp texture, no halo: plain Anton type in the accent colour */
+.stamp, .stamp.fill { border: 0 !important; rotate: 0deg !important; background: none !important; color: var(--accent, #C8102E) !important; filter: none !important; transform: none !important; padding: 0 !important; }
+.hl { background: none !important; color: var(--accent, #C8102E) !important; }
+.tag { box-shadow: none !important; }
+.shadow-t { text-shadow: none !important; }

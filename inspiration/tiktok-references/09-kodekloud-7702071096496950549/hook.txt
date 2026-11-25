@@ -1,0 +1,3 @@
+FIRST ~3 s (spoken, whisper small.en): HTTP just got a new method called query.
+
+ON SCREEN IN FRAME 1: Faceless. Black ground, tiny KodeKloud logo top centre. 'HTTP METHODS' handwritten white caps top-left; a big yellow pill 'QUERY' pops in mid-frame (tiny 'NEW' label above it by 1 s).

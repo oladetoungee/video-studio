@@ -1,0 +1,74 @@
+{
+ "title": "Working | Study in Estonia",
+ "h1": "Working",
+ "h1y": 185,
+ "found": {
+  "not limited": [
+   [
+    347,
+    1019.3125,
+    74.390625,
+    15
+   ]
+  ],
+  "around 30 ECTS credit points each semester": [
+   [
+    553.09375,
+    3797.375,
+    312.59375,
+    15
+   ]
+  ],
+  "quite difficult to manage a full time job": [
+   [
+    548.921875,
+    3857.375,
+    267.5625,
+    15
+   ]
+  ]
+ },
+ "H": 5200,
+ "focus": {
+  "not limited": {
+   "file": "sie-working__not-limited.png",
+   "top": 499.3125,
+   "rects": [
+    [
+     347,
+     520,
+     74.390625,
+     15
+    ]
+   ]
+  },
+  "around 30 ECTS credit points each semester": {
+   "file": "sie-working__around-30-ects-credit-po.png",
+   "top": 3277.375,
+   "rects": [
+    [
+     553.09375,
+     520,
+     312.59375,
+     15
+    ]
+   ]
+  },
+  "quite difficult to manage a full time job": {
+   "file": "sie-working__quite-difficult-to-manag.png",
+   "top": 3337.375,
+   "rects": [
+    [
+     548.921875,
+     520,
+     267.5625,
+     15
+    ]
+   ]
+  }
+ },
+ "clipTop": 65,
+ "scale": 1.5,
+ "url": "https://studyinestonia.ee/working",
+ "captured": "2026-11-02T12:52:23.217Z"
+}

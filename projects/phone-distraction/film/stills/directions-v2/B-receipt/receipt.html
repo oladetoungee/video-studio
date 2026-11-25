@@ -1,0 +1,199 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>B · The Receipt</title>
+<style>
+@font-face { font-family: "DM Mono"; src: url(../../../../../../library/fonts/DMMono-Medium.ttf); font-weight: 500; }
+html, body { margin: 0; background: #000; overflow: hidden; }
+#stage { position: relative; overflow: hidden; background: #1F3BD6; }
+</style></head>
+<body><div id="stage"></div>
+<script src="../_tools/kit.js"></script>
+<script>
+// B · THE RECEIPT: "free" apps, paid for with attention. One object runs through the whole film: a till receipt that prints a
+// line for every design trick she explains, itemised against YOUR ATTENTION. Ground: flat cobalt. Photos: real people and
+// objects as halftone print cut-outs with a paper edge (Herbert Simon, B.J. Fogg, the hand-held phone, the slot machine).
+// Real sources as paper clippings, marked with her yellow. Receipt ink #15161A on paper #FBF8EE, DM Mono.
+const CO = '#1F3BD6', PAPER = '#FBF8EE', INK = '#15161A', WHITE = '#FFFFFF';
+function stackType(root, small, big, css, o = {}) {
+  const box = el('div', Object.assign({ color: YEL }, css), '', root);
+  const a = el('div', { position: 'relative', font: `700 ${o.ss || 54}px "Helvetica Neue"`, letterSpacing: '-0.03em', lineHeight: 1.05, color: o.sc || WHITE }, '', box);
+  const b = el('div', { position: 'relative', font: `800 ${o.bs || 140}px "Helvetica Neue"`, letterSpacing: '-0.045em', lineHeight: 0.92, marginTop: '8px' }, '', box);
+  return { box, a: words(a, small), b: words(b, big) };
+}
+// the hand-held phone as a halftone print, its screen a generic app page with a crisp FREE button on top
+function freePhone(root, x, y, h) {
+  const w = h * 821 / 1124, d = el('div', { left: x + 'px', top: y + 'px', width: w + 'px', height: h + 'px' }, '', root);
+  img('halftone/phone-free.png', { left: 0, top: 0, width: '100%', height: '100%' }, d);
+  el('div', { left: (0.668 - 0.13) * w + 'px', top: (0.433 - 0.036) * h + 'px', width: 0.26 * w + 'px', height: 0.072 * h + 'px', borderRadius: 0.036 * h + 'px', background: INK, color: PAPER, display: 'flex', alignItems: 'center', justifyContent: 'center', font: `500 ${0.04 * h}px "DM Mono"`, letterSpacing: '0.08em' }, 'FREE', d);
+  return d;
+}
+// ---------- the receipt ----------
+// rows: [left, right, opts] ; opts.hl = yellow marker, opts.rule = dashed rule, opts.big = large line, opts.center
+function receipt(root, x, y, w, rows, o = {}) {
+  const wrap = el('div', { left: x + 'px', top: y + 'px', width: w + 'px', height: (o.h || 900) + 'px', overflow: 'hidden', transformOrigin: '50% 0' }, '', root);
+  const paper = el('div', { left: 0, top: 0, width: w + 'px', background: PAPER, boxShadow: '0 24px 50px rgba(0,0,30,0.35)' }, '', wrap);
+  // torn bottom edge (zigzag), drawn as a clip on the last strip
+  const pad = 40; let yy = 36; const fs = o.fs || 30; const items = [];
+  rows.forEach((rw) => {
+    const [l, rr, op = {}] = rw;
+    if (op.rule) { const e = el('div', { left: pad + 'px', top: yy + 10 + 'px', width: (w - 2 * pad) + 'px', height: '0', borderTop: `3px dashed ${INK}`, opacity: 0.55 }, '', paper); items.push({ e, y: yy, h: 26 }); yy += 30; return; }
+    const size = op.big ? fs * 1.55 : op.small ? fs * 0.8 : fs;
+    const line = el('div', { left: pad + 'px', top: yy + 'px', width: (w - 2 * pad) + 'px', height: size * 1.3 + 'px', display: 'flex', justifyContent: op.center ? 'center' : 'space-between', alignItems: 'center', font: `500 ${size}px "DM Mono"`, color: INK, letterSpacing: '0.02em', textTransform: 'uppercase', whiteSpace: 'nowrap' }, '', paper);
+    let hl = null;
+    if (op.hl) hl = el('div', { left: '-10px', top: '2px', width: 'calc(100% + 20px)', height: 'calc(100% - 4px)', background: YEL, transformOrigin: '0 50%', zIndex: 0 }, '', line);
+    el('span', { position: 'relative', zIndex: 1 }, l, line); if (rr != null) el('span', { position: 'relative', zIndex: 1 }, rr, line);
+    items.push({ e: line, y: yy, h: size * 1.3, hl }); yy += size * 1.3 + (op.gap || 8);
+  });
+  yy += 30; set(paper, { height: yy + 'px', clipPath: zig(w, yy) });
+  return { wrap, paper, items, len: yy };
+}
+function zig(w, h) { const n = Math.round(w / 22), pts = [`0 0`, `${w}px 0`, `${w}px ${h - 12}px`]; for (let i = n; i >= 0; i--) pts.push(`${(i / n) * w}px ${h - (i % 2 ? 0 : 12)}px`); return `polygon(${pts.join(',')})`; }
+// print: the paper feeds down out of a slot at the top of wrap; line i appears when the print head passes it
+function printTo(R, lt, at, speed = 520, hlAt = {}) {
+  const fed = clamp((lt - at) * speed, 0, R.len); // px of paper out
+  // feed in steps (a till prints line by line): small judder of 2 px at each line
+  // the receipt grows down from the top edge as each line prints (the paper stays put, its visible length grows)
+  set(R.wrap, { height: Math.max(0, fed) + 'px' }); R.wrap.style.opacity = fed > 0 ? 1 : 0;
+  R.items.forEach((it, i) => { it.e.style.opacity = fed >= it.y + it.h * 0.6 ? 1 : 0; if (it.hl) marker(it.hl, lt, hlAt[i] != null ? hlAt[i] : 1e9, 0.4); });
+}
+
+// ========== B1 · "free" (0-10) ==========
+scene('B1', 0, 10, (r, S) => {
+  S.metro = freePhone(r, V(660, 330), V(410, 1200), V(470, 620));
+  S.cr = credit(r, 'Hand: NeONBRAND, CC0', { left: V(660, 360) + 'px', top: V(886, 1836) + 'px', color: WHITE, opacity: 0.85 });
+  S.st = stackType(r, 'people call it a', 'free service.', { left: V(110, 70) + 'px', top: V(110, 140) + 'px', width: V(900, 940) + 'px' }, { bs: V(150, 150) });
+  S.R = receipt(r, V(1180, 300), V(0, 460), V(600, 480), [
+    ['receipt', null, { center: true, big: true }], ['17 oct 2026', '22:41', { small: true }], [0, 0, { rule: true }],
+    ['instagram', '$0.00'], ['tiktok', '$0.00'], ['facebook', '$0.00'], [0, 0, { rule: true }],
+    ['total', '$0.00', { big: true }], [0, 0, { rule: true }], ['paid with:', null, { small: true }], ['your attention', null, { hl: true, big: true }],
+  ], { h: V(1000, 680), fs: V(32, 26) });
+  if (PORTRAIT) S.slot = el('div', { left: '270px', top: '446px', width: '540px', height: '18px', borderRadius: '9px', background: '#0E1A6B' }, '', r);
+  caption3(r, ['people call it', 'a free service', 'but it is monetised'], 1110);
+}, (lt, S) => {
+  enter(S.metro, lt, 0, 0.6, { y: 80, o: 0, mb: 8 }, { r: -2 }); enter(S.cr, lt, 0.4, 0.4, { o: 0 });
+  typeOn(S.st.a, lt, 0.3); typeOn(S.st.b, lt, 0.7, 0.12, 0.35, 40);
+  printTo(S.R, lt, 0.4, 600, { 10: 2.5 });
+});
+
+// ========== B2 · Herbert Simon, 1971 (10-20) ==========
+scene('B2', 10, 20, (r, S) => {
+  S.simon = img('halftone/simon.png', { left: V(120, 60) + 'px', top: V(70, 150) + 'px', height: V(800, 760) + 'px', transform: 'rotate(-3deg)' }, r);
+  S.cr = credit(r, 'Herbert A. Simon · photo: RIT, public domain', { left: V(770, 60) + 'px', top: V(800, 950) + 'px', color: WHITE, opacity: 0.85 });
+  S.yr = el('div', { left: V(760, 560) + 'px', top: V(130, 170) + 'px', font: `800 ${V(200, 170)}px "Helvetica Neue"`, letterSpacing: '-0.05em', color: WHITE, lineHeight: 1 }, '1971', r);
+  S.clip = el('div', { left: V(770, 60) + 'px', top: V(390, 1060) + 'px', width: V(1000, 960) + 'px', background: PAPER, padding: '40px 46px', boxSizing: 'border-box', boxShadow: '0 24px 50px rgba(0,0,30,0.35)', transform: 'rotate(1.2deg)' }, '', r);
+  S.q = el('div', { position: 'relative', font: `700 ${V(64, 60)}px "Helvetica Neue"`, letterSpacing: '-0.03em', lineHeight: 1.12, color: INK }, '', S.clip);
+  S.q.innerHTML = '“A wealth of information creates a <span style="position:relative;white-space:nowrap"><span class="hl" style="position:absolute;left:-6px;right:-6px;top:6px;bottom:2px;background:#F3EC7A;transform-origin:0 50%"></span><span style="position:relative">poverty of attention.”</span></span>';
+  S.hl = S.q.querySelector('.hl');
+  el('div', { position: 'relative', marginTop: '22px', font: `500 ${V(26, 26)}px "DM Mono"`, color: INK, opacity: 0.75, letterSpacing: '0.02em' }, 'Designing Organizations for an Information-Rich World, 1971', S.clip);
+  caption3(r, ['a wealth of information', 'creates a', 'poverty of attention']);
+}, (lt, S) => {
+  enter(S.simon, lt, 0, 0.55, { x: -80, o: 0, mb: 8 }, { r: -3 }); enter(S.cr, lt, 0.4, 0.4, { o: 0 });
+  enter(S.yr, lt, 0.3, 0.5, { y: 30, o: 0, blur: 10 });
+  enter(S.clip, lt, 0.7, 0.55, { y: 90, r: 4, o: 0, mb: 8 }, { r: 1.2 });
+  marker(S.hl, lt, 1.7, 0.45);
+});
+
+// ========== B3 · Fogg: the behaviour model, itemised (20-30) ==========
+scene('B3', 20, 30, (r, S) => {
+  S.lab = el('div', { left: V(90, 60) + 'px', top: V(70, 80) + 'px', font: `500 ${V(32, 32)}px "DM Mono"`, letterSpacing: '0.06em', color: WHITE, textTransform: 'uppercase' }, 'Stanford · Persuasive Technology Lab', r);
+  S.cr1 = credit(r, 'Photo: Kris Krüg, CC BY 2.0', { left: V(90, 60) + 'px', top: V(880, 830) + 'px', color: WHITE, opacity: 0.85 });
+  S.book = img('sources/fogg-cover.jpg', { left: V(600, 560) + 'px', top: V(300, 200) + 'px', width: V(400, 420) + 'px', transform: 'rotate(4deg)', boxShadow: '0 24px 50px rgba(0,0,30,0.4)' }, r);
+  S.cr2 = credit(r, 'B.J. Fogg, 2003 · cover: Open Library', { left: V(600, 560) + 'px', top: V(800, 710) + 'px', color: WHITE, opacity: 0.85 });
+  S.fogg = img('halftone/fogg.png', { left: V(60, 40) + 'px', top: V(150, 160) + 'px', height: V(710, 640) + 'px', transform: 'rotate(-2deg)' }, r);
+  S.R = receipt(r, V(1060, 120), V(0, 900), V(700, 840), [
+    ['behaviour', null, { center: true, big: true }], ['fogg behavior model', null, { small: true, center: true }], [0, 0, { rule: true }],
+    ['motivation', 'curiosity'], ['ability', 'one tap'], ['prompt', 'a notification'], [0, 0, { rule: true }],
+    ['= you open the app', null, { hl: true }],
+  ], { h: V(1000, 900), fs: V(34, 32) });
+  caption3(r, ['motivation', 'ability', 'and a prompt'], 1700);
+}, (lt, S) => {
+  enter(S.lab, lt, 0, 0.45, { y: -20, o: 0 }); enter(S.cr1, lt, 0.4, 0.4, { o: 0 });
+  enter(S.book, lt, 0.5, 0.55, { y: 80, r: 10, o: 0, mb: 8 }, { r: 4 }); enter(S.cr2, lt, 0.8, 0.4, { o: 0 });
+  enter(S.fogg, lt, 0.3, 0.55, { x: -60, o: 0, mb: 8 }, { r: -2 });
+  printTo(S.R, lt, 0.8, 520, { 7: 2.9 });
+});
+
+// ========== B4 · pull-to-refresh, x1 x2 x3 (30-40) ==========
+scene('B4', 30, 40, (r, S) => {
+  S.pat = el('div', { left: V(90, 60) + 'px', top: V(80, 120) + 'px', width: V(540, 560) + 'px', height: V(770, 740) + 'px', background: PAPER, boxShadow: '0 24px 50px rgba(0,0,30,0.35)', transform: 'rotate(-2deg)', overflow: 'hidden' }, '', r);
+  img('../sources/patent-US8448084-fig8.png', { left: '20px', top: '20px', width: 'calc(100% - 40px)', height: 'calc(100% - 40px)', objectFit: 'contain' }, S.pat);
+  S.cr1 = credit(r, 'US Patent 8,448,084 · Fig. 8', { left: V(90, 60) + 'px', top: V(880, 900) + 'px', color: WHITE, opacity: 0.85 });
+  S.ph = img('halftone/phonehand2.png', { left: V(600, 640) + 'px', top: V(200, 300) + 'px', height: V(720, 560) + 'px' }, r);
+  S.q = el('div', { left: V(1220, 60) + 'px', top: V(130, 1010) + 'px', width: V(620, 960) + 'px', font: `800 ${V(92, 92)}px "Helvetica Neue"`, letterSpacing: '-0.045em', lineHeight: 0.98, color: WHITE }, '', r);
+  S.q.innerHTML = '“Pull-to-refresh is <span style="color:#F3EC7A">addictive.</span>”';
+  S.cr2 = credit(r, 'Loren Brichter to The Guardian, 2017', { left: V(1220, 60) + 'px', top: V(450, 1220) + 'px', color: WHITE, opacity: 0.85 });
+  S.R = receipt(r, V(1300, 480), V(560, 1300), V(520, 540), [
+    ['pull-to-refresh', 'x1'], ['pull-to-refresh', 'x2'], ['pull-to-refresh', 'x3'], ['pull-to-refresh', 'x4'],
+  ], { h: V(440, 560), fs: V(30, 26) });
+  credit(r, 'Hand: NeONBRAND, CC0', { right: '36px', top: '28px', color: WHITE, opacity: 0.85 });
+  caption3(r, ['so you', 'keep', 'pulling down'], 1720);
+}, (lt, S) => {
+  enter(S.pat, lt, 0, 0.55, { y: 70, o: 0, mb: 8 }, { r: -2 }); enter(S.cr1, lt, 0.4, 0.4, { o: 0 });
+  // the hand pulls down (the gesture) every 1.2 s, and the receipt prints one more pull each time
+  const k = lt - 0.6, cyc = ((k % 1.2) + 1.2) % 1.2, pull = k < 0 ? 0 : cyc < 0.35 ? eOut(cyc / 0.35) : 1 - spring(cyc - 0.35, 2.2, 0.67);
+  enter(S.ph, lt, 0.2, 0.6, { x: 80, o: 0, mb: 8 }, { y: pull * 60 });
+  enter(S.q, lt, 0.8, 0.5, { y: 30, o: 0, blur: 8 }); enter(S.cr2, lt, 1.1, 0.4, { o: 0 });
+  printTo(S.R, lt, 0.9, 90);
+});
+
+// ========== B5 · the EU itemises it (40-50) ==========
+scene('B5', 40, 50, (r, S) => {
+  S.eu = el('div', { left: V(80, 50) + 'px', top: V(110, 160) + 'px', width: V(1010, 980) + 'px', height: V(404, 392) + 'px', overflow: 'hidden', boxShadow: '0 24px 50px rgba(0,0,30,0.35)', transform: 'rotate(-1.2deg)', background: '#fff' }, '', r);
+  img('../sources/eu-tiktok-lead.png', { left: 0, top: 0, width: V(1010, 980) + 'px' }, S.eu);
+  S.cr = credit(r, 'European Commission press release, 6 Feb 2026', { left: V(80, 50) + 'px', top: V(540, 580) + 'px', color: WHITE, opacity: 0.85 });
+  S.st = stackType(r, '', 'in breach.', { left: V(80, 60) + 'px', top: V(680, 1500) + 'px', width: V(1000, 960) + 'px' }, { bs: V(150, 150), ss: V(48, 46) });
+  S.lb = el('div', { left: V(80, 60) + 'px', top: V(640, 1460) + 'px', font: `500 ${V(32, 32)}px "DM Mono"`, letterSpacing: '0.06em', color: WHITE, textTransform: 'uppercase' }, 'Feb 2026 · preliminary finding', r);
+  S.ph = img('halftone/phonehand2.png', { left: V(1440, 640) + 'px', top: V(450, 1000) + 'px', height: V(430, 440) + 'px' }, r);
+  S.cr3 = credit(r, 'Hand: NeONBRAND, CC0', { left: V(1460, 640) + 'px', top: V(886, 1445) + 'px', color: WHITE, opacity: 0.85 });
+  S.R = receipt(r, V(1180, 60), V(0, 660), V(620, 680), [
+    ['addictive design', null, { center: true, small: true }], [0, 0, { rule: true }],
+    ['infinite scroll', 'flagged', { hl: true }], ['autoplay', 'flagged', { hl: true }], ['push notifications', 'flagged', { hl: true }], ['personalised feed', 'flagged', { hl: true }], [0, 0, { rule: true }],
+    ['digital services act', null, { small: true, center: true }],
+  ], { h: V(900, 780), fs: V(32, 26) });
+  caption3(r, ['infinite scroll', 'autoplay', 'push notifications'], 1350);
+}, (lt, S) => {
+  enter(S.eu, lt, 0, 0.55, { y: -50, o: 0, mb: 8 }, { r: -1.2 }); enter(S.cr, lt, 0.4, 0.4, { o: 0 });
+  printTo(S.R, lt, 0.5, 520, { 2: 1.5, 3: 1.75, 4: 2.0, 5: 2.25 });
+  enter(S.lb, lt, 1.4, 0.4, { y: 16, o: 0 }); enter(S.ph, lt, 0.8, 0.6, { x: 80, o: 0, mb: 8 }); enter(S.cr3, lt, 1.1, 0.4, { o: 0 }); typeOn(S.st.b, lt, 1.8, 0.12, 0.35, 40);
+});
+
+// ========== B6 · tear it off (50-60) ==========
+scene('B6', 50, 60, (r, S) => {
+  S.R = receipt(r, V(1180, 200), V(60, 60), V(620, 680), [
+    ['pull-to-refresh', '✕'], ['infinite scroll', '✕'], ['autoplay', '✕'], ['red badges', '✕'], ['likes', '✕'], [0, 0, { rule: true }],
+    ['paid with:', null, { small: true }], ['your attention', null, { big: true, hl: true }],
+  ], { h: V(1080, 880), fs: V(32, 30) });
+  S.ph = img('halftone/phonehand2.png', { left: V(760, 440) + 'px', top: V(300, 1000) + 'px', height: V(560, 620) + 'px' }, r);
+  S.st = stackType(r, 'your attention is', 'an asset.', { left: V(110, 70) + 'px', top: V(150, 1000) + 'px', width: V(700, 940) + 'px' }, { bs: V(190, 150), ss: V(60, 54) });
+  credit(r, 'Hand: NeONBRAND, CC0', { left: V(760, 440) + 'px', top: V(880, 1630) + 'px', color: WHITE, opacity: 0.85 });
+  caption3(r, ['your attention', 'is an', 'asset'], 1700);
+}, (lt, S) => {
+  printTo(S.R, lt, -5, 800, { 7: 0 });
+  // the receipt is torn off and lifts away
+  const p = eIO(prog(lt, 1.4, 0.8)); S.R.wrap.style.transform = `translate(${p * 30}px, ${-p * 20}px) rotate(${p * 4}deg)`;
+  enter(S.ph, lt, 0.2, 0.6, { y: 100, o: 0, mb: 8 });
+  typeOn(S.st.a, lt, 0.5); typeOn(S.st.b, lt, 0.9, 0.12, 0.35, 40);
+});
+
+// ========== motion test: the receipt prints (100-107) ==========
+scene('MT', 100, 107, (r, S) => {
+  S.st = stackType(r, 'people call it a', 'free service.', { left: V(110, 70) + 'px', top: V(110, 140) + 'px', width: V(900, 940) + 'px' }, { bs: V(150, 150) });
+  S.metro = freePhone(r, V(660, 330), V(410, 1200), V(470, 620));
+  S.R = receipt(r, V(1180, 300), V(0, 460), V(600, 480), [
+    ['receipt', null, { center: true, big: true }], ['17 oct 2026', '22:41', { small: true }], [0, 0, { rule: true }],
+    ['instagram', '$0.00'], ['tiktok', '$0.00'], ['facebook', '$0.00'], [0, 0, { rule: true }],
+    ['total', '$0.00', { big: true }], [0, 0, { rule: true }], ['paid with:', null, { small: true }], ['your attention', null, { hl: true, big: true }],
+  ], { h: V(1000, 680), fs: V(32, 26) });
+  if (PORTRAIT) S.slot = el('div', { left: '270px', top: '446px', width: '540px', height: '18px', borderRadius: '9px', background: '#0E1A6B' }, '', r);
+  caption3(r, ['people call it', 'a free service', 'but it is monetised'], 1110, [100.03, 100.8, 102.33]);
+}, (lt, S) => {
+  enter(S.metro, lt, 0.2, 0.6, { y: 80, o: 0, mb: 8 }, { s: 1 + 0.03 * eIO(prog(lt, 0.8, 6)), r: -2 });
+  typeOn(S.st.a, lt, 0.4); typeOn(S.st.b, lt, 0.8, 0.12, 0.35, 40);
+  // printing in line steps: each line feeds in 0.12 s then holds 0.28 s (a till's rhythm)
+  const R = S.R, lines = R.items.length; let fed = 0; const t0 = 1.0;
+  for (let i = 0; i < lines; i++) { const a = t0 + i * 0.4; const it = R.items[i]; const next = i + 1 < lines ? R.items[i + 1].y : R.len; const seg = next - (i ? it.y : 0); fed += seg * eOut(prog(lt, a, 0.14)) * (i ? 1 : 1); if (i === 0) fed = (it.y + it.h) * eOut(prog(lt, a, 0.14)); }
+  fed = 0; for (let i = 0; i < lines; i++) { const a = t0 + i * 0.25; const top = i ? R.items[i].y : 0; const bot = i + 1 < lines ? R.items[i + 1].y : R.len; fed += (bot - top) * eOut(prog(lt, a, 0.14)); }
+  set(R.wrap, { height: Math.max(0, fed) + 'px' }); R.wrap.style.opacity = fed > 0 ? 1 : 0; R.items.forEach((it) => { it.e.style.opacity = fed >= it.y + it.h * 0.6 ? 1 : 0; if (it.hl) marker(it.hl, lt, t0 + lines * 0.25 + 0.3, 0.45); });
+  // after the print, a slow push on the receipt (no dead hold)
+  { const z = 1 + 0.04 * eIO(prog(lt, t0 + lines * 0.25, 3)); R.wrap.style.transform = `scale(${z})`; }
+});
+</script></body></html>

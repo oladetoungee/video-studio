@@ -1,0 +1,30 @@
+{
+  "text": {
+    "h": "<b>Offline</b><i>hobbies</i>"
+  },
+  "images": {
+    "room": "../../assets/shoot/1564.jpg",
+    "me": "../../assets/shoot/1564-person.png",
+    "p1": "../../assets/set5/crochet.jpg",
+    "p2": "../../assets/set5/painting.jpg"
+  },
+  "kind": "her photo + collage (her centred, photos of the hobbies pinned round her)",
+  "board": "Thumbnails 140 (viral-time-to-lock-in: her in the middle, small photos round her, one white serif line)",
+  "fonts": [
+    "shorts-10 Bodoni Moda caps + Instrument Serif italic (white on #3C2A22, Formats 48)"
+  ],
+  "colours": "Font shorts-10 specimen: ground #3C2A22 (the room is washed in it), ink #FFFFFF",
+  "thumbnail_text": "OFFLINE hobbies (+ photos: crochet, painting)",
+  "titles": [
+    "Things to Do Instead of Doomscrolling (That I Actually Do)",
+    "9 Easy Things I Do Instead of Doomscrolling"
+  ],
+  "direction": "Copies Thumbnails 140: she smiles in the middle of her own room (washed brown so the words pop, her face untouched), two real photos of the hobbies pinned round her, one serif line on top.",
+  "nudge": {},
+  "scores": "cold critic r3: 7 / 8 · r4: 6.5 / 7",
+  "recommended": false,
+  "vars": {},
+  "class": "no-lift",
+  "title": "Things to Do Instead of Doomscrolling (That I Actually Do)",
+  "census": "her centred + photos"
+}

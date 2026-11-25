@@ -1,0 +1,24 @@
+{
+  "direction": "Flat warm paper + a hard-edged photo panel of her in her room (hand over mouth, 1:04); editorial serif + one red highlight box (her board: 'Why You're Stuck'); a phone search returning 'Found' (illustration)",
+  "thumbnail_text": "Check if someone's married",
+  "title": "Ghana Put Its Marriage Records on an App. Is That OK?",
+  "titles": [
+    "Ghana Put Its Marriage Records on an App. Is That OK?",
+    "Should Anyone Be Able to Look Up Your Marriage?",
+    "I Like Ghana's New Marriage App. Here's My One Worry"
+  ],
+  "text": {
+    "line1": "Check if",
+    "line2": "someone's",
+    "line3": "MARRIED",
+    "tag": "New in Ghana",
+    "p_app": "Marriage records",
+    "p_q": "Search a name",
+    "p_rl": "Result",
+    "p_res": "Found ✓"
+  },
+  "images": {
+    "scene": "../../assets/scene/s_64.13.jpg"
+  },
+  "vars": {}
+}

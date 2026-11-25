@@ -1,0 +1,124 @@
+/* dark-patterns thumbnails (2026-11-02). Look: the film's C "BLOWN UP" (pink #FF9EC4, ink #111111, white UI; Geist 800/900,
+   Geist Mono; the marker = an ink block with the word knocked out in pink; a black magnifier finds the trick), used freely:
+   every option is its own kind (photo, collage, flat, other). Bar: her own thumbnails (topic huge, one literal picture,
+   few big things, one accent). Editable: text in content.json "text", photos in "images", colours in "vars"
+   (--ground, --fg, --accent, --wash), moves in "nudge" (lib/bind.js). */
+
+:root { --pink: #FF9EC4; --ink: #111111; --white: #FFFFFF; --grey: #6E6E6E; --paper: #F4EFE8; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1280px; height: 720px; overflow: hidden; background: #111; }
+.t { position: relative; width: 1280px; height: 720px; overflow: hidden; background: var(--ground, #FF9EC4); color: var(--fg, #111111);
+  font-family: 'Geist', sans-serif; }
+.guides .badge { position: absolute; right: 10px; bottom: 10px; width: 150px; height: 70px; border: 3px dashed #0f0; z-index: 99; }
+.z1 { z-index: 1; } .z2 { z-index: 2; } .z3 { z-index: 3; } .z4 { z-index: 4; } .z5 { z-index: 5; } .z6 { z-index: 6; }
+.abs { position: absolute; }
+
+/* headline: Geist black, huge, tight */
+.hd { position: absolute; font-family: 'Geist', sans-serif; font-weight: 900; text-transform: uppercase; line-height: .88;
+  letter-spacing: -.035em; white-space: nowrap; color: var(--fg, #111); }
+.hd.tall { font-family: 'Anton', sans-serif; font-weight: 400; letter-spacing: 0; line-height: .9; }
+.acc { color: var(--accent, #FF9EC4); }
+/* the marker: an ink block, the word knocked out in pink */
+.blk { background: var(--ink); color: var(--accent, #FF9EC4); padding: 0 .1em; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+.blkp { background: var(--accent, #FF9EC4); color: var(--ink); padding: 0 .1em; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+.serif { font-family: 'DSerifI', serif; text-transform: none; letter-spacing: -.01em; font-weight: 400; }
+.mono { font-family: 'GMono', monospace; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; }
+.hand { font-family: 'Hand', cursive; font-weight: 700; }
+.marker { font-family: 'Marker', cursive; }
+.strike { position: relative; }
+.strike::after { content: ""; position: absolute; left: -4%; right: -4%; top: 52%; height: .09em; background: var(--ink); }
+
+/* photo of her: her room (grey + one colour wash), she in full colour on top (her ux-research method) */
+.scene { position: absolute; left: 0; top: 0; width: 1280px; height: 720px; transform-origin: var(--sc-o, 50% 30%); scale: var(--sc, 1);
+  translate: var(--sc-x, 0px) var(--sc-y, 0px); }
+.scene img { position: absolute; left: 0; top: 0; width: 1280px; height: 720px; display: block; }
+.scene .bg { filter: grayscale(1) contrast(var(--bgc, 1.05)) brightness(var(--bgb, 1)); }
+.scene .wash { position: absolute; inset: 0; background: var(--wash, #FF9EC4); mix-blend-mode: multiply; }
+.scene .dim { position: absolute; inset: 0; background: var(--dim, rgba(17,17,17,.0)); }
+.scene .me-c { filter: saturate(1.05) contrast(1.05) brightness(1.04); }
+.scene.natural .bg { filter: saturate(.9) contrast(1.05) brightness(1.05); }
+.scene.bw .me-c { filter: grayscale(1) contrast(1.1) brightness(1.08); }
+
+/* cut-out of her (frame edge at the bottom) */
+.cut { position: absolute; bottom: 0; display: block; }
+.cut.ol { filter: drop-shadow(6px 0 0 var(--ol, #111)) drop-shadow(-6px 0 0 var(--ol, #111)) drop-shadow(0 -6px 0 var(--ol, #111)); }
+.cut.bw { filter: grayscale(1) contrast(1.1) brightness(1.1) drop-shadow(6px 0 0 var(--ol, #111)) drop-shadow(-6px 0 0 var(--ol, #111)) drop-shadow(0 -6px 0 var(--ol, #111)); }
+
+/* generic shop UI, white on the ground, no brand */
+.ui { position: absolute; background: var(--white); color: var(--ink); box-shadow: 0 22px 44px rgba(17,17,17,.28); }
+.popup { padding: 30px 34px 30px; text-align: center; }
+.popup .off { font-weight: 900; letter-spacing: -.04em; line-height: .9; }
+.popup .yes { background: var(--ink); color: var(--white); font-weight: 800; letter-spacing: -.01em; margin-top: 18px; padding: 16px 0; }
+.popup .no { color: var(--grey); font-weight: 600; text-decoration: underline; text-underline-offset: .18em; text-decoration-thickness: .06em; margin-top: 18px; white-space: nowrap; }
+.row { display: flex; justify-content: space-between; align-items: baseline; gap: 20px; white-space: nowrap; }
+.rule { height: 3px; background: var(--ink); opacity: .14; }
+.box { display: inline-block; width: 1em; height: 1em; border: .1em solid var(--ink); border-radius: .12em; vertical-align: -.12em; position: relative; background: #fff; }
+.box.on { background: var(--ink); }
+.box.on::after { content: ""; position: absolute; left: .27em; top: .06em; width: .26em; height: .5em; border: solid var(--white); border-width: 0 .12em .12em 0; transform: rotate(45deg); }
+/* the magnifier: a black ring + handle; content inside is drawn bigger */
+.lens { position: absolute; border-radius: 50%; border: var(--lw, 18px) solid var(--ink); background: var(--white); overflow: visible; }
+.lens .in { position: absolute; inset: 0; border-radius: 50%; overflow: hidden; display: flex; align-items: center; justify-content: center; text-align: center; }
+.lens::after { content: ""; position: absolute; left: 86%; top: 86%; width: var(--hl, 150px); height: var(--hw, 34px); background: var(--ink);
+  transform-origin: 0 50%; transform: rotate(45deg); }
+.lens.clear { background: transparent; }
+/* a phone, generic */
+.phone { position: absolute; background: var(--ink); border-radius: 44px; padding: 14px; box-shadow: 0 26px 50px rgba(17,17,17,.35); }
+.phone .scr { background: var(--white); border-radius: 32px; width: 100%; height: 100%; overflow: hidden; position: relative; }
+/* a sticker: white die-cut edge */
+.stk { position: absolute; filter: drop-shadow(5px 0 0 #fff) drop-shadow(-5px 0 0 #fff) drop-shadow(0 5px 0 #fff) drop-shadow(0 -5px 0 #fff) drop-shadow(0 12px 18px rgba(0,0,0,.28)); }
+.tag { position: absolute; background: var(--ink); color: var(--white); font-family: 'GMono', monospace; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; padding: 8px 14px; }
+.shadow-t { text-shadow: 0 4px 0 rgba(0,0,0,.25), 0 10px 30px rgba(0,0,0,.3); }
+.phone .scr { color: var(--ink); }
+
+/* ===== 2026-11-07: her type set 03 Heavy + light (inspiration/know-how/TYPE-SYSTEM.md) and no thick lines ===== */
+@font-face { font-family: 'DMMono'; src: url('../fonts/DMMono-Medium.ttf') format('truetype'); font-weight: 500; }
+.t, .hd, .hd.tall, .popup, .ui, .phone .scr { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important; }
+.hd { font-weight: 700 !important; text-transform: none !important; letter-spacing: -.045em !important; }
+.hd.tall { font-weight: 700 !important; }
+.serif, .hand, .marker { font-family: 'Helvetica Neue', Helvetica, sans-serif !important; font-weight: 300 !important; font-style: normal !important; letter-spacing: -.03em !important; text-transform: none !important; }
+.mono, .tag { font-family: 'DMMono', monospace !important; font-weight: 500 !important; letter-spacing: .12em !important; }
+.popup .off, .popup .yes { font-weight: 700 !important; }
+.cut.ol { filter: none !important; }
+.cut.bw { filter: grayscale(1) contrast(1.1) brightness(1.1) !important; }
+.stk { filter: drop-shadow(0 12px 18px rgba(0,0,0,.28)) !important; }
+.lens { border-width: 3px !important; }
+.lens::after { height: 6px !important; }
+.box { border-width: 2px !important; }
+.rule { height: 1px !important; }
+[style*="font-family:'Hand'"], [style*="font-family:'DSerifI'"], [style*="font-family:'DSerif'"] { font-family: 'Helvetica Neue', sans-serif !important; font-weight: 300 !important; font-style: normal !important; }
+[style*="font-family:'GMono'"], [style*="font-family: 'Geist Mono'"] { font-family: 'DMMono', monospace !important; font-weight: 500 !important; }
+[style*="font-family:'Geist'"], [style*="font-family: 'Geist'"] { font-family: 'Helvetica Neue', sans-serif !important; }
+[style*="22px solid"] { border-width: 3px !important; }
+/* the old families now point at the set's faces (classes inside each direction's own <style> use these names) */
+@font-face { font-family: 'Hand'; src: local('HelveticaNeue-Medium'), local('Helvetica Neue Medium'); font-weight: 100 900; }
+@font-face { font-family: 'Marker'; src: local('HelveticaNeue-Light'), local('Helvetica Neue Light'); font-weight: 100 900; }
+@font-face { font-family: 'DSerifI'; src: local('HelveticaNeue-Bold'), local('Helvetica Neue Bold'); font-weight: 100 900; }
+@font-face { font-family: 'DSerif'; src: local('HelveticaNeue-Light'), local('Helvetica Neue Light'); font-weight: 100 900; }
+@font-face { font-family: 'ISerif'; src: local('HelveticaNeue-Light'), local('Helvetica Neue Light'); font-weight: 100 900; }
+@font-face { font-family: 'GMono'; src: url('../fonts/DMMono-Medium.ttf') format('truetype'); font-weight: 100 900; }
+@font-face { font-family: 'Geist Mono'; src: url('../fonts/DMMono-Medium.ttf') format('truetype'); font-weight: 100 900; }
+@font-face { font-family: 'Geist'; src: local('HelveticaNeue-Bold'), local('Helvetica Neue Bold'); font-weight: 600 900; }
+@font-face { font-family: 'Geist'; src: local('HelveticaNeue-Medium'), local('Helvetica Neue Medium'); font-weight: 500; }
+@font-face { font-family: 'Geist'; src: local('HelveticaNeue'), local('Helvetica Neue'); font-weight: 100 400; }
+@font-face { font-family: 'Anton'; src: local('HelveticaNeue-Bold'), local('Helvetica Neue Bold'); font-weight: 100 900; }
+
+.lens { border-width: 0 !important; box-shadow: 0 18px 40px rgba(17,17,17,.35) !important; }
+.lens::after { height: 10px !important; }
+
+/* ===== 2026-11-10 rollout: her shoot photos (outfit A white shirt, Enhance photo) + quiet same-hue patterns ===== */
+/* her shoot photos are already bright and enhanced: no extra brightening on top (her note 2026-11-08, face too light) */
+.t.no-lift .scene .me-c, .t.no-lift .cut { filter: none !important; }
+/* full photo of her room (4:3): room + her person layer share one box, so they line up; size --pw, place --pl / --pt; the ground shows where the photo ends (same colour as the wash) */
+.pf { position: absolute; inset: 0; overflow: hidden; }
+.pf img { position: absolute; left: var(--pl, 0px); top: var(--pt, -120px); width: var(--pw, 1280px); height: auto; object-fit: fill; }
+.pf .wash { left: var(--pl, 0px); top: var(--pt, -120px); width: var(--pw, 1280px); height: calc(var(--pw, 1280px) * .75); inset: auto; }
+.pf .room { filter: var(--roomf, none); }
+.pf .wash { position: absolute; background: var(--wash, #FF9EC4); mix-blend-mode: multiply; opacity: var(--washo, 1); }
+.pf .dim { position: absolute; inset: 0; background: var(--dim, rgba(17,17,17,0)); }
+.pf.washed .room { filter: grayscale(1) contrast(var(--wc, .7)) brightness(var(--wb, 1.5)); }
+/* a bold ground with a fine static pattern in the same hue, a few % darker (THUMBNAIL-STUDY §7) */
+.pat::before { content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background-image: repeating-linear-gradient(var(--pata, 135deg), var(--patc, rgba(17,17,17,.055)) 0 2px, transparent 2px var(--patg, 13px)); }
+.sh { text-shadow: 0 2px 4px rgba(0,0,0,.25), 0 8px 30px rgba(0,0,0,.35); }
+.lt { font-weight: 300 !important; }
+.hd.up { text-transform: uppercase !important; letter-spacing: -.035em !important; }

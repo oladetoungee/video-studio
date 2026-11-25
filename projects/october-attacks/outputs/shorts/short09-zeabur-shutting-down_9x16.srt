@@ -1,0 +1,95 @@
+1
+00:00:00,073 --> 00:00:02,273
+now Zeabur, the company that is shutting
+
+2
+00:00:02,273 --> 00:00:04,523
+down because of attacks, is a very
+
+3
+00:00:04,523 --> 00:00:06,963
+interesting one this is also another
+
+4
+00:00:06,963 --> 00:00:09,613
+platform that developers use to deploy apps
+
+5
+00:00:09,613 --> 00:00:11,413
+and they are deciding to shut down
+
+6
+00:00:11,413 --> 00:00:13,623
+completely they got breached in August and
+
+7
+00:00:13,623 --> 00:00:16,303
+on October 14th and 15th, they got breached
+
+8
+00:00:16,303 --> 00:00:18,783
+again which leaked internal credentials
+
+9
+00:00:18,783 --> 00:00:22,913
+the second breach covered about 321,810
+
+10
+00:00:22,913 --> 00:00:25,773
+accounts and about 3.2 million environment
+
+11
+00:00:25,773 --> 00:00:28,403
+variables records so how did the attackers
+
+12
+00:00:28,403 --> 00:00:30,643
+get in the second time after they got in the
+
+13
+00:00:30,643 --> 00:00:33,083
+first time? according to Zeabur, their admin
+
+14
+00:00:33,083 --> 00:00:34,703
+token had no expiry date
+
+15
+00:00:34,703 --> 00:00:36,813
+so they had not changed this token since
+
+16
+00:00:36,813 --> 00:00:39,793
+January 2024 so after the first attack, when
+
+17
+00:00:39,793 --> 00:00:42,043
+they changed their keys, they didn't include
+
+18
+00:00:42,043 --> 00:00:43,803
+that particular set of tokens
+
+19
+00:00:43,803 --> 00:00:45,853
+they didn't change those set and that kind
+
+20
+00:00:45,853 --> 00:00:48,333
+of opened the gates again and the old
+
+21
+00:00:48,333 --> 00:00:50,923
+platform now is deciding to shut down
+
+22
+00:00:50,923 --> 00:00:52,393
+they will pause services and just shut
+
+23
+00:00:52,393 --> 00:00:54,123
+everything down by the end of December
+
+24
+00:00:54,123 --> 00:00:55,000
+this is crazy

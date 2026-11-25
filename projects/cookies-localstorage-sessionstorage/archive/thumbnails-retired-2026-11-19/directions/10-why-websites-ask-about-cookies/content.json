@@ -1,0 +1,28 @@
+{
+ "direction": "No face. Yellow ground, the question in heavy red on the left: why every website asks about cookies. On the right a big tilted phone with a generic shop page and the cookie banner everyone knows sliding up: \"We use cookies\" / Accept all / Reject.",
+ "thumbnail_text": "why every website asks about cookies",
+ "kind": "object",
+ "recommended": false,
+ "titles": [
+  "Why Websites Need Cookies (Explained Simply)",
+  "What Are Browser Cookies? Why Every Site Asks You to Accept Them",
+  "localStorage vs sessionStorage vs Cookies (What Goes Where)"
+ ],
+ "text": {
+  "hd": "why every<br>website<br>asks about<br>cookies",
+  "bt": "We use cookies",
+  "bs": "to keep you logged in and remember your cart.",
+  "b1": "Accept all",
+  "b2": "Reject"
+ },
+ "images": {},
+ "vars": {
+  "--ground": "#F7F02B"
+ },
+ "board": "Thumbnails 112 (yt-59 \"Run AI Agents Locally\": a heavy headline over one big device screen showing the thing, nothing else)",
+ "fonts": "Font 67 (thumbs-12: Archivo Black, red on yellow, Thumbnails 89) + Font 58 (Inter Tight, black on light) on the phone",
+ "colours": "Font 67 specimen: #E2262B on #F7F02B; phone screen #FFFFFF with #111111",
+ "title": "Why Websites Need Cookies (Explained Simply)",
+ "class": "no-lift",
+ "scores": "fresh cold critic round 6 (alone / with title): 7 / 7 · Test & Compare"
+}

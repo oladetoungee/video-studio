@@ -1,0 +1,25 @@
+{
+  "direction": "TH14/TH20: her real room, eyebrows up, mouth closed; on the left a huge empty chat bubble from \"Claude\" (the model says nothing) with a big sticking plaster across it: \"hurt\" made literal and a little funny. The question in ink and lilac boxes. Refs: sample 6, Dan Grib \"AI has feelings\" (33x), \"does ai have feelings\" searches. Scores: Round 3: cold 6 · best pair (title 1) 8/7 · taste 6.5.",
+  "concept": "TH14",
+  "thumbnail_text": "CAN AI FEEL HURT?",
+  "title": "Can You Hurt a Chatbot? Why Claude Ends Cruel Chats",
+  "titles": [
+    "Can You Hurt a Chatbot? Why Claude Ends Cruel Chats",
+    "Is Claude Conscious? Why Anthropic Protects It From Users"
+  ],
+  "scores": "Round 3: cold 6 · best pair (title 1) 8/7 · taste 6.5.",
+  "text": {
+    "l1": "<span class=\"boxl\">CAN AI</span>",
+    "l2": "<span class=\"boxl l\">FEEL HURT?</span>",
+    "chat_name": "Claude"
+  },
+  "images": {
+    "scene": "../../assets/scene/s_197.25.jpg",
+    "cut": "../../assets/cut/c_197.25.png"
+  },
+  "vars": {
+    "--px": "-79px",
+    "--py": "-263px",
+    "--pw": "2059px"
+  }
+}

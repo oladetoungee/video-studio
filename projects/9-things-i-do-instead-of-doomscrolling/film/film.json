@@ -1,0 +1,344 @@
+{
+  "title": "9 things I do instead of doomscrolling (A · Offline Bingo)",
+  "hud": "",
+  "intro": 0.4,
+  "outro": 2.0,
+  "voiceDuration": 777.44,
+  "words": "data/words.json",
+  "captions": "data/captions.srt",
+  "images": {
+    "px-banana-bread": "assets/pexels/banana-bread.jpg",
+    "px-bike": "assets/pexels/bike.jpg",
+    "px-book-table": "assets/pexels/book-table.jpg",
+    "px-busstop": "assets/pexels/busstop.jpg",
+    "px-call": "assets/pexels/call.jpg",
+    "px-coffee-talk": "assets/pexels/coffee-talk.jpg",
+    "px-crochet": "assets/pexels/crochet.jpg",
+    "px-journal": "assets/pexels/journal.jpg",
+    "px-kettle": "assets/pexels/kettle.jpg",
+    "px-longread": "assets/pexels/longread.jpg",
+    "px-plants": "assets/pexels/plants.jpg",
+    "px-pray": "assets/pexels/pray.jpg",
+    "px-pushups": "assets/pexels/pushups.jpg",
+    "px-read-eat": "assets/pexels/read-eat.jpg",
+    "px-thrift": "assets/pexels/thrift.jpg",
+    "px-waiting": "assets/pexels/waiting.jpg",
+    "npr": "assets/src/npr-crop.jpg",
+    "px-scroll-bed": "assets/pexels/scroll-bed.jpg",
+    "px-novels": "assets/pexels/novels.jpg",
+    "px-ereader": "assets/pexels/ereader.jpg",
+    "px-chat": "assets/pexels/chat.jpg",
+    "px-painting": "assets/pexels/painting.jpg",
+    "px-camera": "assets/pexels/camera.jpg",
+    "px-cooking": "assets/pexels/cooking.jpg",
+    "px-chores": "assets/pexels/chores.jpg",
+    "px-bags": "assets/pexels/bags.jpg",
+    "px-dinner": "assets/pexels/dinner.jpg",
+    "px-bored-book": "assets/pexels/bored-book.jpg",
+    "px-painting-happy": "assets/pexels/painting-happy.jpg",
+    "px-friends-laugh": "assets/pexels/friends-laugh.jpg",
+    "px-phone-down": "assets/pexels/phone-down.jpg",
+    "px-bike-road": "assets/pexels/bike-road.jpg",
+    "px-neighbours": "assets/pexels/neighbours.jpg",
+    "px-doodle": "assets/pexels/doodle.jpg",
+    "px-lunch-alone": "assets/pexels/lunch-alone.jpg",
+    "px-notes-watch": "assets/pexels/notes-watch.jpg",
+    "px-ceiling": "assets/pexels/ceiling.jpg",
+    "px-daydream": "assets/pexels/daydream.jpg",
+    "px-scroll-hand": "assets/pexels/scroll-hand.jpg",
+    "px-reading-smile": "assets/pexels/reading-smile.jpg",
+    "px-gardening": "assets/pexels/gardening.jpg",
+    "px-barista": "assets/pexels/barista.jpg",
+    "px-bench-talk": "assets/pexels/bench-talk.jpg",
+    "px-library": "assets/pexels/library.jpg",
+    "px-handwriting": "assets/pexels/handwriting.jpg",
+    "px-happy-shopper": "assets/pexels/happy-shopper.jpg",
+    "px-couch-phone": "assets/pexels/couch-phone.jpg",
+    "px-handlebars": "assets/pexels/handlebars.jpg",
+    "px-tired-sofa": "assets/pexels/tired-sofa.jpg",
+    "px-headphones-focus": "assets/pexels/headphones-focus.jpg",
+    "px-queue": "assets/pexels/queue.jpg",
+    "px-rack": "assets/pexels/rack.jpg",
+    "px-tablet": "assets/pexels/tablet.jpg",
+    "px-tea-book": "assets/pexels/tea-book.jpg",
+    "px-laptop-video": "assets/pexels/laptop-video.jpg",
+    "px-laughing-talk": "assets/pexels/laughing-talk.jpg",
+    "px-planner": "assets/pexels/planner.jpg",
+    "px-vintage": "assets/pexels/vintage.jpg",
+    "px-notebook-write": "assets/pexels/notebook-write.jpg",
+    "px-phone-night": "assets/pexels/phone-night.jpg",
+    "px-bench-alone": "assets/pexels/bench-alone.jpg",
+    "px-phones-table": "assets/pexels/phones-table.jpg",
+    "px-window-pause": "assets/pexels/window-pause.jpg",
+    "px-bike-evening": "assets/pexels/bike-evening.jpg",
+    "px-explore": "assets/pexels/explore.jpg",
+    "px-couch-lazy": "assets/pexels/couch-lazy.jpg",
+    "px-store-exit": "assets/pexels/store-exit.jpg",
+    "px-school-kids": "assets/pexels/school-kids.jpg",
+    "px-crumpled": "assets/pexels/crumpled.jpg",
+    "px-coins": "assets/pexels/coins.jpg",
+    "px-picnic": "assets/pexels/picnic.jpg",
+    "px-vintage-bag": "assets/pexels/vintage-bag.jpg"
+  },
+  "scripts": [
+    "scenes/bingo.js",
+    "../talking-head/moments/visuals.js",
+    "scenes/rawmap.js",
+    "scenes/film.js"
+  ],
+  "cutSounds": {
+    "cutSounds": false
+  },
+  "fonts": [],
+  "audio": {
+    "voice": "audio/voice_edit.flac",
+    "voiceFilter": "highpass=f=80,afftdn=nr=8:nf=-52:tn=1,deesser=i=0.3:m=0.5:f=0.5,acompressor=threshold=0.06:ratio=3:attack=6:release=160:knee=3,equalizer=f=3200:t=q:w=1.2:g=1.5",
+    "music": {
+      "dir": "library:music",
+      "xfade": 6.0,
+      "tracks": [
+        [
+          "443",
+          "Mixkit track 443"
+        ],
+        [
+          "150",
+          "Mixkit track 150"
+        ]
+      ]
+    },
+    "sfx": {
+      "roles": {
+        "hit": {
+          "files": [
+            "library:punch-soft-quick",
+            "library:hit-futuristic-bass",
+            "library:wood-hard-hit"
+          ],
+          "align": "peak",
+          "db": 6
+        },
+        "slide": {
+          "files": [
+            "library:paper-slide",
+            "library:paper-quick-move"
+          ],
+          "align": "peak",
+          "db": 18
+        },
+        "place": {
+          "files": [
+            "library:card-place",
+            "library:card-flick"
+          ],
+          "align": "peak",
+          "db": 14
+        },
+        "marker": {
+          "files": [
+            "library:marker-line",
+            "library:pencil-short"
+          ],
+          "align": "start",
+          "db": 4,
+          "maxlen": 0.7
+        },
+        "pop": {
+          "files": [
+            "library:pop-dry",
+            "library:pop-hard-click",
+            "library:notify-bubble-pop",
+            "library:pop-cartoon-bubble"
+          ],
+          "align": "start",
+          "db": 9
+        },
+        "tick": {
+          "files": [
+            "library:ui-select-click",
+            "library:ui-modern-select",
+            "library:ui-click-tone",
+            "library:switch-tap"
+          ],
+          "align": "start",
+          "db": 10
+        },
+        "check": {
+          "files": [
+            "library:click-box-check",
+            "library:ui-option-select"
+          ],
+          "align": "start",
+          "db": 7
+        },
+        "shutter": {
+          "files": [
+            "library:shutter-click",
+            "library:shutter-hard-click",
+            "library:shutter-digital",
+            "library:shutter-vintage"
+          ],
+          "align": "peak",
+          "db": 7
+        },
+        "swipe": {
+          "files": [
+            "library:swipe-fast-zoom",
+            "library:transition-tech-slide",
+            "library:air-zoom-vacuum"
+          ],
+          "align": "peak",
+          "db": 6
+        },
+        "type": {
+          "files": [
+            "library:keyboard-typing",
+            "library:laptop-typing"
+          ],
+          "align": "start",
+          "db": 18,
+          "maxlen": 1.4
+        },
+        "typeHit": {
+          "files": [
+            "library:typewriter-single-hit",
+            "library:typewriter-soft-click"
+          ],
+          "align": "start",
+          "db": 14
+        },
+        "glitch": {
+          "files": [
+            "library:glitch-small-electric",
+            "library:glitch-static",
+            "library:glitch-intro-text"
+          ],
+          "align": "peak",
+          "db": 1
+        },
+        "notify": {
+          "files": [
+            "library:notify-message-pop",
+            "library:notify-positive",
+            "library:bell-notification"
+          ],
+          "align": "start",
+          "db": 3
+        },
+        "clock": {
+          "files": [
+            "library:clock-tick-single",
+            "library:clock-wall-tick-tock"
+          ],
+          "align": "peak",
+          "db": 13,
+          "maxlen": 1.5
+        },
+        "riser": {
+          "files": [
+            "library:riser-cinematic-trailer",
+            "library:riser-metallic-sweep"
+          ],
+          "align": "peak",
+          "db": 4
+        },
+        "tape": {
+          "files": [
+            "library:tape-switch",
+            "library:record-scratch-stop"
+          ],
+          "align": "peak",
+          "db": 6
+        },
+        "ding": {
+          "files": [
+            "library:bell-service-ding",
+            "library:correct-answer"
+          ],
+          "align": "peak",
+          "db": 7
+        },
+        "page": {
+          "files": [
+            "library:page-turn-single",
+            "library:book-paging-single"
+          ],
+          "align": "peak",
+          "db": 18
+        },
+        "tap": {
+          "files": [
+            "library:tap-small-hit",
+            "library:click-plastic-bubble"
+          ],
+          "align": "start",
+          "db": 15
+        },
+        "paper": {
+          "files": [
+            "library:paper-slide",
+            "library:paper-quick-move"
+          ],
+          "align": "peak",
+          "db": 14
+        },
+        "click": {
+          "files": [
+            "library:mouse-double-click",
+            "library:click-classic"
+          ],
+          "align": "start",
+          "db": 15
+        },
+        "boom": {
+          "files": [
+            "library:drum-deep-impact",
+            "library:hit-short-bass"
+          ],
+          "align": "peak",
+          "db": 1
+        },
+        "dab": {
+          "files": [
+            "library:punch-soft-quick",
+            "library:pop-dry"
+          ],
+          "align": "peak",
+          "db": 10
+        },
+        "card": {
+          "files": [
+            "library:card-place",
+            "library:card-flick"
+          ],
+          "align": "peak",
+          "db": 15
+        },
+        "cash": {
+          "files": [
+            "library:coins-clinking",
+            "library:coin-win"
+          ],
+          "align": "start",
+          "db": 9
+        },
+        "error": {
+          "files": [
+            "library:wrong-answer",
+            "library:buzzer-fail"
+          ],
+          "align": "start",
+          "db": 8
+        }
+      }
+    },
+    "levels": {
+      "voiceLufs": -16.0,
+      "duckDb": -15.0,
+      "openDb": -10.0,
+      "fullDb": -7.0,
+      "target": -14.0,
+      "ceiling": 0.66
+    }
+  }
+}

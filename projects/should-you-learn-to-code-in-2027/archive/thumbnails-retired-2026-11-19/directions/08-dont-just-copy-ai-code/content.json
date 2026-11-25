@@ -1,0 +1,21 @@
+{
+ "board": "pick1119-09",
+ "kind": "you centred, big, over a full-screen code editor; one line at the bottom, a red underline",
+ "direction": "Copies pick1119-09 (What I'd Learn Instead of Coding in 2027 + 'Don't Waste Your Life': the person centred and big, straight to camera, over a full-screen code editor, big white bold words across the bottom, a red brush underline). Here: Don't just copy it (the code AI gives you), the video's first skill (read the code) said as a feeling, not a lesson.",
+ "thumbnail_text": "Don't just copy AI code.",
+ "fonts": [
+  "thumbs-10 Poppins Bold (white #FFFFFF, red key colour #E2231A as the underline, as Thumbnails 84)",
+  "thumbs-08 JetBrains Mono for the code behind you"
+ ],
+ "colours": "thumbs-10 (#FFFFFF on dark #2A2522) + red #E2231A; editor #1E1F22",
+ "text": {
+  "hd": "Don't just copy AI code.",
+  "files": "src/\n  app.js\n  signup.js\n  payment.js\n  db.js\ntests/\npackage.json",
+  "code": "<span class=\"n\">1</span><span class=\"k\">import</span> { db } <span class=\"k\">from</span> <span class=\"s\">\"./db\"</span>;\n<span class=\"n\">2</span>\n<span class=\"n\">3</span><span class=\"k\">export async function</span> <span class=\"f\">pay</span>(order) {\n<span class=\"n\">4</span>  <span class=\"k\">const</span> card = order.card;\n<span class=\"n\">5</span>  <span class=\"k\">await</span> <span class=\"f\">charge</span>(card, order.total);\n<span class=\"n\">6</span>  <span class=\"k\">await</span> db.orders.<span class=\"f\">save</span>(order);\n<span class=\"n\">7</span>  <span class=\"k\">return</span> { ok: <span class=\"k\">true</span> };\n<span class=\"n\">8</span>}\n<span class=\"n\">9</span>\n<span class=\"n\">10</span><span class=\"k\">export async function</span> <span class=\"f\">signUp</span>(user) {\n<span class=\"n\">11</span>  <span class=\"k\">try</span> {\n<span class=\"n\">12</span>    <span class=\"k\">await</span> db.users.<span class=\"f\">save</span>(user);\n<span class=\"n\">13</span>  } <span class=\"k\">catch</span> (e) {}\n<span class=\"n\">14</span>}"
+ },
+ "images": {
+  "me": "../../assets/shoot/1609-cut.png"
+ },
+ "vars": {},
+ "class": "no-lift"
+}

@@ -1,0 +1,29 @@
+{
+ "label": "Before this session’s edits",
+ "auto": true,
+ "savedAt": 1794428884327,
+ "content": {
+  "direction": "Flat electric blue (house accent) with fine same-hue diagonal lines. The hook in two parts: €0 TUITION huge in white, \"+ money to live on\" in yellow; and what it is in plain words. Her cut-out on the right, hand in her hair. True for the fully funded ones (Erasmus Mundus, Swedish Institute, DAAD EPOS). Follows: archisha \"$0 TUITION?!\" outlier (kit 7), HTTP 07 (topic + one literal object).",
+  "thumbnail_text": "€0 TUITION IN EUROPE + money to live on",
+  "titles": [
+   "Scholarships for Nigerian Students in Europe 2027",
+   "Fully Funded Scholarships in Europe for Africans (2027)",
+   "Study in Europe for Free? Scholarships Open to Africans"
+  ],
+  "kind": "flat",
+  "class": "no-lift",
+  "text": {
+   "head": "€0 tuition<br>in Europe",
+   "sub": "+ money to live on",
+   "sm": ""
+  },
+  "images": {
+   "me": "../../assets/shoot/cut-1619.png"
+  },
+  "vars": {
+   "--ground": "#1B3FD8",
+   "--pa": ".09"
+  },
+  "title": "Scholarships for Nigerian Students in Europe 2027"
+ }
+}

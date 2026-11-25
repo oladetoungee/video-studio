@@ -1,0 +1,22 @@
+{
+  "direction": "Photo-led: her real room, hand on her head (her own gesture in the recording), large on the right. The problem in two words on the left, \"Slow\" on a red block. Follows viral sample 5 (topic named + scene). Round 2: closed-mouth frame, Plex type, no icons. Round 3: editorial lowercase serif instead of the sans + red box (taste: too close to the shared template).",
+  "concept": "T01",
+  "thumbnail_text": "why is my database so slow?",
+  "title": "Database Indexes: Why Your App Slows Down as It Grows",
+  "titles": [
+    "Database Indexes: Why Your App Slows Down as It Grows",
+    "SQL Indexes: Make Slow Queries Fast with One Line",
+    "Database Indexing for Beginners: Fix Slow SQL Queries"
+  ],
+  "text": {
+    "a": "why is my",
+    "b": "database",
+    "c": "so slow?"
+  },
+  "images": {
+    "scene": "../../assets/scene/f_240.5.jpg"
+  },
+  "frame": "4:00.5 (hand on head, mouth closed)",
+  "vars": {},
+  "scores": "final gate (round 4): A topic/click 2/6 · B pair 7 · C taste 6"
+}

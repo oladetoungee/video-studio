@@ -1,0 +1,59 @@
+1
+00:00:00,000 --> 00:00:01,820
+fixing 404 Not Found means that there's
+
+2
+00:00:01,820 --> 00:00:02,550
+nothing in the address
+
+3
+00:00:02,550 --> 00:00:05,480
+so if I send GET book 9999 and there's no
+
+4
+00:00:05,480 --> 00:00:07,190
+book 9999, the book does not exist
+
+5
+00:00:07,190 --> 00:00:09,550
+so this client gets a 404 Not Found
+
+6
+00:00:09,550 --> 00:00:11,070
+you probably send a 404 yourself
+
+7
+00:00:11,070 --> 00:00:13,950
+410 Gone is a stronger version of 404
+
+8
+00:00:13,950 --> 00:00:15,950
+it means that this resource was here, it was
+
+9
+00:00:15,950 --> 00:00:17,670
+removed on purpose and it should not be back
+
+10
+00:00:17,670 --> 00:00:19,340
+like a book that you've taken out of the
+
+11
+00:00:19,340 --> 00:00:20,780
+catalog for good
+
+12
+00:00:20,780 --> 00:00:23,742
+in practice, most APIs use 404, but Google's
+
+13
+00:00:23,742 --> 00:00:27,150
+docs say it treats 404 and 410 the same way
+
+14
+00:00:27,150 --> 00:00:29,090
+so you use 410 Gone when you want to be
+
+15
+00:00:29,090 --> 00:00:31,033
+clear that something is gone for good

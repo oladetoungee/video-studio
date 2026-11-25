@@ -1,0 +1,67 @@
+1
+00:00:00,045 --> 00:00:02,106
+if you're building an app, there's one very
+
+2
+00:00:02,106 --> 00:00:03,566
+simple question you need to ask yourself
+
+3
+00:00:03,566 --> 00:00:04,905
+before anything else
+
+4
+00:00:04,905 --> 00:00:07,265
+who is this app for, and what do they
+
+5
+00:00:07,265 --> 00:00:08,795
+actually need it for?
+
+6
+00:00:08,795 --> 00:00:11,926
+that question is the heart of UX research
+
+7
+00:00:11,926 --> 00:00:13,506
+and is a big part of what I study in my
+
+8
+00:00:13,506 --> 00:00:15,545
+master's degree in human-computer
+
+9
+00:00:15,545 --> 00:00:17,525
+interaction now, what is UX research?
+
+10
+00:00:17,656 --> 00:00:19,706
+UX research is how you get to know your
+
+11
+00:00:19,706 --> 00:00:21,926
+users it is the work of understanding the
+
+12
+00:00:21,926 --> 00:00:24,185
+people who would use a product, what they
+
+13
+00:00:24,185 --> 00:00:26,095
+need, where they struggle, what they
+
+14
+00:00:26,106 --> 00:00:27,546
+prioritise, so that you can build the
+
+15
+00:00:27,546 --> 00:00:28,986
+product the right way and build it in a way
+
+16
+00:00:28,986 --> 00:00:30,186
+that actually works
+
+17
+00:00:30,546 --> 00:00:31,133
+for them

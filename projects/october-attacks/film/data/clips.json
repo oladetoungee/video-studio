@@ -1,0 +1,297 @@
+{
+ "php-versions": {
+  "file": "assets/src/php-versions.png",
+  "w": 1756,
+  "h": 189,
+  "hl": [
+   [
+    482,
+    48,
+    494,
+    42
+   ]
+  ],
+  "source": "BleepingComputer",
+  "date": "Oct 21, 2026",
+  "url": "https://www.bleepingcomputer.com/news/security/php-ships-emergency-patches-for-critical-php2shell-flaws/",
+  "tag": "P",
+  "text": "Admins should install PHP 8.5.12, 8.4.27, 8.3.36, or 8.2.35 as soon as possible on servers running PHP 8.x and migrate to a fixed release if they're running PHP 7 or earlier.",
+  "captured": "2026-10-25T23:49:52.726Z"
+ },
+ "dr-92": {
+  "file": "assets/src/dr-92.png",
+  "w": 1383,
+  "h": 184,
+  "hl": [
+   [
+    809,
+    98,
+    520,
+    42
+   ]
+  ],
+  "source": "Dark Reading",
+  "date": "Oct 2026",
+  "url": "https://www.darkreading.com/application-security/php2shell-bugs-red-alert-security-industry",
+  "tag": "SPAN",
+  "text": "via a stale global state. The vulnerabilities, discovered by infosec consulting firm Calif, were designated with a critical CVSS v4.0 score of 9.2.",
+  "captured": "2026-10-25T23:54:13.539Z"
+ },
+ "aws-head": {
+  "file": "assets/src/aws-head.png",
+  "w": 1628,
+  "h": 213,
+  "hl": [],
+  "source": "AWS Security Blog",
+  "date": "Oct 21, 2026",
+  "url": "https://aws.amazon.com/blogs/security/amazon-threat-intelligence-identifies-php2shell-exploitation-prior-to-public-disclosure-in-madpot/",
+  "tag": "H1",
+  "text": "Amazon Threat Intelligence identifies PHP2Shell exploitation prior to public disclosure in MadPot",
+  "captured": "2026-10-25T23:50:10.937Z"
+ },
+ "thn-head": {
+  "file": "assets/src/thn-head.png",
+  "w": 2392,
+  "h": 280,
+  "hl": [],
+  "source": "The Hacker News",
+  "date": "Oct 22, 2026",
+  "url": "https://thehackernews.com/2026/10/someone-tried-to-exploit-php2shell-4.html",
+  "tag": "H1",
+  "text": "Someone Tried to Exploit PHP2Shell 4 Days Before the Vulnerabilities Were Publicly Disclosed",
+  "captured": "2026-10-25T23:50:19.339Z"
+ },
+ "ib-head": {
+  "file": "assets/src/ib-head.png",
+  "w": 2560,
+  "h": 309,
+  "hl": [],
+  "source": "Insurance Business",
+  "date": "Oct 21, 2026",
+  "url": "https://www.insurancebusinessmag.com/uk/news/cyber/uk-councils-and-met-police-among-sites-pulled-offline-after-ncsc-alert-594424.aspx",
+  "tag": "H1",
+  "text": "UK councils and Met Police among sites pulled offline after NCSC alert",
+  "captured": "2026-10-25T23:50:26.364Z"
+ },
+ "node-head": {
+  "file": "assets/src/node-head.png",
+  "w": 1238,
+  "h": 232,
+  "hl": [],
+  "source": "nodejs.org",
+  "date": "Oct 21, 2026",
+  "url": "https://nodejs.org/en/blog/vulnerability/october-2026-security-releases",
+  "tag": "H1",
+  "text": "Wednesday, October 21, 2026 Security Releases",
+  "captured": "2026-10-25T23:50:32.785Z"
+ },
+ "rlb-paused": {
+  "file": "assets/src/rlb-paused.png",
+  "w": 1496,
+  "h": 250,
+  "hl": [
+   [
+    44,
+    50,
+    825,
+    42
+   ]
+  ],
+  "source": "Railway blog",
+  "date": "Oct 21, 2026",
+  "url": "https://blog.railway.com/p/security-disclosure-wednesday-october-21st",
+  "tag": "P",
+  "text": "All deployments are paused while we investigate. Until builds are restored, you will not be able to roll out new versions. We apologize for this inconvenience. Follow this incident to be notified when builds resume.",
+  "captured": "2026-10-25T23:50:39.313Z"
+ },
+ "rlb-ai": {
+  "file": "assets/src/rlb-ai.png",
+  "w": 1496,
+  "h": 304,
+  "hl": [
+   [
+    44,
+    104,
+    888,
+    42
+   ]
+  ],
+  "source": "Railway blog",
+  "date": "Oct 21, 2026",
+  "url": "https://blog.railway.com/p/security-disclosure-wednesday-october-21st",
+  "tag": "P",
+  "text": "We believe this is part of a series of attacks recently targeting platform companies with the aim of compromising AI inference providers. We have notified these upstream providers to revoke all keys proactively, as we take these kinds of events extremely seriously.",
+  "captured": "2026-10-25T23:50:39.336Z"
+ },
+ "zb-head": {
+  "file": "assets/src/zb-head.png",
+  "w": 1880,
+  "h": 318,
+  "hl": [],
+  "source": "zeabur.com",
+  "date": "Oct 17, 2026",
+  "url": "https://zeabur.com/blogs/zeabur-is-shutting-down",
+  "tag": "H1",
+  "text": "Zeabur is shutting down: what happens next",
+  "captured": "2026-10-25T23:50:48.768Z"
+ },
+ "zb-dec": {
+  "file": "assets/src/zb-dec.png",
+  "w": 1624,
+  "h": 196,
+  "hl": [
+   [
+    774,
+    102,
+    445,
+    46
+   ]
+  ],
+  "source": "zeabur.com",
+  "date": "Oct 17, 2026",
+  "url": "https://zeabur.com/blogs/zeabur-is-shutting-down",
+  "tag": "P",
+  "text": "Some services will begin shutting down on December 1, 2026, and all dedicated servers and shared clusters will be shut down by December 31.",
+  "captured": "2026-10-25T23:50:48.806Z"
+ },
+ "bczb-num": {
+  "file": "assets/src/bczb-num.png",
+  "w": 1756,
+  "h": 239,
+  "hl": [
+   [
+    1527,
+    98,
+    172,
+    42
+   ],
+   [
+    44,
+    149,
+    469,
+    42
+   ],
+   [
+    845,
+    149,
+    273,
+    42
+   ]
+  ],
+  "source": "BleepingComputer",
+  "date": "Oct 20, 2026",
+  "url": "https://www.bleepingcomputer.com/news/security/zeabur-shutting-down-after-second-security-breach-in-two-months/",
+  "tag": "P",
+  "text": "Development platform Zeabur has disclosed details of a cybersecurity incident in which an attacker used leaked internal credentials stored in plaintext to compromise its infrastructure and steal over 3.2 million environment variable records and information for 321,810 accounts.",
+  "captured": "2026-10-25T23:50:56.768Z"
+ },
+ "tcoc-head": {
+  "file": "assets/src/tcoc-head.png",
+  "w": 1252,
+  "h": 346,
+  "hl": [],
+  "source": "TechCrunch",
+  "date": "Oct 19, 2026",
+  "url": "https://techcrunch.com/2026/10/19/hackers-hit-ai-coding-tool-opencode-running-up-charges-on-users-ai-accounts/",
+  "tag": "H1",
+  "text": "Hackers hit AI coding tool OpenCode, running up charges on users\u2019 AI accounts",
+  "captured": "2026-10-25T23:51:05.633Z"
+ },
+ "tcoc-1000": {
+  "file": "assets/src/tcoc-1000.png",
+  "w": 1418,
+  "h": 194,
+  "hl": [
+   [
+    411,
+    50,
+    585,
+    38
+   ],
+   [
+    224,
+    103,
+    613,
+    38
+   ]
+  ],
+  "source": "TechCrunch",
+  "date": "Oct 19, 2026",
+  "url": "https://techcrunch.com/2026/10/19/hackers-hit-ai-coding-tool-opencode-running-up-charges-on-users-ai-accounts/",
+  "tag": "P",
+  "text": "Other users reported charges in the hundreds of dollars on individual accounts; a few described totals above $1,000.",
+  "captured": "2026-10-25T23:51:05.672Z"
+ },
+ "bcoc-head": {
+  "file": "assets/src/bcoc-head.png",
+  "w": 1756,
+  "h": 160,
+  "hl": [],
+  "source": "BleepingComputer",
+  "date": "Oct 2026",
+  "url": "https://www.bleepingcomputer.com/news/security/opencode-hack-exposes-api-keys-amid-ai-distillation-attacks/",
+  "tag": "H1",
+  "text": "OpenCode hack exposes API keys amid AI distillation attacks",
+  "captured": "2026-10-25T23:51:13.564Z"
+ },
+ "tnwem-head": {
+  "file": "assets/src/tnwem-head.png",
+  "w": 2520,
+  "h": 328,
+  "hl": [],
+  "source": "The Next Web",
+  "date": "Oct 21, 2026",
+  "url": "https://thenextweb.com/news/emudhra-certificates-weak-keys-browsers-block",
+  "tag": "H1",
+  "text": "Eight eMudhra certificate keys were so weak that one was the number 4",
+  "captured": "2026-10-25T23:54:19.719Z"
+ },
+ "bcem-head": {
+  "file": "assets/src/bcem-head.png",
+  "w": 1756,
+  "h": 160,
+  "hl": [],
+  "source": "BleepingComputer",
+  "date": "Oct 2026",
+  "url": "https://www.bleepingcomputer.com/news/security/mozilla-google-apple-block-compromised-emudhra-ca-certificates/",
+  "tag": "H1",
+  "text": "Mozilla, Google, Apple block compromised eMudhra CA certificates",
+  "captured": "2026-10-25T23:51:26.956Z"
+ },
+ "sa-head": {
+  "file": "assets/src/sa-head.png",
+  "w": 1424,
+  "h": 370,
+  "hl": [],
+  "source": "Reuters, via Star-Advertiser",
+  "date": "Oct 19, 2026",
+  "url": "https://www.staradvertiser.com/2026/10/19/breaking-news/how-one-hacker-used-ai-agents-to-break-into-over-100-company-websites/",
+  "tag": "H1",
+  "text": "How one hacker used AI agents to break into over 100 company websites",
+  "captured": "2026-10-25T23:52:32.049Z"
+ },
+ "php-calif": {
+  "file": "assets/src/php-calif.png",
+  "w": 1756,
+  "h": 239,
+  "hl": [],
+  "source": "BleepingComputer",
+  "date": "Oct 21, 2026",
+  "url": "https://www.bleepingcomputer.com/news/security/php-ships-emergency-patches-for-critical-php2shell-flaws/",
+  "tag": "P",
+  "text": "The two unauthenticated RCE flaws were discovered by\u00a0Calif,\u00a0OpenAI, and\u00a0Wiz security researchers, and affect all PHP installations that serve web requests, including PHP-FPM, Apache with mod_php, php-cgi, FrankenPHP, and LiteSpeed.",
+  "captured": "2026-10-25T23:54:05.749Z"
+ },
+ "tnwai-head": {
+  "file": "assets/src/tnwai-head.png",
+  "w": 2520,
+  "h": 328,
+  "hl": [],
+  "source": "The Next Web",
+  "date": "Oct 19, 2026",
+  "url": "https://thenextweb.com/news/ai-agents-hacker-cairn-100-sites-deere-norforge",
+  "tag": "H1",
+  "text": "AI agents broke into 100+ sites for one hacker at $50 each, researcher says",
+  "captured": "2026-10-25T23:56:35.213Z"
+ }
+}

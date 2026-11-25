@@ -1,0 +1,99 @@
+{
+ "sample_rate": 48000,
+ "original_duration": 896.707,
+ "edited_duration": 867.157,
+ "manual_cuts": [
+  {
+   "start": 14.34,
+   "end": 18.39,
+   "seconds": 4.05,
+   "reason": "her intro 'My name is Gbemisola, and I'm currently doing my master's in human-computer interaction' (her note 2026-10-18: cut it; speech measured 14.42-18.36 on the energy envelope)"
+  },
+  {
+   "start": 18.39,
+   "end": 19.57,
+   "seconds": 1.18,
+   "reason": "repeat: 'in this video, in this video' (keeps the second, clearer one)"
+  },
+  {
+   "start": 82.87,
+   "end": 83.94,
+   "seconds": 1.07,
+   "reason": "aside: 'You won't start it.' (unclear, not captionable)"
+  },
+  {
+   "start": 122.58,
+   "end": 128.6,
+   "seconds": 6.02,
+   "reason": "retake: 'a lot of it traces back to a very interesting concept. There is... scratch that'"
+  },
+  {
+   "start": 218.28,
+   "end": 232.39,
+   "seconds": 14.11,
+   "reason": "recap of the Fogg model she already gave at 2:43 ('So in the model of behavior ... going back to the motivation, yeah,')"
+  }
+ ],
+ "manual_seconds_removed": 26.43,
+ "pauses_tightened": 3,
+ "pause_seconds_removed": 3.12,
+ "pauses": [
+  {
+   "orig_at": 114.71,
+   "was": 0.85,
+   "now": 0.52
+  },
+  {
+   "orig_at": 145.36,
+   "was": 0.82,
+   "now": 0.51
+  },
+  {
+   "orig_at": 890.32,
+   "was": 3.29,
+   "now": 0.81
+  }
+ ],
+ "segments": [
+  {
+   "orig_start": 0.0,
+   "orig_end": 14.3575,
+   "edit_start": 0.0
+  },
+  {
+   "orig_start": 19.5525,
+   "orig_end": 82.8875,
+   "edit_start": 14.3225
+  },
+  {
+   "orig_start": 83.9225,
+   "orig_end": 114.9475,
+   "edit_start": 77.6225
+  },
+  {
+   "orig_start": 115.2425,
+   "orig_end": 122.5975,
+   "edit_start": 108.6125
+  },
+  {
+   "orig_start": 128.5825,
+   "orig_end": 145.5975,
+   "edit_start": 115.9325
+  },
+  {
+   "orig_start": 145.8725,
+   "orig_end": 218.2975,
+   "edit_start": 132.9125
+  },
+  {
+   "orig_start": 232.3725,
+   "orig_end": 890.6775,
+   "edit_start": 205.3025
+  },
+  {
+   "orig_start": 893.1225,
+   "orig_end": 896.7068,
+   "edit_start": 863.5725
+  }
+ ]
+}

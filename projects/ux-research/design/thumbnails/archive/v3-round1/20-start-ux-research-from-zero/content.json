@@ -1,0 +1,27 @@
+{
+  "direction": "Big-face close crop: her calm face fills the right half; on a blue block on the left, 'Start UX research' and a giant zero. References: yt 'Never get distracted again' (11, face + text block), 'Zero to Data scientist' (27), 'THEY LIED TO US' (24b).",
+  "thumbnail_text": "Start UX research from zero",
+  "text": {
+    "hd": "Start<br>UX research",
+    "from": "from",
+    "zero": "0"
+  },
+  "images": {
+    "bg": "../../assets/scene/g/s_9.5.jpg",
+    "cut": "../../assets/scene/g/mask3/s_9.5.png"
+  },
+  "vars": {
+    "--ground": "#1B3FD8",
+    "--accent": "#FFD84D",
+    "--bgb": "1",
+    "--meb": "1.04"
+  },
+  "titles": [
+    "How to Become a UX Researcher With No Experience",
+    "How to Get Into UX Research With No Experience",
+    "UX Research for Beginners: What It Is and How It Works"
+  ],
+  "title": "How to Become a UX Researcher With No Experience",
+  "set": 3,
+  "kind": "other"
+}

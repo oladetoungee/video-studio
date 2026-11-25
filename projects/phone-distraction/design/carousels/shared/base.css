@@ -1,0 +1,97 @@
+/* phone-distraction carousels: the film's look A "Lock screen". Flat grounds only (ink #0C0D10, paper #F2EFE9, badge red #FF4433).
+   Inter Tight for everything, IBM Plex Mono for labels (>= 32 px), one Newsreader italic accent word, notification cards. */
+@font-face { font-family: IT; src: url(fonts/InterTight.ttf); font-weight: 100 900; }
+@font-face { font-family: News; src: url(fonts/Newsreader-Italic.ttf); font-style: italic; font-weight: 200 800; }
+@font-face { font-family: Plex; src: url(fonts/IBMPlexMono-SemiBold.ttf); font-weight: 600; }
+@font-face { font-family: Caveat; src: url(fonts/Caveat.ttf); font-weight: 400 700; }
+
+:root { --W: 1080px; --H: 1350px; --M: 88px; --red: #FF4433; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: #2a2a2e; }
+body { display: flex; flex-direction: column; align-items: center; gap: 40px; padding: 40px 0; -webkit-font-smoothing: antialiased; text-rendering: geometricPrecision; }
+@page { size: var(--W) var(--H); margin: 0; }
+@media print { html, body { background: none; } body { display: block; padding: 0; } .slide { break-after: page; } }
+
+.slide { position: relative; width: var(--W); height: var(--H); overflow: hidden; background: var(--bg); color: var(--fg); font-family: IT, sans-serif; font-weight: 500; }
+.g-ink    { --bg: #0C0D10; --fg: #F4F1EA; --sub: #C8C6C0; --mid: #8B8D94; --line: rgba(244,241,234,.14); --a: var(--acc); --card: #1D1F25; }
+.g-paper  { --bg: #F2EFE9; --fg: #0C0D10; --sub: #3B3A37; --mid: #6C6A66; --line: rgba(12,13,16,.14); --a: #E0301F; --card: #FFFDF6; }
+.g-accent { --bg: var(--acc); --fg: #0C0D10; --sub: #1a0d0b; --mid: rgba(12,13,16,.7); --line: rgba(12,13,16,.25); --a: #FFFFFF; --card: #FFFDF6; }
+
+/* type */
+.disp { font-family: IT; font-weight: 800; letter-spacing: -0.045em; line-height: 0.92; white-space: nowrap; }
+.serif { font-family: News; font-style: italic; font-weight: 500; letter-spacing: -0.03em; }
+.acc { color: var(--a); font-style: normal; }
+.mono { font-family: Plex; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; }
+.mono.lab { font-size: 34px; }
+.body, p, .bal, .take { text-wrap: balance; }
+.nw { white-space: nowrap; }
+.body { font-size: 42px; line-height: 1.28; letter-spacing: -0.015em; color: var(--sub); font-weight: 500; }
+.take { line-height: 1.18; font-weight: 700; letter-spacing: -0.02em; color: var(--fg); }
+.src { font-size: 34px; color: var(--mid); margin-top: 22px; line-height: 1.3; letter-spacing: .04em; text-transform: none; }
+.hand { font-family: Caveat; font-weight: 700; color: var(--red); line-height: .95; }
+.tag { font-size: 32px; color: var(--mid); letter-spacing: .08em; }
+
+/* chrome */
+.corner { position: absolute; top: 58px; left: var(--M); font-family: Plex; font-weight: 600; font-size: 32px; letter-spacing: 0.04em; color: var(--mid); }
+.foot { position: absolute; left: var(--M); right: var(--M); bottom: 56px; display: flex; justify-content: space-between; align-items: center; }
+.foot .num { font-family: Plex; font-weight: 600; font-size: 32px; letter-spacing: 0.08em; color: var(--mid); }
+.foot .num b { color: var(--fg); font-weight: 600; }
+.meter { display: flex; gap: 7px; }
+.meter i { display: block; width: 22px; height: 22px; border-radius: 50%; border: 2px solid var(--mid); opacity: .7; }
+.meter i.on { background: var(--a); border-color: var(--a); opacity: 1; }
+.g-accent .meter i.on { background: var(--fg); border-color: var(--fg); }
+.main { position: absolute; left: var(--M); right: var(--M); top: 130px; bottom: 150px; display: flex; flex-direction: column; }
+.push { margin-top: auto; }
+
+/* phone (generic drawing) */
+.ph { position: relative; flex: none; border-radius: 56px; background: #121317; padding: 13px; box-shadow: inset 0 0 0 2px #2c2e34; }
+.ph .scr { position: relative; height: 100%; border-radius: 44px; background: #0C0D10; overflow: hidden; color: #F4F1EA; }
+.ph .isl { position: absolute; top: 15px; left: 50%; width: 100px; height: 30px; margin-left: -50px; border-radius: 16px; background: #000; z-index: 3; }
+.post { margin: 0 16px 16px; border-radius: 20px; background: #1D1F25; padding: 16px; color: #F4F1EA; }
+.post .who { display: flex; align-items: center; gap: 12px; } .post .who i { width: 40px; height: 40px; border-radius: 50%; background: #3a3d45; } .post .who b { display: block; height: 14px; width: 130px; border-radius: 7px; background: #3a3d45; }
+.post .pic { height: 190px; border-radius: 14px; margin-top: 14px; background: #2b2e36; }
+.post .ln { height: 13px; border-radius: 7px; background: #3a3d45; margin-top: 12px; } .post .ln.s { width: 60%; }
+.post .acts { display: flex; gap: 18px; margin-top: 14px; }
+.g-paper .feedcol .post, .g-paper .bf .post { background: #FFFDF6; color: #0C0D10; box-shadow: 0 0 0 3px #0C0D10; }
+.g-paper .bf .post .who i, .g-paper .bf .post .who b, .g-paper .bf .post .ln { background: #E4E0D6; } .g-paper .bf .post .pic { background: #ECE8DE; }
+.spin { position: relative; width: var(--s, 60px); height: var(--s, 60px); }
+.spin i { position: absolute; left: 50%; top: 0; width: calc(var(--s) * .1); height: calc(var(--s) * .3); margin-left: calc(var(--s) * -.05); border-radius: 99px; background: var(--spc, #F4F1EA); transform-origin: 50% calc(var(--s) * .5); }
+.vrow { display: flex; align-items: center; gap: 60px; }
+.side { display: flex; flex-direction: column; align-items: center; }
+svg.pen path { fill: none; stroke: var(--red); stroke-width: 8; stroke-linecap: round; stroke-linejoin: round; }
+
+/* notification cards (the film's banners) */
+.nt { background: var(--card); border-radius: 30px; padding: 24px 28px 26px; color: var(--fg); }
+.g-paper .nt { box-shadow: 0 0 0 3px #0C0D10; }
+.nt .nh { display: flex; justify-content: space-between; font-family: IT; font-weight: 600; font-size: 32px; color: var(--mid); margin-bottom: 16px; }
+.nt .nb { font-size: 42px; font-weight: 650; letter-spacing: -0.02em; line-height: 1.16; }
+.nt.small { padding: 20px 26px 22px; } .nt.small .nh { margin-bottom: 6px; }
+.stack { display: flex; flex-direction: column; gap: 18px; }
+.stack .tag { align-self: flex-end; }
+.cred { font-size: 32px; color: var(--mid); margin-top: 18px; letter-spacing: .02em; text-transform: none; }
+
+/* numbered rows */
+.rows { display: flex; flex-direction: column; }
+.row { display: grid; grid-template-columns: 100px 1fr; align-items: baseline; padding: 28px 0 26px; border-bottom: 3px solid var(--line); }
+.row:first-child { border-top: 3px solid var(--line); }
+.row .n { font-family: Plex; font-weight: 600; font-size: 34px; letter-spacing: .06em; color: var(--a); }
+.row .qh { font-size: 46px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.12; }
+
+/* polaroid */
+.pol { position: absolute; background: #FFFDF6; padding: 16px 16px 0; }
+.pol img { display: block; width: 100%; object-fit: cover; }
+.pol .cap { font-family: Plex; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; color: #0C0D10; font-size: 32px; height: 70px; white-space: nowrap; overflow: hidden; display: flex; align-items: center; padding-left: 2px; }
+
+html.v-slide, html.v-slide body { background: none; }
+html.v-slide body { display: block; padding: 0; }
+html.v-strip body { flex-direction: row; align-items: flex-start; padding: 0; gap: 40px; width: max-content; }
+
+/* grounds the studio colour panel may set (fallbacks: same text colours as paper / ink) */
+.g-card { --bg: #FFFDF6; --fg: #0C0D10; --sub: #3B3A37; --mid: #6C6A66; --line: rgba(12,13,16,.14); --a: #E0301F; --card: #F2EFE9; }
+.g-blue { --bg: #1B3FD8; --fg: #F4F1EA; --sub: #E6E8F5; --mid: rgba(244,241,234,.75); --line: rgba(244,241,234,.25); --a: #FFFFFF; --card: #0C0D10; }
+
+/* settings card / checklist rows (shared by the toggles and checks visuals) */
+.set { background: var(--card); border-radius: 30px; padding: 6px 34px; }
+.sw { display: flex; align-items: center; justify-content: space-between; gap: 30px; padding: 28px 0; border-bottom: 3px solid var(--line); }
+.sw:last-child { border-bottom: 0; }
+.sh { font-size: 46px; font-weight: 750; letter-spacing: -.02em; line-height: 1.08; } .ss { font-size: 34px; color: var(--sub); margin-top: 8px; line-height: 1.2; font-weight: 500; }

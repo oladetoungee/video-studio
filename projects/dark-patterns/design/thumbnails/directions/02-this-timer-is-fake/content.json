@@ -1,0 +1,28 @@
+{
+ "direction": "Black ground, her cut-out large on the right (photo 1558, unconvinced smile). Left: \"this timer is fake\" in white lowercase, \"fake\" in a red box; under it a shop countdown \"Sale ends in 09:59\" in big digits (generic, no shop).",
+ "thumbnail_text": "this timer is fake",
+ "kind": "cut-out",
+ "recommended": false,
+ "titles": [
+  "That Countdown Timer Is Fake. 11 Tricks Online Shops Use",
+  "I Looked Into Fake Countdown Timers. Here's What I Found",
+  "Online Shops Are Rushing You On Purpose. Here's How"
+ ],
+ "text": {
+  "hd": "this timer<br>is <span class=\"box\">fake</span>",
+  "lab": "Sale ends in",
+  "clock": "09:59"
+ },
+ "images": {
+  "cut": "../../assets/shoot/1558-cut.png"
+ },
+ "vars": {
+  "--ground": "#111111"
+ },
+ "board": "Thumbnails 68 (yt-15 \"stop lying to yourself!\": black ground, two lines of white lowercase bold on the left, one word knocked out of a red box, the speaker large on the right)",
+ "fonts": "Font 64 (Inter Tight Bold lowercase + red box, from Thumbnails 68)",
+ "colours": "Font 64 specimen (Thumbnails 68): ground #111111, words #FFFFFF, red box #E2231A; timer card = Font 58 (black Inter Tight on light)",
+ "title": "That Countdown Timer Is Fake. 11 Tricks Online Shops Use",
+ "class": "no-lift",
+ "scores": "Test & Compare · rework 2026-11-19 cold critic R1 7/7, R2 7/8, R3 7/8 (earlier rounds 8-8.5); 'Sale ends in' made bigger"
+}

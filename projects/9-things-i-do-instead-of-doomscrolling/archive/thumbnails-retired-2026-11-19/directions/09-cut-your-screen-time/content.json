@@ -1,0 +1,27 @@
+{
+  "text": {
+    "h": "cut your<br><span class=\"y\">screen time</span>",
+    "avg": "6h 41m"
+  },
+  "images": {
+    "me": "../../assets/set5/1562-cut-clean.png"
+  },
+  "vars": {},
+  "kind": "flat dark + her cut-out on the LEFT + a generic phone (screen time page) right",
+  "board": "Thumbnails 97 (yt-44 QUIT DATA NOW: a card beside the person)",
+  "fonts": [
+    "thumbs-02 Inter Tight Bold + yellow highlight (white + #F7D51D on #1C1C1C, Thumbnails 21)"
+  ],
+  "colours": "Font thumbs-02 specimen: #1C1C1C / #FFFFFF / #F7D51D",
+  "thumbnail_text": "cut your SCREEN TIME (+ a generic phone: Screen Time, daily average 6h 41m, an example number, not hers)",
+  "titles": [
+    "How to Stop Doomscrolling: 9 Things I Do Instead",
+    "9 Easy Things I Do Instead of Doomscrolling"
+  ],
+  "direction": "Copies Thumbnails 97 (a card beside the person, here the card is a real-looking generic phone): the phone shows a high daily screen time, she reacts with both hands from the left; the words name what people search.",
+  "nudge": {},
+  "class": "no-lift",
+  "title": "How to Stop Doomscrolling: 9 Things I Do Instead",
+  "census": "her left, phone right",
+  "scores": "cold critic r5: 6.5 / 7 (cut-out edge, fuller phone screen, smaller gap after; not re-scored)"
+}

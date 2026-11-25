@@ -1,0 +1,27 @@
+{
+ "direction": "17 (2026-11-19): copies pick1119-22 (I'm 45... : three photos side by side, her face in the middle, one bold white lowercase line across the bottom with the key word in colour). Left a real cookie, middle her (Øredev, orange top, thinking with a small smile), right a shop cart; it's not just cookies. (red word).",
+ "thumbnail_text": "it's not just cookies.",
+ "kind": "collage",
+ "recommended": false,
+ "titles": [
+  "Where Websites Really Keep Your Cart and Login",
+  "How Websites Remember You (It's Not Only Cookies)",
+  "Cookies vs localStorage vs sessionStorage: What I Wish I Knew"
+ ],
+ "text": {
+  "hd": "it's not just <b>cookies.</b>"
+ },
+ "images": {
+  "left": "../../assets/collage/cookie-clean.png",
+  "me": "../../assets/oredev/orange-thinking.jpg",
+  "right": "../../assets/collage/cart-navy.png"
+ },
+ "vars": {},
+ "board": "pick1119-22 (I'm 45. If you're in your 30s, watch this.)",
+ "fonts": "Font 35 (shorts-01: Montserrat ExtraBold caps, white + yellow key word #FFE135 on dark #3B3330)",
+ "colours": "shorts-01 specimen: white + yellow #FFE135; side panels its dark ground family #2A2522",
+ "photo": "library/her-photos/oredev-2026-11-10/55642230148 (Enhance photo, bg keep); Pexels cookie + cart (free licence)",
+ "title": "Where Websites Really Keep Your Cart and Login",
+ "class": "no-lift",
+ "scores": "cold critic 2026-11-19 round 3: 7 / 7 · Test & Compare"
+}

@@ -1,0 +1,388 @@
+{
+ "story": "opencode",
+ "outlet": "TechCrunch",
+ "slug": "techcrunch",
+ "url": "https://techcrunch.com/2026/10/19/hackers-hit-ai-coding-tool-opencode-running-up-charges-on-users-ai-accounts/",
+ "finalUrl": "https://techcrunch.com/2026/10/19/hackers-hit-ai-coding-tool-opencode-running-up-charges-on-users-ai-accounts/",
+ "status": "loaded",
+ "http": 200,
+ "title": "Hackers hit AI coding tool OpenCode, running up charges on users’ AI accounts | TechCrunch",
+ "h1": "Hackers hit AI coding tool OpenCode, running up charges on users’ AI accounts",
+ "published": "2026-10-19T19:28:34+00:00",
+ "files": {
+  "fold": "opencode/techcrunch_fold.png",
+  "full": "opencode/techcrunch_full.jpg",
+  "scroll": "opencode/techcrunch_scroll.mp4"
+ },
+ "full": {
+  "width": 1440,
+  "height": 6000,
+  "pageHeight": 9835,
+  "zoom": 1,
+  "quotes": [
+   {
+    "quote": "Hackers hit AI coding tool OpenCode, running up charges on users' AI accounts",
+    "box": {
+     "x": 729,
+     "y": 362,
+     "w": 577,
+     "h": 128
+    },
+    "lines": [
+     {
+      "x": 729,
+      "y": 362,
+      "w": 470,
+      "h": 40
+     },
+     {
+      "x": 729,
+      "y": 406,
+      "w": 577,
+      "h": 40
+     },
+     {
+      "x": 729,
+      "y": 450,
+      "w": 397,
+      "h": 40
+     }
+    ]
+   },
+   {
+    "quote": "attackers broke into an older system overnight, affecting 1.4% of users of its online platform, OpenCode Console",
+    "box": {
+     "x": 226,
+     "y": 864,
+     "w": 657,
+     "h": 46
+    },
+    "lines": [
+     {
+      "x": 264,
+      "y": 864,
+      "w": 619,
+      "h": 19
+     },
+     {
+      "x": 226,
+      "y": 891,
+      "w": 329,
+      "h": 19
+     }
+    ]
+   },
+   {
+    "quote": "I saw my Open AI, Anthropic, and Google AI spend alerts all fire off before going to bed",
+    "box": {
+     "x": 226,
+     "y": 1412,
+     "w": 646,
+     "h": 46
+    },
+    "lines": [
+     {
+      "x": 450,
+      "y": 1412,
+      "w": 422,
+      "h": 19
+     },
+     {
+      "x": 226,
+      "y": 1439,
+      "w": 302,
+      "h": 19
+     }
+    ]
+   },
+   {
+    "quote": "Other users reported charges in the hundreds of dollars on individual accounts; a few described totals above $1,000",
+    "box": {
+     "x": 226,
+     "y": 1516,
+     "w": 589,
+     "h": 46
+    },
+    "lines": [
+     {
+      "x": 226,
+      "y": 1516,
+      "w": 589,
+      "h": 19
+     },
+     {
+      "x": 226,
+      "y": 1543,
+      "w": 397,
+      "h": 19
+     }
+    ]
+   },
+   {
+    "quote": "OpenCode said refunds for unauthorized charges are underway",
+    "box": {
+     "x": 226,
+     "y": 1646,
+     "w": 610,
+     "h": 46
+    },
+    "lines": [
+     {
+      "x": 606,
+      "y": 1646,
+      "w": 230,
+      "h": 19
+     },
+     {
+      "x": 226,
+      "y": 1673,
+      "w": 309,
+      "h": 19
+     }
+    ]
+   }
+  ]
+ },
+ "scroll": {
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "seconds": 8,
+  "keyframes": [
+   {
+    "t": 0,
+    "y": 220
+   },
+   {
+    "t": 1,
+    "y": 220
+   },
+   {
+    "t": 1.9,
+    "y": 454
+   },
+   {
+    "t": 3,
+    "y": 454
+   },
+   {
+    "t": 4.138,
+    "y": 1002
+   },
+   {
+    "t": 5.238,
+    "y": 1002
+   },
+   {
+    "t": 6.138,
+    "y": 1236
+   },
+   {
+    "t": 8,
+    "y": 1236
+   }
+  ],
+  "zoom": 1,
+  "easing": "easeInOutCubic between keyframes, holds where y is equal",
+  "capped": false,
+  "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)",
+  "quotes": [
+   {
+    "quote": "Hackers hit AI coding tool OpenCode, running up charges on users' AI accounts",
+    "inVideo": true,
+    "still": true,
+    "t": 0.53,
+    "visibleStill": [
+     0,
+     1.07
+    ],
+    "scrollY": 220,
+    "box": {
+     "x": 936,
+     "y": 142,
+     "w": 577,
+     "h": 128
+    },
+    "lines": [
+     {
+      "x": 936,
+      "y": 142,
+      "w": 470,
+      "h": 40
+     },
+     {
+      "x": 936,
+      "y": 186,
+      "w": 577,
+      "h": 40
+     },
+     {
+      "x": 936,
+      "y": 230,
+      "w": 397,
+      "h": 40
+     }
+    ],
+    "docBox": {
+     "x": 936,
+     "y": 362,
+     "w": 577,
+     "h": 128
+    },
+    "layoutDriftPx": 0
+   },
+   {
+    "quote": "attackers broke into an older system overnight, affecting 1.4% of users of its online platform, OpenCode Console",
+    "inVideo": true,
+    "still": true,
+    "t": 2.45,
+    "visibleStill": [
+     1.83,
+     3.07
+    ],
+    "scrollY": 454,
+    "box": {
+     "x": 466,
+     "y": 410,
+     "w": 657,
+     "h": 46
+    },
+    "lines": [
+     {
+      "x": 504,
+      "y": 410,
+      "w": 619,
+      "h": 19
+     },
+     {
+      "x": 466,
+      "y": 437,
+      "w": 329,
+      "h": 19
+     }
+    ],
+    "docBox": {
+     "x": 466,
+     "y": 864,
+     "w": 657,
+     "h": 46
+    },
+    "layoutDriftPx": 0
+   },
+   {
+    "quote": "I saw my Open AI, Anthropic, and Google AI spend alerts all fire off before going to bed",
+    "inVideo": true,
+    "still": true,
+    "t": 4.68,
+    "visibleStill": [
+     4.07,
+     5.3
+    ],
+    "scrollY": 1002,
+    "box": {
+     "x": 466,
+     "y": 410,
+     "w": 646,
+     "h": 46
+    },
+    "lines": [
+     {
+      "x": 690,
+      "y": 410,
+      "w": 422,
+      "h": 19
+     },
+     {
+      "x": 466,
+      "y": 437,
+      "w": 302,
+      "h": 19
+     }
+    ],
+    "docBox": {
+     "x": 466,
+     "y": 1412,
+     "w": 646,
+     "h": 46
+    },
+    "layoutDriftPx": 0
+   },
+   {
+    "quote": "Other users reported charges in the hundreds of dollars on individual accounts; a few described totals above $1,000",
+    "inVideo": true,
+    "still": true,
+    "t": 4.68,
+    "visibleStill": [
+     4.07,
+     5.3
+    ],
+    "scrollY": 1002,
+    "box": {
+     "x": 466,
+     "y": 514,
+     "w": 589,
+     "h": 46
+    },
+    "lines": [
+     {
+      "x": 466,
+      "y": 514,
+      "w": 589,
+      "h": 19
+     },
+     {
+      "x": 466,
+      "y": 541,
+      "w": 397,
+      "h": 19
+     }
+    ],
+    "docBox": {
+     "x": 466,
+     "y": 1516,
+     "w": 589,
+     "h": 46
+    },
+    "layoutDriftPx": 0
+   },
+   {
+    "quote": "OpenCode said refunds for unauthorized charges are underway",
+    "inVideo": true,
+    "still": true,
+    "t": 7.05,
+    "visibleStill": [
+     6.07,
+     8.03
+    ],
+    "scrollY": 1236,
+    "box": {
+     "x": 466,
+     "y": 410,
+     "w": 610,
+     "h": 46
+    },
+    "lines": [
+     {
+      "x": 846,
+      "y": 410,
+      "w": 230,
+      "h": 19
+     },
+     {
+      "x": 466,
+      "y": 437,
+      "w": 309,
+      "h": 19
+     }
+    ],
+    "docBox": {
+     "x": 466,
+     "y": 1646,
+     "w": 610,
+     "h": 46
+    },
+    "layoutDriftPx": 0
+   }
+  ]
+ }
+}

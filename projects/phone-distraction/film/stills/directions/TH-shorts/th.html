@@ -1,0 +1,84 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:UB;src:url(../_fonts/Unbounded.ttf)}
+@font-face{font-family:IT;src:url(../_fonts/InterTight.ttf)}
+@font-face{font-family:NR;src:url(../_fonts/Newsreader.ttf)}
+@font-face{font-family:PM;src:url(../_fonts/IBMPlexMono-Regular.ttf)}
+@font-face{font-family:PMB;src:url(../_fonts/IBMPlexMono-SemiBold.ttf)}
+html,body{margin:0;background:#000;overflow:hidden}
+#stage{position:relative;overflow:hidden;background:#000}
+.hl{font-family:UB;font-weight:800;text-transform:uppercase;letter-spacing:-.025em;line-height:.95}
+.mono{font-family:PM;font-size:32px;line-height:1.35}
+.say{font-family:NR;font-weight:500;font-variation-settings:"opsz" 72;letter-spacing:-.015em;line-height:1.06}
+/* her caption spec (SHORTS-PLAYBOOK): Helvetica Neue, local renders only */
+.cap{font-family:"Helvetica Neue";font-weight:500;color:#DFD7CB;letter-spacing:-.08em;line-height:.92;text-align:center}
+.capbox{background:rgba(0,0,0,.4);border-radius:10px;padding:12px 14px;display:inline-block}
+.label{font-family:"Helvetica Neue";font-weight:400;color:#000;background:#fff;border-radius:8px;padding:19px 18px;display:inline-block}
+</style></head><body><div id="stage"></div>
+<script src="../_tools/kit.js"></script>
+<script>
+// Talking-head (16:9, t = 1..4) and shorts (9:16, t = 5..6) style frames over her real footage (never flipped).
+const F = '../_footage/';
+function img(R, src, css) { const i = el('img', css, '', R); i.src = src; return i; }
+function caption(R, lines, size, cy, wmax, dark = 0.4, x0 = 0, ww = W) {
+  const w = el('div', { left: x0 + 'px', top: cy + 'px', width: ww + 'px', textAlign: 'center', transform: 'translateY(-50%)' }, '', R);
+  w.innerHTML = `<div class="capbox" style="background:rgba(0,0,0,${dark})"><div class="cap" style="font-size:${size}px">${lines.join('<br>')}</div></div>`;
+}
+// TH1 · L2 words behind her (direction B type) · 0:03
+scene('th1', 1, 2, (R) => {
+  img(R, F + 'f_3.0.jpg', { left: 0, top: 0, width: W + 'px' });
+  el('div', { left: '40px', top: '-10px', width: '1880px', fontFamily: 'IT', fontWeight: 800, fontSize: '380px', letterSpacing: '-.055em', lineHeight: 1, color: '#FF4433' }, 'distract', R);
+  img(R, F + 'c_3.0.png', { left: 0, top: 0, width: W + 'px' });
+  caption(R, ['your phone was intentionally and strategically designed to distract you'], 46, 1000);
+}, () => {});
+// TH2 · L5 half and half (direction C, the real patent figure) · 5:07
+scene('th2', 2, 3, (R) => {
+  el('div', { left: 0, top: 0, width: '960px', height: H + 'px', background: '#F6F5F0' }, '', R);
+  const fh = 640, fw = fh * 2101 / 3033, fx = (960 - fw) / 2, fy = 290;
+  img(R, '../../../assets/sources/patent-US8448084-fig8-ink.png', { left: fx + 'px', top: fy + 'px', width: fw + 'px', height: fh + 'px' });
+  el('div', { left: '80px', top: '70px', width: '820px', fontFamily: 'IT', fontWeight: 600, letterSpacing: '-.03em', fontSize: '72px', color: '#151515' }, 'Pull-to-refresh, 2009', R);
+  el('div', { left: '80px', top: '165px', width: '820px', color: '#77756E' }, 'US 8,448,084 B2 · FIG. 8 · Loren Brichter<br>Assignee: Twitter, Inc.', R).className = 'mono';
+  const ew = fw * 0.31, eh = fh * 0.05; el('div', { left: fx + fw * 0.30 + 'px', top: fy + fh * 0.245 + 'px', width: ew + 'px', height: eh + 'px', border: '2.4px solid #E2382B', borderRadius: '50%', transform: 'rotate(-2deg)' }, '', R);
+  const v = el('div', { left: '960px', top: 0, width: '960px', height: H + 'px', overflow: 'hidden' }, '', R);
+  img(v, F + 'f_307.0.jpg', { left: '-480px', top: 0, width: '1920px' });
+  caption(R, ['he himself later said that', 'this thing is really addictive'], 46, 970, 0, 0.4, 960, 960);
+}, () => {});
+// TH3 · L7 pop-around (direction A tiles + red badges) · 8:19
+scene('th3', 3, 4, (R) => {
+  img(R, F + 'f_499.0.jpg', { left: 0, top: 0, width: W + 'px' });
+  const pos = [[300, 230, '12'], [190, 500, '3'], [340, 760, '99+'], [1420, 200, '7'], [1700, 300, '4']];
+  pos.forEach(([x, y, n], i) => { el('div', { left: x - 40 + 'px', top: y - 40 + 'px', minWidth: '80px', height: '80px', padding: '0 20px', boxSizing: 'border-box', borderRadius: '40px', background: '#FF4433', color: '#fff', fontFamily: 'IT', fontSize: '44px', fontWeight: 700, lineHeight: '80px', textAlign: 'center' }, n, R); });
+  el('div', { left: '1230px', top: '350px', width: '640px', textAlign: 'left', fontFamily: 'IT', fontWeight: 700, fontSize: '96px', letterSpacing: '-.03em', color: '#F4F1EA' }, 'a <span style="color:#FF4433">red</span> badge', R);
+  el('div', { left: '1620px', top: '1000px', fontFamily: 'IT', fontWeight: 600, fontSize: '32px', letterSpacing: '.12em', color: '#F4F1EA', opacity: 0.8 }, 'ILLUSTRATION', R);
+}, () => {});
+// TH4 · L11 corner cam over a direction B feed post · 6:47
+scene('th4', 4, 5, (R) => {
+  el('div', { left: 0, top: 0, width: W + 'px', height: H + 'px', background: '#0C0D10' }, '', R);
+  el('div', { left: '120px', top: '110px', width: '720px', fontFamily: 'IT', fontWeight: 600, fontSize: '64px', lineHeight: 1.05, letterSpacing: '-.03em', color: '#F4F1EA' }, 'One of the first times a regulator has formally said these features can be a <span style="color:#FF4433">legal problem</span>.', R);
+  const cw = 960, cx = 880, cy = 160, iw = cw - 68, sc = iw / 1250;
+  const c = el('div', { left: cx + 'px', top: cy + 'px', width: cw + 'px', padding: '30px 34px 34px', boxSizing: 'border-box', background: '#1D1F25', borderRadius: '34px', fontFamily: 'IT', color: '#F4F1EA' }, '', R);
+  el('div', { position: 'relative', fontSize: '34px', fontWeight: 600, marginBottom: '20px', display: 'flex', justifyContent: 'space-between' }, '<span>European Commission</span><span style="color:#8B8D94;font-weight:500">10 Jul 2026</span>', c);
+  const im = el('div', { position: 'relative', width: iw + 'px', height: 495 * sc + 'px', borderRadius: '14px', overflow: 'hidden', background: '#fff' }, '', c);
+  img(im, '../../../assets/sources/eu-meta-lead.png', { left: 0, top: 0, width: iw + 'px' });
+  [[399.4, 381, 105.6], [514.8, 381, 70.4], [595, 381, 148.3]].forEach(([x, y, w]) => el('div', { left: (x - 3) * sc + 'px', top: (y - 1) * sc + 'px', width: (w + 6) * sc + 'px', height: 23 * sc + 'px', background: 'rgba(255,68,51,.32)', borderBottom: `${3 * sc}px solid #FF4433` }, '', im));
+  el('div', { position: 'relative', marginTop: '18px', fontSize: '34px', fontWeight: 500, color: '#8B8D94' }, 'Screenshot · digital-strategy.ec.europa.eu', c);
+  const d = 300, cc = el('div', { left: '64px', top: H - 64 - d + 'px', width: d + 'px', height: d + 'px', borderRadius: '50%', overflow: 'hidden', boxShadow: '0 0 0 6px #F4F1EA' }, '', R);
+  img(cc, F + 'f_657.5.jpg', { left: '-513px', top: '-120px', width: '1300px' });
+}, () => {});
+// SHORT 1 · her footage, label + caption (her Helvetica spec) · 5:09
+scene('s1', 5, 6, (R) => {
+  img(R, F + 'p_309.6.jpg', { left: 0, top: 0, width: '1080px', height: '1920px' });
+  el('div', { left: 0, top: '130px', width: W + 'px', textAlign: 'center' }, '<span class="label" style="font-size:82px">the pull-to-refresh story</span>', R);
+  caption(R, ['he himself later said that', 'this thing is really addictive'], 76, 1535);
+}, () => {});
+// SHORT 2 · full-screen film scene (direction C) under the same label + caption · 5:03
+scene('s2', 6, 7, (R) => {
+  el('div', { left: 0, top: 0, width: W + 'px', height: H + 'px', background: '#F6F5F0' }, '', R);
+  const fh = 1130, fw = fh * 2101 / 3033, fx = (W - fw) / 2, fy = 290;
+  img(R, '../../../assets/sources/patent-US8448084-fig8-ink.png', { left: fx + 'px', top: fy + 'px', width: fw + 'px', height: fh + 'px' });
+  const ew = fw * 0.31, eh = fh * 0.05; el('div', { left: fx + fw * 0.30 + 'px', top: fy + fh * 0.245 + 'px', width: ew + 'px', height: eh + 'px', border: '3px solid #E2382B', borderRadius: '50%', transform: 'rotate(-2deg)' }, '', R);
+  el('div', { left: '60px', top: '1700px', width: '960px', color: '#77756E', fontSize: '30px' }, 'US 8,448,084 B2 · FIG. 8 · Loren Brichter · Twitter, Inc.', R).className = 'mono';
+  el('div', { left: 0, top: '130px', width: W + 'px', textAlign: 'center' }, '<span class="label" style="font-size:82px">the pull-to-refresh story</span>', R);
+  caption(R, ['that feature was developed by', 'a developer called Loren'], 76, 1535, 0, 0.72);
+}, () => {});
+</script></body></html>

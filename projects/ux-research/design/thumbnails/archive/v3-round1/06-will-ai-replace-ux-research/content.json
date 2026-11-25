@@ -1,0 +1,28 @@
+{
+  "direction": "The AI question in big type, a generic AI chat bubble offering to do the research, and her calm, unconvinced face. Topic + the object it is about (an AI chat), no brand. References: yt 'Run AI agents locally' (22), 'It clicked' (4), DOAC 'stop lying' (14).",
+  "thumbnail_text": "Will AI replace UX research?",
+  "text": {
+    "hd": "Will AI replace<span class=\"acc\">UX research?</span>",
+    "who": "AI assistant",
+    "msg": "I can talk to your users for you.",
+    "q": "?"
+  },
+  "images": {
+    "bg": "../../assets/scene/g/s_584.2.jpg",
+    "cut": "../../assets/scene/g/mask3/s_584.2.png"
+  },
+  "vars": {
+    "--accent": "#FFD84D",
+    "--bgb": "0.55",
+    "--bgs": "0.8",
+    "--meb": "1.06"
+  },
+  "titles": [
+    "AI and UX Research: What a Master's Student Thinks",
+    "UX Research for Beginners: What It Is and How It Works",
+    "What Is UX Research? Explained From Scratch"
+  ],
+  "title": "AI and UX Research: What a Master's Student Thinks",
+  "set": 3,
+  "kind": "photo"
+}

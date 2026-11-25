@@ -1,0 +1,27 @@
+{
+  "direction": "Editorial split: a warm paper column with the question in a heavy serif ('career?' on a yellow marker highlight), her in black and white, close, calm, on the right. The only black-and-white photo option. References: Pinterest 'how to be consistent' / 'no one cares.' (editorial), viral 'Financial literacy', yt 'you're wasting your 20s' (30).",
+  "thumbnail_text": "Is UX research a good career?",
+  "text": {
+    "hd": "Is UX<br>research<br>a good<br><em>career?</em>",
+    "sm": "from an HCI student"
+  },
+  "images": {
+    "bg": "../../assets/scene/g2/s_287.9.jpg",
+    "cut": "../../assets/scene/g2/cut/s_287.9.png"
+  },
+  "vars": {
+    "--gs": "1",
+    "--bgc": "1.16",
+    "--mec": "1.18"
+  },
+  "titles": [
+    "UX Research Careers: What I've Noticed as a Student",
+    "How to Get Into UX Research With No Experience",
+    "UX Researcher or UX Designer: Which Job Fits You?"
+  ],
+  "title": "UX Research Careers: What I've Noticed as a Student",
+  "set": 3,
+  "kind": "photo",
+  "scores": "critic scores R1 7 · R2 7.5 · R3 7.5 · R4 7.5-8 · R5 7 · below the 7.5 bar (alternate)",
+  "recommended": false
+}

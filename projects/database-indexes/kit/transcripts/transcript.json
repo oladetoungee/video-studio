@@ -1,0 +1,2166 @@
+{
+	"systeminfo": "WHISPER : COREML = 0 | OPENVINO = 0 | MTL : EMBED_LIBRARY = 1 | CPU : NEON = 1 | ARM_FMA = 1 | FP16_VA = 1 | MATMUL_INT8 = 1 | DOTPROD = 1 | SME = 1 | ACCELERATE = 1 | OPENMP = 1 | REPACK = 1 | ",
+	"model": {
+		"type": "small",
+		"multilingual": false,
+		"vocab": 51864,
+		"audio": {
+			"ctx": 1500,
+			"state": 768,
+			"head": 12,
+			"layer": 12
+		},
+		"text": {
+			"ctx": 448,
+			"state": 768,
+			"head": 12,
+			"layer": 12
+		},
+		"mels": 80,
+		"ftype": 1
+	},
+	"params": {
+		"model": "/Users/gbemi/.cache/whisper/ggml-small.en.bin",
+		"language": "en",
+		"translate": false
+	},
+	"result": {
+		"language": "en"
+	},
+	"transcription": [
+		{
+			"timestamps": {
+				"from": "00:00:00,000",
+				"to": "00:00:24,400"
+			},
+			"offsets": {
+				"from": 0,
+				"to": 24400
+			},
+			"text": " As you get more users, your database grows and your tables get bigger."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:24,400",
+				"to": "00:00:28,000"
+			},
+			"offsets": {
+				"from": 24400,
+				"to": 28000
+			},
+			"text": " Now it might take a little bit longer for your app to load and you're now having performance"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:28,000",
+				"to": "00:00:29,120"
+			},
+			"offsets": {
+				"from": 28000,
+				"to": 29120
+			},
+			"text": " issues."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:29,120",
+				"to": "00:00:32,480"
+			},
+			"offsets": {
+				"from": 29120,
+				"to": 32480
+			},
+			"text": " One thing that you can always use to fix this is a database index."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:32,480",
+				"to": "00:00:37,180"
+			},
+			"offsets": {
+				"from": 32480,
+				"to": 37180
+			},
+			"text": " In this video, we'll go over what your database does when there is no index, what an index"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:37,180",
+				"to": "00:00:41,880"
+			},
+			"offsets": {
+				"from": 37180,
+				"to": 41880
+			},
+			"text": " actually is, how it helps find things so fast and helps performance, and the different types"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:41,880",
+				"to": "00:00:46,640"
+			},
+			"offsets": {
+				"from": 41880,
+				"to": 46640
+			},
+			"text": " of indexes, the mistakes that people make when they use database indexes."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:46,640",
+				"to": "00:00:50,280"
+			},
+			"offsets": {
+				"from": 46640,
+				"to": 50280
+			},
+			"text": " So understand why a database index matters, especially for performance."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:50,280",
+				"to": "00:00:54,040"
+			},
+			"offsets": {
+				"from": 50280,
+				"to": 54040
+			},
+			"text": " You first have to understand what your database does without an index."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:54,040",
+				"to": "00:00:59,160"
+			},
+			"offsets": {
+				"from": 54040,
+				"to": 59160
+			},
+			"text": " Here we have a bookstores and the bookstable in our database has a million rows."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:59,160",
+				"to": "00:01:03,120"
+			},
+			"offsets": {
+				"from": 59160,
+				"to": 63120
+			},
+			"text": " We have a million books in there and we run this query."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:03,120",
+				"to": "00:01:07,380"
+			},
+			"offsets": {
+				"from": 63120,
+				"to": 67380
+			},
+			"text": " Without an index, the database has no idea where Auto42's books are."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:07,380",
+				"to": "00:01:09,120"
+			},
+			"offsets": {
+				"from": 67380,
+				"to": 69120
+			},
+			"text": " So it does the only thing it can do."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:09,120",
+				"to": "00:01:14,360"
+			},
+			"offsets": {
+				"from": 69120,
+				"to": 74360
+			},
+			"text": " It starts as the first row and it checks every single row, all one million of them, and that"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:14,360",
+				"to": "00:01:16,840"
+			},
+			"offsets": {
+				"from": 74360,
+				"to": 76840
+			},
+			"text": " is called a full table scan."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:16,840",
+				"to": "00:01:19,840"
+			},
+			"offsets": {
+				"from": 76840,
+				"to": 79840
+			},
+			"text": " And in many cases, it can be very problematic."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:19,840",
+				"to": "00:01:23,920"
+			},
+			"offsets": {
+				"from": 79840,
+				"to": 83920
+			},
+			"text": " When your table has maybe 10, 100 rows, maybe it wouldn't be a problem."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:23,920",
+				"to": "00:01:28,160"
+			},
+			"offsets": {
+				"from": 83920,
+				"to": 88160
+			},
+			"text": " Maybe you wouldn't notice, but at a million rows, then it's a problem."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:28,160",
+				"to": "00:01:29,800"
+			},
+			"offsets": {
+				"from": 88160,
+				"to": 89800
+			},
+			"text": " What is a database index?"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:29,800",
+				"to": "00:01:32,840"
+			},
+			"offsets": {
+				"from": 89800,
+				"to": 92840
+			},
+			"text": " And how does it solve this problem of speed and performance?"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:32,840",
+				"to": "00:01:36,200"
+			},
+			"offsets": {
+				"from": 92840,
+				"to": 96200
+			},
+			"text": " The easiest way to think about it is the index at the back of a book."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:36,200",
+				"to": "00:01:39,320"
+			},
+			"offsets": {
+				"from": 96200,
+				"to": 99320
+			},
+			"text": " If you want to find every page that mentions a particular word, you don't read the old"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:39,320",
+				"to": "00:01:40,320"
+			},
+			"offsets": {
+				"from": 99320,
+				"to": 100320
+			},
+			"text": " book from the beginning."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:40,320",
+				"to": "00:01:44,520"
+			},
+			"offsets": {
+				"from": 100320,
+				"to": 104520
+			},
+			"text": " You go to the index at the back, it's sorted alphabetically, you find the word and it tells"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:44,520",
+				"to": "00:01:45,760"
+			},
+			"offsets": {
+				"from": 104520,
+				"to": 105760
+			},
+			"text": " you the page number."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:45,760",
+				"to": "00:01:48,400"
+			},
+			"offsets": {
+				"from": 105760,
+				"to": 108400
+			},
+			"text": " A database index works the same way."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:48,400",
+				"to": "00:01:53,560"
+			},
+			"offsets": {
+				"from": 108400,
+				"to": 113560
+			},
+			"text": " It's a separate structure that starts the value from a column in sorted order."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:53,560",
+				"to": "00:01:57,120"
+			},
+			"offsets": {
+				"from": 113560,
+				"to": 117120
+			},
+			"text": " And for each value, it keeps a pointer to where that row actually lives."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:57,120",
+				"to": "00:02:02,040"
+			},
+			"offsets": {
+				"from": 117120,
+				"to": 122040
+			},
+			"text": " And it only stores the column and the pointer, so it's way much more smaller than the table"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:02,040",
+				"to": "00:02:03,040"
+			},
+			"offsets": {
+				"from": 122040,
+				"to": 123040
+			},
+			"text": " itself."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:03,040",
+				"to": "00:02:06,320"
+			},
+			"offsets": {
+				"from": 123040,
+				"to": 126320
+			},
+			"text": " Now, what mechanism does a database index use to find things so fast?"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:06,320",
+				"to": "00:02:10,160"
+			},
+			"offsets": {
+				"from": 126320,
+				"to": 130160
+			},
+			"text": " I read an article on this and I love the way the writer explained it and I'm going to use"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:10,160",
+				"to": "00:02:11,160"
+			},
+			"offsets": {
+				"from": 130160,
+				"to": 131160
+			},
+			"text": " the example."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:11,160",
+				"to": "00:02:13,000"
+			},
+			"offsets": {
+				"from": 131160,
+				"to": 133000
+			},
+			"text": " I will link the article in the description box as well."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:13,000",
+				"to": "00:02:17,160"
+			},
+			"offsets": {
+				"from": 133000,
+				"to": 137160
+			},
+			"text": " Say you have an index on the email column and you're looking for bob@email.com."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:17,160",
+				"to": "00:02:22,280"
+			},
+			"offsets": {
+				"from": 137160,
+				"to": 142280
+			},
+			"text": " The database opens the index in the middle and maybe sees dave@email.com."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:22,280",
+				"to": "00:02:23,520"
+			},
+			"offsets": {
+				"from": 142280,
+				"to": 143520
+			},
+			"text": " Bob comes before dave."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:23,520",
+				"to": "00:02:25,480"
+			},
+			"offsets": {
+				"from": 143520,
+				"to": 145480
+			},
+			"text": " So it moves to the left."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:25,480",
+				"to": "00:02:28,680"
+			},
+			"offsets": {
+				"from": 145480,
+				"to": 148680
+			},
+			"text": " Now it sees Alice@email.com."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:28,680",
+				"to": "00:02:31,120"
+			},
+			"offsets": {
+				"from": 148680,
+				"to": 151120
+			},
+			"text": " Bob comes after Alice, so it moves to the right."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:31,120",
+				"to": "00:02:35,840"
+			},
+			"offsets": {
+				"from": 151120,
+				"to": 155840
+			},
+			"text": " And it keeps moving strategically like this until it finds bob@email.com in the index."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:35,840",
+				"to": "00:02:40,760"
+			},
+			"offsets": {
+				"from": 155840,
+				"to": 160760
+			},
+			"text": " Bob's entry in the index has a pointer to where Bob's row is in the table."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:40,760",
+				"to": "00:02:44,800"
+			},
+			"offsets": {
+				"from": 160760,
+				"to": 164800
+			},
+			"text": " So with this strategy, even with a million rows, you can get to the row you're looking"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:44,800",
+				"to": "00:02:47,920"
+			},
+			"offsets": {
+				"from": 164800,
+				"to": 167920
+			},
+			"text": " for in about 20 steps or so."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:47,920",
+				"to": "00:02:52,080"
+			},
+			"offsets": {
+				"from": 167920,
+				"to": 172080
+			},
+			"text": " Without an index, you will do up to a million check in the worst case scenario."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:52,080",
+				"to": "00:02:54,680"
+			},
+			"offsets": {
+				"from": 172080,
+				"to": 174680
+			},
+			"text": " Without an index, you will do way less than that."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:54,680",
+				"to": "00:02:58,800"
+			},
+			"offsets": {
+				"from": 174680,
+				"to": 178800
+			},
+			"text": " Most databases store their indexes in a structure called a B3."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:58,800",
+				"to": "00:03:03,000"
+			},
+			"offsets": {
+				"from": 178800,
+				"to": 183000
+			},
+			"text": " And a B3 works the way that the example from the article showed."
+		},
+		{
+			"timestamps": {
+				"from": "00:03:03,000",
+				"to": "00:03:09,600"
+			},
+			"offsets": {
+				"from": 183000,
+				"to": 189600
+			},
+			"text": " So even with a table with millions of rows, you usually only need a few levels to get"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:09,600",
+				"to": "00:03:10,920"
+			},
+			"offsets": {
+				"from": 189600,
+				"to": 190920
+			},
+			"text": " to the right place."
+		},
+		{
+			"timestamps": {
+				"from": "00:03:10,920",
+				"to": "00:03:14,880"
+			},
+			"offsets": {
+				"from": 190920,
+				"to": 194880
+			},
+			"text": " Adding a database query will literally up your query optimization goal."
+		},
+		{
+			"timestamps": {
+				"from": "00:03:14,880",
+				"to": "00:03:16,320"
+			},
+			"offsets": {
+				"from": 194880,
+				"to": 196320
+			},
+			"text": " And it's kind of a one-liner."
+		},
+		{
+			"timestamps": {
+				"from": "00:03:16,320",
+				"to": "00:03:17,720"
+			},
+			"offsets": {
+				"from": 196320,
+				"to": 197720
+			},
+			"text": " In SKA, it looks something like this."
+		},
+		{
+			"timestamps": {
+				"from": "00:03:17,720",
+				"to": "00:03:21,760"
+			},
+			"offsets": {
+				"from": 197720,
+				"to": 201760
+			},
+			"text": " If you're using Laravel, you're using Laravel for the past one year, for example, you simply"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:21,760",
+				"to": "00:03:23,560"
+			},
+			"offsets": {
+				"from": 201760,
+				"to": 203560
+			},
+			"text": " add it in your migration like this."
+		},
+		{
+			"timestamps": {
+				"from": "00:03:23,560",
+				"to": "00:03:28,360"
+			},
+			"offsets": {
+				"from": 203560,
+				"to": 208360
+			},
+			"text": " Now, when you search books by author, the database goes to the index first, finds author"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:28,360",
+				"to": "00:03:31,040"
+			},
+			"offsets": {
+				"from": 208360,
+				"to": 211040
+			},
+			"text": " 42, and goes straight to those rows, rows."
+		},
+		{
+			"timestamps": {
+				"from": "00:03:31,040",
+				"to": "00:03:34,400"
+			},
+			"offsets": {
+				"from": 211040,
+				"to": 214400
+			},
+			"text": " Once you've added your database index, you can confirm whether your query is actually"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:34,400",
+				"to": "00:03:35,400"
+			},
+			"offsets": {
+				"from": 214400,
+				"to": 215400
+			},
+			"text": " using it or not."
+		},
+		{
+			"timestamps": {
+				"from": "00:03:35,400",
+				"to": "00:03:36,400"
+			},
+			"offsets": {
+				"from": 215400,
+				"to": 216400
+			},
+			"text": " You can ask the database."
+		},
+		{
+			"timestamps": {
+				"from": "00:03:36,400",
+				"to": "00:03:39,600"
+			},
+			"offsets": {
+				"from": 216400,
+				"to": 219600
+			},
+			"text": " Just put the word \"splain\" in front of your query."
+		},
+		{
+			"timestamps": {
+				"from": "00:03:39,600",
+				"to": "00:03:42,520"
+			},
+			"offsets": {
+				"from": 219600,
+				"to": 222520
+			},
+			"text": " In Postgres SQL, you will see \"quen scan.\""
+		},
+		{
+			"timestamps": {
+				"from": "00:03:42,520",
+				"to": "00:03:46,600"
+			},
+			"offsets": {
+				"from": 222520,
+				"to": 226600
+			},
+			"text": " It means that the database is reading every single row."
+		},
+		{
+			"timestamps": {
+				"from": "00:03:46,600",
+				"to": "00:03:49,800"
+			},
+			"offsets": {
+				"from": 226600,
+				"to": 229800
+			},
+			"text": " And if you see \"index scan,\" it means that the database is using your index."
+		},
+		{
+			"timestamps": {
+				"from": "00:03:49,800",
+				"to": "00:03:52,880"
+			},
+			"offsets": {
+				"from": 229800,
+				"to": 232880
+			},
+			"text": " \"S scan,\" \"sequential scan,\" \"sex scan.\""
+		},
+		{
+			"timestamps": {
+				"from": "00:03:52,880",
+				"to": "00:03:58,000"
+			},
+			"offsets": {
+				"from": 232880,
+				"to": 238000
+			},
+			"text": " In MySQL, the results will come back in a small table, so there are two columns to look"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:58,000",
+				"to": "00:03:59,000"
+			},
+			"offsets": {
+				"from": 238000,
+				"to": 239000
+			},
+			"text": " at."
+		},
+		{
+			"timestamps": {
+				"from": "00:03:59,000",
+				"to": "00:04:01,400"
+			},
+			"offsets": {
+				"from": 239000,
+				"to": 241400
+			},
+			"text": " If it says \"all,\" that means it's doing a full table scan."
+		},
+		{
+			"timestamps": {
+				"from": "00:04:01,400",
+				"to": "00:04:04,480"
+			},
+			"offsets": {
+				"from": 241400,
+				"to": 244480
+			},
+			"text": " If it says something like \"ref or range,\" then it's using an index."
+		},
+		{
+			"timestamps": {
+				"from": "00:04:04,480",
+				"to": "00:04:08,280"
+			},
+			"offsets": {
+				"from": 244480,
+				"to": 248280
+			},
+			"text": " So if a query is slow and you first want to confirm what is going on, you can use-- and"
+		},
+		{
+			"timestamps": {
+				"from": "00:04:08,280",
+				"to": "00:04:11,960"
+			},
+			"offsets": {
+				"from": 248280,
+				"to": 251960
+			},
+			"text": " that confirms to you, is this query doing a full scan or is it using an index?"
+		},
+		{
+			"timestamps": {
+				"from": "00:04:11,960",
+				"to": "00:04:13,960"
+			},
+			"offsets": {
+				"from": 251960,
+				"to": 253960
+			},
+			"text": " There are a few types of database index."
+		},
+		{
+			"timestamps": {
+				"from": "00:04:13,960",
+				"to": "00:04:18,560"
+			},
+			"offsets": {
+				"from": 253960,
+				"to": 258560
+			},
+			"text": " You hear people talk about B3, Ash, Bitmap, and many, many like that."
+		},
+		{
+			"timestamps": {
+				"from": "00:04:18,560",
+				"to": "00:04:22,840"
+			},
+			"offsets": {
+				"from": 258560,
+				"to": 262840
+			},
+			"text": " I'm just only going to focus on three in this video."
+		},
+		{
+			"timestamps": {
+				"from": "00:04:22,840",
+				"to": "00:04:25,280"
+			},
+			"offsets": {
+				"from": 262840,
+				"to": 265280
+			},
+			"text": " The first one is B3, B3."
+		},
+		{
+			"timestamps": {
+				"from": "00:04:25,280",
+				"to": "00:04:29,600"
+			},
+			"offsets": {
+				"from": 265280,
+				"to": 269600
+			},
+			"text": " The B3 is the default one, so when you create an index without saying what type it is, this"
+		},
+		{
+			"timestamps": {
+				"from": "00:04:29,600",
+				"to": "00:04:31,560"
+			},
+			"offsets": {
+				"from": 269600,
+				"to": 271560
+			},
+			"text": " is the one that you get."
+		},
+		{
+			"timestamps": {
+				"from": "00:04:31,560",
+				"to": "00:04:32,560"
+			},
+			"offsets": {
+				"from": 271560,
+				"to": 272560
+			},
+			"text": " So it's very common."
+		},
+		{
+			"timestamps": {
+				"from": "00:04:32,560",
+				"to": "00:04:36,000"
+			},
+			"offsets": {
+				"from": 272560,
+				"to": 276000
+			},
+			"text": " It can find exact matches, like the user with this email."
+		},
+		{
+			"timestamps": {
+				"from": "00:04:36,000",
+				"to": "00:04:39,940"
+			},
+			"offsets": {
+				"from": 276000,
+				"to": 279940
+			},
+			"text": " It can find ranges, like books priced between 10 and 15."
+		},
+		{
+			"timestamps": {
+				"from": "00:04:39,940",
+				"to": "00:04:43,000"
+			},
+			"offsets": {
+				"from": 279940,
+				"to": 283000
+			},
+			"text": " It can sort, like showing the newest order first."
+		},
+		{
+			"timestamps": {
+				"from": "00:04:43,000",
+				"to": "00:04:46,840"
+			},
+			"offsets": {
+				"from": 283000,
+				"to": 286840
+			},
+			"text": " And it can find values by how they start, like every book title that starts with Ari."
+		},
+		{
+			"timestamps": {
+				"from": "00:04:46,840",
+				"to": "00:04:48,800"
+			},
+			"offsets": {
+				"from": 286840,
+				"to": 288800
+			},
+			"text": " And that works because the index is sorted."
+		},
+		{
+			"timestamps": {
+				"from": "00:04:48,800",
+				"to": "00:04:51,880"
+			},
+			"offsets": {
+				"from": 288800,
+				"to": 291880
+			},
+			"text": " So all the titles that start with Ari sit next to each other."
+		},
+		{
+			"timestamps": {
+				"from": "00:04:51,880",
+				"to": "00:04:56,000"
+			},
+			"offsets": {
+				"from": 291880,
+				"to": 296000
+			},
+			"text": " The second commonly used type of database index is the unique index."
+		},
+		{
+			"timestamps": {
+				"from": "00:04:56,000",
+				"to": "00:04:58,880"
+			},
+			"offsets": {
+				"from": 296000,
+				"to": 298880
+			},
+			"text": " It makes sure that no two rows have the same value."
+		},
+		{
+			"timestamps": {
+				"from": "00:04:58,880",
+				"to": "00:05:01,480"
+			},
+			"offsets": {
+				"from": 298880,
+				"to": 301480
+			},
+			"text": " For example, no two user can sign up with the same email."
+		},
+		{
+			"timestamps": {
+				"from": "00:05:01,480",
+				"to": "00:05:04,160"
+			},
+			"offsets": {
+				"from": 301480,
+				"to": 304160
+			},
+			"text": " Your primary query already has one."
+		},
+		{
+			"timestamps": {
+				"from": "00:05:04,160",
+				"to": "00:05:06,960"
+			},
+			"offsets": {
+				"from": 304160,
+				"to": 306960
+			},
+			"text": " And the third one-- this one kind of always confuses me."
+		},
+		{
+			"timestamps": {
+				"from": "00:05:06,960",
+				"to": "00:05:11,120"
+			},
+			"offsets": {
+				"from": 306960,
+				"to": 311120
+			},
+			"text": " The third one is the composites index, which is an index on more than one column."
+		},
+		{
+			"timestamps": {
+				"from": "00:05:11,120",
+				"to": "00:05:14,960"
+			},
+			"offsets": {
+				"from": 311120,
+				"to": 314960
+			},
+			"text": " So say your index, last name, and first name together in that order."
+		},
+		{
+			"timestamps": {
+				"from": "00:05:14,960",
+				"to": "00:05:18,640"
+			},
+			"offsets": {
+				"from": 314960,
+				"to": 318640
+			},
+			"text": " It helps you when you search by last name, and it helps you when you search by last name"
+		},
+		{
+			"timestamps": {
+				"from": "00:05:18,640",
+				"to": "00:05:19,640"
+			},
+			"offsets": {
+				"from": 318640,
+				"to": 319640
+			},
+			"text": " and first name."
+		},
+		{
+			"timestamps": {
+				"from": "00:05:19,640",
+				"to": "00:05:22,040"
+			},
+			"offsets": {
+				"from": 319640,
+				"to": 322040
+			},
+			"text": " But when you search by only first name, it usually doesn't help."
+		},
+		{
+			"timestamps": {
+				"from": "00:05:22,040",
+				"to": "00:05:25,320"
+			},
+			"offsets": {
+				"from": 322040,
+				"to": 325320
+			},
+			"text": " A little bit of a reason-- let's use the example with phone books to understand it."
+		},
+		{
+			"timestamps": {
+				"from": "00:05:25,320",
+				"to": "00:05:27,560"
+			},
+			"offsets": {
+				"from": 325320,
+				"to": 327560
+			},
+			"text": " Think of a phone book sorted by surname."
+		},
+		{
+			"timestamps": {
+				"from": "00:05:27,560",
+				"to": "00:05:29,680"
+			},
+			"offsets": {
+				"from": 327560,
+				"to": 329680
+			},
+			"text": " All the adderia means are together."
+		},
+		{
+			"timestamps": {
+				"from": "00:05:29,680",
+				"to": "00:05:32,160"
+			},
+			"offsets": {
+				"from": 329680,
+				"to": 332160
+			},
+			"text": " And for that, all the ocafos are together."
+		},
+		{
+			"timestamps": {
+				"from": "00:05:32,160",
+				"to": "00:05:36,160"
+			},
+			"offsets": {
+				"from": 332160,
+				"to": 336160
+			},
+			"text": " And inside each surname, it is sorted by first name."
+		},
+		{
+			"timestamps": {
+				"from": "00:05:36,160",
+				"to": "00:05:40,040"
+			},
+			"offsets": {
+				"from": 336160,
+				"to": 340040
+			},
+			"text": " So in the ocafos, adda ocafo will come before chidi ocafo."
+		},
+		{
+			"timestamps": {
+				"from": "00:05:40,040",
+				"to": "00:05:42,040"
+			},
+			"offsets": {
+				"from": 340040,
+				"to": 342040
+			},
+			"text": " So if I'm looking for adda ocafo, it's easy."
+		},
+		{
+			"timestamps": {
+				"from": "00:05:42,040",
+				"to": "00:05:45,520"
+			},
+			"offsets": {
+				"from": 342040,
+				"to": 345520
+			},
+			"text": " I go to the ocafo, I find ocafo, and then I find adda."
+		},
+		{
+			"timestamps": {
+				"from": "00:05:45,520",
+				"to": "00:05:48,720"
+			},
+			"offsets": {
+				"from": 345520,
+				"to": 348720
+			},
+			"text": " But what if I want everyone whose first name is adda?"
+		},
+		{
+			"timestamps": {
+				"from": "00:05:48,720",
+				"to": "00:05:53,400"
+			},
+			"offsets": {
+				"from": 348720,
+				"to": 353400
+			},
+			"text": " There's probably adda adeyemi in the front, and adda ocafo in the middle, and adda williams"
+		},
+		{
+			"timestamps": {
+				"from": "00:05:53,400",
+				"to": "00:05:54,400"
+			},
+			"offsets": {
+				"from": 353400,
+				"to": 354400
+			},
+			"text": " near the end."
+		},
+		{
+			"timestamps": {
+				"from": "00:05:54,400",
+				"to": "00:05:59,140"
+			},
+			"offsets": {
+				"from": 354400,
+				"to": 359140
+			},
+			"text": " They are spread across the old phone book because the book is sorted by surname first."
+		},
+		{
+			"timestamps": {
+				"from": "00:05:59,140",
+				"to": "00:06:03,600"
+			},
+			"offsets": {
+				"from": 359140,
+				"to": 363600
+			},
+			"text": " So nothing groups the addas together, and I would have to read every page to find them."
+		},
+		{
+			"timestamps": {
+				"from": "00:06:03,600",
+				"to": "00:06:07,880"
+			},
+			"offsets": {
+				"from": 363600,
+				"to": 367880
+			},
+			"text": " So that's exactly what happens with the composites index on last name, first name."
+		},
+		{
+			"timestamps": {
+				"from": "00:06:07,880",
+				"to": "00:06:15,640"
+			},
+			"offsets": {
+				"from": 367880,
+				"to": 375640
+			},
+			"text": " So the tip is to put the column you search by most often first."
+		},
+		{
+			"timestamps": {
+				"from": "00:06:15,640",
+				"to": "00:06:19,120"
+			},
+			"offsets": {
+				"from": 375640,
+				"to": 379120
+			},
+			"text": " And for the rest, there are different kinds of searches."
+		},
+		{
+			"timestamps": {
+				"from": "00:06:19,120",
+				"to": "00:06:23,600"
+			},
+			"offsets": {
+				"from": 379120,
+				"to": 383600
+			},
+			"text": " For the rest of the database index types, we have the hash index, which is for exact"
+		},
+		{
+			"timestamps": {
+				"from": "00:06:23,600",
+				"to": "00:06:26,600"
+			},
+			"offsets": {
+				"from": 383600,
+				"to": 386600
+			},
+			"text": " matches only."
+		},
+		{
+			"timestamps": {
+				"from": "00:06:26,600",
+				"to": "00:06:29,900"
+			},
+			"offsets": {
+				"from": 386600,
+				"to": 389900
+			},
+			"text": " Like looking up someone's login session by its exact token."
+		},
+		{
+			"timestamps": {
+				"from": "00:06:29,900",
+				"to": "00:06:33,840"
+			},
+			"offsets": {
+				"from": 389900,
+				"to": 393840
+			},
+			"text": " It cannot do range or sorting, so most people just use b3."
+		},
+		{
+			"timestamps": {
+				"from": "00:06:33,840",
+				"to": "00:06:37,680"
+			},
+			"offsets": {
+				"from": 393840,
+				"to": 397680
+			},
+			"text": " A bitmap is for columns with only a few values, like a status column."
+		},
+		{
+			"timestamps": {
+				"from": "00:06:37,680",
+				"to": "00:06:39,240"
+			},
+			"offsets": {
+				"from": 397680,
+				"to": 399240
+			},
+			"text": " It's mostly active or inactive or banned."
+		},
+		{
+			"timestamps": {
+				"from": "00:06:39,240",
+				"to": "00:06:42,960"
+			},
+			"offsets": {
+				"from": 399240,
+				"to": 402960
+			},
+			"text": " You mostly see it in databases that are built for reports, yeah?"
+		},
+		{
+			"timestamps": {
+				"from": "00:06:42,960",
+				"to": "00:06:46,040"
+			},
+			"offsets": {
+				"from": 402960,
+				"to": 406040
+			},
+			"text": " And then we have spatial index, that one is mostly for location data."
+		},
+		{
+			"timestamps": {
+				"from": "00:06:46,040",
+				"to": "00:06:50,920"
+			},
+			"offsets": {
+				"from": 406040,
+				"to": 410920
+			},
+			"text": " Like when you search restaurant name, a coffee shop name, or when a write app looks for drivers"
+		},
+		{
+			"timestamps": {
+				"from": "00:06:50,920",
+				"to": "00:06:52,160"
+			},
+			"offsets": {
+				"from": 410920,
+				"to": 412160
+			},
+			"text": " close to you."
+		},
+		{
+			"timestamps": {
+				"from": "00:06:52,160",
+				"to": "00:06:55,300"
+			},
+			"offsets": {
+				"from": 412160,
+				"to": 415300
+			},
+			"text": " So it's groups, places that are near each other on the app."
+		},
+		{
+			"timestamps": {
+				"from": "00:06:55,300",
+				"to": "00:06:56,300"
+			},
+			"offsets": {
+				"from": 415300,
+				"to": 416300
+			},
+			"text": " So on the map."
+		},
+		{
+			"timestamps": {
+				"from": "00:06:56,300",
+				"to": "00:07:01,360"
+			},
+			"offsets": {
+				"from": 416300,
+				"to": 421360
+			},
+			"text": " So the app only checks places around you instead of every coffee shop or every restaurant in"
+		},
+		{
+			"timestamps": {
+				"from": "00:07:01,360",
+				"to": "00:07:02,360"
+			},
+			"offsets": {
+				"from": 421360,
+				"to": 422360
+			},
+			"text": " the world."
+		},
+		{
+			"timestamps": {
+				"from": "00:07:02,360",
+				"to": "00:07:04,360"
+			},
+			"offsets": {
+				"from": 422360,
+				"to": 424360
+			},
+			"text": " And then we have the full test index as well."
+		},
+		{
+			"timestamps": {
+				"from": "00:07:04,360",
+				"to": "00:07:05,960"
+			},
+			"offsets": {
+				"from": 424360,
+				"to": 425960
+			},
+			"text": " It is for searching inside text."
+		},
+		{
+			"timestamps": {
+				"from": "00:07:05,960",
+				"to": "00:07:10,240"
+			},
+			"offsets": {
+				"from": 425960,
+				"to": 430240
+			},
+			"text": " For example, when you search an online store for wireless headphones, it finds every product"
+		},
+		{
+			"timestamps": {
+				"from": "00:07:10,240",
+				"to": "00:07:12,960"
+			},
+			"offsets": {
+				"from": 430240,
+				"to": 432960
+			},
+			"text": " description with those words in it, right?"
+		},
+		{
+			"timestamps": {
+				"from": "00:07:12,960",
+				"to": "00:07:16,680"
+			},
+			"offsets": {
+				"from": 432960,
+				"to": 436680
+			},
+			"text": " So it works by indexing each word in the test instead of the whole value."
+		},
+		{
+			"timestamps": {
+				"from": "00:07:16,680",
+				"to": "00:07:20,200"
+			},
+			"offsets": {
+				"from": 436680,
+				"to": 440200
+			},
+			"text": " And there's also covering index and there's partial index."
+		},
+		{
+			"timestamps": {
+				"from": "00:07:20,200",
+				"to": "00:07:23,800"
+			},
+			"offsets": {
+				"from": 440200,
+				"to": 443800
+			},
+			"text": " You also hear about clustered and non-clustered indexes."
+		},
+		{
+			"timestamps": {
+				"from": "00:07:23,800",
+				"to": "00:07:26,200"
+			},
+			"offsets": {
+				"from": 443800,
+				"to": 446200
+			},
+			"text": " And the difference between those is very simple."
+		},
+		{
+			"timestamps": {
+				"from": "00:07:26,200",
+				"to": "00:07:30,640"
+			},
+			"offsets": {
+				"from": 446200,
+				"to": 450640
+			},
+			"text": " The clustered index decides the order the table's rules are actually stored."
+		},
+		{
+			"timestamps": {
+				"from": "00:07:30,640",
+				"to": "00:07:32,240"
+			},
+			"offsets": {
+				"from": 450640,
+				"to": 452240
+			},
+			"text": " Think of this as a phone book again."
+		},
+		{
+			"timestamps": {
+				"from": "00:07:32,240",
+				"to": "00:07:33,840"
+			},
+			"offsets": {
+				"from": 452240,
+				"to": 453840
+			},
+			"text": " The data itself is sorted by Sony."
+		},
+		{
+			"timestamps": {
+				"from": "00:07:33,840",
+				"to": "00:07:35,640"
+			},
+			"offsets": {
+				"from": 453840,
+				"to": 455640
+			},
+			"text": " So once you found the name, you found everything."
+		},
+		{
+			"timestamps": {
+				"from": "00:07:35,640",
+				"to": "00:07:39,440"
+			},
+			"offsets": {
+				"from": 455640,
+				"to": 459440
+			},
+			"text": " A table can only have one clustered index because the rules can only be stored in one"
+		},
+		{
+			"timestamps": {
+				"from": "00:07:39,440",
+				"to": "00:07:40,440"
+			},
+			"offsets": {
+				"from": 459440,
+				"to": 460440
+			},
+			"text": " order."
+		},
+		{
+			"timestamps": {
+				"from": "00:07:40,440",
+				"to": "00:07:44,800"
+			},
+			"offsets": {
+				"from": 460440,
+				"to": 464800
+			},
+			"text": " A non-clustered index is a separate structure that points back to the rule."
+		},
+		{
+			"timestamps": {
+				"from": "00:07:44,800",
+				"to": "00:07:46,920"
+			},
+			"offsets": {
+				"from": 464800,
+				"to": 466920
+			},
+			"text": " Think of that as the index at the back of a book."
+		},
+		{
+			"timestamps": {
+				"from": "00:07:46,920",
+				"to": "00:07:48,740"
+			},
+			"offsets": {
+				"from": 466920,
+				"to": 468740
+			},
+			"text": " It tells you where to go and go there."
+		},
+		{
+			"timestamps": {
+				"from": "00:07:48,740",
+				"to": "00:07:52,680"
+			},
+			"offsets": {
+				"from": 468740,
+				"to": 472680
+			},
+			"text": " So a table can have lots of non-clustered indexes."
+		},
+		{
+			"timestamps": {
+				"from": "00:07:52,680",
+				"to": "00:07:55,640"
+			},
+			"offsets": {
+				"from": 472680,
+				"to": 475640
+			},
+			"text": " So this is the difference between clustered and non-clustered indexes."
+		},
+		{
+			"timestamps": {
+				"from": "00:07:55,640",
+				"to": "00:08:01,160"
+			},
+			"offsets": {
+				"from": 475640,
+				"to": 481160
+			},
+			"text": " So now that begs the question, if database indexes makes queries so fast, why don't we"
+		},
+		{
+			"timestamps": {
+				"from": "00:08:01,160",
+				"to": "00:08:04,160"
+			},
+			"offsets": {
+				"from": 481160,
+				"to": 484160
+			},
+			"text": " just index every column and be done with it?"
+		},
+		{
+			"timestamps": {
+				"from": "00:08:04,160",
+				"to": "00:08:05,160"
+			},
+			"offsets": {
+				"from": 484160,
+				"to": 485160
+			},
+			"text": " We cannot."
+		},
+		{
+			"timestamps": {
+				"from": "00:08:05,160",
+				"to": "00:08:06,760"
+			},
+			"offsets": {
+				"from": 485160,
+				"to": 486760
+			},
+			"text": " So every index has a cost."
+		},
+		{
+			"timestamps": {
+				"from": "00:08:06,760",
+				"to": "00:08:11,200"
+			},
+			"offsets": {
+				"from": 486760,
+				"to": 491200
+			},
+			"text": " Every time you insert, update, and delete a rule, the database also has to update every"
+		},
+		{
+			"timestamps": {
+				"from": "00:08:11,200",
+				"to": "00:08:12,320"
+			},
+			"offsets": {
+				"from": 491200,
+				"to": 492320
+			},
+			"text": " index on that table."
+		},
+		{
+			"timestamps": {
+				"from": "00:08:12,320",
+				"to": "00:08:17,040"
+			},
+			"offsets": {
+				"from": 492320,
+				"to": 497040
+			},
+			"text": " So if your other table has six indexes, every new order means updating the old table and"
+		},
+		{
+			"timestamps": {
+				"from": "00:08:17,040",
+				"to": "00:08:18,440"
+			},
+			"offsets": {
+				"from": 497040,
+				"to": 498440
+			},
+			"text": " all six indexes."
+		},
+		{
+			"timestamps": {
+				"from": "00:08:18,440",
+				"to": "00:08:22,560"
+			},
+			"offsets": {
+				"from": 498440,
+				"to": 502560
+			},
+			"text": " So the more database indexes you have, the slower your writes get."
+		},
+		{
+			"timestamps": {
+				"from": "00:08:22,560",
+				"to": "00:08:25,200"
+			},
+			"offsets": {
+				"from": 502560,
+				"to": 505200
+			},
+			"text": " And also, indexes also take up storage space."
+		},
+		{
+			"timestamps": {
+				"from": "00:08:25,200",
+				"to": "00:08:30,200"
+			},
+			"offsets": {
+				"from": 505200,
+				"to": 510200
+			},
+			"text": " And for a small table, the database will often skip your index and just count the table anyway"
+		},
+		{
+			"timestamps": {
+				"from": "00:08:30,200",
+				"to": "00:08:33,680"
+			},
+			"offsets": {
+				"from": 510200,
+				"to": 513680
+			},
+			"text": " because that's faster for a small table if you have just like 10 rules."
+		},
+		{
+			"timestamps": {
+				"from": "00:08:33,680",
+				"to": "00:08:36,880"
+			},
+			"offsets": {
+				"from": 513680,
+				"to": 516880
+			},
+			"text": " It's faster to read them than to go through an index first."
+		},
+		{
+			"timestamps": {
+				"from": "00:08:36,880",
+				"to": "00:08:42,040"
+			},
+			"offsets": {
+				"from": 516880,
+				"to": 522040
+			},
+			"text": " So what you do is that you only index the columns that you actually search on or filter"
+		},
+		{
+			"timestamps": {
+				"from": "00:08:42,040",
+				"to": "00:08:43,520"
+			},
+			"offsets": {
+				"from": 522040,
+				"to": 523520
+			},
+			"text": " on or join or sort by."
+		},
+		{
+			"timestamps": {
+				"from": "00:08:43,520",
+				"to": "00:08:44,760"
+			},
+			"offsets": {
+				"from": 523520,
+				"to": 524760
+			},
+			"text": " You don't index everything."
+		},
+		{
+			"timestamps": {
+				"from": "00:08:44,760",
+				"to": "00:08:48,320"
+			},
+			"offsets": {
+				"from": 524760,
+				"to": 528320
+			},
+			"text": " But because as good as it is, it can also get costly too."
+		},
+		{
+			"timestamps": {
+				"from": "00:08:48,320",
+				"to": "00:08:52,080"
+			},
+			"offsets": {
+				"from": 528320,
+				"to": 532080
+			},
+			"text": " And there are several mistakes you can make that can stop your database index from working"
+		},
+		{
+			"timestamps": {
+				"from": "00:08:52,080",
+				"to": "00:08:53,080"
+			},
+			"offsets": {
+				"from": 532080,
+				"to": 533080
+			},
+			"text": " as well."
+		},
+		{
+			"timestamps": {
+				"from": "00:08:53,080",
+				"to": "00:08:57,240"
+			},
+			"offsets": {
+				"from": 533080,
+				"to": 537240
+			},
+			"text": " You can have a database index and the database too wouldn't use it."
+		},
+		{
+			"timestamps": {
+				"from": "00:08:57,240",
+				"to": "00:08:59,580"
+			},
+			"offsets": {
+				"from": 537240,
+				"to": 539580
+			},
+			"text": " And these are the common mistakes that cause it."
+		},
+		{
+			"timestamps": {
+				"from": "00:08:59,580",
+				"to": "00:09:02,000"
+			},
+			"offsets": {
+				"from": 539580,
+				"to": 542000
+			},
+			"text": " The first one is wrapping your colon in a function."
+		},
+		{
+			"timestamps": {
+				"from": "00:09:02,000",
+				"to": "00:09:07,800"
+			},
+			"offsets": {
+				"from": 542000,
+				"to": 547800
+			},
+			"text": " For example, in this case, a normal index on email is sorted by the emails exactly as"
+		},
+		{
+			"timestamps": {
+				"from": "00:09:07,800",
+				"to": "00:09:09,120"
+			},
+			"offsets": {
+				"from": 547800,
+				"to": 549120
+			},
+			"text": " they were stored."
+		},
+		{
+			"timestamps": {
+				"from": "00:09:09,120",
+				"to": "00:09:12,800"
+			},
+			"offsets": {
+				"from": 549120,
+				"to": 552800
+			},
+			"text": " The lowercase versions are not in that budget."
+		},
+		{
+			"timestamps": {
+				"from": "00:09:12,800",
+				"to": "00:09:17,180"
+			},
+			"offsets": {
+				"from": 552800,
+				"to": 557180
+			},
+			"text": " So the database can use it here unless you create an index on the same expression."
+		},
+		{
+			"timestamps": {
+				"from": "00:09:17,180",
+				"to": "00:09:23,040"
+			},
+			"offsets": {
+				"from": 557180,
+				"to": 563040
+			},
+			"text": " The second is you can also be adding a wildcard at the start of a like."
+		},
+		{
+			"timestamps": {
+				"from": "00:09:23,040",
+				"to": "00:09:25,840"
+			},
+			"offsets": {
+				"from": 563040,
+				"to": 565840
+			},
+			"text": " The index is sorted by how each value starts."
+		},
+		{
+			"timestamps": {
+				"from": "00:09:25,840",
+				"to": "00:09:29,200"
+			},
+			"offsets": {
+				"from": 565840,
+				"to": 569200
+			},
+			"text": " And if you don't know how it starts, the index cannot help you find it."
+		},
+		{
+			"timestamps": {
+				"from": "00:09:29,200",
+				"to": "00:09:34,620"
+			},
+			"offsets": {
+				"from": 569200,
+				"to": 574620
+			},
+			"text": " Another database index gotcha is that in MySQL, when you had a foreign key, the database"
+		},
+		{
+			"timestamps": {
+				"from": "00:09:34,620",
+				"to": "00:09:40,160"
+			},
+			"offsets": {
+				"from": 574620,
+				"to": 580160
+			},
+			"text": " creates an index on that column for you automatically, if there isn't one already."
+		},
+		{
+			"timestamps": {
+				"from": "00:09:40,160",
+				"to": "00:09:42,340"
+			},
+			"offsets": {
+				"from": 580160,
+				"to": 582340
+			},
+			"text": " But in Postgres SQL, it doesn't."
+		},
+		{
+			"timestamps": {
+				"from": "00:09:42,340",
+				"to": "00:09:46,860"
+			},
+			"offsets": {
+				"from": 582340,
+				"to": 586860
+			},
+			"text": " So if you're on Postgres or you've moved from MySQL to Postgres, you have to check and confirm"
+		},
+		{
+			"timestamps": {
+				"from": "00:09:46,860",
+				"to": "00:09:50,000"
+			},
+			"offsets": {
+				"from": 586860,
+				"to": 590000
+			},
+			"text": " that your foreign key columns actually have indexes."
+		},
+		{
+			"timestamps": {
+				"from": "00:09:50,000",
+				"to": "00:09:53,860"
+			},
+			"offsets": {
+				"from": 590000,
+				"to": 593860
+			},
+			"text": " And it's one of the common reasons why it joins suddenly will get slow."
+		},
+		{
+			"timestamps": {
+				"from": "00:09:53,860",
+				"to": "00:09:57,160"
+			},
+			"offsets": {
+				"from": 593860,
+				"to": 597160
+			},
+			"text": " So again, to reiterate when to actually use a database index."
+		},
+		{
+			"timestamps": {
+				"from": "00:09:57,160",
+				"to": "00:10:03,860"
+			},
+			"offsets": {
+				"from": 597160,
+				"to": 603860
+			},
+			"text": " Use it when a column keeps showing up in your where, clauses, your joins or your order by."
+		},
+		{
+			"timestamps": {
+				"from": "00:10:03,860",
+				"to": "00:10:08,560"
+			},
+			"offsets": {
+				"from": 603860,
+				"to": 608560
+			},
+			"text": " So say you are sorting a million orders by date, you only show the first, and you only"
+		},
+		{
+			"timestamps": {
+				"from": "00:10:08,560",
+				"to": "00:10:09,560"
+			},
+			"offsets": {
+				"from": 608560,
+				"to": 609560
+			},
+			"text": " show the first 10."
+		},
+		{
+			"timestamps": {
+				"from": "00:10:09,560",
+				"to": "00:10:15,760"
+			},
+			"offsets": {
+				"from": 609560,
+				"to": 615760
+			},
+			"text": " If there is no index, the database has to do, look at a million rows and sort them before"
+		},
+		{
+			"timestamps": {
+				"from": "00:10:15,760",
+				"to": "00:10:17,160"
+			},
+			"offsets": {
+				"from": 615760,
+				"to": 617160
+			},
+			"text": " it can give you those 10."
+		},
+		{
+			"timestamps": {
+				"from": "00:10:17,160",
+				"to": "00:10:22,040"
+			},
+			"offsets": {
+				"from": 617160,
+				"to": 622040
+			},
+			"text": " But with an index, it read them in order and stops at the first, after the first 10."
+		},
+		{
+			"timestamps": {
+				"from": "00:10:22,040",
+				"to": "00:10:27,720"
+			},
+			"offsets": {
+				"from": 622040,
+				"to": 627720
+			},
+			"text": " So when you use explain and you realize that a query is doing a full table scan and it"
+		},
+		{
+			"timestamps": {
+				"from": "00:10:27,720",
+				"to": "00:10:31,140"
+			},
+			"offsets": {
+				"from": 627720,
+				"to": 631140
+			},
+			"text": " is slow, then maybe you need an index there."
+		},
+		{
+			"timestamps": {
+				"from": "00:10:31,140",
+				"to": "00:10:35,460"
+			},
+			"offsets": {
+				"from": 631140,
+				"to": 635460
+			},
+			"text": " So if your query is slow, you probably should consider adding an index there."
+		},
+		{
+			"timestamps": {
+				"from": "00:10:35,460",
+				"to": "00:10:41,720"
+			},
+			"offsets": {
+				"from": 635460,
+				"to": 641720
+			},
+			"text": " And if it's doing a full scan, also when a table gets more read, like you read it a lot"
+		},
+		{
+			"timestamps": {
+				"from": "00:10:41,720",
+				"to": "00:10:44,960"
+			},
+			"offsets": {
+				"from": 641720,
+				"to": 644960
+			},
+			"text": " more than you write it, that's also a good situation for a database index."
+		},
+		{
+			"timestamps": {
+				"from": "00:10:44,960",
+				"to": "00:10:48,840"
+			},
+			"offsets": {
+				"from": 644960,
+				"to": 648840
+			},
+			"text": " But you shouldn't do that when the table is small, or when the table is constantly reaching"
+		},
+		{
+			"timestamps": {
+				"from": "00:10:48,840",
+				"to": "00:10:53,320"
+			},
+			"offsets": {
+				"from": 648840,
+				"to": 653320
+			},
+			"text": " to or really search, then you probably don't need a database index in that situation."
+		},
+		{
+			"timestamps": {
+				"from": "00:10:53,320",
+				"to": "00:10:54,920"
+			},
+			"offsets": {
+				"from": 653320,
+				"to": 654920
+			},
+			"text": " So that's it to its database indexes."
+		},
+		{
+			"timestamps": {
+				"from": "00:10:54,920",
+				"to": "00:10:55,120"
+			},
+			"offsets": {
+				"from": 654920,
+				"to": 655120
+			},
+			"text": " Bye."
+		}
+	]
+}

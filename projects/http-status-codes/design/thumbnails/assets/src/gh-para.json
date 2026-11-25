@@ -1,0 +1,37 @@
+{
+ "url": "https://docs.github.com/en/rest/using-the-rest-api/troubleshooting-the-rest-api",
+ "needle": "GitHub uses a",
+ "cssWidth": 400,
+ "scale": 3,
+ "box": {
+  "x": 4,
+  "y": 1514.90625,
+  "w": 392,
+  "h": 203.15625,
+  "marks": [
+   [
+    [
+     87.578125,
+     89.78125,
+     104.859375,
+     22
+    ]
+   ],
+   [
+    [
+     12,
+     140.96875,
+     319.734375,
+     22
+    ],
+    [
+     12,
+     166.5625,
+     87.4375,
+     22
+    ]
+   ]
+  ]
+ },
+ "captured": "2026-11-03T07:08:59.438Z"
+}

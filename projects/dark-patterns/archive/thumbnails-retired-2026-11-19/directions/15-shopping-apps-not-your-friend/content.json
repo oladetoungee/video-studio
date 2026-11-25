@@ -1,0 +1,30 @@
+{
+ "direction": "Gbemi on stage (Oredev 2026, grey blazer, explaining with both hands, dark stage behind her), one white sentence with a full stop across the top: 'Shopping apps are not your friend.', 'friend.' in serif italic.",
+ "thumbnail_text": "Shopping apps are not your friend.",
+ "kind": "photo (real scene)",
+ "recommended": false,
+ "titles": [
+  "I Studied the Tricks Shopping Apps Use. Here's What I Found",
+  "Dark Patterns: The Tricks Apps Use to Make You Buy More",
+  "We've All Been Tricked by Online Shops (Dark Patterns)"
+ ],
+ "text": {
+  "hd": "Shopping apps<br>are not your<br><em>friend.</em>"
+ },
+ "images": {
+  "room": "../../assets/oredev/55642239799.jpg"
+ },
+ "vars": {
+  "--pw": "1600px",
+  "--pl": "-320px",
+  "--pt": "-470px",
+  "--dim": "rgba(0,0,0,0)",
+  "--ground": "#2B2420"
+ },
+ "board": "pick1119-26 ('we have been tricked into achieving loneliness, misery and sickness': the speaker mid-sentence in a real scene, 'Modern life is a scam.' in white across the top)",
+ "fonts": "Font 72 (Inter Tight Bold + Instrument Serif italic, Thumbnails 152; weight raised from 500 to 700 so it reads on the photo)",
+ "colours": "Font 72 specimen (Thumbnails 152): words #FFFFFF on dark #2B2420 (here the dark stage)",
+ "title": "I Studied the Tricks Shopping Apps Use. Here's What I Found",
+ "class": "no-lift",
+ "scores": ""
+}

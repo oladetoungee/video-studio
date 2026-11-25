@@ -1,0 +1,700 @@
+1
+00:00:00,000 --> 00:00:05,460
+ If you want to get into software development, like right now, the reality is that junior
+
+2
+00:00:05,460 --> 00:00:09,520
+ developer roles have just become very, very, very, very rare.
+
+3
+00:00:09,520 --> 00:00:14,860
+ I was checking and I was seeing this thing from Indeed's research team, and they found
+
+4
+00:00:14,860 --> 00:00:20,240
+ out that in the first quarter of 2026, only 4.5%, and that's in the first quarter, only
+
+5
+00:00:20,240 --> 00:00:25,480
+ 4.5% of software development is job posting on Indeed were entry level, and I was struggling
+
+6
+00:00:25,480 --> 00:00:27,080
+ that that number has even reduced.
+
+7
+00:00:27,080 --> 00:00:29,300
+ I almost feel like junior software developer
+
+8
+00:00:29,300 --> 00:00:32,460
+ is becoming a role that just doesn't exist anymore.
+
+9
+00:00:32,460 --> 00:00:33,840
+ I think software development post,
+
+10
+00:00:33,840 --> 00:00:36,420
+ and I was seeing that it has gone up a little bit.
+
+11
+00:00:36,420 --> 00:00:39,660
+ We found out that in the US, the rules about 15%
+
+12
+00:00:39,660 --> 00:00:42,020
+ between February last year to June this year.
+
+13
+00:00:42,020 --> 00:00:44,860
+ So the job posting are mostly for senior roles.
+
+14
+00:00:44,860 --> 00:00:46,340
+ Senior roles, yeah.
+
+15
+00:00:46,340 --> 00:00:48,620
+ So maybe you are learning how to code
+
+16
+00:00:48,620 --> 00:00:51,420
+ or you're trying to build actual software development skills.
+
+17
+00:00:51,420 --> 00:00:53,060
+ Of course, you can just write code.
+
+18
+00:00:53,060 --> 00:00:55,020
+ But if you want to maybe properly just build
+
+19
+00:00:55,020 --> 00:00:58,280
+ of software development skills in 2027,
+
+20
+00:00:58,280 --> 00:01:00,060
+ then this video is for you.
+
+21
+00:01:00,060 --> 00:01:02,660
+ Because I know you're probably asking yourself,
+
+22
+00:01:02,660 --> 00:01:04,100
+ and this is a very right question to add,
+
+23
+00:01:04,100 --> 00:01:07,020
+ but is there even a point to doing that anymore?
+
+24
+00:01:07,020 --> 00:01:10,380
+ I would say yes, personally,
+
+25
+00:01:10,380 --> 00:01:12,900
+ but of course you are not trying to learn how to code
+
+26
+00:01:12,900 --> 00:01:14,140
+ the same way people learned how to code
+
+27
+00:01:14,140 --> 00:01:15,260
+ three, four years ago.
+
+28
+00:01:15,260 --> 00:01:17,780
+ Someone I know is really, really interested
+
+29
+00:01:17,780 --> 00:01:19,580
+ in being a software developer right now.
+
+30
+00:01:19,580 --> 00:01:21,780
+ And I don't even, I was thinking about the advice
+
+31
+00:01:21,780 --> 00:01:23,180
+ to give them, and that was even what led me
+
+32
+00:01:23,180 --> 00:01:24,640
+ to recording this video.
+
+33
+00:01:24,640 --> 00:01:28,440
+ because at this point, I would even say it was easier,
+
+34
+00:01:28,440 --> 00:01:30,580
+ like when I started, it was so easy.
+
+35
+00:01:30,580 --> 00:01:32,680
+ Now I'm realizing how easy it was,
+
+36
+00:01:32,680 --> 00:01:34,600
+ because then I was like, "Oh my God, it was so hard."
+
+37
+00:01:34,600 --> 00:01:36,720
+ When I'm like, "Oh my God, it was so easy."
+
+38
+00:01:36,720 --> 00:01:40,520
+ The beginner right now, I will say you should try,
+
+39
+00:01:40,520 --> 00:01:42,720
+ of course, with the realities and using AI tools
+
+40
+00:01:42,720 --> 00:01:44,160
+ and trying to do things,
+
+41
+00:01:44,160 --> 00:01:45,760
+ but I will say if you focus on four things,
+
+42
+00:01:45,760 --> 00:01:47,360
+ reading code, debugging,
+
+43
+00:01:47,360 --> 00:01:49,440
+ fundamentals with a little bit of system design
+
+44
+00:01:49,440 --> 00:01:50,720
+ and domain knowledge.
+
+45
+00:01:50,720 --> 00:01:52,760
+ One of the skills that matter now is reading code.
+
+46
+00:01:52,760 --> 00:01:56,700
+ AI would write a lot of code for you, I swear.
+
+47
+00:01:56,700 --> 00:01:59,400
+ Everybody using AI to write code, I promise you that.
+
+48
+00:01:59,400 --> 00:02:01,740
+ And people are writing a lot of code these days
+
+49
+00:02:01,740 --> 00:02:03,820
+ that we are all not even reading.
+
+50
+00:02:03,820 --> 00:02:06,800
+ But I will say reading code is a very, very important skill
+
+51
+00:02:06,800 --> 00:02:07,640
+ right now.
+
+52
+00:02:07,640 --> 00:02:08,920
+ Reading code means that you can look back
+
+53
+00:02:08,920 --> 00:02:11,440
+ on whatever AI wrote, and you can tell what it does,
+
+54
+00:02:11,440 --> 00:02:13,240
+ and whether it's what you asked for.
+
+55
+00:02:13,240 --> 00:02:15,620
+ And this is even interesting because you're usually out
+
+56
+00:02:15,620 --> 00:02:18,560
+ to write code, to even read code.
+
+57
+00:02:18,560 --> 00:02:21,920
+ But now, I don't know, I recommend it as a skill
+
+58
+00:02:21,920 --> 00:02:23,480
+ for anyone that is starting to really care
+
+59
+00:02:23,480 --> 00:02:25,840
+ and software development right now.
+
+60
+00:02:25,840 --> 00:02:27,240
+ The skill of reading code,
+
+61
+00:02:27,240 --> 00:02:29,220
+ because a lot of code will be written
+
+62
+00:02:29,220 --> 00:02:31,080
+ and you need to learn how to read it
+
+63
+00:02:31,080 --> 00:02:32,600
+ in case you need to read it.
+
+64
+00:02:32,600 --> 00:02:34,640
+ The second skill that matters now more than ever
+
+65
+00:02:34,640 --> 00:02:35,480
+ is debugging.
+
+66
+00:02:35,480 --> 00:02:36,740
+ Debugging means finding out
+
+67
+00:02:36,740 --> 00:02:38,360
+ why something is broken in your code.
+
+68
+00:02:38,360 --> 00:02:39,720
+ Say a user sign up on your app
+
+69
+00:02:39,720 --> 00:02:41,320
+ and the app crashes with this error.
+
+70
+00:02:41,320 --> 00:02:43,200
+ AI is really good at debugging as well.
+
+71
+00:02:43,200 --> 00:02:44,480
+ And I'm not even joking.
+
+72
+00:02:44,480 --> 00:02:47,080
+ But it doesn't always understand context sometimes.
+
+73
+00:02:47,080 --> 00:02:48,600
+ For example, if I paste this into AI,
+
+74
+00:02:48,600 --> 00:02:51,200
+ maybe the model that is not so solid
+
+75
+00:02:51,200 --> 00:02:53,560
+ and I say fix this, one easy fix it might give
+
+76
+00:02:53,560 --> 00:02:55,840
+ is to wrap the saving, try cache.
+
+77
+00:02:55,840 --> 00:02:58,520
+ So the error is caught and the crash goes away.
+
+78
+00:02:58,520 --> 00:03:00,360
+ So the page stops crashing, right?
+
+79
+00:03:00,360 --> 00:03:02,040
+ But the user still isn't signed up.
+
+80
+00:03:02,040 --> 00:03:03,920
+ And yeah, nobody can tell them why.
+
+81
+00:03:03,920 --> 00:03:05,680
+ But if you can read the error yourself,
+
+82
+00:03:05,680 --> 00:03:07,400
+ you can come to the conclusion that somebody
+
+83
+00:03:07,400 --> 00:03:09,360
+ with this email already has an account
+
+84
+00:03:09,360 --> 00:03:12,040
+ and the database is refusing to save a second one.
+
+85
+00:03:12,040 --> 00:03:15,200
+ So the real fix is actually check for that
+
+86
+00:03:15,200 --> 00:03:17,700
+ and tell the user that the email is already taken.
+
+87
+00:03:17,700 --> 00:03:20,280
+ So debugging is a skill that gives you that bandwidth.
+
+88
+00:03:20,280 --> 00:03:24,040
+ When you use AI to code, you add your mind into the loop.
+
+89
+00:03:24,040 --> 00:03:27,320
+ And it would help a lot if you know how to debug.
+
+90
+00:03:27,320 --> 00:03:29,880
+ But you have to know enough to understand
+
+91
+00:03:29,880 --> 00:03:32,680
+ when you fix that AI give you, or it's the actual problem.
+
+92
+00:03:32,680 --> 00:03:35,000
+ If you don't know how to debug, you wouldn't know, right?
+
+93
+00:03:35,000 --> 00:03:37,360
+ The third skill that matters now is the fundamentals
+
+94
+00:03:37,360 --> 00:03:38,880
+ and a little bit of system design.
+
+95
+00:03:38,880 --> 00:03:41,260
+ Fundamentals are basically about how the web works,
+
+96
+00:03:41,260 --> 00:03:42,600
+ all the stuff underneath, what happens
+
+97
+00:03:42,600 --> 00:03:45,680
+ when you send a request out of the database, save your data.
+
+98
+00:03:45,680 --> 00:03:48,480
+ System design is thinking about how all the part of your app
+
+99
+00:03:48,480 --> 00:03:50,120
+ works together.
+
+100
+00:03:50,120 --> 00:03:51,880
+ What can go wrong between these different parts?
+
+101
+00:03:51,880 --> 00:03:53,400
+ Where is your user data saved?
+
+102
+00:03:53,400 --> 00:03:55,880
+ How does it connect to what the user sees?
+
+103
+00:03:55,880 --> 00:03:57,920
+ Let's take a real example from payment.
+
+104
+00:03:57,920 --> 00:03:59,440
+ When a customer pays for an order
+
+105
+00:03:59,440 --> 00:04:01,720
+ on maybe an online shopping platform,
+
+106
+00:04:01,720 --> 00:04:04,440
+ the payment provider sends your survey message
+
+107
+00:04:04,440 --> 00:04:06,800
+ to say that, oh, payments were successful.
+
+108
+00:04:06,800 --> 00:04:08,120
+ That message is called a webhook.
+
+109
+00:04:08,120 --> 00:04:09,840
+ Many providers will send the webhook again
+
+110
+00:04:09,840 --> 00:04:11,280
+ if your server doesn't reply in time.
+
+111
+00:04:11,280 --> 00:04:12,920
+ So your app can receive the same payment
+
+112
+00:04:12,920 --> 00:04:14,320
+ successful message twice.
+
+113
+00:04:14,320 --> 00:04:16,080
+ Your code has to be ready for that.
+
+114
+00:04:16,080 --> 00:04:18,920
+ Or else you could record a payment twice,
+
+115
+00:04:18,920 --> 00:04:21,760
+ or send the customer's order twice, right?
+
+116
+00:04:21,760 --> 00:04:25,040
+ So you kind of just need knowledge of these fundamentals
+
+117
+00:04:25,040 --> 00:04:26,840
+ or how everything works together.
+
+118
+00:04:26,840 --> 00:04:29,400
+ Another thing I would say is domain knowledge.
+
+119
+00:04:29,400 --> 00:04:30,720
+ That means understanding the area
+
+120
+00:04:30,720 --> 00:04:32,360
+ that your software is for.
+
+121
+00:04:32,360 --> 00:04:34,580
+ Software can be for different kinds of things,
+
+122
+00:04:34,580 --> 00:04:36,600
+ in health, finance, where I work,
+
+123
+00:04:36,600 --> 00:04:38,560
+ I write code for a fleet management company.
+
+124
+00:04:38,560 --> 00:04:39,720
+ Some people write code in finance,
+
+125
+00:04:39,720 --> 00:04:40,680
+ some people write code in health,
+
+126
+00:04:40,680 --> 00:04:42,840
+ in payments, in logistics, for school.
+
+127
+00:04:42,840 --> 00:04:45,600
+ So say you're building a stock app for your pharmacy, right?
+
+128
+00:04:45,600 --> 00:04:48,040
+ AI can write office talk half very quickly,
+
+129
+00:04:48,040 --> 00:04:49,560
+ but the pharmacy needs to sell the medicine
+
+130
+00:04:49,560 --> 00:04:53,880
+ that expires first before the newer stock, right?
+
+131
+00:04:53,880 --> 00:04:57,360
+ And it needs to know which batch a product came from.
+
+132
+00:04:57,360 --> 00:04:59,120
+ If you have the domain knowledge,
+
+133
+00:04:59,120 --> 00:05:00,560
+ you would ask AI to build it,
+
+134
+00:05:00,560 --> 00:05:03,040
+ but you also understand what is missing.
+
+135
+00:05:03,040 --> 00:05:04,560
+ But if you do not have that domain knowledge,
+
+136
+00:05:04,560 --> 00:05:06,360
+ you're still able to build your app with AI,
+
+137
+00:05:06,360 --> 00:05:09,040
+ but the app is not solid enough for the pharmacy,
+
+138
+00:05:09,040 --> 00:05:09,880
+ for example.
+
+139
+00:05:09,880 --> 00:05:11,160
+ So whatever field you're in,
+
+140
+00:05:11,160 --> 00:05:14,080
+ you need to establish domain knowledge in that field.
+
+141
+00:05:14,080 --> 00:05:15,160
+ is the reason why in companies,
+
+142
+00:05:15,160 --> 00:05:16,360
+ they will always have some engineers
+
+143
+00:05:16,360 --> 00:05:17,200
+ that everybody goes to,
+
+144
+00:05:17,200 --> 00:05:18,880
+ some point before them start engineer.
+
+145
+00:05:18,880 --> 00:05:20,680
+ A big part of what makes them so valuable
+
+146
+00:05:20,680 --> 00:05:23,120
+ is that they know the business well.
+
+147
+00:05:23,120 --> 00:05:24,600
+ So this is part of the domain knowledge
+
+148
+00:05:24,600 --> 00:05:25,680
+ that you have to build.
+
+149
+00:05:25,680 --> 00:05:28,200
+ So I would say that if you want to learn how to code
+
+150
+00:05:28,200 --> 00:05:29,760
+ in trend trend seven,
+
+151
+00:05:29,760 --> 00:05:32,560
+ of course you can learn faster, way faster with AI.
+
+152
+00:05:32,560 --> 00:05:33,640
+ I think it's still worth it.
+
+153
+00:05:33,640 --> 00:05:35,400
+ I just think you might need to focus on other things
+
+154
+00:05:35,400 --> 00:05:36,960
+ as opposed to like maybe learning syntax
+
+155
+00:05:36,960 --> 00:05:40,480
+ or learning how to write a for loop or stuff like that.
+
+156
+00:05:40,480 --> 00:05:42,360
+ And I just don't think you should think of it
+
+157
+00:05:42,360 --> 00:05:46,600
+ something that would give you a junior developer role. I don't think you should put so much trust
+
+158
+00:05:46,600 --> 00:05:50,200
+ in the fact that in the learn-out code, you get a junior developer role right now.
+
+159
+00:05:50,200 --> 00:05:55,000
+ So I'll say try to build with AI first, learn to work with it, and then start to learn the rest,
+
+160
+00:05:55,000 --> 00:05:59,240
+ like reading code, like reading other people's code, like the bargain, like the fundamentals,
+
+161
+00:05:59,240 --> 00:06:04,440
+ a little bit of system design. A lot of free reliable places to learn these things from.
+
+162
+00:06:04,440 --> 00:06:09,560
+ I'll try to add some link in the description box. There are just so many free reliable places to
+
+163
+00:06:09,560 --> 00:06:12,040
+ to learn system design, to learn fundamentals.
+
+164
+00:06:12,040 --> 00:06:14,600
+ So yeah, I think you should actually commit to it.
+
+165
+00:06:14,600 --> 00:06:17,880
+ I think just the learning itself, it's so good for you,
+
+166
+00:06:17,880 --> 00:06:21,160
+ but you also need to understand the reality of the market
+
+167
+00:06:21,160 --> 00:06:23,560
+ and the impact that AI has had on the market as well.
+
+168
+00:06:23,560 --> 00:06:26,160
+ So if anybody is telling you that you learn how to code now,
+
+169
+00:06:26,160 --> 00:06:28,440
+ you get a junior software developer role,
+
+170
+00:06:28,440 --> 00:06:29,720
+ you have to think about it very well,
+
+171
+00:06:29,720 --> 00:06:32,920
+ because I'm not sure that is a promise
+
+172
+00:06:32,920 --> 00:06:36,080
+ you can hold on to at least in this age and time.
+
+173
+00:06:36,080 --> 00:06:37,560
+ Maybe not say something else will happen,
+
+174
+00:06:37,560 --> 00:06:39,080
+ but as of today, I don't think that the promise
+
+175
+00:06:39,080 --> 00:06:41,080
+ I want to like go so seriously.
+

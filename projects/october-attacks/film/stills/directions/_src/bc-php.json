@@ -1,0 +1,54 @@
+{
+ "title": "PHP ships emergency patches for critical PHP2Shell flaws",
+ "h1": "PHP ships emergency patches for critical PHP2Shell flaws",
+ "h1y": 452,
+ "found": {
+  "before any application code runs": [
+   [
+    290.828125,
+    1259.1875,
+    258.53125,
+    21
+   ]
+  ],
+  "8.5.12": [
+   [
+    274,
+    2259.609375,
+    47.75,
+    21
+   ]
+  ]
+ },
+ "H": 6716,
+ "focus": {
+  "before any application code runs": {
+   "file": "bc-php__before-any-application-c.png",
+   "top": 739.1875,
+   "rects": [
+    [
+     290.828125,
+     520,
+     258.53125,
+     21
+    ]
+   ]
+  },
+  "8.5.12": {
+   "file": "bc-php__8-5-12.png",
+   "top": 1739.609375,
+   "rects": [
+    [
+     274,
+     520,
+     47.75,
+     21
+    ]
+   ]
+  }
+ },
+ "clipTop": 332,
+ "scale": 1.5,
+ "url": "https://www.bleepingcomputer.com/news/security/php-ships-emergency-patches-for-critical-php2shell-flaws",
+ "captured": "2026-10-25T22:51:36.831Z"
+}

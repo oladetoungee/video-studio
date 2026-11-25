@@ -1,0 +1,67 @@
+1
+00:00:00,370 --> 00:00:02,270
+you know that gesture where you drag your
+
+2
+00:00:02,270 --> 00:00:04,050
+feed down and you let it go to see if
+
+3
+00:00:04,050 --> 00:00:05,630
+something new has appeared?
+
+4
+00:00:05,750 --> 00:00:07,310
+that's the pull-to-refresh
+
+5
+00:00:07,310 --> 00:00:09,370
+that feature was developed by a developer
+
+6
+00:00:09,370 --> 00:00:11,580
+called Loren for a Twitter app he built,
+
+7
+00:00:11,580 --> 00:00:13,110
+called Tweetie, around 2008
+
+8
+00:00:13,110 --> 00:00:13,940
+and
+
+9
+00:00:14,190 --> 00:00:16,150
+he himself later said that this thing is
+
+10
+00:00:16,150 --> 00:00:17,790
+really addictive, right?
+
+11
+00:00:17,790 --> 00:00:19,810
+so it's an addictive feature, an addictive
+
+12
+00:00:19,850 --> 00:00:22,160
+gesture, and it has this unpredictable
+
+13
+00:00:22,330 --> 00:00:23,690
+reward again at the end of it
+
+14
+00:00:23,690 --> 00:00:25,630
+when you pull down your feed to refresh, you
+
+15
+00:00:25,630 --> 00:00:27,170
+don't know what's coming, but you know
+
+16
+00:00:27,170 --> 00:00:28,750
+something new will pop up, right?
+
+17
+00:00:28,880 --> 00:00:30,200
+so you keep pulling down

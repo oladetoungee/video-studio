@@ -1,0 +1,107 @@
+/* http-status-codes thumbnails (2026-11-03). Look: the film's B "THE FIRST DIGIT": one flat ground per class
+   (1xx stone #D9D4C7, 2xx mint #8FE3B0, 3xx sky #8EC5FF, 4xx amber #FFA51F, 5xx tomato #FF5A3C), ink #121212, white cards;
+   Funnel Display 800 for numbers and headlines, Funnel Sans for words, Fragment Mono for small labels, Instrument Serif
+   italic for one accent word (collage lines). The signature: a giant odometer digit (mid-roll, with a little vertical blur).
+   Used freely so each kind looks different (photo, collage, flat, other).
+   Editable: text in content.json "text", photos in "images", colours in "vars" (--ground, --fg, --wash, --c2/--c4/--c5),
+   moves in "nudge" (lib/bind.js). */
+/* 2026-11-07: type set 02 Bold condensed (TYPE-SYSTEM.md): 'FD' = Anton (headlines, numbers, UPPERCASE), 'FS' = Inter Tight, 'FM' = DM Mono;
+   'IS' / 'Hand' map to Inter Tight (no serif, no handwriting in set 02). No outlines, rings or sticker borders. */
+@font-face { font-family: 'FD'; src: url('../fonts/Anton-Regular.ttf') format('truetype'); font-weight: 100 900; }
+@font-face { font-family: 'FS'; src: url('../fonts/InterTightRegular.ttf') format('truetype'); font-weight: 400; }
+@font-face { font-family: 'FS'; src: url('../fonts/InterTightMedium.ttf') format('truetype'); font-weight: 500; }
+@font-face { font-family: 'FS'; src: url('../fonts/InterTightSemiBold.ttf') format('truetype'); font-weight: 600; }
+@font-face { font-family: 'FS'; src: url('../fonts/InterTightBold.ttf') format('truetype'); font-weight: 700 900; }
+@font-face { font-family: 'FM'; src: url('../fonts/DMMono-Medium.ttf') format('truetype'); }
+@font-face { font-family: 'IS'; src: url('../fonts/InterTightMedium.ttf') format('truetype'); }
+@font-face { font-family: 'Hand'; src: url('../fonts/InterTightSemiBold.ttf') format('truetype'); }
+
+:root { --ink: #121212; --stone: #D9D4C7; --mint: #8FE3B0; --sky: #8EC5FF; --amber: #FFA51F; --tomato: #FF5A3C; --white: #FFFFFF;
+  --c1: #D9D4C7; --c2: #8FE3B0; --c3: #8EC5FF; --c4: #FFA51F; --c5: #FF5A3C; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1280px; height: 720px; overflow: hidden; background: #121212; }
+.t { position: relative; width: 1280px; height: 720px; overflow: hidden; background: var(--ground, #FFA51F); color: var(--fg, #121212);
+  font-family: 'FS', sans-serif; }
+.guides .badge { position: absolute; right: 10px; bottom: 10px; width: 150px; height: 70px; border: 3px dashed #0f0; z-index: 99; }
+.z1 { z-index: 1; } .z2 { z-index: 2; } .z3 { z-index: 3; } .z4 { z-index: 4; } .z5 { z-index: 5; } .z6 { z-index: 6; }
+.abs { position: absolute; }
+
+/* headline: Funnel Display 800, huge, tight */
+.hd { position: absolute; font-family: 'FS', sans-serif; font-weight: 800; text-transform: uppercase; line-height: .86;
+  letter-spacing: -.018em; font-kerning: normal; white-space: nowrap; color: var(--fg, #121212); }
+.num { font-family: 'FD', sans-serif; font-weight: 800; letter-spacing: -.05em; line-height: .8; white-space: nowrap; }
+.sans { font-family: 'FS', sans-serif; font-weight: 700; letter-spacing: -.02em; }
+.mono { font-family: 'FM', monospace; letter-spacing: .02em; }
+.serif { font-family: 'IS', serif; font-weight: 400; text-transform: none; letter-spacing: -.01em; }
+.hand { font-family: 'Hand', cursive; font-weight: 700; }
+.c2 { color: var(--c2, #8FE3B0); } .c3 { color: var(--c3, #8EC5FF); } .c4 { color: var(--c4, #FFA51F); } .c5 { color: var(--c5, #FF5A3C); }
+.wh { color: #fff; }
+.fade { opacity: .32; }
+/* a highlighter band behind a word */
+.hl { background: linear-gradient(transparent 12%, var(--hlc, #FFA51F) 12%, var(--hlc, #FFA51F) 92%, transparent 92%); padding: 0 .08em;
+  box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+.blk { background: var(--ink); color: var(--kc, #FFA51F); padding: 0 .12em; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+
+/* the odometer window: the digit rolls up, the next one comes in from below, both a little blurred */
+.odo { position: absolute; overflow: hidden; }
+.odo .roll { position: absolute; left: 0; width: 100%; text-align: center; font-family: 'FD'; font-weight: 800; line-height: 1; letter-spacing: -.05em; }
+
+/* photo of her: her room in grey washed with one class colour (her ux-research method), she in full colour on top */
+.scene { position: absolute; left: 0; top: 0; width: 1280px; height: 720px; transform-origin: var(--sc-o, 50% 0%); scale: var(--sc, 1);
+  translate: var(--sc-x, 0px) var(--sc-y, 0px); }
+.scene img { position: absolute; left: 0; top: 0; width: 1280px; height: 720px; display: block; }
+.scene .bg { filter: grayscale(1) contrast(var(--bgc, .6)) brightness(var(--bgb, 1.55)); }
+.scene .wash { position: absolute; inset: 0; background: var(--wash, #FFA51F); mix-blend-mode: multiply; }
+.scene .dim { position: absolute; inset: 0; background: var(--dim, rgba(18,18,18,0)); }
+.scene .me-c { filter: saturate(1.06) contrast(1.04) brightness(1.06); }
+.scene.natural .bg { filter: grayscale(.45) contrast(1.04) brightness(1.1); }
+.scene.bw .me-c { filter: grayscale(1) contrast(1.1) brightness(1.1); }
+/* split wash: left half one colour, right half another */
+.scene .wash.l { right: 50%; } .scene .wash.r { left: 50%; background: var(--wash2, #FF5A3C); }
+
+/* cut-out of her (frame edge at the bottom), outline in ink or white */
+.cut { position: absolute; bottom: 0; display: block; }
+.cut.ol { filter: drop-shadow(7px 0 0 var(--ol, #121212)) drop-shadow(-7px 0 0 var(--ol, #121212)) drop-shadow(0 -7px 0 var(--ol, #121212)); }
+.cut.bw { filter: grayscale(1) contrast(1.1) brightness(1.12) drop-shadow(7px 0 0 var(--ol, #121212)) drop-shadow(-7px 0 0 var(--ol, #121212)) drop-shadow(0 -7px 0 var(--ol, #121212)); }
+
+/* white card (a response, a browser, a code tile) */
+.card { position: absolute; background: var(--white); color: var(--ink); box-shadow: 0 22px 44px rgba(18,18,18,.26); }
+.tile { position: absolute; color: var(--ink); display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+.row { display: flex; justify-content: space-between; align-items: baseline; gap: 20px; white-space: nowrap; }
+.rule { height: 3px; background: var(--ink); opacity: .14; }
+.code { font-family: 'FM', monospace; white-space: pre; }
+/* a phone, generic */
+.phone { position: absolute; background: var(--ink); border-radius: 46px; padding: 14px; box-shadow: 0 26px 50px rgba(18,18,18,.35); }
+.phone .scr { background: var(--white); color: var(--ink); border-radius: 34px; width: 100%; height: 100%; overflow: hidden; position: relative; }
+/* browser bar, generic */
+.bar { height: 54px; background: #EDEBE6; display: flex; align-items: center; gap: 10px; padding: 0 20px; }
+.bar i { width: 14px; height: 14px; border-radius: 50%; background: rgba(18,18,18,.25); display: block; }
+.bar .url { margin-left: 14px; flex: 1; height: 32px; background: #fff; border-radius: 6px; font-family: 'FM'; font-size: 17px; line-height: 32px; padding: 0 14px; color: rgba(18,18,18,.65); }
+/* sticker with a white die-cut edge (collage) */
+.stk { position: absolute; filter: drop-shadow(5px 0 0 #fff) drop-shadow(-5px 0 0 #fff) drop-shadow(0 5px 0 #fff) drop-shadow(0 -5px 0 #fff) drop-shadow(0 12px 18px rgba(0,0,0,.28)); }
+/* hand-drawn marker ring + arrow (svg) */
+svg.mk { position: absolute; overflow: visible; }
+svg.mk path { fill: none; stroke: var(--mkc, #121212); stroke-linecap: round; stroke-linejoin: round; }
+.credit { position: absolute; font-family: 'FM'; font-size: 15px; letter-spacing: .04em; color: rgba(18,18,18,.6); }
+.shadow-t { text-shadow: 0 4px 0 rgba(0,0,0,.18), 0 10px 30px rgba(0,0,0,.25); }
+
+/* set 02 overrides (2026-11-07) */
+* { font-synthesis: none; }
+.cut.ol, .cut.bw { filter: none; } .cut.bw { filter: grayscale(1) contrast(1.1) brightness(1.12); }
+.stk { filter: drop-shadow(0 12px 18px rgba(0,0,0,.28)); }
+svg.mk { display: none; }
+.scene img { object-fit: cover; object-position: var(--op, 50% 22%); }
+/* her studio photos (2026-11-07): only her (person layer) on the flat ground; the washes become flat colour fields */
+.scene.photo { scale: 1 !important; translate: 0 0 !important; }
+.scene.photo .bg { display: none; }
+.scene.photo .wash { mix-blend-mode: normal; }
+.scene.photo img { width: auto; height: var(--ph, 860px); left: var(--px, 50%); top: var(--py, -60px); translate: -50% 0; object-fit: fill; }
+.hd, .num, .odo .roll { letter-spacing: 0; line-height: .9; }
+.serif { font-style: normal; }
+.hd { font-family: 'FD', sans-serif; font-weight: 400; }
+.card { box-shadow: none; }
+.cut.bw { filter: none; }
+.scene.bw .me-c { filter: none; }
+
+/* her shoot photos are already bright and enhanced: no extra brightening on top (her note 2026-11-08, face too light) */
+.t.no-lift .scene .me-c, .t.no-lift .cut { filter: none; }

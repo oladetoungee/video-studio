@@ -1,0 +1,35 @@
+{
+ "title": "How a 'NULL' License Plate Landed One Hacker in Ticket Hell | WIRED",
+ "h1": "How a 'NULL' License Plate Landed One Hacker in Ticket Hell",
+ "h1y": 452,
+ "found": {
+  "12,049": [],
+  "NULL": [
+   [
+    178.375,
+    447,
+    82.140625,
+    65
+   ]
+  ]
+ },
+ "H": 4666,
+ "focus": {
+  "NULL": {
+   "file": "wired__null.png",
+   "top": 0,
+   "rects": [
+    [
+     178.375,
+     447,
+     82.140625,
+     65
+    ]
+   ]
+  }
+ },
+ "clipTop": 332,
+ "scale": 1.5,
+ "url": "https://www.wired.com/story/null-license-plate-landed-one-hacker-ticket-hell/",
+ "captured": "2026-11-02T19:35:41.052Z"
+}

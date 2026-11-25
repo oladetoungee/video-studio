@@ -1,0 +1,55 @@
+{
+  "direction": "Before / after split: green \"Testing\" with one clean \"Order placed\"; black \"Real users\" with the same order placed twice and \"Charged twice\" in red. Her cut-out (1583, calm) at the seam. Kind f.",
+  "board": "Thumbnails 55 (yt-02 before | after) / Thumbnails 66 (yt-13 Before | After)",
+  "thumbnail_text": "TESTING | REAL USERS (+ \"Order placed, 0 bugs, all tests passed\" vs the same order placed twice and a \"Charged twice\" error)",
+  "titles": [
+    "Edge Cases: Why Code That Passes Tests Still Breaks",
+    "Why Code That Passes Tests Still Breaks (Edge Cases)"
+  ],
+  "title": "Edge Cases: Why Code That Passes Tests Still Breaks",
+  "kind": "other",
+  "text": {
+    "lt": "Testing",
+    "rt": "<span class=\"y\">Real</span> users",
+    "ok": "Order placed",
+    "b1": "Order placed",
+    "b2": "Order placed",
+    "b3": "Charged twice",
+    "b4": "You paid 2 times",
+    "bugs": "0 Bugs",
+    "bugsub": "Tests passed"
+  },
+  "images": {
+    "me": "../../assets/shoot/cut-1583.png"
+  },
+  "vars": {},
+  "class": "no-lift",
+  "recommended": true,
+  "scores": "8.5 / 9 (set 3, her favourite); cold critic r4 after the font pass: 8 / 8.5",
+  "nudge": {
+    "her": {
+      "s": 1.38,
+      "dx": 27,
+      "dy": -10
+    },
+    "phoneL": {
+      "s": 1.124,
+      "dx": -43,
+      "dy": 5
+    },
+    "phoneR": {
+      "s": 1.164,
+      "dx": 62,
+      "dy": 18
+    },
+    "zero": {
+      "dx": 13,
+      "s": 1.009
+    }
+  },
+  "fonts": [
+    "combo-22 Inter Tight Black (ink #010000 on green #21F587, Design 270)",
+    "pair-03 Inter Tight (white on #0C0C0C, red #D92A11, Design 20)"
+  ],
+  "colours": "left Design 270 (#21F587 / #010000), right Design 20 (#0C0C0C / #FFFFFF / #D92A11)"
+}

@@ -1,0 +1,31 @@
+{
+ "direction": "18 (2026-11-19, replaces 10): copies pick1119-43 (How to never procrastinate: black ground, the object on the left, a short two-line question on the right with one red word). A phone with the cookie banner everyone knows; what did you just accept? with accept? in a red box.",
+ "thumbnail_text": "what did you / just accept?",
+ "kind": "object",
+ "recommended": false,
+ "titles": [
+  "Why Every Website Asks About Cookies (Explained Simply)",
+  "What Happens When You Click Accept All Cookies?",
+  "What Are Browser Cookies, Really? (Explained Simply)"
+ ],
+ "text": {
+  "hd": "what did you<br>just <b>accept?</b>",
+  "bt": "We use cookies",
+  "b1": "Accept all",
+  "b2": "Reject"
+ },
+ "images": {},
+ "vars": {
+  "--ground": "#111111"
+ },
+ "board": "pick1119-43 (How to never procrastinate)",
+ "fonts": "Font 64 (thumbs-09: Inter Tight Bold lowercase white + red box #E2231A on #111)",
+ "colours": "thumbs-09 specimen as is",
+ "title": "Why Every Website Asks About Cookies (Explained Simply)",
+ "titles_before_2026_11_19": [
+  "What Happens When You Click Accept All Cookies?",
+  "Why Every Website Asks About Cookies (Explained Simply)",
+  "What Are Browser Cookies, Really? (Explained Simply)"
+ ],
+ "scores": "cold critic 2026-11-19 round 3: 7 / 7 · Test & Compare"
+}

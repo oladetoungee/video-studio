@@ -1,0 +1,68 @@
+{
+ "01-too-rude-for-ai": {
+  "scores": "Round 3 (after fixes): cold image 7 · best pair (title 1) clarity 8, click 8 · taste 7.5 (round 2).",
+  "recommended": true
+ },
+ "02-ai-can-hang-up": {
+  "scores": "Round 3: cold 7 · best pair (title 1) 8/8 (a top-3 pair) · taste 7."
+ },
+ "03-cruel-ai-leaves": {
+  "scores": "Round 3: cold 7 · best pair (title 1) 8/8 · taste 6."
+ },
+ "04-be-rude-get-cut-off": {
+  "scores": "Round 3: cold 7 · best pair (title 1) 8/7 · taste 6.5."
+ },
+ "05-frustrated-vs-cruel": {
+  "scores": "Round 3: cold 5 · best pair (title 1) 8/7 (the most accurate about the rule) · taste 5.5."
+ },
+ "06-mean-to-claude": {
+  "scores": "Round 3: cold 5 · best pair (title 1) 7/7 · taste 6."
+ },
+ "07-is-claude-conscious-collage": {
+  "scores": "Round 3: cold 5 · best pair (title 1) 7/7 · taste 7.5 (closest to her collage samples)."
+ },
+ "08-yelling-at-ai": {
+  "scores": "Round 3: cold 7 · best pair (title 1) 8/7 · taste 6.5."
+ },
+ "10-tool-or-person": {
+  "scores": "Round 3: cold 7 · best pair (title 1) 8/8 · taste 6.5."
+ },
+ "11-ai-that-hangs-up-collage": {
+  "scores": "Round 3: cold 5 · best pair 7/6 · taste 7."
+ },
+ "12-new-rule-for-claude": {
+  "scores": "Round 3: cold 6 · best pair (title 1) 8/7 · taste 7."
+ },
+ "13-kind-to-a-chatbot": {
+  "scores": "Round 3: cold 6 · best pair (title 1) 8/8 · taste 5."
+ },
+ "14-can-ai-feel-hurt": {
+  "scores": "Round 3: cold 6 · best pair (title 1) 8/7 · taste 6.5."
+ },
+ "15-cruel-to-ai-equals": {
+  "scores": "Round 3: cold 4 · best pair (title 1) 7/6 · taste 6.5."
+ },
+ "16-being-cruel-ended-this-chat": {
+  "scores": "Round 3: cold 6 · best pair (title 1) 8/7 · taste 7."
+ },
+ "17-be-mean-chat-over": {
+  "scores": "Round 3: cold 6 · best pair (title 1) 8/7 · taste 7."
+ },
+ "18-say-please-to-ai": {
+  "scores": "Round 3: cold 6 · best pair 7/6 · taste 6."
+ },
+ "19-protected-from-us": {
+  "scores": "Round 3: cold 6 · best pair (title 1) 8/8 · taste 7."
+ },
+ "20-is-claude-conscious": {
+  "scores": "Round 3: cold image 8 · best pair (title 1) 8/8 (a top-3 pair) · taste 7.5.",
+  "recommended": true
+ },
+ "21-real-rule-and-phone": {
+  "scores": "Round 3: cold 5 · best pair (title 1) 8/7 · taste 7.5."
+ },
+ "22-new-ai-rule-nov-12": {
+  "scores": "Round 3: cold image 8 · best pair (title 1) 9/8, the top pair · taste 6.5 (round 2, before the closed-mouth frame). Only before 12 November; after that use 02.",
+  "recommended": true
+ }
+}

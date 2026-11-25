@@ -1,0 +1,22 @@
+{
+  "direction": "The film's say vs do board on her real photo: SAY ≠ DO in big type, a canary note with what users tell you (\"I always use search\") and an orange note with what they actually do (\"taps the menu\"), her knowing chin-on-hand smile. Follows the before/after splits on her board and viral sample 3.",
+  "concept": "T06",
+  "thumbnail_text": "SAY ≠ DO",
+  "title": "UX Research: Why Users Say One Thing and Do Another",
+  "titles": [
+    "UX Research: Why Users Say One Thing and Do Another",
+    "UX Research for Beginners: Watch Users, Don't Just Ask"
+  ],
+  "text": {
+    "hd": "SAY <span style=\"color:#E3342A\">≠</span> DO",
+    "say": "&ldquo;I always use search.&rdquo;",
+    "do": "Taps the menu. Every time."
+  },
+  "images": {
+    "scene": "../../assets/scene/g/s_757.jpg",
+    "front": "../../assets/scene/g/mask/s_757.png"
+  },
+  "vars": {},
+  "scores": "a 2/4 · 3/6 · 2/5 | b 7/6 · 8/7 · 8/8 | c 4 · 7 · 7",
+  "recommended": true
+}

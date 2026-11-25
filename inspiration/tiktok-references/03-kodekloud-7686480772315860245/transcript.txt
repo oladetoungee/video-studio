@@ -1,0 +1,44 @@
+[00:00] What is a DDoS attack?
+[00:02] Let's say you run your online store on one server,
+[00:04] and this server can handle 2,000 requests per second.
+[00:07] Now, one attacker on his computer
+[00:10] writes a small program that sends requests to your store,
+[00:13] but this program is an endless while loop,
+[00:15] running 5,000 times per second.
+[00:17] That means this program is sending 5,000 requests per second
+[00:20] to your store, but your store can handle only 2,000.
+[00:23] Therefore, your server is overloaded,
+[00:25] and when real customers make requests to your server,
+[00:28] your server will not be able to process
+[00:29] the real customer's requests, because the server is
+[00:31] busy with thousands of requests that the attacker is sending.
+[00:35] You see, because your server is busy processing the attacker's
+[00:37] requests, the real users are being denied the service.
+[00:41] And that is exactly why we call it a denial of service attack,
+[00:44] or DDoS.
+[00:45] And this is actually easy to deal with,
+[00:47] because all the requests come from the same IP address.
+[00:49] So we can block the IP address, and we
+[00:51] can make a rule that if someone sends more than 20 requests
+[00:54] per second, we will block that IP address.
+[00:56] The real problem starts when the attacker doesn't
+[00:58] use a single machine, but uses multiple devices
+[01:00] to attack your server.
+[01:02] The attacker uses hundreds or thousands
+[01:04] of compromised home routers, cameras, and laptops
+[01:06] around the world, and uses these devices to send requests
+[01:09] to your server.
+[01:10] This is difficult to solve, because you just
+[01:12] can't block all the IP addresses,
+[01:14] because then you will block some of your customers as well.
+[01:16] One of the ways to attack a server is with SIN packets.
+[01:19] A SIN packet is the first step of opening a TCP connection
+[01:22] with the server.
+[01:23] When a attacker sends multiple SIN packets,
+[01:25] the server reserves multiple slots to open TCP connections.
+[01:28] Now, our server has a limit of 2,000 connections at one time.
+[01:32] And if all connections get taken by attacker,
+[01:34] then the real users can't get a slot to connect to the server.
+[01:37] Therefore, most companies use a DDoS protection
+[01:39] service, like CloudFlare, that understands these attack
+[01:42] patterns, and protects your server from attacks.

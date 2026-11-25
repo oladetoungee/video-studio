@@ -1,0 +1,37 @@
+{
+  "direction": "Combined (her 10-26 brief): 13's base (night ground, her cut-out with the orange outline). The PHP terminal from 14 is the hero with the cracked elephant on it; a fan of five REAL headlines sits behind her (Zeabur, Railway, OpenCode, eMudhra, AI agents; untouched crops) so it reads 'lots of real news'; 15's robots with '100+ sites hacked' underneath.",
+  "thumbnail_text": "IS YOUR PHP SAFE? · 100+ SITES HACKED",
+  "titles": [
+    "PHP2Shell, Railway, AI Agents: October 2026 Hacks Explained",
+    "PHP2Shell Explained: The PHP Flaw and October's Other Hacks",
+    "PHP2Shell and AI Agents: The October 2026 Hacks Explained"
+  ],
+  "title": "PHP2Shell, Railway, AI Agents: October 2026 Hacks Explained",
+  "kind": "graphic",
+  "set": "combined",
+  "text": {
+    "hd": "Is your <span class=\"acc\">PHP</span> safe?",
+    "cmd": "<span class=\"p\">$</span> php -v",
+    "bad": "<s>8.3.35</s> <span class=\"x\">✗</span>",
+    "good": "8.3.36 <span class=\"ok\">✓</span>",
+    "sites": "100+ sites hacked"
+  },
+  "images": {
+    "me": "../../assets/cut/gbemi-9.0.png",
+    "elephant": "../../assets/draw/elephant-cracked.svg",
+    "robot": "../../assets/draw/robot.svg",
+    "c1": "../../assets/src/bc-zeabur.png",
+    "c2": "../../assets/src/tc-railway.png",
+    "c3": "../../assets/src/bc-opencode.png",
+    "c4": "../../assets/src/bc-emudhra.png",
+    "c5": "../../assets/src/sa-agents.png"
+  },
+  "vars": {
+    "--ground": "#16110D",
+    "--fg": "#EFE7D8",
+    "--accent": "#F2541B",
+    "--ol": "#F2541B"
+  },
+  "scores": "combined critic R1 7 · R2 8 (ship this one)",
+  "recommended": true
+}

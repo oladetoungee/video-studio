@@ -1,0 +1,63 @@
+1
+00:00:00,070 --> 00:00:02,360
+once you've added your database index, you
+
+2
+00:00:02,360 --> 00:00:04,370
+can confirm whether your query is actually
+
+3
+00:00:04,390 --> 00:00:04,970
+using it or not
+
+4
+00:00:04,970 --> 00:00:06,200
+you can ask the database
+
+5
+00:00:06,200 --> 00:00:08,240
+just put the word EXPLAIN in front of your
+
+6
+00:00:08,240 --> 00:00:11,540
+query in PostgreSQL, you will see Seq Scan
+
+7
+00:00:11,540 --> 00:00:14,310
+it means that the database is reading every
+
+8
+00:00:14,310 --> 00:00:16,670
+single row, and if you see Index Scan, it
+
+9
+00:00:16,670 --> 00:00:19,080
+means that the database is using your index
+
+10
+00:00:19,080 --> 00:00:21,630
+Seq Scan, Sequential scan
+
+11
+00:00:21,693 --> 00:00:24,463
+in MySQL, the results will come back in a
+
+12
+00:00:24,463 --> 00:00:26,540
+small table, so there are two columns to
+
+13
+00:00:26,540 --> 00:00:28,560
+look at if it says ALL, that means it's
+
+14
+00:00:28,560 --> 00:00:30,170
+doing a full table scan
+
+15
+00:00:30,170 --> 00:00:31,950
+if it says something like ref or range, then
+
+16
+00:00:31,950 --> 00:00:32,800
+it's using an index

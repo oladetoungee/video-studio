@@ -1,0 +1,153 @@
+{
+ "story": "php2shell",
+ "outlet": "SecurityWeek",
+ "slug": "securityweek",
+ "url": "https://www.securityweek.com/php2shell-patches-land-as-first-exploitation-attempts-hit-sensors/",
+ "finalUrl": "https://www.securityweek.com/php2shell-patches-land-as-first-exploitation-attempts-hit-sensors/",
+ "status": "loaded",
+ "http": 200,
+ "title": "PHP2Shell Patches Land as First Exploitation Attempts Hit Sensors",
+ "h1": "PHP2Shell Patches Land as First Exploitation Attempts Hit Sensors",
+ "published": "2026-10-21T16:50:40+00:00",
+ "files": {
+  "fold": "php2shell/securityweek_fold.png",
+  "full": "php2shell/securityweek_full.jpg",
+  "scroll": "php2shell/securityweek_scroll.mp4"
+ },
+ "full": {
+  "width": 1440,
+  "height": 5697,
+  "pageHeight": 5697,
+  "zoom": 1,
+  "quotes": [
+   {
+    "quote": "Several cybersecurity companies saw exploitation attempts of CVE-2026-109618 and CVE-2026-109619 before PHP released the patches",
+    "box": {
+     "x": 100,
+     "y": 458,
+     "w": 1170,
+     "h": 31
+    },
+    "lines": [
+     {
+      "x": 100,
+      "y": 458,
+      "w": 1170,
+      "h": 31
+     }
+    ]
+   },
+   {
+    "quote": "We are now seeing php2shell exploited in the wild at scale",
+    "box": {
+     "x": 107,
+     "y": 1745,
+     "w": 438,
+     "h": 27
+    },
+    "lines": [
+     {
+      "x": 107,
+      "y": 1745,
+      "w": 438,
+      "h": 27
+     }
+    ]
+   }
+  ]
+ },
+ "scroll": {
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "seconds": 8,
+  "keyframes": [
+   {
+    "t": 0,
+    "y": 174
+   },
+   {
+    "t": 1,
+    "y": 174
+   },
+   {
+    "t": 2.452,
+    "y": 1335
+   },
+   {
+    "t": 8,
+    "y": 1335
+   }
+  ],
+  "zoom": 1,
+  "easing": "easeInOutCubic between keyframes, holds where y is equal",
+  "capped": false,
+  "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)",
+  "quotes": [
+   {
+    "quote": "Several cybersecurity companies saw exploitation attempts of CVE-2026-109618 and CVE-2026-109619 before PHP released the patches",
+    "inVideo": true,
+    "still": true,
+    "t": 0.53,
+    "visibleStill": [
+     0,
+     1.07
+    ],
+    "scrollY": 174,
+    "box": {
+     "x": 340,
+     "y": 284,
+     "w": 1170,
+     "h": 31
+    },
+    "lines": [
+     {
+      "x": 340,
+      "y": 284,
+      "w": 1170,
+      "h": 31
+     }
+    ],
+    "docBox": {
+     "x": 340,
+     "y": 458,
+     "w": 1170,
+     "h": 31
+    },
+    "layoutDriftPx": 50
+   },
+   {
+    "quote": "We are now seeing php2shell exploited in the wild at scale",
+    "inVideo": true,
+    "still": true,
+    "t": 5.2,
+    "visibleStill": [
+     2.37,
+     8.03
+    ],
+    "scrollY": 1335,
+    "box": {
+     "x": 347,
+     "y": 410,
+     "w": 438,
+     "h": 27
+    },
+    "lines": [
+     {
+      "x": 347,
+      "y": 410,
+      "w": 438,
+      "h": 27
+     }
+    ],
+    "docBox": {
+     "x": 347,
+     "y": 1745,
+     "w": 438,
+     "h": 27
+    },
+    "layoutDriftPx": 50
+   }
+  ]
+ }
+}

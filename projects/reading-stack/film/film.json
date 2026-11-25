@@ -1,0 +1,216 @@
+{
+  "title": "How to read (and actually remember it)",
+  "hud": "HOW TO READ",
+  "intro": 1.8,
+  "outro": 6.0,
+  "voiceDuration": 951.235,
+  "words": "data/words.json",
+  "captions": "data/captions.srt",
+  "images": {
+    "baratta": "assets/cover_baratta.jpg",
+    "convivial": "assets/cover_convivial.jpg",
+    "bookB": "assets/book_baratta.jpg",
+    "bookC": "assets/book_convivial.jpg",
+    "marple": "assets/cover_marple.jpg",
+    "spine_marple": "assets/spine_marple.png",
+    "spine_baratta": "assets/spine_baratta.png",
+    "spine_convivial": "assets/spine_convivial.png"
+  },
+  "scripts": [
+    "scenes/kit.js",
+    "scenes/scenes1.js",
+    "scenes/scenes2.js",
+    "scenes/scenes3.js",
+    "scenes/film.js"
+  ],
+  "cutSounds": {
+    "punch": [
+      "blue"
+    ]
+  },
+  "audio": {
+    "voice": "audio/voice_edit.flac",
+    "voiceFilter": "highpass=f=75,acompressor=threshold=0.05:ratio=3:attack=6:release=160:knee=3,deesser=i=0.25",
+    "music": {
+      "dir": "library:music",
+      "xfade": 5.0,
+      "tracks": [
+        [
+          "135",
+          "Sleepy Cat - Alejandro Maga\u00f1a"
+        ],
+        [
+          "766",
+          "Lo-Fi 04 - Lily J"
+        ],
+        [
+          "150",
+          "A Blue Day - Alejandro Maga\u00f1a"
+        ],
+        [
+          "175",
+          "Digital Clouds - Alejandro Maga\u00f1a"
+        ],
+        [
+          "282",
+          "Sweet September - Arulo"
+        ],
+        [
+          "750",
+          "Relaxation 04 - Lily J"
+        ],
+        [
+          "443",
+          "Serene View - Arulo"
+        ],
+        [
+          "234",
+          "Thinking About You - Arulo"
+        ]
+      ]
+    },
+    "sfx": {
+      "keys": "audio/sfx/keys",
+      "roles": {
+        "cut": {
+          "files": [
+            "mk164",
+            "library:whoosh-short-sweep",
+            "mk175",
+            "library:whoosh-small-sweep"
+          ],
+          "align": "peak",
+          "db": -12
+        },
+        "whoosh": {
+          "files": [
+            "library:whoosh-small-sweep",
+            "mk164",
+            "library:whoosh-short-sweep",
+            "mk3115"
+          ],
+          "align": "peak",
+          "db": -4
+        },
+        "riser": {
+          "files": [
+            "mk790",
+            "mk1492"
+          ],
+          "align": "peak",
+          "db": -18
+        },
+        "impact": {
+          "files": [
+            "mk1143"
+          ],
+          "align": "peak",
+          "db": -9
+        },
+        "book": {
+          "files": [
+            "library:punch-soft-quick",
+            "library:hit-weak"
+          ],
+          "align": "peak",
+          "db": -6
+        },
+        "page": {
+          "files": [
+            "library:page-turn-single",
+            "library:page-turn-big",
+            "library:paper-slide"
+          ],
+          "align": "peak",
+          "db": -1
+        },
+        "pen": {
+          "files": [
+            "library:marker-line",
+            "library:pencil-short",
+            "library:pencil-fast",
+            "library:scribble-on-paper"
+          ],
+          "align": "start",
+          "db": -6,
+          "maxlen": 0.7
+        },
+        "pop": {
+          "files": [
+            "library:pop-dry",
+            "library:explainer-pop-whoosh",
+            "library:pop-hard-click",
+            "mk2357"
+          ],
+          "align": "peak",
+          "db": -5
+        },
+        "click": {
+          "files": [
+            "mk2568",
+            "library:click-classic",
+            "mk3124"
+          ],
+          "align": "peak",
+          "db": -3
+        },
+        "card": {
+          "files": [
+            "library:card-place",
+            "library:paper-quick-move",
+            "library:card-flick"
+          ],
+          "align": "start",
+          "db": 0
+        },
+        "tick": {
+          "files": [
+            "library:tap-small-hit",
+            "library:click-box-check"
+          ],
+          "align": "peak",
+          "db": -5
+        },
+        "type": {
+          "files": [
+            "KEYS"
+          ],
+          "align": "start",
+          "db": -6
+        },
+        "hit": {
+          "files": [
+            "mk1143"
+          ],
+          "align": "peak",
+          "db": -12
+        },
+        "hitS": {
+          "files": [
+            "library:punch-soft-quick",
+            "library:hit-weak"
+          ],
+          "align": "peak",
+          "db": -4
+        },
+        "mark": {
+          "files": [
+            "library:marker-line",
+            "library:pencil-short"
+          ],
+          "align": "start",
+          "db": -4,
+          "maxlen": 0.7
+        }
+      }
+    },
+    "levels": {
+      "voiceLufs": -16.0,
+      "duckDb": -12.0,
+      "openDb": -5.0,
+      "fullDb": -2.0,
+      "target": -14.0,
+      "ceiling": 0.8
+    }
+  }
+}

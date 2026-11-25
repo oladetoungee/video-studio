@@ -1,0 +1,307 @@
+{
+ "_help": "Edit text here (or in the studio), then run: node shared/build.mjs instagram (from design/carousels). Markup: *word* = highlight, \\n = line break.",
+ "width": 1080,
+ "height": 1350,
+ "deck": "linkedin",
+ "docTitle": "Free tuition in Europe? 9 countries for Nigerian students (LinkedIn)",
+ "slides": [
+  {
+   "layout": "cover",
+   "ground": "shelf",
+   "title": "Free tuition\nin *Europe*?",
+   "size": 170,
+   "sub": "Year one added up for five countries, and what decides the price in the rest.",
+   "subSize": 42,
+   "labels": [
+    {
+     "k": "Germany, tuition",
+     "p": "€0",
+     "star": true,
+     "ps": 260,
+     "s": "at most public universities"
+    }
+   ],
+   "sticker": "*But you must show\n€11,904 a year in the bank"
+  },
+  {
+   "layout": "two",
+   "ground": "ink",
+   "title": "When I say *cheap*\nI mean two numbers",
+   "size": 130,
+   "body": "Tuition, and the proof of funds. That's the money you show the embassy to prove you can live there while you study.",
+   "labels": [
+    {
+     "k": "Number 1",
+     "p": "Tuition",
+     "ps": 70
+    },
+    {
+     "k": "Number 2",
+     "p": "Proof of funds",
+     "ps": 70,
+     "red": true
+    }
+   ],
+   "body2": "On every slide, the red label is the proof of funds, the number people forget."
+  },
+  {
+   "layout": "country",
+   "ground": "shelf",
+   "flags": [
+    "de"
+   ],
+   "title": "Germany",
+   "size": 150,
+   "body": "Most public universities don't charge tuition. For the visa you show 992 euros for every month, usually in a blocked account.",
+   "labels": [
+    {
+     "k": "Tuition",
+     "p": "€0",
+     "star": false,
+     "s": "most public unis"
+    },
+    {
+     "k": "Proof of funds",
+     "p": "€992",
+     "red": true,
+     "s": "a month"
+    }
+   ],
+   "work": "That's €11,904 for a year, plus a small semester fee at your university.",
+   "src": "Sources: daad.de, nigeria.diplo.de"
+  },
+  {
+   "layout": "country",
+   "ground": "ink",
+   "flags": [
+    "fr"
+   ],
+   "title": "France",
+   "size": 150,
+   "body": "For students from outside the EU, a master's is 3,950 euros a year. The proof of funds went up on 1 August 2026.",
+   "labels": [
+    {
+     "k": "Master's, a year",
+     "p": "€3,950",
+     "ps": 140
+    },
+    {
+     "k": "Proof of funds",
+     "was": "€615",
+     "p": "€877.50",
+     "red": true,
+     "ps": 120,
+     "s": "a month now"
+    }
+   ],
+   "src": "Sources: cnam.fr, Décret 2026-526",
+   "work": "That's €10,530 for a year. It used to be €7,380."
+  },
+  {
+   "layout": "country",
+   "ground": "shelf",
+   "flags": [
+    "at"
+   ],
+   "title": "Austria",
+   "size": 150,
+   "body": "Nigeria isn't on the no-fee list. The proof of funds depends on your age.",
+   "labels": [
+    {
+     "k": "Tuition",
+     "p": "€1,506",
+     "ps": 84,
+     "s": "a year"
+    },
+    {
+     "k": "Under 24",
+     "p": "€722.58",
+     "ps": 84,
+     "red": true,
+     "s": "a month"
+    },
+    {
+     "k": "24 and over",
+     "p": "€1,308.39",
+     "ps": 72,
+     "red": true,
+     "s": "a month"
+    }
+   ],
+   "shot": {
+    "img": "at-ages-big.png",
+    "credit": "oead.at, 2 Nov 2026 (tuition: tuwien.at)",
+    "w": 900
+   }
+  },
+  {
+   "layout": "country",
+   "ground": "ink",
+   "flags": [
+    "ee"
+   ],
+   "title": "Estonia,\nwhere I study",
+   "size": 130,
+   "body": "I pay 6,000 euros a year for HCI at Tallinn University. Most master's there are 4,000 to 5,200.",
+   "labels": [
+    {
+     "k": "Most master's",
+     "p": "€4,000",
+     "ps": 140,
+     "s": "to €5,200 a year"
+    },
+    {
+     "k": "Proof of funds",
+     "p": "€880",
+     "red": true,
+     "ps": 140,
+     "s": "a month"
+    }
+   ],
+   "src": "Sources: tlu.ee, politsei.ee",
+   "work": "That's €10,560 for a year."
+  },
+  {
+   "layout": "stack",
+   "ground": "shelf",
+   "title": "Three where *it depends*",
+   "size": 120,
+   "body": "I couldn't put these on one price, so here's what decides it.",
+   "labels": [
+    {
+     "k": "Italy",
+     "p": "€10,179.85",
+     "red": true,
+     "s": "funds a year; fee set by family income"
+    },
+    {
+     "k": "Czech Rep.",
+     "p": "€0 in Czech",
+     "s": "English programmes set their own fees"
+    },
+    {
+     "k": "Poland",
+     "p": "776 zł",
+     "red": true,
+     "s": "a month to show, plus rent"
+    }
+   ],
+   "src": "Sources: Italian Embassy, studyin.cz, Poznań office"
+  },
+  {
+   "layout": "stack",
+   "ground": "ink",
+   "title": "Expensive without a *scholarship*",
+   "size": 104,
+   "body": "Both charge students from outside the EU and EEA.",
+   "labels": [
+    {
+     "k": "Norway, fee",
+     "p": "NOK 204,000",
+     "s": "NHH master's, a year",
+     "ps": 62
+    },
+    {
+     "k": "Norway, funds",
+     "p": "NOK 170,368",
+     "red": true,
+     "s": "living costs, a year",
+     "ps": 62
+    },
+    {
+     "k": "Finland, fee",
+     "p": "€10,000",
+     "s": "UEF, from, a year",
+     "ps": 62
+    },
+    {
+     "k": "Finland, funds",
+     "p": "€9,600",
+     "red": true,
+     "s": "in your account, a year",
+     "ps": 62
+    }
+   ],
+   "src": "Sources: nhh.no, udi.no, uef.fi, migri.fi"
+  },
+  {
+   "layout": "rank",
+   "ground": "shelf",
+   "title": "Year one,\n*added up*",
+   "size": 130,
+   "rows": [
+    {
+     "f": "at",
+     "c": "Austria, under 24",
+     "v": "€10,177"
+    },
+    {
+     "f": "de",
+     "c": "Germany",
+     "v": "€11,904"
+    },
+    {
+     "f": "fr",
+     "c": "France",
+     "v": "€14,480",
+     "red": true
+    },
+    {
+     "f": "ee",
+     "c": "Estonia",
+     "v": "€14,560",
+     "red": true
+    },
+    {
+     "f": "at",
+     "c": "Austria, 24+",
+     "v": "€17,207",
+     "red": true
+    },
+    {
+     "f": "fi",
+     "c": "Finland",
+     "v": "€19,600",
+     "red": true
+    }
+   ],
+   "body": "My sums: the cheapest master's I found in each country plus 12 months of proof of funds. Black rows are over €14,000. Germany's semester fee is not in it."
+  },
+  {
+   "layout": "words",
+   "ground": "yellow",
+   "title": "So which one is\n*cheapest* for you?",
+   "size": 124,
+   "verdicts": [
+    {
+     "k": "Under 24",
+     "v": "Austria"
+    },
+    {
+     "k": "Can study in Czech",
+     "v": "Czech Rep."
+    },
+    {
+     "k": "Everyone else",
+     "v": "Germany"
+    }
+   ],
+   "body2": "And don't forget rent. If you're schooling in a city like Paris, rent is going to choke you."
+  },
+  {
+   "layout": "end",
+   "ground": "ink",
+   "title": "Which country\nare you *looking at*?",
+   "size": 104,
+   "body": "Tell me in the comments. My full video on YouTube goes through every country, with the official links.",
+   "where": "Full video on YouTube",
+   "handle": "@WithGbemi",
+   "polaroid": {
+    "img": "headshot-cut.png",
+    "caption": ""
+   },
+   "polY": 560,
+   "herH": 520
+  }
+ ]
+}

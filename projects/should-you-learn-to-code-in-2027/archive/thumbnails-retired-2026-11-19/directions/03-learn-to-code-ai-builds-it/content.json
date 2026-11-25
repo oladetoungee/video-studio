@@ -1,0 +1,40 @@
+{
+ "board": "own-ux-research_her-thumbnail",
+ "kind": "photo: her room washed one colour, she in full colour, a big phone",
+ "direction": "Copies HER OWN ux-research thumbnail (board 'Yours'): her room washed in one colour so it goes calm, she in full colour in the middle, the topic huge in tall condensed caps across the top, a big phone beside her. The phone shows what anyone can now type to an AI ('Build me a sign-up page') and it done, so the question LEARN TO CODE? lands. Sticky note dropped after the cold review (clutter). Generic chat screen, no brand.",
+ "thumbnail_text": "LEARN TO CODE? + phone: 'Build me a sign-up page' -> code -> Done",
+ "fonts": [
+  "shorts-06 Oswald 600 (cream #EDE2A0 on warm dark #5A4F4A, as Formats 26)"
+ ],
+ "colours": "shorts-06 specimen (#5A4F4A ground used as the wash, #EDE2A0 cream)",
+ "text": {
+  "hd": "Learn to code?",
+  "note": "Build me a sign-up page",
+  "q": "Build me a sign-up page",
+  "ok": "Done"
+ },
+ "images": {
+  "room": "../../assets/shoot/1607.jpg",
+  "me": "../../assets/shoot/1607-person.png"
+ },
+ "vars": {
+  "--pw": "1360px",
+  "--pl": "-140px",
+  "--pt": "-20px",
+  "--wash": "#5A4F4A",
+  "--dim": "rgba(20,16,14,.5)"
+ },
+ "class": "no-lift",
+ "titles": [
+  "Junior Developer Jobs Are Rare. Should You Still Code?",
+  "Is Learning to Code Still Worth It in 2027? (Honest Answer)",
+  "Should You Still Learn to Code in 2027? A Developer's Answer"
+ ],
+ "title": "Junior Developer Jobs Are Rare. Should You Still Code?",
+ "titles_2026": [
+  "Is Learning to Code Still Worth It in 2026? (Honest Answer)",
+  "Should You Still Learn to Code in 2026? A Developer's Answer"
+ ],
+ "recommended": false,
+ "scores": "R1 6 / 7, R2 6 / 6.5, R3 7 / 8 (R3's single upload pick, with 'Junior Developer Jobs Are Rare. Should You Still Code?'). After R3: phone 1.4x, prompt 42 px, code 2 lines, room darker, her lower (not re-scored)"
+}

@@ -1,0 +1,106 @@
+<!doctype html><html><head><meta charset="utf-8"><title>A · The missing rung</title>
+<link rel="stylesheet" href="../_shared/fonts.css"></head><body>
+<script src="../_shared/clips.js"></script>
+<script src="../_shared/lib.js"></script>
+<script>
+/* A · THE MISSING RUNG. The career ladder: its bottom rung (junior roles) is gone; the four skills are new rungs she builds.
+ * Ground: flat mint #BFE3D0. Ink #14231C (ladder, type). ONE accent: tomato #E5432D (her nails, her cushion) = the missing
+ * rung and the rungs you build. Repainted after critic round 1: clay #CF5A36 ground, ink, cream #FFF1DC accent. Type: Barlow Condensed 800 (headlines), Hanken Grotesk
+ * (sentences), Azeret Mono (labels, credits >= 32 px). Motion: rungs slide in from the right 0.45 s outQuint, staggered
+ * on her words; the junior rung drops out (gravity 0.6 s, slight turn), a dashed tomato ghost stays where it was. */
+const C = { g: '#CF5A36', ink: '#1A1411', red: '#FFF1DC', cream: '#FFF1DC', dim: '#4A1F12', line: '#B84C2C' };
+const FD = (s, w = 800) => `800 ${s}px "Barlow Condensed"`, FB = (s, w = 500) => `${w} ${s}px "Hanken Grotesk"`, FM = (s, w = 500) => `${w} ${s}px "Azeret Mono"`;
+const ground = (c = C.g) => rect(0, 0, W, H, c);
+/** the ladder. o: x (left rail), yb (bottom), w (inner width), gap, n rungs, top (rail top), rail lw.
+ *  rungs: [{i, kind: 'solid'|'ghost'|'new'|'fall', at, label, lc}] (i = 0 bottom) */
+function ladder(t, o) {
+  const lw = o.lw || 22, x = o.x, w = o.w, gap = o.gap;
+  const top = o.top == null ? -40 : o.top; const grow = o.growAt == null ? 1 : ez(t, o.growAt, 0.8);
+  const yb = o.yb; const ytop = lerp(yb, top, grow);
+  rect(x - lw, ytop, lw, yb - ytop + (o.foot || 30), C.ink); rect(x + w, ytop, lw, yb - ytop + (o.foot || 30), C.ink);
+  for (const r of o.rungs) {
+    const y = yb - (r.i + 0.5) * gap; if (y < ytop) continue;
+    if (r.kind === 'solid') rect(x, y - lw / 2, w, lw, C.ink);
+    if (r.kind === 'ghost' || (r.kind === 'fall' && t >= r.at)) { ctx.save(); ctx.setLineDash([18, 12]); ctx.strokeStyle = C.red; ctx.lineWidth = 4; ctx.strokeRect(x + 6, y - lw / 2, w - 12, lw); ctx.restore(); }
+    if (r.kind === 'fall') { const p = clamp((t - r.at) / 0.6); if (p < 1) { const dy = 900 * p * p, rot = 0.5 * p * p; ctx.save(); ctx.translate(x + w / 2, y + dy); ctx.rotate(rot); withA(1 - p * 0.3, () => rect(-w / 2, -lw / 2, w, lw, t < r.at ? C.ink : C.red)); ctx.restore(); } }
+    if (r.kind === 'new') { const p = ez(t, r.at, 0.45); if (p > 0) { const dx = (1 - p) * (o.slide || 700); withA(Math.min(1, p * 2), () => rect(x + dx, y - lw / 2, w, lw, C.red)); } }
+    if (r.label) { const la = r.kind === 'new' ? ez(t, r.at + 0.08, 0.4) : (r.la == null ? 1 : ez(t, r.la, 0.4)); const side = o.labelLeft ? -1 : 1;
+      withA(la, () => { txt(r.label, side > 0 ? x + w + lw + 36 + 20 * (1 - la) : x - lw - 36 - 20 * (1 - la), y + o.ls * 0.34, FD(o.ls), r.lc || C.ink, side > 0 ? 'left' : 'right');
+        if (r.sub) txt(r.sub, side > 0 ? x + w + lw + 38 : x - lw - 38, y + o.ls * 0.34 + o.ls * 0.95, FB(o.ls * 0.72, 600), C.dim, side > 0 ? 'left' : 'right'); }); }
+  }
+}
+/* 0:00 "If you want to get into software development ... junior developer roles have just become very, very, very, very rare." */
+function sHook(t) {
+  ground(); const k = { jr: P('junior', 4), v: P('very, very, very, very rare.', 7) };
+  const x = V(110, 80), fs = V(150, 128), lh = fs * 0.95, y0 = V(330, 300);
+  wordsOn(t, ['JUNIOR'], [k.jr.t], x, y0, FD(fs), C.ink, { rise: 26 });
+  wordsOn(t, ['DEVELOPER', 'ROLES'], [k.jr.t + 0.15, k.jr.t + 0.3], x, y0 + lh, FD(fs), C.ink, { rise: 26 });
+  wordsOn(t, ['HAVE', 'JUST', 'BECOME'], [6.45, 6.73, 7.01], x, y0 + 2 * lh, FD(fs), C.ink, { rise: 26 });
+  const vf = FD(V(84, 72), 700); wordsOn(t, ['very,', 'very,', 'very,', 'very'], k.v.w.slice(0, 4), x, y0 + 2 * lh + V(110, 100), vf, C.dim, { rise: 18 });
+  wordsOn(t, ['RARE.'], [k.v.w[4]], x, y0 + 3 * lh + V(230, 200), FD(fs * 1.5), C.red, { rise: 30 });
+  const lx = V(1240, 380), lwid = V(330, 320);
+  ladder(t, { x: lx, yb: V(1000, 1840), w: lwid, gap: V(170, 150), ls: V(60, 52), growAt: 0.0, top: V(-40, 940),
+    rungs: [{ i: 0, kind: 'fall', at: k.v.w[4] + 0.05, label: 'JUNIOR', lc: C.red, la: k.jr.t }, { i: 1, kind: 'solid' }, { i: 2, kind: 'solid' }, { i: 3, kind: 'solid' }, { i: 4, kind: 'solid' }, { i: 5, kind: 'solid' }] });
+}
+/* 0:12 "this thing from Indeed's research team ... only 4.5% of software development job postings on Indeed were entry level" */
+function sNum(t) {
+  ground(); const k = { ind: P("Indeed's research team", 12), n: P('4.5% of software development', 20), el: P('were entry level,', 23) };
+  const x = V(110, 80);
+  const big = ez(t, k.n.t, 0.5); withA(big, () => txt('4.5%', x, V(400, 470), FD(V(330, 300)), C.red, 'left', 'alphabetic'));
+  withA(ez(t, k.n.w[1], 0.4), () => { txt('of US software development job', x, V(480, 550), FB(V(48, 44), 600), C.ink); txt('postings on Indeed were entry level', x, V(540, 606), FB(V(48, 44), 600), C.ink); });
+  withA(ez(t, k.el.t, 0.4), () => txt('Q1 2026', x, V(610, 690), FM(V(36, 36)), C.dim, 'left', 'alphabetic', 2));
+  clipCard(t, 'ind-head', V(1120, 80), V(110, 1160), V(690, 640), { at: k.ind.t - 0.3, cs: 32, credit: false });
+  clipCard(t, 'ind-45', V(110, 40), V(700, 900), V(1700, 1000), { at: k.n.t - 0.4, hlAt: k.n.w[0], pad: V(34, 24), cs: 34, creditCol: C.dim, creditFont: '"Azeret Mono"' });
+}
+/* 1:44 "but I will say if you focus on four things: reading code, debugging, fundamentals with a little bit of system design and domain knowledge." */
+const FOUR = () => ({ f: P('focus on four things,', 104), rc: P('reading code,', 105.5), db: P('debugging,', 106.4), fu: P('fundamentals with a little bit of system design', 107), dk: P('domain knowledge.', 109.4) });
+function sFour(t) {
+  ground(); const k = FOUR(); const zp = 1 + 0.05 * io(t, k.f.t, 6.5); const zx = V(960, 540), zy = V(620, 1100);
+  ctx.save(); ctx.translate(zx, zy); ctx.scale(zp, zp); ctx.translate(-zx, -zy);
+  const x = V(110, 80);
+  wordsOn(t, ['FOCUS', 'ON'], [k.f.w[0], k.f.w[1]], x, V(300, 260), FD(V(150, 120)), C.ink, { rise: 22 });
+  wordsOn(t, ['FOUR', 'THINGS.'], [k.f.w[2], k.f.w[3]], x, V(445, 375), FD(V(150, 120)), C.red, { rise: 22 });
+  const lx = V(940, 120), lw = V(280, 260);
+  ladder(t, { x: lx, yb: V(1040, 1860), w: lw, gap: V(196, 250), ls: V(64, 60), top: V(-40, 520), slide: V(900, 800),
+    rungs: [{ i: 0, kind: 'new', at: k.rc.t, label: 'READING CODE' }, { i: 1, kind: 'new', at: k.db.t, label: 'DEBUGGING' },
+      { i: 2, kind: 'new', at: k.fu.t, label: 'FUNDAMENTALS', sub: '+ a little system design', subAt: k.fu.w[5] }, { i: 3, kind: 'new', at: k.dk.t, label: 'DOMAIN KNOWLEDGE' }, { i: 4, kind: 'solid' }, { i: 5, kind: 'solid' }] });
+  ctx.restore();
+}
+/* 4:43 "say you're building a stock app for your pharmacy ... sell the medicine that expires first before the newer stock ... which batch" */
+function sPharm(t) {
+  ground(); const k = { app: P('stock app for your pharmacy,', 283.8), sell: P('sell the medicine that expires first', 288.8), b: P('which batch a product came from.', 295) };
+  const ix = V(80, 60), iy = V(80, 120), iw = V(820, 960), ih = V(920, 760);
+  withA(ez(t, k.app.t, 0.5), () => { ctx.save(); rrPath(ix, iy, iw, ih, 28); ctx.clip(); cover(IMG.ph, ix, iy, iw, ih, 0.3, 0.5); ctx.restore();
+    txt('Pexels · cottonbro studio', ix + 24, iy + ih - 26, FM(V(32, 32)), '#FFFFFF'); });
+  const x = V(1000, 80), y = V(250, 1020);
+  // the four-rung marker: you are on rung 4
+  for (let i = 0; i < 4; i++) rect(x + i * 58, y - V(120, 110), 44, 14, i === 3 ? C.red : C.ink);
+  txt('4 · DOMAIN KNOWLEDGE', x, y - V(60, 54), FM(V(34, 34), 600), C.ink, 'left', 'alphabetic', 1);
+  wordsOn(t, ['SELL', 'THE', 'MEDICINE'], [k.sell.w[0], k.sell.w[1], k.sell.w[2]], x, y + V(80, 70), FD(V(110, 100)), C.ink, { rise: 20 });
+  wordsOn(t, ['THAT', 'EXPIRES', 'FIRST.'], [k.sell.w[3], k.sell.w[4], k.sell.w[5]], x, y + V(185, 170), FD(V(110, 100)), C.ink, { rise: 20, cols: [C.ink, C.ink, C.red] });
+  // two batches: the earlier expiry goes first
+  const by = y + V(270, 250); const bw = V(560, 760), bh = V(150, 150);
+  [['BATCH A', 'EXP 03/2027', true], ['BATCH B', 'EXP 11/2027', false]].forEach(([b, e, first], i) => {
+    const a = ez(t, k.b.w[1] + i * 0.12, 0.45); withA(a, () => { const bx = x, byy = by + i * (bh + 26) + 20 * (1 - a);
+      rect(bx, byy, bw, bh, first ? C.ink : '#FFFFFF'); strokeR(bx, byy, bw, bh, C.ink, 4);
+      txt(b, bx + 28, byy + 62, FD(V(56, 52)), first ? C.cream : C.ink); txt(e, bx + 28, byy + 112, FM(V(34, 34), 600), first ? C.cream : C.ink);
+      if (first) txt('SELL FIRST', bx + bw - 28, byy + 62, FM(V(32, 32), 700), C.cream, 'right'); }); });
+}
+/* in-edit correction (her rule 2026-11-02). She says "We found out that in the US, [they rose] about 15% between February last
+ * year to June this year": the finding is Indeed's, and "last year / this year" means Feb 2025 to Jun 2026. Plain card, type on. */
+function sFix(t) {
+  ground(); const x = V(110, 80);
+  txt('QUICK NOTE', x, V(170, 330), FM(V(38, 38), 600), C.red, 'left', 'alphabetic', 3);
+  const L = PORT ? ['INDEED FOUND', 'THIS, NOT ME:', 'US SOFTWARE', 'DEVELOPMENT', 'POSTINGS UP', 'ALMOST 15%'] : ['INDEED FOUND THIS, NOT ME:', 'US SOFTWARE DEVELOPMENT', 'POSTINGS UP ALMOST 15%'];
+  L.forEach((l, i) => txt(l, x, V(330, 500) + i * V(128, 118), FD(V(130, 120)), i === L.length - 1 ? C.red : C.ink));
+  txt('Late February 2025 to June 2026.', x, V(330, 500) + L.length * V(128, 118) - V(30, 20), FB(V(46, 44), 600), C.ink);
+  clipCard(t, 'ind-15', x, V(790, 1340), V(1100, 920), { hlAt: -1, cs: 32, creditCol: C.dim, creditFont: '"Azeret Mono"', shadow: false });
+}
+const DIR = {
+  images: { ph: '../_src/px/pharmacy-8657301.jpg' },
+  fonts: ['800 40px "Barlow Condensed"', '600 40px "Hanken Grotesk"', '500 40px "Azeret Mono"', '600 40px "Azeret Mono"'],
+  draw(t) { if (t === 999) return sFix(t); if (t < 11) sHook(t); else if (t < 60) sNum(t); else if (t < 200) sFour(t); else sPharm(t); },
+  stills: { a1: { t: 10.4 }, a2: { t: 24.6 }, a3: { t: 110.9 }, a4: { t: 297.2 }, a5: { t: 999 }, p1: { t: 10.4 }, p2: { t: 110.9 } },
+};
+boot(DIR);
+</script></body></html>

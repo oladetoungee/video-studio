@@ -1,0 +1,105 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>C · Under the surface</title>
+<style>
+@font-face { font-family: "Grot"; src: url(../_fonts/HankenGrotesk.ttf); font-weight: 100 900; }
+@font-face { font-family: "Mono"; src: url(../_fonts/JetBrainsMono.ttf); font-weight: 100 800; }
+html, body { margin: 0; overflow: hidden; background: #F3EFE6; }
+#stage { position: relative; overflow: hidden; background: #F3EFE6; }
+.h { text-wrap: balance; font: 800 88px/0.98 "Grot"; letter-spacing: -3px; color: #12201E; }
+.q { font: 700 72px/1.05 "Grot"; letter-spacing: -1.5px; white-space: nowrap; }
+.m { font: 500 32px/1.2 "Mono"; letter-spacing: .5px; white-space: nowrap; }
+</style></head><body><div id="stage"></div>
+<script src="../_tools/kit.js"></script>
+<script src="../_tools/ux.js"></script>
+<script>
+// C · UNDER THE SURFACE. One continuous vertical cross-section. The screen (UI) is a thin crust on top; the camera dives
+// under it through flat strata of the experience (UX) down to the bedrock: people. An orange probe (UX research) drills
+// down and pulls each question up as it passes. 9:16 is the native shape; 16:9 frames the same world wider.
+// Palette: paper #F3EFE6 · strata #CFE7E0 #93CDBF #3E9A8B #1F5E55 · bedrock #0F2B28 · probe (her headband) #F26A2E · ink #12201E
+const P = PORTRAIT, ORA = '#F26A2E', INK = '#12201E';
+const WW = W, BAND = P ? 760 : 620;
+const world = el('div', { left: 0, top: 0, width: '1px', height: '1px', transformOrigin: '0 0' });
+const SURF = 0; // surface line at world y 0
+const QS_ = [];
+const strata = [
+  { c: '#CFE7E0', q: 'Can a user find what they’re looking for?', ink: INK },
+  { c: '#93CDBF', q: 'Does it make sense to the user?', ink: INK },
+  { c: '#3E9A8B', q: 'Did the users get frustrated using it?', ink: '#0E1B19' },
+  { c: '#1F5E55', q: 'Did the user come back to use it?', ink: '#EAF4F1' },
+];
+const BED = strata.length * BAND;
+// flat bands with a hand-cut wavy top edge (a cross-section, no gradients)
+function band(y, h, c, seed) {
+  let d = `M-4000 ${h + 4000} L-4000 20 `; for (let x = -4000; x <= 6000; x += 160) d += `L${x} ${20 + Math.sin(x * 0.004 + seed) * 12 + (hash(seed + x) - 0.5) * 6} `;
+  d += `L6000 ${h + 4000} Z`;
+  el('div', { left: 0, top: y - 20 + 'px', width: '1px', height: '1px' }, `<svg width="1" height="1" style="overflow:visible;position:absolute"><path d="${d}" fill="${c}"/></svg>`, world);
+}
+strata.forEach((s, i) => band(SURF + i * BAND, BAND, s.c, i * 2.1 + 1));
+band(BED, 6000, '#0F2B28', 9);
+// the screen: a phone standing on the surface
+const phW = P ? 300 : 260, phH = phW * 1.9, phX = P ? 690 : 1300;
+const ph = el('div', { left: phX + 'px', top: SURF - phH + 6 + 'px', width: phW + 'px', height: phH + 'px', background: '#12201E', borderRadius: phW * 0.14 + 'px', boxSizing: 'border-box', padding: phW * 0.05 + 'px', transformOrigin: '50% 100%' },
+  `<div style="position:relative;width:100%;height:100%;background:#FFFDF7;border-radius:${phW * 0.1}px;overflow:hidden">
+    <div style="position:absolute;left:10%;top:9%;width:80%;height:24%;background:${ORA}"></div>
+    <div style="position:absolute;left:10%;top:38%;width:60%;height:4%;background:#12201E"></div>
+    <div style="position:absolute;left:10%;top:46%;width:78%;height:2.5%;background:#C9C9C0"></div>
+    <div style="position:absolute;left:10%;top:51%;width:70%;height:2.5%;background:#C9C9C0"></div>
+    <div style="position:absolute;left:10%;top:80%;width:80%;height:9%;background:#12201E;border-radius:6px"></div></div>`, world);
+on((t) => { const k = spring(t - 0.15, 2.2, 0.6); ph.style.transform = `scale(${t < 0.15 ? 0 : 0.6 + 0.4 * k})`; ph.style.opacity = t < 0.15 ? 0 : 1; });
+// headline on the paper (world space, above the surface)
+const h1 = el('div', P ? { left: '70px', top: SURF - phH - 470 + 'px', width: '940px' } : { left: '150px', top: SURF - 560 + 'px', width: '1000px' }, 'UI is what you can see and touch.', world);
+h1.className = 'h'; words(h1, 0.6, 0.11);
+const tag = el('div', P ? { left: '70px', top: SURF + 40 + 'px' } : { left: '150px', top: SURF + 46 + 'px' }, 'under the screen: the experience', world);
+tag.className = 'm'; tag.style.display = 'none';
+// probe: an orange line drilling down from the phone; each question types on as the tip passes its stratum
+const probeX = phX + phW / 2;
+const probe = el('div', { left: probeX - 5 + 'px', top: SURF + 'px', width: '10px', height: '0px', background: ORA }, '', world);
+const tip = el('div', { left: probeX - 22 + 'px', top: SURF + 'px', width: '44px', height: '44px', borderRadius: '50%', background: ORA }, '', world);
+const DIVE0 = 2.0, PER = 1.5; // seconds per stratum
+const depthAt = (t) => { const i = Math.floor((t - DIVE0) / PER), f = ((t - DIVE0) % PER) / PER; if (t < DIVE0) return 0; if (i >= strata.length) return BED; return (i + eQuart(Math.min(1, f / 0.7))) * BAND; };
+on((t) => { const d = depthAt(t) + (t > DIVE0 ? 60 : 0); probe.style.height = Math.max(0, d) + 'px'; tip.style.top = SURF + d - 22 + 'px'; tip.style.opacity = probe.style.opacity = t < DIVE0 ? 0 : 1; });
+strata.forEach((s, i) => {
+  const q = el('div', P ? { left: '70px', top: SURF + i * BAND + BAND * 0.30 + 'px', width: '680px', whiteSpace: 'normal' } : { left: '150px', top: SURF + i * BAND + BAND * 0.40 + 'px', width: '1180px', whiteSpace: 'normal' }, s.q, world);
+  q.className = 'q'; q.style.color = s.ink; QS_.push(q); if (P) { q.style.whiteSpace = 'normal'; q.style.fontSize = '66px'; }
+  words(q, DIVE0 + i * PER + 0.55, 0.07);
+});
+
+// in each stratum, the user's path as a drawn trace: wandering (find), a loop (make sense), a knot (frustrated), a return (come back)
+const traceG = el('div', { left: 0, top: 0 }, '', world);
+const TR = (i) => { const y = SURF + i * BAND + BAND * (P ? 0.66 : 0.7), x0 = P ? 70 : 150, w = P ? 640 : 900;
+  if (i === 0) return `M${x0} ${y} q${w * 0.15} -70 ${w * 0.3} 0 t${w * 0.3} 0 t${w * 0.25} -40`;
+  if (i === 1) return `M${x0} ${y + 30} C${x0 + w * 0.4} ${y + 30} ${x0 + w * 0.55} ${y - 90} ${x0 + w * 0.45} ${y - 90} S${x0 + w * 0.3} ${y + 30} ${x0 + w * 0.6} ${y + 30} L${x0 + w * 0.95} ${y + 30}`;
+  if (i === 2) { let d = `M${x0} ${y}`; for (let k = 0; k < 9; k++) d += ` Q${x0 + w * (0.3 + hash(k) * 0.4)} ${y - 80 + hash(k + 9) * 160} ${x0 + w * (0.25 + hash(k + 3) * 0.5)} ${y - 60 + hash(k + 5) * 120}`; return d + ` L${x0 + w * 0.95} ${y}`; }
+  return `M${x0} ${y + 40} L${x0 + w * 0.7} ${y + 40} Q${x0 + w * 0.95} ${y + 40} ${x0 + w * 0.95} ${y - 20} L${x0 + w * 0.95} ${y - 50}`;
+};
+strata.forEach((s, i) => stroke(traceG, TR(i), DIVE0 + i * PER + 0.45, DIVE0 + i * PER + 1.1, { c: i >= 2 ? '#EAF4F1' : INK, sw: 9 }));
+QS_.push(traceG);
+// bedrock: people
+const peopleY = BED + (P ? 260 : 170);
+const bed1 = el('div', P ? { left: '70px', top: peopleY + 'px', width: '940px', color: '#EAF4F1' } : { left: '150px', top: peopleY + 'px', width: '1500px', color: '#EAF4F1' },
+  'Good design doesn’t start with screens.<br>Good design starts with <span style="color:' + ORA + '">people.</span>', world);
+bed1.className = 'h'; bed1.style.color = '#EAF4F1'; if (P) bed1.style.fontSize = '84px';
+const NB = 7, pw = P ? 110 : 120;
+for (let i = 0; i < NB; i++) {
+  const x = P ? 70 + (i % 4) * 240 + (i >= 4 ? 120 : 0) : 150 + i * 230, y = P ? peopleY + 520 + (i >= 4 ? 300 : 0) : peopleY + 330;
+  const g = el('div', { left: x + 'px', top: y + 'px', width: pw + 'px', height: pw * 1.5 + 'px' },
+    `<svg width="${pw}" height="${pw * 1.5}" viewBox="0 0 200 300"><circle cx="100" cy="66" r="50" fill="${i === 3 ? ORA : '#EAF4F1'}"/><path d="M18 300 Q18 150 100 138 Q182 150 182 300 Z" fill="${i === 3 ? ORA : '#EAF4F1'}"/></svg>`, world);
+  on((t) => { const k = spring(t - (11.5 + i * 0.08), 2.4, 0.55); g.style.opacity = t < 11.5 + i * 0.08 ? 0 : 1; g.style.transform = `translateY(${(1 - k) * 60}px)`; });
+}
+words(bed1, 10.6, 0.1);
+// camera: surface -> dive with the probe -> pull back to see the whole section -> bedrock
+const cxW = W / 2;
+const camY = (d) => SURF + d - (P ? 520 : 300) + H / 2 - H / 2; // keep the tip in the upper third
+const keys = [[0, cxW, SURF - (P ? 620 : 330), 1]];
+for (let i = 0; i < strata.length; i++) keys.push([DIVE0 + i * PER + PER * 0.7, cxW, SURF + i * BAND + BAND * 0.5 + (P ? 120 : 40), 1, PER * 0.7]);
+keys.push([9.4, cxW, P ? 560 : BED * 0.42, P ? 0.36 : 0.3, 1.0]); // pull back: the experience is much bigger than the screen
+keys.push([10.6, cxW, BED + (P ? 760 : 420), 1, 0.85]);
+camera(world, keys);
+// the pulled-back frame gets one line of screen-space type
+const over = el('div', P ? { left: '70px', top: '300px', width: '560px' } : { left: '150px', top: '120px', width: '850px' }, 'The experience is much bigger than what is on the screen.', stage);
+over.className = 'h'; over.style.zIndex = 5; over.style.fontSize = P ? '60px' : '80px'; over.style.textWrap = 'balance';
+on((t) => { const k = eExpo(prog(t, 8.6, 8.95)), d = eQuart(prog(t, 9.8, 10.1)); over.style.opacity = k * (1 - d); over.style.transform = `translateY(${(1 - k) * 16}px)`; });
+// during the pull-back only the shapes stay (no tiny unreadable words)
+on((t) => { const k = 1 - eQuart(prog(t, 8.3, 8.7)) + eQuart(prog(t, 9.9, 10.2)); [...QS_, h1, tag].forEach((e) => (e.style.visibility = k < 0.5 ? 'hidden' : 'visible')); });
+window.crisp = () => false;
+</script></body></html>

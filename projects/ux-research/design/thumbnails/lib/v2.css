@@ -1,0 +1,47 @@
+/* ux-research thumbnails, set 2 (2026-10-16). Bar: her own database-indexes thumbnail
+   (inspiration/youtube-thumbnail/her-own/). One idea, the topic huge, ONE big literal picture, few elements, lots of air,
+   one accent colour, her calm cut-out as a signature. Flat grounds (no video frame of her room under everything).
+   Every screen, badge and card is generic (no real brand). Editable: text in content.json "text", photos in "images",
+   colours in "vars" (--ground, --fg, --accent, --ol = her outline), moves in "nudge" (lib/bind.js). */
+@font-face { font-family: 'Grot'; src: url('../fonts/SchibstedGrotesk.ttf') format('truetype'); font-weight: 400 900; }
+@font-face { font-family: 'Marker'; src: url('../fonts/PermanentMarker-Regular.ttf') format('truetype'); }
+@font-face { font-family: 'Serif'; src: url('../fonts/InstrumentSerif-Italic.ttf') format('truetype'); font-style: italic; }
+@font-face { font-family: 'Archivo'; src: url('../fonts/Archivo.ttf') format('truetype'); font-weight: 100 900; }
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1280px; height: 720px; overflow: hidden; background: #111; }
+.t { position: relative; width: 1280px; height: 720px; overflow: hidden; background: var(--ground); color: var(--fg); }
+.guides .badge { position: absolute; right: 10px; bottom: 10px; width: 150px; height: 70px; border: 3px dashed #f0f; z-index: 99; }
+.abs { position: absolute; }
+.z1 { z-index: 1; } .z2 { z-index: 2; } .z3 { z-index: 3; } .z4 { z-index: 4; } .z5 { z-index: 5; }
+
+/* the topic, huge */
+.hd { position: absolute; font-family: 'Grot', sans-serif; font-weight: 900; letter-spacing: -0.045em; line-height: .88; white-space: nowrap; word-spacing: .07em; }
+.hd .acc, .acc { color: var(--accent); }
+.it { font-family: 'Serif', serif; font-style: italic; font-weight: 400; letter-spacing: -0.02em; }
+.marker { font-family: 'Marker', cursive; line-height: 1; }
+
+/* her cut-out: bottom edge sits on the frame edge; outline in --ol drawn round her shape */
+.me { position: absolute; bottom: 0; display: block; }
+.me.bw { filter: grayscale(1) contrast(1.1) brightness(1.13)
+  drop-shadow(4px 0 0 var(--ol)) drop-shadow(-4px 0 0 var(--ol)) drop-shadow(0 -4px 0 var(--ol)) drop-shadow(0 4px 0 var(--ol))
+  drop-shadow(3px 0 0 var(--ol)) drop-shadow(-3px 0 0 var(--ol)) drop-shadow(0 -3px 0 var(--ol)); }
+.me.col { filter: drop-shadow(4px 0 0 var(--ol)) drop-shadow(-4px 0 0 var(--ol)) drop-shadow(0 -4px 0 var(--ol)) drop-shadow(0 4px 0 var(--ol))
+  drop-shadow(3px 0 0 var(--ol)) drop-shadow(-3px 0 0 var(--ol)) drop-shadow(0 -3px 0 var(--ol)); }
+.me.plain { filter: none; }
+
+/* sticky note */
+.note { position: absolute; width: var(--s, 230px); height: var(--s, 230px); background: var(--nb, #FFE15A); color: #17140F;
+  font-family: 'Marker', cursive; font-size: var(--fs, 40px); line-height: 1.05; display: flex; align-items: center; justify-content: center;
+  text-align: center; padding: 22px; box-shadow: 0 18px 30px rgba(0,0,0,.30); }
+
+/* generic phone (no brand, shapes only) */
+.phone { position: absolute; width: var(--pw, 300px); height: var(--ph, 600px); border-radius: 46px; background: #121316; padding: 12px;
+  box-shadow: 0 30px 50px rgba(0,0,0,.35); }
+.phone .scr { position: relative; width: 100%; height: 100%; border-radius: 35px; background: #FFFDF6; overflow: hidden; }
+.phone .notch { position: absolute; top: 14px; left: 50%; width: 84px; height: 24px; margin-left: -42px; border-radius: 12px; background: #121316; z-index: 5; }
+.bar { position: absolute; height: var(--bh, 22px); border-radius: 11px; background: var(--bc, #DDD8CC); }
+.btn { position: absolute; border-radius: 18px; background: var(--btn, #17140F); color: #fff; font: 800 34px/1 'Archivo', sans-serif;
+  display: flex; align-items: center; justify-content: center; }
+
+svg.draw { position: absolute; left: 0; top: 0; overflow: visible; }

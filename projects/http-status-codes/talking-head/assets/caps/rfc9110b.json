@@ -1,0 +1,86 @@
+{
+ "title": "RFC 9110: HTTP Semantics",
+ "h1": "RFC 9110",
+ "h1y": 355.96875,
+ "found": {
+  "request method from POST to GET": [
+   [
+    522.640625,
+    111344.578125,
+    226.34375,
+    19
+   ]
+  ],
+  "lacks valid authentication": [
+   [
+    706.109375,
+    113853.484375,
+    66.828125,
+    19
+   ],
+   [
+    85.5,
+    113875.875,
+    95.796875,
+    19
+   ]
+  ],
+  "Unprocessable Content": [
+   [
+    187.90625,
+    118001.296875,
+    175.703125,
+    22
+   ]
+  ]
+ },
+ "H": 164844,
+ "focus": {
+  "request method from POST to GET": {
+   "file": "rfc9110b__request-method-from-post.png",
+   "top": 110824.578125,
+   "rects": [
+    [
+     522.640625,
+     520,
+     226.34375,
+     19
+    ]
+   ]
+  },
+  "lacks valid authentication": {
+   "file": "rfc9110b__lacks-valid-authenticati.png",
+   "top": 113333.484375,
+   "rects": [
+    [
+     706.109375,
+     520,
+     66.828125,
+     19
+    ],
+    [
+     85.5,
+     542.390625,
+     95.796875,
+     19
+    ]
+   ]
+  },
+  "Unprocessable Content": {
+   "file": "rfc9110b__unprocessable-content.png",
+   "top": 117481.296875,
+   "rects": [
+    [
+     187.90625,
+     520,
+     175.703125,
+     22
+    ]
+   ]
+  }
+ },
+ "clipTop": 235.96875,
+ "scale": 1.5,
+ "url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+ "captured": "2026-11-02T21:08:13.741Z"
+}

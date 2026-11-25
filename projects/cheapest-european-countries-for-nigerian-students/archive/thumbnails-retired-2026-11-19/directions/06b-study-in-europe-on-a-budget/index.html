@@ -1,0 +1,18 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../lib/eu.css"><style>
+/* board yt-11 ("MOVING ABROAD": real street scene full bleed, big caps serif line + small italic line above, no face).
+   Font board thumbs-07 (Thumbnails 64 = the yt-11 thumbnail): Bodoni Moda caps 600 gold #E0B04A + Instrument Serif italic cream #F4EBD0
+   on olive #4F5A3E. The photo is washed in that olive (one-colour wash) and darkened behind the words (her rule: darken the scene behind words) so the gold reads. */
+.t{background:var(--ground,#4F5A3E)}
+.bg{left:0;top:0;width:1280px;height:720px}
+.bg img{object-position:var(--ox,50%) var(--oy,62%);transform:scale(var(--zoom,1.45));transform-origin:var(--zx,30%) var(--zy,92%);filter:grayscale(.35) brightness(1) contrast(1.05)}
+.wash{left:0;top:0;width:1280px;height:720px;background:#4F5A3E;mix-blend-mode:multiply;opacity:var(--wo,.5)}
+.wash2{left:0;top:0;width:1280px;height:var(--wh,350px);background:#2E3524;opacity:.55}
+.dark{left:0;top:0;width:1280px;height:720px;background:linear-gradient(#1f2618 0%,rgba(31,38,24,.85) 38%,rgba(31,38,24,0) 62%)}
+.pre{left:0;right:0;top:var(--py,46px);text-align:center;font:italic 400 var(--ps,64px)/1 "IS",serif;color:#F4EBD0;text-shadow:0 2px 14px rgba(0,0,0,.45)}
+.w{left:0;right:0;top:var(--wy,118px);text-align:center;font:900 var(--ws,112px)/1.04 "BM",serif;color:#E0B04A;letter-spacing:0;text-shadow:0 4px 26px rgba(0,0,0,.55),0 1px 3px rgba(0,0,0,.4)}
+</style></head><body><div class="t">
+<div class="fill bg z1" data-move="photo"><img data-img="photo" alt=""></div>
+<div class="veil wash z1"></div><div class="veil dark z1"></div>
+<div class="a pre z3" data-k="pre"></div>
+<div class="a w z3" data-k="w"></div>
+</div><script src="../../lib/bind.js"></script></body></html>

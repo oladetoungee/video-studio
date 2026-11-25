@@ -1,0 +1,177 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<title>B · Multiplayer</title>
+<style>
+@font-face { font-family: 'Geist'; src: url('../_fonts/Geist.ttf'); font-weight: 100 900; }
+@font-face { font-family: 'GMono'; src: url('../_fonts/GeistMono.ttf'); font-weight: 100 900; }
+html, body { margin: 0; background: #FCFCFC; }
+#stage { position: relative; overflow: hidden; background: #FCFCFC; font-family: 'Geist'; color: #111; }
+.h { font-weight: 500; letter-spacing: -0.035em; line-height: 1.05; white-space: nowrap; }
+.mono { font-family: 'GMono'; font-weight: 450; letter-spacing: 0.04em; text-transform: uppercase; color: #9B9B9B; white-space: nowrap; }
+.card { background: #fff; border-radius: 18px; box-shadow: 0 0 0 1px rgba(0,0,0,.06), 0 18px 50px rgba(0,0,0,.07); overflow: hidden; }
+.tag { color: #fff; font-weight: 500; border-radius: 6px; white-space: nowrap; letter-spacing: -0.01em; }
+.w { display: inline-block; }
+.cell { position: absolute; overflow: hidden; white-space: nowrap; }
+</style></head>
+<body><div id="stage"></div>
+<script src="../_tools/kit.js"></script>
+<script>
+const C = { ground: '#FCFCFC', ink: '#111111', grey: '#9B9B9B', line: '#ECECEC', green: '#11A35A', greenSoft: 'rgba(17,163,90,.16)', violet: '#6C4BF4', amber: '#F2A10D', rose: '#E8467C', sky: '#1F8FFF', slate: '#4B5563' };
+const SRC = '../../../assets/sources/';
+const CUT = '../../../../design/thumbnails/assets/cut/';
+function wrapWords(e) {
+  for (const n of [...e.childNodes]) {
+    if (n.nodeType === 3) { const f = document.createDocumentFragment(); n.textContent.split(/(\s+)/).forEach(tk => { if (!tk) return; if (/^\s+$/.test(tk)) f.appendChild(document.createTextNode(' ')); else { const sp = document.createElement('span'); sp.className = 'w'; sp.textContent = tk; f.appendChild(sp); } }); e.replaceChild(f, n); }
+    else if (n.nodeType === 1 && n.tagName !== 'BR') wrapWords(n);
+  }
+}
+function headline(parent, html, { x, y, size, align = 'center' }) {
+  const e = el('div', { left: (align === 'center' ? x - 2000 : x) + 'px', top: y + 'px', width: (align === 'center' ? 4000 : 3000) + 'px', textAlign: align, fontSize: size + 'px' }, html, parent);
+  e.className = 'h'; wrapWords(e); return { e, words: [...e.querySelectorAll('.w')] };
+}
+function rise(words, lt, t0, stag = 0.05) { words.forEach((w, i) => { const p = eOut(prog(lt, t0 + i * stag, t0 + i * stag + 0.5)); set(w, { opacity: clamp(p * 1.5), transform: `translateY(${(1 - p) * 0.45}em)` }); }); }
+const acc = (c, s) => `<span style="color:${c}">${s}</span>`;
+// multiplayer cursor with a name tag
+function cursor(parent, name, color, { avatar = null, size = 1 } = {}) {
+  const g = el('div', { left: 0, top: 0, zIndex: 30 }, '', parent);
+  g.innerHTML = `<svg width="${34 * size}" height="${40 * size}" viewBox="0 0 34 40" style="position:absolute;left:0;top:0;overflow:visible;filter:drop-shadow(0 2px 3px rgba(0,0,0,.18))"><path d="M2 2 L2 31 L10 24 L15.5 37 L21 34.6 L15.6 22.2 L26 22 Z" fill="${color}" stroke="#fff" stroke-width="2.4" stroke-linejoin="round"/></svg>`;
+  const tag = el('div', { left: 24 * size + 'px', top: 30 * size + 'px', background: color, fontSize: 21 * size + 'px', padding: `${6 * size}px ${11 * size}px ${7 * size}px ${avatar ? 6 * size : 11 * size}px`, display: 'flex', alignItems: 'center', gap: 8 * size + 'px' }, '', g);
+  tag.className = 'tag';
+  if (avatar) { const a = el('div', { position: 'relative', width: 30 * size + 'px', height: 30 * size + 'px', borderRadius: '50%', overflow: 'hidden', background: '#DCE8E2', flex: 'none' }, '', tag); el('img', { left: '-36%', top: '-4%', width: '180%' }, '', a).src = avatar; }
+  tag.appendChild(document.createTextNode(name));
+  return { g, draw(x, y, s = 1, op = 1) { set(g, { transform: `translate(${x}px, ${y}px) scale(${s})`, opacity: op, display: op <= 0 ? 'none' : 'block' }); } };
+}
+const lockSVG = (c = '#111') => `<svg width="22" height="26" viewBox="0 0 22 26" style="vertical-align:-4px"><rect x="2" y="11" width="18" height="13" rx="3" fill="${c}"/><path d="M6 11 V7.5 A5 5 0 0 1 16 7.5 V11" fill="none" stroke="${c}" stroke-width="2.6"/></svg>`;
+// ================================================================= THE WORLD (one continuous take; the camera moves, nothing cuts)
+// world coordinates in px; the camera looks at (cx, cy) with zoom z
+const WORLD = {
+  article: { x: 0, y: 0 },            // TechCabal card centre
+  search: { x: 1500, y: 980 },        // real Marrify search box (screenshot crop) centre
+  table: { x: 3350, y: 980 },         // record table centre
+};
+const CAM = [ // t, cx, cy, zoom  (16:9)
+  [0.0, 120, -150, 1.42], [2.3, 40, -150, 1.32], [3.5, 1500, 920, 1.24], [5.9, 1500, 910, 1.2], [6.9, 3350, 960, 1.25], [7.9, 3350, 960, 1.25], [9.6, 3350, 945, 1.48], [10.5, 3350, 945, 1.52],
+];
+const CAMP = [ // portrait
+  [0.0, 60, -60, 1.0], [2.3, 0, -100, 0.82], [3.5, 1500, 990, 1.0], [5.9, 1500, 990, 0.98], [6.9, 3350, 950, 0.7], [7.9, 3350, 950, 0.7], [9.6, 3330, 950, 1.0], [10.5, 3330, 950, 1.05],
+];
+function camAt(t) {
+  const K = PORTRAIT ? CAMP : CAM; let i = 0; while (i < K.length - 2 && t > K[i + 1][0]) i++;
+  const a = K[i], b = K[i + 1], p = eIO(prog(t, a[0], b[0]));
+  return { cx: lerp(a[1], b[1], p), cy: lerp(a[2], b[2], p), z: Math.exp(lerp(Math.log(a[3]), Math.log(b[3]), p)) };
+}
+let world, overlay;
+scene('take', 0, 10.5, (r, S) => {
+  world = el('div', { left: 0, top: 0, width: '1px', height: '1px', transformOrigin: '0 0' }, '', r);
+  overlay = el('div', { left: 0, top: 0, width: W + 'px', height: H + 'px', zIndex: 20 }, '', r);
+  // -- 1. the real article (TechCabal Daily, 8 Sep 2026): heading + the "what happened" paragraph
+  const A = el('div', { left: (WORLD.article.x - 640) + 'px', top: (WORLD.article.y - 330) + 'px', width: '1280px', height: '600px' }, '', world); A.className = 'card';
+  const head = el('div', { left: '40px', top: '40px', width: '1200px', height: '196px', overflow: 'hidden' }, '', A);
+  el('img', { left: '0px', top: '0px', width: '1200px' }, '', head).src = SRC + 'techcabal/tc_crop_section_heading.png';
+  const para = el('div', { left: '40px', top: '250px', width: '1200px', height: '320px', overflow: 'hidden' }, '', A);
+  el('img', { left: '0px', top: '-50px', width: '1200px' }, '', para).src = SRC + 'techcabal/tc_crop_what_happened_paragraph.png';
+  S.hl = el('div', { background: C.greenSoft, borderRadius: '4px', left: '512px', top: '268px', height: '40px', width: '0px', mixBlendMode: 'multiply' }, '', A);
+  const src1 = el('div', { left: (WORLD.article.x - 640) + 'px', top: (WORLD.article.y + 292) + 'px', fontSize: '26px' }, 'Screenshot · TechCabal Daily · 8 Sep 2026', world); src1.className = 'mono';
+  // -- 2. the real Marrify search box (screenshot of marrify's homepage, 1 Oct 2026), cropped from the 4K capture
+  // 4K capture regions: whole widget x 740-2400, y 1080-1420; input + button only x 760-2360, y 1190-1330
+  const bw = V(1280, 1000), reg = V([740, 1080, 1660, 340], [760, 1190, 1600, 140]), kk = bw / reg[2], bh = reg[3] * kk;
+  S.box = { x0: WORLD.search.x - bw / 2, y0: WORLD.search.y - bh / 2, w: bw, h: bh };
+  const B = el('div', { left: S.box.x0 + 'px', top: S.box.y0 + 'px', width: bw + 'px', height: bh + 'px', borderRadius: '6px', overflow: 'hidden', boxShadow: '0 18px 50px rgba(0,0,0,.08)' }, '', world);
+  el('img', { left: (-reg[0] * kk) + 'px', top: (-reg[1] * kk) + 'px', width: (3840 * kk) + 'px' }, '', B).src = SRC + 'marrify/mf_01_home_desktop.png';
+  const src2 = el('div', { left: S.box.x0 + 'px', top: (S.box.y0 - 44) + 'px', fontSize: '26px' }, 'Screenshot · marrify homepage · 1 Oct 2026', world); src2.className = 'mono';
+  // -- 3. the record table (our diagram; fields are placeholders, no real data)
+  const cols = [['Name', 250], ['Spouse', 250], ['Married', 190], ['Divorced', 190], ['Court', 210], ['Status', 330]];
+  S.cols = []; let x0 = WORLD.table.x - 710;
+  const T = el('div', { left: x0 + 'px', top: (WORLD.table.y - 200) + 'px', width: '1420px', height: '400px' }, '', world); T.className = 'card';
+  S.T = T; let cx = 30;
+  cols.forEach(([name, w], ci) => {
+    const col = el('div', { left: cx + 'px', top: '0px', width: w + 'px', height: '400px', overflow: 'hidden' }, '', T);
+    const hd = el('div', { left: '0px', top: '26px', fontSize: '22px', color: '#6B6B6B', fontWeight: 500, whiteSpace: 'nowrap' }, name, col);
+    const lk = el('div', { left: '0px', top: '26px', display: 'none', fontSize: '22px', color: '#ABABAB', fontWeight: 500, whiteSpace: 'nowrap' }, lockSVG('#ABABAB') + ' ' + name, col);
+    const rows = [0, 1, 2, 3].map(ri => {
+      const y = 92 + ri * 74;
+      if (name === 'Status') return el('div', { left: '0px', top: (y - 8) + 'px', fontSize: '24px', fontWeight: 500, whiteSpace: 'nowrap', color: ri === 1 ? C.ink : '#C9C9C9' }, ri === 1 ? `<span style="display:inline-block;width:12px;height:12px;border-radius:3px;background:${C.green};margin-right:10px"></span>Active marriage` : '—', col);
+      return el('div', { left: '0px', top: y + 'px', height: '14px', width: (w * (0.45 + hash(ci * 7 + ri) * 0.4)) + 'px', background: ri === 1 ? '#D9D9D9' : '#EFEFEF', borderRadius: '3px' }, '', col);
+    });
+    S.cols.push({ col, hd, lk, rows, w, x: cx, name });
+    cx += w + 20;
+  });
+  el('div', { left: '0px', top: '72px', width: '1420px', height: '1px', background: C.line }, '', T);
+  S.rowHL = el('div', { left: '14px', top: '160px', width: '1392px', height: '60px', background: 'rgba(0,0,0,.025)', borderRadius: '10px' }, '', T);
+  S.src3 = el('div', { left: '30px', top: '352px', fontSize: '18px' }, 'Diagram · placeholder fields, no real records', T); S.src3.className = 'mono';
+  // -- type (screen space, on top of the world)
+  S.h1 = headline(overlay, `Ghana just launched ${acc(C.green, 'Marrify.')}`, { x: CX, y: V(120, 300), size: V(80, 84) });
+  if (PORTRAIT) { S.h1.e.innerHTML = `Ghana just launched<br><span style="color:${C.green}">Marrify.</span>`; wrapWords(S.h1.e); S.h1.words = [...S.h1.e.querySelectorAll('.w')]; }
+  S.h2 = headline(overlay, `Searchable by ${acc(C.green, 'anyone')} that has your name.`, { x: CX, y: V(150, 520), size: V(72, 76) });
+  if (PORTRAIT) { S.h2.e.innerHTML = `Searchable by <span style="color:${C.green}">anyone</span><br>that has your name.`; wrapWords(S.h2.e); S.h2.words = [...S.h2.e.querySelectorAll('.w')]; }
+  S.h3a = headline(overlay, `Who gets to see ${acc(C.green, 'what?')}`, { x: CX, y: V(150, 330), size: V(80, 84) });
+  S.h3 = headline(overlay, `Expose the ${acc(C.green, 'minimum.')}`, { x: CX, y: V(150, 330), size: V(80, 84) });
+  S.ill = el('div', { left: 0, width: W + 'px', textAlign: 'center', top: V(990, 1300) + 'px', fontSize: '26px' }, 'Illustration · who could search', overlay); S.ill.className = 'mono';
+  // -- people (screen-space cursors anchored to world points)
+  S.me = cursor(overlay, 'Gbemi', C.ink, { avatar: CUT + 'f_311.32.png', size: V(1.15, 1.25) });
+  S.crowd = [['An employer', C.violet], ['A neighbour', C.amber], ['An ex', C.rose], ['A stranger', C.slate], ['A colleague', C.sky], ['You', C.green]].map(([n, c]) => cursor(overlay, n, c, { size: V(1.1, 1.2) }));
+}, (lt, S) => {
+  const cam = camAt(lt);
+  set(world, { transform: `translate(${CX}px, ${CY}px) scale(${cam.z}) translate(${-cam.cx}px, ${-cam.cy}px)` });
+  const toScreen = (wx, wy) => [CX + (wx - cam.cx) * cam.z, CY + (wy - cam.cy) * cam.z];
+  // her cursor highlights "launched Marrify" in the real paragraph (0.6 - 1.8 s)
+  const hp = eIO(prog(lt, 0.9, 1.6));
+  set(S.hl, { width: (250 * hp) + 'px' });
+  const hx = WORLD.article.x - 640 + 512, hy = WORLD.article.y - 330 + 300;
+  const mp = eOut(prog(lt, 0.2, 0.9));
+  const [mx, my] = toScreen(hx + 250 * hp, hy);
+  S.me.draw(lerp(mx + V(420, 200), mx, mp), lerp(my + V(260, 300), my, mp), 1, lt < 2.9 ? 1 : 1 - prog(lt, 2.9, 3.2));
+  rise(S.h1.words, lt, 0.3); set(S.h1.e, { opacity: lt < 2.3 ? 1 : 0 });
+  // the crowd converges on the real search box from every edge (3.4 - 5.2 s), springy, out of order
+  const order = [2, 0, 4, 1, 5, 3];
+  S.crowd.forEach((c, i) => {
+    const a = (i / 6) * Math.PI * 2 + 0.5;
+    const slot = [0, 1, 2, 3, 4, 5][i], cols = V(6, 3);
+    const target = [S.box.x0 + 40 + (slot % cols) * (S.box.w - 140) / (cols - 1) * 0.92, S.box.y0 + S.box.h + 8 + Math.floor(slot / cols) * 120 + hash(i + 5) * 20];
+    const [tx, ty] = toScreen(target[0], target[1]);
+    const fx = CX + Math.cos(a) * V(1300, 900), fy = CY + Math.sin(a) * V(800, 1300);
+    const t0 = 3.4 + order[i] * 0.13, sp = spring(lt - t0, 1.5, 0.62);
+    const x = lerp(fx, tx, sp), y = lerp(fy, ty, sp) - Math.sin(clamp(sp) * Math.PI) * 60;
+    const hold = lt > 5.6 ? eIn(prog(lt, 5.6, 6.1)) : 0;
+    const land = lt - t0 - 0.55, press = land > 0 && land < 0.12 ? 0.9 : 1;
+    c.draw(x, y + hold * 30, press, lt < t0 ? 0 : 1 - hold);
+  });
+  rise(S.h2.words, lt, 3.6); set(S.h2.e, { opacity: lt < 3.5 || lt >= 5.9 ? 0 : 1 });
+  set(S.ill, { opacity: lt > 3.9 && lt < 5.9 ? 1 : 0 });
+  // columns lock one by one and fold away, leaving only the status (7.3 - 8.8 s)
+  let x = 30;
+  S.cols.forEach((c, ci) => {
+    const isStatus = c.name === 'Status';
+    const t0 = 7.9 + ci * 0.16;
+    const lockOn = !isStatus && lt > t0;
+    c.hd.style.display = lockOn ? 'none' : 'block'; c.lk.style.display = lockOn ? 'block' : 'none';
+    const fold = isStatus ? 0 : eIO(prog(lt, t0 + 0.25, t0 + 0.7));
+    c.rows.forEach(rw => { rw.style.opacity = isStatus ? 1 : 1 - eOut(prog(lt, t0, t0 + 0.2)); });
+    const w = lerp(c.w, 40 + c.name.length * 12, fold);
+    set(c.col, { left: x + 'px', width: w + 'px' }); x += w + lerp(20, 12, fold);
+  });
+  const sw = x + 20;
+  const shrink = eIO(prog(lt, 9.0, 9.6));
+  const st = S.cols.find(c => c.name === 'Status');
+  st.rows.forEach((rw, ri) => { if (ri !== 1) rw.style.opacity = 1 - shrink; else rw.style.top = lerp(158, 100, shrink) + 'px'; });
+  set(S.rowHL, { top: lerp(160, 108, shrink) + 'px', opacity: 1 - shrink });
+  set(S.src3, { opacity: 1 - eOut(prog(lt, 7.9, 8.3)) });
+  set(S.T, { width: sw + 'px', left: (WORLD.table.x - sw / 2) + 'px', height: lerp(400, 172, shrink) + 'px', top: (WORLD.table.y - lerp(200, 86, shrink)) + 'px' });
+  rise(S.h3a.words, lt, 6.45); set(S.h3a.e, { opacity: lt < 6.4 || lt >= 7.9 ? 0 : 1 });
+  rise(S.h3.words, lt, 8.0); set(S.h3.e, { opacity: lt < 7.95 ? 0 : 1 });
+});
+// ---- reciprocity (portrait still, 11 - 14): a phone notification, illustration
+scene('both', 11, 14, (r, S) => {
+  S.h = headline(r, `Transparency ${acc(C.green, 'runs both ways.')}`, { x: CX, y: V(140, 300), size: V(84, 84) });
+  if (PORTRAIT) { S.h.e.innerHTML = `Transparency<br><span style="color:${C.green}">runs both ways.</span>`; wrapWords(S.h.e); S.h.words = [...S.h.e.querySelectorAll('.w')]; }
+  const pw = V(560, 640), ph = V(760, 900);
+  S.ph = el('div', { left: (CX - pw / 2) + 'px', top: V(300, 620) + 'px', width: pw + 'px', height: ph + 'px', borderRadius: '64px', background: '#F1F1F1', boxShadow: 'inset 0 0 0 14px #111' }, '', r);
+  S.n = el('div', { left: (CX - pw / 2 + 40) + 'px', top: V(420, 790) + 'px', width: (pw - 80) + 'px', padding: '26px 28px', fontSize: V(27, 30) + 'px', lineHeight: 1.25 }, `<div class="mono" style="font-size:17px;margin-bottom:10px">Records · now</div><div style="font-weight:600">Someone looked up your marriage record.</div><div style="color:#777;margin-top:6px"></div>`, r); S.n.className = 'card';
+  S.ill = el('div', { left: 0, width: W + 'px', textAlign: 'center', top: V(1000, 1600) + 'px', fontSize: '26px' }, 'Illustration · what she asks for', r); S.ill.className = 'mono';
+  S.me = cursor(r, 'Gbemi', C.ink, { avatar: CUT + 'f_311.32.png', size: 1.25 });
+}, (lt, S) => {
+  rise(S.h.words, lt, 0.1);
+  const p = spring(lt - 0.5, 1.8, 0.6); set(S.n, { transform: `translateY(${(1 - p) * -80}px)`, opacity: clamp(p * 2) });
+  S.me.draw(V(1200, 640), V(560, 1060) + (1 - eOut(prog(lt, 0.8, 1.5))) * 200, 1, 1);
+});
+</script></body></html>

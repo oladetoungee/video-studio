@@ -1,0 +1,39 @@
+1
+00:00:00,080 --> 00:00:02,790
+what I find even interesting is how AI is
+
+2
+00:00:02,790 --> 00:00:04,400
+literally on both sides
+
+3
+00:00:04,400 --> 00:00:06,850
+for example the PHP2Shell loopholes were
+
+4
+00:00:06,850 --> 00:00:09,620
+found with help from AI and here AI is also
+
+5
+00:00:09,620 --> 00:00:10,960
+being used by the attackers
+
+6
+00:00:10,960 --> 00:00:12,510
+so the same tools that are helping the
+
+7
+00:00:12,510 --> 00:00:14,720
+defenders find the bugs faster are also
+
+8
+00:00:14,720 --> 00:00:17,170
+helping the attackers break in faster
+
+9
+00:00:17,170 --> 00:00:19,130
+so it's almost like this back and forth
+
+10
+00:00:19,130 --> 00:00:19,767
+situation

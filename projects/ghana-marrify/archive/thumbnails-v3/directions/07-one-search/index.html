@@ -1,0 +1,20 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../lib/r3.css"><style>
+.t{--ground:#F4F4F4;--fg:#111114;--accent:#16A34A}
+.hd{left:0;right:0;top:50px;text-align:center;font-size:98px;color:var(--fg)}
+.hd .acc{color:var(--accent)}
+.sbar{left:110px;top:210px;width:1060px;box-shadow:0 14px 40px rgba(0,0,0,.12)}
+.sbar .go{--go:#FF4713}
+.critter{left:170px;top:372px;width:260px;height:325px}
+.critter2{left:840px;top:452px;width:200px;height:250px}
+.say{left:470px;top:470px;font-size:64px;background:#fff;color:#111114;padding:18px 26px;border-radius:18px;box-shadow:0 10px 30px rgba(0,0,0,.12)}
+.say .stamp{font-size:80px;margin-left:10px;vertical-align:-6px;--srot:-5deg}
+.gh{left:372px;top:350px;width:110px;height:74px;transform:rotate(10deg)}
+.illb{right:24px;bottom:16px;color:#9a958a}
+</style></head><body><div class="t">
+<div class="abs hd isans nw" data-move="headline"><span data-k="line1"></span> <span class="acc" data-k="line2"></span></div>
+<div class="sbar " data-move="searchbar"><svg viewBox="0 0 24 24" width="52" height="52"><circle cx="10" cy="10" r="7" fill="none" stroke="#111114" stroke-width="2.8"/><path d="M15.5 15.5 L22 22" stroke="#111114" stroke-width="2.8" stroke-linecap="round"/></svg><span class="q" data-k="s_q"></span><span class="cur"></span><div class="go" data-k="s_go"></div></div>
+<svg class="abs critter" data-move="record" viewBox="0 0 200 250"><path d="M0 0 H150 L200 50 V250 H0 Z" fill="#E8352B"/><path d="M150 0 V50 H200 Z" fill="#B3261E"/><ellipse cx="62" cy="120" rx="30" ry="34" fill="#fff"/><ellipse cx="138" cy="120" rx="30" ry="34" fill="#fff"/><circle cx="74" cy="126" r="15" fill="#111114"/><circle cx="150" cy="126" r="15" fill="#111114"/></svg>
+<div class="abs say" data-move="answer"><span data-k="ans1"></span><span class="stamp" data-k="ans2"></span></div>
+<span class="flag gh" data-flag="gh" data-move="flag"></span>
+<div class="abs ill illb">Illustration</div>
+</div><script src="../../lib/flags.js"></script><script src="../../lib/bind.js"></script></body></html>

@@ -1,0 +1,29 @@
+{
+  "direction": "Photo background, natural colour (no wash): she holds her palms up, the cracked generic elephant floats beside her, and the topic sits on a dark band across the bottom in mixed type. Honest wording: PHP had a hole, it was not 'hacked'. References: viral 5 (topic named, the scene shows it), her database-indexes thumbnail (one literal object).",
+  "thumbnail_text": "A security hole in PHP",
+  "titles": [
+    "PHP2Shell Explained: The PHP Flaw and October's Other Hacks",
+    "PHP Vulnerability 2026: How to Check and Patch PHP2Shell"
+  ],
+  "title": "PHP2Shell Explained: The PHP Flaw and October's Other Hacks",
+  "kind": "photo",
+  "text": {
+    "hd": "<span class=\"serif\">a security hole in</span> <span class=\"acc\">PHP</span>"
+  },
+  "images": {
+    "bg": "../../assets/scene/gbemi-176.6.jpg",
+    "me": "../../assets/scene/gbemi-176.6-person.png",
+    "elephant": "../../assets/draw/elephant-cracked.svg"
+  },
+  "vars": {
+    "--ground": "#16110D",
+    "--fg": "#fff",
+    "--accent": "#FF7A45",
+    "--dim": "rgba(22,17,13,.25)",
+    "--sc": "1.0",
+    "--sc-x": "0px",
+    "--sc-y": "0px"
+  },
+  "scores": "cold critic R1 5 · R2 6.5",
+  "recommended": false
+}

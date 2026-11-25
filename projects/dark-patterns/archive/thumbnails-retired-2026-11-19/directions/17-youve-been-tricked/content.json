@@ -1,0 +1,35 @@
+{
+ "direction": "Gbemi in her real room (29 Oct shoot 1559, palm up, 'see?'), room dimmed a little behind the words, she natural. One white lowercase line across the top: 'online shops tricked you.'; on her open palm a small generic checkout card with two pre-ticked extras (Gift wrap +€2.99, Fast delivery +€4.99).",
+ "thumbnail_text": "online shops tricked you.",
+ "kind": "photo (her room)",
+ "recommended": false,
+ "titles": [
+  "I Fell for These Shopping Tricks. Here's How They Work",
+  "Dark Patterns Explained: 11 Tricks Websites Use on You",
+  "The Sneaky Design Tricks in Every Shopping App"
+ ],
+ "text": {
+  "hd": "online shops tricked you.",
+  "aside": "",
+  "k": "AT CHECKOUT",
+  "r1": "Gift wrap +€2.99",
+  "r2": "Fast delivery +€4.99"
+ },
+ "images": {
+  "room": "../../assets/shoot/1559.jpg",
+  "me": "../../assets/shoot/1559-person.png"
+ },
+ "vars": {
+  "--pw": "1280px",
+  "--pl": "0px",
+  "--pt": "-150px",
+  "--dim": "rgba(10,8,6,.55)",
+  "--ground": "#3A3632"
+ },
+ "board": "pick1119-10 ('i tried 6 design tricks to make my home look expensive': her in a warm real room, 'this works.' across the top, a handwritten 'thank me later!' beside her)",
+ "fonts": "Font 69 (Poppins Bold lowercase, Thumbnails 96); card text Font 58 (Inter Tight, black on light)",
+ "colours": "Font 69 specimen: white #FFFFFF words on dark #3A3632 (her room dimmed); Font 48: white handwriting",
+ "title": "I Fell for These Shopping Tricks. Here's How They Work",
+ "class": "no-lift",
+ "scores": ""
+}

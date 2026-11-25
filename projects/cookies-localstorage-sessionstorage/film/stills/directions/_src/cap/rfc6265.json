@@ -1,0 +1,34 @@
+{
+ "title": "RFC 6265: HTTP State Management Mechanism | RFC Editor",
+ "h1": "RFC 6265:      HTTP State Management Mechanism",
+ "h1y": 123,
+ "found": {
+  "4096 bytes": [
+   [
+    218.78125,
+    35166.84375,
+    95.1875,
+    19
+   ]
+  ]
+ },
+ "H": 49796,
+ "focus": {
+  "4096 bytes": {
+   "file": "rfc6265__4096-bytes.png",
+   "top": 34646.84375,
+   "rects": [
+    [
+     218.78125,
+     520,
+     95.1875,
+     19
+    ]
+   ]
+  }
+ },
+ "clipTop": 3,
+ "scale": 1.5,
+ "url": "https://www.rfc-editor.org/rfc/rfc6265",
+ "captured": "2026-11-02T19:33:48.905Z"
+}

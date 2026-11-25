@@ -1,0 +1,27 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../lib/r2.css"><style>
+.t{--ground:#141414;--fg:#F7F5F0;--accent:#FFD23F}
+.l{position:absolute;left:0;top:0;width:640px;height:720px;background:#E7DFCC}
+.r{position:absolute;left:640px;top:0;width:640px;height:720px;background:#16181A}
+.lab{top:40px;font-size:76px}
+.lab.a{left:48px;color:#141414}.lab.b{left:688px;color:var(--fg)}
+.box{position:absolute;left:150px;top:220px;width:340px;height:230px}
+.box .f{position:absolute;left:0;width:340px;height:44px;background:#C9A86A;border:3px solid #141414;border-radius:3px}
+.box .f::before{content:'';position:absolute;left:24px;top:-14px;width:90px;height:14px;background:#C9A86A;border:3px solid #141414;border-bottom:0;border-radius:3px 3px 0 0}
+.box .k{position:absolute;left:-20px;top:150px;width:380px;height:100px;background:#8E6B3A;border:3px solid #141414}
+.box .k::after{content:'';position:absolute;left:150px;top:30px;width:80px;height:26px;border:3px solid #141414;background:#E7DFCC}
+.cap{font-size:52px;width:560px}
+.cap.a{left:50px;top:540px;color:#141414}.cap.b{left:690px;top:540px;color:var(--accent)}
+.ph{position:absolute;left:840px;top:130px;width:240px;height:370px;border:5px solid #F7F5F0;border-radius:34px;background:#2a2d31;overflow:hidden}
+.ph .s{margin:46px 16px 0;height:44px;border-radius:8px;background:#FFFDF6;display:flex;align-items:center;padding:0 12px;font-family:'Archivo';font-weight:600;font-size:20px;color:#111}
+.ph .row{margin:12px 16px 0;height:40px;border-radius:6px;background:#3b3f44;display:flex;align-items:center;gap:8px;padding:0 10px;font-family:'Archivo';font-weight:700;font-size:16px;color:#F7F5F0}
+.ph .row i{display:block;height:12px;background:#666;border-radius:2px;flex:1}
+.mk{left:690px;top:676px;font-size:13px;color:rgba(247,245,240,.5)}
+.mk2{left:50px;top:676px;font-size:13px;color:rgba(20,20,20,.5)}
+</style></head><body><div class="t">
+<div class="l"></div><div class="r"></div>
+<div class="abs lab a anton nw" data-k="left"></div><div class="abs lab b anton nw" data-k="right"></div>
+<div class="box" data-move="archive"><div class="f" style="top:0"></div><div class="f" style="top:50px"></div><div class="f" style="top:100px"></div><div class="k"></div></div>
+<div class="ph" data-move="phone"><div class="s" data-k="query"></div><div class="row"><span data-k="r1"></span><i></i></div><div class="row"><span data-k="r2"></span><i></i></div></div>
+<div class="abs cap a hand" data-k="capL"></div><div class="abs cap b hand" data-k="capR"></div>
+<div class="abs mk mono" data-k="label"></div>
+</div><script src="../../lib/bind.js"></script></body></html>

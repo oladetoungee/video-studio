@@ -1,0 +1,19 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../lib/oa.css"><style>
+.hd{left:0;width:1280px;text-align:center;top:8px;font-size:112px;line-height:.9;color:var(--fg)}
+.grid{position:absolute;display:grid;grid-template-columns:repeat(5,52px);gap:10px}
+.grid i{width:52px;height:40px;border-radius:5px;background:#3A332D;border-top:8px solid #5A5048}
+.grid i.r{background:#C8320C;border-top-color:#FF6A3A}
+.g1{left:40px;top:270px}.g2{left:960px;top:270px}
+.bot{left:540px;top:236px;width:0}
+.robot{left:52px;top:520px;width:150px}.robot2{left:1080px;top:520px;width:150px}
+.price{position:absolute;left:880px;top:570px;rotate:-6deg;background:#EFE7D8;color:#16110D;padding:10px 22px;border-radius:10px;font:400 50px/1 'Anton';white-space:nowrap;box-shadow:0 12px 24px rgba(0,0,0,.4)}
+.price small{display:block;font:600 22px/1.2 'Mono';color:#5C5248;margin-top:4px}
+</style></head><body><div class="t">
+<div class="scene" data-move="photo"><img class="bg" data-img="bg" alt=""><div class="wash"></div><div class="dim"></div><div class="grid g1" data-move="sites-left"></div><div class="grid g2" data-move="sites-right"></div><img class="me-c" data-img="me" alt=""></div>
+<div class="hd z3 shadow-t" data-k="hd"></div>
+<div class="price z4" data-move="price"><span data-k="price"></span><small data-k="pricenote"></small></div>
+</div><script src="../../lib/bind.js"></script></body></html>
+<script>
+for (const [sel, red] of [['.g1',[0,2,3,6,7,9,11,12,14,16,17,19,21,22,24]],['.g2',[1,2,4,5,8,10,12,13,15,17,18,20,23,24]]]) {
+  const g=document.querySelector(sel); for(let i=0;i<25;i++){const e=document.createElement('i'); if(red.includes(i)) e.className='r'; g.appendChild(e);} }
+</script>

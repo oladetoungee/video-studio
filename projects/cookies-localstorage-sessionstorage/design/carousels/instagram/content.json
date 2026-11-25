@@ -1,0 +1,210 @@
+{
+  "_help": "Edit text here (or in the studio), then run: node shared/build.mjs instagram (from design/carousels). Markup: *word* = light contrast words, {g:word} green, {r:word} red, `code` mono, \\n = line break.",
+  "deck": "instagram",
+  "width": 1080,
+  "height": 1350,
+  "accent": "#E5262A",
+  "accentOnInk": "#E5262A",
+  "docTitle": "Cookies vs localStorage vs sessionStorage",
+  "slides": [
+    {
+      "layout": "cover",
+      "ground": "concrete",
+      "kicker": "Where browsers keep data",
+      "title": "Login, cart, checkout form. *Where does a website keep them?*",
+      "size": 92,
+      "sub": "Pick the wrong one and a half-filled form disappears when the tab closes.",
+      "subSize": 38,
+      "board": {
+        "cols": [
+          "Refresh",
+          "Close tab"
+        ],
+        "rows": [
+          {
+            "k": "Login",
+            "v": "HttpOnly cookie",
+            "r": [
+              "ok",
+              "ok"
+            ]
+          },
+          {
+            "k": "Cart",
+            "v": "localStorage",
+            "r": [
+              "ok",
+              "ok"
+            ]
+          },
+          {
+            "k": "Checkout form",
+            "v": "sessionStorage",
+            "r": [
+              "ok",
+              "gone"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "layout": "statement",
+      "ground": "ink",
+      "title": "HTTP doesn't *remember* you",
+      "size": 132,
+      "body": "Logging in and clicking My Orders are two separate requests. So the browser has to remind the server it's still you.",
+      "code": [
+        "Request 1:  log in",
+        "Request 2:  My Orders",
+        "Server:  *who is this?*"
+      ]
+    },
+    {
+      "layout": "ticket",
+      "ground": "concrete",
+      "tag": "Cookies",
+      "title": "A cookie works like a cloakroom ticket",
+      "size": 100,
+      "ticket": {
+        "label": "Cookie",
+        "no": "117"
+      },
+      "body": "The staff don't remember your face, they use your ticket number. Your browser shows its cookie on every request to that site the same way."
+    },
+    {
+      "layout": "number",
+      "ground": "concrete",
+      "title": "Cookies are *tiny*",
+      "size": 110,
+      "big": "4 KB",
+      "of": "per cookie, and it goes with every request to that site",
+      "body": "Browsers must allow at least 4,096 bytes per cookie. Source: RFC 6265, section 6.1."
+    },
+    {
+      "layout": "statement",
+      "ground": "concrete",
+      "title": "Your login cookie usually holds just *an ID*",
+      "size": 112,
+      "code": [
+        "Cookie: *session_id=8f3a1c77*"
+      ],
+      "body": "The server keeps the real details about you and uses that ID to look them up, the same way the cloakroom uses the number to find your coat."
+    },
+    {
+      "layout": "survive",
+      "ground": "concrete",
+      "tag": "localStorage",
+      "title": "localStorage is why your cart is *still there tomorrow*",
+      "size": 92,
+      "object": {
+        "img": "cart-yellow.png",
+        "w": 360,
+        "label": "Browser closed"
+      },
+      "stamp": "Still there",
+      "body": "localStorage stays until your code removes it or you clear your browser data. Closing the tab, or the whole browser, doesn't clear it."
+    },
+    {
+      "layout": "number",
+      "ground": "concrete",
+      "title": "localStorage holds *a lot more than a cookie*",
+      "size": 104,
+      "big": "5 MB",
+      "of": "per site",
+      "body": "It varies by browser. localStorage only stores strings, and it never goes to the server unless your code sends it. Source: MDN, Storage quotas."
+    },
+    {
+      "layout": "test",
+      "ground": "concrete",
+      "tag": "sessionStorage",
+      "title": "sessionStorage belongs to one tab",
+      "size": 100,
+      "form": {
+        "label": "Checkout form",
+        "fields": [
+          "Ada Okafor",
+          "Tartu mnt 12",
+          "Tallinn"
+        ]
+      },
+      "tests": [
+        {
+          "name": "Refresh",
+          "result": "ok",
+          "stamp": "Still there"
+        },
+        {
+          "name": "Close tab",
+          "result": "gone",
+          "stamp": "Gone"
+        }
+      ],
+      "body": "That's why a half-filled checkout form can disappear when you close the tab. A second tab you open yourself gets its own sessionStorage."
+    },
+    {
+      "layout": "read",
+      "ground": "concrete",
+      "tag": "Who can read it",
+      "title": "Every script on your page can read localStorage",
+      "size": 96,
+      "panel": {
+        "title": "localStorage",
+        "rows": [
+          [
+            "cart",
+            "2 items"
+          ],
+          [
+            "theme",
+            "dark"
+          ]
+        ]
+      },
+      "scripts": [
+        "your-app.js",
+        "analytics.js",
+        "chat-widget.js"
+      ],
+      "body": "Analytics scripts and chat widgets too, so it's not a place for anything secret. Cookies can be read as well, unless the server marks them HttpOnly."
+    },
+    {
+      "layout": "end",
+      "ground": "ink",
+      "title": "Which one to use",
+      "size": 104,
+      "board": {
+        "cols": [
+          "Close tab"
+        ],
+        "rows": [
+          {
+            "k": "Login",
+            "v": "HttpOnly cookie",
+            "r": [
+              "ok"
+            ]
+          },
+          {
+            "k": "Cart",
+            "v": "localStorage",
+            "r": [
+              "ok"
+            ]
+          },
+          {
+            "k": "Checkout form",
+            "v": "sessionStorage",
+            "r": [
+              "gone"
+            ]
+          }
+        ]
+      },
+      "body": "sessionStorage is for things that only matter in this tab. localStorage is for things you still want tomorrow.",
+      "where": "Full video on YouTube",
+      "handle": "@WithGbemi",
+      "me": "headshot-cut.png"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+ "direction": "14 (2026-11-19): copies pick1119-35 (Spec-Driven Development explained: three stacked white word boxes on the left, the presenter on the right explaining with his hand). Her room (shoot 1550, mid-explanation, hand out) dimmed to the specimen's warm grey, she stays natural; three white boxes: your browser / remembers / you.",
+ "thumbnail_text": "how does / your browser / remember you?",
+ "kind": "photo",
+ "recommended": false,
+ "titles": [
+  "Cookies vs localStorage vs sessionStorage, Simply Explained",
+  "Cookies, localStorage and sessionStorage in 5 Minutes",
+  "How Websites Remember You: Cookies and localStorage"
+ ],
+ "text": {
+  "l1": "how does",
+  "l2": "your browser",
+  "l3": "remember you?"
+ },
+ "images": {
+  "room": "../../assets/shoot/1550.jpg",
+  "me": "../../assets/shoot/1550-person.png"
+ },
+ "vars": {
+  "--pw": "1480px",
+  "--pl": "80px",
+  "--pt": "-230px",
+  "--dim": "rgba(62,52,46,.78)",
+  "--ground": "#3E342E"
+ },
+ "board": "pick1119-35 (Spec-Driven Development: AI Assisted Coding Explained)",
+ "fonts": "Font 39 (shorts-05: TikTok Sans in a white box, black words)",
+ "colours": "Font 39 specimen: white boxes, #111 words, warm grey ground #6B6059 (the room is dimmed toward it)",
+ "title": "Cookies vs localStorage vs sessionStorage, Simply Explained",
+ "class": "no-lift",
+ "titles_before_2026_11_19": [
+  "How Your Browser Remembers You (Cookies Explained)",
+  "Cookies vs localStorage vs sessionStorage, Simply Explained",
+  "How Websites Remember You: Cookies and localStorage"
+ ]
+}

@@ -1,0 +1,3 @@
+Fonts for the ux-research direction pages (downloaded from github.com/google/fonts, 2026-10-13):
+Permanent Marker (Apache 2.0) · Caveat, Courier Prime, Schibsted Grotesk, Young Serif, Hanken Grotesk, JetBrains Mono (SIL OFL 1.1).
+Helvetica Neue (shorts captions) is a macOS system font, loaded with local() only, never copied here.

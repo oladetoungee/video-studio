@@ -1,0 +1,774 @@
+{
+ "TOTAL": 302.683,
+ "INTRO": 0.5,
+ "OUTRO": 5,
+ "FPS": 30,
+ "CUES": [
+  {
+   "name": "pop",
+   "t": 0.36,
+   "db": -5
+  },
+  {
+   "name": "type",
+   "t": 3.85,
+   "db": -4,
+   "n": 8,
+   "d": 0.467
+  },
+  {
+   "name": "blink",
+   "t": 6.39,
+   "db": -6
+  },
+  {
+   "name": "whoosh",
+   "t": 10.51,
+   "db": -10
+  },
+  {
+   "name": "pop",
+   "t": 14.01,
+   "db": -3
+  },
+  {
+   "name": "pen",
+   "t": 16.37,
+   "db": -2
+  },
+  {
+   "name": "pop",
+   "t": 18.78,
+   "db": -6
+  },
+  {
+   "name": "pop",
+   "t": 22.23,
+   "db": -2
+  },
+  {
+   "name": "whoosh",
+   "t": 24.88,
+   "db": -6
+  },
+  {
+   "name": "whoosh",
+   "t": 28.85,
+   "db": -2
+  },
+  {
+   "name": "pop",
+   "t": 32.58,
+   "db": -5
+  },
+  {
+   "name": "impact",
+   "t": 36.52,
+   "db": -12
+  },
+  {
+   "name": "pop",
+   "t": 39.35,
+   "db": -4
+  },
+  {
+   "name": "blink",
+   "t": 42.515,
+   "db": -2
+  },
+  {
+   "name": "pen",
+   "t": 45.3,
+   "db": -1
+  },
+  {
+   "name": "lid",
+   "t": 49.86,
+   "db": -2
+  },
+  {
+   "name": "pop",
+   "t": 52.97,
+   "db": -3
+  },
+  {
+   "name": "pop",
+   "t": 55.48,
+   "db": -3
+  },
+  {
+   "name": "whoosh",
+   "t": 62.93,
+   "db": -10
+  },
+  {
+   "name": "pop",
+   "t": 67.32,
+   "db": -3
+  },
+  {
+   "name": "pop",
+   "t": 69.98,
+   "db": -3
+  },
+  {
+   "name": "pop",
+   "t": 72.58,
+   "db": -5
+  },
+  {
+   "name": "impact",
+   "t": 77.087,
+   "db": -12
+  },
+  {
+   "name": "blink",
+   "t": 80.4,
+   "db": -2
+  },
+  {
+   "name": "pop",
+   "t": 84.536,
+   "db": -3
+  },
+  {
+   "name": "dive",
+   "t": 90.28,
+   "db": -3
+  },
+  {
+   "name": "pop",
+   "t": 92.85,
+   "db": -6
+  },
+  {
+   "name": "whoosh",
+   "t": 97.3,
+   "db": -2
+  },
+  {
+   "name": "pen",
+   "t": 99.78,
+   "db": -2
+  },
+  {
+   "name": "impact",
+   "t": 103.36,
+   "db": -12
+  },
+  {
+   "name": "crowd",
+   "t": 111.08,
+   "db": -2
+  },
+  {
+   "name": "pop",
+   "t": 115.61,
+   "db": -5
+  },
+  {
+   "name": "pop",
+   "t": 118.53,
+   "db": -4
+  },
+  {
+   "name": "pop",
+   "t": 122.34,
+   "db": -6
+  },
+  {
+   "name": "pop",
+   "t": 125.22,
+   "db": -3
+  },
+  {
+   "name": "pop",
+   "t": 128.5,
+   "db": -8
+  },
+  {
+   "name": "pop",
+   "t": 133.54,
+   "db": -5
+  },
+  {
+   "name": "whoosh",
+   "t": 136,
+   "db": -8
+  },
+  {
+   "name": "lid",
+   "t": 141.06,
+   "db": -2
+  },
+  {
+   "name": "pop",
+   "t": 147.996,
+   "db": -6
+  },
+  {
+   "name": "type",
+   "t": 152.21,
+   "db": -6,
+   "n": 4,
+   "d": 0.333
+  },
+  {
+   "name": "lid",
+   "t": 154.74,
+   "db": -2
+  },
+  {
+   "name": "whoosh",
+   "t": 161.17,
+   "db": -6
+  },
+  {
+   "name": "type",
+   "t": 165.37,
+   "db": -6,
+   "n": 23,
+   "d": 1.5
+  },
+  {
+   "name": "click",
+   "t": 169.97,
+   "db": -2
+  },
+  {
+   "name": "click",
+   "t": 171.28,
+   "db": -2
+  },
+  {
+   "name": "click",
+   "t": 173.34,
+   "db": -2
+  },
+  {
+   "name": "dive",
+   "t": 174.88,
+   "db": -3
+  },
+  {
+   "name": "whoosh",
+   "t": 180.615,
+   "db": -3
+  },
+  {
+   "name": "pop",
+   "t": 183.69,
+   "db": -3
+  },
+  {
+   "name": "pop",
+   "t": 187.93,
+   "db": -4
+  },
+  {
+   "name": "pop",
+   "t": 190.53,
+   "db": -3
+  },
+  {
+   "name": "impact",
+   "t": 193.55,
+   "db": -10
+  },
+  {
+   "name": "pen",
+   "t": 196.15,
+   "db": -3
+  },
+  {
+   "name": "pop",
+   "t": 200.92,
+   "db": -4
+  },
+  {
+   "name": "pop",
+   "t": 206.37,
+   "db": -2
+  },
+  {
+   "name": "pop",
+   "t": 210.28,
+   "db": -6
+  },
+  {
+   "name": "impact",
+   "t": 213.44,
+   "db": -9
+  },
+  {
+   "name": "lid",
+   "t": 217.46,
+   "db": -2
+  },
+  {
+   "name": "pop",
+   "t": 223.31,
+   "db": -6
+  },
+  {
+   "name": "pop",
+   "t": 232.93,
+   "db": -4
+  },
+  {
+   "name": "pop",
+   "t": 243.116,
+   "db": -3
+  },
+  {
+   "name": "lid",
+   "t": 248.66,
+   "db": -2
+  },
+  {
+   "name": "whoosh",
+   "t": 252.1,
+   "db": -10
+  },
+  {
+   "name": "impact",
+   "t": 257.41,
+   "db": -8
+  },
+  {
+   "name": "pop",
+   "t": 260.281,
+   "db": -6
+  },
+  {
+   "name": "impact",
+   "t": 264.05,
+   "db": -10
+  },
+  {
+   "name": "whoosh",
+   "t": 268.14,
+   "db": -10
+  },
+  {
+   "name": "lid",
+   "t": 271.76,
+   "db": -2
+  },
+  {
+   "name": "blink",
+   "t": 275.757,
+   "db": -2
+  },
+  {
+   "name": "pop",
+   "t": 281.44,
+   "db": -6
+  },
+  {
+   "name": "whoosh",
+   "t": 284.59,
+   "db": -4
+  },
+  {
+   "name": "impact",
+   "t": 289.78,
+   "db": -10
+  },
+  {
+   "name": "pop",
+   "t": 292.83,
+   "db": -4
+  },
+  {
+   "name": "pop",
+   "t": 298.083,
+   "db": -4
+  },
+  {
+   "name": "lid",
+   "t": 302.233,
+   "db": -4
+  }
+ ],
+ "SCENES": [
+  {
+   "n": 1,
+   "id": "gather",
+   "start": 0,
+   "end": 3.45,
+   "ground": "white",
+   "label": "blink",
+   "trans": "cut"
+  },
+  {
+   "n": 2,
+   "id": "platform",
+   "start": 3.45,
+   "end": 10.25,
+   "ground": "white2",
+   "label": "blink",
+   "trans": "cut"
+  },
+  {
+   "n": 3,
+   "id": "launch",
+   "start": 10.25,
+   "end": 13.91,
+   "ground": "white",
+   "label": "blink",
+   "trans": "cut"
+  },
+  {
+   "n": 4,
+   "id": "read",
+   "start": 13.91,
+   "end": 18.66,
+   "ground": "white2",
+   "label": "blink",
+   "trans": "cut"
+  },
+  {
+   "n": 5,
+   "id": "sources",
+   "start": 18.66,
+   "end": 25.87,
+   "ground": "white",
+   "label": "blink",
+   "trans": "cut"
+  },
+  {
+   "n": 6,
+   "id": "kinds",
+   "start": 25.87,
+   "end": 32.43,
+   "ground": "white2",
+   "label": "blink",
+   "trans": "cut"
+  },
+  {
+   "n": 7,
+   "id": "licensed",
+   "start": 32.43,
+   "end": 37.38,
+   "ground": "white",
+   "label": "blink",
+   "trans": "cut"
+  },
+  {
+   "n": 8,
+   "id": "african",
+   "start": 37.38,
+   "end": 41.42,
+   "ground": "white2",
+   "label": "blink",
+   "trans": "cut"
+  },
+  {
+   "n": 9,
+   "id": "finally",
+   "start": 41.42,
+   "end": 43.98,
+   "ground": "white",
+   "label": "blink",
+   "trans": "cut"
+  },
+  {
+   "n": 10,
+   "id": "drawbacks",
+   "start": 43.98,
+   "end": 49.98,
+   "ground": "white2",
+   "label": "blink",
+   "trans": "cut"
+  },
+  {
+   "n": 11,
+   "id": "estonia",
+   "start": 49.98,
+   "end": 55.38,
+   "ground": "white",
+   "label": "blink",
+   "trans": "cut"
+  },
+  {
+   "n": 12,
+   "id": "online",
+   "start": 55.38,
+   "end": 71.91,
+   "ground": "white2",
+   "label": "blink",
+   "trans": "cut"
+  },
+  {
+   "n": 13,
+   "id": "ecosystem",
+   "start": 71.91,
+   "end": 79.18,
+   "ground": "white",
+   "label": "blink",
+   "trans": "cut"
+  },
+  {
+   "n": 14,
+   "id": "nigeria",
+   "start": 79.18,
+   "end": 86.307,
+   "ground": "white2",
+   "label": "blink",
+   "trans": "cut"
+  },
+  {
+   "n": 15,
+   "id": "more-of-this",
+   "start": 86.307,
+   "end": 90.58,
+   "ground": "white",
+   "label": "blink",
+   "trans": "cut"
+  },
+  {
+   "n": 16,
+   "id": "one-record",
+   "start": 90.58,
+   "end": 99.42,
+   "ground": "white2",
+   "label": "blink",
+   "trans": "cut"
+  },
+  {
+   "n": 17,
+   "id": "sensitive",
+   "start": 99.42,
+   "end": 104.98,
+   "ground": "white",
+   "label": "blink",
+   "trans": "cut"
+  },
+  {
+   "n": 18,
+   "id": "personal",
+   "start": 104.98,
+   "end": 108.98,
+   "ground": "white2",
+   "label": "blink",
+   "trans": "cut"
+  },
+  {
+   "n": 19,
+   "id": "searchable",
+   "start": 108.98,
+   "end": 112.75,
+   "ground": "white",
+   "label": "blink",
+   "trans": "cut"
+  },
+  {
+   "n": 20,
+   "id": "open-data",
+   "start": 112.75,
+   "end": 121.82,
+   "ground": "white2",
+   "label": "blink",
+   "trans": "cut"
+  },
+  {
+   "n": 21,
+   "id": "public-entity",
+   "start": 121.82,
+   "end": 127.35,
+   "ground": "white",
+   "label": "blink",
+   "trans": "cut"
+  },
+  {
+   "n": 22,
+   "id": "different",
+   "start": 127.35,
+   "end": 130.18,
+   "ground": "white2",
+   "label": "blink",
+   "trans": "cut"
+  },
+  {
+   "n": 23,
+   "id": "balance",
+   "start": 130.18,
+   "end": 141.18,
+   "ground": "white",
+   "label": "blink",
+   "trans": "cut"
+  },
+  {
+   "n": 24,
+   "id": "consent",
+   "start": 141.18,
+   "end": 154.86,
+   "ground": "white2",
+   "label": "blink",
+   "trans": "cut"
+  },
+  {
+   "n": 25,
+   "id": "minimisation",
+   "start": 154.86,
+   "end": 164.18,
+   "ground": "white",
+   "label": "blink",
+   "trans": "cut"
+  },
+  {
+   "n": 26,
+   "id": "free-to-marry",
+   "start": 164.18,
+   "end": 168.29,
+   "ground": "white2",
+   "label": "blink",
+   "trans": "cut"
+  },
+  {
+   "n": 27,
+   "id": "not-required",
+   "start": 168.29,
+   "end": 175.18,
+   "ground": "white",
+   "label": "blink",
+   "trans": "cut"
+  },
+  {
+   "n": 28,
+   "id": "could",
+   "start": 175.18,
+   "end": 184.5,
+   "ground": "white2",
+   "label": "blink",
+   "trans": "cut"
+  },
+  {
+   "n": 29,
+   "id": "minimal-answer",
+   "start": 184.5,
+   "end": 196.56,
+   "ground": "white",
+   "label": "blink",
+   "trans": "cut"
+  },
+  {
+   "n": 30,
+   "id": "access",
+   "start": 196.56,
+   "end": 210.08,
+   "ground": "white2",
+   "label": "blink",
+   "trans": "cut"
+  },
+  {
+   "n": 31,
+   "id": "not-neutral",
+   "start": 210.08,
+   "end": 217.58,
+   "ground": "white",
+   "label": "blink",
+   "trans": "cut"
+  },
+  {
+   "n": 32,
+   "id": "split",
+   "start": 217.58,
+   "end": 232.78,
+   "ground": "white2",
+   "label": "blink",
+   "trans": "cut"
+  },
+  {
+   "n": 33,
+   "id": "tricky",
+   "start": 232.78,
+   "end": 242.38,
+   "ground": "white",
+   "label": "blink",
+   "trans": "cut"
+  },
+  {
+   "n": 34,
+   "id": "cultural",
+   "start": 242.38,
+   "end": 248.78,
+   "ground": "white2",
+   "label": "blink",
+   "trans": "cut"
+  },
+  {
+   "n": 35,
+   "id": "two-way",
+   "start": 248.78,
+   "end": 255.78,
+   "ground": "white",
+   "label": "blink",
+   "trans": "cut"
+  },
+  {
+   "n": 36,
+   "id": "both-ways",
+   "start": 255.78,
+   "end": 258.1,
+   "ground": "white2",
+   "label": "blink",
+   "trans": "cut"
+  },
+  {
+   "n": 37,
+   "id": "reciprocity",
+   "start": 258.1,
+   "end": 267.58,
+   "ground": "white",
+   "label": "blink",
+   "trans": "cut"
+  },
+  {
+   "n": 38,
+   "id": "looked-up",
+   "start": 267.58,
+   "end": 271.88,
+   "ground": "white2",
+   "label": "blink",
+   "trans": "cut"
+  },
+  {
+   "n": 39,
+   "id": "build-it",
+   "start": 271.88,
+   "end": 280.38,
+   "ground": "white",
+   "label": "blink",
+   "trans": "cut"
+  },
+  {
+   "n": 40,
+   "id": "probe",
+   "start": 280.38,
+   "end": 287.48,
+   "ground": "white2",
+   "label": "blink",
+   "trans": "cut"
+  },
+  {
+   "n": 41,
+   "id": "love-it",
+   "start": 287.48,
+   "end": 297.983,
+   "ground": "white",
+   "label": "blink",
+   "trans": "cut"
+  },
+  {
+   "n": 42,
+   "id": "end",
+   "start": 297.983,
+   "end": 302.683,
+   "ground": "white2",
+   "label": "blink",
+   "trans": "cut"
+  }
+ ]
+}

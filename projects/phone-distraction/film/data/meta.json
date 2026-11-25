@@ -1,0 +1,1800 @@
+{
+ "TOTAL": 872.557,
+ "INTRO": 0.4,
+ "OUTRO": 5,
+ "FPS": 30,
+ "CUES": [
+  {
+   "name": "paper",
+   "t": 0.1,
+   "db": -4
+  },
+  {
+   "name": "mark",
+   "t": 5.58,
+   "db": 0
+  },
+  {
+   "name": "print",
+   "t": 8.14,
+   "db": 0
+  },
+  {
+   "name": "clock",
+   "t": 8.64,
+   "db": 0
+  },
+  {
+   "name": "print",
+   "t": 9.1,
+   "db": -4
+  },
+  {
+   "name": "print",
+   "t": 11.05,
+   "db": -2
+  },
+  {
+   "name": "print",
+   "t": 12.78,
+   "db": -2
+  },
+  {
+   "name": "paper",
+   "t": 18.08,
+   "db": -8
+  },
+  {
+   "name": "paper",
+   "t": 33.6,
+   "db": -8
+  },
+  {
+   "name": "paper",
+   "t": 36.147,
+   "db": -8
+  },
+  {
+   "name": "print",
+   "t": 38.57,
+   "db": -3
+  },
+  {
+   "name": "paper",
+   "t": 40.84,
+   "db": -4
+  },
+  {
+   "name": "paper",
+   "t": 46.517,
+   "db": -3
+  },
+  {
+   "name": "stamp",
+   "t": 47.49,
+   "db": -4
+  },
+  {
+   "name": "print",
+   "t": 49.57,
+   "db": 0
+  },
+  {
+   "name": "shutter",
+   "t": 52.87,
+   "db": -2
+  },
+  {
+   "name": "mark",
+   "t": 54.777,
+   "db": 0
+  },
+  {
+   "name": "paper",
+   "t": 57.62,
+   "db": -4
+  },
+  {
+   "name": "paper",
+   "t": 59.547,
+   "db": -4
+  },
+  {
+   "name": "paper",
+   "t": 61.34,
+   "db": -4
+  },
+  {
+   "name": "paper",
+   "t": 65.78,
+   "db": -4
+  },
+  {
+   "name": "paper",
+   "t": 71.69,
+   "db": -3
+  },
+  {
+   "name": "print",
+   "t": 77.61,
+   "db": 0
+  },
+  {
+   "name": "print",
+   "t": 80.09,
+   "db": -2
+  },
+  {
+   "name": "bell",
+   "t": 83.83,
+   "db": -2
+  },
+  {
+   "name": "print",
+   "t": 86.01,
+   "db": 0
+  },
+  {
+   "name": "print",
+   "t": 93.13,
+   "db": 0
+  },
+  {
+   "name": "print",
+   "t": 95.31,
+   "db": -2
+  },
+  {
+   "name": "print",
+   "t": 97.49,
+   "db": -2
+  },
+  {
+   "name": "print",
+   "t": 99.59,
+   "db": 0
+  },
+  {
+   "name": "print",
+   "t": 100.41,
+   "db": -2
+  },
+  {
+   "name": "stamp",
+   "t": 101.95,
+   "db": 0
+  },
+  {
+   "name": "print",
+   "t": 106.69,
+   "db": -3
+  },
+  {
+   "name": "tear",
+   "t": 107.41,
+   "db": 0
+  },
+  {
+   "name": "hit",
+   "t": 110.41,
+   "db": -2
+  },
+  {
+   "name": "print",
+   "t": 110.85,
+   "db": -2
+  },
+  {
+   "name": "tick",
+   "t": 115.13,
+   "db": -4
+  },
+  {
+   "name": "paper",
+   "t": 116.297,
+   "db": -3
+  },
+  {
+   "name": "shutter",
+   "t": 120.72,
+   "db": -3
+  },
+  {
+   "name": "shutter",
+   "t": 125.65,
+   "db": -2
+  },
+  {
+   "name": "paper",
+   "t": 129.52,
+   "db": -6
+  },
+  {
+   "name": "stamp",
+   "t": 131.51,
+   "db": -4
+  },
+  {
+   "name": "pop",
+   "t": 139.887,
+   "db": -2
+  },
+  {
+   "name": "bell",
+   "t": 142.57,
+   "db": -4
+  },
+  {
+   "name": "shutter",
+   "t": 150.01,
+   "db": -4
+  },
+  {
+   "name": "paper",
+   "t": 151.41,
+   "db": -4
+  },
+  {
+   "name": "paper",
+   "t": 154.763,
+   "db": -3
+  },
+  {
+   "name": "paper",
+   "t": 159.383,
+   "db": 0
+  },
+  {
+   "name": "print",
+   "t": 164.89,
+   "db": 0
+  },
+  {
+   "name": "tick",
+   "t": 169.66,
+   "db": 0
+  },
+  {
+   "name": "print",
+   "t": 176.23,
+   "db": -2
+  },
+  {
+   "name": "bell",
+   "t": 177.25,
+   "db": -4
+  },
+  {
+   "name": "paper",
+   "t": 179.36,
+   "db": -5
+  },
+  {
+   "name": "print",
+   "t": 190.89,
+   "db": 0
+  },
+  {
+   "name": "mark",
+   "t": 193.61,
+   "db": -3
+  },
+  {
+   "name": "paper",
+   "t": 195.55,
+   "db": -6
+  },
+  {
+   "name": "stamp",
+   "t": 201.95,
+   "db": -6
+  },
+  {
+   "name": "print",
+   "t": 202.97,
+   "db": 0
+  },
+  {
+   "name": "paper",
+   "t": 205.8,
+   "db": -4
+  },
+  {
+   "name": "notify",
+   "t": 209.91,
+   "db": -2
+  },
+  {
+   "name": "print",
+   "t": 212.45,
+   "db": -2
+  },
+  {
+   "name": "mark",
+   "t": 215.77,
+   "db": 0
+  },
+  {
+   "name": "paper",
+   "t": 217.68,
+   "db": -4
+  },
+  {
+   "name": "tick",
+   "t": 221.57,
+   "db": -2
+  },
+  {
+   "name": "pop",
+   "t": 224.39,
+   "db": -6
+  },
+  {
+   "name": "pop",
+   "t": 225.35,
+   "db": -3
+  },
+  {
+   "name": "cash",
+   "t": 226.33,
+   "db": -2
+  },
+  {
+   "name": "print",
+   "t": 226.57,
+   "db": -4
+  },
+  {
+   "name": "shutter",
+   "t": 230.947,
+   "db": -4
+  },
+  {
+   "name": "print",
+   "t": 238.537,
+   "db": -3
+  },
+  {
+   "name": "print",
+   "t": 240.65,
+   "db": -2
+  },
+  {
+   "name": "print",
+   "t": 243.63,
+   "db": -3
+  },
+  {
+   "name": "bell",
+   "t": 245.67,
+   "db": -4
+  },
+  {
+   "name": "notify",
+   "t": 248.9,
+   "db": -3
+  },
+  {
+   "name": "paper",
+   "t": 252.6,
+   "db": -6
+  },
+  {
+   "name": "mark",
+   "t": 257.01,
+   "db": -3
+  },
+  {
+   "name": "pop",
+   "t": 259.79,
+   "db": -5
+  },
+  {
+   "name": "pop",
+   "t": 261.07,
+   "db": -5
+  },
+  {
+   "name": "pop",
+   "t": 262.35,
+   "db": -5
+  },
+  {
+   "name": "print",
+   "t": 265.49,
+   "db": -2
+  },
+  {
+   "name": "refresh",
+   "t": 271.83,
+   "db": -2
+  },
+  {
+   "name": "shutter",
+   "t": 275.04,
+   "db": 0
+  },
+  {
+   "name": "print",
+   "t": 277.63,
+   "db": 0
+  },
+  {
+   "name": "print",
+   "t": 278.506,
+   "db": -3
+  },
+  {
+   "name": "print",
+   "t": 279.73,
+   "db": -3
+  },
+  {
+   "name": "mark",
+   "t": 284.51,
+   "db": -1
+  },
+  {
+   "name": "refresh",
+   "t": 292.317,
+   "db": -6
+  },
+  {
+   "name": "refresh",
+   "t": 295.417,
+   "db": -4
+  },
+  {
+   "name": "refresh",
+   "t": 297.937,
+   "db": -4
+  },
+  {
+   "name": "print",
+   "t": 298.27,
+   "db": -2
+  },
+  {
+   "name": "print",
+   "t": 302.51,
+   "db": -4
+  },
+  {
+   "name": "mark",
+   "t": 306.91,
+   "db": -4
+  },
+  {
+   "name": "tick",
+   "t": 315.51,
+   "db": 0
+  },
+  {
+   "name": "paper",
+   "t": 318.827,
+   "db": -4
+  },
+  {
+   "name": "hit",
+   "t": 323.97,
+   "db": -6
+  },
+  {
+   "name": "print",
+   "t": 325.71,
+   "db": -3
+  },
+  {
+   "name": "stamp",
+   "t": 327.07,
+   "db": -4
+  },
+  {
+   "name": "mark",
+   "t": 338.137,
+   "db": -3
+  },
+  {
+   "name": "tick",
+   "t": 345.85,
+   "db": -3
+  },
+  {
+   "name": "pop",
+   "t": 346.697,
+   "db": -2
+  },
+  {
+   "name": "error",
+   "t": 348.45,
+   "db": -6
+  },
+  {
+   "name": "paper",
+   "t": 349.52,
+   "db": -4
+  },
+  {
+   "name": "print",
+   "t": 357.41,
+   "db": -3
+  },
+  {
+   "name": "print",
+   "t": 375.67,
+   "db": -3
+  },
+  {
+   "name": "tear",
+   "t": 379.67,
+   "db": -2
+  },
+  {
+   "name": "tear",
+   "t": 380.61,
+   "db": 0
+  },
+  {
+   "name": "hit",
+   "t": 381.983,
+   "db": -3
+  },
+  {
+   "name": "print",
+   "t": 383.43,
+   "db": -4
+  },
+  {
+   "name": "print",
+   "t": 387.39,
+   "db": -2
+  },
+  {
+   "name": "pop",
+   "t": 394.877,
+   "db": -3
+  },
+  {
+   "name": "stamp",
+   "t": 410.137,
+   "db": -4
+  },
+  {
+   "name": "print",
+   "t": 417.95,
+   "db": -4
+  },
+  {
+   "name": "bell",
+   "t": 424.503,
+   "db": -3
+  },
+  {
+   "name": "tick",
+   "t": 430.15,
+   "db": -3
+  },
+  {
+   "name": "print",
+   "t": 433.01,
+   "db": -3
+  },
+  {
+   "name": "print",
+   "t": 435.46,
+   "db": -2
+  },
+  {
+   "name": "pop",
+   "t": 439.05,
+   "db": -8
+  },
+  {
+   "name": "pop",
+   "t": 440.29,
+   "db": -8
+  },
+  {
+   "name": "mark",
+   "t": 443.797,
+   "db": -4
+  },
+  {
+   "name": "print",
+   "t": 444.33,
+   "db": -2
+  },
+  {
+   "name": "mark",
+   "t": 446.63,
+   "db": -3
+  },
+  {
+   "name": "notify",
+   "t": 450.13,
+   "db": -1
+  },
+  {
+   "name": "stamp",
+   "t": 453.03,
+   "db": -6
+  },
+  {
+   "name": "pop",
+   "t": 455.61,
+   "db": -4
+  },
+  {
+   "name": "tear",
+   "t": 467.817,
+   "db": 0
+  },
+  {
+   "name": "paper",
+   "t": 471.33,
+   "db": -6
+  },
+  {
+   "name": "tick",
+   "t": 474.17,
+   "db": -4
+  },
+  {
+   "name": "pop",
+   "t": 475.44,
+   "db": -3
+  },
+  {
+   "name": "tick",
+   "t": 477.81,
+   "db": -2
+  },
+  {
+   "name": "pop",
+   "t": 483.21,
+   "db": -6
+  },
+  {
+   "name": "shutter",
+   "t": 487.57,
+   "db": -3
+  },
+  {
+   "name": "paper",
+   "t": 507.61,
+   "db": -6
+  },
+  {
+   "name": "mark",
+   "t": 510.21,
+   "db": -3
+  },
+  {
+   "name": "notify",
+   "t": 511.8,
+   "db": -3
+  },
+  {
+   "name": "print",
+   "t": 514.82,
+   "db": -2
+  },
+  {
+   "name": "print",
+   "t": 524.22,
+   "db": 0
+  },
+  {
+   "name": "print",
+   "t": 526.33,
+   "db": -2
+  },
+  {
+   "name": "pop",
+   "t": 526.95,
+   "db": -4
+  },
+  {
+   "name": "paper",
+   "t": 532.44,
+   "db": -6
+  },
+  {
+   "name": "tick",
+   "t": 541.19,
+   "db": -4
+  },
+  {
+   "name": "pop",
+   "t": 543.23,
+   "db": -1
+  },
+  {
+   "name": "mark",
+   "t": 553.41,
+   "db": -4
+  },
+  {
+   "name": "tape",
+   "t": 556.07,
+   "db": -8
+  },
+  {
+   "name": "tick",
+   "t": 563.55,
+   "db": -4
+  },
+  {
+   "name": "mark",
+   "t": 564.05,
+   "db": -3
+  },
+  {
+   "name": "print",
+   "t": 565.89,
+   "db": -5
+  },
+  {
+   "name": "paper",
+   "t": 571.23,
+   "db": -6
+  },
+  {
+   "name": "print",
+   "t": 583.83,
+   "db": -2
+  },
+  {
+   "name": "stamp",
+   "t": 584.643,
+   "db": -3
+  },
+  {
+   "name": "print",
+   "t": 592.26,
+   "db": -2
+  },
+  {
+   "name": "shutter",
+   "t": 595,
+   "db": -2
+  },
+  {
+   "name": "mark",
+   "t": 596.69,
+   "db": -3
+  },
+  {
+   "name": "stamp",
+   "t": 601.737,
+   "db": -4
+  },
+  {
+   "name": "cash",
+   "t": 605.804,
+   "db": -6
+  },
+  {
+   "name": "print",
+   "t": 608.01,
+   "db": -3
+  },
+  {
+   "name": "print",
+   "t": 610.57,
+   "db": -2
+  },
+  {
+   "name": "shutter",
+   "t": 610.91,
+   "db": -4
+  },
+  {
+   "name": "print",
+   "t": 613.09,
+   "db": -2
+  },
+  {
+   "name": "print",
+   "t": 614.37,
+   "db": -3
+  },
+  {
+   "name": "print",
+   "t": 616.33,
+   "db": -3
+  },
+  {
+   "name": "shutter",
+   "t": 623.47,
+   "db": -2
+  },
+  {
+   "name": "mark",
+   "t": 626.53,
+   "db": -3
+  },
+  {
+   "name": "print",
+   "t": 630.11,
+   "db": -3
+  },
+  {
+   "name": "paper",
+   "t": 639.847,
+   "db": -4
+  },
+  {
+   "name": "stamp",
+   "t": 640.86,
+   "db": -3
+  },
+  {
+   "name": "pop",
+   "t": 643.437,
+   "db": -4
+  },
+  {
+   "name": "mark",
+   "t": 649.99,
+   "db": -4
+  },
+  {
+   "name": "print",
+   "t": 652.07,
+   "db": -2
+  },
+  {
+   "name": "print",
+   "t": 661.59,
+   "db": -3
+  },
+  {
+   "name": "bell",
+   "t": 665.65,
+   "db": -4
+  },
+  {
+   "name": "stamp",
+   "t": 672.103,
+   "db": -4
+  },
+  {
+   "name": "print",
+   "t": 678.95,
+   "db": -2
+  },
+  {
+   "name": "print",
+   "t": 686.53,
+   "db": -2
+  },
+  {
+   "name": "bell",
+   "t": 696.79,
+   "db": -4
+  },
+  {
+   "name": "print",
+   "t": 697.45,
+   "db": -2
+  },
+  {
+   "name": "hit",
+   "t": 700.57,
+   "db": -7
+  },
+  {
+   "name": "stamp",
+   "t": 702.75,
+   "db": -5
+  },
+  {
+   "name": "print",
+   "t": 705.49,
+   "db": -2
+  },
+  {
+   "name": "print",
+   "t": 713.57,
+   "db": -5
+  },
+  {
+   "name": "print",
+   "t": 719.27,
+   "db": -3
+  },
+  {
+   "name": "print",
+   "t": 721.61,
+   "db": -3
+  },
+  {
+   "name": "tick",
+   "t": 724.51,
+   "db": -3
+  },
+  {
+   "name": "paper",
+   "t": 731.04,
+   "db": -6
+  },
+  {
+   "name": "print",
+   "t": 738.89,
+   "db": -2
+  },
+  {
+   "name": "print",
+   "t": 741.83,
+   "db": -4
+  },
+  {
+   "name": "print",
+   "t": 742.95,
+   "db": -4
+  },
+  {
+   "name": "tick",
+   "t": 747.79,
+   "db": -4
+  },
+  {
+   "name": "print",
+   "t": 758.81,
+   "db": -2
+  },
+  {
+   "name": "tick",
+   "t": 759.877,
+   "db": -2
+  },
+  {
+   "name": "mark",
+   "t": 761.63,
+   "db": -4
+  },
+  {
+   "name": "tick",
+   "t": 768.877,
+   "db": -3
+  },
+  {
+   "name": "tick",
+   "t": 778.59,
+   "db": -2
+  },
+  {
+   "name": "swipe",
+   "t": 781.57,
+   "db": -6
+  },
+  {
+   "name": "stamp",
+   "t": 796.277,
+   "db": -4
+  },
+  {
+   "name": "paper",
+   "t": 797.17,
+   "db": -6
+  },
+  {
+   "name": "mark",
+   "t": 801.81,
+   "db": -4
+  },
+  {
+   "name": "tick",
+   "t": 807.11,
+   "db": -5
+  },
+  {
+   "name": "mark",
+   "t": 809.46,
+   "db": -6
+  },
+  {
+   "name": "tear",
+   "t": 810.97,
+   "db": 2
+  },
+  {
+   "name": "paper",
+   "t": 815.22,
+   "db": -6
+  },
+  {
+   "name": "print",
+   "t": 822.41,
+   "db": -3
+  },
+  {
+   "name": "bell",
+   "t": 823.59,
+   "db": -4
+  },
+  {
+   "name": "print",
+   "t": 824.39,
+   "db": -2
+  },
+  {
+   "name": "clock",
+   "t": 825.99,
+   "db": -2
+  },
+  {
+   "name": "mark",
+   "t": 834.81,
+   "db": -4
+  },
+  {
+   "name": "paper",
+   "t": 839.164,
+   "db": -4
+  },
+  {
+   "name": "pop",
+   "t": 855.55,
+   "db": -2
+  },
+  {
+   "name": "print",
+   "t": 855.79,
+   "db": -6
+  },
+  {
+   "name": "tear",
+   "t": 857.39,
+   "db": 0
+  },
+  {
+   "name": "hit",
+   "t": 858.697,
+   "db": -2
+  },
+  {
+   "name": "print",
+   "t": 860.91,
+   "db": -6
+  },
+  {
+   "name": "print",
+   "t": 861.75,
+   "db": -6
+  },
+  {
+   "name": "paper",
+   "t": 868.057,
+   "db": -4
+  },
+  {
+   "name": "stamp",
+   "t": 869.457,
+   "db": -4
+  }
+ ],
+ "SCENES": [
+  {
+   "n": 1,
+   "id": "hook",
+   "start": 0,
+   "end": 6.25,
+   "ground": "blue",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 2,
+   "id": "later",
+   "start": 6.25,
+   "end": 14.63,
+   "ground": "blueB",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 3,
+   "id": "plan",
+   "start": 14.63,
+   "end": 40.79,
+   "ground": "blue",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 4,
+   "id": "economy",
+   "start": 40.79,
+   "end": 46.48,
+   "ground": "blueB",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 5,
+   "id": "simon",
+   "start": 46.48,
+   "end": 52.82,
+   "ground": "blue",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 6,
+   "id": "quote",
+   "start": 52.82,
+   "end": 56.11,
+   "ground": "blueB",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 7,
+   "id": "flood",
+   "start": 56.11,
+   "end": 65.71,
+   "ground": "blue",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 8,
+   "id": "currency",
+   "start": 65.71,
+   "end": 72.94,
+   "ground": "blueB",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 9,
+   "id": "free",
+   "start": 72.94,
+   "end": 86.64,
+   "ground": "blue",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 10,
+   "id": "ads",
+   "start": 86.64,
+   "end": 98.52,
+   "ground": "blueB",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 11,
+   "id": "sold",
+   "start": 98.52,
+   "end": 107.61,
+   "ground": "blue",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 12,
+   "id": "product",
+   "start": 107.61,
+   "end": 110.83,
+   "ground": "slip",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 13,
+   "id": "persuasive",
+   "start": 110.83,
+   "end": 116.26,
+   "ground": "blueB",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 14,
+   "id": "fogg",
+   "start": 116.26,
+   "end": 129.35,
+   "ground": "blue",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 15,
+   "id": "class",
+   "start": 129.35,
+   "end": 147.77,
+   "ground": "blueB",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 16,
+   "id": "model",
+   "start": 147.77,
+   "end": 159.73,
+   "ground": "blue",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 17,
+   "id": "prompt",
+   "start": 159.73,
+   "end": 178.64,
+   "ground": "blueB",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 18,
+   "id": "students",
+   "start": 178.64,
+   "end": 195.38,
+   "ground": "blue",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 19,
+   "id": "real",
+   "start": 195.38,
+   "end": 205.63,
+   "ground": "blueB",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 20,
+   "id": "curiosity",
+   "start": 205.63,
+   "end": 212.43,
+   "ground": "blue",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 21,
+   "id": "reward",
+   "start": 212.43,
+   "end": 217.51,
+   "ground": "blueB",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 22,
+   "id": "gamble",
+   "start": 217.51,
+   "end": 226.73,
+   "ground": "blue",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 23,
+   "id": "psych",
+   "start": 226.73,
+   "end": 237.93,
+   "ground": "blueB",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 24,
+   "id": "predict",
+   "start": 237.93,
+   "end": 245.31,
+   "ground": "blue",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 25,
+   "id": "phoneworks",
+   "start": 245.31,
+   "end": 258.47,
+   "ground": "blueB",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 26,
+   "id": "designs",
+   "start": 258.47,
+   "end": 265.47,
+   "ground": "blue",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 27,
+   "id": "ptr",
+   "start": 265.47,
+   "end": 274.99,
+   "ground": "blueB",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 28,
+   "id": "patent",
+   "start": 274.99,
+   "end": 288.25,
+   "ground": "blue",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 29,
+   "id": "pulls",
+   "start": 288.25,
+   "end": 298.25,
+   "ground": "blueB",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 30,
+   "id": "scroll",
+   "start": 298.25,
+   "end": 307.27,
+   "ground": "blue",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 31,
+   "id": "pages",
+   "start": 307.27,
+   "end": 318.79,
+   "ground": "blueB",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 32,
+   "id": "ask",
+   "start": 318.79,
+   "end": 325.08,
+   "ground": "blue",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 33,
+   "id": "removed",
+   "start": 325.08,
+   "end": 341.09,
+   "ground": "blueB",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 34,
+   "id": "loadmore",
+   "start": 341.09,
+   "end": 349.15,
+   "ground": "blue",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 35,
+   "id": "cues",
+   "start": 349.15,
+   "end": 380.81,
+   "ground": "blueB",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 36,
+   "id": "lastpage",
+   "start": 380.81,
+   "end": 387.37,
+   "ground": "slip",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 37,
+   "id": "autoplay",
+   "start": 387.37,
+   "end": 396.61,
+   "ground": "blue",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 38,
+   "id": "decide",
+   "start": 396.61,
+   "end": 411.26,
+   "ground": "blueB",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 39,
+   "id": "effort",
+   "start": 411.26,
+   "end": 425.61,
+   "ground": "blue",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 40,
+   "id": "defaults",
+   "start": 425.61,
+   "end": 435.44,
+   "ground": "blueB",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 41,
+   "id": "badges",
+   "start": 435.44,
+   "end": 444.31,
+   "ground": "blue",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 42,
+   "id": "accident",
+   "start": 444.31,
+   "end": 453.55,
+   "ground": "blueB",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 43,
+   "id": "bluered",
+   "start": 453.55,
+   "end": 468.05,
+   "ground": "blue",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 44,
+   "id": "grab",
+   "start": 468.05,
+   "end": 471.28,
+   "ground": "slip",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 45,
+   "id": "everyapp",
+   "start": 471.28,
+   "end": 475.06,
+   "ground": "blueB",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 46,
+   "id": "unfinished",
+   "start": 475.06,
+   "end": 485.97,
+   "ground": "blue",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 47,
+   "id": "chi",
+   "start": 485.97,
+   "end": 507.44,
+   "ground": "blueB",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 48,
+   "id": "urgent",
+   "start": 507.44,
+   "end": 514.8,
+   "ground": "blue",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 49,
+   "id": "likes",
+   "start": 514.8,
+   "end": 532.27,
+   "ground": "blueB",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 50,
+   "id": "approval",
+   "start": 532.27,
+   "end": 543.98,
+   "ground": "blue",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 51,
+   "id": "howmany",
+   "start": 543.98,
+   "end": 561.73,
+   "ground": "blueB",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 52,
+   "id": "check",
+   "start": 561.73,
+   "end": 571.06,
+   "ground": "blue",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 53,
+   "id": "braindrain",
+   "start": 571.06,
+   "end": 592.24,
+   "ground": "blueB",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 54,
+   "id": "eu-tiktok",
+   "start": 592.24,
+   "end": 601.99,
+   "ground": "blue",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 55,
+   "id": "award",
+   "start": 601.99,
+   "end": 610.89,
+   "ground": "blueB",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 56,
+   "id": "eu-named",
+   "start": 610.89,
+   "end": 621.778,
+   "ground": "blue",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 57,
+   "id": "eu-meta",
+   "start": 621.778,
+   "end": 630.66,
+   "ground": "blueB",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 58,
+   "id": "legal",
+   "start": 630.66,
+   "end": 642.55,
+   "ground": "blue",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 59,
+   "id": "curious",
+   "start": 642.55,
+   "end": 652.05,
+   "ground": "blueB",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 60,
+   "id": "whatnow",
+   "start": 652.05,
+   "end": 666.59,
+   "ground": "blue",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 61,
+   "id": "nineteen",
+   "start": 666.59,
+   "end": 688.48,
+   "ground": "blueB",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 62,
+   "id": "left",
+   "start": 688.48,
+   "end": 697.43,
+   "ground": "blue",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 63,
+   "id": "need",
+   "start": 697.43,
+   "end": 703.59,
+   "ground": "blueB",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 64,
+   "id": "rule",
+   "start": 703.59,
+   "end": 722.97,
+   "ground": "blue",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 65,
+   "id": "notifoff",
+   "start": 722.97,
+   "end": 730.87,
+   "ground": "blueB",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 66,
+   "id": "hypocritical",
+   "start": 730.87,
+   "end": 738.87,
+   "ground": "blue",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 67,
+   "id": "try",
+   "start": 738.87,
+   "end": 744.33,
+   "ground": "blueB",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 68,
+   "id": "grayscale",
+   "start": 744.33,
+   "end": 758.79,
+   "ground": "blue",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 69,
+   "id": "autoplayoff",
+   "start": 758.79,
+   "end": 768.2,
+   "ground": "blueB",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 70,
+   "id": "notifneed",
+   "start": 768.2,
+   "end": 779.26,
+   "ground": "blue",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 71,
+   "id": "homescreen",
+   "start": 779.26,
+   "end": 782.31,
+   "ground": "blueB",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 72,
+   "id": "blocker",
+   "start": 782.31,
+   "end": 797,
+   "ground": "blue",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 73,
+   "id": "askyourself",
+   "start": 797,
+   "end": 809.31,
+   "ground": "blueB",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 74,
+   "id": "asset",
+   "start": 809.31,
+   "end": 815.17,
+   "ground": "blue",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 75,
+   "id": "pays",
+   "start": 815.17,
+   "end": 824.37,
+   "ground": "blueB",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 76,
+   "id": "hours",
+   "start": 824.37,
+   "end": 837.71,
+   "ground": "blue",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 77,
+   "id": "dropit",
+   "start": 837.71,
+   "end": 848.79,
+   "ground": "blueB",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 78,
+   "id": "fought",
+   "start": 848.79,
+   "end": 857.69,
+   "ground": "blue",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 79,
+   "id": "takeback",
+   "start": 857.69,
+   "end": 867.957,
+   "ground": "slip",
+   "label": "receipt",
+   "trans": "cut"
+  },
+  {
+   "n": 80,
+   "id": "end",
+   "start": 867.957,
+   "end": 872.557,
+   "ground": "blueB",
+   "label": "receipt",
+   "trans": "cut"
+  }
+ ]
+}

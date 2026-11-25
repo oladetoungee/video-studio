@@ -1,0 +1,2127 @@
+{
+ "TOTAL": 959.035,
+ "INTRO": 1.8,
+ "OUTRO": 6,
+ "FPS": 30,
+ "CUES": [
+  {
+   "name": "whoosh",
+   "t": 0.3,
+   "db": -6
+  },
+  {
+   "name": "book",
+   "t": 0.7,
+   "db": -1
+  },
+  {
+   "name": "book",
+   "t": 1.27,
+   "db": -3
+  },
+  {
+   "name": "cut",
+   "t": 2.16,
+   "db": 0
+  },
+  {
+   "name": "impact",
+   "t": 4.64,
+   "db": -8
+  },
+  {
+   "name": "type",
+   "t": 7.8,
+   "db": 0,
+   "n": 10,
+   "d": 0.654
+  },
+  {
+   "name": "click",
+   "t": 9.02,
+   "db": 0
+  },
+  {
+   "name": "type",
+   "t": 10.55,
+   "db": 0,
+   "n": 22,
+   "d": 1.62
+  },
+  {
+   "name": "pen",
+   "t": 13.18,
+   "db": -3
+  },
+  {
+   "name": "book",
+   "t": 15.47,
+   "db": -1
+  },
+  {
+   "name": "book",
+   "t": 16.42,
+   "db": -2
+  },
+  {
+   "name": "book",
+   "t": 16.92,
+   "db": -3
+  },
+  {
+   "name": "impact",
+   "t": 17.61,
+   "db": -8
+  },
+  {
+   "name": "pop",
+   "t": 20.48,
+   "db": -2
+  },
+  {
+   "name": "whoosh",
+   "t": 24.55,
+   "db": -4
+  },
+  {
+   "name": "type",
+   "t": 28.56,
+   "db": 0,
+   "n": 10,
+   "d": 0.615
+  },
+  {
+   "name": "impact",
+   "t": 29.1,
+   "db": -12
+  },
+  {
+   "name": "whoosh",
+   "t": 32.04,
+   "db": -4
+  },
+  {
+   "name": "type",
+   "t": 34.66,
+   "db": 0,
+   "n": 8,
+   "d": 0.5
+  },
+  {
+   "name": "type",
+   "t": 36.673,
+   "db": -2,
+   "n": 19,
+   "d": 1.231
+  },
+  {
+   "name": "whoosh",
+   "t": 40.43,
+   "db": -4
+  },
+  {
+   "name": "whoosh",
+   "t": 45.41,
+   "db": -7
+  },
+  {
+   "name": "whoosh",
+   "t": 48.05,
+   "db": -6
+  },
+  {
+   "name": "cut",
+   "t": 49.96,
+   "db": 0
+  },
+  {
+   "name": "pen",
+   "t": 54.86,
+   "db": -3
+  },
+  {
+   "name": "whoosh",
+   "t": 59.74,
+   "db": -5
+  },
+  {
+   "name": "book",
+   "t": 60.11,
+   "db": -4
+  },
+  {
+   "name": "cut",
+   "t": 62.05,
+   "db": 0
+  },
+  {
+   "name": "pop",
+   "t": 68.6,
+   "db": -6
+  },
+  {
+   "name": "pop",
+   "t": 71.23,
+   "db": -4
+  },
+  {
+   "name": "pen",
+   "t": 76.14,
+   "db": -5
+  },
+  {
+   "name": "whoosh",
+   "t": 81.84,
+   "db": -14
+  },
+  {
+   "name": "whoosh",
+   "t": 85.59,
+   "db": -14
+  },
+  {
+   "name": "pen",
+   "t": 87.84,
+   "db": -3
+  },
+  {
+   "name": "whoosh",
+   "t": 90.94,
+   "db": -8
+  },
+  {
+   "name": "cut",
+   "t": 93.32,
+   "db": 0
+  },
+  {
+   "name": "riser",
+   "t": 94.62,
+   "db": -4
+  },
+  {
+   "name": "impact",
+   "t": 94.64,
+   "db": -2
+  },
+  {
+   "name": "cut",
+   "t": 95.7,
+   "db": 0
+  },
+  {
+   "name": "cut",
+   "t": 97.92,
+   "db": 0
+  },
+  {
+   "name": "riser",
+   "t": 100,
+   "db": -3
+  },
+  {
+   "name": "impact",
+   "t": 100.02,
+   "db": 0
+  },
+  {
+   "name": "cut",
+   "t": 101.53,
+   "db": 0
+  },
+  {
+   "name": "book",
+   "t": 102.47,
+   "db": -3
+  },
+  {
+   "name": "page",
+   "t": 103.43,
+   "db": 0
+  },
+  {
+   "name": "page",
+   "t": 104.6,
+   "db": -2
+  },
+  {
+   "name": "pen",
+   "t": 109.28,
+   "db": -5
+  },
+  {
+   "name": "pen",
+   "t": 112.74,
+   "db": -4
+  },
+  {
+   "name": "pen",
+   "t": 115.52,
+   "db": -4
+  },
+  {
+   "name": "click",
+   "t": 119.36,
+   "db": 0
+  },
+  {
+   "name": "click",
+   "t": 120.66,
+   "db": -2
+  },
+  {
+   "name": "cut",
+   "t": 125.8,
+   "db": 0
+  },
+  {
+   "name": "type",
+   "t": 128.6,
+   "db": 0,
+   "n": 8,
+   "d": 0.542
+  },
+  {
+   "name": "type",
+   "t": 129.88,
+   "db": 0,
+   "n": 7,
+   "d": 0.458
+  },
+  {
+   "name": "whoosh",
+   "t": 134.18,
+   "db": -5
+  },
+  {
+   "name": "cut",
+   "t": 135.73,
+   "db": 0
+  },
+  {
+   "name": "card",
+   "t": 139.08,
+   "db": -2
+  },
+  {
+   "name": "riser",
+   "t": 140.84,
+   "db": -6
+  },
+  {
+   "name": "impact",
+   "t": 140.86,
+   "db": -1
+  },
+  {
+   "name": "cut",
+   "t": 142.26,
+   "db": 0
+  },
+  {
+   "name": "click",
+   "t": 143.58,
+   "db": 0
+  },
+  {
+   "name": "click",
+   "t": 145.62,
+   "db": 0
+  },
+  {
+   "name": "cut",
+   "t": 147.46,
+   "db": 0
+  },
+  {
+   "name": "impact",
+   "t": 148.52,
+   "db": -6
+  },
+  {
+   "name": "card",
+   "t": 153.2,
+   "db": -4
+  },
+  {
+   "name": "pop",
+   "t": 156.098,
+   "db": -2
+  },
+  {
+   "name": "page",
+   "t": 160.95,
+   "db": 0
+  },
+  {
+   "name": "cut",
+   "t": 165.71,
+   "db": 0
+  },
+  {
+   "name": "type",
+   "t": 170.94,
+   "db": 0,
+   "n": 7,
+   "d": 0.393
+  },
+  {
+   "name": "click",
+   "t": 173.515,
+   "db": 0
+  },
+  {
+   "name": "impact",
+   "t": 178.012,
+   "db": -6
+  },
+  {
+   "name": "whoosh",
+   "t": 180.9,
+   "db": -6
+  },
+  {
+   "name": "pen",
+   "t": 185.78,
+   "db": -2
+  },
+  {
+   "name": "card",
+   "t": 188.32,
+   "db": 0
+  },
+  {
+   "name": "impact",
+   "t": 191.44,
+   "db": -7
+  },
+  {
+   "name": "tick",
+   "t": 194.68,
+   "db": -6
+  },
+  {
+   "name": "tick",
+   "t": 203.64,
+   "db": -4
+  },
+  {
+   "name": "impact",
+   "t": 207.93,
+   "db": -6
+  },
+  {
+   "name": "cut",
+   "t": 209.71,
+   "db": 0
+  },
+  {
+   "name": "whoosh",
+   "t": 215.6,
+   "db": -6
+  },
+  {
+   "name": "pop",
+   "t": 221.12,
+   "db": -5
+  },
+  {
+   "name": "whoosh",
+   "t": 225.95,
+   "db": -14
+  },
+  {
+   "name": "whoosh",
+   "t": 231.33,
+   "db": -14
+  },
+  {
+   "name": "card",
+   "t": 234.54,
+   "db": -4
+  },
+  {
+   "name": "whoosh",
+   "t": 237.57,
+   "db": -14
+  },
+  {
+   "name": "pop",
+   "t": 240.54,
+   "db": -5
+  },
+  {
+   "name": "pen",
+   "t": 247.26,
+   "db": -6
+  },
+  {
+   "name": "whoosh",
+   "t": 252.61,
+   "db": -8
+  },
+  {
+   "name": "book",
+   "t": 255.28,
+   "db": -3
+  },
+  {
+   "name": "book",
+   "t": 257.24,
+   "db": -3
+  },
+  {
+   "name": "book",
+   "t": 259.85,
+   "db": -3
+  },
+  {
+   "name": "cut",
+   "t": 261.2,
+   "db": 0
+  },
+  {
+   "name": "riser",
+   "t": 264.42,
+   "db": -4
+  },
+  {
+   "name": "impact",
+   "t": 264.44,
+   "db": 0
+  },
+  {
+   "name": "cut",
+   "t": 267.1,
+   "db": 0
+  },
+  {
+   "name": "book",
+   "t": 267.87,
+   "db": -5
+  },
+  {
+   "name": "book",
+   "t": 268.41,
+   "db": -6
+  },
+  {
+   "name": "impact",
+   "t": 270.8,
+   "db": -8
+  },
+  {
+   "name": "pen",
+   "t": 274.82,
+   "db": -4
+  },
+  {
+   "name": "whoosh",
+   "t": 282.56,
+   "db": -6
+  },
+  {
+   "name": "page",
+   "t": 283.55,
+   "db": -2
+  },
+  {
+   "name": "whoosh",
+   "t": 287.35,
+   "db": -8
+  },
+  {
+   "name": "pen",
+   "t": 292.52,
+   "db": -3
+  },
+  {
+   "name": "page",
+   "t": 296.46,
+   "db": -1
+  },
+  {
+   "name": "pop",
+   "t": 301.56,
+   "db": -5
+  },
+  {
+   "name": "pop",
+   "t": 306.98,
+   "db": -5
+  },
+  {
+   "name": "pop",
+   "t": 313.54,
+   "db": -5
+  },
+  {
+   "name": "pop",
+   "t": 318.16,
+   "db": -5
+  },
+  {
+   "name": "pop",
+   "t": 322.29,
+   "db": -5
+  },
+  {
+   "name": "pen",
+   "t": 324.67,
+   "db": -9
+  },
+  {
+   "name": "pop",
+   "t": 327.82,
+   "db": -5
+  },
+  {
+   "name": "cut",
+   "t": 335.19,
+   "db": 0
+  },
+  {
+   "name": "pop",
+   "t": 338.54,
+   "db": -1
+  },
+  {
+   "name": "pop",
+   "t": 342.4,
+   "db": -5
+  },
+  {
+   "name": "pop",
+   "t": 347.9,
+   "db": -2
+  },
+  {
+   "name": "card",
+   "t": 349.54,
+   "db": 0
+  },
+  {
+   "name": "pop",
+   "t": 355,
+   "db": 0
+  },
+  {
+   "name": "click",
+   "t": 362.05,
+   "db": -2
+  },
+  {
+   "name": "whoosh",
+   "t": 367.84,
+   "db": -12
+  },
+  {
+   "name": "click",
+   "t": 370.44,
+   "db": -3
+  },
+  {
+   "name": "whoosh",
+   "t": 372.9,
+   "db": -10
+  },
+  {
+   "name": "card",
+   "t": 375.54,
+   "db": 0
+  },
+  {
+   "name": "card",
+   "t": 377.16,
+   "db": 0
+  },
+  {
+   "name": "impact",
+   "t": 381.98,
+   "db": -12
+  },
+  {
+   "name": "click",
+   "t": 385.72,
+   "db": 0
+  },
+  {
+   "name": "cut",
+   "t": 389.77,
+   "db": 0
+  },
+  {
+   "name": "impact",
+   "t": 396.11,
+   "db": -10
+  },
+  {
+   "name": "card",
+   "t": 398.5,
+   "db": 0
+  },
+  {
+   "name": "pop",
+   "t": 400.44,
+   "db": -2
+  },
+  {
+   "name": "card",
+   "t": 403.09,
+   "db": 0
+  },
+  {
+   "name": "cut",
+   "t": 406,
+   "db": 0
+  },
+  {
+   "name": "pen",
+   "t": 410.7,
+   "db": -3
+  },
+  {
+   "name": "pop",
+   "t": 415.76,
+   "db": -4
+  },
+  {
+   "name": "tick",
+   "t": 419.48,
+   "db": -5
+  },
+  {
+   "name": "whoosh",
+   "t": 422.98,
+   "db": -8
+  },
+  {
+   "name": "pop",
+   "t": 426.48,
+   "db": 0
+  },
+  {
+   "name": "cut",
+   "t": 432.16,
+   "db": 0
+  },
+  {
+   "name": "riser",
+   "t": 433.7,
+   "db": -6
+  },
+  {
+   "name": "impact",
+   "t": 433.72,
+   "db": -2
+  },
+  {
+   "name": "cut",
+   "t": 436.1,
+   "db": 0
+  },
+  {
+   "name": "pop",
+   "t": 441.88,
+   "db": -3
+  },
+  {
+   "name": "impact",
+   "t": 445.52,
+   "db": -10
+  },
+  {
+   "name": "whoosh",
+   "t": 450.54,
+   "db": -7
+  },
+  {
+   "name": "whoosh",
+   "t": 453.72,
+   "db": -7
+  },
+  {
+   "name": "card",
+   "t": 457.88,
+   "db": -2
+  },
+  {
+   "name": "cut",
+   "t": 460.06,
+   "db": 0
+  },
+  {
+   "name": "pen",
+   "t": 462.42,
+   "db": -6
+  },
+  {
+   "name": "impact",
+   "t": 466.86,
+   "db": -8
+  },
+  {
+   "name": "pen",
+   "t": 470.82,
+   "db": -3
+  },
+  {
+   "name": "pen",
+   "t": 476.36,
+   "db": -3
+  },
+  {
+   "name": "card",
+   "t": 480.75,
+   "db": -2
+  },
+  {
+   "name": "card",
+   "t": 483.17,
+   "db": -2
+  },
+  {
+   "name": "cut",
+   "t": 488.54,
+   "db": 0
+  },
+  {
+   "name": "pen",
+   "t": 492.4,
+   "db": -4
+  },
+  {
+   "name": "cut",
+   "t": 494.71,
+   "db": 0
+  },
+  {
+   "name": "pen",
+   "t": 501.38,
+   "db": -10
+  },
+  {
+   "name": "click",
+   "t": 504.94,
+   "db": -1
+  },
+  {
+   "name": "pop",
+   "t": 509.14,
+   "db": -5
+  },
+  {
+   "name": "tick",
+   "t": 512.24,
+   "db": -9
+  },
+  {
+   "name": "pop",
+   "t": 515.53,
+   "db": -6
+  },
+  {
+   "name": "pop",
+   "t": 518.45,
+   "db": -6
+  },
+  {
+   "name": "cut",
+   "t": 521.56,
+   "db": 0
+  },
+  {
+   "name": "cut",
+   "t": 529.34,
+   "db": 0
+  },
+  {
+   "name": "impact",
+   "t": 534.22,
+   "db": -10
+  },
+  {
+   "name": "impact",
+   "t": 541.04,
+   "db": -10
+  },
+  {
+   "name": "card",
+   "t": 543.08,
+   "db": 0
+  },
+  {
+   "name": "card",
+   "t": 545.02,
+   "db": 0
+  },
+  {
+   "name": "cut",
+   "t": 547.21,
+   "db": 0
+  },
+  {
+   "name": "click",
+   "t": 551.46,
+   "db": -2
+  },
+  {
+   "name": "click",
+   "t": 552.48,
+   "db": -2
+  },
+  {
+   "name": "whoosh",
+   "t": 556.94,
+   "db": -12
+  },
+  {
+   "name": "impact",
+   "t": 560.34,
+   "db": -6
+  },
+  {
+   "name": "cut",
+   "t": 562.2,
+   "db": 0
+  },
+  {
+   "name": "book",
+   "t": 563.12,
+   "db": -4
+  },
+  {
+   "name": "pen",
+   "t": 565.98,
+   "db": -4
+  },
+  {
+   "name": "whoosh",
+   "t": 570.78,
+   "db": -8
+  },
+  {
+   "name": "type",
+   "t": 575.123,
+   "db": -3,
+   "n": 5,
+   "d": 0.35714285714285715
+  },
+  {
+   "name": "whoosh",
+   "t": 577.64,
+   "db": -9
+  },
+  {
+   "name": "pop",
+   "t": 583.72,
+   "db": -3
+  },
+  {
+   "name": "pop",
+   "t": 589.34,
+   "db": -3
+  },
+  {
+   "name": "impact",
+   "t": 592.2,
+   "db": -9
+  },
+  {
+   "name": "cut",
+   "t": 593.14,
+   "db": 0
+  },
+  {
+   "name": "card",
+   "t": 595.2,
+   "db": 0
+  },
+  {
+   "name": "page",
+   "t": 597.7,
+   "db": -1
+  },
+  {
+   "name": "type",
+   "t": 603.2,
+   "db": -3,
+   "n": 4,
+   "d": 0.33
+  },
+  {
+   "name": "card",
+   "t": 607.36,
+   "db": -4
+  },
+  {
+   "name": "whoosh",
+   "t": 610.3,
+   "db": -6
+  },
+  {
+   "name": "whoosh",
+   "t": 614.96,
+   "db": -8
+  },
+  {
+   "name": "cut",
+   "t": 615.74,
+   "db": 0
+  },
+  {
+   "name": "impact",
+   "t": 619.35,
+   "db": -8
+  },
+  {
+   "name": "pop",
+   "t": 626.76,
+   "db": -3
+  },
+  {
+   "name": "card",
+   "t": 630.22,
+   "db": 0
+  },
+  {
+   "name": "pen",
+   "t": 634.01,
+   "db": -3
+  },
+  {
+   "name": "cut",
+   "t": 637.62,
+   "db": 0
+  },
+  {
+   "name": "pop",
+   "t": 640.9,
+   "db": -4
+  },
+  {
+   "name": "whoosh",
+   "t": 645.5,
+   "db": -12
+  },
+  {
+   "name": "whoosh",
+   "t": 650.986,
+   "db": -12
+  },
+  {
+   "name": "whoosh",
+   "t": 654.88,
+   "db": -12
+  },
+  {
+   "name": "pen",
+   "t": 659.88,
+   "db": -5
+  },
+  {
+   "name": "whoosh",
+   "t": 665.8,
+   "db": -8
+  },
+  {
+   "name": "pop",
+   "t": 670.56,
+   "db": -2
+  },
+  {
+   "name": "whoosh",
+   "t": 677.68,
+   "db": -9
+  },
+  {
+   "name": "cut",
+   "t": 681,
+   "db": 0
+  },
+  {
+   "name": "riser",
+   "t": 682.02,
+   "db": -5
+  },
+  {
+   "name": "impact",
+   "t": 682.04,
+   "db": -1
+  },
+  {
+   "name": "cut",
+   "t": 684.78,
+   "db": 0
+  },
+  {
+   "name": "pop",
+   "t": 688.44,
+   "db": -2
+  },
+  {
+   "name": "card",
+   "t": 690.12,
+   "db": 0
+  },
+  {
+   "name": "pen",
+   "t": 695.66,
+   "db": -4
+  },
+  {
+   "name": "cut",
+   "t": 698.16,
+   "db": 0
+  },
+  {
+   "name": "page",
+   "t": 699.9,
+   "db": -2
+  },
+  {
+   "name": "pop",
+   "t": 703.02,
+   "db": -3
+  },
+  {
+   "name": "whoosh",
+   "t": 708.59,
+   "db": -6
+  },
+  {
+   "name": "pop",
+   "t": 712.59,
+   "db": -2
+  },
+  {
+   "name": "pop",
+   "t": 719.3,
+   "db": -9
+  },
+  {
+   "name": "impact",
+   "t": 723.16,
+   "db": -12
+  },
+  {
+   "name": "pop",
+   "t": 726.67,
+   "db": -3
+  },
+  {
+   "name": "pen",
+   "t": 731.92,
+   "db": -5
+  },
+  {
+   "name": "pen",
+   "t": 736.38,
+   "db": -5
+  },
+  {
+   "name": "pop",
+   "t": 739.38,
+   "db": -5
+  },
+  {
+   "name": "pop",
+   "t": 743.42,
+   "db": -3
+  },
+  {
+   "name": "pen",
+   "t": 746.16,
+   "db": -5
+  },
+  {
+   "name": "pen",
+   "t": 749.8,
+   "db": -3
+  },
+  {
+   "name": "pop",
+   "t": 755.89,
+   "db": -6
+  },
+  {
+   "name": "impact",
+   "t": 759.76,
+   "db": -8
+  },
+  {
+   "name": "whoosh",
+   "t": 762.92,
+   "db": -7
+  },
+  {
+   "name": "whoosh",
+   "t": 765.84,
+   "db": -7
+  },
+  {
+   "name": "pop",
+   "t": 770.08,
+   "db": -4
+  },
+  {
+   "name": "whoosh",
+   "t": 776.13,
+   "db": -6
+  },
+  {
+   "name": "cut",
+   "t": 778.78,
+   "db": 0
+  },
+  {
+   "name": "impact",
+   "t": 784.24,
+   "db": -7
+  },
+  {
+   "name": "book",
+   "t": 787.977,
+   "db": -6
+  },
+  {
+   "name": "book",
+   "t": 789.9,
+   "db": -6
+  },
+  {
+   "name": "book",
+   "t": 791.86,
+   "db": -6
+  },
+  {
+   "name": "book",
+   "t": 793.74,
+   "db": -6
+  },
+  {
+   "name": "pop",
+   "t": 797.56,
+   "db": -4
+  },
+  {
+   "name": "impact",
+   "t": 802.42,
+   "db": -8
+  },
+  {
+   "name": "whoosh",
+   "t": 807.3,
+   "db": -10
+  },
+  {
+   "name": "pen",
+   "t": 810.072,
+   "db": -2
+  },
+  {
+   "name": "whoosh",
+   "t": 812.67,
+   "db": -10
+  },
+  {
+   "name": "whoosh",
+   "t": 819.665,
+   "db": -12
+  },
+  {
+   "name": "pen",
+   "t": 822.263,
+   "db": -5
+  },
+  {
+   "name": "cut",
+   "t": 827.9,
+   "db": 0
+  },
+  {
+   "name": "impact",
+   "t": 833.76,
+   "db": -12
+  },
+  {
+   "name": "whoosh",
+   "t": 836.88,
+   "db": -8
+  },
+  {
+   "name": "pen",
+   "t": 841.9,
+   "db": -3
+  },
+  {
+   "name": "click",
+   "t": 845.4,
+   "db": -4
+  },
+  {
+   "name": "click",
+   "t": 846.2,
+   "db": -4
+  },
+  {
+   "name": "impact",
+   "t": 851.53,
+   "db": -10
+  },
+  {
+   "name": "impact",
+   "t": 855.62,
+   "db": -10
+  },
+  {
+   "name": "pop",
+   "t": 863.46,
+   "db": -7
+  },
+  {
+   "name": "cut",
+   "t": 870.94,
+   "db": 0
+  },
+  {
+   "name": "impact",
+   "t": 874.44,
+   "db": -3
+  },
+  {
+   "name": "cut",
+   "t": 880.24,
+   "db": 0
+  },
+  {
+   "name": "click",
+   "t": 884.15,
+   "db": -5
+  },
+  {
+   "name": "click",
+   "t": 885.15,
+   "db": -5
+  },
+  {
+   "name": "click",
+   "t": 887.41,
+   "db": -5
+  },
+  {
+   "name": "click",
+   "t": 888.53,
+   "db": -5
+  },
+  {
+   "name": "impact",
+   "t": 895.72,
+   "db": -8
+  },
+  {
+   "name": "tick",
+   "t": 898.82,
+   "db": -6
+  },
+  {
+   "name": "pop",
+   "t": 902.6,
+   "db": 0
+  },
+  {
+   "name": "cut",
+   "t": 905.49,
+   "db": 0
+  },
+  {
+   "name": "whoosh",
+   "t": 910.44,
+   "db": -9
+  },
+  {
+   "name": "page",
+   "t": 915.88,
+   "db": -1
+  },
+  {
+   "name": "pop",
+   "t": 919.34,
+   "db": -3
+  },
+  {
+   "name": "impact",
+   "t": 923.12,
+   "db": -7
+  },
+  {
+   "name": "pop",
+   "t": 926.5,
+   "db": -1
+  },
+  {
+   "name": "cut",
+   "t": 929.8,
+   "db": 0
+  },
+  {
+   "name": "click",
+   "t": 931.5,
+   "db": -4
+  },
+  {
+   "name": "click",
+   "t": 932.62,
+   "db": -4
+  },
+  {
+   "name": "click",
+   "t": 934.76,
+   "db": -4
+  },
+  {
+   "name": "click",
+   "t": 935.48,
+   "db": -4
+  },
+  {
+   "name": "cut",
+   "t": 939.66,
+   "db": 0
+  },
+  {
+   "name": "card",
+   "t": 942.86,
+   "db": 0
+  },
+  {
+   "name": "whoosh",
+   "t": 945.58,
+   "db": -6
+  },
+  {
+   "name": "click",
+   "t": 951.54,
+   "db": 0
+  },
+  {
+   "name": "cut",
+   "t": 953.01,
+   "db": 0
+  },
+  {
+   "name": "book",
+   "t": 953.66,
+   "db": -2
+  },
+  {
+   "name": "book",
+   "t": 954.16,
+   "db": -4
+  }
+ ],
+ "SCENES": [
+  {
+   "n": 1,
+   "id": "title",
+   "start": 0,
+   "end": 2.16,
+   "ground": "paper",
+   "label": "// 00 — intro",
+   "trans": "cut"
+  },
+  {
+   "n": 2,
+   "id": "stack",
+   "start": 2.16,
+   "end": 5.09,
+   "ground": "ink",
+   "label": "// 01 — the stack",
+   "trans": "cut"
+  },
+  {
+   "n": 3,
+   "id": "video",
+   "start": 5.09,
+   "end": 15.18,
+   "ground": "paper",
+   "label": "// 01 — the stack",
+   "trans": "cut"
+  },
+  {
+   "n": 4,
+   "id": "stack-again",
+   "start": 15.18,
+   "end": 18.61,
+   "ground": "ink",
+   "label": "// 01 — the stack",
+   "trans": "cut"
+  },
+  {
+   "n": 5,
+   "id": "three-books",
+   "start": 18.61,
+   "end": 49.96,
+   "ground": "paper",
+   "label": "// 01 — the stack",
+   "trans": "cut"
+  },
+  {
+   "n": 6,
+   "id": "today",
+   "start": 49.96,
+   "end": 61.95,
+   "ground": "ink",
+   "label": "// 02 — today",
+   "trans": "cut"
+  },
+  {
+   "n": 7,
+   "id": "read-a-book",
+   "start": 61.95,
+   "end": 67.88,
+   "ground": "ink",
+   "label": "// 03 — the problem",
+   "trans": "whip"
+  },
+  {
+   "n": 8,
+   "id": "question",
+   "start": 67.88,
+   "end": 72.5,
+   "ground": "paper",
+   "label": "// 03 — the problem",
+   "trans": "cut"
+  },
+  {
+   "n": 9,
+   "id": "gist",
+   "start": 72.5,
+   "end": 86.24,
+   "ground": "ink",
+   "label": "// 03 — the problem",
+   "trans": "cut"
+  },
+  {
+   "n": 10,
+   "id": "feeling",
+   "start": 86.24,
+   "end": 93.32,
+   "ground": "paper",
+   "label": "// 03 — the problem",
+   "trans": "cut"
+  },
+  {
+   "n": 11,
+   "id": "fixes-that",
+   "start": 93.32,
+   "end": 95.7,
+   "ground": "blue",
+   "label": "// 03 — the problem",
+   "trans": "cut"
+  },
+  {
+   "n": 12,
+   "id": "method",
+   "start": 95.7,
+   "end": 97.92,
+   "ground": "paper",
+   "label": "// 04 — the method",
+   "trans": "cut"
+  },
+  {
+   "n": 13,
+   "id": "structure-first",
+   "start": 97.92,
+   "end": 101.53,
+   "ground": "blue",
+   "label": "// 04 — the method",
+   "trans": "cut"
+  },
+  {
+   "n": 14,
+   "id": "contents",
+   "start": 101.53,
+   "end": 119.98,
+   "ground": "paper",
+   "label": "// 04 — the method",
+   "trans": "cut"
+  },
+  {
+   "n": 15,
+   "id": "two-steps",
+   "start": 119.98,
+   "end": 125.7,
+   "ground": "ink",
+   "label": "// 04 — the method",
+   "trans": "cut"
+  },
+  {
+   "n": 16,
+   "id": "seen-it",
+   "start": 125.7,
+   "end": 130.71,
+   "ground": "ink",
+   "label": "// 05 — an old idea",
+   "trans": "whip"
+  },
+  {
+   "n": 17,
+   "id": "old-idea",
+   "start": 130.71,
+   "end": 135.73,
+   "ground": "paper",
+   "label": "// 05 — an old idea",
+   "trans": "cut"
+  },
+  {
+   "n": 18,
+   "id": "adler-1940",
+   "start": 135.73,
+   "end": 142.26,
+   "ground": "blue",
+   "label": "// 05 — an old idea",
+   "trans": "cut"
+  },
+  {
+   "n": 19,
+   "id": "to-read",
+   "start": 142.26,
+   "end": 147.36,
+   "ground": "paper",
+   "label": "// 05 — an old idea",
+   "trans": "cut"
+  },
+  {
+   "n": 20,
+   "id": "inspect",
+   "start": 147.36,
+   "end": 151.24,
+   "ground": "paper",
+   "label": "// 06 — inspectional reading",
+   "trans": "whip"
+  },
+  {
+   "n": 21,
+   "id": "before-ch1",
+   "start": 151.24,
+   "end": 165.61,
+   "ground": "ink",
+   "label": "// 06 — inspectional reading",
+   "trans": "cut"
+  },
+  {
+   "n": 22,
+   "id": "justin-sung",
+   "start": 165.61,
+   "end": 176.66,
+   "ground": "ink",
+   "label": "// 07 — priming",
+   "trans": "whip"
+  },
+  {
+   "n": 23,
+   "id": "priming",
+   "start": 176.66,
+   "end": 188.2,
+   "ground": "paper",
+   "label": "// 07 — priming",
+   "trans": "cut"
+  },
+  {
+   "n": 24,
+   "id": "tiktok",
+   "start": 188.2,
+   "end": 195.18,
+   "ground": "ink",
+   "label": "// 07 — priming",
+   "trans": "cut"
+  },
+  {
+   "n": 25,
+   "id": "memorising",
+   "start": 195.18,
+   "end": 209.61,
+   "ground": "paper",
+   "label": "// 07 — priming",
+   "trans": "cut"
+  },
+  {
+   "n": 26,
+   "id": "why-it-works",
+   "start": 209.61,
+   "end": 217.73,
+   "ground": "paper",
+   "label": "// 08 — why it works",
+   "trans": "whip"
+  },
+  {
+   "n": 27,
+   "id": "cold",
+   "start": 217.73,
+   "end": 247.14,
+   "ground": "ink",
+   "label": "// 08 — why it works",
+   "trans": "cut"
+  },
+  {
+   "n": 28,
+   "id": "shelves",
+   "start": 247.14,
+   "end": 261.2,
+   "ground": "paper",
+   "label": "// 08 — why it works",
+   "trans": "cut"
+  },
+  {
+   "n": 29,
+   "id": "build-shelves",
+   "start": 261.2,
+   "end": 267.1,
+   "ground": "blue",
+   "label": "// 08 — why it works",
+   "trans": "cut"
+  },
+  {
+   "n": 30,
+   "id": "book-one",
+   "start": 267.1,
+   "end": 274.76,
+   "ground": "ink",
+   "label": "// 09 — book one",
+   "trans": "cut"
+  },
+  {
+   "n": 31,
+   "id": "b1-title",
+   "start": 274.76,
+   "end": 295.62,
+   "ground": "paper",
+   "label": "// 09 — book one",
+   "trans": "cut"
+  },
+  {
+   "n": 32,
+   "id": "b1-contents",
+   "start": 295.62,
+   "end": 335.09,
+   "ground": "paper",
+   "label": "// 09 — book one",
+   "trans": "whip"
+  },
+  {
+   "n": 33,
+   "id": "ch1-question",
+   "start": 335.09,
+   "end": 349.42,
+   "ground": "paper",
+   "label": "// 10 — chapter 01",
+   "trans": "whip"
+  },
+  {
+   "n": 34,
+   "id": "ch1-undefined",
+   "start": 349.42,
+   "end": 353.12,
+   "ground": "ink",
+   "label": "// 10 — chapter 01",
+   "trans": "cut"
+  },
+  {
+   "n": 35,
+   "id": "be-critical",
+   "start": 353.12,
+   "end": 358.49,
+   "ground": "paper",
+   "label": "// 10 — chapter 01",
+   "trans": "cut"
+  },
+  {
+   "n": 36,
+   "id": "ch1-definition",
+   "start": 358.49,
+   "end": 364.25,
+   "ground": "ink",
+   "label": "// 10 — chapter 01",
+   "trans": "cut"
+  },
+  {
+   "n": 37,
+   "id": "challenged",
+   "start": 364.25,
+   "end": 389.77,
+   "ground": "paper",
+   "label": "// 10 — chapter 01",
+   "trans": "cut"
+  },
+  {
+   "n": 38,
+   "id": "ch2",
+   "start": 389.77,
+   "end": 406,
+   "ground": "ink",
+   "label": "// 11 — chapter 02",
+   "trans": "cut"
+  },
+  {
+   "n": 39,
+   "id": "ch3",
+   "start": 406,
+   "end": 432.16,
+   "ground": "paper",
+   "label": "// 12 — chapter 03",
+   "trans": "cut"
+  },
+  {
+   "n": 40,
+   "id": "ch3-strategy",
+   "start": 432.16,
+   "end": 436.1,
+   "ground": "blue",
+   "label": "// 12 — chapter 03",
+   "trans": "cut"
+  },
+  {
+   "n": 41,
+   "id": "ch4",
+   "start": 436.1,
+   "end": 446.56,
+   "ground": "ink",
+   "label": "// 13 — chapter 04",
+   "trans": "cut"
+  },
+  {
+   "n": 42,
+   "id": "ch4-questions",
+   "start": 446.56,
+   "end": 459.96,
+   "ground": "paper",
+   "label": "// 13 — chapter 04",
+   "trans": "cut"
+  },
+  {
+   "n": 43,
+   "id": "ch5-7",
+   "start": 459.96,
+   "end": 488.44,
+   "ground": "paper",
+   "label": "// 14 — chapters 05–07",
+   "trans": "whip"
+  },
+  {
+   "n": 44,
+   "id": "ch8-10",
+   "start": 488.44,
+   "end": 494.71,
+   "ground": "paper",
+   "label": "// 15 — chapters 08–10",
+   "trans": "whip"
+  },
+  {
+   "n": 45,
+   "id": "ch8-head",
+   "start": 494.71,
+   "end": 512.14,
+   "ground": "ink",
+   "label": "// 15 — chapter 08",
+   "trans": "cut"
+  },
+  {
+   "n": 46,
+   "id": "ch8-four",
+   "start": 512.14,
+   "end": 521.56,
+   "ground": "paper",
+   "label": "// 15 — chapter 08",
+   "trans": "cut"
+  },
+  {
+   "n": 47,
+   "id": "ch9",
+   "start": 521.56,
+   "end": 529.34,
+   "ground": "ink",
+   "label": "// 16 — chapter 09",
+   "trans": "cut"
+  },
+  {
+   "n": 48,
+   "id": "ch10",
+   "start": 529.34,
+   "end": 547.11,
+   "ground": "paper",
+   "label": "// 17 — chapter 10",
+   "trans": "cut"
+  },
+  {
+   "n": 49,
+   "id": "my-guess",
+   "start": 547.11,
+   "end": 553.92,
+   "ground": "paper",
+   "label": "// 18 — my guess",
+   "trans": "whip"
+  },
+  {
+   "n": 50,
+   "id": "position",
+   "start": 553.92,
+   "end": 562.1,
+   "ground": "ink",
+   "label": "// 18 — my guess",
+   "trans": "cut"
+  },
+  {
+   "n": 51,
+   "id": "book-two",
+   "start": 562.1,
+   "end": 565.86,
+   "ground": "ink",
+   "label": "// 19 — book two",
+   "trans": "whip"
+  },
+  {
+   "n": 52,
+   "id": "b2-title",
+   "start": 565.86,
+   "end": 593.14,
+   "ground": "paper",
+   "label": "// 19 — book two",
+   "trans": "cut"
+  },
+  {
+   "n": 53,
+   "id": "convivial",
+   "start": 593.14,
+   "end": 607.24,
+   "ground": "ink",
+   "label": "// 20 — convivial",
+   "trans": "cut"
+  },
+  {
+   "n": 54,
+   "id": "power-back",
+   "start": 607.24,
+   "end": 615.74,
+   "ground": "paper",
+   "label": "// 20 — convivial",
+   "trans": "cut"
+  },
+  {
+   "n": 55,
+   "id": "b2-guess",
+   "start": 615.74,
+   "end": 637.52,
+   "ground": "ink",
+   "label": "// 20 — my guess",
+   "trans": "cut"
+  },
+  {
+   "n": 56,
+   "id": "b2-parts",
+   "start": 637.52,
+   "end": 661.31,
+   "ground": "ink",
+   "label": "// 21 — structure",
+   "trans": "whip"
+  },
+  {
+   "n": 57,
+   "id": "page-count",
+   "start": 661.31,
+   "end": 675.36,
+   "ground": "paper",
+   "label": "// 21 — structure",
+   "trans": "cut"
+  },
+  {
+   "n": 58,
+   "id": "theory",
+   "start": 675.36,
+   "end": 681,
+   "ground": "ink",
+   "label": "// 21 — structure",
+   "trans": "cut"
+  },
+  {
+   "n": 59,
+   "id": "manual",
+   "start": 681,
+   "end": 684.78,
+   "ground": "blue",
+   "label": "// 21 — structure",
+   "trans": "cut"
+  },
+  {
+   "n": 60,
+   "id": "theory-practice",
+   "start": 684.78,
+   "end": 698.06,
+   "ground": "paper",
+   "label": "// 21 — structure",
+   "trans": "cut"
+  },
+  {
+   "n": 61,
+   "id": "b2-ch1",
+   "start": 698.06,
+   "end": 708.59,
+   "ground": "paper",
+   "label": "// 22 — book two · ch 01",
+   "trans": "whip"
+  },
+  {
+   "n": 62,
+   "id": "who-creative",
+   "start": 708.59,
+   "end": 712.14,
+   "ground": "paper",
+   "label": "// 22 — book two · ch 01",
+   "trans": "whip"
+  },
+  {
+   "n": 63,
+   "id": "quotes",
+   "start": 712.14,
+   "end": 730.62,
+   "ground": "ink",
+   "label": "// 22 — book two · ch 01",
+   "trans": "cut"
+  },
+  {
+   "n": 64,
+   "id": "b2-ch1-more",
+   "start": 730.62,
+   "end": 742.12,
+   "ground": "paper",
+   "label": "// 22 — book two · ch 01",
+   "trans": "cut"
+  },
+  {
+   "n": 65,
+   "id": "ordinary-people",
+   "start": 742.12,
+   "end": 769.6,
+   "ground": "ink",
+   "label": "// 22 — book two · ch 01",
+   "trans": "cut"
+  },
+  {
+   "n": 66,
+   "id": "link-convivial",
+   "start": 769.6,
+   "end": 778.78,
+   "ground": "paper",
+   "label": "// 22 — book two · ch 01",
+   "trans": "cut"
+  },
+  {
+   "n": 67,
+   "id": "bridging",
+   "start": 778.78,
+   "end": 794.34,
+   "ground": "ink",
+   "label": "// 23 — book two · ch 10",
+   "trans": "cut"
+  },
+  {
+   "n": 68,
+   "id": "gap",
+   "start": 794.34,
+   "end": 808.4,
+   "ground": "paper",
+   "label": "// 23 — book two · ch 10",
+   "trans": "cut"
+  },
+  {
+   "n": 69,
+   "id": "primed-cold",
+   "start": 808.4,
+   "end": 827.8,
+   "ground": "paper",
+   "label": "// 23 — book two · ch 10",
+   "trans": "whip"
+  },
+  {
+   "n": 70,
+   "id": "worth-it",
+   "start": 827.8,
+   "end": 852.96,
+   "ground": "paper",
+   "label": "// 24 — worth it",
+   "trans": "whip"
+  },
+  {
+   "n": 71,
+   "id": "anticipation",
+   "start": 852.96,
+   "end": 870.94,
+   "ground": "ink",
+   "label": "// 24 — worth it",
+   "trans": "cut"
+  },
+  {
+   "n": 72,
+   "id": "no-brainer",
+   "start": 870.94,
+   "end": 880.24,
+   "ground": "blue",
+   "label": "// 25 — recap",
+   "trans": "cut"
+  },
+  {
+   "n": 73,
+   "id": "recap",
+   "start": 880.24,
+   "end": 893.44,
+   "ground": "paper",
+   "label": "// 25 — recap",
+   "trans": "cut"
+  },
+  {
+   "n": 74,
+   "id": "memorise-it",
+   "start": 893.44,
+   "end": 905.49,
+   "ground": "ink",
+   "label": "// 25 — recap",
+   "trans": "cut"
+  },
+  {
+   "n": 75,
+   "id": "fiction",
+   "start": 905.49,
+   "end": 929.8,
+   "ground": "paper",
+   "label": "// 26 — fiction?",
+   "trans": "cut"
+  },
+  {
+   "n": 76,
+   "id": "the-method",
+   "start": 929.8,
+   "end": 939.66,
+   "ground": "blue",
+   "label": "// 27 — the method",
+   "trans": "cut"
+  },
+  {
+   "n": 77,
+   "id": "your-turn",
+   "start": 939.66,
+   "end": 953.01,
+   "ground": "ink",
+   "label": "// 28 — your turn",
+   "trans": "cut"
+  },
+  {
+   "n": 78,
+   "id": "end",
+   "start": 953.01,
+   "end": 959.035,
+   "ground": "paper",
+   "label": "// 29 — end",
+   "trans": "cut"
+  }
+ ]
+}

@@ -1,0 +1,22 @@
+{
+ "label": "Before this session’s edits",
+ "auto": true,
+ "savedAt": 1790870603065,
+ "content": {
+  "direction": "Face + book + 3-word hook",
+  "title": "How I Remember the Non-Fiction I Read",
+  "text": {
+   "line1": "Read the",
+   "line2": "contents",
+   "line3": "first."
+  },
+  "images": {
+   "person": "../../assets/cut/baratta_gaze.png"
+  },
+  "vars": {
+   "--x": "430px",
+   "--y": "6px",
+   "--w": "912px"
+  }
+ }
+}

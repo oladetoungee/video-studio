@@ -1,0 +1,50 @@
+{
+ "music": "443",
+ "musicAt": 4,
+ "musicDb": -22,
+ "sfxDb": -4,
+ "roles": {
+  "tick": "clock-tick-single",
+  "tick2": "ui-select-click",
+  "pop": "pop-dry",
+  "pop2": "notify-bubble-pop",
+  "place": "card-place",
+  "swipe": "swipe-fast-zoom",
+  "hit": "hit-short-bass"
+ },
+ "cues": [
+  [
+   335.0,
+   "tick"
+  ],
+  [
+   335.74,
+   "pop"
+  ],
+  [
+   337.68,
+   "tick2"
+  ],
+  [
+   339.6,
+   "place"
+  ],
+  [
+   341.9,
+   "tick"
+  ],
+  [
+   342.4,
+   "swipe",
+   -2
+  ],
+  [
+   343.44,
+   "hit"
+  ],
+  [
+   344.16,
+   "pop2"
+  ]
+ ]
+}

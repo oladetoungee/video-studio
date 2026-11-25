@@ -1,0 +1,74 @@
+{
+ "title": "The Labor Market Is Tilting Toward Seniority - Indeed Hiring Lab",
+ "h1": "The Labor Market Is Tilting Toward Seniority",
+ "h1y": 867.421875,
+ "found": {
+  "4.5% in software development": [
+   [
+    529.546875,
+    2912.234375,
+    226.875,
+    22
+   ]
+  ],
+  "69.3%": [
+   [
+    803.5625,
+    1338.421875,
+    45.0625,
+    22
+   ]
+  ],
+  "software development": [
+   [
+    220.453125,
+    1338.421875,
+    169.765625,
+    22
+   ]
+  ]
+ },
+ "H": 8117,
+ "focus": {
+  "4.5% in software development": {
+   "file": "indeed-seniority__4-5-in-software-developm.png",
+   "top": 2392.234375,
+   "rects": [
+    [
+     529.546875,
+     520,
+     226.875,
+     22
+    ]
+   ]
+  },
+  "69.3%": {
+   "file": "indeed-seniority__69-3-.png",
+   "top": 818.421875,
+   "rects": [
+    [
+     803.5625,
+     520,
+     45.0625,
+     22
+    ]
+   ]
+  },
+  "software development": {
+   "file": "indeed-seniority__software-development.png",
+   "top": 818.421875,
+   "rects": [
+    [
+     220.453125,
+     520,
+     169.765625,
+     22
+    ]
+   ]
+  }
+ },
+ "clipTop": 747.421875,
+ "scale": 1.5,
+ "url": "https://hiringlab.indeed.com/2026/07/23/the-labor-market-is-tilting-toward-seniority/",
+ "captured": "2026-11-02T19:31:06.811Z"
+}

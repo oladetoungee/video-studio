@@ -1,0 +1,19 @@
+{
+  "direction": "A big generic phone stuck on the refresh spinner over an empty feed; her deadpan beside it (7:22).",
+  "concept": "TH03",
+  "follows": "viral sample 1 (the object huge beside her)",
+  "thumbnail_text": "STILL NOTHING?",
+  "title": "Why You Check Your Phone Even When Nothing's There",
+  "titles": [
+    "Why You Check Your Phone Even When Nothing's There",
+    "Pull-to-Refresh Explained: Why You Keep Pulling Down"
+  ],
+  "text": {
+    "words": "Still <span class=\"acc\">nothing?</span>"
+  },
+  "images": {
+    "scene": "../../assets/scene/warm/s_442.5.jpg",
+    "front": "../../assets/scene/warm/mask/s_442.5.png"
+  },
+  "vars": {}
+}

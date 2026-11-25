@@ -1,0 +1,19 @@
+{
+  "direction": "Red highlight box on one word (her board: 'JOBS ARE DEAD', 'stop lying to yourself'), Playfair editorial lines, her raised-eyebrow look (3:25) in the room",
+  "title": "Anyone Can Now Search Divorce Records in Ghana",
+  "titles": [
+    "Anyone Can Now Search Divorce Records in Ghana",
+    "Ghana's Marriage Registry Is Open to Anyone. Is That OK?",
+    "I Like Ghana's New Marriage Records Site. I Have Questions"
+  ],
+  "text": {
+    "line1": "should your",
+    "line2": "divorce be",
+    "box": "public?"
+  },
+  "images": {
+    "scene": "../../assets/scene/s_205.08.jpg",
+    "front": "../../assets/scene/mask/s_205.08.png"
+  },
+  "vars": {}
+}

@@ -1,0 +1,46 @@
+{
+ "title": "Working full time while doing a master's abroad",
+ "last_word_h": 604.2,
+ "end_why": "after her last word (\"…and not to die. Yeah.\"); the rest is room tone",
+ "summary": "She talks almost without pauses (no gap over 1.2 s inside her speech, apart from one inside a retake), so the gain comes from 6 retakes and stumbles plus the end. She starts speaking at 0.07 s, so there is no dead air at the start.",
+ "cuts": [
+  {
+   "kind": "Restart (her call)",
+   "A": 5.63,
+   "B": 7.47,
+   "why": "She stops mid-phrase (\"doing a full time-\"), adds an aside, then says the phrase again. Keeping the second take gives \"I'm also doing a full-time master's degree here as well\". If she likes the aside \"I like to add full time to it\", skip this cut."
+  },
+  {
+   "kind": "Retake",
+   "h1": 121.88,
+   "h2": 125.12,
+   "why": "Restart: first take breaks off (\"gets scratched up\"), second take is clean: \"before the semester gets busy\"."
+  },
+  {
+   "kind": "Stumble",
+   "h1": 228.38,
+   "h2": 231.14,
+   "why": "\"one of the tip, tip, tip is to block, block\": keeps \"if you have a full-time job, block your week, right?\""
+  },
+  {
+   "kind": "Retake",
+   "h1": 232.66,
+   "h2": 234.92,
+   "why": "Same sentence twice; the second (\"A good way to plan your week is to start with the things that cannot move\") is the complete one."
+  },
+  {
+   "kind": "Retake",
+   "h1": 431.68,
+   "h2": 434.5,
+   "why": "She corrects herself (\"20, 30 calendar days, I think …\"); keeps the corrected take \"30 calendar days of study leave. And 20 of those are paid\"."
+  },
+  {
+   "kind": "Retake",
+   "A": 487.4,
+   "B": 493.27,
+   "why": "An \"um\" and three goes at the same line (\"So I can work around the clock as well. I don't know. Yeah, I can work around the clock.\"); keeps the last, firm one: \"I work around the clock. But depending on the job…\""
+  }
+ ],
+ "decisions": "- **Cut 1 of section 2** (the \"I like to add full time to it\" aside at 0:05) is optional: it's a personal touch, but it breaks the first sentence of the video.\n- **9:43 \"Try to, I don't know, this advice is the one for me as well, but try to, you know, get proper sleep\"**: left in (it sounds like her), but it is a loose sentence; optional cut 9:41.90 (581.90) to 9:46.58 (586.58) so it reads \"…at least get sleep. You know, get proper sleep. It helps.\" (not counted in the totals)\n- **Ending**: the video ends on \"…stay on top of things and not to die. Yeah.\" with no sign-off. Her kit had a closing line (\"tell me in the comments which of these tips you already do\") that she did not record.\n- Unclear words to listen to: 1:19 \"Working while studying is the real ghetto(?)\", 5:49 \"you can … at your work\", 6:13 \"School will take a lot of my blood(?) in December\", 7:53 \"affords you some strap(?) privileges\", 9:14 \"You cannot be cooking a four-year-old(?) on Wednesday afternoon\" (whisper's words; meaning unclear, probably a Nigerian dish).",
+ "kit": "**Skipped from the kit** (she didn't say these):\n- The 1994 planning-fallacy study (Roger Buehler, Dale Griffin, Michael Ross: students guessed 34 days for their thesis, took about 55, about 30% finished on time). She gave the advice (\"budget 10 weeks if you think 6-8\") without the study.\n- Cal Newport's name for time blocking (she says \"It's called time blocking\").\n- The 2019 MIT sleep study (88 chemistry students) and the Mike and Matty \"bedtime, not alarm\" rule.\n- Tip 7 \"be honest with yourself about what you have / don't hold on to a picture of a perfect work-life balance / be willing to give things up\" (partly said in her own words at the end).\n- \"Tell your manager in advance: I have this big thing at school and I want to take study leave.\"\n- The detail about her big practical course with real clients (she says instead she'll be rounding off courses, doing presentations, cleaning up projects in December).\n- The closing call to action (\"tell me in the comments which of these tips you already do\").\n- Tip numbers stop after six: from vacation days on she says \"another thing\" / \"another tip\" (communication, kind of job, meal prep, sleep).\n\n**Added in the recording** (not in the kit):\n- \"confirm international students can work where you're studying before you even try\" framing, \"please, or you intend to be\".\n- \"Don't just write credits. Understand this course will give me these credits … I have to be in school two times / once every week.\"\n- Elective courses: choose ones where class commitments won't overwhelm you.\n- \"you have the same one 24 hours\" (same calendar tip).\n- Meal-prep section is longer (\"those four hours … guarantees food for the rest of the week\", African food).\n- Migraines / hospital and \"I believe that God is taking control\".\n- Fixed-hours jobs: \"you can just clock out of work and forget about work … For me, I don't think 5pm is really when work ends.\"\n\n**Facts to check:**\n- 1:02 she says \"**At any university** after your first year, you need at least 45 of those [ECTS]\". The kit says \"At my university\" (Tallinn University). It may be whisper mishearing \"my\" as \"any\"; if she really said \"any\", it's too broad (the rule is per school). Worth a listen.\n- \"In Estonia, full-time study means around 30 ECTS every semester\" and \"falling into part-time study can result in your permit being revoked\": matches the kit's on-screen note (at least 22.5 ECTS per semester, checked every 2 semesters; check your own school).\n- Study leave: she says \"30 calendar days, 20 of those are paid at your average salary\": matches the kit (Adult Education Act; the kit adds \"with a letter from your school, for higher education\").\n- \"I've been doing both since October 2025. This month makes it a year\": true only if it's posted in October 2026; if it goes out later, the line dates the video.\n- \"there's no limit to the number of hours\" for students working in Estonia: matches the kit."
+}

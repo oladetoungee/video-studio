@@ -1,0 +1,23 @@
+{
+  "direction": "Clean white-and-red editorial (her board: 'how to be consistent', 'no one cares.'): 'Ghana's' + huge red 'marriage search app' behind her cut-out (2:48), phone search + real rings (stock)",
+  "thumbnail_text": "Ghana's marriage search app",
+  "title": "Anyone Can Now Check If You're Married in Ghana",
+  "titles": [
+    "Anyone Can Now Check If You're Married in Ghana",
+    "I Like Ghana's New Marriage App. Here's My One Worry",
+    "Ghana Launched Marrify. Should Marriage Records Be Public?"
+  ],
+  "text": {
+    "line1": "Ghana's new",
+    "line2": "marriage search app",
+    "p_app": "Marriage records",
+    "p_q": "Search a name",
+    "p_rl": "Record found",
+    "p_res": "Married"
+  },
+  "images": {
+    "front": "../../assets/scene/mask/s_185.13.png",
+    "rings": "../../assets/stock/rings_cut.png"
+  },
+  "vars": {}
+}

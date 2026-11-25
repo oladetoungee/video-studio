@@ -1,0 +1,36 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../lib/rm.css"><style>
+/* sample 3 measured (1200x675 scaled to 1280x720): white grid paper (~45 px cells); person cut-out x 0-560, face box
+   341 px wide centred at 255,382, head cropped by the top edge, thin white edge; title Inter-like heavy caps #1F1F1F,
+   line 1 x 535-1245 cap 35-105, line 2 x 522-1255 cap 128-207; red marker double underline y 230-245 x 560-1220;
+   sticky notes 215x92: yellow #F9D649 (475,308) cyan #80D8F0 (850,308) yellow (1035,455) cyan (663,455) green #4BE35E (913,602);
+   marker caps ~46 px; hand-drawn black arrows. */
+.t{--ground:#F7F7F5;--fg:#1F1F1F;--accent:#E3171B;--cx:-634px;--cy:-87px;--cw:1790px}
+.gp{position:absolute;inset:0;background-image:linear-gradient(rgba(0,0,0,.075) 1px,transparent 1px),linear-gradient(90deg,rgba(0,0,0,.075) 1px,transparent 1px);background-size:44px 44px;background-position:-6px -10px}
+.cut2{-webkit-mask-image:linear-gradient(90deg,#000 640px,transparent 720px);mask-image:linear-gradient(90deg,#000 640px,transparent 720px);z-index:1}
+.cut2 img{filter:drop-shadow(0 0 2px #fff) drop-shadow(0 0 5px rgba(255,255,255,.9))}
+.ttl{position:absolute;left:520px;width:740px;text-align:center;top:22px;font-family:'Inter';font-weight:800;color:var(--fg);text-transform:uppercase;letter-spacing:-.025em;line-height:1;white-space:nowrap}
+.ttl .a{font-size:72px;letter-spacing:-.035em}.ttl .b{font-size:120px;margin-top:2px}
+.st{position:absolute;width:215px;height:92px;display:flex;align-items:center;justify-content:center;font-family:'Kalam';font-size:46px;color:#111;box-shadow:0 1px 1px rgba(0,0,0,.08)}
+.y{background:#F9D649}.c{background:#80D8F0}.g{background:#4BE35E}
+.st .pixw{color:#1d5466;font-size:44px}.st{overflow:hidden}.y .pixw{color:#5e5110}.st{z-index:2}svg.dr{z-index:2}
+svg.dr{position:absolute;left:0;top:0;overflow:visible}
+svg.dr path{fill:none;stroke:#111;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+svg.ul path{fill:none;stroke:var(--accent);stroke-width:7;stroke-linecap:round}
+</style></head><body><div class="t">
+<div class="gp"></div>
+<div class="cut2" data-move="her"><img data-img="front" alt=""></div>
+<div class="ttl" data-move="headline"><div class="a" data-k="line1"></div><div class="b" data-k="line2"></div></div>
+<svg class="dr ul" width="1" height="1" data-move="underline"><path d="M562 233 C 760 226, 1000 228, 1222 236"/><path d="M606 247 C 760 240, 920 239, 1066 241"/></svg>
+<div data-move="framework">
+<div class="st y" style="left:475px;top:308px"><span data-k="n1"></span></div>
+<div class="st c" style="left:850px;top:308px"><span class="pixw" data-px="11" data-k="n2"></span></div>
+<div class="st y" style="left:1035px;top:455px"><span class="pixw" data-px="11" data-k="n3"></span></div>
+<div class="st c" style="left:663px;top:455px"><span class="pixw" data-px="11" data-k="n4"></span></div>
+<div class="st g" style="left:913px;top:602px;font-size:42px"><span data-k="n5"></span></div>
+<svg class="dr" width="1" height="1">
+  <path d="M705 354 L830 354 M812 342 L831 354 L812 367"/>
+  <path d="M1097 344 C 1140 346, 1172 372, 1170 420 M1156 404 L1170 421 L1184 403"/>
+  <path d="M1016 497 L906 497 M924 485 L905 497 L924 510"/>
+  <path d="M786 580 C 784 622, 820 640, 884 637 M866 624 L885 637 L866 651"/>
+</svg></div>
+</div><script src="../../lib/rm.js"></script><script src="../../lib/bind.js"></script></body></html>

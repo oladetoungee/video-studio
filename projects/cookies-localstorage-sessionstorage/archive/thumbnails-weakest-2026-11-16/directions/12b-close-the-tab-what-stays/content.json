@@ -1,0 +1,30 @@
+{
+ "direction": "12b (2026-11-16 rework of 12, which scored 6/7 cold: small struck line at phone size, the checklist gave the answer away). TWO SUM's composition: the question huge across the top in black condensed caps on blue, a lined notepad below running off the bottom, sketched by hand: a browser tab with its X and a cursor on it, and three empty tick boxes: login ? cart ? form ? (the video answers them). She sits at the bottom right, hand on her chin, thinking about it (shoot 1554, hard-masked cut-out). The old 12 stays beside it.",
+ "thumbnail_text": "Close the tab. What stays?",
+ "kind": "flat",
+ "recommended": false,
+ "titles": [
+  "Close the Tab: What Your Browser Keeps (Cookies vs localStorage vs sessionStorage)",
+  "Why Your Cart Stays but Your Checkout Form Disappears",
+  "localStorage vs sessionStorage vs Cookies (What Goes Where)"
+ ],
+ "text": {
+  "hd": "Close the tab.<br>What stays?",
+  "r1": "login?",
+  "r2": "cart?",
+  "r3": "form?"
+ },
+ "images": {
+  "me": "../../assets/shoot/1554-hard.png"
+ },
+ "vars": {
+  "--ground": "#2FA8E0",
+  "--ink": "#111111"
+ },
+ "board": "Thumbnails 91 (yt-38 \"TWO SUM\": the topic huge across the top, a notepad with the idea sketched by hand below, off the bottom edge)",
+ "fonts": "Font 66 (thumbs-11: Oswald Bold black #111111 on blue #2FA8E0, Thumbnails 87) for the headline + Font 83 (pair-08: Caveat Brush in its own dark green #18480E) for the handwriting on the paper",
+ "colours": "Font 66 specimen: black #111111 on blue #2FA8E0; the notepad is paper white with Caveat Brush in Font 83's green ink",
+ "title": "Close the Tab: What Your Browser Keeps (Cookies vs localStorage vs sessionStorage)",
+ "class": "no-lift",
+ "scores": "new 2026-11-16, see STATUS.md"
+}

@@ -1,0 +1,81 @@
+URL: https://www.helpnetsecurity.com/?p=388647
+STATUS: loaded (http 200)
+FINAL: https://www.helpnetsecurity.com/2026/10/21/emudhra-certificates-private-keys-compromised/
+TITLE: eMudhra security blunder left trusted CA signing keys exposed to anyone - Help Net Security
+H1: eMudhra security blunder left trusted CA signing keys exposed to anyone
+OG: eMudhra security blunder left trusted CA signing keys exposed to anyone - Help Net Security | Help Net Security
+PUBLISHED: 2026-10-21T14:11:24+00:00  MODIFIED: 2026-10-23T06:30:06+00:00
+DOC_H: 5173
+
+Sinisa Markovic, Managing Editor, Help Net Security
+October 21, 2026
+Share
+eMudhra security blunder left trusted CA signing keys exposed to anyone
+
+Eight intermediate certificates issued by Indian certificate authority eMudhra were secured with private keys so weak that anyone could recover them from the public certificates in under a second.
+
+On its website, the company highlights that it has issued more than 60 million digital certificates.
+
+A security researcher known as Wayne discovered the flaw on October 17 while running a check against the Common CA Database (CCADB). To prove the keys were compromised, he signed the message “We have a problem here – Wayne” with each of them and sent his report to Apple, Google, Microsoft, Mozilla and eMudhra.
+
+Mozilla’s Dennis Jackson made the incident public on October 20 in a statement on the organization’s dev-security-policy forum, warning that the keys could let attackers issue fraudulent HTTPS certificates for websites they don’t control. The certificates chain to roots trusted by Apple, Google, Microsoft and Mozilla.
+
+“This is a serious security incident with implications across the Internet,” stated Cloudflare.
+
+“These certificates were widely trusted by browsers, operating systems, and also within Cloudflare. Because the keys themselves are weak, an attacker can create a forged certificate for any domain and use it to impersonate servers to intercept or modify traffic,” the company added.
+
+Private keys anyone could guess
+
+According to Mozilla’s incident report, the eight affected keys came from a batch of 24 intermediates eMudhra generated on April 30, 2025. Six issue TLS certificates for websites and two are used for code signing, and certificate authority Sectigo cross-signed all eight in May 2025.
+
+A private key of this type is meant to be a random number more than 100 digits long. Each of these was smaller than 256, so anyone can find one by testing at most 256 values.
+
+Security researcher Scott Helme was among those who recovered the keys.
+
+“One of eMudhra’s certificate authority private keys is the number 4. Not a number that starts with 4, or the number 4 followed by a few hundred random digits, just, 4… Another one is 56, and another is 115. I know, because I recovered all of them from their public certificates on my laptop just now, and it took less than a second,” wrote Helme.
+
+“Normally when a CA key is compromised, someone stole it! There’s a thief, there’s a moment it happened, and you can at least reason about who now has access to that key.”
+
+“Here, nobody had to steal anything. The key was effectively public from the day the certificate existed,” added Helme.
+
+Browsers acted within hours
+
+Chrome and Firefox blocked the certificates on the day of the report, Apple followed on October 19 and Microsoft on October 20. eMudhra revoked them on October 18.
+
+The flaw is so easy to exploit that, in Jackson’s words, “the impact of this incident could not be higher.” His concern lies with devices and applications that have no reliable way to learn that a certificate was revoked.
+
+After several people recovered the keys on their own and some said so publicly, Mozilla removed trust in the eMudhra root certificate that signed the intermediates.
+
+Google will do the same in Chrome and is “conducting a thorough evaluation regarding the status of eMudhra’s remaining CA certificate,” according to its Chrome Root Program. eMudhra has stopped issuing from that root and estimates that about 30,000 customer certificates need to be replaced.
+
+Responding on Mozilla’s bug tracker, eMudhra traced the problem to a faulty script used during the April 2025 key ceremony. The script created a second set of weaker keys, and because their labels resembled those of the properly generated keys, staff picked the weak ones when preparing the certificates.
+
+The company said only one of the intermediates was ever put into production and that none of them were used to issue certificates to customers. It admitted to human errors at several steps of the process and plans to re-check every key ceremony it has carried out.
+
+It is not known whether anyone recovered and used the weak keys in the 17 months before the flaw was reported.
+
+Risk outside the browser
+
+Browsers are protected, but apps, servers and devices that don’t receive revocation updates may still trust the certificates, Helme warned, which could expose user data to anyone able to intercept their traffic.
+
+The disclosure site set up by Jackson advises users to update their browsers and operating systems, and Helme recommends that administrators update the certificate lists their systems rely on.
+
+UPDATE (October 23, 2026, 02:30 a.m. ET):
+
+On October 22, five days after a researcher showed that private keys for eight of its intermediate certificates could be recovered in under a second, Indian certificate authority eMudhra announced it will leave the global SSL/TLS certificate business.
+
+Chairman V. Srinivasan said eMudhra revoked the affected certificates within 14 hours of discovery and that none of them were used to issue end-entity certificates. He added that the company’s infrastructure was not compromised and that no data was breached.
+
+Global SSL/TLS brings in about 1% of eMudhra’s global revenue, according to Srinivasan, and rising compliance costs, along with free certificates from large providers, had already reduced the returns from that business.
+
+The board also cited reaction on social media, saying the incident drew scrutiny “out of proportion to SSL/TLS’s place in our business.”
+
+More about
+Apple
+ 
+certificates
+ 
+Google
+ 
+Mozilla
+Share

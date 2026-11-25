@@ -1,0 +1,104 @@
+{
+ "story": "railway",
+ "outlet": "Railway Status",
+ "slug": "railway-status",
+ "url": "https://status.railway.com/",
+ "finalUrl": "https://status.railway.com/",
+ "status": "loaded",
+ "http": 200,
+ "title": "Railway Status",
+ "h1": "",
+ "published": "",
+ "files": {
+  "fold": "railway/railway-status_fold.png",
+  "full": "railway/railway-status_full.jpg",
+  "scroll": "railway/railway-status_scroll.mp4"
+ },
+ "full": {
+  "width": 1440,
+  "height": 6000,
+  "pageHeight": 9259,
+  "zoom": 1,
+  "quotes": [
+   {
+    "quote": "New account signups remain paused",
+    "box": {
+     "x": 363,
+     "y": 324,
+     "w": 270,
+     "h": 18
+    },
+    "lines": [
+     {
+      "x": 363,
+      "y": 324,
+      "w": 270,
+      "h": 18
+     }
+    ]
+   }
+  ]
+ },
+ "scroll": {
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "seconds": 8,
+  "keyframes": [
+   {
+    "t": 0,
+    "y": 0
+   },
+   {
+    "t": 1,
+    "y": 0
+   },
+   {
+    "t": 2.55,
+    "y": 1400
+   },
+   {
+    "t": 8,
+    "y": 1400
+   }
+  ],
+  "zoom": 1,
+  "easing": "easeInOutCubic between keyframes, holds where y is equal",
+  "capped": false,
+  "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)",
+  "quotes": [
+   {
+    "quote": "New account signups remain paused",
+    "inVideo": true,
+    "still": true,
+    "t": 0.53,
+    "visibleStill": [
+     0,
+     1.07
+    ],
+    "scrollY": 0,
+    "box": {
+     "x": 603,
+     "y": 324,
+     "w": 270,
+     "h": 18
+    },
+    "lines": [
+     {
+      "x": 603,
+      "y": 324,
+      "w": 270,
+      "h": 18
+     }
+    ],
+    "docBox": {
+     "x": 603,
+     "y": 324,
+     "w": 270,
+     "h": 18
+    },
+    "layoutDriftPx": 0
+   }
+  ]
+ }
+}

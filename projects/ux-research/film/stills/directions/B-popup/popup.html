@@ -1,0 +1,98 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>B · Pop-up book</title>
+<style>
+@font-face { font-family: "Serif"; src: url(../_fonts/YoungSerif-Regular.ttf); }
+@font-face { font-family: "Mono"; src: url(../_fonts/JetBrainsMono.ttf); font-weight: 100 800; }
+html, body { margin: 0; overflow: hidden; background: #EBB23C; }
+#stage { position: relative; overflow: hidden; }
+.strip { font: 400 54px/1.12 "Serif"; color: #1B1B1F; background: #FBF7EE; padding: 16px 30px 20px; white-space: nowrap;
+  box-shadow: 0 8px 14px -6px rgba(0,0,0,.35); }
+.lab { font: 500 32px/1.2 "Mono"; color: rgba(27,27,31,.72); white-space: nowrap; letter-spacing: .5px; }
+</style></head><body><div id="stage"></div>
+<script src="../_tools/kit.js"></script>
+<script src="../_tools/ux.js"></script>
+<script>
+// B · POP-UP BOOK. Each idea is a spread in a paper pop-up book: flat cut-paper people and things stand up off the page
+// (hinged at their base, spring 2.4 Hz / zeta 0.55), her own cut-out stands up the same way, words are printed paper strips.
+// Between spreads everything folds flat again and the next spread stands up (the fold is the transition carrier).
+// Palette: spreads mustard #EBB23C / tomato #E5533C / sky #8EC5E8 ; paper #FBF7EE ; ink #1B1B1F ; one accent per spread.
+const P = PORTRAIT, INK = '#1B1B1F', PAPER = '#FBF7EE';
+const SP = [ // spread: ground, t0, t1
+  { g: '#EBB23C', t0: 0, t1: 4.9 }, { g: '#E5533C', t0: 4.9, t1: 10 }, { g: '#8EC5E8', t0: 10, t1: 15 }, { g: '#EBB23C', t0: 15, t1: 20 }];
+const roots = SP.map((s) => el('div', { left: 0, top: 0, width: W + 'px', height: H + 'px', background: s.g, perspective: '1600px', perspectiveOrigin: '50% 30%', display: 'none' }));
+on((t) => SP.forEach((s, i) => (roots[i].style.display = t >= s.t0 && t < s.t1 ? 'block' : 'none')));
+// cut-paper edge: a few random notches so strips never look like UI pills
+function jag(seed) { const pts = []; for (let i = 0; i <= 8; i++) pts.push(`${(i / 8) * 100}% ${hash(seed + i) * 4}%`); for (let i = 8; i >= 0; i--) pts.push(`${(i / 8) * 100 + (hash(seed * 3 + i) - 0.5) * 0.8}% ${96 + hash(seed * 5 + i) * 4}%`); return `polygon(${pts.join(',')})`; }
+function strip(root, x, y, html, o = {}) { const e = el('div', { left: x + 'px', top: y + 'px', fontSize: (o.fs || 54) + 'px', transform: `rotate(${o.r || 0}deg)`, clipPath: jag(o.seed || 1), opacity: 0, background: o.bg || PAPER }, html, root); e.className = 'strip'; return e; }
+// stands up off the page: hinge at the base (rotateX), with a floor shadow that shrinks as it rises; folds down again at tOut
+function popup(e, t0, tOut, o = {}) {
+  e.style.transformOrigin = '50% 100%';
+  on((t) => {
+    const up = spring(t - t0, o.f || 2.4, o.z || 0.55), down = eQuart(prog(t, tOut - 0.42, tOut - 0.02));
+    const k = t < t0 ? 0 : up * (1 - down);
+    e.style.opacity = t < t0 || k < 0.02 ? 0 : 1;
+    e.style.transform = `${o.base || ''} rotateX(${(1 - k) * 86}deg)`;
+    e.style.filter = `drop-shadow(0 ${lerp(2, 14, clamp(k))}px ${lerp(2, 10, clamp(k))}px rgba(0,0,0,${0.32 * clamp(k)}))`;
+  });
+}
+function lay(e, t0, tOut, r = 0) { // strips: slide a few px and land flat (they are glued, not standing)
+  on((t) => { const k = eExpo(prog(t, t0, t0 + 0.32)), d = eQuart(prog(t, tOut - 0.35, tOut)); e.style.opacity = t < t0 ? 0 : 1 - d; e.style.transform = `translate(${(1 - k) * -26}px,${(1 - k) * 10 + d * 20}px) rotate(${r}deg)`; });
+}
+function svg(root, x, y, w, h, vb, inner) { const d = el('div', { left: x + 'px', top: y + 'px', width: w + 'px', height: h + 'px' }, `<svg width="${w}" height="${h}" viewBox="${vb}">${inner}</svg>`, root); return d; }
+const cut = (fill, d) => `<path d="${d}" fill="${fill}" stroke="${PAPER}" stroke-width="7" stroke-linejoin="round" paint-order="stroke"/>`;
+const PERSON = (c) => cut(c, 'M22 300 Q22 150 100 138 Q178 150 178 300 Z') + `<circle cx="100" cy="66" r="46" fill="${c}" stroke="${PAPER}" stroke-width="7" paint-order="stroke"/>`;
+const PERSON_PHONE = (c) => cut(c, 'M22 300 Q22 150 100 138 Q178 150 178 300 Z') + cut(c, 'M140 170 Q190 150 214 104 L232 112 Q212 170 152 206 Z') + cut(c, 'M206 52 L240 52 L240 112 L206 112 Z') + `<circle cx="110" cy="74" r="46" fill="${c}" stroke="${PAPER}" stroke-width="7" paint-order="stroke"/>`;
+const PHONE = (acc) => cut(PAPER, 'M20 10 Q20 0 34 0 L226 0 Q240 0 240 14 L240 466 Q240 480 226 480 L34 480 Q20 480 20 466 Z')
+  + `<rect x="48" y="44" width="164" height="96" fill="${acc}"/><rect x="48" y="160" width="120" height="18" fill="${INK}"/><rect x="48" y="190" width="150" height="12" fill="#C9C2B4"/><rect x="48" y="212" width="132" height="12" fill="#C9C2B4"/>`
+  + `<rect x="48" y="390" width="164" height="50" rx="4" fill="${INK}"/><circle cx="80" cy="300" r="26" fill="${acc}"/><circle cx="150" cy="300" r="26" fill="#C9C2B4"/>`;
+
+// ---------- spread 0 · UI then UX (1:11-1:31) ----------
+{
+  const r = roots[0], o = SP[0].t1;
+  const ph = svg(r, ...(P ? [300, 420, 260, 520] : [330, 130, 250, 500]), '0 0 260 520', PHONE('#E5533C')); popup(ph, 0.05, o);
+  const s1 = strip(r, ...(P ? [90, 1010] : [150, 700]), 'UI: what you can see and touch.', { r: -1.5, seed: 2, fs: P ? 50 : 60 }); lay(s1, 0.9, o, -1.5);
+  const pe = svg(r, ...(P ? [600, 560, 300, 450] : [1320, 170, 320, 480]), '0 0 200 300', PERSON(INK)); popup(pe, 2.3, o, { z: 0.5 });
+  const s2 = strip(r, ...(P ? [90, 1140] : [150, 830]), 'UX: how the whole product feels to use.', { r: 1, seed: 5, fs: P ? 44 : 60, bg: '#1B1B1F' }); s2.style.color = PAPER; lay(s2, 2.9, o, 1);
+  const lab = el('div', { left: (P ? 90 : 1320) + 'px', top: (P ? 1290 : 690) + 'px' }, 'Illustration · paper cut-outs', r); lab.className = 'lab'; fadeIn(lab, 3.4);
+}
+// ---------- spread 1 · say vs do: the shadow tells what they actually do (7:29-7:43) ----------
+{
+  const r = roots[1], t0 = SP[1].t0, o = SP[1].t1;
+  const px = P ? 170 : 520, py = P ? 640 : 380, s = P ? 1.25 : 1.35;
+  const sh = svg(r, px + 150, py - 30, 260 * s, 300 * s, '0 0 260 300', `<path d="M22 300 Q22 150 100 138 Q178 150 178 300 Z M140 170 Q190 150 214 104 L232 112 Q212 170 152 206 Z M206 52 L240 52 L240 112 L206 112 Z" fill="${INK}" opacity=".88"/><circle cx="110" cy="74" r="46" fill="${INK}" opacity=".88"/>`);
+  on((t) => { const k = spring(t - (t0 + 1.0), 1.8, 0.7); sh.style.opacity = t < t0 + 1.0 ? 0 : 1; sh.style.transformOrigin = '30% 100%'; sh.style.transform = `translateX(${(1 - k) * -150}px) skewX(${(1 - k) * -18 - 6}deg)`; });
+  const pe = svg(r, px, py, 200 * s, 300 * s, '0 0 200 300', PERSON(PAPER).replaceAll(`stroke="${PAPER}"`, `stroke="${INK}"`).replace('stroke-width="7"', 'stroke-width="5"')); popup(pe, t0 + 0.02, o);
+  const a = strip(r, ...(P ? [90, 420] : [140, 240]), 'what they say', { r: -2, seed: 9, fs: P ? 50 : 54 }); lay(a, t0 + 1.9, o, -2);
+  const b = strip(r, ...(P ? [380, 520] : [1030, 250]), 'what they actually do', { r: 1.5, seed: 12, fs: P ? 46 : 54, bg: INK }); b.style.color = PAPER; lay(b, t0 + 2.4, o, 1.5);
+  const q = el('div', { left: (P ? 90 : 1030) + 'px', top: (P ? 1150 : 520) + 'px', width: (P ? 900 : 760) + 'px', font: `400 ${P ? 54 : 58}px/1.15 "Serif"`, color: INK }, 'We are just not very good at noticing our own behaviours.', r);
+  words(q, t0 + 3.0, 0.12);
+}
+// ---------- spread 2 · her cut-out stands up: generative research (5:32-5:52) ----------
+{
+  const r = roots[2], t0 = SP[2].t0, o = SP[2].t1;
+  const her = el('img', P ? { left: '-260px', top: '780px', width: '1600px' } : { left: '820px', top: '120px', width: '1700px' }, '', r);
+  her.src = '../_src/m_350.png';
+  her.style.webkitMaskImage = 'none';
+  const out = 'drop-shadow(5px 0 0 #FBF7EE) drop-shadow(-5px 0 0 #FBF7EE) drop-shadow(0 5px 0 #FBF7EE) drop-shadow(0 -5px 0 #FBF7EE)';
+  her.style.transformOrigin = '50% 100%';
+  on((t) => { const k = t < t0 + 0.2 ? 0 : spring(t - t0 - 0.2, 2.2, 0.6); her.style.opacity = k > 0.02 ? 1 : 0; her.style.transform = `rotateX(${(1 - k) * 80}deg)`; her.style.filter = out + ` drop-shadow(0 14px 10px rgba(0,0,0,${0.3 * clamp(k)}))`; });
+  const s1 = strip(r, ...(P ? [90, 410] : [140, 300]), 'For my thesis,', { r: -1.5, seed: 21, fs: P ? 60 : 64 }); lay(s1, t0 + 0.9, o, -1.5);
+  const s2 = strip(r, ...(P ? [90, 540] : [140, 430]), 'I’m doing generative research.', { r: 1, seed: 23, fs: P ? 52 : 64, bg: INK }); s2.style.color = PAPER; lay(s2, t0 + 1.3, o, 1);
+  const l = el('div', { left: (P ? 90 : 140) + 'px', top: (P ? 680 : 600) + 'px' }, 'Generative research happens early,<br>before anything is designed.', r); l.className = 'lab'; l.style.lineHeight = '1.35'; fadeIn(l, t0 + 2.0);
+  const cap = el('div', { left: (P ? 90 : 140) + 'px', top: (P ? 830 : 960) + 'px' }, 'Gbemi, HCI master’s student', r); cap.className = 'lab'; fadeIn(cap, t0 + 2.4);
+}
+// ---------- spread 3 · five people before you build (9:25-9:33) ----------
+{
+  const r = roots[3], t0 = SP[3].t0, o = SP[3].t1;
+  const cols = [INK, PAPER, '#E5533C', INK, PAPER];
+  for (let i = 0; i < 5; i++) {
+    const x = P ? 90 + (i % 3) * 310 + (i >= 3 ? 155 : 0) : 260 + i * 290, y = P ? 760 + (i >= 3 ? 330 : 0) : 470, s = P ? 0.95 : 1.05;
+    const pe = svg(r, x, y, 200 * s, 300 * s, '0 0 200 300', PERSON(cols[i]).replaceAll(`stroke="${PAPER}"`, `stroke="${cols[i] === PAPER ? INK : PAPER}"`)); popup(pe, t0 + 0.4 + i * 0.09, o);
+  }
+  [['Talk to five people', 0, 'P'], ['who would actually use your product', 1, 'P'], ['before you start to build.', 2, 'I']].forEach(([txt, i, c]) => {
+    const e = strip(r, ...(P ? [90, 400 + i * 112] : [260 + i * 40, 110 + i * 118]), txt, { r: [-1.2, 0.8, -0.6][i], seed: 31 + i * 2, fs: P ? 44 : 58, bg: c === 'I' ? INK : PAPER });
+    if (c === 'I') e.style.color = PAPER; lay(e, t0 + 1.1 + i * 0.35, o, [-1.2, 0.8, -0.6][i]);
+  });
+}
+window.crisp = () => false;
+</script></body></html>

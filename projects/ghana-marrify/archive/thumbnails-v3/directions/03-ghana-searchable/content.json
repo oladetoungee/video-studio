@@ -1,0 +1,21 @@
+{
+  "direction": "One plain statement: 'Ghana made marriages SEARCHABLE' on the left, her raised-hand 'hmm' moment (3:05) big on the right; one prop: a search bar returning MARRIED (illustration)",
+  "thumbnail_text": "Ghana made marriages searchable",
+  "title": "Should Anyone Be Able to Look Up Your Marriage?",
+  "titles": [
+    "Should Anyone Be Able to Look Up Your Marriage?",
+    "I Love Ghana's New Marriage App. One Thing Worries Me",
+    "Is Ghana's New Marriage Search App a Good Idea?"
+  ],
+  "text": {
+    "line1": "Ghana made marriages",
+    "line2": "SEARCHABLE",
+    "s_q": "Search a name",
+    "res": "Married"
+  },
+  "images": {
+    "scene": "../../assets/scene/s_185.13.jpg",
+    "front": "../../assets/scene/mask/s_185.13.png"
+  },
+  "vars": {}
+}

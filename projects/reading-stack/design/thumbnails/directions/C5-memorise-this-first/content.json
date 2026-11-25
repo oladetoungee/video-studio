@@ -1,0 +1,28 @@
+{
+  "direction": "Her photo 16; the real contents page top-left with chapter 1 circled, a short hand-drawn white pen stroke from \"this\" to the page (kept left of her). Serif line \"Memorise this first.\" set from the left; label \"non-fiction\". Only with a title that explains \"this\" (S2, S4).",
+  "concept": "T5",
+  "sample": "thought-of-these (the thing itself, large) + viral sample 3",
+  "thumbnail_text": "Memorise this first.",
+  "title": "How to Read Non-Fiction Books Without Forgetting Them",
+  "titles": [
+    "How to Read Non-Fiction Books Without Forgetting Them",
+    "How to Retain What You Read: Start With the Contents Page"
+  ],
+  "text": {
+    "big": "Memorise <em>this</em> first.",
+    "l1": "non-fiction"
+  },
+  "images": {
+    "photo": "../../assets/photo/gbemi16_warm.jpg",
+    "contents": "../../assets/collage/baratta_contents_page.png",
+    "coffee": "../../assets/collage/coffee_top.png",
+    "baratta": "../../assets/collage/cover_baratta_clean.jpg"
+  },
+  "vars": {},
+  "gates": {
+    "round3": "a 2/5 · b 7/7 · c 6.5",
+    "pass": false,
+    "note": "fails: \"this\" depends on the soft page",
+    "key": "a = cold image-only topic confidence/5 and click/10; b = in a mocked feed with the title, clarity/click (pass 8/8); c = taste vs her collage samples (pass 8)"
+  }
+}

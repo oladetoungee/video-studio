@@ -1,0 +1,104 @@
+{
+ "story": "emudhra",
+ "outlet": "The Hacker News",
+ "slug": "thehackernews",
+ "url": "https://thehackernews.com/2026/10/eight-emudhra-ca-keys-compromised.html",
+ "finalUrl": "https://thehackernews.com/2026/10/eight-emudhra-ca-keys-compromised.html",
+ "status": "loaded",
+ "http": 200,
+ "title": "Eight eMudhra CA Keys Compromised, Triggering Emergency Fixes Across Browsers and Software",
+ "h1": "Eight eMudhra CA Keys Compromised, Triggering Emergency Fixes Across Browsers and Software",
+ "published": "",
+ "files": {
+  "fold": "emudhra/thehackernews_fold.png",
+  "full": "emudhra/thehackernews_full.jpg",
+  "scroll": "emudhra/thehackernews_scroll.mp4"
+ },
+ "full": {
+  "width": 1440,
+  "height": 6000,
+  "pageHeight": 12023,
+  "zoom": 1,
+  "quotes": [
+   {
+    "quote": "Chrome and Firefox blocked the eight certificates within hours",
+    "box": {
+     "x": 176,
+     "y": 1064,
+     "w": 432,
+     "h": 19
+    },
+    "lines": [
+     {
+      "x": 176,
+      "y": 1064,
+      "w": 432,
+      "h": 19
+     }
+    ]
+   }
+  ]
+ },
+ "scroll": {
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "seconds": 8,
+  "keyframes": [
+   {
+    "t": 0,
+    "y": 181
+   },
+   {
+    "t": 1,
+    "y": 181
+   },
+   {
+    "t": 2.09,
+    "y": 654
+   },
+   {
+    "t": 8,
+    "y": 654
+   }
+  ],
+  "zoom": 1,
+  "easing": "easeInOutCubic between keyframes, holds where y is equal",
+  "capped": false,
+  "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)",
+  "quotes": [
+   {
+    "quote": "Chrome and Firefox blocked the eight certificates within hours",
+    "inVideo": true,
+    "still": true,
+    "t": 5.03,
+    "visibleStill": [
+     2.03,
+     8.03
+    ],
+    "scrollY": 654,
+    "box": {
+     "x": 416,
+     "y": 410,
+     "w": 432,
+     "h": 19
+    },
+    "lines": [
+     {
+      "x": 416,
+      "y": 410,
+      "w": 432,
+      "h": 19
+     }
+    ],
+    "docBox": {
+     "x": 416,
+     "y": 1064,
+     "w": 432,
+     "h": 19
+    },
+    "layoutDriftPx": 0
+   }
+  ]
+ }
+}

@@ -1,0 +1,121 @@
+{
+ "sample_rate": 48000,
+ "original_duration": 775.499,
+ "edited_duration": 719.516,
+ "manual_cuts": [
+  {
+   "start": 0.0,
+   "end": 36.5,
+   "seconds": 36.5,
+   "reason": "silence before her first word (whisper made up text here)"
+  },
+  {
+   "start": 114.98,
+   "end": 117.04,
+   "seconds": 2.06,
+   "reason": "retake: 'The term was popularised, subscribe to that.' (she restarts the sentence)"
+  },
+  {
+   "start": 119.22,
+   "end": 120.5,
+   "seconds": 1.28,
+   "reason": "fact fix: 'back in the eighties' (Don Norman was at Apple in 1993); keeps 'popularised by Don Norman when he was at Apple'"
+  },
+  {
+   "start": 299.4,
+   "end": 302.49,
+   "seconds": 3.09,
+   "reason": "false start: 'You see quantitative and... describe that.'"
+  },
+  {
+   "start": 586.04,
+   "end": 588.98,
+   "seconds": 2.94,
+   "reason": "retake: 'Now another question I wanted to ask. Excuse that.' (she restarts with 'answer')"
+  },
+  {
+   "start": 636.58,
+   "end": 637.71,
+   "seconds": 1.13,
+   "reason": "filler: 'Right?'"
+  },
+  {
+   "start": 760.63,
+   "end": 764.01,
+   "seconds": 3.38,
+   "reason": "unclear aside: 'that I did find it from a medium as if I can, is that' (the Medium credit is on screen)"
+  }
+ ],
+ "manual_seconds_removed": 50.38,
+ "pauses_tightened": 3,
+ "pause_seconds_removed": 5.62,
+ "pauses": [
+  {
+   "orig_at": 570.71,
+   "was": 0.75,
+   "now": 0.51
+  },
+  {
+   "orig_at": 767.54,
+   "was": 4.64,
+   "now": 0.84
+  },
+  {
+   "orig_at": 772.44,
+   "was": 2.27,
+   "now": 0.69
+  }
+ ],
+ "segments": [
+  {
+   "orig_start": 36.4825,
+   "orig_end": 114.9975,
+   "edit_start": 0.0
+  },
+  {
+   "orig_start": 117.0225,
+   "orig_end": 119.2375,
+   "edit_start": 78.48
+  },
+  {
+   "orig_start": 120.4825,
+   "orig_end": 299.4175,
+   "edit_start": 80.66
+  },
+  {
+   "orig_start": 302.4725,
+   "orig_end": 570.9475,
+   "edit_start": 259.56
+  },
+  {
+   "orig_start": 571.1525,
+   "orig_end": 586.0575,
+   "edit_start": 528.0
+  },
+  {
+   "orig_start": 588.9625,
+   "orig_end": 636.5975,
+   "edit_start": 542.87
+  },
+  {
+   "orig_start": 637.6925,
+   "orig_end": 760.6475,
+   "edit_start": 590.47
+  },
+  {
+   "orig_start": 763.9925,
+   "orig_end": 767.9075,
+   "edit_start": 713.39
+  },
+  {
+   "orig_start": 771.6725,
+   "orig_end": 772.7275,
+   "edit_start": 717.27
+  },
+  {
+   "orig_start": 774.2725,
+   "orig_end": 775.4986,
+   "edit_start": 718.29
+  }
+ ]
+}

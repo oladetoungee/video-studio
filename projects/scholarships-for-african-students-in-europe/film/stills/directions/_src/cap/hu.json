@@ -1,0 +1,54 @@
+{
+ "title": "General information and FAQ of the Stipendium Hungaricum Scholarship Program - Embassy of Hungary",
+ "h1": "General information and FAQ of the Stipendium Hungaricum Scholarship Program",
+ "h1y": 242,
+ "found": {
+  "NO OPEN APPLICATION": [
+   [
+    986.125,
+    517,
+    204.21875,
+    25
+   ]
+  ],
+  "Department of Scholarship Awards": [
+   [
+    902.21875,
+    972.765625,
+    316.859375,
+    25
+   ]
+  ]
+ },
+ "H": 4267,
+ "focus": {
+  "NO OPEN APPLICATION": {
+   "file": "hu__no-open-application.png",
+   "top": 0,
+   "rects": [
+    [
+     986.125,
+     517,
+     204.21875,
+     25
+    ]
+   ]
+  },
+  "Department of Scholarship Awards": {
+   "file": "hu__department-of-scholarshi.png",
+   "top": 452.765625,
+   "rects": [
+    [
+     902.21875,
+     520,
+     316.859375,
+     25
+    ]
+   ]
+  }
+ },
+ "clipTop": 122,
+ "scale": 1.5,
+ "url": "https://abuja.mfa.gov.hu/en/articles/general-information-and-faq-of-the-stipendium-hungaricum-scholarship-program",
+ "captured": "2026-11-02T12:50:04.231Z"
+}

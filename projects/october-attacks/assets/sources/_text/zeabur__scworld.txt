@@ -1,0 +1,16 @@
+URL: https://www.scworld.com/brief/zeabur-to-shut-down-following-major-security-breach
+STATUS: loaded (http 200)
+FINAL: https://www.scworld.com/brief/zeabur-to-shut-down-following-major-security-breach
+TITLE: Zeabur to shut down following major security breach | brief | SC Media
+H1: Zeabur to shut down following major security breach
+OG: Zeabur to shut down following major security breach | SC Media
+PUBLISHED: 2026-10-21T17:54:04-04:00  MODIFIED: 2026-10-21T17:54:08-04:00
+DOC_H: 4664
+
+Zeabur is shutting down its development platform after a significant security breach resulted in the theft of millions of environment variable records and account information, as first reported by Bleeping Computer.
+
+The incident occurred between Oct. 14 and Oct. 15, 2026, when attackers utilized leaked internal credentials stored in plaintext to compromise shared hosting infrastructure and dedicated servers. The breach exposed data for 321,810 accounts and approximately 3.2 million environment variable records. Investigations revealed that attackers gained root access to 101 Google Cloud Platform servers, added unauthorized SSH keys and attached customer disk copies to their own virtual machines. Zeabur acknowledged that the credentials used in this attack likely originated from a prior breach in August 2026. The company failed to rotate administrator tokens, which had remained unchanged since January 2024, and left administrative portals exposed to the public internet. Citing the increasing complexity of maintaining secure infrastructure and the weight of its operational responsibilities, Zeabur announced it will cease all services by Dec. 31, 2026. Users are advised to immediately rotate all secrets, revoke active sessions and rebuild compromised servers to mitigate further risks.
+
+ADVERTISEMENT
+
+Source: Bleeping Computer

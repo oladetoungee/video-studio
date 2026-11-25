@@ -1,0 +1,676 @@
+{
+ "title": "cookies-localstorage-sessionstorage: talking-head",
+ "source": "../kit/raw-video.mov",
+ "fps": 30,
+ "words": "data/raw_words.json",
+ "faces": "data/face_track.json",
+ "edl": "data/edl.json",
+ "edit": {
+  "silenceDb": -44,
+  "maxPause": 1.2,
+  "keepBefore": 0.14,
+  "keepAfter": 0.1
+ },
+ "out": "../outputs/talking-head",
+ "shortsOut": "../outputs/shorts",
+ "tail": 0.7,
+ "audio": {
+  "voiceFilter": "highpass=f=80,afftdn=nr=8:nf=-52:tn=1,deesser=i=0.3:m=0.5:f=0.5,acompressor=threshold=0.06:ratio=3:attack=6:release=160:knee=3,equalizer=f=3200:t=q:w=1.2:g=1.5",
+  "music": {
+   "dir": "library:music"
+  },
+  "levels": {
+   "voiceLufs": -16.0,
+   "duckDb": -18.0,
+   "openDb": -10.0,
+   "target": -14.0,
+   "ceiling": 0.8
+  },
+  "sfx": {
+   "palette": true,
+   "roles": {
+    "slam": {
+     "files": [
+      "library:drum-deep-impact"
+     ],
+     "align": "peak",
+     "db": -4
+    },
+    "stamp": {
+     "files": [
+      "library:click-box-check"
+     ],
+     "align": "peak",
+     "db": -2
+    },
+    "refresh": {
+     "files": [
+      "library:tape-switch"
+     ],
+     "align": "peak",
+     "db": -3
+    },
+    "xclick": {
+     "files": [
+      "library:ui-device-click"
+     ],
+     "align": "peak",
+     "db": -3
+    },
+    "wipe": {
+     "files": [
+      "library:swipe-fast-zoom"
+     ],
+     "align": "peak",
+     "db": -6
+    },
+    "dot": {
+     "files": [
+      "library:ui-select-click"
+     ],
+     "align": "peak",
+     "db": -4
+    },
+    "photo": {
+     "files": [
+      "library:shutter-click"
+     ],
+     "align": "peak",
+     "db": -5
+    },
+    "ticket": {
+     "files": [
+      "library:card-place"
+     ],
+     "align": "peak",
+     "db": -3
+    },
+    "flip": {
+     "files": [
+      "library:card-flick"
+     ],
+     "align": "peak",
+     "db": -3
+    },
+    "wrong": {
+     "files": [
+      "library:wrong-answer"
+     ],
+     "align": "peak",
+     "db": -8
+    },
+    "type": {
+     "files": [
+      "library:keyboard-typing"
+     ],
+     "align": "peak",
+     "db": -10
+    },
+    "shut": {
+     "files": [
+      "library:tape-stop-slowdown"
+     ],
+     "align": "peak",
+     "db": -6
+    },
+    "mark": {
+     "files": [
+      "library:marker-line"
+     ],
+     "align": "peak",
+     "db": -5
+    },
+    "pop": {
+     "files": [
+      "library:pop-dry"
+     ],
+     "align": "peak",
+     "db": -4
+    }
+   },
+   "gainDb": 6
+  }
+ },
+ "moments": [
+  {
+   "id": "full",
+   "kind": "full",
+   "slug": "full",
+   "title": "The whole video, tightened, with graphics (A Crash test + cloakroom)",
+   "in": 0,
+   "out": 319.64,
+   "cuts": [
+    [
+     187.83,
+     189.32
+    ]
+   ],
+   "retakes": false,
+   "script": "moments/full.js",
+   "music": [
+    "1009",
+    0.0
+   ],
+   "note": "only cleanup cut: room tone after her last word (out 319.64). Correction: top-level pauses safari-fix + CK.fix card (plan.js two-exceptions). 2026-11-19 text cleanup: \"But there are two exceptions.\" cut [187.9,189.45] + no safari-fix pause (HER-STANDARD: cut, no correction card); the private window is a crash test (plan.js private-window).",
+   "pauses": false
+  },
+  {
+   "id": "sh01",
+   "kind": "short",
+   "slug": "why-websites-need-cookies",
+   "title": "Why websites need cookies to remember you",
+   "label": "Why websites need cookies | to remember you",
+   "sublabel": "",
+   "in": 9.45,
+   "out": 58.22,
+   "cuts": [],
+   "script": "shorts/sh01.js",
+   "music": [
+    "102",
+    4.0
+   ],
+   "tail": 0.5,
+   "ckStyle": {
+    "lab": "heavylight",
+    "cap": "body"
+   },
+   "endCard": false,
+   "fmt": "B",
+   "frame9": "4x5",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 51.03,
+    "text": "How do websites\nremember you? (~cookies~)",
+    "style": "photo",
+    "top": 270
+   },
+   "fonts": [
+    "shorts-13"
+   ],
+   "colours": "shorts-13",
+   "board": [
+    9,
+    47,
+    62
+   ]
+  },
+  {
+   "id": "sh02",
+   "kind": "short",
+   "slug": "what-is-a-browser-cookie",
+   "title": "What is a browser cookie?",
+   "label": "What is a browser cookie?",
+   "sublabel": "",
+   "in": 67.44,
+   "out": 91.81,
+   "cuts": [],
+   "script": "shorts/sh02.js",
+   "music": [
+    "443",
+    4.0
+   ],
+   "tail": 0.5,
+   "ckStyle": {
+    "lab": "kicker",
+    "cap": "word"
+   },
+   "endCard": false,
+   "fmt": "D",
+   "frame9": "wideLow",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 81.31,
+    "text": "What's a\n~cookie~ in\nyour browser?",
+    "style": "card",
+    "big": true
+   },
+   "fonts": [
+    "thumbs-08"
+   ],
+   "colours": "thumbs-08",
+   "board": [
+    68,
+    63,
+    7
+   ]
+  },
+  {
+   "id": "sh03",
+   "kind": "short",
+   "slug": "how-long-does-a-cookie-last",
+   "title": "How long does a browser cookie last?",
+   "label": "How long does a browser cookie last?",
+   "sublabel": "",
+   "in": 91.74,
+   "out": 119.23,
+   "cuts": [],
+   "script": "shorts/sh03.js",
+   "music": [
+    "175",
+    4.0
+   ],
+   "tail": 0.5,
+   "ckStyle": {
+    "lab": "plain",
+    "cap": "light"
+   },
+   "endCard": false,
+   "fmt": "G",
+   "frame9": "letterbox",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 111.3,
+    "text": "How long do ~cookies~ last?",
+    "style": "photo",
+    "top": 330
+   },
+   "fonts": [
+    "thumbs-17"
+   ],
+   "colours": "thumbs-17",
+   "board": [
+    12,
+    37,
+    36
+   ]
+  },
+  {
+   "id": "sh04",
+   "kind": "short",
+   "slug": "what-is-a-session-id",
+   "title": "What's inside your login cookie? (session ID)",
+   "label": "What's inside your login cookie?",
+   "sublabel": "",
+   "in": 119.23,
+   "out": 134.95,
+   "cuts": [],
+   "script": "shorts/sh04.js",
+   "music": [
+    "234",
+    4.0
+   ],
+   "tail": 0.5,
+   "ckStyle": {
+    "lab": "heavylight",
+    "cap": "karaoke"
+   },
+   "endCard": false,
+   "fmt": "J",
+   "poster": "Session ID",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 128.25,
+    "text": "How do\n~login cookies~\nwork?",
+    "style": "frame",
+    "big": true,
+    "shift": 720,
+    "frameW": 0.8
+   },
+   "fonts": [
+    "design-14"
+   ],
+   "colours": "combo-03",
+   "board": [
+    38,
+    65,
+    32
+   ]
+  },
+  {
+   "id": "sh05",
+   "kind": "short",
+   "slug": "what-is-localstorage",
+   "title": "What is localStorage? (why your cart survives)",
+   "label": "What is localStorage? (why your cart survives)",
+   "sublabel": "",
+   "in": 140.07,
+   "out": 200.89,
+   "cuts": [
+    [
+     187.83,
+     189.32
+    ]
+   ],
+   "script": "shorts/sh05.js",
+   "music": [
+    "27",
+    4.0
+   ],
+   "tail": 0.5,
+   "ckStyle": {
+    "lab": "kicker",
+    "cap": "body"
+   },
+   "endCard": false,
+   "fmt": "I",
+   "frame9": "fill",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 157.67,
+    "text": "Why your cart\nis ~still there~\n(localStorage)",
+    "style": "photo"
+   },
+   "fonts": [
+    "thumbs-06"
+   ],
+   "colours": "thumbs-06",
+   "board": [
+    66,
+    27,
+    8
+   ],
+   "pauses": false,
+   "note": "2026-11-13: \"But there are two exceptions.\" cut (only one is said; no correction card in the short), pauses off"
+  },
+  {
+   "id": "sh06",
+   "kind": "short",
+   "slug": "what-is-sessionstorage",
+   "title": "Why your form vanished when you closed the tab",
+   "label": "Why your form vanished | when you closed the tab",
+   "sublabel": "",
+   "in": 200.89,
+   "out": 239.94,
+   "cuts": [],
+   "script": "shorts/sh06.js",
+   "music": [
+    "480",
+    4.0
+   ],
+   "tail": 0.5,
+   "ckStyle": {
+    "lab": "plain",
+    "cap": "body"
+   },
+   "endCard": false,
+   "fmt": "M",
+   "frame9": "fill",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 223.28,
+    "text": "What is\n~sessionStorage~?",
+    "style": "card",
+    "big": true
+   },
+   "fonts": [
+    "design-27"
+   ],
+   "colours": "design-27",
+   "board": [
+    69,
+    17,
+    34
+   ]
+  },
+  {
+   "id": "sh07",
+   "kind": "short",
+   "slug": "who-can-read-localstorage",
+   "title": "Who can read your localStorage and cookies?",
+   "label": "Who can read your localStorage and cookies?",
+   "sublabel": "",
+   "in": 239.94,
+   "out": 279.93,
+   "cuts": [],
+   "script": "shorts/sh07.js",
+   "music": [
+    "1168",
+    4.0
+   ],
+   "tail": 0.5,
+   "ckStyle": {
+    "lab": "heavylight",
+    "cap": "word"
+   },
+   "endCard": false,
+   "fmt": "H",
+   "frame9": "fill",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 279.64,
+    "text": "Is ~localStorage~\nsafe?",
+    "style": "photo"
+   },
+   "fonts": [
+    "shorts-16"
+   ],
+   "colours": "shorts-16",
+   "board": [
+    11,
+    68,
+    13
+   ]
+  },
+  {
+   "id": "sh08",
+   "kind": "short",
+   "slug": "cookies-vs-localstorage-vs-sessionstorage",
+   "title": "Cookies vs localStorage vs sessionStorage",
+   "label": "Cookies vs localStorage vs sessionStorage",
+   "sublabel": "",
+   "in": 279.93,
+   "out": 305.84,
+   "cuts": [],
+   "script": "shorts/sh08.js",
+   "music": [
+    "135",
+    4.0
+   ],
+   "tail": 0.5,
+   "ckStyle": {
+    "lab": "kicker",
+    "cap": "light"
+   },
+   "endCard": false,
+   "fmt": "F",
+   "frame9": "1x1top",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 294.81,
+    "text": "Cookies vs\nlocalStorage vs\n~sessionStorage~",
+    "style": "card",
+    "big": true
+   },
+   "fonts": [
+    "design-17"
+   ],
+   "colours": "design-17",
+   "board": [
+    1,
+    45,
+    29
+   ]
+  },
+  {
+   "id": "sh09",
+   "kind": "short",
+   "slug": "online-shop-login-cart-form",
+   "title": "Where online shops keep your login, cart and form",
+   "label": "Browser storage in an online shop",
+   "sublabel": "",
+   "in": 305.84,
+   "out": 319.64,
+   "cuts": [],
+   "script": "shorts/sh09.js",
+   "music": [
+    "150",
+    4.0
+   ],
+   "tail": 0.5,
+   "ckStyle": {
+    "lab": "plain",
+    "cap": "karaoke"
+   },
+   "endCard": false,
+   "fmt": "K",
+   "frame9": "fill",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 317.4,
+    "text": "Where websites keep\nyour ~login~, cart\nand form",
+    "style": "frame",
+    "shift": 760,
+    "frameW": 0.86
+   },
+   "fonts": [
+    "thumbs-19"
+   ],
+   "colours": "thumbs-19",
+   "board": [
+    52,
+    67,
+    42
+   ]
+  },
+  {
+   "id": "teaser",
+   "kind": "teaser",
+   "slug": "cookies-localstorage-sessionstorage",
+   "title": "Teaser for LinkedIn and X (v3.1, 2026-11-19): the server forgets you -> COOKIES / LOCAL STORAGE / SESSION STORAGE (her opening line) -> after you log in… -> the three places -> who can read them -> the online shop",
+   "bites": [
+    [
+     9.45,
+     29.6
+    ],
+    [
+     0.02,
+     2.9
+    ],
+    [
+     49.2,
+     62.35
+    ],
+    {
+     "gap": 0.8,
+     "at": 320.7
+    },
+    [
+     67.4,
+     73.7
+    ],
+    {
+     "gap": 0.8,
+     "at": 320.7
+    },
+    [
+     134.95,
+     147.52
+    ],
+    [
+     183.4,
+     187.83
+    ],
+    {
+     "gap": 0.8,
+     "at": 320.7
+    },
+    [
+     200.89,
+     207.49
+    ],
+    [
+     217.49,
+     221.92
+    ],
+    {
+     "gap": 0.8,
+     "at": 320.7
+    },
+    [
+     239.94,
+     243.17
+    ],
+    [
+     253.77,
+     272.55
+    ],
+    [
+     305.84,
+     320.6
+    ]
+   ],
+   "tail": 6.5,
+   "captionStyle": "shorts",
+   "script": "teaser/teaser.js",
+   "music": [
+    "766",
+    0.0
+   ],
+   "fonts": [
+    "design-32",
+    "design-29"
+   ],
+   "colours": "design-32",
+   "note": "2026-11-19 v3.1 (her note B): her opening line as the names card after the hook question; plan in teaser/PLAN-v3.md; v3 in archive/text-cleanup-2026-11-19/. Ends on the outroCard."
+  }
+ ],
+ "common": [
+  "../film/scenes/ck.js",
+  "moments/common.js",
+  "moments/visuals.js",
+  "moments/plan.js",
+  "moments/formats.js",
+  "moments/fontboard.js"
+ ],
+ "pad": "#D9DCDA",
+ "frame9": "3x4",
+ "teaserOut": "../outputs/teaser",
+ "videoTitle": "localStorage vs sessionStorage vs Cookies (What Goes Where)",
+ "outroCard": {
+  "on": true,
+  "thumb": "../outputs/thumbnails/01-cart-still-here.png",
+  "title": "localStorage Explained: Why Your Cart Is Still There",
+  "dur": 6.5,
+  "photo": "/library/her-photos/avatar.png",
+  "style": {
+   "ground": "#0E0E0E",
+   "ink": "#FFFFFF",
+   "mid": "#A3A7A5",
+   "accent": "#E5262A"
+  }
+ },
+ "images": {
+  "mdn-session": "../film/assets/src/mdn-session.png",
+  "mdn-warn": "../film/assets/src/mdn-setcookie-warn.png",
+  "rfc-4096": "../film/assets/src/rfc-4096-crop.png",
+  "webkit-ls": "../film/assets/src/webkit-ls.png",
+  "mdn-quotas": "../film/assets/src/mdn-quotas-line.png",
+  "px-cloak": "../film/assets/src/px-10880678.jpg",
+  "px-cart": "../film/assets/src/px-6214472.jpg",
+  "px-coats": "../film/assets/src/px-5490198.jpg",
+  "px-jackets": "../film/assets/src/px-11585383.jpg",
+  "mdn-quotas-full": "../film/stills/directions/_src/clips/mdn-quotas.png",
+  "cover_sh01": "assets/covers/sh01.jpg",
+  "cover_sh02": "assets/covers/sh02.jpg",
+  "cover_sh02_cut": "assets/covers/sh02-cut.png",
+  "cover_sh03": "assets/covers/sh03.jpg",
+  "cover_sh04": "assets/covers/sh04.jpg",
+  "cover_sh05": "assets/covers/sh05.jpg",
+  "cover_sh06": "assets/covers/sh06.jpg",
+  "cover_sh06_cut": "assets/covers/sh06-cut.png",
+  "cover_sh07": "assets/covers/sh07.jpg",
+  "cover_sh08": "assets/covers/sh08.jpg",
+  "cover_sh08_cut": "assets/covers/sh08-cut.png",
+  "cover_sh09": "assets/covers/sh09.jpg",
+  "cover_sh04_frame": "assets/covers/sh04-frame.jpg",
+  "cover_sh09_frame": "assets/covers/sh09-frame.jpg"
+ },
+ "pauses": [
+  {
+   "id": "safari-fix",
+   "at": 193.5,
+   "d": 6,
+   "text": "Update: exception 2 is Safari. It can delete localStorage after 7 days of Safari use without a visit to the site.",
+   "look": "frozen"
+  }
+ ]
+}

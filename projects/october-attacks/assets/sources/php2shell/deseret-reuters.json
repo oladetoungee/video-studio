@@ -1,0 +1,311 @@
+{
+ "story": "php2shell",
+ "outlet": "Deseret News (Reuters)",
+ "slug": "deseret-reuters",
+ "url": "https://www.deseret.com/business/2026/10/21/website-computer-server-security-flaw-artificial-intelligence-hackers-cybersecurity-php-programming-language/",
+ "finalUrl": "https://www.deseret.com/business/2026/10/21/website-computer-server-security-flaw-artificial-intelligence-hackers-cybersecurity-php-programming-language/",
+ "status": "loaded",
+ "http": 200,
+ "title": "A just-revealed security flaw is hitting computer systems around the world ",
+ "h1": "A just-revealed security flaw is hitting computer systems around the world",
+ "published": "2026-10-21T17:57:07.259Z",
+ "files": {
+  "fold": "php2shell/deseret-reuters_fold.png",
+  "full": "php2shell/deseret-reuters_full.jpg",
+  "scroll": "php2shell/deseret-reuters_scroll.mp4"
+ },
+ "full": {
+  "width": 1440,
+  "height": 4429,
+  "pageHeight": 4429,
+  "zoom": 1,
+  "quotes": [
+   {
+    "quote": "numerous government websites across Europe that went dark Wednesday, to execute fixes",
+    "box": {
+     "x": 182,
+     "y": 1577,
+     "w": 659,
+     "h": 50
+    },
+    "lines": [
+     {
+      "x": 337,
+      "y": 1577,
+      "w": 504,
+      "h": 22
+     },
+     {
+      "x": 182,
+      "y": 1605,
+      "w": 227,
+      "h": 22
+     }
+    ]
+   },
+   {
+    "quote": "PHP powers nearly three-quarters of the world's websites",
+    "box": {
+     "x": 182,
+     "y": 2919,
+     "w": 707,
+     "h": 50
+    },
+    "lines": [
+     {
+      "x": 678,
+      "y": 2919,
+      "w": 211,
+      "h": 22
+     },
+     {
+      "x": 182,
+      "y": 2947,
+      "w": 260,
+      "h": 22
+     }
+    ]
+   },
+   {
+    "quote": "The PHP2Shell flaws are rated 9.2 out of 10",
+    "box": {
+     "x": 182,
+     "y": 3053,
+     "w": 350,
+     "h": 22
+    },
+    "lines": [
+     {
+      "x": 182,
+      "y": 3053,
+      "w": 350,
+      "h": 22
+     }
+    ]
+   },
+   {
+    "quote": "uncovered the PHP problems with assistance from OpenAI's GPT-5.6 Sol platform",
+    "box": {
+     "x": 182,
+     "y": 3372,
+     "w": 689,
+     "h": 51
+    },
+    "lines": [
+     {
+      "x": 590,
+      "y": 3372,
+      "w": 281,
+      "h": 22
+     },
+     {
+      "x": 182,
+      "y": 3401,
+      "w": 382,
+      "h": 22
+     }
+    ]
+   }
+  ]
+ },
+ "scroll": {
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "seconds": 10.733333333333333,
+  "keyframes": [
+   {
+    "t": 0,
+    "y": 48
+   },
+   {
+    "t": 1,
+    "y": 48
+   },
+   {
+    "t": 2.434,
+    "y": 1167
+   },
+   {
+    "t": 3.534,
+    "y": 1167
+   },
+   {
+    "t": 5.061,
+    "y": 2509
+   },
+   {
+    "t": 6.161,
+    "y": 2509
+   },
+   {
+    "t": 6.961,
+    "y": 2643
+   },
+   {
+    "t": 8.061,
+    "y": 2643
+   },
+   {
+    "t": 9.037,
+    "y": 2962
+   },
+   {
+    "t": 10.737,
+    "y": 2962
+   }
+  ],
+  "zoom": 1,
+  "easing": "easeInOutCubic between keyframes, holds where y is equal",
+  "capped": false,
+  "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)",
+  "quotes": [
+   {
+    "quote": "numerous government websites across Europe that went dark Wednesday, to execute fixes",
+    "inVideo": true,
+    "still": true,
+    "t": 2.98,
+    "visibleStill": [
+     2.37,
+     3.6
+    ],
+    "scrollY": 1167,
+    "box": {
+     "x": 422,
+     "y": 410,
+     "w": 659,
+     "h": 50
+    },
+    "lines": [
+     {
+      "x": 577,
+      "y": 410,
+      "w": 504,
+      "h": 22
+     },
+     {
+      "x": 422,
+      "y": 438,
+      "w": 227,
+      "h": 22
+     }
+    ],
+    "docBox": {
+     "x": 422,
+     "y": 1577,
+     "w": 659,
+     "h": 50
+    },
+    "layoutDriftPx": 0
+   },
+   {
+    "quote": "PHP powers nearly three-quarters of the world's websites",
+    "inVideo": true,
+    "still": true,
+    "t": 5.62,
+    "visibleStill": [
+     5,
+     6.23
+    ],
+    "scrollY": 2509,
+    "box": {
+     "x": 422,
+     "y": 410,
+     "w": 707,
+     "h": 50
+    },
+    "lines": [
+     {
+      "x": 918,
+      "y": 410,
+      "w": 211,
+      "h": 22
+     },
+     {
+      "x": 422,
+      "y": 438,
+      "w": 260,
+      "h": 22
+     }
+    ],
+    "docBox": {
+     "x": 422,
+     "y": 2919,
+     "w": 707,
+     "h": 50
+    },
+    "layoutDriftPx": 0
+   },
+   {
+    "quote": "The PHP2Shell flaws are rated 9.2 out of 10",
+    "inVideo": true,
+    "still": true,
+    "t": 7.5,
+    "visibleStill": [
+     6.87,
+     8.13
+    ],
+    "scrollY": 2643,
+    "box": {
+     "x": 422,
+     "y": 410,
+     "w": 350,
+     "h": 22
+    },
+    "lines": [
+     {
+      "x": 422,
+      "y": 410,
+      "w": 350,
+      "h": 22
+     }
+    ],
+    "docBox": {
+     "x": 422,
+     "y": 3053,
+     "w": 350,
+     "h": 22
+    },
+    "layoutDriftPx": 0
+   },
+   {
+    "quote": "uncovered the PHP problems with assistance from OpenAI's GPT-5.6 Sol platform",
+    "inVideo": true,
+    "still": true,
+    "t": 9.87,
+    "visibleStill": [
+     8.97,
+     10.77
+    ],
+    "scrollY": 2962,
+    "box": {
+     "x": 422,
+     "y": 410,
+     "w": 689,
+     "h": 51
+    },
+    "lines": [
+     {
+      "x": 830,
+      "y": 410,
+      "w": 281,
+      "h": 22
+     },
+     {
+      "x": 422,
+      "y": 439,
+      "w": 382,
+      "h": 22
+     }
+    ],
+    "docBox": {
+     "x": 422,
+     "y": 3372,
+     "w": 689,
+     "h": 51
+    },
+    "layoutDriftPx": 0
+   }
+  ]
+ }
+}

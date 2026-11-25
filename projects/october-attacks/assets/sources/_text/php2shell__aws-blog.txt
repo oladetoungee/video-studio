@@ -1,0 +1,135 @@
+URL: https://aws.amazon.com/blogs/security/amazon-threat-intelligence-identifies-php2shell-exploitation-prior-to-public-disclosure-in-madpot/
+STATUS: loaded (http 200)
+FINAL: https://aws.amazon.com/blogs/security/amazon-threat-intelligence-identifies-php2shell-exploitation-prior-to-public-disclosure-in-madpot/
+TITLE: Amazon Threat Intelligence identifies PHP2Shell exploitation prior to public disclosure in MadPot | AWS Security Blog
+H1: Amazon Threat Intelligence identifies PHP2Shell exploitation prior to public disclosure in MadPot
+OG: Amazon Threat Intelligence identifies PHP2Shell exploitation prior to public disclosure in MadPot | Amazon Web Services | Amazon Web Services
+PUBLISHED: 2026-10-21T15:36:26-07:00  MODIFIED: 2026-10-22T14:25:03-07:00
+DOC_H: 4919
+
+AWS Security Blog
+Amazon Threat Intelligence identifies PHP2Shell exploitation prior to public disclosure in MadPot
+by CJ Moses on 21 OCT 2026 in Announcements, Security, Identity, & Compliance Permalink  Comments  Share
+
+Amazon Threat Intelligence identified a PHP2Shell exploitation attempt dating to Oct. 17, 2026, in MadPot telemetry, four days before public disclosure of CVE-2026-109618 and CVE-2026-109619. The exploit attempt originated from an IP address associated with a commercial anonymization network. While the vulnerability was under embargo, the targeting of a honeypot from an anonymized IP address suggests the activity was conducted by a threat actor, though it remains unclear how the actor acquired exploit information prior to disclosure.
+
+The PHP embargo window was set to be lifted on 2026-10-21 1400 UTC. On the day of the release, Amazon Threat Intelligence identified multiple proof of concept exploits for the vulnerability, with the earliest around 2026-10-21 0200 UTC. Subsequently, from 2026-10-21 0200 UTC to 2026-10-21 0800 UTC, Amazon Threat Intelligence identified additional exploitation attempts of PHP2Shell targeting MadPot from additional anonymized infrastructure. The actual payloads and choices in anonymization infrastructure varied, suggesting these were multiple actors. Technical analysis is ongoing, and it’s unclear if any of these attempts would have succeeded in real-world systems.
+
+The actual release of the embargo window was 2026-10-21 1400 UTC. Once the embargo was lifted and the patch was released, additional proof-of-concept exploits appeared within hours, and we saw them used against our sensors almost immediately. PHP2Shell is now seeing broad exploitation attempts in the wild.
+
+Two lessons from this event apply well beyond this one vulnerability:
+
+An embargo protects defenders only until someone else finds the same bug. Coordinated disclosure is still the right model. But defenders should not assume the public disclosure date is the earliest date of exploitation. With PHP2Shell, compromise may predate the advisory.
+The time from patch to working exploit is shrinking for structural reasons. In the past, most exploitation we observed came after a public proof of concept was released. A small number of capable actors built exploits, and everyone else waited for them. That dependency is weakening. AI-assisted analysis makes it cheaper to turn a patch diff or advisory into a working exploit. As a result, more actors can act within hours or even minutes once technical details of a vulnerability are disclosed.
+
+For security leaders, this changes several working assumptions:
+
+For critical vulnerabilities in internet-facing systems, measure patch and mitigation timelines in hours. A 7-day or 30-day SLA assumes a delay that no longer exists.
+Start investigations from the earliest known exploitation, not from the disclosure date. For PHP2Shell, investigate from at least starting on October 17th.
+Invest in detections that don’t rely on a signature for a specific CVE. The first exploitation will often come before those signatures exist.
+How AWS helps protect customers
+
+AWS deploys multiple layers of protection to help safeguard customers. Our internal threat intelligence system automatically detected and restricted malicious scanning attempts targeting this vulnerability. We analyze over 200 billion events per minute and integrate threat intelligence from our MadPot honeypot network to identify and block known exploitation attempts in real time. Our honeypot system provides us with early detection of exploitation attempts, enabling rapid response and threat analysis.
+
+Immediate recommended actions
+
+Upgrade immediately to the fixed PHP versions. Upgrading is the only complete remediation for both CVE-2026-109618 and CVE-2026-109619. There are no configuration-only workarounds that fully address both issues.
+Consider blocking multi-part file uploads in PHP deployments that cannot be patched immediately, but determine how this would affect your application prior to deploying.
+Look for POST requests with the PHP_SESSION_UPLOAD_PROGRESS string in form uploads.
+Review web server logs for suspicious activity.
+Check for unexpected process execution or file modification on web application servers.
+Indicators of Compromise (IOCs)
+
+IP Address
+
+	
+
+Observed Date
+
+103.216.220.92
+
+	
+
+10/17/2026
+
+31.223.184.166
+
+	
+
+10/21/2026
+
+37.19.200.5
+
+	
+
+10/21/2026
+
+134.209.159.64
+
+	
+
+10/21/2026
+
+103.114.163.188
+
+	
+
+10/21/2026
+
+95.217.98.37
+
+	
+
+10/21/2026
+
+The identified IP addresses include shared anonymization infrastructure and are not exclusive to this threat activity. Organizations should investigate any observations involving these addresses as opposed to blocking.
+
+See how to use AWS Web Application Firewall to help reduce your exposure while you patch in our blog post Using AWS WAF to apply mitigations for PHP2Shell RCE vulnerabilities (CVE-2026-109618 and CVE-2026-109619).
+
+If you have questions, start a new thread on AWS re:Post or reach out to AWS Support.
+
+CJ Moses
+
+CJ Moses is the CISO of Amazon Integrated Security. In his role, CJ leads security engineering and operations across Amazon. His mission is to enable Amazon businesses by making the benefits of security the path of least resistance. CJ joined Amazon in December 2007, holding various roles including Consumer CISO, and most recently AWS CISO, before becoming CISO of Amazon Integrated Security September of 2023.
+
+Prior to joining Amazon, CJ led the technical analysis of computer and network intrusion efforts at the Federal Bureau of Investigation’s Cyber Division. CJ also served as a Special Agent with the Air Force Office of Special Investigations (AFOSI). CJ led several computer intrusion investigations seen as foundational to the security industry today.
+
+CJ holds degrees in Computer Science and Criminal Justice, and is an active SRO GT America GT2 race car driver.
+
+TAGS: Security Blog
+Like
+Share
+4 Comments
+Log in to comment
+Log in
+Sort by:  Top
+RM
+Rory Mercer
+Oct 22
+Hi CJ,
+Very interesting post! AWS Linux for Elastic Beanstalk has still not updated the upstream fix nearly 18 hours after public release of the disclosure (not including the time provided to AWS in private.
+How is this reconcileable with your very valid comment 'measure patch and mitigation timelines in hours. A 7-day or 30-day SLA assumes a delay that no longer exists.'
+We are waiting on AWS here.
+Like (2)
+Reply
+Share
+PL
+Paul L
+Edited on Oct 22
+Hi CJ,
+Thank you for the write-up. It's certainly very reasurring that AWS was well aware of the issue and that it was apparently being actively exploited. Perhaps you'd care to follow up on why this DIDN'T lead to AWS publishing updated versions of PHP for AWS managed distros for 10 hours or more after the publication of this, despite having early access to this patch?
+It would at least be useful to know that AWS is aware that they dropped the ball and will do better next time, before we all spend time finding a hosting company that actually is interested in customer's data security.
+Paul
+Like (1)
+Reply (1)
+Share
+ 
+J
+JB_dk
+Oct 22
+Nice writeup, unfortunately, your list of IOCs is not useful for production websites, because webserver logs don't generally log the full details of POST request content, and the random list of IPs are (according to the note under the list) mostly innocent anonymity providers tricked into forwarding the attack traffic to MadPot.
+Are there any suggested IOCs that can be retroactively applied to production websites for which only standard W3C style access logs are available?
+Also, why weren't global alarms issued when php.net pre-announced the updates and their CVSS score 24 hours before the embargo was lifted? Instead, we as AWS customers were alarted only by mass media stories AFTER the public disclosure.
+Like
+Reply
+Share

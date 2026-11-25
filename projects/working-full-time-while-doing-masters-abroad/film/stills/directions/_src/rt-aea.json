@@ -1,0 +1,54 @@
+{
+ "title": "Adult Education Act-Riigi Teataja",
+ "h1": "Riigi Teataja",
+ "h1y": 0,
+ "found": {
+  "up to thirty calendar days in a year": [
+   [
+    124,
+    3737.15625,
+    213.234375,
+    16
+   ]
+  ],
+  "for twenty calendar days": [
+   [
+    607.328125,
+    3877.15625,
+    151.75,
+    16
+   ]
+  ]
+ },
+ "H": 5998,
+ "focus": {
+  "up to thirty calendar days in a year": {
+   "file": "rt-aea__up-to-thirty-calendar-da.png",
+   "top": 3217.15625,
+   "rects": [
+    [
+     124,
+     520,
+     213.234375,
+     16
+    ]
+   ]
+  },
+  "for twenty calendar days": {
+   "file": "rt-aea__for-twenty-calendar-days.png",
+   "top": 3357.15625,
+   "rects": [
+    [
+     607.328125,
+     520,
+     151.75,
+     16
+    ]
+   ]
+  }
+ },
+ "clipTop": 0,
+ "scale": 1.5,
+ "url": "https://www.riigiteataja.ee/en/eli/523052019003/consolide",
+ "captured": "2026-11-02T12:51:55.820Z"
+}

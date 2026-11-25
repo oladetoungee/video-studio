@@ -1,0 +1,46 @@
+{
+ "title": "edge-case direction A-map",
+ "hud": "",
+ "intro": 0,
+ "outro": 1,
+ "voiceDuration": 503,
+ "words": "../_shared/words.json",
+ "images": {
+  "clip_wired-head": "../_src/clips/wired-head.png",
+  "clip_wired-plate": "../_src/clips/wired-plate.png",
+  "clip_bbc-jn": "../_src/clips/bbc-jn.png",
+  "clip_azure": "../_src/clips/azure.png",
+  "clip_bbc-head": "../_src/clips/bbc-head.png",
+  "px_7549098": "../_src/pexels/px-7549098.jpg",
+  "px_14139165": "../_src/pexels/px-14139165.jpg",
+  "px_20047828": "../_src/pexels/px-20047828.jpg",
+  "px_3943950": "../_src/pexels/px-3943950.jpg",
+  "f_raw_299_0": "../_src/footage/raw_299.0.jpg",
+  "f_raw_52_5": "../_src/footage/raw_52.5.jpg",
+  "f_raw_264_5": "../_src/footage/raw_264.5.jpg",
+  "f_raw_259_5": "../_src/footage/raw_259.5.jpg",
+  "f_raw_4_5": "../_src/footage/raw_4.5.jpg",
+  "f_raw_331_9": "../_src/footage/raw_331.9.jpg",
+  "f_raw_228_0": "../_src/footage/raw_228.0.jpg",
+  "f_raw_237_0": "../_src/footage/raw_237.0.jpg",
+  "f_raw_205_9": "../_src/footage/raw_205.9.jpg",
+  "f_raw_47_5": "../_src/footage/raw_47.5.jpg",
+  "f_matte_264_5": "../_src/footage/matte_264.5.png",
+  "f_matte_259_5": "../_src/footage/matte_259.5.png"
+ },
+ "scripts": [
+  "../_shared/clips.js",
+  "../_shared/base.js",
+  "scenes.js"
+ ],
+ "cutSounds": {
+  "cutSounds": false
+ },
+ "fonts": [
+  "800 40px \"Alegreya SC\"",
+  "500 40px \"Alegreya SC\"",
+  "500 40px \"Alegreya Sans\"",
+  "800 40px \"Alegreya Sans\"",
+  "italic 400 40px \"IM Fell English\""
+ ]
+}

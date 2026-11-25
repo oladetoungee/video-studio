@@ -1,0 +1,38 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Direction render</title>
+<link rel="stylesheet" href="/studio/runtime/fonts.css">
+<style>
+@font-face{font-family:"Alegreya SC";font-weight:800;src:url(/dirs/_fonts/AlegreyaSC-800.ttf)}
+@font-face{font-family:"Alegreya SC";font-weight:500;src:url(/dirs/_fonts/AlegreyaSC-500.ttf)}
+@font-face{font-family:"Alegreya Sans";font-weight:500;src:url(/dirs/_fonts/AlegreyaSans-500.ttf)}
+@font-face{font-family:"Alegreya Sans";font-weight:800;src:url(/dirs/_fonts/AlegreyaSans-800.ttf)}
+@font-face{font-family:"IM Fell English";font-style:italic;src:url(/dirs/_fonts/IMFell-Italic.ttf)}
+@font-face{font-family:Onest;font-weight:800;src:url(/dirs/_fonts/Onest-800.ttf)}
+@font-face{font-family:Onest;font-weight:500;src:url(/dirs/_fonts/Onest-500.ttf)}
+@font-face{font-family:"JetBrains Mono";font-weight:500;src:url(/dirs/_fonts/JBMono-500.ttf)}
+@font-face{font-family:"JetBrains Mono";font-weight:800;src:url(/dirs/_fonts/JBMono-800.ttf)}
+@font-face{font-family:"Barlow Condensed";font-weight:800;src:url(/dirs/_fonts/BarlowCond-800.ttf)}
+@font-face{font-family:"Barlow Condensed";font-weight:600;src:url(/dirs/_fonts/BarlowCond-600.ttf)}
+@font-face{font-family:Barlow;font-weight:500;src:url(/dirs/_fonts/Barlow-500.ttf)}
+@font-face{font-family:"Overpass Mono";font-weight:600;src:url(/dirs/_fonts/OverpassMono-600.ttf)}
+@font-face{font-family:Anton;src:url(/dirs/_fonts/Anton.ttf)}
+html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1920" height="1080"></canvas>
+<script src="/studio/runtime/core.js"></script>
+<script src="/studio/runtime/motion.js"></script>
+<script src="/studio/runtime/house.js"></script>
+<script src="/studio/runtime/boot.js"></script>
+<script>
+// Same as studio/runtime/film.html, for a direction folder served as /p/dp-<X>/film/ (no edits, no captions).
+window.BUILD_ERROR = null;
+(async () => {
+  try {
+    const q = new URLSearchParams(location.search); const cv = document.getElementById('c');
+    await bootFilm({ slug: q.get('slug'), canvas: cv, aspect: q.get('aspect') || '16x9', edits: false });
+    window.grab = (t, qq) => { renderFrame(t); return cv.toDataURL('image/jpeg', qq || 0.92); };
+    window.grabPNG = (t) => { renderFrame(t); return cv.toDataURL('image/png'); };
+    window.meta = () => FILM.meta();
+  } catch (e) { window.BUILD_ERROR = String(e && e.stack || e); console.error(e); }
+  window.READY = true;
+})();
+</script></body></html>

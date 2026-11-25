@@ -1,0 +1,66 @@
+/* cheapest-countries thumbnails, set 3 (2026-11-12): every thumbnail copies the COMPOSITION of one named board item
+   (studio /ideas/boards/thumbnails/), so the type changes per thumbnail: editorial serif, italic, rounded sans, boxes, heavy sans.
+   Photos: her 29 Oct shoot (outfit B, already through Enhance photo, class no-lift: nothing extra on her face) and Pexels
+   (assets/px/credits.txt). No gradient grounds, glow, outlines on text, or labels on things. A soft dark veil (.veil) only sits
+   behind words on a photo so they read.
+   Editable: text in content.json "text", photos in "images", colours / positions in "vars", moves in "nudge" (lib/bind.js). */
+@font-face { font-family: 'LG'; src: url('../fonts/LeagueGothicRegular.ttf'); }
+@font-face { font-family: 'IT'; src: url('../fonts/InterTightLight.ttf'); font-weight: 300; }
+@font-face { font-family: 'IT'; src: url('../fonts/InterTightMedium.ttf'); font-weight: 500; }
+@font-face { font-family: 'IT'; src: url('../fonts/InterTightSemiBold.ttf'); font-weight: 600; }
+@font-face { font-family: 'IT'; src: url('../fonts/InterTightBold.ttf'); font-weight: 700; }
+@font-face { font-family: 'IT'; src: url('../fonts/InterTightExtraBold.ttf'); font-weight: 800; }
+@font-face { font-family: 'IT'; src: url('../fonts/InterTightBlack.ttf'); font-weight: 900; }
+@font-face { font-family: 'Mono'; src: url('../fonts/DMMono-Medium.ttf'); font-weight: 500; }
+@font-face { font-family: 'IS'; src: url('../fonts/InstrumentSerif-Regular.ttf'); font-style: normal; }
+@font-face { font-family: 'IS'; src: url('../fonts/InstrumentSerif-Italic.ttf'); font-style: italic; }
+@font-face { font-family: 'DMS'; src: url('../fonts/DMSerifDisplay-Regular.ttf'); font-style: normal; }
+@font-face { font-family: 'DMS'; src: url('../fonts/DMSerifDisplay-Italic.ttf'); font-style: italic; }
+@font-face { font-family: 'NW'; src: url('../fonts/Newsreader.ttf'); font-style: normal; font-weight: 200 800; }
+@font-face { font-family: 'NW'; src: url('../fonts/Newsreader-Italic.ttf'); font-style: italic; font-weight: 200 800; }
+@font-face { font-family: 'AB'; src: url('../fonts/ArchivoBlack-Regular.ttf'); }
+@font-face { font-family: 'FG'; src: url('../fonts/Figtree.ttf'); font-weight: 300 900; }
+@font-face { font-family: 'CV'; src: url('../fonts/Caveat.ttf'); font-weight: 400 700; }
+:root { --ink: #111114; --paper: #EDE9E2; --or: #FF4713; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1280px; height: 720px; overflow: hidden; background: #111; }
+.t { position: relative; width: 1280px; height: 720px; overflow: hidden; background: var(--ground, #111114); color: var(--fg, #fff); font-family: 'IT', sans-serif; }
+.guides .badge { position: absolute; right: 10px; bottom: 10px; width: 150px; height: 70px; border: 3px dashed #f0f; z-index: 99; }
+.z1 { z-index: 1; } .z2 { z-index: 2; } .z3 { z-index: 3; } .z4 { z-index: 4; } .z5 { z-index: 5; } .z6 { z-index: 6; }
+.a { position: absolute; white-space: nowrap; }
+/* a photo placed by width + left + top (vars per photo key) */
+.ph { position: absolute; display: block; }
+/* a photo that fills a box (collage panels, split halves) */
+.fill { position: absolute; overflow: hidden; }
+.fill img { position: absolute; display: block; width: 100%; height: 100%; object-fit: cover; }
+.veil { position: absolute; pointer-events: none; }
+.shd { text-shadow: 0 3px 22px rgba(0,0,0,.5), 0 1px 3px rgba(0,0,0,.35); }
+.shd2 { text-shadow: 0 2px 12px rgba(0,0,0,.35); }
+.t.no-lift .cut { filter: none; }
+.or { color: var(--or); }
+/* set 4 (2026-11-12 evening) */
+@font-face { font-family: 'AN'; src: url('../fonts/Anton-Regular.ttf'); }
+@font-face { font-family: 'PB'; src: url('../fonts/Poppins-Bold.ttf'); font-weight: 700; }
+@font-face { font-family: 'BG'; src: url('../fonts/BricolageGrotesque.ttf'); font-weight: 200 800; }
+.flag { display: inline-block; overflow: hidden; }
+.flag svg { width: 100%; height: 100%; display: block; }
+/* fix 2026-11-12 (her notes on 07 + 09): new fonts from library/fonts */
+@font-face { font-family: 'CD'; src: url('../fonts/ClashDisplay-Variable.ttf'); font-weight: 200 700; }
+@font-face { font-family: 'CG'; src: url('../fonts/CabinetGrotesk-Variable.ttf'); font-weight: 100 900; }
+/* FONT BOARD ONLY (her rule 2026-11-12, inspiration/boards/fonts/, "Font N" ids in each content.json "fonts").
+   On the board: AB Archivo Black (design-33), AN Anton (design-05), SofiaX/Archivo width axis (design-07), IT Inter Tight
+   (design-09/31), FG Figtree (design-25), BG Bricolage Grotesque (design-24), Mono DM Mono (design-29), IS Instrument Serif
+   (pair-03/15), CV Caveat (shorts-14), PB Poppins (thumbs-10), NW Newsreader (shorts-11), plus the faces below.
+   NOT on the board, do not use: LG League Gothic, DMS DM Serif Display, CD Clash Display, CG Cabinet Grotesk. */
+@font-face { font-family: 'AR'; src: url('../fonts/Archivo.ttf'); font-weight: 100 900; font-stretch: 62% 125%; }
+@font-face { font-family: 'CB'; src: url('../fonts/CaveatBrush-Regular.ttf'); }
+@font-face { font-family: 'GS'; src: url('../fonts/GeneralSans-Variable.ttf'); font-weight: 200 700; }
+@font-face { font-family: 'BM'; src: url('../fonts/BodoniModa.ttf'); font-weight: 400 900; font-style: normal; }
+@font-face { font-family: 'BM'; src: url('../fonts/BodoniModa-Italic.ttf'); font-weight: 400 900; font-style: italic; }
+@font-face { font-family: 'PM'; src: url('../fonts/PermanentMarker-Regular.ttf'); }
+@font-face { font-family: 'SC'; src: url('../fonts/SixCaps.ttf'); }
+@font-face { font-family: 'GL'; src: url('../fonts/Gloock-Regular.ttf'); }
+@font-face { font-family: 'BS'; src: url('../fonts/BigShouldersDisplay.ttf'); font-weight: 100 900; }
+
+/* 2026-11-19 rework: Montserrat (font board thumbs-18 / shorts-01) */
+@font-face { font-family: 'MS'; src: url('../fonts/Montserrat-Variable.ttf'); font-weight: 100 900; }

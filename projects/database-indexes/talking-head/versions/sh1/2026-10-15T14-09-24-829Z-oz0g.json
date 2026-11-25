@@ -1,0 +1,24 @@
+{
+ "label": "Before this session’s edits",
+ "auto": true,
+ "savedAt": 1792073364829,
+ "edits": {
+  "t": {
+   "label/label": {
+    "s": "You should not \nadd a databse index \non every column",
+    "pos": {
+     "9x16": {
+      "dy": -34,
+      "dx": 14.9
+     }
+    }
+   }
+  },
+  "captions": {},
+  "capShort": {},
+  "cap16": {},
+  "captions9": {
+   "y": 1688
+  }
+ }
+}

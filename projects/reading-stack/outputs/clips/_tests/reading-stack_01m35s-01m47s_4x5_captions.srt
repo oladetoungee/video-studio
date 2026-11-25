@@ -1,0 +1,23 @@
+1
+00:00:00,000 --> 00:00:01,080
+this method that I'm going to talk about
+in this video is going to fix that.
+
+2
+00:00:01,100 --> 00:00:02,800
+The method is pretty much straightforward.
+
+3
+00:00:02,820 --> 00:00:06,700
+The idea is that before you read the
+book, you read the structure of the book
+
+4
+00:00:06,720 --> 00:00:10,380
+first. So you get a new book, you
+go to the table of content first,
+
+5
+00:00:10,400 --> 00:00:11,500
+you don't just flip and start reading,
+you go to the table of content.

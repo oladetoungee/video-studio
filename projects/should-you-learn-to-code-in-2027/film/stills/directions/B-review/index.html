@@ -1,0 +1,147 @@
+<!doctype html><html><head><meta charset="utf-8"><title>B · You are the reviewer</title>
+<link rel="stylesheet" href="../_shared/fonts.css"></head><body>
+<script src="../_shared/clips.js"></script>
+<script src="../_shared/lib.js"></script>
+<script>
+/* B · YOU ARE THE REVIEWER. AI writes the code; she reads it. The whole video is a stack of review sheets:
+ * removed lines (red), added lines (green), and her review note in amber (amber = the human, always; never anything else).
+ * Even the non-code beats are reviews: the market numbers are a page she reads, the four skills are a diff of the
+ * syllabus (- syntax, - for loops, + reading code ...), the verdict is her approval.
+ * Ground cool grey #E9EBEE; sheets white, 3 px ink border, flat (no shadows, no rounded corners). Ink #1B1F24.
+ * Grid 16:9: headline row (x 110, baseline 190, Onest 800 96 px), sheet x 110-1260, side column x 1320-1810.
+ * 9:16: headline 2 lines, sheet full width (x 70-1010), side items stacked under it.
+ * Type: Onest 800/700/600, Martian Mono (code >= 46 px at 1920, >= 40 px at 1080; labels >= 32 px).
+ * Motion: lines type on at 40 chars/s; a removed line is struck in 0.3 s outExpo; the note drops 26 px in 0.4 s outQuint;
+ * sheets slide up 60 px in 0.45 s between beats; every hold gets a 2 % push. */
+const C = { g: '#E9EBEE', ink: '#1B1F24', dim: '#69707A', wh: '#FFFFFF', add: '#DDF6E3', addI: '#1A7F37', del: '#FFE4E1', delI: '#CF222E', amb: '#F2A900' };
+const FO = (s, w = 800) => `${w} ${s}px "Onest"`, FMM = (s, w = 400) => `${w} ${s}px "Martian Mono"`;
+const ground = () => rect(0, 0, W, H, C.g);
+const SX = () => V(110, 70), SW = () => V(1150, 940), SIDE = () => V(1320, 70), SIDEW = () => V(490, 940);
+/** headline: lines = [[ [word, time, colour?], ... ], ...] */
+function head(t, lines, o = {}) { const fs = o.fs || V(96, 100), x = V(110, 70), y0 = o.y || V(190, 210);
+  lines.forEach((ln, i) => wordsOn(t, ln.map(w => w[0]), ln.map(w => w[1]), x, y0 + i * fs * 1.02, FO(fs), C.ink, { rise: 18, cols: ln.map(w => w[2] || C.ink) })); }
+/** a review sheet. o: x,y,w, file, tag, fs, lines [{s, k: ' '|'+'|'-', at, strikeAt, mark}], err {s[], at, goneAt} */
+function sheet(t, o) {
+  let fs = o.fs || 46; { const L = o.lines.reduce((a, l) => (l.s.length > a.length ? l.s : a), ''); const need = tw(L, FMM(fs)) + fs * 1.3 + 50; if (need > o.w) fs = Math.floor(fs * (o.w - 50) / need); }
+  const lh = fs * 1.7, x = o.x, y = o.y, w = o.w; const hd = Math.max(fs * 1.9, 76);
+  const h = hd + o.lines.length * lh + fs * 0.9; const a = o.at == null ? 1 : ez(t, o.at, 0.45);
+  ctx.save(); ctx.translate(0, 60 * (1 - a)); ctx.globalAlpha *= Math.min(1, a * 1.6);
+  rect(x, y, w, h, C.wh); strokeR(x, y, w, h, C.ink, 3); rect(x, y, w, hd, C.ink);
+  txt(o.file, x + 26, y + hd * 0.66, FMM(V(34, 32), 500), C.wh); if (o.tag) txt(o.tag, x + w - 26, y + hd * 0.66, FMM(V(32, 32)), '#AEB4BC', 'right');
+  o.lines.forEach((l, i) => { const ly = y + hd + fs * 0.45 + i * lh; const p = l.at == null ? 1 : ez(t, l.at, 0.3); if (p <= 0) return;
+    const markOn = l.mark && t >= (l.markAt == null ? -1 : l.markAt);
+    const bg = l.k === '+' ? C.add : l.k === '-' ? C.del : markOn ? C.del : null; withA(p, () => { if (bg) rect(x + 3, ly, w - 6, lh, bg);
+      txt(l.k === ' ' ? '' : l.k, x + 24, ly + lh * 0.68, FMM(fs, 700), l.k === '+' ? C.addI : C.delI);
+      const n = l.at == null ? l.s.length : Math.floor(clamp((t - l.at) * 40, 0, l.s.length)); const s = l.s.slice(0, n);
+      txt(s, x + 24 + fs * 1.3, ly + lh * 0.68, FMM(fs, l.b ? 700 : 400), l.c || C.ink);
+      if (l.k === '-' && l.strikeAt != null) { const sp = ez(t, l.strikeAt, 0.3, 'outExpo'); rect(x + 24 + fs * 1.3, ly + lh * 0.48, tw(s, FMM(fs)) * sp, 4, C.delI); }
+      if (l.mark && l.mark.trim()) withA(ez(t, l.markAt == null ? -1 : l.markAt, 0.3), () => txt(l.mark, x + w - 26, ly + lh * 0.68, FMM(Math.max(fs * 0.8, 32), 700), C.delI, 'right')); }); });
+  if (o.err) { const ea = ez(t, o.err.at, 0.3) * (o.err.goneAt == null ? 1 : 1 - ez(t, o.err.goneAt, 0.35)); const ey = y + h + 16, eh = V(40, 36) * (1.35 * o.err.s.length + 0.7);
+    withA(ea, () => { rect(x, ey, w, eh, C.delI); o.err.s.forEach((l, i) => txt(l, x + 26, ey + V(40, 36) * (1.35 + i * 1.35), FMM(V(40, 36), 600), C.wh)); }); }
+  ctx.restore(); return h;
+}
+/** her review note: amber block, "YOU, REVIEWING", her words */
+function note(t, at, x, y, w, lines, fs, by = 'YOU, REVIEWING') {
+  const p = ez(t, at, 0.4); if (p <= 0) return 0; const lh = fs * 1.2, h = fs * 1.5 + lines.length * lh + fs * 0.6;
+  withA(Math.min(1, p * 1.5), () => { ctx.save(); ctx.translate(0, 26 * (1 - p)); rect(x, y, w, h, C.amb); strokeR(x, y, w, h, C.ink, 3);
+    txt(by, x + 28, y + 52, FMM(32, 600), C.ink, 'left', 'alphabetic', 1);
+    lines.forEach((l, i) => txt(l, x + 28, y + fs * 1.5 + i * lh + fs * 0.75, FO(fs, 700), C.ink)); ctx.restore(); });
+  return h;
+}
+function push(t, t0, d = 6) { const s = 1 + 0.02 * io(t, t0, d); ctx.translate(W / 2, H / 2); ctx.scale(s, s); ctx.translate(-W / 2, -H / 2); }
+const CODE0 = [{ s: 'async function signUp(user) {', k: ' ' }, { s: '  await db.insert(user)', k: ' ' }, { s: '  return { ok: true }', k: ' ' }, { s: '}', k: ' ' }];
+const ERR = ['Error 1062: Duplicate entry', "'ada@example.com'", "for key 'users.email'"];
+/* 0:12-0:24 Indeed: 4.5% entry level (+ her opening line as her note) */
+function sMarket(t) {
+  ground(); ctx.save(); push(t, 12, 12); const k = { ind: P("Indeed's research team", 12), n: P('4.5% of software development', 20), el: P('were entry level,', 23) };
+  head(t, PORT ? [[['ONLY', k.n.t - 0.3], ['4.5%', k.n.t, C.delI]], [['ENTRY', k.el.w[1]], ['LEVEL', k.el.w[2]]]] : [[['ONLY', k.n.t - 0.3], ['4.5%', k.n.t, C.delI], ['WERE', k.el.w[0]], ['ENTRY', k.el.w[1]], ['LEVEL', k.el.w[2]]]]);
+  const y = V(270, 470); const h1 = clipCard(t, 'ind-title', SX(), y, V(800, 940), { at: k.ind.t - 0.3, pad: 28, credit: false, shadow: false });
+  clipCard(t, 'ind-45', SX(), y + h1 + V(30, 30), V(1700, 940), { at: k.n.t - 0.4, hlAt: k.n.w[0], pad: V(30, 22), cs: 34, creditCol: C.dim, creditFont: '"Martian Mono"', shadow: false });
+  // A's missing rung, redrawn in B's colours (the combination): the junior rung is a dashed red outline
+  withA(ez(t, k.el.w[2] + 0.3, 0.5), () => { const lx = V(1240, 300), lw = V(300, 360), top = V(770, 1360), bot = V(1080, 1880), lwid = 18;
+    rect(lx - lwid, top, lwid, bot - top, C.ink); rect(lx + lw, top, lwid, bot - top, C.ink); [0, 1].forEach(i => rect(lx, top + 40 + i * 90, lw, lwid, C.ink));
+    ctx.save(); ctx.setLineDash([16, 10]); ctx.strokeStyle = C.delI; ctx.lineWidth = 4; ctx.strokeRect(lx + 6, bot - 60, lw - 12, lwid); ctx.restore();
+    txt('JUNIOR', lx + lw + 40, bot - 38, FMM(V(36, 36), 700), C.delI); txt('SENIOR', lx + lw + 40, top + 62, FMM(V(36, 36), 700), C.ink); });
+  ctx.restore();
+}
+/* 2:38 "Say a user sign up on your app and the app crashes with this error." */
+function sCrash(t) {
+  ground(); const k = { say: P('Say a user sign up on your app', 158), cr: P('and the app crashes with this error.', 159.6) };
+  head(t, PORT ? [[['THE', k.cr.w[1]], ['APP', k.cr.w[2]]], [['CRASHES.', k.cr.w[3], C.delI]]] : [[['A', k.say.w[0]], ['USER', k.say.w[2]]], [['SIGNS', k.say.w[3]], ['UP.', k.say.w[4]]], [['THE', k.cr.w[1]], ['APP', k.cr.w[2]]], [['CRASHES.', k.cr.w[3], C.delI]]], { y: V(300, 210) });
+  sheet(t, { x: V(810, 70), y: V(120, 470), w: V(1000, 940), file: 'signup.js', fs: V(50, 40), lines: CODE0, err: { s: ERR, at: k.cr.w[3] } });
+}
+/* 2:52 "one easy fix it might give is to wrap the saving [in a] try-catch. So the error is caught and the crash goes away.
+ *  So the page stops crashing, right? But the user still isn't signed up." (motion test 172.4-182.3) */
+function sTry(t) {
+  ground(); ctx.save(); push(t, 177, 5); const k = { fix: P('one easy fix it might give', 171.9), wrap: P('wrap the saving, try cache.', 173.9), go: P('the crash goes away.', 177), stop: P('the page stops crashing,', 178.5), but: P("But the user still isn't signed up.", 180.2) };
+  const sw = ez(t, k.go.t - 0.1, 0.25);
+  withA(1 - sw, () => head(t, PORT ? [[["AI'S", k.fix.w[0] - 0.2], ['FIX:', k.fix.w[2]]], [['TRY-CATCH.', k.wrap.w[3], C.addI]]] : [[["AI'S", k.fix.w[0] - 0.2], ['EASY', k.fix.w[1]], ['FIX:', k.fix.w[2]], ['TRY-CATCH.', k.wrap.w[3], C.addI]]]));
+  if (sw > 0) head(t, PORT ? [[['THE', k.go.w[0]], ['CRASH', k.go.w[1]]], [['GOES', k.go.w[2]], ['AWAY.', k.go.w[3]]]] : [[['THE', k.go.w[0]], ['CRASH', k.go.w[1]], ['GOES', k.go.w[2]], ['AWAY.', k.go.w[3]]]]);
+  const lines = [CODE0[0], { s: '  await db.insert(user)', k: '-', at: k.wrap.w[1] - 0.3, strikeAt: k.wrap.w[2] },
+    { s: '  try { await db.insert(user) }', k: '+', at: k.wrap.w[3] }, { s: '  catch (e) { }', k: '+', at: k.wrap.w[4] }, CODE0[2], CODE0[3]];
+  const sx = SX(), sy = V(260, 470), swd = SW();
+  const h = sheet(t, { x: sx, y: sy, w: swd, file: 'signup.js', tag: 'suggested by AI', fs: V(46, 40), lines, err: { s: ERR, at: -1, goneAt: k.go.w[1] } });
+  withA(ez(t, k.stop.w[2], 0.35), () => { const by = sy + h + 26, bh = V(96, 90); rect(sx, by, swd, bh, C.wh); strokeR(sx, by, swd, bh, C.ink, 3);
+    txt('Page: no crash', sx + 26, by + bh * 0.64, FMM(V(38, 34), 600), C.addI); txt('Signed up: 0', sx + swd - 26, by + bh * 0.64, FMM(V(38, 34), 600), C.delI, 'right'); });
+  note(t, k.but.w[0], SIDE(), V(560, 1180), SIDEW(), PORT ? ['But the user still', "isn't signed up."] : ['But the user', "still isn't", 'signed up.'], V(60, 64));
+  ctx.restore();
+}
+/* 3:12 "So the real fix is actually check for that and tell the user that the email is already taken." */
+function sFix(t) {
+  ground(); const k = { rf: P('So the real fix is actually check for that', 191.8), tk: P('tell the user that the email is already taken.', 195.2) };
+  head(t, [[['THE', k.rf.w[1]], ['REAL', k.rf.w[2], C.addI], ['FIX', k.rf.w[3], C.addI]]]);
+  const lines = [CODE0[0], { s: '  if (await db.emailTaken(user))', k: '+', at: k.rf.w[6] }, { s: "    return 'email taken'", k: '+', at: k.rf.w[8] }, CODE0[1], CODE0[2], CODE0[3]];
+  sheet(t, { x: SX(), y: V(260, 330), w: SW(), file: 'signup.js', tag: 'your change', fs: V(46, 40), lines });
+  const fx = SIDE(), fy = V(260, 1020), fw = SIDEW(); withA(ez(t, k.tk.w[0], 0.4), () => { const fh = 330;
+    rect(fx, fy, fw, fh, C.wh); strokeR(fx, fy, fw, fh, C.ink, 3); txt('Sign up', fx + 30, fy + 70, FO(48, 800), C.ink);
+    rect(fx + 30, fy + 104, fw - 60, 80, '#F6F7F9'); strokeR(fx + 30, fy + 104, fw - 60, 80, C.delI, 3); txt('ada@example.com', fx + 50, fy + 156, FMM(32), C.ink);
+    withA(ez(t, k.tk.w[5], 0.3), () => { txt('This email is', fx + 30, fy + 240, FO(40, 700), C.delI); txt('already taken.', fx + 30, fy + 290, FO(40, 700), C.delI); }); });
+  note(t, k.tk.w[7] + 0.2, SIDE(), V(630, 1400), SIDEW(), ['Approved.'], V(60, 64));
+}
+/* 4:08 "Many providers will send the webhook again ... So your app can receive the same payment successful message twice.
+ *  Your code has to be ready for that." */
+function sHook(t) {
+  ground(); const k = { wh: P('That message is called a webhook.', 246.7), tw: P('the same payment successful message twice.', 252.1), rd: P('Your code has to be ready for that.', 254.2) };
+  head(t, PORT ? [[['SAME', k.tw.w[1]], ['MESSAGE,', k.tw.w[4]]], [['TWICE.', k.tw.w[5], C.delI]]] : [[['THE', k.tw.w[0]], ['SAME', k.tw.w[1]], ['MESSAGE,', k.tw.w[4]], ['TWICE.', k.tw.w[5], C.delI]]]);
+  const lines = [{ s: 'POST /webhooks  order 1042', k: ' ', at: k.wh.w[4] }, { s: '  payment.successful', k: ' ', at: k.wh.w[4] + 0.15 },
+    { s: 'POST /webhooks  order 1042', k: ' ', at: k.tw.w[5] - 0.3, mark: 'x2', markAt: k.tw.w[5] }, { s: '  payment.successful', k: ' ', at: k.tw.w[5] - 0.15, mark: ' ', markAt: k.tw.w[5] }];
+  sheet(t, { x: SX(), y: V(260, 470), w: SW(), file: 'server log', tag: 'same order', fs: V(46, 40), lines });
+  const px = SIDE(), py = V(260, 1040), pw = SIDEW(), ph = V(300, 400);
+  withA(ez(t, k.wh.t, 0.4), () => { cover(IMG.pay, px, py, pw, ph, 0.4, 0.55); strokeR(px, py, pw, ph, C.ink, 3); rect(px, py + ph - 52, pw, 52, 'rgba(27,31,36,0.85)'); txt('Pexels · Kaboompics', px + 18, py + ph - 16, FMM(30, 600), '#FFFFFF'); });
+  note(t, k.rd.w[1], SIDE(), V(600, 1480), SIDEW(), PORT ? ['Your code has to be', 'ready for that.'] : ['Your code has to', 'be ready for that.'], V(48, 56));
+}
+/* 1:44 the four skills as a diff of the syllabus. Removed lines are her words from 5:35 ("as opposed to ... learning
+ *  syntax or learning how to write a for loop"); added lines land on "reading code, debugging, fundamentals ... domain knowledge". */
+function sFour(t) {
+  ground(); ctx.save(); push(t, 104.5, 7); const k = { f: P('focus on four things,', 104), rc: P('reading code,', 105.5), db: P('debugging,', 106.4), fu: P('fundamentals with a little bit of system design', 107), dk: P('domain knowledge.', 109.4) };
+  head(t, PORT ? [[['FOCUS', k.f.w[0]], ['ON', k.f.w[1]]], [['FOUR', k.f.w[2], C.addI], ['THINGS.', k.f.w[3], C.addI]]] : [[['FOCUS', k.f.w[0]], ['ON', k.f.w[1]], ['FOUR', k.f.w[2], C.addI], ['THINGS.', k.f.w[3], C.addI]]], { y: V(190, 520), fs: V(96, 120) });
+  const lines = [{ s: 'learn syntax', k: '-', at: 104.0, strikeAt: k.f.w[2] }, { s: 'learn to write a for loop', k: '-', at: 104.1, strikeAt: k.f.w[3] },
+    { s: 'reading code', k: '+', at: k.rc.t }, { s: 'debugging', k: '+', at: k.db.t }, { s: 'fundamentals', k: '+', at: k.fu.t }, { s: '  + a little system design', k: '+', at: k.fu.w[5], c: C.dim }, { s: 'domain knowledge', k: '+', at: k.dk.t }];
+  sheet(t, { x: SX(), y: V(260, 800), w: V(1380, 940), file: 'learning-to-code.md', tag: 'your plan', fs: V(52, 44), lines });
+  ctx.restore();
+}
+/* 5:32 the verdict: "I think it's still worth it." */
+function sWorth(t) {
+  ground(); const k = { w: P("I think it's still worth it.", 332.4) };
+  head(t, PORT ? [[['STILL', k.w.w[3]]], [['WORTH', k.w.w[4], C.addI], ['IT.', k.w.w[5], C.addI]]] : [[['STILL', k.w.w[3]], ['WORTH', k.w.w[4], C.addI], ['IT.', k.w.w[5], C.addI]]], { fs: V(170, 170), y: V(480, 700) });
+  note(t, k.w.t, SX(), V(620, 940), V(1100, 940), ["I think it's still worth it."], V(72, 64), 'YOU, REVIEWING: APPROVED');
+  if (!PORT) sheet(t, { x: 1320, y: 580, w: 490, file: 'learning-to-code.md', fs: 34, at: k.w.w[5], lines: [{ s: 'reading code', k: '+' }, { s: 'debugging', k: '+' }, { s: 'fundamentals', k: '+' }, { s: 'domain knowledge', k: '+' }] });
+}
+/* correction in the edit (her rule 2026-11-02): "We found out that in the US, [they rose] about 15% between February last
+ * year to June this year". The finding is Indeed's; the dates are Feb 2025 to Jun 2026. Pause her, plain screen, type on. */
+function sNote(t) {
+  ground(); const x = SX();
+  txt('QUICK NOTE', x, V(170, 300), FMM(38, 600), C.delI, 'left', 'alphabetic', 3);
+  const L = PORT ? ['Indeed found', 'this, not me.', 'US software', 'development', 'postings: up', 'almost 15%.'] : ['Indeed found this, not me.', 'US software development', 'postings: up almost 15%.'];
+  L.forEach((l, i) => txt(l, x, V(300, 440) + i * V(104, 110), FO(V(96, 100)), i === L.length - 1 ? C.addI : C.ink));
+  txt('Late February 2025 to June 2026.', x, V(300, 440) + L.length * V(104, 110) - V(10, 0), FO(V(46, 48), 600), C.ink);
+  clipCard(t, 'ind-15', x, V(700, 1300), V(1200, 940), { hlAt: -1, cs: 34, creditCol: C.dim, creditFont: '"Martian Mono"', shadow: false });
+}
+const DIR = {
+  images: { pay: '../_src/px/payment-5717934.jpg' },
+  fonts: ['800 40px "Onest"', '700 40px "Onest"', '600 40px "Onest"', '400 40px "Martian Mono"', '500 40px "Martian Mono"', '600 40px "Martian Mono"', '700 40px "Martian Mono"'],
+  draw(t) { if (t === 999) return sNote(t); if (t < 60) sMarket(t); else if (t < 150) sFour(t); else if (t < 165) sCrash(t); else if (t < 183.5) sTry(t); else if (t < 220) sFix(t); else if (t < 300) sHook(t); else sWorth(t); },
+  stills: { b1: { t: 162.0 }, b2: { t: 182.3 }, b3: { t: 198.0 }, b4: { t: 256.4 }, b5: { t: 25.2 }, b6: { t: 110.9 }, b7: { t: 334.6 }, b8: { t: 999 }, p1: { t: 182.3 }, p2: { t: 110.9 } },
+};
+boot(DIR);
+</script></body></html>

@@ -1,0 +1,21 @@
+{
+  "direction": "Faceless option in the film's look: one new order (yellow) lands in the orders table AND in each of its six indexes (her own example), every stack labelled. Round 2: \"index\" labels on each stack (round 1 was too abstract).",
+  "concept": "T22",
+  "thumbnail_text": "1 new order = 7 writes",
+  "title": "Why Indexing Every Column Makes Your Database Slower",
+  "titles": [
+    "Why Indexing Every Column Makes Your Database Slower",
+    "6 Indexes, 7 Writes: The Hidden Cost of Database Indexes",
+    "Don't Add a Database Index Before You Run EXPLAIN"
+  ],
+  "text": {
+    "a": "1 new order",
+    "b": "= <span class=\"mark\">7 writes</span>",
+    "t": "table",
+    "i": "index"
+  },
+  "images": {},
+  "frame": "none (faceless, Query Plan look)",
+  "vars": {},
+  "scores": "final gate (round 4): A topic/click 3/5 · B pair 8 · C taste 6"
+}

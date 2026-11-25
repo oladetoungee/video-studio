@@ -1,0 +1,307 @@
+{
+ "title": "claude-rule: talking-head",
+ "source": "../kit/anthropic rule for claude.mov",
+ "fps": 30,
+ "words": "data/raw_words.json",
+ "faces": "data/face_track.json",
+ "edl": "data/edl.json",
+ "film": "claude-rule",
+ "pad": "#CDBFF3",
+ "edit": {
+  "silenceDb": -44,
+  "maxPause": 0.42,
+  "keepBefore": 0.14,
+  "keepAfter": 0.1
+ },
+ "out": "../outputs/talking-head",
+ "shortsOut": "../outputs/shorts",
+ "tail": 0.7,
+ "audio": {
+  "voiceFilter": "highpass=f=80,afftdn=nr=8:nf=-52:tn=1,deesser=i=0.3:m=0.5:f=0.5,acompressor=threshold=0.06:ratio=3:attack=6:release=160:knee=3,equalizer=f=3200:t=q:w=1.2:g=1.5",
+  "music": {
+   "dir": "library:music"
+  },
+  "levels": {
+   "voiceLufs": -16.0,
+   "duckDb": -18.0,
+   "openDb": -10.0,
+   "target": -14.0,
+   "ceiling": 0.8
+  },
+  "sfx": {
+   "palette": true,
+   "roles": {}
+  }
+ },
+ "moments": [
+  {
+   "id": "full",
+   "kind": "full",
+   "slug": "full",
+   "title": "The whole video, tightened, with graphics (The Thread look)",
+   "in": 0,
+   "out": "end",
+   "retakes": false,
+   "cuts": [
+    [
+     110.62,
+     111.41
+    ],
+    [
+     119.29,
+     121.24
+    ],
+    [
+     154.84,
+     155.38
+    ],
+    [
+     226.5,
+     232.44
+    ]
+   ],
+   "script": "moments/full.js",
+   "music": [
+    "480",
+    0.0
+   ]
+  },
+  {
+   "id": "sh1",
+   "kind": "short",
+   "slug": "rule-pt1",
+   "title": "Anthropic's new rule for Claude (pt 1)",
+   "label": "Anthropic's new rule for Claude (pt 1)",
+   "in": 0.0,
+   "out": 36.6,
+   "cuts": [
+    [
+     16.3,
+     23.4
+    ]
+   ],
+   "script": "shorts/sh1.js",
+   "music": [
+    "480",
+    4.0
+   ],
+   "endCard": {
+    "seconds": 5,
+    "thumb": "thumb",
+    "title": "Anthropic's new rule about being cruel to Claude, and is AI conscious?"
+   }
+  },
+  {
+   "id": "sh2",
+   "kind": "short",
+   "slug": "rule-pt2",
+   "title": "What Anthropic's new rule actually says",
+   "label": "What Anthropic's new rule actually says",
+   "in": 36.8,
+   "out": 74.4,
+   "cuts": [],
+   "script": "shorts/sh2.js",
+   "music": [
+    "722",
+    4.0
+   ],
+   "endCard": {
+    "seconds": 5,
+    "thumb": "thumb",
+    "title": "Anthropic's new rule about being cruel to Claude, and is AI conscious?"
+   }
+  },
+  {
+   "id": "sh3",
+   "kind": "short",
+   "slug": "is-claude-conscious",
+   "title": "Is Claude conscious?",
+   "label": "Is Claude conscious?",
+   "in": 76.7,
+   "out": 119.0,
+   "cuts": [
+    [
+     110.62,
+     115.28
+    ]
+   ],
+   "script": "shorts/sh3.js",
+   "music": [
+    "167",
+    4.0
+   ],
+   "endCard": {
+    "seconds": 5,
+    "thumb": "thumb",
+    "title": "Anthropic's new rule about being cruel to Claude, and is AI conscious?"
+   }
+  },
+  {
+   "id": "sh4",
+   "kind": "short",
+   "slug": "ai-like-a-person",
+   "title": "Treating AI like a person",
+   "label": "Treating AI like a person",
+   "in": 121.2,
+   "out": 182.0,
+   "cuts": [
+    [
+     154.84,
+     155.38
+    ],
+    [
+     158.55,
+     159.7
+    ]
+   ],
+   "script": "shorts/sh4.js",
+   "music": [
+    "480",
+    4.0
+   ],
+   "endCard": {
+    "seconds": 5,
+    "thumb": "thumb",
+    "title": "Anthropic's new rule about being cruel to Claude, and is AI conscious?"
+   }
+  },
+  {
+   "id": "sh5",
+   "kind": "short",
+   "slug": "can-ai-get-tired",
+   "title": "If AI can be hurt, can it get tired?",
+   "label": "If AI can be hurt, can it get tired?",
+   "in": 184.4,
+   "out": 223.6,
+   "cuts": [],
+   "script": "shorts/sh5.js",
+   "music": [
+    "722",
+    4.0
+   ],
+   "endCard": {
+    "seconds": 5,
+    "thumb": "thumb",
+    "title": "Anthropic's new rule about being cruel to Claude, and is AI conscious?"
+   }
+  },
+  {
+   "id": "sh6",
+   "kind": "short",
+   "slug": "be-nice-to-ai",
+   "title": "Should you be nice to AI?",
+   "label": "Should you be nice to AI?",
+   "in": 233.05,
+   "out": 259.5,
+   "cuts": [],
+   "script": "shorts/sh6.js",
+   "music": [
+    "167",
+    4.0
+   ],
+   "endCard": {
+    "seconds": 5,
+    "thumb": "thumb",
+    "title": "Anthropic's new rule about being cruel to Claude, and is AI conscious?"
+   }
+  },
+  {
+   "id": "teaser",
+   "kind": "teaser",
+   "slug": "claude-rule",
+   "title": "Teaser for LinkedIn and X: her best lines, The Thread look",
+   "bites": [
+    [
+     212.06,
+     214.93
+    ],
+    [
+     0.02,
+     10.64
+    ],
+    [
+     49.95,
+     59.75
+    ],
+    [
+     28.48,
+     33.1
+    ],
+    [
+     93.48,
+     97.73
+    ],
+    [
+     105.49,
+     110.78
+    ],
+    [
+     134.68,
+     144.53
+    ],
+    {
+     "in": 144.64,
+     "out": 154.68,
+     "holds": [
+      [
+       152.5,
+       153.6,
+       0.6
+      ]
+     ]
+    },
+    [
+     184.45,
+     193.12
+    ],
+    [
+     196.93,
+     206.49
+    ],
+    [
+     233.14,
+     235.23
+    ],
+    [
+     245.9,
+     251.1
+    ],
+    [
+     256.72,
+     259.55
+    ],
+    [
+     251.12,
+     252.8
+    ]
+   ],
+   "tail": 6.5,
+   "captionStyle": "shorts",
+   "script": "teaser/teaser.js",
+   "music": [
+    "282",
+    0.0
+   ],
+   "endCard": {
+    "title": "Is It Okay to Be Mean to AI? Anthropic's New Rule"
+   }
+  }
+ ],
+ "images": {
+  "moral": "../film/assets/sources/anthropic/ac_crop_moral_status.png",
+  "rule": "../film/assets/sources/anthropic/ap_crop_rule.png",
+  "thumb": "../outputs/thumbnails/02-ai-can-hang-up.png",
+  "su": "../film/assets/sources/suleyman/su_quote.png"
+ },
+ "videoTitle": "Anthropic's new rule about being cruel to Claude, and is AI conscious?",
+ "common": [
+  "moments/common.js"
+ ],
+ "fonts": [
+  "500 40px \"Schibsted Grotesk\"",
+  "800 40px \"Schibsted Grotesk\"",
+  "500 40px \"IBM Plex Mono\"",
+  "italic 400 40px Newsreader"
+ ],
+ "teaserOut": "../outputs/teaser"
+}

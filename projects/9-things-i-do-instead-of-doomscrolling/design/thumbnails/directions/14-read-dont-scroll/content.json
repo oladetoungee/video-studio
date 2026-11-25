@@ -1,0 +1,29 @@
+{
+  "text": {
+    "h": "Read, don't scroll"
+  },
+  "images": {
+    "scene": "../../assets/set5/candle-book.jpg",
+    "phone": "../../assets/set5/phone-cut.png"
+  },
+  "kind": "full-bleed warm real scene (an open book, a candle, a cup of tea at night), no face + one phrase on a yellow box at the top",
+  "board": "pick1119-28 (Forget Your Reading Journal, Do This Instead / Learn Deeply)",
+  "fonts": [
+    "thumbs-02 Inter Tight Bold + yellow highlight (#111 on #F7D51D, Thumbnails 21)"
+  ],
+  "colours": "Font thumbs-02 specimen: yellow box #F7D51D, black text",
+  "thumbnail_text": "Read, don't scroll (black on a yellow box)",
+  "titles": [
+    "What I Do at Night Instead of Doomscrolling",
+    "What to Do Instead of Scrolling at Night (9 Easy Things)",
+    "Things to Do Instead of Doomscrolling (That I Actually Do)"
+  ],
+  "direction": "Copies pick1119-28: the thing itself, close and warm (an evening with a book instead of the phone; Pexels), one short phrase in a yellow box. No face, a calm contrast to the faces in the set.",
+  "nudge": {},
+  "vars": {},
+  "class": "no-lift",
+  "title": "What I Do at Night Instead of Doomscrolling",
+  "census": "scene, no face, words top",
+  "scores": "cold critic 2026-11-19: r1 5/6 · r2 7/6 (phone put down added) · r3 7/7 (night title).",
+  "recommended": false
+}

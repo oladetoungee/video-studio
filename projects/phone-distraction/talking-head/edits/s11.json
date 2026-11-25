@@ -1,0 +1,15 @@
+{
+ "t": {
+  "shout-1/The next video plays *on its own.*": {
+   "hide": true
+  },
+  "label/label": {
+   "s": "YouTube's Autoplay Feature",
+   "pos": {
+    "9x16": {
+     "k": 0.93
+    }
+   }
+  }
+ }
+}

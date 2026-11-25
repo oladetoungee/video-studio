@@ -1,0 +1,27 @@
+{
+ "direction": "Photo background (her room from the 29 Oct shoot, calmed by Enhance), she large on the right, chin on hand. Left: the topic name huge in white, \"explained\" underlined in tomato. Follows: Cal Newport \"Reading as an Act of Resistance\", \"WEB3 EXPLAINED!\" (board yt), PhD Vlog. One line, the topic, nothing to decode.",
+ "thumbnail_text": "HTTP STATUS CODES explained",
+ "titles": [
+  "What 200, 404 and 500 Actually Mean",
+  "HTTP Status Codes Explained (With Real API Examples)",
+  "The Numbers Behind Every Website Error"
+ ],
+ "title": "What 200, 404 and 500 Actually Mean",
+ "kind": "photo",
+ "text": {
+  "h1": "HTTP<br>STATUS<br>CODES",
+  "h2": "explained",
+  "u1": "example.com/books/9999",
+  "w1": "404 Not Found"
+ },
+ "images": {
+  "room": "../../assets/photo/shoot/room-1605.jpg"
+ },
+ "vars": {
+  "--rw": "1520px",
+  "--rx": "-40px",
+  "--ry": "-210px",
+  "--dim": "rgba(10,10,12,.30)"
+ },
+ "class": "no-lift"
+}

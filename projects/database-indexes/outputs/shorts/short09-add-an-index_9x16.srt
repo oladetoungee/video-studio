@@ -1,0 +1,27 @@
+1
+00:00:00,097 --> 00:00:02,432
+adding a database index will literally up
+
+2
+00:00:02,432 --> 00:00:04,577
+your query optimisation game, and it's kind
+
+3
+00:00:04,577 --> 00:00:05,477
+of a one-liner
+
+4
+00:00:05,477 --> 00:00:07,427
+in SQL, it looks something like this
+
+5
+00:00:07,427 --> 00:00:09,287
+now when you search books by author, the
+
+6
+00:00:09,287 --> 00:00:11,627
+database goes to the index first, finds
+
+7
+00:00:11,627 --> 00:00:13,933
+author 42, and goes straight to those rows

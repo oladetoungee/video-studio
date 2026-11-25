@@ -1,0 +1,652 @@
+{
+ "title": "http-status-codes: talking-head",
+ "source": "../kit/raw-video.mov",
+ "fps": 30,
+ "words": "data/raw_words.json",
+ "faces": "data/face_track.json",
+ "edl": "data/edl.json",
+ "edit": {
+  "silenceDb": -44,
+  "maxPause": 0.42,
+  "keepBefore": 0.14,
+  "keepAfter": 0.1
+ },
+ "out": "../outputs/talking-head",
+ "shortsOut": "../outputs/shorts",
+ "tail": 0.7,
+ "audio": {
+  "voiceFilter": "highpass=f=80,afftdn=nr=8:nf=-52:tn=1,deesser=i=0.3:m=0.5:f=0.5,acompressor=threshold=0.06:ratio=3:attack=6:release=160:knee=3,equalizer=f=3200:t=q:w=1.2:g=1.5",
+  "music": {
+   "dir": "library:music"
+  },
+  "levels": {
+   "voiceLufs": -16.0,
+   "duckDb": -18.0,
+   "openDb": -10.0,
+   "target": -14.0,
+   "ceiling": 0.8
+  },
+  "sfx": {
+   "palette": true,
+   "gainDb": 8,
+   "roles": {
+    "ratchet": {
+     "files": [
+      "library:tape-switch"
+     ],
+     "align": "peak",
+     "db": -4
+    },
+    "tick": {
+     "files": [
+      "library:ui-click-tone"
+     ],
+     "align": "peak",
+     "db": -2
+    },
+    "pop": {
+     "files": [
+      "library:pop-hard-click"
+     ],
+     "align": "peak",
+     "db": -6
+    },
+    "type": {
+     "files": [
+      "library:typewriter-single-hit"
+     ],
+     "align": "peak",
+     "db": -3
+    },
+    "shutter": {
+     "files": [
+      "library:shutter-click"
+     ],
+     "align": "peak",
+     "db": -5
+    },
+    "marker": {
+     "files": [
+      "library:marker-line"
+     ],
+     "align": "peak",
+     "db": -3
+    },
+    "spin": {
+     "files": [
+      "library:clock-wall-tick-tock"
+     ],
+     "align": "peak",
+     "db": -10
+    }
+   }
+  }
+ },
+ "moments": [
+  {
+   "id": "full",
+   "kind": "full",
+   "slug": "full",
+   "title": "The whole video, tightened, with graphics (B · The First Digit)",
+   "in": 0,
+   "out": 527.3,
+   "cuts": [
+    [
+     14.95,
+     17.45
+    ],
+    [
+     47.5,
+     49.38
+    ],
+    [
+     185.0,
+     192.92
+    ],
+    [
+     423.22,
+     424.46
+    ]
+   ],
+   "retakes": false,
+   "script": "moments/full.js",
+   "music": [
+    "722",
+    0.0
+   ],
+   "captionStyle": "shorts",
+   "note": "cuts = CLEANUP.md (4 retakes + the end). Corrections: 8:11 mistake counter 4 + caption \"The fourth one\"; 8:34 caption \"false\" (tools/words.py)."
+  },
+  {
+   "id": "sh01",
+   "kind": "short",
+   "slug": "what-is-a-status-code",
+   "title": "What is an HTTP status code?",
+   "label": "What is an HTTP status code?",
+   "labelCode": "200",
+   "sublabel": "",
+   "in": 0.05,
+   "out": 28.05,
+   "cuts": [
+    [
+     14.95,
+     17.45
+    ]
+   ],
+   "script": "shorts/sh01.js",
+   "music": [
+    "722",
+    2.0
+   ],
+   "tail": 0.5,
+   "endCard": false,
+   "fmt": "D",
+   "frame9": "wideLow",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 3.47,
+    "text": "What HTTP ~status codes~ really mean"
+   }
+  },
+  {
+   "id": "sh02",
+   "kind": "short",
+   "slug": "remember-status-codes",
+   "title": "How to remember: HTTP status codes",
+   "label": "How to remember | HTTP status codes",
+   "labelCode": "2xx",
+   "sublabel": "",
+   "in": 34.6,
+   "out": 83.08,
+   "cuts": [
+    [
+     47.5,
+     49.38
+    ]
+   ],
+   "script": "shorts/sh02.js",
+   "music": [
+    "722",
+    2.0
+   ],
+   "tail": 0.5,
+   "endCard": false,
+   "labelStyle": "stack",
+   "capStyle": "box",
+   "fmt": "B",
+   "frame9": "4x5",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 50.89,
+    "text": "How to remember every ~HTTP~ status code"
+   }
+  },
+  {
+   "id": "sh03",
+   "kind": "short",
+   "slug": "200-201-204",
+   "title": "200 vs 201 vs 204: which should your API return?",
+   "label": "200 vs 201 vs 204 | which should your API return?",
+   "labelCode": "200",
+   "sublabel": "",
+   "in": 100.58,
+   "out": 137.7,
+   "cuts": [],
+   "script": "shorts/sh03.js",
+   "music": [
+    "722",
+    2.0
+   ],
+   "tail": 0.5,
+   "endCard": false,
+   "fmt": "H",
+   "frame9": "fill",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 105.02,
+    "text": "Which ~success~ code should your API return?"
+   }
+  },
+  {
+   "id": "sh04",
+   "kind": "short",
+   "slug": "redirects",
+   "title": "301 vs 302 redirects: and 307, 308",
+   "label": "301 vs 302 redirects | and 307, 308",
+   "labelCode": "301",
+   "sublabel": "",
+   "in": 153.02,
+   "out": 200.48,
+   "cuts": [
+    [
+     185.0,
+     192.92
+    ]
+   ],
+   "script": "shorts/sh04.js",
+   "music": [
+    "722",
+    2.0
+   ],
+   "tail": 0.5,
+   "endCard": false,
+   "labelStyle": "stack",
+   "capStyle": "box",
+   "fmt": "C",
+   "frame9": "4x5",
+   "poster": "301 302 307 308",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 168.97,
+    "text": "~Redirects~: 301 vs 302",
+    "style": "card"
+   }
+  },
+  {
+   "id": "sh05",
+   "kind": "short",
+   "slug": "400-vs-422",
+   "title": "400 vs 422: which error should your API send?",
+   "label": "400 vs 422 | which error should your API send?",
+   "labelCode": "400",
+   "sublabel": "",
+   "in": 211.08,
+   "out": 235.64,
+   "cuts": [],
+   "script": "shorts/sh05.js",
+   "music": [
+    "722",
+    2.0
+   ],
+   "tail": 0.5,
+   "endCard": false,
+   "fmt": "F",
+   "frame9": "1x1top",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 229.96,
+    "text": "The right ~error~ code for bad form data"
+   }
+  },
+  {
+   "id": "sh06",
+   "kind": "short",
+   "slug": "404-vs-410",
+   "title": "410 Gone vs 404 Not Found",
+   "label": "410 Gone vs 404 Not Found",
+   "labelCode": "410",
+   "sublabel": "",
+   "in": 235.5,
+   "out": 266.52,
+   "cuts": [],
+   "script": "shorts/sh06.js",
+   "music": [
+    "722",
+    2.0
+   ],
+   "tail": 0.5,
+   "endCard": false,
+   "labelStyle": "stack",
+   "capStyle": "box",
+   "fmt": "J",
+   "poster": "404 410",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 256.05,
+    "text": "Page deleted? Don't send a ~404~"
+   }
+  },
+  {
+   "id": "sh07",
+   "kind": "short",
+   "slug": "409-conflict",
+   "title": "409 Conflict: two admins save at the same time",
+   "label": "409 Conflict | two admins save at the same time",
+   "labelCode": "409",
+   "sublabel": "",
+   "in": 272.1,
+   "out": 288.24,
+   "cuts": [],
+   "script": "shorts/sh07.js",
+   "music": [
+    "722",
+    2.0
+   ],
+   "tail": 0.5,
+   "endCard": false,
+   "fmt": "K",
+   "frame9": "fill",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 282.73,
+    "text": "When two people ~save~ at the same time"
+   }
+  },
+  {
+   "id": "sh08",
+   "kind": "short",
+   "slug": "401-vs-403",
+   "title": "401 vs 403: Unauthorized vs Forbidden",
+   "label": "401 vs 403 | Unauthorized vs Forbidden",
+   "labelCode": "401",
+   "sublabel": "",
+   "in": 296.98,
+   "out": 359.34,
+   "cuts": [],
+   "script": "shorts/sh08.js",
+   "music": [
+    "722",
+    2.0
+   ],
+   "tail": 0.5,
+   "endCard": false,
+   "labelStyle": "stack",
+   "capStyle": "box",
+   "fmt": "B",
+   "frame9": "4x5",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 338.42,
+    "text": "401 vs ~403~: what's the difference?",
+    "style": "card"
+   }
+  },
+  {
+   "id": "sh09",
+   "kind": "short",
+   "slug": "github-404",
+   "title": "Why GitHub returns 404: instead of 403",
+   "label": "Why GitHub returns 404 | instead of 403",
+   "labelCode": "404",
+   "sublabel": "",
+   "in": 359.2,
+   "out": 378.18,
+   "cuts": [],
+   "script": "shorts/sh09.js",
+   "music": [
+    "722",
+    2.0
+   ],
+   "tail": 0.5,
+   "endCard": false,
+   "fmt": "G",
+   "frame9": "letterbox",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 371.72,
+    "text": "Why GitHub shows ~404~ for private repos"
+   }
+  },
+  {
+   "id": "sh10",
+   "kind": "short",
+   "slug": "5xx-errors",
+   "title": "502 Bad Gateway vs 504 Gateway Timeout",
+   "label": "502 Bad Gateway vs 504 Gateway Timeout",
+   "labelCode": "502",
+   "sublabel": "",
+   "in": 378.04,
+   "out": 427.87,
+   "cuts": [
+    [
+     423.22,
+     424.46
+    ]
+   ],
+   "script": "shorts/sh10.js",
+   "music": [
+    "722",
+    2.0
+   ],
+   "tail": 0.5,
+   "endCard": false,
+   "labelStyle": "stack",
+   "capStyle": "box",
+   "fmt": "I",
+   "frame9": "fill",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 416.57,
+    "text": "What ~502~ and 504 errors really mean"
+   }
+  },
+  {
+   "id": "sh11",
+   "kind": "short",
+   "slug": "200-ok-for-errors",
+   "title": "Returning 200 OK: for API errors",
+   "label": "Returning 200 OK | for API errors",
+   "labelCode": "200",
+   "sublabel": "",
+   "in": 435.68,
+   "out": 452.04,
+   "cuts": [],
+   "script": "shorts/sh11.js",
+   "music": [
+    "722",
+    2.0
+   ],
+   "tail": 0.5,
+   "endCard": false,
+   "fmt": "A",
+   "frame9": "wide",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 444.72,
+    "text": "Stop sending ~200~ OK for errors"
+   }
+  },
+  {
+   "id": "sh12",
+   "kind": "short",
+   "slug": "find-vs-findorfail",
+   "title": "Laravel find vs findOrFail: how a 404 becomes a 500",
+   "label": "Laravel find vs findOrFail | how a 404 becomes a 500",
+   "labelCode": "500",
+   "sublabel": "",
+   "in": 457.71,
+   "out": 480.24,
+   "cuts": [],
+   "script": "shorts/sh12.js",
+   "music": [
+    "722",
+    2.0
+   ],
+   "tail": 0.5,
+   "endCard": false,
+   "labelStyle": "stack",
+   "capStyle": "box",
+   "fmt": "F",
+   "frame9": "1x1top",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 467.77,
+    "text": "Laravel: stop turning 404s into ~500~ errors",
+    "style": "card"
+   }
+  },
+  {
+   "id": "sh13",
+   "kind": "short",
+   "slug": "app-debug-stack-trace",
+   "title": "Laravel APP_DEBUG=true: in production",
+   "label": "Laravel APP_DEBUG=true | in production",
+   "labelCode": "500",
+   "sublabel": "",
+   "in": 494.86,
+   "out": 520.96,
+   "cuts": [],
+   "script": "shorts/sh13.js",
+   "music": [
+    "722",
+    2.0
+   ],
+   "tail": 0.5,
+   "endCard": false,
+   "fmt": "M",
+   "frame9": "fill",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 498.07,
+    "text": "Never ship APP_DEBUG=true to ~production~"
+   }
+  },
+  {
+   "id": "teaser",
+   "kind": "teaser",
+   "slug": "http-status-codes",
+   "title": "Teaser for LinkedIn and X: her best lines, B · The First Digit",
+   "bites": [
+    [
+     442.63,
+     447.68
+    ],
+    [
+     6.71,
+     12.72
+    ],
+    [
+     72.09,
+     83.08
+    ],
+    {
+     "gap": 0.9,
+     "at": 527.8
+    },
+    [
+     153.07,
+     155.14
+    ],
+    [
+     229.93,
+     235.64
+    ],
+    [
+     329.65,
+     333.74
+    ],
+    [
+     333.76,
+     338.42
+    ],
+    [
+     359.25,
+     364.7
+    ],
+    {
+     "gap": 0.9,
+     "at": 527.8
+    },
+    [
+     473.43,
+     478.44
+    ],
+    [
+     483.19,
+     491.28
+    ],
+    [
+     507.75,
+     512.4
+    ],
+    [
+     408.53,
+     414.46
+    ],
+    [
+     374.39,
+     378.18
+    ],
+    {
+     "gap": 1.3,
+     "at": 527.8
+    },
+    [
+     520.87,
+     527.25
+    ]
+   ],
+   "tail": 6.5,
+   "captionStyle": "shorts",
+   "script": "teaser/teaser.js",
+   "music": [
+    "766",
+    0.0
+   ],
+   "endCard": {
+    "title": "HTTP Status Codes: Is It You or the Server?"
+   }
+  }
+ ],
+ "common": [
+  "assets/src/clips.js",
+  "../film/scenes/fdkit.js",
+  "../film/scenes/fdsent.js",
+  "moments/common.js",
+  "moments/visuals.js",
+  "moments/plan.js"
+ ],
+ "pad": "#D9D4C7",
+ "frame9": "4x5",
+ "videoTitle": "HTTP Status Codes: Is It You or the Server?",
+ "images": {
+  "clip_rfc-first": "assets/src/rfc-first.png",
+  "clip_gh-404": "assets/src/gh-404.png",
+  "clip_gh-line": "assets/src/gh-line.png",
+  "clip_google-4xx": "assets/src/google-4xx.png",
+  "clip_google-line": "assets/src/google-line.png",
+  "clip_rfc-301": "assets/src/rfc-301.png",
+  "clip_rfc-401": "assets/src/rfc-401.png",
+  "clip_laravel-false": "assets/src/laravel-false.png",
+  "clip_rfc-teapot": "assets/src/rfc-teapot.png",
+  "px_5865624": "assets/px/px-5865624.jpg",
+  "px_4907178": "assets/px/px-4907178.jpg",
+  "px_17489152": "assets/px/px-17489152.jpg",
+  "px_416583": "assets/px/px-416583.jpg",
+  "px_4801686": "assets/px/px-4801686.jpg",
+  "px_39183052": "assets/px/px-39183052.jpg",
+  "clip_gh-hl": "assets/src/gh-hl.png",
+  "cover_sh01": "assets/covers/sh01.jpg",
+  "cover_sh02": "assets/covers/sh02.jpg",
+  "cover_sh03": "assets/covers/sh03.jpg",
+  "cover_sh04": "assets/covers/sh04.jpg",
+  "cover_sh04_cut": "assets/covers/sh04-cut.png",
+  "cover_sh05": "assets/covers/sh05.jpg",
+  "cover_sh06": "assets/covers/sh06.jpg",
+  "cover_sh07": "assets/covers/sh07.jpg",
+  "cover_sh08": "assets/covers/sh08.jpg",
+  "cover_sh08_cut": "assets/covers/sh08-cut.png",
+  "cover_sh09": "assets/covers/sh09.jpg",
+  "cover_sh10": "assets/covers/sh10.jpg",
+  "cover_sh11": "assets/covers/sh11.jpg",
+  "cover_sh12": "assets/covers/sh12.jpg",
+  "cover_sh12_cut": "assets/covers/sh12-cut.png",
+  "cover_sh13": "assets/covers/sh13.jpg"
+ },
+ "outro": {
+  "16x9": {
+   "src": "assets/outro/outro_16x9.mp4",
+   "dur": 8.133,
+   "poster": "assets/outro_16x9.jpg"
+  },
+  "9x16": {
+   "src": "assets/outro/outro_9x16.mp4",
+   "dur": 6.867,
+   "poster": "assets/outro_9x16.jpg"
+  },
+  "note": "her 'FULL VIDEO ON YOUTUBE' clip (she sent it 2026-11-10): ends every short and the teaser (moment \"outro\": false opts out); 1:1 / 4:5 use the 16:9 clip's centre"
+ }
+}

@@ -1,0 +1,126 @@
+{
+ "sample_rate": 48000,
+ "source": "talking-head/data/edl.json full",
+ "edited_duration": 465.096,
+ "segments": [
+  {
+   "orig_start": 2.1667,
+   "orig_end": 19.1,
+   "edit_start": 0.0
+  },
+  {
+   "orig_start": 19.2667,
+   "orig_end": 22.4667,
+   "edit_start": 16.8983
+  },
+  {
+   "orig_start": 22.7,
+   "orig_end": 29.1333,
+   "edit_start": 20.0633
+  },
+  {
+   "orig_start": 29.7333,
+   "orig_end": 40.8667,
+   "edit_start": 26.4616
+  },
+  {
+   "orig_start": 41.1,
+   "orig_end": 43.8333,
+   "edit_start": 37.56
+  },
+  {
+   "orig_start": 44.1333,
+   "orig_end": 49.9667,
+   "edit_start": 40.2583
+  },
+  {
+   "orig_start": 50.1667,
+   "orig_end": 53.1667,
+   "edit_start": 46.0567
+  },
+  {
+   "orig_start": 53.5333,
+   "orig_end": 65.7667,
+   "edit_start": 49.0217
+  },
+  {
+   "orig_start": 66.3667,
+   "orig_end": 134.7,
+   "edit_start": 61.2201
+  },
+  {
+   "orig_start": 141.0667,
+   "orig_end": 172.6667,
+   "edit_start": 129.5184
+  },
+  {
+   "orig_start": 172.9667,
+   "orig_end": 229.2667,
+   "edit_start": 161.0834
+  },
+  {
+   "orig_start": 232.7667,
+   "orig_end": 267.8333,
+   "edit_start": 217.3484
+  },
+  {
+   "orig_start": 275.7667,
+   "orig_end": 308.3,
+   "edit_start": 252.38
+  },
+  {
+   "gap": 4.5,
+   "edit_start": 284.9133
+  },
+  {
+   "orig_start": 308.3,
+   "orig_end": 318.8333,
+   "edit_start": 289.3783
+  },
+  {
+   "orig_start": 325.2333,
+   "orig_end": 367.2,
+   "edit_start": 299.8766
+  },
+  {
+   "orig_start": 367.5333,
+   "orig_end": 401.8333,
+   "edit_start": 341.8083
+  },
+  {
+   "orig_start": 402.1,
+   "orig_end": 435.4,
+   "edit_start": 376.0733
+  },
+  {
+   "orig_start": 436.7,
+   "orig_end": 438.6333,
+   "edit_start": 409.3383
+  },
+  {
+   "orig_start": 439.3667,
+   "orig_end": 447.2667,
+   "edit_start": 411.2366
+  },
+  {
+   "orig_start": 447.4667,
+   "orig_end": 467.0333,
+   "edit_start": 419.1016
+  },
+  {
+   "orig_start": 467.5333,
+   "orig_end": 471.7667,
+   "edit_start": 438.6332
+  },
+  {
+   "orig_start": 472.0,
+   "orig_end": 493.1333,
+   "edit_start": 442.8316
+  },
+  {
+   "orig_start": 493.8667,
+   "orig_end": 495.0333,
+   "edit_start": 463.9299
+  }
+ ]
+}

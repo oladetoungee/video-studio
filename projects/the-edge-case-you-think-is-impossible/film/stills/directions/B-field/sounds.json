@@ -1,0 +1,19 @@
+{
+ "music": "1009",
+ "musicAt": 20,
+ "musicDb": -23,
+ "sfxDb": -4,
+ "roles": {
+  "type": "keyboard-typing",
+  "key": "typewriter-soft-click",
+  "click": "click-classic",
+  "click2": "click-plastic-bubble",
+  "pop": "notify-bubble-pop",
+  "row": "ui-select-click",
+  "buzz": "buzzer-fail",
+  "err": "glitch-small-electric",
+  "hit": "hit-short-bass",
+  "load": "riser-short-stutter",
+  "marker": "marker-line"
+ }
+}

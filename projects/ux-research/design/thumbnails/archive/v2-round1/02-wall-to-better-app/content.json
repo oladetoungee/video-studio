@@ -1,0 +1,25 @@
+{
+  "direction": "Faceless. The question as the topic, and the whole idea of UX research in one move: a messy cluster of users' sticky-note complaints, a big curved arrow, and a calm, finished app screen with a tick. Off-black ground, canary as the only colour.",
+  "thumbnail_text": "What is UX research?",
+  "titles": [
+    "UX Research for Beginners: What It Is and How It Works",
+    "What Is UX Research? Explained From Scratch",
+    "UX Research Explained Simply (No Jargon, Just Examples)"
+  ],
+  "text": {
+    "hd": "What is<br><span class=\"acc\">UX research?</span>",
+    "n1": "Can't find search",
+    "n2": "Too slow",
+    "n3": "Where's my order?",
+    "btn": "Done"
+  },
+  "images": {},
+  "vars": {
+    "--ground": "#111114",
+    "--fg": "#FFFFFF",
+    "--accent": "#FFE15A"
+  },
+  "scores": "",
+  "recommended": false,
+  "title": "UX Research for Beginners: What It Is and How It Works"
+}

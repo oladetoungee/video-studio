@@ -1,0 +1,173 @@
+{
+ "story": "php2shell",
+ "outlet": "Wiz",
+ "slug": "wiz-blog",
+ "url": "https://www.wiz.io/blog/php2shell-php-rce",
+ "finalUrl": "https://www.wiz.io/blog/php2shell-php-rce",
+ "status": "loaded",
+ "http": 200,
+ "title": "PHP2Shell: AI uncovers critical RCE vulnerabilities affecting 70% of the Internet | Wiz Blog",
+ "h1": "PHP2Shell: AI uncovers critical RCE vulnerabilities affecting 70% of the Internet",
+ "published": "2026-10-21T09:59:59-04:00",
+ "files": {
+  "fold": "php2shell/wiz-blog_fold.png",
+  "full": "php2shell/wiz-blog_full.jpg",
+  "scroll": "php2shell/wiz-blog_scroll.mp4"
+ },
+ "full": {
+  "width": 1440,
+  "height": 6000,
+  "pageHeight": 15530,
+  "zoom": 1,
+  "quotes": [
+   {
+    "quote": "These findings rank among the most severe vulnerabilities discovered in PHP, and arguably in software history",
+    "box": {
+     "x": 98,
+     "y": 1565,
+     "w": 905,
+     "h": 24
+    },
+    "lines": [
+     {
+      "x": 98,
+      "y": 1565,
+      "w": 905,
+      "h": 24
+     }
+    ]
+   },
+   {
+    "quote": "how frontier AI helped us find and fix vulnerabilities that had remained hidden in the PHP codebase for more than a decade",
+    "box": {
+     "x": 65,
+     "y": 1821,
+     "w": 1013,
+     "h": 56
+    },
+    "lines": [
+     {
+      "x": 257,
+      "y": 1821,
+      "w": 821,
+      "h": 24
+     },
+     {
+      "x": 65,
+      "y": 1853,
+      "w": 195,
+      "h": 24
+     }
+    ]
+   }
+  ]
+ },
+ "scroll": {
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "seconds": 8,
+  "keyframes": [
+   {
+    "t": 0,
+    "y": 1
+   },
+   {
+    "t": 1,
+    "y": 1
+   },
+   {
+    "t": 2.449,
+    "y": 1155
+   },
+   {
+    "t": 3.549,
+    "y": 1155
+   },
+   {
+    "t": 4.47,
+    "y": 1411
+   },
+   {
+    "t": 8,
+    "y": 1411
+   }
+  ],
+  "zoom": 1,
+  "easing": "easeInOutCubic between keyframes, holds where y is equal",
+  "capped": false,
+  "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)",
+  "quotes": [
+   {
+    "quote": "These findings rank among the most severe vulnerabilities discovered in PHP, and arguably in software history",
+    "inVideo": true,
+    "still": true,
+    "t": 3,
+    "visibleStill": [
+     2.37,
+     3.63
+    ],
+    "scrollY": 1155,
+    "box": {
+     "x": 338,
+     "y": 410,
+     "w": 905,
+     "h": 24
+    },
+    "lines": [
+     {
+      "x": 338,
+      "y": 410,
+      "w": 905,
+      "h": 24
+     }
+    ],
+    "docBox": {
+     "x": 338,
+     "y": 1565,
+     "w": 905,
+     "h": 24
+    },
+    "layoutDriftPx": 0
+   },
+   {
+    "quote": "how frontier AI helped us find and fix vulnerabilities that had remained hidden in the PHP codebase for more than a decade",
+    "inVideo": true,
+    "still": true,
+    "t": 6.22,
+    "visibleStill": [
+     4.4,
+     8.03
+    ],
+    "scrollY": 1411,
+    "box": {
+     "x": 305,
+     "y": 410,
+     "w": 1013,
+     "h": 56
+    },
+    "lines": [
+     {
+      "x": 497,
+      "y": 410,
+      "w": 821,
+      "h": 24
+     },
+     {
+      "x": 305,
+      "y": 442,
+      "w": 195,
+      "h": 24
+     }
+    ],
+    "docBox": {
+     "x": 305,
+     "y": 1821,
+     "w": 1013,
+     "h": 56
+    },
+    "layoutDriftPx": 0
+   }
+  ]
+ }
+}

@@ -1,0 +1,32 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../lib/set.css"><style>
+.t{background:#EFEDE6}
+.h{left:0;width:1280px;top:18px;text-align:center;font:500 112px/1 FIT,sans-serif;color:#111111;letter-spacing:-.055em;white-space:nowrap}
+/* a plain week calendar filling the frame behind her (Thumbnails 51: her plan behind her) */
+.cal{left:24px;top:150px;width:var(--cw,1232px);height:600px;background:#FFFFFF;border:2px solid #111111;border-radius:14px;overflow:hidden}
+.cal .d{position:absolute;top:0;height:100%;border-left:2px solid #DAD7CE}
+.cal .dn{position:absolute;top:10px;width:100%;text-align:center;font:600 40px/1 FIT,sans-serif;color:#111;letter-spacing:-.02em}
+.cal .hr{position:absolute;left:0;width:100%;border-top:1px solid #ECEAE3}
+.ev{position:absolute;left:8px;right:8px;border-radius:10px;padding:10px 12px;font:800 var(--evz,46px)/1 FIT,sans-serif;letter-spacing:-.03em}
+.ev.w{background:#111111;color:#FFFFFF;background:var(--work,#C9C5BA);color:#111111}
+.ev.c{background:#D7262B;color:#FFFFFF}
+.me{left:var(--mx,350px);top:var(--my,168px);width:var(--mw,700px);filter:drop-shadow(0 18px 30px rgba(0,0,0,.35))}
+</style><script>
+// builds the week (the day names and the two block labels are editable in content.json "text")
+window.layout = (c) => {
+  const cal = document.querySelector('.cal'), T = c.text || {};
+  const days = (T.days || 'Mon,Tue,Wed,Thu,Fri').split(','), W = cal.offsetWidth / days.length, top = 52, ph = 38; // 1 hour = 38 px from 8:00
+  for (let h = 0; h < 15; h++) { const r = document.createElement('div'); r.className = 'hr'; r.style.top = (top + h * ph) + 'px'; cal.appendChild(r); }
+  const hid = String(T.unlabelled || '').split(',').map(Number); // days hidden behind her get no label (no half-words)
+  days.forEach((dn, i) => {
+    const L = (k) => hid.includes(i + 1) ? '' : (T[k] || '');
+    const d = document.createElement('div'); d.className = 'd'; d.style.left = (i * W) + 'px'; d.style.width = W + 'px'; if (!i) d.style.borderLeft = '0';
+    d.innerHTML = `<div class="dn">${dn}</div><div class="ev w" style="top:${top + 1 * ph}px;height:${8 * ph - 6}px">${L('work')}</div>` +
+      `<div class="ev c" style="top:${top + 10 * ph}px;height:${3 * ph - 6}px">${L('class')}</div>`;
+    cal.appendChild(d);
+  });
+};
+</script></head><body><div class="t">
+<div class="h z3" data-k="h"></div>
+<div class="cal z2" data-move="calendar"></div>
+<img class="cut me z4" data-img="me" data-move="her" alt="">
+</div><script src="../../lib/bind.js"></script></body></html>

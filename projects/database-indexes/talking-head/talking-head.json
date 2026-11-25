@@ -1,0 +1,483 @@
+{
+ "title": "database-indexes: talking-head",
+ "source": "../kit/database indexes.mov",
+ "fps": 30,
+ "words": "data/raw_words.json",
+ "faces": "data/face_track.json",
+ "edl": "data/edl.json",
+ "film": "database-indexes",
+ "edit": {
+  "silenceDb": -44,
+  "maxPause": 0.42,
+  "keepBefore": 0.14,
+  "keepAfter": 0.1
+ },
+ "out": "../outputs/talking-head",
+ "shortsOut": "../outputs/shorts",
+ "tail": 0.7,
+ "audio": {
+  "voiceFilter": "highpass=f=80,afftdn=nr=8:nf=-52:tn=1,deesser=i=0.3:m=0.5:f=0.5,acompressor=threshold=0.06:ratio=3:attack=6:release=160:knee=3,equalizer=f=3200:t=q:w=1.2:g=1.5",
+  "music": {
+   "dir": "library:music"
+  },
+  "levels": {
+   "voiceLufs": -16.0,
+   "duckDb": -18.0,
+   "openDb": -10.0,
+   "target": -14.0,
+   "ceiling": 0.8
+  },
+  "sfx": {
+   "palette": true,
+   "roles": {},
+   "keys": "../film/audio/sfx/keys"
+  }
+ },
+ "moments": [
+  {
+   "id": "full",
+   "kind": "full",
+   "slug": "full",
+   "title": "The whole video, tightened, with graphics (Query Plan look)",
+   "in": 0,
+   "out": "end",
+   "retakes": false,
+   "cuts": [
+    [
+     0.0,
+     19.35
+    ],
+    [
+     171.8,
+     174.3
+    ],
+    [
+     198.8,
+     200.8
+    ],
+    [
+     231.86,
+     232.6
+    ],
+    [
+     606.9,
+     608.25
+    ],
+    [
+     619.8,
+     620.38
+    ]
+   ],
+   "script": "moments/full.js",
+   "music": [
+    "157",
+    0.0
+   ]
+  },
+  {
+   "id": "sh1",
+   "kind": "short",
+   "slug": "index-every-column",
+   "title": "Why not index every column?",
+   "label": "why not index every column?",
+   "in": 477.1,
+   "out": 524.2,
+   "cuts": [],
+   "script": "shorts/sh1.js",
+   "music": [
+    "102",
+    4.0
+   ],
+   "endCard": {
+    "seconds": 4,
+    "thumb": "thumb",
+    "title": "Database Indexes: Why Your App Slows Down as It Grows"
+   }
+  },
+  {
+   "id": "sh2",
+   "kind": "short",
+   "slug": "composite-phone-book",
+   "title": "Composite indexes (the phone book)",
+   "label": "composite indexes (the phone book)",
+   "in": 306.3,
+   "out": 375.0,
+   "cuts": [
+    [
+     321.75,
+     323.0
+    ]
+   ],
+   "script": "shorts/sh2.js",
+   "music": [
+    "160",
+    4.0
+   ],
+   "endCard": {
+    "seconds": 4,
+    "thumb": "thumb",
+    "title": "Database Indexes: Why Your App Slows Down as It Grows"
+   }
+  },
+  {
+   "id": "sh3",
+   "kind": "short",
+   "slug": "how-an-index-works",
+   "title": "How a database index works",
+   "label": "how a database index works",
+   "in": 122.2,
+   "out": 171.8,
+   "cuts": [
+    [
+     126.1,
+     132.75
+    ]
+   ],
+   "script": "shorts/sh3.js",
+   "music": [
+    "157",
+    4.0
+   ],
+   "endCard": {
+    "seconds": 4,
+    "thumb": "thumb",
+    "title": "Database Indexes: Why Your App Slows Down as It Grows"
+   }
+  },
+  {
+   "id": "sh4",
+   "kind": "short",
+   "slug": "is-your-index-used",
+   "title": "Is your index being used?",
+   "label": "is your index being used?",
+   "in": 210.2,
+   "out": 244.1,
+   "cuts": [
+    [
+     231.86,
+     232.6
+    ]
+   ],
+   "script": "shorts/sh4.js",
+   "music": [
+    "102",
+    4.0
+   ],
+   "endCard": {
+    "seconds": 4,
+    "thumb": "thumb",
+    "title": "Database Indexes: Why Your App Slows Down as It Grows"
+   }
+  },
+  {
+   "id": "sh5",
+   "kind": "short",
+   "slug": "postgres-foreign-keys",
+   "title": "Postgres foreign keys",
+   "label": "Postgres foreign keys",
+   "in": 568.85,
+   "out": 593.3,
+   "cuts": [],
+   "script": "shorts/sh5.js",
+   "music": [
+    "160",
+    4.0
+   ],
+   "endCard": {
+    "seconds": 4,
+    "thumb": "thumb",
+    "title": "Database Indexes: Why Your App Slows Down as It Grows"
+   }
+  },
+  {
+   "id": "sh6",
+   "kind": "short",
+   "slug": "index-ignored",
+   "title": "Why your index gets ignored",
+   "label": "why your index gets ignored",
+   "in": 527.6,
+   "out": 568.8,
+   "cuts": [],
+   "script": "shorts/sh6.js",
+   "music": [
+    "157",
+    4.0
+   ],
+   "endCard": {
+    "seconds": 4,
+    "thumb": "thumb",
+    "title": "Database Indexes: Why Your App Slows Down as It Grows"
+   }
+  },
+  {
+   "id": "sh7",
+   "kind": "short",
+   "slug": "why-apps-get-slow",
+   "title": "Why your database gets slow",
+   "label": "why your database gets slow",
+   "in": 19.5,
+   "out": 87.6,
+   "cuts": [
+    [
+     31.75,
+     53.85
+    ]
+   ],
+   "script": "shorts/sh7.js",
+   "music": [
+    "160",
+    4.0
+   ],
+   "endCard": {
+    "seconds": 4,
+    "thumb": "thumb",
+    "title": "Database Indexes: Why Your App Slows Down as It Grows"
+   }
+  },
+  {
+   "id": "sh8",
+   "kind": "short",
+   "slug": "what-is-an-index",
+   "title": "What is a database index?",
+   "label": "what is a database index?",
+   "in": 87.6,
+   "out": 116.93,
+   "cuts": [],
+   "script": "shorts/sh8.js",
+   "music": [
+    "157",
+    4.0
+   ],
+   "endCard": {
+    "seconds": 4,
+    "thumb": "thumb",
+    "title": "Database Indexes: Why Your App Slows Down as It Grows"
+   }
+  },
+  {
+   "id": "sh9",
+   "kind": "short",
+   "slug": "add-an-index",
+   "title": "How to add a database index",
+   "label": "how to add a database index",
+   "in": 190.35,
+   "out": 210.25,
+   "cuts": [
+    [
+     197.7,
+     203.7,
+     "exact"
+    ]
+   ],
+   "script": "shorts/sh9.js",
+   "music": [
+    "102",
+    4.0
+   ],
+   "endCard": {
+    "seconds": 4,
+    "thumb": "thumb",
+    "title": "Database Indexes: Why Your App Slows Down as It Grows"
+   }
+  },
+  {
+   "id": "sh10",
+   "kind": "short",
+   "slug": "btree-and-unique",
+   "title": "The 2 most common database indexes",
+   "label": "the 2 most common database indexes",
+   "in": 262.0,
+   "out": 303.75,
+   "cuts": [],
+   "script": "shorts/sh10.js",
+   "music": [
+    "160",
+    4.0
+   ],
+   "endCard": {
+    "seconds": 4,
+    "thumb": "thumb",
+    "title": "Database Indexes: Why Your App Slows Down as It Grows"
+   }
+  },
+  {
+   "id": "sh11",
+   "kind": "short",
+   "slug": "more-index-types",
+   "title": "4 more database index types",
+   "label": "4 more database index types",
+   "in": 381.2,
+   "out": 436.1,
+   "cuts": [
+    [
+     401.85,
+     402.75
+    ]
+   ],
+   "script": "shorts/sh11.js",
+   "music": [
+    "157",
+    4.0
+   ],
+   "endCard": {
+    "seconds": 4,
+    "thumb": "thumb",
+    "title": "Database Indexes: Why Your App Slows Down as It Grows"
+   }
+  },
+  {
+   "id": "sh12",
+   "kind": "short",
+   "slug": "clustered",
+   "title": "Clustered vs non-clustered indexes",
+   "label": "clustered vs non-clustered indexes",
+   "in": 439.15,
+   "out": 471.1,
+   "cuts": [],
+   "script": "shorts/sh12.js",
+   "music": [
+    "102",
+    4.0
+   ],
+   "endCard": {
+    "seconds": 4,
+    "thumb": "thumb",
+    "title": "Database Indexes: Why Your App Slows Down as It Grows"
+   }
+  },
+  {
+   "id": "sh13",
+   "kind": "short",
+   "slug": "when-to-index",
+   "title": "When to add a database index",
+   "label": "when to add a database index",
+   "in": 594.75,
+   "out": 652.5,
+   "cuts": [
+    [
+     606.9,
+     608.15
+    ],
+    [
+     619.8,
+     620.45
+    ],
+    [
+     630.2,
+     637.0
+    ]
+   ],
+   "script": "shorts/sh13.js",
+   "music": [
+    "160",
+    4.0
+   ],
+   "endCard": {
+    "seconds": 4,
+    "thumb": "thumb",
+    "title": "Database Indexes: Why Your App Slows Down as It Grows"
+   }
+  },
+  {
+   "id": "teaser",
+   "kind": "teaser",
+   "slug": "database-indexes",
+   "title": "Teaser for LinkedIn and X: her best lines, Query Plan look",
+   "lead": true,
+   "bites": [
+    [
+     15.2,
+     16.7
+    ],
+    [
+     19.48,
+     28.61
+    ],
+    [
+     69.07,
+     76.38
+    ],
+    [
+     79.45,
+     87.64
+    ],
+    {
+     "gap": 0.8,
+     "at": 15.2
+    },
+    [
+     92.31,
+     96.05
+    ],
+    [
+     160.12,
+     171.94
+    ],
+    [
+     190.36,
+     195.81
+    ],
+    [
+     216.33,
+     218.79
+    ],
+    {
+     "gap": 0.8,
+     "at": 15.2
+    },
+    [
+     475.56,
+     483.82
+    ],
+    [
+     483.86,
+     486.47
+    ],
+    [
+     498.21,
+     502.05
+    ],
+    [
+     532.48,
+     536.67
+    ],
+    {
+     "gap": 1.3,
+     "at": 15.2
+    }
+   ],
+   "tail": 4.0,
+   "captionStyle": "shorts",
+   "script": "teaser/teaser.js",
+   "music": [
+    "766",
+    0.0
+   ],
+   "endCard": {
+    "title": "Database Indexes: Why Your App Slows Down as It Grows"
+   }
+  }
+ ],
+ "images": {
+  "thumb": "../outputs/thumbnails/02-fast-then-slow.png"
+ },
+ "videoTitle": "Database Indexes: Why Your App Slows Down as It Grows",
+ "common": [
+  "moments/common.js"
+ ],
+ "pad": "#0E1013",
+ "teaserOut": "../outputs/teaser",
+ "outro": {
+  "16x9": {
+   "src": "../kit/landscape - full video on youtube (1).mp4",
+   "dur": 6.267,
+   "poster": "assets/outro_16x9.jpg"
+  },
+  "9x16": {
+   "src": "../kit/portrait - full video on youtube (1).mp4",
+   "dur": 6.833,
+   "poster": "assets/outro_9x16.jpg"
+  },
+  "note": "her 'FULL VIDEO ON YOUTUBE' clip: ends every short and the teaser (moment \"outro\": false opts out); 1:1 / 4:5 use the 16:9 clip's centre"
+ }
+}

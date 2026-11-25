@@ -1,0 +1,30 @@
+{
+  "text": {
+    "w": "studying in Europe <span>isn't free.</span>",
+    "tag": "€0 tuition<br><b>≠</b> €0 cost"
+  },
+  "images": {
+    "me": "../../assets/shoot/cut-1586c.png"
+  },
+  "vars": {},
+  "class": "no-lift",
+  "nudge": {},
+  "board": "yt-72 (one line across the top, the creator centred under it, one small card)",
+  "kind": "flat pale yellow, one lowercase line across the top, her cut-out centred (hand on chin), a small tag beside her",
+  "direction": "Copies board yt-72 (\"boring, but it works\": one line across the top, the creator centred, a small card beside her). Words: studying in Europe isn't free. + tag €0 tuition ≠ €0 cost.",
+  "thumbnail_text": "studying in Europe isn't free. + tag: €0 tuition ≠ €0 cost",
+  "titles": [
+    "Study in Europe for Free? What Nigerians Really Pay",
+    "Tuition Free Universities in Europe Need Proof of Funds",
+    "What Studying in Europe Really Costs a Nigerian in 2027"
+  ],
+  "fonts": [
+    "design-24 Bricolage Grotesque (ink #2A1F6E + #6A63B2 on #F2F3C4, as Design 409)",
+    "design-29 DM Mono (yellow #F1E381 on olive #5D6A52, as Design 353)"
+  ],
+  "colours": "combo-09 (Design 409) + combo-13 (Design 353) for the tag",
+  "title": "Study in Europe for Free? What Nigerians Really Pay",
+  "recommended": false,
+  "fontboard_note": "NEW 2026-11-12 (font board round 2): replaces a \"words left, her right\" layout",
+  "scores": "font-board round 2 (2026-11-13, fonts with their source colours; fresh cold critic, PNG alone, 4 rounds): 4/10"
+}

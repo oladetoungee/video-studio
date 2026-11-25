@@ -1,0 +1,509 @@
+{
+ "slug": "ghana-marrify",
+ "aspect": "16x9",
+ "note": "Transition board. Fill carrier (what brings the next shot in: a shape, a line, a word, the camera, or \"hard cut\") and why (>= 20 characters: the reason, e.g. \"cut on the beat of 'licensed', new idea\"). Re-running lab.mjs board keeps them.",
+ "cuts": [
+  {
+   "from": "gather",
+   "to": "platform",
+   "frame": 104,
+   "t": 3.45,
+   "kind": "cut",
+   "lands_on": "a @ 3.55 s (f107)",
+   "carrier": "",
+   "why": ""
+  },
+  {
+   "from": "platform",
+   "to": "launch",
+   "frame": 308,
+   "t": 10.25,
+   "kind": "cut",
+   "lands_on": "It @ 10.37 s (f311)",
+   "carrier": "",
+   "why": ""
+  },
+  {
+   "from": "launch",
+   "to": "read",
+   "frame": 418,
+   "t": 13.91,
+   "kind": "cut",
+   "lands_on": "and @ 14.03 s (f421)",
+   "carrier": "",
+   "why": ""
+  },
+  {
+   "from": "read",
+   "to": "sources",
+   "frame": 560,
+   "t": 18.66,
+   "kind": "cut",
+   "lands_on": "it @ 18.65 s (f560)",
+   "carrier": "",
+   "why": ""
+  },
+  {
+   "from": "sources",
+   "to": "kinds",
+   "frame": 777,
+   "t": 25.87,
+   "kind": "cut",
+   "lands_on": "all @ 25.99 s (f780)",
+   "carrier": "",
+   "why": ""
+  },
+  {
+   "from": "kinds",
+   "to": "licensed",
+   "frame": 973,
+   "t": 32.43,
+   "kind": "cut",
+   "lands_on": "check @ 32.58 s (f977)",
+   "carrier": "",
+   "why": ""
+  },
+  {
+   "from": "licensed",
+   "to": "african",
+   "frame": 1122,
+   "t": 37.38,
+   "kind": "cut",
+   "lands_on": "And @ 37.50 s (f1125)",
+   "carrier": "",
+   "why": ""
+  },
+  {
+   "from": "african",
+   "to": "finally",
+   "frame": 1243,
+   "t": 41.42,
+   "kind": "cut",
+   "lands_on": "centralised @ 41.57 s (f1247)",
+   "carrier": "",
+   "why": ""
+  },
+  {
+   "from": "finally",
+   "to": "drawbacks",
+   "frame": 1320,
+   "t": 43.98,
+   "kind": "cut",
+   "lands_on": "Now @ 44.10 s (f1323)",
+   "carrier": "",
+   "why": ""
+  },
+  {
+   "from": "drawbacks",
+   "to": "estonia",
+   "frame": 1500,
+   "t": 49.98,
+   "kind": "cut",
+   "lands_on": "I've @ 50.10 s (f1503)",
+   "carrier": "",
+   "why": ""
+  },
+  {
+   "from": "estonia",
+   "to": "online",
+   "frame": 1662,
+   "t": 55.38,
+   "kind": "cut",
+   "lands_on": "And @ 55.50 s (f1665)",
+   "carrier": "",
+   "why": ""
+  },
+  {
+   "from": "online",
+   "to": "ecosystem",
+   "frame": 2158,
+   "t": 71.91,
+   "kind": "cut",
+   "lands_on": "The @ 72.03 s (f2161)",
+   "carrier": "",
+   "why": ""
+  },
+  {
+   "from": "ecosystem",
+   "to": "nigeria",
+   "frame": 2376,
+   "t": 79.18,
+   "kind": "cut",
+   "lands_on": "And @ 79.30 s (f2379)",
+   "carrier": "",
+   "why": ""
+  },
+  {
+   "from": "nigeria",
+   "to": "more-of-this",
+   "frame": 2590,
+   "t": 86.307,
+   "kind": "cut",
+   "lands_on": "my @ 86.46 s (f2594)",
+   "carrier": "",
+   "why": ""
+  },
+  {
+   "from": "more-of-this",
+   "to": "one-record",
+   "frame": 2718,
+   "t": 90.58,
+   "kind": "cut",
+   "lands_on": "There's @ 90.70 s (f2721)",
+   "carrier": "",
+   "why": ""
+  },
+  {
+   "from": "one-record",
+   "to": "sensitive",
+   "frame": 2983,
+   "t": 99.42,
+   "kind": "cut",
+   "lands_on": "is @ 99.30 s (f2979)",
+   "carrier": "",
+   "why": ""
+  },
+  {
+   "from": "sensitive",
+   "to": "personal",
+   "frame": 3150,
+   "t": 104.98,
+   "kind": "cut",
+   "lands_on": "I @ 105.10 s (f3153)",
+   "carrier": "",
+   "why": ""
+  },
+  {
+   "from": "personal",
+   "to": "searchable",
+   "frame": 3270,
+   "t": 108.98,
+   "kind": "cut",
+   "lands_on": "And @ 109.10 s (f3273)",
+   "carrier": "",
+   "why": ""
+  },
+  {
+   "from": "searchable",
+   "to": "open-data",
+   "frame": 3383,
+   "t": 112.75,
+   "kind": "cut",
+   "lands_on": "And @ 112.87 s (f3386)",
+   "carrier": "",
+   "why": ""
+  },
+  {
+   "from": "open-data",
+   "to": "public-entity",
+   "frame": 3655,
+   "t": 121.82,
+   "kind": "cut",
+   "lands_on": "year. @ 121.82 s (f3655)",
+   "carrier": "",
+   "why": ""
+  },
+  {
+   "from": "public-entity",
+   "to": "different",
+   "frame": 3821,
+   "t": 127.35,
+   "kind": "cut",
+   "lands_on": "But @ 127.50 s (f3825)",
+   "carrier": "",
+   "why": ""
+  },
+  {
+   "from": "different",
+   "to": "balance",
+   "frame": 3906,
+   "t": 130.18,
+   "kind": "cut",
+   "lands_on": "So @ 130.30 s (f3909)",
+   "carrier": "",
+   "why": ""
+  },
+  {
+   "from": "balance",
+   "to": "consent",
+   "frame": 4236,
+   "t": 141.18,
+   "kind": "cut",
+   "lands_on": "And @ 141.30 s (f4239)",
+   "carrier": "",
+   "why": ""
+  },
+  {
+   "from": "consent",
+   "to": "minimisation",
+   "frame": 4646,
+   "t": 154.86,
+   "kind": "cut",
+   "lands_on": "And @ 154.98 s (f4649)",
+   "carrier": "",
+   "why": ""
+  },
+  {
+   "from": "minimisation",
+   "to": "free-to-marry",
+   "frame": 4926,
+   "t": 164.18,
+   "kind": "cut",
+   "lands_on": "So @ 164.30 s (f4929)",
+   "carrier": "",
+   "why": ""
+  },
+  {
+   "from": "free-to-marry",
+   "to": "not-required",
+   "frame": 5049,
+   "t": 168.29,
+   "kind": "cut",
+   "lands_on": "Answering @ 168.41 s (f5052)",
+   "carrier": "",
+   "why": ""
+  },
+  {
+   "from": "not-required",
+   "to": "could",
+   "frame": 5256,
+   "t": 175.18,
+   "kind": "cut",
+   "lands_on": "I @ 175.30 s (f5259)",
+   "carrier": "",
+   "why": ""
+  },
+  {
+   "from": "could",
+   "to": "minimal-answer",
+   "frame": 5535,
+   "t": 184.5,
+   "kind": "cut",
+   "lands_on": "Like @ 184.62 s (f5539)",
+   "carrier": "",
+   "why": ""
+  },
+  {
+   "from": "minimal-answer",
+   "to": "access",
+   "frame": 5897,
+   "t": 196.56,
+   "kind": "cut",
+   "lands_on": "But @ 196.68 s (f5900)",
+   "carrier": "",
+   "why": ""
+  },
+  {
+   "from": "access",
+   "to": "not-neutral",
+   "frame": 6303,
+   "t": 210.08,
+   "kind": "cut",
+   "lands_on": "And @ 210.20 s (f6306)",
+   "carrier": "",
+   "why": ""
+  },
+  {
+   "from": "not-neutral",
+   "to": "split",
+   "frame": 6528,
+   "t": 217.58,
+   "kind": "cut",
+   "lands_on": "For @ 217.70 s (f6531)",
+   "carrier": "",
+   "why": ""
+  },
+  {
+   "from": "split",
+   "to": "tricky",
+   "frame": 6984,
+   "t": 232.78,
+   "kind": "cut",
+   "lands_on": "So @ 232.90 s (f6987)",
+   "carrier": "",
+   "why": ""
+  },
+  {
+   "from": "tricky",
+   "to": "cultural",
+   "frame": 7272,
+   "t": 242.38,
+   "kind": "cut",
+   "lands_on": "It's @ 242.50 s (f7275)",
+   "carrier": "",
+   "why": ""
+  },
+  {
+   "from": "cultural",
+   "to": "two-way",
+   "frame": 7464,
+   "t": 248.78,
+   "kind": "cut",
+   "lands_on": "but @ 248.90 s (f7467)",
+   "carrier": "",
+   "why": ""
+  },
+  {
+   "from": "two-way",
+   "to": "both-ways",
+   "frame": 7674,
+   "t": 255.78,
+   "kind": "cut",
+   "lands_on": "it. @ 255.71 s (f7671)",
+   "carrier": "",
+   "why": ""
+  },
+  {
+   "from": "both-ways",
+   "to": "reciprocity",
+   "frame": 7743,
+   "t": 258.1,
+   "kind": "cut",
+   "lands_on": "And @ 258.22 s (f7747)",
+   "carrier": "",
+   "why": ""
+  },
+  {
+   "from": "reciprocity",
+   "to": "looked-up",
+   "frame": 8028,
+   "t": 267.58,
+   "kind": "cut",
+   "lands_on": "If @ 267.70 s (f8031)",
+   "carrier": "",
+   "why": ""
+  },
+  {
+   "from": "looked-up",
+   "to": "build-it",
+   "frame": 8157,
+   "t": 271.88,
+   "kind": "cut",
+   "lands_on": "I @ 272.00 s (f8160)",
+   "carrier": "",
+   "why": ""
+  },
+  {
+   "from": "build-it",
+   "to": "probe",
+   "frame": 8412,
+   "t": 280.38,
+   "kind": "cut",
+   "lands_on": "But @ 280.50 s (f8415)",
+   "carrier": "",
+   "why": ""
+  },
+  {
+   "from": "probe",
+   "to": "love-it",
+   "frame": 8625,
+   "t": 287.48,
+   "kind": "cut",
+   "lands_on": "I @ 287.60 s (f8628)",
+   "carrier": "",
+   "why": ""
+  },
+  {
+   "from": "love-it",
+   "to": "end",
+   "frame": 8940,
+   "t": 297.983,
+   "kind": "cut",
+   "lands_on": null,
+   "carrier": "",
+   "why": ""
+  }
+ ],
+ "flags": [
+  {
+   "frame": 308,
+   "kind": "blank after cut",
+   "detail": "platform -> launch: frames +1,+2,+3 show under 30 % of the settled shot's detail (empty ground): bring the next shot in with something on screen"
+  },
+  {
+   "frame": 560,
+   "kind": "blank after cut",
+   "detail": "read -> sources: frames +1,+2,+3 show under 30 % of the settled shot's detail (empty ground): bring the next shot in with something on screen"
+  },
+  {
+   "frame": 777,
+   "kind": "blank after cut",
+   "detail": "sources -> kinds: frames +1,+2,+3 show under 30 % of the settled shot's detail (empty ground): bring the next shot in with something on screen"
+  },
+  {
+   "frame": 973,
+   "kind": "blank after cut",
+   "detail": "kinds -> licensed: frames +1,+2,+3 show under 30 % of the settled shot's detail (empty ground): bring the next shot in with something on screen"
+  },
+  {
+   "frame": 1243,
+   "kind": "blank after cut",
+   "detail": "african -> finally: frames +1,+2,+3 show under 30 % of the settled shot's detail (empty ground): bring the next shot in with something on screen"
+  },
+  {
+   "frame": 1662,
+   "kind": "blank after cut",
+   "detail": "estonia -> online: frames +1,+2,+3,+5 show under 30 % of the settled shot's detail (empty ground): bring the next shot in with something on screen"
+  },
+  {
+   "frame": 2983,
+   "kind": "blank after cut",
+   "detail": "one-record -> sensitive: frames +1,+2,+3,+5 show under 30 % of the settled shot's detail (empty ground): bring the next shot in with something on screen"
+  },
+  {
+   "frame": 4236,
+   "kind": "blank after cut",
+   "detail": "balance -> consent: frames +1,+2,+3 show under 30 % of the settled shot's detail (empty ground): bring the next shot in with something on screen"
+  },
+  {
+   "frame": 4646,
+   "kind": "blank after cut",
+   "detail": "consent -> minimisation: frames +1,+2,+3 show under 30 % of the settled shot's detail (empty ground): bring the next shot in with something on screen"
+  },
+  {
+   "frame": 4926,
+   "kind": "blank after cut",
+   "detail": "minimisation -> free-to-marry: frames +1,+2,+3,+5 show under 30 % of the settled shot's detail (empty ground): bring the next shot in with something on screen"
+  },
+  {
+   "frame": 5535,
+   "kind": "blank after cut",
+   "detail": "could -> minimal-answer: frames +1,+2,+3,+5 show under 30 % of the settled shot's detail (empty ground): bring the next shot in with something on screen"
+  },
+  {
+   "frame": 5897,
+   "kind": "blank after cut",
+   "detail": "minimal-answer -> access: frames +1,+2,+3,+5 show under 30 % of the settled shot's detail (empty ground): bring the next shot in with something on screen"
+  },
+  {
+   "frame": 6303,
+   "kind": "blank after cut",
+   "detail": "access -> not-neutral: frames +1,+2,+3 show under 30 % of the settled shot's detail (empty ground): bring the next shot in with something on screen"
+  },
+  {
+   "frame": 6528,
+   "kind": "blank after cut",
+   "detail": "not-neutral -> split: frames +1,+2,+3 show under 30 % of the settled shot's detail (empty ground): bring the next shot in with something on screen"
+  },
+  {
+   "frame": 7464,
+   "kind": "blank after cut",
+   "detail": "cultural -> two-way: frames +1,+2,+3 show under 30 % of the settled shot's detail (empty ground): bring the next shot in with something on screen"
+  },
+  {
+   "frame": 7743,
+   "kind": "blank after cut",
+   "detail": "both-ways -> reciprocity: frames +1,+2,+3,+5 show under 30 % of the settled shot's detail (empty ground): bring the next shot in with something on screen"
+  },
+  {
+   "frame": 8028,
+   "kind": "blank after cut",
+   "detail": "reciprocity -> looked-up: frames +1,+2,+3,+5 show under 30 % of the settled shot's detail (empty ground): bring the next shot in with something on screen"
+  },
+  {
+   "frame": 8625,
+   "kind": "blank after cut",
+   "detail": "probe -> love-it: frames +1,+2,+3,+5 show under 30 % of the settled shot's detail (empty ground): bring the next shot in with something on screen"
+  }
+ ]
+}

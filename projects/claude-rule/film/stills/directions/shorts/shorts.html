@@ -1,0 +1,31 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>claude-rule · short style frames</title>
+<style>
+/* Helvetica Neue is the Mac system font: used here for LOCAL renders only, never copied (SHORTS-PLAYBOOK "Font and licence") */
+html, body { margin: 0; background: #000; }
+#stage { position: relative; overflow: hidden; background: #000; }
+.bg { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; object-fit: cover; }
+.label { position: absolute; left: 0; right: 0; text-align: center; }
+.label span { display: inline-block; font-family: 'Helvetica Neue'; font-weight: 400; font-size: 82px; line-height: 1; color: #000; background: #fff; border-radius: 8px; padding: 19px 18px; white-space: nowrap; }
+.cap { position: absolute; left: 50%; transform: translateX(-50%); text-align: center; font-family: 'Helvetica Neue'; font-weight: 500; font-size: 76px; line-height: 0.92; letter-spacing: -0.08em; word-spacing: 0.06em; color: #DFD7CB; background: rgba(0,0,0,0.4); border-radius: 10px; padding: 12px 14px; white-space: nowrap; }
+</style></head>
+<body><div id="stage"></div>
+<script src="../_tools/kit.js"></script>
+<script>
+// One proposed short: SH2 "Anthropic's new rule for Claude (pt 2)" (refined-kit.md section 5, raw 0:36.8-1:16.0).
+// Series label (Helvetica Neue Regular 82 px, white box, top 6-8 %) + spoken caption (Helvetica Neue Medium 76 px,
+// -0.08 em, #DFD7CB on black 40 %, centred at y ~1535, lowercase as spoken, max 2 lines x 30 characters).
+function label(r) { const l = el('div', { top: '135px' }, '<span>Anthropic’s new rule</span>', r); l.className = 'label';
+  const l2 = el('div', { top: '255px' }, '<span>for Claude (pt 2)</span>', r); l2.className = 'label'; }
+function cap(r, html) { const c = el('div', { top: '1468px' }, html, r); c.className = 'cap'; return c; }
+// S1: her footage (9:16 crop from the 4K recording, never flipped), 0:52.8
+scene('face', 0, 1, (r) => {
+  el('img', {}, '', r).className = 'bg'; r.lastChild.src = '../_footage/p_52.8.jpg';
+  label(r); cap(r, 'is that Claude can end<br>the conversation');
+}, () => {});
+// S2: full-screen film insert (B · The Fine Print, 9:16 frame at 0:47.4), caption keeps running on top
+scene('insert', 1, 2, (r) => {
+  el('img', {}, '', r).className = 'bg'; r.lastChild.src = '../B-fineprint/frames/B6_lift_9x16.png';
+  label(r); cap(r, 'and of course,<br>according to them,');
+}, () => {});
+</script></body></html>

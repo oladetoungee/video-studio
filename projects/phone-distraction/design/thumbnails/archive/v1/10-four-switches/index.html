@@ -1,0 +1,13 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../../../lib/pd.css"><style>
+.t{--ground:#0C0D10;--fg:#F4F1EA;--accent:#FF4433}
+.w{left:60px;top:150px;font-size:124px;color:var(--fg);line-height:.84;width:640px}
+.sub{left:64px;top:440px;font-size:54px;font-weight:700;color:#D8D6D0;letter-spacing:-.025em;width:600px;line-height:1.05}
+.set{position:absolute;left:740px;top:110px;width:500px;background:#1D1F25;border-radius:30px;padding:12px 10px;z-index:3;transform:rotate(2deg)}
+.set .sw span{font-size:32px;flex:1} .set .sw{padding:24px 20px} .set .sw em{font-style:normal;font-family:'Plex';font-size:22px;letter-spacing:.1em;color:var(--mut)}
+.set .tog{width:96px;height:58px;border-radius:29px} .set .tog::after{width:48px;height:48px;top:5px;left:5px} .set .tog.on::after{left:43px}
+.set .sw:last-of-type{border-bottom:0}
+</style></head><body><div class="t">
+<div class="abs it cap w z4" data-k="words"></div>
+<div class="abs sub z4" data-k="sub"></div>
+<div class="set" data-move="settings"><div class="sw"><span data-k="s1"></span><em data-k="v1"></em><i class="tog"></i></div><div class="sw"><span data-k="s2"></span><em data-k="v2"></em><i class="tog"></i></div><div class="sw"><span data-k="s3"></span><em data-k="v3"></em><i class="tog"></i></div><div class="sw"><span data-k="s4"></span><em data-k="v4"></em><i class="tog on"></i></div></div>
+</div><script src="../../../../lib/bind.js"></script></body></html>

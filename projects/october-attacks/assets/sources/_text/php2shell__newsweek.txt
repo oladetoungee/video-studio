@@ -1,0 +1,149 @@
+URL: https://www.newsweek.com/php-vunerability-php2shell-issue-websites-hack-server-12601225
+STATUS: loaded (http 200)
+FINAL: https://www.newsweek.com/php-vunerability-php2shell-issue-websites-hack-server-12601225
+TITLE: PHP Vulnerability: List of Websites Powered by PHP as Hacker Threat Prompts Scramble - Newsweek
+H1: Critical PHP Flaws Threaten Millions of Websites in New AI Security Test
+OG: PHP vulnerability sparks scramble as major websites face threat | Newsweek
+PUBLISHED: 2026-10-21T19:03:58  MODIFIED: 2026-10-21T19:03:58
+DOC_H: 13952
+
+By Hollie Silverman
+
+News Editor
+
+1
+Share
+Newsweek is a Trust Project member
+Prefer Newsweek on Google
+to see more of our trusted coverage when you search.
+
+Two newly disclosed security flaws could put websites that people use every day at risk, potentially allowing hackers to take control of vulnerable servers or access sensitive information stored in their memory.
+
+The problem lies in PHP, behind-the-scenes technology used across a huge portion of the internet. That means people could potentially be affected without ever knowing what PHP is or that a website or online service they use depends on it.
+
+Wiz Research estimates that PHP powers roughly 70 percent of websites worldwide, though that does not mean 70 percent of websites are vulnerable to these particular attacks.
+
+Read More on News
+FBI Issues Advice As Security Issue Hits Global Websites
+5 min read
+Trump Rally for Lindsey Graham’s Sister Upended by Numerous Protesters
+10 min read
+Hospitals Urged to Forgo Computers as Cyber Threat Grows
+1 min read
+
+“Effective Immediately, all organizations using PHP for their systems are advised to be prepared for an update addressing two critical vulnerabilities,” the United States National Security Agency Cybersecurity Division said in a post on X on Wednesday.
+
+“PHP is widely used for web applications. These vulnerabilities often provide a direct path to the server's file system or database. If an immediate update is not feasible, it is recommended that organizations take the system offline until it can be fully mitigated.”
+
+The city of Mainz's website, Mainz.de, went offline on October 20, 2026, along with other websites operated by Rhineland-Palatinate government agencie...
+Read More
+
+The vulnerabilities, CVE-2026-109618 and CVE-2026-109619, have been dubbed “PHP2Shell” and both carry a critical CVSS v4.0 severity rating of 9.2. Google Cloud said PHP versions 5.4 through 8.5.11 are affected, with fixes included in PHP 8.5.12, 8.4.27, 8.3.36 and 8.2.35.
+
+The discovery is also drawing attention because artificial intelligence played an important role in the research.
+
+Google Cloud said Wiz Research used multiple AI models while identifying and helping remediate the vulnerabilities, with Gemini 4 Argon contributing to vulnerability discovery, exploit development, attack detection and patch validation.
+
+The Bulletin
+Want the morning news straight to your inbox?
+Sign up
+Sign up to Breaking News alerts
+By clicking “sign up” you are agreeing to our
+Terms of Service and Privacy Policy
+
+PHP operates largely out of sight of ordinary internet users but sits underneath websites and web applications across the internet.
+
+The potential reach extends across major web platforms. Sansec reported that researchers demonstrated unauthenticated remote-code execution against applications including WordPress, Drupal, Joomla, Magento, MediaWiki, Roundcube, phpMyAdmin, Nextcloud, Laravel, Symfony and WHMCS.
+
+Newsweek reached out to some of the impacted platforms by email for comment Wednesday.
+
+RELATED STORY
+Newsweek Webinar: How the Politics of AI Could Shape Midterms
+
+Thank you for reaching out to the Wikimedia Foundation, the non-profit that operates Wikipedia and other Wikimedia projects. Please find our response below, this can be attributed to a Wikimedia Foundation spokesperson.
+
+“The Wikimedia Foundation is currently in the process of addressing security vulnerabilities in PHP, the programming language that underpins most wikis, including the Wikimedia projects. This issue affects all known versions of PHP, and is not specific to the Wikimedia Foundation," a Wikimedia spokesperson told Newsweek on Wednesday in an emailed statement.
+
+"All Foundation-supported systems and volunteer-run systems that use PHP are affected. We have taken down a number of other systems as a precautionary measure until they can be safely patched.”
+
+In a statement posted to its website, Drupal said: "Site owners are responsible for maintaining the security of their hosting platform. Updating to a PHP release containing the patch to these vulnerabilities is the only complete mitigation."
+
+Because the vulnerabilities are in PHP itself rather than simply in an individual website's application code, fixing an affected site's own software does not necessarily address the underlying problem. Sansec said the remedy is to update PHP.
+
+For ordinary internet users, PHP2Shell is primarily a threat to the websites and servers they rely on, rather than a vulnerability they can directly patch on their phones or computers.
+
+Wiz Research said the flaws could allow an unauthenticated attacker to execute code or read sensitive process memory containing information such as passwords, authentication tokens, API keys and certificates.
+
+Which Websites Are Powered by PHP?
+
+Some of the internet's best-known website platforms depend on PHP.
+
+WordPress runs on PHP, as do Drupal and Joomla. The PHP ecosystem also stretches into ecommerce and other web applications, including Magento and WooCommerce.
+
+Wikipedia is another prominent example. The Wikimedia Foundation says Wikipedia is powered by MediaWiki, while its technology documentation describes MediaWiki as open-source wiki software written in PHP.
+
+However, consumers should not interpret that list as meaning those websites are currently vulnerable.
+
+Automattic, for example, said Wednesday that sites hosted on WordPress.com, WordPress VIP, WP Cloud and Pressable were already protected against PHP2Shell and that customers on those services do not need to take action.
+
+The important distinction is between using PHP and running a vulnerable PHP installation. A site's exposure depends on its underlying server environment and whether applicable security updates have been installed.
+
+Which Websites Have Gone Dark?
+
+Some organizations have temporarily taken websites and online services offline rather than leave potentially vulnerable systems exposed while fixes are installed.
+
+Malwarebytes reported Wednesday that users could encounter websites placed into maintenance mode as administrators responded to PHP2Shell. Cybersecurity authorities have advised organizations that cannot quickly secure an affected internet-facing system to consider isolating it from public networks.
+
+Reports indicate that the response has been particularly visible in Europe. Insider Paper, citing Reuters, reported that government websites in the Netherlands and Finland were taken offline, while local-government administrative websites in France were temporarily disconnected and services in Denmark, including a national school communication platform, were also affected.
+
+Malwarebytes similarly said people may encounter websites offline while administrators install security updates and check their systems.
+
+Could U.S. Government Resources Be Impacted?
+
+The vulnerabilities potentially matter to any organization operating an affected PHP web environment, but there is currently no evidence that U.S. federal government websites have been compromised or taken offline because of PHP2Shell.
+
+Cybersecurity authorities outside the U.S. have already treated the flaws seriously. The Dutch NCSC-NL advised organizations to identify PHP-based applications and their runtime versions, prioritizing internet-facing systems, and to isolate internet-facing PHP applications from public networks when an immediate fix is not possible.
+
+Ubuntu also released fixes for affected PHP packages across its supported releases, including older releases covered through expanded security maintenance, illustrating that organizations may receive fixes through their operating-system provider rather than directly from the PHP project.
+
+What Should Users Do?
+
+For most people, there is no PHP2Shell patch they need to install on their phone or personal computer. The vulnerabilities affect PHP running on servers, so the immediate responsibility to fix them falls on website operators, hosting providers and organizations running affected PHP installations.
+
+Users can still reduce their broader exposure if an online service is compromised by following standard security practices, including using unique passwords for different accounts, turning on multifactor authentication where available and treating unexpected login or password-reset messages cautiously.
+
+What Is PHP?
+
+PHP is a programming language that runs on web servers, largely invisible to people visiting the websites that depend on it.
+
+Instead of running on a user's phone or laptop, PHP does work behind the scenes before a webpage reaches the user's browser. Malwarebytes describes PHP as powering a large part of the web and underpinning platforms.
+
+That's why a serious vulnerability in PHP can have such wide-reaching implications. The problem is not confined to one website or one WordPress plugin. It sits in underlying technology used by many different types of websites and applications. NCSC-NL said the vulnerabilities may affect a broad range of internet-facing web applications and products that embed or depend upon PHP.
+
+What Is 'PHP2Shell'?
+
+PHP2Shell is the name given to two critical vulnerabilities: CVE-2026-109618 and CVE-2026-109619.
+
+The PHP security team released emergency patches Wednesday in PHP 8.5.12, 8.4.27, 8.3.36 and 8.2.35. The vulnerabilities can allow remote-code execution without authentication, meaning an attacker could potentially cause a vulnerable server to execute commands without first having to log in.
+
+BleepingComputer reported that the PHP security team considers the risk greatest for Apache installations using mod_php, where an exploit has been demonstrated in which an unauthenticated request can trigger an attack before application code runs.
+
+The vulnerabilities are particularly serious because the problem lies in PHP rather than an individual application. Automattic said researchers demonstrated attacks against current WordPress, Drupal and Joomla installations, and stressed that updating WordPress, a theme or plugins alone does not fix the underlying PHP vulnerability.
+
+Organizations using PHP 8.1 and earlier face an added complication because those versions no longer receive regular releases from the PHP project. PHP provided minimal source backports for PHP 7.4, 8.0 and 8.1, while organizations may also receive fixes from Linux distributions or long-term-support vendors.
+
+Newsweek’s reporters and editors used Martyn, our AI assistant, to produce this story. Learn more about Martyn
+here.
+
+Contact Newsweek editors on this story: Jason Lemon and Dave Siminoff.
+
+The Bulletin
+Want the morning news straight to your inbox?
+Sign up
+Sign up to Breaking News alerts
+By clicking “sign up” you are agreeing to our
+Terms of Service and Privacy Policy
+View 1 Comment
+Request Reprint & Licensing
+Submit Correction
+View Editorial & AI Guidelines

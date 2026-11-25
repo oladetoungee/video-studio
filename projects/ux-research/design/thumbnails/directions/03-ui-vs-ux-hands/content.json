@@ -1,0 +1,28 @@
+{
+  "direction": "Centred, her two open hands raised: a white 'UI' card above one hand ('how it looks'), a blue 'UX' card above the other ('how it feels'), a big serif 'vs' over her head on the pale ceiling. Everything fully inside the frame. References: yt 'Before/After' splits (12, 21), 'UI UX roadmap' (26), viral 'Fitness sales framework' (labelled blocks).",
+  "thumbnail_text": "UI vs UX",
+  "text": {
+    "ui": "UI",
+    "ux": "UX",
+    "vs": "vs",
+    "l1": "how it looks",
+    "l2": "how it feels"
+  },
+  "images": {
+    "bg": "../../assets/scene/g2/s_300.6.jpg",
+    "cut": "../../assets/scene/g2/cut/s_300.6.png"
+  },
+  "vars": {
+    "--meb": "1.02"
+  },
+  "titles": [
+    "UI vs UX vs UX Research: The Difference Explained",
+    "UI vs UX Explained: What Users See vs How It Feels",
+    "UI vs UX: Why a Pretty App Can Still Fail"
+  ],
+  "title": "UI vs UX vs UX Research: The Difference Explained",
+  "set": 3,
+  "kind": "photo",
+  "scores": "critic scores R1 6.5 · R2 8 · R3 7.5 · R4 7.5 · R5 8",
+  "recommended": true
+}

@@ -1,0 +1,127 @@
+1
+00:00:00,000 --> 00:00:02,160
+the third one is the composite index, which
+
+2
+00:00:02,160 --> 00:00:02,950
+is an
+
+3
+00:00:03,110 --> 00:00:04,590
+index on more than one column
+
+4
+00:00:04,590 --> 00:00:06,858
+so say you index last name and first name
+
+5
+00:00:06,858 --> 00:00:08,500
+together in that order
+
+6
+00:00:08,510 --> 00:00:10,260
+it helps you when you search by last name,
+
+7
+00:00:10,260 --> 00:00:12,080
+and it helps you when you search by last
+
+8
+00:00:12,080 --> 00:00:12,890
+name and first name
+
+9
+00:00:12,890 --> 00:00:14,540
+but when you search by only first name, it
+
+10
+00:00:14,540 --> 00:00:15,467
+usually doesn't help
+
+11
+00:00:15,467 --> 00:00:16,937
+let's use the example with phone books to
+
+12
+00:00:16,937 --> 00:00:18,794
+understand it think of a phone book sorted
+
+13
+00:00:18,794 --> 00:00:21,843
+by surname all the Adeyemis are together,
+
+14
+00:00:21,843 --> 00:00:24,233
+all the Okafors are together
+
+15
+00:00:24,233 --> 00:00:27,153
+and inside each surname, it is sorted by
+
+16
+00:00:27,153 --> 00:00:30,135
+first name so in the Okafors, Ada Okafor
+
+17
+00:00:30,135 --> 00:00:31,993
+will come before Chidi Okafor
+
+18
+00:00:31,993 --> 00:00:34,403
+so if I'm looking for Ada Okafor, it's easy
+
+19
+00:00:34,403 --> 00:00:36,788
+I go to the O's, I find Okafor, and then I
+
+20
+00:00:36,788 --> 00:00:39,133
+find Ada but what if I want everyone whose
+
+21
+00:00:39,133 --> 00:00:40,283
+first name is Ada?
+
+22
+00:00:40,283 --> 00:00:42,589
+there's probably Ada Adeyemi in the front,
+
+23
+00:00:42,589 --> 00:00:45,224
+and Ada Okafor in the middle, and Ada
+
+24
+00:00:45,224 --> 00:00:46,583
+Williams near the end
+
+25
+00:00:46,583 --> 00:00:48,653
+they are spread across the whole phone book
+
+26
+00:00:48,653 --> 00:00:51,143
+because the book is sorted by surname first
+
+27
+00:00:51,143 --> 00:00:53,383
+so nothing groups the Adas together, and I
+
+28
+00:00:53,383 --> 00:00:55,253
+would have to read every page to find them
+
+29
+00:00:55,253 --> 00:00:57,503
+so that's exactly what happens with the
+
+30
+00:00:57,503 --> 00:01:00,667
+composite index on last name, first
+
+31
+00:01:01,177 --> 00:01:03,967
+name so the tip is to put the column
+
+32
+00:01:04,147 --> 00:01:06,567
+you search by most often first

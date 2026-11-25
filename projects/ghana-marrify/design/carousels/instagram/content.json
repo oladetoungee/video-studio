@@ -1,0 +1,244 @@
+{
+  "_help": "Edit text here (or in the studio), then run: node shared/build.mjs instagram (from design/carousels). Markup: *word* = accent colour, _word_ = serif italic, \\n = line break. A slide's own \"accent\" overrides the deck accent for that slide only.",
+  "deck": "instagram",
+  "width": 1080,
+  "height": 1350,
+  "accent": "#1B3FD8",
+  "accentOnInk": "#6E8CFF",
+  "slides": [
+    {
+      "layout": "hook",
+      "ground": "ink",
+      "title": "Anyone in\nGhana can\nlook up\nyour\n*marriage.*",
+      "size": 150,
+      "sub": "Marriages and divorces are now searchable on a new public app, Marrify. Who should be able to see them?",
+      "subW": 580,
+      "polaroid": {
+        "img": "gbemi_305s.jpg",
+        "caption": ""
+      },
+      "subSize": 48
+    },
+    {
+      "layout": "visual",
+      "visual": "sources",
+      "ground": "paper",
+      "title": "Type a name,\nsee their marriage\n*record.*",
+      "size": 108,
+      "sources": [
+        "Registrar-General",
+        "The courts",
+        "Local assemblies",
+        "Ghana Gazette"
+      ],
+      "search": "Search a name",
+      "button": "Verify",
+      "tag": "Illustration",
+      "gap": 36,
+      "takeaway": "Divorce records too, some reportedly going back to 1886.",
+      "takeSize": 42,
+      "srcLabel": "Records from",
+      "corner": "// Marrify, Ghana’s new app"
+    },
+    {
+      "layout": "visual",
+      "visual": "versus",
+      "ground": "paper",
+      "accent": "#FF4713",
+      "accentOnInk": "#FF4713",
+      "title": "Is a divorce\nreally *public?*",
+      "size": 124,
+      "cards": [
+        {
+          "k": "A business",
+          "h": "Its yearly revenue",
+          "s": "In Estonia, anyone can check it. A business answers to the public.",
+          "v": "Fine."
+        },
+        {
+          "k": "A person",
+          "h": "Their divorce",
+          "s": "In Ghana, now searchable by name.",
+          "v": "Different?",
+          "accent": true
+        }
+      ],
+      "takeSize": 42,
+      "gap": 60,
+      "takeaway": "I like open data. I just don’t know yet how that works with personal records like these."
+    },
+    {
+      "layout": "visual",
+      "visual": "distance",
+      "ground": "ink",
+      "title": "Public in theory.\nNow one search\n*away.*",
+      "size": 104,
+      "meterLabel": "Effort to find it",
+      "tag": "Illustration",
+      "rows": [
+        {
+          "k": "Before",
+          "s": "A divorce file in a courthouse somewhere",
+          "v": 100,
+          "label": ""
+        },
+        {
+          "k": "Now",
+          "s": "The same record, on a stranger’s phone, in seconds",
+          "v": 4,
+          "label": "",
+          "accent": true
+        }
+      ],
+      "gap": 50,
+      "takeaway": "Did the people in these records ever agree to that kind of reach?",
+      "takeSize": 44
+    },
+    {
+      "layout": "visual",
+      "visual": "minimal",
+      "ground": "paper",
+      "title": "What if the app\nonly answered\nwhat was *asked?*",
+      "size": 104,
+      "qLabel": "A proposal",
+      "q": "Is this person free to marry?",
+      "aLabel": "Answer",
+      "a": "No. Active marriage on record.",
+      "hidden": [
+        "Spouse’s name",
+        "Dates",
+        "History",
+        "Which court"
+      ],
+      "hiddenLabel": "Left out",
+      "tag": "Illustration",
+      "gap": 36,
+      "takeaway": "That’s data minimisation: show the least data that answers the question.",
+      "takeSize": 44,
+      "takeTop": 56
+    },
+    {
+      "layout": "visual",
+      "visual": "levels",
+      "ground": "paper",
+      "title": "Not everyone\nneeds the\n*same* view.",
+      "size": 120,
+      "fields": [
+        "Status",
+        "Spouse",
+        "Dates",
+        "Court"
+      ],
+      "status": "Married",
+      "views": [
+        {
+          "who": "An\nindividual",
+          "shown": 1
+        },
+        {
+          "who": "Certain\norganisations",
+          "shown": 4
+        }
+      ],
+      "tag": "Illustration: one possible split",
+      "takeaway": "Who decides which organisations\nget the fuller view?",
+      "takeSize": 44,
+      "shownWord": "Shown"
+    },
+    {
+      "layout": "punch",
+      "ground": "accent",
+      "accent": "#FF4713",
+      "accentOnInk": "#FF4713",
+      "title": "Same\nrecord.\n*Different*\nweight.",
+      "size": 176,
+      "body": "In Estonia, a divorce record can be just admin. In many African contexts, divorce still carries stigma, especially for women.",
+      "note": "“It’s not just a privacy engineering conversation. It’s also a cultural design thing.”",
+      "bodySize": 42,
+      "noteSize": 44,
+      "noteBy": "— Gbemi, @WithGbemi",
+      "bodyW": 904
+    },
+    {
+      "layout": "visual",
+      "visual": "log",
+      "ground": "ink",
+      "accent": "#22E08A",
+      "accentOnInk": "#22E08A",
+      "title": "If someone looks\nyou up, do you get\nto *see* that?",
+      "size": 104,
+      "head": "Imagined access log",
+      "rows": [
+        {
+          "who": "A private individual",
+          "s": "searched your name",
+          "t": "Today 14:02"
+        },
+        {
+          "who": "An organisation",
+          "s": "checked your marital status",
+          "t": "Mon 09:15"
+        },
+        {
+          "who": "A private individual",
+          "s": "opened your record",
+          "t": "Sun 21:40"
+        }
+      ],
+      "tag": "Illustration",
+      "takeaway": "In Estonia, I can see what happens to my data in the system. Could Ghana do that too?",
+      "takeSize": 50,
+      "gap": 60
+    },
+    {
+      "layout": "punch",
+      "ground": "accent",
+      "accent": "#22E08A",
+      "accentOnInk": "#22E08A",
+      "grid": true,
+      "title": "“Centralised\ndata.\n_Finally._”",
+      "size": 170,
+      "body": "I’m Nigerian and I’ve lived in Estonia for a year. One reliable record solves so many problems. So yes, part of me wants this.",
+      "bodySize": 40,
+      "lh": 1.0,
+      "cols": [
+        {
+          "k": "Nigeria",
+          "v": "Pieces of paper everywhere."
+        },
+        {
+          "k": "Estonia",
+          "v": "A link for everything, even marriage and divorce."
+        }
+      ],
+      "corner": "// my first thought, as an African",
+      "hang": -0.16
+    },
+    {
+      "layout": "end",
+      "ground": "accent",
+      "title": "I want Africa\nbuilding _this._",
+      "size": 170,
+      "body": "And questioning it while we do.",
+      "bodyW": 880,
+      "where": "Full video on YouTube",
+      "video": "Ghana Launched an App to Check If Someone Is Married",
+      "handle": "@WithGbemi",
+      "polaroid": {
+        "img": "gbemi_247s.jpg",
+        "caption": ""
+      },
+      "ask": "Send this to someone in Ghana.",
+      "askSize": 56,
+      "videoSize": 36,
+      "bodySize": 44,
+      "nudge": {
+        "polaroid": {
+          "s": 1.18,
+          "dy": -60,
+          "dx": -10
+        }
+      }
+    }
+  ]
+}

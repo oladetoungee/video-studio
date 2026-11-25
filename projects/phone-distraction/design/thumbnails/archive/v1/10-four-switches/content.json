@@ -1,0 +1,26 @@
+{
+  "direction": "Faceless, practical: a generic settings card with four big switches, each with its state (Autoplay off, Red badges off, Notifications off, Grayscale on).",
+  "concept": "TH10",
+  "follows": "viral sample 2 (a clipboard of DONEs: the outcome as one object)",
+  "thumbnail_text": "4 SWITCHES",
+  "title": "How to Stop Scrolling: Phone Settings That Actually Help",
+  "titles": [
+    "How to Stop Scrolling: Phone Settings That Actually Help",
+    "How to Use Your Phone Less (Simple Settings That Help)"
+  ],
+  "scores": "A topic (image only) 9/8 · B with best title 8.5 · C taste 6 (round 2; fixes from round 2 applied after)",
+  "text": {
+    "words": "4 <span class=\"acc\">switches</span>",
+    "sub": "",
+    "s1": "Autoplay",
+    "s2": "Red badges",
+    "s3": "Notifications",
+    "s4": "Grayscale",
+    "v1": "OFF",
+    "v2": "OFF",
+    "v3": "OFF",
+    "v4": "ON"
+  },
+  "images": {},
+  "vars": {}
+}

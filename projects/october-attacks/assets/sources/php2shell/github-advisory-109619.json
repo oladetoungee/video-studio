@@ -1,0 +1,104 @@
+{
+ "story": "php2shell",
+ "outlet": "GitHub (php-src advisory)",
+ "slug": "github-advisory-109619",
+ "url": "https://github.com/php/php-src/security/advisories/GHSA-6wmf-4rv5-p3rp",
+ "finalUrl": "https://github.com/php/php-src/security/advisories/GHSA-6wmf-4rv5-p3rp",
+ "status": "loaded",
+ "http": 200,
+ "title": "RCE via stale global state",
+ "h1": "RCE via stale global state",
+ "published": "",
+ "files": {
+  "fold": "php2shell/github-advisory-109619_fold.png",
+  "full": "php2shell/github-advisory-109619_full.jpg",
+  "scroll": "php2shell/github-advisory-109619_scroll.mp4"
+ },
+ "full": {
+  "width": 1440,
+  "height": 4573,
+  "pageHeight": 4573,
+  "zoom": 1,
+  "quotes": [
+   {
+    "quote": "RCE via stale global state",
+    "box": {
+     "x": 112,
+     "y": 248,
+     "w": 344,
+     "h": 38
+    },
+    "lines": [
+     {
+      "x": 112,
+      "y": 248,
+      "w": 344,
+      "h": 38
+     }
+    ]
+   }
+  ]
+ },
+ "scroll": {
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "seconds": 8,
+  "keyframes": [
+   {
+    "t": 0,
+    "y": 109
+   },
+   {
+    "t": 1,
+    "y": 109
+   },
+   {
+    "t": 2.55,
+    "y": 1509
+   },
+   {
+    "t": 8,
+    "y": 1509
+   }
+  ],
+  "zoom": 1,
+  "easing": "easeInOutCubic between keyframes, holds where y is equal",
+  "capped": false,
+  "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)",
+  "quotes": [
+   {
+    "quote": "RCE via stale global state",
+    "inVideo": true,
+    "still": true,
+    "t": 0.53,
+    "visibleStill": [
+     0,
+     1.07
+    ],
+    "scrollY": 109,
+    "box": {
+     "x": 352,
+     "y": 139,
+     "w": 344,
+     "h": 38
+    },
+    "lines": [
+     {
+      "x": 352,
+      "y": 139,
+      "w": 344,
+      "h": 38
+     }
+    ],
+    "docBox": {
+     "x": 352,
+     "y": 248,
+     "w": 344,
+     "h": 38
+    },
+    "layoutDriftPx": 0
+   }
+  ]
+ }
+}

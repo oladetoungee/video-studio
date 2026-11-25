@@ -1,0 +1,28 @@
+{
+  "text": {
+    "h": "Bugs your tests <span class=\"hl\">miss</span>",
+    "ok": "All tests passed",
+    "r1": "“It charged me twice.”",
+    "r2": "“It won’t take my name.”"
+  },
+  "kind": "flat, no face: two one-star reviews (new version of 04)",
+  "board": "Thumbnails 65 (yt-12 \"Never get distracted again...\": the post card IS the picture)",
+  "fonts": [
+    "thumbs-02 Inter Tight Bold + yellow highlight (white on #1C1C1C, #F7D51D, Thumbnails 21)"
+  ],
+  "colours": "Thumbnails 21 / thumbs-02: #1C1C1C / #FFFFFF / #F7D51D (+ star red #E5322D)",
+  "thumbnail_text": "Bugs your tests miss + \"All tests passed\" + two 1-star reviews (charged twice / won't take my name)",
+  "titles": [
+    "Edge Cases: Bugs Your Tests Miss (and Real Users Find)",
+    "Edge Cases: Why Code That Passes Tests Still Breaks",
+    "What Is an Edge Case? 8 Real Bugs Explained"
+  ],
+  "title": "Edge Cases: Bugs Your Tests Miss (and Real Users Find)",
+  "replaces": "04-the-leap-year-bug (kept beside it)",
+  "scores": "cold critic 2026-11-16, 3 fresh rounds, PNGs only, alone: r1 6 (3 reviews), r2 7, r3 6. Old 04 in the same rounds: 5 / 6 / 6.5",
+  "direction": "Copies Thumbnails 65: the cards are the picture. A green \"All tests passed\" tag, then what real users write: two generic one-star reviews (no app, no brand). One line on top, one yellow highlighted word.",
+  "nudge": {},
+  "images": {},
+  "vars": {},
+  "class": "no-lift"
+}

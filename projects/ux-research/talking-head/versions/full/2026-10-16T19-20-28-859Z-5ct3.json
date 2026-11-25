@@ -1,0 +1,20 @@
+{
+ "label": "Before this session’s edits",
+ "auto": true,
+ "savedAt": 1792178428859,
+ "edits": {
+  "t": {
+   "corner-18/@her circle": {
+    "pos": {
+     "16x9": {
+      "dx": -6.2,
+      "k": 1.507
+     }
+    }
+   }
+  },
+  "captions": {},
+  "capShort": {},
+  "cap16": {}
+ }
+}

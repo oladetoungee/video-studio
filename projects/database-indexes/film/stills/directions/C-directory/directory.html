@@ -1,0 +1,109 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face { font-family: Schib; src: url(../_fonts/SchibstedGrotesk.ttf); font-weight: 400 900; }
+@font-face { font-family: Oswald; src: url(../_fonts/Oswald.ttf); font-weight: 200 700; }
+html, body { margin: 0; background: #F4CC2E; }
+#stage { position: relative; overflow: hidden; background: #F4CC2E; color: #141414; font-family: Schib; }
+.entry { position: relative; display: flex; align-items: baseline; white-space: nowrap; }
+.entry .n { flex: none; } .entry .d { flex: 1; border-bottom: 3px dotted #141414; margin: 0 10px; transform: translateY(-6px); opacity: .55; } .entry .r { flex: none; font-weight: 500; }
+</style></head><body>
+<div id="stage"></div>
+<script src="../_tools/kit.js"></script>
+<script>
+// C · DIRECTORY: the film is printed reference material. A phone book, the index at the back of a book, guide words,
+// thumb tabs, dot leaders. Flat directory yellow, cream pages, black ink; "found" = the line printed in reverse.
+const P = PORTRAIT;
+const C = { bg: '#F4CC2E', paper: '#FFF8E2', ink: '#141414', dim: '#6B5F3A' };
+function head(root, txt, top, size, width) { return el('div', { left: V(140, 60) + 'px', top: (top ?? V(84, 372)) + 'px', font: `800 ${size ?? V(68, 72)}px Schib`, letterSpacing: '-0.035em', lineHeight: 1.0, width: (width ?? V(1500, 960)) + 'px' }, txt, root); }
+function page(root, x, y, w, h, guide, entries, opts = {}) {
+  const p = el('div', { left: x + 'px', top: y + 'px', width: w + 'px', height: h + 'px', background: C.paper, boxSizing: 'border-box', padding: `${opts.pad ?? 34}px ${opts.pad ?? 40}px`, outline: `3px solid ${C.ink}` }, '', root);
+  const g = el('div', { position: 'relative', display: 'flex', justifyContent: 'space-between', font: `600 ${opts.gs ?? 26}px Oswald`, letterSpacing: '0.06em', borderBottom: `3px solid ${C.ink}`, paddingBottom: '10px', marginBottom: '16px' }, `<span>${guide[0]}</span><span>${guide[1]}</span>`, p);
+  const rows = entries.map(([sur, first, row]) => {
+    const e = el('div', { position: 'relative', font: `400 ${opts.fs ?? 30}px Schib`, lineHeight: (opts.lh ?? 52) + 'px', padding: '0 8px', margin: '0 -8px' }, `<span class="n"><b style="font-weight:800">${sur}</b>, ${first}</span><span class="d"></span><span class="r">row ${row}</span>`, p);
+    e.className = 'entry'; return e;
+  });
+  const num = opts.num ? el('div', { left: 0, bottom: '18px', width: '100%', textAlign: 'center', font: '600 26px Oswald', letterSpacing: '0.08em' }, opts.num, p) : null;
+  return { p, rows, num };
+}
+function reverse(e, on) { set(e, { background: on ? C.ink : 'transparent', color: on ? C.paper : C.ink }); e.querySelector('.d').style.borderColor = on ? C.paper : C.ink; }
+
+// ---------------- Scene 1 (0-10 s): Ada Okafor is easy; everyone named Ada is not (motion test 0-8 s) ----------------
+scene('book', 0, 10, (root, S) => {
+  S.h1 = head(root, 'Looking for <span style="background:#141414;color:#F4CC2E;padding:0 14px;margin:0 4px;white-space:nowrap">Ada Okafor</span>? It\'s easy.', undefined, undefined, V(1500, 820));
+  S.h2 = head(root, 'Everyone whose first name is Ada?');
+  const L = [['Obi', 'Amaka', '7,301'], ['Obi', 'Emeka', '90,118'], ['Odu', 'Tunde', '3,442'], ['Ogun', 'Kemi', '61,027'], ['Ojo', 'Bisi', '12,880'], ['Ojo', 'Femi', '40,551'], ['Ojukwu', 'Ike', '19,664']];
+  const R = [['Okafor', 'Ada', '48,213'], ['Okafor', 'Chidi', '5,760'], ['Okafor', 'Ifeoma', '77,904'], ['Okafor', 'Nkem', '21,336'], ['Okeke', 'Obi', '8,019'], ['Okonkwo', 'Uche', '66,412'], ['Okonkwo', 'Zara', '2,975']];
+  S.spread = el('div', { left: 0, top: 0, width: W + 'px', height: H + 'px' }, '', root);
+  if (!P) {
+    S.lp = page(S.spread, 140, 230, 740, 720, ['OBI', 'OJUKWU'], L, { num: '417', fs: 32, lh: 70 });
+    S.rp = page(S.spread, 880, 230, 740, 720, ['OKAFOR', 'OKONKWO'], R, { num: '418', fs: 32, lh: 70 });
+  } else {
+    S.rp = page(S.spread, 60, 560, 900, 840, ['OKAFOR', 'OKONKWO'], R, { num: '418', fs: 36, lh: 76, gs: 32 });
+  }
+  // thumb tabs (A-B ... Y-Z) on the fore-edge
+  const groups = ['AB', 'CD', 'EF', 'GH', 'IJ', 'KL', 'MN', 'OP', 'QR', 'ST', 'UV', 'WX', 'YZ'];
+  const tx = V(1623, 962), ty = V(236, 566), th = V(54, 64);
+  S.tabs = groups.map((g, i) => el('div', { left: tx + 'px', top: (ty + i * th) + 'px', width: V(64, 56) + 'px', height: (th - 6) + 'px', background: C.ink, color: C.bg, font: `600 ${V(24, 28)}px Oswald`, display: 'flex', alignItems: 'center', justifyContent: 'center', letterSpacing: '0.04em' }, g, S.spread));
+  S.cap = el('div', { left: V(140, 60) + 'px', top: V(990, 1402) + 'px', font: '500 30px Schib', color: C.dim, letterSpacing: '0.02em' }, 'Illustration · made-up names and row numbers', root);
+  // three pages with one Ada each
+  S.three = el('div', { left: 0, top: 0, width: W + 'px', height: H + 'px' }, '', root);
+  const pages = [
+    ['ADEBAYO', 'ADEYEMI', [['Adebayo', 'Tola', '9,214'], ['Adewale', 'Kunle', '30,771'], ['Adeyemi', 'Ada', '14,602'], ['Adeyemi', 'Bisi', '52,330'], ['Adeyemi', 'Funmi', '808']], 'PAGE 12'],
+    ['OKAFOR', 'OKONKWO', [['Okafor', 'Ada', '48,213'], ['Okafor', 'Chidi', '5,760'], ['Okafor', 'Ifeoma', '77,904'], ['Okeke', 'Obi', '8,019'], ['Okonkwo', 'Zara', '2,975']], 'PAGE 418'],
+    ['WALKER', 'WILLIAMS', [['Walker', 'Sam', '33,190'], ['West', 'Dayo', '71,045'], ['Williams', 'Ada', '26,958'], ['Williams', 'Ben', '4,421'], ['Williams', 'Grace', '59,307']], 'PAGE 961'],
+  ];
+  const adaIdx = [2, 0, 2];
+  S.pg = pages.map((d, i) => {
+    const o = P ? page(S.three, 60, 520 + i * 280, 960, 260, [d[0], d[1]], d[2].slice(Math.max(0, adaIdx[i] - 1), Math.max(0, adaIdx[i] - 1) + 3), { fs: 32, lh: 54, gs: 26, pad: 22 })
+                : page(S.three, 140 + i * 520, 250, 480, 560, [d[0], d[1]], d[2], { num: d[3], fs: 27, lh: 64, gs: 24, pad: 28 });
+    if (P) el('div', { right: '22px', top: '18px', font: '600 26px Oswald', letterSpacing: '0.08em', background: C.paper }, d[3], o.p);
+    o.ada = o.rows[P ? Math.min(1, adaIdx[i]) : adaIdx[i]];
+    return o;
+  });
+  S.count = el('div', { left: V(140, 60) + 'px', top: V(850, 1348) + 'px', font: `800 ${V(56, 46)}px Schib`, letterSpacing: '-0.03em', whiteSpace: 'nowrap' }, '', root);
+}, (t, S) => {
+  // spread enters 0.1-0.6, tab OP pulls out 1.0, marker reaches Ada Okafor 2.1, scene swaps at 3.6
+  const a = ein(t, 0.1, 0.55), out = eIO(prog(t, 2.8, 3.15));
+  set(S.spread, { transform: `translateY(${(1 - a) * 120 - out * 0}px) translateX(${-out * W * 1.05}px)`, opacity: a });
+  set(S.h1, { opacity: ein(t, 0.3, 0.4) * (1 - prog(t, 2.8, 2.9)), transform: `translateY(${(1 - ein(t, 0.3, 0.4)) * 20}px)` });
+  S.tabs.forEach((e, i) => { const pull = i === 7 ? ein(t, 0.7, 0.35) : 0; set(e, { transform: `translateX(${pull * V(26, 0) - pull * V(0, 14)}px)`, background: i === 7 && pull > 0.5 ? C.paper : C.ink, color: i === 7 && pull > 0.5 ? C.ink : C.bg, outline: i === 7 && pull > 0.5 ? `3px solid ${C.ink}` : 'none' }); });
+  S.rp.rows.forEach((r, i) => reverse(r, i === 0 && t >= 1.3));
+  if (S.lp) S.lp.rows.forEach((r, i) => reverse(r, false));
+  // three pages
+  const b = prog(t, 3.6, 10);
+  S.three.style.display = t >= 2.9 ? 'block' : 'none';
+  set(S.h2, { opacity: ein(t, 3.0, 0.4), transform: `translateY(${(1 - ein(t, 3.0, 0.4)) * 20}px)` });
+  S.pg.forEach((o, i) => { const k = ein(t, 3.05 + i * 0.12, 0.6); set(o.p, { transform: `translateX(${(1 - k) * W * 0.6}px) rotate(${(1 - k) * 3}deg)` }); reverse(o.ada, t >= 4.0 + i * 0.6); });
+  const pages = Math.min(1000, Math.round(1000 * Math.pow(prog(t, 3.9, 6.0), 1.3)));
+  S.count.innerHTML = t < 3.9 ? '' : `Pages to read: ${fmt(Math.max(1, pages))}${pages >= 1000 ? ' of 1,000. All of them.' : ''}`;
+  if (P && pages >= 1000) S.count.innerHTML = 'Pages to read: all 1,000';
+  set(S.count, { opacity: ein(t, 3.9, 0.3) });
+  set(S.cap, { opacity: ein(t, 0.6, 0.4) });
+});
+
+// ---------------- Scene 2 (10-16 s): the index at the back of a book ----------------
+scene('backofbook', 10, 16, (root, S) => {
+  S.h = head(root, 'The index at the back of a book', undefined, undefined, V(720, 960));
+  S.sub = el('div', { left: V(144, 64) + 'px', top: V(250, 540) + 'px', font: `500 ${V(36, 38)}px Schib`, width: V(700, 940) + 'px', lineHeight: 1.3 }, 'Sorted alphabetically. Find the word, and it tells you the page number.', root);
+  const E = [['B-tree', '54, 61'], ['clustered index', '88'], ['composite index', '70'], ['EXPLAIN', '40'], ['foreign key', '102'], ['full table scan', '12'], ['hash index', '77'], ['pointer', '23, 31'], ['primary key', '66'], ['Seq Scan', '41']];
+  S.pg = el('div', { left: V(1000, 60) + 'px', top: V(120, 720) + 'px', width: V(760, 960) + 'px', height: V(840, 700) + 'px', background: C.paper, outline: `3px solid ${C.ink}`, boxSizing: 'border-box', padding: '40px 48px' }, '', root);
+  el('div', { position: 'relative', font: '600 40px Oswald', letterSpacing: '0.1em', borderBottom: `3px solid ${C.ink}`, paddingBottom: '12px', marginBottom: '18px' }, 'INDEX', S.pg);
+  S.rows = E.map(([w, p]) => { const e = el('div', { position: 'relative', font: `400 ${V(32, 32)}px Schib`, lineHeight: V(64, 52) + 'px', padding: '0 8px', margin: '0 -8px' }, `<span class="n">${w}</span><span class="d"></span><span class="r">${p}</span>`, S.pg); e.className = 'entry'; return e; });
+  S.cap = el('div', { left: V(144, 64) + 'px', top: V(990, 1440) + 'px', font: '500 30px Schib', color: C.dim }, 'Illustration · an imagined database book', root);
+}, (t, S) => {
+  set(S.h, { opacity: ein(t, 0, 0.4) }); set(S.sub, { opacity: ein(t, 0.3, 0.4) });
+  const k = ein(t, 0.2, 0.6); set(S.pg, { transform: `translateY(${(1 - k) * 80}px)`, opacity: k });
+  S.rows.forEach((r, i) => reverse(r, i === 5 && t > 1.6));
+  S.cap.style.opacity = ein(t, 1, 0.4);
+});
+
+// ---------------- Scene 3 (20-26 s): the tip ----------------
+scene('tip', 20, 26, (root, S) => {
+  S.h = head(root, 'Put the column you search by most often first.', V(150, 400), V(104, 96), V(1660, 960));
+  S.card = el('div', { left: V(140, 60) + 'px', top: V(560, 900) + 'px', width: V(1100, 960) + 'px', background: C.paper, outline: `3px solid ${C.ink}`, boxSizing: 'border-box', padding: '34px 44px', font: `500 ${V(38, 34)}px Schib`, lineHeight: 1.45, whiteSpace: 'pre' }, 'CREATE INDEX idx_name\n  ON users (<b style="font-weight:800;background:#141414;color:#FFF8E2;padding:0 8px">last_name</b>, first_name);', root);
+  S.n = el('div', { left: V(144, 64) + 'px', top: V(800, 1160) + 'px', font: `500 ${V(34, 36)}px Schib`, lineHeight: 1.5, whiteSpace: 'pre' }, 'Helps: last_name, or last_name and first_name.\nUsually no help: first_name alone.', root);
+}, (t, S) => {
+  set(S.h, { opacity: ein(t, 0, 0.4) }); const k = ein(t, 0.4, 0.5); set(S.card, { opacity: k, transform: `translateY(${(1 - k) * 40}px)` }); set(S.n, { opacity: ein(t, 0.9, 0.4) });
+});
+</script></body></html>

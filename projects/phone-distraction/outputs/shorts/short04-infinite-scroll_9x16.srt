@@ -1,0 +1,135 @@
+1
+00:00:00,000 --> 00:00:01,470
+if you don't know what the infinite scroll
+
+2
+00:00:01,470 --> 00:00:03,730
+is, it's just the ability to keep scrolling
+
+3
+00:00:03,730 --> 00:00:05,770
+infinitely before this feature or this
+
+4
+00:00:05,770 --> 00:00:07,000
+design was made,
+
+5
+00:00:07,130 --> 00:00:08,770
+websites used to have pages
+
+6
+00:00:08,770 --> 00:00:10,610
+when you get to the bottom and you wanted to
+
+7
+00:00:10,610 --> 00:00:12,650
+see more content, you would have to click
+
+8
+00:00:12,650 --> 00:00:15,730
+next page that click was a stopping point
+
+9
+00:00:15,730 --> 00:00:17,750
+it's a very important moment where your
+
+10
+00:00:17,750 --> 00:00:20,530
+brain has the chance to ask, do I actually
+
+11
+00:00:20,530 --> 00:00:21,800
+want to keep going?
+
+12
+00:00:22,020 --> 00:00:24,940
+infinite scroll was designed in 2006
+
+13
+00:00:25,080 --> 00:00:27,110
+and it's removed that moment
+
+14
+00:00:27,110 --> 00:00:28,770
+so you don't have to click anything
+
+15
+00:00:28,770 --> 00:00:31,410
+the content just keeps loading and there is
+
+16
+00:00:31,410 --> 00:00:34,890
+now no natural place or chance for you to
+
+17
+00:00:34,890 --> 00:00:37,250
+stop there is no cue sent to your brain to
+
+18
+00:00:37,250 --> 00:00:37,770
+stop
+
+19
+00:00:38,030 --> 00:00:39,350
+if there's a button
+
+20
+00:00:39,510 --> 00:00:41,550
+to load more, that button will send a cue to
+
+21
+00:00:41,550 --> 00:00:43,110
+my brain like, okay, do I want to load more
+
+22
+00:00:43,110 --> 00:00:44,530
+or do I want to drop my freaking phone?
+
+23
+00:00:44,530 --> 00:00:46,090
+but that is no longer there
+
+24
+00:00:46,090 --> 00:00:49,071
+if you notice older forms of media had
+
+25
+00:00:49,071 --> 00:00:51,523
+stopping cues so a book has chapters, that's
+
+26
+00:00:51,523 --> 00:00:52,613
+a stopping cue
+
+27
+00:00:52,613 --> 00:00:55,333
+a TV show, TV shows used to end and then
+
+28
+00:00:55,333 --> 00:00:56,443
+you'd have to wait
+
+29
+00:00:56,603 --> 00:00:58,417
+like for the next episode for like a week
+
+30
+00:00:58,417 --> 00:01:00,737
+those are stopping cues, but in the case of
+
+31
+00:01:00,737 --> 00:01:03,047
+social apps, that is taken away, right?
+
+32
+00:01:03,177 --> 00:01:05,647
+your feed does not have a last page and it's
+
+33
+00:01:05,717 --> 00:01:07,417
+intentionally designed that way so that you
+
+34
+00:01:07,417 --> 00:01:08,967
+can keep scrolling forever

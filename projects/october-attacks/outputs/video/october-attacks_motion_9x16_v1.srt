@@ -1,0 +1,652 @@
+1
+00:00:00,480 --> 00:00:03,130
+A lot of things have been happening
+on the internet this month.
+
+2
+00:00:03,230 --> 00:00:07,150
+October is supposed to be Cybersecurity
+Awareness Month and it has ironically
+
+3
+00:00:07,500 --> 00:00:09,440
+been one attack after the other.
+
+4
+00:00:09,460 --> 00:00:12,670
+PHP, which is the language meant
+most of the websites in the world,
+
+5
+00:00:12,880 --> 00:00:16,000
+has had two critical security holes.
+
+6
+00:00:16,020 --> 00:00:19,730
+Railway, which is also a popular platform
+among developers where we deploy apps,
+
+7
+00:00:20,100 --> 00:00:23,280
+has had to literally tell their
+users to change their secret keys.
+
+8
+00:00:23,360 --> 00:00:27,560
+There is also another platform, Zeabur,
+that is literally shutting down after
+
+9
+00:00:27,580 --> 00:00:30,650
+being hacked twice, like
+they're literally checking out.
+
+10
+00:00:30,860 --> 00:00:35,000
+And there is news of another hacker that
+has used AI agents to break into more
+
+11
+00:00:35,020 --> 00:00:39,700
+than a hundred companies. So it's been
+an overflow of attacks this month.
+
+12
+00:00:39,910 --> 00:00:42,740
+I believe the PHP one is
+the biggest one so far.
+
+13
+00:00:42,760 --> 00:00:46,540
+PHP runs nearly three quarters
+of the websites in the world.
+
+14
+00:00:46,560 --> 00:00:49,780
+WordPress runs on PHP.
+Laravel runs on PHP.
+
+15
+00:00:49,840 --> 00:00:54,140
+I write Laravel at work.
+Most of the web runs on PHP.
+
+16
+00:00:54,670 --> 00:00:57,760
+And two critical loopholes have
+been found in PHP this month.
+
+17
+00:00:57,850 --> 00:00:59,690
+They're calling it the PHP2Shell.
+
+18
+00:00:59,760 --> 00:01:02,640
+And the shell part of the name
+is actually very important.
+
+19
+00:01:02,660 --> 00:01:07,520
+Getting a shell means that the attack is
+so bad that an attacker can type commands
+
+20
+00:01:07,540 --> 00:01:11,540
+on your server as if they were
+on their own personal computer.
+
+21
+00:01:11,660 --> 00:01:13,390
+PHP has rated this 9.2
+
+22
+00:01:13,930 --> 00:01:16,500
+out of 10, so it is really terrible.
+
+23
+00:01:16,560 --> 00:01:17,940
+Now there are two bugs reported.
+
+24
+00:01:17,960 --> 00:01:22,700
+The first one is about memory. So if PHP
+runs out of memory at a very specific
+
+25
+00:01:22,720 --> 00:01:27,420
+moment while it's reading a request,
+it leaves some unfinished data behind,
+
+26
+00:01:27,490 --> 00:01:32,200
+then it's cleanup code treats that broken
+data like it's real and an attacker
+
+27
+00:01:32,220 --> 00:01:34,240
+can use it to run their own commands.
+
+28
+00:01:34,450 --> 00:01:38,940
+The second bug is more about leftover
+information like leftover stuff on PHP
+
+29
+00:01:38,960 --> 00:01:42,760
+workers from previous requests
+that it should have thrown away.
+
+30
+00:01:42,830 --> 00:01:44,460
+Now these are not just random bugs.
+
+31
+00:01:44,480 --> 00:01:48,450
+These are huge loopholes that people
+have already tried to exploit.
+
+32
+00:01:48,480 --> 00:01:53,360
+The thing about PHP2Shell. and why it's
+really so crazy is that it happens before
+
+33
+00:01:53,380 --> 00:01:58,957
+your code even runs. So PHP reads
+the incoming request first and this
+
+34
+00:01:58,977 --> 00:02:01,100
+loophole is in that reading part.
+
+35
+00:02:01,120 --> 00:02:04,180
+So your login, your middleware,
+your authentication,
+
+36
+00:02:04,200 --> 00:02:06,380
+nobody stands a chance against this stuff.
+
+37
+00:02:06,560 --> 00:02:09,690
+You can have the best login in
+the world and it wouldn't matter.
+
+38
+00:02:09,710 --> 00:02:13,180
+Even Amazon has reported that someone
+tried to use it on one of their honeypot
+
+39
+00:02:13,200 --> 00:02:17,040
+servers, which is basically a trap server
+set up to catch attackers just four
+
+40
+00:02:17,060 --> 00:02:18,660
+days before it was even announced.
+
+41
+00:02:18,820 --> 00:02:22,670
+And there are government websites in
+Europe that literally went off while they
+
+42
+00:02:22,740 --> 00:02:24,670
+patched because of all of this drama.
+
+43
+00:02:24,800 --> 00:02:28,440
+So basically if you're running PHP
+anywhere, you have to update your PHP.
+
+44
+00:02:28,690 --> 00:02:33,480
+If you're still on PHP 8.1 or older, you
+need to upgrade and updating the package
+
+45
+00:02:33,500 --> 00:02:38,000
+is not even enough. You have to restart
+your Apache and if you use Docker,
+
+46
+00:02:38,020 --> 00:02:39,580
+you have to rebuild your images.
+
+47
+00:02:39,600 --> 00:02:42,550
+Everyone has been patching and if
+you're using Laravel for example,
+
+48
+00:02:42,570 --> 00:02:46,180
+your Laravel version doesn't even protect
+you here because the loophole is in
+
+49
+00:02:46,200 --> 00:02:47,890
+PHP which is underneath Laravel.
+
+50
+00:02:47,920 --> 00:02:52,240
+And it's not even just PHP, Node.js also
+had its own security release on that
+
+51
+00:02:52,260 --> 00:02:55,060
+same day. So if you run Node,
+you need to update that too.
+
+52
+00:02:55,160 --> 00:02:56,890
+Now why everyone was busy patching
+
+53
+00:02:57,260 --> 00:02:59,560
+PHP? Railway happened on the same day.
+
+54
+00:02:59,750 --> 00:03:02,700
+If you don't know what Railway is,
+Railway is a deployment platform where you
+
+55
+00:03:02,720 --> 00:03:03,870
+can deploy your apps.
+
+56
+00:03:04,240 --> 00:03:08,220
+So basically, Railway says someone may
+have accessed their customers' encrypted
+
+57
+00:03:08,240 --> 00:03:11,900
+environment variables and if you're a
+developer, you know how important it is
+
+58
+00:03:11,920 --> 00:03:13,710
+to keep your environment variable safe.
+
+59
+00:03:13,900 --> 00:03:17,270
+So Railway paused deployments for
+a while, this even affected me,
+
+60
+00:03:17,310 --> 00:03:21,460
+and they asked their users to revoke and
+change their API keys and cloud keys.
+
+61
+00:03:21,500 --> 00:03:25,000
+There's still no full details from
+Railway on how the attackers got in.
+
+62
+00:03:25,040 --> 00:03:27,320
+They did say however, that it's part
+
+63
+00:03:28,000 --> 00:03:29,320
+of a series of attacks
+
+64
+00:03:29,710 --> 00:03:33,210
+on platforms like theirs with the
+goal of getting to AI companies.
+
+65
+00:03:33,230 --> 00:03:38,080
+Now Zeabur, the company that is shutting down
+because of attacks is a very interesting
+
+66
+00:03:38,100 --> 00:03:43,250
+one. This is also another platform that
+developers use to deploy apps and they
+
+67
+00:03:43,270 --> 00:03:45,000
+are deciding to shut down completely.
+
+68
+00:03:45,020 --> 00:03:48,220
+They got breached in August
+and on October 14th and 15th,
+
+69
+00:03:48,240 --> 00:03:51,680
+they got breached again, which
+leaked internal credentials.
+
+70
+00:03:51,700 --> 00:03:55,080
+The second breach covered about 321,810
+
+71
+00:03:55,840 --> 00:04:00,450
+accounts and about 3.2 million
+environment variables records.
+
+72
+00:04:00,540 --> 00:04:03,940
+So how did the attackers get in the
+second time after they got in the first
+
+73
+00:04:03,960 --> 00:04:07,700
+time? According to Zeabur, their
+admin token had no expiry date.
+
+74
+00:04:07,720 --> 00:04:10,820
+So they had not changed this
+token since January 2024.
+
+75
+00:04:11,180 --> 00:04:14,120
+So after the first attack,
+when they changed their keys,
+
+76
+00:04:14,140 --> 00:04:16,540
+they didn't include that
+particular set of tokens.
+
+77
+00:04:16,560 --> 00:04:17,910
+They didn't change those set
+
+78
+00:04:18,280 --> 00:04:23,140
+and that kind of opened the gates again
+and the old platform now is deciding
+
+79
+00:04:23,160 --> 00:04:26,200
+to shut down. They will pause services
+and just shut everything down by the
+
+80
+00:04:26,220 --> 00:04:28,100
+end of December. This is crazy.
+
+81
+00:04:28,130 --> 00:04:33,400
+The OpenCode one is also very, very
+interesting because people found out OpenCode
+
+82
+00:04:33,420 --> 00:04:35,220
+had been hacked from their bills.
+
+83
+00:04:35,240 --> 00:04:38,030
+OpenCode is an open source AI coding tool.
+
+84
+00:04:38,050 --> 00:04:42,760
+It has an online platform called OpenCode
+Console where people store their AI
+
+85
+00:04:42,780 --> 00:04:47,320
+API keys. Now OpenCode said attackers
+broke into an older system and took those
+
+86
+00:04:47,340 --> 00:04:50,093
+keys. So people started
+getting alerts from OpenAI,
+
+87
+00:04:50,113 --> 00:04:53,660
+Anthropic, Google, and some of these
+charges were in hundreds of dollars.
+
+88
+00:04:53,680 --> 00:04:58,420
+A few of them were even over a thousand
+dollars for AI usage that users did
+
+89
+00:04:58,440 --> 00:05:01,870
+not run. Like imagine getting
+alerts for things you didn't use.
+
+90
+00:05:01,930 --> 00:05:03,250
+OpenCode calls it a distillation
+
+91
+00:05:03,680 --> 00:05:08,200
+attack. That is when someone asks an AI
+model loads of questions and just uses
+
+92
+00:05:08,220 --> 00:05:10,800
+the answer to train their own model.
+
+93
+00:05:10,820 --> 00:05:15,120
+So basically in simple words someone
+may have been building their own AI on
+
+94
+00:05:15,140 --> 00:05:18,440
+other people's bill. Of course the AI
+companies have blocked the stolen keys
+
+95
+00:05:18,460 --> 00:05:20,660
+and refunds are going out, which is good.
+
+96
+00:05:20,850 --> 00:05:24,540
+When you put the Railway, Zeabur
+and OpenCode incidents side by side,
+
+97
+00:05:24,560 --> 00:05:26,440
+you realize they are kind
+of the same pattern.
+
+98
+00:05:26,480 --> 00:05:30,600
+In these situations particularly the
+attackers went straight for the place where
+
+99
+00:05:30,620 --> 00:05:32,500
+developers keep their secret keys.
+
+100
+00:05:32,520 --> 00:05:35,320
+So if you use any of this platform you
+want to change any key you're not sure
+
+101
+00:05:35,340 --> 00:05:39,700
+about. You want to give your keys an expiry
+date whenever or wherever the service
+
+102
+00:05:39,720 --> 00:05:43,380
+allows it. You want to give each
+keys only the access it needs.
+
+103
+00:05:43,400 --> 00:05:47,380
+So if a key only needs to read one
+storage bucket just give it access to that
+
+104
+00:05:47,400 --> 00:05:53,160
+one storage bucket. Set spending limits,
+set alerts on all your AI and cloud
+
+105
+00:05:53,240 --> 00:05:57,250
+accounts and honestly do not store
+keys in tools that don't need them.
+
+106
+00:05:57,370 --> 00:06:02,340
+Now there's this one more story from
+the October drama and this one actually
+
+107
+00:06:02,420 --> 00:06:07,260
+sounds so made up. eMudhra is one of the
+companies their browsers trust to confirm
+
+108
+00:06:07,280 --> 00:06:10,180
+that a website is who
+it really says it is.
+
+109
+00:06:10,200 --> 00:06:12,150
+That is how important this company is.
+
+110
+00:06:12,580 --> 00:06:15,440
+So it's like this little padlock
+that your browser depends on.
+
+111
+00:06:15,850 --> 00:06:20,630
+Now it turns out that eight of
+their signing keys were so weak.
+
+112
+00:06:20,740 --> 00:06:25,060
+The keys were so weak that one of
+them literally was the number four.
+
+113
+00:06:25,480 --> 00:06:26,530
+Just number four.
+
+114
+00:06:27,030 --> 00:06:28,700
+That's how weak their keys were.
+
+115
+00:06:28,720 --> 00:06:29,720
+Like just
+
+116
+00:06:30,000 --> 00:06:34,800
+number four. So the scripts went wrong
+when the keys were made in April 2025
+
+117
+00:06:34,820 --> 00:06:37,620
+and it made a second set of weak keys.
+
+118
+00:06:37,810 --> 00:06:41,560
+And with keys like this of course someone
+could fake a website and your browser
+
+119
+00:06:41,580 --> 00:06:42,810
+will still have shown
+
+120
+00:06:43,470 --> 00:06:46,700
+the padlock. To be honest in cases like
+this I don't think there is anything
+
+121
+00:06:46,720 --> 00:06:50,820
+the average users can even do about
+these things but just to keep your stuff
+
+122
+00:06:50,980 --> 00:06:53,280
+updated. And I think in
+the middle of all of this
+
+123
+00:06:53,720 --> 00:06:59,290
+attack drama is where the role
+that AI plays on all sides.
+
+124
+00:07:00,420 --> 00:07:04,920
+Reuters reported that one attacker used
+AI agents to break into more than a
+
+125
+00:07:04,940 --> 00:07:08,850
+hundred company websites. These
+include sites belonging to SharkNinja,
+
+126
+00:07:08,870 --> 00:07:12,820
+Cummins, all of those. So in this case
+what the attackers did was that it gave
+
+127
+00:07:12,840 --> 00:07:16,550
+the agent short instructions and just
+let them run on for hours on their own.
+
+128
+00:07:16,570 --> 00:07:21,030
+And the cost estimated to about $50
+in AI tokens per successful hack.
+
+129
+00:07:21,350 --> 00:07:25,420
+Like it's so crazy that we've gotten
+to the point where it's costing $50 to
+
+130
+00:07:25,440 --> 00:07:29,870
+hack into a company. It's just been so
+interesting reading and seeing the news
+
+131
+00:07:30,070 --> 00:07:34,900
+everywhere. What I find even interesting
+is how AI is literally on both sides.
+
+132
+00:07:34,920 --> 00:07:39,530
+For example the PHP2Shell loopholes
+were found with help from AI.
+
+133
+00:07:39,730 --> 00:07:41,780
+And AI is also being
+used by the attackers.
+
+134
+00:07:41,800 --> 00:07:45,720
+So the same tools that are helping the
+defenders find the bugs faster are also
+
+135
+00:07:45,740 --> 00:07:48,380
+helping the attackers break in faster.
+
+136
+00:07:48,400 --> 00:07:50,740
+So it's almost like this
+back and forth situation.
+
+137
+00:07:50,760 --> 00:07:54,392
+I have people that are working in companies
+that have literally been stuck over
+
+138
+00:07:54,412 --> 00:07:57,670
+dealing with attacks, it's
+been crazy, really crazy.

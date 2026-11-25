@@ -1,0 +1,19 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../lib/oa.css"><style>
+.hd{left:46px;top:40px;font-size:132px;color:var(--fg)}
+.wall{position:absolute;left:46px;top:220px;display:grid;grid-template-columns:repeat(3,212px);gap:20px}
+.w{position:relative;height:144px;background:#2A221C;border-radius:10px;overflow:hidden}
+.w:before{content:"";position:absolute;left:0;right:0;top:0;height:22px;background:#3A3029}
+.w:after{content:"";position:absolute;left:10px;top:7px;width:30px;height:8px;border-radius:4px;background:#5A4C40}
+.w img{position:absolute;left:62px;top:34px;width:90px;opacity:.9}
+.w span{position:absolute;left:0;right:0;bottom:10px;text-align:center;font:600 18px/1 'Mono';color:#A99A88}
+.w.hot{background:var(--accent)} .w.hot:before{background:#C8401A} .w.hot span{color:#16110D;font-weight:700}
+.w.hot b{position:absolute;left:0;right:0;top:30px;text-align:center;font:400 64px/1 'Anton';color:#16110D}
+.cut{right:-40px;height:480px}
+</style></head><body><div class="t">
+<div class="hd z3" data-k="hd"></div>
+<div class="wall z2" data-move="websites" id="wall"></div>
+<img class="cut ol z4" data-img="me" data-move="her" alt="">
+</div><script src="../../lib/bind.js"></script></body></html>
+<script>
+const W=document.getElementById('wall'); for(let i=0;i<9;i++){const d=document.createElement('div'); d.className='w'+(i===4?' hot':''); d.innerHTML = i===4 ? '<b>?</b><span>PHP 8.3.35</span>' : '<img src="../../assets/draw/elephant.svg"><span>runs on PHP</span>'; W.appendChild(d);}
+</script>

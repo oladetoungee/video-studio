@@ -1,0 +1,234 @@
+{
+ "story": "php2shell",
+ "outlet": "TechCrunch",
+ "slug": "techcrunch-phpocalypse",
+ "url": "https://techcrunch.com/2026/10/24/php-ocalypse-how-two-critical-web-bugs-almost-broke-the-internet/",
+ "finalUrl": "https://techcrunch.com/2026/10/24/php-ocalypse-how-two-critical-web-bugs-almost-broke-the-internet/",
+ "status": "loaded",
+ "http": 200,
+ "title": "PHP-ocalypse: How two critical web bugs almost broke the internet | TechCrunch",
+ "h1": "PHP-ocalypse: How two critical web bugs almost broke the internet",
+ "published": "2026-10-24T15:30:00+00:00",
+ "files": {
+  "fold": "php2shell/techcrunch-phpocalypse_fold.png",
+  "full": "php2shell/techcrunch-phpocalypse_full.jpg",
+  "scroll": "php2shell/techcrunch-phpocalypse_scroll.mp4"
+ },
+ "full": {
+  "width": 1440,
+  "height": 6000,
+  "pageHeight": 13208,
+  "zoom": 1,
+  "quotes": [
+   {
+    "quote": "On Wednesday, a decades-old open-source web technology called PHP almost broke the internet",
+    "box": {
+     "x": 226,
+     "y": 811,
+     "w": 612,
+     "h": 46
+    },
+    "lines": [
+     {
+      "x": 226,
+      "y": 811,
+      "w": 612,
+      "h": 19
+     },
+     {
+      "x": 226,
+      "y": 838,
+      "w": 216,
+      "h": 19
+     }
+    ]
+   },
+   {
+    "quote": "the world — so far — broadly avoided mass internet exploitation",
+    "box": {
+     "x": 304,
+     "y": 1359,
+     "w": 538,
+     "h": 19
+    },
+    "lines": [
+     {
+      "x": 304,
+      "y": 1359,
+      "w": 538,
+      "h": 19
+     }
+    ]
+   },
+   {
+    "quote": "Banks, retailers, gaming sites, online stores, hospitals, and some government agencies took down their servers to prevent attacks",
+    "box": {
+     "x": 226,
+     "y": 1465,
+     "w": 633,
+     "h": 46
+    },
+    "lines": [
+     {
+      "x": 305,
+      "y": 1465,
+      "w": 554,
+      "h": 19
+     },
+     {
+      "x": 226,
+      "y": 1492,
+      "w": 550,
+      "h": 19
+     }
+    ]
+   }
+  ]
+ },
+ "scroll": {
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "seconds": 8,
+  "keyframes": [
+   {
+    "t": 0,
+    "y": 220
+   },
+   {
+    "t": 1,
+    "y": 220
+   },
+   {
+    "t": 1.846,
+    "y": 401
+   },
+   {
+    "t": 2.946,
+    "y": 401
+   },
+   {
+    "t": 4.084,
+    "y": 949
+   },
+   {
+    "t": 8,
+    "y": 949
+   }
+  ],
+  "zoom": 1,
+  "easing": "easeInOutCubic between keyframes, holds where y is equal",
+  "capped": false,
+  "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)",
+  "quotes": [
+   {
+    "quote": "On Wednesday, a decades-old open-source web technology called PHP almost broke the internet",
+    "inVideo": true,
+    "still": true,
+    "t": 2.4,
+    "visibleStill": [
+     1.77,
+     3.03
+    ],
+    "scrollY": 401,
+    "box": {
+     "x": 466,
+     "y": 410,
+     "w": 612,
+     "h": 46
+    },
+    "lines": [
+     {
+      "x": 466,
+      "y": 410,
+      "w": 612,
+      "h": 19
+     },
+     {
+      "x": 466,
+      "y": 437,
+      "w": 216,
+      "h": 19
+     }
+    ],
+    "docBox": {
+     "x": 466,
+     "y": 811,
+     "w": 612,
+     "h": 46
+    },
+    "layoutDriftPx": 0
+   },
+   {
+    "quote": "the world — so far — broadly avoided mass internet exploitation",
+    "inVideo": true,
+    "still": true,
+    "t": 6.02,
+    "visibleStill": [
+     4,
+     8.03
+    ],
+    "scrollY": 949,
+    "box": {
+     "x": 544,
+     "y": 410,
+     "w": 538,
+     "h": 19
+    },
+    "lines": [
+     {
+      "x": 544,
+      "y": 410,
+      "w": 538,
+      "h": 19
+     }
+    ],
+    "docBox": {
+     "x": 544,
+     "y": 1359,
+     "w": 538,
+     "h": 19
+    },
+    "layoutDriftPx": 0
+   },
+   {
+    "quote": "Banks, retailers, gaming sites, online stores, hospitals, and some government agencies took down their servers to prevent attacks",
+    "inVideo": true,
+    "still": true,
+    "t": 6.02,
+    "visibleStill": [
+     4,
+     8.03
+    ],
+    "scrollY": 949,
+    "box": {
+     "x": 466,
+     "y": 516,
+     "w": 633,
+     "h": 46
+    },
+    "lines": [
+     {
+      "x": 545,
+      "y": 516,
+      "w": 554,
+      "h": 19
+     },
+     {
+      "x": 466,
+      "y": 543,
+      "w": 550,
+      "h": 19
+     }
+    ],
+    "docBox": {
+     "x": 466,
+     "y": 1465,
+     "w": 633,
+     "h": 46
+    },
+    "layoutDriftPx": 0
+   }
+  ]
+ }
+}

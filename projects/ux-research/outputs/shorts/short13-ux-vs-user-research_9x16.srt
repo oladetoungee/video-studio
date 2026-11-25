@@ -1,0 +1,83 @@
+1
+00:00:00,090 --> 00:00:02,330
+that is UX research the same as user
+
+2
+00:00:02,330 --> 00:00:03,639
+research? most of the time, people use these
+
+3
+00:00:03,639 --> 00:00:05,309
+two terms they mean the same thing
+
+4
+00:00:05,309 --> 00:00:07,529
+you will see even in job titles that use
+
+5
+00:00:07,809 --> 00:00:10,189
+either one now, user research is the broader
+
+6
+00:00:10,189 --> 00:00:12,959
+one UX research sits under it
+
+7
+00:00:13,170 --> 00:00:14,989
+user research is about understanding the
+
+8
+00:00:14,989 --> 00:00:16,362
+users themselves, the users, their needs,
+
+9
+00:00:16,362 --> 00:00:17,509
+their habits, their lives
+
+10
+00:00:17,509 --> 00:00:19,749
+and it can feed into a lot of decisions that
+
+11
+00:00:19,749 --> 00:00:20,929
+go beyond design
+
+12
+00:00:20,929 --> 00:00:23,150
+for example, research into how customers
+
+13
+00:00:23,150 --> 00:00:25,650
+feel about your prices or your delivery time
+
+14
+00:00:25,650 --> 00:00:26,429
+is user research
+
+15
+00:00:26,429 --> 00:00:28,849
+it isn't really about the experience of your
+
+16
+00:00:28,849 --> 00:00:29,329
+product
+
+17
+00:00:29,650 --> 00:00:32,089
+UX research is more focused on how people
+
+18
+00:00:32,089 --> 00:00:34,139
+experience a specific product or service
+
+19
+00:00:34,139 --> 00:00:36,150
+either way, they share the same goal, which
+
+20
+00:00:36,150 --> 00:00:38,509
+is making sure that decisions are based on
+
+21
+00:00:38,509 --> 00:00:39,267
+real users

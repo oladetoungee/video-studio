@@ -1,0 +1,29 @@
+{
+  "direction": "Her photo 16 (thoughtful, chin on hand). One serif line \"Forgot what you read?\" (the strategist's \"Forgot the last book you read?\" needed two lines; the taste critic rejected that), old books top-left, Baratta top-right, a coffee; labels \"non-fiction\", \"a method from 1940\".",
+  "concept": "T3",
+  "sample": "viral sample 4 (the problem as a question) in the time-to-lock-in collage look",
+  "thumbnail_text": "Forgot what you read?",
+  "title": "How to Read Non-Fiction and Actually Remember It",
+  "titles": [
+    "How to Read Non-Fiction and Actually Remember It",
+    "How to Read Non-Fiction Books Without Forgetting Them",
+    "How I Read Non-Fiction Books So I Remember Them"
+  ],
+  "text": {
+    "big": "Forgot what you read?",
+    "l1": "non-fiction"
+  },
+  "images": {
+    "photo": "../../assets/photo/gbemi16_warm.jpg",
+    "stack": "../../assets/collage/book_stack_old.png",
+    "baratta": "../../assets/collage/cover_baratta_clean.jpg",
+    "coffee": "../../assets/collage/coffee_top.png"
+  },
+  "vars": {},
+  "gates": {
+    "round3": "a 4/6 · b 8/6 · c 7",
+    "pass": false,
+    "note": "fails click by 2; recommended (question hook)",
+    "key": "a = cold image-only topic confidence/5 and click/10; b = in a mocked feed with the title, clarity/click (pass 8/8); c = taste vs her collage samples (pass 8)"
+  }
+}

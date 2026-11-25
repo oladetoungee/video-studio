@@ -1,0 +1,73 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Talking-head style frames</title>
+<link rel="stylesheet" href="../_shared/fonts.css"></head><body>
+<script src="../_shared/clips.js"></script>
+<script src="../_shared/lib.js"></script>
+<script>
+/* Talking-head style frames on her REAL footage (frames from kit/raw-video.mov at the raw times in the file names; never flipped,
+ * no retouching; the cut-outs are Apple Vision person mattes of the same frame, used only to put words BEHIND her).
+ * th1 A · words behind her (L2)        th2 A · uneven split with the dial (L14)
+ * th3 B · receipt window + time-card stub corner timer (L19)   th4 C · a screen on her wall with the week montage (TV behind her) */
+const A = { night: '#101418', sand: '#ECE4D3', bone: '#EEF1F4', ink: '#141414', mid: '#6B655B', cyan: '#29B6E8' };
+const B = { card: '#E7D7AE', ink: '#1D1A15', red: '#C8102E', rule: '#A08A5E' };
+const FD = (s, w = 700) => `${w} ${s}px "Familjen Grotesk"`, FM = (s, w = 500) => `${w} ${s}px "JetBrains Mono"`, FSI = (s) => `italic 500 ${s}px "Source Serif 4"`;
+const FB = (s) => `400 ${s}px "Bebas Neue"`, FC = (s) => `400 ${s}px "Cutive Mono"`, FH = (s, w = 600) => `${w} ${s}px "Caveat"`, FN = (s, w = 600) => `${w} ${s}px "Instrument Sans"`;
+function her(name) { ctx.drawImage(IMG[name], 0, 0, W, H); }
+/* A captions: Familjen 600 sentence case, white, a faint dark plate only behind the line; the key word on a bone block */
+function capA(words, key, y) {
+  const f = FD(56, 600); const sp = tw(' ', f); const full = words.reduce((a, w) => a + tw(w, f) + sp, -sp) + (key >= 0 ? 24 : 0); let x = W / 2 - full / 2;
+  rect(x - 26, y - 58, full + 52, 80, 'rgba(10,12,14,0.55)');
+  words.forEach((w, i) => { const ww = tw(w, f); if (i === key) { x += 12; rect(x - 10, y - 50, ww + 20, 64, A.bone); txt(w, x, y, f, A.ink); x += 12; } else txt(w, x, y, f, '#FFFFFF'); x += ww + sp; });
+}
+/* B captions: C1 heavy condensed caps (Bebas), white with a dark stroke, one red word */
+function capB(words, key, y) {
+  const f = FB(92); const sp = tw(' ', f); const full = words.reduce((a, w) => a + tw(w, f) + sp, -sp); let x = W / 2 - full / 2;
+  words.forEach((w, i) => { ctx.font = f; ctx.lineWidth = 10; ctx.strokeStyle = 'rgba(0,0,0,0.85)'; ctx.lineJoin = 'round'; ctx.textAlign = 'left'; ctx.strokeText(w, x, y); txt(w, x, y, f, i === key ? B.red : '#FFFFFF'); x += tw(w, f) + sp; });
+}
+/* C captions: Caveat 600, white, soft dark offset, lower middle */
+function capC(s, y) { const f = FH(80); txt(s, W / 2 + 3, y + 3, f, 'rgba(0,0,0,0.55)', 'center'); txt(s, W / 2, y, f, '#FFFFFF', 'center'); }
+
+function th1() { // A · "use the same calendar for school and work" (raw 5:30): the words sit BEHIND her (her matte drawn on top)
+  her('raw330');
+  txt('SAME', 90, 312, FD(300), '#F3F6F8', 'left', 'alphabetic', -6); txt('calendar', 96, 470, FD(120, 400), A.cyan, 'left');
+  ctx.drawImage(IMG.cut330, 0, 0, W, H);
+  capA(['use', 'the', 'same', 'calendar', 'for', 'school', 'and', 'work'], 2, 1000);
+}
+function th2() { // A · "your classes cannot move, assignment deadlines cannot move, your meetings at work cannot move" (raw 3:59-4:03): uneven split, dial 58 % / her 42 %
+  const sx = 1114; rect(0, 0, sx, H, '#F3F6F8');
+  ctx.drawImage(IMG.raw241, 520, 0, 806, 1080, sx, 0, W - sx, H); rect(sx - 2, 0, 4, H, A.ink);
+  txt('what can’t move', 100, 170, FD(80), A.ink); txt('goes in first', 100, 245, FD(60, 400), '#5D6670');
+  [['10:00', 'work meeting'], ['18:00', 'class'], ['23:59', 'deadline']].forEach(([h, s2], i) => { txt(h, 100, 340 + i * 52, FM(34, 600), A.ink); txt(s2, 230, 340 + i * 52, FM(34, 500), '#5D6670'); });
+  const cx = 720, cy = 690, r = 250, th = 60; const ang = (h) => -Math.PI / 2 + h / 24 * Math.PI * 2;
+  ctx.lineWidth = th; ctx.strokeStyle = '#DCE3E8'; ctx.beginPath(); ctx.arc(cx, cy, r, 0, Math.PI * 2); ctx.stroke();
+  const arc = (a, b, c) => { ctx.strokeStyle = c; ctx.lineWidth = th; ctx.beginPath(); ctx.arc(cx, cy, r, ang(a), ang(b)); ctx.stroke(); };
+  arc(10, 11, A.ink); arc(18, 20, A.ink); arc(23.5, 24, A.ink);
+  for (let h = 0; h < 24; h += 6) { const a = ang(h); txt(String(h).padStart(2, '0'), cx + Math.cos(a) * (r - th / 2 - 42), cy + Math.sin(a) * (r - th / 2 - 42) + 12, FM(34), '#5D6670', 'center'); }
+  const f = FD(48, 600), mid = sx + (W - sx) / 2; const w1 = tw('your classes', f), w2 = tw('cannot move', f);
+  rect(mid - w1 / 2 - 18, 880 - 48, w1 + 36, 64, 'rgba(10,12,14,0.55)'); txt('your classes', mid, 880, f, '#FFF', 'center');
+  rect(mid - w2 / 2 - 12, 952 - 48, w2 + 24, 64, A.bone); txt('cannot move', mid, 952, f, A.ink, 'center');
+}
+function th3() { // B · "there's no limit to the number of hours" (raw 0:47.9): the real page in a manila window on her empty wall + the tip counter stub
+  her('raw47');
+  const x = 70, y = 120, w = 640; rect(x - 16, y - 16, w + 32, 260, B.card); txt('STUDYINESTONIA.EE', x, y + 26, FC(32), B.ink); txt('2 NOV 2026', x + w, y + 26, FC(32), B.ink, 'right');
+  const c = CLIPS['sie-hours'], im = IMG['clip_sie-hours'], s = (w) / c.w; rect(x, y + 50, w, c.h * s, '#fff'); ctx.drawImage(im, x, y + 50, w, c.h * s);
+  ctx.save(); ctx.globalCompositeOperation = 'multiply'; ctx.fillStyle = '#FFE45A'; const r0 = c.hl[0]; ctx.fillRect(x + r0[0] * s, y + 50 + r0[1] * s, r0[2] * s, r0[3] * s); ctx.restore();
+  // the side counter: a time-card stub that counts the tips (00 before tip 1, then 01..10 as she says them)
+  const sx = W - 340, sy = 70; rect(sx, sy, 280, 170, B.card); line(sx + 18, sy + 60, sx + 262, sy + 60, B.rule, 2);
+  txt('TIPS', sx + 22, sy + 46, FB(46), B.ink, 'left', 'alphabetic', 2); txt('00 / 10', sx + 258, sy + 46, FC(36), B.ink, 'right'); txt('RULES FIRST', sx + 140, sy + 128, FB(58), B.red, 'center', 'alphabetic', 2);
+  capB(['THERE\'S', 'NO', 'LIMIT', 'ON', 'THE', 'NUMBER', 'OF', 'HOURS'], 2, 1010);
+}
+function th4() { // C · "once Monday starts it just keeps moving" (raw 1:24): a big screen on her wall plays the week montage; she stays in front (her matte)
+  her('raw84');
+  const x = 60, y = 90, w = 820, h = 461; rect(x - 12, y - 12, w + 24, h + 24, '#0B0B0A'); cover(IMG.px_lecture, x, y, w, h, 0.5, 0.4);
+  const ft = '400 52px "DSEG7"'; txt('MON', x + 24, y + h - 26, FN(46, 700), '#FF8A1F', 'left', 'alphabetic', 2); txt('19:45', x + 24 + tw('MON', FN(46, 700), 2) + 14, y + h - 26, ft, '#FF8A1F', 'left');
+  ctx.drawImage(IMG.cut84, 0, 0, W, H);
+  capC('once Monday starts, it just keeps moving', 1000);
+}
+const DIR = {
+  images: { raw330: '../_src/her/raw_330.0.jpg', cut330: '../_src/her/cut_330.0.png', raw241: '../_src/her/raw_241.0.jpg', raw47: '../_src/her/raw_47.9.jpg', raw84: '../_src/her/raw_84.0.jpg', cut84: '../_src/her/cut_84.0.png', px_lecture: '../_src/px/lecture.jpg' },
+  fonts: ['700 40px "Familjen Grotesk"', '600 40px "Familjen Grotesk"', '500 40px "JetBrains Mono"', 'italic 500 40px "Source Serif 4"', '400 40px "Bebas Neue"', '400 40px "Cutive Mono"', '600 40px "Caveat"', '400 40px "DSEG7"', '700 40px "Instrument Sans"'],
+  draw(t) { ({ 1: th1, 2: th2, 3: th3, 4: th4 })[t](); },
+  stills: { 'th1-A-behind-her_raw330': { t: 1 }, 'th2-A-split-dial_raw241': { t: 2 }, 'th3-B-receipt-window-timer_raw47.9': { t: 3 }, 'th4-C-screen-behind-her_raw84': { t: 4 } },
+};
+boot(DIR);
+</script></body></html>

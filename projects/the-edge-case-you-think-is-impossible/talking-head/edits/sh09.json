@@ -1,0 +1,29 @@
+{
+ "t": {
+  "cover/cover": {
+   "pos": {
+    "9x16": {
+     "dy": -162.3,
+     "dx": -3.2,
+     "k": 0.644
+    }
+   }
+  },
+  "bytes-sh/seven": {
+   "s": "LETTERS"
+  },
+  "bytes-sh/value adebayo": {
+   "pos": {
+    "9x16": {
+     "dx": 14.1,
+     "dy": 5.8
+    }
+   }
+  }
+ },
+ "mix": {
+  "music": -15,
+  "sfx": -7,
+  "voice": 0
+ }
+}

@@ -1,0 +1,30 @@
+{
+  "direction": "TH08: the whole debate in words behind her head (her matte in front): \"IS AI A\" small, \"TOOL\" huge in white, a serif \"or\", \"PERSON?\" in lilac; her sceptical look, fingers pinched, mouth closed; room dimmed 20 % (flat). Refs: sample 1 (\"FINANCIAL LITERACY\" behind the head), Pinterest \"COOK\" / \"POV\". Scores: Round 3: cold 7 · best pair (title 1) 8/8 · taste 6.5.",
+  "concept": "TH08",
+  "thumbnail_text": "IS AI A TOOL OR PERSON?",
+  "title": "Why I'm Kind to AI, Even Though It Can't Feel",
+  "titles": [
+    "Why I'm Kind to AI, Even Though It Can't Feel",
+    "AI Can't Feel. So Why Protect Claude From Cruelty?"
+  ],
+  "scores": "Round 3: cold 7 · best pair (title 1) 8/8 · taste 6.5.",
+  "text": {
+    "l0": "IS AI A",
+    "l1": "TOOL",
+    "l2": "PERSON?",
+    "or": "or",
+    "chat_name": "Claude",
+    "chat_in": "Message…",
+    "rude": "YOU ARE USELESS, ANSWER ME NOW",
+    "ended": "This chat has ended"
+  },
+  "images": {
+    "scene": "../../assets/scene/s_26.75.jpg",
+    "cut": "../../assets/cut/c_26.75.png"
+  },
+  "vars": {
+    "--px": "0px",
+    "--py": "-192px",
+    "--pw": "1917px"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "board": "pick1119-30",
+  "pick": "pick1119-30 (I Watched Iman Gadzhi's Claude Video So You Don't Waste 26 Minutes: 26 MIN -> 3 MIN, faces below)",
+  "kind": "her own room photo (shoot 29 Oct), she looks straight at the camera with one hand up ('what?'), room dimmed; one number -> number across the top",
+  "direction": "Copies pick1119-30: one simple device for a number (€0 -> €11,904) with a real reacting face under it. The cold critics asked for 05's contrast with her face looking at the camera.",
+  "thumbnail_text": "€0 tuition -> €11,904 to get the visa (Germany)",
+  "titles": [
+    "Free Tuition in Germany? Here's the Money You Still Need",
+    "What Studying in Germany Really Costs a Nigerian",
+    "Cheapest Countries to Study in Europe for Nigerians (2027)"
+  ],
+  "title": "Free Tuition in Germany? Here's the Money You Still Need",
+  "class": "no-lift",
+  "text": {
+    "n0": "€0",
+    "n1": "€11,904",
+    "l0": "tuition",
+    "l1": "to get the visa"
+  },
+  "images": {
+    "bg": "../../assets/shoot/room-1579.jpg",
+    "me": "../../assets/shoot/room-1579-cut.png"
+  },
+  "vars": {},
+  "recommended": false,
+  "fonts": ["thumbs-06 Montserrat Black (yellow #F5CF2F + white on dark, Thumbnails 58)"],
+  "colours": "thumbs-06: yellow + white over her room dimmed to dark grey",
+  "facts": "Germany: €0 tuition at most public universities; €11,904 a year (€992 a month) blocked account for the visa (kit 7f, nigeria.diplo.de)",
+  "built": "2026-11-19 rework round 3 (projects/THUMBS-REWORK-BRIEF-2026-11-19.md)"
+}

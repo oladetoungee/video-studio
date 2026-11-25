@@ -1,0 +1,16 @@
+@font-face{font-family:"SofiaX";font-weight:1 1000;src:url(../_fonts/SofiaSansExtraCondensed.ttf)}
+@font-face{font-family:"Sofia";font-weight:1 1000;src:url(../_fonts/SofiaSans.ttf)}
+@font-face{font-family:"Martian";font-weight:100 800;font-stretch:75% 112.5%;src:url(../_fonts/MartianMono.ttf)}
+@font-face{font-family:"RHD";font-weight:300 900;src:url(../_fonts/RedHatDisplay.ttf)}
+@font-face{font-family:"RHM";font-weight:300 700;src:url(../_fonts/RedHatMono.ttf)}
+@font-face{font-family:"League";font-stretch:75% 100%;src:url(../_fonts/LeagueGothic.ttf)}
+@font-face{font-family:"Franklin";font-weight:100 900;src:url(../_fonts/LibreFranklin.ttf)}
+@font-face{font-family:"OverMono";font-weight:300 700;src:url(../_fonts/OverpassMono.ttf)}
+@font-face{font-family:"Gloock";src:url(../_fonts/Gloock-Regular.ttf)}
+@font-face{font-family:"DMSI";font-style:italic;src:url(../_fonts/DMSerifDisplay-Italic.ttf)}
+@font-face{font-family:"DM Mono";font-weight:500;src:url(../_fonts/DMMono-Medium.ttf)}
+html,body{margin:0;padding:0;overflow:hidden;background:#000}
+#stage{position:relative;overflow:hidden}
+#stage *{box-sizing:border-box}
+.abs{position:absolute}
+img{display:block}

@@ -1,0 +1,92 @@
+URL: https://vercel.com/kb/bulletin/php2shell-security-bulletin
+STATUS: loaded (http 200)
+FINAL: https://vercel.com/kb/bulletin/php2shell-security-bulletin
+TITLE: PHP security advisory: php2shell (CVE-2026-109618, CVE-2026-109619) | Vercel Knowledge Base
+H1: PHP security advisory: php2shell (CVE-2026-109618, CVE-2026-109619)
+OG: PHP security advisory: php2shell (CVE-2026-109618, CVE-2026-109619) | Vercel Knowledge Base | 
+PUBLISHED:   MODIFIED: 
+DOC_H: 5358
+
+On October 21, 2026, PHP publicly disclosed two critical vulnerabilities, CVE-2026-109618 and CVE-2026-109619, known as php2shell. Specially crafted HTTP requests may allow an attacker to run code remotely, expose data from other requests, or cause a denial of service.
+
+Working public exploits are already available, and exploitation attempts have been reported across the industry.
+
+Copy link to heading
+Required action
+
+Upgrade the PHP runtime to a patched release immediately, regardless of WAF protections or hosting provider. Updating your application code or plugins does not fix these vulnerabilities.
+
+Vercel deployed WAF protections before public disclosure. These rules reduce exposure to known exploit patterns, but do not replace patching. See How to upgrade and protect your PHP application for remediation steps.
+
+Copy link to heading
+Who is affected
+
+The vulnerabilities affect PHP 5.4 and later in default configurations. Frameworks and CMSs built on PHP, including WordPress, Drupal, Laravel, and Magento, are affected when they run on a vulnerable PHP runtime.
+
+The PHP security team advises all PHP installations serving web requests to update, including PHP-FPM, Apache with mod_php, php-cgi, FrankenPHP, and LiteSpeed. Exploitability varies by runtime and configuration; do not treat a different web server or framework as a substitute for patching.
+
+Copy link to heading
+Understanding php2shell
+
+The vulnerabilities are in the PHP engine itself:
+
+CVE-2026-109618: RCE via out-of-memory corruption. Out-of-memory handling can leave internal request data partially initialized. Request cleanup may then use that invalid data.
+CVE-2026-109619: RCE via stale global state. A PHP worker can retain references to freed request memory. A later request handled by the same worker may use that stale state.
+
+Both vulnerabilities are rated critical. See the PHP security advisory and the linked technical advisories for details.
+
+Copy link to heading
+Vercel WAF protection
+
+Vercel received advance notice through the coordinated disclosure process. We deployed new rules to the Vercel WAF before public disclosure to block known php2shell exploit patterns.
+
+These protections apply automatically to all projects on Vercel at no cost, with no configuration needed. They cover:
+
+PHP functions deployed on Vercel.
+Requests Vercel rewrites or proxies to external PHP backends.
+
+Blocked requests appear in your project's Firewall dashboard. The Vercel Security team is monitoring attack traffic and will update the rules as new variants appear.
+
+WAF protection does not replace patching. Requests that bypass Vercel's network, including direct requests to an external PHP backend, are not covered.
+
+Copy link to heading
+How to upgrade and protect your PHP application
+Copy link to heading
+Update the PHP runtime
+
+Upgrade to a patched release for your PHP branch:
+
+PHP branch	Patched release
+PHP 8.2	8.2.35
+PHP 8.3	8.3.36
+PHP 8.4	8.4.27
+PHP 8.5	8.5.12
+
+If your distribution or hosting provider manages PHP, check for updated packages that address both CVEs. PHP 8.1 and earlier no longer receive regular updates from the PHP project; upgrade to a supported branch or contact your distribution or LTS vendor about backported fixes.
+
+Copy link to heading
+Update the deployment serving traffic
+
+For container deployments, rebuild with an updated PHP base image and redeploy. For other hosting environments, apply the patched runtime using your provider's upgrade process.
+
+Verify that the deployment serving web requests is running the patched runtime. Updating only your local development environment, application code, or plugins is insufficient.
+
+Copy link to heading
+Protect external PHP backends
+
+Patch any external PHP servers that receive traffic through Vercel. Limit direct access to those servers so requests pass through Vercel's network. See Restricting your origin to Vercel traffic for guidance.
+
+Copy link to heading
+Next steps
+Review the official PHP security advisory for affected versions and full remediation guidance.
+Review your project's Firewall dashboard and the Vercel Firewall documentation.
+For additional questions, contact security@vercel.com.
+
+We are grateful for the close collaboration with OpenAI and Wiz, who coordinated and contributed to this effort.
+
+Get security bulletins by email
+
+Learn what’s affected and how to respond.
+
+Email
+Subscribe

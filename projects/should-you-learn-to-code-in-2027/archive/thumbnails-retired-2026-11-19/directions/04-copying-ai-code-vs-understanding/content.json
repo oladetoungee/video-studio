@@ -1,0 +1,34 @@
+{
+ "board": "yt-51",
+ "kind": "flat dark (#1C1C1C) + her cut-out on the right (words left / her right 2 of 2)",
+ "direction": "Copies board yt-51 (Copying -> Understanding: the creator thinking, hand at her face, two stacked labels top-left joined by an arrow, the first crossed out). Here: Copying AI code (crossed out) -> Understanding it: her first skill, reading the code AI writes.",
+ "thumbnail_text": "Copying AI code (crossed out) -> Understanding it",
+ "fonts": [
+  "thumbs-02 Inter Tight Bold (white on #1C1C1C, black on yellow highlight #F7D51D, as Thumbnails 21)"
+ ],
+ "colours": "thumbs-02 specimen (#1C1C1C, #FFFFFF, #F7D51D)",
+ "text": {
+  "l1": "<s>Copying AI code</s>",
+  "l2": "Understanding it"
+ },
+ "images": {
+  "me": "../../assets/shoot/1613-cut.png"
+ },
+ "vars": {
+  "--ls": "92px",
+  "--y1": "150px",
+  "--y2": "400px"
+ },
+ "class": "no-lift",
+ "titles": [
+  "Coding With AI? Learn to Read the Code It Writes",
+  "Learn to Code With AI: 4 Skills Beginners Need Now",
+  "Should I Learn to Code in 2027? 4 Skills That Matter Now"
+ ],
+ "title": "Coding With AI? Learn to Read the Code It Writes",
+ "titles_2026": [
+  "Should I Learn to Code in 2026? 4 Skills That Matter Now"
+ ],
+ "recommended": false,
+ "scores": "R1 6 / 7, R2 6 / 6, R3 6 / 7. After R3: strike 11 px, 'Understanding it' (not re-scored)"
+}

@@ -1,0 +1,23 @@
+{
+  "direction": "Sticky notes on the wall of her real room (the film's research wall, made literal): one big canary note names the topic, two small notes name the work she describes (interview users, find patterns). Her smile on the right. Follows viral sample 3 (work drawn as sticky notes).",
+  "concept": "T04",
+  "thumbnail_text": "WHAT UX RESEARCHERS DO",
+  "title": "What Does a UX Researcher Actually Do All Week?",
+  "titles": [
+    "What Does a UX Researcher Actually Do All Week?",
+    "A Week in UX Research: Plan, Interview, Find Patterns"
+  ],
+  "text": {
+    "note": "What UX researchers do",
+    "n1": "",
+    "n2": "Interview users",
+    "n3": "Find patterns"
+  },
+  "images": {
+    "scene": "../../assets/scene/g/s_586.jpg",
+    "front": "../../assets/scene/g/mask/s_586.png"
+  },
+  "vars": {},
+  "scores": "a 4/5 · 4/6 · 4/5 | b 6/5 · 8/6 · 8/5 | c 5 · 6 · 5",
+  "recommended": false
+}

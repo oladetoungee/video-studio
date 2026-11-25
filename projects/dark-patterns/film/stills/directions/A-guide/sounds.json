@@ -1,0 +1,3 @@
+{"music": "766", "musicAt": 20, "musicDb": -23, "sfxDb": -4,
+ "roles": {"paper": "card-place", "pin": "pop-hard-click", "marker": "marker-line", "slide": "paper-slide", "type": "typewriter-single-hit", "type2": "typewriter-soft-click",
+  "shutter": "shutter-click", "scribble": "pencil-short", "hit": "hit-short-bass", "tick": "clock-tick-single", "tape": "tape-rewind-fast"}}

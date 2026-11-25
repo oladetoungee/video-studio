@@ -1,0 +1,54 @@
+{
+ "title": "Window: sessionStorage property - Web APIs | MDN",
+ "h1": "Window: sessionStorage property",
+ "h1y": 107,
+ "found": {
+  "Opening a page in a new tab or window creates a new session": [
+   [
+    328,
+    735,
+    467.125,
+    20
+   ]
+  ],
+  "closing the tab": [
+   [
+    328,
+    791,
+    113.1875,
+    20
+   ]
+  ]
+ },
+ "H": 4104,
+ "focus": {
+  "Opening a page in a new tab or window creates a new session": {
+   "file": "mdn-sessionstorage__opening-a-page-in-a-new-.png",
+   "top": 215,
+   "rects": [
+    [
+     328,
+     520,
+     467.125,
+     20
+    ]
+   ]
+  },
+  "closing the tab": {
+   "file": "mdn-sessionstorage__closing-the-tab.png",
+   "top": 271,
+   "rects": [
+    [
+     328,
+     520,
+     113.1875,
+     20
+    ]
+   ]
+  }
+ },
+ "clipTop": 0,
+ "scale": 1.5,
+ "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage",
+ "captured": "2026-11-02T19:32:20.388Z"
+}

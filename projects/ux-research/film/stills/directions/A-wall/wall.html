@@ -1,0 +1,126 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>A · The research wall</title>
+<style>
+.P .credit { font-size: 36px; }
+@font-face { font-family: "Marker"; src: url(../_fonts/PermanentMarker-Regular.ttf); }
+@font-face { font-family: "Hand"; src: url(../_fonts/Caveat.ttf); font-weight: 400 700; }
+@font-face { font-family: "Grot"; src: url(../_fonts/SchibstedGrotesk.ttf); font-weight: 400 900; }
+@font-face { font-family: "Type"; src: url(../_fonts/CourierPrime-Regular.ttf); }
+@font-face { font-family: "Type"; src: url(../_fonts/CourierPrime-Bold.ttf); font-weight: 700; }
+html, body { margin: 0; background: #1D3A32; overflow: hidden; }
+#stage { position: relative; overflow: hidden; background: #1D3A32; }
+.big { font: 800 150px/0.9 "Grot"; letter-spacing: -6px; }
+.sub { text-wrap: balance; font: 400 40px/52px "Type"; margin-top: 30px; }
+.wallword { font: 170px/1 "Marker"; color: #F4F0E6; white-space: nowrap; }
+.credit { font: 44px/1.2 "Type"; color: rgba(244,240,230,.72); white-space: nowrap; }
+</style></head><body><div id="stage"></div>
+<script src="../_tools/kit.js"></script>
+<script src="../_tools/ux.js"></script>
+<script>
+// A · THE RESEARCH WALL. One deep-green wall; the camera travels along it. Everything she explains is written on cards and
+// sticky notes as she says it, then sorted: the film does UX research on UX research.
+// Palette: wall #1D3A32 · canary note #FFE15A · accent note (her headband orange) #F26A2E · card #FFFDF6 · ink #17140F · paint marker #F4F0E6
+const YEL = '#FFE15A', ORA = '#F26A2E', WHITE = '#F4F0E6';
+const world = el('div', { left: 0, top: 0, width: '1px', height: '1px', transformOrigin: '0 0' });
+const P = PORTRAIT; if (P) document.body.classList.add('P');
+// boards: landscape side by side along the wall (2200 px apart), portrait stacked (2100 px apart)
+const B = (i) => (P ? { x: 0, y: i * 3400 } : { x: i * 2200, y: 0 });
+const bw = P ? 1080 : 1920, bh = P ? 1920 : 1080;
+const at = (i, x, y) => [B(i).x + x, B(i).y + y];
+
+// ---------- board 0 · UI vs UX (her words 1:02-1:31) ----------
+{
+  const L = P
+    ? { ui: [70, 400, 940, 300], ux: [70, 1900, 940, 300], s: 280, fs: 52, uiN: [[70, 760], [400, 778], [730, 758], [235, 1092], [565, 1104]], uxN: [[60, 2250], [384, 2268], [708, 2246], [384, 2590]], div: 'M200 1640 Q540 1610 880 1650' }
+    : { ui: [130, 120, 760, 330], ux: [1060, 120, 760, 330], s: 214, fs: 46, uiN: [[150, 520], [395, 540], [640, 512], [270, 778], [520, 790]], uxN: [[1060, 505], [1305, 525], [1574, 498], [1190, 740]], div: 'M960 150 Q972 420 954 640 T966 960' };
+  const big = P ? 'font-size:130px;letter-spacing:-5px' : '';
+  const sub = P ? 'font-size:36px;line-height:46px;margin-top:22px' : '';
+  const ui = card(world, ...at(0, ...L.ui.slice(0, 2)), L.ui[2], L.ui[3], `<div class="big" style="${big}">UI</div><div class="sub" style="${sub}">what you can see and touch</div>`, { head: P ? 172 : 172, lh: P ? 46 : 52 });
+  const ux = card(world, ...at(0, ...L.ux.slice(0, 2)), L.ux[2], L.ux[3], `<div class="big" style="${big}">UX</div><div class="sub" style="${sub}">how the whole product feels to use</div>`, { head: P ? 172 : 172, lh: P ? 46 : 52 });
+  slap(ui, 0.2, -1.5, { from: 1.12, spin: 4 }); slap(ux, P ? 3.4 : 3.1, 1.2, { from: 1.12, spin: -4 });
+  ['the button', 'the colours', 'the layout', 'the icons', 'the screen'].forEach((w, i) => {
+    const n = sticky(world, ...at(0, ...L.uiN[i]), L.s, w, { fs: L.fs }); slap(n, 0.9 + i * 0.25, [-4, 3, -2, 5, -3][i]);
+  });
+  const qs = ['Can a user find what they\u2019re looking for?', 'Does it make sense to the user?', 'Did the users get frustrated using it?', 'Did the user come back to use it?'];
+  let last;
+  qs.forEach((w, i) => { const n = sticky(world, ...at(0, ...L.uxN[i]), L.s + 36, w, { bg: ORA, fs: P ? 40 : 34, ink: '#1A0F08' }); slap(n, 3.7 + i * 0.3, [3, -3, 4, -2][i]); last = L.uxN[i]; });
+  const lastS = L.s + 36;
+  const g = el('div', { left: B(0).x + 'px', top: B(0).y + 'px' }, '', world);
+  if (!P) stroke(g, L.div, 2.4, 3.0, { sw: 8 });
+  stroke(g, loopPath(last[0], last[1], lastS, lastS, 3), 5.2, 5.9, { sw: 8 });
+}
+
+// ---------- board 1 · say vs do (7:01-7:37) ----------
+{
+  const T = 6.67;
+  const L = P
+    ? { say: [90, 400], do: [690, 400], ws: 150, card: [70, 640, 940, 330], cfs: 52, n1: [80, 1010, 270], n2: [730, 1010, 270], pol: [395, 946, 290] }
+    : { say: [170, 170], do: [1500, 170], ws: 170, card: [520, 300, 880, 390], cfs: 58, n1: [140, 430, 290], n2: [1490, 430, 290], pol: [845, 735, 230] };
+  const s = el('div', { left: B(1).x + L.say[0] + 'px', top: B(1).y + L.say[1] + 'px' }, 'say', world); s.className = 'wallword'; s.style.fontSize = L.ws + 'px';
+  const d = el('div', { left: B(1).x + L.do[0] + 'px', top: B(1).y + L.do[1] + 'px' }, 'do', world); d.className = 'wallword'; d.style.fontSize = L.ws + 'px'; d.style.color = ORA;
+  write(s, T + 0.2, T + 0.75); write(d, T + 1.6, T + 2.0);
+  const c = card(world, ...at(1, L.card[0], L.card[1]), L.card[2], L.card[3],
+    `<div style="font:700 ${L.cfs}px/${P ? 64 : 70}px 'Type';letter-spacing:-1px;padding-top:${P ? 66 : 46}px">What people say and what people do are often very different.</div>`, { head: P ? 100 : 80, lh: P ? 64 : 70 });
+  slap(c, T + 0.9, -1, { from: 1.1, spin: 3 });
+  const n1 = sticky(world, ...at(1, L.n1[0], L.n1[1]), L.n1[2], 'what they tell you', { fs: 40 }); slap(n1, T + 2.4, -4);
+  const n2 = sticky(world, ...at(1, L.n2[0], L.n2[1]), L.n2[2], 'what they actually do', { bg: ORA, fs: 40 }); slap(n2, T + 2.7, 3);
+  const po = polaroid(world, ...at(1, L.pol[0], L.pol[1]), L.pol[2], '../_src/h_445.jpg', 'my first semester', { pos: '50% 38%', fs: P ? 40 : 30 });
+  slap(po, T + 3.2, 5, { from: 1.15 });
+}
+
+// ---------- board 2 · find patterns (3:53-4:13) ----------
+{
+  const T = 11.7;
+  const C = P ? [[240, 820], [800, 820], [540, 1240]] : [[420, 640], [1000, 640], [1560, 640]];
+  const cardL = P ? [70, 390, 940, 250] : [150, 110, 980, 270];
+  const c = card(world, ...at(2, cardL[0], cardL[1]), cardL[2], cardL[3],
+    `<div class="big" style="font-size:${P ? 92 : 110}px;letter-spacing:-4px">find patterns</div><div class="sub" style="margin-top:18px;font-size:36px">in the notes or the recordings</div>`, { head: P ? 118 : 132 });
+  slap(c, T + 0.1, -1.2, { from: 1.1, spin: 3 });
+  const s = P ? 128 : 138;
+  for (let i = 0; i < 15; i++) {
+    const g = i % 3, j = Math.floor(i / 3);
+    const ang = j * 1.3 + g, r = j === 0 ? 0 : s * 0.72;
+    const tx = C[g][0] + Math.cos(ang) * r - s / 2, ty = C[g][1] + Math.sin(ang) * r * 0.8 - s / 2;
+    const sx = (P ? 60 : 120) + hash(i + 3) * (bw - (P ? 240 : 380)), sy = (P ? 700 : 430) + hash(i + 40) * (P ? 700 : 520);
+    const n = sticky(world, B(2).x + tx, B(2).y + ty, s, '', { bg: g === 1 ? ORA : YEL, scribble: true, seed: i + 1 });
+    const rot = (hash(i * 9) - 0.5) * 14;
+    on((t) => { // land scattered, then gather into the three clusters
+      const a = spring(t - (T + 0.5 + i * 0.06), 2.6, 0.6), m = eQuart(prog(t, T + 1.7 + g * 0.12, T + 2.5 + g * 0.12));
+      n.style.opacity = t < T + 0.5 + i * 0.06 ? 0 : 1;
+      n.style.transform = `translate(${(sx - tx) * (1 - m)}px,${(sy - ty) * (1 - m)}px) rotate(${rot * (1 - m * 0.5)}deg) scale(${lerp(1.3, 1, a)})`;
+      n.style.boxShadow = '0 9px 16px -6px rgba(0,0,0,.42)';
+    });
+  }
+  const g = el('div', { left: B(2).x + 'px', top: B(2).y + 'px' }, '', world);
+  C.forEach((cc, i) => stroke(g, loopPath(cc[0] - s * 1.25, cc[1] - s * 1.12, s * 2.5, s * 2.15, i + 7), T + 2.8 + i * 0.25, T + 3.4 + i * 0.25, { sw: 7, c: i === 1 ? ORA : WHITE }));
+  const lab = el('div', { left: B(2).x + (P ? 70 : 150) + 'px', top: B(2).y + (P ? 1530 : 960) + 'px' }, 'Illustration: notes from interviews', world); lab.className = 'credit';
+  fadeIn(lab, T + 3.2);
+}
+
+// ---------- board 3 · the closing line (12:33-12:46) ----------
+{
+  const T = 16.1;
+  const L = P ? [70, 520, 940, 640, 74] : [250, 230, 1240, 560, 92];
+  const c = card(world, ...at(3, L[0], L[1]), L[2], L[3],
+    `<div style="font:800 ${L[4]}px/1.0 'Grot';letter-spacing:-3px;padding-top:${P ? 40 : 30}px">Good design doesn't start with <span id="scr">screens.</span></div>
+     <div style="font:800 ${L[4]}px/1.0 'Grot';letter-spacing:-3px;margin-top:${P ? 50 : 40}px">It starts with <span id="ppl">people.</span></div>`, { lines: false, pad: P ? '50px 56px' : '60px 80px' });
+  slap(c, T + 0.1, -0.8, { from: 1.08, spin: 2 });
+  const po = polaroid(world, ...at(3, P ? 730 : 1300, P ? 1110 : 610), P ? 290 : 330, '../_src/h_766.jpg', 'Gbemi', { pos: '50% 34%', fs: 40 });
+  slap(po, T + 2.4, 6, { from: 1.15 });
+  const cr = el('div', { left: B(3).x + L[0] + 'px', top: B(3).y + L[1] + L[3] + 40 + 'px' }, '....', world); cr.className = 'credit';
+  fadeIn(cr, T + 2.8);
+  // marker strike on "screens", loop on "people": measured once fonts are laid out
+  const g = el('div', { left: 0, top: 0 }, '', world);
+  document.fonts.ready.then(() => {
+    const rel = (id) => { const r = document.getElementById(id); let x = 0, y = 0, n = r; while (n && n !== c) { x += n.offsetLeft; y += n.offsetTop; n = n.offsetParent; } return [B(3).x + L[0] + x, B(3).y + L[1] + y, r.offsetWidth, r.offsetHeight]; };
+    const [sx, sy, sw, sh] = rel('scr'), [px, py, pw, ph] = rel('ppl');
+    stroke(g, `M${sx - 8} ${sy + sh * 0.58} Q${sx + sw / 2} ${sy + sh * 0.5} ${sx + sw + 10} ${sy + sh * 0.55}`, T + 1.0, T + 1.4, { c: ORA, sw: 12 });
+    stroke(g, loopPath(px + 6, py + 6, pw - 6, ph - 10, 11, 10), T + 1.7, T + 2.3, { c: ORA, sw: 9 });
+  });
+}
+
+// camera: board 0 -> 1 -> 2 -> 3 (each move 0.8 s inOutQuart; the move itself is the transition carrier)
+const cx = (i) => B(i).x + bw / 2, cy = (i) => B(i).y + bh / 2;
+camera(world, [[0, cx(0), cy(0)], ...(P ? [[3.3, cx(0), cy(0) + 1500, 1, 0.7]] : []), [7.2, cx(1), cy(1)], [11.6, cx(2), cy(2)], [16.0, cx(3), cy(3)]], 0.8);
+window.crisp = () => false;
+</script></body></html>

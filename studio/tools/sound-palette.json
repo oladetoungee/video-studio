@@ -1,0 +1,203 @@
+{
+  "_about": "Default sound roles for talking-head edits and shorts (inspiration/know-how/SOUND-PALETTE.md). footmix.py uses a role from here when the manifest's audio.sfx.roles does not define it (a project's own roles always win). library:<name> = library/sounds/<name>.mp3 (Mixkit, free licence).",
+  "shutter": {
+    "files": [
+      "library:shutter-click",
+      "library:shutter-hard-click",
+      "library:shutter-vintage"
+    ],
+    "align": "peak",
+    "db": -4
+  },
+  "riser": {
+    "files": [
+      "library:riser-cinematic-trailer",
+      "library:riser-metallic-sweep"
+    ],
+    "align": "peak",
+    "db": -12
+  },
+  "hit": {
+    "files": [
+      "library:hit-short-bass",
+      "library:drum-deep-impact",
+      "library:hit-futuristic-bass"
+    ],
+    "align": "peak",
+    "db": -6
+  },
+  "pop": {
+    "files": [
+      "library:pop-dry",
+      "library:notify-bubble-pop",
+      "library:pop-hard-click",
+      "library:pop-cartoon-bubble"
+    ],
+    "align": "peak",
+    "db": -5
+  },
+  "tick": {
+    "files": [
+      "library:ui-select-click",
+      "library:ui-modern-select",
+      "library:ui-click-tone",
+      "library:switch-tap"
+    ],
+    "align": "peak",
+    "db": -4
+  },
+  "notify": {
+    "files": [
+      "library:notify-message-pop",
+      "library:notify-positive",
+      "library:notify-confirmation"
+    ],
+    "align": "peak",
+    "db": -6
+  },
+  "typeHit": {
+    "files": [
+      "library:typewriter-single-hit",
+      "library:typewriter-soft-click"
+    ],
+    "align": "peak",
+    "db": -8
+  },
+  "glitch": {
+    "files": [
+      "library:glitch-small-electric",
+      "library:glitch-static",
+      "library:glitch-intro-text"
+    ],
+    "align": "peak",
+    "db": -8
+  },
+  "tape": {
+    "files": [
+      "library:tape-rewind-fast",
+      "library:tape-switch",
+      "library:record-scratch-stop"
+    ],
+    "align": "peak",
+    "db": -6
+  },
+  "cash": {
+    "files": [
+      "library:coins-clinking",
+      "library:coin-win",
+      "library:bell-service-ding"
+    ],
+    "align": "peak",
+    "db": -6
+  },
+  "error": {
+    "files": [
+      "library:wrong-answer",
+      "library:buzzer-fail"
+    ],
+    "align": "peak",
+    "db": -8
+  },
+  "swipe": {
+    "files": [
+      "library:swipe-fast-zoom",
+      "library:transition-tech-slide",
+      "library:air-zoom-vacuum"
+    ],
+    "align": "peak",
+    "db": -8
+  },
+  "whoosh": {
+    "files": [
+      "library:whoosh-small-sweep",
+      "library:whoosh-short-sweep"
+    ],
+    "align": "peak",
+    "db": -8
+  },
+  "paper": {
+    "files": [
+      "library:card-place",
+      "library:paper-slide",
+      "library:paper-quick-move"
+    ],
+    "align": "start",
+    "db": -4
+  },
+  "mark": {
+    "files": [
+      "library:marker-line"
+    ],
+    "align": "start",
+    "db": -8,
+    "maxlen": 0.6
+  },
+  "clock": {
+    "files": [
+      "library:clock-tick-single",
+      "library:clock-wall-tick-tock"
+    ],
+    "align": "peak",
+    "db": -6
+  },
+  "tapeStop": {
+    "files": [
+      "library:tape-stop-slowdown"
+    ],
+    "align": "start",
+    "db": -6
+  },
+  "boom": {
+    "files": [
+      "library:drum-deep-impact",
+      "library:hit-futuristic-bass",
+      "library:falling-hit"
+    ],
+    "align": "peak",
+    "db": -4
+  },
+  "riserShort": {
+    "files": [
+      "library:riser-short-stutter",
+      "library:riser-synth",
+      "library:riser-suspense-swell"
+    ],
+    "align": "peak",
+    "db": -10
+  },
+  "flash": {
+    "files": [
+      "library:shutter-digital",
+      "library:shutter-hard-click",
+      "library:camera-autofocus"
+    ],
+    "align": "peak",
+    "db": -5
+  },
+  "glitchHit": {
+    "files": [
+      "library:glitch-rewind-transition",
+      "library:glitch-crackles",
+      "library:glitch-static"
+    ],
+    "align": "peak",
+    "db": -7
+  },
+  "typeSoft": {
+    "files": [
+      "library:keyboard-typing",
+      "library:laptop-typing"
+    ],
+    "align": "start",
+    "db": -15,
+    "_note": "pause-her correction screens: a soft keyboard bed under the typing (cue len = the typing time)"
+  },
+  "mouseClick": {
+    "files": [
+      "library:click-classic"
+    ],
+    "align": "peak",
+    "db": -6,
+    "note": "a real mouse click (Mixkit #1117): the Subscribe press on the drawn ending (outroCard)"
+  }
+}

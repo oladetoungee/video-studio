@@ -1,0 +1,21 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../lib/oa.css"><style>
+.hd{right:40px;top:36px;font-size:150px;text-align:right;color:#fff;line-height:.88}
+.hd .serif{font-size:110px;display:block;text-transform:none;line-height:1}
+.cal{position:absolute;left:34px;top:250px;width:560px;background:#EFE7D8;color:#16110D;padding:18px 20px 20px;rotate:-4deg;box-shadow:0 24px 40px rgba(0,0,0,.45)}
+.cal .m{font:400 64px/1 'Anton';color:var(--accent);letter-spacing:.01em}
+.cal .g{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-top:10px}
+.cal .g b{font:600 15px/1 'Mono';color:#7A6E62;text-align:center;padding-bottom:4px}
+.cal .g span{position:relative;height:56px;border-top:2px solid #CFC5B2;font:700 22px/1 'Manrope';padding:5px 0 0 6px}
+.cal .g span.x:after{content:"";position:absolute;left:-2px;top:-4px;width:56px;height:52px;border:4px solid var(--accent);border-radius:50%;rotate:-8deg}
+.cal img{position:absolute;filter:drop-shadow(0 6px 8px rgba(0,0,0,.35))}
+</style></head><body><div class="t">
+<div class="scene nat" data-move="photo"><img class="bg" data-img="bg" alt=""><div class="wash"></div><div class="dim"></div><img class="me-c" data-img="me" alt=""></div>
+<div class="hd z3 shadow-t" data-k="hd"></div>
+<div class="cal z4" data-move="calendar"><div class="m" data-k="month"></div><div class="g" id="g"></div></div>
+</div><script src="../../lib/bind.js"></script></body></html>
+<script>
+const g=document.getElementById('g'); 'MTWTFSS'.split('').forEach(d=>{const b=document.createElement('b');b.textContent=d;g.appendChild(b)});
+for(let i=0;i<3;i++) g.appendChild(document.createElement('span'));
+const mark={14:'key',17:'padlock',19:'robot',21:'elephant'};
+for(let d=1; d<=31; d++){const s=document.createElement('span'); s.textContent=d; if(mark[d]) {s.className='x'; const im=document.createElement('img'); im.src='../../assets/draw/'+mark[d]+'.svg'; im.style.cssText= mark[d]==='key'?'width:90px;left:4px;top:14px;rotate:-20deg':mark[d]==='elephant'?'width:86px;left:0px;top:8px':'width:52px;left:22px;top:2px'; s.appendChild(im);} g.appendChild(s);}
+</script>

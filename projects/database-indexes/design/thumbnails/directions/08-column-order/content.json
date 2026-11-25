@@ -1,0 +1,24 @@
+{
+  "direction": "Composite index as code: an index on (last_name, first_name); a search by surname ticked green, a search by first name only crossed red (usually not used; BRIEF). Her own names (Okafor, Ada). Round 2: one prop only, closed-mouth thinking frame, code 34 px. Round 3: the cross now says \"usually\" (PostgreSQL 18 and MySQL 8 skip scan can sometimes help).",
+  "concept": "T05",
+  "thumbnail_text": "Wrong column order?",
+  "title": "Composite Index Explained: Why Column Order Matters",
+  "titles": [
+    "Composite Index Explained: Why Column Order Matters",
+    "Database Index Types: Which One Should You Use?",
+    "2 Database Index Mistakes (and a Postgres Gotcha)"
+  ],
+  "text": {
+    "a": "Wrong",
+    "b": "<span class=\"mark\">column order?</span>",
+    "code": "INDEX (last_name, first_name)",
+    "q1": "WHERE last_name = 'Okafor'",
+    "q2": "WHERE first_name = 'Ada' <span style=\"color:#9AA0AA\">(usually)</span>"
+  },
+  "images": {
+    "scene": "../../assets/scene/f_268.7.jpg"
+  },
+  "frame": "4:28.7 (chin on hand, thinking)",
+  "vars": {},
+  "scores": "final gate (round 4): A topic/click 4/6 · B pair 8 · C taste 6"
+}

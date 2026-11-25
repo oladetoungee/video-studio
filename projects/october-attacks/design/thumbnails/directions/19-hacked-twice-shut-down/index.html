@@ -1,0 +1,20 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../lib/oa.css"><style>
+.kick{position:absolute;left:50px;top:34px;font:700 52px/1 'Mono';letter-spacing:.06em;color:var(--accent);text-transform:uppercase}
+.hd{left:46px;top:104px;font-size:138px;line-height:.92;color:var(--fg)}
+.rack{position:absolute;left:770px;top:60px;width:380px;height:660px;background:#2A221C;border-radius:16px 16px 0 0;padding:26px 22px;box-shadow:inset 0 0 0 6px #3A3029}
+.u{height:64px;background:#1A1410;border-radius:6px;margin-bottom:14px;position:relative}
+.u:before{content:"";position:absolute;left:18px;top:26px;width:12px;height:12px;border-radius:50%;background:#4A3F35}
+.u:after{content:"";position:absolute;left:46px;right:18px;top:20px;height:24px;background:repeating-linear-gradient(90deg,#2E2620 0 10px,#1A1410 10px 16px)}
+.sign{position:absolute;left:720px;top:250px;width:470px;padding:26px 0 22px;background:#FFFDF6;text-align:center;font:400 104px/1 'Marker';color:#C8320C;rotate:-6deg;box-shadow:0 20px 34px rgba(0,0,0,.5)}
+.tape{width:110px;height:36px}.ta{left:740px;top:236px;rotate:-30deg}.tb{left:1090px;top:226px;rotate:24deg}
+.tok{position:absolute;left:840px;top:470px;rotate:8deg;background:var(--accent);color:#16110D;padding:14px 22px 14px 44px;border-radius:8px 30px 30px 8px;font:700 30px/1.15 'Mono';box-shadow:0 14px 24px rgba(0,0,0,.45);white-space:nowrap}
+.tok:before{content:"";position:absolute;left:16px;top:50%;width:14px;height:14px;margin-top:-7px;border-radius:50%;background:#16110D}
+.clip{left:46px;top:500px;width:600px;rotate:-2deg;padding:6px}
+.clip .cr{font-size:15px}
+</style></head><body><div class="t">
+<div class="kick z3" data-k="kick"></div><div class="hd z3" data-k="hd"></div>
+<div class="rack z1" data-move="server"><div class="u"></div><div class="u"></div><div class="u"></div><div class="u"></div><div class="u"></div><div class="u"></div><div class="u"></div><div class="u"></div></div>
+<div data-move="sign"><div class="sign z3" data-k="sign"></div><div class="tape ta z4"></div><div class="tape tb z4"></div></div>
+<div class="tok z4" data-move="token" data-k="token"></div>
+<div class="clip z3" data-move="headline"><img data-img="clip" alt=""><div class="cr" data-k="credit"></div></div>
+</div><script src="../../lib/bind.js"></script></body></html>

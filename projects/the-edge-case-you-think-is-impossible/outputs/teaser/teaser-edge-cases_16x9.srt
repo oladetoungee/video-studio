@@ -1,0 +1,291 @@
+1
+00:00:00,023 --> 00:00:01,593
+Real users double-click,
+
+2
+00:00:01,593 --> 00:00:02,743
+like ta-ta-ta-ta-ta-ta-ta.
+
+3
+00:00:02,997 --> 00:00:03,847
+They click a lot.
+
+4
+00:00:03,847 --> 00:00:05,807
+Real users open different tabs.
+
+5
+00:00:05,807 --> 00:00:08,147
+Real users network drop halfway.
+
+6
+00:00:08,147 --> 00:00:09,287
+Real users
+
+7
+00:00:09,287 --> 00:00:11,447
+leave the page open for two hours,
+
+8
+00:00:11,447 --> 00:00:13,247
+and they go and then they come back.
+
+9
+00:00:13,247 --> 00:00:14,587
+And they're not doing anything strange.
+
+10
+00:00:14,587 --> 00:00:16,420
+They are just being users.
+
+11
+00:00:16,420 --> 00:00:17,860
+someone is going to report an issue.
+
+12
+00:00:17,860 --> 00:00:19,343
+And it's going to be
+
+13
+00:00:19,343 --> 00:00:21,413
+exactly that edge case that you never thought
+
+14
+00:00:21,413 --> 00:00:22,533
+of.
+
+15
+00:00:22,963 --> 00:00:24,513
+One of the most common edge cases in
+
+16
+00:00:24,513 --> 00:00:25,133
+production
+
+17
+00:00:25,133 --> 00:00:26,833
+is the duplicate submission.
+
+18
+00:00:26,833 --> 00:00:27,553
+If, for example,
+
+19
+00:00:27,553 --> 00:00:28,653
+in an online shop,
+
+20
+00:00:28,653 --> 00:00:30,613
+someone clicks place order,
+
+21
+00:00:30,613 --> 00:00:32,053
+and maybe the page
+
+22
+00:00:32,053 --> 00:00:33,133
+feels a little slow,
+
+23
+00:00:33,133 --> 00:00:34,433
+they click it again.
+
+24
+00:00:34,433 --> 00:00:36,453
+Now our server gets
+
+25
+00:00:36,453 --> 00:00:37,053
+two requests,
+
+26
+00:00:37,053 --> 00:00:38,953
+and it creates two orders.
+
+27
+00:00:38,953 --> 00:00:40,513
+And if we charge on each order,
+
+28
+00:00:40,513 --> 00:00:42,553
+you can charge the user twice.
+
+29
+00:00:42,673 --> 00:00:44,553
+Another common edge case in production is a
+
+30
+00:00:44,553 --> 00:00:45,233
+race condition.
+
+31
+00:00:45,233 --> 00:00:46,913
+A race condition is when two things happen at
+
+32
+00:00:46,913 --> 00:00:47,773
+the same time.
+
+33
+00:00:47,773 --> 00:00:49,683
+And your code just assume that they would
+
+34
+00:00:49,683 --> 00:00:51,217
+happen one after the other.
+
+35
+00:00:51,217 --> 00:00:51,787
+For example,
+
+36
+00:00:51,787 --> 00:00:53,237
+in our online shop,
+
+37
+00:00:53,237 --> 00:00:56,020
+say we have one item left in stock,
+
+38
+00:00:56,020 --> 00:00:59,260
+two people click buy in the exact same second,
+
+39
+00:00:59,320 --> 00:01:01,430
+both requests check the stock,
+
+40
+00:01:01,430 --> 00:01:03,040
+both see one item left,
+
+41
+00:01:03,040 --> 00:01:04,530
+both create an order,
+
+42
+00:01:04,530 --> 00:01:06,120
+and now we have sold an item that we
+
+43
+00:01:06,120 --> 00:01:07,540
+do not have.
+
+44
+00:01:08,060 --> 00:01:08,780
+In 2016,
+
+45
+00:01:08,780 --> 00:01:10,880
+the BBC wrote about a woman called Jennifer
+
+46
+00:01:10,880 --> 00:01:11,673
+Null.
+
+47
+00:01:11,673 --> 00:01:13,673
+When Jennifer Null tries to buy a plane
+
+48
+00:01:13,673 --> 00:01:14,883
+ticket, most websites
+
+49
+00:01:14,883 --> 00:01:17,143
+tell her that she has left the surname field
+
+50
+00:01:17,143 --> 00:01:17,853
+blank.
+
+51
+00:01:17,853 --> 00:01:19,173
+Her surname is Null.
+
+52
+00:01:19,173 --> 00:01:21,283
+The website sees the name Null and treats it
+
+53
+00:01:21,283 --> 00:01:22,963
+as empty.
+
+54
+00:01:23,040 --> 00:01:25,520
+Another edge case that can cause issues:
+
+55
+00:01:25,520 --> 00:01:27,233
+time zones and daylight saving.
+
+56
+00:01:27,233 --> 00:01:28,843
+On the 29th of March,
+
+57
+00:01:28,843 --> 00:01:31,263
+the clocks in Tallinn jump from 3 a.m.
+
+58
+00:01:31,263 --> 00:01:32,133
+straight to 4 a.m.
+
+59
+00:01:32,133 --> 00:01:33,513
+So 3:30
+
+60
+00:01:33,513 --> 00:01:34,833
+that morning never happened.
+
+61
+00:01:34,833 --> 00:01:37,473
+Now imagine our online shop sends a daily
+
+62
+00:01:37,473 --> 00:01:38,770
+sales report at 3:30,
+
+63
+00:01:38,770 --> 00:01:40,293
+Tallinn time.
+
+64
+00:01:40,293 --> 00:01:41,893
+On one day of the year,
+
+65
+00:01:41,893 --> 00:01:42,503
+that
+
+66
+00:01:42,503 --> 00:01:43,573
+job would not run.
+
+67
+00:01:43,573 --> 00:01:45,713
+You can't protect your app from every single
+
+68
+00:01:45,713 --> 00:01:46,913
+possible edge case
+
+69
+00:01:46,913 --> 00:01:48,483
+because you can't even predict every single
+
+70
+00:01:48,483 --> 00:01:49,993
+one. If you want to wait till you predict
+
+71
+00:01:49,993 --> 00:01:51,283
+every single one,
+
+72
+00:01:51,283 --> 00:01:52,633
+you probably wouldn't ship anything.
+
+73
+00:01:52,633 --> 00:01:54,433
+What do we do about this?

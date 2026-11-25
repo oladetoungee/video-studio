@@ -1,0 +1,32 @@
+{
+  "direction": "Photo background, a photo version of kit T9: her room washed night-brown, she in colour with palms up in the middle; on both sides a wall of small website tiles, many turned red; a flat robot (the AI agents) and a price tag '$50 each' marked as the researcher's estimate. References: viral 4 (diagram of the idea beside her), viral 1 (objects around the person).",
+  "thumbnail_text": "AI AGENTS HACKED 100+ SITES",
+  "titles": [
+    "AI Hacking News: One Hacker, AI Agents, 100+ Companies",
+    "PHP2Shell Explained: The PHP Flaw and October's Other Hacks"
+  ],
+  "title": "AI Hacking News: One Hacker, AI Agents, 100+ Companies",
+  "kind": "photo",
+  "text": {
+    "hd": "AI agents hacked<br><span class=\"acc\">100+ sites</span>",
+    "price": "$50 per hack",
+    "pricenote": "researcher's estimate"
+  },
+  "images": {
+    "bg": "../../assets/scene/gbemi-176.6.jpg",
+    "me": "../../assets/scene/gbemi-176.6-person.png",
+    "robot": "../../assets/draw/robot.svg"
+  },
+  "vars": {
+    "--ground": "#16110D",
+    "--fg": "#EFE7D8",
+    "--accent": "#F2541B",
+    "--wash": "#6E5A48",
+    "--dim": "rgba(22,17,13,.55)",
+    "--sc": "1.0",
+    "--sc-x": "0px",
+    "--sc-y": "0px"
+  },
+  "scores": "cold critic R1 6.5 · R2 6.5",
+  "recommended": false
+}

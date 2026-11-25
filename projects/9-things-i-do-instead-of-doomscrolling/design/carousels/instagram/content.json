@@ -1,0 +1,197 @@
+{
+  "_help": "Edit text here (or in the studio), then run: node shared/build.mjs instagram (from design/carousels). Markup: *word* = the orange dauber behind a word, \n = line break. Item slides fill the little card in the footer.",
+  "deck": "instagram",
+  "width": 1080,
+  "height": 1350,
+  "accent": "#FF6A1A",
+  "docTitle": "9 things I do instead of doomscrolling (Instagram)",
+  "slides": [
+    {
+      "layout": "cover",
+      "ground": "butter",
+      "title": "9 things I do instead of *doomscrolling*",
+      "size": 88,
+      "sub": "Easy ones, because we usually scroll when we're tired.",
+      "squares": [
+        "Read",
+        "Be bored",
+        "Talk to people",
+        "Make friends",
+        "New hobby",
+        "Long videos",
+        "Move your body",
+        "Pray, journal",
+        "Call your people"
+      ],
+      "daubed": 1,
+      "cardW": 920,
+      "cardH": 480
+    },
+    {
+      "layout": "statement",
+      "ground": "ink",
+      "label": "Why it's so hard to stop",
+      "title": "Your feed has no *end*",
+      "size": 120,
+      "body": "A book gives you the end of a chapter and a show gives you the end of an episode. Infinite scroll on Instagram or TikTok has neither, so your brain never gets a natural stopping cue.",
+      "source": "Source: Rixen et al., 2023",
+      "photo": {
+        "img": "night-phone.jpg",
+        "h": 250,
+        "w": 600,
+        "r": -3,
+        "side": "left",
+        "pos": "50% 20%",
+        "gap": 60
+      }
+    },
+    {
+      "layout": "statement",
+      "ground": "card",
+      "label": "My one rule",
+      "title": "Replace it with something *easy*",
+      "size": 96,
+      "body": "For most of us, doomscrolling is what we do when we're tired, or when we don't want to do something more difficult. If the new habit takes too much effort, you'll end up back on your phone.",
+      "photo": {
+        "img": "reading-sofa.jpg",
+        "h": 330,
+        "w": 640,
+        "r": 3,
+        "gap": 70
+      }
+    },
+    {
+      "layout": "photoband",
+      "ground": "butter",
+      "n": "01",
+      "title": "Read",
+      "size": 96,
+      "body": "If I'm going out, you'll barely see me without a book. I noticed I picked up my phone every time I ate, so now I read while I eat.",
+      "photo": {
+        "img": "read-eat.jpg",
+        "pos": "50% 45%"
+      },
+      "bandH": 760
+    },
+    {
+      "layout": "item",
+      "ground": "card",
+      "n": "02",
+      "title": "Let yourself be *bored*",
+      "body": "Try it in small places, like waiting for your kettle to boil or standing at a bus stop. It feels uncomfortable at first, and then you get okay with just being bored.",
+      "photo": {
+        "img": "kettle.jpg",
+        "h": 250,
+        "w": 620,
+        "r": -3,
+        "side": "left",
+        "gap": 60
+      }
+    },
+    {
+      "layout": "photoband",
+      "ground": "butter",
+      "n": "03",
+      "title": "Talk to people",
+      "size": 84,
+      "body": "It can be small talk with someone who isn't even a friend. I'll take awkward talking with people over scrolling on social media any time, any day.",
+      "photo": {
+        "img": "coffee-talk.jpg",
+        "pos": "50% 40%"
+      }
+    },
+    {
+      "layout": "quote",
+      "ground": "ink",
+      "n": "04",
+      "title": "Make friends as an *adult*",
+      "size": 84,
+      "quote": "Our parents at the school gate: \"My child is going to this school, your child is going to this school.\" Boom, friends.",
+      "qsize": 54,
+      "body": "That's how our parents' generation in Nigeria made friends. I think we can be a bit more intentional about it too."
+    },
+    {
+      "layout": "item",
+      "ground": "card",
+      "n": "05",
+      "title": "Pick up something *new*",
+      "body": "This summer I learned to ride a bike. I also hunt for bags at thrift stores now, and I'm still failing at banana bread. It doesn't have to make money.",
+      "photo": {
+        "img": "thrift.jpg",
+        "h": 270,
+        "w": 640,
+        "r": -2,
+        "gap": 60
+      }
+    },
+    {
+      "layout": "photoband",
+      "ground": "card",
+      "n": "06",
+      "title": "Long-form, on purpose",
+      "size": 80,
+      "body": "This one can still be on a screen. Watch a long YouTube video or read a long article, and give it your attention instead of leaving it on in the background.",
+      "photo": {
+        "img": "laptop-night.jpg",
+        "pos": "50% 55%"
+      }
+    },
+    {
+      "layout": "photoband",
+      "ground": "card",
+      "n": "07",
+      "title": "Do something *physical*",
+      "size": 66,
+      "body": "Go for a walk without your phone, or do ten push-ups when you want to pick it up. I'm very physically lazy, but I've tried it a few times and it works.",
+      "photo": {
+        "img": "pushups.jpg",
+        "pos": "50% 60%"
+      },
+      "bandH": 540
+    },
+    {
+      "layout": "item",
+      "ground": "butter",
+      "n": "08",
+      "title": "Pray, then write it down",
+      "body": "Even a few minutes of prayer or meditation in the time you'd have spent scrolling. Writing doesn't have to be profound. A brain dump is enough.",
+      "photo": {
+        "img": "notebook.jpg",
+        "h": 260,
+        "w": 620,
+        "r": 2,
+        "side": "left",
+        "gap": 60
+      }
+    },
+    {
+      "layout": "item",
+      "ground": "ink",
+      "n": "09",
+      "title": "Call your *people*",
+      "body": "Call your mom, your dad, your siblings, your friends. Social media can never beat the genuine connection you get from the people in your life.",
+      "photo": {
+        "img": "call.jpg",
+        "h": 360,
+        "w": 660,
+        "r": -3,
+        "gap": 60
+      }
+    },
+    {
+      "layout": "end",
+      "ground": "butter",
+      "title": "Which one would you try *first*?",
+      "size": 100,
+      "body": "I made a full video about all nine and why the feed is so hard to put down.",
+      "where": "Full video on YouTube",
+      "handle": "@WithGbemi",
+      "polaroid": {
+        "img": "gbemi-headshot.jpg"
+      },
+      "polY": 700,
+      "polX": 620,
+      "blockGap": 90
+    }
+  ]
+}

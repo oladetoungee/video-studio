@@ -1,0 +1,195 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face { font-family: Plex; src: url(../_fonts/IBMPlexSans.ttf); font-weight: 100 700; font-stretch: 85% 100%; }
+@font-face { font-family: PlexMono; src: url(../_fonts/IBMPlexMono-Regular.ttf); font-weight: 400; }
+@font-face { font-family: PlexMono; src: url(../_fonts/IBMPlexMono-SemiBold.ttf); font-weight: 600; }
+:root { --bg: #0E1013; --ink: #ECEAE4; --dim: #7A808A; --line: #2C313A; --panel: #15181D; --acc: #FFC53D; }
+html, body { margin: 0; background: var(--bg); }
+#stage { position: relative; overflow: hidden; background-color: var(--bg); background-image: repeating-linear-gradient(0deg, #181B20 0 2px, transparent 2px 60px), repeating-linear-gradient(90deg, #181B20 0 2px, transparent 2px 60px); color: var(--ink); font-family: Plex; }
+.mono { font-family: PlexMono; }
+</style></head><body>
+<div id="stage"></div>
+<script src="../_tools/kit.js"></script>
+<script>
+// A · QUERY PLAN: a Manim-style diagram film. Off-black ground, hairline strokes that draw themselves, ONE yellow = the path the query takes.
+const C = { bg: '#0E1013', ink: '#ECEAE4', dim: '#7A808A', line: '#2C313A', panel: '#15181D', acc: '#FFC53D', accInk: '#0E1013' };
+const P = PORTRAIT;
+function label(root, x, y, txt, size = 22, color = C.dim, extra = {}) {
+  return el('div', Object.assign({ left: x + 'px', top: y + 'px', font: `400 ${size}px PlexMono`, letterSpacing: '0.04em', color, whiteSpace: 'pre' }, extra), txt, root);
+}
+
+// ---------------- Scene 1 (0-10 s): the search walks down a B-tree (motion test 0-8 s) ----------------
+scene('tree', 0, 10, (root, S) => {
+  // layout in a 1920x1080 design space; portrait scales it into the middle band
+  const g = el('div', { left: 0, top: 0, width: W + 'px', height: H + 'px', transformOrigin: '0 0' }, '', root);
+  S.g = g;
+  const s = svg(g);
+  S.s = s;
+  const CW = V(150, 118), CH = 66, LW = V(118, 100);
+  const nodes = [];
+  function node(cx, y, keys, cw, lvl) {
+    const w = keys.length * cw, x0 = cx - w / 2;
+    const r = sv(s, 'rect', { x: x0, y, width: w, height: CH, fill: 'none', stroke: C.ink, 'stroke-width': 2.5 });
+    const divs = keys.slice(1).map((k, i) => sv(s, 'line', { x1: x0 + (i + 1) * cw, y1: y, x2: x0 + (i + 1) * cw, y2: y + CH, stroke: C.ink, 'stroke-width': 2.5 }));
+    const cells = keys.map((k, i) => sv(s, 'rect', { x: x0 + i * cw + 5, y: y + 5, width: cw - 10, height: CH - 10, fill: C.acc, opacity: 0 }));
+    const txt = keys.map((k, i) => sv(s, 'text', { x: x0 + i * cw + cw / 2, y: y + CH / 2 + 9, 'text-anchor': 'middle', fill: C.ink, 'font-family': 'PlexMono', 'font-size': 27 }, k));
+    const ptr = keys.map((k, i) => i).concat([keys.length]).map(i => [x0 + i * cw, y + CH]);
+    const n = { cx, y, w, x0, keys, r, divs, cells, txt, ptr, lvl };
+    nodes.push(n); return n;
+  }
+  const Y0 = V(260, 540), Y1 = V(450, 720), Y2 = V(640, 900);
+  const bx = V([500, 960, 1420], [180, 540, 900]), lx = V([250, 520, 790], [165, 405, 645]);
+  const R = node(V(960, 540), Y0, ['dave', 'mia'], CW, 0);
+  const B = [node(bx[0], Y1, ['alice', 'carl'], CW, 1), node(bx[1], Y1, ['frank', 'jon'], CW, 1), node(bx[2], Y1, ['omar', 'tom'], CW, 1)];
+  const L = [node(lx[0], Y2, ['aaron', 'ada'], LW, 2), node(lx[1], Y2, ['alice', 'bob'], LW, 2), node(lx[2], Y2, ['carl', 'cole'], LW, 2)];
+  const edges = [];
+  function edge(a, i, b, bx) { const [x, y] = a.ptr[i]; const p = sv(s, 'path', { d: `M${x} ${y} L${bx} ${b.y}`, fill: 'none', stroke: C.dim, 'stroke-width': 2 }); edges.push({ p, lvl: a.lvl }); return p; }
+  R.e = [0, 1, 2].map(i => edge(R, i, B[i], bx[i]));
+  B[0].e = [0, 1, 2].map(i => edge(B[0], i, L[i], lx[i]));
+  // the other branches end in stubs ("...more leaves")
+  const stubs = [];
+  for (const b of [B[1], B[2]]) for (let i = 0; i < 3; i++) { const [x, y] = b.ptr[i]; const p = sv(s, 'path', { d: `M${x} ${y} L${x + (i - 1) * 30} ${y + 70}`, fill: 'none', stroke: C.line, 'stroke-width': 2, 'stroke-dasharray': '6 7' }); stubs.push(p); }
+  const more = sv(s, 'text', { x: V(1420, 875), y: Y1 + 170, 'text-anchor': 'middle', fill: C.dim, 'font-family': 'PlexMono', 'font-size': 22 }, '… more leaves');
+  // yellow path overlays (drawn as the search walks)
+  const yp1 = sv(s, 'path', { d: `M${R.ptr[0][0]} ${R.ptr[0][1]} L${bx[0]} ${Y1}`, fill: 'none', stroke: C.acc, 'stroke-width': 5 });
+  const yp2 = sv(s, 'path', { d: `M${B[0].ptr[1][0]} ${B[0].ptr[1][1]} L${lx[1]} ${Y2}`, fill: 'none', stroke: C.acc, 'stroke-width': 5 });
+  // the row in the table that bob's entry points to (illustrative)
+  const rowY = V(830, 1080);
+  const ptr = sv(s, 'path', { d: `M${L[1].x0 + LW * 1.5} ${Y2 + CH} L${L[1].x0 + LW * 1.5} ${rowY}`, fill: 'none', stroke: C.acc, 'stroke-width': 4, 'stroke-dasharray': '2 0' });
+  const row = sv(s, 'rect', { x: V(200, 90), y: rowY, width: 900, height: 64, fill: C.panel, stroke: C.line, 'stroke-width': 2 });
+  const rowHi = sv(s, 'rect', { x: V(200, 90), y: rowY, width: 900, height: 64, fill: 'none', stroke: C.acc, 'stroke-width': 4, opacity: 0 });
+  const rowTx = sv(s, 'text', { x: V(228, 118), y: rowY + 42, fill: C.ink, 'font-family': 'PlexMono', 'font-size': 26 }, 'row 48,213 │ bob@email.com │ Bob │ Tartu');
+  const rowLb = sv(s, 'text', { x: V(200, 90), y: rowY - 14, fill: C.dim, 'font-family': 'PlexMono', 'font-size': 20, 'letter-spacing': '1' }, 'TABLE  users');
+  // the query token
+  const chip = sv(s, 'g', {});
+  sv(chip, 'rect', { x: -70, y: -26, width: 140, height: 52, fill: C.acc });
+  sv(chip, 'text', { x: 0, y: 10, 'text-anchor': 'middle', fill: C.accInk, 'font-family': 'PlexMono', 'font-size': 28, 'font-weight': 600 }, 'bob');
+  Object.assign(S, { nodes, R, B, L, edges, stubs, more, yp1, yp2, ptr, row, rowHi, rowTx, rowLb, chip, CH });
+  // code line (top)
+  S.code = el('div', { left: '120px', top: '96px', font: '400 38px PlexMono', color: C.ink, whiteSpace: 'pre' }, '', root);
+  S.ctext = document.createTextNode(''); S.code.appendChild(S.ctext);
+  S.caret = el('span', { position: 'relative', display: 'inline-block', width: '18px', height: '40px', background: C.acc, verticalAlign: '-6px', marginLeft: '2px' }, '', S.code);
+  // readout (her comparisons)
+  S.read = [['bob < dave', 'go left'], ['bob > alice', 'right of alice'], ['bob = bob', 'found']].map((r, i) => {
+    const d = el('div', { left: V(1250, 90) + 'px', top: V(640 + i * 64, 1180) + 'px', fontSize: V(32, 40) + 'px', font: '400 32px PlexMono', color: C.ink, whiteSpace: 'pre' }, `<span style="color:${C.dim}">${i + 1}  </span>${r[0].padEnd(12)}<span style="color:${C.acc}">${r[1]}</span>`, g);
+    return d;
+  });
+  S.levels = el('div', { left: V(1250, 90) + 'px', top: V(850, 1620) + 'px', font: '400 30px PlexMono', color: C.dim, letterSpacing: '0.04em', whiteSpace: 'pre' }, '', g);
+  S.cap = label(root, P ? 60 : 120, P ? 1270 : 916, 'Illustration · real nodes hold hundreds of keys\nExample after Sergey Egorenkov, Medium', P ? 30 : 32, C.dim, { lineHeight: 1.3 });
+  if (P) { set(S.code, { left: '60px', top: '370px', font: '400 34px PlexMono', lineHeight: '1.4' }); }
+}, (t, S) => {
+  // layout
+  const push = 1 + 0.025 * eio(t, 0, 8);
+  if (P) set(S.g, { transform: `translate(${540 * (1 - push)}px, ${900 * (1 - push)}px) scale(${push})` });
+  else set(S.g, { transform: `translate(${960 * (1 - push)}px, ${540 * (1 - push)}px) scale(${push})` });
+  // code type-on 0.15-1.45 s
+  const q = "SELECT * FROM users WHERE email = 'bob@email.com';"; const TQ = [0.1, 1.0];
+  const qp = P ? "SELECT * FROM users\nWHERE email = 'bob@email.com';" : q;
+  S.ctext.nodeValue = typed(qp, prog(t, TQ[0], TQ[1]));
+  S.caret.style.opacity = t < 1.2 ? 1 : 0;
+  // tree draws itself: root 1.3, level 2 at 1.55 (stagger 3 f), leaves 1.85; edges 0.12 s after their parent
+  const lvlT = [0.8, 1.05, 1.35];
+  S.nodes.forEach((n, i) => {
+    const t0 = lvlT[n.lvl] + (n.lvl ? (i % 3) * 0.1 : 0);
+    draw(n.r, ein(t, t0, 0.55)); n.divs.forEach(d => draw(d, ein(t, t0 + 0.15, 0.3)));
+    n.txt.forEach((x, k) => { const a = ein(t, t0 + 0.2 + k * 0.07, 0.3); x.setAttribute('opacity', a); x.setAttribute('transform', `translate(0 ${(1 - a) * 10})`); });
+  });
+  S.edges.forEach((e, i) => draw(e.p, ein(t, lvlT[e.lvl] + 0.18 + (i % 3) * 0.07, 0.4)));
+  S.stubs.forEach((p, i) => p.setAttribute('opacity', ein(t, 1.6 + i * 0.03, 0.3)));
+  S.more.setAttribute('opacity', ein(t, 1.9, 0.3));
+  // row + table label
+  S.row.setAttribute('opacity', ein(t, 1.8, 0.4)); S.rowTx.setAttribute('opacity', ein(t, 1.9, 0.4)); S.rowLb.setAttribute('opacity', ein(t, 1.9, 0.4));
+  // the chip walks: above root (3.0-3.45), down-left to B0 (4.2-4.75), down to leaf L1 (5.4-5.95)
+  const R = S.R, B0 = S.B[0], L1 = S.L[1];
+  const p0 = [R.cx, R.y - 52], p1 = [B0.cx, B0.y - 46], p2 = [L1.x0 + L1.w * 0.75, L1.y - 46];
+  let x = p0[0], y = p0[1] - 60 * (1 - ein(t, 3.0, 0.45));
+  const m1 = eio(t, 4.2, 0.55), m2 = eio(t, 5.4, 0.55);
+  x = lerp(x, p1[0], m1); y = lerp(y, p1[1], m1); x = lerp(x, p2[0], m2); y = lerp(y, p2[1], m2);
+  S.chip.setAttribute('transform', `translate(${x} ${y})`); S.chip.setAttribute('opacity', ein(t, 3.0, 0.2) * (1 - prog(t, 6.0, 6.25)));
+  // compare flashes: the key being compared gets a yellow outline-fill pulse; found = solid
+  const cmp = (cell, tt) => cell.setAttribute('opacity', 0.28 * ein(t, tt, 0.15) * (1 - prog(t, tt + 0.6, tt + 0.9)));
+  cmp(R.cells[0], 3.5); cmp(B0.cells[0], 4.8);
+  const found = ein(t, 6.0, 0.2); L1.cells[1].setAttribute('opacity', found);
+  L1.txt[1].setAttribute('fill', found > 0.5 ? C.accInk : C.ink); if (found > 0.5) L1.txt[1].setAttribute('font-weight', 600);
+  draw(S.yp1, ein(t, 4.2, 0.5)); draw(S.yp2, ein(t, 5.4, 0.5));
+  draw(S.ptr, ein(t, 6.3, 0.55)); S.rowHi.setAttribute('opacity', ein(t, 6.85, 0.2));
+  S.read.forEach((d, i) => { const tt = [3.6, 4.85, 6.05], a = ein(t, tt[i], 0.35) * (P && i < 2 ? 1 - prog(t, tt[i + 1] - 0.15, tt[i + 1]) : 1); set(d, { opacity: a, transform: `translateX(${(1 - a) * 24}px)` }); });
+  const lv = t < 3.5 ? 0 : t < 4.85 ? 1 : t < 6.05 ? 2 : 3;
+  S.levels.textContent = `LEVELS READ  ${lv} of 3`;
+  S.levels.style.opacity = P ? 0 : ein(t, 3.5, 0.3);
+  S.cap.style.opacity = ein(t, 2.0, 0.4);
+});
+
+// ---------------- Scene 2 (10-16 s): full table scan ----------------
+scene('scan', 10, 16, (root, S) => {
+  S.h = el('div', { left: V(120, 60) + 'px', top: V(110, 280) + 'px', font: `600 ${V(92, 96)}px Plex`, letterSpacing: '-0.02em', lineHeight: 1 }, 'Full table scan', root);
+  S.sub = el('div', { left: V(124, 64) + 'px', top: V(222, 400) + 'px', font: `400 ${V(34, 36)}px Plex`, color: C.dim, width: V(1100, 960) + 'px', lineHeight: 1.3 }, 'It checks every single row, all one million of them.', root);
+  S.code = el('div', { left: V(120, 60) + 'px', top: V(312, 520) + 'px', font: `400 ${V(32, 30)}px PlexMono`, color: C.ink, whiteSpace: 'pre' }, P ? 'SELECT * FROM books\nWHERE author_id = 42;' : 'SELECT * FROM books WHERE author_id = 42;', root);
+  const tx = V(120, 60), ty = V(400, 640), tw = V(1060, 960), rh = V(40, 44), nr = V(14, 15);
+  S.tab = el('div', { left: tx + 'px', top: ty + 'px', width: tw + 'px', height: (rh * nr) + 'px', overflow: 'hidden', borderTop: `2px solid ${C.line}`, borderBottom: `2px solid ${C.line}` }, '', root);
+  S.rows = []; for (let i = 0; i < nr + 2; i++) S.rows.push(el('div', { left: 0, width: tw + 'px', height: rh + 'px', font: `400 ${V(28, 28)}px PlexMono`, lineHeight: rh + 'px', whiteSpace: 'pre', borderBottom: `1px solid ${C.line}` }, '', S.tab));
+  S.bar = el('div', { left: (tx - 6) + 'px', top: (ty + rh * 6) + 'px', width: (tw + 12) + 'px', height: rh + 'px', border: `3px solid ${C.acc}`, boxSizing: 'border-box' }, '', root);
+  S.hd = el('div', { left: tx + 'px', top: (ty - 34) + 'px', font: '400 28px PlexMono', color: C.dim, whiteSpace: 'pre' }, 'id'.padEnd(12) + 'title'.padEnd(20) + 'author_id', root);
+  S.num = el('div', { left: V(1290, 60) + 'px', top: V(560, 1380) + 'px', font: `600 ${V(124, 120)}px PlexMono`, letterSpacing: '-0.03em' }, '', root);
+  S.of = el('div', { left: V(1296, 64) + 'px', top: V(710, 1530) + 'px', font: '400 32px PlexMono', color: C.dim }, 'rows checked / 1,000,000', root);
+  S.pb = el('div', { left: V(1296, 64) + 'px', top: V(780, 1600) + 'px', width: V(500, 950) + 'px', height: '10px', background: C.line }, '', root);
+  S.pf = el('div', { left: 0, top: 0, height: '10px', background: C.acc }, '', S.pb);
+  S.cap = label(root, V(120, 60), V(990, 1400), 'Illustration · made-up rows', 32);
+  S.rh = rh; S.nr = nr;
+}, (t, S) => {
+  S.n = Math.min(1e6, 1e6 * Math.pow(prog(t, 0.2, 5.6), 1.15));
+  const speed = 26;
+  const off = 0;
+  S.rows.forEach((r, i) => {
+    const id = Math.max(1, Math.floor(S.n) - 6) + i; const a = (hash(id) * 97 | 0) % 60 + 1; const auth = (id % 23 === 0) ? 42 : a === 42 ? 41 : a;
+    r.textContent = `${String(id).padEnd(12)}book #${String(id).padStart(6, '0')}        ${auth}`;
+    r.style.top = (i * S.rh - off) + 'px';
+    const above = i * S.rh - off < S.rh * 6;
+    r.style.color = above ? (auth === 42 ? C.acc : '#4A4F57') : C.ink;
+  });
+  const n = S.n;
+  S.num.textContent = fmt(n); S.pf.style.width = (100 * n / 1e6) + '%';
+  [S.h, S.sub, S.code].forEach((e, i) => { const a = ein(t, i * 0.08, 0.5); set(e, { opacity: a, transform: `translateY(${(1 - a) * 18}px)` }); });
+});
+
+// ---------------- Scene 3 (20-26 s): EXPLAIN, before and after the index ----------------
+scene('explain', 20, 26, (root, S) => {
+  S.h = el('div', { left: V(120, 60) + 'px', top: V(100, 370) + 'px', font: `600 ${V(76, 72)}px Plex`, maxWidth: V(1600, 760) + 'px', letterSpacing: '-0.02em', lineHeight: 1.05, width: V(1600, 960) + 'px' }, 'Put <span style="color:' + C.acc + '">EXPLAIN</span> in front of your query.', root);
+  const pan = (i, title, lines, big, means) => {
+    const x = V(120 + i * 860, 60), y = V(300, 580 + i * 420), w = V(820, 960);
+    const p = el('div', { left: x + 'px', top: y + 'px', width: w + 'px', height: V(440, 330) + 'px', background: C.panel, border: `2px solid ${C.line}`, boxSizing: 'border-box', padding: '26px 30px' }, '', root);
+    el('div', { position: 'relative', font: '400 22px PlexMono', color: C.dim, letterSpacing: '0.04em', marginBottom: '18px' }, title, p);
+    const code = el('div', { position: 'relative', font: `400 ${V(23, 25)}px PlexMono`, color: C.ink, whiteSpace: 'pre', lineHeight: 1.5 }, lines, p);
+    const b = el('div', { left: x + 'px', top: (y + V(470, 342)) + 'px', font: `600 ${V(54, 40)}px Plex`, letterSpacing: '-0.01em', whiteSpace: 'nowrap' }, big, root);
+    const m = el('div', { left: (x + 2) + 'px', left: (x + V(2, 300)) + 'px', top: (y + V(540, 350)) + 'px', font: '400 32px PlexMono', color: C.dim }, means, root);
+    return { p, b, m };
+  };
+  const q = "postgres=# EXPLAIN (COSTS OFF)\n  SELECT * FROM users\n  WHERE email = 'bob@email.com';\n\n";
+  S.a = pan(0, 'BEFORE · no index on email', q + "<b style='font-weight:600'>Seq Scan on users</b>\n  Filter: (email = 'bob@email.com'::text)", 'Seq Scan', 'reading every single row');
+  S.b = pan(1, 'AFTER · CREATE INDEX idx_email ON users (email);', q + "<b style='font-weight:600;background:" + C.acc + ";color:" + C.accInk + ";padding:0 6px;margin-left:-6px'>Index Scan using idx_email on users</b>\n  Index Cond: (email = 'bob@email.com'::text)", 'Index Scan', 'using your index');
+  S.cap = label(root, V(120, 60), V(1000, 1410), 'PostgreSQL output. MySQL: type ALL vs ref, range', 30);
+}, (t, S) => {
+  const a = ein(t, 0, 0.5); set(S.h, { opacity: a, transform: `translateY(${(1 - a) * 18}px)` });
+  [S.a, S.b].forEach((o, i) => { const k = ein(t, 0.35 + i * 1.1, 0.55); set(o.p, { opacity: k, transform: `translateY(${(1 - k) * 30}px)` }); const k2 = ein(t, 0.75 + i * 1.1, 0.45); set(o.b, { opacity: k2 }); set(o.m, { opacity: ein(t, 0.9 + i * 1.1, 0.45) }); });
+  S.cap.style.opacity = ein(t, 1.8, 0.4);
+});
+
+// ---------------- Scene 4 (30-36 s): a million checks vs about 20 comparisons ----------------
+scene('numbers', 30, 36, (root, S) => {
+  S.h = el('div', { left: V(120, 60) + 'px', top: V(120, 300) + 'px', font: `600 ${V(76, 80)}px Plex`, letterSpacing: '-0.02em', lineHeight: 1.05, width: V(1500, 960) + 'px' }, 'Finding bob in a million rows', root);
+  const row = (i, lab, val, w, col) => {
+    const y = V(380 + i * 280, 640 + i * 520);
+    const l = el('div', { left: V(120, 60) + 'px', top: y + 'px', font: '400 32px PlexMono', color: C.dim, letterSpacing: '0.03em' }, lab, root);
+    const bar = el('div', { left: V(120, 60) + 'px', top: (y + 56) + 'px', height: V(54, 60) + 'px', background: col }, '', root);
+    const v = el('div', { left: V(120, 60) + 'px', top: (y + V(126, 136)) + 'px', font: `600 ${V(60, 64)}px Plex`, letterSpacing: '-0.01em', whiteSpace: 'nowrap' }, val, root);
+    return { l, bar, v, w, y };
+  };
+  S.r = [row(0, 'WITHOUT AN INDEX', 'up to 1,000,000 checks', V(1680, 960), '#3A3F48'), row(1, 'WITH AN INDEX', '<span style="color:' + C.acc + '">about 20</span> comparisons', 20 * V(1680, 960) / 1e6 + 6, C.acc)];
+  S.note = label(root, V(120, 60), V(960, 1380), '2^20 = 1,048,576. In a real B-tree: a few levels, 3-4 page reads.', 30);
+}, (t, S) => {
+  const a = ein(t, 0, 0.5); set(S.h, { opacity: a, transform: `translateY(${(1 - a) * 18}px)` });
+  S.r.forEach((r, i) => { const k = ein(t, 0.5 + i * 1.3, 0.75); r.bar.style.width = (r.w * k) + 'px'; set(r.l, { opacity: ein(t, 0.4 + i * 1.3, 0.3) }); set(r.v, { opacity: ein(t, 0.8 + i * 1.3, 0.4), transform: `translateY(${(1 - ein(t, 0.8 + i * 1.3, 0.4)) * 14}px)` }); });
+  S.note.style.opacity = ein(t, 3.0, 0.4);
+});
+</script></body></html>

@@ -1,0 +1,117 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Talking-head + shorts frames</title>
+<link rel="stylesheet" href="../_shared/fonts.css"></head><body>
+<script src="../_shared/clips.js"></script>
+<script src="../_shared/lib.js"></script>
+<script>
+/* Her REAL footage (frames from kit/raw-video.mov, never flipped, no retouching: only scaled / cropped around her) with
+ * each look around her. th* = 16:9 talking-head edit, s* = 9:16 shorts. Raw times in the still names. */
+const A = { g: '#CF5A36', ink: '#1A1411', red: '#FFF1DC', cream: '#FFF1DC', hot: '#FF7A45' };
+const B = { g: '#E9EBEE', ink: '#1B1F24', add: '#DDF6E3', addI: '#1A7F37', del: '#FFE4E1', delI: '#CF222E', amb: '#F2A900' };
+const CC = { pen: '#1F3A9A', red: '#D7262E' };
+/** draw her frame (1920x1080 source) so that source rect (sx,sy,sw,sh) fills (x,y,w,h) */
+function her(im, x, y, w, h, sx, sy, sw, sh) { ctx.drawImage(im, sx, sy, sw, sh, x, y, w, h); }
+/** C1 caption: heavy condensed caps (Anton), white, black outline, one key word in colour */
+function capC1(words, key, cx, y, size, col) {
+  const f = `400 ${size}px "Anton"`; const s = words.join(' '); let x = cx - tw(s, f) / 2;
+  words.forEach((w, i) => { ctx.font = f; ctx.lineJoin = 'round'; ctx.lineWidth = size * 0.16; ctx.strokeStyle = '#000'; ctx.textAlign = 'left'; ctx.textBaseline = 'alphabetic';
+    ctx.strokeText(w, x, y); txt(w, x, y, f, i === key ? col : '#FFFFFF'); x += tw(w + ' ', f); });
+}
+/** C2 caption: white Onest caps, one word on an amber box */
+function capC2(words, key, cx, y, size) {
+  const f = `800 ${size}px "Onest"`; const s = words.join(' '); let x = cx - tw(s, f) / 2;
+  words.forEach((w, i) => { const ww = tw(w, f); if (i === key) rect(x - 12, y - size * 0.86, ww + 24, size * 1.08, B.amb);
+    if (i !== key) { ctx.font = f; ctx.lineJoin = 'round'; ctx.lineWidth = size * 0.14; ctx.strokeStyle = '#000'; ctx.textAlign = 'left'; ctx.strokeText(w, x, y); }
+    txt(w, x, y, f, i === key ? B.ink : '#FFFFFF'); x += tw(w + ' ', f); });
+}
+const FD = (s) => `800 ${s}px "Barlow Condensed"`, FM = (s, w = 600) => `${w} ${s}px "Azeret Mono"`, FMM = (s, w = 500) => `${w} ${s}px "Martian Mono"`;
+const STILL = {
+  /* A · half and half: the ladder beside her. raw 0:29.6 "junior software developer is becoming a role that just doesn't exist anymore" */
+  'th1-A-half-ladder_raw29.6'() {
+    rect(0, 0, 960, 1080, A.g); her(IMG.r29, 960, 0, 960, 1080, 400, 0, 960, 1080);
+    ['JUNIOR', 'SOFTWARE', 'DEVELOPER'].forEach((l, i) => txt(l, 90, 170 + i * 104, FD(110), i === 0 ? A.red : A.ink));
+    const x = 330, w = 300, yb = 1040; rect(x - 20, 600, 20, 480, A.ink); rect(x + w, 600, 20, 480, A.ink);
+    [1, 2].forEach(i => rect(x, yb - (i + 0.5) * 170 - 11, w, 22, A.ink));
+    ctx.save(); ctx.setLineDash([18, 12]); ctx.strokeStyle = A.red; ctx.lineWidth = 4; ctx.strokeRect(x + 6, yb - 85 - 11, w - 12, 22); ctx.restore();
+    txt('JUNIOR', x + w + 50, yb - 85 + 20, FD(58), A.red);
+    capC1(['DOESN\'T', 'EXIST', 'ANYMORE'], 1, 1440, 930, 92, A.hot);
+  },
+  /* A · receipt card over her (screenshot as heading) + corner skills counter. raw 0:22.6 "...job postings on Indeed were entry level" */
+  'th2-A-receipt-over-her_raw22.6'() {
+    her(IMG.r22, 0, 0, 1920, 1080, 0, 0, 1920, 1080);
+    clipCard(0, 'ind-45', 300, 70, 1320, { hlAt: -1, pad: 26, cs: 30, creditCol: '#FFFFFF', creditFont: '"Azeret Mono"', creditBg: true });
+    capC1(['WERE', 'ENTRY', 'LEVEL'], 1, 960, 960, 96, A.hot);
+  },
+  /* B · the review screen on the wall behind her (TV / slide behind her). raw 2:55.3 "wrap the saving [in a] try-catch" */
+  'th3-B-screen-behind_raw175.3'() {
+    her(IMG.r175, 0, 0, 1920, 1080, 0, 0, 1920, 1080);
+    const x = 60, y = 90, w = 640, fs = 27, lh = fs * 1.8; rect(x - 14, y - 14, w + 28, 448, '#0F1114'); rect(x, y, w, 420, '#FFFFFF');
+    rect(x, y, w, 60, B.ink); txt('signup.js', x + 20, y + 40, FMM(26), '#FFFFFF'); txt('suggested by AI', x + w - 20, y + 40, FMM(22), '#AEB4BC', 'right');
+    const L = [['', 'async function signUp(user) {'], ['-', '  await db.insert(user)'], ['+', '  try { await db.insert(user) }'], ['+', '  catch (e) { }'], ['', '  return { ok: true }'], ['', '}']];
+    L.forEach(([k, s], i) => { const ly = y + 74 + i * lh; if (k) rect(x, ly, w, lh, k === '+' ? B.add : B.del); txt(k, x + 14, ly + lh * 0.7, FMM(fs, 700), k === '+' ? B.addI : B.delI); txt(s, x + 38, ly + lh * 0.7, FMM(fs), B.ink); if (k === '-') rect(x + 38, ly + lh * 0.5, tw(s, FMM(fs)), 3, B.delI); });
+    capC2(['WRAP', 'IT', 'IN', 'A', 'TRY-CATCH'], 4, 960, 960, 84);
+  },
+  /* B · her approval note on the wall beside her: the plan sheet, approved. raw 5:33.3 "I think it's still worth it" */
+  'th5-B-plan-on-wall_raw333.3'() {
+    her(IMG.r333, 0, 0, 1920, 1080, 0, 0, 1920, 1080);
+    const x = 60, y = 90, w = 620, fs = 34, lh = fs * 1.7; const L = [['+', 'reading code'], ['+', 'debugging'], ['+', 'fundamentals'], ['+', 'domain knowledge']];
+    const h = 64 + L.length * lh + 24; rect(x - 12, y - 12, w + 24, h + 24 + 110, '#0F1114'); rect(x, y, w, h, '#FFFFFF'); rect(x, y, w, 64, B.ink); txt('learning-to-code.md', x + 20, y + 43, FMM(28), '#FFFFFF');
+    L.forEach(([k, s], i) => { const ly = y + 76 + i * lh; rect(x, ly, w, lh, B.add); txt(k, x + 16, ly + lh * 0.7, FMM(fs, 700), B.addI); txt(s, x + 52, ly + lh * 0.7, FMM(fs), B.ink); });
+    rect(x, y + h + 6, w, 92, B.amb); txt('YOU, REVIEWING: APPROVED', x + 22, y + h + 64, FMM(30, 700), B.ink);
+    capC2(['I', 'THINK', "IT'S", 'STILL', 'WORTH', 'IT'], 4, 960, 960, 84);
+  },
+  /* C · words behind her (her matte in front): "I think it's still worth it." raw 5:33.3 */
+  'th4-C-words-on-wall_raw333.3'() {
+    her(IMG.r333, 0, 0, 1920, 1080, 0, 0, 1920, 1080);
+    const x = 60, y = 80, w = 620, h = 560; rect(x, y, w, h, '#F8F7F2'); for (let yy = y + 90; yy < y + h; yy += 76) line(x, yy, x + w, yy, '#B9CCE8', 2); line(x + 70, y, x + 70, y + h, '#E26A6A', 3);
+    txt('Focus on:', x + 92, y + 150, '700 52px "Kalam"', CC.pen);
+    ['reading code', 'debugging', 'fundamentals', 'domain knowledge'].forEach((l, i) => { const yy = y + 226 + i * 76; txt((i + 1) + '. ' + l, x + 92, yy, '700 50px "Kalam"', CC.pen);
+      ctx.save(); ctx.strokeStyle = CC.red; ctx.lineWidth = 7; ctx.lineCap = 'round'; ctx.beginPath(); ctx.moveTo(x + w - 90, yy - 16); ctx.lineTo(x + w - 72, yy); ctx.lineTo(x + w - 40, yy - 40); ctx.stroke(); ctx.restore(); });
+    capC1(['I', 'THINK', "IT'S", 'STILL', 'WORTH', 'IT'], 4, 960, 960, 92, '#7FA2FF');
+  },
+  /* SHORT SH1 (A look) · "Indeed: only 4.5% of software jobs were entry level", top title T3 (cream box, Big Shoulders),
+   * her in a 4:5 window, captions C1. Frame 1 = the hook, raw 0:08.0 "very, very, very rare" */
+  's1-A-SH1-hook_raw8.0'() {
+    rect(0, 0, 1080, 1920, A.g);
+    rect(60, 120, 960, 330, A.cream); strokeR(60, 120, 960, 330, A.ink, 4);
+    txt('INDEED: ONLY 4.5% OF', 540, 240, FD(96), A.ink, 'center'); txt('SOFTWARE JOBS WERE', 540, 330, FD(96), A.ink, 'center'); txt('ENTRY LEVEL', 540, 420, FD(96), A.g, 'center');
+    her(IMG.r8, 60, 520, 960, 1200, 432, 0, 864, 1080);
+    capC1(['VERY,', 'VERY', 'RARE'], 2, 540, 1560, 110, A.hot);
+  },
+  /* SHORT SH1 frame 2: the real page is the heading over her window (T9), raw 0:22.6 */
+  's2-A-SH1-receipt_raw22.6'() {
+    rect(0, 0, 1080, 1920, A.g);
+    clipCard(0, 'ind-45b', 60, 110, 960, { hlAt: -1, pad: 22, cs: 32, creditCol: A.ink, creditFont: '"Azeret Mono"', shadow: false });
+    txt('ONLY 4.5%', 60, 450, FD(170), A.cream);
+    her(IMG.r22, 60, 500, 960, 1200, 432, 0, 864, 1080);
+    capC1(['WERE', 'ENTRY', 'LEVEL'], 1, 540, 1580, 100, A.hot);
+  },
+  /* SHORT SH4 (B look) · half code window on top, her below; label T3 amber box; captions C2. raw 3:01.3 "the user still isn't signed up" */
+  's3-B-SH4-half_raw181.3'() {
+    rect(0, 0, 1080, 1920, B.g);
+    rect(60, 90, 960, 190, B.amb); strokeR(60, 90, 960, 190, B.ink, 4); txt('Debugging AI code: the sign-up', 540, 170, '800 58px "Onest"', B.ink, 'center'); txt('crash it "fixed"', 540, 245, '800 58px "Onest"', B.ink, 'center');
+    const x = 60, y = 330, w = 960, fs = 34, lh = fs * 1.75; rect(x, y, w, 510, '#FFFFFF'); strokeR(x, y, w, 510, B.ink, 3); rect(x, y, w, 76, B.ink); txt('signup.js', x + 24, y + 50, FMM(32), '#FFFFFF');
+    const L = [['', 'async function signUp(user) {'], ['-', '  await db.insert(user)'], ['+', '  try { await db.insert(user) }'], ['+', '  catch (e) { }'], ['', '}']];
+    L.forEach(([k, s], i) => { const ly = y + 96 + i * lh; if (k) rect(x + 3, ly, w - 6, lh, k === '+' ? B.add : B.del); if (k === '-') rect(x + 56, ly + lh * 0.5, tw(s, FMM(fs)), 3, B.delI); txt(k, x + 20, ly + lh * 0.7, FMM(fs, 700), k === '+' ? B.addI : B.delI); txt(s, x + 56, ly + lh * 0.7, FMM(fs), B.ink); });
+    rect(x, y + 540, w, 90, '#FFFFFF'); strokeR(x, y + 540, w, 90, B.ink, 3); txt('Page: no crash', x + 24, y + 597, FMM(34, 600), B.addI); txt('Signed up: 0', x + w - 24, y + 597, FMM(34, 600), B.delI, 'right');
+    her(IMG.r181, 60, 990, 960, 860, 480, 100, 960, 860); strokeR(60, 990, 960, 860, B.ink, 3);
+    capC2(['STILL', "ISN'T", 'SIGNED', 'UP'], 1, 540, 1730, 72);
+  },
+  /* SHORT SH1 in look B: label T3 (amber box), the real page as the heading, her in a 4:5 window, captions C2. raw 0:22.6 */
+  's4-B-SH1-receipt_raw22.6'() {
+    rect(0, 0, 1080, 1920, B.g);
+    rect(60, 90, 960, 190, B.amb); strokeR(60, 90, 960, 190, B.ink, 4); txt('Indeed: only 4.5% of software', 540, 170, '800 58px "Onest"', B.ink, 'center'); txt('jobs were entry level', 540, 245, '800 58px "Onest"', B.ink, 'center');
+    txt('4.5%', 60, 500, '800 200px "Onest"', B.delI);
+    clipCard(0, 'ind-45b', 60, 540, 960, { hlAt: -1, pad: 22, cs: 32, creditCol: B.ink, creditFont: '"Martian Mono"', shadow: false });
+    her(IMG.r22, 60, 760, 960, 1080, 432, 0, 864, 972); strokeR(60, 760, 960, 1080, B.ink, 3);
+    capC2(['WERE', 'ENTRY', 'LEVEL'], 1, 540, 1700, 80);
+  },
+};
+const DIR = {
+  images: { r29: '../_src/her/raw_29.6.jpg', r22: '../_src/her/raw_22.6.jpg', r175: '../_src/her/raw_175.3.jpg', r333: '../_src/her/raw_333.3.jpg', c333: '../_src/her/cut_333.3.png', r8: '../_src/her/raw_8.0.jpg', r181: '../_src/her/raw_181.3.jpg' },
+  fonts: ['400 40px "Anton"', '800 40px "Onest"', '700 40px "Kalam"', '400 40px "Instrument Serif"', '800 40px "Barlow Condensed"', '500 40px "Martian Mono"', '600 40px "Azeret Mono"'],
+  draw() {}, stills: {},
+};
+const KEYS = Object.keys(STILL); DIR.draw = (t) => { const k = KEYS[Math.round(t)]; if (k) STILL[k](); };
+KEYS.forEach((k, i) => DIR.stills[k] = { t: i });
+boot(DIR);
+</script></body></html>

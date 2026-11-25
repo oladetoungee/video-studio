@@ -1,0 +1,27 @@
+{
+  "direction": "REMAKE of viral sample 3 (\"FITNESS SALES FRAMEWORK\"): the topic in heavy black on a paper grid with a red underline, the framework as coloured boxes: the index search from her video drawn as a branching tree (dave -> left to alice, mia faded; alice -> right to bob -> his row); her on the right pointing at it. Example after Sergey Egorenkov's article. Round 2: a real branching tree (round 1 read as a linked list), closed-mouth frame. Round 3: her photo in a clean frame instead of a cut-out (halo on white); one accent (yellow path, white boxes).",
+  "concept": "REMAKE of viral sample 3",
+  "thumbnail_text": "How an index finds a row",
+  "title": "How Database Indexes Find 1 Row in a Million",
+  "titles": [
+    "How Database Indexes Find 1 Row in a Million",
+    "What Is a Database Index? (And Why Your App Needs One)",
+    "Database Indexing for Beginners: Fix Slow SQL Queries"
+  ],
+  "text": {
+    "a": "How an index",
+    "b": "finds a row",
+    "k1": "dave",
+    "k2": "alice",
+    "k5": "mia",
+    "k3": "bob",
+    "k4": "row 48,213"
+  },
+  "images": {
+    "scene": "../../assets/scene/f_448.7.jpg"
+  },
+  "sample": "3",
+  "frame": "7:28.7 (pointing up at the words, mouth closed)",
+  "vars": {},
+  "scores": "final gate (round 4): A topic/click 5/6 · B pair 7 · C taste 7"
+}

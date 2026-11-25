@@ -1,0 +1,174 @@
+/* Same Language, Different Code — Øredev 2026 deck, v2.
+   v1's motion and story, in Direction A's look: warm white, fine ink lines, Geist, sentence case,
+   one blue that means "the environment / Tallinn", one red-orange for Lagos and for things going wrong. */
+
+@font-face { font-family: 'Geist'; src: url('assets/fonts/Geist.ttf'); font-weight: 100 900; }
+@font-face { font-family: 'GeistMono'; src: url('assets/fonts/GeistMono.ttf'); font-weight: 100 900; }
+@font-face { font-family: 'Serif'; src: url('assets/fonts/InstrumentSerif-Italic.ttf'); font-style: italic; }
+/* v1 slide code names its old fonts inline; map those names to the v2 fonts so nothing falls back */
+@font-face { font-family: 'Anton'; src: url('assets/fonts/Geist.ttf'); font-weight: 100 900; }
+@font-face { font-family: 'Archivo'; src: url('assets/fonts/Geist.ttf'); font-weight: 100 900; }
+@font-face { font-family: 'DM Mono'; src: url('assets/fonts/Geist.ttf'); font-weight: 100 900; }
+@font-face { font-family: 'JB'; src: url('assets/fonts/GeistMono.ttf'); font-weight: 100 900; }
+
+:root {
+  --paper: #F6F4EF;
+  --card: #FFFFFF;
+  --ink: #141416;
+  --tomato: #FF5A36;   /* Lagos, and things going wrong */
+  --cobalt: #2B50FF;   /* the environment, Tallinn */
+  --lime: #C8D3FF;     /* soft blue: highlights and emphasis */
+  --mute: #8B877F;
+  --line: #D8D4CB;
+  --ease: cubic-bezier(.16, 1, .3, 1);
+  --back: cubic-bezier(.34, 1.36, .64, 1);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 100%; height: 100%; background: #0c0c0d; overflow: hidden; }
+body { font-family: 'Geist', system-ui, sans-serif; -webkit-font-smoothing: antialiased; cursor: none; }
+body.cursor { cursor: default; }
+
+#stage { position: absolute; left: 50%; top: 50%; width: 1920px; height: 1080px; overflow: hidden; }
+.slide { position: absolute; inset: 0; display: none; overflow: hidden; background: var(--bg); color: var(--fg); }
+.slide.cur { display: block; }
+
+/* grounds. Mostly warm white; dark for code-heavy moments; full blue only for a punchline. */
+.bg-paper, .bg-card { --bg: var(--paper); --fg: var(--ink); --sub: #77736B; --acc: var(--cobalt); --line: #D8D4CB; }
+.bg-tomato { --bg: var(--paper); --fg: var(--ink); --sub: #77736B; --acc: var(--tomato); --line: #D8D4CB; }
+.bg-lime   { --bg: #ECEFFA; --fg: var(--ink); --sub: #6E7386; --acc: var(--cobalt); --line: #CDD3E6; }
+.bg-ink    { --bg: #141416; --fg: #F2F0EB; --sub: #8E8B86; --acc: var(--lime); --line: #2E2E33; }
+.bg-cobalt { --bg: var(--cobalt); --fg: #FFFFFF; --sub: #C9D3FF; --acc: #FFFFFF; --line: rgba(255,255,255,.28); }
+html[data-theme="stage"] .bg-paper, html[data-theme="stage"] .bg-card, html[data-theme="stage"] .bg-tomato,
+html[data-theme="stage"] .bg-lime { --bg: #141416; --fg: #F2F0EB; --sub: #8E8B86; --line: #2E2E33; --card: #1E1E22; }
+
+/* ---------- type: all Geist, sentence case, tight ---------- */
+.huge { font-family: 'Geist'; font-weight: 600; line-height: 1.0; letter-spacing: -.045em; }
+.head { font-family: 'Geist'; font-weight: 600; font-size: 84px; line-height: 1.04; letter-spacing: -.04em; }
+.sub  { font-family: 'Geist'; font-weight: 400; font-size: 44px; line-height: 1.2; letter-spacing: -.02em; color: var(--sub); }
+.body { font-family: 'Geist'; font-weight: 400; font-size: 40px; line-height: 1.25; letter-spacing: -.015em; }
+.mono { font-family: 'Geist', sans-serif; font-weight: 500; font-size: 28px; letter-spacing: -.005em; color: var(--sub); }
+.serif { font-family: 'Serif', serif; font-style: italic; font-weight: 400; letter-spacing: -.01em; }
+.code { font-family: 'GeistMono', monospace; font-weight: 500; font-size: 38px; line-height: 1.5; white-space: pre; font-variant-ligatures: none; }
+.acc { color: var(--acc); }
+.red { color: var(--tomato); } .blue { color: var(--cobalt); } .lime { color: var(--lime); } .muted { color: var(--sub); }
+.bg-paper .lime, .bg-tomato .lime, .bg-lime .lime, .bg-card .lime { color: var(--cobalt); }
+.abs { position: absolute; }
+.credit { display: none; }
+
+/* ---------- motion (from v1, softer offsets) ---------- */
+[data-a] { transition-property: opacity, transform, clip-path, filter; transition-duration: .5s, .75s, .75s, .55s;
+  transition-timing-function: ease-out, var(--ease), var(--ease), var(--ease); transition-delay: var(--d, 0ms); }
+[data-a]:not(.on) { opacity: 0; }
+[data-a="up"]:not(.on)    { transform: translateY(36px); filter: blur(6px); }
+[data-a="down"]:not(.on)  { transform: translateY(-36px); filter: blur(6px); }
+[data-a="left"]:not(.on)  { transform: translateX(60px); filter: blur(6px); }
+[data-a="right"]:not(.on) { transform: translateX(-60px); filter: blur(6px); }
+[data-a="pop"]:not(.on)   { transform: scale(.8); }
+[data-a="pop"] { transition-timing-function: ease-out, var(--back), var(--ease), var(--ease); }
+[data-a="zoom"]:not(.on)  { transform: scale(1.15); filter: blur(10px); }
+[data-a="drop"]:not(.on)  { transform: translateY(-80px); }
+[data-a="drop"] { transition-timing-function: ease-out, var(--back), var(--ease), var(--ease); }
+[data-a="wipe"]:not(.on)  { opacity: 1; clip-path: inset(0 100% 0 0); }
+[data-a="wipe"].on        { clip-path: inset(0 0 0 0); }
+[data-a="wipeup"]:not(.on){ opacity: 1; clip-path: inset(100% 0 0 0); }
+[data-a="wipeup"].on      { clip-path: inset(0 0 0 0); }
+[data-a="rise"]:not(.on)  { opacity: 1; clip-path: inset(0 0 100% 0); transform: translateY(35%); }
+[data-a="rise"].on        { clip-path: inset(-20% -5% -25% -5%); }
+[data-a="blur"]:not(.on)  { filter: blur(16px); }
+[data-a="fade"] { transition-duration: .7s, .7s, .7s, .7s; }
+[data-a="type"]:not(.on), [data-a="count"]:not(.on) { opacity: 0; }
+[data-a="draw"] { opacity: 1; }
+.dimmed { opacity: .2 !important; filter: saturate(.2); transition: opacity .5s ease, filter .5s ease !important; }
+.instant, .instant *, .instant .hl::before, .instant .strike::after { transition: none !important; }
+
+@keyframes push { from { transform: scale(1); } to { transform: scale(1.06); } }
+.slide.cur .push { animation: push 26s linear both; }
+@keyframes blink { 50% { opacity: 0; } }
+.caret { display: inline-block; width: .5em; height: 1em; background: currentColor; vertical-align: -.12em; animation: blink 1.05s steps(1) infinite; }
+
+/* ---------- motifs, quieter ---------- */
+.reg, .grid { display: none; }
+.hl { position: relative; display: inline-block; z-index: 0; }
+.hl::before { content: ''; position: absolute; left: -.08em; right: -.08em; top: .1em; bottom: .02em; background: var(--hlc, var(--lime)); z-index: -1;
+  transform: scaleX(0); transform-origin: left; transition: transform .6s var(--ease); transition-delay: var(--hd, 0ms); }
+.bg-ink .hl::before { background: var(--hlc, #2A3270); }
+.hl.on::before { transform: scaleX(1); }
+.strike { position: relative; display: inline-block; }
+.strike::after { content: ''; position: absolute; left: -3%; right: -3%; top: 54%; height: .07em; background: var(--tomato); transform: scaleX(0); transform-origin: left; transition: transform .55s var(--ease); transition-delay: var(--d, 0ms); }
+.strike.on::after { transform: scaleX(1); }
+/* tiles become quiet labels: Geist, no heavy boxes */
+.tiles { display: flex; flex-wrap: wrap; gap: 10px; }
+.tile { font-family: 'Geist'; font-weight: 600; letter-spacing: -.035em; display: inline-block; padding: .04em .22em; line-height: 1.08; }
+.shot { position: absolute; background: var(--card); padding: 14px 14px 56px; border: 2px solid var(--line); }
+.shot img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.shot .cap { position: absolute; left: 14px; right: 14px; bottom: 14px; font-family: 'GeistMono'; font-size: 22px; color: var(--sub); }
+.browser { position: absolute; background: #fff; border: 2px solid var(--ink); overflow: hidden; }
+.browser .bar { height: 50px; background: #F0EEE8; border-bottom: 2px solid var(--ink); display: flex; align-items: center; gap: 10px; padding: 0 18px; font-family: 'GeistMono'; font-size: 20px; color: #77736B; }
+.browser .bar i { width: 13px; height: 13px; border: 2px solid var(--ink); border-radius: 50%; display: inline-block; }
+.browser .bar span { margin-left: 14px; }
+.browser img { display: block; width: 100%; }
+.term { position: absolute; background: #141416; color: #ECEAE4; border: 2px solid var(--fg); }
+.bg-ink .term { border-color: #3A3A40; }
+.term .bar { height: 52px; border-bottom: 1px solid #2c2c31; display: flex; align-items: center; padding: 0 22px; gap: 10px; font-family: 'GeistMono'; font-size: 20px; color: #77736B; }
+.term .bar i { width: 13px; height: 13px; border-radius: 50%; background: #3a3a40; display: inline-block; }
+.term pre { padding: 34px 42px; }
+.k { color: #FF8A6B; } .s { color: #B9C6FF; } .c { color: #77736B; } .f { color: #7FD1B9; } .n { color: #ECEAE4; }
+.lineon { background: rgba(43,80,255,.22); box-shadow: -12px 0 0 var(--cobalt); }
+.rule { height: 2px; background: var(--fg); transform-origin: left; }
+.num { font-family: 'GeistMono'; font-weight: 500; }
+
+/* the Environment Profile table */
+.prof { position: absolute; left: 140px; right: 140px; }
+.prof .row { display: grid; grid-template-columns: 470px 1fr; align-items: baseline; border-top: 2px solid var(--fg); padding: 20px 0 18px; transition: opacity .5s, filter .5s; }
+.prof .row .n { display: none; }
+.prof .row .t { font-family: 'Geist'; font-weight: 600; font-size: 54px; line-height: 1.05; letter-spacing: -.035em; }
+.prof .row .q { font-family: 'Geist'; font-weight: 400; font-size: 30px; line-height: 1.25; color: var(--sub); letter-spacing: -.01em; }
+.prof .row.forg { border-top-style: dashed; }
+.prof .row.hot .t { color: var(--acc); }
+.prof .end { border-top: 2px solid var(--fg); }
+
+/* slide number (bottom right, quiet) */
+.slide .pnum { position: absolute; left: 44px; bottom: 30px; font-family: 'Geist'; font-size: 22px; color: var(--sub); opacity: .8; z-index: 5; }
+
+/* overview grid (G) */
+#overview { position: fixed; inset: 0; background: #0b0b0c; overflow: auto; display: none; z-index: 50; padding: 30px; cursor: default; }
+#overview.open { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; align-content: start; }
+#overview .th { position: relative; aspect-ratio: 16/9; overflow: hidden; outline: 2px solid #333; cursor: pointer; }
+#overview .th.cur { outline: 4px solid var(--cobalt); }
+#overview .th .lab { position: absolute; left: 8px; bottom: 6px; font: 500 13px 'GeistMono'; color: #fff; background: rgba(0,0,0,.6); padding: 2px 6px; }
+#overview .th .inner { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; transform-origin: 0 0; pointer-events: none; }
+#blackout { position: fixed; inset: 0; background: #000; display: none; z-index: 60; }
+#blackout.on { display: block; }
+#progress { display: none; }
+
+/* ---------- practice bar (CONFIG.practice): number, go to, the script for this slide ---------- */
+#practice { position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; background: #1a1a1d; color: #ECEAE4; font-family: 'Geist'; cursor: default; display: none; }
+body.practice #practice { display: block; }
+#practice .bar { height: 46px; display: flex; align-items: center; gap: 16px; padding: 0 18px; font-size: 15px; border-top: 1px solid #2c2c31; }
+#practice .no { font-family: 'GeistMono'; font-size: 15px; color: #fff; min-width: 110px; }
+#practice .sec { color: #8E8B86; font-size: 14px; flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+#practice label { color: #8E8B86; font-size: 14px; }
+#practice input { width: 64px; background: #0f0f11; border: 1px solid #3a3a40; color: #fff; font: 500 15px 'GeistMono'; padding: 6px 8px; }
+#practice button { background: #2B50FF; color: #fff; border: 0; font: 500 14px 'Geist'; padding: 8px 14px; cursor: pointer; }
+#practice button.ghost { background: transparent; border: 1px solid #3a3a40; }
+#practice .script { display: none; height: 30vh; overflow: auto; padding: 16px 24px 24px; font-size: 19px; line-height: 1.65; color: #ECEAE4; border-top: 1px solid #2c2c31; }
+#practice.open .script { display: block; }
+#practice .script p { margin: 0 0 10px; max-width: 1100px; color: #A39F98; }
+#practice .script .clk { display: inline-block; font: 500 12px 'GeistMono'; color: #fff; background: #2B50FF; padding: 1px 6px; margin-right: 6px; vertical-align: 2px; }
+#practice .script .past { color: #6E6B66; }
+#practice .script .now { color: #fff; font-weight: 500; }
+#practice .script .fact { color: #FFB199; font-size: 16px; }
+#practice .ver { display: flex; border: 1px solid #3a3a40; }
+#practice .ver button { background: transparent; color: #8E8B86; padding: 7px 12px; }
+#practice .ver button.on { background: #ECEAE4; color: #141416; }
+
+/* presenting copy: full-screen button, only while the mouse moves, gone in full screen */
+#fsbtn { position: fixed; top: calc(16px + env(safe-area-inset-top, 0px)); right: calc(16px + env(safe-area-inset-right, 0px)); z-index: 50; background: #2B50FF; color: #fff; border: 0; font: 500 16px 'Geist'; padding: 10px 16px; cursor: pointer; opacity: 0; pointer-events: none; transition: opacity .3s; }
+body.cursor #fsbtn { opacity: 1; pointer-events: auto; }
+body.fs #fsbtn { display: none; }
+html, body { touch-action: pan-y; }
+
+/* iPad copy (CONFIG.glance): the whole script shows at once, the slide shrinks above it */
+body.glance #practice .script { height: auto; max-height: calc(100vh - 46px - 200px); padding: 14px 22px 20px; font-size: 20px; line-height: 1.5; }
+body.glance #practice .script p { max-width: none; color: #fff; }

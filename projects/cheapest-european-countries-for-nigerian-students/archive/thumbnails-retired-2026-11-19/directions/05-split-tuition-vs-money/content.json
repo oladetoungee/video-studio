@@ -1,0 +1,41 @@
+{
+  "board": "yt-16",
+  "kind": "split of 2 real photos (Pexels), no face",
+  "direction": "Copies board yt-16 (\"12:30 PM / 7:30 PM\": two real photos side by side, one bold white label at the top of each). Left: a European lecture hall, \"€0 tuition\". Right: a hand holding a €100 note, \"€11,904 to show\" (Germany: tuition is €0 at most public universities, but the visa asks you to show €11,904 a year = €992 a month, kit 7f). The before/after split is used because the topic IS a gap between two numbers.",
+  "thumbnail_text": "€0 tuition | €11,904 to show (Germany)",
+  "titles": [
+    "Free Tuition in Germany? Here's the Money You Still Need",
+    "Germany Is Free to Study In. The Visa Isn't",
+    "Tuition Free Universities in Europe Need Proof of Funds"
+  ],
+  "title": "Tuition Free Universities in Europe Need Proof of Funds",
+  "text": {
+    "a1": "€0",
+    "a2": "tuition in Germany",
+    "b1": "€11,904",
+    "b2": "to show for the visa"
+  },
+  "images": {
+    "h1": "../../assets/collage/lecture.jpg",
+    "h2": "../../assets/px/hand-100-euro.jpg"
+  },
+  "vars": {
+    "--ls": "128px",
+    "--ss": "46px",
+    "--sy": "186px",
+    "--dim": "rgba(10,10,12,0)"
+  },
+  "recommended": false,
+  "scores": "font-board round 2 (2026-11-13, fonts with their source colours; fresh cold critic, PNG alone, 4 rounds): 7/10; earlier: round 2 (2026-11-12 night, fresh cold critics, alone / with title): R1 8 / 8.5, R2 7.5 / 8, R3 7.5 / 6.5; earlier: cold rounds 1-3: 8 / 8.5, 8 / 8, 7 / 8 (with \"Germany Is Free to Study In. The Visa Isn't\")",
+  "fonts": [
+    "design-05 Anton (sand #D8CDBB on navy #17357B, as Design 368)",
+    "pair-01 Anton + Archivo"
+  ],
+  "colours": "combo-01 (Design 368: #17357B navy + #D8CDBB sand)",
+  "fontboard_note": "fontboard 2026-11-12: Archivo Black + Figtree -> Anton + Archivo; labels on navy/sand blocks instead of shadowed white",
+  "titles_before_2026_11_19": [
+    "Germany Is Free to Study In. The Visa Isn't",
+    "Tuition Free Universities in Europe Need Proof of Funds",
+    "Study in Europe for Free? What Nigerians Really Pay"
+  ]
+}

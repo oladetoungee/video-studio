@@ -1,0 +1,167 @@
+1
+00:00:01,579 --> 00:00:03,640
+if you're building an app, there's one very
+
+2
+00:00:03,640 --> 00:00:05,100
+simple question you need to ask yourself
+
+3
+00:00:05,100 --> 00:00:06,439
+before anything else
+
+4
+00:00:06,439 --> 00:00:08,799
+who is this app for, and what do they
+
+5
+00:00:08,799 --> 00:00:10,313
+actually need it for?
+
+6
+00:00:10,313 --> 00:00:12,933
+so you can have a beautiful app with a
+
+7
+00:00:12,933 --> 00:00:15,753
+beautiful interface that is a nightmare to
+
+8
+00:00:15,753 --> 00:00:18,173
+use in that case, you have a great UI, but
+
+9
+00:00:18,173 --> 00:00:18,993
+terrible UX
+
+10
+00:00:18,993 --> 00:00:21,226
+a lot of products fail because the team
+
+11
+00:00:21,226 --> 00:00:22,333
+built something that
+
+12
+00:00:22,443 --> 00:00:24,199
+maybe nobody actually needs
+
+13
+00:00:24,199 --> 00:00:25,650
+you don't want to build the wrong thing
+
+14
+00:00:25,650 --> 00:00:27,073
+building is very expensive
+
+15
+00:00:27,073 --> 00:00:28,633
+even with AI, you still spend your time and
+
+16
+00:00:28,633 --> 00:00:29,622
+your tokens
+
+17
+00:00:30,385 --> 00:00:32,086
+it is cheaper to change your idea or change
+
+18
+00:00:32,086 --> 00:00:34,381
+your sketch than it is to rebuild an app
+
+19
+00:00:34,381 --> 00:00:35,573
+that is already live
+
+20
+00:00:35,573 --> 00:00:37,824
+and doing UX research means that decisions
+
+21
+00:00:37,824 --> 00:00:40,942
+about a product come from what the users,
+
+22
+00:00:40,973 --> 00:00:42,762
+the real people, actually do
+
+23
+00:00:43,013 --> 00:00:44,213
+otherwise, they just come from a random
+
+24
+00:00:44,213 --> 00:00:45,322
+person on the team
+
+25
+00:00:46,063 --> 00:00:49,083
+what people say and what people do are often
+
+26
+00:00:49,083 --> 00:00:49,995
+very different
+
+27
+00:00:49,995 --> 00:00:51,446
+if you ask
+
+28
+00:00:51,616 --> 00:00:52,776
+someone how they use an app, they will give
+
+29
+00:00:52,776 --> 00:00:53,576
+you an answer
+
+30
+00:00:53,576 --> 00:00:55,356
+if you watch them use the app, they could
+
+31
+00:00:55,356 --> 00:00:56,850
+end up doing something completely different
+
+32
+00:00:56,850 --> 00:00:57,436
+We are human beings
+
+33
+00:00:57,436 --> 00:00:59,256
+We are just not very good at noticing our
+
+34
+00:00:59,256 --> 00:01:00,600
+own behaviours
+
+35
+00:01:00,600 --> 00:01:03,249
+but even as a small startup, some research
+
+36
+00:01:03,249 --> 00:01:05,170
+is always better than no research
+
+37
+00:01:05,259 --> 00:01:06,050
+you don't need a lab
+
+38
+00:01:06,050 --> 00:01:07,550
+talk to five people who would actually use
+
+39
+00:01:07,550 --> 00:01:09,840
+your product before you start to build
+
+40
+00:01:10,605 --> 00:01:12,113
+design doesn't start with screens
+
+41
+00:01:12,113 --> 00:01:14,226
+good design starts with people
+
+42
+00:01:15,475 --> 00:01:17,500
+will AI replace UX research?

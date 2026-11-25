@@ -1,0 +1,56 @@
+[00:00] How does one gigabyte folder gets compressed to 400 megabytes zip file?
+[00:04] And when you unzip it, you get back the complete folder.
+[00:06] So where did those 600 megabytes go?
+[00:09] Let's understand this with one small word, banana.
+[00:12] Your computer normally stores each of these letters in eight bits.
+[00:15] So six letters take 48 bits in total.
+[00:18] But if you notice, the letter A appears three times.
+[00:21] Letter N appears twice and B appears only once.
+[00:24] So the argument is that letter A appears so many times and yet we use full eight
+[00:29] bits for every time A appears.
+[00:30] What if we represent A with just zero, B with one zero and N with one one?
+[00:35] Now, if we write banana again, B becomes one zero, A will become zero,
+[00:40] N becomes one one and we continue the same way.
+[00:43] When we put these codes together,
+[00:45] the whole word becomes just nine bits instead of 48 bits.
+[00:48] And notice that we haven't deleted anything.
+[00:50] We simply found a shorter way to represent the same word.
+[00:52] Now you might ask, who decides which letter gets which code?
+[00:56] This is exactly where something called Huffman coding comes in.
+[00:59] First, we will count each letter.
+[01:00] B appears once and twice and A three times.
+[01:04] Huffman starts with the two letters which appear least number of times.
+[01:07] So in this case, B and N appear least number of times.
+[01:10] Put them together under one point.
+[01:12] Their counts add up to three.
+[01:13] So we write three above that point.
+[01:15] Now we have two groups, A with a count of three and the B and N group also with a
+[01:20] count of three. Join these under one new point at the top
+[01:23] and write six there because three plus three is six.
+[01:25] Our tree is complete.
+[01:26] A on one side and B and N sharing the other side.
+[01:29] Now label each left branch zero and each right branch as one.
+[01:33] To reach A from the top, we take one left turn, so A will get zero.
+[01:37] To reach B, we go right and then left.
+[01:39] Right means one and left means zero, so it becomes one zero.
+[01:43] To reach N, we go right and then again right.
+[01:46] Both are right, so it becomes one one.
+[01:48] Focus on what just happened here.
+[01:50] We just need one bit to represent A, while N and B need two bits.
+[01:54] Huffman has given the most common letter,
+[01:56] the shorter code, and that's how we save some space on disk.
+[01:58] But how does unzip read all nine bits correctly to get the word banana?
+[02:02] It starts with one.
+[02:04] One itself doesn't represent any letter, so it reads the next bit, zero.
+[02:08] Now one zero means B, so we get letter B.
+[02:11] The next bit is zero.
+[02:12] Zero represents A, so we get A.
+[02:14] Then one one means N and we keep going until it gets banana back.
+[02:18] Now zip also stores these codes inside
+[02:20] the file so that we know exactly how to read the bits while unzipping.
+[02:23] There is one more interesting thing you should notice.
+[02:26] One code will never be the start of another code.
+[02:28] For example, if code one one zero represents F, then code one one zero zero
+[02:33] for any other letter is not possible because it will confuse the decoder.
+[02:37] When we read one one zero zero, we might see the first three bits and say, hey,
+[02:41] this represents F. This video helped hit subscribe and follow.

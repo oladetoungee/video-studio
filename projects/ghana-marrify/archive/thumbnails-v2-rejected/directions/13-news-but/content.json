@@ -1,0 +1,20 @@
+{
+  "direction": "The real Graphic Online headline as a taped clipping + her raised finger (0:46) + a handwritten 'but who else can search?'",
+  "title": "Ghana's New App Checks If Your Partner Is Already Married",
+  "titles": [
+    "Ghana's New App Checks If Your Partner Is Already Married",
+    "Ghana's New Marriage App Is Useful. Who Else Can Search?",
+    "Ghana Launched a Marriage Verification App. My Honest Take"
+  ],
+  "text": {
+    "credit": "Graphic Online · Sep 2026",
+    "note1": "but who else",
+    "note2": "can search?"
+  },
+  "images": {
+    "scene": "../../assets/scene/s_46.13.jpg",
+    "front": "../../assets/scene/mask/s_46.13.png",
+    "clip": "../../assets/props/graphic_headline.png"
+  },
+  "vars": {}
+}

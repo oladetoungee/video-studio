@@ -1,0 +1,33 @@
+{
+  "direction": "Three plain words stacked, PUBLIC. in a red box; her sceptical look (1:35) in her room; one prop: a record card cut to one red line, DIVORCE on record (illustration). Follows viral sample 8 (plain frame, the words carry it).",
+  "concept": "T11",
+  "thumbnail_text": "Married? Divorced? Public.",
+  "title": "Ghana Put Marriage and Divorce Records Online. Good Idea?",
+  "titles": [
+    "Ghana Put Marriage and Divorce Records Online. Good Idea?",
+    "Ghana Put Every Marriage and Divorce Online. Good Idea?",
+    "Ghana's Marriage Records Are Now Online. Should They Be?"
+  ],
+  "scores": "a 4/6 · 5/8 · 5/8 | b 9/8 · 9/8 · 9/8 | c 7 · 7 · 7",
+  "recommended": true,
+  "text": {
+    "line1": "Married?",
+    "line2": "Divorced?",
+    "line3": "Public.",
+    "r_h": "Marriage record",
+    "r_sub": "Registry search result",
+    "r_k1": "Name",
+    "r_v1": "[name]",
+    "r_k2": "Spouse",
+    "r_v2": "[name]",
+    "r_k3": "Wedding",
+    "r_v3": "[date]",
+    "r_k4": "Divorce",
+    "r_v4": "On record"
+  },
+  "images": {
+    "scene": "../../assets/scene/warm/s_95.63.jpg",
+    "front": "../../assets/scene/warm/mask/s_95.63.png"
+  },
+  "vars": {}
+}

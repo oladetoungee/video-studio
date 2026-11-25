@@ -1,0 +1,31 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../lib/base.css"><style>
+.t{background:var(--paper);--accent:var(--orange)}
+.half{position:absolute;top:0;bottom:0;width:640px;overflow:hidden}
+.L{left:0;background:var(--paper)} .R{left:640px;background:var(--blue)}
+.R .grid{opacity:1}
+.hd{position:absolute;left:44px;top:40px;font-size:142px;white-space:nowrap}
+.L .hd{color:var(--ink)} .R .hd{color:var(--white)}
+.tag{position:absolute;left:48px;top:20px}
+.L .tag{color:rgba(17,17,20,.5)} .R .tag{color:rgba(255,255,255,.6)}
+.w{position:absolute;font-family:'Archivo',sans-serif;font-weight:700;font-size:50px;letter-spacing:-.02em;white-space:nowrap}
+.L .w{color:rgba(17,17,20,.30)}
+.shelf{position:absolute;left:44px;right:44px;display:grid;grid-template-columns:52px 1fr;align-items:baseline;border-bottom:2px solid rgba(255,255,255,.35);padding-bottom:8px}
+.shelf .n{font-family:'DM Mono',monospace;font-weight:500;font-size:22px;color:var(--accent)}
+.shelf .x{font-family:'Archivo',sans-serif;font-weight:800;font-size:50px;color:var(--white);letter-spacing:-.01em}
+</style></head><body><div class="t">
+<div class="half L"><div class="hd disp" data-k="left"></div><div id="float"></div></div>
+<div class="half R"><div class="grid"></div><div class="hd disp" data-k="right"></div><div id="shelves" data-move="shelves"></div></div>
+</div>
+<script>
+window.layout = c => {
+  const pos = [[40,270,-12],[330,330,9],[90,460,6],[300,560,-8]];
+  const f = document.getElementById('float'), s = document.getElementById('shelves');
+  (c.ideas || []).forEach((t, i) => {
+    const p = pos[i % pos.length];
+    const w = document.createElement('div'); w.className = 'w'; w.textContent = t; w.dataset.k = 'ideas.' + i;
+    w.style.left = p[0] + 'px'; w.style.top = p[1] + 'px'; w.style.transform = 'rotate(' + p[2] + 'deg)'; f.appendChild(w);
+    if (i < 4) { const r = document.createElement('div'); r.className = 'shelf'; r.style.top = (252 + i * 112) + 'px';
+      r.innerHTML = '<span class="n">' + String(i + 1).padStart(2, '0') + '</span><span class="x" data-k="ideas.' + i + '">' + t + '</span>'; s.appendChild(r); }
+  });
+};
+</script><script src="../../lib/bind.js"></script></body></html>

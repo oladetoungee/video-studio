@@ -1,0 +1,23 @@
+{
+ "direction": "Collage on warm paper: two big city photos as polaroids (Stockholm, Amsterdam; Pexels) around her cut-out, hand on her cheek, thinking. One big line at the foot names the topic. No captions on the photos. Follows: board \"my potential\" collage, \"Living in Finland diaries\", her 10-07 collage style.",
+ "thumbnail_text": "FULLY FUNDED MASTER'S IN EUROPE",
+ "titles": [
+  "Erasmus Mundus, DAAD and More: Scholarships for 2027",
+  "Scholarships for African Students in Europe: 2027 Deadlines",
+  "Scholarships for Nigerian Students in Europe 2027"
+ ],
+ "kind": "collage",
+ "class": "no-lift",
+ "text": {
+  "line": "Fully funded master's in <span style=\"color:#1B3FD8\">Europe</span>"
+ },
+ "images": {
+  "p1": "../../assets/src/stockholm.jpg",
+  "p2": "../../assets/src/berlin.jpg",
+  "p3": "../../assets/src/amsterdam.jpg",
+  "p4": "../../assets/src/budapest.jpg",
+  "me": "../../assets/shoot/cut-1613.png"
+ },
+ "vars": {},
+ "title": "Erasmus Mundus, DAAD and More: Scholarships for 2027"
+}

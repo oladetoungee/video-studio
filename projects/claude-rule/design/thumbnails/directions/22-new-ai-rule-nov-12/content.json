@@ -1,0 +1,27 @@
+{
+  "direction": "★ RECOMMENDED. News with the date: her real room, hand up, eyebrows raised; a calendar tile \"FROM NOV 12\" (when the rule takes effect) on the left; no chat card, so her face gets the room. Words: \"NEW CLAUDE RULE\" + \"DON'T BE CRUEL\". Time-sensitive: use only before 12 November. Scores: Round 3: cold image 8 · best pair (title 1) 9/8, the top pair · taste 6.5 (round 2, before the closed-mouth frame). Only before 12 November; after that use 02.",
+  "concept": "rule family (date)",
+  "thumbnail_text": "NEW CLAUDE RULE: DON'T BE CRUEL",
+  "title": "Is It Okay to Be Mean to AI? Anthropic's New Rule",
+  "titles": [
+    "Is It Okay to Be Mean to AI? Anthropic's New Rule",
+    "Claude Can End Your Chat If You're Cruel. But Why?"
+  ],
+  "scores": "Round 3: cold image 8 · best pair (title 1) 9/8, the top pair · taste 6.5 (round 2, before the closed-mouth frame). Only before 12 November; after that use 02.",
+  "recommended": true,
+  "text": {
+    "l1": "<span class=\"boxl\">NEW CLAUDE RULE</span>",
+    "l2": "<span class=\"boxl r\">DON'T BE CRUEL</span>",
+    "mon": "FROM NOV",
+    "day": "12"
+  },
+  "images": {
+    "scene": "../../assets/scene/s_166.5.jpg",
+    "cut": "../../assets/cut/c_166.5.png"
+  },
+  "vars": {
+    "--px": "-301px",
+    "--py": "-199px",
+    "--pw": "2127px"
+  }
+}

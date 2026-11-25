@@ -1,0 +1,72 @@
+URL: https://blog.gitguardian.com/railway-october-2026-incident-environment-variables/
+STATUS: loaded (http 200)
+FINAL: https://blog.gitguardian.com/railway-october-2026-incident-environment-variables/
+TITLE: New Railway Incident: Treat Every Env Variable as Exposed
+H1: Railway October 2026 Incident: Treat Every Environment Variable as Exposed
+OG: New Railway Incident: Treat Every Env Variable as Exposed | GitGuardian Blog - Take Control of Your Secrets Security
+PUBLISHED: 2026-10-22T09:33:16.000Z  MODIFIED: 2026-10-22T09:36:54.000Z
+DOC_H: 5906
+
+BREACH EXPLAINED
+Railway October 2026 Incident: Treat Every Environment Variable as Exposed
+
+Railway's security incident may have exposed decrypted customer environment variables. Pull and scan yours with GitGuardian to know what to rotate first.
+
+Cybersecurity research team
+
+Read more posts by this author.
+
+CYBERSECURITY RESEARCH TEAM
+22 OCT 2026 • 2 MIN READ
+Follow us on 
+Table of contents
+What happened in the Railway security incident
+Investigate, then rotate every Railway environment variable
+How to scan Railway environment variables for secrets
+Railway’s recommended next steps
+What happened in the Railway security incident
+
+On Oct. 21, 2026, Railway disclosed anomalous activity on the systems that store customer environment variables.
+
+An unauthorized third party may have accessed encrypted environment variables and, for some of them, obtained the decrypted values. Railway is asking all customers to rotate their environment variables, including API keys and private registry credentials, and has paused deployments during the investigation.
+
+Railway believes the impact is limited to a subset of users, who will be contacted by email. It links the attack to "a series of attacks recently targeting platform companies with the aim of compromising AI inference providers," a pattern that echoes the Vercel incident from April.
+
+Investigate, then rotate every Railway environment variable
+
+Treat every secret stored in Railway as at risk until investigated. Identify the exposed credentials, check where they are used, and confirm whether they are still active or already abused. Then revoke or rotate them, redeploy, and verify dependent services.
+
+Railway sealed variables cannot be read back from the UI, the API, or the CLI. That limits casual exposure, but the disclosure does not say whether they were in scope. Rotate them too.
+
+How to scan Railway environment variables for secrets
+
+Railway customers can dump their environment variables locally and scan them.
+
+Dump the variables of each service and environment:
+
+railway variable list --service <service> --environment <environment> --kv > .env.railway
+
+Then scan the file with GitGuardian:
+
+ggshield secret scan path .env.railway
+
+GitGuardian identifies which variables contain valid secrets. This gives you a prioritized list of what to rotate first. If you dumped several services into the same directory, scan them all at once:
+
+ggshield secret scan path -r .
+
+Rotate secrets in upstream services, such as AWS, GCP, GitHub, or AI providers, before updating the values in Railway. Delete the dumped files once done.
+
+Railway’s recommended next steps
+
+Railway recommends that customers:
+
+Rotate all environment variables stored in Railway, including API keys.
+Rotate private registry credentials.
+Review logs of the services using these credentials for unusual activity. Railway published dedicated guides for AWS, GCP, and GitHub.
+Follow the status page, since new deployments are paused until builds are restored.
+
+Talk to GitGuardian to see how you can strengthen your security controls.
+
+Book the demo now.
+
+Share this article on Twitter, HackerNews, LinkedIn, or Reddit.

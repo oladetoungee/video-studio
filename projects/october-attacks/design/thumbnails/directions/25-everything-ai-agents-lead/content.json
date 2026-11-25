@@ -1,0 +1,33 @@
+{
+  "direction": "Combined (her 10-26 brief) led by the line she asked for, 'AI agents hacked 100+ sites', with 15's three robots under it; along the bottom a small row: the PHP terminal (14) with the question 'Is your PHP safe?', and two REAL headlines (Railway TechCrunch, Zeabur; untouched crops). 13's base: night ground, her cut-out with the orange outline on the right.",
+  "thumbnail_text": "AI AGENTS HACKED 100+ SITES · IS YOUR PHP SAFE?",
+  "titles": [
+    "PHP2Shell and AI Agents: The October 2026 Hacks Explained",
+    "PHP2Shell, Railway, AI Agents: October 2026 Hacks Explained",
+    "AI Hacking News: One Hacker, AI Agents, 100+ Companies"
+  ],
+  "title": "PHP2Shell and AI Agents: The October 2026 Hacks Explained",
+  "kind": "graphic",
+  "set": "combined",
+  "text": {
+    "hd": "AI agents hacked<br><span class=\"acc\">100+ sites</span>",
+    "cmd": "<span class=\"p\">$</span> php -v",
+    "bad": "<s>8.3.35</s> <span class=\"x\">✗</span>",
+    "good": "8.3.36 <span class=\"ok\">✓</span>",
+    "q": "Is your PHP safe?"
+  },
+  "images": {
+    "me": "../../assets/cut/gbemi-176.6.png",
+    "robot": "../../assets/draw/robot.svg",
+    "c1": "../../assets/src/bc-zeabur.png",
+    "c2": "../../assets/src/tc-railway.png"
+  },
+  "vars": {
+    "--ground": "#16110D",
+    "--fg": "#EFE7D8",
+    "--accent": "#F2541B",
+    "--ol": "#F2541B"
+  },
+  "scores": "combined critic R1 6.5 · R2 7 (cards moved off her hand after R2)",
+  "recommended": false
+}

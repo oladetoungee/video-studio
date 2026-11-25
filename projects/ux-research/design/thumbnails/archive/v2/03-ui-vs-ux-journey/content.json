@@ -1,0 +1,27 @@
+{
+  "direction": "UI vs UX drawn literally: three generic app screens in a row. UI is the one screen (circled); UX is the whole trip across all of them (the long arrow). Warm paper, orange as the only colour, her calm cut-out bottom-left in black and white with an ink outline.",
+  "thumbnail_text": "UI vs UX",
+  "titles": [
+    "UI vs UX: The Experience Is Bigger Than the Screen",
+    "UI vs UX Explained: What Users See vs How It Feels",
+    "UI vs UX: Why a Pretty App Can Still Fail"
+  ],
+  "text": {
+    "hd": "UI<span class=\"it\">vs</span>UX",
+    "ui": "UI",
+    "ux": "UX",
+    "done": "Done!"
+  },
+  "images": {
+    "me": "../../assets/cut/gbemi-direct-hard.png"
+  },
+  "vars": {
+    "--ground": "#EAE6DA",
+    "--fg": "#17140F",
+    "--accent": "#FF4713",
+    "--ol": "#17140F"
+  },
+  "scores": "critic vs her thumbnail: R1 7 · R2 7.5 · R3 7 · R4 7 · R5 8.5 · R6 8 · R7 8",
+  "recommended": true,
+  "title": "UI vs UX: The Experience Is Bigger Than the Screen"
+}

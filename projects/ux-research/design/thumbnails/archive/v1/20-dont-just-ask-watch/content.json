@@ -1,0 +1,22 @@
+{
+  "direction": "Two sticky notes held in her pinched fingers, the film's sticky-note language in her real room: canary \"Don't just ask users.\" and orange \"Watch them.\", with UX RESEARCH named above her head.",
+  "concept": "T21",
+  "thumbnail_text": "UX RESEARCH: DON'T JUST ASK USERS. WATCH THEM.",
+  "title": "UX Research for Beginners: Watch Users, Don't Just Ask",
+  "titles": [
+    "UX Research for Beginners: Watch Users, Don't Just Ask",
+    "UX Research: Why Users Say One Thing and Do Another"
+  ],
+  "text": {
+    "top": "UX RESEARCH",
+    "a": "Don't just ask users.",
+    "b": "Watch them."
+  },
+  "images": {
+    "scene": "../../assets/scene/g/s_337.jpg",
+    "front": "../../assets/scene/g/mask/s_337.png"
+  },
+  "vars": {},
+  "scores": "a 2/5 · 4/7 · 4/6 | b 6/6 · 7/6 · 7/7 | c 6 · 8 · 7",
+  "recommended": false
+}

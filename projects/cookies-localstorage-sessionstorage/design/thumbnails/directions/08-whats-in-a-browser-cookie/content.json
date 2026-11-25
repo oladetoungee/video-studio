@@ -1,0 +1,36 @@
+{
+ "direction": "No face. Red ground, two real chocolate-chip cookies (Pexels, free licence) big in the middle right with a cream ticket stuck on them: \"user: Ada / logged in: yes\" (a plain made-up example). The question in big rounded cream type on top.",
+ "thumbnail_text": "what's in a browser cookie?",
+ "kind": "object",
+ "recommended": false,
+ "titles": [
+  "How Websites Keep You Logged In (It's a Cookie)",
+  "How Login Cookies Actually Work",
+  "What's Actually Inside a Browser Cookie?"
+ ],
+ "text": {
+  "hd": "what&rsquo;s in a<br>browser cookie?",
+  "tk": "user: Ada<br>logged in: yes"
+ },
+ "images": {
+  "obj": "../../assets/collage/cookie-pair-clean.png"
+ },
+ "vars": {
+  "--ground": "#DC3E2B"
+ },
+ "board": "Thumbnails 91 (yt-38 \"TWO SUM\": one real object filling the frame, the topic in huge heavy rounded type on top, a small note on the object)",
+ "fonts": "Font 14 (design-14: Bagel Fat One, cream on red, Design 361) + Font 63 (thumbs-08: JetBrains Mono ExtraBold, black on light) on the ticket",
+ "colours": "Font 14 / Font 94 combo (Design 361): ground #DC3E2B, words #EDE6D9; ticket #EDE6D9 with #111111 mono",
+ "title": "How Websites Keep You Logged In (It's a Cookie)",
+ "class": "no-lift",
+ "scores": "cold critic 2026-11-19 round 3: 5 / 4 (with \"user: ???\"); reverted to \"user: Ada\" (8 alone on 11-16), not re-scored",
+ "titles_before_2026_11_19": [
+  "What's Actually Inside a Browser Cookie?",
+  "How Login Cookies Work: Session IDs Explained Simply",
+  "localStorage vs sessionStorage vs Cookies (What Goes Where)"
+ ],
+ "text_before_2026_11_19": {
+  "hd": "what&rsquo;s in a<br>browser cookie?",
+  "tk": "user: Ada<br>logged in: yes"
+ }
+}

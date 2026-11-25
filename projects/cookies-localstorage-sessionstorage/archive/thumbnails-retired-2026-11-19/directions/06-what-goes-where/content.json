@@ -1,0 +1,32 @@
+{
+ "direction": "Flat dark ground (#2B2B2B), she on the left (shoot 1549, straight at the camera, hard-masked), a big pale table on the right: rows cookie / localStorage / sessionStorage, columns login / cart / form, one tick per row (the answer she gives in the video), the localStorage row lit yellow. WHAT GOES WHERE? in heavy yellow across the top.",
+ "thumbnail_text": "WHAT GOES WHERE?",
+ "kind": "photo",
+ "recommended": false,
+ "titles": [
+  "localStorage vs sessionStorage vs Cookies (What Goes Where)",
+  "Cookies vs localStorage vs sessionStorage: Which One to Use?",
+  "Where Online Shops Keep Your Login, Cart and Form"
+ ],
+ "text": {
+  "hd": "WHAT GOES WHERE?",
+  "c1": "login",
+  "c2": "cart",
+  "c3": "form",
+  "r1": "cookie",
+  "r2": "localStorage",
+  "r3": "sessionStorage"
+ },
+ "images": {
+  "me": "../../assets/shoot/1549-hard.png"
+ },
+ "vars": {
+  "--ground": "#2B2B2B"
+ },
+ "board": "Thumbnails 63 (yt-10 \"SAVE 4 HOURS A DAY\": the creator in front of a big ticked table, heavy yellow caps across the top)",
+ "fonts": "Font 61 (thumbs-06: Montserrat Black, yellow on dark, Thumbnails 58) + Font 58 (thumbs-03: Inter Tight, black on pale grey) in the table",
+ "colours": "Font 61 specimen: #F6D23A on its flat #2B2B2B; table = Font 58 specimen #111111 on #E9E7E3, the hot row in Font 61's yellow",
+ "title": "localStorage vs sessionStorage vs Cookies (What Goes Where)",
+ "class": "no-lift",
+ "scores": "fresh cold critic round 6 (alone / with title): 6 / 7"
+}

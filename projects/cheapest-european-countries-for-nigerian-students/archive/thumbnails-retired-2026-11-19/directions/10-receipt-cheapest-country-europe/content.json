@@ -1,0 +1,38 @@
+{
+  "text": {
+    "w": "Which is<br>cheapest?",
+    "sub": "Studying in Europe<br>as a Nigerian",
+    "hd": "YEAR ONE IN EUROPE",
+    "c0": "Austria*",
+    "v0": "€?",
+    "c1": "Germany",
+    "v1": "€11,904",
+    "c2": "France",
+    "v2": "€14,480",
+    "c3": "Estonia",
+    "v3": "€14,560",
+    "ft": "*UNDER 24<br>TUITION + MONEY TO SHOW"
+  },
+  "images": {},
+  "vars": {},
+  "class": null,
+  "nudge": {},
+  "fonts": [
+    "design-01 Six Caps (red #CB482E on cream #E9E0CC, as Design 377)",
+    "pair-04 Six Caps + Inter Tight (red on cream)"
+  ],
+  "colours": "Design 377 (#E9E0CC cream + #CB482E red), receipt a few % lighter (#F3ECDC)",
+  "fontboard_note": "NEW 2026-11-12 (font board): replaces the room-photo country labels",
+  "board": "Design 377 / font pair-04 (Six Caps headline)",
+  "kind": "flat cream, very tall condensed red question, a till receipt with year-one cost per country (cheapest circled); no face",
+  "direction": "Copies Design 377 / font-board design-01 (huge Six Caps question in red on cream, one small line under it) and makes the picture a receipt: year one (tuition + money to show) for Austria under 24 €10,177, Germany €11,904, France €14,480, Estonia €14,560 (kit 7f), Austria circled. Austria shown as €? so the answer stays in the video (critic).",
+  "thumbnail_text": "WHICH IS CHEAPEST? + Studying in Europe as a Nigerian + receipt of 4 countries",
+  "titles": [
+    "Cheapest Country to Study in Europe? 9 Countries Compared",
+    "Cheapest Countries in Europe: Tuition + Proof of Funds",
+    "Cheapest Countries to Study in Europe for Nigerians (2027)"
+  ],
+  "title": "Cheapest Country to Study in Europe? 9 Countries Compared",
+  "recommended": false,
+  "scores": "font-board round 2 (2026-11-13, fonts with their source colours; fresh cold critic, PNG alone, 4 rounds): 7/10"
+}

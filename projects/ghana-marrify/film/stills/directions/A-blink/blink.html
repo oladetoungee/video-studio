@@ -1,0 +1,275 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<title>A · Blink</title>
+<style>
+@font-face { font-family: 'Inst'; src: url('../_fonts/InstrumentSans.ttf'); font-weight: 100 900; font-stretch: 75% 100%; }
+@font-face { font-family: 'GMono'; src: url('../_fonts/GeistMono.ttf'); font-weight: 100 900; }
+html, body { margin: 0; background: #F4F4F4; }
+#stage { position: relative; overflow: hidden; background: #F4F4F4; font-family: 'Inst'; color: #141414; }
+.h { font-weight: 600; letter-spacing: -0.025em; line-height: 1.04; white-space: nowrap; }
+.sub { font-weight: 450; color: #8A8A88; letter-spacing: -0.01em; }
+.mono { font-family: 'GMono'; font-weight: 500; letter-spacing: 0.02em; text-transform: uppercase; color: #9A9A98; }
+.bub { background: #fff; border-radius: 26px; box-shadow: 0 1px 0 rgba(0,0,0,.04), 0 10px 30px rgba(0,0,0,.06); font-weight: 500; letter-spacing: -0.01em; white-space: nowrap; }
+.w { display: inline-block; }
+</style></head>
+<body><div id="stage"></div>
+<script src="../_tools/kit.js"></script>
+<script>
+// ---------------------------------------------------------------- palette (sampled from Cue / OpenAI "Get ready" / Orthogonal, adapted)
+const C = { ground: '#F4F4F4', ink: '#141414', grey: '#6B6B6B', red: '#E3412F', gold: '#F2B21B', green: '#12965A', cobalt: '#2E4FE0', black: '#1C1C1C', sand: '#D7A96B', coral: '#F07B57', face: '#D9D9D5' };
+// ---------------------------------------------------------------- record-characters: drawn from the subject (paper, folder, envelope, stamp, gazette, register)
+const SHAPES = {
+  cert:     { d: 'M18 4 H66 L84 22 V96 H18 Z', x: 'M66 4 V22 H84 Z', eyes: [[38, 52], [62, 52]] },
+  folder:   { d: 'M6 22 Q6 16 12 16 H38 L46 24 H88 Q94 24 94 30 V88 Q94 94 88 94 H12 Q6 94 6 88 Z', x: 'M6 34 H94', eyes: [[36, 60], [64, 60]] },
+  envelope: { d: 'M6 28 H94 V90 H6 Z', x: 'M6 28 L50 56 L94 28 Z', eyes: [[34, 72], [66, 72]] },
+  stamp:    { d: 'M50 4 A14 14 0 1 1 49.9 4 Z M42 30 H58 V46 H42 Z M10 46 H90 Q94 46 94 50 V82 H6 V50 Q6 46 10 46 Z', x: 'M4 82 H96 V94 H4 Z', eyes: [[36, 64], [64, 64]] },
+  gazette:  { d: 'M16 10 H84 V90 H16 Z', x: 'M10 4 H90 A8 8 0 0 1 90 20 H10 A8 8 0 0 1 10 4 Z M10 80 H90 A8 8 0 0 1 90 96 H10 A8 8 0 0 1 10 80 Z', eyes: [[37, 50], [63, 50]] },
+  idcard:   { d: 'M8 26 H92 Q98 26 98 32 V74 Q98 80 92 80 H8 Q2 80 2 74 V32 Q2 26 8 26 Z', x: 'M10 36 H34 V68 H10 Z', eyes: [[56, 50], [80, 50]] },
+  register: { d: 'M10 8 H84 Q92 8 92 16 V92 H18 Q10 92 10 84 Z', x: 'M10 8 H26 V92 H18 Q10 92 10 84 Z', eyes: [[46, 48], [72, 48]] },
+};
+function critter(parent, shape, color, size) {
+  const g = el('div', { width: size + 'px', height: size + 'px', left: 0, top: 0, transformOrigin: '50% 90%' }, '', parent);
+  const sh = SHAPES[shape], dark = color === C.black;
+  const detail = sh.x.includes('Z') ? `<path d="${sh.x}" fill="${dark ? 'rgba(255,255,255,.22)' : 'rgba(0,0,0,.16)'}"/>` : `<path d="${sh.x}" stroke="${dark ? 'rgba(255,255,255,.22)' : 'rgba(0,0,0,.16)'}" stroke-width="3" fill="none"/>`;
+  g.innerHTML = `<svg viewBox="0 0 100 100" width="${size}" height="${size}" style="position:absolute;left:0;top:0;overflow:visible"><path d="${sh.d}" fill="${color}"/>${detail}</svg>`;
+  const eyes = sh.eyes.map(([ex, ey]) => {
+    const r = size * 0.11;
+    const sc = el('div', { left: (ex / 100 * size - r) + 'px', top: (ey / 100 * size - r) + 'px', width: 2 * r + 'px', height: 2 * r + 'px', background: '#fff', borderRadius: '50%', overflow: 'hidden' }, '', g);
+    const pu = el('div', { width: r * 1.1 + 'px', height: r * 1.1 + 'px', background: C.ink, borderRadius: '50%', left: r * 0.45 + 'px', top: r * 0.45 + 'px' }, '', sc);
+    const lid = el('div', { left: (ex / 100 * size - r) + 'px', top: (ey / 100 * size - 2) + 'px', width: 2 * r + 'px', height: Math.max(3, size * 0.03) + 'px', background: dark ? '#fff' : C.ink, borderRadius: '3px', display: 'none' }, '', g);
+    return { sc, pu, lid, r };
+  });
+  return {
+    g, size,
+    draw({ x, y, s = 1, rot = 0, open = 1, lx = 0, ly = 0, op = 1 }) {
+      set(g, { transform: `translate(${x - size / 2}px, ${y - size * 0.9}px) scale(${s}) rotate(${rot}deg)`, opacity: op, display: s <= 0.001 ? 'none' : 'block' });
+      for (const e of eyes) {
+        const closed = open < 0.18;
+        e.lid.style.display = closed ? 'block' : 'none';
+        e.sc.style.display = closed ? 'none' : 'block';
+        e.sc.style.transform = `scaleY(${clamp(open, 0.18, 1)})`;
+        e.pu.style.transform = `translate(${lx * e.r * 0.42}px, ${ly * e.r * 0.42}px)`;
+      }
+    },
+  };
+}
+// searchers: plain grey faces with typographic eyes that swap hard, frame-cut ("o o", "– –", "> <"), each eye 1 frame apart
+function glyphFace(parent, r, color = C.face) {
+  const g = el('div', { left: 0, top: 0, width: 2 * r + 'px', height: 2 * r + 'px', borderRadius: '50%', background: color }, '', parent);
+  const eyes = [-1, 1].map(sd => el('div', { left: (r + sd * r * 0.4 - r * 0.32) + 'px', top: (r - r * 0.56) + 'px', width: r * 0.64 + 'px', textAlign: 'center', fontFamily: 'Inst', fontWeight: 800, fontSize: r * 0.86 + 'px', lineHeight: 1, color: C.ink }, 'o', g));
+  return {
+    g,
+    draw({ x, y, s = 1, state = 'o', state2 = null, lx = 0, ly = 0 }) {
+      set(g, { transform: `translate(${x - r}px, ${y - r}px) scale(${s})`, display: s <= 0.001 ? 'none' : 'block' });
+      eyes.forEach((e, i) => {
+        const st = i === 1 && state2 ? state2 : state;
+        const glyph = st === '<' ? (i ? '<' : '>') : st;
+        if (e.textContent !== glyph) e.textContent = glyph;
+        e.style.transform = `translate(${lx * r * 0.2}px, ${ly * r * 0.2}px)`;
+      });
+    },
+  };
+}
+// deterministic blinking: a blink every ~2.4-4 s per seed, 0.05 s close, 0.09 s open
+function blink(t, seed) {
+  const per = 2.4 + hash(seed) * 1.6, ph = hash(seed + 9) * per;
+  const u = ((t + ph) % per + per) % per;
+  if (u < 0.05) return 1 - u / 0.05;
+  if (u < 0.14) return (u - 0.05) / 0.09;
+  return 1;
+}
+// headline with one coloured word; words rise in as one unit with a 3-frame stagger
+function headline(parent, html, { x, y, size, align = 'center', color = C.ink, w = null }) {
+  const e = el('div', { left: (align === 'center' ? x - 2000 : x) + 'px', top: y + 'px', width: (align === 'center' ? 4000 : (w || 3000)) + 'px', textAlign: align, fontSize: size + 'px', color }, '', parent);
+  e.className = 'h'; e.innerHTML = html; wrapWords(e);
+  if (w) { e.style.whiteSpace = 'normal'; }
+  return { e, words: [...e.querySelectorAll('.w')] };
+}
+// wrap every word of an element's text nodes in <span class="w"> (keeps coloured spans and <br>)
+function wrapWords(e) {
+  for (const n of [...e.childNodes]) {
+    if (n.nodeType === 3) {
+      const frag = document.createDocumentFragment();
+      n.textContent.split(/(\s+)/).forEach(tok => { if (!tok) return; if (/^\s+$/.test(tok)) frag.appendChild(document.createTextNode(' ')); else { const sp = document.createElement('span'); sp.className = 'w'; sp.textContent = tok; frag.appendChild(sp); } });
+      e.replaceChild(frag, n);
+    } else if (n.nodeType === 1 && n.tagName !== 'BR') wrapWords(n);
+  }
+}
+function rise(words, lt, t0, stag = 0.06) {
+  words.forEach((w, i) => { const p = eOut(prog(lt, t0 + i * stag, t0 + i * stag + 0.55)); set(w, { opacity: clamp(p * 1.6), transform: `translateY(${(1 - p) * 34}px)`, filter: `blur(${(1 - p) * 6}px)` }); });
+}
+const acc = (c, s) => `<span style="color:${c}">${s}</span>`;
+// ---------------------------------------------------------------- eyelid wipe (the signature): two ink lids close to a line and open on the next scene
+function lids(parent) {
+  const svg = el('div', { left: 0, top: 0, width: W + 'px', height: H + 'px', zIndex: 50, pointerEvents: 'none' }, '', parent);
+  svg.innerHTML = `<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}"><path id="lt" fill="${C.ink}"/><path id="lb" fill="${C.ink}"/></svg>`;
+  const lt = svg.querySelector('#lt'), lb = svg.querySelector('#lb');
+  return (c) => { // c: 0 open .. 1 closed
+    if (c <= 0) { svg.style.display = 'none'; return; } svg.style.display = 'block';
+    const half = H / 2, k = V(260, 320) * (1 - c * 0.85);              // curvature of the lid edge
+    const yt = lerp(-k - 10, half, c), yb = lerp(H + k + 10, half, c);
+    lt.setAttribute('d', `M0 0 H${W} V${yt} Q${CX} ${yt + 2 * k} 0 ${yt} Z`);
+    lb.setAttribute('d', `M0 ${H} H${W} V${yb} Q${CX} ${yb - 2 * k} 0 ${yb} Z`);
+  };
+}
+// ================================================================= SCENES
+const CAST = [ // shape, colour, size
+  ['cert', C.red, 150], ['folder', C.sand, 160], ['envelope', C.cobalt, 160], ['stamp', C.black, 150], ['gazette', C.gold, 150], ['register', C.green, 150], ['idcard', C.coral, 160],
+];
+// ---- 1. hook: the records gather (0 - 3.28 s)
+const T_SWAP = 3.28;
+scene('gather', 0, T_SWAP, (r, S) => {
+  S.h = headline(r, `Ghana just launched ${acc(C.green, 'Marrify.')}`, { x: CX, y: V(210, 470), size: V(104, 96) });
+  if (PORTRAIT) { S.h.e.innerHTML = `Ghana just launched<br><span style="color:${C.green}">Marrify.</span>`; wrapWords(S.h.e); S.h.words = [...S.h.e.querySelectorAll('.w')]; }
+  S.sub = el('div', { left: '0', top: V(345, 700) + 'px', width: W + 'px', textAlign: 'center', fontSize: V(42, 44) + 'px', color: C.grey }, PORTRAIT ? 'A public search for marriage<br>and divorce records.' : 'A public search for marriage and divorce records.', r); S.sub.className = 'sub'; S.sub.style.color = C.grey;
+  S.c = CAST.map(([sh, col, sz]) => critter(r, sh, col, sz * V(1.45, 1.4)));
+  S.c.forEach((c, i) => set(c.g, { zIndex: [3, 1, 2, 5, 4, 1, 3][i] }));
+}, (lt, S) => {
+  rise(S.h.words, lt, 0.15); const ps = eOut(prog(lt, 0.7, 1.3)); set(S.sub, { opacity: ps, transform: `translateY(${(1 - ps) * 16}px)` });
+  const n = S.c.length;
+  S.c.forEach((c, i) => {
+    let fx, fy;
+    // packed like a crowd: overlapping, three sizes, uneven baseline (OpenAI 'Get ready' packing)
+    const PK = V([[-430, 870, 1.0], [-250, 840, 0.8], [-80, 880, 1.05], [70, 820, 0.65], [215, 870, 0.95], [380, 850, 0.8], [520, 880, 0.65]],
+                 [[-300, 1180, 1.0], [-110, 1150, 0.8], [90, 1190, 1.05], [300, 1140, 0.7], [-190, 1400, 0.95], [40, 1380, 0.8], [250, 1410, 0.75]]);
+    fx = CX + PK[i][0]; fy = PK[i][1]; c.k = PK[i][2];
+    const t0 = 0.35 + [3, 0, 5, 1, 4, 2, 6][i] * 0.09;
+    const sp = spring(lt - t0, 2.0, 0.5);
+    const from = { x: fx + (i < n / 2 ? -1 : 1) * V(520, 300) * (1 - Math.abs(i - (n - 1) / 2) / n), y: fy + V(520, 700) };
+    const x = lerp(from.x, fx, sp), y = lerp(from.y, fy, sp);
+    const pop = lt < t0 ? 0 : clamp(0.35 + spring(lt - t0, 2.6, 0.42) * 0.65, 0, 1.3);
+    const look = lt < 2.2 ? clamp((CX - fx) / 300, -1, 1) : 0, lookY = lt < 2.2 ? -0.2 : 0.3;
+    c.draw({ x, y, s: pop * c.k, rot: (1 - sp) * (i % 2 ? 10 : -10) + (i % 3 - 1) * 4 * sp, open: blink(lt, i * 3.1 + 1), lx: look, ly: lookY });
+  });
+});
+// ---- 2. eyelid wipe: close 0.2 s (ease-in), fully shut 2 frames around the swap, open 0.3 s (ease-out)
+scene('lid1', T_SWAP - 0.22, T_SWAP + 0.4, (r, S) => { S.l = lids(r); }, (lt, S) => {
+  const c = lt < 0.2 ? eIn(prog(lt, 0, 0.2)) : lt < 0.26 ? 1 : 1 - eOut(prog(lt, 0.26, 0.56));
+  S.l(c);
+}, 50);
+// ---- 3. watched: searchers' faces open their eyes all around one record (3.28 - 6.4 s)
+const RING = 12, T_DIVE = 6.02, T_ANS = 6.4;
+window.crisp = (t) => (t >= T_SWAP - 0.22 && t < T_SWAP + 0.4) || (t >= T_DIVE && t < T_ANS + 0.6);
+scene('watched', T_SWAP, T_ANS, (r, S) => {
+  S.rec = critter(r, 'cert', C.red, V(200, 220));
+  S.cap = el('div', { left: 0, width: W + 'px', textAlign: 'center', top: V(580, 1090) + 'px', fontSize: V(30, 32) + 'px' }, 'a divorce record', r); S.cap.className = 'mono'; S.cap.style.color = C.grey;
+  S.faces = Array.from({ length: RING }, (_, i) => glyphFace(r, V(54, 56) * (0.85 + hash(i + 40) * 0.3)));
+  S.pos = S.faces.map((_, i) => {
+    const a = (i / RING) * Math.PI * 2 + 0.26 + (hash(i) - 0.5) * 0.12;
+    const rx = V(700, 400), ry = V(320, 560);
+    return { x: CX + Math.cos(a) * rx * (0.92 + hash(i + 7) * 0.12), y: V(450, 900) + Math.sin(a) * ry * (0.9 + hash(i + 3) * 0.12) };
+  });
+  S.h = headline(r, `Searchable by ${acc(C.red, 'anyone')} that has your name.`, { x: CX, y: V(930, 1580), size: V(66, 66) });
+  if (PORTRAIT) { S.h.e.innerHTML = `Searchable by <span style="color:${C.red}">anyone</span><br>that has your name.`; wrapWords(S.h.e); S.h.words = [...S.h.e.querySelectorAll('.w')]; }
+}, (lt, S) => {
+  const cy = V(545, 1050);
+  const wake = lt > 1.25;
+  const nerv = wake ? Math.sin(lt * 6.3) * 0.9 : 0;
+  S.rec.draw({ x: CX, y: cy, s: 1 + Math.sin(lt * 2) * 0.01, open: wake ? blink(lt, 77) : 0, lx: nerv, ly: 0.1 });
+  set(S.cap, { opacity: eOut(prog(lt, 0.4, 0.9)) });
+  const F = Math.floor(lt * 30);
+  S.faces.forEach((f, i) => {
+    const t0 = 0.4 + [0, 7, 3, 11, 5, 9, 1, 6, 2, 10, 4, 8][i] * 0.11;
+    const s = lt < t0 ? 0 : clamp(spring(lt - t0, 2.4, 0.45), 0, 1.25);
+    const p = S.pos[i]; const dx = CX - p.x, dy = cy - 70 - p.y, d = Math.hypot(dx, dy);
+    // eyes: shut ("– –") when they pop, open ("o o") 4 frames later, blink on their own clock; at 1.95 s every face looks at the record;
+    // at 2.6 s a few squeeze ("> <"). Left and right eye change one frame apart.
+    const st = (tt) => tt < t0 + 0.13 ? '–' : blink(tt, i * 1.7 + 20) < 0.5 ? '–' : (tt > 2.6 && tt < 3.0 && i % 3 === 0) ? '<' : 'o';
+    const sL = st(lt), sR = st(lt - 1 / 30);
+    const dart = eOut(prog(lt, 1.95, 2.12));
+    const wander = [Math.sin(i * 2.1), Math.cos(i * 1.3)];
+    const glyphR = sR === '<' ? '<' : sR;
+    f.draw({ x: p.x, y: p.y, s, state: sL, state2: sL === '<' ? '<' : glyphR, lx: lerp(wander[0], dx / d, dart), ly: lerp(wander[1], dy / d, dart) });
+  });
+  rise(S.h.words, lt, 1.85, 0.06);
+});
+// ---- 4. dive into the record's left pupil: it grows to cover the frame (0.38 s, ease-in)
+const EYE = () => [CX - V(23, 25), V(545, 1050) - V(76 + 4, 84 + 4)];
+scene('dive', T_DIVE, T_ANS + 0.02, (r, S) => {
+  S.dot = el('div', { borderRadius: '50%', background: C.ink, zIndex: 41 }, '', r);
+}, (lt, S) => {
+  const p = eIn(prog(lt, 0, 0.38));
+  const [x0, y0] = EYE();
+  const R = lerp(V(12, 13), Math.hypot(W, H) * 1.05, p);
+  set(S.dot, { left: (x0 - R) + 'px', top: (y0 - R) + 'px', width: 2 * R + 'px', height: 2 * R + 'px' });
+}, 45);
+// ---- 5. the minimal answer: black holds 4 frames, then the iris opens over 0.45 s onto the white world (6.4 - 10)
+scene('answer', T_ANS, 10.2, (r, S) => {
+  S.root = r;
+  S.mask = el('div', { left: 0, top: 0, width: W + 'px', height: H + 'px', overflow: 'hidden', clipPath: 'circle(0px at 50% 50%)', background: C.ground }, '', r);
+  const m = S.mask;
+  S.asker = glyphFace(m, V(70, 74));
+  S.q = el('div', { fontSize: V(38, 40) + 'px', padding: '22px 30px', color: C.ink }, 'Is this person currently free to marry?', m); S.q.className = 'bub';
+  if (PORTRAIT) S.q.innerHTML = 'Is this person currently<br>free to marry?';
+  S.rec = critter(m, 'cert', C.cobalt, V(200, 210));
+  S.a = el('div', { fontSize: V(46, 44) + 'px', padding: '28px 38px', fontWeight: 600 }, `This person currently has an ${acc(C.cobalt, 'active marriage')} on record.`, m); S.a.className = 'bub';
+  if (PORTRAIT) S.a.innerHTML = `This person currently has<br>an ${acc(C.cobalt, 'active marriage')} on record.`;
+  S.noRow = el('div', { display: 'flex', flexDirection: V('row', 'column'), gap: V('64px', '20px') }, '', m);
+  S.no = ['Name of spouse', 'Dates', 'History'].map(s => el('div', { position: 'relative', fontSize: V(44, 44) + 'px', color: C.grey, textDecoration: 'line-through', textDecorationThickness: '3px', fontWeight: 500, whiteSpace: 'nowrap' }, s, S.noRow));
+  S.h = headline(m, 'Nothing else.', { x: V(160, CX), y: V(830, 1600), size: V(110, 92), align: V('left', 'center') });
+}, (lt, S) => {
+  const ax = V(250, 170), ay = V(250, 560), rx = V(250, 870), ry = V(700, 1170);
+  const R = lt < 0.13 ? 0 : lerp(V(12, 13), Math.hypot(W, H) * 1.1, eIO(prog(lt, 0.13, 0.6)));
+  S.root.style.background = lt < 0.6 ? C.ink : 'transparent';
+  set(S.mask, { clipPath: `circle(${R}px at ${ax}px ${ay}px)` });
+  // the searcher is already there when the iris opens on it; it blinks once, then asks
+  const blinkS = (lt > 0.62 && lt < 0.72) || blink(lt, 5) < 0.5 ? '–' : 'o';
+  S.asker.draw({ x: ax, y: ay, s: 1, state: blinkS, state2: (lt > 0.65 && lt < 0.75) ? '–' : null, lx: 0.8, ly: 0.3 });
+  const qp = eOut(prog(lt, 0.75, 1.15));
+  set(S.q, { left: V(ax + 100, 80) + 'px', top: V(ay - 40, ay + 100) + 'px', opacity: qp, transform: `translateY(${(1 - qp) * 20}px) scale(${0.96 + 0.04 * qp})`, transformOrigin: '0% 100%' });
+  const sr = clamp(spring(lt - 1.15, 2.2, 0.5), 0, 1.25);
+  S.rec.draw({ x: rx, y: ry, s: sr, open: lt < 1.6 ? 1 : blink(lt, 8), lx: 0.7, ly: -0.5 });
+  const ap = eOut(prog(lt, 1.45, 1.95));
+  set(S.a, { left: V(400, 80) + 'px', top: V(500, ry - 680) + 'px', opacity: ap, transform: `translateY(${(1 - ap) * 24}px)`, transformOrigin: '0% 100%' });
+  const p0 = eOut(prog(lt, 2.0, 2.5));
+  set(S.noRow, { left: V(430, 120) + 'px', top: V(660, ry - 420) + 'px' });
+  S.no.forEach((e, i) => { const p = eOut(prog(lt, 2.0 + i * 0.12, 2.5 + i * 0.12)); set(e, { opacity: p, transform: `translateY(${(1 - p) * 14}px)` }); });
+  rise(S.h.words, lt, 2.55);
+});
+// ---- 6. Estonia: her, brought into the group (still only, 10.2 - 13)
+scene('estonia', 10.2, 13, (r, S) => {
+  const av = V(380, 420);
+  S.av = el('div', { width: av + 'px', height: av + 'px', borderRadius: '50%', overflow: 'hidden', background: '#DCE8E2' }, '', r);
+  el('img', { left: '-33%', top: '-4%', width: '178%' }, '', S.av).src = '../../../../design/thumbnails/assets/cut/f_311.32.png';
+  S.name = el('div', { fontSize: V(30, 32) + 'px' }, 'Gbemi · in Estonia for a year', r); S.name.className = 'mono'; S.name.style.color = C.grey;
+  S.h = headline(r, `In Estonia, there's ${acc(C.green, 'a link for everything.')}`, { x: CX, y: V(150, 300), size: V(76, 70) });
+  if (PORTRAIT) { S.h.e.innerHTML = `In Estonia, there's<br><span style="color:${C.green}">a link for everything.</span>`; wrapWords(S.h.e); S.h.words = [...S.h.e.querySelectorAll('.w')]; }
+  S.rows = [['cert', C.coral, 'You can get married online'], ['folder', C.sand, 'You can divorce online'], ['register', C.cobalt, 'Health records, online']].map(([sh, col, txt]) => {
+    const c = critter(r, sh, col, V(100, 104));
+    const b = el('div', { fontSize: V(38, 36) + 'px', padding: '22px 30px 22px 30px' }, txt + ` <span style="color:${C.green};font-weight:700">✓</span>`, r); b.className = 'bub';
+    return { c, b };
+  });
+}, (lt, S) => {
+  rise(S.h.words, lt, 0.1);
+  const ax = V(330, CX - 210), ay = V(380, 560);
+  set(S.av, { left: ax + 'px', top: ay + 'px' }); set(S.name, { left: (ax - 120) + 'px', top: (ay + V(405, 445)) + 'px', width: V(620, 620) + 'px', textAlign: 'center' });
+  S.rows.forEach(({ c, b }, i) => {
+    const p = eOut(prog(lt, 0.5 + i * 0.25, 1.0 + i * 0.25));
+    const x = V(900, 120), y = V(420 + i * 175, 1190 + i * 165);
+    c.draw({ x: x + 50, y: y + 80, s: clamp(spring(lt - 0.5 - i * 0.25, 2.4, 0.5), 0, 1.25), open: blink(lt, i + 30), lx: -0.6 });
+    set(b, { left: (x + V(124, 124)) + 'px', top: y + 'px', opacity: p, transform: `translateX(${(1 - p) * 30}px)` });
+  });
+});
+// ---- 7. reciprocity (13 - 16): the record looks back at the searcher
+scene('both', 13, 16, (r, S) => {
+  const html = PORTRAIT ? `If someone looks up<br>my marriage record,<br>do I get to see that<br><span style="color:${C.cobalt}">someone looked it up?</span>`
+                        : `If someone looks up my marriage record,<br>do I get to see <span style="color:${C.cobalt}">that someone looked it up?</span>`;
+  S.h = headline(r, html, { x: V(160, 80), y: V(150, 330), size: V(66, 76), align: 'left' });
+  S.h.e.style.lineHeight = '1.1';
+  S.who = glyphFace(r, V(90, 120));
+  S.rec = critter(r, 'cert', C.cobalt, V(200, 290));
+  S.line = el('div', { height: '0', borderTop: `6px dotted ${C.ink}`, transformOrigin: '0 0' }, '', r);
+  S.l1 = el('div', { fontSize: V(30, 32) + 'px' }, 'someone searching', r); S.l1.className = 'mono'; S.l1.style.color = C.grey;
+  S.l2 = el('div', { fontSize: V(30, 32) + 'px' }, 'my record', r); S.l2.className = 'mono'; S.l2.style.color = C.grey;
+}, (lt, S) => {
+  rise(S.h.words, lt, 0.1, 0.03);
+  const a = { x: V(560, 300), y: V(700, 1060) }, b = { x: V(1360, 780), y: V(820, 1560) };
+  S.who.draw({ x: a.x, y: a.y, s: 1, state: 'o', lx: 1, ly: V(0, 0.6) });
+  S.rec.draw({ x: b.x, y: b.y, s: 1, open: 1, lx: -1, ly: V(-0.2, -0.6) });
+  const fr = V(90, 120), rc = { x: b.x, y: b.y - V(200, 290) * 0.42 }, dxy = Math.atan2(rc.y - a.y, rc.x - a.x);
+  const x0 = a.x + Math.cos(dxy) * (fr + 6), y0 = a.y + Math.sin(dxy) * (fr + 6), x1 = rc.x - Math.cos(dxy) * V(80, 115), y1 = rc.y - Math.sin(dxy) * V(80, 115);
+  set(S.line, { left: x0 + 'px', top: y0 + 'px', width: Math.hypot(x1 - x0, y1 - y0) + 'px', transform: `rotate(${Math.atan2(y1 - y0, x1 - x0)}rad)` });
+  set(S.l1, { left: (a.x - 200) + 'px', top: (a.y + V(110, 140)) + 'px', width: '400px', textAlign: 'center' });
+  set(S.l2, { left: (b.x - 200) + 'px', top: (b.y + 30) + 'px', width: '400px', textAlign: 'center' });
+});
+</script></body></html>

@@ -1,0 +1,24 @@
+{
+  "direction": "Split before / after: left, her grimacing, a phone crowded with coloured apps and red badges at the left edge; right, her smiling, the same phone gone grey and quiet at the right edge (both faces clear); the promise on a black strip along the bottom.",
+  "kind": "other",
+  "concept": "v3 (2026-10-16)",
+  "references": "Before / After (Justin Sung) · Day 1 / Day 900 · 12:30 PM / 7:30 PM split",
+  "thumbnail_text": "Break your scrolling habit",
+  "title": "How to Stop Scrolling: Phone Settings That Actually Help",
+  "titles": [
+    "How to Stop Scrolling: Phone Settings That Actually Help",
+    "How to Use Your Phone Less (Simple Settings That Help)"
+  ],
+  "scores": "fresh critics vs her bar: r1 7 · r2 8 · r3 7.3 · r4 7",
+  "recommended": "",
+  "text": {
+    "b": "before",
+    "a": "after",
+    "words": "Break your scrolling habit"
+  },
+  "images": {
+    "before": "../../assets/scene/warm/s_695.5.jpg",
+    "after": "../../assets/scene/warm/s_300.0.jpg"
+  },
+  "vars": {}
+}

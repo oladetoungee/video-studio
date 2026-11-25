@@ -1,0 +1,79 @@
+URL: https://startwithidentity.com/blog/2026-10-19-zeabur-to-shut-down-after-a-non-expiring-admin-token-opened-its-shared-cluster/
+STATUS: loaded (http 200)
+FINAL: https://startwithidentity.com/blog/2026-10-19-zeabur-to-shut-down-after-a-non-expiring-admin-token-opened-its-shared-cluster/
+TITLE: Zeabur to shut down after a non-expiring admin token opened
+H1: Zeabur to shut down after a non-expiring admin token opened its shared cluster
+OG: Zeabur to shut down after a non-expiring admin token opened | Start with Identity
+PUBLISHED: 2026-10-19T02:00:00Z  MODIFIED: 2026-10-19T02:00:00Z
+DOC_H: 3321
+
+Home
+/
+News
+/
+Zeabur to shut down after a non-expiring admin token opened its shared cluster
+NEWS
+Zeabur to shut down after a non-expiring admin token opened its shared cluster
+
+Zeabur says an attacker used a shared-cluster admin token created in January 2024 with no expiry, plus internal AWS keys, all stored in plaintext in a private config repo, to read 3.2 million environment-variable records. The developer hosting platform will close by December 31, 2026.
+
+By SWI Community Team
+Oct 19, 2026
+
+Developer hosting platform Zeabur published a preliminary incident report on October 19 saying an attacker used its own internal credentials to take over its shared cluster on October 14 and 15. The keys were a shared-cluster admin token created on January 10, 2024 with no expiry, plus internal AWS keys, both stored in plaintext in a private configuration repository and usable from the public internet. Zeabur suspects they were obtained in its August breach, when a GitHub App private key was read and replaced but the plaintext credentials were not rotated. The attacker read 3,218,965 environment-variable records covering 321,810 accounts, the platform database, and settings for 865 hosted database services, added SSH keys to 50 dedicated servers, and called the API as two impersonated accounts. Zeabur rotated its login signing key on October 15 and, per BleepingComputer, will shut down by December 31, 2026.
+
+Why it matters
+
+Every failure here is a non-human identity control: a token with no expiry, a credential stored in plaintext, an admin path reachable from anywhere, and an incident response that rotated the key that was known stolen but not the secrets that key could reach. A platform that holds customers' environment variables is a secrets manager whether it calls itself one or not.
+
+If you deployed on Zeabur, treat every variable as leaked: revoke API keys, cloud keys, database passwords and signing keys at the provider first, then redeploy. Rebuild GCP dedicated servers, and check the GitHub audit log for Zeabur GitHub App actions between 15:05 and 18:54 UTC on October 15. For your own platforms, give admin tokens an expiry, keep them out of repositories, and make secrets rotation after any breach cover everything the stolen key could read.
+
+Source: Zeabur
+
+NEWSLETTER
+Get identity news that matters
+
+This Week in Identity is a short weekly digest of the breaches, standards, and vendor moves worth your attention. No spam, no vendor pitches.
+
+Email address *
+Subscribe
+Last reviewed October 19, 2026
+By SWI Community Team
+Suggest a correction
+How we research
+RELATED ON START WITH IDENTITY
+BLOG
+GitLab's incoming email address is a non-expiring token that commits code and runs CI as you→
+
+Aikido Security showed that the personal address GitLab issues for creating issues by email can also open merge requests that GitLab commits in your name and ca
+
+BLOG
+OpenCode Console breach may have exposed users' saved AI provider keys→
+
+OpenCode says an intruder reached a legacy system on the night of October 16 and may have exposed OpenAI, Anthropic and Google keys that 1.4% of OpenCode Consol
+
+BLOG
+A phantom join key let anyone mint JFrog Artifactory admin tokens, and exploitation started in days→
+
+CVE-2026-82329 (CVSS 9.8) is an authentication bypass in JFrog Access. Instances without an explicit join key got a predictable one, letting an unauthenticated
+
+GLOSSARY
+Access Token→
+
+A short-lived credential a client presents to a resource server to access protected data. Access tokens are typically opaque or JWT-formatted, with lifetimes me
+
+GLOSSARY
+Bearer Token→
+
+A bearer token is a credential that grants access to whoever presents it, with no proof that the presenter is the party it was issued to. OAuth 2.0 defines how
+
+RANKING
+Best Non-Human Identity Security Platforms: Top 5→
+
+The best non-human identity (NHI) security platforms in 2026: Astrix Security, Token Security, Oasis Security, Entro Security, and Aembit. Ranked for discovery,
+
+#identity-news
+#breach
+#secrets
+#non-human-identity
+Independent analysis. No vendor sponsorship. Editorial policy · Report a correction

@@ -1,0 +1,43 @@
+1
+00:00:00,073 --> 00:00:02,233
+people usually mix up who a UX researcher is
+
+2
+00:00:02,233 --> 00:00:04,533
+and who a UX designer is a lot
+
+3
+00:00:04,652 --> 00:00:07,063
+a UX researcher's job is to understand the
+
+4
+00:00:07,063 --> 00:00:08,512
+users, what they need
+
+5
+00:00:08,512 --> 00:00:10,652
+a UX designer's job is to take that
+
+6
+00:00:10,652 --> 00:00:12,373
+understanding and design the product around
+
+7
+00:00:12,373 --> 00:00:15,493
+it in smaller teams, there's usually just
+
+8
+00:00:15,493 --> 00:00:17,553
+one person that ends up doing both jobs
+
+9
+00:00:17,553 --> 00:00:19,012
+and there are also a lot of product managers
+
+10
+00:00:19,012 --> 00:00:20,892
+that do research as part of their jobs as
+
+11
+00:00:20,892 --> 00:00:21,200
+well

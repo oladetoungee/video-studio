@@ -1,0 +1,34 @@
+{
+ "direction": "Her real room (photo 1558, unconvinced smile), she centred, the room dimmed. LEGAL? huge in white BEHIND her head (she sits in front of the letters), \"are fake timers\" small across the top.",
+ "thumbnail_text": "are fake timers LEGAL?",
+ "kind": "photo",
+ "recommended": false,
+ "titles": [
+  "Are Dark Patterns Illegal? What EU and US Law Says",
+  "Dark Patterns Explained: 11 Tricks Websites Use on You",
+  "Hard to Cancel Subscriptions? 11 Dark Patterns Explained"
+ ],
+ "text": {
+  "hd": "LEGAL?",
+  "pre": "are fake timers",
+  "lab": "Sale ends in",
+  "clock": "09:59"
+ },
+ "images": {
+  "room": "../../assets/shoot/1558.jpg",
+  "me": "../../assets/shoot/1558-person.png"
+ },
+ "vars": {
+  "--pw": "1300px",
+  "--pl": "-17px",
+  "--pt": "0px",
+  "--dim": "rgba(8,8,8,.55)",
+  "--ground": "#222222"
+ },
+ "board": "Thumbnails 119 (yt-66 \"FINANCIAL LITERACY\": the creator centred, one huge white word filling the frame BEHIND her head)",
+ "fonts": "Font 71 (Anton, Thumbnails 113: white on dark)",
+ "colours": "Font 71 specimen: white #FFFFFF words on a dark ground (her room dimmed 55%, like #222222)",
+ "title": "Are Dark Patterns Illegal? What EU and US Law Says",
+ "class": "no-lift",
+ "scores": "cold critic round 6: 7 alone / 7.5 with title; timer added, word lifted after"
+}

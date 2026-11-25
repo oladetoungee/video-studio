@@ -1,0 +1,34 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Moment render</title>
+<link rel="stylesheet" href="/studio/runtime/fonts.css">
+<style>html,body{margin:0;background:transparent}canvas{display:block}</style></head>
+<body><canvas id="c" width="1920" height="1080"></canvas>
+<script src="/studio/runtime/core.js"></script>
+<script src="/studio/runtime/motion.js"></script>
+<script src="/studio/runtime/house.js"></script>
+<script src="/studio/runtime/boot.js"></script>
+<script src="/studio/runtime/footage.js"></script>
+<script src="/studio/runtime/layouts.js"></script>
+<script src="/studio/runtime/teaser.js"></script>
+<script>
+// Headless host for footage moments (studio/tools/composite.mjs):
+//   /studio/runtime/moment.html?m=/p/<slug>/talking-head/talking-head.json&id=m01&aspect=9x16&captions=1
+// The canvas is transparent where her footage shows; grab() returns a PNG with alpha.
+window.BUILD_ERROR = null;
+(async () => {
+  try {
+    const q = new URLSearchParams(location.search); const cv = document.getElementById('c');
+    FOOT.frame9Q = q.get('frame9') || null;   // (comparison stills: a shorts framing for this page only, composite.mjs --frame9)
+    await bootMoment({ manifest: q.get('m'), id: q.get('id'), canvas: cv, aspect: q.get('aspect') || '16x9', edits: q.get('edits') !== '0' });
+    SHOW.captions = q.get('captions') === '1'; EL.rec = q.get('elements') === '1';
+    // m: her matte for this frame ({b: base64 grey bytes, w, h}), passed by composite.mjs for frames a layout cuts her out of
+    window.grab = (t, m) => { if (m) TH.setMatteGray(m.b, m.w, m.h); renderMoment(t); return cv.toDataURL('image/png'); };
+    window.matteFrames = (f0, f1) => TH.matteFrames(f0, f1);
+    window.meta = () => FOOT.meta();
+    window.cams = (f0, f1) => momentCams(f0, f1);
+    // (capBgNeed() / setCapBg(d) from footage.js are globals: what composite.mjs capbg measures behind her 16:9 captions)
+    window.setView = (o) => { if (o.aspect) setAspect(o.aspect); if (o.captions != null) SHOW.captions = !!o.captions; };
+  } catch (e) { window.BUILD_ERROR = String(e && e.stack || e); console.error(e); }
+  window.READY = true;
+})();
+</script></body></html>

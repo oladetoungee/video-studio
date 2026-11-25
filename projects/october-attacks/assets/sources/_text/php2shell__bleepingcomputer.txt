@@ -1,0 +1,79 @@
+URL: https://www.bleepingcomputer.com/news/security/php-ships-emergency-patches-for-critical-php2shell-flaws/
+STATUS: loaded (http 200)
+FINAL: https://www.bleepingcomputer.com/news/security/php-ships-emergency-patches-for-critical-php2shell-flaws/
+TITLE: PHP ships emergency patches for critical PHP2Shell flaws
+H1: PHP ships emergency patches for critical PHP2Shell flaws
+OG: PHP ships emergency patches for critical PHP2Shell flaws | BleepingComputer
+PUBLISHED:   MODIFIED: 
+DOC_H: 5137
+
+PHP ships emergency patches for critical PHP2Shell flaws
+By Sergiu Gatlan 
+October 21, 2026 10:07 AM 0
+
+The PHP security team released emergency security patches for two critical remote code execution (RCE) vulnerabilities (CVE-2026-109618 and CVE-2026-109619) tracked collectively as PHP2Shell.
+
+The two unauthenticated RCE flaws were discovered by Calif, OpenAI, and Wiz security researchers, and affect all PHP installations that serve web requests, including PHP-FPM, Apache with mod_php, php-cgi, FrankenPHP, and LiteSpeed.
+
+"We consider the risk highest for mod_php, with a demonstrated exploit where an unauthenticated request can trigger the attack before any application code runs," the PHP security team said.
+
+Both flaws stem from the same underlying problem: PHP can leave its memory in a corrupted state when a request ends abnormally, and both can be exploited to achieve remote code execution.
+
+CVE-2026-109618 can be used to gain remote code execution as the web worker account by exploiting a chain of weaknesses that trigger out-of-memory corruption, while the CVE-2026-109619 stale global state vulnerability enables unauthenticated heap use-after-free, memory disclosure, and remote code execution with the web worker's privileges.
+
+Admins should install PHP 8.5.12, 8.4.27, 8.3.36, or 8.2.35 as soon as possible on servers running PHP 8.x and migrate to a fixed release if they're running PHP 7 or earlier.
+
+"PHP 8.1 and older no longer receive updates from the PHP project. Some distributions and LTS vendors provide backported fixes, so contact your vendor for details, or upgrade to a supported version," the PHP developers added.
+
+"Given the severity of these vulnerabilities, the PHP security team provided minimal source-backports for PHP 7.4, PHP 8.0, and PHP 8.1 to help people building from source or without access to an LTS vendor."
+
+Advanced warning
+
+This follows a Tuesday warning from PHP developers urging administrators to prepare to install these security updates as soon as they're released.
+
+"All PHP users are encouraged to prepare now so they can upgrade as soon as the release is available," they said. "We reserve the right to release earlier should details of either vulnerability become public, or should evidence of active exploitation appear in the wild."
+
+PHP core developer Gina Peter Banyard warned that no PHP2Shell mitigations would fully block potential attacks and that applying the official security patches is the only permanent defense.
+
+Before the patches were released, Cloudflare CTO Dane Knecht confirmed that the company (which had already deployed a set of WAF rules designed to block known PHP2Shell exploitation methods) was already observing early attacks targeting the two vulnerabilities. However, Knecht also stressed that these protections were temporary and urged all admins to install the PHP security updates as soon as they become available.
+
+The UK National Cyber Security Centre (NCSC) has also warned UK organizations to immediately update systems using PHP or take them offline until they can be patched.
+
+Temporary mitigation measures 
+
+However, the PHP security team did share a number of mitigation measures that should reduce exposure to some attack paths for those who can't immediately patch their servers, although they don't fully protect against exploitation (detailed information is available in PHP's blog post):
+
+CVE-2026-109618:
+Set memory_limit=-1, preferably in a way applications can’t override, such as php_admin_value in the FPM pool or Apache configuration.
+Set a low post_max_size: 8M for applications that don’t require file uploads, 32M if uploads are necessary. 
+Use a container or cgroup limit as an availability boundary, preferably with a policy that kills only the affected worker.
+
+CVE-2026-109619:
+
+Set session.upload_progress.enabled=0 and restart every worker.
+On PHP 8.5, set fatal_error_backtraces=0 and restart every worker. This blocks only the confirmed fatal backtrace path.
+Remove invalid or deprecated settings applied per request that emit diagnostics before initialization. Hiding diagnostics with error_reporting, display_errors or @ does not help.
+Fix attacker-reachable fatal errors and execution timeouts, including failures in callbacks, upload or import processing and cleanup.
+
+PHP (Hypertext Preprocessor) is an open-source, server-side web development language that powers 75% to 80% of all websites, including those using Content Management Systems (CMS) like WordPress, Joomla, and Drupal.
+
+According to VirusTotal estimates, over 5.1 million PHP hosts are exposed online, with roughly 3.8 million having at least one port open.
+
+Once attackers have valid credentials, only 37% of their actions are blocked
+
+Overall prevention scores can hide what happens after initial access. Once attackers are using valid credentials, prevention drops sharply.
+
+The Blue Report 2026 measures defenses technique by technique across 338 million simulations run in customer production environments.
+
+Get the report
+Related Articles:
+
+PHP shares mitigation for new RCE vulnerability with no patch
+
+HPE patches eight max severity RCE and auth bypass AOS flaws
+
+GitLab warns of new max severity code execution vulnerability
+
+PHP warns admins of two critical flaws, emergency patches coming tomorrow
+
+F5 releases out-of-band patches for critical NGINX vulnerabilities

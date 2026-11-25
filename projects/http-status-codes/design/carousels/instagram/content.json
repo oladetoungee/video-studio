@@ -1,0 +1,227 @@
+{
+ "_help": "Edit text here (or in the studio), then run: node shared/build.mjs instagram (from design/carousels). Markup: *word* = one word boxed, \\n = line break. ground = stone | mint | sky | amber | tomato | ink | card.",
+ "deck": "instagram",
+ "width": 1080,
+ "height": 1350,
+ "accent": "#FFA51F",
+ "accentOnInk": "#FFA51F",
+ "docTitle": "HTTP status codes: read the first digit (Instagram)",
+ "slides": [
+  {
+   "layout": "cover",
+   "ground": "amber",
+   "odo": {
+    "from": "4",
+    "to": "4",
+    "f": 1,
+    "blur": 0,
+    "rest": "xx",
+    "dim": true
+   },
+   "odoSize": 520,
+   "title": "What the first digit of an HTTP status code *tells you*",
+   "size": 92,
+   "sub": "A 4 means check the request. A 5 means check the server."
+  },
+  {
+   "layout": "statement",
+   "ground": "stone",
+   "title": "Every response carries a three-digit *status code*",
+   "size": 96,
+   "resp": {
+    "parts": [
+     {
+      "t": "HTTP/1.1"
+     },
+     {
+      "t": "200",
+      "l": "status code"
+     },
+     {
+      "t": "OK",
+      "l": "reason phrase"
+     }
+    ]
+   },
+   "body": "The code tells you what happened, and the body gives you the detail. You can already tell a lot from the first digit."
+  },
+  {
+   "layout": "classes",
+   "ground": "stone",
+   "title": "HTTP status codes at a bookshop counter",
+   "size": 84,
+   "rows": [
+    "Got it, keep going",
+    "Here's your book",
+    "We moved it to our other branch",
+    "The problem is on *your\u00a0side*",
+    "Your request was fine, *our\u00a0system\u00a0broke*"
+   ]
+  },
+  {
+   "layout": "calls",
+   "ground": "mint",
+   "title": "2xx means it worked. Three you'll use all the time",
+   "size": 84,
+   "calls": [
+    {
+     "code": "200",
+     "req": "GET /books/42",
+     "nm": "OK, and here's the book"
+    },
+    {
+     "code": "201",
+     "req": "POST /books",
+     "nm": "Created, usually with a Location header"
+    },
+    {
+     "code": "204",
+     "req": "DELETE /books/42",
+     "nm": "No Content, success with an empty body"
+    }
+   ]
+  },
+  {
+   "layout": "grid",
+   "ground": "sky",
+   "title": "Which redirect? 301, 302, 307 or 308",
+   "size": 84,
+   "cols": [
+    "Permanent",
+    "Temporary"
+   ],
+   "rowsG": [
+    {
+     "k": "May switch POST\u00a0to\u00a0GET",
+     "cells": [
+      {
+       "v": "301",
+       "n": "Moved for good"
+      },
+      {
+       "v": "302",
+       "n": "Back soon"
+      }
+     ]
+    },
+    {
+     "k": "Keeps POST as\u00a0POST",
+     "cells": [
+      {
+       "v": "308",
+       "n": "Moved for good",
+       "dk": true
+      },
+      {
+       "v": "307",
+       "n": "Back soon",
+       "dk": true
+      }
+     ]
+    }
+   ],
+   "body": "For normal web pages, 301 and 302 are fine. If you're redirecting an API where POST requests matter, I would use 307 and 308."
+  },
+  {
+   "layout": "duo",
+   "ground": "amber",
+   "title": "400 or 422?",
+   "size": 110,
+   "cols": [
+    {
+     "k": "400",
+     "n": "Bad Request",
+     "v": "Broken JSON, like a missing bracket"
+    },
+    {
+     "k": "422",
+     "n": "Unprocessable Content",
+     "v": "The data inside makes no sense, like a book with no\u00a0title",
+     "dk": true
+    }
+   ],
+   "body": "Some APIs send 400 for validation errors too. I\u00a0think 422 is clearer, because it tells the front end the format was fine and the data needs fixing."
+  },
+  {
+   "layout": "statement",
+   "ground": "ink",
+   "title": "Ask for book 9999 when it doesn't exist, and you get a *404*",
+   "size": 88,
+   "resp": {
+    "parts": [
+     {
+      "t": "HTTP/1.1"
+     },
+     {
+      "t": "404",
+      "l": "status code"
+     },
+     {
+      "t": "Not Found",
+      "l": "reason phrase"
+     }
+    ],
+    "fs": 56
+   },
+   "body": "410 Gone says the book was there and it's gone for good."
+  },
+  {
+   "layout": "duo",
+   "ground": "amber",
+   "title": "401 asks who you are. 403 says *you can't do this*",
+   "size": 88,
+   "cols": [
+    {
+     "k": "401",
+     "n": "Unauthorized",
+     "v": "No hotel keycard at all, or the card doesn't work"
+    },
+    {
+     "k": "403",
+     "n": "Forbidden",
+     "v": "Your card works fine, but it's for another room",
+     "dk": true
+    }
+   ],
+   "body": "On a 401, send the user to log in. On a 403, logging in again with the same account won't help."
+  },
+  {
+   "layout": "calls",
+   "ground": "tomato",
+   "title": "Your app sends 500. The proxy sends 502 and 504",
+   "size": 84,
+   "calls": [
+    {
+     "code": "500",
+     "req": "Internal Server Error",
+     "nm": "Usually an uncaught\u00a0exception"
+    },
+    {
+     "code": "502",
+     "req": "Bad Gateway",
+     "nm": "The proxy got an invalid answer from your app"
+    },
+    {
+     "code": "504",
+     "req": "Gateway Timeout",
+     "nm": "Your app took too long, like a slow query"
+    }
+   ]
+  },
+  {
+   "layout": "end",
+   "ground": "ink",
+   "title": "Never send\n*200\u00a0OK* when something failed",
+   "size": 96,
+   "body": "Your front end only sees the 200, and your monitoring counts it as a success. Send the real code and put the detail in the body.",
+   "where": "Full video on YouTube",
+   "handle": "@WithGbemi",
+   "polaroid": {
+    "img": "../shared/assets/headshot.png",
+    "caption": "Gbemisola"
+   },
+   "polY": 660,
+   "polX": 690
+  }
+ ]
+}

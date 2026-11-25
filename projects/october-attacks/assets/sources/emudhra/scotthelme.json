@@ -1,0 +1,157 @@
+{
+ "story": "emudhra",
+ "outlet": "Scott Helme",
+ "slug": "scotthelme",
+ "url": "https://scotthelme.co.uk/eight-bits-of-trust-emudhras-ca-keys-cracked-in-milliseconds/",
+ "finalUrl": "https://scotthelme.co.uk/eight-bits-of-trust-emudhras-ca-keys-cracked-in-milliseconds/",
+ "status": "loaded",
+ "http": 200,
+ "title": "Eight Bits of Trust; eMudhra's CA keys cracked in milliseconds",
+ "h1": "Eight Bits of Trust; eMudhra's CA keys cracked in milliseconds",
+ "published": "2026-10-20T19:53:02.000Z",
+ "files": {
+  "fold": "emudhra/scotthelme_fold.png",
+  "full": "emudhra/scotthelme_full.jpg",
+  "scroll": "emudhra/scotthelme_scroll.mp4"
+ },
+ "full": {
+  "width": 1440,
+  "height": 6000,
+  "pageHeight": 11839,
+  "zoom": 1,
+  "quotes": [
+   {
+    "quote": "One of eMudhra's certificate authority private keys is the number 4.",
+    "box": {
+     "x": 190,
+     "y": 736,
+     "w": 596,
+     "h": 22
+    },
+    "lines": [
+     {
+      "x": 190,
+      "y": 736,
+      "w": 596,
+      "h": 22
+     }
+    ]
+   },
+   {
+    "quote": "Not a number that starts with 4, or the number 4 followed by a few hundred random digits, just, 4...",
+    "box": {
+     "x": 190,
+     "y": 800,
+     "w": 587,
+     "h": 56
+    },
+    "lines": [
+     {
+      "x": 190,
+      "y": 800,
+      "w": 587,
+      "h": 22
+     },
+     {
+      "x": 190,
+      "y": 834,
+      "w": 285,
+      "h": 22
+     }
+    ]
+   }
+  ]
+ },
+ "scroll": {
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "seconds": 8,
+  "keyframes": [
+   {
+    "t": 0,
+    "y": 270
+   },
+   {
+    "t": 8,
+    "y": 270
+   }
+  ],
+  "zoom": 1,
+  "easing": "easeInOutCubic between keyframes, holds where y is equal",
+  "capped": false,
+  "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)",
+  "quotes": [
+   {
+    "quote": "One of eMudhra's certificate authority private keys is the number 4.",
+    "inVideo": true,
+    "still": true,
+    "t": 4.02,
+    "visibleStill": [
+     0,
+     8.03
+    ],
+    "scrollY": 270,
+    "box": {
+     "x": 350,
+     "y": 413,
+     "w": 596,
+     "h": 22
+    },
+    "lines": [
+     {
+      "x": 350,
+      "y": 413,
+      "w": 596,
+      "h": 22
+     }
+    ],
+    "docBox": {
+     "x": 350,
+     "y": 683,
+     "w": 596,
+     "h": 22
+    },
+    "layoutDriftPx": 0
+   },
+   {
+    "quote": "Not a number that starts with 4, or the number 4 followed by a few hundred random digits, just, 4...",
+    "inVideo": true,
+    "still": true,
+    "t": 4.02,
+    "visibleStill": [
+     0,
+     8.03
+    ],
+    "scrollY": 270,
+    "box": {
+     "x": 350,
+     "y": 477,
+     "w": 802,
+     "h": 56
+    },
+    "lines": [
+     {
+      "x": 350,
+      "y": 477,
+      "w": 802,
+      "h": 22
+     },
+     {
+      "x": 350,
+      "y": 511,
+      "w": 71,
+      "h": 22
+     }
+    ],
+    "docBox": {
+     "x": 350,
+     "y": 747,
+     "w": 802,
+     "h": 56
+    },
+    "layoutDriftPx": 0
+   }
+  ]
+ }
+}

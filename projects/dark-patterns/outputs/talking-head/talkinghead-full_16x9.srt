@@ -1,0 +1,987 @@
+1
+00:00:00,100 --> 00:00:02,220
+If you get a pop-up that offers you 10%
+
+2
+00:00:02,220 --> 00:00:04,640
+off, and the button to close it says,
+
+3
+00:00:04,640 --> 00:00:05,600
+"No thanks,
+
+4
+00:00:05,600 --> 00:00:07,620
+I hate saving money," there's a name for that
+
+5
+00:00:07,620 --> 00:00:09,780
+thing. It's called a dark pattern.
+
+6
+00:00:09,780 --> 00:00:11,940
+A dark pattern is a design in an app
+
+7
+00:00:11,940 --> 00:00:14,100
+or a website that tricks you into doing
+
+8
+00:00:14,100 --> 00:00:16,040
+something that you don't mean to do,
+
+9
+00:00:16,040 --> 00:00:16,687
+like
+
+10
+00:00:16,687 --> 00:00:18,327
+buying something extra.
+
+11
+00:00:18,327 --> 00:00:20,927
+Now, a dark pattern is different from bad
+
+12
+00:00:20,927 --> 00:00:22,567
+design. Most of the time,
+
+13
+00:00:22,567 --> 00:00:23,927
+dark patterns are
+
+14
+00:00:23,927 --> 00:00:25,847
+intentional. The dark pattern usually helps
+
+15
+00:00:25,847 --> 00:00:28,367
+the business at the expense of the user.
+
+16
+00:00:28,367 --> 00:00:30,247
+There are a lot of dark patterns that people
+
+17
+00:00:30,247 --> 00:00:31,187
+use to build stuff,
+
+18
+00:00:31,187 --> 00:00:32,267
+and I'll go over a lot of them in
+
+19
+00:00:32,267 --> 00:00:33,087
+this video.
+
+20
+00:00:33,087 --> 00:00:34,807
+Most of all of the stuff I'm using in
+
+21
+00:00:34,807 --> 00:00:36,687
+this video come from Harry Brignull,
+
+22
+00:00:36,687 --> 00:00:37,607
+who is a UX designer,
+
+23
+00:00:37,607 --> 00:00:39,547
+and he was the one that coined the term
+
+24
+00:00:39,547 --> 00:00:40,847
+"dark patterns" in
+
+25
+00:00:40,847 --> 00:00:42,527
+2010. I'll put
+
+26
+00:00:42,527 --> 00:00:44,627
+the link to his website below.
+
+27
+00:00:44,627 --> 00:00:47,033
+The first one is the confirmshaming.
+
+28
+00:00:47,360 --> 00:00:50,760
+Confirmshaming is when the button to say "No"
+
+29
+00:00:50,760 --> 00:00:53,400
+is written to make the user feel bad.
+
+30
+00:00:53,400 --> 00:00:54,260
+Like, look at this.
+
+31
+00:00:54,260 --> 00:00:55,800
+No, I hate saving money.
+
+32
+00:00:55,800 --> 00:00:58,780
+The idea is that you'd rather click yes than
+
+33
+00:00:58,780 --> 00:01:00,080
+say you hate saving money.
+
+34
+00:01:00,080 --> 00:01:02,440
+Another pattern is hard to cancel.
+
+35
+00:01:02,440 --> 00:01:04,600
+People used to call it the roach motel.
+
+36
+00:01:04,600 --> 00:01:07,140
+The name comes from a cockroach trap where
+
+37
+00:01:07,140 --> 00:01:08,560
+it's easy to get in,
+
+38
+00:01:08,560 --> 00:01:09,640
+but it's hard to get out.
+
+39
+00:01:09,640 --> 00:01:11,760
+A lot of people can relate to this,
+
+40
+00:01:11,760 --> 00:01:14,240
+where joining or subscribing is easy.
+
+41
+00:01:14,240 --> 00:01:16,960
+But leaving and/or unsubscribing is hard.
+
+42
+00:01:16,960 --> 00:01:18,920
+You join an online shop's delivery membership
+
+43
+00:01:18,920 --> 00:01:20,100
+with one click.
+
+44
+00:01:20,100 --> 00:01:21,180
+But to cancel,
+
+45
+00:01:21,180 --> 00:01:23,540
+you have to go through page after page after
+
+46
+00:01:23,540 --> 00:01:24,680
+page of offers,
+
+47
+00:01:24,680 --> 00:01:25,320
+You know,
+
+48
+00:01:25,320 --> 00:01:26,640
+like this,
+
+49
+00:01:26,640 --> 00:01:28,960
+we also have another dark pattern called sneak
+
+50
+00:01:28,960 --> 00:01:30,867
+into basket is when
+
+51
+00:01:30,867 --> 00:01:32,647
+something you didn't choose end up in your
+
+52
+00:01:32,647 --> 00:01:33,667
+shopping cart.
+
+53
+00:01:33,667 --> 00:01:35,667
+So say you add a pair of shoes
+
+54
+00:01:35,667 --> 00:01:37,147
+and now you get to check out.
+
+55
+00:01:37,147 --> 00:01:38,507
+There is also
+
+56
+00:01:38,507 --> 00:01:39,167
+a
+
+57
+00:01:39,167 --> 00:01:41,327
+cleaning spray for five euro that you never
+
+58
+00:01:41,327 --> 00:01:43,481
+picked. Another interesting dark pattern is
+
+59
+00:01:43,481 --> 00:01:45,967
+hidden costs where there are fees that only
+
+60
+00:01:45,967 --> 00:01:47,827
+show up at the last step of checkout.
+
+61
+00:01:47,827 --> 00:01:49,227
+This happens to me a lot.
+
+62
+00:01:49,227 --> 00:01:51,407
+You think that the total of your cart is
+
+63
+00:01:51,407 --> 00:01:52,887
+90 euro and now you are at checkout and
+
+64
+00:01:52,887 --> 00:01:54,487
+you're seeing 100 and something.
+
+65
+00:01:54,487 --> 00:01:57,027
+The shoe cost 40 euro on the product page.
+
+66
+00:01:57,027 --> 00:01:58,627
+And at the last page,
+
+67
+00:01:58,627 --> 00:02:00,247
+you see that a service fee has been added
+
+68
+00:02:00,247 --> 00:02:01,847
+and is now 52 euros.
+
+69
+00:02:01,847 --> 00:02:04,247
+And by then you've typed in your card details,
+
+70
+00:02:04,247 --> 00:02:06,547
+so it just feels easier to just pay now.
+
+71
+00:02:06,547 --> 00:02:10,287
+Another dark pattern is hidden subscription,
+
+72
+00:02:10,287 --> 00:02:12,627
+which is like a free trial that turns into
+
+73
+00:02:12,627 --> 00:02:14,947
+a paid plan without a clear warning.
+
+74
+00:02:14,947 --> 00:02:17,487
+So a shop gives you a free month of
+
+75
+00:02:17,487 --> 00:02:19,227
+premium, but it asks for your card first,
+
+76
+00:02:19,227 --> 00:02:20,967
+which is now is a dark pattern just so
+
+77
+00:02:20,967 --> 00:02:21,687
+you know.
+
+78
+00:02:21,687 --> 00:02:23,527
+And when that free trial ends,
+
+79
+00:02:23,527 --> 00:02:25,027
+they just start charging you.
+
+80
+00:02:25,027 --> 00:02:26,027
+This has happened to me before.
+
+81
+00:02:26,027 --> 00:02:27,832
+They literally charged me for a year's
+
+82
+00:02:27,832 --> 00:02:29,187
+subscription. There are many more dark
+
+83
+00:02:29,187 --> 00:02:30,707
+patterns that you will run into when you use
+
+84
+00:02:30,707 --> 00:02:31,927
+apps or shops online.
+
+85
+00:02:31,927 --> 00:02:32,647
+And again,
+
+86
+00:02:32,647 --> 00:02:34,387
+keep in mind that they were intentionally put
+
+87
+00:02:34,387 --> 00:02:34,707
+in place.
+
+88
+00:02:34,707 --> 00:02:35,447
+It's not bad design,
+
+89
+00:02:35,447 --> 00:02:36,507
+it's intentional.
+
+90
+00:02:36,507 --> 00:02:38,067
+Another one is trick wording.
+
+91
+00:02:38,067 --> 00:02:40,527
+It's a question that is written so that you
+
+92
+00:02:40,527 --> 00:02:42,247
+click the opposite of what you're meant to
+
+93
+00:02:42,247 --> 00:02:43,647
+click. Something like,
+
+94
+00:02:43,647 --> 00:02:46,007
+untick this box if you don't want to stop
+
+95
+00:02:46,007 --> 00:02:46,967
+receiving emails.
+
+96
+00:02:46,967 --> 00:02:48,487
+You would have to read these two or three
+
+97
+00:02:48,487 --> 00:02:50,947
+times to work out which one
+
+98
+00:02:50,947 --> 00:02:52,287
+actually stops the email.
+
+99
+00:02:52,287 --> 00:02:54,787
+One other common dark pattern is disguised
+
+100
+00:02:54,787 --> 00:02:57,007
+ads. They are ads that are made to look
+
+101
+00:02:57,007 --> 00:02:58,667
+like part of the page.
+
+102
+00:02:58,667 --> 00:03:00,707
+Say you search a shop for
+
+103
+00:03:00,707 --> 00:03:03,447
+running shoes and the first few results are
+
+104
+00:03:03,447 --> 00:03:05,787
+paid ads that look exactly like the normal
+
+105
+00:03:05,787 --> 00:03:07,187
+result, but they are paid ads.
+
+106
+00:03:07,187 --> 00:03:08,667
+We also have nagging.
+
+107
+00:03:08,667 --> 00:03:10,647
+Nagging is asking again and again and again
+
+108
+00:03:10,647 --> 00:03:12,187
+after the user has said no.
+
+109
+00:03:12,187 --> 00:03:13,987
+It's a type of dark pattern.
+
+110
+00:03:13,987 --> 00:03:15,907
+Say a shopping app asks you to turn on
+
+111
+00:03:15,907 --> 00:03:17,767
+notification and you're already saying no.
+
+112
+00:03:17,767 --> 00:03:19,427
+Next time it asks again.
+
+113
+00:03:19,427 --> 00:03:21,947
+And the only options are yes and not now.
+
+114
+00:03:21,947 --> 00:03:23,107
+This happens to me a lot.
+
+115
+00:03:23,107 --> 00:03:25,007
+I think Snapchat does this to me a lot.
+
+116
+00:03:25,007 --> 00:03:27,127
+I don't want my Snapchat notifications on,
+
+117
+00:03:27,127 --> 00:03:28,007
+but every time,
+
+118
+00:03:28,007 --> 00:03:30,147
+every time it's asking me again and again,
+
+119
+00:03:30,147 --> 00:03:31,667
+I'm this close to deleting the app.
+
+120
+00:03:31,667 --> 00:03:33,127
+Another one is pre-selection.
+
+121
+00:03:33,127 --> 00:03:35,027
+Pre-selection is when the option that the
+
+122
+00:03:35,027 --> 00:03:37,367
+company wants is already ticked for the user.
+
+123
+00:03:37,367 --> 00:03:39,347
+So there is a box at checkout that says,
+
+124
+00:03:39,347 --> 00:03:41,627
+add gift wrapping for 2.99 euros,
+
+125
+00:03:41,627 --> 00:03:42,927
+and it's already ticked.
+
+126
+00:03:42,927 --> 00:03:43,947
+If you don't read every line,
+
+127
+00:03:43,947 --> 00:03:45,867
+you pay for gift wrapping that you never asked
+
+128
+00:03:45,867 --> 00:03:47,027
+for. Another
+
+129
+00:03:47,027 --> 00:03:48,827
+common dark pattern is fake urgency.
+
+130
+00:03:48,827 --> 00:03:51,487
+Fake urgency is a deadline that is not real.
+
+131
+00:03:51,487 --> 00:03:53,707
+Say a product page shows a countdown that
+
+132
+00:03:53,707 --> 00:03:56,027
+says, this deal ends in 10 minutes.
+
+133
+00:03:56,027 --> 00:03:57,447
+If you refresh that page again,
+
+134
+00:03:57,447 --> 00:03:59,447
+it starts again from 10 minutes.
+
+135
+00:03:59,447 --> 00:04:01,307
+This deal ends in 10 minutes.
+
+136
+00:04:01,307 --> 00:04:03,747
+It's there to rush you so you buy before
+
+137
+00:04:03,747 --> 00:04:05,427
+you've had the time to think about it.
+
+138
+00:04:05,427 --> 00:04:08,267
+Another one is fake scarcity.
+
+139
+00:04:08,267 --> 00:04:10,547
+This is done mostly by shopping website,
+
+140
+00:04:10,547 --> 00:04:12,007
+shopping apps,
+
+141
+00:04:12,007 --> 00:04:14,387
+the website say that there's only a few left,
+
+142
+00:04:14,387 --> 00:04:15,787
+or that something is selling out,
+
+143
+00:04:15,787 --> 00:04:16,800
+when it's not true.
+
+144
+00:04:16,800 --> 00:04:18,020
+The page will say,
+
+145
+00:04:18,020 --> 00:04:20,180
+"Oh, only two left in stock." And when you
+
+146
+00:04:20,180 --> 00:04:21,160
+come back a week later,
+
+147
+00:04:21,160 --> 00:04:21,940
+it still says,
+
+148
+00:04:21,940 --> 00:04:24,540
+"Only two left in stock." It's there to make
+
+149
+00:04:24,540 --> 00:04:25,500
+you buy now,
+
+150
+00:04:25,500 --> 00:04:26,420
+buy now.
+
+151
+00:04:26,420 --> 00:04:28,500
+Why do companies use dark patterns?
+
+152
+00:04:28,500 --> 00:04:30,440
+It's, a lot of times,
+
+153
+00:04:30,440 --> 00:04:31,967
+it comes down to numbers.
+
+154
+00:04:31,967 --> 00:04:33,887
+A team is chasing a number,
+
+155
+00:04:33,887 --> 00:04:34,227
+like, "Oh,
+
+156
+00:04:34,227 --> 00:04:35,127
+we want more sign-ups,
+
+157
+00:04:35,127 --> 00:04:37,087
+or we want more sales." So it's not really
+
+158
+00:04:37,087 --> 00:04:38,287
+about what is best for the user.
+
+159
+00:04:38,287 --> 00:04:40,827
+It's about how much the team can get to
+
+160
+00:04:40,827 --> 00:04:42,627
+their own goal.
+
+161
+00:04:42,627 --> 00:04:43,847
+How common are dark patterns?
+
+162
+00:04:43,847 --> 00:04:44,547
+In January,
+
+163
+00:04:44,547 --> 00:04:47,647
+2023, the European Commission checked
+
+164
+00:04:47,647 --> 00:04:50,987
+399 online stores and 148 of them had at
+
+165
+00:04:50,987 --> 00:04:53,647
+least one of three dark patterns that the EU
+
+166
+00:04:53,647 --> 00:04:54,807
+was looking for.
+
+167
+00:04:54,807 --> 00:04:57,647
+42 of those websites had fake countdown
+
+168
+00:04:57,647 --> 00:05:00,627
+timers, and 70 of them were hiding important
+
+169
+00:05:00,627 --> 00:05:02,847
+information or making important information
+
+170
+00:05:02,847 --> 00:05:03,907
+hard to see.
+
+171
+00:05:03,907 --> 00:05:04,507
+In July,
+
+172
+00:05:04,507 --> 00:05:07,987
+2024, consumer and privacy agencies from about
+
+173
+00:05:07,987 --> 00:05:09,047
+26 countries,
+
+174
+00:05:09,047 --> 00:05:09,787
+they looked
+
+175
+00:05:09,787 --> 00:05:12,847
+at over 600 websites that sell subscriptions,
+
+176
+00:05:12,847 --> 00:05:14,987
+and they found out that 76% of them use
+
+177
+00:05:14,987 --> 00:05:17,080
+at least one possible dark pattern,
+
+178
+00:05:17,080 --> 00:05:17,660
+and
+
+179
+00:05:17,660 --> 00:05:20,000
+nearly 67% of them use more than one dark
+
+180
+00:05:20,000 --> 00:05:22,580
+pattern. So what's the law that protects users
+
+181
+00:05:22,580 --> 00:05:23,300
+against dark patterns?
+
+182
+00:05:23,300 --> 00:05:25,080
+Are there even laws that protect users against
+
+183
+00:05:25,080 --> 00:05:25,987
+dark patterns?
+
+184
+00:05:25,987 --> 00:05:26,647
+not a lawyer,
+
+185
+00:05:26,647 --> 00:05:28,167
+but depending on where you live and everything
+
+186
+00:05:28,167 --> 00:05:29,467
+that I read and studied,
+
+187
+00:05:29,467 --> 00:05:30,647
+in the EU,
+
+188
+00:05:30,647 --> 00:05:32,087
+the Unfair Commercial
+
+189
+00:05:32,087 --> 00:05:33,987
+Practices Directive from
+
+190
+00:05:34,147 --> 00:05:37,147
+2005 already banned some of these tricks,
+
+191
+00:05:37,147 --> 00:05:39,047
+like tricks like saying a deal is only
+
+192
+00:05:39,047 --> 00:05:41,667
+available for a very limited time is banned in
+
+193
+00:05:41,667 --> 00:05:42,527
+the EU.
+
+194
+00:05:42,527 --> 00:05:44,867
+So again protection from these dark patterns
+
+195
+00:05:44,867 --> 00:05:47,427
+depends on where you live as a user.
+
+196
+00:05:47,686 --> 00:05:48,207
+For your data,
+
+197
+00:05:48,207 --> 00:05:49,246
+for example,
+
+198
+00:05:49,246 --> 00:05:50,187
+GDPR
+
+199
+00:05:50,287 --> 00:05:53,246
+says that a pre-ticked box does not count as
+
+200
+00:05:53,246 --> 00:05:55,047
+consent on the part of the user.
+
+201
+00:05:55,047 --> 00:05:56,047
+So if
+
+202
+00:05:56,047 --> 00:05:56,667
+an
+
+203
+00:05:56,667 --> 00:05:58,287
+online shop charges you
+
+204
+00:05:58,287 --> 00:06:00,347
+for an extra through a box that they had
+
+205
+00:06:00,347 --> 00:06:01,967
+pre-ticked or pre-select for you,
+
+206
+00:06:01,967 --> 00:06:04,527
+the EU consumer law says that you are entitled
+
+207
+00:06:04,527 --> 00:06:05,727
+to get that money back.
+
+208
+00:06:05,727 --> 00:06:06,407
+In the US,
+
+209
+00:06:06,407 --> 00:06:08,287
+I think the best known case is the Amazon
+
+210
+00:06:08,287 --> 00:06:08,927
+Prime case,
+
+211
+00:06:08,927 --> 00:06:10,507
+where the FTC said
+
+212
+00:06:10,507 --> 00:06:12,287
+Amazon signed people up for Prime
+
+213
+00:06:12,287 --> 00:06:13,447
+without their consent
+
+214
+00:06:13,447 --> 00:06:14,827
+and made cancelling hard.
+
+215
+00:06:14,827 --> 00:06:15,767
+So in
+
+216
+00:06:15,767 --> 00:06:16,327
+September
+
+217
+00:06:16,327 --> 00:06:18,667
+2025, Amazon actually did pay 2.5
+
+218
+00:06:18,667 --> 00:06:20,100
+billion dollars to settle this.
+
+219
+00:06:29,147 --> 00:06:29,767
+And
+
+220
+00:06:29,767 --> 00:06:30,707
+I
+
+221
+00:06:30,746 --> 00:06:32,787
+read that the EU is working on this new
+
+222
+00:06:32,787 --> 00:06:34,767
+law called the Digital Fairness Act.
+
+223
+00:06:34,767 --> 00:06:36,667
+The idea is that it's expected to deal with
+
+224
+00:06:36,667 --> 00:06:38,087
+dark patterns more directly.
+
+225
+00:06:38,087 --> 00:06:39,647
+It hasn't been published yet,
+
+226
+00:06:39,647 --> 00:06:41,487
+but it's something that is under work.
+
+227
+00:06:41,487 --> 00:06:42,207
+So
+
+228
+00:06:42,207 --> 00:06:42,807
+as a user,
+
+229
+00:06:42,807 --> 00:06:44,787
+you just try to keep all of these patterns
+
+230
+00:06:44,787 --> 00:06:46,727
+in mind as well to protect yourself.
+
+231
+00:06:46,727 --> 00:06:48,807
+And if you're a developer or a designer and
+
+232
+00:06:48,807 --> 00:06:50,107
+maybe you work in a company and you actually
+
+233
+00:06:50,107 --> 00:06:51,307
+see a dark pattern,
+
+234
+00:06:51,307 --> 00:06:52,827
+I think the way to counter it,
+
+235
+00:06:52,827 --> 00:06:54,487
+if it's something you would want to counter,
+
+236
+00:06:54,487 --> 00:06:54,987
+is to be like,
+
+237
+00:06:54,987 --> 00:06:57,227
+"Hey, we can get sued for this." Don't even
+
+238
+00:06:57,227 --> 00:06:57,667
+try to say,
+
+239
+00:06:57,667 --> 00:06:59,107
+"This is wrong," or anything like that,
+
+240
+00:06:59,107 --> 00:06:59,707
+because
+
+241
+00:06:59,707 --> 00:07:00,847
+maybe you probably wouldn't be taken
+
+242
+00:07:00,847 --> 00:07:01,686
+seriously. But just be like,
+
+243
+00:07:01,686 --> 00:07:02,267
+"Hey, guys,
+
+244
+00:07:02,267 --> 00:07:04,207
+we could be sued for this." I think people
+
+245
+00:07:04,207 --> 00:07:05,507
+take that more seriously.
+
+246
+00:07:05,507 --> 00:07:07,273
+And try to build the honest version we can
+
+247
+00:07:07,273 --> 00:07:09,233
+make the world a better place,

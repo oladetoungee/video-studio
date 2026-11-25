@@ -1,0 +1,35 @@
+{
+ "board": "yt-60",
+ "kind": "flat blue + her cut-out LEFT + huge stacked caps right, the old way (a Hello World lesson) crossed out with a red X",
+ "direction": "Copies board yt-60 (STOP LEARNING CODE THE OLD WAY: huge stacked condensed caps with the last line in a red box, the old way crossed out with a big red X, the creator beside it), mirrored so she is on the left. The old way = the classic first lesson (print \"Hello, World!\": learn syntax, take a course, get a junior job); the video's answer = learn it differently now that AI writes the code. Rework of 05 (2026-11-16): plain search words (learn to code) + a promise, and a picture a beginner recognises.",
+ "thumbnail_text": "(Hello World crossed out) STOP LEARNING TO CODE / THE OLD WAY",
+ "fonts": [
+  "thumbs-11 Oswald Bold (#111111 on blue #2EA6DE, as Thumbnails 87); round 3, replaced design-05 Anton cream, which read washed out at phone size",
+  "thumbs-01 Anton + red box for the last line (white on #D7262B); thumbs-08 JetBrains Mono for the one line of code"
+ ],
+ "colours": "thumbs-11 specimen (#2EA6DE, #111111) + yt-60's red box and red strike",
+ "text": {
+  "old": "<span class=\"f\">print</span>(<span class=\"s\">\"Hello World\"</span>)",
+  "hd": "Stop learning<br>to code",
+  "rb": "the old way"
+ },
+ "images": {
+  "me": "../../assets/shoot/1619-cut.png"
+ },
+ "vars": {},
+ "class": "no-lift",
+ "titles": [
+  "Stop Learning to Code the Old Way (Do This Instead)",
+  "How I'd Learn to Code in 2027 If I Were Starting Today",
+  "Should You Still Learn to Code in 2027? A Developer's Answer"
+ ],
+ "title": "Stop Learning to Code the Old Way (Do This Instead)",
+ "titles_2026": [
+  "How I'd Learn to Code in 2026 If I Were Starting Today",
+  "Should You Still Learn to Code in 2026? A Developer's Answer"
+ ],
+ "recommended": true,
+ "rework_of": "05-a-coding-course-is-not-a-job",
+ "scores": "2026-11-16 cold (alone, fresh critic each round, whole set): R1 6, R2 6, R3 7 (ranked first in R3); the old 05 scored 6 / 6 / 6 in the same rounds. R3 note (not applied): code card about 1.6x bigger, her 60 px right.",
+ "scores_2026_11_19": "2026-11-19 cold (feed): R1 7/6, R2 6/6, R3 7/6 with the old title; R3 critic's upload pick with a title that matches its claim (now title 1). Earlier 2026-11-16: 6, 6, 7 alone."
+}

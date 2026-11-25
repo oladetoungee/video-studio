@@ -1,0 +1,188 @@
+{
+  "_help": "Edit text here (or in the studio), then run: node shared/build.mjs instagram (from design/carousels). Markup: *word* = the red error marker, \\n = line break.",
+  "deck": "instagram",
+  "width": 1080,
+  "height": 1350,
+  "accent": "#D4F04A",
+  "accentOnInk": "#D4F04A",
+  "docTitle": "Edge cases: 8 real bugs from things users really type (Instagram)",
+  "slides": [
+    {
+      "layout": "cover",
+      "ground": "accent",
+      "title": "Her surname is Null, and websites say she *left it blank*",
+      "size": 100,
+      "sub": "This is an edge case, the kind of input we're sure no user will ever type. Here are seven more that really happened.",
+      "subSize": 38,
+      "ui": "form",
+      "fields": [
+        {
+          "label": "First name",
+          "value": "Jennifer"
+        },
+        {
+          "label": "Surname",
+          "value": "Null",
+          "err": true,
+          "msg": "Surname is required."
+        }
+      ],
+      "gap": 60
+    },
+    {
+      "layout": "punch",
+      "ground": "red",
+      "title": "Real users double-click, switch tabs and lose their network halfway",
+      "size": 112,
+      "body": "They're not doing anything strange. They are just being users."
+    },
+    {
+      "layout": "visual",
+      "ground": "accent",
+      "ui": "orders",
+      "button": "Place order",
+      "ordersLabel": "Orders",
+      "orders": [
+        {
+          "k": "#1041  Running shoes",
+          "v": "€40"
+        },
+        {
+          "k": "#1042  Running shoes",
+          "v": "€40",
+          "dup": true
+        }
+      ],
+      "title": "One double click, two orders",
+      "size": 96,
+      "body": "The fix is to give each order its own key, so the same order sent twice only counts once."
+    },
+    {
+      "layout": "trick",
+      "ground": "card",
+      "tag": "Starbucks, 2015",
+      "title": "$15 of gift cards became *$20*",
+      "ui": "ledger",
+      "ledgerLabel": "Same transfer, sent twice at once",
+      "rows": [
+        {
+          "k": "$5 from card 1 to card 2",
+          "v": "✓"
+        },
+        {
+          "k": "$5 from card 1 to card 2",
+          "v": "✓",
+          "dup": true
+        }
+      ],
+      "totalLabel": "All cards",
+      "was": "$15",
+      "now": "$20",
+      "body": "Egor Homakov, a researcher, found this race condition in Starbucks gift cards. The code assumed the two transfers would happen one after the other."
+    },
+    {
+      "layout": "trick",
+      "ground": "accent",
+      "title": "1 left in stock, *2 sold*",
+      "ui": "stock",
+      "item": "Running shoes",
+      "left": "Only 1 left",
+      "okLabel": "Order confirmed",
+      "buyers": [
+        "Buyer A",
+        "Buyer B"
+      ],
+      "body": "Two people click buy in the same second. Both see one item left, and now we have sold an item that we do not have."
+    },
+    {
+      "layout": "trick",
+      "ground": "ink",
+      "tag": "Names",
+      "title": "The name O'Brien can break a query",
+      "ui": "code",
+      "fields": [
+        {
+          "label": "Surname",
+          "value": "O'Brien",
+          "err": true
+        }
+      ],
+      "code": "WHERE surname = <b>'O</b><span class=\"r\">'</span><span class=\"g\">Brien'</span>",
+      "body": "The apostrophe is the character that starts and ends text in SQL. If your code glues the name straight into the query, it breaks."
+    },
+    {
+      "layout": "trick",
+      "ground": "accent",
+      "title": "His licence plate said NULL",
+      "ui": "plate",
+      "plateLabel": "Licence plate",
+      "plate": "NULL",
+      "ticket": "FINE",
+      "fine": "$12,000 in fines",
+      "body": "Security researcher Joseph Tartaro got the plate in California. Then tickets that were not his started coming to him. He told the story at DEF CON in 2019.",
+      "gap": 40
+    },
+    {
+      "layout": "trick",
+      "ground": "card",
+      "title": "29 February 2012 + 1 year = a date that doesn't exist",
+      "size": 84,
+      "ui": "form",
+      "fields": [
+        {
+          "label": "Valid from",
+          "value": "29 FEB 2012",
+          "mono": true
+        },
+        {
+          "label": "Valid to",
+          "value": "29 FEB 2013",
+          "mono": true,
+          "err": true,
+          "msg": "Invalid date"
+        }
+      ],
+      "body": "That's how part of Microsoft's cloud, Azure, went down on leap day in 2012. The code added one to the year."
+    },
+    {
+      "layout": "trick",
+      "ground": "ink",
+      "tag": "Unicode",
+      "title": "Adébáyọ̀ has 7 letters. Some code counts 13 bytes",
+      "size": 92,
+      "ui": "bytes",
+      "fields": [
+        {
+          "label": "First name",
+          "value": "Adébáyọ̀"
+        }
+      ],
+      "counts": [
+        {
+          "k": "Letters",
+          "n": "7"
+        },
+        {
+          "k": "strlen()",
+          "n": "13",
+          "err": true
+        }
+      ],
+      "body": "Letters with accents and tone marks take more than one byte each. So a 10-character limit can turn away a short Yorùbá name."
+    },
+    {
+      "layout": "end",
+      "ground": "accent",
+      "title": "Which edge case have you seen in production?",
+      "size": 96,
+      "body": "You can't predict every single one. If you wait till you can, you probably wouldn't ship anything.",
+      "where": "Full video on YouTube",
+      "handle": "@WithGbemi",
+      "polaroid": {
+        "img": "headshot.png",
+        "caption": "Edge cases"
+      },
+      "polY": 700
+    }
+  ]
+}

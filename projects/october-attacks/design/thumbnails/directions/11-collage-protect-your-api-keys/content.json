@@ -1,0 +1,29 @@
+{
+  "direction": "Collage over her full natural close-up (calm, direct): a golden key and a .env file with blurred values float beside her; one serif line on a dark band across her chest says the topic. References: viral collage 'Time to lock in.' and 'Thought of these?' (small objects floating, one serif line). Round 2: the thin serif line was the weakest text in the set at phone size, so the words are now in the heavy condensed face.",
+  "thumbnail_text": "protect your API keys",
+  "titles": [
+    "OpenCode Hacked, Railway Breached: Protect Your API Keys",
+    "Three Breaches This Month Went After Developers' Secret Keys"
+  ],
+  "title": "OpenCode Hacked, Railway Breached: Protect Your API Keys",
+  "kind": "collage",
+  "text": {
+    "line": "Protect your <span class=\"acc\">API keys</span>"
+  },
+  "images": {
+    "bg": "../../assets/scene/gbemi-9.0.jpg",
+    "me": "../../assets/scene/gbemi-9.0-person.png",
+    "key": "../../assets/draw/key.svg"
+  },
+  "vars": {
+    "--ground": "#16110D",
+    "--fg": "#fff",
+    "--accent": "#F2541B",
+    "--dim": "rgba(22,17,13,.2)",
+    "--sc": "1.0",
+    "--sc-x": "0px",
+    "--sc-y": "0px"
+  },
+  "scores": "cold critic R1 5 · R2 6 · fixes from R2 applied after scoring",
+  "recommended": false
+}

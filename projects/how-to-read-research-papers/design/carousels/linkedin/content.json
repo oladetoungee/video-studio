@@ -1,0 +1,379 @@
+{
+ "_help": "Edit text here (or in the studio), then run: node shared/build.mjs linkedin (from design/carousels). Markup: *word* = italic key word in the accent colour, ==word== = highlighter (paper slides), \\n = line break.",
+ "deck": "linkedin",
+ "width": 1080,
+ "height": 1350,
+ "accent": "#FBFAF4",
+ "accentOnInk": "#FBFAF4",
+ "docTitle": "How to read a research paper (and tell if it's any good)",
+ "slides": [
+  {
+   "layout": "receipt",
+   "ground": "ink",
+   "title": "How to read a research paper, *and tell if it's any good*",
+   "size": 92,
+   "shot": {
+    "img": "keshav_p1.png",
+    "srcW": 1700,
+    "x": 400,
+    "y": 175,
+    "w": 900,
+    "h": 270,
+    "width": 912,
+    "rot": -1.5,
+    "hl": [
+     [
+      590,
+      195,
+      520,
+      70
+     ]
+    ],
+    "credit": "The method I use comes from S. Keshav's two-page paper (2007)"
+   },
+   "body": "I'm an HCI master's student, so I read a lot of papers for my thesis. This is the method I use."
+  },
+  {
+   "layout": "list",
+   "ground": "ink",
+   "title": "Three parts of a paper do *most of the work*",
+   "size": 88,
+   "rows": [
+    {
+     "head": "The abstract",
+     "sub": "The whole paper squeezed into one paragraph: what they asked, did and found."
+    },
+    {
+     "head": "The method",
+     "sub": "Who took part, how many people and how they measured it."
+    },
+    {
+     "head": "The discussion and limitations",
+     "sub": "What the results mean, and what the study cannot tell you."
+    }
+   ],
+   "body": "When you're writing your thesis, the limitations section is often where you find your research gap."
+  },
+  {
+   "layout": "passes",
+   "ground": "ink",
+   "title": "Read it in up to *three passes*",
+   "size": 100,
+   "passes": [
+    {
+     "t": "5-10 min",
+     "w": "Do I even need this paper?"
+    },
+    {
+     "t": "up to 1 hour",
+     "w": "What did they find, and how?"
+    },
+    {
+     "t": "4-5 hours",
+     "w": "Only for the papers your thesis stands on"
+    }
+   ],
+   "body": "Keshav's times are for your first papers. Pass three drops to about an hour once you're experienced."
+  },
+  {
+   "layout": "receipt",
+   "ground": "ink",
+   "title": "Pass one,\n*in this order*",
+   "size": 104,
+   "shot": {
+    "img": "keshav_p1.png",
+    "srcW": 1700,
+    "scale": 1.6,
+    "strips": [
+     {
+      "box": [
+       294,
+       1758,
+       523,
+       32
+      ],
+      "hl": [
+       [
+        538,
+        814
+       ]
+      ]
+     },
+     {
+      "box": [
+       176,
+       1838,
+       606,
+       30
+      ],
+      "scale": 1.4,
+      "rot": 0,
+      "hl": [
+       [
+        424,
+        778
+       ]
+      ]
+     },
+     {
+      "box": [
+       175,
+       1890,
+       641,
+       58
+      ],
+      "scale": 1.4,
+      "rot": 0
+     },
+     {
+      "box": [
+       175,
+       1972,
+       274,
+       30
+      ],
+      "scale": 1.4,
+      "rot": 0,
+      "hl": [
+       [
+        323,
+        445
+       ]
+      ]
+     },
+     {
+      "box": [
+       906,
+       580,
+       641,
+       58
+      ],
+      "scale": 1.4,
+      "rot": 0
+     }
+    ],
+    "credit": "S. Keshav, “How to Read a Paper” (2007), section 2.1"
+   },
+   "body": "Most of the time, that's enough to know if you need the paper at all."
+  },
+  {
+   "layout": "punch",
+   "ground": "paper",
+   "title": "Ten minutes can save you a ==whole evening==",
+   "size": 130,
+   "body": "A lot of the time, after those five or ten minutes, you find the paper isn't relevant to what you're doing. That's where you stop."
+  },
+  {
+   "layout": "list",
+   "ground": "paper",
+   "title": "After pass one, answer the *five Cs*",
+   "size": 84,
+   "rows": [
+    {
+     "head": "Category",
+     "sub": "What kind of paper is it? A study or a review?"
+    },
+    {
+     "head": "Context",
+     "sub": "Which other papers is it related to?"
+    },
+    {
+     "head": "Correctness",
+     "sub": "Do the assumptions seem valid?"
+    },
+    {
+     "head": "Contributions",
+     "sub": "What does it add to the subject?"
+    },
+    {
+     "head": "Clarity",
+     "sub": "Is the paper well written?"
+    }
+   ]
+  },
+  {
+   "layout": "receipt",
+   "ground": "ink",
+   "title": "In pass two, *write in the margin*",
+   "size": 100,
+   "shot": {
+    "img": "keshav_p1.png",
+    "srcW": 1700,
+    "scale": 1.65,
+    "strips": [
+     {
+      "box": [
+       1219,
+       1625,
+       329,
+       29
+      ],
+      "hl": true
+     },
+     {
+      "box": [
+       876,
+       1655,
+       509,
+       31
+      ],
+      "hl": true,
+      "dx": 20
+     }
+    ],
+    "credit": "S. Keshav, “How to Read a Paper” (2007), section 2.2"
+   },
+   "body": "Look properly at the figures and graphs, and mark the references that look relevant. I've started printing the important papers so I can mark them up.",
+   "margin": [
+    "key point",
+    "read ref later",
+    "check graph"
+   ]
+  },
+  {
+   "layout": "stickies",
+   "ground": "paper",
+   "title": "In pass three, re-create the paper *in your head*",
+   "size": 92,
+   "notes": [
+    "Who would you recruit?",
+    "What would you ask them?",
+    "Would you measure the same thing?",
+    "Where is your version different?"
+   ],
+   "body": "Every place where your version is different is either a weak spot in the paper or an idea for your own research."
+  },
+  {
+   "layout": "receipt",
+   "ground": "ink",
+   "title": "Does the number fit *the size of the claim?*",
+   "size": 88,
+   "shot": {
+    "img": "caine__most-common-sample-size.png",
+    "srcW": 1920,
+    "scale": 2.5,
+    "strips": [
+     {
+      "box": [
+       1164,
+       780,
+       129,
+       27
+      ],
+      "hl": true
+     },
+     {
+      "box": [
+       651,
+       808,
+       260,
+       26
+      ],
+      "hl": true,
+      "dx": 60
+     }
+    ],
+    "credit": "Kelly Caine, CHI 2016"
+   },
+   "people": 12,
+   "body": "Kelly Caine looked at every paper published at CHI 2014, a big HCI conference. 12 people in long interviews can tell you a lot about how people experience something, but not what percentage of all people do it.",
+   "corner": "Check 1 of 3"
+  },
+  {
+   "layout": "duo",
+   "ground": "paper",
+   "title": "Does the method *match the question?*",
+   "size": 100,
+   "cols": [
+    {
+     "k": "Who took part",
+     "v": "University students"
+    },
+    {
+     "k": "Applied to",
+     "v": "Nurses on\nnight shifts"
+    }
+   ],
+   "q": "?",
+   "body": "Check how they got their answer, whether that's a survey, watching people work or measuring heart rate, and who was in the study before you apply it to anyone else.",
+   "corner": "Check 2 of 3"
+  },
+  {
+   "layout": "receipt",
+   "ground": "ink",
+   "title": "Who *funded it?*",
+   "size": 124,
+   "shot": {
+    "img": "pubmed__leads-to-more-favorable-.png",
+    "srcW": 1920,
+    "scale": 1.95,
+    "strips": [
+     {
+      "box": [
+       481,
+       745,
+       436,
+       30
+      ]
+     },
+     {
+      "box": [
+       919,
+       745,
+       342,
+       30
+      ],
+      "dx": 40
+     },
+     {
+      "box": [
+       223,
+       781,
+       352,
+       30
+      ],
+      "hl": true
+     },
+     {
+      "box": [
+       577,
+       781,
+       259,
+       30
+      ],
+      "hl": true,
+      "dx": 40
+     }
+    ],
+    "credit": "Lundh et al., Cochrane review, 2017 (PubMed 28207928)"
+   },
+   "body": "Funding doesn't exactly make a study wrong. But when the funder benefits from one particular answer, you need to pay a little bit more attention.",
+   "titleNowrap": true,
+   "corner": "Check 3 of 3"
+  },
+  {
+   "layout": "chat",
+   "ground": "ink",
+   "title": "Still doesn't make sense?",
+   "size": 100,
+   "ask": "Can you explain this paragraph in simple words?",
+   "note": "then check it against the paper",
+   "body": "I use AI for dense paragraphs a lot. Looking up the terms you don't know or reading a survey paper on the topic first can help too.",
+   "reply": "This paragraph says the app was only tested with students, so the results may not hold for other people."
+  },
+  {
+   "layout": "end",
+   "ground": "ink",
+   "title": "What's the first part of a paper *you read?*",
+   "size": 96,
+   "body": "Tell me in the comments. My full video has every step, including how I keep notes and what I do when a paper still doesn't make sense.",
+   "where": "Full video on YouTube",
+   "handle": "@WithGbemi",
+   "polaroid": {
+    "img": "gbemi-photo.jpg",
+    "caption": "Gbemisola"
+   },
+   "polY": 700
+  }
+ ]
+}

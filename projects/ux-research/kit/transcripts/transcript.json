@@ -1,0 +1,1242 @@
+{
+	"systeminfo": "WHISPER : COREML = 0 | OPENVINO = 0 | MTL : EMBED_LIBRARY = 1 | CPU : NEON = 1 | ARM_FMA = 1 | FP16_VA = 1 | MATMUL_INT8 = 1 | DOTPROD = 1 | SME = 1 | ACCELERATE = 1 | OPENMP = 1 | REPACK = 1 | ",
+	"model": {
+		"type": "small",
+		"multilingual": false,
+		"vocab": 51864,
+		"audio": {
+			"ctx": 1500,
+			"state": 768,
+			"head": 12,
+			"layer": 12
+		},
+		"text": {
+			"ctx": 448,
+			"state": 768,
+			"head": 12,
+			"layer": 12
+		},
+		"mels": 80,
+		"ftype": 1
+	},
+	"params": {
+		"model": "/Users/gbemi/.cache/whisper/ggml-small.en.bin",
+		"language": "en",
+		"translate": false
+	},
+	"result": {
+		"language": "en"
+	},
+	"transcription": [
+		{
+			"timestamps": {
+				"from": "00:00:00,000",
+				"to": "00:00:02,000"
+			},
+			"offsets": {
+				"from": 0,
+				"to": 2000
+			},
+			"text": " I'm going to try to get out of the room a little bit, and then I'll get out of the room."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:02,000",
+				"to": "00:00:20,000"
+			},
+			"offsets": {
+				"from": 2000,
+				"to": 20000
+			},
+			"text": " I'm going to try to get out of the room a little bit, and then I'll get out of the room a little bit, and then I'll get out of the room a little bit, and then I'll get out of the room a little bit, and then I'll get out of the room a little bit, and then I'll get out of the room a little bit, and then I'll get out of the room a little bit, and then I'll get out of the room a little bit, and then I'll get out of the room a little bit, and then I'll get out of the room a little bit, and then I'll get out of the room a little bit."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:20,000",
+				"to": "00:00:27,000"
+			},
+			"offsets": {
+				"from": 20000,
+				"to": 27000
+			},
+			"text": " I'll get out of the room a little bit, and then I'll get out of the room a little bit, and then I'll get out of the room a little bit, and then I'll get out of the room a little bit, and then I'll get out of the room a little bit, and then I'll get out of the room a little bit, and then I'll get out of the room a little bit."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:27,000",
+				"to": "00:00:37,000"
+			},
+			"offsets": {
+				"from": 27000,
+				"to": 37000
+			},
+			"text": " I'm going to try to get out of the room a little bit, and then I'll get out of the room a little bit, and then I'll get out of the room a little bit, and then I'll get out of the room a little bit, and then I'll get out of the room a little bit, and then I'll get out of the room a little bit, and then I'll get out of the room a little bit."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:37,000",
+				"to": "00:00:41,000"
+			},
+			"offsets": {
+				"from": 37000,
+				"to": 41000
+			},
+			"text": " If you're building an app, there's one very simple question you need to ask yourself before anything else."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:41,000",
+				"to": "00:00:52,000"
+			},
+			"offsets": {
+				"from": 41000,
+				"to": 52000
+			},
+			"text": " Who is this app for, and what do they actually need it for? That question is the heart of UX research, and it's a big part of what I study in my master's degree in human computer interaction."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:52,000",
+				"to": "00:01:02,000"
+			},
+			"offsets": {
+				"from": 52000,
+				"to": 62000
+			},
+			"text": " In this video, I'm going to start from the scratch, from the beginning, UI, UX, and then we'll walk it all the way home to UX research, how it is done, where UX research is, and all of that."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:02,000",
+				"to": "00:01:11,000"
+			},
+			"offsets": {
+				"from": 62000,
+				"to": 71000
+			},
+			"text": " You've probably heard people say UI, UX, like one word, UI, UX designer, UI, UX course, but UI and UX are two different things."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:11,000",
+				"to": "00:01:18,000"
+			},
+			"offsets": {
+				"from": 71000,
+				"to": 78000
+			},
+			"text": " UI stands for user interface. It is what you can see and touch, the button, the colors, the layout, the icons, the screen."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:18,000",
+				"to": "00:01:31,000"
+			},
+			"offsets": {
+				"from": 78000,
+				"to": 91000
+			},
+			"text": " UX, on the other hand, stands for user experience. It is how the old product feels to use. Can a user find what they're looking for? Does it make sense to the user? Did the users get frustrated using it? Did the user come back to use it?"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:31,000",
+				"to": "00:01:40,000"
+			},
+			"offsets": {
+				"from": 91000,
+				"to": 100000
+			},
+			"text": " So you can have a beautiful and half with a beautiful interface that is a nightmare to use. In that case, we have a great UI, but terrible UX."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:40,000",
+				"to": "00:01:47,000"
+			},
+			"offsets": {
+				"from": 100000,
+				"to": 107000
+			},
+			"text": " So your UI is kind of part of your UX. The experience is just much more bigger than what is on the screen."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:47,000",
+				"to": "00:01:57,000"
+			},
+			"offsets": {
+				"from": 107000,
+				"to": 117000
+			},
+			"text": " Now, what is UX? User experience, or UX, covers everything about how a person experiences a product or a service. The time was popularized, subscribe to that."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:57,000",
+				"to": "00:02:12,000"
+			},
+			"offsets": {
+				"from": 117000,
+				"to": 132000
+			},
+			"text": " The time was popularized by Don Norman back in the 80s when it was at Apple. And the way he and Jacob Nielsen describe it is that user experience cover every part of a person's interaction with a company, its services and its products."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:12,000",
+				"to": "00:02:25,000"
+			},
+			"offsets": {
+				"from": 132000,
+				"to": 145000
+			},
+			"text": " And all of this connects back to an idea called human centered design. The idea is simple. You can make sense of it in, I love this phrase that I found on like a media article, it says that good design doesn't start with screens, it starts with people."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:25,000",
+				"to": "00:02:33,000"
+			},
+			"offsets": {
+				"from": 145000,
+				"to": 153000
+			},
+			"text": " So you start from the people who use a product, their needs, their abilities, their limitations, their real lives, and you design around them."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:33,000",
+				"to": "00:02:51,000"
+			},
+			"offsets": {
+				"from": 153000,
+				"to": 171000
+			},
+			"text": " So now, we know what UX is. Now what is UX research? UX research is how you get to know your users. It is the work of understanding the people who would use a product, what they need, where they struggle, what they prioritize, so that you can view the product the right way and build it in a way that actually works for them."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:51,000",
+				"to": "00:03:01,000"
+			},
+			"offsets": {
+				"from": 171000,
+				"to": 181000
+			},
+			"text": " Why aren't we doing this old research? The idea is simple. You don't want to build the wrong thing. You could choose to not do it and guess your way through, but you don't want to build the wrong thing."
+		},
+		{
+			"timestamps": {
+				"from": "00:03:01,000",
+				"to": "00:03:07,000"
+			},
+			"offsets": {
+				"from": 181000,
+				"to": 187000
+			},
+			"text": " Building is very expensive. Even with AI, you used to spend your time and your tokens, and in some cases, you probably still need a thing."
+		},
+		{
+			"timestamps": {
+				"from": "00:03:07,000",
+				"to": "00:03:20,000"
+			},
+			"offsets": {
+				"from": 187000,
+				"to": 200000
+			},
+			"text": " A lot of products fail because the teams build something that maybe nobody actually needs. Some other products fail because they build the right thing, but they build it in a way that people just couldn't find their way around it, or people just couldn't figure it out."
+		},
+		{
+			"timestamps": {
+				"from": "00:03:20,000",
+				"to": "00:03:29,000"
+			},
+			"offsets": {
+				"from": 200000,
+				"to": 209000
+			},
+			"text": " UX research helps to catch both problems helly on. It is cheaper to change your idea or change your sketch than it is to rebuild and have that is already life."
+		},
+		{
+			"timestamps": {
+				"from": "00:03:29,000",
+				"to": "00:03:39,000"
+			},
+			"offsets": {
+				"from": 209000,
+				"to": 219000
+			},
+			"text": " And doing UX research means that decisions about the products come from what the users, the real people, actually do. Otherwise, they just come from a random person on the team."
+		},
+		{
+			"timestamps": {
+				"from": "00:03:39,000",
+				"to": "00:03:49,000"
+			},
+			"offsets": {
+				"from": 219000,
+				"to": 229000
+			},
+			"text": " Now, who is a UX researcher? Well, I mean, a UX researcher does UX research. A UX researcher works closely with designers, product managers, engineers, and the people running the business."
+		},
+		{
+			"timestamps": {
+				"from": "00:03:49,000",
+				"to": "00:03:53,000"
+			},
+			"offsets": {
+				"from": 229000,
+				"to": 233000
+			},
+			"text": " Their job is to bring real users into those conversations."
+		},
+		{
+			"timestamps": {
+				"from": "00:03:53,000",
+				"to": "00:04:04,000"
+			},
+			"offsets": {
+				"from": 233000,
+				"to": 244000
+			},
+			"text": " A typical way for a UX researcher might look like planning a study, recruiting people to take part, running user interviews or usability testing, then sitting down with the notes or the recordings to find patterns."
+		},
+		{
+			"timestamps": {
+				"from": "00:04:04,000",
+				"to": "00:04:13,000"
+			},
+			"offsets": {
+				"from": 244000,
+				"to": 253000
+			},
+			"text": " And finally, sharing what they found from these users or about these users with the team in a way that actually changes what gets built."
+		},
+		{
+			"timestamps": {
+				"from": "00:04:13,000",
+				"to": "00:04:21,000"
+			},
+			"offsets": {
+				"from": 253000,
+				"to": 261000
+			},
+			"text": " People usually mix who a UX researcher is and who a UX designer is a lot. A UX researcher's job is to understand the users, what they need."
+		},
+		{
+			"timestamps": {
+				"from": "00:04:21,000",
+				"to": "00:04:26,000"
+			},
+			"offsets": {
+				"from": 261000,
+				"to": 266000
+			},
+			"text": " A UX designer's job is to take that understanding and design the product around it."
+		},
+		{
+			"timestamps": {
+				"from": "00:04:26,000",
+				"to": "00:04:34,000"
+			},
+			"offsets": {
+				"from": 266000,
+				"to": 274000
+			},
+			"text": " In smaller teams, there's usually just one person that ends up doing both jobs. And there are also a lot of product managers that do research as part of their jobs as well."
+		},
+		{
+			"timestamps": {
+				"from": "00:04:34,000",
+				"to": "00:04:46,000"
+			},
+			"offsets": {
+				"from": 274000,
+				"to": 286000
+			},
+			"text": " What you need to dive into UX research is just genuine curiosity about users, about people. You have to be really good at taking the time to study people, find patterns, and just be really good at listening."
+		},
+		{
+			"timestamps": {
+				"from": "00:04:46,000",
+				"to": "00:04:53,000"
+			},
+			"offsets": {
+				"from": 286000,
+				"to": 293000
+			},
+			"text": " Basically, you must be interested in people. When I started reading and studying about UX research, I kept running into different ways that people categorize it."
+		},
+		{
+			"timestamps": {
+				"from": "00:04:53,000",
+				"to": "00:04:59,000"
+			},
+			"offsets": {
+				"from": 293000,
+				"to": 299000
+			},
+			"text": " You go on Coursera. Coursera has quite a number. You go to different places. It's a different kind of categorization everywhere."
+		},
+		{
+			"timestamps": {
+				"from": "00:04:59,000",
+				"to": "00:05:11,000"
+			},
+			"offsets": {
+				"from": 299000,
+				"to": 311000
+			},
+			"text": " You see quantitative and... describe that. You see generative and evaluative, qualitative and quantitative, behavioral and attitude in our primary and secondary, remote, in-person, moderated, unmoderated."
+		},
+		{
+			"timestamps": {
+				"from": "00:05:11,000",
+				"to": "00:05:18,000"
+			},
+			"offsets": {
+				"from": 311000,
+				"to": 318000
+			},
+			"text": " But the useful way to think about it is that some of these peers describe what kind of information you get, like quantitative and qualitative."
+		},
+		{
+			"timestamps": {
+				"from": "00:05:18,000",
+				"to": "00:05:23,000"
+			},
+			"offsets": {
+				"from": 318000,
+				"to": 323000
+			},
+			"text": " And others describe how you run the research, like remote or in-person."
+		},
+		{
+			"timestamps": {
+				"from": "00:05:23,000",
+				"to": "00:05:32,000"
+			},
+			"offsets": {
+				"from": 323000,
+				"to": 332000
+			},
+			"text": " Anyways, there's a lot of categorization. I will focus on the first three big peers in this video. Generative and evaluative, qualitative and quantitative, behavioral and attitude in our..."
+		},
+		{
+			"timestamps": {
+				"from": "00:05:32,000",
+				"to": "00:05:40,000"
+			},
+			"offsets": {
+				"from": 332000,
+				"to": 340000
+			},
+			"text": " The first big way to split UX research is generative versus evaluative. Generative UX research happens early, before anything is designed."
+		},
+		{
+			"timestamps": {
+				"from": "00:05:40,000",
+				"to": "00:05:47,000"
+			},
+			"offsets": {
+				"from": 340000,
+				"to": 347000
+			},
+			"text": " It asks questions like, \"What is the real problem? What do people need? How do they get by right now without this thing that we are about to build?\""
+		},
+		{
+			"timestamps": {
+				"from": "00:05:47,000",
+				"to": "00:05:57,000"
+			},
+			"offsets": {
+				"from": 347000,
+				"to": 357000
+			},
+			"text": " It generates ideas for what to build. For example, for my thesis, I'm doing generative research. Evaluative research, on the other hand, happens later, after there is a design."
+		},
+		{
+			"timestamps": {
+				"from": "00:05:57,000",
+				"to": "00:06:04,000"
+			},
+			"offsets": {
+				"from": 357000,
+				"to": 364000
+			},
+			"text": " It asks questions like, \"Does this product actually work? Can users use it? Where do the users get stuck while using it?\""
+		},
+		{
+			"timestamps": {
+				"from": "00:06:04,000",
+				"to": "00:06:07,000"
+			},
+			"offsets": {
+				"from": 364000,
+				"to": 367000
+			},
+			"text": " So you are evaluating something that already exists."
+		},
+		{
+			"timestamps": {
+				"from": "00:06:07,000",
+				"to": "00:06:15,000"
+			},
+			"offsets": {
+				"from": 367000,
+				"to": 375000
+			},
+			"text": " So generative UX research helps you decide what to build. And evaluative UX research tells you whether what you build works."
+		},
+		{
+			"timestamps": {
+				"from": "00:06:15,000",
+				"to": "00:06:23,000"
+			},
+			"offsets": {
+				"from": 375000,
+				"to": 383000
+			},
+			"text": " The second way to split UX research is qualitative versus quantitative. Quantitative UX research is about numbers."
+		},
+		{
+			"timestamps": {
+				"from": "00:06:23,000",
+				"to": "00:06:31,000"
+			},
+			"offsets": {
+				"from": 383000,
+				"to": 391000
+			},
+			"text": " How many people completed the task? What percentage dropped off at checkout? How long did it take? It tells you what is happening and how much of it."
+		},
+		{
+			"timestamps": {
+				"from": "00:06:31,000",
+				"to": "00:06:38,000"
+			},
+			"offsets": {
+				"from": 391000,
+				"to": 398000
+			},
+			"text": " Qualitative UX research is about understanding. Why did the users drop off? What were they thinking? What confused them?"
+		},
+		{
+			"timestamps": {
+				"from": "00:06:38,000",
+				"to": "00:06:49,000"
+			},
+			"offsets": {
+				"from": 398000,
+				"to": 409000
+			},
+			"text": " It's usually smaller and more in depth. It tells you the why. Usually, you want both. You want the numbers to show where the problem is and you want the conversation to show why the problem is happening."
+		},
+		{
+			"timestamps": {
+				"from": "00:06:49,000",
+				"to": "00:07:01,000"
+			},
+			"offsets": {
+				"from": 409000,
+				"to": 421000
+			},
+			"text": " Now, the big way to split UX research is behavioral versus attitudinal. Attitudinal UX research is about what users say, what they think, what they feel, what they tell you that they do."
+		},
+		{
+			"timestamps": {
+				"from": "00:07:01,000",
+				"to": "00:07:08,000"
+			},
+			"offsets": {
+				"from": 421000,
+				"to": 428000
+			},
+			"text": " Surveys and interviews are mostly attitudinal. Behavioral UX research, on the other hand, is about what people actually do."
+		},
+		{
+			"timestamps": {
+				"from": "00:07:08,000",
+				"to": "00:07:12,000"
+			},
+			"offsets": {
+				"from": 428000,
+				"to": 432000
+			},
+			"text": " So you watch them use the thing. You look at the data on what they click."
+		},
+		{
+			"timestamps": {
+				"from": "00:07:12,000",
+				"to": "00:07:19,000"
+			},
+			"offsets": {
+				"from": 432000,
+				"to": 439000
+			},
+			"text": " And the reason why I want to amount on this, because this is one of the things that was so admired in my years during my first semester,"
+		},
+		{
+			"timestamps": {
+				"from": "00:07:19,000",
+				"to": "00:07:23,000"
+			},
+			"offsets": {
+				"from": 439000,
+				"to": 443000
+			},
+			"text": " that what people say and what people do are often very different."
+		},
+		{
+			"timestamps": {
+				"from": "00:07:23,000",
+				"to": "00:07:29,000"
+			},
+			"offsets": {
+				"from": 443000,
+				"to": 449000
+			},
+			"text": " What people say, what they give you in a survey is usually different from what they do when you watch them."
+		},
+		{
+			"timestamps": {
+				"from": "00:07:29,000",
+				"to": "00:07:32,000"
+			},
+			"offsets": {
+				"from": 449000,
+				"to": 452000
+			},
+			"text": " If you ask someone how they use an app, they will give you an answer."
+		},
+		{
+			"timestamps": {
+				"from": "00:07:32,000",
+				"to": "00:07:37,000"
+			},
+			"offsets": {
+				"from": 452000,
+				"to": 457000
+			},
+			"text": " If you watch them use the app, they could end up doing something completely different from the answer that they gave you."
+		},
+		{
+			"timestamps": {
+				"from": "00:07:37,000",
+				"to": "00:07:43,000"
+			},
+			"offsets": {
+				"from": 457000,
+				"to": 463000
+			},
+			"text": " And they might genuinely believe what they told you. We are human beings. We are just not very good at noticing our own behaviors."
+		},
+		{
+			"timestamps": {
+				"from": "00:07:43,000",
+				"to": "00:07:51,000"
+			},
+			"offsets": {
+				"from": 463000,
+				"to": 471000
+			},
+			"text": " So good UX research watches, as much as it acts, what people say still matters. Sometimes they do exactly what they tell you."
+		},
+		{
+			"timestamps": {
+				"from": "00:07:51,000",
+				"to": "00:07:57,000"
+			},
+			"offsets": {
+				"from": 471000,
+				"to": 477000
+			},
+			"text": " But when what they say and what they do don't match, then working out why they don't match is also a very useful finding."
+		},
+		{
+			"timestamps": {
+				"from": "00:07:57,000",
+				"to": "00:08:01,000"
+			},
+			"offsets": {
+				"from": 477000,
+				"to": 481000
+			},
+			"text": " Now there are a few more categories of UX research that I'll go over very quickly."
+		},
+		{
+			"timestamps": {
+				"from": "00:08:01,000",
+				"to": "00:08:05,000"
+			},
+			"offsets": {
+				"from": 481000,
+				"to": 485000
+			},
+			"text": " The primary research is the research you do yourself, like running your own interview."
+		},
+		{
+			"timestamps": {
+				"from": "00:08:05,000",
+				"to": "00:08:10,000"
+			},
+			"offsets": {
+				"from": 485000,
+				"to": 490000
+			},
+			"text": " Secondary research uses what already exists, like published studies, industry reports and all of that."
+		},
+		{
+			"timestamps": {
+				"from": "00:08:10,000",
+				"to": "00:08:14,000"
+			},
+			"offsets": {
+				"from": 490000,
+				"to": 494000
+			},
+			"text": " Remote UX research happens over a video call through an online tool."
+		},
+		{
+			"timestamps": {
+				"from": "00:08:14,000",
+				"to": "00:08:19,000"
+			},
+			"offsets": {
+				"from": 494000,
+				"to": 499000
+			},
+			"text": " In-person research happens in the same room where you can notice things like body language and all of that."
+		},
+		{
+			"timestamps": {
+				"from": "00:08:19,000",
+				"to": "00:08:25,000"
+			},
+			"offsets": {
+				"from": 499000,
+				"to": 505000
+			},
+			"text": " And then we have moderated research, where a researcher is there, guiding the session, asking follow-up questions."
+		},
+		{
+			"timestamps": {
+				"from": "00:08:25,000",
+				"to": "00:08:31,000"
+			},
+			"offsets": {
+				"from": 505000,
+				"to": 511000
+			},
+			"text": " And unmoderated research, where people complete tasks on their own, usually through a tool that records them."
+		},
+		{
+			"timestamps": {
+				"from": "00:08:31,000",
+				"to": "00:08:36,000"
+			},
+			"offsets": {
+				"from": 511000,
+				"to": 516000
+			},
+			"text": " So how is UX research actually done? There are a lot of methods that I've actually mentioned in the earlier part."
+		},
+		{
+			"timestamps": {
+				"from": "00:08:36,000",
+				"to": "00:08:42,000"
+			},
+			"offsets": {
+				"from": 516000,
+				"to": 522000
+			},
+			"text": " There's user interview, where you sit down with people, you talk to them about their lives, their work, their frustration, maybe how they use their product and all of that."
+		},
+		{
+			"timestamps": {
+				"from": "00:08:42,000",
+				"to": "00:08:50,000"
+			},
+			"offsets": {
+				"from": 522000,
+				"to": 530000
+			},
+			"text": " There's usability testing. You give someone a task to do with your design, maybe with your app, you watch how they do the tasks, usually while they think out loud."
+		},
+		{
+			"timestamps": {
+				"from": "00:08:50,000",
+				"to": "00:08:53,000"
+			},
+			"offsets": {
+				"from": 530000,
+				"to": 533000
+			},
+			"text": " Then we have surveys. You can reach a lot of people quickly with surveys."
+		},
+		{
+			"timestamps": {
+				"from": "00:08:53,000",
+				"to": "00:09:00,000"
+			},
+			"offsets": {
+				"from": 533000,
+				"to": 540000
+			},
+			"text": " But surveys usually have less depth. And then there's contextual inquiry, where you go to where people work and live and watch them in their real environment."
+		},
+		{
+			"timestamps": {
+				"from": "00:09:00,000",
+				"to": "00:09:09,000"
+			},
+			"offsets": {
+				"from": 540000,
+				"to": 549000
+			},
+			"text": " There are also diary studies, where people record their experiences over days or weeks, so you see patterns that maybe a single session would have missed."
+		},
+		{
+			"timestamps": {
+				"from": "00:09:09,000",
+				"to": "00:09:16,000"
+			},
+			"offsets": {
+				"from": 549000,
+				"to": 556000
+			},
+			"text": " There's CAD sorting. There's A/B testing. There's all kinds of UX research methods that we can't go over in this video."
+		},
+		{
+			"timestamps": {
+				"from": "00:09:16,000",
+				"to": "00:09:21,000"
+			},
+			"offsets": {
+				"from": 556000,
+				"to": 561000
+			},
+			"text": " You might be thinking that UX research sounds like something that only big companies with big budgets can do."
+		},
+		{
+			"timestamps": {
+				"from": "00:09:21,000",
+				"to": "00:09:25,000"
+			},
+			"offsets": {
+				"from": 561000,
+				"to": 565000
+			},
+			"text": " But even as a small startup, some research is always better than no research."
+		},
+		{
+			"timestamps": {
+				"from": "00:09:25,000",
+				"to": "00:09:33,000"
+			},
+			"offsets": {
+				"from": 565000,
+				"to": 573000
+			},
+			"text": " You don't need a lab. Talk to five people who would actually use your product before you start to build, maybe yourself and a few friends."
+		},
+		{
+			"timestamps": {
+				"from": "00:09:33,000",
+				"to": "00:09:39,000"
+			},
+			"offsets": {
+				"from": 573000,
+				"to": 579000
+			},
+			"text": " Watch three of your friends try your app on a video call with messages, with feedback. That also counts."
+		},
+		{
+			"timestamps": {
+				"from": "00:09:39,000",
+				"to": "00:09:46,000"
+			},
+			"offsets": {
+				"from": 579000,
+				"to": 586000
+			},
+			"text": " Because good design goes so much deeper than just a nice visual. It's about whether the thing actually works for the people using it."
+		},
+		{
+			"timestamps": {
+				"from": "00:09:46,000",
+				"to": "00:09:54,000"
+			},
+			"offsets": {
+				"from": 586000,
+				"to": 594000
+			},
+			"text": " Now, another question I wanted to ask is that is UX research the same as user research?"
+		},
+		{
+			"timestamps": {
+				"from": "00:09:54,000",
+				"to": "00:10:00,000"
+			},
+			"offsets": {
+				"from": 594000,
+				"to": 600000
+			},
+			"text": " Most of the time, people use these two times. They mean the same thing. You will see, even in job titles, that use either one."
+		},
+		{
+			"timestamps": {
+				"from": "00:10:00,000",
+				"to": "00:10:09,000"
+			},
+			"offsets": {
+				"from": 600000,
+				"to": 609000
+			},
+			"text": " Now, user research is the broader one. UX research sits under it. User research is about understanding the users themselves, the users that need their habits, their lives."
+		},
+		{
+			"timestamps": {
+				"from": "00:10:09,000",
+				"to": "00:10:18,000"
+			},
+			"offsets": {
+				"from": 609000,
+				"to": 618000
+			},
+			"text": " And it can fit into a lot of decisions that go beyond design. For example, research into how customers feel about your prices or your delivery time is user research."
+		},
+		{
+			"timestamps": {
+				"from": "00:10:18,000",
+				"to": "00:10:26,000"
+			},
+			"offsets": {
+				"from": 618000,
+				"to": 626000
+			},
+			"text": " It isn't really about the experience of your product. UX research is more focused on how people experience a specific product or service."
+		},
+		{
+			"timestamps": {
+				"from": "00:10:26,000",
+				"to": "00:10:31,000"
+			},
+			"offsets": {
+				"from": 626000,
+				"to": 631000
+			},
+			"text": " It always, they share the same goal, which is making sure that decisions are based on real users."
+		},
+		{
+			"timestamps": {
+				"from": "00:10:31,000",
+				"to": "00:10:37,000"
+			},
+			"offsets": {
+				"from": 631000,
+				"to": 637000
+			},
+			"text": " And again, both of them also differ from market research. For example, market research is more about what people would buy."
+		},
+		{
+			"timestamps": {
+				"from": "00:10:37,000",
+				"to": "00:10:43,000"
+			},
+			"offsets": {
+				"from": 637000,
+				"to": 643000
+			},
+			"text": " Right? UX research is about how people use the product, how it makes them feel, how it feels to them as well."
+		},
+		{
+			"timestamps": {
+				"from": "00:10:43,000",
+				"to": "00:10:47,000"
+			},
+			"offsets": {
+				"from": 643000,
+				"to": 647000
+			},
+			"text": " Will AI replace UX research? Very good question that I also wanted to answer."
+		},
+		{
+			"timestamps": {
+				"from": "00:10:47,000",
+				"to": "00:10:52,000"
+			},
+			"offsets": {
+				"from": 647000,
+				"to": 652000
+			},
+			"text": " AI too is already doing a lot of the slow work. They can transcribe interviews, they can summarize hours of notes."
+		},
+		{
+			"timestamps": {
+				"from": "00:10:52,000",
+				"to": "00:10:58,000"
+			},
+			"offsets": {
+				"from": 652000,
+				"to": 658000
+			},
+			"text": " We save UX research as a lot of time. I cannot even imagine having to do my thesis four years ago."
+		},
+		{
+			"timestamps": {
+				"from": "00:10:58,000",
+				"to": "00:11:03,000"
+			},
+			"offsets": {
+				"from": 658000,
+				"to": 663000
+			},
+			"text": " I probably would do it, but oh my God, it would be a lot of work. So AI is changing how UX research gets done, right?"
+		},
+		{
+			"timestamps": {
+				"from": "00:11:03,000",
+				"to": "00:11:10,000"
+			},
+			"offsets": {
+				"from": 663000,
+				"to": 670000
+			},
+			"text": " In a good way, I think, if you use it well. Now, if you're thinking about a career in UX design, I'm still a student."
+		},
+		{
+			"timestamps": {
+				"from": "00:11:10,000",
+				"to": "00:11:13,000"
+			},
+			"offsets": {
+				"from": 670000,
+				"to": 673000
+			},
+			"text": " I'm currently doing my master's in human computer interaction."
+		},
+		{
+			"timestamps": {
+				"from": "00:11:13,000",
+				"to": "00:11:19,000"
+			},
+			"offsets": {
+				"from": 673000,
+				"to": 679000
+			},
+			"text": " And from what I've noticed, the number of jobs with the title UX researcher is actually small compared to other design rules."
+		},
+		{
+			"timestamps": {
+				"from": "00:11:19,000",
+				"to": "00:11:25,000"
+			},
+			"offsets": {
+				"from": 679000,
+				"to": 685000
+			},
+			"text": " I think it's because a lot of companies expect their designers and maybe their product managers to just do some research work themselves."
+		},
+		{
+			"timestamps": {
+				"from": "00:11:25,000",
+				"to": "00:11:30,000"
+			},
+			"offsets": {
+				"from": 685000,
+				"to": 690000
+			},
+			"text": " So companies have fewer people whose old job is research. But it's still a very much needed skill."
+		},
+		{
+			"timestamps": {
+				"from": "00:11:30,000",
+				"to": "00:11:33,000"
+			},
+			"offsets": {
+				"from": 690000,
+				"to": 693000
+			},
+			"text": " I think it's just the entry level that might be hard to break into."
+		},
+		{
+			"timestamps": {
+				"from": "00:11:33,000",
+				"to": "00:11:39,000"
+			},
+			"offsets": {
+				"from": 693000,
+				"to": 699000
+			},
+			"text": " I wouldn't know yet, honestly. I'm not in the job market for UX research yet, but that much I do know now."
+		},
+		{
+			"timestamps": {
+				"from": "00:11:39,000",
+				"to": "00:11:44,000"
+			},
+			"offsets": {
+				"from": 699000,
+				"to": 704000
+			},
+			"text": " And as far as to get into UX research, the way I'm getting into it is by getting a master's degree."
+		},
+		{
+			"timestamps": {
+				"from": "00:11:44,000",
+				"to": "00:11:47,000"
+			},
+			"offsets": {
+				"from": 704000,
+				"to": 707000
+			},
+			"text": " But I want to believe you can get into it via different ways."
+		},
+		{
+			"timestamps": {
+				"from": "00:11:47,000",
+				"to": "00:11:51,000"
+			},
+			"offsets": {
+				"from": 707000,
+				"to": 711000
+			},
+			"text": " You can learn the basics, the method, when to use one way, how to ask questions."
+		},
+		{
+			"timestamps": {
+				"from": "00:11:51,000",
+				"to": "00:11:57,000"
+			},
+			"offsets": {
+				"from": 711000,
+				"to": 717000
+			},
+			"text": " There are a few guys from places like Nelson Norman Grove, Mays Interaction Design Foundation."
+		},
+		{
+			"timestamps": {
+				"from": "00:11:57,000",
+				"to": "00:12:00,000"
+			},
+			"offsets": {
+				"from": 717000,
+				"to": 720000
+			},
+			"text": " You learn the book. There are a lot of books as well."
+		},
+		{
+			"timestamps": {
+				"from": "00:12:00,000",
+				"to": "00:12:03,000"
+			},
+			"offsets": {
+				"from": 720000,
+				"to": 723000
+			},
+			"text": " And also try to do real research, something that nobody is paying you for."
+		},
+		{
+			"timestamps": {
+				"from": "00:12:03,000",
+				"to": "00:12:09,000"
+			},
+			"offsets": {
+				"from": 723000,
+				"to": 729000
+			},
+			"text": " Just pick an app you use, interview a few people, watch them use it, write up what you find, write your first case study or something like that."
+		},
+		{
+			"timestamps": {
+				"from": "00:12:09,000",
+				"to": "00:12:13,000"
+			},
+			"offsets": {
+				"from": 729000,
+				"to": 733000
+			},
+			"text": " You can also volunteer to do research with small business, things like that."
+		},
+		{
+			"timestamps": {
+				"from": "00:12:13,000",
+				"to": "00:12:20,000"
+			},
+			"offsets": {
+				"from": 733000,
+				"to": 740000
+			},
+			"text": " A lot of UX researchers, from what I've noticed, come from other fields, psychology, teaching, marketing, journalism, computer science."
+		},
+		{
+			"timestamps": {
+				"from": "00:12:20,000",
+				"to": "00:12:25,000"
+			},
+			"offsets": {
+				"from": 740000,
+				"to": 745000
+			},
+			"text": " So if your job already involves talking to people, figuring out what they need, maybe this is something you might love."
+		},
+		{
+			"timestamps": {
+				"from": "00:12:25,000",
+				"to": "00:12:33,000"
+			},
+			"offsets": {
+				"from": 745000,
+				"to": 753000
+			},
+			"text": " And of course, degrees going to school, like the way I'm doing, is actually also a very valid route, maybe even the most common one."
+		},
+		{
+			"timestamps": {
+				"from": "00:12:33,000",
+				"to": "00:12:39,000"
+			},
+			"offsets": {
+				"from": 753000,
+				"to": 759000
+			},
+			"text": " So that's UX research. It's a very long video, so if you go but in the middle, I'll skip through a lot of it."
+		},
+		{
+			"timestamps": {
+				"from": "00:12:39,000",
+				"to": "00:12:46,000"
+			},
+			"offsets": {
+				"from": 759000,
+				"to": 766000
+			},
+			"text": " Just don't forget this phrase that I did find it from a medium as if I can, is that good design doesn't start with screens."
+		},
+		{
+			"timestamps": {
+				"from": "00:12:46,000",
+				"to": "00:12:48,000"
+			},
+			"offsets": {
+				"from": 766000,
+				"to": 768000
+			},
+			"text": " Good design starts with people."
+		},
+		{
+			"timestamps": {
+				"from": "00:12:55,000",
+				"to": "00:13:05,000"
+			},
+			"offsets": {
+				"from": 775000,
+				"to": 785000
+			},
+			"text": " [BLANK_AUDIO]"
+		}
+	]
+}

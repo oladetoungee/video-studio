@@ -1,0 +1,20 @@
+{
+  "direction": "Both her hands up, eyes to the side (2:03): a big MARRIED? card and a smaller DIVORCED? card by her hands; a search bar typed 'Search Ghana's records' with the flag (illustration)",
+  "thumbnail_text": "Married? Divorced? Search Ghana's records",
+  "title": "Should Your Divorce Be One Search Away?",
+  "titles": [
+    "Should Your Divorce Be One Search Away?",
+    "Ghana Put Marriage Records on an App. Should It?",
+    "Ghana's New Records App: Great Idea, Real Privacy Risk"
+  ],
+  "text": {
+    "st1": "Married?",
+    "st2": "Divorced?",
+    "s_q": "Search Ghana's records"
+  },
+  "images": {
+    "scene": "../../assets/scene/s_123.00.jpg",
+    "front": "../../assets/scene/mask/s_123.00.png"
+  },
+  "vars": {}
+}

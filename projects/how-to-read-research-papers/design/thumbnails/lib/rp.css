@@ -1,0 +1,94 @@
+/* how-to-read-research-papers thumbnails (2026-11-03). Look: the film's A "The Margin" (graphite #2F3136, paper #FBFAF4,
+   highlighter #F3EE2E on paper, blue pen #2447C9; Newsreader 800 with an italic key word, Caveat for her handwriting, the
+   paper's own type for real pages), used freely so each kind looks different. Bar: her own thumbnails (topic huge, one literal
+   picture, few big things, one accent). Editable: text in content.json "text", photos in "images", colours in "vars"
+   (--ground, --fg, --accent, --wash), moves in "nudge" (lib/bind.js). */
+/* 2026-11-07 her type set 05 (inspiration/know-how/TYPE-SYSTEM.md): the old family names now point at DM Serif Display
+   (headlines, every weight maps to the one face, no fake bold) and DM Mono (the pen notes: no handwriting). */
+@font-face { font-family: 'News'; src: url('../fonts/DMSerifDisplay-Regular.ttf') format('truetype'); font-weight: 100 900; }
+@font-face { font-family: 'News'; font-style: italic; src: url('../fonts/DMSerifDisplay-Italic.ttf') format('truetype'); font-weight: 100 900; }
+@font-face { font-family: 'Hand'; src: url('../fonts/DMMono-Medium.ttf') format('truetype'); font-weight: 100 900; size-adjust: 62%; }
+@font-face { font-family: 'Inter Tight'; src: url('../fonts/InterTightSemiBold.ttf') format('truetype'); font-weight: 600; }
+@font-face { font-family: 'Mono'; src: url('../fonts/DMMono-Medium.ttf') format('truetype'); font-weight: 500; }
+@font-face { font-family: 'Anton'; src: url('../fonts/Anton-Regular.ttf') format('truetype'); }
+@font-face { font-family: 'HNC'; src: url('../fonts/DMSerifDisplay-Regular.ttf') format('truetype'); font-weight: 100 900; }
+
+:root { --graphite: #2F3136; --paper: #FBFAF4; --hi: #F3EE2E; --pen: #2447C9; --ink: #17171A; --grey: #C9CBD0; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { font-synthesis: none; width: 1280px; height: 720px; overflow: hidden; background: #111; }
+.t { position: relative; width: 1280px; height: 720px; overflow: hidden; background: var(--ground, #2F3136); color: var(--fg, #FBFAF4);
+  font-family: 'News', serif; }
+.guides .badge { position: absolute; right: 10px; bottom: 10px; width: 150px; height: 70px; border: 3px dashed #0f0; z-index: 99; }
+.z1 { z-index: 1; } .z2 { z-index: 2; } .z3 { z-index: 3; } .z4 { z-index: 4; } .z5 { z-index: 5; } .z6 { z-index: 6; }
+.abs { position: absolute; }
+
+/* headline: Newsreader 800, tight; the key word in italic */
+.hd { position: absolute; font-family: 'News', serif; font-weight: 800; line-height: .9; letter-spacing: -.03em; white-space: nowrap;
+  color: var(--fg, #FBFAF4); font-variation-settings: "opsz" 72; }
+.hd.up { text-transform: uppercase; letter-spacing: -.02em; }
+.hd em { font-style: italic; font-weight: 700; }
+.hd.cond { font-family: 'HNC', 'Anton', sans-serif; font-weight: 900; text-transform: uppercase; letter-spacing: 0; line-height: .88; }
+.acc { color: var(--accent, #F3EE2E); }
+.pen-c { color: var(--pen); }
+/* a highlighter mark behind a word: only on paper-coloured things (the look's rule) */
+.mk { background: linear-gradient(var(--hi), var(--hi)) no-repeat 0 62% / 100% 72%; padding: 0 .08em; color: var(--ink); }
+.hand { font-family: 'Hand', cursive; font-weight: 700; color: var(--pen); line-height: 1; white-space: nowrap; }
+.mono { font-family: 'Mono', monospace; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; }
+.cred { font-family: 'News', serif; font-style: italic; font-size: 22px; opacity: .75; }
+
+/* photo of her: her room (grey + one colour wash), she in full colour on top (her ux-research method) */
+.scene { position: absolute; left: 0; top: 0; width: 1280px; height: 720px; transform-origin: var(--sc-o, 50% 30%); scale: var(--sc, 1);
+  translate: var(--sc-x, 0px) var(--sc-y, 0px); }
+.scene img { position: absolute; left: 0; top: 0; width: 1280px; height: 720px; display: block; }
+.scene .bg { filter: grayscale(1) contrast(var(--bgc, 1.05)) brightness(var(--bgb, 1)); }
+.scene .wash { position: absolute; inset: 0; background: var(--wash, #2F3136); mix-blend-mode: multiply; }
+.scene .dim { position: absolute; inset: 0; background: var(--dim, rgba(17,17,17,0)); }
+.scene .me-c { filter: saturate(1.06) contrast(1.05) brightness(1.14); }
+.scene.natural .bg { filter: saturate(.85) contrast(1.05) brightness(var(--bgb, .9)); }
+.scene.bw .me-c, .scene.bw .bg { filter: grayscale(1) contrast(1.1) brightness(1.05); }
+
+/* cut-out of her (frame edge at the bottom) */
+.cut { position: absolute; bottom: 0; display: block; }
+.cut.ol { filter: none; }
+.cut.bw { filter: grayscale(1) contrast(1.1) brightness(1.08); }
+
+/* a printed paper (generic: grey bars for text, real headings in her words) */
+.paper { position: absolute; background: var(--paper); color: var(--ink); box-shadow: 0 24px 50px rgba(0,0,0,.38); padding: 34px 36px; overflow: hidden; }
+.paper .ttl { font-family: 'News', serif; font-weight: 800; font-size: 34px; line-height: 1.02; letter-spacing: -.02em; }
+.paper .h { font-family: 'News', serif; font-weight: 800; font-size: 24px; letter-spacing: .02em; text-transform: uppercase; margin: 16px 0 8px; }
+.paper .ln { height: 9px; background: var(--grey); margin: 0 0 10px; border-radius: 2px; }
+.paper .ln.s { width: 62%; } .paper .ln.m { width: 84%; }
+.paper .ln.hl { background: var(--hi); height: 16px; margin: -3px 0 7px; }
+.paper .ln.ghost { background: #E4E5E8; }
+.paper.fade .ln:not(.hl) { background: #E2E3E6; }
+.paper .num { position: absolute; width: 58px; height: 58px; border-radius: 50%; background: var(--hi); color: var(--ink); font-family: 'Hand';
+  font-weight: 700; font-size: 46px; display: flex; align-items: center; justify-content: center; transform: rotate(-8deg); }
+/* the numbered tabs 1-2-3 clipped to the paper's edge */
+.tab { position: absolute; width: 84px; height: 84px; background: var(--paper); color: var(--ink); border-radius: 0 12px 12px 0; font-family: 'News';
+  font-weight: 800; font-size: 54px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 22px rgba(0,0,0,.3); }
+.tab.on { background: var(--hi); }
+/* a yellow sticky note */
+.sticky { position: absolute; background: #F7EE7A; color: var(--ink); box-shadow: 0 16px 30px rgba(0,0,0,.3); padding: 22px 24px; font-family: 'Hand';
+  font-weight: 700; line-height: 1; }
+/* a die-cut sticker edge for collage objects */
+.stk { position: absolute; filter: drop-shadow(0 12px 18px rgba(0,0,0,.3)); }
+/* a real page crop (the paper's own type) */
+.real { position: absolute; overflow: hidden; background: #fff; box-shadow: 0 24px 50px rgba(0,0,0,.38); }
+.real img { position: absolute; display: block; }
+.real .hl { position: absolute; background: var(--hi); mix-blend-mode: multiply; border-radius: 6px; }
+svg.pen { position: absolute; overflow: visible; }
+svg.pen path, svg.pen ellipse { fill: none; stroke: var(--pen); stroke-linecap: round; stroke-linejoin: round; }
+.shadow-t { text-shadow: 0 8px 30px rgba(0,0,0,.35); }
+
+/* ---------- set 2 (2026-11-10): her thumbnail shoot (cream knit, 29 Oct; Enhance photo + cut-out), quiet-pattern grounds ---------- */
+/* her shoot photos are already sharp and bright: no extra light on her (her rule 2026-11-08 night) */
+.t.no-lift .scene .me-c, .t.no-lift .cut { filter: none; }
+/* her room photo (4:3, assets/photo/shoot/room-NNNN.jpg) + her aligned cut-out (room-NNNN-cut.png) at the same place */
+.room { position: absolute; width: var(--rw, 1900px); left: var(--rx, 0px); top: var(--ry, -480px); display: block; max-width: none; }
+.room.grey { filter: grayscale(1) contrast(1.04) brightness(var(--bgb, 1)); }
+.room.soft { filter: saturate(.8) brightness(var(--bgb, .8)); }
+.washc { position: absolute; inset: 0; background: var(--wash, #2F3136); mix-blend-mode: multiply; }
+/* a bold flat ground with a quiet same-hue pattern (THUMBNAIL-STUDY §7): fine static lines a few % darker, no gradient look */
+.pat { background-color: var(--ground); background-image: repeating-linear-gradient(-38deg, rgba(0,0,0,var(--pa, .05)) 0 3px, transparent 3px 19px); }
+.pat-dots { background-color: var(--ground); background-image: radial-gradient(rgba(0,0,0,var(--pa, .06)) 1.6px, transparent 2px); background-size: 16px 16px; }
+.soft-t { text-shadow: 0 4px 24px rgba(0,0,0,.5); }

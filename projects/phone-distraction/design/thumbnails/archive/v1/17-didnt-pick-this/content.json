@@ -1,0 +1,22 @@
+{
+  "direction": "Everyone has watched a video they did not choose: a generic video player counting down Up next 5; her concerned, hand raised (10:33).",
+  "concept": "TH17",
+  "follows": "viral sample 2 + Wyatt Feaster (UI on screen)",
+  "thumbnail_text": "YOU DIDN'T PICK THIS",
+  "title": "Autoplay Explained: Why the Next Video Starts on Its Own",
+  "titles": [
+    "Autoplay Explained: Why the Next Video Starts on Its Own",
+    "Why You Keep Watching: Autoplay Decides for You"
+  ],
+  "scores": "A topic (image only) 7/7 · B with best title 8.5 · C taste 4 (round 2; fixes from round 2 applied after)",
+  "text": {
+    "words": "You didn't <span class=\"acc\">pick this</span>",
+    "up": "Up next in",
+    "count": "5"
+  },
+  "images": {
+    "scene": "../../../../assets/scene/warm/s_633.5.jpg",
+    "front": "../../../../assets/scene/warm/mask/s_633.5.png"
+  },
+  "vars": {}
+}

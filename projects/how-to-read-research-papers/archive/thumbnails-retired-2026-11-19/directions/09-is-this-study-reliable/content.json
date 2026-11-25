@@ -1,0 +1,31 @@
+{
+  "text": {
+    "a": "Only 12 people?",
+    "b": "Is this study reliable?",
+    "cr": "K. Caine, CHI 2016"
+  },
+  "images": {
+    "room": "../../assets/photo/shoot/room-1605.jpg",
+    "me": "../../assets/photo/shoot/room-1605-cut.png",
+    "clip": "../../assets/stock/caine-12.png"
+  },
+  "kind": "photo (her thinking, big, in her real room) + a yellow note + one real line from a study",
+  "board": "Thumbnails 141 (viral: \"unclear ACL / Yoruba paper\" screenshot)",
+  "fonts": [
+    "thumbs-12 Archivo Black caps (red #E2262B on yellow #F7F02B, from Thumbnails 89)"
+  ],
+  "colours": "thumbs-12: #F7F02B / #E2262B; her room darkened to #141414",
+  "thumbnail_text": "ONLY 12 PEOPLE? IS THIS STUDY RELIABLE? + \"the most common sample size is 12.\"",
+  "titles": [
+    "How to Spot a Weak Study When Reading Research Papers",
+    "How to Tell if a Research Paper Is Any Good",
+    "Sample Size, Method, Funding: How to Judge a Study"
+  ],
+  "direction": "Copies Thumbnails 141 (a real line from a paper with one note on it): \"the most common sample size is 12.\" from Caine's CHI 2016 abstract (verbatim, credited), the yellow note asks \"Only 12 people?\", she thinks it over, big, on the right.",
+  "nudge": {},
+  "vars": {},
+  "class": "no-lift",
+  "title": "How to Spot a Weak Study When Reading Research Papers",
+  "scores": "",
+  "recommended": false
+}

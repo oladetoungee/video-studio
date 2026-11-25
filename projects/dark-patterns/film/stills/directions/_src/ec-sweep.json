@@ -1,0 +1,106 @@
+{
+ "title": "Manipulative online practices",
+ "h1": "Consumer protection: manipulative online practices found on 148 out of 399 online shops screened",
+ "h1y": 265,
+ "found": {
+  "148": [
+   [
+    525.375,
+    317,
+    86.78125,
+    58
+   ]
+  ],
+  "399": [
+   [
+    771.140625,
+    317,
+    86.765625,
+    58
+   ]
+  ],
+  "42 websites": [
+   [
+    411,
+    906,
+    89.828125,
+    17
+   ]
+  ],
+  "fake countdown": [
+   [
+    919.828125,
+    586,
+    30.25,
+    17
+   ],
+   [
+    371,
+    610,
+    77.390625,
+    17
+   ]
+  ]
+ },
+ "H": 4004,
+ "focus": {
+  "148": {
+   "file": "ec-sweep__148.png",
+   "top": 0,
+   "rects": [
+    [
+     525.375,
+     317,
+     86.78125,
+     58
+    ]
+   ]
+  },
+  "399": {
+   "file": "ec-sweep__399.png",
+   "top": 0,
+   "rects": [
+    [
+     771.140625,
+     317,
+     86.765625,
+     58
+    ]
+   ]
+  },
+  "42 websites": {
+   "file": "ec-sweep__42-websites.png",
+   "top": 386,
+   "rects": [
+    [
+     411,
+     520,
+     89.828125,
+     17
+    ]
+   ]
+  },
+  "fake countdown": {
+   "file": "ec-sweep__fake-countdown.png",
+   "top": 66,
+   "rects": [
+    [
+     919.828125,
+     520,
+     30.25,
+     17
+    ],
+    [
+     371,
+     544,
+     77.390625,
+     17
+    ]
+   ]
+  }
+ },
+ "clipTop": 145,
+ "scale": 1.5,
+ "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_23_418",
+ "captured": "2026-11-02T12:50:33.376Z"
+}

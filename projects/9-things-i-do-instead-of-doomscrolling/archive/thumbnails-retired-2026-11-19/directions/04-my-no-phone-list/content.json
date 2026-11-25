@@ -1,0 +1,32 @@
+{
+  "text": {
+    "h": "my no-phone list",
+    "i0": "read",
+    "i1": "call home",
+    "i2": "ride a bike",
+    "i3": "thrift",
+    "i4": "journal"
+  },
+  "images": {
+    "me": "../../assets/set5/1559-cut-clean.png"
+  },
+  "vars": {},
+  "kind": "flat + her cut-out on the LEFT + a hand-written ticked list",
+  "board": "Thumbnails 63 (yt-10 SAVE 4 HOURS A DAY: heading on top, a hand-drawn tick list beside him)",
+  "fonts": [
+    "shorts-14 Caveat Bold (white on #3B88D6, Formats 64)"
+  ],
+  "colours": "Font shorts-14 specimen: #3B88D6 / #FFFFFF",
+  "thumbnail_text": "my no-phone list: read, call home, ride a bike, thrift, journal (ticked)",
+  "titles": [
+    "9 Easy Things I Do Instead of Doomscrolling",
+    "Things to Do Instead of Doomscrolling (That I Actually Do)"
+  ],
+  "direction": "Copies Thumbnails 63: a hand-written list of five things from the video, each ticked, and she presents it with an open hand from the left. Caveat white on blue, as Formats 64.",
+  "nudge": {},
+  "scores": "cold critic r3: 7 / 7.5 · r4: 6.5 / 7",
+  "recommended": false,
+  "class": "no-lift",
+  "title": "9 Easy Things I Do Instead of Doomscrolling",
+  "census": "her left, list right"
+}

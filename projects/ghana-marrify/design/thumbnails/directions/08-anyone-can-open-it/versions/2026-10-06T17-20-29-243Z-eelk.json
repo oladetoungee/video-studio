@@ -1,0 +1,28 @@
+{
+ "label": "Before this session’s edits",
+ "auto": true,
+ "savedAt": 1791307229243,
+ "content": {
+  "direction": "One image: a tied bundle of old paper government files (Pexels) spilling out of the top of a phone running a marriage-records search (illustration), held at her hands (4:02); she looks on, unconvinced. Round 2 changed the words from 'Anyone can open it' (a cold critic could not tell what 'it' was) to name the records.",
+  "concept": "T5",
+  "thumbnail_text": "Marriage records: open to anyone",
+  "title": "Should Marriage Records Be Public? Ghana Just Made Them",
+  "titles": [
+   "Should Marriage Records Be Public? Ghana Just Made Them",
+   "Ghana's Marriage Records Are Now Online. Should They Be?",
+   "Ghana Made Marriages Searchable. Anyone Can Check Yours"
+  ],
+  "text": {
+   "line1": "Marriage<br>records:",
+   "line2": "open to<br>anyone",
+   "p_app": "Marriage records",
+   "p_q": "Search a name"
+  },
+  "images": {
+   "scene": "../../assets/scene/warm/s_242.83.jpg",
+   "front": "../../assets/scene/warm/mask/s_242.83.png",
+   "files": "../../assets/stock/paper_bundles_cut.png"
+  },
+  "vars": {}
+ }
+}

@@ -1,0 +1,28 @@
+{
+  "text": {
+    "h": "I got my <span class=\"y\">evenings back</span>"
+  },
+  "images": {
+    "room": "../../assets/set5/tea-candle.jpg",
+    "me": "../../assets/oredev/smile-head-cut.png",
+    "feed1": "../../assets/pexels/pushups.jpg"
+  },
+  "kind": "her face big and laughing on the right (Oredev, cut-out) over a warm blurred evening room + one phone with an endless feed tilted on the left + one line of caps at the bottom",
+  "board": "pick1119-17 (i stopped doomscrolling 6 months ago... / THAT PHONE IS THE PROBLEM)",
+  "fonts": [
+    "shorts-01 Montserrat ExtraBold caps, yellow key word (white + #F5CF2F, Formats 2)"
+  ],
+  "colours": "Font shorts-01 specimen: white + yellow #F5CF2F; ground = a warm room photo, blurred and darkened",
+  "thumbnail_text": "I GOT MY EVENINGS BACK (\"evenings back\" in yellow)",
+  "titles": [
+    "I Cut Back on Doomscrolling. Here's What I Do Instead",
+    "How I Stopped Doomscrolling Every Night (9 Easy Swaps)",
+    "How to Stop Doomscrolling: 9 Things I Do Instead"
+  ],
+  "direction": "Copies pick1119-17: her face close, warm and alive (Oredev, laughing mid-sentence), the feed on a tilted phone at the left, a feeling line at the bottom in white caps with the key words in yellow. The title says what the video is; the thumbnail says how it feels after. Round 1 critic: the first version (calm, looking down) read as bored, against the words.",
+  "nudge": {},
+  "vars": {},
+  "class": "no-lift",
+  "title": "I Cut Back on Doomscrolling. Here's What I Do Instead",
+  "census": "phone left, her right, words bottom"
+}

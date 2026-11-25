@@ -1,0 +1,139 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>B Now Boarding</title>
+<link rel="stylesheet" href="../_shared/fonts.css">
+<style>
+:root{--ground:#1B1D21;--flap:#0E0F11;--split:#25282D;--let:#F3F0E8;--dim:#7A7F87;--go:#2FD27A}
+#stage{background:var(--ground);font-family:"Barlow";color:var(--let)}
+.row{position:absolute;display:flex;gap:5px}
+.cell{position:relative;background:var(--flap);display:flex;align-items:center;justify-content:center;font-family:"Barlow Condensed";font-weight:600;color:var(--let);border-radius:3px;overflow:hidden}
+.cell:after{content:"";position:absolute;left:0;right:0;top:50%;height:2px;background:var(--split)}
+.cell.flip{background:#16181B}
+.cell.go{color:var(--go)} .cell.dim{color:var(--dim)}
+.lab{position:absolute;font-family:"DM Mono";font-weight:500;letter-spacing:.08em;color:var(--dim);text-transform:uppercase}
+.big{font-family:"Barlow Condensed";font-weight:800;text-transform:uppercase;line-height:.92}
+.clip{position:absolute;background:#fff;overflow:hidden}
+.clip img{position:absolute;left:0;top:0}
+.hl{position:absolute;background:#7FE9AE;mix-blend-mode:multiply;transform-origin:0 50%}
+.src{position:absolute;font-family:"DM Mono";font-size:28px;color:var(--dim);letter-spacing:.03em}
+.pass{position:absolute;background:#F3F0E8;color:#16181B;border-radius:18px;overflow:hidden}
+.pass .stub{position:absolute;top:0;bottom:0;border-left:3px dashed #B9B4A8}
+.cap{position:absolute;left:0;right:0;text-align:center;font-family:"Barlow Condensed";font-weight:800;text-transform:uppercase;letter-spacing:.01em;color:#fff;-webkit-text-stroke:0;text-shadow:0 0 1px #000,0 3px 0 #000,0 -3px 0 #000,3px 0 0 #000,-3px 0 0 #000,2px 2px 0 #000,-2px -2px 0 #000,2px -2px 0 #000,-2px 2px 0 #000}
+.cap b{color:var(--go);font-weight:800}
+.feed{position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover}
+</style></head>
+<body><div id="stage"></div>
+<script src="../_shared/lib.js"></script>
+<script>
+const W = +Q.get('w') || 1920, H = +Q.get('h') || 1080, PORT = H > W;
+const S = $('#stage'); st(S, { width: W + 'px', height: H + 'px' });
+const GLY = 'ABCDEFGHIJKLMNOPRSTUVWXYZ0123456789';
+// a row of flap cells; returns id prefix. text padded to n cells
+let ROWN = 0;
+function flaps(x, y, n, cw, ch, fs, text, cls = '') {
+  const id = 'r' + (ROWN++); let h = `<div class="row" id="${id}" style="left:${x}px;top:${y}px">`;
+  for (let i = 0; i < n; i++) h += `<div class="cell ${cls}" data-ch="${(text[i] || ' ').replace('"', '&quot;')}" style="width:${cw}px;height:${ch}px;font-size:${fs}px"></div>`;
+  return h + '</div>';
+}
+// split-flap: each cell flips through 3-7 glyphs (0.05 s each) from t0 + i*stagger, then shows its letter
+function runFlaps(sel, t, t0, stagger = 0.03, text = null, cls = null) {
+  $$(sel + ' .cell').forEach((c, i) => {
+    if (text !== null) c.dataset.ch = text[i] || ' ';
+    const tgt = c.dataset.ch; const s0 = t0 + i * stagger; const n = 3 + Math.floor(hash(i * 7.3 + t0) * 5); const end = s0 + n * 0.05;
+    if (t < s0) { if (c.dataset.prev !== undefined) { c.textContent = c.dataset.prev; } else c.textContent = ''; c.classList.remove('flip'); }
+    else if (t < end && tgt !== ' ') { c.textContent = GLY[Math.floor(hash(Math.floor((t - s0) / 0.05) + i * 13.1) * GLY.length)]; c.classList.add('flip'); }
+    else { c.textContent = tgt; c.classList.remove('flip'); }
+    if (cls) { if (t >= end) { c.classList.remove('go', 'dim'); if (cls !== 'none') c.classList.add(cls); } }
+  });
+}
+const ROWS = [
+  ['ERASMUS MUNDUS', 'EU-WIDE', 'MOST OCT-JAN', 'OPEN', 'go'],
+  ['AISS (TALLINN)', 'ESTONIA', '2 FEB 2027', 'OPENS 2 DEC', ''],
+  ['SWEDISH INSTITUTE', 'SWEDEN', '15 JAN / FEB', 'ADMISSION OPEN', 'go'],
+  ['NL SCHOLARSHIP', 'NETHERLANDS', 'PER UNI', 'PER UNI', ''],
+  ['DAAD EPOS', 'GERMANY', 'PER COURSE', 'MANY PASSED', 'dim'],
+  ['STIPENDIUM HUNG.', 'HUNGARY', 'NOT YET OUT', 'NOT OPEN', 'dim'],
+  ['CHEVENING', 'UK', '6 OCT 2026', 'CLOSED', 'dim'],
+];
+function board(x0, y0, cw, ch, fs, gapY, cols) {
+  let h = ''; const heads = ['Scholarship', 'Closes', 'Status'], F = [0, 2, 3];
+  let x = x0; cols.forEach((n, j) => { h += `<div class="lab" style="left:${x}px;top:${y0 - 62}px;font-size:40px">${heads[j]}</div>`; x += n * (cw + 5) + 40; });
+  ROWS.forEach((r, i) => { let x = x0; cols.forEach((n, j) => { h += flaps(x, y0 + i * (ch + gapY), n, cw, ch, fs, r[F[j]], j === 2 ? r[4] : (r[4] === 'dim' ? 'dim' : '')).replace('class="row"', `class="row b${i} c${j}"`); x += n * (cw + 5) + 40; }); });
+  return h;
+}
+const SI = { src: '../_src/cap/si__15-january.png', sx: 296, sy: 764, sw: 990, sh: 222, hl: [[40, 12, 350, 34], [40, 153, 195, 34]] };
+function clip(c, x, y, w) {
+  const k = w / c.sw; const h = Math.round(c.sh * k);
+  return `<div class="clip" id="clipsi" style="left:${x}px;top:${y}px;width:${w}px;height:${h}px"><img src="${c.src}" style="width:${1920 * k}px;left:${-c.sx * k}px;top:${-c.sy * k}px">${c.hl.map((r, i) => `<div class="hl" data-hl="${i}" style="left:${r[0] * k - 4}px;top:${r[1] * k - 2}px;width:${r[2] * k + 8}px;height:${r[3] * k + 4}px"></div>`).join('')}</div>`;
+}
+const SHOTS = {};
+SHOTS.b1 = () => {
+  S.innerHTML = `<div class="big abs" style="left:100px;top:80px;font-size:104px">Departures <span style="color:var(--dim)">·</span> 2027 intake</div>
+   <div class="lab" style="right:96px;top:104px;font-size:30px">Checked 2 Nov 2026</div>` + board(100, 300, 33, 80, 56, 24, [17, 12, 14]);
+  return t => { $$('.row').forEach(r => runFlaps('#' + r.id, t, 0)); };
+};
+SHOTS.b2 = () => {
+  S.innerHTML = `<div class="big abs" style="left:96px;top:70px;font-size:120px">Swedish Institute</div>
+   <div class="lab" style="left:100px;top:226px;font-size:34px;color:var(--let)">Step 1 · University Admissions</div>` + flaps(96, 276, 12, 60, 108, 84, 'BY 15 JAN 27', 'go') +
+   `<div class="lab" style="left:1000px;top:226px;font-size:34px;color:var(--let)">Step 2 · The scholarship</div>` + flaps(996, 276, 12, 60, 108, 84, '8-24 FEB 27 ', 'go') +
+   clip(SI, 168, 480, 1584) + `<div class="src" style="left:168px;top:880px;font-size:30px">si.se · checked 2 Nov 2026 · the portal closes 14:59 CET on the last day</div>`;
+  return t => { $$('.row').forEach(r => runFlaps('#' + r.id, t, 0)); $$('.hl').forEach(h => sweep(h, t, 0)); };
+};
+function pass(x, y, w, h, kind, rows, id) {
+  return `<div class="pass" id="${id}" style="left:${x}px;top:${y}px;width:${w}px;height:${h}px">
+   <div class="abs" style="left:0;top:0;right:0;height:${h * 0.2}px;background:${kind === 'FULL' ? 'var(--go)' : '#2B2E33'};"></div>
+   <div class="abs big" style="left:44px;top:${h * 0.045}px;font-size:${h * 0.11}px;color:${kind === 'FULL' ? '#0E0F11' : '#F3F0E8'}">${kind === 'FULL' ? 'Fully funded' : 'Partial'}</div>
+   ${rows.map((r, i) => `<div class="abs" style="left:44px;top:${h * 0.26 + i * h * 0.26}px;width:${w - 88}px"><div style="font-family:'DM Mono';font-size:30px;letter-spacing:.08em;color:#6A6760;text-transform:uppercase">${r[0]}</div><div style="font-family:'Barlow Condensed';font-weight:600;font-size:${h * 0.115}px;line-height:1.02">${r[1]}</div></div>`).join('')}
+</div></div>`;
+}
+SHOTS.b3 = () => {
+  S.innerHTML = pass(80, 80, 1200, 440, 'FULL', [['Pays', 'Your tuition'], ['And', 'Money to live on every month']], 'p1') +
+    pass(640, 560, 1200, 440, 'PARTIAL', [['Pays', 'Some of it'], ['Like', 'A one-time payment<br>or a tuition discount']], 'p2');
+  return t => { enter('#p1', P(t, 0, .5), -60, 0); enter('#p2', P(t, .15, .5), 60, 0); };
+};
+SHOTS.b4 = () => {
+  const lines = PORT ? ['APPLY ONLY', 'ON THE', 'OFFICIAL', 'WEBSITE'] : ['APPLY ONLY ON THE', 'OFFICIAL WEBSITE'];
+  const cw = PORT ? 88 : 86, ch = PORT ? 150 : 150, n = PORT ? 10 : 17;
+  S.innerHTML = `<div class="abs" style="inset:0;background:#000"></div>` + lines.map((l, i) => flaps((W - n * (cw + 6)) / 2, (H - lines.length * (ch + 20)) / 2 + i * (ch + 20), n, cw, ch, PORT ? 120 : 118, l.padStart(Math.floor((n + l.length) / 2)).padEnd(n), l.includes('OFFICIAL') ? 'go' : '')).join('');
+  return t => { $$('.row').forEach((r, i) => runFlaps('#' + r.id, t, i * 0.1)); };
+};
+SHOTS.p1 = () => {
+  const r = ROWS; let h = `<div class="big abs" style="left:60px;top:120px;font-size:110px">Departures<br><span style="color:var(--dim)">2027 intake</span></div>`;
+  r.forEach((row, i) => { const y = 470 + i * 196; h += flaps(60, y, 17, 50, 84, 64, row[0], row[4] === 'dim' ? 'dim' : '') + flaps(60, y + 92, 14, 46, 72, 52, row[3], row[4]) + `<div class="lab" style="left:${60 + 14 * 51 + 24}px;top:${y + 114}px;font-size:30px;white-space:nowrap">${row[2]}</div>`; });
+  S.innerHTML = h; return t => { $$('.row').forEach(rw => runFlaps('#' + rw.id, t, 0)); };
+};
+SHOTS.p2 = () => {
+  S.innerHTML = `<div class="big abs" style="left:60px;top:140px;font-size:120px">Full or<br>partial?</div>` +
+   `<div class="abs" style="left:60px;top:470px;width:960px;height:520px">${pass(0, 0, 960, 520, 'FULL', [['Pays', 'Your tuition'], ['And', 'Money to live on every month']], 'p1')}</div>` +
+   `<div class="abs" style="left:60px;top:1050px;width:960px;height:520px">${pass(0, 0, 960, 520, 'PARTIAL', [['Pays', 'Some of it'], ['Like', 'A one-time payment<br>or a tuition discount']], 'p2')}</div>`;
+  return t => { };
+};
+// motion test: raw 0.2 -> 10.2 (the opening): her full frame + flap title, hard cut to the board on "some"
+function buildTest() {
+  S.innerHTML = `<div id="her" class="abs" style="inset:0;background:var(--ground)"><img class="feed" data-feed="her" src="../_src/raw_2.jpg" style="top:170px;height:1080px">
+     <div class="abs" style="left:0;right:0;top:0;height:170px;background:var(--ground)"></div>
+     ${flaps(150, 40, 27, 54, 92, 70, 'SCHOLARSHIPS IN EUROPE 2027', '').replace('class="row"', 'class="row" ')}
+     <div class="cap" id="cap" style="top:840px;font-size:74px"></div></div>
+   <div id="brd" class="abs" style="inset:0;background:var(--ground);display:none"><div id="push" class="abs" style="inset:0;transform-origin:30% 45%">
+     <div class="big abs" style="left:96px;top:70px;font-size:96px">Departures <span style="color:var(--dim)">·</span> 2027 intake</div>
+     ${board(100, 280, 33, 72, 52, 16, [17, 12, 14])}<div class="abs" id="feb1" style="left:${100 + 17 * 38 + 40}px;top:${280 + 1 * 88 + 74}px;width:${12 * 38}px;height:8px;background:var(--go);transform-origin:0 50%"></div><div class="abs" id="feb2" style="left:${100 + 17 * 38 + 40}px;top:${280 + 2 * 88 + 74}px;width:${12 * 38}px;height:8px;background:var(--go);transform-origin:0 50%"></div></div>
+     <div class="cap" id="cap2" style="top:975px;font-size:60px"></div></div>`;
+  // the board starts with statuses blank (they flip in on her words)
+  return t => {
+    const onBoard = t >= 5.06; st('#her', { display: onBoard ? 'none' : 'block' }); st('#brd', { display: onBoard ? 'block' : 'none' });
+    runFlaps('#r0', t, 0.5, 0.035);
+    const C = [[0.28, 'a <b>Nigerian</b> or an African student'], [1.86, 'and you want to start a <b>master\'s</b> program'], [3.54, 'in Europe in <b>2027</b>']];
+    let c = ''; C.forEach(([a, s]) => { if (t >= a) c = s; }); $('#cap').innerHTML = c;
+    const rows = $$('#brd .row');
+    rows.forEach(r => { const i = +[...r.classList].find(k => /^b\d/.test(k)).slice(1); const j = +[...r.classList].find(k => /^c\d/.test(k)).slice(1);
+      if (j < 2) { runFlaps('#' + r.id, t, 5.1 + i * 0.07, 0.02, null, ROWS[i][4] === 'dim' && t >= 6.54 ? 'dim' : 'none'); }
+      else { const dead = ROWS[i][4] === 'dim'; const t0 = dead ? 6.54 + (i - 4) * 0.08 : 8.54 + i * 0.06; runFlaps('#' + r.id, t, t0, 0.025, null, ROWS[i][4] || 'none'); } });
+    st('#push', { transform: `scale(${1 + 0.05 * E.inOutQuart(clamp((t - 5.1) / 4))})` }); sweep('#feb1', t, 9.3, .35); sweep('#feb2', t, 9.4, .35);
+    const C2 = [[5.1, 'some scholarship deadlines have <b>already passed</b>'], [6.74, 'and a lot of the big ones close between now and <b>February</b>']];
+    let c2 = ''; C2.forEach(([a, s]) => { if (t >= a) c2 = s; }); $('#cap2').innerHTML = c2;
+  };
+}
+let TEST = null;
+window.show = async (n) => { const f = SHOTS[n](); await imagesReady(); f(99); };
+window.seek = async (t) => { if (!TEST) { TEST = buildTest(); await imagesReady(); } TEST(t); };
+window.READY = true;
+</script></body></html>

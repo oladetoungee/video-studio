@@ -1,0 +1,104 @@
+{
+ "label": "Autosave",
+ "auto": true,
+ "savedAt": 1791148639030,
+ "edits": {
+  "t": {
+   "platform/search verify": {
+    "s": "Search and *verify*"
+   },
+   "african/@her african": {
+    "pos": {
+     "16x9": {
+      "hide": true
+     }
+    }
+   },
+   "finally/finally": {
+    "s": "*Finally!*"
+   },
+   "online/@her online": {
+    "pos": {
+     "16x9": {
+      "hide": true
+     }
+    }
+   },
+   "online/Gbemi, in Estonia": {
+    "hide": true
+   },
+   "sensitive/TechCabal's words": {
+    "hide": true
+   },
+   "balance/dont know": {
+    "hide": true
+   },
+   "minimisation/Diagram: placeholder fields, no real records": {
+    "hide": true
+   },
+   "not-required/table lock label": {
+    "hide": true
+   },
+   "access/Illustration": {
+    "hide": true
+   },
+   "not-neutral/always say": {
+    "hide": true
+   },
+   "split/Especially for women": {
+    "hide": true
+   },
+   "probe/@polaroid head": {
+    "pos": {
+     "16x9": {
+      "hide": true
+     }
+    }
+   },
+   "love-it/@her love": {
+    "pos": {
+     "16x9": {
+      "hide": true
+     }
+    }
+   },
+   "love-it/like idea": {
+    "hide": true
+   },
+   "love-it/again drawbacks": {
+    "s": "The *drawbacks*"
+   },
+   "love-it/Just what's been running in my head": {
+    "hide": true
+   }
+  },
+  "captions": {},
+  "modes": {
+   "sources": "dark",
+   "licensed": "dark",
+   "online": "dark",
+   "ecosystem": "dark",
+   "one-record": "dark",
+   "personal": "dark",
+   "searchable": "dark",
+   "public-entity": "dark",
+   "balance": "dark",
+   "consent": "dark",
+   "minimisation": "dark",
+   "not-required": "dark",
+   "could": "dark",
+   "access": "dark",
+   "not-neutral": "dark",
+   "split": "dark",
+   "tricky": "dark",
+   "cultural": "dark",
+   "two-way": "dark",
+   "both-ways": "dark",
+   "reciprocity": "dark",
+   "looked-up": "dark",
+   "probe": "dark",
+   "love-it": "dark",
+   "gather": "dark"
+  }
+ }
+}

@@ -1,0 +1,26 @@
+{
+  "text": {
+    "h": "is <span class=\"r\">5 hours</span><br>too much?",
+    "avg": "5h 12m"
+  },
+  "kind": "flat black + ONE device for the number (a generic phone on its Screen Time page, 5h 12m, an example, not hers) + a big lowercase question with the number in red",
+  "board": "pick1119-43 (How to never procrastinate / is 3:32 too long?)",
+  "fonts": [
+    "thumbs-09 Inter Tight Bold lowercase + red (white + #E1251B on near-black, Thumbnails 68)"
+  ],
+  "colours": "Font thumbs-09 specimen: #111 ground / white / red #E1251B",
+  "thumbnail_text": "is 5 hours too much? (\"5 hours\" in red; the phone shows 5h 12m)",
+  "titles": [
+    "How Much Screen Time Is Too Much? (What I Do Instead)",
+    "Too Much Screen Time? 9 Things I Do Instead of Scrolling"
+  ],
+  "direction": "Copies pick1119-43: black ground, the problem as one picture on the left (here a plain generic phone showing a daily screen time), a short question in huge white lowercase on the right with the number in red. No face: a stranger reads it in a second.",
+  "nudge": {},
+  "images": {},
+  "vars": {},
+  "class": "no-lift",
+  "title": "How Much Screen Time Is Too Much? (What I Do Instead)",
+  "census": "phone left, words right (no face)",
+  "scores": "cold critic 2026-11-19: r1 7/7 · r2 8/7 · r3 7/7 (title changed to the question before r3). Critic: same template as pick 43 (it is the copy).",
+  "recommended": false
+}

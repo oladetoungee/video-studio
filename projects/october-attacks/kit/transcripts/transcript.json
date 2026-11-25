@@ -1,0 +1,1000 @@
+{
+	"systeminfo": "WHISPER : COREML = 0 | OPENVINO = 0 | MTL : EMBED_LIBRARY = 1 | CPU : NEON = 1 | ARM_FMA = 1 | FP16_VA = 1 | MATMUL_INT8 = 1 | DOTPROD = 1 | SME = 1 | ACCELERATE = 1 | OPENMP = 1 | REPACK = 1 | ",
+	"model": {
+		"type": "small",
+		"multilingual": false,
+		"vocab": 51864,
+		"audio": {
+			"ctx": 1500,
+			"state": 768,
+			"head": 12,
+			"layer": 12
+		},
+		"text": {
+			"ctx": 448,
+			"state": 768,
+			"head": 12,
+			"layer": 12
+		},
+		"mels": 80,
+		"ftype": 1
+	},
+	"params": {
+		"model": "/Users/gbemi/.cache/whisper/ggml-small.en.bin",
+		"language": "en",
+		"translate": false
+	},
+	"result": {
+		"language": "en"
+	},
+	"transcription": [
+		{
+			"timestamps": {
+				"from": "00:00:00,000",
+				"to": "00:00:03,600"
+			},
+			"offsets": {
+				"from": 0,
+				"to": 3600
+			},
+			"text": " A lot of things have been happening on the internet this month. October is supposed to"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:03,600",
+				"to": "00:00:09,040"
+			},
+			"offsets": {
+				"from": 3600,
+				"to": 9040
+			},
+			"text": " be cybersecurity awareness month and it has ironically been one attack after the other."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:09,040",
+				"to": "00:00:14,080"
+			},
+			"offsets": {
+				"from": 9040,
+				"to": 14080
+			},
+			"text": " HP, which is the language meant most of the websites in the world, has had two critical"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:14,080",
+				"to": "00:00:19,040"
+			},
+			"offsets": {
+				"from": 14080,
+				"to": 19040
+			},
+			"text": " security roles. Railway, which is also a popular platform among developers where we deploy"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:19,040",
+				"to": "00:00:23,040"
+			},
+			"offsets": {
+				"from": 19040,
+				"to": 23040
+			},
+			"text": " Hapsun, has had to literally tell their users to change their secrets keys."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:23,040",
+				"to": "00:00:27,920"
+			},
+			"offsets": {
+				"from": 23040,
+				"to": 27920
+			},
+			"text": " There is also another platform, Zebra, that is literally shutting down after being hacked"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:27,920",
+				"to": "00:00:32,480"
+			},
+			"offsets": {
+				"from": 27920,
+				"to": 32480
+			},
+			"text": " twice, like they're literally checking out. And there is news of another hacker that has"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:32,480",
+				"to": "00:00:38,720"
+			},
+			"offsets": {
+				"from": 32480,
+				"to": 38720
+			},
+			"text": " used AI agents to break into more than a hundred companies. So it's been an overflow of attacks"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:38,720",
+				"to": "00:00:44,720"
+			},
+			"offsets": {
+				"from": 38720,
+				"to": 44720
+			},
+			"text": " this month. I believe the PHP one is the biggest one so far. PHP runs nearly three quarters of the"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:44,720",
+				"to": "00:00:51,040"
+			},
+			"offsets": {
+				"from": 44720,
+				"to": 51040
+			},
+			"text": " websites in the world. WordPress runs on PHP. Laravel runs on PHP. I write Laravel at work."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:51,040",
+				"to": "00:00:57,440"
+			},
+			"offsets": {
+				"from": 51040,
+				"to": 57440
+			},
+			"text": " Most of the web runs on PHP. And two critical loopholes have been found in PHP this month."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:57,440",
+				"to": "00:01:02,400"
+			},
+			"offsets": {
+				"from": 57440,
+				"to": 62400
+			},
+			"text": " They're calling it the PHP two shell. And the shell part of the name is actually very important."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:02,400",
+				"to": "00:01:08,480"
+			},
+			"offsets": {
+				"from": 62400,
+				"to": 68480
+			},
+			"text": " Getting a shell means that the attack is so bad that an attacker can type commands on your server"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:08,480",
+				"to": "00:01:15,520"
+			},
+			"offsets": {
+				"from": 68480,
+				"to": 75520
+			},
+			"text": " as if they were on their own personal computer. PHP has rated this 9.2 out of 10. So it is really"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:15,520",
+				"to": "00:01:20,320"
+			},
+			"offsets": {
+				"from": 75520,
+				"to": 80320
+			},
+			"text": " terrible. Now there are two bugs reported. The first one is about memory. So if PHP runs out"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:20,320",
+				"to": "00:01:26,400"
+			},
+			"offsets": {
+				"from": 80320,
+				"to": 86400
+			},
+			"text": " of memory at a very specific moment while it's reading a request, it leaves some unfinished data"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:26,400",
+				"to": "00:01:32,560"
+			},
+			"offsets": {
+				"from": 86400,
+				"to": 92560
+			},
+			"text": " behind, then it's cleanup code treats that broken data like it's real and an attacker can use it to"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:32,560",
+				"to": "00:01:38,160"
+			},
+			"offsets": {
+				"from": 92560,
+				"to": 98160
+			},
+			"text": " run their own commands. The second bug is more about leftover information like leftover stuff"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:38,160",
+				"to": "00:01:43,280"
+			},
+			"offsets": {
+				"from": 98160,
+				"to": 103280
+			},
+			"text": " on PHP workers from previous requests that it should have thrown away. Now these are not just"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:43,280",
+				"to": "00:01:49,280"
+			},
+			"offsets": {
+				"from": 103280,
+				"to": 109280
+			},
+			"text": " random bugs. These are huge loopholes that people have already tried to exploit. The thing about PHP"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:49,280",
+				"to": "00:01:56,080"
+			},
+			"offsets": {
+				"from": 109280,
+				"to": 116080
+			},
+			"text": " two shell and why it's really so crazy is that it happens before your code even runs. So PHP reads"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:56,560",
+				"to": "00:02:02,640"
+			},
+			"offsets": {
+				"from": 116560,
+				"to": 122640
+			},
+			"text": " the incoming request first and this loop all is in that reading part. So your login, your middleware,"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:02,640",
+				"to": "00:02:07,200"
+			},
+			"offsets": {
+				"from": 122640,
+				"to": 127200
+			},
+			"text": " your authentication, nobody stands a chance against this stuff. You can have the best"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:07,200",
+				"to": "00:02:11,280"
+			},
+			"offsets": {
+				"from": 127200,
+				"to": 131280
+			},
+			"text": " login in the world and it wouldn't matter. Even Amazon has reported that someone tried to use"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:11,280",
+				"to": "00:02:16,240"
+			},
+			"offsets": {
+				"from": 131280,
+				"to": 136240
+			},
+			"text": " it on one of their on-import servers, which is basically a trap server set up to catch attackers"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:16,240",
+				"to": "00:02:20,480"
+			},
+			"offsets": {
+				"from": 136240,
+				"to": 140480
+			},
+			"text": " just for this before it was even announced. And there are government websites in Europe that"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:20,480",
+				"to": "00:02:25,760"
+			},
+			"offsets": {
+				"from": 140480,
+				"to": 145760
+			},
+			"text": " literally went off while they patched because of all of this drama. So basically if you're running"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:25,760",
+				"to": "00:02:31,760"
+			},
+			"offsets": {
+				"from": 145760,
+				"to": 151760
+			},
+			"text": " PHP anywhere, you have to update your PHP. If you're still on PHP 8.1 or older, you need to upgrade"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:31,760",
+				"to": "00:02:37,760"
+			},
+			"offsets": {
+				"from": 151760,
+				"to": 157760
+			},
+			"text": " and updating the package is not even enough. You have to restart your patch and if you use Docker,"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:37,760",
+				"to": "00:02:41,440"
+			},
+			"offsets": {
+				"from": 157760,
+				"to": 161440
+			},
+			"text": " you have to rebuild your images. Everyone has been patching and if you're using Laravel,"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:41,440",
+				"to": "00:02:46,160"
+			},
+			"offsets": {
+				"from": 161440,
+				"to": 166160
+			},
+			"text": " for example, your Laravel version doesn't even protect you here because the loophole is in PHP,"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:46,160",
+				"to": "00:02:51,600"
+			},
+			"offsets": {
+				"from": 166160,
+				"to": 171600
+			},
+			"text": " which is underneath Laravel and it's not even just PHP. Node.js also add its own security release"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:51,600",
+				"to": "00:02:56,240"
+			},
+			"offsets": {
+				"from": 171600,
+				"to": 176240
+			},
+			"text": " on that same day. So if you run Node, you need to update to that too. Now why everyone was busy"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:56,240",
+				"to": "00:03:01,600"
+			},
+			"offsets": {
+				"from": 176240,
+				"to": 181600
+			},
+			"text": " patching PHP? Railway happened on the same day. If you don't know what railway is, railway is a"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:01,600",
+				"to": "00:03:06,320"
+			},
+			"offsets": {
+				"from": 181600,
+				"to": 186320
+			},
+			"text": " deployment platform where you can deploy your apps. So basically, railway says someone may have"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:06,320",
+				"to": "00:03:10,560"
+			},
+			"offsets": {
+				"from": 186320,
+				"to": 190560
+			},
+			"text": " accessed their customers' encrypted environment variables and if you're a developer, you know"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:10,560",
+				"to": "00:03:14,960"
+			},
+			"offsets": {
+				"from": 190560,
+				"to": 194960
+			},
+			"text": " how important it is to keep your environment variables safe. So railway post deployment for"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:14,960",
+				"to": "00:03:20,560"
+			},
+			"offsets": {
+				"from": 194960,
+				"to": 200560
+			},
+			"text": " a while, this even affected me, and the ads asked their users to revoke and change their API keys"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:20,560",
+				"to": "00:03:25,760"
+			},
+			"offsets": {
+				"from": 200560,
+				"to": 205760
+			},
+			"text": " and cloud keys. There's still no full details from railway on how the attack has gotten. They did say"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:25,760",
+				"to": "00:03:32,080"
+			},
+			"offsets": {
+				"from": 205760,
+				"to": 212080
+			},
+			"text": " however, that it's part of a series of attacks on platforms like theirs with the goal of getting to"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:32,080",
+				"to": "00:03:37,440"
+			},
+			"offsets": {
+				"from": 212080,
+				"to": 217440
+			},
+			"text": " AI companies. Now Zibor, the company that is shutting down because of attacks, is a very"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:37,440",
+				"to": "00:03:43,280"
+			},
+			"offsets": {
+				"from": 217440,
+				"to": 223280
+			},
+			"text": " interesting one. This is also another platform that developers use to deploy apps and they are"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:43,280",
+				"to": "00:03:48,640"
+			},
+			"offsets": {
+				"from": 223280,
+				"to": 228640
+			},
+			"text": " deciding to shut down completely. They got breached in August and on October 14th and 15th, they got"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:48,640",
+				"to": "00:03:56,320"
+			},
+			"offsets": {
+				"from": 228640,
+				"to": 236320
+			},
+			"text": " breached again which leaked internal credentials. The second breach covered about 321,810 accounts"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:56,320",
+				"to": "00:04:01,920"
+			},
+			"offsets": {
+				"from": 236320,
+				"to": 241920
+			},
+			"text": " and about 3.2 million environment variables records. So how did the attackers get in the"
+		},
+		{
+			"timestamps": {
+				"from": "00:04:01,920",
+				"to": "00:04:06,800"
+			},
+			"offsets": {
+				"from": 241920,
+				"to": 246800
+			},
+			"text": " second time after they got in the first time? According to Zibor, their admin token had no"
+		},
+		{
+			"timestamps": {
+				"from": "00:04:06,800",
+				"to": "00:04:12,480"
+			},
+			"offsets": {
+				"from": 246800,
+				"to": 252480
+			},
+			"text": " expiry date. So they had not changed this token since January 2024. So after the first attack,"
+		},
+		{
+			"timestamps": {
+				"from": "00:04:12,480",
+				"to": "00:04:17,200"
+			},
+			"offsets": {
+				"from": 252480,
+				"to": 257200
+			},
+			"text": " when they changed their keys, they didn't include that particular set of tokens. They didn't change"
+		},
+		{
+			"timestamps": {
+				"from": "00:04:17,200",
+				"to": "00:04:23,840"
+			},
+			"offsets": {
+				"from": 257200,
+				"to": 263840
+			},
+			"text": " those set and that kind of opened the gates again and the old platform now is deciding to shut down."
+		},
+		{
+			"timestamps": {
+				"from": "00:04:23,840",
+				"to": "00:04:27,920"
+			},
+			"offsets": {
+				"from": 263840,
+				"to": 267920
+			},
+			"text": " They will pass services and just shut everything down by the end of December. This is crazy."
+		},
+		{
+			"timestamps": {
+				"from": "00:04:27,920",
+				"to": "00:04:34,080"
+			},
+			"offsets": {
+				"from": 267920,
+				"to": 274080
+			},
+			"text": " The open code one is also very very interesting because people found out open code had been hacked"
+		},
+		{
+			"timestamps": {
+				"from": "00:04:34,080",
+				"to": "00:04:39,920"
+			},
+			"offsets": {
+				"from": 274080,
+				"to": 279920
+			},
+			"text": " from the abuse. Open code is an open source AI coding tool. It has an online platform called"
+		},
+		{
+			"timestamps": {
+				"from": "00:04:39,920",
+				"to": "00:04:45,600"
+			},
+			"offsets": {
+				"from": 279920,
+				"to": 285600
+			},
+			"text": " open code console where people store their AI API keys. Now open code said attackers broke into"
+		},
+		{
+			"timestamps": {
+				"from": "00:04:45,600",
+				"to": "00:04:50,880"
+			},
+			"offsets": {
+				"from": 285600,
+				"to": 290880
+			},
+			"text": " an older system and took those keys. So people started getting alerts from open AI and Tropic"
+		},
+		{
+			"timestamps": {
+				"from": "00:04:50,880",
+				"to": "00:04:56,000"
+			},
+			"offsets": {
+				"from": 290880,
+				"to": 296000
+			},
+			"text": " Google and some of these charges were in hundreds of dollars. A few of them were even over a thousand"
+		},
+		{
+			"timestamps": {
+				"from": "00:04:56,000",
+				"to": "00:05:01,760"
+			},
+			"offsets": {
+				"from": 296000,
+				"to": 301760
+			},
+			"text": " dollars for AI usage that users did not run. Like imagine getting alerts for things you didn't use."
+		},
+		{
+			"timestamps": {
+				"from": "00:05:01,760",
+				"to": "00:05:07,520"
+			},
+			"offsets": {
+				"from": 301760,
+				"to": 307520
+			},
+			"text": " Open code calls it a distillation account. That is when someone asks an AI model loads of questions"
+		},
+		{
+			"timestamps": {
+				"from": "00:05:07,520",
+				"to": "00:05:13,120"
+			},
+			"offsets": {
+				"from": 307520,
+				"to": 313120
+			},
+			"text": " and just uses the answer to train their own model. So basically in simple words someone may have been"
+		},
+		{
+			"timestamps": {
+				"from": "00:05:13,120",
+				"to": "00:05:18,080"
+			},
+			"offsets": {
+				"from": 313120,
+				"to": 318080
+			},
+			"text": " building their own AI on other people's bill. Of course the AI companies have blocked the stolen"
+		},
+		{
+			"timestamps": {
+				"from": "00:05:18,080",
+				"to": "00:05:23,120"
+			},
+			"offsets": {
+				"from": 318080,
+				"to": 323120
+			},
+			"text": " keys and refunds are going out which is good. When you put the railways the borough and open"
+		},
+		{
+			"timestamps": {
+				"from": "00:05:23,120",
+				"to": "00:05:27,280"
+			},
+			"offsets": {
+				"from": 323120,
+				"to": 327280
+			},
+			"text": " codes incident side by side you realize they are kind of the same pattern. In these situations"
+		},
+		{
+			"timestamps": {
+				"from": "00:05:27,280",
+				"to": "00:05:32,320"
+			},
+			"offsets": {
+				"from": 327280,
+				"to": 332320
+			},
+			"text": " particularly the attackers went straight for the place where developers keep their secret keys."
+		},
+		{
+			"timestamps": {
+				"from": "00:05:32,320",
+				"to": "00:05:36,080"
+			},
+			"offsets": {
+				"from": 332320,
+				"to": 336080
+			},
+			"text": " So if you use any of this platform you want to change any key you're not sure about. You want"
+		},
+		{
+			"timestamps": {
+				"from": "00:05:36,080",
+				"to": "00:05:41,120"
+			},
+			"offsets": {
+				"from": 336080,
+				"to": 341120
+			},
+			"text": " to give your keys an expiry date whenever or wherever the service allows it. You want to give"
+		},
+		{
+			"timestamps": {
+				"from": "00:05:41,120",
+				"to": "00:05:46,400"
+			},
+			"offsets": {
+				"from": 341120,
+				"to": 346400
+			},
+			"text": " each keys only the access it needs. So if a key only needs to read one storage bucket just give"
+		},
+		{
+			"timestamps": {
+				"from": "00:05:46,400",
+				"to": "00:05:52,800"
+			},
+			"offsets": {
+				"from": 346400,
+				"to": 352800
+			},
+			"text": " it access to that one storage bucket. Set spending limits, set alerts on all your AI and cloud"
+		},
+		{
+			"timestamps": {
+				"from": "00:05:52,800",
+				"to": "00:05:58,960"
+			},
+			"offsets": {
+				"from": 352800,
+				"to": 358960
+			},
+			"text": " accounts and honestly do not store keys in tools that don't need them. Now there's one more story"
+		},
+		{
+			"timestamps": {
+				"from": "00:05:58,960",
+				"to": "00:06:05,280"
+			},
+			"offsets": {
+				"from": 358960,
+				"to": 365280
+			},
+			"text": " from the October drama and this one actually sounds so made up. Emudra is one of the companies that"
+		},
+		{
+			"timestamps": {
+				"from": "00:06:05,280",
+				"to": "00:06:11,600"
+			},
+			"offsets": {
+				"from": 365280,
+				"to": 371600
+			},
+			"text": " your browsers need that your browsers trust to confirm that a website is who it really says it"
+		},
+		{
+			"timestamps": {
+				"from": "00:06:11,600",
+				"to": "00:06:16,080"
+			},
+			"offsets": {
+				"from": 371600,
+				"to": 376080
+			},
+			"text": " is. That is how important this company is. So it's like this little padlock that your browser"
+		},
+		{
+			"timestamps": {
+				"from": "00:06:16,080",
+				"to": "00:06:23,840"
+			},
+			"offsets": {
+				"from": 376080,
+				"to": 383840
+			},
+			"text": " depends on. Now it turns out that eight of the assignee keys were so weak. The keys were so weak"
+		},
+		{
+			"timestamps": {
+				"from": "00:06:23,840",
+				"to": "00:06:30,320"
+			},
+			"offsets": {
+				"from": 383840,
+				"to": 390320
+			},
+			"text": " that one of them literally was the number four. Just number four. That's how weak their keys were."
+		},
+		{
+			"timestamps": {
+				"from": "00:06:30,320",
+				"to": "00:06:36,960"
+			},
+			"offsets": {
+				"from": 390320,
+				"to": 396960
+			},
+			"text": " Like just number four. So the scripts went wrong when the keys were made in April 2025 and it made"
+		},
+		{
+			"timestamps": {
+				"from": "00:06:36,960",
+				"to": "00:06:42,560"
+			},
+			"offsets": {
+				"from": 396960,
+				"to": 402560
+			},
+			"text": " a second set of weak keys. And with keys like this of course someone could affect the website"
+		},
+		{
+			"timestamps": {
+				"from": "00:06:42,560",
+				"to": "00:06:47,760"
+			},
+			"offsets": {
+				"from": 402560,
+				"to": 407760
+			},
+			"text": " and your browser will still have shown the padlock. So be honest in cases like this I don't think"
+		},
+		{
+			"timestamps": {
+				"from": "00:06:47,760",
+				"to": "00:06:52,320"
+			},
+			"offsets": {
+				"from": 407760,
+				"to": 412320
+			},
+			"text": " there is anything the average users can even do about these things but just to keep your stuff"
+		},
+		{
+			"timestamps": {
+				"from": "00:06:52,320",
+				"to": "00:07:00,000"
+			},
+			"offsets": {
+				"from": 412320,
+				"to": 420000
+			},
+			"text": " updated. And I think in the middle of all of this attack drama is where the role that AI plays on"
+		},
+		{
+			"timestamps": {
+				"from": "00:07:00,000",
+				"to": "00:07:07,120"
+			},
+			"offsets": {
+				"from": 420000,
+				"to": 427120
+			},
+			"text": " all sides. Reuters reported that one attacker used AI agents to break into more than a hundred company"
+		},
+		{
+			"timestamps": {
+				"from": "00:07:07,120",
+				"to": "00:07:12,880"
+			},
+			"offsets": {
+				"from": 427120,
+				"to": 432880
+			},
+			"text": " websites. These include sites belonging to shark, ninj, commies, all of those. So in this case what"
+		},
+		{
+			"timestamps": {
+				"from": "00:07:12,880",
+				"to": "00:07:17,440"
+			},
+			"offsets": {
+				"from": 432880,
+				"to": 437440
+			},
+			"text": " the attackers did was that it gave the agent short instructions and just let them run on for hours on"
+		},
+		{
+			"timestamps": {
+				"from": "00:07:17,440",
+				"to": "00:07:24,240"
+			},
+			"offsets": {
+				"from": 437440,
+				"to": 444240
+			},
+			"text": " their own. And the cost estimated to about $50 in AI tokens per successful hack. Like it's so crazy"
+		},
+		{
+			"timestamps": {
+				"from": "00:07:24,240",
+				"to": "00:07:28,960"
+			},
+			"offsets": {
+				"from": 444240,
+				"to": 448960
+			},
+			"text": " that we've gotten to the point where it's costing $50 to hack into a company. It's just been so"
+		},
+		{
+			"timestamps": {
+				"from": "00:07:28,960",
+				"to": "00:07:35,440"
+			},
+			"offsets": {
+				"from": 448960,
+				"to": 455440
+			},
+			"text": " interesting reading and seeing the news everywhere. What I find even interesting is how AI is"
+		},
+		{
+			"timestamps": {
+				"from": "00:07:35,440",
+				"to": "00:07:41,520"
+			},
+			"offsets": {
+				"from": 455440,
+				"to": 461520
+			},
+			"text": " literally on both sides. For example the PHP social loop rules were found with help from AI"
+		},
+		{
+			"timestamps": {
+				"from": "00:07:41,520",
+				"to": "00:07:45,760"
+			},
+			"offsets": {
+				"from": 461520,
+				"to": 465760
+			},
+			"text": " and here AI is also being used by the attackers. So the same tools that are helping the defenders"
+		},
+		{
+			"timestamps": {
+				"from": "00:07:45,760",
+				"to": "00:07:51,520"
+			},
+			"offsets": {
+				"from": 465760,
+				"to": 471520
+			},
+			"text": " find the box faster are also helping the attackers break in faster. So it's almost like this back and"
+		},
+		{
+			"timestamps": {
+				"from": "00:07:51,520",
+				"to": "00:07:56,320"
+			},
+			"offsets": {
+				"from": 471520,
+				"to": 476320
+			},
+			"text": " forth situation. I have people that are working in companies that have literally been stuck over"
+		},
+		{
+			"timestamps": {
+				"from": "00:07:56,320",
+				"to": "00:07:59,440"
+			},
+			"offsets": {
+				"from": 476320,
+				"to": 479440
+			},
+			"text": " dealing with attacks. It's been crazy, really crazy."
+		}
+	]
+}

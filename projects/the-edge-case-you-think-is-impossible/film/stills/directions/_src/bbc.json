@@ -1,0 +1,34 @@
+{
+ "title": "These unlucky people have names that break computers",
+ "h1": "These unlucky people have names that break computers",
+ "h1y": 302,
+ "found": {
+  "Jennifer Null": [
+   [
+    279.328125,
+    1256.25,
+    110.125,
+    21
+   ]
+  ]
+ },
+ "H": 8931,
+ "focus": {
+  "Jennifer Null": {
+   "file": "bbc__jennifer-null.png",
+   "top": 736.25,
+   "rects": [
+    [
+     279.328125,
+     520,
+     110.125,
+     21
+    ]
+   ]
+  }
+ },
+ "clipTop": 182,
+ "scale": 1.5,
+ "url": "https://www.bbc.com/future/article/20160325-the-names-that-break-computer-systems",
+ "captured": "2026-11-02T19:33:48.068Z"
+}

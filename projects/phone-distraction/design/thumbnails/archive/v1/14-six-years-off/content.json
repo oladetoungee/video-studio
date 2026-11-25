@@ -1,0 +1,21 @@
+{
+  "direction": "A personal story with a number: a plain camera-style app icon (no real logo) crossed out in red pen beside her today (12:27). Much better with a photo of her at about 19 as a polaroid (flagged).",
+  "concept": "TH14",
+  "follows": "Pinterest polaroids + Day 1 / Day 900 splits",
+  "needs_photo": "any photo of her at about 19 (for a then / now polaroid)",
+  "thumbnail_text": "6 YEARS OFF THE APP",
+  "title": "Why I Left Instagram at 19 (and the Rule I Use Now)",
+  "titles": [
+    "Why I Left Instagram at 19 (and the Rule I Use Now)",
+    "I Quit Instagram at 19. Here's My Rule for Social Media"
+  ],
+  "scores": "A topic (image only) 7/7 · B with best title 8 · C taste 4 (round 2; fixes from round 2 applied after)",
+  "text": {
+    "words": "6 years off <span class=\"acc\">the app</span>"
+  },
+  "images": {
+    "scene": "../../../../assets/scene/warm/s_747.0.jpg",
+    "front": "../../../../assets/scene/warm/mask/s_747.0.png"
+  },
+  "vars": {}
+}

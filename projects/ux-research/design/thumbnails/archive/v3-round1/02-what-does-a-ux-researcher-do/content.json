@@ -1,0 +1,26 @@
+{
+  "direction": "Her pointing at herself (the UX researcher), the question across the pale wall behind her head, two sticky notes with the job in plain words either side. References: yt 'POV' (29), Pinterest 'COOK' (text behind the head), the film's sticky-note wall.",
+  "thumbnail_text": "What does a UX researcher do?",
+  "text": {
+    "hd": "What does a<br><span class=\"acc\">UX researcher</span> do?",
+    "n1": "Talks to users",
+    "n2": "Watches them use the app"
+  },
+  "images": {
+    "bg": "../../assets/scene/g/s_349.jpg",
+    "cut": "../../assets/scene/g/mask3/s_349.png"
+  },
+  "vars": {
+    "--accent": "#E8501E",
+    "--bgb": "0.98",
+    "--meb": "1.05"
+  },
+  "titles": [
+    "What Does a UX Researcher Actually Do All Week?",
+    "What Is UX Research? A Beginner's Path Into the Field",
+    "UX Researcher vs UX Designer: Who Does What on a Team?"
+  ],
+  "title": "What Does a UX Researcher Actually Do All Week?",
+  "set": 3,
+  "kind": "photo"
+}

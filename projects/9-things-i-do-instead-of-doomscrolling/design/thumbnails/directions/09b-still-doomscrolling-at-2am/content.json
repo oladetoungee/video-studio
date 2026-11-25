@@ -1,0 +1,31 @@
+{
+  "text": {
+    "h": "Still<br>doomscrolling<br><span class=\"r\">at 2am?</span>"
+  },
+  "images": {
+    "scene": "../../assets/pexels/night-phone.jpg",
+    "room": "../../assets/shoot/1548.jpg",
+    "me": "../../assets/shoot/1548-person.png"
+  },
+  "kind": "real scene left (someone lit by a phone in bed at night) + her in her dimmed room right, huge caps across the scene",
+  "board": "Thumbnails 98 (yt-45 IT'S A TRAP: a real scene on the left with huge caps across it, the person on the right) · Thumbnails 98 (closest pick: pick1119-17, phone-lit scene + her face)",
+  "fonts": [
+    "thumbs-16 Anton + red box (white + #D7262E box on #1E1E1E, Thumbnails 113)"
+  ],
+  "colours": "Font thumbs-16 specimen: #1E1E1E (her room is dimmed in it) / #FFFFFF / red box #D7262E",
+  "thumbnail_text": "STILL DOOMSCROLLING AT 2AM? (over someone lit by a phone in bed at night; she looks at you, hand on her cheek)",
+  "titles": [
+    "How to Stop Doomscrolling: 9 Things I Do Instead",
+    "How to Stop Doomscrolling at Night (What I Do Instead)",
+    "What to Do Instead of Scrolling on Your Phone (9 Ideas)"
+  ],
+  "rework_of": "09-cut-your-screen-time (kept as it was)",
+  "direction": "Rework of 09. Copies Thumbnails 98 (IT'S A TRAP) with the Anton + red box of Thumbnails 113: the left half is the problem itself, someone lit by a phone in bed at night; the right half is her in her own room (dimmed, face untouched), hand on her cheek. The words name the topic people search and ask the viewer if it is them (round 2: the trap line read as a tired formula and ran into her face).",
+  "nudge": {},
+  "vars": {},
+  "class": "no-lift",
+  "title": "How to Stop Doomscrolling: 9 Things I Do Instead",
+  "census": "words left / her right",
+  "scores": "cold critic 2026-11-19: r1 7/8 · r2 7/7 · r3 7/7 (left scene brightened before r3). Best of ours in rounds 1 and 3.",
+  "recommended": true
+}

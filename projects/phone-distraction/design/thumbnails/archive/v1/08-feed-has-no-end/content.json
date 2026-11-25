@@ -1,0 +1,21 @@
+{
+  "direction": "The endless feed made physical: one long paper strip of posts running off the top and bottom of the frame; her beside it, finger up (5:00). Best with a photo of her holding her phone up (flagged).",
+  "concept": "TH08",
+  "follows": "viral sample 1 (a literal picture of the topic)",
+  "needs_photo": "her holding her phone up, screen towards the camera",
+  "thumbnail_text": "THE FEED HAS NO END",
+  "title": "Why Websites Got Rid of the \"Next Page\" Button",
+  "titles": [
+    "Why Websites Got Rid of the \"Next Page\" Button",
+    "Why Can't I Stop Scrolling? It Was Designed That Way"
+  ],
+  "scores": "A topic (image only) 7/6 · B with best title 8 · C taste 5 (round 2; fixes from round 2 applied after)",
+  "text": {
+    "words": "The feed has <span class=\"acc\">no end</span>"
+  },
+  "images": {
+    "scene": "../../../../assets/scene/warm/s_300.0.jpg",
+    "front": "../../../../assets/scene/warm/mask/s_300.0.png"
+  },
+  "vars": {}
+}

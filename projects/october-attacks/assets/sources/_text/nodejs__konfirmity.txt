@@ -1,0 +1,499 @@
+URL: https://www.konfirmity.com/advisories/nodejs-october-2026-security-releases
+STATUS: loaded (http 200)
+FINAL: https://www.konfirmity.com/advisories/nodejs-october-2026-security-releases
+TITLE: Node.js October 2026 Security Release Advisory | Konfirmity
+H1: Node.js October 2026 Security Releases
+OG: Node.js October 2026 Security Release Advisory | Konfirmity | Konfirmity
+PUBLISHED: 2026-10-21  MODIFIED: 2026-10-25
+DOC_H: 17300
+
+All security advisories
+
+//SECURITY ADVISORY
+
+Node.js October 2026 Security Releases
+
+On 21 October 2026 Node.js fixed ten vulnerabilities across every supported release line, four of them rated high. The most serious is a memory corruption bug in Brotli decompression, scored 9.2 Critical, and researchers have since shown it can run code through an ordinary fetch() call. Upgrade to 22.23.4, 24.22.1 or 26.12.1. Node.js 20 and older receive no fix.
+
+ACTIVE
+
+Fixed releases, Docker images, Lambda base images, Elastic Beanstalk and Amazon Linux packages are available. Code execution through the Brotli flaw has been demonstrated.
+
+Published
+October 21, 2026
+Last updated
+October 25, 2026
+Affects
+Node.js 22.x, 24.x and 26.x, and every end-of-life line
+Severity
+Critical for the Brotli flaw (CVSS 4.0 9.2). The others score CVSS 3.0 7.4 or lower.
+Primary record
+Node.js security release post
+
+Reflects what was publicly known on the last updated date. Facts come from the primary sources listed at the end of the page.
+
+ON THIS PAGE
+
+Are you affected?
+What to do
+Fixed versions
+Not on the internet?
+If you run on AWS
+The vulnerabilities
+Dependency updates
+Published since
+Timeline
+Questions
+Recording it for compliance
+Sources
+Are you affected?
+
+If you run Node.js anywhere, yes. Find the row that describes you.
+
+You run Node.js 22, 24 or 26
+
+Servers, CLIs, build tools, serverless functions
+
+UPDATE NEEDED
+
+Upgrade to 22.23.4, 24.22.1 or 26.12.1. All three lines carry at least one high-severity fix. Fixed versions
+
+You run Node.js 20 or older
+
+Including 21, 23 and 25
+
+ACT NOW
+
+No fix is coming. Node.js 20 reached end of life on 30 April 2026. Plan a move to Node.js 22 or 24 now. Details
+
+Your services are not reachable from the internet
+
+Internal APIs, workers, scheduled jobs and functions that only call out
+
+UPDATE NEEDED
+
+Still affected, usually not urgently. Several fixes protect the calls your code makes, not the requests it receives. How it reaches you
+
+You run Node.js on AWS
+
+Lambda, Elastic Beanstalk, CodeBuild, App Runner, ECS, EKS
+
+UPDATE NEEDED
+
+Some services update Node.js for you and some do not. Container images and pinned Lambda runtimes never update on their own. Service by service
+
+You ship Node.js inside images or binaries
+
+Docker images, single executable applications, startup snapshots
+
+UPDATE NEEDED
+
+Upgrading the host is not enough. Rebuild every image and binary on the fixed version, because each one carries its own copy of the runtime.
+
+You rely on the Permission Model
+
+Processes started with --permission
+
+LOW RISK
+
+Two low-severity bypasses are fixed. Node.js documents the Permission Model as a safeguard for trusted code, not a sandbox for untrusted code.
+
+For Node.js on developer laptops, along with the other October updates to make there, see the device security checklist.
+
+What to do
+
+This is an upgrade, not a configuration change. Node.js has published no workarounds for any of the ten CVEs.
+
+01
+
+Find every Node.js version you run
+
+Check servers, CI runners, developer machines, base images and serverless runtimes. The command below also prints the bundled OpenSSL, c-ares and Undici versions.
+SHELL
+COPY
+node -p "[process.version, 'openssl ' + process.versions.openssl,
+  'c-ares ' + process.versions.ares, 'undici ' + process.versions.undici].join('\n')"
+02
+
+Upgrade to the fixed release for your line
+
+22.23.4, 24.22.1 or 26.12.1, or anything later in the same line. See fixed versions.
+03
+
+Rebuild container images
+
+The official node images were updated on 21 October. An image built before then keeps the old runtime until you rebuild it on a fresh pull of the base.
+SHELL
+COPY
+docker run --rm node:22 node --version   # expect v22.23.4 or later
+docker run --rm node:24 node --version   # expect v24.22.1 or later
+docker run --rm node:26 node --version   # expect v26.12.1 or later
+04
+
+Rebuild single executables and startup snapshots
+
+A single executable application embeds its own copy of Node.js, so it stays vulnerable until it is rebuilt. If you build startup snapshots, rebuild them too. See CVE-2026-106074.
+05
+
+Schedule the move off end-of-life lines
+
+Anything on Node.js 20 or older stays exposed to every issue on this page. Treat it as a known, unfixed vulnerability until it is migrated.
+Fixed versions
+
+Status as of 21 October 2026, from the Node.js release schedule. Any later release in the same line also contains the fixes.
+
+Fixed Node.js version for each release line
+RELEASE LINE	STATUS	FIXED IN
+Node.js 26	Current, becomes LTS on 28 October 2026	26.12.1
+Node.js 24 (Krypton)	LTS, in maintenance since 20 October 2026	24.22.1
+Node.js 22 (Jod)	Maintenance LTS until 30 April 2027	22.23.4
+Node.js 25, 23 and 21	End of life	No fix
+Node.js 20 (Iron) and older	End of life since 30 April 2026	No fix
+End-of-life lines
+
+The Node.js security post states that end-of-life versions are always affected when a security release occurs. Node.js 20 reached end of life on 30 April 2026 and Node.js 25 on 1 June 2026. The Node.js project recommends that production applications use only Active LTS or Maintenance LTS releases.
+
+Services that are not on the internet
+
+A service nobody can reach from outside still calls out: to AI, payment, CRM and data providers, and to your other services. Several of these fixes protect those outbound calls, so not being internet-facing does not mean not affected. It usually does mean not urgent.
+
+How each fix reaches a service, and how urgent it is for internal services
+FIX	REACHES YOU THROUGH	WHAT AN ATTACKER NEEDS	PRIORITY
+Brotli decoder (CVE-2026-111497)	Decompressing Brotli data you do not control: request bodies sent to you, or responses to calls you make. The built-in fetch asks HTTPS servers for Brotli by default.	A way to send you crafted data: as a client of your service, or by controlling or compromising a service you call.	Highest. Patch first anything that accepts Brotli bodies, or fetches URLs that users supply.
+TLS hostname checks (CVE-2026-106069, CVE-2026-105483, CVE-2026-106072)	Outbound TLS connections to an address an attacker can influence, such as webhook URLs or link previews.	Control of that address, a certificate your client trusts for the IP address, and a way to receive the connection.	Only services that connect to user-supplied addresses. Connections to fixed hostnames are not affected.
+DNS resolve (CVE-2026-105482)	Names that users supply, checked as strings and then passed to dns.resolve.	A way to supply the name.	Only services that resolve user-supplied names after a string check.
+Keep-alive responses (CVE-2026-105481)	Outbound HTTP calls that reuse connections.	A malicious or compromised service you call, or a position on the network path to a plain HTTP service.	Low for internal services that call known HTTPS APIs.
+eMudhra certificate blocklist	Every outbound HTTPS call.	A position on the network path, for example through DNS poisoning, a hijacked route or a proxy, plus a certificate issued with one of the compromised keys.	Low inside a private cloud network. Higher for code that runs on networks you do not control.
+Snapshots, Permission Model and ZipFile (the remaining five)	Local use of those features. No network path.	Code or files already running inside your process.	Only if you use those features.
+
+For most of these, an attacker has to control a service you call or get onto the network path between you and it. From inside a private cloud network that is hard, which is why most internal services can take this on a normal rebuild cycle. The exceptions are services that accept Brotli request bodies, and services that call or connect to addresses users supply, such as webhook senders.
+
+This table is our reading of the fix commits and the “Who is exposed” notes below, not guidance from Node.js. A WAF, CDN or load balancer in front of a service only sees traffic coming in. It plays no part in the calls your service makes out.
+
+If you run on AWS
+
+Whether AWS updates Node.js for you depends on how the code is deployed. Status as of 22 October 2026.
+
+Who updates Node.js on each AWS service, and what to do
+SERVICE	WHO UPDATES NODE.JS	STATUS	WHAT TO DO
+Lambda, .zip, Auto runtime updates (the default)	AWS, gradually	AWS does not publish when a runtime version reaches each Region. Runtime updates	Confirm with process.version, then nothing more.
+Lambda, .zip, Function update mode	AWS, only when you update the function	As above. Published versions keep their runtime.	Redeploy or update each function once the fixed runtime reaches your Region.
+Lambda, .zip, Manual mode	Nobody. The runtime is pinned.	Stays on the pinned version indefinitely.	Switch back to Auto. AWS intends Manual only for temporary rollbacks.
+Lambda container images	You	Fixed base images published 22 October: lambda/nodejs 22, 24 and 26-preview.	Rebuild on a fresh pull of the base image, then redeploy.
+Lambda@Edge	AWS	Allows only Auto runtime updates, so it follows the Lambda rollout. Restrictions	Confirm with process.version.
+Lambda nodejs20.x	Nobody	AWS stopped patching it on 30 April 2026. Lambda runtimes	Move to nodejs22.x or nodejs24.x.
+Elastic Beanstalk	AWS, through platform updates	Fixed. Platform v6.11.12, released 22 October, ships 22.23.4 and 24.22.1. Release notes	Turn on managed platform updates, or apply platform v6.11.12 now.
+CodeBuild	AWS, in the curated images	The published image definitions pin earlier Node.js versions. Check what your build prints.	Request a specific version with runtime-versions in your buildspec.
+App Runner, source code	AWS, on each deployment	Newest listed Node.js runtime is 22.21.1. Release list	Redeploy once a fixed runtime is listed, or move to an image-based service you rebuild.
+Amazon Linux 2023 nodejs22 and nodejs24 packages	AWS, through Amazon Linux updates	Fixed on 24 October: nodejs22 22.23.4 and nodejs24 24.22.1. The nodejs22 package uses the system brotli library, which has its own fix.	Update nodejs22 or nodejs24 and brotli with dnf, then restart Node.js processes.
+ECS, Fargate, EKS, EC2 and image-based App Runner	You	Your own images and hosts.	Rebuild images on a fresh node base image and update hosts.
+Check a Lambda function
+
+AWS does not say which Node.js release each Lambda runtime version contains. The reliable check is to log process.version from the function and look for 22.23.4, 24.22.1 or later. The INIT_START line in CloudWatch Logs shows the runtime version ARN, which tells you when it changes. How to read it
+
+AWS CLI
+COPY
+# Which update mode each function uses: Auto, FunctionUpdate or Manual
+aws lambda get-runtime-management-config --function-name my-function
+
+Node.js 26 is in public preview on Lambda, and AWS says preview runtimes should not be used for production. The AWS SDK for JavaScript v3 makes its calls through Node.js’s own TLS, so upgrading Node.js covers it. AWS had published no security bulletin on these CVEs by 22 October.
+
+The vulnerabilities
+
+Ten CVEs, ordered by severity. Node.js rates each high, medium or low; the CVE records published on 22 and 23 October add CVSS scores (3.0 unless marked 4.0). The explanations below draw on the CVE records, the fix commits and their tests.
+
+Node.js October 2026 CVEs by release line
+CVE	SEVERITY	CVSS	AFFECTED LINES
+CVE-2026-111497
+Brotli decoder out-of-bounds write
+	HIGH	9.2 (4.0)	22.x, 24.x, 26.x
+CVE-2026-105482
+DNS resolve truncates names at a NUL character
+	HIGH	7.4	22.x, 24.x, 26.x
+CVE-2026-106069
+TLS hostname bypass with non-canonical IP addresses
+	HIGH	7.4	22.x, 24.x, 26.x
+CVE-2026-105483
+TLS hostname bypass with fullwidth digits
+	HIGH	7.4	24.x, 26.x
+CVE-2026-106072
+DNS names in certificates accepted for IP endpoints
+	MEDIUM	6.7	22.x, 24.x, 26.x
+CVE-2026-105481
+Keep-alive socket accepts a response sent too early
+	MEDIUM	6.5	22.x, 24.x, 26.x
+CVE-2026-106074
+Repeated random values in snapshots and SEAs
+	MEDIUM	4.8	22.x, 24.x, 26.x
+CVE-2026-106070
+ZipFile returns stray bytes after a failed header check
+	LOW	3.7	26.x
+CVE-2026-106071
+Permission Model over-grants with wildcard paths
+	LOW	3.6	26.x
+CVE-2026-106073
+Permission Model bypass through fs.realpathSync
+	LOW	3.3	22.x, 24.x, 26.x
+HIGH
+CVE-2026-111497: Brotli decoder out-of-bounds write
+
+Affects 22.x, 24.x and 26.x. Fix: Node.js commit, google/brotli commit
+
+The bug is in the Brotli library that Node.js bundles, not in Node.js’s own code. A crafted compressed stream that declares a single block type and then switches blocks was not rejected, and Node.js says the result is an out-of-bounds write that permits remote code execution. Node.js applied the upstream fix, which makes the decoder stop with an error on such streams.
+
+Code execution has been demonstrated. On 22 October Imperva ran code on the official Node.js 24.22.0 image through both a Brotli response read by the built-in fetch and a Brotli request body handled by Express and body-parser, and confirmed 24.22.1 rejects the same input. The CVE record, published by Google, scores it 9.2 Critical under CVSS 4.0 and covers Google Brotli 1.0.3 to 1.2.0, so other software that bundles Brotli needs its own update. No attacks had been reported as of 25 October, and it was not in the CISA KEV catalog.
+
+Who is exposed: anything that decompresses Brotli data it does not control. zlib.brotliDecompress, its sync form and zlib.createBrotliDecompress all reach the decoder; the fix’s regression test exercises both the one-shot and streaming paths. Typical cases are servers that accept Content-Encoding: br request bodies and clients or proxies that decompress responses from servers they do not trust.
+
+The built-in fetch reaches it. For HTTPS URLs it asks servers for Brotli by default (Accept-Encoding: br, gzip, deflate) and decodes Brotli responses with Node.js’s own zlib, in the bundled Undici of all three fixed releases. Any fetch call to a server that is malicious or has been compromised can deliver a crafted response. This is our reading of the source; Node.js has not said it.
+
+HIGH
+CVE-2026-105482: DNS resolve truncates names at a NUL character
+
+Affects 22.x, 24.x and 26.x. Fix: Node.js commit
+
+The DNS resolver hands names to c-ares as C strings, which end at the first NUL character. A name such as example.com\0.trusted.corp passes a JavaScript check like endsWith(".trusted.corp"), but the query actually goes out for example.com. The fix commit uses this example.
+
+Who is exposed: applications that pass user-supplied names to dns.resolve, any resolve* method, dns.reverse or a Resolver instance after checking them as strings, for example to enforce an allowlist. After the fix these calls throw ERR_INVALID_ARG_VALUE for names containing a NUL. The change does not touch dns.lookup.
+
+HIGH
+CVE-2026-106069: TLS hostname bypass with non-canonical IP addresses
+
+Affects 22.x, 24.x and 26.x. Fix: Node.js commit
+
+Before checking a server’s certificate, Node.js normalised the hostname. Strings such as 0127.0.0.1, 0x7f.0.0.1 or 127.1 could be checked against the certificate as one address while the operating system’s resolver connected to another. According to the CVE record, the certificate check reads 0127.0.0.1 as octal, 87.0.0.1, while the operating system’s resolver on some platforms, such as macOS, reads it as decimal and connects to 127.0.0.1. A server at the connected address can then present a certificate issued for the other address.
+
+Who is exposed: applications that open TLS connections to host strings an attacker can influence, such as webhook senders, URL previewers and proxies. Based on the fix’s tests, the attacker also needs a certificate the client trusts whose DNS name is the IP address written normally. Connections to fixed, ordinary hostnames are not affected. After the fix, tls.checkServerIdentity rejects these hosts with ERR_TLS_CERT_ALTNAME_INVALID.
+
+HIGH
+CVE-2026-105483: TLS hostname bypass with fullwidth digits
+
+Affects 24.x and 26.x. Fix: Node.js commit
+
+A related regression in the same hostname check. A host written with fullwidth digits, such as １２７.0.0.1, was normalised into an ordinary IP address and could then match a certificate issued for that address. The fix rejects any host that only becomes an IP address after normalisation. Node.js 22 does not have the regression.
+
+Node.js rates this high, but the fix commit itself describes it as a low-severity bug that is not easy to exploit. We show the rating from the security release post.
+
+MEDIUM
+CVE-2026-106072: DNS names in certificates accepted for IP endpoints
+
+Affects 22.x, 24.x and 26.x. Fix: Same commit as CVE-2026-106069
+
+A second report of the same underlying problem, fixed by the same change. A certificate whose DNS name reads 127.0.0.1 could authenticate a connection made to a non-canonical form of the address, such as 0177.0.0.1. Upgrading for CVE-2026-106069 fixes this too.
+
+MEDIUM
+CVE-2026-105481: Keep-alive socket accepts a response sent too early
+
+Affects 22.x, 24.x and 26.x. Fix: Node.js commit
+
+When the HTTP client reuses a kept-alive connection, a server could write a response onto the idle socket before the next request was sent, and Node.js would treat it as the answer to that request. An earlier guard only caught this when the event loop had polled the socket. The fix asks the operating system whether unread data is waiting before reusing a socket, and opens a new connection if it is.
+
+Who is exposed: clients using an http.Agent with keepAlive enabled that talk to a server which is malicious or compromised, or to a plain HTTP server through an attacker on the network path.
+
+MEDIUM
+CVE-2026-106074: Repeated random values in snapshots and SEAs
+
+Affects 22.x, 24.x and 26.x. Fix: Node.js commit
+
+crypto.randomUUID() and crypto.randomInt() keep a small cache of random values. When an application built a startup snapshot, the unused part of that cache was saved into it, so every process started from the snapshot produced the same first values. The fix clears the caches when a snapshot is written and when it is loaded.
+
+Who is exposed: only applications built as single executable applications with useSnapshot enabled, or that use user-land startup snapshots. Ordinary applications are not. Node.js has not published rotation guidance; our recommendation is to rebuild affected binaries on a fixed version and to treat any UUIDs or random numbers they used as secrets, such as tokens or nonces, as predictable and rotate them.
+
+LOW
+CVE-2026-106070: ZipFile returns stray bytes after a failed header check
+
+Affects 26.x. Fix: Node.js commit
+
+zlib.ZipFile is an experimental API added in 26.8.0 for reading ZIP archives. When a ZIP entry failed header validation, a later read of that entry could return bytes from the wrong position in the file. Only 26.x has this API.
+
+LOW
+CVE-2026-106071: Permission Model over-grants with wildcard paths
+
+Affects 26.x. Fix: Node.js commit
+
+With the Permission Model enabled, a wildcard path in --allow-fs-read or --allow-fs-write could grant access to more paths than it should. According to the CVE record, a path shorter than a wildcard rule’s prefix could be treated as matching it.
+
+LOW
+CVE-2026-106073: Permission Model bypass through fs.realpathSync
+
+Affects 22.x, 24.x and 26.x. Fix: Node.js commit
+
+fs.realpathSync() skipped the Permission Model check that its siblings, such as fs.promises.realpath() and fs.existsSync(), already performed, so it could be used on paths the process had not been granted.
+
+On both Permission Model issues: the Node.js documentation describes the Permission Model as a seat belt that stops trusted code from accidentally touching files it was not granted, and states that it does not protect against malicious code. Do not rely on it to contain untrusted code, patched or not.
+
+Dependency updates
+
+The releases also update libraries that Node.js bundles. You get these by upgrading Node.js; there is nothing to install separately.
+
+c-ares (DNS resolver)
+
+22.23.4
+1.34.9
+24.22.1
+1.34.9
+26.12.1
+1.34.9
+Eleven upstream advisories, mostly use-after-free bugs when lookups are cancelled or servers change during a callback, and one where a reply from a different server than the one queried could be accepted. c-ares 1.34.9
+
+OpenSSL
+
+22.23.4
+3.5.9
+24.22.1
+3.5.9
+26.12.1
+3.5.9 (unchanged)
+CVE-2026-84782 (high), a DTLS bug that can leak heap memory or crash, plus a set of low-severity fixes. OpenSSL vulnerabilities
+
+Undici (HTTP client behind fetch)
+
+22.23.4
+6.29.1
+24.22.1
+7.30.1
+26.12.1
+8.12.2
+Includes CVE-2026-109383 (high), where TLS options such as a custom checkServerIdentity could be silently dropped, and several denial-of-service fixes. 7.x and 8.x also fix a cache poisoning bug, CVE-2026-109829. Undici releases
+
+SQLite
+
+22.23.4
+3.53.4
+24.22.1
+Unchanged
+26.12.1
+Unchanged
+Brings 22.x up to the SQLite version already in 24.x. Node.js lists it as a dependency update and names no CVE.
+
+Root certificates
+
+22.23.4
+NSS 3.131.1
+24.22.1
+NSS 3.131.1
+26.12.1
+NSS 3.131.1
+Rejects chains containing the eight compromised eMudhra intermediates (#66871) and removes three emSign roots (#66877). See our eMudhra advisory.
+
+Undici is also published on npm. If your application depends on the undici package directly rather than using the built-in fetch, upgrade that package as well; upgrading Node.js does not change it.
+
+Published since 21 October
+
+What has changed since the security release, as of 25 October 2026.
+
+CVE records and scores. All ten records were published on 22 and 23 October with CVSS scores, now in the table above. Node.js also added a summary for each CVE to its security release post.
+A working exploit for the Brotli flaw. Imperva demonstrated code execution on 22 October. The underlying Brotli fix has been public upstream since 27 February 2026, so attackers have had a diff to study for months.
+Workarounds. Node.js still lists none, so upgrading is the only documented remedy.
+Timeline
+
+Dates are UTC. Upstream dependency releases are included because the Node.js fixes depend on them.
+
+2026-09-29
+
+OpenSSL releases 3.5.9.
+
+OpenSSL vulnerabilities
+
+2026-10-15
+
+Undici releases 6.29.1, 7.30.1 and 8.12.2.
+
+Undici releases
+
+2026-10-19
+
+c-ares publishes security release 1.34.9.
+
+c-ares releases
+
+2026-10-20
+
+Node.js merges the eMudhra intermediate blocklist and the NSS 3.131.1 root store update.
+
+nodejs/node #66871
+
+2026-10-21
+
+Node.js releases 22.23.4, 24.22.1 and 26.12.1 and publishes the security release post.
+
+Node.js security release post
+
+14:39 to 14:43 UTC
+
+Official node images for all three versions are pushed to Docker Hub.
+
+nodejs/docker-node
+
+2026-10-22
+
+00:09 to 00:17 UTC
+
+AWS publishes Lambda base images with 22.23.4, 24.22.1 and 26.12.1.
+
+Amazon ECR Public Gallery
+
+Imperva demonstrates code execution through the Brotli flaw. Elastic Beanstalk ships platform v6.11.12 with the fixed versions.
+
+Imperva
+
+2026-10-23
+
+16:15 UTC
+
+The remaining nine CVE records are published with CVSS scores. Google published the Brotli record the day before.
+
+CVE record
+
+2026-10-24
+
+Amazon Linux 2023 ships fixed nodejs22, nodejs24 and brotli packages.
+
+Amazon Linux
+
+Questions
+Which Node.js version should I upgrade to?
+Is Node.js 20 affected by the October 2026 vulnerabilities?
+What is the most serious vulnerability in this Node.js release?
+Do I need to change my code after upgrading?
+Are the official Node.js Docker images updated?
+Our services are not on the internet. Do we still need to upgrade Node.js?
+Does Node.js fetch reach the Brotli vulnerability?
+Does AWS Lambda update Node.js automatically?
+Does this release include the eMudhra certificate fix?
+Are CVSS scores available for these CVEs?
+Recording it for compliance
+
+A runtime security release is routine vulnerability management, not an incident. Auditors will still expect to see that you knew about it and patched within your own timelines.
+
+Controls to record this event against
+FRAMEWORK	CONTROL	WHAT TO RECORD
+ISO 27001:2022	A.8.8	Management of technical vulnerabilities. Record which systems ran an affected version and when each was upgraded.
+ISO 27001:2022	A.8.32	Change management. Link the upgrade to your normal change record.
+ISO 27001:2022	A.8.9	Configuration management, if any system still runs an end-of-life Node.js line.
+SOC 2	CC7.1	Identifying newly discovered vulnerabilities.
+SOC 2	CC8.1	Authorising, testing and deploying the upgrade.
+
+Evidence to keep: the date you assessed it, the inventory of Node.js versions you found, the version each system and image moved to, and any end-of-life systems with their migration plan.
+
+Sources
+Node.js security release post, 21 October 2026
+The CVE list, severities, affected lines and credits.
+Node.js 26.12.1 release notes
+Commits for each fix on the 26.x line.
+Node.js 24.22.1 release notes
+Commits for each fix on the 24.x line.
+Node.js 22.23.4 release notes
+Commits for each fix on the 22.x line.
+Node.js previous releases
+Release line status and end-of-life dates.
+Node.js Permission Model documentation
+What the Permission Model does and does not protect against.
+Official node images on Docker Hub
+Image tags for the fixed versions.
+AWS Lambda runtime version updates
+Auto, Function update and Manual modes, and how rollouts work.
+AWS Lambda Node.js base images
+Container base images with the fixed versions.
+Undici fetch source in Node.js 24.22.1
+Where fetch requests and decodes Brotli responses.

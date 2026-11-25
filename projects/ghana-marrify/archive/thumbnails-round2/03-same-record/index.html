@@ -1,0 +1,21 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../lib/base.css"><style>
+.t{--ground:var(--ink);--fg:var(--white);--accent:var(--orange);--ground2:var(--paper)}
+.half{position:absolute;top:0;bottom:0;width:640px}
+.half.r{left:640px;background:var(--ground2)}
+.top{position:absolute;left:0;right:0;top:40px;text-align:center;font-size:104px;z-index:2}
+.top span{background:var(--white);color:var(--ink);padding:16px 30px 4px;display:inline-block;border:5px solid var(--ink)}
+.col{position:absolute;top:262px;width:560px}
+.col.l{left:52px;color:var(--white)}.col.r{left:692px;color:var(--ink)}
+.cty{display:flex;align-items:center;gap:22px;font-size:66px}
+.cty .flag{position:relative;width:132px;height:84px;outline:3px solid rgba(255,255,255,.9)}
+.col.r .cty .flag{outline-color:var(--ink)}
+.big{font-size:150px;margin-top:34px}.big>div{white-space:nowrap}.big>div+div{margin-top:6px}
+.col.r .big{color:var(--accent)}
+</style></head><body><div class="t">
+<div class="half r"></div>
+<div class="top disp" data-move="top"><span data-k="top"></span></div>
+<div class="col l" data-move="left"><div class="cty disp"><div class="flag" data-flag="ee"></div><span data-k="c1"></span></div>
+  <div class="big disp"><div data-k="a1"></div><div data-k="a2"></div></div></div>
+<div class="col r" data-move="right"><div class="cty disp"><div class="flag" data-flag="gh"></div><span data-k="c2"></span></div>
+  <div class="big disp"><div data-k="b1"></div><div data-k="b2"></div></div></div>
+</div><script src="../../lib/flags.js"></script><script src="../../lib/bind.js"></script></body></html>

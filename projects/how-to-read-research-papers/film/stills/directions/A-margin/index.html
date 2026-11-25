@@ -1,0 +1,123 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../_shared/fonts.css">
+<style>
+:root{--g:#2F3136;--paper:#FBFAF4;--hi:#F3EE2E;--pen:#2447C9;--ink:#17171A;--soft:#B9BCC2}
+#stage{background:var(--g);font-family:Newsreader}
+.pg{position:absolute;left:0;top:0;width:1700px;height:2200px;transform-origin:0 0}
+.pg>img{width:1700px;height:2200px;box-shadow:0 30px 60px rgba(0,0,0,.38)}
+.hl{position:absolute;background:var(--hi);mix-blend-mode:multiply;transform-origin:0 50%;border-radius:6px}
+.pen{fill:none;stroke:var(--pen);stroke-linecap:round;stroke-linejoin:round}
+.hand{font-family:Caveat;font-weight:700;color:var(--pen);white-space:nowrap;line-height:1}
+.handw{font-family:Caveat;font-weight:700;color:var(--paper);white-space:nowrap;line-height:1}
+.ttl{font-weight:800;color:var(--paper);letter-spacing:-.02em;line-height:.98;font-variation-settings:"opsz" 72}
+.mk{position:relative;display:inline-block;z-index:0;font-style:italic;font-weight:600}
+.mk>i{display:none;position:absolute;left:-6px;right:-6px;top:12%;bottom:4%;background:var(--hi);z-index:-1;transform-origin:0 50%;border-radius:4px}
+.cred{font-family:Newsreader;font-style:italic;font-size:26px;color:var(--soft)}
+.card{position:absolute;background:var(--paper);box-shadow:0 24px 50px rgba(0,0,0,.35)}
+.tab{position:absolute;width:120px;height:120px;background:var(--paper);border-radius:0 14px 14px 0;font-family:Newsreader;font-weight:800;font-size:76px;color:var(--ink);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px rgba(0,0,0,.3)}
+.cap{position:absolute;font-family:"HN Cond";font-weight:900;text-transform:uppercase;color:#fff;-webkit-text-stroke:0;paint-order:stroke fill;text-shadow:0 3px 0 rgba(0,0,0,.55),0 0 2px rgba(0,0,0,.6);letter-spacing:.005em;line-height:1}
+.cap b{background:var(--hi);color:var(--ink);text-shadow:none;padding:0 .12em;border-radius:4px}
+</style></head><body><div id="stage"></div>
+<script src="../_shared/lib.js"></script>
+<script>
+const K1 = '../_src/keshav_p1.png', K2 = '../_src/keshav_p2.png', PX = (p) => p * KS;
+// left-column baselines (pt) on page 1
+const LEFT = [231,241,252,262,272,286,297,310,324,362,372,383,393,403,414,424,435,445,456,466,477,487,525,536,546,556,567,577,588,620,630,641,651];
+function page(src, x, y, s, r) { return h(`<div class="pg" style="transform:translate(${x}px,${y}px) rotate(${r}deg) scale(${s})"><img src="${src}"></div>`); }
+function hl(pg, r, k, extra = '') { const d = h(`<div class="hl" style="left:${r[0]}px;top:${r[1]}px;width:${r[2]}px;height:${r[3]}px;${extra}"></div>`); d.style.transform = `scaleX(${k})`; d.style.opacity = k > 0 ? 1 : 0; pg.appendChild(d); return d; }
+function svg(pg, w = 1700, hh = 2200) { const s = h(`<svg class="abs" style="left:0;top:0;overflow:visible" width="${w}" height="${hh}" viewBox="0 0 ${w} ${hh}"></svg>`); pg.appendChild(s); return s; }
+function path(s, d, sw, k, cls = 'pen', col) { const p = document.createElementNS('http://www.w3.org/2000/svg', 'path'); p.setAttribute('d', d); p.setAttribute('pathLength', '1'); p.setAttribute('class', cls); p.style.strokeWidth = sw; if (col) p.style.stroke = col; s.appendChild(p); drawK(p, k); return p; }
+function txt(par, html, css) { const e = h(`<div class="abs" style="${css}">${html}</div>`); par.appendChild(e); return e; }
+
+// ---------- opening (motion test; t = 0 at raw 20.20) ----------
+function opening(t, S) {
+  const kIn = P(t, 0, 0.75, E.outExpo);
+  const pg = page(K1, lerp(1320, 860, kIn), 70, 0.66, lerp(5, -2, kIn)); pg.style.filter = kIn < .97 ? `blur(${(6 * (1 - kIn)).toFixed(1)}px)` : 'none';
+  // slow push from 3.8 to 9.6
+  const push = P(t, 0, 3.5, E.outCubic), mv = P(t, 5.7, .6, E.inOutQuart); pg.style.transformOrigin = '0 0'; pg.style.transform = `translate(${lerp(1320, 860, kIn) + 120 * mv}px, ${70 + 40 * mv}px) rotate(${lerp(5, -2, kIn)}deg) scale(${0.66 * (1 + 0.06 * push) * (1 + 0.06 * mv)})`; pg.firstChild.style.boxShadow = `0 ${30 + 20 * mv}px ${60 + 30 * mv}px rgba(0,0,0,${.38 + .08 * mv})`;
+  S.appendChild(pg);
+  // title
+  const T = txt(S, `<div class="ttl" style="font-size:98px">How to read a<br><span class="mk"><i></i>research paper</span></div>`, 'left:96px;top:170px;width:760px');
+  enter(T, P(t, .15, .6), 0, 46, 10); { const ko = P(t, 6.1, .45, E.inExpo); if (ko > 0) { T.style.transform = `translateY(${-160 * ko}px)`; T.style.opacity = 1 - ko; } }
+  const mk = $('.mk>i', T); const km = P(t, .95, .4, E.outCubic); mk.style.transform = `scaleX(${km})`; mk.style.opacity = km > 0 ? 1 : 0; 
+  // highlighter runs down every line 1.55 -> 2.95 (raw 21.75 'written to be read from start to finish')
+  LEFT.slice(0, 5).forEach((y, i) => { const t0 = 1.6 + i * 0.25; const k = P(t, t0, .1, E.outCubic); const kOut = P(t, 6.1, .35, E.outCubic);
+    const r = [PX(52), PX(y - 8.2), PX(242), PX(11)]; const d = hl(pg, r, k); d.style.opacity = (k > 0 ? 1 : 0) * (1 - P(t, 6.1, .35, E.outCubic)) * 0.9; });
+  // pen cross over the block on 'like a novel' (3.2)
+  const sv = svg(pg); const kx1 = P(t, 3.55, .22, E.outCubic), kx2 = P(t, 3.74, .22, E.outCubic); const kOut = P(t, 6.1, .35, E.outCubic);
+  const a = path(sv, `M ${PX(60)} ${PX(222)} C ${PX(150)} ${PX(245)}, ${PX(220)} ${PX(260)}, ${PX(292)} ${PX(282)}`, 16, kx1);
+  const b = path(sv, `M ${PX(290)} ${PX(226)} C ${PX(220)} ${PX(245)}, ${PX(130)} ${PX(260)}, ${PX(58)} ${PX(282)}`, 16, kx2);
+  a.style.opacity *= 1 - kOut; b.style.opacity *= 1 - kOut;
+  const nn = txt(S, `not a<br>novel.`, 'left:470px;top:560px;font-size:120px;transform:rotate(-6deg)'); nn.className = 'abs handw'; writeOn(nn, P(t, 3.8, .5, E.lin)); nn.style.opacity = (t >= 3.8 ? 1 : 0) * (1 - kOut);
+  // parts of a paper (6.55): brackets + labels in the left margin (white hand on graphite)
+  const parts = [['title', 70, 160, 6.55], ['abstract', 216, 272, 6.7], ['introduction', 349, 487, 6.85]];
+  parts.forEach(([lab, y0, y1, t0], i) => { const k = P(t, t0, .35, E.outCubic);
+    path(sv, `M ${PX(44)} ${PX(y0 - 6)} q ${-PX(14)} 0 ${-PX(14)} ${PX(12)} L ${PX(30)} ${PX(y1 - 10)} q 0 ${PX(12)} ${PX(14)} ${PX(12)}`, 10, k, 'pen');
+    const L = h(`<div class="abs handw" style="left:${-PX(30) - 700}px;top:${PX((y0 + y1) / 2) - 50}px;width:500px;text-align:right;font-size:96px">${lab}</div>`); pg.appendChild(L); writeOn(L, P(t, t0 + .05, .4, E.lin));
+    // order number (8.0 'order')
+    const kn = P(t, 8.0 + i * .12, .3, E.outQuint); const n = h(`<div class="abs" style="left:${-PX(30) - 170}px;top:${PX((y0 + y1) / 2) - 60}px;width:120px;height:120px;background:var(--hi);border-radius:50%;font-family:Caveat;font-weight:700;font-size:96px;color:var(--ink);display:flex;align-items:center;justify-content:center;transform:scale(${lerp(1.4, 1, kn)}) rotate(-8deg);opacity:${kn > 0 ? 1 : 0}">${i + 1}</div>`); pg.appendChild(n);
+  });
+  // tabs clip on at 8.9
+  [1, 2, 3].forEach((n, i) => { const k = P(t, 8.85 + i * .08, .35, E.outExpo); const tb = h(`<div class="tab" style="left:1700px;top:${300 + i * 150}px;transform:translateX(${lerp(-120, 0, k)}px);opacity:${k > 0 ? 1 : 0}">${n}</div>`); pg.appendChild(tb); });
+}
+
+// ---------- stills ----------
+const SCENES = {
+  a1: { t: 4.35, draw: (t, S) => opening(t, S) },
+  a2: { draw: (t, S) => { // pass one receipt
+      const pg = page(K1, 700, -1080, 0.95, -1.5); S.appendChild(pg);
+      const ph = [194, 641, 293]; hl(pg, kr(ph, 3), 1);
+      // Keshav's 4 steps ticked
+      const sv = svg(pg); [669, 688, 717].forEach((y, i) => path(sv, `M ${PX(40)} ${PX(y - 4)} l ${PX(6)} ${PX(6)} l ${PX(12)} ${PX(-14)}`, 12, 1));
+      const n = h(`<div class="abs hand" style="left:${PX(150)}px;top:${PX(728)}px;font-size:76px;transform:rotate(-3deg)">↑ only these,<br>&nbsp;&nbsp;&nbsp;in this order</div>`); pg.appendChild(n);
+      txt(S, `<div class="ttl" style="font-size:104px">Pass one.</div><div class="ttl" style="font-size:92px;margin-top:10px;white-space:nowrap"><span class="mk"><i style="transform:none"></i><span>5–10 minutes</span></span></div>`, 'left:96px;top:330px;width:600px');
+      txt(S, `S. Keshav, “How to Read a Paper” (2007), section 2.1`, 'left:98px;top:980px').className = 'abs cred';
+      const tb = h(`<div class="tab" style="left:1700px;top:520px">1</div>`); pg.appendChild(tb);
+  } },
+  a3: { draw: (t, S) => { // the five Cs: a crop of Keshav's list, her plain-word versions in the margin
+      const sc = 1.42, x0 = 312, y0 = 238, wpt = 252, hpt = 168;
+      const card = h(`<div class="card" style="left:80px;top:110px;width:${wpt * KS * sc}px;height:${hpt * KS * sc}px;overflow:hidden;transform:rotate(-1deg)"></div>`); S.appendChild(card);
+      const pg = h(`<div class="pg" style="transform:translate(${-x0 * KS * sc}px,${-y0 * KS * sc}px) scale(${sc})"><img src="${K1}" style="box-shadow:none"></div>`); card.appendChild(pg);
+      const notes = ['what kind of paper?', 'related to what?', 'do the assumptions hold?', "what's new here?", 'is it well written?'];
+      [[274, 'Category'], [315, 'Context'], [345, 'Correctness'], [365, 'Contributions'], [395, 'Clarity']].forEach(([y, w], i) => {
+        hl(pg, kr([339, y, 339 + w.length * 4.75], 2), 1);
+        const yy = 110 + (y - y0 - 6) * KS * sc - 4 - 80 * Math.sin(-1 * Math.PI / 180) * 0;
+        txt(S, `✓ ${notes[i]}`, `left:${80 + wpt * KS * sc + 50}px;top:${190 + i * 120}px;font-size:70px;transform:rotate(-1deg)`).className = 'abs handw';
+      });
+      txt(S, `<div class="ttl" style="font-size:92px">The five Cs</div>`, 'left:96px;top:860px');
+      txt(S, `S. Keshav, “How to Read a Paper” (2007): what you should be able to answer after pass one`, 'left:98px;top:985px').className = 'abs cred';
+  } },
+  a4: { draw: (t, S) => correction(S, 1920, 1080) },
+  p1: { draw: (t, S) => { // three tabs, 9:16
+      txt(S, `<div class="ttl" style="font-size:118px">Read it in<br><span class="mk"><i style="transform:none"></i><span>three passes</span></span></div>`, 'left:72px;top:150px;width:940px');
+      const sheets = [['1', '5–10 min', 'is this paper<br>even for me?'], ['2', 'up to 1 hour', 'what did they find,<br>and the evidence'], ['3', '4–5 hours', 're-create it<br>in your head']];
+      sheets.forEach(([n, tm, q], i) => { const y = 560 + i * 400;
+        const c = h(`<div class="card" style="left:${70 + i * 22}px;top:${y}px;width:780px;height:340px;transform:rotate(${[-1.5, 1, -0.6][i]}deg)"></div>`); S.appendChild(c);
+        c.appendChild(h(`<div class="tab" style="left:780px;top:40px;width:120px">${n}</div>`));
+        c.appendChild(h(`<div class="abs" style="left:46px;top:40px;font-family:Newsreader;font-weight:800;font-size:76px;color:var(--ink);letter-spacing:-.02em"><span class="mk"><i style="transform:none"></i>${tm}</span></div>`));
+        c.appendChild(h(`<div class="abs hand" style="left:50px;top:160px;font-size:78px">${q}</div>`));
+      });
+      txt(S, `times from S. Keshav, “How to Read a Paper” (pass 3: for beginners)`, 'left:72px;top:1800px;width:940px;font-size:30px').className = 'abs cred';
+  } },
+  p2: { draw: (t, S) => { // Pexels photo + her line
+      txt(S, `<img src="../_src/pexels/8553916.jpg" style="width:1080px;height:1040px;object-fit:cover;object-position:50% 55%">`, 'left:0;top:0');
+      txt(S, `<div class="ttl" style="font-size:112px">Print it out<br>so you can<br><span class="mk"><i style="transform:none"></i><span>mark it up.</span></span></div>`, 'left:72px;top:1200px;width:940px');
+      txt(S, `something I do now.`, 'left:80px;top:1590px;font-size:84px;transform:rotate(-3deg)').className = 'abs handw';
+      txt(S, `photo: Polina Tankilevitch / Pexels`, 'left:74px;top:1820px;font-size:28px').className = 'abs cred';
+  } },
+};
+// in-edit correction frame (her slip: "every paper published in 2014" -> at CHI 2014)
+function correction(S, W, H) {
+  // the real line from Caine's abstract, big enough to read (3 full lines)
+  const ox = 432, oy = 501, sc = 2.3, cw = 470, ch = 54;
+  const rc = h(`<div class="card" style="left:400px;top:80px;width:${cw * sc + 40}px;height:${ch * sc + 30}px;overflow:hidden;transform:rotate(-.6deg)"><div class="abs" style="left:20px;top:15px;width:${cw * sc}px;height:${ch * sc}px;overflow:hidden"><div class="abs" style="left:0;top:0;transform:scale(${sc});transform-origin:0 0"><img src="../_src/caine__most-common-sample-size.png" style="position:absolute;width:1280px;left:-${ox}px;top:-${oy}px;max-width:none"></div></div></div>`); S.appendChild(rc);
+  const inner = rc.firstChild.firstChild; [[592, 500, 64, 19], [826, 518, 36, 19], [434, 536, 175, 19]].forEach(r => inner.appendChild(h(`<div class="hl" style="left:${r[0] - ox}px;top:${r[1] - oy}px;width:${r[2]}px;height:${r[3]}px;border-radius:3px"></div>`)));
+  txt(S, `Kelly Caine, “Local Standards for Sample Size at CHI”, CHI 2016`, `left:404px;top:${80 + ch * sc + 44}px`).className = 'abs cred';
+  const c = h(`<div class="card" style="left:400px;top:400px;width:1120px;height:500px;transform:rotate(-1deg)"></div>`); S.appendChild(c);
+  const L = (html, y) => c.appendChild(h(`<div class="abs" style="left:70px;top:${y}px;font-family:Newsreader;font-size:56px;line-height:1;color:var(--ink);font-weight:500;white-space:pre">${html}</div>`));
+  L('Kelly Caine looked at every paper', 66);
+  L(`published <span style="position:relative;display:inline-block;width:0"><span class="hand" style="position:absolute;left:-62px;top:-80px;font-size:46px;transform:rotate(-4deg)">at CHI</span><span class="hand" style="position:absolute;left:-14px;top:-22px;font-size:48px">‸</span></span>in 2014 and found`, 160);
+  L('the most common sample size was 12.', 254);
+  c.appendChild(h(`<div class="abs hand" style="left:70px;top:370px;font-size:54px">correction: every paper at CHI 2014, one conference</div>`));
+}
+window.SCENES = SCENES; window.TEST = opening; boot();
+</script></body></html>

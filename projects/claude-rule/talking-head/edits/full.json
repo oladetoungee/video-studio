@@ -1,0 +1,29 @@
+{
+ "t": {
+  "card-33/A what-if": {
+   "s": "-----"
+  },
+  "pops-37/@pop 2": {
+   "pos": {
+    "16x9": {
+     "hide": true
+    }
+   }
+  },
+  "pops-37/an offender?": {
+   "hide": true
+  },
+  "pops-37/tired?": {
+   "hide": true
+  }
+ },
+ "captions16": {
+  "size": 63,
+  "y": 992
+ },
+ "mix": {
+  "voice": 5,
+  "music": -10,
+  "sfx": 4
+ }
+}

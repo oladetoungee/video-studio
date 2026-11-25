@@ -1,0 +1,25 @@
+{
+  "direction": "Faceless. What users say vs what they do, side by side: they SAY 'So easy!' (speech bubble), and on the phone they DO wander: five taps looping round the screen, the last one still missing the Pay button. Flat electric blue, white and ink only.",
+  "thumbnail_text": "UX Research (they say 'So easy!' / they do: four missed taps)",
+  "titles": [
+    "UX Research: Why Users Say One Thing and Do Another",
+    "UX Research for Beginners: Watch Users, Don't Just Ask",
+    "What Is UX Research? Why Some Apps Are So Confusing"
+  ],
+  "text": {
+    "hd": "UX<br>Research",
+    "l1": "they say",
+    "l2": "they do",
+    "say": "“So easy!”",
+    "btn": "Pay"
+  },
+  "images": {},
+  "vars": {
+    "--ground": "#1B3FD8",
+    "--fg": "#FFFFFF",
+    "--accent": "#FF4713"
+  },
+  "scores": "",
+  "recommended": false,
+  "title": "UX Research: Why Users Say One Thing and Do Another"
+}

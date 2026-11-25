@@ -1,0 +1,29 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Short style frames</title>
+<style>
+/* Helvetica Neue is a macOS system font: local renders only, never shipped (SHORTS-PLAYBOOK "Font and licence") */
+html, body { margin: 0; overflow: hidden; background: #000; }
+#stage { position: relative; overflow: hidden; }
+.label { position: absolute; left: 0; width: 1080px; top: 130px; text-align: center; }
+.label span { display: inline-block; font: 400 82px/1 "Helvetica Neue"; color: #000; background: #fff; border-radius: 8px; padding: 19px 18px; }
+.cap { position: absolute; left: 0; width: 1080px; text-align: center; }
+.cap span { display: inline-block; font: 500 76px/0.92 "Helvetica Neue"; letter-spacing: -0.09em; color: #DFD7CB; background: rgba(0,0,0,.4); border-radius: 10px; padding: 12px 22px 14px 14px; }
+</style></head><body><div id="stage"></div>
+<script src="../_tools/kit.js"></script>
+<script src="../_tools/ux.js"></script>
+<script>
+// Proposed short SH2 "say vs do" (raw 7:12-7:57). Series label (Helvetica Neue Regular 82 px, white box, top 130 px) and
+// spoken caption (Helvetica Neue Medium 76 px, -0.09 em, #DFD7CB on black 40 %, 2 lines max, block centred on y 1535).
+const sc = [];
+function shot(t, build) { const r = el('div', { left: 0, top: 0, width: W + 'px', height: H + 'px', display: 'none', overflow: 'hidden' }); sc.push([t, r]); build(r); }
+on((t) => sc.forEach(([tt, r]) => (r.style.display = Math.abs(t - tt) < 0.5 ? 'block' : 'none')));
+function chrome(r, lines) {
+  el('div', {}, '<span>what people say</span><br><span style="margin-top:12px">vs what they do</span>', r).className = 'label';
+  const c = el('div', { top: (1535 - lines.length * 76 * 0.92 / 2 - 13) + 'px' }, `<span>${lines.join('<br>')}</span>`, r); c.className = 'cap';
+}
+// 1 · her footage, 9:16 crop of the 4K frame (centred on her, never flipped): raw 7:20
+shot(1, (r) => { const i = el('img', { left: '-1131px', top: 0, width: '3413px', height: '1920px' }, '', r); i.src = '../_src/f_440.jpg'; chrome(r, ['that what people say', 'and what people do']); });
+// 2 · full-screen film scene (direction A, 9:16) under the same label and caption: raw 7:32
+shot(2, (r) => { const i = el('img', { left: 0, top: 0, width: '1080px', height: '1920px' }, '', r); i.src = '../A-wall/frames/A6_say-vs-do_9x16.png'; chrome(r, ['if you watch them use the app', 'they could end up doing']); });
+window.crisp = () => false;
+</script></body></html>

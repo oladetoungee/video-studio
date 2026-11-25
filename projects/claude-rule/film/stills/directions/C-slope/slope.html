@@ -1,0 +1,129 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>C · The Slope</title>
+<style>
+@font-face { font-family: 'Shoulders'; src: url(../_fonts/BigShouldersDisplay.ttf); font-weight: 100 900; }
+@font-face { font-family: 'SMono'; src: url(../_fonts/SpaceMono-Regular.ttf); font-weight: 400; }
+@font-face { font-family: 'SMono'; src: url(../_fonts/SpaceMono-Bold.ttf); font-weight: 700; }
+:root { --ground: #E7B53A; --ink: #1A1712; --paper: #F6F1E6; --mute: #3B2F10; }
+html, body { margin: 0; background: var(--ground); }
+#stage { position: relative; overflow: hidden; background: var(--ground); font-family: 'Shoulders', sans-serif; color: var(--ink); }
+.plank { position: absolute; height: 14px; background: var(--ink); transform-origin: 50% 50%; }
+.blk { position: absolute; bottom: 14px; background: var(--ink); color: var(--paper); font-weight: 800; text-transform: uppercase; line-height: 1; letter-spacing: 0.005em; white-space: nowrap; }
+.blk.l { background: var(--paper); color: var(--ink); }
+.head { position: absolute; font-weight: 800; text-transform: uppercase; line-height: 0.9; letter-spacing: 0.002em; }
+.head .wd { display: inline-block; white-space: pre; }
+.head em { font-style: normal; }
+.head em .wd { background: var(--paper); padding-left: 0.06em; }
+.mono { position: absolute; font-family: 'SMono', monospace; color: var(--mute); text-transform: uppercase; letter-spacing: 0.04em; white-space: nowrap; }
+.tick { position: absolute; width: 4px; background: var(--ink); }
+</style></head>
+<body><div id="stage"></div>
+<script src="../_tools/kit.js"></script>
+<script src="../_tools/words.js"></script>
+<script>
+// C · THE SLOPE: one object carries the film: a plank, the line between "tool" and "person". Level, it is a measuring
+// rule (tool <-> human); her claims slide in as heavy blocks, each new one pushed in UNDER the pile so the stack reads
+// top-down in the order she says it; on "slippery slope" the plank tilts (outExpo 0.6 s), holds 8 f, and the pile slides off.
+const M = V(120, 72), LBL = 32;
+const PL = V({ x: 120, w: 1680, y: 860 }, { x: 60, w: 960, y: 1300 });
+function plank(root) { const p = el('div', { left: PL.x + 'px', top: PL.y + 'px', width: PL.w + 'px' }, '', root); p.className = 'plank'; return p; }
+function block(pl, html, x, fs, light = false) { const b = el('div', { left: x + 'px', fontSize: fs + 'px', padding: `${fs * 0.16}px ${fs * 0.3}px ${fs * 0.12}px` }, html, pl); b.className = 'blk' + (light ? ' l' : ''); return b; }
+function head(root, html, css) { const h = el('div', css, html, root); h.className = 'head'; return h; }
+const wrapW = (txt) => txt.split(' ').map(w => `<span class="wd">${w} </span>`).join('');
+function updHead(h, times, t) {
+  [...h.querySelectorAll('.wd')].forEach((w, i) => { const p = eOutX((t - times[i]) / F(9));
+    w.style.opacity = t >= times[i] ? 1 : 0; w.style.transform = `translateY(${(1 - p) * 0.4}em)`; });
+}
+// pile: blocks enter from the left along the plank (outQuint 12 f) on their word; each new block goes UNDER the pile and
+// lifts the blocks above it by its height (outQuint 10 f), so the pile always reads top-down in spoken order.
+function updPile(bs, ts, hs, t, slideT0 = 1e9, accel = 1800) {
+  bs.forEach((b, i) => {
+    const on = t >= ts[i]; b.style.visibility = on ? 'visible' : 'hidden'; if (!on) return;
+    let lift = 0; for (let j = i + 1; j < bs.length; j++) lift += hs[j] * eOutQ((t - ts[j]) / F(10));
+    const xin = (1 - eOutQ((t - ts[i]) / F(12))) * -(b._x + b.offsetWidth + 200);
+    const ds = Math.max(0, t - slideT0 - (bs.length - 1 - i) * F(2)), slide = 0.5 * accel * ds * ds; // top blocks lag 2 f each
+    b.style.transform = `translate(${xin + slide}px, ${-lift}px)`;
+  });
+}
+
+// ---------- scene 1: the slope (144.6 - 155.4) ----------
+scene('slope', 144.6, 155.4, (r, S) => {
+  S.p = plank(r);
+  const fs = V(84, 58);
+  S.b = [
+    block(S.p, 'A tech company says', V(140, 20), fs),
+    block(S.p, 'this model may be conscious.', V(140, 20), fs, true),
+    block(S.p, 'And now there are rules', V(140, 20), fs),
+    block(S.p, V('about how users are allowed<br>to treat the model.', 'about how users<br>are allowed to<br>treat the model.'), V(140, 20), V(56, 50)),
+  ];
+  S.b.forEach(b => b._x = parseFloat(b.style.left));
+  S.t = [144.8, 146.1, 147.8, 149.8];
+  S.hs = S.b.map(b => b.offsetHeight);
+  S.h = head(r, V(wrapW('It’s a very') + '<em>' + wrapW('slippery slope,') + '</em>' + wrapW('man.'), wrapW('It’s a very') + '<br><em>' + wrapW('slippery slope,') + '</em><br>' + wrapW('man.')),
+    { left: M + 'px', top: V(80, 380) + 'px', fontSize: V(132, 120) + 'px', width: (W - 2 * M) + 'px' });
+  S.ht = Wt(152.8, 'It’s a very slippery slope, man.').map(w => w.s);
+  S.lab = el('div', { left: M + 'px', top: (PL.y + V(50, 60)) + 'px', fontSize: LBL + 'px' }, 'her words', r); S.lab.className = 'mono';
+}, (lt, S, t) => {
+  const pd = eOutQ((t - 144.6) / F(12));
+  // tilt starts 6 f before "slippery" (153.4): 0 -> 14 deg, outExpo 18 f; hold 8 f; then the pile slides (a = 1800 px/s^2)
+  const th = 14 * eOutX((t - 153.2) / F(18));
+  set(S.p, { transform: `rotate(${th}deg)`, clipPath: pd < 1 ? `inset(-3000px ${(1 - pd) * 100}% -3000px -3000px)` : 'none' });
+  updPile(S.b, S.t, S.hs, t, 153.2 + F(18) + F(8));
+  updHead(S.h, S.ht, t);
+  S.lab.style.opacity = clamp((t - 145) / F(8)) * (1 - clamp((t - 153.2) / F(6)));
+});
+
+// ---------- scene 2: the rule, level (92.0 - 97.6) ----------
+scene('tool', 92.0, 97.6, (r, S) => {
+  S.p = plank(r);
+  S.ticks = []; const n = V(25, 13);
+  for (let i = 0; i < n; i++) { const tk = el('div', { left: (PL.x + (PL.w - 4) * i / (n - 1)) + 'px', top: (PL.y + 14) + 'px', height: (i % 4 === 0 ? 36 : 18) + 'px' }, '', r); tk.className = 'tick'; S.ticks.push(tk); }
+  S.l = el('div', { left: PL.x + 'px', top: (PL.y + 70) + 'px', fontSize: LBL + 'px' }, 'tool', r); S.l.className = 'mono';
+  S.rr = el('div', { right: (W - PL.x - PL.w) + 'px', top: (PL.y + 70) + 'px', fontSize: LBL + 'px' }, 'human', r); S.rr.className = 'mono';
+  S.mk = block(S.p, 'Claude', 0, V(84, 70), true);
+  S.h = head(r, wrapW('Claude is a tool.') + '<br>' + wrapW('It is not a human.'), { left: M + 'px', top: V(150, 400) + 'px', fontSize: V(190, 150) + 'px', width: (W - 2 * M) + 'px' });
+  S.ht = Wt(93.6, 'Claude is a tool. It is not a human.').map(w => w.s);
+  S.lab = el('div', { left: M + 'px', top: V(990, 1420) + 'px', fontSize: LBL + 'px' }, 'her view', r); S.lab.className = 'mono';
+}, (lt, S, t) => {
+  set(S.p, { clipPath: `inset(-3000px ${(1 - eOutQ((t - 92.0) / F(12))) * 100}% -3000px -3000px)` });
+  S.ticks.forEach((tk, i) => { tk.style.transform = `scaleY(${eOutQ((t - 92.1 - i * F(1)) / F(8))})`; tk.style.transformOrigin = 'top'; });
+  // the marker block arrives at the middle of the rule (93.6) and slides to the "tool" end on "tool" (94.0), outExpo 15 f
+  const p = eOutX((t - 94.0) / F(15)), a = eOutQ((t - 93.6) / F(10));
+  S.mk.style.visibility = t >= 93.6 ? 'visible' : 'hidden';
+  S.mk.style.transform = `translate(${lerp(PL.w / 2 - S.mk.offsetWidth / 2, 0, p)}px, ${(1 - a) * -120}px)`;
+  updHead(S.h, S.ht, t);
+  S.lab.style.opacity = clamp((t - 93.6) / F(8));
+});
+
+// ---------- scene 3: very, very, very powerful (139.4 - 144.6) ----------
+scene('powerful', 139.4, 144.6, (r, S) => {
+  S.p = plank(r);
+  const fs = V(120, 96);
+  S.b = [block(S.p, 'very', V(1000, 480), fs), block(S.p, 'very', V(1000, 480), fs), block(S.p, 'very', V(1000, 480), fs), block(S.p, 'powerful.', V(1000, 480), fs, true)];
+  S.b.forEach(b => b._x = parseFloat(b.style.left));
+  S.t = Wt(140.3, 'very, very, very powerful.').map(w => w.s);
+  S.hs = S.b.map(b => b.offsetHeight);
+  S.h = head(r, wrapW('And this tool is'), { left: M + 'px', top: V(150, 400) + 'px', fontSize: V(150, 120) + 'px' });
+  S.ht = Wt(139.5, 'And this tool is').map(w => w.s);
+}, (lt, S, t) => {
+  updPile(S.b, S.t, S.hs, t);
+  // the plank dips 1.2 deg per block (spring, zeta 0.5): the weight is the point
+  let tilt = 0; S.t.forEach(ti => { if (t >= ti) tilt += 1.2 * spring(t - ti - F(3), 2, 0.5); });
+  S.p.style.transform = `rotate(${tilt}deg)`;
+  updHead(S.h, S.ht, t);
+});
+
+// ---------- scene 4: 9pm or 10pm (197.0 - 207.0) ----------
+scene('ninepm', 197.0, 207.0, (r, S) => {
+  S.p = plank(r);
+  S.n = head(r, wrapW('9pm') + '<br><span class="wd" style="font-size:0.4em">or </span>' + '<em>' + wrapW('10pm') + '</em>', { left: M + 'px', top: V(80, 380) + 'px', fontSize: V(300, 280) + 'px' });
+  S.b = block(S.p, '“Hey, I’m tired.”', V(820, 300), V(92, 84), true); S.b._x = V(820, 300);
+  S.lab = el('div', { left: M + 'px', top: (PL.y + V(50, 60)) + 'px', fontSize: LBL + 'px' }, 'her what-if', r); S.lab.className = 'mono';
+}, (lt, S, t) => {
+  updHead(S.n, [199.7, 199.9, 200.0], t);
+  updPile([S.b], [203.9], [0], t);
+  // the plank sags under the block: 0 -> 4 deg, spring (zeta 0.6)
+  S.p.style.transform = `rotate(${t < 203.9 ? 0 : 4 * spring(t - 203.9 - F(6), 1.6, 0.6)}deg)`;
+  S.lab.style.opacity = clamp((t - 203.9) / F(8));
+});
+</script></body></html>

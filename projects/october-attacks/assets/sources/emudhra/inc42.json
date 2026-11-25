@@ -1,0 +1,53 @@
+{
+ "story": "emudhra",
+ "outlet": "Inc42",
+ "slug": "inc42",
+ "url": "https://inc42.com/buzz/emudhras-security-key-flaw-what-went-wrong-and-why-google-mozilla-stepped-in/",
+ "finalUrl": "https://inc42.com/buzz/emudhras-security-key-flaw-what-went-wrong-and-why-google-mozilla-stepped-in/",
+ "status": "loaded",
+ "http": 200,
+ "title": "eMudhra’s Security Key Flaw: What Went Wrong And Why Google, Mozilla Stepped In",
+ "h1": "eMudhra’s Security Key Flaw: What Went Wrong And Why Google, Mozilla Stepped In",
+ "published": "2026-10-21T19:17:06+05:30",
+ "files": {
+  "fold": "emudhra/inc42_fold.png",
+  "full": "emudhra/inc42_full.jpg",
+  "scroll": "emudhra/inc42_scroll.mp4"
+ },
+ "full": {
+  "width": 1440,
+  "height": 6000,
+  "pageHeight": 12740,
+  "zoom": 1,
+  "quotes": []
+ },
+ "scroll": {
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "seconds": 8,
+  "keyframes": [
+   {
+    "t": 0,
+    "y": 32
+   },
+   {
+    "t": 1,
+    "y": 32
+   },
+   {
+    "t": 2.55,
+    "y": 1432
+   },
+   {
+    "t": 8,
+    "y": 1432
+   }
+  ],
+  "zoom": 1,
+  "easing": "easeInOutCubic between keyframes, holds where y is equal",
+  "capped": false,
+  "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)",
+  "quotes": []
+ }
+}

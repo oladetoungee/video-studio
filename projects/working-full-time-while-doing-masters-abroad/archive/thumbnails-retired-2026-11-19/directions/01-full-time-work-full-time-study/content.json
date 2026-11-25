@@ -1,0 +1,31 @@
+{
+  "recommended": true,
+  "text": {
+    "k1": "Full-time",
+    "k2": "Full-time",
+    "a": "Work",
+    "b": "Study"
+  },
+  "images": {
+    "me": "../../assets/shoot2/cut-1586c-clean.png"
+  },
+  "kind": "flat, huge words above either side of her (her big, running off the bottom)",
+  "layout": "her centre",
+  "board": "Thumbnails 7 (pin-01-07 fpt.doc \"COOK\": huge words, the head between)",
+  "fonts": [
+    "design-02 Big Shoulders Display Black (black #000000 on orange #E99A3F, Design 397)"
+  ],
+  "colours": "Design 397: #E99A3F / #000000",
+  "thumbnail_text": "FULL-TIME WORK | FULL-TIME STUDY (heavy, either side above her)",
+  "titles": [
+    "How I Work Full Time While Doing a Master's Abroad",
+    "Working Full Time While Doing a Master's Abroad",
+    "Masters While Working Full Time: My First Year"
+  ],
+  "title": "How I Work Full Time While Doing a Master's Abroad",
+  "direction": "Copies Thumbnails 7: two heavy words fill the top, FULL-TIME WORK and FULL-TIME STUDY, she sits big below between them, thinking. Big Shoulders Black on orange, as Design 397.",
+  "nudge": {},
+  "vars": {},
+  "class": "no-lift",
+  "scores": "round-5 cold critic 7; round 6 polished, waiting for the re-score"
+}

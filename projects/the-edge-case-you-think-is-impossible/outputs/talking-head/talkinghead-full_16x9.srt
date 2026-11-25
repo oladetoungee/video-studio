@@ -1,0 +1,1195 @@
+1
+00:00:00,073 --> 00:00:01,113
+If you're a software developer,
+
+2
+00:00:01,113 --> 00:00:02,753
+I want you to think of the craziest edge
+
+3
+00:00:02,753 --> 00:00:03,633
+cases in the world.
+
+4
+00:00:03,633 --> 00:00:05,133
+The one thing that you thought,
+
+5
+00:00:05,133 --> 00:00:05,493
+oh, yeah,
+
+6
+00:00:05,493 --> 00:00:07,753
+there's no way a user would navigate and
+
+7
+00:00:07,753 --> 00:00:09,613
+navigate and navigate and end up in this kind
+
+8
+00:00:09,613 --> 00:00:10,633
+of situation.
+
+9
+00:00:10,633 --> 00:00:11,393
+I promise you,
+
+10
+00:00:11,393 --> 00:00:13,433
+with everything that I have and everything
+
+11
+00:00:13,433 --> 00:00:14,353
+that I owe,
+
+12
+00:00:14,353 --> 00:00:15,793
+someone is going to report an issue.
+
+13
+00:00:15,793 --> 00:00:17,277
+And it's going to be
+
+14
+00:00:17,277 --> 00:00:19,347
+exactly that edge case that you never thought
+
+15
+00:00:19,347 --> 00:00:20,253
+of.
+
+16
+00:00:20,253 --> 00:00:21,693
+It doesn't even have to be something big.
+
+17
+00:00:21,693 --> 00:00:23,633
+You don't even have to have a lot of
+
+18
+00:00:23,633 --> 00:00:24,413
+users
+
+19
+00:00:24,413 --> 00:00:26,683
+for edge cases that you didn't
+
+20
+00:00:26,683 --> 00:00:28,183
+write for to exist.
+
+21
+00:00:28,183 --> 00:00:29,133
+Usually when we build,
+
+22
+00:00:29,133 --> 00:00:30,273
+we create a
+
+23
+00:00:30,273 --> 00:00:31,333
+direct simple path,
+
+24
+00:00:31,333 --> 00:00:32,393
+you know?
+
+25
+00:00:32,393 --> 00:00:33,973
+And just before that,
+
+26
+00:00:33,973 --> 00:00:34,353
+you know,
+
+27
+00:00:34,353 --> 00:00:35,593
+the user fills a form,
+
+28
+00:00:35,593 --> 00:00:36,633
+they click a button,
+
+29
+00:00:36,633 --> 00:00:37,860
+and then they wait.
+
+30
+00:00:37,860 --> 00:00:38,700
+But it
+
+31
+00:00:38,700 --> 00:00:39,290
+sounds straightforward,
+
+32
+00:00:39,290 --> 00:00:40,530
+but it's not.
+
+33
+00:00:40,530 --> 00:00:41,820
+Real users don't
+
+34
+00:00:41,820 --> 00:00:42,430
+always do that.
+
+35
+00:00:42,430 --> 00:00:44,880
+Real users don't just always fill the form and
+
+36
+00:00:44,880 --> 00:00:46,390
+click the button and wait.
+
+37
+00:00:46,390 --> 00:00:47,960
+Real users double-click,
+
+38
+00:00:47,960 --> 00:00:49,110
+like ta-ta-ta-ta-ta-ta-ta.
+
+39
+00:00:49,363 --> 00:00:50,213
+They click a lot.
+
+40
+00:00:50,213 --> 00:00:52,173
+Real users open different tabs.
+
+41
+00:00:52,173 --> 00:00:54,513
+Real users network drop halfway.
+
+42
+00:00:54,513 --> 00:00:55,653
+Real users
+
+43
+00:00:55,653 --> 00:00:57,813
+leave the page open for two hours,
+
+44
+00:00:57,813 --> 00:00:59,613
+and they go and then they come back.
+
+45
+00:00:59,613 --> 00:01:00,953
+And they're not doing anything strange.
+
+46
+00:01:00,953 --> 00:01:02,763
+They are just being users.
+
+47
+00:01:02,763 --> 00:01:04,313
+One of the most common edge cases in
+
+48
+00:01:04,313 --> 00:01:04,933
+production
+
+49
+00:01:04,933 --> 00:01:06,633
+is the duplicate submission.
+
+50
+00:01:06,633 --> 00:01:07,353
+If, for example,
+
+51
+00:01:07,353 --> 00:01:08,453
+in an online shop,
+
+52
+00:01:08,453 --> 00:01:10,413
+someone clicks place order,
+
+53
+00:01:10,413 --> 00:01:11,853
+and maybe the page
+
+54
+00:01:11,853 --> 00:01:12,933
+feels a little slow,
+
+55
+00:01:12,933 --> 00:01:14,233
+they click it again.
+
+56
+00:01:14,233 --> 00:01:16,253
+Now our server gets
+
+57
+00:01:16,253 --> 00:01:16,853
+two requests,
+
+58
+00:01:16,853 --> 00:01:18,753
+and it creates two orders.
+
+59
+00:01:18,753 --> 00:01:20,313
+And if we charge on each order,
+
+60
+00:01:20,313 --> 00:01:21,633
+you can charge the user twice.
+
+61
+00:01:21,633 --> 00:01:23,313
+It doesn't even need a double-click.
+
+62
+00:01:23,313 --> 00:01:24,893
+The phone can lose the network after the
+
+63
+00:01:24,893 --> 00:01:27,193
+request was sent and the app can retry.
+
+64
+00:01:27,193 --> 00:01:28,393
+Or they can refresh the page,
+
+65
+00:01:28,393 --> 00:01:29,633
+and then the browser asks them if they want
+
+66
+00:01:29,633 --> 00:01:31,813
+to send the form again and they say yes.
+
+67
+00:01:31,813 --> 00:01:33,993
+Disabling the button after the first click
+
+68
+00:01:33,993 --> 00:01:34,833
+helps with this,
+
+69
+00:01:34,833 --> 00:01:36,403
+but it only covers the double-click part.
+
+70
+00:01:36,403 --> 00:01:38,013
+It does nothing for like maybe a retry
+
+71
+00:01:38,013 --> 00:01:39,213
+or a second tab.
+
+72
+00:01:39,213 --> 00:01:41,493
+The fix that is common for this is using
+
+73
+00:01:41,493 --> 00:01:42,503
+an idempotency
+
+74
+00:01:42,503 --> 00:01:43,353
+key.
+
+75
+00:01:43,353 --> 00:01:44,643
+Basically, an idempotency
+
+76
+00:01:44,643 --> 00:01:46,713
+key puts things in place such
+
+77
+00:01:46,713 --> 00:01:49,613
+that doing something twice has the same
+
+78
+00:01:49,613 --> 00:01:52,053
+result, as doing it just once.
+
+79
+00:01:52,183 --> 00:01:52,833
+Stripe's
+
+80
+00:01:52,833 --> 00:01:55,833
+API uses the same idea with an idempotency
+
+81
+00:01:55,833 --> 00:01:56,413
+key header.
+
+82
+00:01:56,413 --> 00:01:57,793
+So a retried
+
+83
+00:01:57,793 --> 00:01:59,473
+request doesn't create a second payment.
+
+84
+00:01:59,473 --> 00:02:01,353
+Another common edge case in production is a
+
+85
+00:02:01,353 --> 00:02:02,033
+race condition.
+
+86
+00:02:02,033 --> 00:02:03,713
+A race condition is when two things happen at
+
+87
+00:02:03,713 --> 00:02:04,573
+the same time.
+
+88
+00:02:04,573 --> 00:02:06,483
+And your code just assume that they would
+
+89
+00:02:06,483 --> 00:02:08,257
+happen one after the other.
+
+90
+00:02:08,257 --> 00:02:09,287
+was this researcher
+
+91
+00:02:09,287 --> 00:02:11,587
+called Egor that found one of these race
+
+92
+00:02:11,587 --> 00:02:13,167
+conditions in Starbucks
+
+93
+00:02:13,167 --> 00:02:14,687
+gift cards.
+
+94
+00:02:15,027 --> 00:02:17,367
+So he had gift cards worth $15
+
+95
+00:02:17,367 --> 00:02:18,447
+in total,
+
+96
+00:02:18,447 --> 00:02:20,827
+and he sent the same
+
+97
+00:02:20,827 --> 00:02:21,917
+balance transfer twice,
+
+98
+00:02:21,917 --> 00:02:23,127
+at the same time,
+
+99
+00:02:23,127 --> 00:02:24,587
+from two different sessions.
+
+100
+00:02:24,587 --> 00:02:25,947
+Both transfers went through,
+
+101
+00:02:25,947 --> 00:02:28,227
+and his card ended up with $20
+
+102
+00:02:28,267 --> 00:02:29,187
+between them.
+
+103
+00:02:29,187 --> 00:02:31,127
+So each request checked the balance,
+
+104
+00:02:31,127 --> 00:02:32,127
+saw that it was enough money,
+
+105
+00:02:32,127 --> 00:02:32,967
+and moved it.
+
+106
+00:02:32,967 --> 00:02:34,587
+Neither request was there for the other one to
+
+107
+00:02:34,587 --> 00:02:35,327
+finish.
+
+108
+00:02:35,327 --> 00:02:37,017
+The same thing can happen in your app.
+
+109
+00:02:37,017 --> 00:02:37,587
+For example,
+
+110
+00:02:37,587 --> 00:02:39,037
+in our online shop,
+
+111
+00:02:39,037 --> 00:02:41,787
+say we have one item left in stock,
+
+112
+00:02:41,787 --> 00:02:45,027
+two people click buy in the exact same second,
+
+113
+00:02:45,087 --> 00:02:47,197
+both requests check the stock,
+
+114
+00:02:47,197 --> 00:02:48,807
+both see one item left,
+
+115
+00:02:48,807 --> 00:02:50,297
+both create an order,
+
+116
+00:02:50,297 --> 00:02:51,887
+and now we have sold an item that we
+
+117
+00:02:51,887 --> 00:02:52,967
+do not have.
+
+118
+00:02:52,967 --> 00:02:54,547
+What do we do about this?
+
+119
+00:02:54,547 --> 00:02:56,567
+So if the two requests arrive at the same
+
+120
+00:02:56,567 --> 00:02:57,967
+time, only one of them can take the last
+
+121
+00:02:57,967 --> 00:03:00,687
+item. The other one gets zero rows updated,
+
+122
+00:03:00,687 --> 00:03:02,497
+and that's how you know it's sold out.
+
+123
+00:03:02,497 --> 00:03:03,887
+A lot of edge
+
+124
+00:03:03,887 --> 00:03:04,827
+case
+
+125
+00:03:04,907 --> 00:03:06,747
+situations in production can also happen with
+
+126
+00:03:06,747 --> 00:03:07,467
+names
+
+127
+00:03:07,467 --> 00:03:08,167
+because
+
+128
+00:03:08,167 --> 00:03:10,837
+we sometimes build names featuring like
+
+129
+00:03:10,837 --> 00:03:11,947
+default names.
+
+130
+00:03:11,947 --> 00:03:13,207
+Take the name O'Brien,
+
+131
+00:03:13,207 --> 00:03:13,887
+for example,
+
+132
+00:03:13,887 --> 00:03:15,687
+the apostrophe is the same character that
+
+133
+00:03:15,687 --> 00:03:17,687
+starts an empty piece of text in SQL.
+
+134
+00:03:17,687 --> 00:03:19,647
+So if your code glues the name straight into
+
+135
+00:03:19,647 --> 00:03:20,647
+the query,
+
+136
+00:03:20,647 --> 00:03:21,607
+the apostrophe
+
+137
+00:03:21,607 --> 00:03:22,847
+ends the text early,
+
+138
+00:03:22,847 --> 00:03:23,937
+and the query breaks.
+
+139
+00:03:23,937 --> 00:03:26,337
+And if an apostrophe can break your query by
+
+140
+00:03:26,337 --> 00:03:28,387
+accident, it means that someone can type
+
+141
+00:03:28,387 --> 00:03:29,867
+something after the apostrophe
+
+142
+00:03:29,867 --> 00:03:30,987
+on purpose,
+
+143
+00:03:30,987 --> 00:03:32,627
+and that will be SQL injection.
+
+144
+00:03:32,627 --> 00:03:33,347
+In 2016,
+
+145
+00:03:33,347 --> 00:03:35,447
+the BBC wrote about a woman called Jennifer
+
+146
+00:03:35,447 --> 00:03:36,207
+Null.
+
+147
+00:03:36,207 --> 00:03:38,207
+When Jennifer Null tries to buy a plane
+
+148
+00:03:38,207 --> 00:03:39,417
+ticket, most websites
+
+149
+00:03:39,417 --> 00:03:41,677
+tell her that she has left the surname field
+
+150
+00:03:41,677 --> 00:03:42,387
+blank.
+
+151
+00:03:42,387 --> 00:03:43,707
+Her surname is Null.
+
+152
+00:03:43,707 --> 00:03:45,817
+The website sees the name Null and treats it
+
+153
+00:03:45,817 --> 00:03:47,067
+as empty.
+
+154
+00:03:47,067 --> 00:03:48,117
+And yeah,
+
+155
+00:03:48,117 --> 00:03:48,667
+so Null,
+
+156
+00:03:48,667 --> 00:03:50,537
+apart from even being in a name situation,
+
+157
+00:03:50,537 --> 00:03:52,747
+is also an edge case that catches
+
+158
+00:03:52,747 --> 00:03:55,547
+almost everyone because Null means no value.
+
+159
+00:03:55,547 --> 00:03:56,997
+There was another story,
+
+160
+00:03:56,997 --> 00:03:58,667
+I was told at a conference,
+
+161
+00:03:58,667 --> 00:03:59,977
+where a security
+
+162
+00:03:59,977 --> 00:04:01,877
+researcher got a personal
+
+163
+00:04:01,877 --> 00:04:04,147
+license plate in California that said NULL.
+
+164
+00:04:04,147 --> 00:04:05,447
+Like that was the license plate,
+
+165
+00:04:05,447 --> 00:04:07,667
+NULL. Then he started getting parking tickets
+
+166
+00:04:07,667 --> 00:04:08,947
+over $12,000
+
+167
+00:04:08,947 --> 00:04:11,213
+in fines that were not his tickets.
+
+168
+00:04:11,213 --> 00:04:12,923
+There were tickets where no plate number had
+
+169
+00:04:12,923 --> 00:04:13,273
+been recorded.
+
+170
+00:04:13,273 --> 00:04:15,713
+And in the system that processes the tickets,
+
+171
+00:04:15,713 --> 00:04:18,163
+those were now linked to a plate called NULL.
+
+172
+00:04:18,163 --> 00:04:20,383
+So all of them landed on his plate.
+
+173
+00:04:20,383 --> 00:04:22,193
+So this is another null situation.
+
+174
+00:04:22,193 --> 00:04:23,533
+Another one that is common,
+
+175
+00:04:23,533 --> 00:04:24,983
+another thing that can cause very interesting
+
+176
+00:04:24,983 --> 00:04:25,913
+edge cases
+
+177
+00:04:25,913 --> 00:04:26,773
+situation in production
+
+178
+00:04:26,773 --> 00:04:27,860
+is leap years.
+
+179
+00:04:27,973 --> 00:04:29,763
+Leap years are an edge case that will show
+
+180
+00:04:29,763 --> 00:04:30,673
+up every four years,
+
+181
+00:04:30,673 --> 00:04:32,793
+which is exactly why they get missed.
+
+182
+00:04:33,240 --> 00:04:34,620
+On the 29th of February,
+
+183
+00:04:34,620 --> 00:04:35,472
+Microsoft's cloud,
+
+184
+00:04:35,472 --> 00:04:36,138
+Windows Azure,
+
+185
+00:04:36,138 --> 00:04:39,740
+had an outage because of a leap year bug.
+
+186
+00:04:39,740 --> 00:04:41,620
+Part of their system made
+
+187
+00:04:41,620 --> 00:04:42,510
+security
+
+188
+00:04:42,510 --> 00:04:44,350
+certificates that were valid for one year.
+
+189
+00:04:44,350 --> 00:04:46,970
+And the system worked out the end dates by
+
+190
+00:04:46,970 --> 00:04:48,820
+taking today's date and just adding one to the
+
+191
+00:04:48,820 --> 00:04:49,680
+year.
+
+192
+00:04:49,680 --> 00:04:51,500
+So on the 29th of February,
+
+193
+00:04:51,500 --> 00:04:52,970
+2012, that system,
+
+194
+00:04:52,970 --> 00:04:55,380
+that logic gave 29th of February,
+
+195
+00:04:55,380 --> 00:04:57,380
+2013, and that date doesn't exist.
+
+196
+00:04:57,380 --> 00:04:59,320
+So creating the certificate
+
+197
+00:04:59,320 --> 00:05:01,860
+failed and part of Azure went down with it.
+
+198
+00:05:01,860 --> 00:05:02,480
+So yeah,
+
+199
+00:05:02,480 --> 00:05:04,500
+this is something to think about as well,
+
+200
+00:05:04,500 --> 00:05:05,440
+leap year bugs.
+
+201
+00:05:05,440 --> 00:05:07,920
+Another edge case that can cause issues:
+
+202
+00:05:07,920 --> 00:05:09,600
+time zones and daylight saving.
+
+203
+00:05:09,600 --> 00:05:11,020
+There's also an edge case
+
+204
+00:05:11,020 --> 00:05:12,510
+in production that a lot of people do not
+
+205
+00:05:12,510 --> 00:05:13,180
+think about.
+
+206
+00:05:13,180 --> 00:05:14,200
+In Estonia where I live,
+
+207
+00:05:14,200 --> 00:05:16,100
+the clock changes twice in a year.
+
+208
+00:05:16,100 --> 00:05:17,710
+On the 29th of March,
+
+209
+00:05:17,710 --> 00:05:20,130
+the clocks in Tallinn jump from 3 a.m.
+
+210
+00:05:20,130 --> 00:05:21,000
+straight to 4 a.m.
+
+211
+00:05:21,000 --> 00:05:22,380
+So 3:30
+
+212
+00:05:22,380 --> 00:05:23,790
+that morning never happened.
+
+213
+00:05:23,790 --> 00:05:25,540
+The same way on the 25th
+
+214
+00:05:25,540 --> 00:05:26,180
+of
+
+215
+00:05:26,180 --> 00:05:27,240
+October,
+
+216
+00:05:27,540 --> 00:05:28,380
+the clock
+
+217
+00:05:28,380 --> 00:05:29,420
+went from 4 a.m.
+
+218
+00:05:29,420 --> 00:05:30,360
+back to 3 a.m.
+
+219
+00:05:30,360 --> 00:05:31,650
+So 3:30
+
+220
+00:05:31,737 --> 00:05:32,767
+happened twice.
+
+221
+00:05:32,767 --> 00:05:35,407
+Now imagine our online shop sends a daily
+
+222
+00:05:35,407 --> 00:05:36,704
+sales report at 3:30,
+
+223
+00:05:36,704 --> 00:05:38,227
+Tallinn time.
+
+224
+00:05:38,227 --> 00:05:39,827
+On one day of the year,
+
+225
+00:05:39,827 --> 00:05:40,437
+that
+
+226
+00:05:40,437 --> 00:05:41,717
+job would not run.
+
+227
+00:05:41,717 --> 00:05:42,567
+On another day of the year,
+
+228
+00:05:42,567 --> 00:05:43,697
+it would run twice.
+
+229
+00:05:43,697 --> 00:05:45,027
+So these are things to consider.
+
+230
+00:05:45,027 --> 00:05:47,327
+Another common edge case is the Unicode bug.
+
+231
+00:05:47,327 --> 00:05:49,047
+Unicode is the edge case that breaks names
+
+232
+00:05:49,047 --> 00:05:50,807
+with accents and tone marks.
+
+233
+00:05:50,807 --> 00:05:52,757
+A lot of Yoruba names have this.
+
+234
+00:05:53,147 --> 00:05:54,374
+Take Adébáyọ̀.
+
+235
+00:05:54,374 --> 00:05:55,487
+Adébáyọ̀, for example,
+
+236
+00:05:55,487 --> 00:05:57,627
+you can see seven letters,
+
+237
+00:05:57,627 --> 00:05:58,747
+but some
+
+238
+00:05:58,747 --> 00:05:59,767
+functions count bytes,
+
+239
+00:05:59,767 --> 00:06:01,127
+not letters,
+
+240
+00:06:01,127 --> 00:06:02,547
+right? So in this case,
+
+241
+00:06:02,547 --> 00:06:03,687
+you would have 13,
+
+242
+00:06:03,687 --> 00:06:06,060
+because letters like é and ọ̀
+
+243
+00:06:06,060 --> 00:06:07,880
+take more than one byte each.
+
+244
+00:06:07,880 --> 00:06:09,920
+So if we check the name must be at
+
+245
+00:06:09,920 --> 00:06:11,630
+most 20 characters.
+
+246
+00:06:11,630 --> 00:06:13,200
+If we check that with the wrong function,
+
+247
+00:06:13,200 --> 00:06:15,000
+you can reject actual names.
+
+248
+00:06:15,000 --> 00:06:16,670
+So the fix for this is usually to count
+
+249
+00:06:16,670 --> 00:06:18,820
+with a function that counts characters and to
+
+250
+00:06:18,820 --> 00:06:20,900
+normalize the text before it saves.
+
+251
+00:06:20,900 --> 00:06:23,730
+Hyrum's law is about a different kind of edge
+
+252
+00:06:23,730 --> 00:06:26,460
+case. It's the behavior in your app that you
+
+253
+00:06:26,460 --> 00:06:27,720
+actually never promised.
+
+254
+00:06:27,720 --> 00:06:29,780
+It's named after Hyrum Wright.
+
+255
+00:06:29,780 --> 00:06:31,280
+Hyrum's law states
+
+256
+00:06:31,280 --> 00:06:32,110
+that with a
+
+257
+00:06:32,110 --> 00:06:34,240
+sufficient number of users of an API,
+
+258
+00:06:34,240 --> 00:06:36,080
+it does not matter what you promise in the
+
+259
+00:06:36,080 --> 00:06:37,140
+contract. All
+
+260
+00:06:37,140 --> 00:06:39,500
+observable behaviors of your system will be
+
+261
+00:06:39,500 --> 00:06:41,187
+depended on by someone.
+
+262
+00:06:41,187 --> 00:06:43,507
+So let's say our online shop API happens to
+
+263
+00:06:43,507 --> 00:06:45,537
+return products in the order that we had it.
+
+264
+00:06:45,537 --> 00:06:46,607
+We didn't choose that.
+
+265
+00:06:46,607 --> 00:06:49,027
+The query just happened to come back that way.
+
+266
+00:06:49,027 --> 00:06:50,757
+Now, if someone is using our API to show
+
+267
+00:06:50,757 --> 00:06:51,787
+products in their app,
+
+268
+00:06:51,787 --> 00:06:53,757
+and they're showing the newest products by
+
+269
+00:06:53,757 --> 00:06:54,777
+taking the last
+
+270
+00:06:54,777 --> 00:06:55,947
+product in the list,
+
+271
+00:06:55,947 --> 00:06:56,727
+then if we,
+
+272
+00:06:56,727 --> 00:06:57,647
+on our end,
+
+273
+00:06:57,647 --> 00:07:00,107
+maybe add an index or change the query,
+
+274
+00:07:00,107 --> 00:07:02,417
+the order will change and the app will break.
+
+275
+00:07:02,417 --> 00:07:03,087
+To them,
+
+276
+00:07:03,087 --> 00:07:04,227
+we've broken something.
+
+277
+00:07:04,227 --> 00:07:04,587
+To us,
+
+278
+00:07:04,587 --> 00:07:06,197
+we didn't break anything because we never
+
+279
+00:07:06,197 --> 00:07:07,187
+promised that behavior.
+
+280
+00:07:07,187 --> 00:07:08,727
+But because they are used
+
+281
+00:07:08,727 --> 00:07:09,627
+to getting that behavior,
+
+282
+00:07:09,627 --> 00:07:11,417
+they now think that we've broken
+
+283
+00:07:11,417 --> 00:07:12,843
+something. So this is also
+
+284
+00:07:12,843 --> 00:07:14,403
+the kind of edge case that you also have
+
+285
+00:07:14,403 --> 00:07:15,373
+to consider.
+
+286
+00:07:15,373 --> 00:07:15,873
+To be honest,
+
+287
+00:07:15,873 --> 00:07:16,803
+there's so much more.
+
+288
+00:07:16,803 --> 00:07:18,513
+You can't undo every single one,
+
+289
+00:07:18,513 --> 00:07:20,573
+right? You can't protect your app from every
+
+290
+00:07:20,573 --> 00:07:22,313
+single possible edge case
+
+291
+00:07:22,313 --> 00:07:23,883
+because you can't even predict every single
+
+292
+00:07:23,883 --> 00:07:25,393
+one. If you want to wait till you predict
+
+293
+00:07:25,393 --> 00:07:26,683
+every single one,
+
+294
+00:07:26,683 --> 00:07:28,113
+you probably wouldn't ship anything.
+
+295
+00:07:28,113 --> 00:07:29,833
+You can catch a few of them from some
+
+296
+00:07:29,833 --> 00:07:30,433
+of
+
+297
+00:07:30,433 --> 00:07:32,073
+the ones that I've talked about in this video,
+
+298
+00:07:32,073 --> 00:07:33,940
+but you probably wouldn't be able to catch
+
+299
+00:07:33,940 --> 00:07:35,360
+all of them.

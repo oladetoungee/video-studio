@@ -1,0 +1,32 @@
+{
+  "direction": "Photo background (her ux-research method): her room washed in one rust colour so it goes calm, she in full colour (calm, hands together), the topic name huge, and one literal picture: a generic elephant (PHP's mascot animal, not the PHP logo) with a crack through it. References: her two own thumbnails (topic name huge + one object), viral 5 'how to be consistent'.",
+  "thumbnail_text": "PHP2Shell, the hole in PHP",
+  "titles": [
+    "PHP2Shell Explained: Is Your PHP Server Patched?",
+    "PHP2Shell Explained: The PHP Flaw and October's Other Hacks",
+    "PHP Vulnerability 2026: How to Check and Patch PHP2Shell"
+  ],
+  "title": "PHP2Shell Explained: Is Your PHP Server Patched?",
+  "kind": "photo",
+  "text": {
+    "hd": "PHP2Shell",
+    "sub": "the hole in <span class=\"acc\">PHP</span>"
+  },
+  "images": {
+    "bg": "../../assets/scene/gbemi-3.0.jpg",
+    "me": "../../assets/scene/gbemi-3.0-person.png",
+    "elephant": "../../assets/draw/elephant-cracked.svg"
+  },
+  "vars": {
+    "--ground": "#16110D",
+    "--fg": "#EFE7D8",
+    "--accent": "#FF7A45",
+    "--wash": "#B4532C",
+    "--dim": "rgba(22,17,13,.35)",
+    "--sc": "1.18",
+    "--sc-x": "115px",
+    "--sc-y": "0px"
+  },
+  "scores": "cold critic R1 6.5 · R2 7.5",
+  "recommended": false
+}

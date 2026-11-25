@@ -1,0 +1,265 @@
+{
+ "TOTAL": 482,
+ "INTRO": 0,
+ "OUTRO": 2,
+ "FPS": 30,
+ "CUES": [
+  {
+   "name": "hang",
+   "t": 0.45,
+   "db": -10,
+   "keep": true
+  },
+  {
+   "name": "thud",
+   "t": 2.93,
+   "db": -5,
+   "keep": true
+  },
+  {
+   "name": "paper",
+   "t": 3.78,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "zip",
+   "t": 7.26,
+   "db": -7,
+   "keep": true
+  },
+  {
+   "name": "zip2",
+   "t": 7.85,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "zip3",
+   "t": 8.26,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "thud",
+   "t": 113.75,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "slide",
+   "t": 116.36,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "lock",
+   "t": 120.54,
+   "db": -8,
+   "keep": true
+  },
+  {
+   "name": "lock",
+   "t": 122.64,
+   "db": -8,
+   "keep": true
+  },
+  {
+   "name": "hang",
+   "t": 147.61,
+   "db": -8,
+   "keep": true
+  },
+  {
+   "name": "hang",
+   "t": 148.03,
+   "db": -9,
+   "keep": true
+  },
+  {
+   "name": "check",
+   "t": 149.46,
+   "db": -5,
+   "keep": true
+  },
+  {
+   "name": "check2",
+   "t": 154.85,
+   "db": -5,
+   "keep": true
+  },
+  {
+   "name": "check",
+   "t": 158.18,
+   "db": -5,
+   "keep": true
+  },
+  {
+   "name": "jingle",
+   "t": 185.42,
+   "db": -8,
+   "keep": true
+  },
+  {
+   "name": "clip",
+   "t": 186.32,
+   "db": -5,
+   "keep": true
+  },
+  {
+   "name": "type",
+   "t": 187.94,
+   "db": -10,
+   "keep": true
+  },
+  {
+   "name": "zip",
+   "t": 198.6,
+   "db": -7,
+   "keep": true
+  },
+  {
+   "name": "marker",
+   "t": 199.18,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "hang",
+   "t": 240.18,
+   "db": -10,
+   "keep": true
+  },
+  {
+   "name": "paper",
+   "t": 245.69,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "stamp",
+   "t": 246.64,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "type1",
+   "t": 249.73,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "zip",
+   "t": 253.06,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "jingle",
+   "t": 253.56,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "scribble",
+   "t": 254.96,
+   "db": -7,
+   "keep": true
+  },
+  {
+   "name": "thud",
+   "t": 255.41,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "clip",
+   "t": 256.72,
+   "db": -5,
+   "keep": true
+  },
+  {
+   "name": "marker",
+   "t": 257.86,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "hang",
+   "t": 378.61,
+   "db": -8,
+   "keep": true
+  },
+  {
+   "name": "stamp",
+   "t": 386.7,
+   "db": -2,
+   "keep": true
+  }
+ ],
+ "SCENES": [
+  {
+   "n": 1,
+   "id": "board",
+   "start": 0,
+   "end": 108.06,
+   "ground": "peg",
+   "label": "board",
+   "trans": "cut"
+  },
+  {
+   "n": 2,
+   "id": "before",
+   "start": 108.06,
+   "end": 146.49,
+   "ground": "peg",
+   "label": "before",
+   "trans": "whip"
+  },
+  {
+   "n": 3,
+   "id": "fix",
+   "start": 146.49,
+   "end": 185.32,
+   "ground": "inkB",
+   "label": "fix",
+   "trans": "cut"
+  },
+  {
+   "n": 4,
+   "id": "env",
+   "start": 185.32,
+   "end": 239.83,
+   "ground": "peg",
+   "label": "env",
+   "trans": "cut"
+  },
+  {
+   "n": 5,
+   "id": "zeabur",
+   "start": 239.83,
+   "end": 256.62,
+   "ground": "peg",
+   "label": "zeabur",
+   "trans": "whip"
+  },
+  {
+   "n": 6,
+   "id": "zeabur-src",
+   "start": 256.62,
+   "end": 378.41,
+   "ground": "peg",
+   "label": "zeabur-src",
+   "trans": "whip"
+  },
+  {
+   "n": 7,
+   "id": "four",
+   "start": 378.41,
+   "end": 482,
+   "ground": "peg",
+   "label": "four",
+   "trans": "whip"
+  }
+ ]
+}

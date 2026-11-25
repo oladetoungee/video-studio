@@ -1,0 +1,31 @@
+{
+ "direction": "Her real room (photo 1564, hand on cheek, fed up), she centred. Across the lower half, over her shirt, two cream boxes: SUBSCRIPTIONS / YOU CAN'T CANCEL.",
+ "thumbnail_text": "SUBSCRIPTIONS YOU CAN'T CANCEL",
+ "kind": "photo",
+ "recommended": false,
+ "titles": [
+  "Hard to Cancel Subscriptions? 11 Dark Patterns Explained",
+  "Dark Patterns Explained: 11 Tricks Websites Use on You",
+  "Dark Patterns in UX: 11 Examples and Why Companies Use Them"
+ ],
+ "text": {
+  "w1": "SUBSCRIPTIONS",
+  "w2": "YOU CAN'T CANCEL"
+ },
+ "images": {
+  "room": "../../assets/shoot/1564.jpg",
+  "me": "../../assets/shoot/1564-person.png"
+ },
+ "vars": {
+  "--pw": "1320px",
+  "--pl": "-50px",
+  "--pt": "-150px",
+  "--dim": "rgba(10,10,10,.4)"
+ },
+ "board": "Thumbnails 116 (yt-63, the lower one \"IT'S OVER\": the person centred in a real scene, the words in a band across the lower half, over her)",
+ "fonts": "Font 77 (Archivo 800, Design 351)",
+ "colours": "Font 77 specimen (Design 351): ink #101114 on cream #E6DFCD boxes, over her room dimmed 40%",
+ "title": "Hard to Cancel Subscriptions? 11 Dark Patterns Explained",
+ "class": "no-lift",
+ "scores": "cold critic round 6: 6 alone / 6 with title"
+}

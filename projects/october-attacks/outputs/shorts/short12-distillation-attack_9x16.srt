@@ -1,0 +1,71 @@
+1
+00:00:00,073 --> 00:00:02,843
+OpenCode is an open source AI coding tool
+
+2
+00:00:02,843 --> 00:00:05,383
+it has an online platform called OpenCode
+
+3
+00:00:05,383 --> 00:00:08,233
+console where people store their AI API keys
+
+4
+00:00:08,233 --> 00:00:10,663
+now OpenCode said attackers broke into an
+
+5
+00:00:10,663 --> 00:00:12,363
+older system and took those keys
+
+6
+00:00:12,363 --> 00:00:14,783
+so people started getting alerts from OpenAI
+
+7
+00:00:14,783 --> 00:00:16,813
+and Anthropic, Google, and some of these
+
+8
+00:00:16,813 --> 00:00:18,463
+charges were in hundreds of dollars
+
+9
+00:00:18,463 --> 00:00:20,883
+a few of them were even over a thousand
+
+10
+00:00:20,883 --> 00:00:23,383
+dollars for AI usage that users did not run
+
+11
+00:00:23,383 --> 00:00:25,843
+like imagine getting alerts for things you
+
+12
+00:00:25,843 --> 00:00:28,603
+didn't use OpenCode calls it a distillation
+
+13
+00:00:28,603 --> 00:00:31,443
+attack that is when someone asks an AI model
+
+14
+00:00:31,443 --> 00:00:33,723
+loads of questions and just uses the answer
+
+15
+00:00:33,723 --> 00:00:35,333
+to train their own model
+
+16
+00:00:35,333 --> 00:00:37,603
+so basically in simple words someone may
+
+17
+00:00:37,603 --> 00:00:39,533
+have been building their own AI on other
+
+18
+00:00:39,533 --> 00:00:40,467
+people's bill

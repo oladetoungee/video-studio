@@ -1,0 +1,119 @@
+1
+00:00:00,000 --> 00:00:02,180
+data minimization.
+
+2
+00:00:02,320 --> 00:00:04,510
+So the idea of data minimization is that you
+
+3
+00:00:04,510 --> 00:00:06,820
+expose the minimum amount of data required to
+
+4
+00:00:06,820 --> 00:00:07,840
+answer the question being asked.
+
+5
+00:00:07,840 --> 00:00:09,120
+So if I ask the question,
+
+6
+00:00:09,120 --> 00:00:10,640
+is this person currently free to marry?
+
+7
+00:00:10,640 --> 00:00:11,870
+That's a yes or no answer.
+
+8
+00:00:11,870 --> 00:00:13,680
+Answering that question does not require
+
+9
+00:00:13,680 --> 00:00:15,250
+showing when they got married,
+
+10
+00:00:15,250 --> 00:00:16,020
+who they married,
+
+11
+00:00:16,020 --> 00:00:17,300
+when they divorced,
+
+12
+00:00:17,300 --> 00:00:18,500
+which court granted it,
+
+13
+00:00:18,500 --> 00:00:21,100
+right? Like in the case of Marrify in Ghana,
+
+14
+00:00:21,100 --> 00:00:21,850
+for example,
+
+15
+00:00:21,850 --> 00:00:22,600
+the question is,
+
+16
+00:00:22,600 --> 00:00:23,760
+is this person married?
+
+17
+00:00:23,760 --> 00:00:24,860
+So the answer is simple.
+
+18
+00:00:24,860 --> 00:00:26,800
+This person currently has an active marriage
+
+19
+00:00:26,800 --> 00:00:27,600
+on record.
+
+20
+00:00:27,600 --> 00:00:28,240
+Nothing else.
+
+21
+00:00:28,240 --> 00:00:29,240
+No name of spouse,
+
+22
+00:00:29,240 --> 00:00:29,820
+no dates,
+
+23
+00:00:29,820 --> 00:00:30,780
+no history.
+
+24
+00:00:30,780 --> 00:00:32,010
+But of course,
+
+25
+00:00:32,010 --> 00:00:33,860
+another person could request another thing.
+
+26
+00:00:33,860 --> 00:00:35,800
+And then I was thinking about access level.
+
+27
+00:00:35,800 --> 00:00:37,940
+Maybe perhaps an individual could access a
+
+28
+00:00:37,940 --> 00:00:39,660
+particular level of this data.
+
+29
+00:00:39,660 --> 00:00:41,320
+And maybe there are certain organizations or
+
+30
+00:00:41,320 --> 00:00:43,467
+institutions that can access more.

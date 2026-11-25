@@ -1,0 +1,28 @@
+{
+ "direction": "No face. Flat lime, WHY SHOPS TRICK YOU in heavy black caps on the left. On the right a black line drawing of a generic checkout: \"Only 2 left!\" in red, a box already ticked, and the Pay button. Drawn, so obviously not a real shop.",
+ "thumbnail_text": "WHY SHOPS TRICK YOU",
+ "kind": "flat",
+ "recommended": false,
+ "titles": [
+  "Dark Patterns in UX: 11 Examples and Why Companies Use Them",
+  "What Are Dark Patterns? 11 Examples From Online Shops",
+  "Dark Patterns Explained: 11 Tricks Websites Use on You"
+ ],
+ "text": {
+  "hd": "WHY<br>SHOPS<br>TRICK<br>YOU",
+  "clock": "Only 2 left!",
+  "gift": "Gift wrap",
+  "left": "",
+  "pay": "PAY NOW"
+ },
+ "images": {},
+ "vars": {
+  "--ground": "#D9F44F"
+ },
+ "board": "Thumbnails 89 (yt-36 \"WHAT IS SPACE COMPLEXITY OF ALGORITHMS\": flat yellow, heavy red caps stacked on the left, a simple black line drawing of the topic on the right)",
+ "fonts": "Font 9 (Inter Tight Black, Design 394: black on lime), also for the words inside the drawing",
+ "colours": "Font 9 specimen (Design 394): ground #D9F44F, words and drawing #000000",
+ "title": "Dark Patterns in UX: 11 Examples and Why Companies Use Them",
+ "class": "no-lift",
+ "scores": "cold critic 5.5-6.5 alone"
+}

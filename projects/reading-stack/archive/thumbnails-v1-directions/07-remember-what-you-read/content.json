@@ -1,0 +1,23 @@
+{
+  "direction": "Outcome as a giant word behind her (the FAVOR pattern) on blue",
+  "title": "The Simple Reading Habit That Makes Non-Fiction Stick",
+  "text": {
+    "line1": "Remember<br>what you",
+    "year": "READ.",
+    "caption": ""
+  },
+  "images": {
+    "person": "../../assets/cut/neutral.png"
+  },
+  "vars": {
+    "--x": "600px",
+    "--y": "40px",
+    "--w": "1000px",
+    "--ys": "330px"
+  },
+  "nudge": {
+    "img:person": {
+      "dx": -40
+    }
+  }
+}

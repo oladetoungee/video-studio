@@ -1,0 +1,27 @@
+{
+  "text": {
+    "a": "read like a researcher"
+  },
+  "images": {
+    "room": "../../assets/photo/oredev/od-55642239799.png",
+    "cut": "../../assets/photo/oredev/od-55642239799-cut.png"
+  },
+  "kind": "real moment (her on stage, explaining with both hands) + one huge light serif line behind her head",
+  "board": "pick1119-11 (\"more books to read to be disgustingly educated\": huge serif line behind her head)",
+  "fonts": [
+    "thumbs-17 / design-26 Instrument Serif italic, white on dark (Thumbnails 152 / Design 20)"
+  ],
+  "colours": "white on the dark stage",
+  "photo": "Øredev 2026 photo 55642239799 (on stage, both hands up), Enhance photo --bg keep --strength 0.5 + cut-out",
+  "thumbnail_text": "read like a researcher",
+  "titles": [
+    "How I Read Research Papers as a Master's Student",
+    "How to Read Research Papers Effectively for Beginners",
+    "I'm an HCI Researcher. Here's How I Read a Paper"
+  ],
+  "direction": "Copies pick1119-11: one big light serif line across the top, her head in front of it, a real moment. The line is the feeling (you, reading like the people who write them); the title carries the search words.",
+  "nudge": {},
+  "vars": {},
+  "class": "no-lift",
+  "title": "How I Read Research Papers as a Master's Student"
+}

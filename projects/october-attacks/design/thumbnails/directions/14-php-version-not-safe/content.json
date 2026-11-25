@@ -1,0 +1,26 @@
+{
+  "direction": "Flat, no face (kit T4): the whole thumbnail is a terminal. 'php -v' and two answers: 8.3.35 struck through with a red cross, 8.3.36 with a green tick. A developer reads it in a second and wants to know which number they have. Small elephant top right. References: her database-indexes thumbnail (one mechanism, few big elements), the outlier PHP2Shell thumbnails (terminal prompt, dark ground, one red).",
+  "thumbnail_text": "IS YOUR PHP SAFE?",
+  "titles": [
+    "PHP Vulnerability 2026: How to Check and Patch PHP2Shell",
+    "PHP2Shell Explained: Is Your PHP Server Patched?"
+  ],
+  "title": "PHP Vulnerability 2026: How to Check and Patch PHP2Shell",
+  "kind": "graphic",
+  "text": {
+    "cmd": "<span class=\"p\">$</span> php -v",
+    "r1": "<span class=\"s\">PHP 8.3.35</span> <span class=\"m\">✗</span>",
+    "r2": "PHP 8.3.36 <span class=\"m\">✓</span>",
+    "hd": "Is your PHP <span class=\"acc\">safe?</span>"
+  },
+  "images": {
+    "elephant": "../../assets/draw/elephant-cracked.svg"
+  },
+  "vars": {
+    "--ground": "#0D0A08",
+    "--fg": "#EFE7D8",
+    "--accent": "#F2541B"
+  },
+  "scores": "cold critic R1 8 · R2 8.5",
+  "recommended": true
+}

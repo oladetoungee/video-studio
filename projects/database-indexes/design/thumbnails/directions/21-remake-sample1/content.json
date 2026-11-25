@@ -1,0 +1,23 @@
+{
+  "direction": "REMAKE of viral sample 1 (\"FINANCIAL LITERACY\", Tina Huang, 1.9M): the topic in two huge white words behind her head, her hand at her head, the topic's object flying past her shoulder (money -> table-row cards). Round 2: closed-mouth frame, fewer, bigger cards, her lower so INDEXES reads. Round 3: no separate blurred copy behind her (round 2 showed a ghost of her head); the room is the same frame, words behind her head.",
+  "concept": "REMAKE of viral sample 1",
+  "thumbnail_text": "DATABASE INDEXES",
+  "title": "Database Indexes: Why Your App Slows Down as It Grows",
+  "titles": [
+    "Database Indexes: Why Your App Slows Down as It Grows",
+    "Database Indexes Explained: How Apps Search Fast",
+    "What Is a Database Index? (And Why Your App Needs One)"
+  ],
+  "text": {
+    "a": "DATABASE",
+    "b": "INDEXES"
+  },
+  "images": {
+    "scene": "../../assets/scene/f_240.5.jpg",
+    "front": "../../assets/cut/f_240.5.png"
+  },
+  "sample": "1",
+  "frame": "4:00.5 (hand on head, mouth closed)",
+  "vars": {},
+  "scores": "final gate (round 4): A topic/click 5/6 · B pair 6 · C taste 6"
+}

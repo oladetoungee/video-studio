@@ -1,0 +1,939 @@
+{
+ "TOTAL": 467.496,
+ "INTRO": 0.4,
+ "OUTRO": 2,
+ "FPS": 30,
+ "CUES": [
+  {
+   "name": "marker",
+   "t": 2.923,
+   "db": 2
+  },
+  {
+   "name": "marker",
+   "t": 11.313,
+   "db": 2
+  },
+  {
+   "name": "marker",
+   "t": 19.472,
+   "db": 2
+  },
+  {
+   "name": "shutter",
+   "t": 20.823,
+   "db": -6
+  },
+  {
+   "name": "shutter",
+   "t": 24.023,
+   "db": -6
+  },
+  {
+   "name": "shutter",
+   "t": 25.243,
+   "db": -6
+  },
+  {
+   "name": "shutter",
+   "t": 27.038,
+   "db": -6
+  },
+  {
+   "name": "swipe",
+   "t": 41.015,
+   "db": -6
+  },
+  {
+   "name": "tick",
+   "t": 47.79,
+   "db": -6
+  },
+  {
+   "name": "pop",
+   "t": 48.69,
+   "db": -6
+  },
+  {
+   "name": "pop",
+   "t": 49.698,
+   "db": -6
+  },
+  {
+   "name": "marker",
+   "t": 62.133,
+   "db": 2
+  },
+  {
+   "name": "type",
+   "t": 63.123,
+   "db": 0
+  },
+  {
+   "name": "pop",
+   "t": 69.553,
+   "db": -4
+  },
+  {
+   "name": "pop",
+   "t": 73.753,
+   "db": -4
+  },
+  {
+   "name": "pop",
+   "t": 91.393,
+   "db": -4
+  },
+  {
+   "name": "swipe",
+   "t": 99.593,
+   "db": -6
+  },
+  {
+   "name": "marker",
+   "t": 101.773,
+   "db": 2
+  },
+  {
+   "name": "marker",
+   "t": 112.993,
+   "db": 2
+  },
+  {
+   "name": "type",
+   "t": 121.533,
+   "db": 0
+  },
+  {
+   "name": "cash",
+   "t": 149.132,
+   "db": -14
+  },
+  {
+   "name": "error",
+   "t": 172.837,
+   "db": -6
+  },
+  {
+   "name": "type",
+   "t": 184.487,
+   "db": 0
+  },
+  {
+   "name": "error",
+   "t": 205.197,
+   "db": -5
+  },
+  {
+   "name": "error",
+   "t": 222.702,
+   "db": -5
+  },
+  {
+   "name": "marker",
+   "t": 231.702,
+   "db": 2
+  },
+  {
+   "name": "swipe",
+   "t": 237.522,
+   "db": -6
+  },
+  {
+   "name": "paper",
+   "t": 248.592,
+   "db": -6
+  },
+  {
+   "name": "paper",
+   "t": 249.442,
+   "db": -6
+  },
+  {
+   "name": "paper",
+   "t": 250.942,
+   "db": -6
+  },
+  {
+   "name": "type",
+   "t": 264.113,
+   "db": 0
+  },
+  {
+   "name": "type",
+   "t": 285.563,
+   "db": -6
+  },
+  {
+   "name": "marker",
+   "t": 286.663,
+   "db": -6
+  },
+  {
+   "name": "swipe",
+   "t": 290.778,
+   "db": -6
+  },
+  {
+   "name": "error",
+   "t": 307.143,
+   "db": -4
+  },
+  {
+   "name": "type",
+   "t": 316.423,
+   "db": 0
+  },
+  {
+   "name": "marker",
+   "t": 323.063,
+   "db": 2
+  },
+  {
+   "name": "tick",
+   "t": 330.933,
+   "db": -4
+  },
+  {
+   "name": "swipe",
+   "t": 334.793,
+   "db": -6
+  },
+  {
+   "name": "type",
+   "t": 355.975,
+   "db": 0
+  },
+  {
+   "name": "error",
+   "t": 384.393,
+   "db": -5
+  },
+  {
+   "name": "type",
+   "t": 391.813,
+   "db": 0
+  },
+  {
+   "name": "marker",
+   "t": 416.59,
+   "db": 2
+  },
+  {
+   "name": "swipe",
+   "t": 419.855,
+   "db": -6
+  },
+  {
+   "name": "error",
+   "t": 432.435,
+   "db": -5
+  },
+  {
+   "name": "swipe",
+   "t": 438.765,
+   "db": -6
+  },
+  {
+   "name": "marker",
+   "t": 453.672,
+   "db": 2
+  },
+  {
+   "name": "marker",
+   "t": 457.852,
+   "db": 2
+  },
+  {
+   "name": "marker",
+   "t": 464.463,
+   "db": 2
+  }
+ ],
+ "SCENES": [
+  {
+   "n": 1,
+   "id": "open",
+   "start": 0.413,
+   "end": 3.973,
+   "ground": "lime",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 2,
+   "id": "navigate",
+   "start": 3.973,
+   "end": 10.973,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 3,
+   "id": "promise",
+   "start": 10.973,
+   "end": 14.693,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 4,
+   "id": "issue",
+   "start": 14.693,
+   "end": 16.133,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 5,
+   "id": "never-thought",
+   "start": 16.133,
+   "end": 20.523,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 6,
+   "id": "montage",
+   "start": 20.523,
+   "end": 28.418,
+   "ground": "efInk",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 7,
+   "id": "happy-path",
+   "start": 28.418,
+   "end": 40.695,
+   "ground": "lime",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 8,
+   "id": "real-users",
+   "start": 40.695,
+   "end": 46.52,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 9,
+   "id": "double-click",
+   "start": 46.52,
+   "end": 52.268,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 10,
+   "id": "network",
+   "start": 52.268,
+   "end": 54.608,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 11,
+   "id": "two-hours",
+   "start": 54.608,
+   "end": 61.048,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 12,
+   "id": "being-users",
+   "start": 61.048,
+   "end": 62.823,
+   "ground": "efInk",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 13,
+   "id": "ch1",
+   "start": 62.823,
+   "end": 66.693,
+   "ground": "lime",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 14,
+   "id": "place-order",
+   "start": 66.693,
+   "end": 74.293,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 15,
+   "id": "two-requests",
+   "start": 74.293,
+   "end": 78.813,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 16,
+   "id": "charged-twice",
+   "start": 78.813,
+   "end": 83.373,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 17,
+   "id": "retry",
+   "start": 83.373,
+   "end": 87.253,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 18,
+   "id": "resubmit",
+   "start": 87.253,
+   "end": 91.873,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 19,
+   "id": "disable",
+   "start": 91.873,
+   "end": 99.273,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 20,
+   "id": "idem",
+   "start": 99.273,
+   "end": 105.113,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 21,
+   "id": "twice-once",
+   "start": 105.113,
+   "end": 113.943,
+   "ground": "efInk",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 22,
+   "id": "stripe",
+   "start": 113.943,
+   "end": 118.173,
+   "ground": "lime",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 23,
+   "id": "key-code",
+   "start": 118.173,
+   "end": 121.233,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 24,
+   "id": "ch2",
+   "start": 121.233,
+   "end": 123.793,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 25,
+   "id": "race",
+   "start": 123.793,
+   "end": 129.982,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 26,
+   "id": "starbucks",
+   "start": 129.982,
+   "end": 136.752,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 27,
+   "id": "gift-cards",
+   "start": 136.752,
+   "end": 150.912,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 28,
+   "id": "each-checked",
+   "start": 150.912,
+   "end": 158.742,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 29,
+   "id": "stock",
+   "start": 158.742,
+   "end": 163.447,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 30,
+   "id": "one-left",
+   "start": 163.447,
+   "end": 176.237,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 31,
+   "id": "zero-rows",
+   "start": 176.237,
+   "end": 184.187,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 32,
+   "id": "ch3",
+   "start": 184.187,
+   "end": 193.637,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 33,
+   "id": "obrien",
+   "start": 193.637,
+   "end": 205.627,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 34,
+   "id": "injection",
+   "start": 205.627,
+   "end": 214.317,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 35,
+   "id": "bbc",
+   "start": 214.317,
+   "end": 217.862,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 36,
+   "id": "jennifer-null",
+   "start": 217.862,
+   "end": 224.042,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 37,
+   "id": "bbc-jn",
+   "start": 224.042,
+   "end": 228.722,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 38,
+   "id": "null-apart",
+   "start": 228.722,
+   "end": 232.192,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 39,
+   "id": "no-value",
+   "start": 232.192,
+   "end": 237.202,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 40,
+   "id": "plate",
+   "start": 237.202,
+   "end": 247.722,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 41,
+   "id": "tickets",
+   "start": 247.722,
+   "end": 252.833,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 42,
+   "id": "no-plate",
+   "start": 252.833,
+   "end": 259.783,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 43,
+   "id": "wired",
+   "start": 259.783,
+   "end": 263.813,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 44,
+   "id": "ch5",
+   "start": 263.813,
+   "end": 269.593,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 45,
+   "id": "four-years",
+   "start": 269.593,
+   "end": 274.843,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 46,
+   "id": "azure-date",
+   "start": 274.843,
+   "end": 280.843,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 47,
+   "id": "azure",
+   "start": 280.843,
+   "end": 285.463,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 48,
+   "id": "fix",
+   "start": 285.463,
+   "end": 290.458,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 49,
+   "id": "cert",
+   "start": 290.458,
+   "end": 300.363,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 50,
+   "id": "leap-date",
+   "start": 300.363,
+   "end": 308.063,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 51,
+   "id": "azure-down",
+   "start": 308.063,
+   "end": 316.123,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 52,
+   "id": "ch6",
+   "start": 316.123,
+   "end": 320.283,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 53,
+   "id": "not-think",
+   "start": 320.283,
+   "end": 323.863,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 54,
+   "id": "estonia",
+   "start": 323.863,
+   "end": 326.783,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 55,
+   "id": "spring",
+   "start": 326.783,
+   "end": 334.473,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 56,
+   "id": "autumn",
+   "start": 334.473,
+   "end": 343.415,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 57,
+   "id": "report-job",
+   "start": 343.415,
+   "end": 355.675,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 58,
+   "id": "ch7",
+   "start": 355.675,
+   "end": 357.975,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 59,
+   "id": "tone-marks",
+   "start": 357.975,
+   "end": 363.795,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 60,
+   "id": "bytes",
+   "start": 363.795,
+   "end": 378.493,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 61,
+   "id": "max-20",
+   "start": 378.493,
+   "end": 385.613,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 62,
+   "id": "unicode-fix",
+   "start": 385.613,
+   "end": 391.513,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 63,
+   "id": "ch8",
+   "start": 391.513,
+   "end": 394.953,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 64,
+   "id": "never-promised",
+   "start": 394.953,
+   "end": 400.393,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 65,
+   "id": "hyrum-quote",
+   "start": 400.393,
+   "end": 411.73,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 66,
+   "id": "api-order",
+   "start": 411.73,
+   "end": 416.08,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 67,
+   "id": "didnt-choose",
+   "start": 416.08,
+   "end": 419.535,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 68,
+   "id": "api-break",
+   "start": 419.535,
+   "end": 432.925,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 69,
+   "id": "them-us",
+   "start": 432.925,
+   "end": 438.445,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 70,
+   "id": "used-to",
+   "start": 438.445,
+   "end": 442.17,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 71,
+   "id": "consider",
+   "start": 442.17,
+   "end": 445.812,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 72,
+   "id": "so-much-more",
+   "start": 445.812,
+   "end": 449.412,
+   "ground": "efInk",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 73,
+   "id": "cant-predict",
+   "start": 449.412,
+   "end": 454.592,
+   "ground": "lime",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 74,
+   "id": "ship",
+   "start": 454.592,
+   "end": 458.552,
+   "ground": "efInk",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 75,
+   "id": "catch-few",
+   "start": 458.552,
+   "end": 462.512,
+   "ground": "lime",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 76,
+   "id": "end",
+   "start": 462.512,
+   "end": 467.496,
+   "ground": "lime",
+   "label": "",
+   "trans": "whip"
+  }
+ ]
+}

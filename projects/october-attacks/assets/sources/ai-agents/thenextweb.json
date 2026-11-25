@@ -1,0 +1,177 @@
+{
+ "story": "ai-agents",
+ "outlet": "The Next Web",
+ "slug": "thenextweb",
+ "url": "https://thenextweb.com/news/ai-agents-hacker-cairn-100-sites-deere-norforge",
+ "finalUrl": "https://thenextweb.com/news/ai-agents-hacker-cairn-100-sites-deere-norforge",
+ "status": "loaded",
+ "http": 200,
+ "title": "‘It’s not script kiddie stuff’: AI agents hack 100+ sites for one hacker",
+ "h1": "",
+ "published": "2026-10-19T13:58:43+00:00",
+ "files": {
+  "fold": "ai-agents/thenextweb_fold.png",
+  "full": "ai-agents/thenextweb_full.jpg",
+  "scroll": "ai-agents/thenextweb_scroll.mp4"
+ },
+ "full": {
+  "width": 1440,
+  "height": 5527,
+  "pageHeight": 5527,
+  "zoom": 1,
+  "quotes": [
+   {
+    "quote": "AI agents broke into 100+ sites for one hacker at $50 each, researcher says",
+    "box": {
+     "x": 156,
+     "y": 186,
+     "w": 1128,
+     "h": 116
+    },
+    "lines": [
+     {
+      "x": 156,
+      "y": 186,
+      "w": 1128,
+      "h": 56
+     },
+     {
+      "x": 179,
+      "y": 246,
+      "w": 1083,
+      "h": 56
+     }
+    ]
+   },
+   {
+    "quote": "Successful attacks took a little under 23 hours on average",
+    "box": {
+     "x": 304,
+     "y": 2549,
+     "w": 661,
+     "h": 54
+    },
+    "lines": [
+     {
+      "x": 678,
+      "y": 2549,
+      "w": 287,
+      "h": 22
+     },
+     {
+      "x": 304,
+      "y": 2581,
+      "w": 204,
+      "h": 22
+     }
+    ]
+   }
+  ]
+ },
+ "scroll": {
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "seconds": 8,
+  "keyframes": [
+   {
+    "t": 0,
+    "y": 0
+   },
+   {
+    "t": 1,
+    "y": 0
+   },
+   {
+    "t": 2.81,
+    "y": 2139
+   },
+   {
+    "t": 8,
+    "y": 2139
+   }
+  ],
+  "zoom": 1,
+  "easing": "easeInOutCubic between keyframes, holds where y is equal",
+  "capped": false,
+  "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)",
+  "quotes": [
+   {
+    "quote": "AI agents broke into 100+ sites for one hacker at $50 each, researcher says",
+    "inVideo": true,
+    "still": true,
+    "t": 0.53,
+    "visibleStill": [
+     0,
+     1.07
+    ],
+    "scrollY": 0,
+    "box": {
+     "x": 396,
+     "y": 186,
+     "w": 1128,
+     "h": 116
+    },
+    "lines": [
+     {
+      "x": 396,
+      "y": 186,
+      "w": 1128,
+      "h": 56
+     },
+     {
+      "x": 419,
+      "y": 246,
+      "w": 1083,
+      "h": 56
+     }
+    ],
+    "docBox": {
+     "x": 396,
+     "y": 186,
+     "w": 1128,
+     "h": 116
+    },
+    "layoutDriftPx": 0
+   },
+   {
+    "quote": "Successful attacks took a little under 23 hours on average",
+    "inVideo": true,
+    "still": true,
+    "t": 5.38,
+    "visibleStill": [
+     2.73,
+     8.03
+    ],
+    "scrollY": 2139,
+    "box": {
+     "x": 544,
+     "y": 410,
+     "w": 661,
+     "h": 54
+    },
+    "lines": [
+     {
+      "x": 918,
+      "y": 410,
+      "w": 287,
+      "h": 22
+     },
+     {
+      "x": 544,
+      "y": 442,
+      "w": 204,
+      "h": 22
+     }
+    ],
+    "docBox": {
+     "x": 544,
+     "y": 2549,
+     "w": 661,
+     "h": 54
+    },
+    "layoutDriftPx": 0
+   }
+  ]
+ }
+}

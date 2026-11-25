@@ -1,0 +1,12 @@
+@font-face{font-family:"Big Shoulders Display";font-weight:100 900;src:url(../_fonts/BigShouldersDisplay.ttf)}
+@font-face{font-family:"Hanken Grotesk";font-weight:100 900;src:url(../_fonts/HankenGrotesk.ttf)}
+@font-face{font-family:"Azeret Mono";font-weight:100 900;src:url(../_fonts/AzeretMono.ttf)}
+@font-face{font-family:"Onest";font-weight:100 900;src:url(../_fonts/Onest.ttf)}
+@font-face{font-family:"Martian Mono";font-weight:100 800;src:url(../_fonts/MartianMono.ttf)}
+@font-face{font-family:"Kalam";font-weight:400;src:url(../_fonts/Kalam.ttf)}
+@font-face{font-family:"Kalam";font-weight:700;src:url(../_fonts/Kalam-Bold.ttf)}
+@font-face{font-family:"Libre Franklin";font-weight:100 900;src:url(../_fonts/LibreFranklin.ttf)}
+@font-face{font-family:"Anton";src:url(../_fonts/Anton.ttf)}
+@font-face{font-family:"Instrument Serif";src:url(../_fonts/InstrumentSerif-Regular.ttf)}
+html,body{margin:0;background:#000;overflow:hidden}canvas{display:block}
+@font-face{font-family:"Barlow Condensed";font-weight:800;src:url(../_fonts/BarlowCondensed-ExtraBold.ttf)}

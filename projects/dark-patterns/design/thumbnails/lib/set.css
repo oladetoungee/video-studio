@@ -1,0 +1,43 @@
+/* dark-patterns thumbnails, set 2026-11-12. Fonts ONLY from the font board (inspiration/boards/fonts, "Font N"),
+   colours from its colour combos. Each direction copies one named thumbnail-board item (content.json "board").
+   Editable: text in content.json "text" (data-k), photos in "images" (data-img), colours in "vars", moves in "nudge". */
+@font-face { font-family: 'Poppins'; src: url('../fonts/Poppins-Bold.ttf') format('truetype'); font-weight: 700; }
+@font-face { font-family: 'Inter Tight'; src: url('../fonts/InterTightMedium.ttf') format('truetype'); font-weight: 500; }
+@font-face { font-family: 'Inter Tight'; src: url('../fonts/InterTightSemiBold.ttf') format('truetype'); font-weight: 600; }
+@font-face { font-family: 'Inter Tight'; src: url('../fonts/InterTightBold.ttf') format('truetype'); font-weight: 700; }
+@font-face { font-family: 'Inter Tight'; src: url('../fonts/InterTightBlack.ttf') format('truetype'); font-weight: 900; }
+@font-face { font-family: 'Archivo'; src: url('../fonts/Archivo.ttf') format('truetype'); font-weight: 100 900; font-stretch: 62% 125%; }
+@font-face { font-family: 'Archivo Black'; src: url('../fonts/ArchivoBlack-Regular.ttf') format('truetype'); }
+@font-face { font-family: 'Montserrat'; src: url('../fonts/Montserrat-Variable.ttf') format('truetype'); font-weight: 100 900; }
+@font-face { font-family: 'Figtree'; src: url('../fonts/Figtree.ttf') format('truetype'); font-weight: 300 900; }
+@font-face { font-family: 'Libre Baskerville'; src: url('../fonts/LibreBaskerville[wght].ttf') format('truetype'); font-weight: 400 700; }
+@font-face { font-family: 'Libre Baskerville'; src: url('../fonts/LibreBaskerville-Italic[wght].ttf') format('truetype'); font-weight: 400 700; font-style: italic; }
+@font-face { font-family: 'Gloock'; src: url('../fonts/Gloock-Regular.ttf') format('truetype'); }
+@font-face { font-family: 'Bagel Fat One'; src: url('../fonts/BagelFatOne-Regular.ttf') format('truetype'); }
+@font-face { font-family: 'Anton'; src: url('../fonts/Anton-Regular.ttf') format('truetype'); }
+@font-face { font-family: 'Caveat Brush'; src: url('../fonts/CaveatBrush-Regular.ttf') format('truetype'); }
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1280px; height: 720px; overflow: hidden; background: #111; }
+.t { position: relative; width: 1280px; height: 720px; overflow: hidden; background: var(--ground, #111); color: var(--ink, #fff); font-family: 'Inter Tight', sans-serif; }
+.guides .badge { position: absolute; right: 10px; bottom: 10px; width: 150px; height: 70px; border: 3px dashed #0f0; z-index: 99; }
+.z1 { z-index: 1; } .z2 { z-index: 2; } .z3 { z-index: 3; } .z4 { z-index: 4; } .z5 { z-index: 5; } .z6 { z-index: 6; }
+.a { position: absolute; }
+.nw { white-space: nowrap; }
+/* her shoot photo: room and her person layer share one box (they line up); the room can be dimmed behind the words, she stays natural */
+.pf { position: absolute; inset: 0; overflow: hidden; }
+.pf img { position: absolute; left: var(--pl, 0px); top: var(--pt, -120px); width: var(--pw, 1280px); height: auto; }
+.pf .dim { position: absolute; inset: 0; background: var(--dim, rgba(0,0,0,.4)); }
+.me { position: absolute; left: var(--pl, 0px); top: var(--pt, -120px); width: var(--pw, 1280px); height: auto; z-index: 3; }
+.t.no-lift .me, .t.no-lift .cut { filter: none; }
+.cut { position: absolute; bottom: 0; display: block; filter: drop-shadow(0 18px 30px rgba(0,0,0,.35)); }
+/* soft shadow so words pop on photos (no outline, no glow) */
+.sh { text-shadow: 0 3px 6px rgba(0,0,0,.35), 0 10px 34px rgba(0,0,0,.45); }
+/* generic phone (lib/phone.js makes it real) */
+.phone { position: absolute; background: #111; border-radius: 44px; padding: 12px; }
+.phone .scr { background: #fff; border-radius: 32px; width: 100%; height: 100%; overflow: hidden; position: relative; color: #111; }
+
+/* added 2026-11-19 (rework from her 50 picks): Font 13 Switzer (Design 350), Instrument Serif italic (Font 26 / 72), Caveat (Font 48) */
+@font-face { font-family: 'Switzer'; src: url('../fonts/Switzer-Variable.ttf') format('truetype'); font-weight: 100 900; }
+@font-face { font-family: 'Instrument Serif'; src: url('../fonts/InstrumentSerif-Italic.ttf') format('truetype'); font-style: italic; }
+@font-face { font-family: 'Caveat'; src: url('../fonts/Caveat.ttf') format('truetype'); font-weight: 400 700; }

@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Shorts formats</title>
+<link rel="stylesheet" href="/studio/runtime/fonts.css">
+<style>
+:root{--bg:#111114;--fg:#EDE9E2;--mid:#8A8780;--line:#2B2B31;--card:#18181D;--acc:#6E8CFF;--like:#22E08A;--no:#6B6A66}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 Archivo,system-ui,sans-serif}
+main{padding:40px clamp(16px,4vw,56px) 96px}
+a{color:var(--acc)}
+h1{font:800 64px/0.92 "Bricolage Grotesque",sans-serif;letter-spacing:-0.03em;text-transform:uppercase;margin:0 0 10px}
+.k{font:500 13px "DM Mono",monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--mid);margin:0 0 6px}
+.count{font:800 30px/1.1 "Bricolage Grotesque",sans-serif;letter-spacing:-0.02em;margin:22px 0 0}
+.count span{color:var(--like)}
+.filters{display:flex;gap:6px 18px;flex-wrap:wrap;margin:24px 0 8px;border-bottom:1px solid var(--line);padding-bottom:12px}
+.filters button{background:none;border:0;color:var(--mid);font:500 13px "DM Mono",monospace;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;padding:4px 0}
+.filters button[aria-pressed=true]{color:var(--fg);border-bottom:2px solid var(--fg)}
+.filters .sep{width:1px;background:var(--line);margin:0 4px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(380px,1fr));gap:40px 32px;margin-top:28px}
+@media (max-width:760px){.grid{grid-template-columns:1fr}h1{font-size:44px}}
+.card{border-top:1px solid var(--line);padding-top:14px}
+.card.like{border-top:3px solid var(--like)}
+.card.no{opacity:.45}
+.frames{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.frames a{display:block;background:var(--card);aspect-ratio:9/16;overflow:hidden}
+.frames img{width:100%;height:100%;object-fit:contain;display:block}
+.num{font:600 14px "DM Mono",monospace;color:var(--fg);letter-spacing:.04em;margin:12px 0 -8px}
+.fmt{font:800 24px/1.05 "Bricolage Grotesque",sans-serif;letter-spacing:-0.01em;margin:14px 0 4px}
+.who{font:500 12px "DM Mono",monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--mid)}
+.who a{color:var(--acc);text-decoration:none;margin-left:6px;white-space:nowrap}
+.who a:hover{text-decoration:underline}
+h3{font:500 12px "DM Mono",monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--mid);margin:12px 0 2px}
+p{margin:0}
+.act{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:14px}
+.act button{background:none;border:1px solid var(--line);color:var(--fg);font:600 14px Archivo,sans-serif;padding:8px 14px;cursor:pointer}
+.act button:hover{border-color:var(--fg)}
+.act button.on[data-p=like]{background:var(--like);border-color:var(--like);color:#111}
+.act button.on[data-p=no]{background:var(--no);border-color:var(--no);color:#111}
+textarea{width:100%;min-height:48px;margin-top:10px;background:var(--card);color:var(--fg);border:1px solid var(--line);font:15px Archivo,sans-serif;padding:10px;resize:vertical}
+.saved{font:500 12px "DM Mono",monospace;color:var(--like)}
+.empty{color:var(--mid);margin-top:40px}
+</style>
+</head>
+<body>
+<main>
+  <p class="k"><a href="/">← Studio</a> &nbsp;·&nbsp; <a href="/ideas/">Ideas board</a></p>
+  <h1>Shorts formats</h1>
+  <p class="k">Real TikToks and YouTube Shorts · three moments from each (start, middle, end) · leave a note if you want</p>
+  <p class="count" id="count"></p>
+  <div class="filters" id="filters"></div>
+  <div class="grid" id="list"></div>
+</main>
+<script>
+let items = [], picks = {}, filter = 'all';
+try { filter = localStorage.getItem('formats.filter') || 'all'; } catch (e) {}
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const views = v => !v ? '' : v >= 1e6 ? (v / 1e6).toFixed(1).replace(/\.0$/, '') + 'M views' : v >= 1e3 ? Math.round(v / 1e3) + 'K views' : v + ' views';
+const pk = id => (picks[id] && picks[id].pick === 'no') ? 'no' : 'like';   // liked by default (her rule 2026-11-09); she only marks "Not for me"
+
+function card(i) {
+  const p = pk(i.id), note = (picks[i.id] && picks[i.id].note) || '';
+  const fr = (i.frames || []).map(f => `<a href="/ideas/formats/frames/${encodeURIComponent(f)}" target="_blank"><img loading="lazy" src="/ideas/formats/frames/${encodeURIComponent(f)}" alt=""></a>`).join('');
+  const meta = [i.creator, i.platform, views(i.views)].filter(Boolean).map(esc).join(' · ');
+  return `<article class="card" data-id="${esc(i.id)}">
+    <div class="frames">${fr}</div>
+    <p class="num">Formats ${items.indexOf(i) + 1}</p><p class="fmt">${esc(i.format)}</p>
+    <p class="who">${meta}<a href="${esc(i.url)}" target="_blank" rel="noopener">Open the real video ↗</a></p>
+    <h3>Captions and fonts</h3><p>${esc(i.caption_font_note)}</p>
+    <h3>What works</h3><p>${esc(i.what_works)}</p>
+    <div class="act"><span class="saved" hidden>Saved</span></div>
+    <textarea placeholder="A note (what you like or don't)">${esc(note)}</textarea>
+  </article>`;
+}
+
+function render() {
+  const liked = items.filter(i => pk(i.id) === 'like').length, no = items.filter(i => pk(i.id) === 'no').length;
+  document.getElementById('count').textContent = `${items.length} examples · quote a number, e.g. Formats 12`;
+  const fmts = {}; for (const i of items) fmts[i.format] = (fmts[i.format] || 0) + 1;
+  const btn = (k, l, n) => `<button data-f="${esc(k)}" aria-pressed="${k === filter}">${esc(l)} ${n}</button>`;
+  document.getElementById('filters').innerHTML = btn('all', 'All', items.length) + '<span class="sep"></span>'
+    + Object.keys(fmts).sort().map(f => btn('f:' + f, f, fmts[f])).join('');
+  const shown = items.filter(i => filter === 'all' || 'f:' + i.format === filter);
+  document.getElementById('list').innerHTML = shown.map(card).join('') || '<p class="empty">Nothing here yet.</p>';
+}
+
+async function save(id, body) {
+  const r = await fetch('/api/formats/' + encodeURIComponent(id), { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(body) });
+  if (!r.ok) throw new Error('save failed');
+  picks[id] = await r.json();
+}
+function flash(c) { const s = c.querySelector('.saved'); s.hidden = false; setTimeout(() => s.hidden = true, 1200); }
+
+document.addEventListener('click', async e => {
+  const f = e.target.closest('[data-f]');
+  if (f) { filter = f.dataset.f; try { localStorage.setItem('formats.filter', filter); } catch (er) {} return render(); }
+  const b = e.target.closest('.act button'); if (!b) return;
+  const c = b.closest('.card'), id = c.dataset.id, p = b.dataset.p;
+  try {
+    await save(id, { pick: p });
+    c.className = 'card ' + p; c.querySelectorAll('.act button').forEach(x => x.classList.toggle('on', x.dataset.p === p));
+    { const keep = window.scrollY; render(); window.scrollTo(0, keep); }
+  } catch (er) { alert('Could not save. Is the studio still running?'); }
+});
+const timers = {};
+document.addEventListener('input', e => {
+  if (e.target.tagName !== 'TEXTAREA') return;
+  const c = e.target.closest('.card'), id = c.dataset.id; clearTimeout(timers[id]);
+  timers[id] = setTimeout(async () => { try { await save(id, { note: e.target.value }); flash(c); } catch (er) {} }, 600);
+});
+
+fetch('/api/formats').then(r => r.json()).then(d => { items = d.items || []; picks = d.picks || {}; render(); });
+</script>
+</body>
+</html>

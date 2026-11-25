@@ -1,0 +1,54 @@
+{
+ "title": "Erasmus Mundus action - Erasmus+",
+ "h1": "Select your language",
+ "h1y": 0,
+ "found": {
+  "1 400 Euros/month": [
+   [
+    719.234375,
+    14371.25,
+    159.015625,
+    23
+   ]
+  ],
+  "24 months": [
+   [
+    1033.03125,
+    13525.5,
+    84.921875,
+    23
+   ]
+  ]
+ },
+ "H": 26957,
+ "focus": {
+  "1 400 Euros/month": {
+   "file": "em-guide__1-400-euros-month.png",
+   "top": 13851.25,
+   "rects": [
+    [
+     719.234375,
+     520,
+     159.015625,
+     23
+    ]
+   ]
+  },
+  "24 months": {
+   "file": "em-guide__24-months.png",
+   "top": 13005.5,
+   "rects": [
+    [
+     1033.03125,
+     520,
+     84.921875,
+     23
+    ]
+   ]
+  }
+ },
+ "clipTop": 0,
+ "scale": 1.5,
+ "url": "https://erasmus-plus.ec.europa.eu/programme-guide/part-b/key-action-1/erasmus-mundus-joint-masters",
+ "captured": "2026-11-02T12:49:32.154Z"
+}

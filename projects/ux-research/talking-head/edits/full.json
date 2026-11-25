@@ -1,0 +1,25 @@
+{
+ "t": {
+  "corner-18/@her circle": {
+   "pos": {
+    "16x9": {
+     "dx": -6.2,
+     "k": 1.507
+    }
+   }
+  }
+ },
+ "cap16": {
+  "13": "how it is done, who a UX research is",
+  "387": "in UX research*, I'm still a student"
+ },
+ "captions16": {
+  "size": 70,
+  "y": 998
+ },
+ "mix": {
+  "voice": 4,
+  "music": -6,
+  "sfx": 0
+ }
+}

@@ -1,0 +1,221 @@
+URL: https://emudhra.we-have-a-problem.com/
+STATUS: loaded (http 200)
+FINAL: https://emudhra.we-have-a-problem.com/
+TITLE: eMudhra Intermediate CA Compromise
+H1: eMudhra Intermediate CA Compromise
+OG: eMudhra Intermediate CA Compromise | we-have-a-problem.com
+PUBLISHED:   MODIFIED: 
+DOC_H: 7751
+
+English / 日本語（要約）
+
+eMudhra Intermediate CA Compromise
+
+20th October 2026
+
+The private keys of eight eMudhra intermediate CA certificates have been compromised. They chain to roots trusted by the Mozilla, Microsoft, Apple and Chrome root programs and by many downstream trust stores.
+
+Root programs are run by operating system and browser vendors to vet certificate authorities and decide which ones their products trust. Trust stores are the lists of trusted root certificates that operating systems, browsers, language runtimes, libraries and applications use to verify certificates, and many are based on the root programs' lists.
+
+How do we know?
+
+To demonstrate that the keys are compromised, the original reporter Wayne signed the following message with the private key of each of the eight intermediate CAs and reported it to the Root Program Teams on the 17th of October:
+
+We have a problem here - Wayne
+
+proof.zip contains the message, and for each intermediate the certificate, its public key and a signature on the message. To verify with OpenSSL:
+
+openssl x509 -in EM-DV-TLS-CA-G3B.crt.pem -noout -pubkey | diff - EM-DV-TLS-CA-G3B.pub.pem
+openssl dgst -sha384 -verify EM-DV-TLS-CA-G3B.pub.pem -signature EM-DV-TLS-CA-G3B.sig message.txt
+What actions have been taken?
+
+The root programs and many downstream trust stores have taken action to protect their users. The certificates have been blocked in Firefox and Chrome since the 17th of October, on Microsoft platforms since the 20th and on Apple products since the 22nd.
+
+The issue was responsibly disclosed to downstream trust stores on the 19th of October. Many have already released updates or are in the process of releasing updates.
+
+What are the consequences?
+
+An attacker with the private key of any of the compromised intermediate CAs could impersonate any website or service.
+
+This has already been remediated by Mozilla, Microsoft, Apple, and Chrome for their users through their tools for distributing revocation information such as OneCRL, CRLite and CRLSets.
+
+The CA has also revoked the compromised intermediate certificates. However, many other clients do not consume revocation information and require software updates to ensure they no longer trust the compromised intermediates. These include applications and libraries that ship their own CA bundle, and apps built on Electron, such as Slack and Discord. Electron apps only pick up Electron's fix once they are updated to a version built on a patched Electron release. Updating the operating system or browser may not be enough for these clients.
+
+Does your client still trust the compromised intermediates?
+Intermediate CA	Chains to	Result
+CN=EM DV TLS CA - G3B, O=eMudhra BV, C=NL	emSign Root TLS CA - G3	checking…
+CN=EM DV TLS CA - G3C, O=eMudhra Inc, C=US	emSign Root TLS CA - G3	✅ Did not connect
+CN=EM OV TLS CA - G3B, O=eMudhra BV, C=NL	emSign Root TLS CA - G3	✅ Did not connect
+CN=EM OV TLS CA - G3C, O=eMudhra Inc, C=US	emSign Root TLS CA - G3	✅ Did not connect
+CN=EM EV TLS CA - G3B, O=eMudhra BV, C=NL	emSign Root TLS CA - G3	✅ Did not connect
+CN=EM EV TLS CA - G3C, O=eMudhra Inc, C=US	emSign Root TLS CA - G3	✅ Did not connect
+CN=EM DV TLS CA - G3B, O=eMudhra BV, C=NL	AAA Certificate Services	✅ Did not connect
+CN=EM DV TLS CA - G3C, O=eMudhra Inc, C=US	AAA Certificate Services	✅ Did not connect
+CN=EM OV TLS CA - G3B, O=eMudhra BV, C=NL	AAA Certificate Services	checking…
+CN=EM OV TLS CA - G3C, O=eMudhra Inc, C=US	AAA Certificate Services	checking…
+CN=EM EV TLS CA - G3B, O=eMudhra BV, C=NL	AAA Certificate Services	✅ Did not connect
+CN=EM EV TLS CA - G3C, O=eMudhra Inc, C=US	AAA Certificate Services	checking…
+CN=EM DV TLS CA - G3B, O=eMudhra BV, C=NL (No CT)	emSign Root TLS CA - G3	checking…
+CN=EM DV TLS CA - G3B, O=eMudhra BV, C=NL (No CT)	AAA Certificate Services	checking…
+
+Run check
+
+A ✅ only means that the connection failed. Browsers do not tell the page why, so a network problem looks the same as a rejected certificate. To double-check, open the link in that row: if it loads without a warning page, the browser is vulnerable.
+
+On 22nd October 2026, two chains marked No CT were added. Their leaf certificates were never logged to Certificate Transparency (CT), so clients that enforce CT reject them even if they still trust the intermediate. A successful connection to these hosts means the client trusts the compromised intermediates and does not enforce CT. As described below, these are the clients that can be attacked without anyone noticing.
+
+To check curl or other command-line clients, run:
+
+curl https://dv-g3b-emudhra.we-have-a-problem.com/
+curl https://dv-g3b-aaa-emudhra.we-have-a-problem.com/
+
+A certificate error means the client does not trust the compromised intermediates. To check whether the client also accepts certificates that were never logged to CT, run:
+
+curl https://dv-g3b-noct-emudhra.we-have-a-problem.com/
+curl https://dv-g3b-aaa-noct-emudhra.we-have-a-problem.com/
+
+Most browsers enforce CT, but many non-browser clients, including curl, do not which places them at greater risk.
+
+To check a trust store offline, chains.zip contains the certificate chain served by each of the fourteen hosts above in PEM format, with instructions for verifying them with OpenSSL.
+
+What is known about the cause?
+
+The private keys for the intermediate certificates were incorrectly generated by the CA. This means that anyone can recover them from the certificates.
+
+This would have been possible since the certificates were created in April 2025. There are no entries in the certificate transparency logs for these intermediates in that period, indicating that CT-enforcing clients like Firefox, Chrome, Edge and Safari could not have been attacked.
+
+However, many clients outside of the browser ecosystem do not enforce Certificate Transparency. We do not know if attackers exploited the flawed key generation to target these clients.
+
+Further technical information about the cause is captured in the initial incident report in Mozilla's bug tracker.
+
+Which clients aren't yet patched?
+
+The servers behind the checker record how many times each user-agent connects successfully, meaning it still trusts the compromised intermediates. Only these counts are recorded. See the user-agent statistics.
+
+A JSON dump with more detail, including counts for each JA4 fingerprint, is also available.
+
+Which intermediates were compromised?
+
+impacted-intermediates.json lists the eight intermediates and their Sectigo cross-signs. roots.json lists the roots they chain to.
+
+What actions can trust store operators take?
+
+Please see this thread in Mozilla's dev-security-policy forum.
+
+What actions can users take?
+
+Users should update their browsers and operating systems to the latest versions as soon as possible.
+
+Who has patched?
+
+Pending entries are listed at the end of each group.
+
+Operating systems and distributions
+Software	Patched version
+Alpine Linux ca-certificates	20261020-r0
+Arch Linux ca-certificates-mozilla	3.131.1-1
+Chainguard ca-certificates	20260909-r3
+Debian ca-certificates	20250419~deb12u2,
+20250419+deb13u1,
+20260816+nmu1
+Devuan ca-certificates	Same as Debian
+Fedora ca-certificates	2026.2.92_v9.0.319
+FreeBSD ca_root_nss	1.131.1
+FreeBSD caroot	15.1-RELEASE-p6,
+14.5-RELEASE-p3,
+14.4-RELEASE-p12
+Freedesktop SDK	25.08.19,
+26.08.3
+Gentoo ca-certificates	20260816.3.125
+GNU Guix	7608a99
+Homebrew ca-certificates	2026-09-25_1
+NetBSD	current
+OmniOS web/ca-bundle	r151054by,
+r151056ay,
+r151058y
+OpenBSD	current
+8.0
+7.9
+Oracle Linux ca-certificates	2025.2.80_v9.0.304-80.2.0.1.el8_10,
+2025.2.80_v9.0.305-91.0.1.el9,
+2025.2.80_v9.0.305-102.0.1.el10_2
+RHEL ca-certificates	Pending for RHEL 7,
+2026.2.92_v9.0.319-81.3.el8_10,
+2026.2.92_v9.0.319-90.3.el9_8,
+2026.2.92_v9.0.319-100.3.el10_2
+Ubuntu ca-certificates	20260816ubuntu0.22.04.1,
+20260816ubuntu0.24.04.1,
+20260816ubuntu0.26.04.1,
+20260816ubuntu0.26.10.1
+Bottlerocket	pending
+Root store bundles and libraries
+Software	Patched version
+Cloudflare CFSSL trust store	2026.10.1
+curl CA bundle	2026-10-20
+Elixir castore	1.0.22
+NSS	3.131.1
+Perl Mozilla::CA	20261020
+Python certifi	2026.10.19
+Rust rustls-webpki	0.103.16
+Rust webpki-roots / webpki-root-certs	1.0.10
+Composer ca-bundle	1.4.16, 1.6.0
+Erlang certifi	2.18.0
+Ruby excon	1.8.0
+Kubernetes cert-manager	trust-pkg-debian-trixie:20250419-deb13u1.0,
+trust-pkg-debian-bookworm:20250419-deb12u2.0
+Language runtimes
+Software	Patched version
+Bun	1.4.4
+Dart	Dart SDK 3.13.7, Flutter SDK 3.47.8
+Deno	2.9.8
+Electron	44.9.1,
+43.8.1,
+42.11.16
+Go	1.27.3,
+1.26.10
+Java	OpenJDK | Oracle JDK
+Node.js	26.12.1,
+24.22.1,
+22.23.4
+Python	3.15.1,
+3.14.9,
+3.13.17
+Applications and tools
+Software	Patched version
+ArgoCD	3.3.18, 3.4.12, 3.5.6, 3.6.0-rc4
+Claude Code	2.1.303
+Conda	26.9.4
+Docker Desktop	4.96.2
+Docker Engine	29.9.2
+Docker cli	29.9.2
+Git for Windows	2.56.0.3
+mise	2026.10.17
+Obsidian	1.14.5
+pip	26.2.2
+pixi	0.82.1
+pypi-publish GitHub Action	1.14.3
+Rustup	1.29.2
+uv	0.13.5
+Visual Studio Code	1.143.1
+Godot	pending
+GitHub CLI	2.102.1
+LibreOffice	pending
+mitmproxy	12.3
+Plex Media Server	1.43.5.11079
+Immich	3.3.5
+Tailscale	1.104.2
+litellm	1.103.8, 1.104.6, 1.105.4, 1.106.3
+certbot	pending
+containerd	pending
+
+Add more at github.com/galadran/we-have-a-problem.com.
+
+Are there workarounds until patches are available?
+macOS curl, git, and Python
+Linux
+Windows
+Android
+NetBSD
+FreeBSD
+
+Site published by Dennis Jackson. This site is the work of many contributors from the community. The source is on GitHub and PRs are welcome. Licensed under the Apache License, Version 2.0.

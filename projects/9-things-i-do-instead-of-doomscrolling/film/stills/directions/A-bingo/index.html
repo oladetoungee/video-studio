@@ -1,0 +1,120 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>A Offline Bingo</title>
+<link rel="stylesheet" href="../_shared/fonts.css">
+<style>
+:root{--ground:#F7D44C;--card:#FFFDF5;--ink:#161616;--daub:#FF6A1A;--mute:#6B6455}
+#stage{background:var(--ground);font-family:"Figtree";color:var(--ink)}
+.card{position:absolute;background:var(--card);border:6px solid var(--ink);border-radius:20px;overflow:hidden}
+.head{position:absolute;left:0;right:0;top:0;background:var(--ink);color:var(--card);font-family:"Dela Gothic One";display:flex;align-items:center;justify-content:center;letter-spacing:.02em}
+.sq{position:absolute;border-right:4px solid var(--ink);border-bottom:4px solid var(--ink);overflow:hidden}
+.sq .n{position:absolute;font-family:"Dela Gothic One";line-height:1}
+.sq .l{position:absolute;font-weight:800;line-height:1.02;letter-spacing:-.01em}
+.dab{position:absolute;mix-blend-mode:multiply;opacity:.85;transform-origin:50% 50%}
+.now{position:absolute;inset:6px;border:7px solid var(--ink);border-radius:6px}
+.big{font-family:"Dela Gothic One";line-height:.98;letter-spacing:-.005em}
+.mono{font-family:"Red Hat Mono";font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+.ph{position:absolute;overflow:hidden;border:5px solid var(--ink)}
+.ph img{width:100%;height:100%;object-fit:cover}
+.cr{position:absolute;font-family:"Red Hat Mono";font-size:28px;color:var(--mute)}
+.feed{position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover}
+.capC1{position:absolute;left:0;right:0;text-align:center;font-family:"Dela Gothic One";text-transform:uppercase;color:#fff;line-height:1.05;text-shadow:0 0 1px #000,0 4px 0 #000,0 -4px 0 #000,4px 0 0 #000,-4px 0 0 #000,3px 3px 0 #000,-3px -3px 0 #000,3px -3px 0 #000,-3px 3px 0 #000}
+.capC1 b{color:var(--ground);font-weight:400}
+</style></head>
+<body><div id="stage"></div>
+<script src="../_shared/lib.js"></script>
+<script>
+const W = +Q.get('w') || 1920, H = +Q.get('h') || 1080, PORT = H > W;
+const S = $('#stage'); st(S, { width: W + 'px', height: H + 'px' });
+// the bingo card: size = outer width; done = how many squares are daubed; photos = {index: pexels name}
+function card(id, x, y, size, done, o = {}) {
+  const hh = Math.round(size * 0.15), cell = (size - 12) / 3; let h = `<div class="card" id="${id}" style="left:${x}px;top:${y}px;width:${size}px;height:${size + hh}px">
+    <div class="head" style="height:${hh}px;font-size:${hh * 0.46}px">${o.head || 'MY OFFLINE CARD'}</div>`;
+  ITEMS.forEach(([n, l], i) => { const cx = (i % 3) * cell, cy = hh + Math.floor(i / 3) * cell; const r = cell * 0.26;
+    h += `<div class="sq" id="${id}s${i}" style="left:${cx}px;top:${cy}px;width:${cell + (i % 3 === 2 ? 4 : 0)}px;height:${cell + (i > 5 ? 4 : 0)}px">
+      ${o.photos && o.photos[i] ? `<img src="${PX(o.photos[i])}" class="abs" id="${id}p${i}" style="inset:0;width:100%;height:100%;object-fit:cover">` : ''}
+      <div class="dab" id="${id}d${i}" style="left:${cell * 0.5 - r}px;top:${cell * 0.33 - r}px;width:${2 * r}px;height:${2 * r}px;opacity:${i < done ? .85 : 0}">${blot(r, i * 1.7 + 2, 'var(--daub)')}</div>${o.now === i ? `<div class="now" id="${id}now"></div>` : ''}
+      <div class="n" style="left:${cell * 0.1}px;top:${cell * 0.1}px;font-size:${cell * 0.26}px">${n}</div>
+      <div class="l" id="${id}l${i}" style="left:${cell * 0.1}px;right:${cell * 0.06}px;bottom:${cell * 0.07}px;font-size:${cell * 0.15}px">${l}</div></div>`; });
+  return h + '</div>';
+}
+function daubIn(id, i, t, t0) { const el = $(`#${id}d${i}`); if (!el) return; const k = P(t, t0, 0.22, E.outQuint); el.style.opacity = t >= t0 ? .85 : 0; el.style.transform = `scale(${lerp(1.5, 1, k)}) rotate(${lerp(-14, 0, k)}deg)`; }
+const SHOTS = {};
+// a1 · the card is the counter: 7 of 9 daubed (raw 16:15 "Number seven ... something physical")
+SHOTS.a1 = () => {
+  S.innerHTML = `<div class="big abs" style="left:110px;top:150px;width:800px;font-size:80px">9 things I do instead of doomscrolling</div>
+   <div class="mono abs" style="left:114px;top:620px;font-size:58px">07 / 09</div>
+   <div class="abs" style="left:114px;top:710px;width:760px;font-size:72px;font-weight:800;line-height:1.05">Doing something physical</div>
+` + card('c', 940, 70, 830, 7, { now: 6 });
+};
+// a2 · one square fills the frame: 01 Reading, Pexels photo die-cut inside, her line beside it (raw 3:25)
+SHOTS.a2 = () => {
+  S.innerHTML = `<div class="card" style="left:110px;top:100px;width:880px;height:880px">
+     <div class="ph" style="left:60px;top:250px;width:760px;height:570px;border-width:5px"><img src="${PX('read-eat')}"></div>
+     <div class="dab" style="left:20px;top:10px;width:300px;height:300px">${blot(150, 3, 'var(--daub)')}</div>
+     <div class="abs big" style="left:60px;top:56px;font-size:150px">01</div>
+     <div class="abs" style="left:340px;top:120px;font-size:72px;font-weight:800">Reading</div></div>
+   <div class="cr" style="left:116px;top:996px">Photo: Pexels</div>
+   <div class="abs" style="left:1060px;top:320px;width:840px;font-size:76px;font-weight:800;line-height:1.06;letter-spacing:-.015em;white-space:nowrap">"You'll barely see me<br>without a book."</div>`;
+};
+// a3 · full-bleed dauber colour for a punchline (raw 2:26 "scrolling is such an easy way out")
+SHOTS.a3 = () => {
+  S.innerHTML = `<div class="abs" style="inset:0;background:var(--ink)"></div>
+   <div class="big abs" style="left:130px;top:250px;width:1500px;font-size:130px;color:var(--ground)">Scrolling is such an easy way out.</div>
+   <div class="abs" style="left:136px;top:720px;width:1300px;font-size:56px;font-weight:700;line-height:1.2;color:var(--card)">So don't replace it with something<br>too demanding.</div>`;
+};
+// a4 · the ending: the full card, nine daubed, a line through it; her closing line (raw 20:24)
+SHOTS.a4 = () => {
+  S.innerHTML = card('c', 110, 90, 760, 9, { head: 'BINGO' }) + `<div class="abs" style="left:116px;top:1000px" class="mono"></div>
+   <div class="big abs" style="left:1000px;top:200px;width:820px;font-size:84px">Social media can never beat</div>
+   <div class="abs" style="left:1000px;top:520px;width:820px;font-size:96px;font-weight:900;line-height:1;letter-spacing:-.02em;background:var(--ink);color:var(--ground);padding:10px 26px 22px;display:inline-block">genuine connection.</div>
+   <div class="mono abs" style="left:1004px;top:780px;font-size:58px">09 / 09</div>`;
+};
+// portrait p1 · the card under a title (shorts / 9:16 film)
+SHOTS.p1 = () => {
+  S.innerHTML = `<div class="big abs" style="left:70px;top:150px;width:940px;font-size:92px">9 things I do instead of doomscrolling</div>` + card('c', 70, 560, 940, 3, { now: 2 }) +
+   `<div class="mono abs" style="left:74px;top:1660px;font-size:44px">03 / 09  Small talk</div>`;
+};
+// portrait p2 · one square: 03 small talk (raw 8:23)
+SHOTS.p2 = () => {
+  S.innerHTML = `<div class="card" style="left:70px;top:160px;width:940px;height:940px">
+     <div class="ph" style="left:56px;top:270px;width:828px;height:560px"><img src="${PX('coffee-talk')}"></div>
+     <div class="dab" style="left:16px;top:10px;width:300px;height:300px">${blot(150, 5, 'var(--daub)')}</div>
+     <div class="abs big" style="left:56px;top:58px;font-size:150px">03</div>
+     <div class="abs" style="left:340px;top:110px;font-size:78px;font-weight:800">Small talk</div></div>
+   <div class="cr" style="left:76px;top:1112px">Photo: Pexels</div>
+   <div class="abs" style="left:76px;top:1240px;width:930px;font-size:86px;font-weight:800;line-height:1.04;letter-spacing:-.015em">"I'd take awkward talking with people over scrolling."</div>`;
+};
+// motion test (raw 973.6 -> 982.4): her full frame + the card as a corner counter; on "Number" the frame splits
+// (her left, the card right), the camera pushes to square 07, "seven" daubs it, "physical" drops the photo in; pull back.
+function buildTest() {
+  S.innerHTML = `<div id="herbox" class="abs" style="left:0;top:0;width:1920px;height:1080px;overflow:hidden"><img class="feed" data-feed="her" src="../_src/raw_975.4.jpg" id="herimg" style="width:1920px;height:1080px"></div>
+   <div id="right" class="abs" style="left:1920px;top:0;width:960px;height:1080px;background:var(--ground);overflow:hidden">
+     <div id="cam" class="abs" style="inset:0;transform-origin:0 0">${card('c', 100, 60, 760, 6, { now: 6 })}</div>
+     <div id="tag" class="abs mono" style="left:106px;top:990px;font-size:58px">06 / 09</div></div>
+   <div id="mini" class="abs" style="right:40px;top:40px;width:250px">${card('m', 0, 0, 250, 6, { head: '06 / 09' })}</div>
+   <div id="cap" class="capC1" style="top:820px;font-size:60px"></div>`;
+  $$('#mini .l').forEach(e => e.style.display = 'none'); $$('#mini .n').forEach(e => e.style.fontSize = '30px');
+  $('#cl6').textContent = '';
+  return T => {
+    const t = T;
+    // split: her box slides from 1920 wide to the left half (her face stays centred), the card panel slides in
+    const k = P(t, 974.12, 0.6, E.outQuint), back = P(t, 980.9, 0.6, E.outQuint), s = k * (1 - back);
+    st('#herbox', { width: lerp(1920, 960, s) + 'px' }); st('#herimg', { transform: `translateX(${lerp(0, -480, s)}px)` });
+    st('#right', { left: lerp(1920, 960, s) + 'px' }); st('#mini', { opacity: 1 - clamp(s * 3), transform: `translateY(${-30 * clamp(s * 3)}px)` });
+    // camera: push into square 07 (bottom-left) and back out (each frame covers ~15 % of the remaining distance)
+    const push = P(t, 977.2, 0.75, E.outQuint) * (1 - P(t, 980.2, 0.6, E.outQuint));
+    const z = lerp(1, 1.12, push); st('#cam', { transform: `translate(${lerp(0, -40, push)}px, ${lerp(0, -20, push)}px) scale(${z})` });
+    daubIn('c', 6, t, 974.95); daubIn('m', 6, t, 981.0);
+    $('#m .head') && ($('#m .head').textContent = t >= 981.0 ? '07 / 09' : '06 / 09');
+    $('#tag').textContent = t >= 974.95 ? '07 / 09' : '06 / 09'; $('#tag').style.opacity = 1 - push;
+    typeOn('#cl6', 'Something physical', t, 978.55, 16);
+    const nw = $('#cnow'); if (nw) { nw.style.opacity = t >= 974.95 ? 1 : 0; nw.style.transform = `scale(${lerp(1.08, 1, P(t, 974.95, .3, E.outQuint))})`; }
+    $('#cap').innerHTML = capAt([[974.1, 'NUMBER <b>SEVEN</b>'], [975.45, 'ON MY LIST OF<br>THINGS I DO'], [976.75, 'INSTEAD OF<br>DOOMSCROLLING'], [978.3, 'DOING SOMETHING<br><b>PHYSICAL</b>'], [980.3, '']], t);
+    st('#cap', { left: s > 0.5 ? '0px' : '0px', right: s > 0.5 ? '960px' : '0px' });
+  };
+}
+let TEST = null;
+window.show = async (n) => { SHOTS[n](); await imagesReady(); };
+window.seek = async (t) => { if (!TEST) { TEST = buildTest(); await imagesReady(); } TEST(t); };
+window.READY = true;
+</script></body></html>

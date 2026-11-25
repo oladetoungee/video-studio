@@ -1,0 +1,81 @@
+URL: https://station.railway.com/community/security-practices-after-a-recent-cloud-0bf3bdea
+STATUS: loaded (http 200)
+FINAL: https://station.railway.com/community/security-practices-after-a-recent-cloud-0bf3bdea
+TITLE: Security practices after a recent cloud incident - Railway Central Station
+H1: 
+OG: Security practices after a recent cloud incident - Railway Central Station | Railway Central Station
+PUBLISHED:   MODIFIED: 
+DOC_H: 900
+
+Some deployments failing in EU West. We're investigating.
+
+View details
+
+Security practices after a recent cloud incident
+Follow
+changeshop
+HOBBY
+OP
+
+2 months ago
+
+I recently saw the discussion around the Zeabur security incident and it made me take another look at my own deployment setup.
+
+For people running production apps on Railway, what security practices do you consider essential?
+
+I’m especially interested in secrets/API keys, credential rotation, and what you do if you think a credential might have been exposed.
+
+Would be interested to hear how others handle this in real-world projects.
+
+Solved
+$10 Bounty
+1
+
+PINNED SOLUTION
+
+0x5b62656e5d
+MODERATOR
+
+2 months ago
+
+"What security practices do you consider essential?"
+
+All of the common ones (not committing .env files, rotating credentials immediately after a suspected leak, etc.
+
+"What do you do if you think a credential might have been exposed"
+
+Rotate it.
+
+1 Replies
+
+Railway
+BOT
+
+2 months ago
+
+This thread has been opened as a bounty so the community can help solve it.
+
+Status changed to Open Railway • about 2 months ago
+
+0x5b62656e5d
+MODERATOR
+
+2 months ago
+
+"What security practices do you consider essential?"
+
+All of the common ones (not committing .env files, rotating credentials immediately after a suspected leak, etc.
+
+"What do you do if you think a credential might have been exposed"
+
+Rotate it.
+
+Reply
+
+Status changed to Solved changeshop • about 2 months ago
+
+Welcome!
+
+Sign in to your Railway account to join the conversation.
+
+Login

@@ -1,0 +1,22 @@
+{
+  "direction": "Her palm up like a stop sign, close and bright; STOP in a red block, \"doomscrolling\" in a white one; a light phone mid-feed under the palm she is refusing.",
+  "kind": "photo",
+  "concept": "v3 (2026-10-16)",
+  "references": "STOP THIS! (red box) · Stop wasting evenings · Never get distracted again",
+  "thumbnail_text": "Stop doomscrolling",
+  "title": "How to Use Your Phone Less (Simple Settings That Help)",
+  "titles": [
+    "How to Use Your Phone Less (Simple Settings That Help)",
+    "Why You Can’t Put Your Phone Down at Night"
+  ],
+  "scores": "fresh critics vs her bar: r1 7.5 · r2 7 · r3 7 · r4 7",
+  "recommended": "",
+  "text": {
+    "stop": "<span class=\"bx r\" style=\"padding:.02em .1em .04em\">Stop</span>",
+    "words": "<span class=\"bx\">doomscrolling</span>"
+  },
+  "images": {
+    "photo": "../../assets/scene/warm/s_292.7.jpg"
+  },
+  "vars": {}
+}

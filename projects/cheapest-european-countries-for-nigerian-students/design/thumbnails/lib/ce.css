@@ -1,0 +1,46 @@
+/* cheapest-countries thumbnails, set 2 (2026-11-10, rollout to the HTTP standard). Type set 06 Ultra condensed (her pick 2026-11-07):
+   League Gothic caps for the big words, Inter Tight for the second line, DM Mono for small marks. House palette of this video:
+   off-black #111114, warm paper #EDE9E2, ONE accent safety orange #FF4713. Her photos: the 29 Oct shoot, outfit B (white tee, red
+   headband), through Enhance photo, class no-lift (no extra light on her). No gradients, outlines, glow or boxes behind words.
+   Editable: text in content.json "text", photos in "images", colours / positions in "vars", moves in "nudge" (lib/bind.js). */
+@font-face { font-family: 'LG'; src: url('../fonts/LeagueGothicRegular.ttf') format('truetype'); }
+@font-face { font-family: 'IT'; src: url('../fonts/InterTightSemiBold.ttf') format('truetype'); font-weight: 600; }
+@font-face { font-family: 'IT'; src: url('../fonts/InterTightBold.ttf') format('truetype'); font-weight: 700; }
+@font-face { font-family: 'IT'; src: url('../fonts/InterTightExtraBold.ttf') format('truetype'); font-weight: 800; }
+@font-face { font-family: 'IT'; src: url('../fonts/InterTightBlack.ttf') format('truetype'); font-weight: 900; }
+@font-face { font-family: 'Mono'; src: url('../fonts/DMMono-Medium.ttf') format('truetype'); font-weight: 500; }
+:root { --ink: #111114; --paper: #EDE9E2; --or: #FF4713; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1280px; height: 720px; overflow: hidden; background: #111; }
+.t { position: relative; width: 1280px; height: 720px; overflow: hidden; background: var(--ground, #111114); color: var(--fg, #fff); font-family: 'IT', sans-serif; }
+.guides .badge { position: absolute; right: 10px; bottom: 10px; width: 150px; height: 70px; border: 3px dashed #f0f; z-index: 99; }
+.z1 { z-index: 1; } .z2 { z-index: 2; } .z3 { z-index: 3; } .z4 { z-index: 4; } .z5 { z-index: 5; } .z6 { z-index: 6; }
+.abs { position: absolute; }
+.lg { position: absolute; font-family: 'LG', sans-serif; text-transform: uppercase; line-height: .88; white-space: nowrap; letter-spacing: .005em; }
+.it { position: absolute; font-family: 'IT', sans-serif; font-weight: 800; letter-spacing: -.02em; line-height: 1.05; white-space: nowrap; }
+.mono { position: absolute; font: 500 22px/1 'Mono', monospace; letter-spacing: .08em; text-transform: uppercase; white-space: nowrap; }
+.or { color: var(--or); } .ink { color: var(--ink); } .pap { color: var(--paper); }
+.shd { text-shadow: 0 4px 26px rgba(0,0,0,.45); }
+/* her room photo (2016x1512, placed by --rw/--rx/--ry) + the same frame's cut-out on top (text can sit behind her) */
+.room { position: absolute; width: var(--rw, 1500px); left: var(--rx, 0px); top: var(--ry, 0px); display: block; }
+.dimr { position: absolute; inset: 0; background: var(--dim, rgba(17,17,20,.3)); }
+.cut { position: absolute; bottom: 0; display: block; }
+.t.no-lift .scene .me-c, .t.no-lift .cut { filter: none; }
+/* bold colour + a quiet same-hue pattern (THUMBNAIL-STUDY §7): static fine lines a few % darker */
+.pat { position: absolute; inset: 0; background-color: var(--ground); background-image: repeating-linear-gradient(135deg, rgba(0,0,0,var(--pa, .05)) 0 2px, transparent 2px 11px); }
+.pat-l { position: absolute; inset: 0; background-color: var(--ground); background-image: repeating-linear-gradient(135deg, rgba(255,255,255,var(--pa, .035)) 0 2px, transparent 2px 11px); }
+/* drawn flags (plain bands, a soft shadow) */
+.flag { position: absolute; display: flex; box-shadow: 0 10px 24px rgba(0,0,0,.35); }
+.flag i { flex: 1; } .flag.h { flex-direction: column; }
+/* polaroid photo */
+.pol { position: absolute; background: #FBF9F4; padding: 10px 10px 34px; box-shadow: 0 16px 30px rgba(0,0,0,.3); }
+.pol img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.pic { position: absolute; display: block; object-fit: cover; }
+.obj { position: absolute; display: block; filter: drop-shadow(0 14px 18px rgba(0,0,0,.4)); }
+/* paper receipt */
+.rcpt { position: absolute; background: #FBF9F4; color: var(--ink); box-shadow: 0 24px 46px rgba(0,0,0,.35); padding: 26px 34px 30px; }
+.rcpt .hd { font: 500 22px/1 'Mono'; letter-spacing: .12em; text-transform: uppercase; color: #6B675F; padding-bottom: 16px; border-bottom: 2px dashed #CFC9BD; }
+.rcpt .row { display: flex; justify-content: space-between; align-items: baseline; padding: 12px 0 8px; border-bottom: 1px dashed #DCD6CA; }
+.rcpt .row .k { font: 400 52px/1 'LG'; text-transform: uppercase; letter-spacing: .01em; }
+.rcpt .row .v { font: 400 64px/1 'LG'; letter-spacing: .01em; }
+.rcpt .ft { font: 500 16px/1.35 'Mono'; letter-spacing: .04em; color: #6B675F; padding-top: 14px; text-transform: uppercase; }

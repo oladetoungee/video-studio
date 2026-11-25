@@ -1,0 +1,923 @@
+{
+ "TOTAL": 268.699,
+ "INTRO": 0.5,
+ "OUTRO": 6,
+ "FPS": 30,
+ "CUES": [
+  {
+   "name": "notify",
+   "t": 0.61,
+   "db": 0
+  },
+  {
+   "name": "shutter",
+   "t": 7.19,
+   "db": 0
+  },
+  {
+   "name": "hit",
+   "t": 9.94,
+   "db": 0
+  },
+  {
+   "name": "notify",
+   "t": 11.61,
+   "db": -2
+  },
+  {
+   "name": "tick",
+   "t": 17.61,
+   "db": -2
+  },
+  {
+   "name": "tick",
+   "t": 20.26,
+   "db": -2
+  },
+  {
+   "name": "strike",
+   "t": 22.97,
+   "db": 0
+  },
+  {
+   "name": "notify",
+   "t": 29.07,
+   "db": -4
+  },
+  {
+   "name": "tick",
+   "t": 31,
+   "db": 0
+  },
+  {
+   "name": "tick",
+   "t": 32.61,
+   "db": 0
+  },
+  {
+   "name": "tick",
+   "t": 34.63,
+   "db": 0
+  },
+  {
+   "name": "tick",
+   "t": 36.23,
+   "db": 0
+  },
+  {
+   "name": "notify",
+   "t": 40.31,
+   "db": -4
+  },
+  {
+   "name": "shutter",
+   "t": 42.211,
+   "db": 0
+  },
+  {
+   "name": "paper",
+   "t": 46.52,
+   "db": 0
+  },
+  {
+   "name": "pen",
+   "t": 50.09,
+   "db": 0
+  },
+  {
+   "name": "shutter",
+   "t": 52.47,
+   "db": 0
+  },
+  {
+   "name": "tape",
+   "t": 54.04,
+   "db": 0
+  },
+  {
+   "name": "shutter",
+   "t": 61.37,
+   "db": 0
+  },
+  {
+   "name": "shutter",
+   "t": 62.48,
+   "db": 0
+  },
+  {
+   "name": "shutter",
+   "t": 66.97,
+   "db": 0
+  },
+  {
+   "name": "paper",
+   "t": 69.29,
+   "db": 0
+  },
+  {
+   "name": "notify",
+   "t": 74.36,
+   "db": -4
+  },
+  {
+   "name": "notify",
+   "t": 76.84,
+   "db": -2
+  },
+  {
+   "name": "paper",
+   "t": 84.1,
+   "db": 0
+  },
+  {
+   "name": "paper",
+   "t": 85.72,
+   "db": 0
+  },
+  {
+   "name": "paper",
+   "t": 89.31,
+   "db": 0
+  },
+  {
+   "name": "paper",
+   "t": 90.32,
+   "db": 0
+  },
+  {
+   "name": "fall",
+   "t": 92.08,
+   "db": 0
+  },
+  {
+   "name": "hit",
+   "t": 94.21,
+   "db": 0
+  },
+  {
+   "name": "notify",
+   "t": 97.83,
+   "db": -4
+  },
+  {
+   "name": "ding",
+   "t": 102.42,
+   "db": 0
+  },
+  {
+   "name": "switch",
+   "t": 105.64,
+   "db": 0
+  },
+  {
+   "name": "hit",
+   "t": 109.66,
+   "db": -3
+  },
+  {
+   "name": "switch",
+   "t": 114.4,
+   "db": 0
+  },
+  {
+   "name": "tick",
+   "t": 118.59,
+   "db": 0
+  },
+  {
+   "name": "tick",
+   "t": 121.19,
+   "db": 0
+  },
+  {
+   "name": "tick",
+   "t": 123.99,
+   "db": 0
+  },
+  {
+   "name": "hit",
+   "t": 130.61,
+   "db": 1
+  },
+  {
+   "name": "paper",
+   "t": 137.77,
+   "db": 0
+  },
+  {
+   "name": "paper",
+   "t": 138.19,
+   "db": -1
+  },
+  {
+   "name": "paper",
+   "t": 138.61,
+   "db": -2
+  },
+  {
+   "name": "swipe",
+   "t": 142.11,
+   "db": 0
+  },
+  {
+   "name": "paper",
+   "t": 143.38,
+   "db": -1
+  },
+  {
+   "name": "paper",
+   "t": 145.17,
+   "db": 0
+  },
+  {
+   "name": "paper",
+   "t": 147.18,
+   "db": -1
+  },
+  {
+   "name": "hit",
+   "t": 150.7,
+   "db": -4
+  },
+  {
+   "name": "fall",
+   "t": 151.717,
+   "db": -2
+  },
+  {
+   "name": "paper",
+   "t": 152.21,
+   "db": 0
+  },
+  {
+   "name": "shutter",
+   "t": 158.66,
+   "db": 0
+  },
+  {
+   "name": "pen",
+   "t": 164.2,
+   "db": 0
+  },
+  {
+   "name": "paper",
+   "t": 167.7,
+   "db": 0
+  },
+  {
+   "name": "notify",
+   "t": 175.26,
+   "db": -4
+  },
+  {
+   "name": "pop",
+   "t": 178.81,
+   "db": -2
+  },
+  {
+   "name": "tick",
+   "t": 182.97,
+   "db": 0
+  },
+  {
+   "name": "tick",
+   "t": 183.96,
+   "db": 0
+  },
+  {
+   "name": "hit",
+   "t": 188.74,
+   "db": -3
+  },
+  {
+   "name": "notify",
+   "t": 190.45,
+   "db": -2
+  },
+  {
+   "name": "notify",
+   "t": 194.15,
+   "db": -2
+  },
+  {
+   "name": "clock",
+   "t": 196.51,
+   "db": 0
+  },
+  {
+   "name": "hit",
+   "t": 201.2,
+   "db": 1
+  },
+  {
+   "name": "notify",
+   "t": 203.31,
+   "db": 0
+  },
+  {
+   "name": "notify",
+   "t": 206.33,
+   "db": -3
+  },
+  {
+   "name": "hit",
+   "t": 210.85,
+   "db": -2
+  },
+  {
+   "name": "switch",
+   "t": 218.53,
+   "db": 0
+  },
+  {
+   "name": "switch",
+   "t": 219.76,
+   "db": 0
+  },
+  {
+   "name": "tape",
+   "t": 222.19,
+   "db": 0
+  },
+  {
+   "name": "paper",
+   "t": 225.65,
+   "db": 0
+  },
+  {
+   "name": "hit",
+   "t": 231.13,
+   "db": -3
+  },
+  {
+   "name": "switch",
+   "t": 233.46,
+   "db": 0
+  },
+  {
+   "name": "notify",
+   "t": 236.39,
+   "db": -2
+  },
+  {
+   "name": "hit",
+   "t": 241.11,
+   "db": 0
+  },
+  {
+   "name": "pop",
+   "t": 247.09,
+   "db": -2
+  },
+  {
+   "name": "pen",
+   "t": 249.53,
+   "db": 0
+  },
+  {
+   "name": "paper",
+   "t": 251.36,
+   "db": 0
+  },
+  {
+   "name": "riser",
+   "t": 254.865,
+   "db": 0
+  },
+  {
+   "name": "fall",
+   "t": 255.867,
+   "db": 0
+  },
+  {
+   "name": "switch",
+   "t": 256.43,
+   "db": 0
+  },
+  {
+   "name": "tape",
+   "t": 262.02,
+   "db": 0
+  },
+  {
+   "name": "type",
+   "t": 264.48,
+   "db": 6
+  }
+ ],
+ "SCENES": [
+  {
+   "n": 1,
+   "id": "open",
+   "start": 0,
+   "end": 9.87,
+   "ground": "lil",
+   "label": "open",
+   "trans": "cut"
+  },
+  {
+   "n": 2,
+   "id": "cruel",
+   "start": 9.87,
+   "end": 11.54,
+   "ground": "lil2",
+   "label": "cruel",
+   "trans": "cut"
+  },
+  {
+   "n": 3,
+   "id": "not-a-fight",
+   "start": 11.54,
+   "end": 17.56,
+   "ground": "lil",
+   "label": "not-a-fight",
+   "trans": "cut"
+  },
+  {
+   "n": 4,
+   "id": "questions",
+   "start": 17.56,
+   "end": 23.97,
+   "ground": "lil2",
+   "label": "questions",
+   "trans": "cut"
+  },
+  {
+   "n": 5,
+   "id": "thought-process",
+   "start": 23.97,
+   "end": 31,
+   "ground": "lil",
+   "label": "thought-process",
+   "trans": "cut"
+  },
+  {
+   "n": 6,
+   "id": "meter",
+   "start": 31,
+   "end": 37.34,
+   "ground": "lil2",
+   "label": "meter",
+   "trans": "cut"
+  },
+  {
+   "n": 7,
+   "id": "wording",
+   "start": 37.34,
+   "end": 42.181,
+   "ground": "lil",
+   "label": "wording",
+   "trans": "cut"
+  },
+  {
+   "n": 8,
+   "id": "page-rule",
+   "start": 42.181,
+   "end": 46.44,
+   "ground": "lil2",
+   "label": "page-rule",
+   "trans": "cut"
+  },
+  {
+   "n": 9,
+   "id": "lift",
+   "start": 46.44,
+   "end": 50.3,
+   "ground": "lil",
+   "label": "lift",
+   "trans": "cut"
+  },
+  {
+   "n": 10,
+   "id": "ended",
+   "start": 50.3,
+   "end": 54.34,
+   "ground": "lil2",
+   "label": "ended",
+   "trans": "cut"
+  },
+  {
+   "n": 11,
+   "id": "chat-ends",
+   "start": 54.34,
+   "end": 55.54,
+   "ground": "lil",
+   "label": "chat-ends",
+   "trans": "cut"
+  },
+  {
+   "n": 12,
+   "id": "other-side",
+   "start": 55.54,
+   "end": 60.38,
+   "ground": "lil2",
+   "label": "other-side",
+   "trans": "cut"
+  },
+  {
+   "n": 13,
+   "id": "new-chat",
+   "start": 60.38,
+   "end": 62.45,
+   "ground": "lil",
+   "label": "new-chat",
+   "trans": "cut"
+  },
+  {
+   "n": 14,
+   "id": "page-constitution",
+   "start": 62.45,
+   "end": 66.2,
+   "ground": "lil2",
+   "label": "page-constitution",
+   "trans": "cut"
+  },
+  {
+   "n": 15,
+   "id": "moral-chat",
+   "start": 66.2,
+   "end": 66.94,
+   "ground": "lil",
+   "label": "moral-chat",
+   "trans": "cut"
+  },
+  {
+   "n": 16,
+   "id": "page-moral",
+   "start": 66.94,
+   "end": 69.21,
+   "ground": "lil2",
+   "label": "page-moral",
+   "trans": "cut"
+  },
+  {
+   "n": 17,
+   "id": "two-voices",
+   "start": 69.21,
+   "end": 76.77,
+   "ground": "lil",
+   "label": "two-voices",
+   "trans": "cut"
+  },
+  {
+   "n": 18,
+   "id": "leadership",
+   "start": 76.77,
+   "end": 81.46,
+   "ground": "lil2",
+   "label": "leadership",
+   "trans": "cut"
+  },
+  {
+   "n": 19,
+   "id": "stickers",
+   "start": 81.46,
+   "end": 93.62,
+   "ground": "lil",
+   "label": "stickers",
+   "trans": "cut"
+  },
+  {
+   "n": 20,
+   "id": "tool",
+   "start": 93.62,
+   "end": 95.57,
+   "ground": "lil2",
+   "label": "tool",
+   "trans": "cut"
+  },
+  {
+   "n": 21,
+   "id": "amazing",
+   "start": 95.57,
+   "end": 101.84,
+   "ground": "lil",
+   "label": "amazing",
+   "trans": "cut"
+  },
+  {
+   "n": 22,
+   "id": "calculation",
+   "start": 101.84,
+   "end": 105.61,
+   "ground": "lil2",
+   "label": "calculation",
+   "trans": "cut"
+  },
+  {
+   "n": 23,
+   "id": "believe",
+   "start": 105.61,
+   "end": 110.64,
+   "ground": "nite",
+   "label": "believe",
+   "trans": "cut"
+  },
+  {
+   "n": 24,
+   "id": "conversation",
+   "start": 110.64,
+   "end": 114.37,
+   "ground": "lil2",
+   "label": "conversation",
+   "trans": "cut"
+  },
+  {
+   "n": 25,
+   "id": "living",
+   "start": 114.37,
+   "end": 118.54,
+   "ground": "nite",
+   "label": "living",
+   "trans": "cut"
+  },
+  {
+   "n": 26,
+   "id": "impose",
+   "start": 118.54,
+   "end": 132.02,
+   "ground": "lil2",
+   "label": "impose",
+   "trans": "cut"
+  },
+  {
+   "n": 27,
+   "id": "attributes",
+   "start": 132.02,
+   "end": 136.73,
+   "ground": "lil",
+   "label": "attributes",
+   "trans": "cut"
+  },
+  {
+   "n": 28,
+   "id": "powerful",
+   "start": 136.73,
+   "end": 142.1,
+   "ground": "lil2",
+   "label": "powerful",
+   "trans": "cut"
+  },
+  {
+   "n": 29,
+   "id": "slope",
+   "start": 142.1,
+   "end": 152.18,
+   "ground": "lil",
+   "label": "slope",
+   "trans": "cut"
+  },
+  {
+   "n": 30,
+   "id": "illusion",
+   "start": 152.18,
+   "end": 158.63,
+   "ground": "lil2",
+   "label": "illusion",
+   "trans": "cut"
+  },
+  {
+   "n": 31,
+   "id": "page-suleyman",
+   "start": 158.63,
+   "end": 167.67,
+   "ground": "lil",
+   "label": "page-suleyman",
+   "trans": "cut"
+  },
+  {
+   "n": 32,
+   "id": "digital-person",
+   "start": 167.67,
+   "end": 178.78,
+   "ground": "lil2",
+   "label": "digital-person",
+   "trans": "cut"
+  },
+  {
+   "n": 33,
+   "id": "interesting",
+   "start": 178.78,
+   "end": 182.97,
+   "ground": "lil",
+   "label": "interesting",
+   "trans": "cut"
+  },
+  {
+   "n": 34,
+   "id": "chain",
+   "start": 182.97,
+   "end": 190.42,
+   "ground": "lil2",
+   "label": "chain",
+   "trans": "cut"
+  },
+  {
+   "n": 35,
+   "id": "what-if",
+   "start": 190.42,
+   "end": 196.48,
+   "ground": "lil",
+   "label": "what-if",
+   "trans": "cut"
+  },
+  {
+   "n": 36,
+   "id": "nine-pm",
+   "start": 196.48,
+   "end": 197.43,
+   "ground": "nite",
+   "label": "nine-pm",
+   "trans": "cut"
+  },
+  {
+   "n": 37,
+   "id": "tired",
+   "start": 197.43,
+   "end": 201.14,
+   "ground": "lil",
+   "label": "tired",
+   "trans": "cut"
+  },
+  {
+   "n": 38,
+   "id": "tired-big",
+   "start": 201.14,
+   "end": 203.24,
+   "ground": "lil2",
+   "label": "tired-big",
+   "trans": "cut"
+  },
+  {
+   "n": 39,
+   "id": "why-not",
+   "start": 203.24,
+   "end": 206.26,
+   "ground": "lil",
+   "label": "why-not",
+   "trans": "cut"
+  },
+  {
+   "n": 40,
+   "id": "offender",
+   "start": 206.26,
+   "end": 210.86,
+   "ground": "lil2",
+   "label": "offender",
+   "trans": "cut"
+  },
+  {
+   "n": 41,
+   "id": "offender-big",
+   "start": 210.86,
+   "end": 211.68,
+   "ground": "lil",
+   "label": "offender-big",
+   "trans": "cut"
+  },
+  {
+   "n": 42,
+   "id": "slave-owner",
+   "start": 211.68,
+   "end": 216.6,
+   "ground": "lil2",
+   "label": "slave-owner",
+   "trans": "cut"
+  },
+  {
+   "n": 43,
+   "id": "selling",
+   "start": 216.6,
+   "end": 218.48,
+   "ground": "lil",
+   "label": "selling",
+   "trans": "cut"
+  },
+  {
+   "n": 44,
+   "id": "night",
+   "start": 218.48,
+   "end": 219.71,
+   "ground": "nite",
+   "label": "night",
+   "trans": "cut"
+  },
+  {
+   "n": 45,
+   "id": "day",
+   "start": 219.71,
+   "end": 220.51,
+   "ground": "lil",
+   "label": "day",
+   "trans": "cut"
+  },
+  {
+   "n": 46,
+   "id": "reasoning",
+   "start": 220.51,
+   "end": 223.06,
+   "ground": "lil2",
+   "label": "reasoning",
+   "trans": "cut"
+  },
+  {
+   "n": 47,
+   "id": "own-sake",
+   "start": 223.06,
+   "end": 225.62,
+   "ground": "lil",
+   "label": "own-sake",
+   "trans": "cut"
+  },
+  {
+   "n": 48,
+   "id": "sake",
+   "start": 225.62,
+   "end": 233.43,
+   "ground": "lil2",
+   "label": "sake",
+   "trans": "cut"
+  },
+  {
+   "n": 49,
+   "id": "heart",
+   "start": 233.43,
+   "end": 236.32,
+   "ground": "nite",
+   "label": "heart",
+   "trans": "cut"
+  },
+  {
+   "n": 50,
+   "id": "because",
+   "start": 236.32,
+   "end": 241.05,
+   "ground": "lil2",
+   "label": "because",
+   "trans": "cut"
+  },
+  {
+   "n": 51,
+   "id": "no",
+   "start": 241.05,
+   "end": 243.18,
+   "ground": "lil",
+   "label": "no",
+   "trans": "cut"
+  },
+  {
+   "n": 52,
+   "id": "why",
+   "start": 243.18,
+   "end": 249.95,
+   "ground": "lil2",
+   "label": "why",
+   "trans": "cut"
+  },
+  {
+   "n": 53,
+   "id": "overall",
+   "start": 249.95,
+   "end": 251.33,
+   "ground": "lil",
+   "label": "overall",
+   "trans": "cut"
+  },
+  {
+   "n": 54,
+   "id": "end-slope",
+   "start": 251.33,
+   "end": 256.4,
+   "ground": "lil2",
+   "label": "end-slope",
+   "trans": "cut"
+  },
+  {
+   "n": 55,
+   "id": "i-dont-know",
+   "start": 256.4,
+   "end": 262.05,
+   "ground": "nite",
+   "label": "i-dont-know",
+   "trans": "cut"
+  },
+  {
+   "n": 56,
+   "id": "ended-big",
+   "start": 262.05,
+   "end": 264.25,
+   "ground": "lil2",
+   "label": "ended-big",
+   "trans": "cut"
+  },
+  {
+   "n": 57,
+   "id": "end-card",
+   "start": 264.25,
+   "end": 268.699,
+   "ground": "nite",
+   "label": "end-card",
+   "trans": "cut"
+  }
+ ]
+}

@@ -1,0 +1,23 @@
+{
+ "direction": "Split: left half signal green with quiet lines (fully funded), right half graphite (partial). The question across the top; her cut-out in the middle, arms crossed, eyes on the viewer. Under each side the real example: Erasmus Mundus pays tuition + €1,400 a month; the NL Scholarship is €5,000 for the first year (studyinnl.org). Follows: board f-kind split (the topic is a contrast), viral 3 (framework drawn).",
+ "thumbnail_text": "FULLY FUNDED OR PARTIAL? + one real example each side",
+ "titles": [
+  "What a Fully Funded Scholarship in Europe Really Pays",
+  "Scholarships for African Students in Europe: 2027 Deadlines",
+  "Fully Funded Scholarships in Europe for Africans (2027)"
+ ],
+ "kind": "flat",
+ "class": "no-lift",
+ "text": {
+  "head": "Fully funded or partial?",
+  "lv": "tuition +<br>€1,400 a month",
+  "lk": "Fully funded",
+  "rv": "€5,000<br>once",
+  "rk": "Partial"
+ },
+ "images": {
+  "me": "../../assets/shoot/cut-1612.png"
+ },
+ "vars": {},
+ "title": "What a Fully Funded Scholarship in Europe Really Pays"
+}

@@ -1,0 +1,48 @@
+{
+ "direction": "Pale grey ground, she large on the right (shoot 1554, hand on her chin, unconvinced; hard-masked). Two lines of calm black lowercase on the left, and under them a dark browser-storage panel (key / value, no borders): email, a login token in red, cart. Anyone's script can read it.",
+ "thumbnail_text": "anyone can / read this. (panel: localStorage)",
+ "kind": "cut-out",
+ "recommended": false,
+ "titles": [
+  "Any Script on Your Page Can Read localStorage",
+  "Is localStorage Safe? I Checked Who Can Read It",
+  "localStorage vs Cookies: Which One Can Scripts Read?"
+ ],
+ "text": {
+  "hd": "anyone can<br>read this.",
+  "ph": "localStorage",
+  "k1": "email",
+  "v1": "ada@mail.com",
+  "k2": "token",
+  "v2": "eyJhbGciOi&hellip;",
+  "k3": "",
+  "v3": ""
+ },
+ "images": {
+  "me": "../../assets/shoot/1554-hard.png"
+ },
+ "vars": {
+  "--ground": "#E9E7E3"
+ },
+ "board": "Thumbnails 31 (pin-03-02 \"no one cares.\": pale grey ground, two lines of black lowercase sans on the left, the speaker large on the right)",
+ "fonts": "Font 58 (thumbs-03: Inter Tight, #111111 on #E9E7E3, the type of Thumbnails 31 itself; set at 600 for weight)",
+ "colours": "Font 58 specimen: #111111 on #E9E7E3 (the open padlock drawn in the same ink)",
+ "title": "Any Script on Your Page Can Read localStorage",
+ "class": "no-lift",
+ "scores": "cold critic 2026-11-19 round 3: 7 / 6",
+ "titles_before_2026_11_19": [
+  "Is localStorage Safe? Who Can Read Your Data",
+  "localStorage vs Cookies: Which Is More Secure?",
+  "localStorage vs sessionStorage vs Cookies (What Goes Where)"
+ ],
+ "text_before_2026_11_19": {
+  "hd": "localStorage<br>isn&rsquo;t private.",
+  "ph": "Local storage",
+  "k1": "email",
+  "v1": "ada@mail.com",
+  "k2": "token",
+  "v2": "eyJhbGciOi&hellip;",
+  "k3": "cart",
+  "v3": "2 items"
+ }
+}

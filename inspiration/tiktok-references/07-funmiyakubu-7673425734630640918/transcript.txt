@@ -1,0 +1,132 @@
+[00:00] Two weeks ago, OpenAI flew some influencers to a luxury retreat in upstate New York and gave them farm to table dinners, beekeeping and painting workshops, as well as classes on how to use charge GPT better.
+[00:10] The videos that came out of it were just what you would expect from a brand trip, which is very much girly pop high class aesthetic.
+[00:15] But the people in the comments were not happy.
+[00:17] One creator got told she sold us all for a nice hotel room.
+[00:20] Another got asked if she was going to film a get ready with me while she told the data center.
+[00:24] Comments like these even led to one of them deleting the video she'd made.
+[00:27] And the anger underneath those comments isn't coming from nowhere because people hate AI, like really really hate it with passion.
+[00:33] But besides that, the people at that retreat were posted from a luxury suite in the same period that OpenAI was discussing a deal worth around $500 billion to build one of the largest data centers in the world in Ohio.
+[00:44] Water becomes cars and electricity bills shoot off.
+[00:46] So watching someone do a wellness weekend with the same company's money while that's happening feels obscene and I get it.
+[00:51] But to be very very honest, you people are starting to do too much and I'm not going to lie like you're actually turning into all those weird internet trolls.
+[00:59] Because logically you should know that retreat is going to have zero effect on whether the data center in Ohio actually gets built.
+[01:05] Whether it's 8 influencers, 0 influencers, 800, it doesn't matter because they are going to build a data center and not one of those creators can vote against it.
+[01:13] A lot of people believe that if they shame the people who use AI, so the YouTuber will use it to research and script, Jane Doe will use it to make YouTube graphics or the influencer will text the trip.
+[01:22] Then the companies will fill it and pull back, which is actually the funniest thing ever.
+[01:26] Every time a technology's harm gets too big to ignore, the responsibility for them gets moved off the company that built the thing onto you, the consumer.
+[01:33] And at this point, it's just tired because it has happened across so many things and nothing has changed.
+[01:37] The personal carbon footprint is a number popularized by an oil company that's supposed to make you feel bad about your flight, your long showers and even the meat you eat.
+[01:46] Back in 2004, BP, British Petroleum, paid an ad agency around $200 million to push the idea so that you could sit and tally up your personal share of a crisis that BP itself was helping to cause.
+[01:57] We all ran with it and shamed others for their carbon footprint, which is what these companies want.
+[02:01] The guilt gets pointed at the individual so that the regulation never reaches the company.
+[02:05] The same thing happened with bottles. Recycling, as we know it, was shaped by a group called Keep America Beautiful that was founded in 1953 by the American Can Company and the Owens Illinois Glass Company, so the people who actually made the cans and the bottles.
+[02:17] They are the ones who popularized the word "liter bog", putting the blame for litter on the individual litterer.
+[02:22] And in 1971, they ran the famous Crying Indian advert, at the same time as they were lobbying against bottle deposit laws that would have made the packaging companies responsible for their own waste.
+[02:32] Also, the plastics industry spent decades telling you to recycle, while knowing it wouldn't really work.
+[02:37] Industry documents from the 1970s show officials describing large-scale plastic recycling as costly and unlikely to ever be economically viable.
+[02:44] And then from the late 1980s, that same industry spent tens of millions of dollars on adverts, telling the public that plastic could and should be recycled.
+[02:52] For my insiders, I've said the whole point of promoting recycling was to keep people comfortable buying more plastic.
+[02:57] And again, we ran with it and shamed everyone we saw with a plastic bottle, with no regard for whether it was just a hot day and they really needed that water.
+[03:04] Or maybe they were on their way to a party and they wouldn't have made sense to go with their personal bottle.
+[03:09] So we joined the companies in manufacturing a sense of personal guilt, attached it to an everyday behavior, and used it to keep the pressure off the companies and off the government who could actually regulate them.
+[03:18] When it comes to AI, people speak like a bucket of water is being wasted just based on one prompt such as GPT.
+[03:23] For researchers at UC Riverside estimated back in 2023 that a short exchange of 10 to 50 questions could use around 500 milliliters, which is basically a full bottle.
+[03:32] And analysts argue that the viral figures on social media are inflated by anywhere from 50 to 250 times, so the number you're shaming people with is not even real.
+[03:40] Also, we are all contributing to the issue in some way, whether you agree or not.
+[03:44] The same data centers you make or does feel guilty about for AI have always existed.
+[03:48] AI has been running inside the products you've been using for years, the spam filter on your email, the fraud detection on your bank card, the thing that picks your roots on maps.
+[03:56] Generative AI, which is the chatbot you can actually talk to, is what is new.
+[04:00] But the underlying technology and the data centers behind it were already woven through your life.
+[04:05] And those same data centers are the ones storing your photos, streaming your shows, backing up your phone.
+[04:09] So should we shame you for taking pictures of the same sunset a million times?
+[04:13] The trolling was never really about measuring harm or protecting communities. This was about measuring purity, sorting people into clean and don't clean, and trying to feel superior.
+[04:21] When your camera rolls in, there's no space and you buy more cloud storage. That's a data center.
+[04:25] While that doesn't make AI's footprint identical, it does mean that putting the person using chargeability on their microscope, while the entire digital economy runs on the same infrastructure, is the same thing we did with recycling.
+[04:36] Yes, plastic bottles are an issue, but if I go to your house, I'm sure I'll see hundreds of other items made with plastic.
+[04:42] From your food containers, to your toothbrush, to your soap bottles. So why are you shaming others when you keep buying soap bottles, but never the refillable ones?
+[04:49] Now, I'm not saying there is nothing wrong with data centers and water. Like, they are a very, very big issue.
+[04:54] According to the International Energy Agency, data centers globally used around 560 billion liters of water in 2023, and that's projected to roughly double to about 1.2 trillion liters by 2030.
+[05:05] Also, data centers are only around 1.5% of global electricity demand, but in the places they cluster, the local numbers get enormous.
+[05:12] In Ireland, it's about 22% of the electricity, which is so crazy. However, that's not a prompt causing it.
+[05:17] That's a decision made in a ballroom about where to build a facility, and whose water and whose power it gets to use.
+[05:23] Anyway, so if shaming ourselves isn't the answer, what can actually change things?
+[05:26] Like with everything else, the thing that actually works is boring, and not many people are doing it because they would rather be in the comfort of their homes, trolling others.
+[05:33] According to S&P Global, community opposition, meaning people organizing, showing up to local meetings and pressuring officials, blocked or delayed around $98 billion worth of data center projects between March and June of 2025 alone.
+[05:46] At least 25 projects have been canceled in the last three years because of this movement.
+[05:50] New York passed a moratorium on new data centers, Maine is set to pass the first statewide one, states like Minnesota have brought in water permitting rules specifically for these facilities, and more than 30 states are moving on those electricity tariffs.
+[06:03] None of that came from a comment section, all of it came from people aiming at the level where the decision actually sits, which is the government and regulation.
+[06:10] And when you look at what the shaming actually achieved, it is basically nothing.
+[06:13] Because in the single loudest wave of AI backlash we've ever had, usage didn't drop, it doubled.
+[06:18] OpenAI reported its weekly users going from about $400 million at the start of 2025 to about $900 million by early 2026.
+[06:25] Pew found that the share of Americans who feel more concerned than excited about AI actually rose to about 50% at the very same time as the share of adults using AI chatbots climbed to about 49%.
+[06:36] People are worried, but they are using it more at the same time, so you're not going to shame that out of existence.
+[06:40] The people who blocked $98 billion of projects weren't the global majority, they were organized locals and that is the difference. Organized locals blocked $98 billion, and the comment section shaming people blocked nothing.
+[06:51] Which is why going after an influencer was never going to work, because if she had turned down the trip, OpenAI has a whole roster of other creators, and the next one will go.
+[06:59] Creators with millions of followers who genuinely hate AI haven't been able to convert their own audiences.
+[07:04] So the idea that a pile-on in the comments will convert millions of strangers across the entire globe, that you have never even met, was never realistically logical, it was just trolling.
+[07:14] And what really gets me is that we are all part of the demand we are pretending to be angry about.
+[07:17] You know how those CEOs love saying AI is going to help us more faster and do more.
+[07:21] People hate that framing, which is fair, because do more faster might free you up to do other things at the company, but it also usually means that somebody else loses their job.
+[07:29] So I'm a small creator and I get messages asking why I'm not posting enough or why my consistency is on and off.
+[07:34] First of all, my most popular videos like this one take me a long ass time to create.
+[07:38] I have a full-time job, I have courses compulsory to my role, I have things I learned on the side, I have just started a 15 month apprenticeship, I am still somebody's child, somebody's sibling, somebody's friend, somebody's auntie, I have a lot of things I need to show up to in my life.
+[07:51] So the maths of producing constantly without the team behind you is just brutal.
+[07:55] Audience wants more faster always and then some of that same audience treats the tools that make more and faster survivable as a moral failing.
+[08:02] What all that pressure produces is people using AI to keep up and what a lot of the internet has decided to do about that is hunt for the tale.
+[08:09] Like people don't actually sit down to enjoy content anymore, like they actually do not enjoy the videos you are watching because they are just always on guard waiting for you to see a typical AI phrase and suddenly they are calling you out even though it is a phrase that anybody would have used at any point in time.
+[08:23] Like obviously I understand that they are setting phrases that only AI uses.
+[08:26] Second, Green for example, in one of his videos he used the phrase "I appreciate the pushback" and viewers took that as proof that AI wrote his script.
+[08:34] Green said the line was actually aimed at his guest on the episode, not a chatbot at all.
+[08:38] But the accusation had already done its damage and he ended up posting an apology and announced that he would be making fewer videos.
+[08:44] Green did also say that he had used chargepity to find papers and resources for that script.
+[08:48] But using AI to locate sources is not the same thing as AI writing your work and he says that the words and the takes were his.
+[08:54] Again, I'm just like, can people actually calm down?
+[08:56] Using AI to find sources faster is the least controversial thing in the world because it is just the next step in something we have been doing for decades.
+[09:03] Our parents went from library to library pulling down enormous books and reading 20 to 30 pages of a chapter just to find the one paragraph that they needed.
+[09:10] Then the internet let us use Ctrl+F to search inside the text and jump straight to it, now AI pulls the papers for you.
+[09:16] Every step just made finding things faster and nobody ever wrote a modified apology for using Google instead of going to a library.
+[09:23] Anyway, me personally, I use AI. I use it a lot. I use it everywhere.
+[09:26] And I'm very honest about this on my page whether that's on TikTok or YouTube anywhere.
+[09:31] And if you don't like that about me, you cannot follow.
+[09:33] I use AI for my content. I use it to understand the technical courses I'm taking.
+[09:36] I even use it to know if the color of my dog's poo is a cause for concern.
+[09:40] And above all, I use it at my job and I cannot avoid it.
+[09:43] We have mandatory AI training. Everyone on my team has a cloud account that my company pays for and we're heavily encouraged to use it to save time.
+[09:50] So are you expecting me to not quit my job?
+[09:52] Also, my job is about half technical and half commercial and I am trying to develop the technical half.
+[09:57] So I use AI to understand it so I can do my job well.
+[10:00] In meetings, I bring in engineers to lead the deep technical discussions and a lot of them are brilliant, like absolutely brilliant.
+[10:06] But they are also genuinely bad at talking to customers or writing a clear email.
+[10:10] So if AI helps them do the part that isn't their strength and it helps me do the part that isn't mine,
+[10:15] why is there anything anyone should be ashamed of when neither of us is trying to become the other?
+[10:19] I don't want their role. They don't want mine, but there are things we need to understand or be able to about each other's when required.
+[10:24] And all of this shaming reminds me of a conversation that I had with one of my close friends that works at Meta.
+[10:29] And they told me that one of their friends had expressed that they did not like the fact that they were working at Meta just because of all the harmful things that Mark Zuckerberg has done.
+[10:37] And when I heard that I think I laughed, to be honest, I was confused why I actually laughed.
+[10:42] Because people actually forget that some of us are trying to build a career at this company's life.
+[10:46] That is what we are actively trying to do.
+[10:48] My friend used to code for 12 hours a day.
+[10:51] He was head on set from Nigeria to the UK.
+[10:53] He's earning way more than he ever has.
+[10:55] And you are expecting him to quit his job because of because of the CEO of the company like.
+[11:00] And you're coming to express your displeasure on Instagram.
+[11:03] On Instagram, that is where you are saying these things like maybe start by deleting all your Meta accounts like if it is actually hurting you that bad, maybe start from there.
+[11:11] Anyway, beyond all these little things we're doing, AI is also actually saving lives.
+[11:15] There's a model called GRAPE built by Alibaba's research arm together with the Cancer House between China.
+[11:20] It was trained on nearly 100,000 scans and can spot early stomach cancer on an ordinary CT scan, which is something that human radiologists often miss.
+[11:28] In 2025, it earned a breakthrough device designation from the US FDA, which is the first time a Chinese medical AI got one.
+[11:35] There are also tools like Be My Eyes that let a blind person point a phone at the world and have it described back to them in real time.
+[11:41] This is the same category of technology as the chatbots people are shaming others for in the comments.
+[11:45] So do you also want to shame the people with disabilities?
+[11:48] Because it's the same data center, it's the same water, it's the same electricity like, is it not?
+[11:52] Anyway, the final thing I want to talk about is AI taking jobs.
+[11:55] The World Economic Forum argues that by 2030, the big shift reshaping work such as capitalism, the natural progression of the human race, as well as AI,
+[12:03] will wipe out around 92 million jobs, but it will also create about 170 million new ones.
+[12:09] Every single time a technology has taken a category of work off our hands, we haven't just sat still doing less of the same thing, we have found new things to do.
+[12:17] We went from farming with a hole and cutlass to machines that let a handful of people to feed the whole country.
+[12:22] And we didn't run out of work, we invented entirely new kinds of it.
+[12:26] If we're still using hole and cutlass to farm, like would anybody still want to be in that industry like BFFR?
+[12:31] AI will take the emails and the first drafts and people will make things with that time that don't even exist yet.
+[12:36] New formats, new research, new work, because that's just the evolution of this goddamn earth and you cannot stop it.
+[12:42] And whether that future turns out good for you or it just turns into more extraction depends on what captures it,
+[12:47] which gets decided by regulation and power and not by whether you feel guilty enough to stop typing.

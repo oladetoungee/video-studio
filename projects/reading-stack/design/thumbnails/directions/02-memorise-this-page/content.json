@@ -1,0 +1,32 @@
+{
+  "direction": "Book-structure visual: contents page, one chapter circled (faceless)",
+  "title": "Do This Before You Read Any Non-Fiction Book",
+  "text": {
+    "line1": "Memorise",
+    "line2": "<em>this</em>",
+    "caption": "",
+    "cardHead": "Contents",
+    "cardBook": "Baratta",
+    "line3": "page."
+  },
+  "chapters": [
+    "What does it mean to be critical?",
+    "Different ways to show your criticality",
+    "Understanding score bands and developing your skills within academic assessment",
+    "The connection between critical reading, critical thinking and critical writing",
+    "How to structure your essays",
+    "How to structure your dissertation",
+    "Additional assessments to consider",
+    "Four ways to approach interpretation",
+    "How to use quotes, paraphrase and summarise",
+    "How to use critical language in your assessments"
+  ],
+  "circle": -1,
+  "note": "Chapter titles exactly as she reads them aloud in the video (How to Read and Write Critically, Alex Baratta). Long ones are cut with an ellipsis by the card width.",
+  "vars": {
+    "--cx": "676px",
+    "--cy": "50px",
+    "--cw": "560px",
+    "--rot": "-2.5deg"
+  }
+}

@@ -1,0 +1,66 @@
+{
+ "title": "\"Local Standards for Sample Size at CHI\" by Kelly Caine",
+ "h1": "Local Standards for Sample Size at CHI",
+ "h1y": 531.796875,
+ "found": {
+  "most common sample size": [
+   [
+    828.109375,
+    974.3125,
+    32.078125,
+    16
+   ],
+   [
+    436,
+    992.3125,
+    133.234375,
+    16
+   ]
+  ],
+  "916,000": [
+   [
+    724.765625,
+    974.3125,
+    49.96875,
+    16
+   ]
+  ]
+ },
+ "H": 1600,
+ "focus": {
+  "most common sample size": {
+   "file": "caine__most-common-sample-size.png",
+   "top": 454.3125,
+   "rects": [
+    [
+     828.109375,
+     520,
+     32.078125,
+     16
+    ],
+    [
+     436,
+     538,
+     133.234375,
+     16
+    ]
+   ]
+  },
+  "916,000": {
+   "file": "caine__916-000.png",
+   "top": 454.3125,
+   "rects": [
+    [
+     724.765625,
+     520,
+     49.96875,
+     16
+    ]
+   ]
+  }
+ },
+ "clipTop": 411.796875,
+ "scale": 1.5,
+ "url": "https://open.clemson.edu/computing_pubs/28",
+ "captured": "2026-11-02T19:32:35.430Z"
+}

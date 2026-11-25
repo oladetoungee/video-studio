@@ -1,0 +1,44 @@
+{
+ "direction": "Flat navy. FREE TRIAL TRAP in heavy condensed cream caps across the top. Underneath on the left a phone with a generic sign-up screen: \"7 days FREE\", a \"Start free trial\" button and \"cancel anytime*\", and beside it, with an arrow: \"then €79.99 a year\". Her cut-out on the right (photo 1557, calm side-eye).",
+ "thumbnail_text": "FREE TRIAL TRAP",
+ "kind": "cut-out",
+ "recommended": false,
+ "titles": [
+  "Free Trials Are a Trap. Here's How They Get You",
+  "I Got Charged for a Whole Year After a Free Trial",
+  "Dark Patterns Explained: 11 Tricks Websites Use on You"
+ ],
+ "text": {
+  "hd": "FREE TRIAL TRAP",
+  "big": "7 days<br>FREE",
+  "btn": "Start free trial",
+  "fine": "",
+  "note": "then €79.99<br>a year"
+ },
+ "images": {
+  "cut": "../../assets/shoot/1557-cut.png"
+ },
+ "vars": {
+  "--ground": "#17357B"
+ },
+ "board": "Thumbnails 98 (yt-45 \"IT'S A TRAP\": three chunky words in one line across the top, the picture of the trap underneath on the left, the creator on the right)",
+ "fonts": "Font 5 (Anton, Design 368) + Font 112 (Inter Tight, Design 116: white on navy) for the note; phone text = Font 58",
+ "colours": "Font 5 specimen (Design 368): ground #17357B, words #D8CDBB; note #FFFFFF (Font 112)",
+ "title": "Free Trials Are a Trap. Here's How They Get You",
+ "class": "no-lift",
+ "scores": "rework 2026-11-19 cold critic R1 7/7, R2 7/8, R3 7/8; note bigger, headline off the top edge",
+ "nudge": {
+  "arrow": {
+   "dx": 61,
+   "dy": 6
+  },
+  "note": {
+   "dx": 57,
+   "dy": -21
+  },
+  "hd": {
+   "dx": 34,
+   "dy": -2
+  }
+ }
+}

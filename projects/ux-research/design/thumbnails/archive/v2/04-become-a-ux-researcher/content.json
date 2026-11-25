@@ -1,0 +1,23 @@
+{
+  "direction": "Getting into the field, literally: a big blank staff badge on a lanyard with her calm face as the badge photo, next to the huge words 'Become a UX Researcher'. Off-black ground, green as the only colour. One focal point.",
+  "thumbnail_text": "Become a UX Researcher",
+  "titles": [
+    "How to Get Into UX Research With No Experience",
+    "What Is UX Research? A Beginner's Path Into the Field",
+    "How to Become a UX Researcher (From a Master's Student)"
+  ],
+  "text": {
+    "hd": "Become a<br><span class=\"acc\">UX</span><br><span class=\"acc\">Researcher</span>"
+  },
+  "images": {
+    "me": "../../assets/cut/gbemi-direct-hard.png"
+  },
+  "vars": {
+    "--ground": "#111114",
+    "--fg": "#FFFFFF",
+    "--accent": "#22E08A"
+  },
+  "scores": "critic vs her thumbnail: R1 6.5 · R2 7 · R3 8 · R4 8 · R5 8 · R6 8 · R7 7",
+  "recommended": true,
+  "title": "How to Get Into UX Research With No Experience"
+}

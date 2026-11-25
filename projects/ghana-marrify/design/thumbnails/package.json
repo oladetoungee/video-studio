@@ -1,0 +1,8 @@
+{
+  "name": "ghana-marrify-thumbnails",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "puppeteer-core": "^24.43.1"
+  }
+}

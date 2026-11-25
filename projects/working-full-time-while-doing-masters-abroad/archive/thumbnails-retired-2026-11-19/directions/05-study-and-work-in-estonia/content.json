@@ -1,0 +1,29 @@
+{
+  "text": {
+    "a": "Job + master's in",
+    "b": "Estonia"
+  },
+  "images": {
+    "bg": "../../assets/px/tallinn.jpg",
+    "me": "../../assets/shoot2/cut-1578c-clean.png"
+  },
+  "kind": "real Tallinn photo (darkened, softened), huge words over it, her big on the right in front",
+  "layout": "words across the top, her below right of centre",
+  "board": "Thumbnails 127 (viral-1 \"FINANCIAL LITERACY\": the topic huge across the picture, the person in front)",
+  "fonts": [
+    "shorts-17 Oswald caps, white + mint key word (#FFFFFF, #7FF0C0 on #2E2E33, Formats 20)"
+  ],
+  "colours": "Formats 20: #2E2E33 / #FFFFFF / #7FF0C0",
+  "thumbnail_text": "JOB + MASTER'S IN ESTONIA (over Tallinn old town)",
+  "titles": [
+    "Study and Work in Estonia: My Full-Time Job + Master's",
+    "Can International Students Work Full Time in Estonia?",
+    "Studying in Europe as a Nigerian With a Full-Time Job"
+  ],
+  "title": "Study and Work in Estonia: My Full-Time Job + Master's",
+  "direction": "Copies Thumbnails 127: the topic huge across a real picture of the place (Tallinn old town, Pexels, film/assets/CREDITS.md, darkened and softened), ESTONIA in mint, her in front on the right.",
+  "nudge": {},
+  "vars": {},
+  "class": "no-lift",
+  "scores": "round-5 cold critic 6; round 6 polished, waiting for the re-score"
+}

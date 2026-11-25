@@ -1,0 +1,32 @@
+{
+ "direction": "09b (2026-11-16 rework of 09, which scored 6/5 cold: 'her + a UI card' like three others). Her own UX RESEARCH thumbnail's composition, cut to three things: her room washed in one warm taupe so it goes calm, she in natural colour in the middle holding a cookie on her open palm, the hook HOW YOU STAY LOGGED IN across the top. No UI card. The old 09 stays beside it.",
+ "thumbnail_text": "HOW YOU STAY LOGGED IN",
+ "kind": "photo",
+ "recommended": false,
+ "titles": [
+  "How Login Cookies Work (Explained Simply)",
+  "How Do Websites Keep You Logged In? (Cookies Explained)",
+  "Why Websites Need Cookies (How You Stay Logged In)"
+ ],
+ "text": {
+  "hd": "HOW YOU STAY LOGGED IN"
+ },
+ "images": {
+  "room": "../../assets/shoot/1559.jpg",
+  "me": "../../assets/shoot/1559-person.png",
+  "cookie": "../../assets/collage/cookie-clean.png"
+ },
+ "vars": {
+  "--pw": "1280px",
+  "--pl": "0px",
+  "--pt": "-150px",
+  "--wash": "#5A4F4A",
+  "--ink": "#EDE2A0"
+ },
+ "board": "Thumbnails 126 (her own UX RESEARCH thumbnail: room washed in one colour, her natural in the middle presenting the thing on her palm, topic huge across the top)",
+ "fonts": "Font 40 (shorts-06: Oswald 600, cream #EDE2A0 on taupe #5A4F4A, Formats 26)",
+ "colours": "Font 40 specimen: cream #EDE2A0 words on taupe #5A4F4A (the room is washed to that taupe); phone screen generic white",
+ "title": "How Login Cookies Work (Explained Simply)",
+ "class": "no-lift",
+ "scores": "new 2026-11-16, see STATUS.md"
+}

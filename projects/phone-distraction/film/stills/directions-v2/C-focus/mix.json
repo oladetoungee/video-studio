@@ -1,0 +1,2 @@
+{"video": "C-focus/C_focus_motiontest_silent.mp4", "out": "C-focus/C_focus_motiontest_16x9.mp4", "voice": ["/Users/gbemi/Desktop/CODE/videos/projects/phone-distraction/kit/transcripts/voice.m4a", 0.0, 7.0],
+ "cues": [[0.3, "camera-autofocus", -5], [1.0, "shutter-click", -3], [4.0, "hit-short-bass", -5], [4.1, "shutter-hard-click", -4]]}

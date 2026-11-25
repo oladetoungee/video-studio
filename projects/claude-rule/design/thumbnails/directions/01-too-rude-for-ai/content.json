@@ -1,0 +1,34 @@
+{
+  "direction": "★ RECOMMENDED. TH01, split: her real room on the left (face big, eyebrows up, palm out, mouth closed), the film's lilac on the right with a drawn chat: one blurred red all-caps message, then a big grey \"This chat has ended\" bar. Refs: viral sample 6 (a screen as the hook), Jel's chat bubble (11x), sample 1. Scores: Round 3 (after fixes): cold image 7 · best pair (title 1) clarity 8, click 8 · taste 7.5 (round 2).",
+  "concept": "TH01",
+  "thumbnail_text": "TOO RUDE FOR AI?",
+  "title": "Can You Hurt a Chatbot? Why Claude Ends Cruel Chats",
+  "titles": [
+    "Can You Hurt a Chatbot? Why Claude Ends Cruel Chats",
+    "Claude Can End Your Chat If You're Cruel. But Why?",
+    "Is It Okay to Be Mean to AI? Anthropic's New Rule"
+  ],
+  "scores": "Round 3 (after fixes): cold image 7 · best pair (title 1) clarity 8, click 8 · taste 7.5 (round 2).",
+  "recommended": true,
+  "text": {
+    "l1": "TOO RUDE",
+    "l2": "FOR AI?",
+    "chat_name": "Claude",
+    "chat_in": "You can start a new chat",
+    "rude": "YOU ARE USELESS, ANSWER ME NOW",
+    "ended": "This chat has ended"
+  },
+  "images": {
+    "scene": "../../assets/scene/s_17.5.jpg",
+    "cut": "../../assets/cut/c_17.5.png"
+  },
+  "vars": {
+    "--ground": "#CDBFF3",
+    "--fg": "#15131C",
+    "--accent": "#E8352B",
+    "--px": "-772px",
+    "--py": "-217px",
+    "--pw": "2112px",
+    "--clip": "inset(0px 699px 0px 772px)"
+  }
+}

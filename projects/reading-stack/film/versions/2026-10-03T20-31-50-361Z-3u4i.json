@@ -1,0 +1,30 @@
+{
+ "label": "Autosave",
+ "auto": true,
+ "savedAt": 1791059510361,
+ "edits": {
+  "t": {
+   "memorising/Memorising *sticks.*": {
+    "pos": {
+     "9x16": {
+      "dx": 252.1,
+      "dy": 33.5
+     }
+    }
+   },
+   "three-books/@cover marple": {
+    "pos": {
+     "16x9": {
+      "hide": true
+     }
+    }
+   }
+  },
+  "captions": {},
+  "mix": {
+   "voice": 0,
+   "music": -12,
+   "sfx": 0
+  }
+ }
+}

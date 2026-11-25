@@ -1,0 +1,63 @@
+1
+00:00:00,040 --> 00:00:02,160
+what is a database index and how does it
+
+2
+00:00:02,160 --> 00:00:04,780
+solve this problem of speed and performance?
+
+3
+00:00:04,780 --> 00:00:06,670
+the easiest way to think about it is the
+
+4
+00:00:06,670 --> 00:00:08,480
+index at the back of a book
+
+5
+00:00:08,480 --> 00:00:10,040
+if you want to find every page that mentions
+
+6
+00:00:10,040 --> 00:00:11,637
+a particular word, you don't read the whole
+
+7
+00:00:11,637 --> 00:00:12,720
+book from the beginning
+
+8
+00:00:12,720 --> 00:00:14,590
+you go to the index at the back, it's sorted
+
+9
+00:00:14,590 --> 00:00:16,590
+alphabetically, you find the word, and it
+
+10
+00:00:16,590 --> 00:00:18,210
+tells you the page number
+
+11
+00:00:18,210 --> 00:00:20,480
+a database index works the same way
+
+12
+00:00:20,480 --> 00:00:21,740
+it's a separate structure
+
+13
+00:00:21,910 --> 00:00:24,100
+that stores the values from a column in
+
+14
+00:00:24,100 --> 00:00:27,030
+sorted order, and for each value, it keeps a
+
+15
+00:00:27,030 --> 00:00:27,530
+pointer
+
+16
+00:00:27,710 --> 00:00:29,333
+to where that row actually lives

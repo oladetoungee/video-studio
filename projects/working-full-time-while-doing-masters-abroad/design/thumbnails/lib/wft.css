@@ -1,0 +1,63 @@
+/* working-full-time thumbnails, set 2026-11-10 (rollout to the HTTP standard).
+   Look of this video: B "Clock in / clock out": charcoal #23201B, manila #E7D7AE, paper #F4EBD3, ONE accent stamp red #C8102E
+   (her red headband). Type set 02 Bold condensed: Anton (headline), Inter Tight (light / heavy lines), DM Mono (tiny marks).
+   Her photos: 29 Oct shoot, outfit B (white tee, red headband), through Enhance photo (assets/shoot/, tools/shoot.py).
+   Editable: text in content.json "text", photos "images", colours "vars" (--ground, --fg, --accent, --wash), moves "nudge". */
+@font-face { font-family: 'Anton'; src: url('../fonts/Anton-Regular.ttf') format('truetype'); }
+@font-face { font-family: 'IT'; src: url('../fonts/InterTightRegular.ttf') format('truetype'); font-weight: 100 450; }
+@font-face { font-family: 'IT'; src: url('../fonts/InterTightMedium.ttf') format('truetype'); font-weight: 451 550; }
+@font-face { font-family: 'IT'; src: url('../fonts/InterTightSemiBold.ttf') format('truetype'); font-weight: 551 650; }
+@font-face { font-family: 'IT'; src: url('../fonts/InterTightBold.ttf') format('truetype'); font-weight: 651 900; }
+@font-face { font-family: 'DMMono'; src: url('../fonts/DMMono-Medium.ttf') format('truetype'); }
+
+:root { --charcoal: #23201B; --manila: #E7D7AE; --paper: #F4EBD3; --ink: #1D1A15; --red: #C8102E; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1280px; height: 720px; overflow: hidden; background: #111; }
+.t { position: relative; width: 1280px; height: 720px; overflow: hidden; background: var(--ground, #23201B); color: var(--fg, #F4EBD3); font-family: 'IT', sans-serif; }
+.guides .badge { position: absolute; right: 10px; bottom: 10px; width: 150px; height: 70px; border: 2px dashed #0f0; z-index: 99; }
+.z1 { z-index: 1; } .z2 { z-index: 2; } .z3 { z-index: 3; } .z4 { z-index: 4; } .z5 { z-index: 5; } .z6 { z-index: 6; }
+.abs { position: absolute; }
+
+/* headline: Anton caps, huge, tight; .it = Inter Tight heavy sentence case; .lt = Inter Tight light */
+.hd { position: absolute; font-family: 'Anton', sans-serif; font-weight: 400; text-transform: uppercase; line-height: .9; letter-spacing: .002em; white-space: nowrap; color: var(--fg); }
+.hd.it { font-family: 'IT', sans-serif; font-weight: 800; text-transform: none; letter-spacing: -.04em; line-height: .94; }
+.lt { font-family: 'IT', sans-serif !important; font-weight: 300 !important; text-transform: none; letter-spacing: -.035em; }
+.acc { color: var(--accent, #C8102E); }
+.ink { color: var(--ink); }
+.mono { font-family: 'DMMono', monospace; letter-spacing: .1em; text-transform: uppercase; }
+.sh { text-shadow: 0 2px 4px rgba(0,0,0,.25), 0 10px 34px rgba(0,0,0,.4); }
+
+/* full photo of her room (4:3): room + her person layer share one box; size --pw, place --pl / --pt */
+.pf { position: absolute; inset: 0; overflow: hidden; }
+.pf img { position: absolute; left: var(--pl, 0px); top: var(--pt, -120px); width: var(--pw, 1280px); height: auto; }
+.pf .wash { position: absolute; left: var(--pl, 0px); top: var(--pt, -120px); width: var(--pw, 1280px); height: calc(var(--pw, 1280px) * .75);
+  background: var(--wash, #E7D7AE); mix-blend-mode: multiply; opacity: var(--washo, 1); }
+.pf .dim { position: absolute; inset: 0; background: var(--dim, rgba(0,0,0,0)); }
+.pf .room { filter: var(--roomf, none); }
+.pf.washed .room { filter: grayscale(1) contrast(var(--wc, .7)) brightness(var(--wb, 1.45)); }
+/* her shoot photos are already bright and enhanced: no extra brightening on top (her note 2026-11-08, face too light) */
+.t.no-lift .scene .me-c, .t.no-lift .cut { filter: none; }
+
+/* cut-out of her (frame edge at the bottom) */
+.cut { position: absolute; bottom: 0; display: block; }
+/* objects (Pexels cut-outs), soft shadow, no outline */
+.obj { position: absolute; display: block; filter: drop-shadow(0 18px 26px rgba(0,0,0,.35)); }
+/* a laptop whose screen shows code (generic editor, no brand) */
+.lap { position: absolute; }
+.lap img { width: 100%; display: block; }
+.lap .scr { position: absolute; left: 15.6%; top: 35.8%; width: 64.8%; height: 56.8%; background: #17181C; overflow: hidden; padding: 6% 7%; }
+.lap .scr i { display: block; height: 7.5%; margin-bottom: 4.2%; border-radius: 2px; }
+/* a manila card (time card, calendar) */
+.card { position: absolute; background: var(--manila); color: var(--ink); box-shadow: 0 24px 50px rgba(0,0,0,.4); }
+/* a white page (real screenshot) */
+.page { position: absolute; background: #fff; color: #111; box-shadow: 0 24px 50px rgba(0,0,0,.4); }
+.mark { background: linear-gradient(transparent 0, transparent 0); background-color: #FFE45A; padding: 0 .12em; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+.credit { position: absolute; font-family: 'DMMono', monospace; font-size: 15px; letter-spacing: .06em; color: rgba(255,255,255,.6); }
+/* a bold ground with a fine static pattern in the same hue, a few % lighter or darker (THUMBNAIL-STUDY §7) */
+.pat::before { content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background-image: repeating-linear-gradient(var(--pata, 135deg), var(--patc, rgba(255,255,255,.035)) 0 2px, transparent 2px var(--patg, 13px)); }
+.pat.light::before { --patc: rgba(29,26,21,.05); }
+/* a flag, drawn flat */
+.flag { position: absolute; display: flex; box-shadow: 0 18px 34px rgba(0,0,0,.35); }
+.flag.v { flex-direction: row; } .flag.h { flex-direction: column; }
+.flag i { flex: 1; }

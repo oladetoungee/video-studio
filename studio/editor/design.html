@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Studio</title>
+<link rel="stylesheet" href="/studio/runtime/fonts.css">
+<link rel="stylesheet" href="/studio/editor/editor.css">
+</head>
+<body>
+<div class="app">
+  <header class="top">
+    <a class="back" href="/">← Studio</a>
+    <h1 id="title">Loading…</h1>
+    <span class="k" id="sub"></span>
+    <span class="grow"></span>
+    <button type="button" class="edit" id="tEdit" aria-pressed="true" title="Click text to rewrite it, drag to move (E)">Done</button>
+    <button type="button" id="undo" title="Undo (⌘Z)" disabled>Undo</button>
+    <button type="button" id="redo" title="Redo (⇧⌘Z)" disabled>Redo</button>
+    <span class="save" id="save" aria-live="polite"></span>
+  </header>
+  <div class="body">
+    <aside class="left">
+      <div class="stripbtns" id="stripBtns"></div>
+      <div class="list" id="strip"></div>
+    </aside>
+    <section class="center">
+      <div class="stagewrap" id="stagewrap">
+        <div class="stage dstage editing" id="stage">
+          <iframe id="fa" title="Design preview" tabindex="-1"></iframe>
+          <iframe id="fb" class="back" title="Design preview" tabindex="-1"></iframe>
+          <div id="overlay"></div>
+          <div class="loading" id="loading">Loading…</div>
+        </div>
+      </div>
+      <div class="editbar" id="editbar">
+        <span class="saveflash" id="flash"></span>
+        <span id="hintText">Click any text to rewrite it (Enter saves, Shift+Enter = new line). Drag anything to move it. Changes save by themselves.</span>
+        <span class="grow"></span>
+        <span><kbd>←</kbd><kbd>→</kbd> <span id="navWord">design</span> · arrows move the selection (<kbd>⇧</kbd> 10 px) · <kbd>Enter</kbd> select inside · <kbd>⇧</kbd><kbd>Enter</kbd> or <kbd>Esc</kbd> whole block · <kbd>E</kbd> edit</span>
+      </div>
+    </section>
+    <aside class="right">
+      <section class="pane" id="colourPane">
+        <h2>Colours</h2>
+        <div id="colours"></div>
+      </section>
+      <section class="pane" id="photoPane">
+        <h2>Photos</h2>
+        <div id="photos"></div>
+      </section>
+      <section class="pane" id="layoutPane">
+        <h2>Moved, resized or hidden</h2>
+        <div id="changes"></div>
+      </section>
+      <section class="pane">
+        <h2>Export</h2>
+        <label class="field"><span>What</span><select id="xWhat"></select></label>
+        <div id="xPart" hidden>
+          <label class="field"><span>Size</span><select id="xScale"><option value="1">Full size (as in the export)</option><option value="2">Double size (2×, sharper)</option></select></label>
+          <label class="field"><span>Behind it</span><select id="xBg"><option value="none">Nothing: see-through background</option><option value="ground">Keep the background behind it (the ground colour)</option><option value="all">Everything behind it (a crop of the design)</option></select></label>
+        </div>
+        <div class="summary" id="xSummary"></div>
+        <button type="button" class="primary" id="xGo">Export</button>
+        <p id="xNote"></p>
+        <div id="jobs" style="display:flex;flex-direction:column;gap:8px"></div>
+      </section>
+      <section class="pane" id="checkPane" hidden>
+        <h2>Checks</h2>
+        <p class="hint2">The same checks the export runs: labels at least 32 px, no single word on a last line, photos clear of text, nothing past the margins.</p>
+        <div class="wlist" id="checks"></div>
+      </section>
+      <section class="pane">
+        <h2>All text</h2>
+        <p class="hint2" id="textHint"></p>
+        <div class="tfields" id="texts"></div>
+      </section>
+      <section class="pane">
+        <h2>Versions</h2>
+        <p id="saveState">Edits save into the project by themselves.</p>
+        <div class="inout"><input type="text" id="vName" placeholder="Name this version" aria-label="Version name" style="flex:1 1 140px"><button type="button" id="vSave">Save version</button></div>
+        <div class="vlist" id="vlist"></div>
+      </section>
+      <div class="status" id="status" aria-live="polite"></div>
+    </aside>
+  </div>
+</div>
+<div class="tbar" id="tbar" hidden role="toolbar" aria-label="Selected element"></div>
+<div class="picker" id="picker" hidden role="dialog" aria-label="Choose a photo">
+  <header><b>Choose a photo</b><span class="k" id="pickFor"></span><span class="grow"></span>
+    <div class="prog" id="pickProg" hidden><span></span><i><b></b></i></div>
+    <span class="hint2">Drop photos here to add them</span><button type="button" id="pickAdd" title="JPG, PNG, HEIC or WebP from your Mac">Add photo…</button><button type="button" id="pickClose">Close</button></header>
+  <div class="pgrid" id="pickGrid"></div>
+</div>
+<script src="/studio/editor/shell.js"></script>
+<script src="/studio/editor/design.js"></script>
+</body></html>

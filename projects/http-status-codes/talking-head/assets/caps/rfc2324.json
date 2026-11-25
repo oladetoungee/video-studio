@@ -1,0 +1,54 @@
+{
+ "title": "",
+ "h1": null,
+ "h1y": null,
+ "found": {
+  "I'm a teapot": [
+   [
+    86.265625,
+    3525,
+    93.9375,
+    15
+   ]
+  ],
+  "Hyper Text Coffee Pot Control Protocol": [
+   [
+    86.28125,
+    83,
+    297.421875,
+    15
+   ]
+  ]
+ },
+ "H": 8613,
+ "focus": {
+  "I'm a teapot": {
+   "file": "rfc2324__i-m-a-teapot.png",
+   "top": 3005,
+   "rects": [
+    [
+     86.265625,
+     520,
+     93.9375,
+     15
+    ]
+   ]
+  },
+  "Hyper Text Coffee Pot Control Protocol": {
+   "file": "rfc2324__hyper-text-coffee-pot-co.png",
+   "top": 0,
+   "rects": [
+    [
+     86.28125,
+     83,
+     297.421875,
+     15
+    ]
+   ]
+  }
+ },
+ "clipTop": 0,
+ "scale": 1.5,
+ "url": "https://www.rfc-editor.org/rfc/rfc2324.html",
+ "captured": "2026-11-02T21:07:55.672Z"
+}

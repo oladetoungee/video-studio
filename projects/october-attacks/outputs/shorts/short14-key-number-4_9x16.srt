@@ -1,0 +1,95 @@
+1
+00:00:00,087 --> 00:00:02,937
+now there's one more story from the October
+
+2
+00:00:02,937 --> 00:00:05,827
+drama and this one actually sounds so made
+
+3
+00:00:05,827 --> 00:00:08,560
+up eMudhra is one of the companies that your
+
+4
+00:00:08,560 --> 00:00:11,480
+browsers trust to confirm that a website is
+
+5
+00:00:11,480 --> 00:00:13,220
+who it really says it is
+
+6
+00:00:13,220 --> 00:00:15,070
+that is how important this company is
+
+7
+00:00:15,070 --> 00:00:16,990
+so it's like this little padlock that your
+
+8
+00:00:16,990 --> 00:00:18,590
+browser depends on
+
+9
+00:00:18,590 --> 00:00:22,074
+now it turns out that eight of its signing
+
+10
+00:00:22,074 --> 00:00:25,124
+keys were so weak that one of them literally
+
+11
+00:00:25,124 --> 00:00:26,594
+was the number four
+
+12
+00:00:26,594 --> 00:00:27,914
+just number four
+
+13
+00:00:27,914 --> 00:00:30,084
+that's how weak their keys were
+
+14
+00:00:30,084 --> 00:00:31,584
+like just number four
+
+15
+00:00:31,584 --> 00:00:34,544
+so the scripts went wrong when the keys were
+
+16
+00:00:34,544 --> 00:00:37,254
+made in April 2025 and it made a second set
+
+17
+00:00:37,254 --> 00:00:38,164
+of weak keys
+
+18
+00:00:38,164 --> 00:00:40,564
+and with keys like this of course someone
+
+19
+00:00:40,564 --> 00:00:43,354
+could fake the website and your browser will
+
+20
+00:00:43,354 --> 00:00:45,204
+still have shown the padlock
+
+21
+00:00:45,204 --> 00:00:47,184
+so be honest in cases like this I don't
+
+22
+00:00:47,184 --> 00:00:49,084
+think there is anything the average users
+
+23
+00:00:49,084 --> 00:00:51,034
+can even do about these things but just to
+
+24
+00:00:51,034 --> 00:00:52,867
+keep your stuff updated

@@ -1,0 +1,27 @@
+{
+ "label": "Before this session’s edits",
+ "auto": true,
+ "savedAt": 1792330719533,
+ "edits": {
+  "t": {
+   "card-the-product/title": {
+    "s": "YOUR\nATTENTION"
+   },
+   "card-the-tricks/title": {
+    "s": "UNPREDICTABLE\nREWARDS"
+   },
+   "card-the-proof/title": {
+    "s": "APP\nNOTIFICATIONS"
+   },
+   "card-the-cost/title": {
+    "s": "SOCIAL\nAPPROVAL"
+   }
+  },
+  "captions": {},
+  "capShort": {},
+  "cap16": {},
+  "captions16": {
+   "y": 994
+  }
+ }
+}

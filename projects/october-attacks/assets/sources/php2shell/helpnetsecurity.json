@@ -1,0 +1,185 @@
+{
+ "story": "php2shell",
+ "outlet": "Help Net Security",
+ "slug": "helpnetsecurity",
+ "url": "https://www.helpnetsecurity.com/2026/10/21/php2shell-php-vulnerabilities-patched-cve-2026-109618-cve-2026-109619/",
+ "finalUrl": "https://www.helpnetsecurity.com/2026/10/21/php2shell-php-vulnerabilities-patched-cve-2026-109618-cve-2026-109619/",
+ "status": "loaded",
+ "http": 200,
+ "title": "PHP2Shell: Critical PHP vulnerabilities patched, update now! - Help Net Security",
+ "h1": "PHP2Shell: Critical PHP vulnerabilities patched, update now!",
+ "published": "2026-10-21T13:51:05+00:00",
+ "files": {
+  "fold": "php2shell/helpnetsecurity_fold.png",
+  "full": "php2shell/helpnetsecurity_full.jpg",
+  "scroll": "php2shell/helpnetsecurity_scroll.mp4"
+ },
+ "full": {
+  "width": 1440,
+  "height": 4562,
+  "pageHeight": 4562,
+  "zoom": 1,
+  "quotes": [
+   {
+    "quote": "These findings rank among the most severe vulnerabilities discovered in PHP, and arguably in software history",
+    "box": {
+     "x": 215,
+     "y": 1048,
+     "w": 621,
+     "h": 48
+    },
+    "lines": [
+     {
+      "x": 221,
+      "y": 1048,
+      "w": 615,
+      "h": 21
+     },
+     {
+      "x": 215,
+      "y": 1075,
+      "w": 255,
+      "h": 21
+     }
+    ]
+   },
+   {
+    "quote": "its MadPot honeypot network recorded a PHP2Shell exploitation attempt on Oct. 17, 2026, four days before",
+    "box": {
+     "x": 215,
+     "y": 3224,
+     "w": 643,
+     "h": 48
+    },
+    "lines": [
+     {
+      "x": 548,
+      "y": 3224,
+      "w": 310,
+      "h": 21
+     },
+     {
+      "x": 215,
+      "y": 3251,
+      "w": 538,
+      "h": 21
+     }
+    ]
+   }
+  ]
+ },
+ "scroll": {
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "seconds": 8,
+  "keyframes": [
+   {
+    "t": 0,
+    "y": 224
+   },
+   {
+    "t": 1,
+    "y": 224
+   },
+   {
+    "t": 2.048,
+    "y": 638
+   },
+   {
+    "t": 3.148,
+    "y": 638
+   },
+   {
+    "t": 4.97,
+    "y": 2814
+   },
+   {
+    "t": 8,
+    "y": 2814
+   }
+  ],
+  "zoom": 1,
+  "easing": "easeInOutCubic between keyframes, holds where y is equal",
+  "capped": false,
+  "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)",
+  "quotes": [
+   {
+    "quote": "These findings rank among the most severe vulnerabilities discovered in PHP, and arguably in software history",
+    "inVideo": true,
+    "still": true,
+    "t": 2.6,
+    "visibleStill": [
+     1.97,
+     3.23
+    ],
+    "scrollY": 638,
+    "box": {
+     "x": 455,
+     "y": 410,
+     "w": 621,
+     "h": 48
+    },
+    "lines": [
+     {
+      "x": 461,
+      "y": 410,
+      "w": 615,
+      "h": 21
+     },
+     {
+      "x": 455,
+      "y": 437,
+      "w": 255,
+      "h": 21
+     }
+    ],
+    "docBox": {
+     "x": 455,
+     "y": 1048,
+     "w": 621,
+     "h": 48
+    },
+    "layoutDriftPx": 0
+   },
+   {
+    "quote": "its MadPot honeypot network recorded a PHP2Shell exploitation attempt on Oct. 17, 2026, four days before",
+    "inVideo": true,
+    "still": true,
+    "t": 6.47,
+    "visibleStill": [
+     4.9,
+     8.03
+    ],
+    "scrollY": 2814,
+    "box": {
+     "x": 455,
+     "y": 410,
+     "w": 643,
+     "h": 48
+    },
+    "lines": [
+     {
+      "x": 788,
+      "y": 410,
+      "w": 310,
+      "h": 21
+     },
+     {
+      "x": 455,
+      "y": 437,
+      "w": 538,
+      "h": 21
+     }
+    ],
+    "docBox": {
+     "x": 455,
+     "y": 3224,
+     "w": 643,
+     "h": 48
+    },
+    "layoutDriftPx": 0
+   }
+  ]
+ }
+}

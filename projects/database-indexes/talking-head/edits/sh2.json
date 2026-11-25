@@ -1,0 +1,18 @@
+{
+ "t": {
+  "label/label": {
+   "pos": {
+    "9x16": {
+     "dy": -19.6,
+     "dx": 23.1
+    }
+   },
+   "s": "Composite Database Indexes"
+  }
+ },
+ "mix": {
+  "voice": 0,
+  "music": -4,
+  "sfx": 0
+ }
+}

@@ -1,0 +1,27 @@
+{
+  "direction": "Other (the eMudhra story), rewritten after the critic: bone ground, a huge padlock with the number 4 on it, the plain claim on the left, one line saying who (a company that vouches for websites, so browsers blocked it) and the real BleepingComputer headline under it (untouched, credited). Strange-but-true hook; best for the SH14 short or a community post. References: viral 2 (one object = the story), the film's eMudhra frame (look A).",
+  "thumbnail_text": "ITS SECRET KEY WAS THE NUMBER 4",
+  "titles": [
+    "eMudhra Explained: A Secret Key That Was the Number 4",
+    "The October 2026 Hacks Every Developer Should Know"
+  ],
+  "title": "eMudhra Explained: A Secret Key That Was the Number 4",
+  "kind": "other",
+  "text": {
+    "hd": "Its secret key<br>was the<br><span class=\"acc\">number 4</span>",
+    "num": "4",
+    "credit": "BleepingComputer · Oct 20, 2026",
+    "sub": "A company that vouches for websites. Browsers blocked it."
+  },
+  "images": {
+    "padlock": "../../assets/draw/padlock.svg",
+    "clip": "../../assets/src/bc-emudhra.png"
+  },
+  "vars": {
+    "--ground": "#EFE7D8",
+    "--fg": "#16110D",
+    "--accent": "#F2541B"
+  },
+  "scores": "cold critic R1 3.5 · R2 6.5",
+  "recommended": false
+}

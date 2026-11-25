@@ -1,0 +1,21 @@
+{
+  "direction": "News-led: the real Graphic Online headline (3 Sep 2026) as a taped clipping, credited; the topic in condensed caps with one yellow box (her board: 'JOBS ARE DEAD'); her raised finger (0:46)",
+  "thumbnail_text": "Ghana's new marriage check",
+  "title": "Ghana's Marriage Verification App: Great Idea, Big Question",
+  "titles": [
+    "Ghana's Marriage Verification App: Great Idea, Big Question",
+    "Should Anyone Be Able to Look Up Your Marriage?",
+    "I Like This New App From Ghana. I Also Have Questions"
+  ],
+  "text": {
+    "line1": "Ghana's new",
+    "line2": "MARRIAGE CHECK",
+    "credit": "Graphic Online · 3 Sep 2026"
+  },
+  "images": {
+    "scene": "../../assets/scene/s_46.13.jpg",
+    "front": "../../assets/scene/mask/s_46.13.png",
+    "clip": "../../assets/props/graphic_headline.png"
+  },
+  "vars": {}
+}

@@ -1,0 +1,9 @@
+{
+  "name": "video-studio",
+  "private": true,
+  "version": "2.0.0",
+  "description": "Gbemi's shared video studio: editor, renderer, mixer",
+  "type": "module",
+  "scripts": { "start": "node server.mjs" },
+  "dependencies": { "puppeteer-core": "^24.43.1" }
+}

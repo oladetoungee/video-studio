@@ -1,0 +1,46 @@
+URL: https://www.cybersecuritydive.com/news/website-encryption-security-certificates-emudhra-incident/833622/
+STATUS: loaded (http 200)
+FINAL: https://www.cybersecuritydive.com/news/website-encryption-security-certificates-emudhra-incident/833622/
+TITLE: Weak encryption certificates could have let hackers easily spoof websites | Cybersecurity Dive
+H1: Don’t miss tomorrow’s Cybersecurity industry news
+OG: Weak encryption certificates could have let hackers easily spoof websites | Cybersecurity Dive
+PUBLISHED: 2026-10-21  MODIFIED: 
+DOC_H: 900
+
+Weak encryption certificates could have let hackers easily spoof websites
+
+Major web browsers blocked the eMudhra TLS certificates to prevent them from being weaponized.
+
+Published Oct. 21, 2026
+Eric Geller
+Senior Reporter
+Share
+License
+Add us on Google
+Getty Images
+
+An Indian company’s serious error in creating high-level encryption certificates has prompted major web browsers to block the certificates before hackers can use them to spoof websites.
+
+The issue involves intermediate certificates created by the Indian firm eMudhra, a company with the authority to issue certificates that are trusted by Google Chrome, Microsoft Edge, Mozilla Firefox and other browsers. Certificate issuers use intermediate certificates to “sign” individual website certificates that assure users of the sites’ legitimacy and security. But eMudhra recently failed to apply the proper procedures when creating eight of its intermediate certificates, producing keys that were shockingly weak. 
+
+Key strength is measured in the number of bits of entropy used to randomly create them. Private keys usually contain hundreds of bits of entropy. eMudhra’s faulty keys contained between three and eight.
+
+Because it was trivially easy to break the encryption protecting eMudhra’s intermediate certificates, hackers could have weaponized them to sign fraudulent transport layer security (TLS) certificates that would let them impersonate major companies.
+
+“An attacker can create a forged certificate for any domain and use it to impersonate servers to intercept or modify traffic,” internet infrastructure firm Cloudflare said in a blog post. “This is a serious security incident with implications across the internet.”
+
+Cutting ties with flawed certificates
+
+Leading web browsers responded by severing their trust relationships with the eight weak intermediate certificates. Google and Mozilla published blog posts detailing their responses to the discovery.
+
+“Users should update their browsers and operating systems to the latest versions as soon as possible,” Dennis Jackson, a member of Mozilla’s cryptographic engineering team, wrote on an explainer page about the incident.
+
+There is no evidence that hackers generated any fraudulent website certificates by exploiting the weaknesses in eMudhra’s keys.
+
+Naveen Kumar, an employee at eMudhra, said in a post on a Mozilla forum that a faulty script led to the creation of the weak keys.
+
+“There were human errors in multiple steps of the process,” Kumar wrote. “We are now digging deeper for code flaws, process gaps [and] maker/checker controls specific to this issue.”
+
+Add us on Google
+Share
+Filed Under: Vulnerability, Threats

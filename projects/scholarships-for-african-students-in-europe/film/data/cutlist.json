@@ -1,0 +1,155 @@
+{
+ "sample_rate": 48000,
+ "original_duration": 519.384,
+ "edited_duration": 495.454,
+ "manual_cuts": [
+  {
+   "start": 119.21,
+   "end": 125.58,
+   "seconds": 6.37,
+   "reason": "retake: 'So you apply directly to the programs program you want ... scratch that'"
+  },
+  {
+   "start": 165.56,
+   "end": 172.64,
+   "seconds": 7.08,
+   "reason": "retake: 'What I would advise is this when I was applying ... scratch that, I won't talk about that'"
+  },
+  {
+   "start": 223.75,
+   "end": 226.05,
+   "seconds": 2.3,
+   "reason": "retake: 'you apply through the course and by that' (said twice)"
+  },
+  {
+   "start": 282.44,
+   "end": 286.07,
+   "seconds": 3.63,
+   "reason": "retake: 'I keep saying that before, scratch that, scratch that'"
+  },
+  {
+   "start": 326.77,
+   "end": 327.45,
+   "seconds": 0.68,
+   "reason": "stumble: 'tuition, your weekly,'"
+  },
+  {
+   "start": 487.49,
+   "end": 489.42,
+   "seconds": 1.93,
+   "reason": "'do the same motivation letter' contradicts the line before (kit Q7): now 'So try to sell your experiences'"
+  }
+ ],
+ "manual_seconds_removed": 21.99,
+ "pauses_tightened": 7,
+ "pause_seconds_removed": 1.94,
+ "pauses": [
+  {
+   "orig_at": 54.73,
+   "was": 0.75,
+   "now": 0.44
+  },
+  {
+   "orig_at": 291.66,
+   "was": 0.6,
+   "now": 0.43
+  },
+  {
+   "orig_at": 350.0,
+   "was": 0.71,
+   "now": 0.44
+  },
+  {
+   "orig_at": 408.87,
+   "was": 0.65,
+   "now": 0.43
+  },
+  {
+   "orig_at": 411.28,
+   "was": 0.73,
+   "now": 0.44
+  },
+  {
+   "orig_at": 434.21,
+   "was": 0.72,
+   "now": 0.44
+  },
+  {
+   "orig_at": 476.73,
+   "was": 0.86,
+   "now": 0.46
+  }
+ ],
+ "segments": [
+  {
+   "orig_start": 0.0,
+   "orig_end": 54.9675,
+   "edit_start": 0.0
+  },
+  {
+   "orig_start": 55.2425,
+   "orig_end": 119.2275,
+   "edit_start": 54.9325
+  },
+  {
+   "orig_start": 125.5625,
+   "orig_end": 165.5775,
+   "edit_start": 118.8825
+  },
+  {
+   "orig_start": 172.6225,
+   "orig_end": 223.7675,
+   "edit_start": 158.8625
+  },
+  {
+   "orig_start": 226.0325,
+   "orig_end": 282.4575,
+   "edit_start": 209.9725
+  },
+  {
+   "orig_start": 286.0525,
+   "orig_end": 291.8975,
+   "edit_start": 266.3625
+  },
+  {
+   "orig_start": 292.0325,
+   "orig_end": 326.7875,
+   "edit_start": 272.1725
+  },
+  {
+   "orig_start": 327.4325,
+   "orig_end": 350.2375,
+   "edit_start": 306.8925
+  },
+  {
+   "orig_start": 350.4725,
+   "orig_end": 409.1075,
+   "edit_start": 329.6625
+  },
+  {
+   "orig_start": 409.2925,
+   "orig_end": 411.5175,
+   "edit_start": 388.2625
+  },
+  {
+   "orig_start": 411.7725,
+   "orig_end": 434.4475,
+   "edit_start": 390.4525
+  },
+  {
+   "orig_start": 434.6925,
+   "orig_end": 476.9675,
+   "edit_start": 413.0925
+  },
+  {
+   "orig_start": 477.3325,
+   "orig_end": 487.5075,
+   "edit_start": 455.3325
+  },
+  {
+   "orig_start": 489.4025,
+   "orig_end": 519.384,
+   "edit_start": 465.4725
+  }
+ ]
+}

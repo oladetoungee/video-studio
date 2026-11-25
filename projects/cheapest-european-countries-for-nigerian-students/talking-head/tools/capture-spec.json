@@ -1,0 +1,176 @@
+[
+ {
+  "name": "de-mission",
+  "url": "https://nigeria.diplo.de/ng-en/2691114-2691114",
+  "hl": [
+   "11,904",
+   "11.904",
+   "992"
+  ],
+  "src": "German Missions in Nigeria \u00b7 nigeria.diplo.de"
+ },
+ {
+  "name": "de-daad",
+  "url": "https://www.daad.de/en/study-and-research-in-germany/plan-your-studies/costs-of-education-and-living/",
+  "hl": [
+   "992 euros per month"
+  ],
+  "src": "DAAD \u00b7 daad.de"
+ },
+ {
+  "name": "de-work",
+  "url": "https://www.make-it-in-germany.com/en/study-vocational-training/studies-in-germany/work",
+  "hl": [
+   "140 full days",
+   "280 half days"
+  ],
+  "anchor": "140 full days",
+  "src": "Make it in Germany \u00b7 make-it-in-germany.com"
+ },
+ {
+  "name": "de-bw",
+  "url": "https://uni-tuebingen.de/de/100463",
+  "hl": [
+   "1.500"
+  ],
+  "src": "Universit\u00e4t T\u00fcbingen \u00b7 uni-tuebingen.de"
+ },
+ {
+  "name": "fr-icef",
+  "url": "https://monitor.icef.com/2026/04/france-directs-universities-to-charge-higher-tuition-fees-to-non-eu-students-starting-september-2026/",
+  "hl": [
+   "higher tuition fees"
+  ],
+  "anchor": "France directs universities",
+  "src": "ICEF Monitor \u00b7 April 2026"
+ },
+ {
+  "name": "fr-cnam",
+  "url": "https://www.cnam.fr/international/etudier-au-cnam/venir/droits-inscriptions",
+  "hl": [
+   "3 950",
+   "3950",
+   "2 902",
+   "2902"
+  ],
+  "anchor": "3 950",
+  "src": "Cnam \u00b7 cnam.fr"
+ },
+ {
+  "name": "fr-funds",
+  "url": "https://www.lesmre.com/en/actualites/moroccan-students-france-877-euros-financial-requirement-2026",
+  "hl": [
+   "877.50",
+   "877,50",
+   "877"
+  ],
+  "src": "LesMRE \u00b7 D\u00e9cret 2026-526"
+ },
+ {
+  "name": "fr-work",
+  "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F2713",
+  "hl": [
+   "964 heures"
+  ],
+  "src": "service-public.fr"
+ },
+ {
+  "name": "at-oead",
+  "url": "https://oead.at/de/nach-oesterreich/einreise-und-aufenthalt/aufenthaltsbewilligung-student-kein-mobilitaetsprogramm",
+  "hl": [
+   "722,58",
+   "1.308,39"
+  ],
+  "anchor": "722,58",
+  "up": 1,
+  "src": "OeAD \u00b7 oead.at"
+ },
+ {
+  "name": "at-tuw",
+  "url": "https://www.tuwien.at/en/studies/admission/students-union-fee-and-tuition-fee/tuition-fee",
+  "hl": [
+   "726.72"
+  ],
+  "src": "TU Wien \u00b7 tuwien.at"
+ },
+ {
+  "name": "at-list",
+  "url": "https://www.tuwien.at/en/studies/admission/students-union-fee-and-tuition-fee/tuition-fee",
+  "hl": [
+   "Benin",
+   "Ethiopia",
+   "Senegal",
+   "Togo",
+   "Uganda"
+  ],
+  "anchor": "Benin",
+  "up": 1,
+  "maxH": 700,
+  "src": "TU Wien \u00b7 tuwien.at",
+  "open": true
+ },
+ {
+  "name": "cz-mv",
+  "url": "https://mv.gov.cz/clanek/prostredky-k-pobytu-pro-ucely-dlouhodobeho-pobytu.aspx",
+  "hl": [
+   "115 810",
+   "115.810",
+   "115810"
+  ],
+  "src": "Ministry of the Interior \u00b7 mv.gov.cz"
+ },
+ {
+  "name": "pl-poz",
+  "url": "https://migrant.poznan.uw.gov.pl/en/node/1583",
+  "hl": [
+   "776",
+   "2500",
+   "2 500"
+  ],
+  "anchor": "776",
+  "src": "Wielkopolska Voivodeship Office \u00b7 uw.gov.pl"
+ },
+ {
+  "name": "ee-tlu",
+  "url": "https://www.tlu.ee/en/tuition-fees",
+  "hl": [
+   "7000 (non-EU/EEA citizens)",
+   "Computer Interaction"
+  ],
+  "anchor": "Computer Interaction",
+  "up": 1,
+  "src": "Tallinn University \u00b7 tlu.ee",
+  "open": true,
+  "maxH": 300,
+  "any": true
+ },
+ {
+  "name": "no-nhh",
+  "url": "https://www.nhh.no/en/study-programmes/application-and-admission/financial-matters/",
+  "hl": [
+   "204"
+  ],
+  "src": "NHH \u00b7 nhh.no",
+  "anchor": "204"
+ },
+ {
+  "name": "no-udi",
+  "url": "https://www.udiregelverk.no/en/documents/udi-guidelines/udi-2010-101/udi-2010-101v1/",
+  "hl": [
+   "170 368",
+   "170,368",
+   "170368"
+  ],
+  "src": "UDI \u00b7 udiregelverk.no"
+ },
+ {
+  "name": "fi-migri",
+  "url": "https://migri.fi/en/income-requirement-for-students",
+  "hl": [
+   "9,600",
+   "9 600",
+   "800 euros"
+  ],
+  "src": "Finnish Immigration Service \u00b7 migri.fi"
+ }
+]

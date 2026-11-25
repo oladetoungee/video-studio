@@ -1,0 +1,26 @@
+{
+  "kind": "graphic",
+  "direction": "Flat graphic on paper with a thin grid: a staircase of three big steps (learn, practise, get hired, the last one green) climbs toward her calm cut-out with a white outline in the corner. The path into the field drawn literally. References: her database-indexes sample (one literal diagram + her outlined cut-out), viral 'Fitness sales framework', yt 'Zero to Data scientist' (27).",
+  "thumbnail_text": "How to become a UX researcher",
+  "text": {
+    "hd": "How to become<span class=\"acc\">a UX researcher</span>",
+    "s1": "Learn",
+    "s2": "Practise",
+    "s3": "Get hired"
+  },
+  "images": {
+    "me": "../../assets/cut/gbemi-calm-hard.png"
+  },
+  "vars": {
+    "--ground": "#EDE9E2"
+  },
+  "titles": [
+    "What Is UX Research? A Beginner's Path Into the Field",
+    "How to Get Into UX Research With No Experience",
+    "UX Research Careers: What I've Noticed as a Student"
+  ],
+  "title": "What Is UX Research? A Beginner's Path Into the Field",
+  "set": 3,
+  "scores": "critic scores R1 6.5 · R2 6.5 · R3 5.5 · R4 6.5 · R5 7.5 (rebuilt as a graphic)",
+  "recommended": false
+}

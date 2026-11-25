@@ -1,0 +1,3 @@
+FIRST ~3 s (spoken, whisper small.en): What is a DDoS attack? Let's say you run your
+
+ON SCREEN IN FRAME 1: Faceless. Black ground. Handwritten-comic caps typing on 'What is a DDoS attack?' (DDoS in coral red) top 15%; under it a flat 'SERVER' box with red dotted lines to purple line icons of routers, cameras, laptops, phones.

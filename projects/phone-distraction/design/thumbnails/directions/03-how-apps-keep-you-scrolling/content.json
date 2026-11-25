@@ -1,0 +1,24 @@
+{
+  "direction": "Her on the left, finger raised; the title across the top, \"scrolling\" bigger in yellow; a light phone on the right annotated in big handwriting: refresh, autoplay, endless.",
+  "kind": "photo",
+  "concept": "v3 (2026-10-16)",
+  "references": "Fitness sales framework (drawn steps) · Pinterest annotated vlogs (arrows, handwriting) · new york city writing",
+  "thumbnail_text": "How apps keep you scrolling",
+  "title": "Why Am I Addicted to My Phone? 5 Design Tricks to Blame",
+  "titles": [
+    "Why Am I Addicted to My Phone? 5 Design Tricks to Blame",
+    "Phone Addiction Isn’t an Accident: The 5 Features Behind It"
+  ],
+  "scores": "fresh critics vs her bar: r1 6 · r2 7.5 · r3 8.2 · r4 7.5",
+  "recommended": "2",
+  "text": {
+    "words": "How apps keep you <span class=\"yel\" style=\"font-size:1.3em\">scrolling</span>",
+    "l1": "refresh",
+    "l2": "autoplay",
+    "l3": "endless"
+  },
+  "images": {
+    "photo": "../../assets/scene/warm/s_475.2.jpg"
+  },
+  "vars": {}
+}

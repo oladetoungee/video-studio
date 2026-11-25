@@ -1,0 +1,22 @@
+{
+  "direction": "How-to. A big, plain settings card with three switches, all off: Autoplay, Red badges, Notifications. Her black-and-white cut-out with a red outline bottom right.",
+  "concept": "v2 (2026-10-16)",
+  "thumbnail_text": "How to stop scrolling",
+  "title": "How to Use Your Phone Less (Simple Settings That Help)",
+  "titles": [
+    "How to Use Your Phone Less (Simple Settings That Help)",
+    "Why I Keep My Phone Silent (and You Can Too)"
+  ],
+  "scores": "",
+  "recommended": "",
+  "text": {
+    "words": "How to<br>stop<br><span class=\"acc\">scrolling</span>",
+    "r1": "Autoplay",
+    "r2": "Red badges",
+    "r3": "Notifications"
+  },
+  "images": {
+    "photo": "../../assets/cut/895.75_bw_red.png"
+  },
+  "vars": {}
+}

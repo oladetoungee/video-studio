@@ -1,0 +1,99 @@
+1
+00:00:00,043 --> 00:00:01,803
+now technology can be designed in a way that
+
+2
+00:00:01,803 --> 00:00:03,113
+changes people's behavior
+
+3
+00:00:03,113 --> 00:00:04,803
+and this idea is called persuasive
+
+4
+00:00:04,803 --> 00:00:07,223
+technology a lot of it traces back to a
+
+5
+00:00:07,223 --> 00:00:09,243
+researcher at Stanford University called B.J
+
+6
+00:00:09,243 --> 00:00:12,213
+fogg he ran a lab there called the
+
+7
+00:00:12,223 --> 00:00:14,543
+persuasive technology lab and later
+
+8
+00:00:14,543 --> 00:00:16,723
+published a book on using computers to
+
+9
+00:00:16,723 --> 00:00:18,603
+change what people think and do
+
+10
+00:00:18,603 --> 00:00:21,903
+to make it more interesting, in 2007 B.J
+
+11
+00:00:21,903 --> 00:00:22,443
+fogg
+
+12
+00:00:22,607 --> 00:00:25,787
+taught a famous class at Stanford where
+
+13
+00:00:25,787 --> 00:00:28,507
+students use these ideas to build
+
+14
+00:00:28,837 --> 00:00:31,707
+apps within weeks, their apps had millions
+
+15
+00:00:31,707 --> 00:00:34,067
+of users some of these students went on to
+
+16
+00:00:34,067 --> 00:00:36,387
+build some of the popular apps that we now
+
+17
+00:00:36,387 --> 00:00:38,540
+know and again, some of these people who
+
+18
+00:00:38,540 --> 00:00:39,400
+studied with B.J
+
+19
+00:00:39,400 --> 00:00:40,010
+fogg
+
+20
+00:00:40,130 --> 00:00:42,033
+went on to shape the apps that we use today
+
+21
+00:00:42,033 --> 00:00:43,893
+mike Krieger, one of the co-founders of
+
+22
+00:00:43,893 --> 00:00:45,293
+Instagram, was a student of his
+
+23
+00:00:45,293 --> 00:00:47,553
+and so was Tristan Harris, who later became
+
+24
+00:00:47,553 --> 00:00:49,553
+one of the loudest critics of this kind of
+
+25
+00:00:49,553 --> 00:00:49,867
+design,

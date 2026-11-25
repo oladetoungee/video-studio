@@ -1,0 +1,26 @@
+{
+  "direction": "Medium crop, her calm, hands together: a big 'UX' just above her head, 'research' across her cream sweater below her chin, a yellow paper strip 'in plain words' beside her. Brighter, neutral room. References: yt 'FAVOR' / 'UI UX roadmap' (word behind the head), Pinterest 'COOK', 'keep trying' (mixed type).",
+  "thumbnail_text": "UX research in plain words",
+  "text": {
+    "ux": "UX",
+    "hd": "research",
+    "sub": "in plain words"
+  },
+  "images": {
+    "bg": "../../assets/scene/g2/s_287.9.jpg",
+    "cut": "../../assets/scene/g2/cut/s_287.9.png"
+  },
+  "vars": {
+    "--meb": "1.02"
+  },
+  "titles": [
+    "What Is UX Research? Explained From Scratch",
+    "UX Research for Beginners: What It Is and How It Works",
+    "What Is UX Research? Explained With Real App Examples"
+  ],
+  "title": "What Is UX Research? Explained From Scratch",
+  "set": 3,
+  "kind": "photo",
+  "scores": "critic scores R1 6 · R2 7.5 · R3 6.5 · R4 7 · R5 6.5 · below the 7.5 bar (alternate)",
+  "recommended": false
+}

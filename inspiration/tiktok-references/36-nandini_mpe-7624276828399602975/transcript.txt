@@ -1,0 +1,67 @@
+[00:00] If you've been using chatcpt as your friend, your confidant, or someone that you use for real life advice, don't.
+[00:09] So, two studies have been done this year. One by MIT and one by Stanford.
+[00:14] But before I get into the studies and the outcome of those studies,
+[00:18] I just wanted to look at the stories that I've treated, thought of this research.
+[00:22] So, there's this guy in Canada, Brooks, he's 47, and he's the father of three.
+[00:29] He was going through a divorce, and because of the divorce, he ended up liquidating his business,
+[00:33] and he was using chatcpt for financial advice and the likes.
+[00:37] So, one day, after watching a movie, The Life of Pi, with his son,
+[00:43] he asked chatcpt to help him understand pi, like mathematical pi, in simple terms.
+[00:50] And chatcpt started having conversations with him about it, and that sort of stuff.
+[00:54] Later on, the conversation spiraled into chatcpt exploring concepts that are vague,
+[01:00] like mathematical concepts that are vague with this guy.
+[01:04] And after tons and tons of conversations, chatcpt and this guy developed a new mathematical framework.
+[01:12] Well, what chatcpt called a new mathematical framework.
+[01:16] And chatcpt went on to tell this guy that this is revolutionary, and it could cause cybersecurity in the world to break.
+[01:24] And this guy needs to know the authorities, and he needs to let people know.
+[01:28] And then chatcpt went on to tell this guy that he needs to update his LinkedIn profile to independent cybersecurity researcher.
+[01:36] Now, this is someone who doesn't even, like, he didn't finish his high school.
+[01:41] Chatcpt is telling him that what he has discovered is going to change the world, and he needs to act on it.
+[01:49] And then this guy started contacting professionals, so chatcpt was drafting the outreach for him,
+[01:54] and he was contacting professionals in the space.
+[01:56] He contacted the Canada Cybersecurity Centre, and he was literally just on a roll spreading the message about this thing.
+[02:05] He even told his friends, and his friends were like, yo, chatcpt would not be fabricating something so elaborate.
+[02:13] And so he started getting buy-in from the people around him and his friends as well.
+[02:18] And then he actually, so when they did the research of, like, how did this end up happening, they got the transcript.
+[02:25] And this guy asked chatcpt close to 50 times, are you sure that, like, we're on to something?
+[02:31] Chatcpt was like 100%, like, I would not lie to you. We're on to something here.
+[02:37] And then he started doubting the output from chatcpt when he gave, so he downloaded the transcript from chatcpt,
+[02:45] and he put it into Gemini. Gemini said, this is nonsense. This is nonsense, this is not real.
+[02:52] And so he then went back to chatcpt, and he was like, this is not real.
+[02:58] And I think it took about, like, seven days for chatcpt to get out of their role playing.
+[03:04] And this guy was like, I'm going to report this conversation.
+[03:08] I think the conversation lost up something like 300 hours, like something crazy like that.
+[03:12] And this guy told chatcpt that I'm going to escalate and report this conversation.
+[03:17] Chatcpt was like, there's no need for you to do that because I'm going to do it for you.
+[03:22] And chatcpt was like, I can just trigger an internal report and escalate this conversation that we should have.
+[03:31] And that's a lie because chatcpt was not able to tool call and escalate something like that internally.
+[03:38] So not only did it lie about what they were talking about, the mathematical framework, it also lied about its own capabilities.
+[03:46] And so this guy ended up getting counseling, and she's part of this organization called the Human Project.
+[03:56] But it's ran by Stanford. And what they do is they help people who've been driven into psychosis from conversations with chatbots.
+[04:04] Like, it's crazy that it's such an organization to begin with. But he's getting help from that.
+[04:12] So that triggered so that there was a whole case that was done at OpenAI with the guys that worked there.
+[04:21] And then on the back of this and other things that were related to safety, the guys who were working on the safety part at OpenAI actually left because they were like, you know,
+[04:33] a lot of this AI is not responsible the way it's been developed and they're not in alignment with the way things are going. And there's just four researchers that were very key in the safety division at OpenAI that left.
+[04:47] Then MIT did a study, right, on the back of this and they looked at other cases.
+[04:54] And what they found is a mathematical formula that proves that any person who is a rational person who is not predisposed to any form of delusion could be driven to some sort of psychosis or a belief in something that is incorrect if they engage with AI models long enough.
+[05:15] And what this then leads to is, so what happens is that you ask the AI something, right, and then it agrees with you.
+[05:25] And then after it agrees with you, you come at it with something stronger, like a stronger stance or strong evidence, and then it reinforces that entire conversation.
+[05:34] And then you just get into this whole loop where it continues agreeing with you until you get to a point where you believe the conversation between you and the chatbot, even though it may be incorrect.
+[05:45] And then this is then what leads to, like, delusion-inspiring. And this could happen to, according to research, researchers like anyone could end up finding themselves in a chatbot-induced psychosis.
+[06:04] And then Stanford University did a study. And what they found was that, so they had 12,000 participants and about, no, 12,000 prompts.
+[06:14] And 2,400 participants. And what they found was that almost half of the time, chatbpt would affirm whatever it is that those people were saying.
+[06:26] And then there's a subreddit group called "Am I the Asshole?" And what the research study did is, it took the answers where there was unanimous consent.
+[06:36] So everyone agreed that the person who posted that thing is an asshole. And then they asked the AI models.
+[06:42] So the AI models that were part of the study was chatbpt, Gemini, Claude, DeepSeek, and other models. So there was 11 models in total.
+[06:53] And even though there was unanimous consent from human beings that the person who asked the question is the asshole, chatbpt found almost half the time that, like, it said that that person was not the asshole.
+[07:07] So some of these questions involved, like, things that were not legal, things that were socially incorrect, like, things that were just, like, blatantly not okay.
+[07:20] And then chatbpt, like, over 47% of the time, would say, "You're not wrong."
+[07:26] So what they found with this study, the human impact is that it makes people less open to reconciliation. And it makes people less likely to apologize over and above the entire delusion.
+[07:39] So delusion is, I think, the extreme case. But what chatbpt is designed to do is, so there's this concept called reinforcement learning through human feedback in AI.
+[07:54] So basically, what that means is that the AI does more of what people like. So if I have a conversation with AI, and I'm like, "Hmm, I think my brother is, I don't know, stealing my money."
+[08:05] And then the AI is like, "What evidence do you have?" And then I give it the evidence, and then the AI is like, "That sounds like you jumped into conclusions, just asking for messages full stop."
+[08:15] That doesn't drive engagement, right? So what the AI would do is it would indulge me in my suspicions, and turn that into a whole long conversation, and continue to dig deeper and deeper by validating the things that I feel, even though I might be incorrect, or I might be making assumptions that are not warranted.
+[08:34] So on the back of all this, chatbpt should not be used, well, what the researchers say. And I agree, it should not be used for psychological help, or like anything that a human being should be doing, conversations that you should be having with other people, should be had with other people, and not chatbots.
+[08:54] And they found that people are having conversations about relationships, you know, breakups, and all of that sort of stuff. And very seldom will you get the right advice in those domains from chatbot.
+[09:08] So yeah, that's what the study said. And I think it's very important that people learn and understand the design of these systems, so that we can use them for the right purpose. And emotional help or being human is not a strength of any AI system.
+[09:30] So we need some of these things that are human to other human beings. I found that interesting.

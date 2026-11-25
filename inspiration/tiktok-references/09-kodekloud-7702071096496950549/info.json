@@ -1,0 +1,21 @@
+{
+ "id": "7702071096496950549",
+ "title": "HTTP Has a New Method: QUERY 🌐 Too many search filters can make a GET...",
+ "description": "HTTP Has a New Method: QUERY 🌐 Too many search filters can make a GET URL so long that your CDN rejects it before it reaches the server. Moving the filters into the body doesn’t fix it either, because GET was never meant to carry a body and many servers and CDNs ignore or reject it. QUERY sends the filters in the request body like POST, but tells caches and clients the request only reads data and can be safely repeated. So it can be cached and retried, which POST can’t do. Would you move your search APIs to QUERY today, or wait for wider support? Tell us in the comments 👇 #HTTP #HTTPQuery #WebDevelopment #APIDesign #RESTAPI #BackendDevelopment #CDN #Caching #DevOps #CodingTips #KodeKloud",
+ "uploader": "kodekloud",
+ "uploader_id": "7244524040541520898",
+ "channel": "KodeKloud",
+ "view_count": 73900,
+ "like_count": 4622,
+ "comment_count": 60,
+ "repost_count": 221,
+ "save_count": 1065,
+ "duration": 170,
+ "upload_date": "20261029",
+ "timestamp": 1793289600,
+ "webpage_url": "https://www.tiktok.com/@kodekloud/video/7702071096496950549?_r=1&_t=ZS-9B47wzbkE6f",
+ "track": "original sound - KodeKloud",
+ "artist": "KodeKloud",
+ "width": 576,
+ "height": 1024
+}

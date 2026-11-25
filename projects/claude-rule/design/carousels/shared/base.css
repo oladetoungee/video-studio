@@ -1,0 +1,130 @@
+/* claude-rule carousels: the film's "Thread" look. Lilac ground (her top in the recording), ink bubbles for her own words,
+   white cards for real sources, grey system lines, one giant breakout word with a white highlighter. Flat grounds only. */
+@font-face { font-family: "Schibsted"; src: url(fonts/SchibstedGrotesk.ttf); font-weight: 400 900; }
+@font-face { font-family: "Plex Mono"; src: url(fonts/IBMPlexMono-Medium.ttf); font-weight: 500; }
+@font-face { font-family: "Plex Mono"; src: url(fonts/IBMPlexMono-Regular.ttf); font-weight: 400; }
+@font-face { font-family: "Instrument Serif"; src: url(fonts/InstrumentSerif-Italic.ttf); font-style: italic; font-weight: 400; }
+
+:root {
+  --W: 1080px; --H: 1350px; --M: 84px;
+  --lilac: #CDBFF3; --ink: #15131C; --herText: #F4F1FA; --card: #FFFFFF; --mute: #3E3852; --rule: #A99BD6; --red: #E8352B; --grey: #E4DEF2;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: #2a2a2e; }
+body { display: flex; flex-direction: column; align-items: center; gap: 40px; padding: 40px 0; -webkit-font-smoothing: antialiased; text-rendering: geometricPrecision; }
+@page { size: var(--W) var(--H); margin: 0; }
+@media print { html, body { background: none; } body { display: block; padding: 0; } .slide { break-after: page; } }
+
+.slide { position: relative; width: var(--W); height: var(--H); overflow: hidden; background: var(--bg); color: var(--fg);
+  font-family: Schibsted, sans-serif; font-weight: 500; }
+.g-lilac { --bg: var(--lilac); --fg: var(--ink); --sub: #2A2638; --mid: var(--mute); --line: var(--rule); --a: var(--red); --bubble: var(--ink); --bubbleText: var(--herText); }
+.g-ink   { --bg: var(--ink); --fg: #F4F1FA; --sub: #D9D3EA; --mid: #A79FC2; --line: #3A3550; --a: #FF6A5E; --bubble: #F4F1FA; --bubbleText: var(--ink); }
+.g-paper { --bg: #F4F1FA; --fg: var(--ink); --sub: #2A2638; --mid: var(--mute); --line: #CFC6EA; --a: var(--red); --bubble: var(--ink); --bubbleText: var(--herText); }
+
+/* type */
+.disp { font-family: Schibsted; font-weight: 800; letter-spacing: -0.045em; line-height: 0.95; white-space: nowrap; }
+.serif { font-family: "Instrument Serif"; font-style: italic; font-weight: 400; letter-spacing: -0.01em; }
+.acc { color: var(--a); font-style: normal; }
+mark.hl { background: #fff; color: var(--ink); padding: 0 .08em; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+.g-ink mark.hl { background: var(--lilac); }
+.mono { font-family: "Plex Mono"; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; }
+.mono.lab { font-size: 32px; }
+.body, p, .bal { text-wrap: balance; }
+.body { font-size: 40px; line-height: 1.28; letter-spacing: -0.01em; color: var(--sub); font-weight: 500; }
+.take { line-height: 1.18; font-weight: 700; letter-spacing: -0.02em; color: var(--fg); }
+.nw { white-space: nowrap; }
+
+/* chrome: page number + progress meter only (no corner HUD) */
+.foot { position: absolute; left: var(--M); right: var(--M); bottom: 54px; display: flex; justify-content: space-between; align-items: center; }
+.foot .num { font-family: "Plex Mono"; font-weight: 500; font-size: 32px; letter-spacing: 0.06em; color: var(--mid); }
+.foot .num b { color: var(--fg); font-weight: 500; }
+.meter { display: flex; gap: 7px; }
+.meter i { display: block; width: 26px; height: 14px; border-radius: 7px; border: 2px solid var(--mid); opacity: .6; }
+.meter i.on { background: var(--fg); border-color: var(--fg); opacity: 1; }
+
+.main { position: absolute; left: var(--M); right: var(--M); top: 104px; bottom: 150px; display: flex; flex-direction: column; }
+.push { margin-top: auto; }
+
+/* a system line: mono, centred between two hairlines (like the film) */
+.sys { display: flex; align-items: center; gap: 22px; font-size: 32px; color: var(--mid); white-space: nowrap; }
+.sys::before, .sys::after { content: ''; flex: 1; height: 3px; background: var(--line); }
+
+/* bubbles: her words (ink), a generic user message (white), a cruel message (red, always blurred), her what-if (grey, labelled) */
+.bub { max-width: 100%; padding: 22px 32px 24px; border-radius: 34px; font-size: 42px; line-height: 1.18; letter-spacing: -0.012em; font-weight: 500; text-wrap: pretty; }
+.bub.her { align-self: flex-end; background: var(--bubble); color: var(--bubbleText); border-bottom-right-radius: 10px; }
+.bub.big { font-weight: 600; }
+.bub.user { align-self: flex-end; background: #EEEAF7; color: var(--ink); border-bottom-right-radius: 10px; }
+.bub.rude { align-self: flex-end; background: var(--red); color: #fff; font-weight: 800; text-transform: uppercase; border-bottom-right-radius: 10px; }
+.bub.rude span { display: inline-block; filter: blur(7px); }
+.bub.whatif { align-self: flex-start; background: #fff; color: var(--ink); border: 3px solid var(--rule); border-bottom-left-radius: 10px; max-width: 86%; }
+.bub.whatif .wl { font-size: 32px; color: var(--mute); margin-bottom: 10px; letter-spacing: .04em; }
+
+/* a generic chat window (ILLUSTRATION): never Claude's real interface, no logo */
+.win { background: var(--card); color: var(--ink); border-radius: 10px; overflow: hidden; box-shadow: 0 0 0 3px var(--rule); }
+.g-ink .win { box-shadow: none; }
+.w-hd { display: flex; justify-content: space-between; align-items: center; padding: 22px 32px; border-bottom: 3px solid #ECE7F6; }
+.w-nm { font-weight: 800; font-size: 44px; letter-spacing: -0.03em; }
+.w-ill { font-size: 32px; color: var(--mute); }
+.w-bd { display: flex; flex-direction: column; gap: 18px; padding: 28px 32px 30px; }
+.w-bd .bub { font-size: 46px; }
+.w-bd .bub.her { background: var(--ink); color: var(--herText); }
+.m-sys { align-self: center; font-size: 32px; color: var(--mute); }
+.m-end { align-self: stretch; text-align: center; padding: 22px 20px 24px; border-radius: 18px; background: var(--grey); font-weight: 800; font-size: 54px; letter-spacing: -0.03em; }
+.w-in { padding: 22px 32px 24px; border-top: 3px solid #ECE7F6; font-size: 32px; color: #8A83A0; text-transform: none; letter-spacing: .02em; }
+
+/* real screenshot card */
+.shot { background: #FAF9F5; border-radius: 22px; overflow: hidden; box-shadow: 0 0 0 3px var(--rule); }
+.g-ink .shot { box-shadow: none; }
+.sh-img { position: relative; padding: 26px 26px 18px; }
+.sh-w { position: relative; }
+.sh-img img { display: block; width: 100%; }
+.mark { position: absolute; background: rgba(205,191,243,.9); mix-blend-mode: multiply; }
+.sh-src { padding: 16px 26px 18px; border-top: 2px solid #E4E0D8; font-size: 34px; color: #5B556B; letter-spacing: .03em; white-space: nowrap; }
+
+/* the breakout word */
+.bw { font-family: Schibsted; font-weight: 800; letter-spacing: -0.06em; line-height: 1.04; white-space: nowrap; }
+.bw > span { display: block; text-align: center; background: #fff; padding: 0 .1em; }
+.g-ink .bw > span { background: var(--a); }
+
+/* the line between frustration and cruelty */
+.ln { display: flex; flex-direction: column; gap: 0; }
+.ln-s { display: grid; grid-template-columns: 1fr; row-gap: 14px; }
+.ln-k { font-size: 36px; color: var(--mid); }
+.ln-s.cr .ln-k { color: var(--a); }
+.ln-m { display: flex; }
+.ln-m .bub { font-size: 50px; align-self: flex-start; border-bottom-right-radius: 34px; border-bottom-left-radius: 10px; }
+.ln-t { font-size: 42px; line-height: 1.2; font-weight: 600; letter-spacing: -0.015em; }
+.ln-bar { height: 14px; background: var(--a); margin: 40px -84px 36px; }
+
+/* quote card */
+.qc { background: var(--card); color: var(--ink); border-radius: 26px; padding: 40px 44px 34px; box-shadow: 0 0 0 3px var(--rule); }
+.qt { font-family: "Instrument Serif"; font-style: italic; font-size: 72px; line-height: 1.04; letter-spacing: -0.015em; }
+.qb { font-size: 34px; color: var(--mute); margin-top: 26px; line-height: 1.3; text-transform: none; letter-spacing: .02em; }
+
+/* her photo in a white card */
+.pol { position: absolute; background: #fff; padding: 12px 12px 0; border-radius: 18px; box-shadow: 0 0 0 3px rgba(21,19,28,.12); }
+.pol img { display: block; width: 100%; object-fit: cover; border-radius: 10px; }
+.pol .cap { font-family: "Plex Mono"; font-weight: 500; letter-spacing: .04em; color: var(--ink); font-size: 32px; height: 62px; white-space: nowrap; overflow: hidden; display: flex; align-items: center; padding-left: 4px; }
+.handle { margin-top: 30px; font-weight: 800; font-size: 50px; letter-spacing: -0.03em; }
+
+html.v-slide, html.v-slide body { background: none; }
+html.v-slide body { display: block; padding: 0; }
+html.v-strip body { flex-direction: row; align-items: flex-start; padding: 0; gap: 40px; width: max-content; }
+
+.kick { color: var(--mid); margin-bottom: 26px; }
+.lede { font-size: 44px; line-height: 1.22; font-weight: 600; letter-spacing: -0.015em; color: var(--fg); }
+.m-more { align-self: center; font-size: 32px; color: var(--mute); letter-spacing: .1em; padding: 6px 0; }
+.ln-tag { font-size: 32px; color: var(--mid); margin-top: -4px; }
+.bleed .shot { border-radius: 0; box-shadow: none; }
+.bleed .sh-img { padding: 30px 40px 22px; }
+.bleed .sh-src { padding: 16px 40px 18px; }
+.w-in { color: #6E6788; font-size: 34px; }
+.disp mark.hl { padding: 0 .06em; }
+.l-punch .disp, .l-hook .disp { line-height: 1.02; }
+.meter i { border-radius: 0; }
+
+.l-source .body { text-wrap: wrap; }
+
+.qc.bare { background: none; box-shadow: none; padding: 0; color: var(--fg); }
+.qc.bare .qb { color: var(--mid); }
+.qc.bare .qt { font-size: 92px; }

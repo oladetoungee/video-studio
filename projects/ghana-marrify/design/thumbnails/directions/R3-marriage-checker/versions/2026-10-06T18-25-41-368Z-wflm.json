@@ -1,0 +1,30 @@
+{
+ "label": "Before this session’s edits",
+ "auto": true,
+ "savedAt": 1791311141368,
+ "content": {
+  "direction": "REMAKE of viral sample 3 (\"FITNESS SALES FRAMEWORK\"): her face huge on the left, cut out onto grid paper; the topic in heavy black caps top right with a red marker underline; the process drawn as sticky notes with hand-drawn arrows, the middle steps pixelated for curiosity. Steps: NAME -> REGISTRY -> COURTS -> GAZETTE -> MARRIED? (the hidden ones are the real record sources the platform pulls from).",
+  "concept": "R3",
+  "sample": "3",
+  "thumbnail_text": "GHANA MARRIAGE CHECKER",
+  "title": "Married? In Ghana, Anyone Can Now Look You Up",
+  "titles": [
+   "Married? In Ghana, Anyone Can Now Look You Up",
+   "Is He Already Married? Ghana Built an App to Check",
+   "You Can Now Check If Someone Is Married in Ghana"
+  ],
+  "text": {
+   "line1": "GHANA MARRIAGE",
+   "line2": "CHECKER",
+   "n1": "NAME",
+   "n2": "REGISTRY",
+   "n3": "COURTS",
+   "n4": "GAZETTE",
+   "n5": "MARRIED?"
+  },
+  "images": {
+   "front": "../../assets/scene/warm/mask/s_128.10.png"
+  },
+  "vars": {}
+ }
+}

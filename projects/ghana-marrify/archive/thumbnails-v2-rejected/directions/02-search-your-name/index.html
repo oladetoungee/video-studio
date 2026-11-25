@@ -1,0 +1,23 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../lib/r2.css"><style>
+.t{--ground:#0f1513;--fg:#F7F5F0;--accent:#FFD23F;--px:-6px;--py:-262px;--pw:1905px;--dim:.30}
+.hd{left:56px;top:40px;font-size:124px;color:var(--fg)}
+.ui{left:56px;top:330px;width:540px;background:#FFFDF6;border-radius:12px;box-shadow:0 14px 40px rgba(0,0,0,.45);overflow:hidden}
+.ui .bar{display:flex;align-items:center;gap:16px;padding:20px 22px;border-bottom:2px solid #e6e1d6}
+.ui .q{font-family:'Archivo';font-weight:600;font-size:38px;color:#111114}
+.ui .cur{display:inline-block;width:4px;height:40px;background:#111114;margin-left:4px;vertical-align:-6px}
+.ui .row{display:flex;align-items:center;gap:16px;padding:14px 22px;font-family:'Archivo';font-weight:700;font-size:30px;color:#111114}
+.ui .row.big{font-size:40px;padding:16px 22px}
+.ui .row + .row{border-top:2px solid #eee9de}
+.ui .row b{font-weight:700} .ui .row .r{color:var(--red)}
+.ui .bars{margin-left:auto;display:flex;gap:8px} .ui .bars i{display:block;height:18px;background:#d9d4c8;border-radius:3px}
+.lbl{left:58px;top:610px;font-size:14px;color:rgba(247,245,240,.7)}
+</style></head><body><div class="t">
+<div class="photo z1" data-move="photo"><img data-img="scene" alt=""><div class="dim"></div></div>
+<div class="abs hd serif nw z3 shadow" data-move="headline"><div data-k="line1"></div><div class="it" data-k="line2"></div></div>
+<div class="abs ui z3" data-move="search">
+  <div class="bar"><svg viewBox="0 0 24 24" width="34" height="34"><circle cx="10" cy="10" r="7" fill="none" stroke="#111114" stroke-width="2.6"/><path d="M15.5 15.5 L22 22" stroke="#111114" stroke-width="2.6" stroke-linecap="round"/></svg><span class="q" data-k="query"></span><span class="cur"></span></div>
+  <div class="row"><span data-k="row1"></span><span class="bars"><i style="width:70px"></i><i style="width:40px"></i></span></div>
+  <div class="row big"><span class="r" data-k="row2"></span><span class="bars"><i style="width:56px"></i><i style="width:64px"></i></span></div>
+</div>
+<div class="abs lbl mono z3" data-k="label"></div>
+</div><script src="../../lib/bind.js"></script></body></html>

@@ -1,0 +1,29 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../lib/eu.css"><style>
+/* 2026-11-19 rework: copies pick1119-39 ("How to Scale from 1 to 1,000,000 Users"): flat pale ground, a heavy condensed
+   headline top left with one word in the accent, a simple bar chart bottom right, a hand-drawn arrow between them.
+   Font board design-04 Big Shoulders Display (ink #262824 on #DFD8D4, Design 396), accent #D44B29 from design-03 (same
+   font, Design 400); small labels pair-06 Archivo condensed (Design 400). Numbers: kit 7f (tuition + one year of money to show). */
+.t{background:#DFD8D4;color:#262824}
+.h{position:absolute;left:var(--hx,54px);top:var(--hy,34px);font:800 var(--hs,128px)/.9 "BS",sans-serif;text-transform:uppercase;letter-spacing:-.005em;white-space:nowrap}
+.h .r{color:#D44B29}
+.chart{position:absolute;left:var(--cx,560px);top:0;width:680px;height:720px}
+.bar{position:absolute;bottom:80px;width:190px;background:#262824}
+.bar.r{background:#D44B29}
+.v{position:absolute;width:190px;text-align:center;font:700 62px/1 "BS",sans-serif;letter-spacing:.005em}
+.n{position:absolute;bottom:26px;width:190px;text-align:center;font:700 42px/1 "AR",sans-serif;font-stretch:75%;text-transform:uppercase;letter-spacing:.02em}
+.base{position:absolute;left:-10px;width:670px;bottom:78px;height:4px;background:#262824}
+.tag{position:absolute;width:190px;text-align:center;color:#DFD8D4;font:700 38px/1.0 "AR",sans-serif;font-stretch:75%;text-transform:uppercase}
+.note{position:absolute;left:var(--nx,58px);bottom:var(--ny,34px);font:700 34px/1.15 "AR",sans-serif;font-stretch:75%;text-transform:uppercase;letter-spacing:.03em;color:#262824}
+.arr{position:absolute;left:var(--ax,250px);top:var(--ay,330px);width:330px;height:220px}
+</style></head><body><div class="t">
+<div class="h z3" data-k="h"></div>
+<svg class="arr z2" data-move="arrow" viewBox="0 0 330 220"><path d="M20 10 C 10 120, 120 190, 300 168 M262 140 L 304 168 L 262 200" fill="none" stroke="#D44B29" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+<div class="chart z3" data-move="chart">
+  <div class="base"></div>
+  <div class="bar r" style="left:0;height:290px"></div><div class="v" style="left:0;bottom:384px" data-k="v0"></div><div class="n" style="left:0" data-k="n0"></div>
+  <div class="bar" style="left:230px;height:339px"></div><div class="v" style="left:230px;bottom:433px" data-k="v1"></div><div class="n" style="left:230px" data-k="n1"></div>
+  <div class="tag" style="left:230px;bottom:300px" data-k="t1"></div>
+  <div class="bar" style="left:460px;height:414px"></div><div class="v" style="left:460px;bottom:508px" data-k="v2"></div><div class="n" style="left:460px" data-k="n2"></div>
+</div>
+<div class="note z3" data-k="note"></div>
+</div><script src="../../lib/bind.js"></script></body></html>

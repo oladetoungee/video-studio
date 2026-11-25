@@ -1,0 +1,659 @@
+{
+	"systeminfo": "WHISPER : COREML = 0 | OPENVINO = 0 | MTL : EMBED_LIBRARY = 1 | CPU : NEON = 1 | ARM_FMA = 1 | FP16_VA = 1 | MATMUL_INT8 = 1 | DOTPROD = 1 | SME = 1 | ACCELERATE = 1 | OPENMP = 1 | REPACK = 1 | ",
+	"model": {
+		"type": "small",
+		"multilingual": false,
+		"vocab": 51864,
+		"audio": {
+			"ctx": 1500,
+			"state": 768,
+			"head": 12,
+			"layer": 12
+		},
+		"text": {
+			"ctx": 448,
+			"state": 768,
+			"head": 12,
+			"layer": 12
+		},
+		"mels": 80,
+		"ftype": 1
+	},
+	"params": {
+		"model": "/Users/gbemi/.cache/whisper/ggml-small.en.bin",
+		"language": "en",
+		"translate": false
+	},
+	"result": {
+		"language": "en"
+	},
+	"transcription": [
+		{
+			"timestamps": {
+				"from": "00:00:00,000",
+				"to": "00:00:02,660"
+			},
+			"offsets": {
+				"from": 0,
+				"to": 2660
+			},
+			"text": " Can I just launch something called Marrify?"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:02,660",
+				"to": "00:00:05,180"
+			},
+			"offsets": {
+				"from": 2660,
+				"to": 5180
+			},
+			"text": " It's like a public platform where you can search"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:05,180",
+				"to": "00:00:07,260"
+			},
+			"offsets": {
+				"from": 5180,
+				"to": 7260
+			},
+			"text": " and verify marriages, divorces,"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:07,260",
+				"to": "00:00:09,900"
+			},
+			"offsets": {
+				"from": 7260,
+				"to": 9900
+			},
+			"text": " and license marriage officials."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:09,900",
+				"to": "00:00:14,340"
+			},
+			"offsets": {
+				"from": 9900,
+				"to": 14340
+			},
+			"text": " It launched last month with some Ministry of Gender,"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:14,340",
+				"to": "00:00:25,660"
+			},
+			"offsets": {
+				"from": 14340,
+				"to": 25660
+			},
+			"text": " and I was just reading about it the other day on Tech"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:25,660",
+				"to": "00:00:25,660"
+			},
+			"offsets": {
+				"from": 25660,
+				"to": 25660
+			},
+			"text": " and the way that it works is that it pulls data from different, um, government sources, registrars, general department, the courts, local assembly, all of that."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:25,660",
+				"to": "00:00:31,900"
+			},
+			"offsets": {
+				"from": 25660,
+				"to": 31900
+			},
+			"text": " It covers all kinds of marriages and all kinds of divorces. It goes all the way back, like records from all the way back."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:31,900",
+				"to": "00:00:37,740"
+			},
+			"offsets": {
+				"from": 31900,
+				"to": 37740
+			},
+			"text": " And you can also check whether a church or a pastor and a marriage venue is actually licensed to conduct a marriage."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:37,740",
+				"to": "00:00:44,380"
+			},
+			"offsets": {
+				"from": 37740,
+				"to": 44380
+			},
+			"text": " And I really love this when I saw this, like, because as an African, I'm thinking, \"Wow, we're having centralized data, finally, finally!\""
+		},
+		{
+			"timestamps": {
+				"from": "00:00:44,380",
+				"to": "00:00:50,220"
+			},
+			"offsets": {
+				"from": 44380,
+				"to": 50220
+			},
+			"text": " Now, before I talk about drawbacks, because I read Tech about this article about this, and there were some drawbacks that I cited."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:50,220",
+				"to": "00:00:53,660"
+			},
+			"offsets": {
+				"from": 50220,
+				"to": 53660
+			},
+			"text": " Before I talk about it, let me just, let me love, let me love openings."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:53,660",
+				"to": "00:00:59,020"
+			},
+			"offsets": {
+				"from": 53660,
+				"to": 59020
+			},
+			"text": " I've been living in Estonia for about a year now, and people always say, like, this place is the digital orb of Europe or something like that."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:59,020",
+				"to": "00:01:03,340"
+			},
+			"offsets": {
+				"from": 59020,
+				"to": 63340
+			},
+			"text": " And I'm not going to say, like, it's so real. Everything here, everything you want to do here is online."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:03,340",
+				"to": "00:01:07,260"
+			},
+			"offsets": {
+				"from": 63340,
+				"to": 67260
+			},
+			"text": " I'm not exaggerating. Everything. Your health records, everything links so well."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:07,260",
+				"to": "00:01:11,740"
+			},
+			"offsets": {
+				"from": 67260,
+				"to": 71740
+			},
+			"text": " It's like the eighth papers. There is nothing you want to do that you can't do online here."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:11,740",
+				"to": "00:01:17,340"
+			},
+			"offsets": {
+				"from": 71740,
+				"to": 77340
+			},
+			"text": " You can get married online. You can divorce online. There's a link for everything you want to do in Estonia."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:17,340",
+				"to": "00:01:24,380"
+			},
+			"offsets": {
+				"from": 77340,
+				"to": 84380
+			},
+			"text": " The data ecosystem that the governments use, that they run here, the way it sinks, I genuinely admire it."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:24,380",
+				"to": "00:01:28,620"
+			},
+			"offsets": {
+				"from": 84380,
+				"to": 88620
+			},
+			"text": " And as someone coming from Nigeria, it blew my mind when I got to it, where everything just sinks."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:28,620",
+				"to": "00:01:34,300"
+			},
+			"offsets": {
+				"from": 88620,
+				"to": 94300
+			},
+			"text": " And I see, then I read something in this direction, at least, even though it's for, like, my first instance is, like, \"Yes, please, more of this.\""
+		},
+		{
+			"timestamps": {
+				"from": "00:01:34,300",
+				"to": "00:01:39,260"
+			},
+			"offsets": {
+				"from": 94300,
+				"to": 99260
+			},
+			"text": " Because he solves so much problems. There's more reliable records, instead of, like, just pieces of paper everywhere."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:39,260",
+				"to": "00:01:43,980"
+			},
+			"offsets": {
+				"from": 99260,
+				"to": 103980
+			},
+			"text": " Instead of NIN and this another. And I think the main thing that even made me record this video is,"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:43,980",
+				"to": "00:01:50,140"
+			},
+			"offsets": {
+				"from": 103980,
+				"to": 110140
+			},
+			"text": " like, the drawbacks that take back about race, which is that marriage and divorce records are sensitive private data."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:50,140",
+				"to": "00:01:54,140"
+			},
+			"offsets": {
+				"from": 110140,
+				"to": 114140
+			},
+			"text": " I don't know, like, a divorce record is a personal thing about someone's life."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:54,140",
+				"to": "00:01:58,620"
+			},
+			"offsets": {
+				"from": 114140,
+				"to": 118620
+			},
+			"text": " And now, that record is searchable by anyone that has your name."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:58,620",
+				"to": "00:02:01,580"
+			},
+			"offsets": {
+				"from": 118620,
+				"to": 121580
+			},
+			"text": " And I'm telling this about someone that likes open data. I think that that's even your drawback."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:01,580",
+				"to": "00:02:06,780"
+			},
+			"offsets": {
+				"from": 121580,
+				"to": 126780
+			},
+			"text": " In Estonia, you can search online and find businesses. You can check how much a business, like, you don't know anything about it."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:06,780",
+				"to": "00:02:13,820"
+			},
+			"offsets": {
+				"from": 126780,
+				"to": 133820
+			},
+			"text": " You can look up how much they made in India. And that's fine, I think, because if business is a public entity, that takes public money, holds public accountability."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:13,820",
+				"to": "00:02:19,420"
+			},
+			"offsets": {
+				"from": 133820,
+				"to": 139420
+			},
+			"text": " But maybe in the case of a divorce, it's a little bit different. So that really got me thinking about the drawbacks, of course."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:19,420",
+				"to": "00:02:27,660"
+			},
+			"offsets": {
+				"from": 139420,
+				"to": 147660
+			},
+			"text": " I don't really know, because I love the idea of open data, but I also really don't know how to balance it well with personal data and privacy issues."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:27,660",
+				"to": "00:02:35,420"
+			},
+			"offsets": {
+				"from": 147660,
+				"to": 155420
+			},
+			"text": " Something to think about that I've been thinking about. And there's also the consent path of the conversation, because I want to believe that it was information, right?"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:35,420",
+				"to": "00:02:41,820"
+			},
+			"offsets": {
+				"from": 155420,
+				"to": 161820
+			},
+			"text": " There's a consent path. Like, there's a difference between a divorce with a system in one, cut out or somewhere in 2003."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:41,820",
+				"to": "00:02:47,580"
+			},
+			"offsets": {
+				"from": 161820,
+				"to": 167580
+			},
+			"text": " And there's a difference in that, and somebody just been able to check it on their phone in three seconds, right?"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:47,580",
+				"to": "00:02:56,860"
+			},
+			"offsets": {
+				"from": 167580,
+				"to": 176860
+			},
+			"text": " And I was also then thinking about data minimization. So the idea of data minimization is that you expose the minimum amount of data required to answer the question being asked."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:56,860",
+				"to": "00:03:01,020"
+			},
+			"offsets": {
+				"from": 176860,
+				"to": 181020
+			},
+			"text": " So if I ask the question, is this person currently free to marry? That's a yes or no answer."
+		},
+		{
+			"timestamps": {
+				"from": "00:03:01,020",
+				"to": "00:03:07,900"
+			},
+			"offsets": {
+				"from": 181020,
+				"to": 187900
+			},
+			"text": " Answering that question does not require showing when they got married, who they married, when they divorced, which cost granted it, right?"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:07,900",
+				"to": "00:03:12,540"
+			},
+			"offsets": {
+				"from": 187900,
+				"to": 192540
+			},
+			"text": " I was also thinking about how data minimization can come to play here as well."
+		},
+		{
+			"timestamps": {
+				"from": "00:03:12,540",
+				"to": "00:03:17,260"
+			},
+			"offsets": {
+				"from": 192540,
+				"to": 197260
+			},
+			"text": " Could we minimize data to the point where we are not exposing much more than it's been asked for?"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:17,260",
+				"to": "00:03:21,980"
+			},
+			"offsets": {
+				"from": 197260,
+				"to": 201980
+			},
+			"text": " Like in the case of Marifai in Ghana, for example, the question is, is this person married?"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:21,980",
+				"to": "00:03:26,380"
+			},
+			"offsets": {
+				"from": 201980,
+				"to": 206380
+			},
+			"text": " So the answer is simple. This person currently has an active marriage on record."
+		},
+		{
+			"timestamps": {
+				"from": "00:03:26,380",
+				"to": "00:03:32,620"
+			},
+			"offsets": {
+				"from": 206380,
+				"to": 212620
+			},
+			"text": " Nothing else. No name of spouse, no dates, no history. But of course, another person could request another thing."
+		},
+		{
+			"timestamps": {
+				"from": "00:03:32,620",
+				"to": "00:03:41,500"
+			},
+			"offsets": {
+				"from": 212620,
+				"to": 221500
+			},
+			"text": " And then I was thinking about access level. Maybe perhaps an individual could access the level of this data and maybe there are certain organizations or institutions that can access more."
+		},
+		{
+			"timestamps": {
+				"from": "00:03:41,500",
+				"to": "00:03:46,780"
+			},
+			"offsets": {
+				"from": 221500,
+				"to": 226780
+			},
+			"text": " I'm just thinking about all of it. And again, I always say this, that technology is non-neutral."
+		},
+		{
+			"timestamps": {
+				"from": "00:03:46,780",
+				"to": "00:03:50,540"
+			},
+			"offsets": {
+				"from": 226780,
+				"to": 230540
+			},
+			"text": " It works. It takes the form of the system or the place that you're using it in."
+		},
+		{
+			"timestamps": {
+				"from": "00:03:50,540",
+				"to": "00:03:57,100"
+			},
+			"offsets": {
+				"from": 230540,
+				"to": 237100
+			},
+			"text": " For example, the way a piece of technology works in Estonia will be completely different from the way it's working in a country in Africa, in Nigeria, in Ghana."
+		},
+		{
+			"timestamps": {
+				"from": "00:03:57,100",
+				"to": "00:04:00,460"
+			},
+			"offsets": {
+				"from": 237100,
+				"to": 240460
+			},
+			"text": " In Estonia, a divorce record could just be administrative. Nobody cares."
+		},
+		{
+			"timestamps": {
+				"from": "00:04:00,460",
+				"to": "00:04:05,660"
+			},
+			"offsets": {
+				"from": 240460,
+				"to": 245660
+			},
+			"text": " But in an African context, a larger stand divorce, especially for women, is pretty stigmatized."
+		},
+		{
+			"timestamps": {
+				"from": "00:04:05,660",
+				"to": "00:04:15,740"
+			},
+			"offsets": {
+				"from": 245660,
+				"to": 255740
+			},
+			"text": " So it's very tricky when I think about it, when I think about the drawbacks first, that this is something that I myself think I need to explore further, the human side of this thing."
+		},
+		{
+			"timestamps": {
+				"from": "00:04:15,740",
+				"to": "00:04:21,340"
+			},
+			"offsets": {
+				"from": 255740,
+				"to": 261340
+			},
+			"text": " It's not just a privacy engineering conversation. It's also a cultural design thing. But I've just been putting it side by side."
+		},
+		{
+			"timestamps": {
+				"from": "00:04:21,340",
+				"to": "00:04:29,180"
+			},
+			"offsets": {
+				"from": 261340,
+				"to": 269180
+			},
+			"text": " I really love the idea. But another thing I find generally smart in Estonia is the idea that your data being in the system has also appeared, which you've been able to see what's happening today."
+		},
+		{
+			"timestamps": {
+				"from": "00:04:29,180",
+				"to": "00:04:38,140"
+			},
+			"offsets": {
+				"from": 269180,
+				"to": 278140
+			},
+			"text": " That transparency runs between. And I also think that if we are creating open data in Africa, we also need to ask the question of reciprocity."
+		},
+		{
+			"timestamps": {
+				"from": "00:04:38,140",
+				"to": "00:04:45,260"
+			},
+			"offsets": {
+				"from": 278140,
+				"to": 285260
+			},
+			"text": " Where is the reciprocity for the average individual? If someone looks up my marriage record, I get to see that someone looked it up."
+		},
+		{
+			"timestamps": {
+				"from": "00:04:45,260",
+				"to": "00:04:49,820"
+			},
+			"offsets": {
+				"from": 285260,
+				"to": 289820
+			},
+			"text": " I really want African countries building this kind of infrastructure, because I generally think it's also a problem."
+		},
+		{
+			"timestamps": {
+				"from": "00:04:49,820",
+				"to": "00:04:56,940"
+			},
+			"offsets": {
+				"from": 289820,
+				"to": 296940
+			},
+			"text": " Technology helps when it comes to things like this. But I also think that if we want to build this kind of infrastructure,"
+		},
+		{
+			"timestamps": {
+				"from": "00:04:56,940",
+				"to": "00:05:00,860"
+			},
+			"offsets": {
+				"from": 296940,
+				"to": 300860
+			},
+			"text": " as people, we still need to probe it a little bit and question it. And that's what I've just been doing in my head."
+		},
+		{
+			"timestamps": {
+				"from": "00:05:00,860",
+				"to": "00:05:05,980"
+			},
+			"offsets": {
+				"from": 300860,
+				"to": 305980
+			},
+			"text": " I really like the idea I read about. It's super cool, super, super, super cool. I really love it."
+		},
+		{
+			"timestamps": {
+				"from": "00:05:05,980",
+				"to": "00:05:12,700"
+			},
+			"offsets": {
+				"from": 305980,
+				"to": 312700
+			},
+			"text": " But again, just thinking about the drawbacks and everything, this guy just ran into my head."
+		}
+	]
+}

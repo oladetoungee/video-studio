@@ -1,0 +1,71 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Talking-head style frames</title>
+<style>
+@font-face { font-family: 'Schibsted'; src: url(../_fonts/SchibstedGrotesk.ttf); font-weight: 400 900; }
+@font-face { font-family: 'Plex Mono'; src: url(../_fonts/IBMPlexMono-Regular.ttf); }
+@font-face { font-family: 'News'; src: url(../_fonts/Newsreader.ttf); font-weight: 200 800; }
+@font-face { font-family: 'News'; src: url(../_fonts/Newsreader-Italic.ttf); font-weight: 200 800; font-style: italic; }
+html, body { margin: 0; background: #111; }
+#stage { position: relative; overflow: hidden; background: #111; }
+.ph { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; object-fit: cover; }
+.cut { -webkit-mask-size: 100% 100%; mask-size: 100% 100%; mask-mode: luminance; -webkit-mask-mode: luminance; }
+.bub { position: absolute; font-family: 'Schibsted'; font-weight: 500; font-size: 46px; line-height: 1.18; padding: 22px 32px 24px; border-radius: 32px; background: #15131C; color: #F4F1FA; border-bottom-left-radius: 10px; letter-spacing: -0.012em; }
+.bub.card { background: #CDBFF3; color: #15131C; }
+.big { position: absolute; font-family: 'Schibsted'; font-weight: 800; letter-spacing: -0.045em; line-height: 0.86; white-space: nowrap; }
+.disp { position: absolute; font-family: 'News'; font-weight: 300; letter-spacing: -0.025em; line-height: 0.98; color: #15131C; }
+.disp b { font-weight: 600; }
+.cred { position: absolute; font-family: 'Plex Mono'; text-transform: uppercase; color: #3E3852; font-size: 30px; white-space: nowrap; }
+.mono { position: absolute; font-family: 'Plex Mono'; font-size: 34px; }
+</style></head>
+<body><div id="stage"></div>
+<script src="../_tools/kit.js"></script>
+<script>
+// Talking-head (FULL edit) style frames over her REAL footage (frames from kit/anthropic rule for claude.mov, never
+// flipped, never graded). Each still = one layout from inspiration/know-how/MOTION-REFERENCES.md, all in the approved
+// look A · The Thread (lilac #CDBFF3, ink bubbles, Schibsted Grotesk, Plex Mono labels, Newsreader for the other voice).
+// Rebuilt 2026-10-13 after her pick (TH1 and TH4 were in C's ochre; TH2 in B's espresso).
+const FT = '../_footage/';
+function photo(r, t) { const i = el('img', {}, '', r); i.className = 'ph'; i.src = FT + 'f_' + t + '.jpg'; return i; }
+function cutout(r, t) { const i = photo(r, t); i.classList.add('cut'); i.style.webkitMaskImage = i.style.maskImage = `url(${FT}m_${t}.png)`; return i; }
+
+// TH1 · L2 "Behind her" (A look: Schibsted 800 lilac + the white marker), 2:33 "It's a very slippery slope, man."
+scene('L2', 0, 1, (r) => {
+  photo(r, '153.6');
+  el('div', { left: '70px', top: '30px', fontSize: '290px', color: '#CDBFF3' }, 'Slippery', r).className = 'big';
+  el('div', { left: '1290px', top: '560px', fontSize: '210px', color: '#15131C' }, '<span style="background:linear-gradient(transparent 52%, #FFFFFE 52%, #FFFFFE 92%, transparent 92%)">slope.</span>', r).className = 'big';
+  cutout(r, '153.6');
+}, () => {});
+
+// TH2 · L5 "Half and half" (A look with B's two voices: Anthropic's words in serif on lilac), 0:52
+scene('L5', 1, 2, (r) => {
+  const half = el('div', { left: '960px', top: 0, width: '960px', height: H + 'px', overflow: 'hidden' }, '', r);
+  el('img', { left: '-480px', top: 0, width: '1920px', height: '1080px' }, '', half).src = FT + 'f_52.8.jpg';
+  el('div', { left: 0, top: 0, width: '960px', height: H + 'px', background: '#CDBFF3' }, '', r);
+  const d = el('div', { left: '80px', top: '220px', fontSize: '86px', width: '860px' }, 'sustained and needless<br><b>abusive or cruel</b><br>behavior toward<br>our models.', r); d.className = 'disp';
+  el('div', { left: '80px', top: '700px' }, 'Anthropic’s wording · 8 Oct 2026', r).className = 'cred';
+}, () => {});
+
+// TH3 · L4 "Side stack" (A · The Thread look), 0:09
+scene('L4', 2, 3, (r) => {
+  photo(r, '9.5');
+  el('div', { left: '96px', top: '250px', maxWidth: '560px' }, 'there is a new rule about how you are allowed to talk to Claude.', r).className = 'bub';
+  el('div', { left: '96px', top: '470px', maxWidth: '560px' }, 'you cannot be abusive or <b style="font-weight:800">cruel</b> to Claude.', r).className = 'bub';
+  el('div', { left: '96px', top: '650px', fontSize: '34px', padding: '18px 26px', fontFamily: 'Plex Mono', borderRadius: '18px' }, 'from November 12, 2026', r).className = 'bub card';
+  const l = el('div', { left: '100px', top: '760px', color: '#fff' }, 'ILLUSTRATION', r); l.className = 'mono';
+}, () => {});
+
+// TH4 · L11 "Corner cam" (A look), 3:20 "now it's 9pm or 10pm": the what-if as a chat, her in a circle so she never disappears
+scene('L11', 3, 4, (r) => {
+  el('div', { left: 0, top: 0, width: W + 'px', height: H + 'px', background: '#CDBFF3' }, '', r);
+  el('div', { left: '0px', width: W + 'px', top: '150px', color: '#3E3852', textAlign: 'center' }, '9:00 PM', r).className = 'mono';
+  el('div', { left: '700px', top: '172px', width: '140px', height: '2px', background: '#A99BD6' }, '', r);
+  el('div', { left: '1080px', top: '172px', width: '140px', height: '2px', background: '#A99BD6' }, '', r);
+  const b1 = el('div', { right: '340px', top: '240px', maxWidth: '900px', fontSize: '58px', borderBottomLeftRadius: '32px', borderBottomRightRadius: '10px' }, 'and now it’s <span style="color:#CDBFF3">9pm or 10pm,</span>', r); b1.className = 'bub';
+  const b2 = el('div', { left: '560px', top: '420px', maxWidth: '900px', fontSize: '58px', background: '#FFFFFF', color: '#15131C', border: '2px solid #A99BD6' }, '<div style="font-family:Plex Mono;font-size:30px;color:#3E3852;margin-bottom:10px">her what-if · not a real reply</div>“Hey, I’m tired. I don’t want to do anything else.”', r); b2.className = 'bub';
+  el('div', { left: '560px', top: '930px', width: '1020px', height: '2px', background: '#A99BD6' }, '', r);
+  el('div', { left: '560px', top: '960px', color: '#3E3852' }, 'Message…', r).className = 'mono';
+  el('div', { left: '1300px', top: '960px', color: '#3E3852', width: '280px', textAlign: 'right' }, 'ILLUSTRATION', r).className = 'mono';
+  const c = el('div', { left: '48px', bottom: '48px', width: '360px', height: '360px', borderRadius: '50%', overflow: 'hidden', border: '6px solid #15131C' }, '', r);
+  el('img', { left: '-470px', top: '-230px', width: '1280px', height: '720px' }, '', c).src = FT + 'f_192.6.jpg';
+}, () => {});
+</script></body></html>

@@ -1,0 +1,30 @@
+{
+ "direction": "Collage of real shopping photos filling the frame (shoes, receipt, shopping bags, a gift box), Gbemi big in the middle (Oredev photo, smiling mid-sentence, hand out), two lines of white heavy caps across the bottom: 'WHEN ONE CLICK / COSTS YOU MORE...', 'ONE CLICK' in yellow.",
+ "thumbnail_text": "when one click costs you more...",
+ "kind": "photo collage + her",
+ "recommended": false,
+ "titles": [
+  "How Online Shops Get You to Spend More (Dark Patterns)",
+  "11 Tricks Online Shops Use to Make You Pay More",
+  "Why You Always Spend More Than You Planned Online"
+ ],
+ "text": {
+  "hd": "<div class=\"l1\">WHEN <span class=\"y\">ONE CLICK</span></div><div class=\"l2\">COSTS YOU MORE...</div>"
+ },
+ "images": {
+  "t1": "../../assets/pexels/px-7588163.jpg",
+  "t2": "../../assets/pexels/px-4959926.jpg",
+  "t3": "../../assets/pexels/px-5650023.jpg",
+  "t4": "../../assets/pexels/px-5872188.jpg",
+  "cut": "../../assets/oredev/55642240014-bust.png"
+ },
+ "vars": {
+  "--ground": "#3B3330"
+ },
+ "board": "pick1119-02 ('How Beauty Maintenance Culture Is Keeping Young Women Broke': topic photos collaged behind, the woman centred in front, 'WHEN 'LUXURY' BECOMES THE NEW NORMAL...' in two lines of white caps at the bottom)",
+ "fonts": "Font 35 (Montserrat ExtraBold caps, yellow key word, Formats 2)",
+ "colours": "Font 35 specimen (Formats 2): words #FFFFFF, key word #FFE135, ground #3B3330",
+ "title": "How Online Shops Get You to Spend More (Dark Patterns)",
+ "class": "no-lift",
+ "scores": ""
+}

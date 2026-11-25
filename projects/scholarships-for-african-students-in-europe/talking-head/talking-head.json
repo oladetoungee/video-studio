@@ -1,0 +1,588 @@
+{
+ "title": "scholarships-for-african-students-in-europe: talking-head",
+ "source": "../kit/raw-video.mov",
+ "fps": 30,
+ "words": "data/raw_words.json",
+ "faces": "data/face_track.json",
+ "edl": "data/edl.json",
+ "film": "scholarships-for-african-students-in-europe",
+ "edit": {
+  "silenceDb": -44,
+  "maxPause": 0.42,
+  "keepBefore": 0.14,
+  "keepAfter": 0.1
+ },
+ "out": "../outputs/talking-head",
+ "shortsOut": "../outputs/shorts",
+ "tail": 0.7,
+ "audio": {
+  "voiceFilter": "highpass=f=80,afftdn=nr=8:nf=-52:tn=1,deesser=i=0.3:m=0.5:f=0.5,acompressor=threshold=0.06:ratio=3:attack=6:release=160:knee=3,equalizer=f=3200:t=q:w=1.2:g=1.5",
+  "music": {
+   "dir": "library:music"
+  },
+  "levels": {
+   "voiceLufs": -16.0,
+   "duckDb": -18.0,
+   "openDb": -10.0,
+   "target": -14.0,
+   "ceiling": 0.72
+  },
+  "sfx": {
+   "palette": true,
+   "roles": {
+    "flap": {
+     "files": [
+      "library:typewriter-soft-click"
+     ],
+     "align": "start",
+     "db": 15
+    },
+    "flapEnd": {
+     "files": [
+      "library:ui-select-click",
+      "library:switch-tap"
+     ],
+     "align": "start",
+     "db": 10
+    },
+    "open": {
+     "files": [
+      "library:notify-positive"
+     ],
+     "align": "start",
+     "db": 3
+    },
+    "close": {
+     "files": [
+      "library:tape-switch"
+     ],
+     "align": "peak",
+     "db": 6
+    },
+    "cut": {
+     "files": [
+      "library:shutter-hard-click"
+     ],
+     "align": "peak",
+     "db": 6
+    },
+    "slide": {
+     "files": [
+      "library:paper-slide"
+     ],
+     "align": "peak",
+     "db": 12
+    },
+    "marker": {
+     "files": [
+      "library:marker-line"
+     ],
+     "align": "start",
+     "db": 4,
+     "maxlen": 0.7
+    }
+   },
+   "gainDb": 8
+  }
+ },
+ "moments": [
+  {
+   "id": "full",
+   "kind": "full",
+   "slug": "full",
+   "title": "The whole video, cleaned, with graphics (Now Boarding look)",
+   "in": 0,
+   "out": "end",
+   "retakes": false,
+   "cuts": [
+    [
+     119.18,
+     125.62
+    ],
+    [
+     165.6,
+     172.61
+    ],
+    [
+     223.71,
+     226.03
+    ],
+    [
+     282.4,
+     286.03
+    ],
+    [
+     326.76,
+     327.45
+    ],
+    [
+     487.45,
+     489.46
+    ]
+   ],
+   "script": "moments/full.js",
+   "music": [
+    "722",
+    0.0
+   ]
+  },
+  {
+   "id": "sh01",
+   "kind": "short",
+   "slug": "how-scholarships-work",
+   "title": "How scholarships in Europe work",
+   "label": "",
+   "sublabel": "",
+   "in": 28.0,
+   "out": 81.5,
+   "cuts": [],
+   "script": "shorts/sh01.js",
+   "music": [
+    "722",
+    4.0
+   ],
+   "tail": 0.1,
+   "endCard": false,
+   "topLabel": "How scholarships | in Europe work",
+   "fmt": "D",
+   "frame9": "wideLow",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 60.02,
+    "text": "How scholarships in Europe ~actually~ work",
+    "style": "photo"
+   }
+  },
+  {
+   "id": "sh02",
+   "kind": "short",
+   "slug": "erasmus-mundus",
+   "title": "Erasmus Mundus scholarship: €1,400 a month",
+   "label": "",
+   "sublabel": "",
+   "in": 85.1,
+   "out": 179.5,
+   "cuts": [
+    [
+     119.18,
+     125.62
+    ],
+    [
+     141.74,
+     153.45
+    ],
+    [
+     165.6,
+     172.61
+    ]
+   ],
+   "script": "shorts/sh02.js",
+   "music": [
+    "1009",
+    4.0
+   ],
+   "tail": 0.1,
+   "endCard": false,
+   "pauses": false,
+   "topLabel": "Erasmus Mundus: €1,400 a month",
+   "fmt": "I",
+   "frame9": "fill",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 160.38,
+    "text": "Erasmus Mundus pays ~€1,400~ a month",
+    "style": "photo"
+   }
+  },
+  {
+   "id": "sh03",
+   "kind": "short",
+   "slug": "daad-epos",
+   "title": "DAAD EPOS scholarship in Germany",
+   "label": "",
+   "sublabel": "",
+   "in": 180.54,
+   "out": 240.5,
+   "cuts": [
+    [
+     223.71,
+     226.03
+    ]
+   ],
+   "script": "shorts/sh03.js",
+   "music": [
+    "443",
+    4.0
+   ],
+   "tail": 0.1,
+   "endCard": false,
+   "topLabel": "DAAD EPOS | a scholarship in Germany",
+   "fmt": "B",
+   "frame9": "4x5",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 180.94,
+    "text": "A German scholarship for people with ~work experience~",
+    "style": "photo"
+   }
+  },
+  {
+   "id": "sh04",
+   "kind": "short",
+   "slug": "swedish-institute",
+   "title": "Swedish Institute scholarship for Nigerians",
+   "label": "",
+   "sublabel": "",
+   "in": 240.92,
+   "out": 280.3,
+   "cuts": [
+    [
+     251.35,
+     255.0
+    ]
+   ],
+   "script": "shorts/sh04.js",
+   "music": [
+    "722",
+    4.0
+   ],
+   "tail": 0.1,
+   "endCard": false,
+   "topLabel": "Swedish Institute scholarship | Nigerians can apply",
+   "fmt": "M",
+   "frame9": "fill",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 249.04,
+    "text": "Sweden's ~full~ scholarship: Nigerians can apply",
+    "style": "card",
+    "bg": "#2FD27A"
+   }
+  },
+  {
+   "id": "sh05",
+   "kind": "short",
+   "slug": "nl-scholarship",
+   "title": "NL Scholarship: €5,000 to study in the Netherlands",
+   "label": "",
+   "sublabel": "",
+   "in": 286.5,
+   "out": 320.3,
+   "cuts": [],
+   "script": "shorts/sh05.js",
+   "music": [
+    "1009",
+    4.0
+   ],
+   "tail": 0.1,
+   "endCard": false,
+   "topLabel": "NL Scholarship | €5,000 for your first year",
+   "fmt": "G",
+   "frame9": "letterbox",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 293.5,
+    "text": "Study in the Netherlands: a ~€5,000~ scholarship",
+    "style": "photo"
+   }
+  },
+  {
+   "id": "sh06",
+   "kind": "short",
+   "slug": "stipendium-hungaricum",
+   "title": "Stipendium Hungaricum for Nigerians",
+   "label": "",
+   "sublabel": "",
+   "in": 322.8,
+   "out": 369.3,
+   "cuts": [
+    [
+     326.76,
+     327.45
+    ]
+   ],
+   "script": "shorts/sh06.js",
+   "music": [
+    "443",
+    4.0
+   ],
+   "tail": 0.1,
+   "endCard": false,
+   "topLabel": "Stipendium Hungaricum (Nigeria)",
+   "fmt": "H",
+   "frame9": "fill",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 368.9,
+    "text": "Study in ~Hungary~ on a government scholarship",
+    "style": "photo"
+   }
+  },
+  {
+   "id": "sh07",
+   "kind": "short",
+   "slug": "estonia-scholarships",
+   "title": "Scholarships in Estonia for Nigerian students",
+   "label": "",
+   "sublabel": "",
+   "in": 370.0,
+   "out": 402.2,
+   "cuts": [],
+   "script": "shorts/sh07.js",
+   "music": [
+    "722",
+    4.0
+   ],
+   "tail": 0.1,
+   "endCard": false,
+   "topLabel": "Scholarships in Estonia",
+   "fmt": "A",
+   "frame9": "wide",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 376.68,
+    "text": "Can Nigerians get a scholarship in ~Estonia~?",
+    "style": "photo"
+   }
+  },
+  {
+   "id": "sh08",
+   "kind": "short",
+   "slug": "documents",
+   "title": "Scholarship documents to prepare a year early",
+   "label": "",
+   "sublabel": "",
+   "in": 429.7,
+   "out": 467.4,
+   "cuts": [],
+   "script": "shorts/sh08.js",
+   "music": [
+    "1009",
+    4.0
+   ],
+   "tail": 0.1,
+   "endCard": false,
+   "topLabel": "Scholarship documents",
+   "fmt": "K",
+   "frame9": "fill",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 467.0,
+    "text": "Start your scholarship ~documents~ a year early",
+    "style": "card",
+    "bg": "#EDE9E2",
+    "hi": "#1B3FD8"
+   }
+  },
+  {
+   "id": "sh09",
+   "kind": "short",
+   "slug": "motivation-letter",
+   "title": "How to write a scholarship motivation letter",
+   "label": "",
+   "sublabel": "",
+   "in": 467.6,
+   "out": 512.5,
+   "cuts": [
+    [
+     487.45,
+     489.46
+    ]
+   ],
+   "script": "shorts/sh09.js",
+   "music": [
+    "443",
+    4.0
+   ],
+   "tail": 0.1,
+   "endCard": false,
+   "topLabel": "How to write | a motivation letter",
+   "fmt": "F",
+   "frame9": "1x1top",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 494.46,
+    "text": "How to write a scholarship ~motivation letter~",
+    "style": "photo"
+   }
+  },
+  {
+   "id": "teaser",
+   "kind": "teaser",
+   "slug": "scholarships-2027",
+   "title": "Teaser for LinkedIn and X: her best lines, Now Boarding look",
+   "bites": [
+    [
+     0.06,
+     9.56
+    ],
+    [
+     34.94,
+     37.86
+    ],
+    [
+     64.15,
+     68.23
+    ],
+    [
+     85.21,
+     91.38
+    ],
+    [
+     106.59,
+     113.28
+    ],
+    [
+     115.22,
+     119.03
+    ],
+    [
+     157.74,
+     160.86
+    ],
+    [
+     244.34,
+     251.38
+    ],
+    [
+     290.26,
+     291.15
+    ],
+    [
+     300.46,
+     306.12
+    ],
+    [
+     363.01,
+     367.46
+    ],
+    [
+     357.63,
+     362.89
+    ],
+    [
+     371.99,
+     376.77
+    ],
+    [
+     412.52,
+     418.5
+    ],
+    [
+     436.1,
+     437.78
+    ],
+    [
+     481.7,
+     483.79
+    ],
+    [
+     509.11,
+     512.4
+    ],
+    [
+     516.07,
+     516.87
+    ]
+   ],
+   "tail": 4.0,
+   "captionStyle": "shorts",
+   "script": "teaser/teaser.js",
+   "music": [
+    "1009",
+    0.0
+   ],
+   "endCard": {
+    "title": "Fully Funded Scholarships in Europe for Africans (2027)"
+   }
+  }
+ ],
+ "common": [
+  "../film/scenes/clips.js",
+  "../film/scenes/kit.js",
+  "moments/common.js",
+  "moments/visuals.js",
+  "moments/plan.js",
+  "moments/formats.js"
+ ],
+ "pad": "#1B1D21",
+ "frame9": "3x4",
+ "videoTitle": "Fully Funded Scholarships in Europe for Africans (2027)",
+ "images": {
+  "clip_em-1400": "../film/assets/src/em-1400.png",
+  "clip_em-window": "../film/assets/src/em-window.png",
+  "clip_em-cat": "../film/assets/src/em-cat.png",
+  "clip_aiss-dates": "../film/assets/src/aiss-dates.png",
+  "clip_daad-exp": "../film/assets/src/daad-exp.png",
+  "clip_daad-992": "../film/assets/src/daad-992.png",
+  "clip_nl-5000": "../film/assets/src/nl-5000.png",
+  "clip_okp-ended": "../film/assets/src/okp-ended.png",
+  "clip_hu-noopen": "../film/assets/src/hu-noopen.png",
+  "clip_hu-dsa": "../film/assets/src/hu-dsa.png",
+  "clip_si-dates": "../film/assets/src/si-dates.png",
+  "photo_stockholm": "../film/assets/photos/stockholm.jpg",
+  "photo_budapest": "../film/assets/photos/budapest.jpg",
+  "photo_tallinn": "../film/assets/photos/tallinn.jpg",
+  "photo_amsterdam": "../film/assets/photos/amsterdam.jpg",
+  "photo_berlin": "../film/assets/photos/berlin.jpg",
+  "photo_london": "../film/assets/photos/london.jpg",
+  "photo_brussels": "../film/assets/photos/brussels.jpg",
+  "photo_gradcap": "../film/assets/photos/gradcap.jpg",
+  "photo_notes": "../film/assets/photos/px-37860169.jpg",
+  "photo_dorm": "../film/assets/photos/px-5158946.jpg",
+  "photo_planner": "../film/assets/photos/px-6172482.jpg",
+  "photo_passports": "../film/assets/photos/px-33497885.jpg",
+  "photo_writing": "../film/assets/photos/px-3807755.jpg",
+  "photo_wing": "../film/assets/photos/px-1973183.jpg",
+  "cover_sh01": "assets/covers/sh01.jpg",
+  "cover_sh02": "assets/covers/sh02.jpg",
+  "cover_sh03": "assets/covers/sh03.jpg",
+  "cover_sh04": "assets/covers/sh04.jpg",
+  "cover_sh04_cut": "assets/covers/sh04-cut.png",
+  "cover_sh05": "assets/covers/sh05.jpg",
+  "cover_sh06": "assets/covers/sh06.jpg",
+  "cover_sh07": "assets/covers/sh07.jpg",
+  "cover_sh08": "assets/covers/sh08.jpg",
+  "cover_sh08_cut": "assets/covers/sh08-cut.png",
+  "cover_sh09": "assets/covers/sh09.jpg"
+ },
+ "teaserOut": "../outputs/teaser",
+ "pauses": [
+  {
+   "id": "fix-aiss",
+   "at": 153.05,
+   "d": 5,
+   "text": "Update: AISS is not open yet. It takes applications from 2 December 2026 to 2 February 2027.",
+   "acc": "#9AA0A8"
+  },
+  {
+   "id": "fix-dsa",
+   "at": 355.2,
+   "d": 5,
+   "text": "Update: the Federal Scholarship Board is now the Department of Scholarship Awards (DSA).",
+   "acc": "#9AA0A8"
+  }
+ ],
+ "outroCard": {
+  "on": true,
+  "thumb": "../outputs/thumbnails/01-1400-a-month.png",
+  "title": "Fully Funded Scholarships in Europe for Africans (2027)",
+  "dur": 6.5,
+  "photo": "/library/her-photos/avatar.png",
+  "style": {
+   "ground": "#1B1D21",
+   "ink": "#F3F0E8",
+   "mid": "#9AA0A8",
+   "accent": "#FFD23F"
+  }
+ }
+}

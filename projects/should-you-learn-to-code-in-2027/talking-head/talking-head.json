@@ -1,0 +1,535 @@
+{
+ "title": "should-you-learn-to-code-in-2027: talking-head",
+ "source": "../kit/raw-video.mov",
+ "fps": 30,
+ "words": "data/raw_words.json",
+ "faces": "data/face_track.json",
+ "edl": "data/edl.json",
+ "edit": {
+  "silenceDb": -44,
+  "maxPause": 0.42,
+  "keepBefore": 0.14,
+  "keepAfter": 0.1
+ },
+ "out": "../outputs/talking-head",
+ "shortsOut": "../outputs/shorts",
+ "tail": 0.7,
+ "audio": {
+  "voiceFilter": "highpass=f=80,afftdn=nr=8:nf=-52:tn=1,deesser=i=0.3:m=0.5:f=0.5,acompressor=threshold=0.06:ratio=3:attack=6:release=160:knee=3,equalizer=f=3200:t=q:w=1.2:g=1.5",
+  "music": {
+   "dir": "library:music"
+  },
+  "levels": {
+   "voiceLufs": -16.0,
+   "duckDb": -18.0,
+   "openDb": -10.0,
+   "target": -14.0,
+   "ceiling": 0.8
+  },
+  "sfx": {
+   "palette": true,
+   "roles": {},
+   "gainDb": 8
+  }
+ },
+ "moments": [
+  {
+   "id": "full",
+   "kind": "full",
+   "slug": "full",
+   "title": "The whole video, tightened, with graphics (B You are the reviewer + the missing rung)",
+   "in": 0.36,
+   "out": 396.27,
+   "cuts": [
+    [
+     9.32,
+     15.3
+    ],
+    [
+     16.98,
+     20.08
+    ],
+    [
+     44.82,
+     46.38
+    ]
+   ],
+   "retakes": false,
+   "script": "moments/full.js",
+   "music": [
+    "480",
+    0.0
+   ],
+   "captionStyle": "shorts",
+   "note": "cuts = CLEANUP restart + kit Q2 \"Senior roles, yeah\" (44.82-46.62) + the unclear half-sentence at 5:17 (317.82-318.96, kit Q12); ends on \"in this age and time\" (kit Q4). Remove a cut to keep it. 2026-11-19 (her note): cut [9.32, 15.30] \"I was checking and I was seeing this thing from Indeed's research team, and they found out that\" (starts on \"in the first quarter of 2026\"); the correction pause (fix-15) removed, the Indeed page + credit carries the source. Caption pass 2026-11-19: the 5:17 cut [317.82, 318.96] is undone (the stronger transcription hears \"Some people call them staff engineer\", kit Q12; the cut had left \"some people call them\" audible)."
+  },
+  {
+   "id": "sh01",
+   "kind": "short",
+   "slug": "indeed-entry-level",
+   "title": "Only 4.5% of software job posts on Indeed are entry level",
+   "label": "",
+   "sublabel": "",
+   "in": 0.36,
+   "out": 32.5,
+   "cuts": [
+    [
+     9.32,
+     15.3
+    ],
+    [
+     16.98,
+     20.08
+    ],
+    [
+     24.36,
+     27.08
+    ]
+   ],
+   "script": "shorts/sh01.js",
+   "music": [
+    "157",
+    4.0
+   ],
+   "tail": 0.5,
+   "endCard": false,
+   "fmt": "I",
+   "frame9": "fill",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 0.76,
+    "text": "Only ~4.5%~ of software\njob posts on Indeed\nare entry level",
+    "style": "her"
+   },
+   "board": [
+    16,
+    66,
+    8
+   ],
+   "fonts": [
+    "thumbs-02"
+   ],
+   "colours": "thumbs-02",
+   "topLabel": "Junior developer ~jobs~ in 2026"
+  },
+  {
+   "id": "sh02",
+   "kind": "short",
+   "slug": "still-a-point",
+   "title": "Is learning to code still worth it with AI?",
+   "label": "",
+   "sublabel": "",
+   "in": 46.36,
+   "out": 110.6,
+   "cuts": [
+    [
+     58.28,
+     60.47
+    ],
+    [
+     75.26,
+     96.72
+    ]
+   ],
+   "script": "shorts/sh02.js",
+   "music": [
+    "157",
+    13.0
+   ],
+   "tail": 0.5,
+   "endCard": false,
+   "fmt": "G",
+   "frame9": "letterbox",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 96.06,
+    "text": "Is learning\nto code still\nworth it with AI?",
+    "style": "big",
+    "sub": "an honest answer for beginners"
+   },
+   "board": [
+    12,
+    40,
+    47
+   ],
+   "fonts": [
+    "pair-07",
+    "combo-12"
+   ],
+   "colours": "pair-07 + combo-12",
+   "topLabel": "Is learning to code\nstill worth it?"
+  },
+  {
+   "id": "sh03",
+   "kind": "short",
+   "slug": "reading-code",
+   "title": "Learn to read code, not just write it",
+   "label": "",
+   "sublabel": "",
+   "in": 110.6,
+   "out": 133.1,
+   "cuts": [],
+   "script": "shorts/sh03.js",
+   "music": [
+    "157",
+    22.0
+   ],
+   "tail": 0.5,
+   "endCard": false,
+   "fmt": "J",
+   "poster": "Reading code",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 128.64,
+    "text": "Learn to read code,\nnot just write it",
+    "style": "frame"
+   },
+   "board": [
+    64,
+    65,
+    38
+   ],
+   "fonts": [
+    "shorts-15"
+   ],
+   "colours": "shorts-15",
+   "topLabel": ""
+  },
+  {
+   "id": "sh04",
+   "kind": "short",
+   "slug": "debugging-ai-fix",
+   "title": "Debugging AI code: the fix that hid the bug",
+   "label": "",
+   "sublabel": "",
+   "in": 152.5,
+   "out": 214.62,
+   "cuts": [],
+   "script": "shorts/sh04.js",
+   "music": [
+    "157",
+    31.0
+   ],
+   "tail": 0.5,
+   "endCard": false,
+   "fmt": "B",
+   "frame9": "4x5",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 188.15,
+    "text": "Debugging\n~AI code~",
+    "sub": "(the AI fix that hid the real bug)",
+    "style": "big"
+   },
+   "board": [
+    6,
+    18,
+    25
+   ],
+   "fonts": [
+    "shorts-03",
+    "design-29"
+   ],
+   "colours": "shorts-03",
+   "topLabel": "Debugging\n~AI code~"
+  },
+  {
+   "id": "sh05",
+   "kind": "short",
+   "slug": "webhook-twice",
+   "title": "Why one payment gets saved twice (webhooks)",
+   "label": "",
+   "sublabel": "",
+   "in": 237.52,
+   "out": 261.7,
+   "cuts": [],
+   "script": "shorts/sh05.js",
+   "music": [
+    "157",
+    40.0
+   ],
+   "tail": 0.5,
+   "endCard": false,
+   "fmt": "M",
+   "frame9": "fill",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 248.13,
+    "text": "Why one payment\ngets saved ~twice~",
+    "sub": "(webhooks explained)",
+    "style": "her"
+   },
+   "board": [
+    15,
+    29,
+    44
+   ],
+   "fonts": [
+    "thumbs-16"
+   ],
+   "colours": "thumbs-16",
+   "topLabel": "Payment ~webhooks~"
+  },
+  {
+   "id": "sh06",
+   "kind": "short",
+   "slug": "domain-knowledge",
+   "title": "AI built a pharmacy app. It missed this.",
+   "label": "",
+   "sublabel": "",
+   "in": 266.75,
+   "out": 313.95,
+   "cuts": [],
+   "script": "shorts/sh06.js",
+   "music": [
+    "157",
+    49.0
+   ],
+   "tail": 0.5,
+   "endCard": false,
+   "fmt": "K",
+   "frame9": "fill",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 275.09,
+    "text": "AI built a\npharmacy app",
+    "sub": "It missed what the pharmacy needs most.",
+    "style": "frame"
+   },
+   "board": [
+    52,
+    67,
+    48
+   ],
+   "fonts": [
+    "shorts-11",
+    "shorts-10"
+   ],
+   "colours": "shorts-11 + shorts-10",
+   "topLabel": "Domain knowledge"
+  },
+  {
+   "id": "sh07",
+   "kind": "short",
+   "slug": "junior-role-promise",
+   "title": "Should you still learn to code in 2027?",
+   "label": "",
+   "sublabel": "",
+   "in": 325.6,
+   "out": 396.27,
+   "cuts": [
+    [
+     360.7,
+     372.0
+    ]
+   ],
+   "script": "shorts/sh07.js",
+   "music": [
+    "157",
+    58.0
+   ],
+   "tail": 0.5,
+   "endCard": false,
+   "fmt": "A",
+   "frame9": "wide",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 355.94,
+    "text": "Learning to code\nin 2027 is not\na job guarantee",
+    "style": "her"
+   },
+   "board": [
+    57,
+    58,
+    21
+   ],
+   "fonts": [
+    "shorts-20"
+   ],
+   "colours": "shorts-20",
+   "topLabel": "learning to code in 2027"
+  },
+  {
+   "id": "sh08",
+   "kind": "short",
+   "slug": "fundamentals-system-design",
+   "title": "System design basics for beginners",
+   "label": "",
+   "sublabel": "",
+   "in": 214.62,
+   "out": 235.85,
+   "cuts": [],
+   "script": "shorts/sh08.js",
+   "music": [
+    "157",
+    67.0
+   ],
+   "tail": 0.5,
+   "endCard": false,
+   "fmt": "D",
+   "frame9": "wideLow",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 221.09,
+    "text": "System design\n~for beginners~",
+    "sub": "what breaks between the parts of your app",
+    "style": "big"
+   },
+   "board": [
+    9,
+    36,
+    3
+   ],
+   "fonts": [
+    "thumbs-18"
+   ],
+   "colours": "thumbs-18",
+   "topLabel": "System design\n~for beginners~"
+  },
+  {
+   "id": "teaser",
+   "kind": "teaser",
+   "slug": "learn-to-code",
+   "title": "Teaser for LinkedIn and X (v3): junior roles are rare, the idea, three skills (reading code, debugging, payments), her takeaway",
+   "bites": [
+    {
+     "in": 0.36,
+     "out": 32.46,
+     "cuts": [
+      [
+       9.32,
+       15.3
+      ],
+      [
+       16.98,
+       20.08
+      ],
+      [
+       24.36,
+       27.08
+      ]
+     ]
+    },
+    [
+     60.45,
+     75.26
+    ],
+    {
+     "gap": 1.2,
+     "at": 401.15
+    },
+    [
+     119.3,
+     133.1
+    ],
+    {
+     "gap": 1.2,
+     "at": 401.15
+    },
+    [
+     158.0,
+     161.2
+    ],
+    [
+     166.95,
+     181.95
+    ],
+    {
+     "gap": 1.2,
+     "at": 401.15
+    },
+    [
+     237.52,
+     256.08
+    ],
+    [
+     383.5,
+     396.27
+    ]
+   ],
+   "tail": 6.5,
+   "captionStyle": "shorts",
+   "script": "teaser/teaser.js",
+   "music": [
+    "1009",
+    0.0
+   ],
+   "pauses": false,
+   "endCard": false,
+   "fonts": [
+    "design-07",
+    "design-29"
+   ],
+   "colours": "design-07 (+ the video amber)",
+   "note": "2026-11-13 v3: one story a stranger can follow (TEASER-PLAYBOOK 0a); plan in teaser/PLAN-v3.md; v2 in archive/teaser-v2/. Ends on the outroCard."
+  }
+ ],
+ "pad": "#E9EBEE",
+ "frame9": "4x5",
+ "videoTitle": "Should I Learn to Code in 2026? 4 Skills That Matter Now",
+ "common": [
+  "assets/src/clips.js",
+  "../film/scenes/rvkit.js",
+  "../film/scenes/rvsent.js",
+  "moments/common.js",
+  "moments/visuals.js",
+  "moments/plan.js",
+  "moments/formats.js",
+  "moments/boards.js"
+ ],
+ "images": {
+  "clip_ind-title": "assets/src/ind-title.png",
+  "clip_ind-head": "assets/src/ind-head.png",
+  "clip_ind-45": "assets/src/ind-45.png",
+  "clip_ind-45-p": "assets/src/ind-45-p.png",
+  "clip_ind-ai-head": "assets/src/ind-ai-head.png",
+  "clip_ind-15": "assets/src/ind-15.png",
+  "clip_ind-15-p": "assets/src/ind-15-p.png",
+  "clip_ind-71": "assets/src/ind-71.png",
+  "px_laptop": "assets/px/laptop-574069.jpg",
+  "px_truck": "assets/px/truck-6940962.jpg",
+  "px_meeting": "assets/px/meeting-1181738.jpg",
+  "px_pharmacy": "assets/px/pharmacy-8657301.jpg",
+  "px_pay": "assets/px/payment-5717934.jpg",
+  "cover_sh01": "assets/covers/sh01.jpg",
+  "cover_sh02": "assets/covers/sh02.jpg",
+  "cover_sh03": "assets/covers/sh03.jpg",
+  "cover_sh04": "assets/covers/sh04.jpg",
+  "cover_sh04_cut": "assets/covers/sh04-cut.png",
+  "cover_sh05": "assets/covers/sh05.jpg",
+  "cover_sh06": "assets/covers/sh06.jpg",
+  "cover_sh07": "assets/covers/sh07.jpg",
+  "cover_sh08": "assets/covers/sh08.jpg",
+  "cover_sh08_cut": "assets/covers/sh08-cut.png"
+ },
+ "outroCard": {
+  "on": true,
+  "thumb": "../outputs/thumbnails/01-chart-learn-to-code-2027.png",
+  "title": "Junior Developer Jobs Are Rare. Should You Still Code?",
+  "dur": 6.5,
+  "photo": "/library/her-photos/avatar.png",
+  "style": {
+   "ground": "#1B1F24",
+   "ink": "#FFFFFF",
+   "mid": "#AEB4BC",
+   "accent": "#F2A900"
+  }
+ },
+ "pausesRemoved-2026-11-19": [
+  {
+   "id": "fix-15",
+   "at": 41.8,
+   "d": 4.5,
+   "text": "Correction: Indeed found this, not me.\nUS software development postings rose almost 15%, late February 2025 to June 2026."
+  }
+ ],
+ "pauses": []
+}

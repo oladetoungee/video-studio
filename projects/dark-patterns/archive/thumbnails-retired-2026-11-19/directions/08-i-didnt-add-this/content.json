@@ -1,0 +1,36 @@
+{
+ "direction": "No face. Split in two dark panels on orange: \"You added\" with one line \"Running shoes €40\", and \"At checkout\" with the same shoes plus \"Cleaning spray €5\" (red plus) that you never picked. The example she gives in the video.",
+ "thumbnail_text": "You added / At checkout: + Cleaning spray €5",
+ "kind": "flat",
+ "recommended": false,
+ "titles": [
+  "How Websites Trick You Into Buying Things You Didn't Add",
+  "Dark Patterns Examples: How Online Shops Trick You",
+  "Dark Patterns in E-Commerce: 11 Checkout Tricks to Spot"
+ ],
+ "text": {
+  "l1": "You added",
+  "a1": "Running shoes",
+  "p1": "€40",
+  "l2": "At checkout",
+  "a2": "Running shoes",
+  "p2": "€40",
+  "hook": "I didn't add this!",
+  "a3": "Cleaning spray",
+  "p3": "+€5",
+  "tl": "Total",
+  "t1": "€40",
+  "tr": "Total",
+  "t2": "€45"
+ },
+ "images": {},
+ "vars": {
+  "--ground": "#D16A3C"
+ },
+ "board": "Thumbnails 55 (yt-02 \"before / after\": the frame split in two halves, a short label at the top of each half, the same thing shown twice with one difference)",
+ "fonts": "Font 31 (Inter Tight, Design 406: cream words in ink boxes on orange)",
+ "colours": "Font 31 / Font 111 specimen (Design 406): ground #D16A3C, panels #0C160C, words #F5EFDE; the sneaked-in line marked #E0282B",
+ "title": "How Websites Trick You Into Buying Things You Didn't Add",
+ "class": "no-lift",
+ "scores": "Test & Compare · cold critic round 6: 7 alone / 7.5 with title; hook line added after"
+}

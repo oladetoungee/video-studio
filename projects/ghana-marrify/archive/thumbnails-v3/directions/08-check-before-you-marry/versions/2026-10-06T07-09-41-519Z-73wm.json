@@ -1,0 +1,28 @@
+{
+ "label": "Before this session’s edits",
+ "auto": true,
+ "savedAt": 1791270581519,
+ "content": {
+  "direction": "Her open-palm 'wait' moment (3:25) in her room; 'Check before / YOU MARRY' with the Ghana flag on the hook line; a phone search stamped MARRIED (illustration)",
+  "thumbnail_text": "Check before you marry",
+  "title": "Ghana's New App Shows If Your Partner Is Already Married",
+  "titles": [
+   "Ghana's New App Shows If Your Partner Is Already Married",
+   "Would You Look Up Your Partner on Ghana's New App?",
+   "Ghana's New Marriage Search App: Useful or Too Much?"
+  ],
+  "text": {
+   "line1": "Check before",
+   "line2": "YOU MARRY",
+   "p_app": "Marriage records",
+   "p_q": "Search a name",
+   "p_rl": "Record found",
+   "p_res": "Married"
+  },
+  "images": {
+   "scene": "../../assets/scene/s_205.08.jpg",
+   "front": "../../assets/scene/mask/s_205.08.png"
+  },
+  "vars": {}
+ }
+}

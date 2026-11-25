@@ -1,0 +1,20 @@
+{
+  "direction": "Handwritten checklist on a taped note (her board: 'Everything done by 2pm' clipboard), her side-eye with hands up (2:03) in the room",
+  "title": "Ghana Put Every Marriage and Divorce Record Online",
+  "titles": [
+    "Ghana Put Every Marriage and Divorce Record Online",
+    "Ghana's Marriage Records Site, Reviewed by an HCI Researcher",
+    "Your Marriage History, One Search Away: Ghana's New Registry"
+  ],
+  "text": {
+    "head": "now online in Ghana:",
+    "item1": "marriages",
+    "item2": "divorces",
+    "item3": "anyone can search"
+  },
+  "images": {
+    "scene": "../../assets/scene/s_123.00.jpg",
+    "front": "../../assets/scene/mask/s_123.00.png"
+  },
+  "vars": {}
+}

@@ -1,0 +1,200 @@
+{
+  "_help": "Edit text here (or in the studio), then run: node shared/build.mjs linkedin (from design/carousels). Markup: *word* = accent colour, \\n = line break.",
+  "deck": "linkedin",
+  "width": 1080,
+  "height": 1350,
+  "accent": "#F2541B",
+  "accentOnInk": "#F2541B",
+  "docTitle": "October 2026 developer security news, in plain words",
+  "slides": [
+    {
+      "layout": "cover",
+      "ground": "accent",
+      "title": "The security news every developer should know from October 2026",
+      "size": 88,
+      "sub": "PHP2Shell, Railway, Zeabur, OpenCode, eMudhra and a hacker using AI agents, in plain words.",
+      "subSize": 40,
+      "month": "October 2026",
+      "offset": 3,
+      "marks": [
+        {
+          "d": 14,
+          "img": "key.svg"
+        },
+        {
+          "d": 17,
+          "img": "padlock.svg"
+        },
+        {
+          "d": 19,
+          "img": "robot.svg"
+        },
+        {
+          "d": 21,
+          "img": "elephant.svg"
+        }
+      ]
+    },
+    {
+      "layout": "story",
+      "ground": "ink",
+      "tag": "PHP2Shell",
+      "date": "Oct 21",
+      "title": "Two critical holes in PHP, rated *9.2 out of 10*",
+      "body": "PHP runs nearly three quarters of the websites in the world, so this one touches a lot of us.",
+      "shot": {
+        "img": "bc-php-hero.png",
+        "credit": "BleepingComputer · Oct 21, 2026",
+        "w": 700
+      },
+      "size": 96
+    },
+    {
+      "layout": "flow",
+      "ground": "paper",
+      "title": "It happens before your code *even runs*",
+      "steps": [
+        {
+          "t": "A request comes in"
+        },
+        {
+          "t": "PHP reads it",
+          "note": "the hole",
+          "kind": "hole"
+        },
+        {
+          "t": "Your login",
+          "note": "never reached",
+          "kind": "off"
+        },
+        {
+          "t": "Your code",
+          "note": "never reached",
+          "kind": "off"
+        }
+      ],
+      "body": "It happens while PHP reads the request, so authentication and middleware can't block it."
+    },
+    {
+      "layout": "terminal",
+      "ground": "ink",
+      "title": "The fix is an update and a *restart*",
+      "cmd": "php -v",
+      "lines": [
+        "PHP 8.5.12",
+        "PHP 8.4.27",
+        "PHP 8.3.36",
+        "PHP 8.2.35"
+      ],
+      "body": "Then restart PHP-FPM or Apache and rebuild your Docker images. Updating Laravel alone doesn't fix it."
+    },
+    {
+      "layout": "story",
+      "ground": "paper",
+      "tag": "Railway",
+      "date": "Oct 22",
+      "title": "Railway asked users to *rotate their keys*",
+      "body": "Railway said someone may have accessed customers' encrypted environment variables.",
+      "shot": {
+        "img": "tc-railway.png",
+        "credit": "TechCrunch · Oct 22, 2026",
+        "w": 680
+      },
+      "rot": 1.5
+    },
+    {
+      "layout": "story",
+      "ground": "ink",
+      "tag": "Zeabur",
+      "date": "Oct 20",
+      "title": "Zeabur is shutting down after *two breaches*",
+      "body": "The second used an admin token with no expiry date, unchanged since January 2024.",
+      "shot": {
+        "img": "bc-zeabur-hero.png",
+        "credit": "BleepingComputer · Oct 20, 2026",
+        "w": 600
+      }
+    },
+    {
+      "layout": "bill",
+      "ground": "paper",
+      "tag": "OpenCode",
+      "date": "Oct 19",
+      "title": "Stolen AI keys, *real bills*",
+      "lines": [
+        {
+          "k": "Your usage",
+          "v": "$20"
+        },
+        {
+          "k": "Not you",
+          "v": "$480"
+        },
+        {
+          "k": "Not you",
+          "v": "$560"
+        }
+      ],
+      "totalLabel": "Total",
+      "total": "$1,060",
+      "body": "Attackers took AI keys stored in OpenCode Console. Users saw charges in the hundreds, and a few went over $1,000."
+    },
+    {
+      "layout": "list",
+      "ground": "accent",
+      "title": "Three of them went for the *same place*",
+      "lede": "That's where developers keep their secret keys. These habits limit the damage.",
+      "rows": [
+        "Change keys you're unsure about",
+        "Give every key an expiry date",
+        "Give each key only what it needs",
+        "Turn on spending alerts"
+      ],
+      "size": 96
+    },
+    {
+      "layout": "number",
+      "ground": "ink",
+      "tag": "eMudhra",
+      "date": "Oct 17",
+      "big": "4",
+      "title": "One signing key was the *number 4*",
+      "size": 88,
+      "body": "eMudhra issues certificates that browsers trust. Its keys were so weak that browsers have blocked them.",
+      "shot": {
+        "img": "bc-emudhra-hero.png",
+        "credit": "BleepingComputer · Oct 20, 2026",
+        "w": 560
+      }
+    },
+    {
+      "layout": "duo",
+      "ground": "paper",
+      "title": "AI is on *both sides*",
+      "cols": [
+        {
+          "k": "Finding holes",
+          "v": "AI helped find PHP2Shell."
+        },
+        {
+          "k": "Breaking in",
+          "v": "One hacker used AI agents on 100+ companies."
+        }
+      ]
+    },
+    {
+      "layout": "end",
+      "ground": "ink",
+      "title": "When did you last check *your keys*?",
+      "body": "I put all of these stories in one video, in plain words.",
+      "where": "Full video on YouTube",
+      "handle": "@WithGbemi",
+      "polaroid": {
+        "img": "gbemi_9.jpg",
+        "caption": "Gbemi"
+      },
+      "size": 130,
+      "polY": 720
+    }
+  ]
+}

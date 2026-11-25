@@ -1,0 +1,139 @@
+URL: https://zeabur.com/blogs/zeabur-is-shutting-down
+STATUS: loaded (http 200)
+FINAL: https://zeabur.com/blogs/zeabur-is-shutting-down
+TITLE: Blogs: Zeabur is shutting down: what happens next - Zeabur
+H1: Zeabur is shutting down: what happens next
+OG: Blogs: Zeabur is shutting down: what happens next - Zeabur | Zeabur
+PUBLISHED: 2026-10-17  MODIFIED: 
+DOC_H: 5233
+
+Zeabur will shut down on December 31, 2026. Some services will begin shutting down on December 1.
+Read announcement
+→
+
+October 17, 2026
+
+Zeabur is shutting down: what happens next
+
+Some services will begin shutting down on December 1, 2026, and all dedicated servers and shared clusters will be shut down by December 31.
+
+Yuanlin Lin
+
+This article is also available in 繁體中文, 简体中文, 日本語, Español, and Bahasa Indonesia.
+
+Key points
+Effective immediately: purchases of new dedicated servers and domains have stopped. Request account balance refunds, security incident compensation, and migration help through Zeabur Support. Domains can be transferred out yourself from the Dashboard.
+Starting December 1: dedicated server renewals are disabled and each server shuts down on its own expiration date. All running services on shared clusters are paused; you can restart them manually to back up your data.
+December 31: all dedicated servers and shared clusters stop operating.
+Migration guide: now available. See Migrating off Zeabur: hand this guide to your coding agent.
+To be announced: the data deletion date, final data export deadline, and Zeabur Support closing date.
+Full announcement
+
+Hi everyone,
+
+I'm Yuanlin Lin, the founder of Zeabur.
+
+Today, I have a difficult decision to share: we will be winding down Zeabur. Some services will begin shutting down on December 1, 2026, and all dedicated servers and shared clusters will be shut down by December 31.
+
+I know that receiving this news so soon after a second security incident adds another burden. You may already be worried about your services and data, and now you also have to plan a migration.
+
+We are responsible for the impact this has on you and the extra work it creates. Before explaining what happened, why we've decided to stop, and what comes next, I want to apologize to everyone affected.
+
+About the October 14 security incident
+
+On October 14, 2026 (UTC), an external attacker gained unauthorized access to Zeabur's internal systems and some customer services. We began our emergency response as soon as we detected the unusual activity. We have confirmed that this incident affected a broader scope than the incident in late August.
+
+So far, we have taken measures to contain all known attack paths and continue to monitor for unusual activity. The investigation is ongoing. We will share updates on the full scope of the impact and further actions as the investigation progresses, followed by a more complete report.
+
+Having another security incident in such a short time has let down the people who trusted us. Protecting your services and data is our responsibility, and we have fallen short.
+
+If you notice unusual behavior in your services or suspect they were affected, please contact Zeabur Support. We will also accept compensation claims through Zeabur Support from customers who suffered losses because of this incident.
+
+Why we've decided to stop
+
+Zeabur has been around for about three and a half years. This past year brought our fastest growth, but it also brought underlying problems into clearer view.
+
+From n8n and OpenClaw to vibe coding, AI has created unprecedented demand for cloud deployment. At the same time, we've seen AI rapidly make deployment itself easier. Our growth has started to run into limits, and we have had to rethink the lasting value Zeabur can offer its users.
+
+Our system also began as a project built quickly three and a half years ago. As we adapted our architecture and changed direction to meet market needs, it became increasingly complex and difficult to maintain. The two security incidents in the second half of this year have made the shortcomings in our security and operations even clearer.
+
+After the August incident, we spent a long time discussing and struggling with what to do next. Following this latest incident, we reassessed what it would take to keep operating and the responsibilities our team could carry. We ultimately decided to wind down.
+
+Now that we've made that decision, we want to tell everyone affected as early as possible, so you have as much time as possible to arrange your migration.
+
+I understand what this means for you: moving services, backing up data, and possibly changing plans you had already made. I'm sorry that you have to take on this work on top of everything else you're doing.
+
+Service shutdown timeline
+
+The following arrangements are confirmed. All dates are in 2026:
+
+Effective immediately: We will stop accepting purchases of new dedicated servers and domains, and begin accepting requests for account balance refunds.
+Starting December 1 — dedicated servers: Renewals will be disabled. Existing dedicated servers will shut down on their respective expiration dates between December 1 and December 31. Please check your server's expiration date and complete your backup and migration before then.
+Starting December 1 — shared clusters: All running services will be paused. You will still be able to restart them manually to back up your data.
+December 31: All dedicated servers will have expired and shut down, and all shared clusters will stop operating.
+
+December 31 is the final shutdown date. It does not mean that every service will keep running until that day. Please plan your migration around the services you use and their individual expiration dates.
+
+If your circumstances make it difficult to migrate within this timeline, please contact Zeabur Support as early as possible. We will discuss the available options with you individually.
+
+Data, domains, refunds, and compensation
+
+The data deletion date, final data export deadline, and date when Zeabur Support will close have not yet been finalized. We will announce them once confirmed. In the meantime, please back up and migrate your services according to the shutdown timeline above rather than waiting for a data deletion deadline.
+
+Self-service transfers are now available for domains purchased through Zeabur. We will help you transfer your domains to another registrar. Please include domain transfers in your migration plans, and contact Zeabur Support if you run into any problems.
+
+Account balance refunds and compensation for losses from the security incident are separate requests, both handled through Zeabur Support. When contacting us, please specify which you are requesting and include the relevant account and service details, along with a description of the issue.
+
+We will also explain how unresolved cases will be handled in a follow-up announcement about support arrangements.
+
+How we'll help you migrate
+
+Our team will focus on investigating this incident, handling compensation and refunds, and helping you move your services.
+
+The migration guide is now available. It explains what Zeabur has been doing for you and what you need to replace after the move, and includes a Markdown version for coding agents such as Claude Code and Codex, so your agent can plan and carry out the migration for your situation. We will keep updating it to cover more commonly used services and migration scenarios.
+
+Every service has different data, configuration, and deployment requirements. You will still need to check that your backups are complete and that everything works in the new environment. If you're unsure where to start or get stuck along the way, please tell us about your situation through Zeabur Support.
+
+We expect a higher volume of support requests during this period, so replies may take longer than usual. We will do our best to help. When you contact us, please let us know whether your service is down, whether you can access your data, and when your server is due to expire, so we can understand the urgency.
+
+Thank you to everyone who has supported Zeabur over the past three years, whether you used it in the past or still use it today. You trusted us with your projects, your products, and the work you put into them. That trust means a great deal to us.
+
+I'm sorry we weren't able to prevent what happened, and that we won't be able to keep Zeabur going. We will put our efforts into addressing the aftermath of the incident and helping you migrate, and do our best to see this through properly.
+
+If there's something you'd like to say to me directly, you can email me at yuanlin@zeabur.com. I may be slower to reply than Zeabur Support. For compensation claims, refunds, and technical help, please continue to use Zeabur Support so the team can assist you.
+
+Yuanlin Lin
+Founder, Zeabur
+
+←
+Blogs
+Full announcement
+About the October 14 security incident
+Why we've decided to stop
+Service shutdown timeline
+Data, domains, refunds, and compensation
+How we'll help you migrate
+Products
+Servers & Clusters
+Domains & DNS
+Email Service
+Resources
+Documentation
+Blogs
+Changelogs
+Pricing
+Community
+Support
+Discord
+X
+Threads
+Company
+About Us
+Join Us
+Legal
+Terms of Service
+Privacy Policy
+Security
+All systems normal
+
+© 2026 Zeabur Inc.

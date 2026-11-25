@@ -1,0 +1,87 @@
+1
+00:00:00,157 --> 00:00:02,917
+now, the 5xx status codes are server errors
+
+2
+00:00:02,917 --> 00:00:05,087
+the requests look fine, but the server
+
+3
+00:00:05,087 --> 00:00:06,357
+failed to handle it
+
+4
+00:00:06,357 --> 00:00:09,637
+500 Internal Server Error is the general one
+
+5
+00:00:09,637 --> 00:00:11,077
+something unexpected went wrong
+
+6
+00:00:11,077 --> 00:00:14,117
+usually, it's an exception in your code that
+
+7
+00:00:14,117 --> 00:00:16,147
+nothing caught in most real setups, a
+
+8
+00:00:16,147 --> 00:00:19,567
+request first hits a proxy, like an NGINX or
+
+9
+00:00:19,567 --> 00:00:22,447
+a load balancer, and the proxy passes it to
+
+10
+00:00:22,447 --> 00:00:25,717
+your app 502 Bad Gateway means that the
+
+11
+00:00:25,717 --> 00:00:28,217
+proxy got an invalid response from your app
+
+12
+00:00:28,217 --> 00:00:30,207
+or couldn't get a proper response from it at
+
+13
+00:00:30,207 --> 00:00:33,157
+all 504 Gateway Timeout means that the proxy
+
+14
+00:00:33,157 --> 00:00:35,077
+waited for your app, and your app took too
+
+15
+00:00:35,077 --> 00:00:36,437
+long to answer
+
+16
+00:00:36,437 --> 00:00:38,327
+a very slow database query can actually
+
+17
+00:00:38,327 --> 00:00:39,237
+cause this one
+
+18
+00:00:39,237 --> 00:00:41,197
+503 Service Unavailable means the server
+
+19
+00:00:41,197 --> 00:00:43,397
+cannot handle requests at the moment, and
+
+20
+00:00:43,397 --> 00:00:45,370
+that situation is temporary
+
+21
+00:00:45,370 --> 00:00:46,710
+it might be that the server is overloaded,
+
+22
+00:00:46,710 --> 00:00:48,667
+or maybe the server is down for maintenance

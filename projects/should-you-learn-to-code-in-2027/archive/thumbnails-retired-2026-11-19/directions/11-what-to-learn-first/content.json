@@ -1,0 +1,18 @@
+{
+ "board": "pick1119-48",
+ "kind": "light ground, tight black headline with a red underline, four tiles floating, you below (tired, hand at your chin)",
+ "direction": "Copies pick1119-48 (Here's the AI Roadmap You Actually Need + 'Stop Learning AI Randomly': light ground, a tight black headline with one word underlined in red, app-icon tiles floating around, the person below looking worn out). Here: What to learn first, your Øredev photo (hand at your chin, looking down), and four plain tiles for the four skills the video names (reading code, debugging, how systems work, finding problems): no brand icons.",
+ "thumbnail_text": "What to learn first",
+ "fonts": [
+  "thumbs-19 Inter Tight, very tight (ink #111111 on #EFEDE6, as Thumbnails 174), set in Bold"
+ ],
+ "colours": "thumbs-19 (#EFEDE6, #111111) + red #E2231A (underline, bug tile), tiles #1E1F22 / #2E6BE6 / #F7D51D",
+ "text": {
+  "hd": "What to learn <u>first</u>"
+ },
+ "images": {
+  "me": "../../assets/oredev/55642230148-cut.png"
+ },
+ "vars": {},
+ "class": "no-lift"
+}

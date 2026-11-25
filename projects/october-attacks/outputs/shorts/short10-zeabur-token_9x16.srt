@@ -1,0 +1,51 @@
+1
+00:00:00,063 --> 00:00:02,373
+so how did the attackers get in the second
+
+2
+00:00:02,373 --> 00:00:04,373
+time after they got in the first time?
+
+3
+00:00:04,373 --> 00:00:06,723
+according to Zeabur, their admin token had
+
+4
+00:00:06,723 --> 00:00:07,703
+no expiry date
+
+5
+00:00:07,703 --> 00:00:09,813
+so they had not changed this token since
+
+6
+00:00:09,813 --> 00:00:12,793
+January 2024 so after the first attack, when
+
+7
+00:00:12,793 --> 00:00:15,043
+they changed their keys, they didn't include
+
+8
+00:00:15,043 --> 00:00:16,803
+that particular set of tokens
+
+9
+00:00:16,803 --> 00:00:18,853
+they didn't change those set and that kind
+
+10
+00:00:18,853 --> 00:00:21,333
+of opened the gates again and the old
+
+11
+00:00:21,333 --> 00:00:23,923
+platform now is deciding to shut down
+
+12
+00:00:23,923 --> 00:00:25,393
+they will pause services and just shut
+
+13
+00:00:25,393 --> 00:00:27,133
+everything down by the end of December

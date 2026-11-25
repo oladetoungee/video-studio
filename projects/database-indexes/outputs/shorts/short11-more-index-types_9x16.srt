@@ -1,0 +1,99 @@
+1
+00:00:00,110 --> 00:00:02,942
+the hash index, which is for exact matches
+
+2
+00:00:02,942 --> 00:00:06,187
+only, you know, like looking up someone's
+
+3
+00:00:06,187 --> 00:00:08,787
+login session by its exact token, it cannot
+
+4
+00:00:08,787 --> 00:00:09,637
+do range or
+
+5
+00:00:09,767 --> 00:00:12,007
+sorting so most people just use B-tree
+
+6
+00:00:12,017 --> 00:00:14,087
+a bitmap is for columns with only a few
+
+7
+00:00:14,087 --> 00:00:16,337
+values, like a status column, that's only
+
+8
+00:00:16,337 --> 00:00:17,937
+active or inactive or banned
+
+9
+00:00:17,937 --> 00:00:19,617
+you mostly see it in databases that are
+
+10
+00:00:19,617 --> 00:00:21,330
+built for reports, And then we have spatial
+
+11
+00:00:21,330 --> 00:00:23,323
+index, that one is mostly for location data,
+
+12
+00:00:23,323 --> 00:00:25,119
+like when you search a restaurant name, a
+
+13
+00:00:25,119 --> 00:00:27,250
+coffee shop near me, or when a ride app
+
+14
+00:00:27,250 --> 00:00:29,340
+looks for drivers close to you
+
+15
+00:00:29,340 --> 00:00:31,936
+so it's groups, places that are near each
+
+16
+00:00:31,936 --> 00:00:34,940
+other on the map, so the app only checks
+
+17
+00:00:34,940 --> 00:00:37,280
+places around you, instead of every coffee
+
+18
+00:00:37,280 --> 00:00:39,340
+shop or every restaurant in the world
+
+19
+00:00:39,340 --> 00:00:41,250
+And then we have the full-text index as well
+
+20
+00:00:41,250 --> 00:00:43,030
+it is for searching inside text
+
+21
+00:00:43,030 --> 00:00:45,420
+for example, when you search an online store
+
+22
+00:00:45,420 --> 00:00:47,440
+for wireless headphones, it finds every
+
+23
+00:00:47,440 --> 00:00:49,417
+product description with those words in
+
+24
+00:00:49,417 --> 00:00:51,757
+right? so it works by indexing each word in
+
+25
+00:00:51,757 --> 00:00:53,400
+the text instead of the whole value

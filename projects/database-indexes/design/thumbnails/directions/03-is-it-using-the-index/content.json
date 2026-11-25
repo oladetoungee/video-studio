@@ -1,0 +1,22 @@
+{
+  "direction": "Photo-led with the film's terminal panel: a real PostgreSQL EXPLAIN, and the answer every developer dreads, Seq Scan, big and red. Her on the right, thinking. Follows the code-card outliers (techTFQ, LearnThatStack). Round 2: closed-mouth frame, query one line, Seq Scan 58 px. Round 3: new frame (round 2's pout read sulky): raised-eyebrow look. Round 4 (composition): centred: question across the top, her centred, the EXPLAIN result as a full-width bar across her chest.",
+  "concept": "T07",
+  "thumbnail_text": "Is it using the index?",
+  "title": "Added an Index and It's Still Slow? Check This First",
+  "titles": [
+    "Added an Index and It's Still Slow? Check This First",
+    "Database Index Mistakes (and How to Check with EXPLAIN)",
+    "Seq Scan vs Index Scan: Is Your Query Using the Index?"
+  ],
+  "text": {
+    "a": "Is it using the <span class=\"mark\">index?</span>",
+    "q1": "EXPLAIN SELECT * FROM orders WHERE customer_id = 42;",
+    "r1": "Seq Scan on orders"
+  },
+  "images": {
+    "scene": "../../assets/scene/f_651.8.jpg"
+  },
+  "frame": "10:51.8 (raised eyebrow, mouth closed)",
+  "vars": {},
+  "scores": "final gate (round 4): A topic/click 4/7 · B pair 8 · C taste 7"
+}

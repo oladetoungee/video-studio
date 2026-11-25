@@ -1,0 +1,20 @@
+{
+ "label": "Before this session’s edits",
+ "auto": true,
+ "savedAt": 1792144298866,
+ "edits": {
+  "t": {
+   "label/label": {
+    "pos": {
+     "9x16": {
+      "dy": -19.6,
+      "dx": 23.1
+     }
+    }
+   }
+  },
+  "captions": {},
+  "capShort": {},
+  "cap16": {}
+ }
+}

@@ -1,0 +1,326 @@
+{
+  "title": "October 2026: one attack after the other",
+  "hud": "",
+  "intro": 0.3,
+  "outro": 2.5,
+  "voiceDuration": 477.436,
+  "words": "data/words.json",
+  "captions": "data/captions.srt",
+  "images": {
+    "clip_php-quote": "assets/src/php-quote.png",
+    "clip_php-head": "assets/src/php-head.png",
+    "clip_zeabur-quote": "assets/src/zeabur-quote.png",
+    "clip_zeabur-head": "assets/src/zeabur-head.png",
+    "clip_emudhra-quote": "assets/src/emudhra-quote.png",
+    "clip_railway-text": "assets/src/railway-text.png",
+    "clip_railway-revoke": "assets/src/railway-revoke.png",
+    "clip_railway-head": "assets/src/railway-head.png",
+    "clip_php-versions": "assets/src/php-versions.png",
+    "clip_dr-92": "assets/src/dr-92.png",
+    "clip_aws-head": "assets/src/aws-head.png",
+    "clip_thn-head": "assets/src/thn-head.png",
+    "clip_ib-head": "assets/src/ib-head.png",
+    "clip_node-head": "assets/src/node-head.png",
+    "clip_rlb-paused": "assets/src/rlb-paused.png",
+    "clip_rlb-ai": "assets/src/rlb-ai.png",
+    "clip_zb-head": "assets/src/zb-head.png",
+    "clip_zb-dec": "assets/src/zb-dec.png",
+    "clip_bczb-num": "assets/src/bczb-num.png",
+    "clip_tcoc-head": "assets/src/tcoc-head.png",
+    "clip_tcoc-1000": "assets/src/tcoc-1000.png",
+    "clip_bcoc-head": "assets/src/bcoc-head.png",
+    "clip_tnwem-head": "assets/src/tnwem-head.png",
+    "clip_bcem-head": "assets/src/bcem-head.png",
+    "clip_sa-head": "assets/src/sa-head.png",
+    "clip_php-calif": "assets/src/php-calif.png",
+    "clip_tnwai-head": "assets/src/tnwai-head.png"
+  },
+  "scripts": [
+    "scenes/clips.js",
+    "scenes/kit.js",
+    "scenes/nudges.js",
+    "scenes/s1.js",
+    "scenes/s2.js",
+    "scenes/s3.js",
+    "scenes/s4.js",
+    "scenes/film.js"
+  ],
+  "cutSounds": {
+    "cutSounds": false
+  },
+  "fonts": [
+    "400 40px Anton",
+    "700 40px Manrope",
+    "800 40px Manrope",
+    "500 40px \"Spline Sans Mono\"",
+    "600 40px \"Spline Sans Mono\""
+  ],
+  "audio": {
+    "voice": "audio/voice_edit.flac",
+    "voiceFilter": "highpass=f=80,afftdn=nr=8:nf=-52:tn=1,deesser=i=0.3:m=0.5:f=0.5,acompressor=threshold=0.06:ratio=3:attack=6:release=160:knee=3,equalizer=f=3200:t=q:w=1.2:g=1.5",
+    "music": {
+      "dir": "library:music",
+      "xfade": 6.0,
+      "tracks": [
+        [
+          "766",
+          "Mixkit track 766"
+        ],
+        [
+          "150",
+          "Mixkit track 150"
+        ],
+        [
+          "750",
+          "Mixkit track 750"
+        ],
+        [
+          "480",
+          "Mixkit track 480"
+        ]
+      ]
+    },
+    "sfx": {
+      "roles": {
+        "thud": {
+          "files": [
+            "library:hit-short-bass",
+            "library:drum-deep-impact"
+          ],
+          "align": "start",
+          "db": 3
+        },
+        "hit": {
+          "files": [
+            "library:punch-soft-quick",
+            "library:hit-futuristic-bass",
+            "library:wood-hard-hit"
+          ],
+          "align": "start",
+          "db": -2
+        },
+        "slide": {
+          "files": [
+            "library:paper-slide",
+            "library:paper-quick-move"
+          ],
+          "align": "peak",
+          "db": 15
+        },
+        "place": {
+          "files": [
+            "library:card-place",
+            "library:card-flick"
+          ],
+          "align": "peak",
+          "db": 14
+        },
+        "marker": {
+          "files": [
+            "library:marker-line",
+            "library:pencil-short"
+          ],
+          "align": "start",
+          "db": 4,
+          "maxlen": 0.7
+        },
+        "scribble": {
+          "files": [
+            "library:pencil-short",
+            "library:scribble-on-paper"
+          ],
+          "align": "start",
+          "db": 11,
+          "maxlen": 0.8
+        },
+        "pop": {
+          "files": [
+            "library:pop-dry",
+            "library:pop-hard-click",
+            "library:notify-bubble-pop",
+            "library:pop-cartoon-bubble"
+          ],
+          "align": "start",
+          "db": 9
+        },
+        "tick": {
+          "files": [
+            "library:ui-select-click",
+            "library:ui-modern-select",
+            "library:ui-click-tone",
+            "library:switch-tap"
+          ],
+          "align": "start",
+          "db": 10
+        },
+        "check": {
+          "files": [
+            "library:click-box-check",
+            "library:ui-option-select"
+          ],
+          "align": "start",
+          "db": 4
+        },
+        "shutter": {
+          "files": [
+            "library:shutter-click",
+            "library:shutter-hard-click",
+            "library:shutter-digital",
+            "library:shutter-vintage"
+          ],
+          "align": "peak",
+          "db": 11
+        },
+        "swipe": {
+          "files": [
+            "library:swipe-fast-zoom",
+            "library:transition-tech-slide",
+            "library:air-zoom-vacuum"
+          ],
+          "align": "peak",
+          "db": 9
+        },
+        "whoosh": {
+          "files": [
+            "library:whoosh-small-sweep",
+            "library:whoosh-short-sweep"
+          ],
+          "align": "peak",
+          "db": 3
+        },
+        "type": {
+          "files": [
+            "library:keyboard-typing",
+            "library:laptop-typing"
+          ],
+          "align": "start",
+          "db": 18,
+          "maxlen": 1.4
+        },
+        "typeHit": {
+          "files": [
+            "library:typewriter-single-hit",
+            "library:typewriter-soft-click"
+          ],
+          "align": "start",
+          "db": 14
+        },
+        "glitch": {
+          "files": [
+            "library:glitch-small-electric",
+            "library:glitch-static",
+            "library:glitch-intro-text"
+          ],
+          "align": "start",
+          "db": 10
+        },
+        "error": {
+          "files": [
+            "library:wrong-answer",
+            "library:buzzer-fail"
+          ],
+          "align": "start",
+          "db": 7
+        },
+        "notify": {
+          "files": [
+            "library:notify-message-pop",
+            "library:notify-positive",
+            "library:bell-notification"
+          ],
+          "align": "start",
+          "db": 3
+        },
+        "cash": {
+          "files": [
+            "library:coins-clinking",
+            "library:coin-win"
+          ],
+          "align": "start",
+          "db": 7
+        },
+        "clock": {
+          "files": [
+            "library:clock-tick-single",
+            "library:clock-wall-tick-tock"
+          ],
+          "align": "start",
+          "db": 19,
+          "maxlen": 1.5
+        },
+        "riser": {
+          "files": [
+            "library:riser-cinematic-trailer",
+            "library:riser-metallic-sweep"
+          ],
+          "align": "peak",
+          "db": -2
+        },
+        "stamp": {
+          "files": [
+            "library:wood-hard-hit",
+            "library:typewriter-single-hit"
+          ],
+          "align": "start",
+          "db": 9
+        },
+        "door": {
+          "files": [
+            "library:creaky-door-open"
+          ],
+          "align": "start",
+          "db": 9,
+          "maxlen": 1.6
+        },
+        "tape": {
+          "files": [
+            "library:tape-switch",
+            "library:record-scratch-stop"
+          ],
+          "align": "peak",
+          "db": 8
+        },
+        "ding": {
+          "files": [
+            "library:bell-service-ding",
+            "library:correct-answer"
+          ],
+          "align": "start",
+          "db": -2
+        },
+        "page": {
+          "files": [
+            "library:page-turn-single",
+            "library:book-paging-single"
+          ],
+          "align": "peak",
+          "db": 14
+        },
+        "fall": {
+          "files": [
+            "library:falling-hit",
+            "library:tap-ball"
+          ],
+          "align": "start",
+          "db": 3
+        },
+        "tap": {
+          "files": [
+            "library:tap-small-hit",
+            "library:click-plastic-bubble"
+          ],
+          "align": "start",
+          "db": 7
+        }
+      }
+    },
+    "levels": {
+      "voiceLufs": -16.0,
+      "duckDb": -15.0,
+      "openDb": -10.0,
+      "fullDb": -7.0,
+      "target": -14.0,
+      "ceiling": 0.5
+    }
+  }
+}

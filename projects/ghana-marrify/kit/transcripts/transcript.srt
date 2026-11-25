@@ -1,0 +1,228 @@
+1
+00:00:00,000 --> 00:00:02,660
+ Can I just launch something called Marrify?
+
+2
+00:00:02,660 --> 00:00:05,180
+ It's like a public platform where you can search
+
+3
+00:00:05,180 --> 00:00:07,260
+ and verify marriages, divorces,
+
+4
+00:00:07,260 --> 00:00:09,900
+ and license marriage officials.
+
+5
+00:00:09,900 --> 00:00:14,340
+ It launched last month with some Ministry of Gender,
+
+6
+00:00:14,340 --> 00:00:25,660
+ and I was just reading about it the other day on Tech
+
+7
+00:00:25,660 --> 00:00:25,660
+ and the way that it works is that it pulls data from different, um, government sources, registrars, general department, the courts, local assembly, all of that.
+
+8
+00:00:25,660 --> 00:00:31,900
+ It covers all kinds of marriages and all kinds of divorces. It goes all the way back, like records from all the way back.
+
+9
+00:00:31,900 --> 00:00:37,740
+ And you can also check whether a church or a pastor and a marriage venue is actually licensed to conduct a marriage.
+
+10
+00:00:37,740 --> 00:00:44,380
+ And I really love this when I saw this, like, because as an African, I'm thinking, "Wow, we're having centralized data, finally, finally!"
+
+11
+00:00:44,380 --> 00:00:50,220
+ Now, before I talk about drawbacks, because I read Tech about this article about this, and there were some drawbacks that I cited.
+
+12
+00:00:50,220 --> 00:00:53,660
+ Before I talk about it, let me just, let me love, let me love openings.
+
+13
+00:00:53,660 --> 00:00:59,020
+ I've been living in Estonia for about a year now, and people always say, like, this place is the digital orb of Europe or something like that.
+
+14
+00:00:59,020 --> 00:01:03,340
+ And I'm not going to say, like, it's so real. Everything here, everything you want to do here is online.
+
+15
+00:01:03,340 --> 00:01:07,260
+ I'm not exaggerating. Everything. Your health records, everything links so well.
+
+16
+00:01:07,260 --> 00:01:11,740
+ It's like the eighth papers. There is nothing you want to do that you can't do online here.
+
+17
+00:01:11,740 --> 00:01:17,340
+ You can get married online. You can divorce online. There's a link for everything you want to do in Estonia.
+
+18
+00:01:17,340 --> 00:01:24,380
+ The data ecosystem that the governments use, that they run here, the way it sinks, I genuinely admire it.
+
+19
+00:01:24,380 --> 00:01:28,620
+ And as someone coming from Nigeria, it blew my mind when I got to it, where everything just sinks.
+
+20
+00:01:28,620 --> 00:01:34,300
+ And I see, then I read something in this direction, at least, even though it's for, like, my first instance is, like, "Yes, please, more of this."
+
+21
+00:01:34,300 --> 00:01:39,260
+ Because he solves so much problems. There's more reliable records, instead of, like, just pieces of paper everywhere.
+
+22
+00:01:39,260 --> 00:01:43,980
+ Instead of NIN and this another. And I think the main thing that even made me record this video is,
+
+23
+00:01:43,980 --> 00:01:50,140
+ like, the drawbacks that take back about race, which is that marriage and divorce records are sensitive private data.
+
+24
+00:01:50,140 --> 00:01:54,140
+ I don't know, like, a divorce record is a personal thing about someone's life.
+
+25
+00:01:54,140 --> 00:01:58,620
+ And now, that record is searchable by anyone that has your name.
+
+26
+00:01:58,620 --> 00:02:01,580
+ And I'm telling this about someone that likes open data. I think that that's even your drawback.
+
+27
+00:02:01,580 --> 00:02:06,780
+ In Estonia, you can search online and find businesses. You can check how much a business, like, you don't know anything about it.
+
+28
+00:02:06,780 --> 00:02:13,820
+ You can look up how much they made in India. And that's fine, I think, because if business is a public entity, that takes public money, holds public accountability.
+
+29
+00:02:13,820 --> 00:02:19,420
+ But maybe in the case of a divorce, it's a little bit different. So that really got me thinking about the drawbacks, of course.
+
+30
+00:02:19,420 --> 00:02:27,660
+ I don't really know, because I love the idea of open data, but I also really don't know how to balance it well with personal data and privacy issues.
+
+31
+00:02:27,660 --> 00:02:35,420
+ Something to think about that I've been thinking about. And there's also the consent path of the conversation, because I want to believe that it was information, right?
+
+32
+00:02:35,420 --> 00:02:41,820
+ There's a consent path. Like, there's a difference between a divorce with a system in one, cut out or somewhere in 2003.
+
+33
+00:02:41,820 --> 00:02:47,580
+ And there's a difference in that, and somebody just been able to check it on their phone in three seconds, right?
+
+34
+00:02:47,580 --> 00:02:56,860
+ And I was also then thinking about data minimization. So the idea of data minimization is that you expose the minimum amount of data required to answer the question being asked.
+
+35
+00:02:56,860 --> 00:03:01,020
+ So if I ask the question, is this person currently free to marry? That's a yes or no answer.
+
+36
+00:03:01,020 --> 00:03:07,900
+ Answering that question does not require showing when they got married, who they married, when they divorced, which cost granted it, right?
+
+37
+00:03:07,900 --> 00:03:12,540
+ I was also thinking about how data minimization can come to play here as well.
+
+38
+00:03:12,540 --> 00:03:17,260
+ Could we minimize data to the point where we are not exposing much more than it's been asked for?
+
+39
+00:03:17,260 --> 00:03:21,980
+ Like in the case of Marifai in Ghana, for example, the question is, is this person married?
+
+40
+00:03:21,980 --> 00:03:26,380
+ So the answer is simple. This person currently has an active marriage on record.
+
+41
+00:03:26,380 --> 00:03:32,620
+ Nothing else. No name of spouse, no dates, no history. But of course, another person could request another thing.
+
+42
+00:03:32,620 --> 00:03:41,500
+ And then I was thinking about access level. Maybe perhaps an individual could access the level of this data and maybe there are certain organizations or institutions that can access more.
+
+43
+00:03:41,500 --> 00:03:46,780
+ I'm just thinking about all of it. And again, I always say this, that technology is non-neutral.
+
+44
+00:03:46,780 --> 00:03:50,540
+ It works. It takes the form of the system or the place that you're using it in.
+
+45
+00:03:50,540 --> 00:03:57,100
+ For example, the way a piece of technology works in Estonia will be completely different from the way it's working in a country in Africa, in Nigeria, in Ghana.
+
+46
+00:03:57,100 --> 00:04:00,460
+ In Estonia, a divorce record could just be administrative. Nobody cares.
+
+47
+00:04:00,460 --> 00:04:05,660
+ But in an African context, a larger stand divorce, especially for women, is pretty stigmatized.
+
+48
+00:04:05,660 --> 00:04:15,740
+ So it's very tricky when I think about it, when I think about the drawbacks first, that this is something that I myself think I need to explore further, the human side of this thing.
+
+49
+00:04:15,740 --> 00:04:21,340
+ It's not just a privacy engineering conversation. It's also a cultural design thing. But I've just been putting it side by side.
+
+50
+00:04:21,340 --> 00:04:29,180
+ I really love the idea. But another thing I find generally smart in Estonia is the idea that your data being in the system has also appeared, which you've been able to see what's happening today.
+
+51
+00:04:29,180 --> 00:04:38,140
+ That transparency runs between. And I also think that if we are creating open data in Africa, we also need to ask the question of reciprocity.
+
+52
+00:04:38,140 --> 00:04:45,260
+ Where is the reciprocity for the average individual? If someone looks up my marriage record, I get to see that someone looked it up.
+
+53
+00:04:45,260 --> 00:04:49,820
+ I really want African countries building this kind of infrastructure, because I generally think it's also a problem.
+
+54
+00:04:49,820 --> 00:04:56,940
+ Technology helps when it comes to things like this. But I also think that if we want to build this kind of infrastructure,
+
+55
+00:04:56,940 --> 00:05:00,860
+ as people, we still need to probe it a little bit and question it. And that's what I've just been doing in my head.
+
+56
+00:05:00,860 --> 00:05:05,980
+ I really like the idea I read about. It's super cool, super, super, super cool. I really love it.
+
+57
+00:05:05,980 --> 00:05:12,700
+ But again, just thinking about the drawbacks and everything, this guy just ran into my head.
+

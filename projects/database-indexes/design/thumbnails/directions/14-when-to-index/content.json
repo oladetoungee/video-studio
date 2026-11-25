@@ -1,0 +1,25 @@
+{
+  "direction": "A clipboard checklist beside her (viral sample 2, the DONE clipboard): WHERE, JOIN, ORDER BY ticked in ink, \"every column\" struck out in red. Round 2: hand-drawn ink ticks (no icon circles), \"every column\" 38 px, closed-mouth frame. Round 3: new frame (\"this small\" pinch); clipboard shortened. Round 4 (composition): mirrored: her on the left, the headline and clipboard on the right.",
+  "concept": "T16",
+  "thumbnail_text": "When to add an index",
+  "title": "Why Indexing Every Column Makes Your Database Slower",
+  "titles": [
+    "Why Indexing Every Column Makes Your Database Slower",
+    "Don't Add a Database Index Before You Run EXPLAIN",
+    "What Is a Database Index? (And Why Your App Needs One)"
+  ],
+  "text": {
+    "a": "When to add",
+    "b": "an <span class=\"mark\">index</span>",
+    "i1": "WHERE",
+    "i2": "JOIN",
+    "i3": "ORDER BY",
+    "i4": "every column"
+  },
+  "images": {
+    "scene": "../../assets/scene/f_207.7.jpg"
+  },
+  "frame": "3:27.7 (\"this small\" pinch, mouth closed)",
+  "vars": {},
+  "scores": "final gate (round 4): A topic/click 4/6 · B pair 7 · C taste 6"
+}

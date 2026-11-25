@@ -1,0 +1,22 @@
+{
+  "direction": "News in four words: the real European Commission headline (10 Jul 2026) re-set as a paper clipping with the key words highlighted, no source line on the card (as in her ghana 10b edit; the source is in NOTES.md and the description); her calm beside it (3:06).",
+  "concept": "TH13",
+  "follows": "her own edit of ghana-marrify 10b (newspaper clipping, yellow highlight) + viral sample 1",
+  "thumbnail_text": "EU vs THE ENDLESS FEED",
+  "title": "Instagram's Addictive Design Explained: What Europe Found",
+  "titles": [
+    "Instagram's Addictive Design Explained: What Europe Found",
+    "Europe Says Infinite Scroll May Break the Law. Here's Why"
+  ],
+  "scores": "A topic (image only) 8/8 · B with best title 8 · C taste 7 (round 2; fixes from round 2 applied after)",
+  "text": {
+    "words": "EU <span class=\"vs\">vs</span> <span class=\"acc\">the endless feed</span>",
+    "clip": "Commission preliminarily finds the <mark>addictive design</mark> of Instagram and Facebook in breach of the Digital Services Act",
+    "credit": "European Commission · 10 Jul 2026"
+  },
+  "images": {
+    "scene": "../../../../assets/scene/warm/s_186.0.jpg",
+    "front": "../../../../assets/scene/warm/mask/s_186.0.png"
+  },
+  "vars": {}
+}

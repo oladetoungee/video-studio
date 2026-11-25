@@ -1,0 +1,201 @@
+{
+ "story": "emudhra",
+ "outlet": "Google (Chrome Security)",
+ "slug": "google-blog",
+ "url": "https://blog.google/security/protecting-chrome-and-android-users-from-compromised-emudhra-intermediate-ca-certificates/",
+ "finalUrl": "https://blog.google/security/protecting-chrome-and-android-users-from-compromised-emudhra-intermediate-ca-certificates/",
+ "status": "loaded",
+ "http": 200,
+ "title": "Protecting Chrome and Android Users from Compromised eMudhra Intermediate CA Certificates",
+ "h1": "Protecting Chrome and Android Users from Compromised eMudhra Intermediate CA Certificates",
+ "published": "2026-10-20",
+ "files": {
+  "fold": "emudhra/google-blog_fold.png",
+  "full": "emudhra/google-blog_full.jpg",
+  "scroll": "emudhra/google-blog_scroll.mp4"
+ },
+ "full": {
+  "width": 1440,
+  "height": 3420,
+  "pageHeight": 3420,
+  "zoom": 1,
+  "quotes": [
+   {
+    "quote": "Protecting Chrome and Android Users from Compromised eMudhra Intermediate CA Certificates",
+    "box": {
+     "x": 292,
+     "y": 178,
+     "w": 771,
+     "h": 291
+    },
+    "lines": [
+     {
+      "x": 292,
+      "y": 178,
+      "w": 629,
+      "h": 75
+     },
+     {
+      "x": 292,
+      "y": 250,
+      "w": 522,
+      "h": 75
+     },
+     {
+      "x": 292,
+      "y": 322,
+      "w": 640,
+      "h": 75
+     },
+     {
+      "x": 292,
+      "y": 394,
+      "w": 771,
+      "h": 75
+     }
+    ]
+   },
+   {
+    "quote": "enabling anyone to forge trusted HTTPS certificates to impersonate any website",
+    "box": {
+     "x": 402,
+     "y": 913,
+     "w": 566,
+     "h": 46
+    },
+    "lines": [
+     {
+      "x": 577,
+      "y": 913,
+      "w": 391,
+      "h": 20
+     },
+     {
+      "x": 402,
+      "y": 939,
+      "w": 181,
+      "h": 20
+     }
+    ]
+   }
+  ]
+ },
+ "scroll": {
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "seconds": 8,
+  "keyframes": [
+   {
+    "t": 0,
+    "y": 40
+   },
+   {
+    "t": 1,
+    "y": 40
+   },
+   {
+    "t": 2.083,
+    "y": 503
+   },
+   {
+    "t": 8,
+    "y": 503
+   }
+  ],
+  "zoom": 1,
+  "easing": "easeInOutCubic between keyframes, holds where y is equal",
+  "capped": false,
+  "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)",
+  "quotes": [
+   {
+    "quote": "Protecting Chrome and Android Users from Compromised eMudhra Intermediate CA Certificates",
+    "inVideo": true,
+    "still": true,
+    "t": 0.53,
+    "visibleStill": [
+     0,
+     1.07
+    ],
+    "scrollY": 40,
+    "box": {
+     "x": 532,
+     "y": 138,
+     "w": 771,
+     "h": 291
+    },
+    "lines": [
+     {
+      "x": 532,
+      "y": 138,
+      "w": 629,
+      "h": 75
+     },
+     {
+      "x": 532,
+      "y": 210,
+      "w": 522,
+      "h": 75
+     },
+     {
+      "x": 532,
+      "y": 282,
+      "w": 640,
+      "h": 75
+     },
+     {
+      "x": 532,
+      "y": 354,
+      "w": 771,
+      "h": 75
+     }
+    ],
+    "docBox": {
+     "x": 532,
+     "y": 178,
+     "w": 771,
+     "h": 291
+    },
+    "layoutDriftPx": 0
+   },
+   {
+    "quote": "enabling anyone to forge trusted HTTPS certificates to impersonate any website",
+    "inVideo": true,
+    "still": true,
+    "t": 5.02,
+    "visibleStill": [
+     2,
+     8.03
+    ],
+    "scrollY": 503,
+    "box": {
+     "x": 642,
+     "y": 410,
+     "w": 566,
+     "h": 46
+    },
+    "lines": [
+     {
+      "x": 817,
+      "y": 410,
+      "w": 391,
+      "h": 20
+     },
+     {
+      "x": 642,
+      "y": 436,
+      "w": 181,
+      "h": 20
+     }
+    ],
+    "docBox": {
+     "x": 642,
+     "y": 913,
+     "w": 566,
+     "h": 46
+    },
+    "layoutDriftPx": 0
+   }
+  ]
+ }
+}

@@ -1,0 +1,32 @@
+{
+  "text": {
+    "h": "Your<br>tests<br>won’t<br><span class=\"bx\">catch&nbsp;this</span>",
+    "lab": "First name",
+    "fld": "Zoë",
+    "err": "Invalid name",
+    "btn": "Continue"
+  },
+  "images": {
+    "room": "../../assets/shoot/room3-1594.jpg",
+    "me": "../../assets/shoot/me3-1594.png"
+  },
+  "kind": "photo: stacked caps left, her right in her dark room, a phone between (new version of 07; words left / her right 2 of 2 with 02)",
+  "board": "Thumbnails 113 (yt-60 STOP LEARNING CODE THE OLD WAY: stacked Anton, red box on the last line, him right)",
+  "fonts": [
+    "thumbs-16 Anton + red box (white on #222222, #D7262B, Thumbnails 113)",
+    "Inter Tight inside the phone (generic UI)"
+  ],
+  "colours": "Thumbnails 113 / thumbs-16: #222222 / #FFFFFF / #D7262B",
+  "thumbnail_text": "YOUR TESTS WON'T CATCH THIS + a sign-up form rejecting the name \"Zoë\"",
+  "titles": [
+    "Edge Cases Your Tests Won't Catch (8 Real Examples)",
+    "Edge Cases: Why Code That Passes Tests Still Breaks"
+  ],
+  "title": "Edge Cases Your Tests Won't Catch (8 Real Examples)",
+  "replaces": "07-it-worked-in-testing (kept beside it)",
+  "scores": "cold critic 2026-11-16, 3 fresh rounds, PNGs only, alone: r1 8, r2 7.5, r3 7 (best of the 11 in every round). Old 07 in the same rounds: 4 / 5 / 4",
+  "direction": "Copies Thumbnails 113: four stacked Anton lines on the left, the last in a red box; she looks on calmly from the right of her dark room (1594, mouth closed); between them the thing tests miss: a sign-up form that rejects an ordinary name with an accent.",
+  "nudge": {},
+  "vars": {},
+  "class": "no-lift"
+}

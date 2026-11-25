@@ -1,0 +1,32 @@
+{
+  "direction": "TH12, split: her real room on the left 58 % (fingers at her temple, lips pressed: a headache look); the right is dark ink with a drawn \"Claude\" chat: one big blurred red all-caps message and the chat ending. Words in white, \"AI?\" in red. Refs: sample 2, the \"being rude to ai\" outliers (Duncanyounot \"I BULLIED AI\" 2.4M). Scores: Round 3: cold 7 · best pair (title 1) 8/7 · taste 6.5.",
+  "concept": "TH12",
+  "thumbnail_text": "YELLING AT AI?",
+  "title": "Is It Okay to Be Mean to AI? Anthropic's New Rule",
+  "titles": [
+    "Is It Okay to Be Mean to AI? Anthropic's New Rule",
+    "Should You Be Nice to AI? Yes, But Not for Its Sake"
+  ],
+  "scores": "Round 3: cold 7 · best pair (title 1) 8/7 · taste 6.5.",
+  "text": {
+    "l1": "YELLING",
+    "l2": "AT <span class=\"acc\">AI?</span>",
+    "chat_name": "Claude",
+    "chat_in": "You can start a new chat",
+    "rude": "WHY ARE YOU SO STUPID",
+    "ended": "This chat has ended"
+  },
+  "images": {
+    "scene": "../../assets/scene/s_254.0.jpg",
+    "cut": "../../assets/cut/c_254.0.png"
+  },
+  "vars": {
+    "--ground": "#15131C",
+    "--fg": "#FFFFFF",
+    "--accent": "#E8352B",
+    "--px": "-733px",
+    "--py": "-267px",
+    "--pw": "2167px",
+    "--clip": "inset(0px 705px 0px 733px)"
+  }
+}

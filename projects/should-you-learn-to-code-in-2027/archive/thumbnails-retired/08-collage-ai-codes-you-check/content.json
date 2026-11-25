@@ -1,0 +1,31 @@
+{
+ "direction": "Collage over her full natural photo, she glances sideways as if checking: one die-cut code card from AI with the empty catch, a gold magnifying glass held over it, one heavy serif line on a cream paper strip. No scribbles. References: viral collage 'Thought of these?', 'Time to lock in.', kit TH11.",
+ "thumbnail_text": "AI codes. You check.",
+ "titles": [
+  "Learn to Code With AI: 4 Skills Beginners Need Now",
+  "Should I Learn to Code in 2026? 4 Skills That Matter Now",
+  "Should You Still Learn to Code in 2026? A Developer's Answer"
+ ],
+ "title": "Learn to Code With AI: 4 Skills Beginners Need Now",
+ "kind": "collage",
+ "text": {
+  "line": "AI codes. <em>You</em> check.",
+  "bar": "from AI",
+  "barr": "",
+  "c1": "try { save() }",
+  "c2": "catch (e) { }"
+ },
+ "images": {
+  "room": "../../assets/frames/f_383.0.jpg",
+  "me": "../../assets/scene/gbemi-383.0-person.png",
+  "mag": "../../assets/collage/magnifier.png"
+ },
+ "vars": {
+  "--bgb": "1.15",
+  "--sc": "1.5",
+  "--sc-x": "292px",
+  "--sc-y": "-154px"
+ },
+ "recommended": false,
+ "scores": "cold critic R2 alone / with best title: 6.5 / 7 (R2 fixes applied after, not re-scored)"
+}

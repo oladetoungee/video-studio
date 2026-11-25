@@ -1,0 +1,27 @@
+{
+ "direction": "Black ground. Left: one phone showing a shop's discount pop-up: '10% off?' / 'Yes please' / the guilt-trip link 'No thanks, I hate saving money' (big). Right: 'THIS IS RUDE on purpose.' in big white caps, 'on purpose.' in red serif italic. No face.",
+ "thumbnail_text": "this is rude on purpose.",
+ "kind": "object (phone) on flat",
+ "recommended": false,
+ "titles": [
+  "Dark Patterns: \"No Thanks, I Hate Saving Money\" Has a Name",
+  "Why Apps Make You Feel Bad for Saying No (Dark Patterns)",
+  "The Rude \"No Thanks\" Button Is a Trick. Here's Why"
+ ],
+ "text": {
+  "big": "10% off?",
+  "btn": "Yes please",
+  "no": "No thanks, I hate saving money",
+  "hd": "THIS IS<br>RUDE <em>on<br>purpose.</em>"
+ },
+ "images": {},
+ "vars": {
+  "--ground": "#0C0C0C"
+ },
+ "board": "pick1119-43 ('How to never procrastinate': black ground, one object left, a two-line question right, one part red)",
+ "fonts": "Font 26 (Inter Tight Black caps + Instrument Serif italic, Design 20); phone text Font 58 (Inter Tight, black on light)",
+ "colours": "Font 26 specimen (Design 20): ground #0C0C0C, words #FFFFFF, red #D92A11",
+ "title": "Dark Patterns: \"No Thanks, I Hate Saving Money\" Has a Name",
+ "class": "no-lift",
+ "scores": "NEW 2026-11-19 (copies pick1119-43) · cold critic R1 5/7, R2 4/7, R3 6/7"
+}

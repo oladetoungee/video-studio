@@ -1,0 +1,25 @@
+{
+ "direction": "15 (2026-11-19): copies pick1119-39 (How to Scale from 1 to 1,000,000 Users: big condensed headline with the numbers in red, a growth chart of stacked boxes, one hand-drawn arrow). Ours: 4 KB vs 5 MB, a tiny cookie block next to a tall localStorage stack. No face.",
+ "thumbnail_text": "4 KB vs 5 MB",
+ "kind": "flat",
+ "recommended": false,
+ "titles": [
+  "Cookies vs localStorage: Why Not Just Use the Bigger One?",
+  "Why Websites Don't Keep Everything in Cookies",
+  "localStorage vs Cookies: How Much Can Each Hold?"
+ ],
+ "text": {
+  "hd": "<b>4 KB</b> <span>vs</span> <b>5 MB</b>",
+  "la": "cookie",
+  "lb2": "localStorage"
+ },
+ "images": {},
+ "vars": {
+  "--ground": "#E99A3F"
+ },
+ "board": "pick1119-39 (Think System Design & Architecture Like The Top 1% of Engineers)",
+ "fonts": "Font 2 (design-02: Big Shoulders Display 900, black on orange #E99A3F; combo-07 = the same pair)",
+ "colours": "design-02 / combo-07 as is: #000000 on #E99A3F",
+ "title": "Cookies vs localStorage: Why Not Just Use the Bigger One?",
+ "scores": "cold critic 2026-11-19 round 3: 6 / 6 (grey ground); orange after, not re-scored"
+}

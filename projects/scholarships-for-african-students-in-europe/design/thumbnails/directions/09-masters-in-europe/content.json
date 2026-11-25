@@ -1,0 +1,27 @@
+{
+ "direction": "Her shoot photo on the right (hands together, looking at the viewer), room calmed. The topic name huge in white on the left, the condition under it with a green underline, and the first real deadline in a small line (University Admissions Sweden, 15 January 2027). Follows: Cal Newport \"Reading as an Act of Resistance\" (claim + one underlined word), HTTP 03, \"PhD Vlog\".",
+ "thumbnail_text": "MASTER'S IN EUROPE + on a scholarship + first deadline 15 January",
+ "titles": [
+  "Studying in Europe as a Nigerian: The Scholarships",
+  "How to Get a Scholarship to Study in Europe in 2027",
+  "Fully Funded Scholarships in Europe for Africans (2027)"
+ ],
+ "kind": "photo",
+ "class": "no-lift",
+ "text": {
+  "head": "Master's<br>in Europe",
+  "sub": "on a <u>scholarship</u>",
+  "sm": "for African students, 2027"
+ },
+ "images": {
+  "room": "../../assets/shoot/room-1608.jpg",
+  "me": "../../assets/shoot/room-1608-cut.png"
+ },
+ "vars": {
+  "--rw": "1976px",
+  "--rx": "-28px",
+  "--ry": "-210px",
+  "--dim": "rgba(8,8,10,.60)"
+ },
+ "title": "Studying in Europe as a Nigerian: The Scholarships"
+}

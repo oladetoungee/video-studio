@@ -1,0 +1,33 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Direction render</title>
+<link rel="stylesheet" href="/studio/runtime/fonts.css">
+<style>
+@font-face{font-family:Kalam;font-weight:700;src:url(/dirs/_fonts/Kalam-Bold.ttf)}
+@font-face{font-family:Kalam;font-weight:400;src:url(/dirs/_fonts/Kalam-Regular.ttf)}
+@font-face{font-family:"Funnel Display";font-weight:300 800;src:url(/dirs/_fonts/FunnelDisplay.ttf)}
+@font-face{font-family:"Funnel Sans";font-weight:300 800;src:url(/dirs/_fonts/FunnelSans.ttf)}
+@font-face{font-family:"Fragment Mono";src:url(/dirs/_fonts/FragmentMono-Regular.ttf)}
+@font-face{font-family:"Reddit Sans";font-weight:200 900;src:url(/dirs/_fonts/RedditSans.ttf)}
+@font-face{font-family:"Reddit Mono";font-weight:200 900;src:url(/dirs/_fonts/RedditMono.ttf)}
+@font-face{font-family:"Instrument Serif";src:url(/dirs/_fonts/InstrumentSerif-Regular.ttf)}
+@font-face{font-family:"Instrument Serif";font-style:italic;src:url(/dirs/_fonts/InstrumentSerif-Italic.ttf)}
+html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1920" height="1080"></canvas>
+<script src="/studio/runtime/core.js"></script>
+<script src="/studio/runtime/motion.js"></script>
+<script src="/studio/runtime/house.js"></script>
+<script src="/studio/runtime/boot.js"></script>
+<script>
+// Same as studio/runtime/film.html, for a direction folder served as /p/dp-<X>/film/ (no edits, no captions).
+window.BUILD_ERROR = null;
+(async () => {
+  try {
+    const q = new URLSearchParams(location.search); const cv = document.getElementById('c');
+    await bootFilm({ slug: q.get('slug'), canvas: cv, aspect: q.get('aspect') || '16x9', edits: false });
+    window.grab = (t, qq) => { renderFrame(t); return cv.toDataURL('image/jpeg', qq || 0.92); };
+    window.grabPNG = (t) => { renderFrame(t); return cv.toDataURL('image/png'); };
+    window.meta = () => FILM.meta();
+  } catch (e) { window.BUILD_ERROR = String(e && e.stack || e); console.error(e); }
+  window.READY = true;
+})();
+</script></body></html>

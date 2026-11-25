@@ -1,0 +1,82 @@
+/* 9 things I do instead of doomscrolling: carousels (2026-11-03). The film's look A "OFFLINE BINGO": butter #F7D44C, card #FFFDF5,
+   ink #161616, the orange dauber #FF6A1A (= "done"). Dela Gothic One headlines + numerals, Figtree body, Red Hat Mono labels (>= 32 px).
+   Each item slide daubs its square on the little bingo card in the footer, so the card fills up as you swipe. Pexels photos are
+   stand-ins (credited in film/assets/CREDITS.md). */
+/* type set 06 Ultra condensed (TYPE-SYSTEM.md, 2026-11-07): the old names are aliases: Dela -> League Gothic, Fig -> Inter Tight, RHMono -> DM Mono */
+@font-face { font-family: 'Dela'; src: url('fonts/LeagueGothicRegular.ttf') format('truetype'); }
+@font-face { font-family: 'Fig'; src: url('fonts/InterTightMedium.ttf') format('truetype'); font-weight: 300 550; }
+@font-face { font-family: 'Fig'; src: url('fonts/InterTightBold.ttf') format('truetype'); font-weight: 551 1000; }
+@font-face { font-family: 'RHMono'; src: url('fonts/DMMono-Medium.ttf') format('truetype'); }
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { background: #2a2a2e; }
+body { font-family: 'Fig', sans-serif; padding: 40px; display: flex; flex-direction: column; gap: 40px; align-items: flex-start; }
+html.v-slide body, html.v-strip body { padding: 0; gap: 0; }
+html.v-strip body { flex-direction: row; }
+@media print { body { padding: 0; gap: 0; } .slide { break-after: page; } }
+@page { margin: 0; }
+
+.slide { position: relative; width: var(--W); height: var(--H); overflow: hidden; background: var(--bg); color: var(--fg); flex: none; }
+.g-butter { --bg: #F7D44C; --fg: #161616; --sub: rgba(22,22,22,.86); --mid: rgba(22,22,22,.66); --line: rgba(22,22,22,.22); --sq: #FFFDF5; }
+.g-card   { --bg: #FFFDF5; --fg: #161616; --sub: rgba(22,22,22,.84); --mid: rgba(22,22,22,.62); --line: rgba(22,22,22,.18); --sq: #F3EFE4; }
+.g-ink    { --bg: #161616; --fg: #FFFDF5; --sub: rgba(255,253,245,.86); --mid: rgba(255,253,245,.62); --line: rgba(255,253,245,.24); --sq: #2C2C2C; }
+
+.main { position: absolute; left: 80px; right: 80px; top: 92px; bottom: 170px; display: flex; flex-direction: column; }
+.push { margin-top: auto; }
+.disp { font-family: 'Dela', sans-serif; line-height: .9; text-wrap: balance; letter-spacing: 0; text-transform: uppercase; color: var(--fg); }
+/* *word* = the dauber: an orange blot behind the word */
+.acc { position: relative; z-index: 0; white-space: nowrap; }
+.acc::before { content: ""; position: absolute; z-index: -1; left: 0; right: 0; bottom: .02em; height: 2px; background: currentColor; }
+.g-ink .acc { color: var(--a, #FF6A1A); }
+.body { font-size: 44px; line-height: 1.3; font-weight: 600; letter-spacing: -0.01em; color: var(--sub); text-wrap: pretty; }
+.bal { text-wrap: balance; }
+.nw { white-space: nowrap; }
+.mono { font-family: 'RHMono', monospace; font-weight: 500; font-size: 32px; letter-spacing: .12em; text-transform: uppercase; }
+.lab { line-height: 1.2; }
+
+/* the item number: Dela numeral on a dauber blot */
+.num { position: relative; display: inline-block; font-family: 'Dela'; font-size: 260px; line-height: 1; color: #161616; z-index: 0; align-self: flex-start; padding: .1em .22em .08em; }
+.num::before { content: ""; position: absolute; z-index: -1; inset: 0; background: var(--a, #FF6A1A);
+  border-radius: 46% 54% 42% 58% / 55% 45% 58% 42%; transform: rotate(-4deg); }
+.g-ink .num { color: #161616; }
+
+/* polaroid photo */
+.pol { position: absolute; background: none; padding: 0; box-shadow: 0 22px 44px rgba(0,0,0,.22); }
+.pol img { display: block; width: 100%; object-fit: cover; }
+.cr { font-family: 'RHMono'; font-size: 32px; font-weight: 600; color: var(--mid); margin-top: 18px; }
+.credit { position: absolute; right: 80px; bottom: 120px; font-family: 'RHMono'; font-size: 32px; font-weight: 600; color: var(--mid); }
+
+/* the bingo card (cover / end): 3x3 squares, numbers, daubs */
+.card { background: rgba(22,22,22,.35); border-radius: 16px; padding: 2px; }
+.card .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; }
+.card .sq { position: relative; background: #FFFDF5; aspect-ratio: 1 / 1; overflow: hidden; }
+.card .sq .n { position: absolute; left: 18px; top: 10px; font-family: 'Dela'; font-size: 84px; line-height: 1; color: #161616; z-index: 2; }
+.card .sq .l { position: absolute; left: 18px; right: 12px; bottom: 16px; font-weight: 800; font-size: 36px; line-height: 1.02; color: #161616; z-index: 2; letter-spacing: -.01em; }
+.card .sq .d { position: absolute; left: 6px; top: 2px; width: 110px; height: 84px; background: var(--a, #FF6A1A); border-radius: 46% 54% 42% 58% / 55% 45% 58% 42%; transform: rotate(-8deg); z-index: 1; }
+.card .sq.now { background: #FBE7A1; }
+
+/* numbered list (her decks: mono number + bold line + hairline rule) */
+.rows .row { display: flex; align-items: baseline; gap: 30px; padding: 34px 0 32px; border-top: 1px solid var(--line); }
+.rows .row:last-child { border-bottom: 1px solid var(--line); }
+.rows .n { font-family: 'RHMono'; font-weight: 700; font-size: 40px; color: var(--fg); min-width: 64px; }
+.rows .head { font-family: 'Dela'; font-weight: 400; font-size: 92px; letter-spacing: 0; line-height: .95; text-transform: uppercase; color: var(--fg); }
+
+.handle { display: inline-block; font-family: 'Dela'; font-size: 120px; color: #161616; padding: 0; }
+.g-ink .handle { background: #F7D44C; color: #161616; }
+
+/* footer: slide number + the little bingo card that fills up */
+.foot { position: absolute; left: 80px; right: 80px; bottom: 56px; display: flex; justify-content: space-between; align-items: center; font-family: 'RHMono'; font-size: 34px; color: var(--mid); }
+.foot .nn b { color: var(--fg); font-weight: 700; }
+.mini { display: grid; grid-template-columns: repeat(9, 30px); gap: 8px; }
+.mini i { width: 30px; height: 30px; border-radius: 50%; background: var(--line); }
+.mini i.on { background: #FF6A1A; border-color: #FF6A1A; }
+
+/* photoband: full-bleed photo across the top, text on the ground below */
+.band { position: absolute; left: 0; top: 0; width: 100%; height: var(--bandH, 640px); overflow: hidden; }
+.band img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.rows.tight .row { padding: 22px 0 20px; }
+.rows.tight .head { font-size: 48px; }
+.card .grid[style] .sq .l { font-size: 38px; }
+.card .grid[style] .sq .d { left: 14px; top: 12px; width: 112px; height: 76px; }
+.card .grid[style] .sq .n { left: 28px; top: 22px; font-size: 50px; }
+.qbody { font-family: 'Fig'; font-weight: 700; letter-spacing: -.01em; line-height: 1.22; }

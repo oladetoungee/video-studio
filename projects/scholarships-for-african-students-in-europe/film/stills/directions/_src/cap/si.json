@@ -1,0 +1,75 @@
+{
+ "title": "Scholarship for Global Professionals | Svenska institutet",
+ "h1": "SI Scholarship for Global Professionals",
+ "h1y": 226,
+ "found": {
+  "13 November": [
+   [
+    224,
+    3405.359375,
+    88.578125,
+    19
+   ]
+  ],
+  "15 January": [
+   [
+    346.75,
+    3358.984375,
+    68.890625,
+    19
+   ]
+  ],
+  "8 February": [
+   [
+    427.578125,
+    1398.375,
+    119.265625,
+    30
+   ]
+  ],
+  "Nigeria": []
+ },
+ "H": 10345,
+ "focus": {
+  "13 November": {
+   "file": "si__13-november.png",
+   "top": 2885.359375,
+   "rects": [
+    [
+     224,
+     520,
+     88.578125,
+     19
+    ]
+   ]
+  },
+  "15 January": {
+   "file": "si__15-january.png",
+   "top": 2838.984375,
+   "rects": [
+    [
+     346.75,
+     520,
+     68.890625,
+     19
+    ]
+   ]
+  },
+  "8 February": {
+   "file": "si__8-february.png",
+   "top": 878.375,
+   "rects": [
+    [
+     427.578125,
+     520,
+     119.265625,
+     30
+    ]
+   ]
+  }
+ },
+ "clipTop": 106,
+ "scale": 1.5,
+ "url": "https://si.se/en/apply/scholarships/swedish-institute-scholarships-for-global-professionals/",
+ "captured": "2026-11-02T12:49:21.616Z"
+}

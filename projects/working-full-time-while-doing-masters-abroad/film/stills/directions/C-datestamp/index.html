@@ -1,0 +1,95 @@
+<!doctype html><html><head><meta charset="utf-8"><title>C · Date stamp</title>
+<link rel="stylesheet" href="../_shared/fonts.css"></head><body>
+<script src="../_shared/clips.js"></script>
+<script src="../_shared/lib.js"></script>
+<script>
+/* C · DATE STAMP. Montage + voice-over (yemshaven #23/#24): full-bleed clips of a working student's week, cut on her words,
+ * each carrying an orange camcorder date stamp (DSEG14, #FF8A1F) that runs the week: MON 06:50 ... SAT 10:00.
+ * Her own footage is cut in full frame (no stamp on her: the stamp belongs to the week). Captions: Caveat 600, white,
+ * lower middle, 1-4 words. Phrase cards: black #0B0B0A + Instrument Serif in the stamp orange.
+ * Signature transition: a hard cut on her word + the stamp ticking forward (no slide, no fade). Week strip = the chapter card. */
+const C = { stamp: '#FF8A1F', black: '#0B0B0A', white: '#FFFFFF', cream: '#F3EAD8' };
+const FS = (s) => `400 ${s}px "DSEG14"`, FH = (s, w = 600) => `${w} ${s}px "Caveat"`, FI = (s) => `400 ${s}px "Instrument Serif"`, FN = (s, w = 600) => `${w} ${s}px "Instrument Sans"`;
+function shot(name, o = {}) { const im = FEED[name] || IMG[name]; if (!im) { rect(0, 0, W, H, '#222'); return; } cover(im, o.x || 0, o.y || 0, o.w || W, o.h || H, o.fx == null ? 0.5 : o.fx, o.fy == null ? 0.5 : o.fy, o.zoom || 1); }
+function dateStamp(s, x, y, size, align = 'right') { // camcorder date: orange day (Instrument Sans caps) + seven-segment time (DSEG7), small dark offset for bright frames
+  const parts = s.split(' '); const day = parts.length > 1 ? parts[0] : (/[0-9]/.test(s) ? '' : s); const tm = parts.length > 1 ? parts.slice(1).join(' ') : (day ? '' : s);
+  const ft = `400 ${size}px "DSEG7"`, fd = FN(size * 0.92, 700); const wt = tw(tm, ft), wd = day ? tw(day, fd, 2) + size * 0.4 : 0; const x0 = align === 'right' ? x - wt - wd : x;
+  [['rgba(0,0,0,0.45)', 3], [C.stamp, 0]].forEach(([c, o]) => { if (day) txt(day, x0 + o, y + o, fd, c, 'left', 'alphabetic', 2); txt(tm, x0 + wd + o, y + o, ft, c, 'left'); });
+}
+function cap(words, times, t, y) { // Caveat caption, centred; words appear on her word times
+  const f = FH(V(82, 80)); const full = words.join(' '); const w = tw(full, f); let x = W / 2 - w / 2; const sp = tw(' ', f);
+  words.forEach((s, i) => { const p = ez(t, times[i], 0.18); withA(p, () => { txt(s, x + 3, y + 3, f, 'rgba(0,0,0,0.5)'); txt(s, x, y, f, C.white); }); x += tw(s, f) + sp; });
+}
+const SY = () => V(H - 70, H - 330);   // stamp baseline (portrait: above the platform UI)
+const SX = () => V(W - 90, W - 70);
+function sOpen(t) {
+  const k = { job: P('full-time job', 0.5), ms: P('Full-time master\'s degree', 7.4), since: P('since October 2025', 10) };
+  shot('tallinn', { zoom: 1 + 0.04 * clamp(t / 12) });
+  withA(ez(t, 0.3, 0.4), () => { txt('Tallinn, Estonia', V(90, 70), V(120, 380), FH(V(64, 72)), C.white); });
+  cap(['a', 'full-time', 'job'], [k.job.t - 0.3, k.job.w[0], k.job.w[1]], t, V(H - 250, H - 560));
+  cap(['+', 'a', 'full-time', 'master\'s'], [k.ms.t - 0.2, k.ms.t - 0.1, k.ms.w[0], k.ms.w[1]], t, V(H - 165, H - 470));
+  withA(ez(t, k.since.w[1], 0.15), () => dateStamp('10.2025', SX(), SY(), V(60, 54)));
+}
+const WEEK = [['MON', 'alarm', '06:50'], ['TUE', 'coffee', '07:30'], ['WED', 'laptop', '09:00'], ['THU', 'lecture', '19:45'], ['FRI', 'tram', '21:10'], ['SAT', 'planner', '10:00'], ['SUN', 'mealprep', '14:00']];
+function weekStrip(t, t0) { // the week as a contact strip: seven frames, each with its stamp
+  rect(0, 0, W, H, C.black); const n = 7;
+  if (!PORT) { const g = 14, tw_ = (W - 2 * 60 - (n - 1) * g) / n, th = tw_ * 2.2, y = (H - th) / 2 - 90;
+    WEEK.forEach(([d, im, hh], i) => { const p = ez(t, t0 + i * 0.09, 0.3); const x = 60 + i * (tw_ + g); withA(p, () => { cover(IMG[im], x, y + 30 * (1 - p), tw_, th);
+      dateStamp(d + ' ' + hh, x + tw_ - 12, y + th - 16 + 30 * (1 - p), 30); }); }); }
+  else { const g = 12, th = (H - 2 * 300 - (n - 1) * g) / n, w = W - 140;
+    WEEK.forEach(([d, im, hh], i) => { const p = ez(t, t0 + i * 0.09, 0.3); const y = 300 + i * (th + g); withA(p, () => { cover(IMG[im], 70, y, w, th); dateStamp(d + ' ' + hh, 70 + w - 18, y + th - 18, 34); }); }); }
+}
+function sWeek(t) { // 1:22 "For me once Monday starts it just keeps moving"
+  const k = { mon: P('once Monday starts', 82.5), kp: P('it just keeps moving', 83.3) };
+  weekStrip(t, k.mon.w[1] - 0.2);
+  cap(['once', 'Monday', 'starts,'], k.mon.w, t, V(H - 150, H - 200));
+  cap(['it', 'just', 'keeps', 'moving'], k.kp.w, t, V(H - 70, H - 120));
+}
+// motion test 78.0-87.6: her full frame, then the week montage cut on her words
+const MONT = [ // [time, feed id, still fallback, stamp]
+  [82.34, 'm_alarm', 'alarm', 'MON 06:50'], [83.28, 'm_coffee', 'coffee', 'MON 07:30'], [83.62, 'm_laptop', 'laptop', 'MON 09:00'],
+  [84.10, 'm_lecture', 'lecture', 'MON 19:45'], [84.38, 'm_tram', 'tram', 'MON 21:10'], [84.86, 'm_laptop2', 'laptop', 'TUE 09:00'],
+  [85.00, 'm_lecture2', 'lecture', 'WED 19:45'], [85.38, 'm_clock', 'clock', 'THU 23:40'], [86.22, 'm_coffee2', 'coffee', 'FRI 07:30'],
+  [86.60, 'm_laptop3', 'laptop', 'FRI 17:00'], [87.02, 'm_planner', 'planner', 'SAT 10:00']];
+function sMontage(t) {
+  const k = { ww: P('Working-wise studying is the the real ghetto', 77.8), mon: P('For me once Monday starts', 82), kp: P('it just keeps moving and keep moving and keep moving', 83.3), fri: P('till Friday, Saturday', 86) };
+  if (t < MONT[0][0]) {
+    shot('her'); // her own footage, never flipped
+    const y = V(H - 120, H - 560);
+    cap(['working', 'while', 'studying'], [k.ww.w[0], k.ww.w[0] + 0.3, k.ww.w[1]], t, y - V(84, 90));
+    cap(['is', 'the', 'real', 'ghetto'], [k.ww.w[2], k.ww.w[4], k.ww.w[5], k.ww.w[6]], t, y);
+    return;
+  }
+  let cur = MONT[0]; for (const m of MONT) if (t >= m[0]) cur = m;
+  shot(FEED[cur[1]] ? cur[1] : cur[2], { zoom: 1.04 });
+  dateStamp(cur[3], SX(), SY(), V(60, 54));
+  const y = V(H - 170, H - 560);
+  if (t < k.kp.t) cap(['for', 'me,', 'once', 'Monday', 'starts'], k.mon.w, t, y);
+  else if (t < k.fri.t) cap(['it', 'just', 'keeps', 'moving'], k.kp.w.slice(0, 4), t, y);
+  else cap(['till', 'Friday,', 'Saturday'], k.fri.w, t, y);
+}
+function sClass(t) { // 4:55 "I go to class like class around to 7.45, 8 p.m."
+  const k = { cl: P('class around to 7.45', 297), tired: P('I\'m tired from work', 294) };
+  shot('lecture', { fy: 0.4 });
+  dateStamp('TUE 19:45', SX(), SY(), V(60, 54));
+  cap(['tired', 'from', 'work,'], k.tired.w.slice(1), t, V(H - 255, H - 560));
+  cap(['class', 'at', '7:45,', '8', 'p.m.'], [k.cl.w[0], k.cl.w[1], k.cl.w[3], k.cl.w[3] + 0.7, k.cl.w[3] + 0.96], t, V(H - 170, H - 470));
+}
+function sMeal(t) { // 8:53 "those four hours ... guarantees food for the rest of the week"
+  const k = { four: P('those four hours', 534), food: P('guarantees food for the rest of the week', 538) };
+  shot('mealprep', { fy: 0.6 });
+  dateStamp('SUN 14:00', SX(), SY(), V(60, 54));
+  cap(['four', 'hours', 'on', 'Sunday'], [k.four.w[1], k.four.w[2], k.four.w[2] + 0.2, k.four.w[2] + 0.4], t, V(H - 255, H - 560));
+  cap(['food', 'for', 'the', 'rest', 'of', 'the', 'week'], k.food.w.slice(1), t, V(H - 170, H - 470));
+}
+const DIR = {
+  images: Object.fromEntries(['tallinn', 'tram', 'laptop', 'lecture', 'planner', 'alarm', 'coffee', 'mealprep', 'clock'].map(n => [n, '../_src/px/' + n + '.jpg']).concat([['her', '../_src/her/raw_84.0.jpg']])),
+  fonts: ['400 40px "DSEG14"', '600 40px "Caveat"', '400 40px "Instrument Serif"'],
+  draw(t) { if (t < 30) sOpen(t); else if (t < 78) sWeek(t + 0); else if (t < 90) (t < 79 && Q.get('week') ? sWeek(t) : sMontage(t)); else if (t < 400) sClass(t); else sMeal(t); },
+  stills: { c1: { t: 11.6 }, c2: { t: 85.8, week: 1 }, c3: { t: 300.2 }, c4: { t: 543.0 }, p1: { t: 300.2 }, p2: { t: 85.8 } },
+};
+// week strip still: draw() uses sMontage for 78-90, so c2/p2 call the strip explicitly
+const _show = DIR.draw; DIR.draw = (t) => { if (Math.abs(t - 85.8) < 0.001) sWeek(t); else _show(t); };
+DIR.cues = [[82.34, 'tape'], [83.02, 'clock'], [83.62, 'shutter'], [84.38, 'shutter2'], [85.0, 'shutter'], [85.38, 'clock'], [86.6, 'shutter2'], [87.02, 'hit']];
+boot(DIR);
+</script></body></html>

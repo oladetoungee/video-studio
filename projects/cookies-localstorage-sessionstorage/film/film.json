@@ -1,0 +1,365 @@
+{
+  "title": "Cookies, localStorage and sessionStorage: what survives (A · Crash test + the cloakroom)",
+  "hud": "",
+  "intro": 0.4,
+  "outro": 2.0,
+  "voiceDuration": 319.633,
+  "words": "data/words.json",
+  "captions": "data/captions.srt",
+  "images": {
+    "mdn-session": "assets/src/mdn-session.png",
+    "mdn-warn": "assets/src/mdn-setcookie-warn.png",
+    "rfc-4096": "assets/src/rfc-4096-crop.png",
+    "webkit-ls": "assets/src/webkit-ls.png",
+    "mdn-quotas": "assets/src/mdn-quotas-line.png",
+    "px-cloak": "assets/src/px-10880678.jpg",
+    "px-cart": "assets/src/px-6214472.jpg",
+    "px-coats": "assets/src/px-5490198.jpg",
+    "px-jackets": "assets/src/px-11585383.jpg"
+  },
+  "scripts": [
+    "scenes/ck.js",
+    "../talking-head/moments/plan.js",
+    "scenes/kit.js",
+    "scenes/film.js"
+  ],
+  "cutSounds": {
+    "cutSounds": false
+  },
+  "fonts": [],
+  "audio": {
+    "voice": "audio/voice_edit.flac",
+    "voiceFilter": "highpass=f=80,afftdn=nr=8:nf=-52:tn=1,deesser=i=0.3:m=0.5:f=0.5,acompressor=threshold=0.06:ratio=3:attack=6:release=160:knee=3,equalizer=f=3200:t=q:w=1.2:g=1.5",
+    "music": {
+      "dir": "library:music",
+      "xfade": 6.0,
+      "tracks": [
+        [
+          "1009",
+          "Mixkit track 1009"
+        ],
+        [
+          "766",
+          "Mixkit track 766"
+        ]
+      ]
+    },
+    "sfx": {
+      "roles": {
+        "hit": {
+          "files": [
+            "library:punch-soft-quick",
+            "library:hit-futuristic-bass",
+            "library:wood-hard-hit"
+          ],
+          "align": "start",
+          "db": -2
+        },
+        "slide": {
+          "files": [
+            "library:paper-slide",
+            "library:paper-quick-move"
+          ],
+          "align": "peak",
+          "db": 15
+        },
+        "place": {
+          "files": [
+            "library:card-place",
+            "library:card-flick"
+          ],
+          "align": "peak",
+          "db": 14
+        },
+        "marker": {
+          "files": [
+            "library:marker-line",
+            "library:pencil-short"
+          ],
+          "align": "start",
+          "db": 4,
+          "maxlen": 0.7
+        },
+        "pop": {
+          "files": [
+            "library:pop-dry",
+            "library:pop-hard-click",
+            "library:notify-bubble-pop",
+            "library:pop-cartoon-bubble"
+          ],
+          "align": "start",
+          "db": 4
+        },
+        "tick": {
+          "files": [
+            "library:ui-select-click",
+            "library:ui-modern-select",
+            "library:ui-click-tone",
+            "library:switch-tap"
+          ],
+          "align": "start",
+          "db": 8
+        },
+        "check": {
+          "files": [
+            "library:click-box-check",
+            "library:ui-option-select"
+          ],
+          "align": "start",
+          "db": 4
+        },
+        "shutter": {
+          "files": [
+            "library:shutter-click",
+            "library:shutter-hard-click",
+            "library:shutter-digital",
+            "library:shutter-vintage"
+          ],
+          "align": "peak",
+          "db": 11
+        },
+        "swipe": {
+          "files": [
+            "library:swipe-fast-zoom",
+            "library:transition-tech-slide",
+            "library:air-zoom-vacuum"
+          ],
+          "align": "peak",
+          "db": 9
+        },
+        "type": {
+          "files": [
+            "library:keyboard-typing",
+            "library:laptop-typing"
+          ],
+          "align": "start",
+          "db": 18,
+          "maxlen": 1.4
+        },
+        "typeHit": {
+          "files": [
+            "library:typewriter-single-hit",
+            "library:typewriter-soft-click"
+          ],
+          "align": "start",
+          "db": 14
+        },
+        "glitch": {
+          "files": [
+            "library:glitch-small-electric",
+            "library:glitch-static",
+            "library:glitch-intro-text"
+          ],
+          "align": "start",
+          "db": 10
+        },
+        "error": {
+          "files": [
+            "library:wrong-answer",
+            "library:buzzer-fail"
+          ],
+          "align": "start",
+          "db": 7
+        },
+        "notify": {
+          "files": [
+            "library:notify-message-pop",
+            "library:notify-positive",
+            "library:bell-notification"
+          ],
+          "align": "start",
+          "db": 3
+        },
+        "cash": {
+          "files": [
+            "library:coins-clinking",
+            "library:coin-win"
+          ],
+          "align": "start",
+          "db": 7
+        },
+        "clock": {
+          "files": [
+            "library:clock-tick-single",
+            "library:clock-wall-tick-tock"
+          ],
+          "align": "start",
+          "db": 19,
+          "maxlen": 1.5
+        },
+        "riser": {
+          "files": [
+            "library:riser-cinematic-trailer",
+            "library:riser-metallic-sweep"
+          ],
+          "align": "peak",
+          "db": -2
+        },
+        "stamp": {
+          "files": [
+            "library:click-box-check"
+          ],
+          "align": "peak",
+          "db": 7
+        },
+        "tape": {
+          "files": [
+            "library:tape-switch",
+            "library:record-scratch-stop"
+          ],
+          "align": "peak",
+          "db": 8
+        },
+        "ding": {
+          "files": [
+            "library:bell-service-ding",
+            "library:correct-answer"
+          ],
+          "align": "start",
+          "db": -2
+        },
+        "page": {
+          "files": [
+            "library:page-turn-single",
+            "library:book-paging-single"
+          ],
+          "align": "peak",
+          "db": 14
+        },
+        "tap": {
+          "files": [
+            "library:tap-small-hit",
+            "library:click-plastic-bubble"
+          ],
+          "align": "start",
+          "db": 7
+        },
+        "focus": {
+          "files": [
+            "library:camera-autofocus"
+          ],
+          "align": "start",
+          "db": 10
+        },
+        "coin": {
+          "files": [
+            "library:coins-clinking",
+            "library:coin-win"
+          ],
+          "align": "start",
+          "db": 7
+        },
+        "paper": {
+          "files": [
+            "library:paper-slide",
+            "library:paper-quick-move"
+          ],
+          "align": "peak",
+          "db": 14
+        },
+        "click": {
+          "files": [
+            "library:mouse-double-click",
+            "library:click-classic"
+          ],
+          "align": "start",
+          "db": 9
+        },
+        "boom": {
+          "files": [
+            "library:drum-deep-impact",
+            "library:hit-short-bass"
+          ],
+          "align": "start",
+          "db": 2
+        },
+        "wrong": {
+          "files": [
+            "library:wrong-answer"
+          ],
+          "align": "peak",
+          "db": 8
+        },
+        "slam": {
+          "files": [
+            "library:drum-deep-impact"
+          ],
+          "align": "peak",
+          "db": 5
+        },
+        "refresh": {
+          "files": [
+            "library:tape-switch"
+          ],
+          "align": "peak",
+          "db": 4
+        },
+        "xclick": {
+          "files": [
+            "library:ui-device-click"
+          ],
+          "align": "peak",
+          "db": 4
+        },
+        "wipe": {
+          "files": [
+            "library:swipe-fast-zoom"
+          ],
+          "align": "peak",
+          "db": 3
+        },
+        "dot": {
+          "files": [
+            "library:ui-select-click",
+            "library:ui-modern-select"
+          ],
+          "align": "peak",
+          "db": 6
+        },
+        "photo": {
+          "files": [
+            "library:shutter-click"
+          ],
+          "align": "peak",
+          "db": 10
+        },
+        "ticket": {
+          "files": [
+            "library:card-place"
+          ],
+          "align": "peak",
+          "db": 12
+        },
+        "flip": {
+          "files": [
+            "library:card-flick"
+          ],
+          "align": "peak",
+          "db": 14
+        },
+        "shut": {
+          "files": [
+            "library:tape-stop-slowdown"
+          ],
+          "align": "peak",
+          "db": 4
+        },
+        "mark": {
+          "files": [
+            "library:marker-line"
+          ],
+          "align": "start",
+          "db": 2
+        }
+      }
+    },
+    "levels": {
+      "voiceLufs": -16.0,
+      "duckDb": -15.0,
+      "openDb": -10.0,
+      "fullDb": -7.0,
+      "target": -14.0,
+      "ceiling": 0.64
+    }
+  }
+}

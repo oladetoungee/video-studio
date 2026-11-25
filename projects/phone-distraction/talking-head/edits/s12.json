@@ -1,0 +1,15 @@
+{
+ "t": {
+  "shout-1/Checking your likes? *Intentional design.*": {
+   "hide": true
+  },
+  "label/label": {
+   "pos": {
+    "9x16": {
+     "k": 0.83
+    }
+   },
+   "s": "Social Media Likes and Social Approval"
+  }
+ }
+}

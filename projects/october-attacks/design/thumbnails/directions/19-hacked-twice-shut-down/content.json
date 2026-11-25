@@ -1,0 +1,27 @@
+{
+  "direction": "Other, no face (kit T13): a flat server rack with a paper CLOSED sign taped across it and an orange tag hanging off it, 'admin token, never expired'; the real BleepingComputer headline about Zeabur under the words (untouched crop, credited) so a stranger sees it is real news about a hosting platform. References: viral 2 (one object tells the story), ghana-marrify 10b (real clipping).",
+  "thumbnail_text": "HACKED TWICE, SHUT DOWN",
+  "titles": [
+    "A Hosting Platform Is Shutting Down After Two Hacks",
+    "The October 2026 Hacks Every Developer Should Know"
+  ],
+  "title": "A Hosting Platform Is Shutting Down After Two Hacks",
+  "kind": "other",
+  "text": {
+    "hd": "Hacked twice,<br><span class=\"acc\">shut down</span>",
+    "sign": "CLOSED",
+    "token": "admin token<br>never expired",
+    "credit": "BleepingComputer · Oct 20, 2026",
+    "kick": "A hosting platform"
+  },
+  "images": {
+    "clip": "../../assets/src/bc-zeabur.png"
+  },
+  "vars": {
+    "--ground": "#16110D",
+    "--fg": "#EFE7D8",
+    "--accent": "#F2541B"
+  },
+  "scores": "cold critic R1 8 · R2 8 · fixes from R2 applied after scoring",
+  "recommended": true
+}

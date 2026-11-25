@@ -1,0 +1,23 @@
+{
+  "direction": "Photo-led and calm: her real frame with the room darkened and out of focus, the question set huge in white on the dark left side, the job title in canary.",
+  "thumbnail_text": "What does a UX researcher do?",
+  "titles": [
+    "What Does a UX Researcher Actually Do All Week?",
+    "A Week in UX Research: Plan, Interview, Find Patterns",
+    "UX Researcher vs UX Designer: Who Does What on a Team?"
+  ],
+  "text": {
+    "hd": "What does a<br><span class=\"acc\">UX researcher</span><br>do?"
+  },
+  "images": {
+    "photo": "../../assets/photo/room-643-dark.jpg"
+  },
+  "vars": {
+    "--ground": "#141614",
+    "--fg": "#FFFFFF",
+    "--accent": "#FFE15A"
+  },
+  "scores": "",
+  "recommended": false,
+  "title": "What Does a UX Researcher Actually Do All Week?"
+}

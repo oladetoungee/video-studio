@@ -1,0 +1,32 @@
+{
+  "direction": "Other, no face (kit T7, top 3): plain paper ground and one long, obviously generic receipt for AI usage where every line says 'not you', total '$1,000+' circled in red marker. Everyone fears a bill they didn't run up. Honest: some OpenCode users saw charges in the hundreds and a few over $1,000 (her words in the video; TechCrunch Oct 19). References: viral 2 (one object = the outcome).",
+  "thumbnail_text": "HACKED: $1,000 AI BILL",
+  "titles": [
+    "Stolen API Keys Can Cost You $1,000 in AI Bills",
+    "OpenCode Hacked: Stolen AI Keys Ran Up Bills Over $1,000",
+    "PHP2Shell Explained: The PHP Flaw and October's Other Hacks (Test & Compare only: same title for all three)"
+  ],
+  "title": "Stolen API Keys Can Cost You $1,000 in AI Bills",
+  "kind": "other",
+  "recommended": true,
+  "text": {
+    "hd": "Hacked:<br><span class=\"acc\">$1,000</span><br>AI bill",
+    "rh": "AI USAGE",
+    "total": "$1,000+",
+    "d1": "not you",
+    "v1": "$240",
+    "d2": "not you",
+    "v2": "$310",
+    "d3": "not you",
+    "v3": "$185",
+    "d4": "not you",
+    "v4": "$290"
+  },
+  "images": {},
+  "vars": {
+    "--ground": "#E9E1D2",
+    "--fg": "#16110D",
+    "--accent": "#C8320C"
+  },
+  "scores": "cold critic R1 6 · R2 8.5 · fixes from R2 applied after scoring"
+}

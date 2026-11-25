@@ -1,0 +1,61 @@
+/* Shared visual system for the ghana-marrify thumbnails. Same tokens as the film. */
+@font-face { font-family: 'Bricolage'; src: url('../fonts/BricolageGrotesque.ttf') format('truetype'); font-weight: 200 800; }
+@font-face { font-family: 'Archivo'; src: url('../fonts/Archivo.ttf') format('truetype'); font-weight: 100 900; }
+@font-face { font-family: 'Archivo Black'; src: url('../fonts/ArchivoBlack-Regular.ttf') format('truetype'); }
+@font-face { font-family: 'DM Mono'; src: url('../fonts/DMMono-Regular.ttf') format('truetype'); font-weight: 400; }
+@font-face { font-family: 'DM Mono'; src: url('../fonts/DMMono-Medium.ttf') format('truetype'); font-weight: 500; }
+@font-face { font-family: 'Instrument Serif'; src: url('../fonts/InstrumentSerif-Italic.ttf') format('truetype'); font-style: italic; }
+@font-face { font-family: 'Bebas Neue'; src: url('../fonts/BebasNeue-Regular.woff2') format('woff2'); }
+
+:root {
+  --ink: #111114; --ink2: #0E1116; --paper: #EDE9E2; --paper2: #EAE6DA; --card: #FFFDF6;
+  --blue: #1B3FD8; --green: #22E08A; --orange: #FF4713; --white: #F7F5F0;
+  --grid: rgba(255,255,255,.10); --grid-dark: rgba(17,17,20,.08);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1280px; height: 720px; overflow: hidden; background: var(--ink); }
+.t { position: relative; width: 1280px; height: 720px; overflow: hidden; background: var(--ground); }
+/* Editable colours (studio design editor): a direction sets --ground (background), --fg (headline colour) and --accent
+   on .t; content.json "vars" can override them. --gridc / --rule are only set by the editor when the ground changes. */
+.acc { color: var(--accent, var(--orange)); font-style: normal; }
+
+/* display type */
+.disp { font-family: 'Bricolage', sans-serif; font-weight: 800; text-transform: uppercase;
+        letter-spacing: -0.035em; line-height: .86; font-variation-settings: 'opsz' 96, 'wdth' 100; }
+.blk  { font-family: 'Archivo Black', sans-serif; text-transform: uppercase; letter-spacing: -0.03em; line-height: .9; }
+.bebas{ font-family: 'Bebas Neue', sans-serif; line-height: .86; letter-spacing: 0; }
+.serif{ font-family: 'Instrument Serif', serif; font-style: italic; font-weight: 400; text-transform: none; letter-spacing: -0.01em; }
+.mono { font-family: 'DM Mono', monospace; font-weight: 500; text-transform: uppercase; letter-spacing: .14em; font-size: 15px; }
+.o { color: var(--orange); } .b { color: var(--blue); } .g { color: var(--green); }
+
+/* thin grid like the film's blue/ink slides */
+.grid { position: absolute; inset: 0; --gl: var(--grid); background-image:
+  linear-gradient(var(--gridc, var(--gl)) 1px, transparent 1px), linear-gradient(90deg, var(--gridc, var(--gl)) 1px, transparent 1px);
+  background-size: 80px 80px; background-position: -1px -1px; }
+.grid.dark { --gl: var(--grid-dark); }
+
+.abs { position: absolute; }
+img.cut { position: absolute; display: block; }
+
+/* review overlay: YouTube duration badge zone (bottom-right). Shown only with ?guides */
+.guides .badge { position: absolute; right: 10px; bottom: 10px; width: 150px; height: 70px; border: 3px dashed #f0f; }
+
+/* ---------- ghana-marrify components ---------- */
+img.cut { left: var(--x); top: var(--y); width: var(--w); }
+.h { position: absolute; color: var(--fg); }
+.h > div { white-space: nowrap; }
+.white { color: var(--white); } .ink { color: var(--ink); }
+
+/* flat flags (drawn, never glossy) */
+.flag { position: absolute; display: block; }
+.flag svg { display: block; width: 100%; height: 100%; }
+
+/* generic search UI: an ILLUSTRATION, never Marrify's real interface */
+.ui { position: absolute; background: var(--card); color: var(--ink); border: 4px solid var(--ink); border-radius: 18px; }
+.ui .lbl { position: absolute; font-family: 'DM Mono', monospace; font-weight: 500; font-size: 15px; letter-spacing: .14em;
+           text-transform: uppercase; color: rgba(17,17,20,.5); }
+.search { display: flex; align-items: center; gap: 22px; font-family: 'Archivo', sans-serif; font-weight: 600; }
+.search .cursor { display: inline-block; width: 5px; height: 1em; background: var(--accent); margin-left: 6px; vertical-align: -0.12em; }
+.redact { display: inline-block; height: .78em; background: var(--ink); border-radius: 3px; vertical-align: -0.06em; }
+.row { display: flex; align-items: center; gap: 22px; border-top: 2px solid rgba(17,17,20,.14); }
+.row .k { font-family: 'DM Mono', monospace; font-weight: 500; text-transform: uppercase; letter-spacing: .1em; color: rgba(17,17,20,.55); }

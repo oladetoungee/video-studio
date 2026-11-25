@@ -1,0 +1,103 @@
+1
+00:00:00,000 --> 00:00:02,570
+Ghana just launched something called Marrify.
+
+2
+00:00:02,570 --> 00:00:04,560
+It's like a public platform where you can
+
+3
+00:00:04,560 --> 00:00:06,520
+search and verify marriages,
+
+4
+00:00:06,520 --> 00:00:09,780
+divorces, and licensed marriage officials It
+
+5
+00:00:09,780 --> 00:00:12,573
+launched last month with some Ministry of
+
+6
+00:00:12,573 --> 00:00:14,327
+Gender and I was just reading about it the
+
+7
+00:00:14,327 --> 00:00:16,197
+other day on TechCabal.
+
+8
+00:00:16,197 --> 00:00:17,747
+And the way that it works is that it
+
+9
+00:00:17,747 --> 00:00:19,857
+pulls data from different
+
+10
+00:00:19,857 --> 00:00:21,107
+government sources,
+
+11
+00:00:21,107 --> 00:00:22,927
+Registrar-General's Department,
+
+12
+00:00:22,927 --> 00:00:23,587
+the courts,
+
+13
+00:00:23,587 --> 00:00:24,027
+local assembly,
+
+14
+00:00:24,027 --> 00:00:24,727
+all of that.
+
+15
+00:00:24,727 --> 00:00:27,087
+It covers all kinds of marriages and all kinds
+
+16
+00:00:27,087 --> 00:00:28,807
+of divorces.
+
+17
+00:00:28,807 --> 00:00:29,967
+It goes all the way back,
+
+18
+00:00:29,967 --> 00:00:30,967
+like records from all the way back.
+
+19
+00:00:30,967 --> 00:00:32,567
+And you can also check whether a church or
+
+20
+00:00:32,567 --> 00:00:35,207
+a pastor and a marriage venue is actually
+
+21
+00:00:35,207 --> 00:00:36,657
+licensed to conduct a marriage.
+
+22
+00:00:36,657 --> 00:00:38,367
+And I really love this when I saw it.
+
+23
+00:00:38,367 --> 00:00:39,227
+Because as an African,
+
+24
+00:00:39,227 --> 00:00:39,887
+I'm thinking,
+
+25
+00:00:39,887 --> 00:00:41,700
+wow, we're having centralised data,
+
+26
+00:00:41,700 --> 00:00:43,233
+finally, finally.

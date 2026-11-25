@@ -1,0 +1,227 @@
+{
+ "php2shell/php-net": [
+  "Security advisory: Critical remote code execution vulnerabilities, update now",
+  "PHP 8.5.12, 8.4.27, 8.3.36 and 8.2.35 fix two critical vulnerabilities that can allow unauthenticated remote code execution",
+  "We consider the risk highest for mod_php, with a demonstrated exploit where an unauthenticated request can trigger the attack before any application code runs",
+  "PHP 8.1 and older no longer receive updates from the PHP project"
+ ],
+ "php2shell/datadog": [
+  "each with a CVSS v4.0 score of 9.2",
+  "application-level authentication can't block an attack: PHP processes the malicious request before any application code runs",
+  "AWS reported PHP2Shell exploitation attempts in the wild as early as October 17, 2026, four days before public disclosure and the release of patches",
+  "After a memory allocation fails, PHP leaves invalid data behind for its cleanup routine to process",
+  "A PHP worker can reuse stale state from a previous request",
+  "Restart or replace every worker that still runs the old runtime"
+ ],
+ "php2shell/bleepingcomputer": [
+  "The PHP security team released emergency security patches for two critical remote code execution (RCE) vulnerabilities",
+  "discovered by Calif, OpenAI, and Wiz security researchers",
+  "Admins should install PHP 8.5.12, 8.4.27, 8.3.36, or 8.2.35 as soon as possible"
+ ],
+ "php2shell/thehackernews": [
+  "detected an attempt to exploit the newly disclosed PHP2Shell vulnerabilities dating back to October 17, 2026, against its MadPot honeypot service",
+  "There is no authentication to bypass, no session to steal, and no vulnerable endpoint to discover"
+ ],
+ "php2shell/deseret-reuters": [
+  "numerous government websites across Europe that went dark Wednesday, to execute fixes",
+  "PHP powers nearly three-quarters of the world's websites",
+  "The PHP2Shell flaws are rated 9.2 out of 10",
+  "uncovered the PHP problems with assistance from OpenAI's GPT-5.6 Sol platform"
+ ],
+ "php2shell/github-advisory-109618": [
+  "RCE via OOM corruption"
+ ],
+ "php2shell/github-advisory-109619": [
+  "RCE via stale global state"
+ ],
+ "php2shell/vercel": [
+  "Working public exploits are already available, and exploitation attempts have been reported across the industry"
+ ],
+ "php2shell/helpnetsecurity": [
+  "These findings rank among the most severe vulnerabilities discovered in PHP, and arguably in software history",
+  "its MadPot honeypot network recorded a PHP2Shell exploitation attempt on Oct. 17, 2026, four days before"
+ ],
+ "php2shell/securityweek": [
+  "Several cybersecurity companies saw exploitation attempts of CVE-2026-109618 and CVE-2026-109619 before PHP released the patches",
+  "We are now seeing php2shell exploited in the wild at scale"
+ ],
+ "php2shell/darkreading": [
+  "Security teams are scrambling to remediate two critical PHP vulnerabilities following leaked details and reports of exploitation attempts"
+ ],
+ "php2shell/newsweek": [
+  "government websites in the Netherlands and Finland were taken offline",
+  "Some organizations have temporarily taken websites and online services offline rather than leave potentially vulnerable systems exposed while fixes are installed"
+ ],
+ "php2shell/insurancebusiness": [
+  "Websites belonging to UK councils, the Metropolitan Police and governments across Europe went dark on Wednesday",
+  "Both are rated 9.2 out of 10 for severity"
+ ],
+ "php2shell/paperjam": [
+  "temporarily taken certain services offline as a precautionary measure",
+  "So far, no major infrastructure has publicly documented a successful intrusion conclusively attributed to PHP2Shell"
+ ],
+ "php2shell/wiz": [],
+ "php2shell/wiz-blog": [
+  "These findings rank among the most severe vulnerabilities discovered in PHP, and arguably in software history",
+  "how frontier AI helped us find and fix vulnerabilities that had remained hidden in the PHP codebase for more than a decade"
+ ],
+ "php2shell/aws-blog": [
+  "Amazon Threat Intelligence identified a PHP2Shell exploitation attempt dating to Oct. 17, 2026, in MadPot telemetry, four days before public disclosure",
+  "PHP2Shell is now seeing broad exploitation attempts in the wild",
+  "AI-assisted analysis makes it cheaper to turn a patch diff or advisory into a working exploit"
+ ],
+ "php2shell/techcrunch-phpocalypse": [
+  "On Wednesday, a decades-old open-source web technology called PHP almost broke the internet",
+  "the world — so far — broadly avoided mass internet exploitation",
+  "Banks, retailers, gaming sites, online stores, hospitals, and some government agencies took down their servers to prevent attacks"
+ ],
+ "php2shell/hn-thread": [
+  "PHP2Shell: AI uncovers critical RCE in PHP"
+ ],
+ "railway/railway-blog": [
+  "Security Disclosure: Wednesday October 21st",
+  "an unauthorized third party may have accessed encrypted environment variables and, for some of them, obtained the decrypted contents",
+  "We believe this is part of a series of attacks recently targeting platform companies with the aim of compromising AI inference providers",
+  "we strongly recommend that you immediately roll all environment variables",
+  "All deployments are paused while we investigate"
+ ],
+ "railway/railway-prelim-report": [
+  "Early investigations tell us this attack was attempting to obtain AI provider API keys to perform distillation attacks",
+  "we are not yet able to share the specific details and scale of the exploits",
+  "at most 1.85% of all workspaces had some environment variables potentially compromised",
+  "This represents, numerically, about 100,000 workspaces",
+  "We recommend that all customers who signed up prior to October 21 rotate their keys stored on Railway"
+ ],
+ "railway/techcrunch": [
+  "Developer platform Railway urges 'all users' to revoke secret keys after cyberattack",
+  "may have accessed encrypted environment variables and, for some of them, obtained the decrypted contents",
+  "Railway did not say how many specific users were affected, or what was identified as the root cause",
+  "the company plans to publish a post-mortem on the incident"
+ ],
+ "railway/gitguardian": [
+  "Treat every secret stored in Railway as at risk until investigated",
+  "has paused deployments during the investigation"
+ ],
+ "railway/railway-status": [
+  "New account signups remain paused"
+ ],
+ "railway/hn-thread": [
+  "Security Disclosure"
+ ],
+ "zeabur/zeabur-blog": [
+  "Zeabur is shutting down: what happens next",
+  "all dedicated servers and shared clusters will be shut down by December 31",
+  "Today, I have a difficult decision to share: we will be winding down Zeabur",
+  "We ultimately decided to wind down"
+ ],
+ "zeabur/zeabur-incident-report": [
+  "On October 14–15, 2026, an attacker used leaked Zeabur internal credentials to break into the shared cluster",
+  "long-lived admin credentials were stored in plaintext and could be used from the public internet",
+  "The shared cluster's admin interface was open to the public internet at the time, and the admin tokens had no expiry",
+  "321,810 accounts"
+ ],
+ "zeabur/bleepingcomputer": [
+  "Zeabur shutting down after second security breach in two months",
+  "steal over 3.2 million environment variable records and information for 321,810 accounts",
+  "The admin tokens had no expiry, had not been rotated since they were created in January 2024, and were not included in the post-August rotation",
+  "it will shut down its services starting December 1, 2026, and finish by December 31, 2026"
+ ],
+ "zeabur/scworld": [
+  "The company failed to rotate administrator tokens, which had remained unchanged since January 2024"
+ ],
+ "zeabur/startwithidentity": [
+  "a shared-cluster admin token created in January 2024 with no expiry"
+ ],
+ "zeabur/israynotarray": [],
+ "opencode/x-opencode": [
+  "We had a security breach last night related to a large scale distillation attack that impacted 1.4% of OpenCode Console users"
+ ],
+ "opencode/techcrunch": [
+  "Hackers hit AI coding tool OpenCode, running up charges on users' AI accounts",
+  "attackers broke into an older system overnight, affecting 1.4% of users of its online platform, OpenCode Console",
+  "I saw my Open AI, Anthropic, and Google AI spend alerts all fire off before going to bed",
+  "Other users reported charges in the hundreds of dollars on individual accounts; a few described totals above $1,000",
+  "OpenCode said refunds for unauthorized charges are underway"
+ ],
+ "opencode/bleepingcomputer": [
+  "OpenCode hack exposes API keys amid AI distillation attacks",
+  "the breach affected 1.4% of OpenCode Console users, with some reporting more than $1,700 in unauthorized charges overnight",
+  "Distillation is a legitimate machine-learning technique that trains smaller AI models using responses generated by more powerful models"
+ ],
+ "opencode/infosecurity": [
+  "identified unauthorized access to a legacy system that we were in the process of decommissioning"
+ ],
+ "opencode/devops": [
+  "Stolen keys can lead to unexpected bills and greater risk"
+ ],
+ "opencode/officechai": [
+  "Whole new world with AI-powered hacking"
+ ],
+ "opencode/hn-thread": [
+  "OpenCode has a security breach"
+ ],
+ "emudhra/scotthelme": [
+  "One of eMudhra's certificate authority private keys is the number 4.",
+  "Not a number that starts with 4, or the number 4 followed by a few hundred random digits, just, 4..."
+ ],
+ "emudhra/thenextweb": [
+  "Eight eMudhra certificate keys were so weak that one was the number 4",
+  "Chrome, Firefox, Apple and Microsoft have blocked the eMudhra certificates"
+ ],
+ "emudhra/bleepingcomputer": [
+  "Mozilla, Google, Apple block compromised eMudhra CA certificates",
+  "the private key for eMudhra's \"EM OV TLS CA - G3C\" certificate had a value of just 4",
+  "eMudhra blamed the issue on an error in a script used to generate the certificates in April 2025"
+ ],
+ "emudhra/we-have-a-problem": [
+  "The private keys of eight eMudhra intermediate CA certificates have been compromised",
+  "We have a problem here - Wayne",
+  "The certificates have been blocked in Firefox and Chrome since the 17th of October"
+ ],
+ "emudhra/google-blog": [
+  "Protecting Chrome and Android Users from Compromised eMudhra Intermediate CA Certificates",
+  "enabling anyone to forge trusted HTTPS certificates to impersonate any website"
+ ],
+ "emudhra/thehackernews": [
+  "Chrome and Firefox blocked the eight certificates within hours"
+ ],
+ "emudhra/helpnetsecurity": [
+  "eMudhra announced it will leave the global SSL/TLS certificate business"
+ ],
+ "emudhra/cybersecuritydive": [
+  "Weak encryption certificates could have let hackers easily spoof websites"
+ ],
+ "emudhra/openwall": [
+  "This release removes trust in the following root certificates"
+ ],
+ "emudhra/inc42": [],
+ "emudhra/emudhra-press": [
+  "eMudhra to Exit global SSL/TLS Certificate Business"
+ ],
+ "emudhra/hn-thread": [
+  "eMudhra intermediate CA compromise"
+ ],
+ "nodejs/nodejs-blog": [
+  "Wednesday, October 21, 2026 Security Releases",
+  "ca-cert (eMudhra Intermediate CA Compromise) on 26.x, 24.x, 22.x"
+ ],
+ "nodejs/securityonline": [
+  "On October 21, 2026, the Node.js project shipped versions 22.23.4, 24.22.1 and 26.12.1 to fix 10 vulnerabilities",
+  "The Node.js team does not report exploitation in the wild"
+ ],
+ "nodejs/konfirmity": [],
+ "ai-agents/staradvertiser-reuters": [
+  "How one hacker used AI agents to break into over 100 company websites",
+  "broke into websites belonging to more than 100 companies, including farm equipment maker Deere & Co., home appliance company SharkNinja Inc. and engine manufacturer Cummins Inc.",
+  "Yet the hacker did almost none of the work.",
+  "about $50 per successful hack"
+ ],
+ "ai-agents/thenextweb": [
+  "AI agents broke into 100+ sites for one hacker at $50 each, researcher says",
+  "Successful attacks took a little under 23 hours on average"
+ ],
+ "ai-agents/sbs-reuters": [
+  "The instructions were given in Chinese text consisting of fewer than 100 characters",
+  "This breaks down to about 50 dollars spent per successful hack"
+ ]
+}

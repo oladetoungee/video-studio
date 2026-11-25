@@ -1,0 +1,536 @@
+{
+ "title": "ux-research: talking-head",
+ "source": "../kit/UX research. .mov",
+ "fps": 30,
+ "words": "data/raw_words.json",
+ "faces": "data/face_track.json",
+ "edl": "data/edl.json",
+ "film": "ux-research",
+ "edit": {
+  "silenceDb": -44,
+  "maxPause": 0.42,
+  "keepBefore": 0.14,
+  "keepAfter": 0.1
+ },
+ "out": "../outputs/talking-head",
+ "shortsOut": "../outputs/shorts",
+ "tail": 0.7,
+ "audio": {
+  "voiceFilter": "highpass=f=80,afftdn=nr=8:nf=-52:tn=1,deesser=i=0.3:m=0.5:f=0.5,acompressor=threshold=0.06:ratio=3:attack=6:release=160:knee=3,equalizer=f=3200:t=q:w=1.2:g=1.5",
+  "music": {
+   "dir": "library:music"
+  },
+  "levels": {
+   "voiceLufs": -16.0,
+   "duckDb": -18.0,
+   "openDb": -10.0,
+   "target": -14.0,
+   "ceiling": 0.8
+  },
+  "sfx": {
+   "palette": true,
+   "roles": {}
+  }
+ },
+ "moments": [
+  {
+   "id": "full",
+   "kind": "full",
+   "slug": "full",
+   "title": "What is UX research? Full talking-head edit",
+   "in": 36.5,
+   "out": "end",
+   "retakes": false,
+   "cuts": [
+    [
+     114.98,
+     117.04
+    ],
+    [
+     119.22,
+     120.5,
+     "exact"
+    ],
+    [
+     299.4,
+     302.49
+    ],
+    [
+     586.04,
+     588.98,
+     "exact"
+    ],
+    [
+     636.58,
+     637.71
+    ],
+    [
+     760.63,
+     764.01,
+     "exact"
+    ]
+   ],
+   "script": "moments/full.js",
+   "music": [
+    "282",
+    0.0
+   ]
+  },
+  {
+   "id": "sh1",
+   "kind": "short",
+   "slug": "ui-vs-ux",
+   "title": "UI vs UX",
+   "label": "UI vs UX",
+   "in": 62.45,
+   "out": 107.0,
+   "cuts": [],
+   "script": "shorts/sh1.js",
+   "music": [
+    "722",
+    4.0
+   ],
+   "endCard": {
+    "seconds": 4,
+    "thumb": "thumb_sh1",
+    "title": "What Is UX Research? Why Good-Looking Apps Still Fail"
+   }
+  },
+  {
+   "id": "sh2",
+   "kind": "short",
+   "slug": "say-vs-do",
+   "title": "what people say vs what they do",
+   "label": "what people say vs what they do",
+   "in": 439.3,
+   "out": 477.15,
+   "cuts": [],
+   "script": "shorts/sh2.js",
+   "music": [
+    "1009",
+    4.0
+   ],
+   "endCard": {
+    "seconds": 4,
+    "thumb": "thumb_sh2",
+    "title": "What Is UX Research? Why Good-Looking Apps Still Fail"
+   }
+  },
+  {
+   "id": "sh3",
+   "kind": "short",
+   "slug": "why-apps-fail",
+   "title": "why most apps fail",
+   "label": "why most apps fail",
+   "in": 175.8,
+   "out": 219.0,
+   "cuts": [],
+   "script": "shorts/sh3.js",
+   "music": [
+    "480",
+    4.0
+   ],
+   "endCard": {
+    "seconds": 4,
+    "thumb": "thumb_sh3",
+    "title": "What Is UX Research? Why Good-Looking Apps Still Fail"
+   }
+  },
+  {
+   "id": "sh4",
+   "kind": "short",
+   "slug": "small-budget",
+   "title": "UX research on a small budget",
+   "label": "UX research on a small budget",
+   "in": 556.0,
+   "out": 586.1,
+   "cuts": [],
+   "script": "shorts/sh4.js",
+   "music": [
+    "167",
+    4.0
+   ],
+   "endCard": {
+    "seconds": 4,
+    "thumb": "thumb_sh4",
+    "title": "What Is UX Research? Why Good-Looking Apps Still Fail"
+   }
+  },
+  {
+   "id": "sh5",
+   "kind": "short",
+   "slug": "numbers-vs-why",
+   "title": "UX research: numbers vs why",
+   "label": "UX research: numbers vs why",
+   "in": 380.0,
+   "out": 409.15,
+   "cuts": [],
+   "script": "shorts/sh5.js",
+   "music": [
+    "27",
+    4.0
+   ],
+   "endCard": {
+    "seconds": 4,
+    "thumb": "thumb_sh5",
+    "title": "What Is UX Research? Why Good-Looking Apps Still Fail"
+   }
+  },
+  {
+   "id": "sh6",
+   "kind": "short",
+   "slug": "get-into-ux-research",
+   "title": "how to get into UX research",
+   "label": "how to get into UX research",
+   "in": 701.6,
+   "out": 745.0,
+   "cuts": [],
+   "script": "shorts/sh6.js",
+   "music": [
+    "1168",
+    4.0
+   ],
+   "endCard": {
+    "seconds": 4,
+    "thumb": "thumb_sh6",
+    "title": "What Is UX Research? Why Good-Looking Apps Still Fail"
+   }
+  },
+  {
+   "id": "sh7",
+   "kind": "short",
+   "slug": "what-is-ux-research",
+   "title": "what is UX research?",
+   "label": "what is UX research?",
+   "in": 36.45,
+   "out": 171.4,
+   "cuts": [
+    [
+     52.4,
+     156.2,
+     "exact"
+    ]
+   ],
+   "script": "shorts/sh7.js",
+   "music": [
+    "722",
+    4.0
+   ],
+   "endCard": {
+    "seconds": 4,
+    "thumb": "thumb_collage",
+    "title": "What Is UX Research? Why Good-Looking Apps Still Fail"
+   }
+  },
+  {
+   "id": "sh8",
+   "kind": "short",
+   "slug": "what-ux-means",
+   "title": "what UX really means",
+   "label": "what UX really means",
+   "in": 107.1,
+   "out": 153.5,
+   "cuts": [
+    [
+     114.98,
+     117.04
+    ],
+    [
+     119.22,
+     120.5,
+     "exact"
+    ],
+    [
+     137.1,
+     139.0
+    ]
+   ],
+   "script": "shorts/sh8.js",
+   "music": [
+    "1009",
+    4.0
+   ],
+   "endCard": {
+    "seconds": 4,
+    "thumb": "thumb_iceberg",
+    "title": "What Is UX Research? Why Good-Looking Apps Still Fail"
+   }
+  },
+  {
+   "id": "sh9",
+   "kind": "short",
+   "slug": "what-a-ux-researcher-does",
+   "title": "what a UX researcher does",
+   "label": "what a UX researcher does",
+   "in": 219.1,
+   "out": 252.8,
+   "cuts": [
+    [
+     220.75,
+     223.35
+    ],
+    [
+     246.32,
+     249.2
+    ]
+   ],
+   "script": "shorts/sh9.js",
+   "music": [
+    "480",
+    4.0
+   ],
+   "endCard": {
+    "seconds": 4,
+    "thumb": "thumb_sh6",
+    "title": "What Is UX Research? Why Good-Looking Apps Still Fail"
+   }
+  },
+  {
+   "id": "sh10",
+   "kind": "short",
+   "slug": "researcher-vs-designer",
+   "title": "UX researcher vs UX designer",
+   "label": "UX researcher vs UX designer",
+   "in": 253.0,
+   "out": 274.2,
+   "cuts": [],
+   "script": "shorts/sh10.js",
+   "music": [
+    "167",
+    4.0
+   ],
+   "endCard": {
+    "seconds": 4,
+    "thumb": "thumb_which",
+    "title": "What Is UX Research? Why Good-Looking Apps Still Fail"
+   }
+  },
+  {
+   "id": "sh11",
+   "kind": "short",
+   "slug": "before-vs-after",
+   "title": "UX research: before vs after you build",
+   "label": "UX research: before vs after you build",
+   "in": 331.9,
+   "out": 375.45,
+   "cuts": [],
+   "script": "shorts/sh11.js",
+   "music": [
+    "27",
+    4.0
+   ],
+   "endCard": {
+    "seconds": 4,
+    "thumb": "thumb_sketch",
+    "title": "What Is UX Research? Why Good-Looking Apps Still Fail"
+   }
+  },
+  {
+   "id": "sh12",
+   "kind": "short",
+   "slug": "how-ux-research-is-done",
+   "title": "how UX research is done",
+   "label": "how UX research is done",
+   "in": 511.1,
+   "out": 549.15,
+   "cuts": [
+    [
+     512.82,
+     516.2
+    ]
+   ],
+   "script": "shorts/sh12.js",
+   "music": [
+    "1168",
+    4.0
+   ],
+   "endCard": {
+    "seconds": 4,
+    "thumb": "thumb_seven",
+    "title": "What Is UX Research? Why Good-Looking Apps Still Fail"
+   }
+  },
+  {
+   "id": "sh13",
+   "kind": "short",
+   "slug": "ux-vs-user-research",
+   "title": "UX research vs user research",
+   "label": "UX research vs user research",
+   "in": 591.55,
+   "out": 631.1,
+   "cuts": [],
+   "script": "shorts/sh13.js",
+   "music": [
+    "722",
+    4.0
+   ],
+   "endCard": {
+    "seconds": 4,
+    "thumb": "thumb_sh4",
+    "title": "What Is UX Research? Why Good-Looking Apps Still Fail"
+   }
+  },
+  {
+   "id": "sh14",
+   "kind": "short",
+   "slug": "ai-and-ux-research",
+   "title": "will AI replace UX research?",
+   "label": "will AI replace UX research?",
+   "in": 643.6,
+   "out": 665.5,
+   "cuts": [
+    [
+     645.55,
+     647.5
+    ]
+   ],
+   "script": "shorts/sh14.js",
+   "music": [
+    "1009",
+    4.0
+   ],
+   "endCard": {
+    "seconds": 4,
+    "thumb": "thumb_sh4",
+    "title": "What Is UX Research? Why Good-Looking Apps Still Fail"
+   }
+  },
+  {
+   "id": "sh15",
+   "kind": "short",
+   "slug": "ux-research-jobs",
+   "title": "UX research jobs",
+   "label": "UX research jobs",
+   "in": 665.7,
+   "out": 694.85,
+   "cuts": [],
+   "script": "shorts/sh15.js",
+   "music": [
+    "480",
+    4.0
+   ],
+   "endCard": {
+    "seconds": 4,
+    "thumb": "thumb_sh6",
+    "title": "What Is UX Research? Why Good-Looking Apps Still Fail"
+   }
+  },
+  {
+   "id": "teaser",
+   "kind": "teaser",
+   "slug": "ux-research",
+   "title": "Teaser for LinkedIn and X: her best lines, research wall look",
+   "lead": true,
+   "bites": [
+    [
+     11.0,
+     12.5
+    ],
+    [
+     36.44,
+     45.16
+    ],
+    [
+     91.84,
+     100.53
+    ],
+    [
+     187.42,
+     192.63
+    ],
+    [
+     175.76,
+     177.35
+    ],
+    [
+     181.51,
+     185.29
+    ],
+    {
+     "gap": 0.8,
+     "at": 11.0
+    },
+    [
+     203.58,
+     209.08
+    ],
+    [
+     209.1,
+     218.79
+    ],
+    {
+     "gap": 0.8,
+     "at": 11.0
+    },
+    [
+     439.39,
+     443.34
+    ],
+    [
+     448.69,
+     455.66
+    ],
+    [
+     459.26,
+     462.9
+    ],
+    [
+     561.06,
+     570.24
+    ],
+    [
+     763.38,
+     767.76
+    ],
+    {
+     "gap": 1.3,
+     "at": 11.0
+    },
+    [
+     643.57,
+     645.65
+    ]
+   ],
+   "tail": 4.0,
+   "captionStyle": "shorts",
+   "script": "teaser/teaser.js",
+   "music": [
+    "750",
+    0.0
+   ],
+   "endCard": {
+    "title": "Why Some Apps Are So Confusing (UX Research Explained)"
+   }
+  }
+ ],
+ "common": "moments/common.js",
+ "videoTitle": "What Is UX Research? Why Good-Looking Apps Still Fail",
+ "images": {
+  "thumb_sh1": "../outputs/thumbnails/archive-v1/01-ui-vs-ux-split.png",
+  "thumb_sh2": "../outputs/thumbnails/archive-v1/05-say-vs-do.png",
+  "thumb_sh3": "../outputs/thumbnails/archive-v1/03-zero-users.png",
+  "thumb_sh4": "../outputs/thumbnails/archive-v1/06-ux-research-explained.png",
+  "thumb_sh5": "../outputs/thumbnails/archive-v1/10-three-types.png",
+  "thumb_sh6": "../outputs/thumbnails/archive-v1/07-inside-ux-research.png",
+  "thumb_collage": "../outputs/thumbnails/archive-v1/22-what-is-ux-research-collage.png",
+  "thumb_iceberg": "../outputs/thumbnails/archive-v1/14-ui-is-not-ux-iceberg.png",
+  "thumb_sketch": "../outputs/thumbnails/archive-v1/13-sketch-first.png",
+  "thumb_seven": "../outputs/thumbnails/archive-v1/11-seven-ways.png",
+  "thumb_which": "../outputs/thumbnails/archive-v1/08-which-one.png"
+ },
+ "pad": "#1D3A32",
+ "teaserOut": "../outputs/teaser",
+ "outro": {
+  "16x9": {
+   "src": "../kit/landscape - full video on youtube.mp4",
+   "dur": 6.25,
+   "poster": "assets/outro_16x9.jpg"
+  },
+  "9x16": {
+   "src": "../kit/portrait - full video on youtube.mp4",
+   "dur": 6.867,
+   "poster": "assets/outro_9x16.jpg"
+  },
+  "note": "her 'FULL VIDEO ON YOUTUBE' clip: ends every short and the teaser (moment \"outro\": false opts out); 1:1 / 4:5 use the 16:9 clip, its middle kept in view; the 16:9 clip turns plain white from 6.27 s (an extra blank page in her export), so only its first 6.25 s are used"
+ }
+}

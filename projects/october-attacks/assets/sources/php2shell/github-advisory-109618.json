@@ -1,0 +1,104 @@
+{
+ "story": "php2shell",
+ "outlet": "GitHub (php-src advisory)",
+ "slug": "github-advisory-109618",
+ "url": "https://github.com/php/php-src/security/advisories/GHSA-w8hw-w9fx-j79w",
+ "finalUrl": "https://github.com/php/php-src/security/advisories/GHSA-w8hw-w9fx-j79w",
+ "status": "loaded",
+ "http": 200,
+ "title": "RCE via OOM corruption",
+ "h1": "RCE via OOM corruption",
+ "published": "",
+ "files": {
+  "fold": "php2shell/github-advisory-109618_fold.png",
+  "full": "php2shell/github-advisory-109618_full.jpg",
+  "scroll": "php2shell/github-advisory-109618_scroll.mp4"
+ },
+ "full": {
+  "width": 1440,
+  "height": 2356,
+  "pageHeight": 2356,
+  "zoom": 1,
+  "quotes": [
+   {
+    "quote": "RCE via OOM corruption",
+    "box": {
+     "x": 112,
+     "y": 248,
+     "w": 336,
+     "h": 38
+    },
+    "lines": [
+     {
+      "x": 112,
+      "y": 248,
+      "w": 336,
+      "h": 38
+     }
+    ]
+   }
+  ]
+ },
+ "scroll": {
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "seconds": 8,
+  "keyframes": [
+   {
+    "t": 0,
+    "y": 109
+   },
+   {
+    "t": 1,
+    "y": 109
+   },
+   {
+    "t": 2.455,
+    "y": 1276
+   },
+   {
+    "t": 8,
+    "y": 1276
+   }
+  ],
+  "zoom": 1,
+  "easing": "easeInOutCubic between keyframes, holds where y is equal",
+  "capped": false,
+  "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)",
+  "quotes": [
+   {
+    "quote": "RCE via OOM corruption",
+    "inVideo": true,
+    "still": true,
+    "t": 0.53,
+    "visibleStill": [
+     0,
+     1.07
+    ],
+    "scrollY": 109,
+    "box": {
+     "x": 352,
+     "y": 139,
+     "w": 336,
+     "h": 38
+    },
+    "lines": [
+     {
+      "x": 352,
+      "y": 139,
+      "w": 336,
+      "h": 38
+     }
+    ],
+    "docBox": {
+     "x": 352,
+     "y": 248,
+     "w": 336,
+     "h": 38
+    },
+    "layoutDriftPx": 0
+   }
+  ]
+ }
+}

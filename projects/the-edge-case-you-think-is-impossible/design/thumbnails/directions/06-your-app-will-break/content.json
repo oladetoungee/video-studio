@@ -1,0 +1,28 @@
+{
+  "text": {
+    "h": "your app will <span class=\"bx\">break.</span>",
+    "c1": "O'Brien: invalid name",
+    "c2": "Sold twice"
+  },
+  "images": {
+    "room": "../../assets/shoot/room3-1580.jpg",
+    "me": "../../assets/shoot/me3-1580.png"
+  },
+  "kind": "collage over her room (her centred)",
+  "board": "Thumbnails 117 (yt-64: you're in a war., icons round his head, line at the foot)",
+  "fonts": [
+    "thumbs-09 Inter Tight ExtraBold lowercase + red box (white on #111111, #E2231A, Thumbnails 68)"
+  ],
+  "colours": "Thumbnails 68: #111111 / #FFFFFF / #E2231A",
+  "thumbnail_text": "your app will break. + two error cards beside her (O'Brien: invalid name, Sold twice)",
+  "scores": "cold critic r5: 8 alone / 8.5 with title",
+  "titles": [
+    "Edge Cases in Software: Why Your App Will Break",
+    "Edge Cases Developers Miss: 8 Real Bugs That Broke Apps"
+  ],
+  "title": "Edge Cases in Software: Why Your App Will Break",
+  "direction": "Copies Thumbnails 117: she thinks in the middle of her dimmed room, the errors real users cause float round her head, one lowercase line at the foot with the red box.",
+  "nudge": {},
+  "vars": {},
+  "class": "no-lift"
+}

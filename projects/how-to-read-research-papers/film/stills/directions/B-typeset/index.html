@@ -1,0 +1,95 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../_shared/fonts.css">
+<style>
+:root{--pg:#FBFAF6;--ink:#141414;--cite:#0E7C3A;--rule:#141414;--grey:#5D5D5D}
+#stage{background:var(--pg);font-family:"CMU Serif";color:var(--ink)}
+.cm{font-family:"CMU Serif"} .tt{font-family:"CMU Typewriter"} .sf{font-family:"CMU Sans"}
+.body{font-size:38px;line-height:1.38;text-align:justify;hyphens:auto}
+.sec{font-weight:700;font-size:46px}
+.cite{color:var(--cite)}
+.citebox{outline:3px solid var(--cite);outline-offset:3px}
+.cap{font-size:34px;line-height:1.35}
+.strike{background:linear-gradient(var(--ink),var(--ink)) no-repeat 0 55%/var(--sk,0%) 4px}
+.fig{position:absolute;overflow:hidden;background:#ddd}
+.card{position:absolute;background:#fff;box-shadow:0 20px 50px rgba(0,0,0,.22);border:1px solid #ccc;overflow:hidden}
+.cred{font-family:"CMU Serif";font-style:italic;font-size:26px;color:var(--grey)}
+</style></head><body><div id="stage"></div>
+<script src="../_shared/lib.js"></script>
+<script>
+function txt(par, html, css, cls = '') { const e = h(`<div class="abs ${cls}" style="${css}">${html}</div>`); par.appendChild(e); return e; }
+function reveal(el, k) { if (!el) return; el.style.clipPath = `inset(0 0 ${(100 - 100 * clamp(k)).toFixed(1)}% 0)`; el.style.opacity = k > 0 ? 1 : 0; }
+// ---------- opening (t = 0 at raw 20.20) ----------
+function opening(t, S) {
+  // compile: title, author, abstract appear line by line (like a PDF page rendering), 0.0-1.2
+  const T = txt(S, `<div style="font-weight:700;font-size:92px;text-align:center;letter-spacing:-.005em">How to Read a Research Paper</div>`, 'left:0;top:150px;width:1920px');
+  const A = txt(S, `<div style="font-size:40px;text-align:center;line-height:1.35">Gbemisola Oladetoun<br><span style="font-size:32px">Human-Computer Interaction · <span class="tt">@WithGbemi</span></span></div>`, 'left:0;top:300px;width:1920px');
+  reveal(T, P(t, 0.0, 0.35, E.outCubic)); reveal(A, P(t, 0.25, 0.35, E.outCubic));
+  const push = P(t, 4.4, 1.0, E.inOutQuart);
+  // abstract block
+  const AB = txt(S, `<div style="font-weight:700;font-size:40px;text-align:center;margin-bottom:14px">Abstract</div><div class="body" style="text-align:left;font-size:54px;line-height:1.36"><span class="strike" id="s1">Research papers are not written to be read from start to finish, like a novel.</span> <span id="s2">So in this video, I will show you the parts of a paper and the order to read them in.</span></div>`, 'left:330px;top:470px;width:1260px');
+  reveal(AB, P(t, 0.5, 0.4, E.outCubic));
+  const s2 = $('#s2', AB); s2.style.opacity = t > 4.5 ? P(t, 4.5, .3) : 0;
+  // reading arrow down the abstract, then struck (start to finish 1.6-2.9, novel 3.3)
+  const sv = h(`<svg class="abs" style="left:0;top:0" width="1920" height="1080"><path id="arr" d="M 262 545 L 262 690" pathLength="1" fill="none" stroke="#0E7C3A" stroke-width="6" marker-end="url(#m)"/><defs><marker id="m" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#0E7C3A"/></marker></defs></svg>`); S.appendChild(sv);
+  drawK($('#arr', sv), P(t, 1.6, 1.2, E.inOutQuart)); $('#arr', sv).style.opacity = (t > 1.6 ? 1 : 0) * (1 - P(t, 3.3, .2));
+  { const k = P(t, 3.3, .35, E.outCubic); const n = txt(S, `<span style="font-style:normal">✗</span> <i>not page 1 to the end</i>`, `left:330px;top:${730}px;width:900px;font-size:46px;color:var(--cite);opacity:${k};transform:translateY(${(1 - k) * 16 - 330 * push}px)`); if (t > 4.4) n.style.opacity = k * (1 - push); }
+  // the move: everything shifts up; the page's sections typeset into two columns (6.6 'parts of a paper')
+  const up = -330 * push; [T, A, AB].forEach(e => e.style.transform = `translateY(${up}px)`);
+  if (t > 4.4) { T.style.opacity = 1 - push; A.style.opacity = 1 - push; }
+  const secs = [['1', 'Introduction'], ['2', 'Method'], ['3', 'Results'], ['4', 'Discussion']];
+  secs.forEach(([n, s], i) => { const col = i < 2 ? 0 : 1; const row = i % 2; const k = P(t, 6.6 + i * .12, .3, E.outCubic);
+    const e = txt(S, `<div class="sec">${n}&nbsp;&nbsp;&nbsp;${s}</div><div style="margin-top:16px">${[0, 1, 2].map(j => `<div style="height:16px;background:#E4E4E4;margin:14px 0;width:${[100, 96, 72][j]}%"></div>`).join('')}</div>`, `left:${330 + col * 660}px;top:${760 + row * 150 - 330 * push + 330}px;width:600px`);
+    e.style.top = (720 + row * 170) + 'px'; reveal(e, k); });
+  // reading order in green citation brackets (8.0 'order')
+  [['Abstract', 870, 140], ['1', 290, 722], ['4', 950, 892]].forEach(([w, x, y], i) => { const k = P(t, 8.0 + i * .14, .25, E.outQuint);
+    const e = txt(S, `<span class="cite" style="font-size:44px">[${i + 1}]</span>`, `left:${x - 80}px;top:${y - 4}px;transform:scale(${lerp(1.5, 1, k)});opacity:${k > 0 ? 1 : 0}`); });
+}
+const SCENES = {
+  b1: { t: 9.5, draw: (t, S) => opening(t, S) },
+  b2: { draw: (t, S) => { // Figure 1: time per pass
+      txt(S, `<div class="sec">2.1&nbsp;&nbsp;&nbsp;How long each pass takes</div>`, 'left:160px;top:90px');
+      const X0 = 520, X1 = 1760, max = 300, sx = v => X0 + (X1 - X0) * v / max;
+      const rows = [['Pass 1', 5, 10, '5–10 min'], ['Pass 2', 0, 60, 'up to 1 hour'], ['Pass 3', 240, 300, '4–5 hours, beginners']];
+      const sv = h(`<svg class="abs" style="left:0;top:0" width="1920" height="1080"></svg>`); S.appendChild(sv);
+      let g = `<line x1="${X0}" y1="760" x2="${X1}" y2="760" stroke="#141414" stroke-width="2.5"/><line x1="${X0}" y1="240" x2="${X0}" y2="760" stroke="#141414" stroke-width="2.5"/>`;
+      [0, 60, 120, 180, 240, 300].forEach(v => { g += `<line x1="${sx(v)}" y1="760" x2="${sx(v)}" y2="772" stroke="#141414" stroke-width="2.5"/>`; });
+      rows.forEach(([n, a, b], i) => { const y = 300 + i * 150; g += `<rect x="${sx(a)}" y="${y}" width="${Math.max(10, sx(b) - sx(a))}" height="84" fill="${i === 2 ? '#0E7C3A' : '#BDBDBD'}" stroke="#141414" stroke-width="2.5"/>`; });
+      sv.innerHTML = g;
+      rows.forEach(([n, a, b, l], i) => { const y = 300 + i * 150; txt(S, n, `left:${X0 - 200}px;top:${y + 14}px;font-size:44px`); txt(S, l, i === 2 ? `left:${sx(a) - 620}px;width:590px;text-align:right;top:${y + 16}px;font-size:40px;font-style:italic` : `left:${sx(b) + 24}px;top:${y + 16}px;font-size:40px;font-style:italic`); });
+      [0, 1, 2, 3, 4, 5].forEach(hh => txt(S, hh + ' h', `left:${sx(hh * 60) - 30}px;top:784px;font-size:32px;width:60px;text-align:center`));
+      txt(S, `<b>Figure 1:</b> Time per pass, from Keshav <span class="cite">[1]</span>. An experienced reader needs about an hour for pass 3; for students, she says, plan for the higher side.`, 'left:160px;top:880px;width:1600px', 'cap');
+  } },
+  b3: { draw: (t, S) => erratum(S) },
+  b4: { draw: (t, S) => { // Table 1: three checks
+      txt(S, `<b>Table 1:</b> Three things I check before I trust a paper.`, 'left:260px;top:150px;width:1400px;text-align:center', 'cap');
+      const tb = txt(S, `<table style="border-collapse:collapse;font-size:46px;width:1400px">
+        <tr style="border-top:4px solid #141414;border-bottom:2px solid #141414"><th style="text-align:left;padding:18px 24px">Check</th><th style="text-align:left;padding:18px 24px">Ask yourself</th></tr>
+        <tr><td style="padding:26px 24px 10px;white-space:nowrap">Sample size</td><td style="padding:26px 24px 10px">Does the number fit the size of the claim?</td></tr>
+        <tr><td style="padding:16px 24px">Method</td><td style="padding:16px 24px">Does the method match the question?</td></tr>
+        <tr style="border-bottom:4px solid #141414"><td style="padding:10px 24px 28px">Funding</td><td style="padding:10px 24px 28px">Who funded it, and do they benefit from one answer?</td></tr></table>`, 'left:260px;top:250px');
+      txt(S, `Published doesn’t mean right for your research.`, 'left:0;top:830px;width:1920px;text-align:center;font-size:58px;font-style:italic');
+  } },
+  p1: { draw: (t, S) => { // definition, 9:16
+      txt(S, `<div class="sec" style="font-size:54px">3&nbsp;&nbsp;&nbsp;Pass three</div>`, 'left:90px;top:200px');
+      txt(S, `<div class="body" style="font-size:52px;line-height:1.45;text-align:left"><b>Definition 3.</b> <i>Virtually re-implement the paper</i> <span class="cite">[1]</span>: make the same assumptions as the authors, rebuild the work in your head, then compare your version with theirs.</div>`, 'left:90px;top:330px;width:900px');
+      txt(S, `<div style="border-left:6px solid var(--cite);padding:10px 0 10px 40px;font-size:60px;line-height:1.35;font-style:italic">Every place where your version is different is either a weak spot in the paper or an idea for your own research.</div>`, 'left:90px;top:960px;width:900px');
+      txt(S, `<span class="cite">[1]</span> S. Keshav. How to Read a Paper. <i>ACM SIGCOMM CCR</i>, 2007.`, 'left:90px;top:1700px;width:900px;font-size:30px;border-top:2px solid #141414;padding-top:20px');
+  } },
+  p2: { draw: (t, S) => { // references, ticked
+      txt(S, `<div class="sec" style="font-size:60px">References</div>`, 'left:90px;top:220px');
+      const refs = [[1, 'S. Keshav. How to Read a Paper. <i>ACM SIGCOMM Computer Communication Review</i>, 2007.', 1], [2, 'K. Caine. Local Standards for Sample Size at CHI. <i>CHI 2016</i>.', 1], [3, 'A. Lundh et al. Industry sponsorship and research outcome. <i>Cochrane Review</i>, 2017.', 0], [4, 'Zotero. <span class="tt">zotero.org</span>', 0]];
+      refs.forEach(([n, r, ok], i) => txt(S, `<div style="display:flex;gap:26px;font-size:44px;line-height:1.35"><span class="cite" style="flex:none">${ok ? '✓' : '&nbsp;&nbsp;'}</span><span style="flex:none">[${n}]</span><span>${r}</span></div>`, `left:70px;top:${400 + i * 250}px;width:960px`));
+      txt(S, `Glance over the references. Tick off the ones you’ve already read.`, 'left:90px;top:1540px;width:900px;font-size:56px;font-style:italic;line-height:1.3');
+  } },
+};
+function erratum(S) {
+  txt(S, `<div class="sec">4.1&nbsp;&nbsp;&nbsp;Sample size</div>`, 'left:160px;top:110px');
+  txt(S, `<div class="body" style="font-size:44px;line-height:1.5;text-align:left">In HCI, for example, small studies are very common. Kelly Caine looked at every paper published in 2014<sup style="color:var(--cite)">1</sup> and found that the most common sample size was 12 <span class="cite citebox">[2]</span>.</div>`, 'left:160px;top:210px;width:800px');
+  txt(S, `<div style="border:3px solid #141414;padding:26px 34px;font-size:40px;line-height:1.4"><b>Erratum.</b> <span style="color:var(--cite)">¹</span> Not every paper in 2014: Caine studied every paper published <b>at CHI 2014</b>, one HCI conference.</div>`, 'left:160px;top:620px;width:800px');
+  txt(S, `<div style="border-top:2px solid #141414;width:300px"></div>`, 'left:160px;top:900px');
+  txt(S, `<span class="cite">[2]</span> K. Caine. Local Standards for Sample Size at CHI. <i>CHI 2016</i>.`, 'left:160px;top:920px;font-size:30px');
+  const ox = 430, oy = 395; let rc = h(`<div class="card" style="left:1010px;top:190px;width:860px;height:470px"><div class="abs" style="left:0;top:0;transform:scale(1.75);transform-origin:0 0"><img src="../_src/caine__most-common-sample-size.png" style="position:absolute;width:1280px;left:-${ox}px;top:-${oy}px;max-width:none"></div></div>`); S.appendChild(rc); const rc0 = rc; rc = rc0.firstChild;
+  [[597, 502, 56, 15], [827, 520, 34, 15], [437, 538, 170, 15]].forEach(r => rc.appendChild(h(`<div class="abs" style="left:${r[0] - ox}px;top:${r[1] - oy}px;width:${r[2]}px;height:${r[3]}px;outline:2px solid var(--cite);outline-offset:1px"></div>`)));
+  txt(S, `open.clemson.edu/computing_pubs/28`, 'left:1012px;top:680px', 'cred');
+}
+window.SCENES = SCENES; window.TEST = opening; boot();
+</script></body></html>

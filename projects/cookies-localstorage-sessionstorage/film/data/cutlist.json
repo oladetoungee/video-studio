@@ -1,0 +1,12 @@
+{
+ "sample_rate": 48000,
+ "source": "talking-head/data/edl.json full",
+ "edited_duration": 319.633,
+ "segments": [
+  {
+   "orig_start": 0.0,
+   "orig_end": 319.6333,
+   "edit_start": 0.0
+  }
+ ]
+}

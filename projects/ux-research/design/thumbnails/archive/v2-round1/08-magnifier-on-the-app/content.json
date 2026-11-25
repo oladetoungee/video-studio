@@ -1,0 +1,26 @@
+{
+  "direction": "Research as looking closely: a big magnifying glass over a generic app shows a user's tap landing just off the button. Flat canary ground, ink type, one orange tap ring; her cut-out bottom-left in black and white with an ink outline.",
+  "thumbnail_text": "UX Research",
+  "titles": [
+    "Why Some Apps Are So Confusing (UX Research Explained)",
+    "What Is UX Research? Why Some Apps Are So Confusing",
+    "What Is UX Research? The Step Bad Apps Skip"
+  ],
+  "text": {
+    "hd": "UX<br>Research",
+    "btn": "Pay",
+    "btn2": "Pay"
+  },
+  "images": {
+    "me": "../../assets/cut/gbemi-calm-steeple.png"
+  },
+  "vars": {
+    "--ground": "#FFE15A",
+    "--fg": "#17140F",
+    "--accent": "#FF4713",
+    "--ol": "#17140F"
+  },
+  "scores": "",
+  "recommended": false,
+  "title": "Why Some Apps Are So Confusing (UX Research Explained)"
+}

@@ -1,0 +1,116 @@
+{
+ "story": "opencode",
+ "outlet": "OpenCode on X",
+ "slug": "x-opencode",
+ "url": "https://x.com/opencode/status/2111519637049319818",
+ "finalUrl": "https://x.com/opencode/status/2111519637049319818",
+ "status": "loaded",
+ "http": 200,
+ "title": "OpenCode (@opencode) on X",
+ "h1": "OpenCode on X: \"We had a security breach last night related to a large scale distillation attack that impacted 1.4% of OpenCode Console users We have notified them all this morning via email. If you did not get an email you were not impacted, it was a subset of users who had external providers linked The incident is ongoing so we cannot share more details at this point but we are working with Anthropic, OpenAI, and Google to remediate\"",
+ "published": "2026-10-17T18:08:06.000Z",
+ "files": {
+  "fold": "opencode/x-opencode_fold.png",
+  "full": "opencode/x-opencode_full.jpg",
+  "scroll": "opencode/x-opencode_scroll.mp4"
+ },
+ "full": {
+  "width": 1440,
+  "height": 2054,
+  "pageHeight": 2054,
+  "zoom": 1.5,
+  "quotes": [
+   {
+    "quote": "We had a security breach last night related to a large scale distillation attack that impacted 1.4% of OpenCode Console users",
+    "box": {
+     "x": 348,
+     "y": 179,
+     "w": 810,
+     "h": 66
+    },
+    "lines": [
+     {
+      "x": 348,
+      "y": 179,
+      "w": 810,
+      "h": 30
+     },
+     {
+      "x": 348,
+      "y": 215,
+      "w": 638,
+      "h": 30
+     }
+    ]
+   }
+  ]
+ },
+ "scroll": {
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "seconds": 8,
+  "keyframes": [
+   {
+    "t": 0,
+    "y": 0
+   },
+   {
+    "t": 1,
+    "y": 0
+   },
+   {
+    "t": 2.199,
+    "y": 974
+   },
+   {
+    "t": 8,
+    "y": 974
+   }
+  ],
+  "zoom": 1.5,
+  "easing": "easeInOutCubic between keyframes, holds where y is equal",
+  "capped": false,
+  "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)",
+  "quotes": [
+   {
+    "quote": "We had a security breach last night related to a large scale distillation attack that impacted 1.4% of OpenCode Console users",
+    "inVideo": true,
+    "still": true,
+    "t": 0.53,
+    "visibleStill": [
+     0,
+     1.07
+    ],
+    "scrollY": 0,
+    "box": {
+     "x": 441,
+     "y": 179,
+     "w": 810,
+     "h": 66
+    },
+    "lines": [
+     {
+      "x": 441,
+      "y": 179,
+      "w": 810,
+      "h": 30
+     },
+     {
+      "x": 441,
+      "y": 215,
+      "w": 638,
+      "h": 30
+     }
+    ],
+    "docBox": {
+     "x": 441,
+     "y": 179,
+     "w": 810,
+     "h": 66
+    },
+    "layoutDriftPx": 0
+   }
+  ]
+ }
+}

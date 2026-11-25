@@ -1,0 +1,39 @@
+{
+ "label": "Before this session’s edits",
+ "auto": true,
+ "savedAt": 1793012141998,
+ "content": {
+  "direction": "Combined (her 10-26 brief), split: the left third is warm paper holding a tidy stack, one strip per story: the PHP terminal with the elephant, REAL headlines (Railway TechCrunch, Zeabur, OpenCode; untouched crops), 15's robots with '100+ sites'. The right is 13's night ground with the topic huge, the PHP question in orange and her cut-out with the orange outline.",
+  "thumbnail_text": "OCTOBER'S HACKS · IS YOUR PHP SAFE?",
+  "titles": [
+   "October 2026 Hacks Explained: PHP2Shell, Railway, AI Agents",
+   "PHP2Shell, Railway, OpenCode: October 2026's Big Hacks",
+   "The October 2026 Hacks Every Developer Should Know"
+  ],
+  "title": "October 2026 Hacks Explained: PHP2Shell, Railway, AI Agents",
+  "kind": "graphic",
+  "set": "combined",
+  "text": {
+   "hd": "October's<br><span class=\"acc\">hacks</span>",
+   "q": "Is your PHP safe?",
+   "term": "<span class=\"p\">$</span> php -v &nbsp;<s>8.3.35</s><span class=\"x\">✗</span> 8.3.36<span class=\"ok\">✓</span>",
+   "sites": "100+ sites hacked"
+  },
+  "images": {
+   "me": "../../assets/cut/gbemi-410.0.png",
+   "elephant": "../../assets/draw/elephant-cracked.svg",
+   "robot": "../../assets/draw/robot.svg",
+   "c1": "../../assets/src/bc-zeabur.png",
+   "c2": "../../assets/src/tc-railway.png",
+   "c3": "../../assets/src/bc-opencode.png"
+  },
+  "vars": {
+   "--ground": "#16110D",
+   "--fg": "#EFE7D8",
+   "--accent": "#F2541B",
+   "--ol": "#F2541B"
+  },
+  "scores": "combined critic R1 6 · R2 6.5",
+  "recommended": false
+ }
+}

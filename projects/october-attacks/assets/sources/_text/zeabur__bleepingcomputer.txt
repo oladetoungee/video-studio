@@ -1,0 +1,79 @@
+URL: https://www.bleepingcomputer.com/news/security/zeabur-shutting-down-after-second-security-breach-in-two-months/
+STATUS: loaded (http 200)
+FINAL: https://www.bleepingcomputer.com/news/security/zeabur-shutting-down-after-second-security-breach-in-two-months/
+TITLE: Zeabur shutting down after second security breach in two months
+H1: Zeabur shutting down after second security breach in two months
+OG: Zeabur shutting down after second security breach in two months | BleepingComputer
+PUBLISHED:   MODIFIED: 
+DOC_H: 8603
+
+Zeabur shutting down after second security breach in two months
+By Bill Toulas 
+October 20, 2026 03:33 PM 1
+
+Development platform Zeabur has disclosed details of a cybersecurity incident in which an attacker used leaked internal credentials stored in plaintext to compromise its infrastructure and steal over 3.2 million environment variable records and information for 321,810 accounts.
+
+The attackers used stolen administrator credentials and cloud access keys to compromise Zeabur’s shared hosting infrastructure and dedicated servers, eventually gaining access to its production database.
+
+“On October 14–15, 2026, an attacker used leaked Zeabur internal credentials to break into the shared cluster, some Dedicated Servers, and Zeabur internal systems, and eventually read the platform database,” Zeabur’s announcement reads.
+
+Attack chain
+Source: Zeabur
+
+Zeabur is a developer hosting and deployment platform that lets developers connect a GitHub repository and have the platform handle deployment, databases, HTTPS, and infrastructure management.
+
+In late August 2026, the company suffered another security breach when hackers exploited a flaw in a customer’s NextChat application and then moved through poorly isolated internal systems.
+
+This led to the theft of AWS credentials and access to the production database, exposing account information, API keys, and other secrets stored there.
+
+In the latest incident, Zeabur says the compromise was broader, affecting shared clusters across nine regions, 321,810 accounts, and roughly 3.2 million environment-variable records.
+
+Also, Zeabur confirmed root sign-ins on 101 GCP servers by 92 users, with the attackers adding SSH keys to 50 servers and attaching 16 customer disk copies to their own virtual machines.
+
+Data breach scope
+Source: Zeabur
+
+The company says that attackers likely obtained the credentials they used in the second attack during the August breach, though it hasn’t confirmed this.
+
+Beyond failing to store credentials in encrypted form, Zeabur also failed to rotate all administrator account credentials since the August incident, while administrator portals remained accessible to the public internet.
+
+“The admin tokens had no expiry, had not been rotated since they were created in January 2024, and were not included in the post-August rotation,” explained Zeabur.
+
+Users are urged to rotate exposed credentials and secrets immediately, revoke all active sessions, and rebuild compromised GCP servers.
+
+Variables previously migrated exclusively to customers’ own servers as part of the August incident response escaped this latest platform database exposure, although compromised hosts could still expose them.
+
+Threat actor's activity and vendor response times
+Source: Zeabur
+Zeabur announces shutdown
+
+After discovering the latest security incident, Zeabur announced over the weekend that it will shut down its services starting December 1, 2026, and finish by December 31, 2026.
+
+The decision comes after 3.5 years of continuous growth, including a record year in 2026, but Zeabur said scaling the project to meet market demand has made it increasingly complex and difficult to maintain, and the recent security failures reflect that.
+
+“After the August incident, we spent a long time discussing and struggling with what to do next,” explained Zeabur.
+
+“Following this latest incident, we reassessed what it would take to keep operating and the responsibilities our team could carry. We ultimately decided to wind down.”
+
+On December 1, renewals will be disabled, and all running services on shared clusters will be paused. By the end of the year, all dedicated servers will expire and shut down, and all shared clusters will stop.
+
+Users may be given additional time for data migration, though no concrete timelines on that front have been provided yet.
+
+Once attackers have valid credentials, only 37% of their actions are blocked
+
+Overall prevention scores can hide what happens after initial access. Once attackers are using valid credentials, prevention drops sharply.
+
+The Blue Report 2026 measures defenses technique by technique across 338 million simulations run in customer production environments.
+
+Get the report
+Related Articles:
+
+Capcom confirms data breach affecting 11.7 million accounts
+
+Nikkei discloses third data breach in a month, 1.8M records exposed
+
+Nippon Columbia malware incident exposes 8.6 million karaoke fan records
+
+ASOS links data breach to social engineering attack, credential theft
+
+Advantest confirms personal information stolen in ransomware attack

@@ -1,0 +1,24 @@
+{
+  "direction": "TH07: her face big (frown, lips pressed: \"really?\"), \"MEAN TO CLAUDE?\" huge in white BEHIND her head (her matte in front), like sample 1 \"FINANCIAL LITERACY\"; the room darkened 22 % so white type reads on the pale wall (flat dim, no glow). Nothing else. Refs: sample 1, Brett Codes \"ai is just a tool\" (4.7x). Scores: Round 3: cold 5 · best pair (title 1) 7/7 · taste 6.",
+  "concept": "TH07",
+  "thumbnail_text": "MEAN TO AI?",
+  "title": "Claude Can Hang Up on You. Should AI Be Allowed To?",
+  "titles": [
+    "Claude Can Hang Up on You. Should AI Be Allowed To?",
+    "Is It Okay to Be Mean to AI? Anthropic's New Rule"
+  ],
+  "scores": "Round 3: cold 5 · best pair (title 1) 7/7 · taste 6.",
+  "text": {
+    "l1": "MEAN TO",
+    "l2": "AI?"
+  },
+  "images": {
+    "scene": "../../assets/scene/s_236.5.jpg",
+    "cut": "../../assets/cut/c_236.5.png"
+  },
+  "vars": {
+    "--px": "-260px",
+    "--py": "-295px",
+    "--pw": "2310px"
+  }
+}

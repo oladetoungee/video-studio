@@ -1,0 +1,24 @@
+{
+  "direction": "Before / after split on her real photo. Left: the app with a few users has loaded. Right: the same app with thousands of users, an empty skeleton list still loading. No invented timings. Follows her saved \"Day 1 / Day 900\" splits and the \"fast with 10 rows, crawls with 10,000\" conversation. Round 2: no spinner or cylinder, labels on the phones, headline clear of her headwrap. Round 3: \"Fast\" in white (one accent), 100,000 users (10,000 was not convincing), darker skeleton, a \"database\" cue on the slow phone.",
+  "concept": "T12",
+  "thumbnail_text": "Fast… then slow?",
+  "title": "Database Indexes: Why Your App Slows Down as It Grows",
+  "titles": [
+    "Database Indexes: Why Your App Slows Down as It Grows",
+    "No Index? Your Database Reads Every Single Row",
+    "Database Indexing for Beginners: Fix Slow SQL Queries"
+  ],
+  "text": {
+    "a": "Fast…",
+    "b": "then <span class=\"markr\">slow?</span>",
+    "la": "10 users",
+    "lb": "100,000 users",
+    "db": "waiting on the database…"
+  },
+  "images": {
+    "scene": "../../assets/scene/f_141.9.jpg"
+  },
+  "frame": "2:21.9 (both hands in, calm)",
+  "vars": {},
+  "scores": "final gate (round 4): A topic/click 2/7 · B pair 8 · C taste 6"
+}

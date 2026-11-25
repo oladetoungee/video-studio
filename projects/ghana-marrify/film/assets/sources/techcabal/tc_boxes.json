@@ -1,0 +1,1881 @@
+{
+ "scrollHeight": 14711,
+ "headerHeightSticky": 73.3125,
+ "elements": {
+  "page_headline_h1": {
+   "x": 634.8,
+   "y": 185.4,
+   "w": 650.5,
+   "h": 39
+  },
+  "section_kicker": {
+   "x": 634.3,
+   "y": 6722.4,
+   "w": 552,
+   "h": 23.1
+  },
+  "section_heading_h3": {
+   "x": 634.3,
+   "y": 6757.5,
+   "w": 552,
+   "h": 36
+  },
+  "section_story": {
+   "x": 622.3,
+   "y": 6697.4,
+   "w": 576,
+   "h": 1774.9
+  },
+  "para_what_happened": {
+   "x": 634.3,
+   "y": 7381,
+   "w": 552,
+   "h": 139
+  },
+  "para_more_seriously": {
+   "x": 634.3,
+   "y": 7607.8,
+   "w": 552,
+   "h": 214.8
+  },
+  "para_drawback": {
+   "x": 634.3,
+   "y": 7822.5,
+   "w": 552,
+   "h": 113.4
+  },
+  "para_bigger_picture": {
+   "x": 634.3,
+   "y": 7935.9,
+   "w": 552,
+   "h": 190.2
+  },
+  "para_yet": {
+   "x": 634.3,
+   "y": 8126.1,
+   "w": 552,
+   "h": 164.6
+  }
+ },
+ "phrases": {
+  "drawback_lead": {
+   "text": "But there\u2019s a drawback:",
+   "lines": [
+    {
+     "x": 634.3,
+     "y": 7830.5,
+     "w": 180.2,
+     "h": 19
+    }
+   ]
+  },
+  "drawback_sensitive": {
+   "text": "Marriage and divorce records are sensitive personal information.",
+   "lines": [
+    {
+     "x": 818.9,
+     "y": 7831.5,
+     "w": 303.2,
+     "h": 18
+    },
+    {
+     "x": 634.3,
+     "y": 7857.1,
+     "w": 151.1,
+     "h": 18
+    }
+   ]
+  },
+  "drawback_misuse": {
+   "text": "Making them easier to access can reduce fraud and bureaucracy, but it can also make stalking, harassment, unwanted disclosure, and other forms of misuse easier if the safeguards are weak.",
+   "lines": [
+    {
+     "x": 789.9,
+     "y": 7857.1,
+     "w": 370.8,
+     "h": 18
+    },
+    {
+     "x": 634.3,
+     "y": 7882.7,
+     "w": 472.2,
+     "h": 18
+    },
+    {
+     "x": 634.3,
+     "y": 7908.3,
+     "w": 512.7,
+     "h": 18
+    }
+   ]
+  },
+  "drawback_misuse_short": {
+   "text": "stalking, harassment, unwanted disclosure, and other forms of misuse",
+   "lines": [
+    {
+     "x": 879.4,
+     "y": 7882.7,
+     "w": 227,
+     "h": 18
+    },
+    {
+     "x": 634.3,
+     "y": 7908.3,
+     "w": 269.1,
+     "h": 18
+    }
+   ]
+  },
+  "launch_sentence": {
+   "text": "Ghana has launched Marrify, a digital platform that lets people search and verify registered marriage and divorce records.",
+   "lines": [
+    {
+     "x": 767.3,
+     "y": 7390,
+     "w": 392.7,
+     "h": 20
+    },
+    {
+     "x": 634.3,
+     "y": 7415.6,
+     "w": 469.1,
+     "h": 18
+    }
+   ]
+  },
+  "verify_officials": {
+   "text": "It can also verify marriage officers, licensed venues, churches, pastors, and imams",
+   "lines": [
+    {
+     "x": 1107.8,
+     "y": 7415.6,
+     "w": 73.5,
+     "h": 18
+    },
+    {
+     "x": 634.3,
+     "y": 7441.2,
+     "w": 510.7,
+     "h": 18
+    }
+   ]
+  },
+  "data_sources": {
+   "text": "Marrify says it pulls data from the Registrar-General\u2019s Department, courts, local assemblies, and the Ghana Gazette.",
+   "lines": [
+    {
+     "x": 862.8,
+     "y": 7970.5,
+     "w": 312.1,
+     "h": 18
+    },
+    {
+     "x": 634.3,
+     "y": 7996.1,
+     "w": 515.7,
+     "h": 18
+    }
+   ]
+  },
+  "searchable_infrastructure": {
+   "text": "Marrify turns marriage records from something people largely have to chase through offices and institutions into searchable digital infrastructure.",
+   "lines": [
+    {
+     "x": 746.3,
+     "y": 7615.8,
+     "w": 436.7,
+     "h": 18
+    },
+    {
+     "x": 634.3,
+     "y": 7641.4,
+     "w": 485.5,
+     "h": 18
+    },
+    {
+     "x": 634.3,
+     "y": 7667,
+     "w": 99,
+     "h": 18
+    }
+   ]
+  },
+  "not_truth_machine": {
+   "text": "Yet, Marrify cannot be a magic marital-status truth machine.",
+   "lines": [
+    {
+     "x": 634.3,
+     "y": 8134.1,
+     "w": 458,
+     "h": 19
+    }
+   ]
+  }
+ },
+ "text": {
+  "h1": "\ud83d\udc68\ud83c\udfff\u200d\ud83d\ude80TechCabal Daily \u2013 A $451 million divestiture",
+  "byline": "Emmanuel Nwosu",
+  "section": [
+   "GOVERNMENT",
+   "Ghana Launches Digital Marriage Records Platform",
+   "In our newsroom, we always say, \u201cthere\u2019s tech in everything.\u201d We should probably update that thesis to \u201cthere\u2019s an AI use case for everything; you just haven\u2019t figured it out.\u201d An African government using tech and AI for marriage records wasn\u2019t on our bingo card for 2026, but bet against Ghana at your own detriment.",
+   "What happened? Ghana has launched Marrify, a digital platform that lets people search and verify registered marriage and divorce records. It can also verify marriage officers, licensed venues, churches, pastors, and imams, while an AI assistant provides contextual information on Ghanaian marriage law.",
+   "Why it matters: If, at work, you become suspicious of your colleague who has a secret family but keeps denying that they are married, Marrify is your friend in Ghana. (wink)",
+   "More seriously, Marrify turns marriage records from something people largely have to chase through offices and institutions into searchable digital infrastructure. That has obvious value when you need to verify whether a prospective spouse has a registered marriage or divorce. Still, it also matters for inheritance, immigration, property disputes, court cases, and other situations where knowing someone\u2019s legal marital status can have consequences. The same goes for checking whether a pastor, imam, marriage officer, or venue is actually authorised to conduct marriages.",
+   "But there\u2019s a drawback: Marriage and divorce records are sensitive personal information. Making them easier to access can reduce fraud and bureaucracy, but it can also make stalking, harassment, unwanted disclosure, and other forms of misuse easier if the safeguards are weak.",
+   "The bigger picture: The opportunity is what happens when all that information is brought together. Marrify says it pulls data from the Registrar-General\u2019s Department, courts, local assemblies, and the Ghana Gazette. For citizens, that could mean less running around government offices for basic verification. For courts and government agencies, it could mean faster document checks and fewer opportunities for people to exploit gaps between different records.",
+   "Yet, Marrify cannot be a magic marital-status truth machine. Ghana recognises ordinance, customary and Islamic marriages, and they do not all follow the same registration process. A person not appearing in the database could mean they were never married. Still, it could also mean their marriage was registered elsewhere, the record has not been digitised or linked yet, or the information entered does not match what is in the registry.",
+   "Zoom out: Ghana is showing what digital government can look like when it tackles very ordinary problems. The interesting part isn\u2019t even the AI or tech; it\u2019s whether the country can build enough trust in the underlying data for people to use the platform credibly, and how much more of its public records it can digitise."
+  ],
+  "captions": [
+   "Image Source: Make a Gif"
+  ]
+ },
+ "url": "https://techcabal.com/2026/09/08/techcabal-daily-a-451-million-divestiture/",
+ "captured": "2026-10-01T20:56:55.910Z",
+ "viewport": {
+  "width": 1920,
+  "height": 1080,
+  "deviceScaleFactor": 2
+ },
+ "note": "All boxes are DOCUMENT coordinates in CSS px (page width 1920). Screenshot/frame pixel = (doc - scroll) for the 1920x1080 videos; x2 for the @2x PNGs. Sticky site header covers the top 73 px of the viewport once scrolled. Each screenshot/recording also carries ready-made boxes in its own pixel space.",
+ "screenshots": {
+  "tc_01_page_headline": {
+   "scrollY": 0,
+   "size": "3840x2160 (@2x of 1920x1080)",
+   "boxes_in_png_px_at_2x": {
+    "elements": {
+     "page_headline_h1": {
+      "x": 1269.6,
+      "y": 370.8,
+      "w": 1301.0,
+      "h": 78
+     }
+    },
+    "phrases": {}
+   }
+  },
+  "tc_02_marrify_heading": {
+   "scrollY": 6562,
+   "size": "3840x2160 (@2x of 1920x1080)",
+   "boxes_in_png_px_at_2x": {
+    "elements": {
+     "section_kicker": {
+      "x": 1268.6,
+      "y": 320.8,
+      "w": 1104,
+      "h": 46.2
+     },
+     "section_heading_h3": {
+      "x": 1268.6,
+      "y": 391.0,
+      "w": 1104,
+      "h": 72
+     },
+     "para_what_happened": {
+      "x": 1268.6,
+      "y": 1638,
+      "w": 1104,
+      "h": 278
+     }
+    },
+    "phrases": {
+     "launch_sentence": [
+      {
+       "x": 1534.6,
+       "y": 1656,
+       "w": 785.4,
+       "h": 40
+      },
+      {
+       "x": 1268.6,
+       "y": 1707.2,
+       "w": 938.2,
+       "h": 36
+      }
+     ],
+     "verify_officials": [
+      {
+       "x": 2215.6,
+       "y": 1707.2,
+       "w": 147.0,
+       "h": 36
+      },
+      {
+       "x": 1268.6,
+       "y": 1758.4,
+       "w": 1021.4,
+       "h": 36
+      }
+     ],
+     "searchable_infrastructure": [
+      {
+       "x": 1492.6,
+       "y": 2107.6,
+       "w": 873.4,
+       "h": 36
+      },
+      {
+       "x": 1268.6,
+       "y": 2158.8,
+       "w": 971.0,
+       "h": 36
+      },
+      {
+       "x": 1268.6,
+       "y": 2210,
+       "w": 198,
+       "h": 36
+      }
+     ]
+    }
+   }
+  },
+  "tc_03_drawback_paragraph": {
+   "scrollY": 7319,
+   "size": "3840x2160 (@2x of 1920x1080)",
+   "boxes_in_png_px_at_2x": {
+    "elements": {
+     "para_what_happened": {
+      "x": 1268.6,
+      "y": 124,
+      "w": 1104,
+      "h": 278
+     },
+     "para_drawback": {
+      "x": 1268.6,
+      "y": 1007.0,
+      "w": 1104,
+      "h": 226.8
+     },
+     "para_bigger_picture": {
+      "x": 1268.6,
+      "y": 1233.8,
+      "w": 1104,
+      "h": 380.4
+     },
+     "para_yet": {
+      "x": 1268.6,
+      "y": 1614.2,
+      "w": 1104,
+      "h": 329.2
+     }
+    },
+    "phrases": {
+     "drawback_lead": [
+      {
+       "x": 1268.6,
+       "y": 1023.0,
+       "w": 360.4,
+       "h": 38
+      }
+     ],
+     "drawback_sensitive": [
+      {
+       "x": 1637.8,
+       "y": 1025.0,
+       "w": 606.4,
+       "h": 36
+      },
+      {
+       "x": 1268.6,
+       "y": 1076.2,
+       "w": 302.2,
+       "h": 36
+      }
+     ],
+     "drawback_misuse": [
+      {
+       "x": 1579.8,
+       "y": 1076.2,
+       "w": 741.6,
+       "h": 36
+      },
+      {
+       "x": 1268.6,
+       "y": 1127.4,
+       "w": 944.4,
+       "h": 36
+      },
+      {
+       "x": 1268.6,
+       "y": 1178.6,
+       "w": 1025.4,
+       "h": 36
+      }
+     ],
+     "drawback_misuse_short": [
+      {
+       "x": 1758.8,
+       "y": 1127.4,
+       "w": 454,
+       "h": 36
+      },
+      {
+       "x": 1268.6,
+       "y": 1178.6,
+       "w": 538.2,
+       "h": 36
+      }
+     ],
+     "launch_sentence": [
+      {
+       "x": 1534.6,
+       "y": 142,
+       "w": 785.4,
+       "h": 40
+      },
+      {
+       "x": 1268.6,
+       "y": 193.2,
+       "w": 938.2,
+       "h": 36
+      }
+     ],
+     "verify_officials": [
+      {
+       "x": 2215.6,
+       "y": 193.2,
+       "w": 147.0,
+       "h": 36
+      },
+      {
+       "x": 1268.6,
+       "y": 244.4,
+       "w": 1021.4,
+       "h": 36
+      }
+     ],
+     "data_sources": [
+      {
+       "x": 1725.6,
+       "y": 1303.0,
+       "w": 624.2,
+       "h": 36
+      },
+      {
+       "x": 1268.6,
+       "y": 1354.2,
+       "w": 1031.4,
+       "h": 36
+      }
+     ],
+     "searchable_infrastructure": [
+      {
+       "x": 1492.6,
+       "y": 593.6,
+       "w": 873.4,
+       "h": 36
+      },
+      {
+       "x": 1268.6,
+       "y": 644.8,
+       "w": 971.0,
+       "h": 36
+      },
+      {
+       "x": 1268.6,
+       "y": 696,
+       "w": 198,
+       "h": 36
+      }
+     ],
+     "not_truth_machine": [
+      {
+       "x": 1268.6,
+       "y": 1630.2,
+       "w": 916,
+       "h": 38
+      }
+     ]
+    }
+   }
+  },
+  "tc_04_launch_paragraphs": {
+   "scrollY": 7161,
+   "size": "3840x2160 (@2x of 1920x1080)",
+   "boxes_in_png_px_at_2x": {
+    "elements": {
+     "para_what_happened": {
+      "x": 1268.6,
+      "y": 440,
+      "w": 1104,
+      "h": 278
+     },
+     "para_drawback": {
+      "x": 1268.6,
+      "y": 1323.0,
+      "w": 1104,
+      "h": 226.8
+     },
+     "para_bigger_picture": {
+      "x": 1268.6,
+      "y": 1549.8,
+      "w": 1104,
+      "h": 380.4
+     },
+     "para_yet": {
+      "x": 1268.6,
+      "y": 1930.2,
+      "w": 1104,
+      "h": 329.2
+     }
+    },
+    "phrases": {
+     "drawback_lead": [
+      {
+       "x": 1268.6,
+       "y": 1339.0,
+       "w": 360.4,
+       "h": 38
+      }
+     ],
+     "drawback_sensitive": [
+      {
+       "x": 1637.8,
+       "y": 1341.0,
+       "w": 606.4,
+       "h": 36
+      },
+      {
+       "x": 1268.6,
+       "y": 1392.2,
+       "w": 302.2,
+       "h": 36
+      }
+     ],
+     "drawback_misuse": [
+      {
+       "x": 1579.8,
+       "y": 1392.2,
+       "w": 741.6,
+       "h": 36
+      },
+      {
+       "x": 1268.6,
+       "y": 1443.4,
+       "w": 944.4,
+       "h": 36
+      },
+      {
+       "x": 1268.6,
+       "y": 1494.6,
+       "w": 1025.4,
+       "h": 36
+      }
+     ],
+     "drawback_misuse_short": [
+      {
+       "x": 1758.8,
+       "y": 1443.4,
+       "w": 454,
+       "h": 36
+      },
+      {
+       "x": 1268.6,
+       "y": 1494.6,
+       "w": 538.2,
+       "h": 36
+      }
+     ],
+     "launch_sentence": [
+      {
+       "x": 1534.6,
+       "y": 458,
+       "w": 785.4,
+       "h": 40
+      },
+      {
+       "x": 1268.6,
+       "y": 509.2,
+       "w": 938.2,
+       "h": 36
+      }
+     ],
+     "verify_officials": [
+      {
+       "x": 2215.6,
+       "y": 509.2,
+       "w": 147.0,
+       "h": 36
+      },
+      {
+       "x": 1268.6,
+       "y": 560.4,
+       "w": 1021.4,
+       "h": 36
+      }
+     ],
+     "data_sources": [
+      {
+       "x": 1725.6,
+       "y": 1619.0,
+       "w": 624.2,
+       "h": 36
+      },
+      {
+       "x": 1268.6,
+       "y": 1670.2,
+       "w": 1031.4,
+       "h": 36
+      }
+     ],
+     "searchable_infrastructure": [
+      {
+       "x": 1492.6,
+       "y": 909.6,
+       "w": 873.4,
+       "h": 36
+      },
+      {
+       "x": 1268.6,
+       "y": 960.8,
+       "w": 971.0,
+       "h": 36
+      },
+      {
+       "x": 1268.6,
+       "y": 1012,
+       "w": 198,
+       "h": 36
+      }
+     ],
+     "not_truth_machine": [
+      {
+       "x": 1268.6,
+       "y": 1946.2,
+       "w": 916,
+       "h": 38
+      }
+     ]
+    }
+   }
+  },
+  "tc_crop_drawback_paragraph": {
+   "clip_doc_css": {
+    "x": 610.3,
+    "y": 7798.5,
+    "width": 600,
+    "height": 161.4
+   },
+   "scale": 2,
+   "boxes_in_png_px_at_2x": {
+    "elements": {
+     "para_drawback": {
+      "x": 48.0,
+      "y": 48.0,
+      "w": 1104,
+      "h": 226.8
+     },
+     "para_bigger_picture": {
+      "x": 48.0,
+      "y": 274.8,
+      "w": 1104,
+      "h": 380.4
+     }
+    },
+    "phrases": {
+     "drawback_lead": [
+      {
+       "x": 48.0,
+       "y": 64.0,
+       "w": 360.4,
+       "h": 38
+      }
+     ],
+     "drawback_sensitive": [
+      {
+       "x": 417.2,
+       "y": 66.0,
+       "w": 606.4,
+       "h": 36
+      },
+      {
+       "x": 48.0,
+       "y": 117.2,
+       "w": 302.2,
+       "h": 36
+      }
+     ],
+     "drawback_misuse": [
+      {
+       "x": 359.2,
+       "y": 117.2,
+       "w": 741.6,
+       "h": 36
+      },
+      {
+       "x": 48.0,
+       "y": 168.4,
+       "w": 944.4,
+       "h": 36
+      },
+      {
+       "x": 48.0,
+       "y": 219.6,
+       "w": 1025.4,
+       "h": 36
+      }
+     ],
+     "drawback_misuse_short": [
+      {
+       "x": 538.2,
+       "y": 168.4,
+       "w": 454,
+       "h": 36
+      },
+      {
+       "x": 48.0,
+       "y": 219.6,
+       "w": 538.2,
+       "h": 36
+      }
+     ]
+    }
+   }
+  },
+  "tc_crop_what_happened_paragraph": {
+   "clip_doc_css": {
+    "x": 610.3,
+    "y": 7357,
+    "width": 600,
+    "height": 187
+   },
+   "scale": 2,
+   "boxes_in_png_px_at_2x": {
+    "elements": {
+     "para_what_happened": {
+      "x": 48.0,
+      "y": 48,
+      "w": 1104,
+      "h": 278
+     }
+    },
+    "phrases": {
+     "launch_sentence": [
+      {
+       "x": 314.0,
+       "y": 66,
+       "w": 785.4,
+       "h": 40
+      },
+      {
+       "x": 48.0,
+       "y": 117.2,
+       "w": 938.2,
+       "h": 36
+      }
+     ],
+     "verify_officials": [
+      {
+       "x": 995.0,
+       "y": 117.2,
+       "w": 147.0,
+       "h": 36
+      },
+      {
+       "x": 48.0,
+       "y": 168.4,
+       "w": 1021.4,
+       "h": 36
+      }
+     ]
+    }
+   }
+  },
+  "tc_crop_section_heading": {
+   "clip_doc_css": {
+    "x": 610.3,
+    "y": 6698.4,
+    "width": 600,
+    "height": 119.10000000000036
+   },
+   "scale": 2,
+   "boxes_in_png_px_at_2x": {
+    "elements": {
+     "section_kicker": {
+      "x": 48.0,
+      "y": 48.0,
+      "w": 1104,
+      "h": 46.2
+     },
+     "section_heading_h3": {
+      "x": 48.0,
+      "y": 118.2,
+      "w": 1104,
+      "h": 72
+     }
+    },
+    "phrases": {}
+   }
+  },
+  "tc_crop_page_headline": {
+   "clip_doc_css": {
+    "x": 610.8,
+    "y": 111.4,
+    "width": 698.5,
+    "height": 218
+   },
+   "scale": 2,
+   "boxes_in_png_px_at_2x": {
+    "elements": {
+     "page_headline_h1": {
+      "x": 48.0,
+      "y": 148.0,
+      "w": 1301.0,
+      "h": 78
+     }
+    },
+    "phrases": {}
+   }
+  },
+  "tc_00_fullpage": {
+   "scale": 1,
+   "note": "full page @1x"
+  }
+ },
+ "recordings": {
+  "A": {
+   "file": "tc_scroll_heading_to_drawback.mp4",
+   "fps": 30,
+   "frames": 300,
+   "duration": 10,
+   "size": "1920x1080 (captured @2x, downscaled)",
+   "keys": [
+    [
+     0,
+     6562
+    ],
+    [
+     1.5,
+     6562
+    ],
+    [
+     7.5,
+     7319
+    ],
+    [
+     10,
+     7319
+    ]
+   ],
+   "scrollY_per_frame": [
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6563,
+    6563,
+    6563,
+    6563,
+    6563,
+    6564,
+    6564,
+    6565,
+    6565,
+    6566,
+    6567,
+    6568,
+    6569,
+    6570,
+    6571,
+    6572,
+    6574,
+    6575,
+    6577,
+    6579,
+    6580,
+    6582,
+    6585,
+    6587,
+    6589,
+    6592,
+    6594,
+    6597,
+    6600,
+    6603,
+    6606,
+    6609,
+    6613,
+    6616,
+    6620,
+    6624,
+    6628,
+    6632,
+    6636,
+    6641,
+    6645,
+    6650,
+    6655,
+    6659,
+    6664,
+    6670,
+    6675,
+    6680,
+    6686,
+    6691,
+    6697,
+    6703,
+    6709,
+    6715,
+    6721,
+    6727,
+    6734,
+    6740,
+    6747,
+    6754,
+    6760,
+    6767,
+    6774,
+    6781,
+    6788,
+    6795,
+    6803,
+    6810,
+    6817,
+    6825,
+    6832,
+    6840,
+    6847,
+    6855,
+    6863,
+    6870,
+    6878,
+    6886,
+    6894,
+    6901,
+    6909,
+    6917,
+    6925,
+    6933,
+    6941,
+    6949,
+    6957,
+    6964,
+    6972,
+    6980,
+    6988,
+    6996,
+    7004,
+    7011,
+    7019,
+    7027,
+    7034,
+    7042,
+    7049,
+    7057,
+    7064,
+    7072,
+    7079,
+    7086,
+    7093,
+    7100,
+    7107,
+    7114,
+    7121,
+    7128,
+    7135,
+    7141,
+    7148,
+    7154,
+    7160,
+    7167,
+    7173,
+    7179,
+    7184,
+    7190,
+    7196,
+    7201,
+    7207,
+    7212,
+    7217,
+    7222,
+    7227,
+    7232,
+    7236,
+    7241,
+    7245,
+    7249,
+    7254,
+    7258,
+    7261,
+    7265,
+    7269,
+    7272,
+    7275,
+    7279,
+    7282,
+    7284,
+    7287,
+    7290,
+    7292,
+    7295,
+    7297,
+    7299,
+    7301,
+    7303,
+    7305,
+    7306,
+    7308,
+    7309,
+    7311,
+    7312,
+    7313,
+    7314,
+    7315,
+    7315,
+    7316,
+    7317,
+    7317,
+    7318,
+    7318,
+    7318,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319
+   ],
+   "final_hold_scrollY": 7319,
+   "boxes_in_video_px_during_final_hold": {
+    "elements": {
+     "para_what_happened": {
+      "x": 634.3,
+      "y": 62,
+      "w": 552,
+      "h": 139
+     },
+     "para_drawback": {
+      "x": 634.3,
+      "y": 503.5,
+      "w": 552,
+      "h": 113.4
+     },
+     "para_bigger_picture": {
+      "x": 634.3,
+      "y": 616.9,
+      "w": 552,
+      "h": 190.2
+     },
+     "para_yet": {
+      "x": 634.3,
+      "y": 807.1,
+      "w": 552,
+      "h": 164.6
+     }
+    },
+    "phrases": {
+     "drawback_lead": [
+      {
+       "x": 634.3,
+       "y": 511.5,
+       "w": 180.2,
+       "h": 19
+      }
+     ],
+     "drawback_sensitive": [
+      {
+       "x": 818.9,
+       "y": 512.5,
+       "w": 303.2,
+       "h": 18
+      },
+      {
+       "x": 634.3,
+       "y": 538.1,
+       "w": 151.1,
+       "h": 18
+      }
+     ],
+     "drawback_misuse": [
+      {
+       "x": 789.9,
+       "y": 538.1,
+       "w": 370.8,
+       "h": 18
+      },
+      {
+       "x": 634.3,
+       "y": 563.7,
+       "w": 472.2,
+       "h": 18
+      },
+      {
+       "x": 634.3,
+       "y": 589.3,
+       "w": 512.7,
+       "h": 18
+      }
+     ],
+     "drawback_misuse_short": [
+      {
+       "x": 879.4,
+       "y": 563.7,
+       "w": 227,
+       "h": 18
+      },
+      {
+       "x": 634.3,
+       "y": 589.3,
+       "w": 269.1,
+       "h": 18
+      }
+     ],
+     "launch_sentence": [
+      {
+       "x": 767.3,
+       "y": 71,
+       "w": 392.7,
+       "h": 20
+      },
+      {
+       "x": 634.3,
+       "y": 96.6,
+       "w": 469.1,
+       "h": 18
+      }
+     ],
+     "verify_officials": [
+      {
+       "x": 1107.8,
+       "y": 96.6,
+       "w": 73.5,
+       "h": 18
+      },
+      {
+       "x": 634.3,
+       "y": 122.2,
+       "w": 510.7,
+       "h": 18
+      }
+     ],
+     "data_sources": [
+      {
+       "x": 862.8,
+       "y": 651.5,
+       "w": 312.1,
+       "h": 18
+      },
+      {
+       "x": 634.3,
+       "y": 677.1,
+       "w": 515.7,
+       "h": 18
+      }
+     ],
+     "searchable_infrastructure": [
+      {
+       "x": 746.3,
+       "y": 296.8,
+       "w": 436.7,
+       "h": 18
+      },
+      {
+       "x": 634.3,
+       "y": 322.4,
+       "w": 485.5,
+       "h": 18
+      },
+      {
+       "x": 634.3,
+       "y": 348,
+       "w": 99,
+       "h": 18
+      }
+     ],
+     "not_truth_machine": [
+      {
+       "x": 634.3,
+       "y": 815.1,
+       "w": 458,
+       "h": 19
+      }
+     ]
+    }
+   },
+   "how_to_map": "video_px = doc_css - (0 for x, scrollY_per_frame[frame] for y); 1 css px = 1 video px"
+  },
+  "B": {
+   "file": "tc_scroll_top_to_drawback.mp4",
+   "fps": 30,
+   "frames": 360,
+   "duration": 12,
+   "size": "1920x1080 (captured @2x, downscaled)",
+   "keys": [
+    [
+     0,
+     0
+    ],
+    [
+     1.5,
+     0
+    ],
+    [
+     6.5,
+     6562
+    ],
+    [
+     7.5,
+     6562
+    ],
+    [
+     10.5,
+     7319
+    ],
+    [
+     12,
+     7319
+    ]
+   ],
+   "scrollY_per_frame": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    3,
+    4,
+    6,
+    9,
+    13,
+    18,
+    23,
+    30,
+    38,
+    46,
+    56,
+    68,
+    80,
+    94,
+    110,
+    126,
+    145,
+    164,
+    186,
+    209,
+    233,
+    259,
+    287,
+    316,
+    348,
+    380,
+    415,
+    451,
+    489,
+    528,
+    569,
+    612,
+    657,
+    703,
+    751,
+    800,
+    851,
+    903,
+    958,
+    1013,
+    1070,
+    1129,
+    1189,
+    1250,
+    1313,
+    1377,
+    1443,
+    1510,
+    1578,
+    1647,
+    1717,
+    1788,
+    1861,
+    1934,
+    2008,
+    2083,
+    2159,
+    2236,
+    2314,
+    2392,
+    2471,
+    2550,
+    2630,
+    2710,
+    2791,
+    2872,
+    2954,
+    3035,
+    3117,
+    3199,
+    3281,
+    3363,
+    3445,
+    3527,
+    3609,
+    3690,
+    3771,
+    3852,
+    3932,
+    4012,
+    4092,
+    4171,
+    4249,
+    4326,
+    4403,
+    4479,
+    4554,
+    4629,
+    4702,
+    4774,
+    4846,
+    4916,
+    4985,
+    5053,
+    5120,
+    5185,
+    5249,
+    5312,
+    5373,
+    5434,
+    5492,
+    5549,
+    5605,
+    5659,
+    5712,
+    5763,
+    5812,
+    5860,
+    5906,
+    5950,
+    5993,
+    6034,
+    6074,
+    6112,
+    6148,
+    6182,
+    6215,
+    6246,
+    6275,
+    6303,
+    6329,
+    6354,
+    6377,
+    6398,
+    6418,
+    6436,
+    6453,
+    6468,
+    6482,
+    6495,
+    6506,
+    6516,
+    6525,
+    6533,
+    6539,
+    6545,
+    6549,
+    6553,
+    6556,
+    6558,
+    6560,
+    6561,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6562,
+    6563,
+    6563,
+    6563,
+    6564,
+    6565,
+    6567,
+    6569,
+    6571,
+    6574,
+    6577,
+    6580,
+    6585,
+    6589,
+    6594,
+    6600,
+    6606,
+    6613,
+    6620,
+    6628,
+    6636,
+    6645,
+    6655,
+    6664,
+    6675,
+    6686,
+    6697,
+    6709,
+    6721,
+    6734,
+    6747,
+    6760,
+    6774,
+    6788,
+    6803,
+    6817,
+    6832,
+    6847,
+    6863,
+    6878,
+    6894,
+    6909,
+    6925,
+    6941,
+    6957,
+    6972,
+    6988,
+    7004,
+    7019,
+    7034,
+    7049,
+    7064,
+    7079,
+    7093,
+    7107,
+    7121,
+    7135,
+    7148,
+    7160,
+    7173,
+    7184,
+    7196,
+    7207,
+    7217,
+    7227,
+    7236,
+    7245,
+    7254,
+    7261,
+    7269,
+    7275,
+    7282,
+    7287,
+    7292,
+    7297,
+    7301,
+    7305,
+    7308,
+    7311,
+    7313,
+    7315,
+    7316,
+    7317,
+    7318,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319,
+    7319
+   ],
+   "final_hold_scrollY": 7319,
+   "boxes_in_video_px_during_final_hold": {
+    "elements": {
+     "para_what_happened": {
+      "x": 634.3,
+      "y": 62,
+      "w": 552,
+      "h": 139
+     },
+     "para_drawback": {
+      "x": 634.3,
+      "y": 503.5,
+      "w": 552,
+      "h": 113.4
+     },
+     "para_bigger_picture": {
+      "x": 634.3,
+      "y": 616.9,
+      "w": 552,
+      "h": 190.2
+     },
+     "para_yet": {
+      "x": 634.3,
+      "y": 807.1,
+      "w": 552,
+      "h": 164.6
+     }
+    },
+    "phrases": {
+     "drawback_lead": [
+      {
+       "x": 634.3,
+       "y": 511.5,
+       "w": 180.2,
+       "h": 19
+      }
+     ],
+     "drawback_sensitive": [
+      {
+       "x": 818.9,
+       "y": 512.5,
+       "w": 303.2,
+       "h": 18
+      },
+      {
+       "x": 634.3,
+       "y": 538.1,
+       "w": 151.1,
+       "h": 18
+      }
+     ],
+     "drawback_misuse": [
+      {
+       "x": 789.9,
+       "y": 538.1,
+       "w": 370.8,
+       "h": 18
+      },
+      {
+       "x": 634.3,
+       "y": 563.7,
+       "w": 472.2,
+       "h": 18
+      },
+      {
+       "x": 634.3,
+       "y": 589.3,
+       "w": 512.7,
+       "h": 18
+      }
+     ],
+     "drawback_misuse_short": [
+      {
+       "x": 879.4,
+       "y": 563.7,
+       "w": 227,
+       "h": 18
+      },
+      {
+       "x": 634.3,
+       "y": 589.3,
+       "w": 269.1,
+       "h": 18
+      }
+     ],
+     "launch_sentence": [
+      {
+       "x": 767.3,
+       "y": 71,
+       "w": 392.7,
+       "h": 20
+      },
+      {
+       "x": 634.3,
+       "y": 96.6,
+       "w": 469.1,
+       "h": 18
+      }
+     ],
+     "verify_officials": [
+      {
+       "x": 1107.8,
+       "y": 96.6,
+       "w": 73.5,
+       "h": 18
+      },
+      {
+       "x": 634.3,
+       "y": 122.2,
+       "w": 510.7,
+       "h": 18
+      }
+     ],
+     "data_sources": [
+      {
+       "x": 862.8,
+       "y": 651.5,
+       "w": 312.1,
+       "h": 18
+      },
+      {
+       "x": 634.3,
+       "y": 677.1,
+       "w": 515.7,
+       "h": 18
+      }
+     ],
+     "searchable_infrastructure": [
+      {
+       "x": 746.3,
+       "y": 296.8,
+       "w": 436.7,
+       "h": 18
+      },
+      {
+       "x": 634.3,
+       "y": 322.4,
+       "w": 485.5,
+       "h": 18
+      },
+      {
+       "x": 634.3,
+       "y": 348,
+       "w": 99,
+       "h": 18
+      }
+     ],
+     "not_truth_machine": [
+      {
+       "x": 634.3,
+       "y": 815.1,
+       "w": 458,
+       "h": 19
+      }
+     ]
+    }
+   },
+   "how_to_map": "video_px = doc_css - (0 for x, scrollY_per_frame[frame] for y); 1 css px = 1 video px"
+  }
+ },
+ "after_recording_check": {
+  "h3_y": 6757.5,
+  "drawback_y": 7822.546875
+ }
+}

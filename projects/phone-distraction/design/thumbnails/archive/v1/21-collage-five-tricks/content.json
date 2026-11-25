@@ -1,0 +1,20 @@
+{
+  "direction": "Collage over her (her asked-for style): a full natural photo of her (2:43), one object beside her head (an app with a red badge), one big lowercase serif line.",
+  "concept": "extra (collage)",
+  "follows": "inspiration/viral-samples/collage/ (\"Time to lock in.\", \"How to be Feminine\")",
+  "thumbnail_text": "not an accident",
+  "title": "Why You Can't Stop Scrolling: 5 Features Designed on Purpose",
+  "titles": [
+    "Why You Can't Stop Scrolling: 5 Features Designed on Purpose",
+    "Why Am I Addicted to My Phone? 5 Design Tricks to Blame"
+  ],
+  "scores": "A topic (image only) 5/5 · B with best title 7 · C taste 6 (round 2; fixes from round 2 applied after)",
+  "text": {
+    "words": "not an <i>accident</i>"
+  },
+  "images": {
+    "scene": "../../../../assets/scene/warm/s_163.5.jpg",
+    "front": "../../../../assets/scene/warm/mask/s_163.5.png"
+  },
+  "vars": {}
+}

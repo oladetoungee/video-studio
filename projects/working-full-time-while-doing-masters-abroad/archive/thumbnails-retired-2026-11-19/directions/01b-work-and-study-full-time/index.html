@@ -1,0 +1,20 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../lib/set.css"><style>
+.t{background:#17357B}
+/* her real room washed in ONE colour (her own UX RESEARCH thumbnail: room in deep green, she in full colour, the topic huge on top) */
+.rw{left:0;top:0;width:1280px;height:720px;overflow:hidden}
+.rw .room{position:absolute;width:var(--rw,1480px);left:var(--rx,-190px);top:var(--ry,-36px);filter:grayscale(1) contrast(.9)}
+.wash{inset:0;background:var(--wash,rgba(23,53,123,.86))}
+.me{position:absolute;width:calc(var(--rw,1480px) * 1405 / 2016);left:calc(var(--rx,-190px) + var(--rw,1480px) * 356 / 2016);top:calc(var(--ry,-36px) + var(--rw,1480px) * 384 / 2016);filter:drop-shadow(0 16px 30px rgba(0,0,0,.55))}
+.h{left:0;width:1280px;top:2px;text-align:center;font:400 134px/.98 FAN,sans-serif;color:#D8CDBB;text-transform:uppercase;white-space:nowrap;letter-spacing:.005em}
+.obj{position:absolute}
+.lap{left:-24px;top:332px;width:500px;transform:rotate(-6deg);filter:drop-shadow(0 18px 26px rgba(0,0,0,.55))}
+.lap img{width:100%;display:block}
+.scr{position:absolute;left:12.6%;top:35.5%;width:68.8%;height:57%;background:#16181D url(../../assets/px/laptop.jpg) no-repeat;background-size:1060px auto;background-position:-335px -160px}
+.bk{right:-26px;top:350px;width:430px;transform:rotate(5deg);filter:drop-shadow(0 18px 26px rgba(0,0,0,.55))}
+</style></head><body><div class="t">
+<div class="rw z1" data-move="room"><img class="room" data-img="room" alt=""></div><div class="wash z2"></div>
+<div class="h z3" data-k="h"></div>
+<img class="cut me z4" data-img="me" data-move="her" alt="">
+<div class="obj lap z5" data-move="laptop"><img data-img="laptop" alt=""><div class="scr"></div></div>
+<img class="obj bk z5" data-img="books" data-move="books" alt="">
+</div><script src="../../lib/bind.js"></script></body></html>

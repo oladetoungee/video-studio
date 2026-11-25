@@ -1,0 +1,79 @@
+1
+00:00:00,163 --> 00:00:03,183
+what people say and what people do are often
+
+2
+00:00:03,183 --> 00:00:05,023
+very different what people say, what they
+
+3
+00:00:05,023 --> 00:00:07,023
+give you in a survey, is usually different
+
+4
+00:00:07,023 --> 00:00:09,333
+from what they do when you watch them
+
+5
+00:00:09,462 --> 00:00:10,913
+if you ask
+
+6
+00:00:11,083 --> 00:00:12,243
+someone how they use an app, they will give
+
+7
+00:00:12,243 --> 00:00:13,043
+you an answer
+
+8
+00:00:13,043 --> 00:00:14,823
+if you watch them use the app, they could
+
+9
+00:00:14,823 --> 00:00:16,363
+end up doing something completely different
+
+10
+00:00:16,363 --> 00:00:17,842
+from the answer that they gave you
+
+11
+00:00:17,842 --> 00:00:19,563
+and they might genuinely believe what they
+
+12
+00:00:19,563 --> 00:00:20,503
+told you we are human beings
+
+13
+00:00:20,503 --> 00:00:22,323
+we are just not very good at noticing our
+
+14
+00:00:22,323 --> 00:00:25,505
+own behaviours so good UX research watches
+
+15
+00:00:25,505 --> 00:00:27,283
+as much as it asks
+
+16
+00:00:27,283 --> 00:00:29,233
+what people say still matters
+
+17
+00:00:29,402 --> 00:00:31,463
+sometimes they do exactly what they tell you
+
+18
+00:00:31,463 --> 00:00:33,423
+but when what they say and what they do
+
+19
+00:00:33,423 --> 00:00:35,943
+don't match, then working out why they don't
+
+20
+00:00:35,943 --> 00:00:37,867
+match is also a very useful finding

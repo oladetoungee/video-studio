@@ -1,0 +1,24 @@
+{
+  "direction": "REMAKE of viral sample 9 (\"Thought of these?\"): her cut-out big in the centre with a white sticker edge, a dark navy painted side on the left with a chalky drawing and a row of small photo tiles, a pale paper side on the right with pencil sketches, a dictionary card and a photo; one bold italic outlined question across the left. Left side = married (chalk rings, ring box, proposal, the news headline, Ghana flag); right side = divorced (pencil sketch of a torn certificate and a broken ring, a dictionary card for 'divorce').",
+  "concept": "R9",
+  "sample": "9",
+  "thumbnail_text": "Married or divorced?",
+  "title": "You Can Now Check If Someone Is Married in Ghana",
+  "titles": [
+    "You Can Now Check If Someone Is Married in Ghana",
+    "Marrify: Ghana's App to Check If Someone Is Married",
+    "Check Marital Status Online: Ghana's New App"
+  ],
+  "text": {
+    "q": "Married or divorced?",
+    "dw": "divorce", "dp": "/dɪˈvɔːs/ n.", "dd": "the <mark>legal ending of a marriage</mark> by a court or other competent body."
+  },
+  "images": {
+    "front": "../../assets/scene/warm/mask/s_117.60.png",
+    "box": "../../assets/stock/ringbox_black_cut.png",
+    "news": "../../assets/stock/ringbox_cut.png",
+    "hands": "../../assets/stock/paper_bundles.jpg",
+    "rings": "../../assets/stock/rings_paper.jpg"
+  },
+  "vars": {}
+}

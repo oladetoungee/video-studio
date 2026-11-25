@@ -1,0 +1,12 @@
+{
+ "t": {
+  "teaser/label": {
+   "hide": true
+  }
+ },
+ "mix": {
+  "voice": 5,
+  "music": -6,
+  "sfx": 0
+ }
+}

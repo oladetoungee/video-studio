@@ -1,0 +1,7 @@
+[00:00] Do you notice how the camera is slowly zooming in?
+[00:02] That is my visual hook.
+[00:04] Did you notice this text on the screen?
+[00:06] That is my written hook.
+[00:07] Did you hear the sound at the beginning of the video?
+[00:10] That is my sound hook.
+[00:11] And the question I'm about to ask next is my verbal hook.

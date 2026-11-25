@@ -1,0 +1,63 @@
+1
+00:00:00,133 --> 00:00:01,662
+you might be thinking that UX research
+
+2
+00:00:01,662 --> 00:00:03,243
+sounds like something that only big
+
+3
+00:00:03,243 --> 00:00:05,133
+companies with big budgets can do
+
+4
+00:00:05,133 --> 00:00:07,782
+but even as a small startup, some research
+
+5
+00:00:07,782 --> 00:00:09,703
+is always better than no research
+
+6
+00:00:09,792 --> 00:00:10,583
+you don't need a lab
+
+7
+00:00:10,583 --> 00:00:12,083
+talk to five people who would actually use
+
+8
+00:00:12,083 --> 00:00:15,012
+your product before you start to build maybe
+
+9
+00:00:15,012 --> 00:00:16,912
+yourself and a few friends
+
+10
+00:00:17,242 --> 00:00:19,103
+watch three of your friends try your app on
+
+11
+00:00:19,103 --> 00:00:20,203
+a video call
+
+12
+00:00:20,333 --> 00:00:21,683
+with messages, with feedback
+
+13
+00:00:21,683 --> 00:00:23,783
+that also counts, because good design goes
+
+14
+00:00:23,783 --> 00:00:26,353
+so much deeper than just a nice visual
+
+15
+00:00:26,353 --> 00:00:28,303
+it's about whether the thing actually works
+
+16
+00:00:28,303 --> 00:00:29,700
+for the people using it

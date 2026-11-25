@@ -1,0 +1,26 @@
+{
+  "direction": "Three sticky notes stuck on the wall beside her, each an index type and what it is for (B-tree: ranges and sorting; hash: exact match; full-text: words in text). Follows viral sample 3 (framework on sticky notes). Round 2: no mini icons, notes spaced apart, marker handwriting. Round 4 (composition): her centred with the three notes stuck round her, the question in lowercase serif along the bottom.",
+  "concept": "T08",
+  "thumbnail_text": "which index type?",
+  "title": "Database Index Types: Which One Should You Use?",
+  "titles": [
+    "Database Index Types: Which One Should You Use?",
+    "B-Tree vs Hash vs Full-Text: Database Index Types",
+    "Database Indexing for Beginners: Fix Slow SQL Queries"
+  ],
+  "text": {
+    "a": "which <i style=\"color:#FFC53D\">index type?</i>",
+    "s1": "B-tree",
+    "s2": "Hash",
+    "s3": "Full-text",
+    "d1": "ranges, sorting",
+    "d2": "exact match",
+    "d3": "words in text"
+  },
+  "images": {
+    "scene": "../../assets/scene/f_194.4.jpg"
+  },
+  "frame": "3:14.4 (hands up, puzzled, mouth closed)",
+  "vars": {},
+  "scores": "final gate (round 4): A topic/click 4/5 · B pair 6 · C taste 7"
+}

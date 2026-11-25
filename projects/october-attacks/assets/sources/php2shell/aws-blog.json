@@ -1,0 +1,234 @@
+{
+ "story": "php2shell",
+ "outlet": "AWS Security Blog",
+ "slug": "aws-blog",
+ "url": "https://aws.amazon.com/blogs/security/amazon-threat-intelligence-identifies-php2shell-exploitation-prior-to-public-disclosure-in-madpot/",
+ "finalUrl": "https://aws.amazon.com/blogs/security/amazon-threat-intelligence-identifies-php2shell-exploitation-prior-to-public-disclosure-in-madpot/",
+ "status": "loaded",
+ "http": 200,
+ "title": "Amazon Threat Intelligence identifies PHP2Shell exploitation prior to public disclosure in MadPot | Amazon Web Services",
+ "h1": "Amazon Threat Intelligence identifies PHP2Shell exploitation prior to public disclosure in MadPot",
+ "published": "2026-10-21T15:36:26-07:00",
+ "files": {
+  "fold": "php2shell/aws-blog_fold.png",
+  "full": "php2shell/aws-blog_full.jpg",
+  "scroll": "php2shell/aws-blog_scroll.mp4"
+ },
+ "full": {
+  "width": 1440,
+  "height": 5116,
+  "pageHeight": 5116,
+  "zoom": 1,
+  "quotes": [
+   {
+    "quote": "Amazon Threat Intelligence identified a PHP2Shell exploitation attempt dating to Oct. 17, 2026, in MadPot telemetry, four days before public disclosure",
+    "box": {
+     "x": 135,
+     "y": 425,
+     "w": 748,
+     "h": 39
+    },
+    "lines": [
+     {
+      "x": 135,
+      "y": 425,
+      "w": 748,
+      "h": 17
+     },
+     {
+      "x": 135,
+      "y": 447,
+      "w": 213,
+      "h": 17
+     }
+    ]
+   },
+   {
+    "quote": "PHP2Shell is now seeing broad exploitation attempts in the wild",
+    "box": {
+     "x": 221,
+     "y": 754,
+     "w": 408,
+     "h": 17
+    },
+    "lines": [
+     {
+      "x": 221,
+      "y": 754,
+      "w": 408,
+      "h": 17
+     }
+    ]
+   },
+   {
+    "quote": "AI-assisted analysis makes it cheaper to turn a patch diff or advisory into a working exploit",
+    "box": {
+     "x": 157,
+     "y": 949,
+     "w": 741,
+     "h": 40
+    },
+    "lines": [
+     {
+      "x": 468,
+      "y": 949,
+      "w": 430,
+      "h": 17
+     },
+     {
+      "x": 157,
+      "y": 972,
+      "w": 138,
+      "h": 17
+     }
+    ]
+   }
+  ]
+ },
+ "scroll": {
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "seconds": 8,
+  "keyframes": [
+   {
+    "t": 0,
+    "y": 131
+   },
+   {
+    "t": 1,
+    "y": 131
+   },
+   {
+    "t": 1.879,
+    "y": 344
+   },
+   {
+    "t": 2.979,
+    "y": 344
+   },
+   {
+    "t": 3.84,
+    "y": 539
+   },
+   {
+    "t": 8,
+    "y": 539
+   }
+  ],
+  "zoom": 1,
+  "easing": "easeInOutCubic between keyframes, holds where y is equal",
+  "capped": false,
+  "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)",
+  "quotes": [
+   {
+    "quote": "Amazon Threat Intelligence identified a PHP2Shell exploitation attempt dating to Oct. 17, 2026, in MadPot telemetry, four days before public disclosure",
+    "inVideo": true,
+    "still": true,
+    "t": 0.53,
+    "visibleStill": [
+     0,
+     1.07
+    ],
+    "scrollY": 131,
+    "box": {
+     "x": 375,
+     "y": 294,
+     "w": 748,
+     "h": 39
+    },
+    "lines": [
+     {
+      "x": 375,
+      "y": 294,
+      "w": 748,
+      "h": 17
+     },
+     {
+      "x": 375,
+      "y": 316,
+      "w": 213,
+      "h": 17
+     }
+    ],
+    "docBox": {
+     "x": 375,
+     "y": 425,
+     "w": 748,
+     "h": 39
+    },
+    "layoutDriftPx": 0
+   },
+   {
+    "quote": "PHP2Shell is now seeing broad exploitation attempts in the wild",
+    "inVideo": true,
+    "still": true,
+    "t": 2.43,
+    "visibleStill": [
+     1.8,
+     3.07
+    ],
+    "scrollY": 344,
+    "box": {
+     "x": 461,
+     "y": 410,
+     "w": 408,
+     "h": 17
+    },
+    "lines": [
+     {
+      "x": 461,
+      "y": 410,
+      "w": 408,
+      "h": 17
+     }
+    ],
+    "docBox": {
+     "x": 461,
+     "y": 754,
+     "w": 408,
+     "h": 17
+    },
+    "layoutDriftPx": 0
+   },
+   {
+    "quote": "AI-assisted analysis makes it cheaper to turn a patch diff or advisory into a working exploit",
+    "inVideo": true,
+    "still": true,
+    "t": 5.9,
+    "visibleStill": [
+     3.77,
+     8.03
+    ],
+    "scrollY": 539,
+    "box": {
+     "x": 397,
+     "y": 410,
+     "w": 741,
+     "h": 40
+    },
+    "lines": [
+     {
+      "x": 708,
+      "y": 410,
+      "w": 430,
+      "h": 17
+     },
+     {
+      "x": 397,
+      "y": 433,
+      "w": 138,
+      "h": 17
+     }
+    ],
+    "docBox": {
+     "x": 397,
+     "y": 949,
+     "w": 741,
+     "h": 40
+    },
+    "layoutDriftPx": 0
+   }
+  ]
+ }
+}

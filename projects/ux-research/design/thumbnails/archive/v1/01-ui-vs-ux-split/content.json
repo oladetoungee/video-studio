@@ -1,0 +1,24 @@
+{
+  "direction": "The same checkout screen twice (Illustration). Left, UI, on warm paper: clean and calm. Right, UX, over her real room (sceptical, hand at face): the same screen buried under pop-ups. Follows Kole Jain's CLUELESS / FLUENT split (506K, 16x) and uxpeak's Junior / Senior phones.",
+  "concept": "T02 (top pair 1)",
+  "thumbnail_text": "UI | UX",
+  "title": "UI vs UX: Why a Pretty App Can Still Fail",
+  "titles": [
+    "UI vs UX: Why a Pretty App Can Still Fail",
+    "UI vs UX vs UX Research: The Difference Explained",
+    "Why Beautiful Apps Can Be Awful to Use (UX Research)"
+  ],
+  "recommended": false,
+  "text": {
+    "w1": "UI",
+    "w2": "UX",
+    "m1": "",
+    "m2": ""
+  },
+  "images": {
+    "scene": "../../assets/scene/g/s_601.jpg",
+    "front": "../../assets/scene/g/mask/s_601.png"
+  },
+  "vars": {},
+  "scores": "a 4/5 · 4/6 · 3/6 | b 7/6 · 6/6 · 8/7 | c 3 · 4 · 6"
+}

@@ -1,0 +1,23 @@
+{
+  "direction": "Literal objects either side of her: a book page ending in THE END (left) under BOOKS END., a phone feed running off the bottom (right) under FEEDS DON'T.; her in the middle (7:35).",
+  "concept": "TH22",
+  "follows": "viral sample 1 (literal objects) + Day 1 / Day 900 splits",
+  "thumbnail_text": "BOOKS END. FEEDS DON'T.",
+  "title": "Why Can't I Stop Scrolling? It Was Designed That Way",
+  "titles": [
+    "Why Can't I Stop Scrolling? It Was Designed That Way",
+    "Why You Can't Stop Scrolling: 5 Features Designed on Purpose"
+  ],
+  "scores": "A topic (image only) 8/7 · B with best title 8 · C taste 6 (round 2; fixes from round 2 applied after)",
+  "text": {
+    "words": "",
+    "w1": "Books end.",
+    "w2": "Feeds don't.",
+    "end": "The End"
+  },
+  "images": {
+    "scene": "../../../../assets/scene/warm/s_455.5.jpg",
+    "front": "../../../../assets/scene/warm/mask/s_455.5.png"
+  },
+  "vars": {}
+}

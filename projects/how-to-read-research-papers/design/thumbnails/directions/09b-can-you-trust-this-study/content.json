@@ -1,0 +1,29 @@
+{
+  "text": {
+    "a": "Can you trust",
+    "b": "this study?",
+    "cr": "K. Caine, \"Local Standards for Sample Size at CHI\", CHI 2016 (open.clemson.edu)"
+  },
+  "images": {
+    "me": "../../assets/photo/shoot/room-1605.jpg"
+  },
+  "kind": "a real paper on screen (abstract, one line highlighted, the 12 circled) + her thinking in a small round camera bubble",
+  "board": "Thumbnails 141 (viral: \"unclear ACL / Yoruba paper\" screenshot: the paper big, the speaker small in a corner)",
+  "fonts": [
+    "thumbs-01 Anton + red box (white on #1A1A1A, white on red #D9262B, from Thumbnails 10)"
+  ],
+  "colours": "thumbs-01: ground #1A1A1A, #FFFFFF, red #D9262B; highlighter #F7F02B",
+  "thumbnail_text": "CAN YOU TRUST THIS STUDY? + a real abstract with \"the most common sample size is 12.\" highlighted",
+  "titles": [
+    "How to Tell if a Research Paper Is Any Good",
+    "Only 12 People? How to Tell if a Study Is Any Good",
+    "How I Check if a Research Paper Is Worth Trusting"
+  ],
+  "direction": "Rework of 09 (2026-11-16). 09 was words left / her right (like 08) with three text blocks. 09b copies Thumbnails 141: the real paper is the picture (Caine CHI 2016 abstract, verbatim, credited), one line highlighted, the 12 circled; the question in Anton with a red box; she thinks it over in a round camera bubble.",
+  "nudge": {},
+  "vars": {},
+  "class": "no-lift",
+  "title": "How to Tell if a Research Paper Is Any Good",
+  "scores": "cold critic 2026-11-19, 3 rounds, alone / with title: 6/7, 7/7, 6/7",
+  "recommended": false
+}

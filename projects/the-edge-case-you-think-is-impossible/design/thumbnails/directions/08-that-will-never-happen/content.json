@@ -1,0 +1,27 @@
+{
+  "text": {
+    "q": "“That will<br><b>never</b><br>happen.”",
+    "toast": "New bug report"
+  },
+  "images": {
+    "room": "../../assets/shoot/room3-1589.jpg",
+    "me": "../../assets/shoot/me3-1589.png"
+  },
+  "kind": "photo left + serif quote right",
+  "board": "Thumbnails 48 (yt-76: \"Write to Understand Your Life\", photo left, white serif right)",
+  "fonts": [
+    "thumbs-05 Libre Baskerville Regular + Bold (white on #2D2B2A, Thumbnails 48)"
+  ],
+  "colours": "Thumbnails 48: #2D2B2A / #FFFFFF",
+  "thumbnail_text": "“That will never happen.”",
+  "scores": "cold critic r5: 7.5 / 8.5 (then the stray hand cropped out; not re-scored)",
+  "titles": [
+    "Your Users Will Find the Bug You Said Was Impossible",
+    "Edge Cases in Software: 8 Times “Never” Happened"
+  ],
+  "title": "Your Users Will Find the Bug You Said Was Impossible",
+  "direction": "Copies Thumbnails 48: her photo on the left, the line every developer says set big in a white serif on the dark right half, \"never\" in bold.",
+  "nudge": {},
+  "vars": {},
+  "class": "no-lift"
+}

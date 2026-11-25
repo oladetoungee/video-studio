@@ -1,0 +1,22 @@
+{
+  "direction": "Her hand on her head, looking away, next to a settings page full of vague toggles (Illustration). Cream headline, orange only on CONFUSE. A reaction and a screen everyone recognises (her reading-stack edit: big expressive face).",
+  "concept": "T19",
+  "thumbnail_text": "WHY APPS CONFUSE YOU",
+  "title": "Why Some Apps Are So Confusing (UX Research Explained)",
+  "titles": [
+    "Why Some Apps Are So Confusing (UX Research Explained)",
+    "What Is UX Research? Why Some Apps Are So Confusing",
+    "Why Beautiful Apps Can Be Awful to Use (UX Research)"
+  ],
+  "text": {
+    "l1": "WHY APPS",
+    "l2": "<span class=\"acc\">CONFUSE</span> YOU"
+  },
+  "images": {
+    "scene": "../../assets/scene/g/s_740.5.jpg",
+    "front": "../../assets/scene/g/mask/s_740.5.png"
+  },
+  "vars": {},
+  "scores": "a 5/8 · 4/7 · 5/7 | b 8/8 · 8/7 · 9/8 | c 6 · 6 · 5",
+  "recommended": true
+}

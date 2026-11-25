@@ -1,0 +1,28 @@
+{
+  "direction": "Faceless, built to read at 320 px: what a user SAYS (a big speech bubble, 'I'd use this every day!') against what they DO (their phone: the app opened 0 times this week), with a big orange '≠' between them: that gap is why UX researchers watch. Paper ground, one accent. References: yt tweet-card thumbnails ('Forget about going viral' 20, 'QUIT DATA NOW'), her database-indexes thumbnail (two things linked by an arrow).",
+  "thumbnail_text": "Why UX researchers watch users",
+  "text": {
+    "hd": "Why UX researchers<br><span class=\"acc\">watch users</span>",
+    "say": "What they say",
+    "do": "What they do",
+    "said": "“I’d use this every day!”",
+    "neq": "≠",
+    "n": "0 times",
+    "ns": "opened this week"
+  },
+  "images": {},
+  "vars": {
+    "--ground": "#EDE9E2",
+    "--accent": "#E8501E"
+  },
+  "titles": [
+    "UX Research: Why Users Say One Thing and Do Another",
+    "UX Research for Beginners: Watch Users, Don't Just Ask",
+    "What Is UX Research? Explained From Scratch"
+  ],
+  "title": "UX Research: Why Users Say One Thing and Do Another",
+  "set": 3,
+  "kind": "other",
+  "scores": "critic scores R1 7.5 · R2 7.5 · R3 7.5 · R4 7 · R5 7.5",
+  "recommended": false
+}

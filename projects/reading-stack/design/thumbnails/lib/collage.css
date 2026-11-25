@@ -1,0 +1,57 @@
+/* reading-stack thumbnails, collage over the creator (2026-10-07, her new direction; samples in inspiration/viral-samples/collage/).
+   Measured on the samples at 1280x720: the full room photo fills the frame, her eyes at ~35-42 % of the height; ONE serif line
+   (high-contrast, tightly tracked), white with a soft shadow, across her chest, ~55-65 % of the width; 1-2 small white sans labels
+   (~24 px, medium) tucked in corners; 3-4 real photo cut-outs, 150-260 px, tilted a few degrees, one soft shadow recipe, kept
+   30 px+ away from her head; no panels, boxes or gradients.
+   Every block is data-move (drag / resize / hide in the studio), every photo data-img (swap), every text data-k. */
+@import url('base.css');
+@font-face { font-family: 'Playfair'; src: url('../fonts/PlayfairDisplay.ttf') format('truetype'); font-weight: 400 900; }
+@font-face { font-family: 'Playfair'; src: url('../fonts/PlayfairDisplay-Italic.ttf') format('truetype'); font-weight: 400 900; font-style: italic; }
+@font-face { font-family: 'Instrument Sans'; src: url('../fonts/InstrumentSans.ttf') format('truetype'); font-weight: 400 700; }
+
+.t { --ground: #1a1714; --fg: #FFFFFF; --accent: #D7261E; --shadow: drop-shadow(0 3px 6px rgba(0,0,0,.38)) drop-shadow(0 14px 26px rgba(0,0,0,.30)); }
+/* her photo, never flipped: --px/--py/--pw position and size it (cover 1280x720) */
+img.photo { position: absolute; left: var(--px, 0px); top: var(--py, 0px); width: var(--pw, 1280px); display: block; }
+
+/* the big serif line */
+.big { position: absolute; font-family: 'Playfair', serif; font-weight: 500; color: var(--fg); white-space: nowrap;
+       letter-spacing: -0.035em; line-height: 1; text-shadow: 0 2px 3px rgba(0,0,0,.30), 0 4px 22px rgba(0,0,0,.45); z-index: 6; }
+.big em { font-style: italic; }
+.big .acc { color: var(--accent); }
+.big.c { transform: translateX(-50%); }
+.kick { position: absolute; font-family: 'Playfair', serif; font-style: italic; font-weight: 500; color: var(--fg); white-space: nowrap;
+        letter-spacing: -0.02em; z-index: 6; text-shadow: 0 2px 3px rgba(0,0,0,.30), 0 4px 18px rgba(0,0,0,.42); }
+
+/* the small labels */
+.lab { position: absolute; font-family: 'Instrument Sans', sans-serif; font-weight: 500; font-size: 23px; letter-spacing: 0;
+       color: #fff; white-space: nowrap; text-shadow: 0 1px 3px rgba(0,0,0,.55), 0 2px 8px rgba(0,0,0,.35); z-index: 7; }
+
+/* a real photo cut-out floating on the photo */
+.obj { position: absolute; z-index: 4; transform: rotate(var(--r, 0deg)); filter: drop-shadow(0 2px 3px rgba(0,0,0,.40)) drop-shadow(0 8px 18px rgba(0,0,0,.36)); }
+.obj img { display: block; width: 100%; }
+
+/* a closed book: the real cover, turned a little in 3D, with a thin block of page edges */
+.book { position: absolute; z-index: 4; transform: rotate(var(--r, 0deg)); filter: var(--shadow); }
+.book .bk { position: relative; }
+.book img { display: block; width: 100%; border-radius: 1px 3px 3px 1px; outline: 1px solid rgba(0,0,0,.15); outline-offset: -1px; }
+.book .bk::after { content: ''; position: absolute; left: 4px; top: 0; bottom: 0; width: 2px; background: rgba(0,0,0,.08); }
+
+/* the open contents page (a real frame from her video, un-mirrored, flattened) */
+.page { position: absolute; z-index: 5; transform: rotate(var(--r, 0deg)); filter: var(--shadow); }
+.page img { display: block; width: 100%; }
+.page svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.page .ink { fill: none; stroke: var(--accent); stroke-width: 13; stroke-linecap: round; stroke-linejoin: round; opacity: .92; }
+
+/* a square photo crop, flat, like in-defense-of-being-online (no border, no tilt) */
+.sq { position: absolute; z-index: 4; overflow: hidden; width: var(--cw); height: var(--ch); box-shadow: 0 4px 12px rgba(0,0,0,.30); }
+.sq.w { outline: 6px solid #fff; }
+.sq img { position: absolute; display: block; }
+/* a polaroid (flat option) */
+.pin { position: absolute; z-index: 4; transform: rotate(var(--r, 0deg)); background: #fff; padding: 12px 12px 58px; filter: var(--shadow); }
+.pin .crop { position: relative; overflow: hidden; width: var(--cw); height: var(--ch); }
+.pin .crop img { position: absolute; display: block; }
+
+/* hand-drawn pen line (svg over the whole frame) */
+.pen { position: absolute; inset: 0; z-index: 6; pointer-events: none; }
+.pen path { fill: none; stroke: #fff; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round;
+            filter: drop-shadow(0 2px 3px rgba(0,0,0,.45)); }

@@ -1,0 +1,50 @@
+URL: https://www.infosecurity-magazine.com/news/opencode-breach-openai-anthropic/
+STATUS: loaded (http 200)
+FINAL: https://www.infosecurity-magazine.com/news/opencode-breach-openai-anthropic/
+TITLE: OpenCode Breach Could Affect OpenAI, Anthropic and Google - Infosecurity Magazine
+H1: OpenCode Breach Could Affect OpenAI, Anthropic and Google
+OG: OpenCode Breach Could Affect OpenAI, Anthropic and Google | Infosecurity Magazine
+PUBLISHED: 2026-10-19T13:30:00  MODIFIED: 
+DOC_H: 3402
+
+A security breach affecting open-source AI agent framework provider OpenCode could expose API keys linked to users of Anthropic, OpenAI and Google AI models.
+
+On October 17, OpenCode confirmed a security breach that occurred the night before and affected its Console service, which allows teams to share access to AI models through centrally managed API credentials.
+
+Rather than exposing the underlying OpenAI, Anthropic or Google keys to individual team members, Console stores each workspace’s credentials and uses them to authenticate requests to the respective providers.
+
+OpenCode is a widely used AI agent platform designed for software developers. It has 217,000 stars on GitHub.
+
+In a July 2026 interview with Y Combinator – financial backer of Anomaly, the company which develops and maintains OpenCode – the founder and CEO Jay V claimed OpenCode had reached approximately 13 million monthly active users and 4.6 million weekly active users.
+
+OpenCode Points to Unauthorized Access to Legacy System
+
+The incident was “related to a large-scale distillation attack that impacted 1.4% of OpenCode Console users,” said OpenCode on social media.
+
+“We have notified them all this morning via email. If you did not get an email you were not impacted, it was a subset of users who had external providers linked,” the company added.
+
+The email was made public by several OpenCode users on the dedicated subreddit forum and the official Discord channel.
+
+The email said OpenCode had "identified unauthorized access to a legacy system that we were in the process of decommissioning" and that "third party provider keys (e.g. OpenAI, Anthropic) saved in your workspace may have been exposed."
+
+Specifically, Dax Raad, one of the main contributors to OpenCode and co-founder of Anomaly, noted on X that the breach involved only "the OpenCode Console, not OpenCode itself.”
+
+OpenCode also notified Anthropic, OpenAI and Google to remediate the issue.  
+
+Recommended Steps to Mitigate OpenCode Threat
+
+In an incident response report, software supply chain security firm Safeguard provided recommendations for OpenCode users to identify whether they have been affected by the incident and mitigate its impact:
+
+Key steps include:
+
+Checking whether you may be affected: search your inbox for the subject line “Action Required: Potential provider key breach.” If you have received the email, follow the guidance provided. If not, still review your keys as a precaution
+Identifying all potentially exposed keys: list every OpenAI, Anthropic and Google Gemini API key that was ever stored in an OpenCode Console workspace, including keys added by other workspace admins
+Reviewing API usage for suspicious activity: check each provider’s usage and billing reports from 16 October onward, and further back if possible. Look for unexpected usage spikes, unfamiliar models or unexplained charges
+Creating replacement keys: generate new API keys for any potentially exposed credentials before revoking the old ones. Use project- or workspace-specific keys with appropriate restrictions and spending limits
+Revoking potentially exposed keys: disable or delete the old keys through the relevant provider dashboard. Do not assume a key is safe simply because it has not shown suspicious usage
+Updating all systems using the old keys: replace them in CI/CD secrets, environment files, local agent configurations, production applications, and team members’ machines. Ensure all consumers use the new keys before removing any remaining dependencies on the old ones
+Verifying that old keys no longer function: test revoked keys against the relevant provider APIs and confirm they return an authentication error rather than a successful response
+Applying additional security controls: restrict keys to the required projects and APIs, set appropriate spending limits and budget alerts, and review workspace access and permissions
+Securing your OpenCode Console configuration: if you continue using Console with your own provider credentials, add a dedicated, restricted API key rather than reusing a production key.
+
+OpenCode and Anomaly have been contacted with a request for comment.

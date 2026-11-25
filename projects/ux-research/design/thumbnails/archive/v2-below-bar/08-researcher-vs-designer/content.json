@@ -1,0 +1,26 @@
+{
+  "direction": "A split versus card: the researcher side (warm paper, a big blue magnifying glass) and the designer side (electric blue, a big white pencil), her calm cut-out in black and white standing on the seam, a 'vs' dot between the two job titles.",
+  "thumbnail_text": "UX Researcher vs UX Designer",
+  "titles": [
+    "UX Researcher or UX Designer: Which Job Fits You?",
+    "UX Researcher vs UX Designer: Who Does What on a Team?",
+    "UX Researcher or UX Designer? Here's the Real Difference"
+  ],
+  "text": {
+    "a": "UX<br>Researcher",
+    "b": "UX<br>Designer",
+    "vs": "vs"
+  },
+  "images": {
+    "me": "../../assets/cut/gbemi-direct-hard.png"
+  },
+  "vars": {
+    "--ground": "#EDE9E2",
+    "--fg": "#17140F",
+    "--accent": "#1B3FD8",
+    "--ol": "#FFFFFF"
+  },
+  "scores": "",
+  "recommended": false,
+  "title": "UX Researcher or UX Designer: Which Job Fits You?"
+}

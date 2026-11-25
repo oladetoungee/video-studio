@@ -1,0 +1,26 @@
+{
+ "label": "Photo/colour test (agent)",
+ "auto": false,
+ "savedAt": 1790872156110,
+ "content": {
+  "direction": "Face + book + 3-word hook",
+  "title": "How to Remember the Non-Fiction You Read",
+  "text": {
+   "line1": "Read the",
+   "line2": "contents",
+   "line3": "first."
+  },
+  "images": {
+   "person": "../../../../assets/uploads/cutouts/Reading-Corner-cutout.png"
+  },
+  "vars": {
+   "--x": "430px",
+   "--y": "6px",
+   "--w": "912px",
+   "--ground": "#1B3FD8",
+   "--fg": "#F7F5F0",
+   "--gridc": "rgba(255,255,255,.10)",
+   "--rule": "rgba(255,255,255,.85)"
+  }
+ }
+}

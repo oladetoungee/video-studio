@@ -1,0 +1,50 @@
+{
+ "label": "Autosave",
+ "auto": true,
+ "savedAt": 1791060627535,
+ "edits": {
+  "t": {
+   "memorising/Memorising *sticks.*": {
+    "pos": {
+     "9x16": {
+      "dx": 252.1,
+      "dy": 33.5
+     }
+    }
+   },
+   "three-books/@cover marple": {
+    "pos": {
+     "16x9": {
+      "hide": true
+     }
+    }
+   },
+   "three-books/@cover convivial": {
+    "pos": {
+     "16x9": {
+      "hide": true
+     }
+    }
+   },
+   "three-books/@cover baratta": {
+    "pos": {
+     "16x9": {
+      "hide": true
+     }
+    }
+   },
+   "three-books/caption Suggested by a course supervisor": {
+    "s": ""
+   },
+   "today/Today:": {
+    "hide": true
+   }
+  },
+  "captions": {},
+  "mix": {
+   "voice": 0,
+   "music": -12,
+   "sfx": 0
+  }
+ }
+}

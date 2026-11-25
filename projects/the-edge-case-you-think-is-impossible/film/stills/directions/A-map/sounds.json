@@ -1,0 +1,18 @@
+{
+ "music": "443",
+ "musicAt": 20,
+ "musicDb": -23,
+ "sfxDb": -4,
+ "roles": {
+  "paper": "paper-slide",
+  "pen": "pen-on-paper",
+  "hit": "wood-hard-hit",
+  "pencil": "pencil-short",
+  "pencil2": "pencil-fast",
+  "stamp": "punch-soft-quick",
+  "card": "card-place",
+  "card2": "paper-quick-move",
+  "marker": "marker-line",
+  "wrong": "wrong-answer"
+ }
+}

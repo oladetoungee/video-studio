@@ -1,0 +1,116 @@
+{
+ "story": "emudhra",
+ "outlet": "Cybersecurity Dive",
+ "slug": "cybersecuritydive",
+ "url": "https://www.cybersecuritydive.com/news/website-encryption-security-certificates-emudhra-incident/833622/",
+ "finalUrl": "https://www.cybersecuritydive.com/news/website-encryption-security-certificates-emudhra-incident/833622/",
+ "status": "loaded",
+ "http": 200,
+ "title": "Weak encryption certificates could have let hackers easily spoof websites",
+ "h1": "Don’t miss tomorrow’s Cybersecurity industry news",
+ "published": "2026-10-21",
+ "files": {
+  "fold": "emudhra/cybersecuritydive_fold.png",
+  "full": "emudhra/cybersecuritydive_full.jpg",
+  "scroll": "emudhra/cybersecuritydive_scroll.mp4"
+ },
+ "full": {
+  "width": 1440,
+  "height": 4751,
+  "pageHeight": 4751,
+  "zoom": 1,
+  "quotes": [
+   {
+    "quote": "Weak encryption certificates could have let hackers easily spoof websites",
+    "box": {
+     "x": 135,
+     "y": 179,
+     "w": 746,
+     "h": 109
+    },
+    "lines": [
+     {
+      "x": 135,
+      "y": 179,
+      "w": 697,
+      "h": 61
+     },
+     {
+      "x": 135,
+      "y": 227,
+      "w": 746,
+      "h": 61
+     }
+    ]
+   }
+  ]
+ },
+ "scroll": {
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "seconds": 8,
+  "keyframes": [
+   {
+    "t": 0,
+    "y": 0
+   },
+   {
+    "t": 1,
+    "y": 0
+   },
+   {
+    "t": 2.55,
+    "y": 1400
+   },
+   {
+    "t": 8,
+    "y": 1400
+   }
+  ],
+  "zoom": 1,
+  "easing": "easeInOutCubic between keyframes, holds where y is equal",
+  "capped": false,
+  "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)",
+  "quotes": [
+   {
+    "quote": "Weak encryption certificates could have let hackers easily spoof websites",
+    "inVideo": true,
+    "still": true,
+    "t": 0.53,
+    "visibleStill": [
+     0,
+     1.07
+    ],
+    "scrollY": 0,
+    "box": {
+     "x": 375,
+     "y": 179,
+     "w": 746,
+     "h": 109
+    },
+    "lines": [
+     {
+      "x": 375,
+      "y": 179,
+      "w": 697,
+      "h": 61
+     },
+     {
+      "x": 375,
+      "y": 227,
+      "w": 746,
+      "h": 61
+     }
+    ],
+    "docBox": {
+     "x": 375,
+     "y": 179,
+     "w": 746,
+     "h": 109
+    },
+    "layoutDriftPx": 0
+   }
+  ]
+ }
+}

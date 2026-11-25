@@ -1,0 +1,95 @@
+<!doctype html><html><head><meta charset="utf-8"><title>B close the tab</title>
+<style>
+@font-face{font-family:Onest;font-weight:100 900;src:url(../_fonts/Onest.ttf)}
+@font-face{font-family:RHM;font-weight:300 700;src:url(../_fonts/RedHatMono-VF.ttf)}
+html,body{margin:0;background:#2B1A12}
+#stage{position:relative;overflow:hidden;background:#2B1A12;color:#F6EBD9;font-family:Onest}
+.mono{font-family:RHM;font-weight:500}
+.disp{font-weight:850;letter-spacing:-.035em;line-height:.92}
+.win{background:#F6EBD9;color:#2B1A12;border-radius:0 28px 28px 28px}
+.tabshape{background:#F6EBD9;color:#2B1A12;border-radius:26px 26px 0 0;display:flex;align-items:center;gap:18px;padding:0 28px;box-sizing:border-box;font-family:RHM;font-weight:600}
+.tabghost{border:4px solid rgba(246,235,217,.35);border-bottom:none;color:rgba(246,235,217,.7);border-radius:26px 26px 0 0;display:flex;align-items:center;gap:18px;padding:0 28px;box-sizing:border-box;font-family:RHM;font-weight:500}
+</style></head><body><div id="stage"></div>
+<script src="../_shared/lib.js"></script>
+<script>
+const CH='#2B1A12', CR='#F6EBD9', M='#7FE0B5', MUTE='rgba(43,26,18,.68)';
+const cartIcon=(sz,c=CH)=>`<svg viewBox="0 0 48 48" width="${sz}" height="${sz}"><path d="M4 7h6l5 24h22l5-17H13" fill="none" stroke="${c}" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/><circle cx="18" cy="39" r="3.4" fill="${c}"/><circle cx="34" cy="39" r="3.4" fill="${c}"/></svg>`;
+// a browser window: tabs = [{t, active}] ; content html ; x,y,w,h ; scale for open/close
+function win(x,y,w,h,tabs,content,url='shop.example',o={}){
+  const th=96, tw=o.tw||430; let tabsHtml='';
+  tabs.forEach((t,i)=>{ tabsHtml+=`<div class="${t.active?'tabshape':'tabghost'}" style="position:absolute;left:${i*(tw+14)}px;top:0;width:${tw}px;height:${th}px;font-size:34px"><div style="width:26px;height:26px;border-radius:50%;background:${t.active?CH:'rgba(246,235,217,.5)'};flex:none"></div><div style="flex:1;white-space:nowrap;overflow:hidden">${t.t}</div><div style="font-size:40px">×</div></div>`; });
+  return box({left:x,top:y,width:w,height:h+th,transform:`scale(${o.s??1})`,transformOrigin:o.origin||'50% 50%',opacity:o.op??1},
+   `${tabsHtml}<div class="win" style="position:absolute;left:0;top:${th}px;width:${w}px;height:${h}px;overflow:hidden">
+     <div style="position:absolute;left:30px;right:30px;top:24px;height:70px;border-radius:8px;background:rgba(43,26,18,.08);display:flex;align-items:center;padding:0 32px;box-sizing:border-box" class="mono"><span style="font-size:32px;color:${MUTE}">https://</span><span style="font-size:32px">${url}</span></div>
+     <div style="position:absolute;left:0;top:120px;right:0;bottom:0">${content}</div></div>`);
+}
+const SC = {
+ // chapter opener: the three storages are three tabs; the active one is the chapter
+ chapters: (p) => {
+  const names=['cookies','localStorage','sessionStorage'], act=1, k=(i)=>mv(p,.1+i*.09,.5);
+  if(PORT){ let s=box({left:70,top:150},`<div class="mono" style="font-size:34px;color:${M}">Part 2 of 3</div><div class="disp" style="font-size:150px;margin-top:20px">Where the<br>cart lives</div>`);
+    names.forEach((n,i)=>{ const y=760+i*250; s+=box({left:70+(1-k(i))*-200,top:y,width:940,height:200,opacity:k(i),borderRadius:30,background:i===act?CR:'transparent',border:i===act?'none':`4px solid rgba(246,235,217,.35)`,boxSizing:'border-box',display:'flex',alignItems:'center',padding:'0 46px',gap:30,color:i===act?CH:'rgba(246,235,217,.75)'},`<div class="mono" style="font-size:40px;flex:none">0${i+1}</div><div class="disp" style="font-size:${i===act?96:72}px;letter-spacing:-.03em">${n}</div>`); });
+    return s; }
+  let s='';
+  names.forEach((n,i)=>{ const w=i===act?720:520, x=[90,640,1390][i]-(i===2?0:0); const y=330+(1-k(i))*80;
+    s+=box({left:[90,640,1390][i]+(i===2?0:0),top:y,width:i===act?720:(i===0?520:480),height:150,opacity:k(i)},`<div class="${i===act?'tabshape':'tabghost'}" style="position:absolute;inset:0;font-size:${i===act?54:42}px;font-family:Onest;font-weight:800;letter-spacing:-.02em"><div class="mono" style="font-size:32px;font-weight:500;opacity:.8">0${i+1}</div><div style="flex:1">${n}</div><div style="font-size:52px;font-weight:400">×</div></div>`); });
+  s+=box({left:0,top:480,width:W,height:H-480,background:CR});
+  s+=box({left:90,top:560,color:CH,opacity:mv(p,.5,.5),transform:`translateY(${(1-mv(p,.5,.5))*30}px)`},`<div class="disp" style="font-size:150px">Where the cart lives</div><div class="mono" style="font-size:36px;margin-top:34px;color:${MUTE}">Part 2 of 3</div>`);
+  s+=box({left:1520,top:700,opacity:mv(p,.7,.5)},cartIcon(280));
+  return s;
+ },
+ // motion test 140.0: add to cart -> close the browser -> reopen -> cart still there
+ cart: (p) => {
+  const T=(t)=>t-141.35; // her words, raw seconds
+  const add=mv(p,T(142.55),.45), closeK=EIO(clamp((p-T(143.45))/.55)), reopen=mv(p,T(145.2),.6), still=mv(p,T(146.25),.4,EBACK);
+  const closed = p>=T(143.45)+.55 && p<T(145.2);
+  const s0 = p<T(143.45)?1:(p<T(145.2)?lerp(1,0,closeK):lerp(.0,1,reopen));
+  const n = p>=T(142.9)?1:0;
+  const bx=PORT?60:160, by=PORT?300:120, bw=PORT?960:1600, bh=PORT?1080:740;
+  const tote=(c)=>`<svg viewBox="0 0 100 100" width="100%" height="100%"><path d="M34 34c0-14 6-20 16-20s16 6 16 20" fill="none" stroke="${c}" stroke-width="5"/><path d="M18 32h64l-6 56H24z" fill="${c}"/></svg>`;
+  const iw=PORT?560:620, ih=PORT?640:560;
+  const item=`<div style="position:absolute;left:${PORT?60:90}px;top:${PORT?100:40}px;width:${iw}px;height:${ih}px;border-radius:0;background:rgba(43,26,18,.07)">
+     <div style="position:absolute;left:${iw/2-150}px;top:30px;width:300px;height:300px">${tote(CH)}</div>
+     <div style="position:absolute;left:40px;top:${PORT?380:370}px"><div class="disp" style="font-size:56px">Canvas tote</div><div class="mono" style="font-size:36px;color:${MUTE};margin-top:10px">€24</div></div>
+     <div style="position:absolute;right:30px;bottom:30px;padding:18px 32px;border-radius:6px;background:${p>=T(142.6)?M:CH};color:${p>=T(142.6)?CH:CR};font-size:36px;font-weight:700;transform:scale(${1-.08*Math.sin(Math.PI*clamp((p-T(142.55))/.25))})">Add to cart</div></div>`;
+  const cartX=PORT?640:1060, cartY=PORT?110:70;
+  const fly = p>=T(142.6)&&p<T(143.1) ? box({left:lerp(PORT?300:420,(PORT?1060:1480)+40,add),top:lerp(PORT?500:420,cartY+300,add)-Math.sin(Math.PI*add)*140,width:110,height:110,transform:`scale(${1-add*.6})`},tote(CH)) : '';
+  const cart=`<div style="position:absolute;left:${cartX}px;top:${cartY}px">${cartIcon(PORT?260:340)}<div style="position:absolute;right:-24px;top:-10px;width:120px;height:120px;border-radius:50%;background:${n?M:'transparent'};opacity:${n?1:0};box-sizing:border-box;display:flex;align-items:center;justify-content:center;font-size:68px;font-weight:800;transform:scale(${n?lerp(1.5,1,mv(p,T(142.9),.35,EBACK))*(p>T(146.25)?lerp(1.4,1,still):1):1})">${n?1:''}</div></div>
+    <div class="mono" style="position:absolute;left:${PORT?60:760}px;top:${PORT?800:cartY+420}px;font-size:${PORT?34:36}px;opacity:${p>T(146.25)?still:0};background:${CH};color:${M};padding:18px 26px;border-radius:4px;white-space:nowrap">localStorage → cart: [{"id":17}]</div>`;
+  let s='';
+  if(!closed) s+=win(bx,by,bw,bh,[{t:'shop.example',active:1}],item+cart,'shop.example/tote',{s:Math.max(.001,s0),origin:'50% 100%',op:clamp(s0*3)});
+  else s+=box({left:0,top:PORT?820:400,width:W,textAlign:'center',opacity:mv(p,T(144.0),.3)},`<div class="disp" style="font-size:${PORT?120:150}px">Browser closed.</div><div class="mono" style="font-size:36px;margin-top:26px;color:rgba(246,235,217,.85)">come back tomorrow…</div>`);
+  s+=fly;
+  return s;
+ },
+ // black-phrase style card in this look: chocolate + one line of real code
+ strings: (p) => {
+  const k=mv(p,0,.5);
+  return box({left:PORT?70:160,top:PORT?420:220,opacity:k,transform:`translateY(${(1-k)*30}px)`},`<div class="disp" style="font-size:${PORT?150:190}px">It only stores<br><span style="color:${M}">strings.</span></div>`)
+   + box({left:PORT?70:160,top:PORT?1060:700,width:PORT?940:1600,padding:'34px 40px',borderRadius:24,background:'rgba(246,235,217,.08)',boxSizing:'border-box'},`<div class="mono" style="font-size:${PORT?32:40}px;line-height:1.6">${esc(typed('localStorage.setItem("cart", JSON.stringify(cart))',p,.6,40))}<br><span style="color:${M}">${esc(typed('JSON.parse(localStorage.getItem("cart"))',p,1.9,40))}</span></div>`);
+ },
+ // receipt in a tab: real MDN page, highlighted
+ receipt: (p) => {
+  const cw=PORT?920:1360, ch=cw*195/1060, hl=mv(p,.6,.7);
+  const content=`<div style="position:absolute;left:${PORT?20:70}px;top:${PORT?60:40}px;width:${cw}px;height:${ch}px;overflow:hidden;border-radius:10px"><img src="../_src/clips/mdn-setcookie-warn.png" style="width:100%;display:block">
+    <div style="position:absolute;left:${cw*675/1060}px;top:${cw*80/1060}px;width:${cw*(316/1060)*clamp(hl*1.5)}px;height:${cw*(30/1060)}px;background:${M};mix-blend-mode:multiply"></div><div style="position:absolute;left:${cw*91/1060}px;top:${cw*122/1060}px;width:${cw*(94/1060)*clamp(hl*1.5-.5)}px;height:${cw*(30/1060)}px;background:${M};mix-blend-mode:multiply"></div></div></div>`;
+  return win(PORT?40:180,PORT?520:150,PORT?1000:1560,PORT?420:420,[{t:'Set-Cookie · MDN',active:1},{t:'shop.example',active:0}],content,'developer.mozilla.org/…/Set-Cookie',{tw:PORT?420:480})
+   + box({left:PORT?60:180,top:PORT?150:850},`<div class="disp" style="font-size:${PORT?96:72}px">"I say <span style="color:${M}">meant to</span>…"</div>`)
+   + box({left:PORT?60:1100,top:PORT?1300:880},`<div class="mono" style="font-size:32px;color:rgba(246,235,217,.6)">Source: MDN Web Docs, Set-Cookie</div>`);
+ },
+ // who can read localStorage: every script on the page
+ readers: (p) => {
+  const scripts=['your-app.js','analytics.js','chat-widget.js'];
+  let s=box({left:PORT?70:160,top:PORT?150:110},`<div class="disp" style="font-size:${PORT?120:130}px">Every script on the page<br>can read it.</div>`);
+  const sx=PORT?70:160, sy=PORT?760:500;
+  scripts.forEach((n,i)=>{ const k=mv(p,.4+i*.12,.45,EBACK);
+    const x=sx, y=sy+i*(PORT?170:150);
+    s+=box({left:x,top:y,transform:`scale(${k})`,transformOrigin:'0 50%',padding:'24px 34px',borderRadius:20,background:i?'transparent':CR,color:i?CR:CH,border:i?`4px solid ${CR}`:'none'},`<div class="mono" style="font-size:40px">&lt;script src="${n}"&gt;</div>`);
+    if(!PORT){ const lk2=mv(p,1.2+i*.12,.45); s+=box({left:900,top:y+50,width:300*lk2,height:5,background:i?CR:M}); } });
+  const lk=mv(p,1.0,.5);
+  s+=box({left:PORT?70:1200,top:PORT?1340:sy,width:PORT?940:560,height:PORT?150:420,borderRadius:24,background:M,color:CH,display:'flex',flexDirection:'column',justifyContent:'center',padding:'0 44px',boxSizing:'border-box',opacity:lk,transform:`translateY(${(1-lk)*40}px)`},`<div class="disp" style="font-size:${PORT?60:80}px">localStorage</div><div class="mono" style="font-size:36px;margin-top:14px">cart · theme · …</div>`);
+  return s;
+ },
+};
+setup(SC, [[140.0,0,'chapters'],[141.35,0,'cart']], [{t:140.17,name:'tab'},{t:142.6,name:'click'},{t:142.95,name:'pop'},{t:143.5,name:'close'},{t:145.25,name:'open'},{t:146.3,name:'ding'}]);
+</script></body></html>

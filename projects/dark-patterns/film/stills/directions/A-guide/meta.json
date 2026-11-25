@@ -1,0 +1,175 @@
+{
+ "TOTAL": 463,
+ "INTRO": 0,
+ "OUTRO": 1,
+ "FPS": 30,
+ "CUES": [
+  {
+   "name": "paper",
+   "t": 45.9,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "pin",
+   "t": 46,
+   "db": -3,
+   "keep": true
+  },
+  {
+   "name": "marker",
+   "t": 55.3,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "slide",
+   "t": 60.98,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "paper",
+   "t": 61.72,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "shutter",
+   "t": 62,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "type",
+   "t": 62.22,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "pin",
+   "t": 62.35,
+   "db": -3,
+   "keep": true
+  },
+  {
+   "name": "type2",
+   "t": 64.4,
+   "db": -5,
+   "keep": true
+  },
+  {
+   "name": "marker",
+   "t": 68.24,
+   "db": -5,
+   "keep": true
+  },
+  {
+   "name": "scribble",
+   "t": 69.66,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "hit",
+   "t": 155.9,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "paper",
+   "t": 229.2,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "tick",
+   "t": 236.3,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "tape",
+   "t": 238.3,
+   "db": -5,
+   "keep": true
+  },
+  {
+   "name": "pin",
+   "t": 317,
+   "db": -3,
+   "keep": true
+  },
+  {
+   "name": "marker",
+   "t": 320.76,
+   "db": -5,
+   "keep": true
+  }
+ ],
+ "SCENES": [
+  {
+   "n": 1,
+   "id": "pre",
+   "start": 0,
+   "end": 33.5,
+   "ground": "drawer",
+   "label": "pre",
+   "trans": "cut"
+  },
+  {
+   "n": 2,
+   "id": "origin",
+   "start": 33.5,
+   "end": 44.5,
+   "ground": "drawer",
+   "label": "origin",
+   "trans": "whip"
+  },
+  {
+   "n": 3,
+   "id": "confirm",
+   "start": 44.5,
+   "end": 60.6,
+   "ground": "drawer",
+   "label": "confirm",
+   "trans": "whip"
+  },
+  {
+   "n": 4,
+   "id": "roach",
+   "start": 60.6,
+   "end": 155.85,
+   "ground": "drawer",
+   "label": "roach",
+   "trans": "whip"
+  },
+  {
+   "n": 5,
+   "id": "phrase",
+   "start": 155.85,
+   "end": 227.4,
+   "ground": "black",
+   "label": "phrase",
+   "trans": "cut"
+  },
+  {
+   "n": 6,
+   "id": "urgency",
+   "start": 227.4,
+   "end": 313.8,
+   "ground": "drawer",
+   "label": "urgency",
+   "trans": "cut"
+  },
+  {
+   "n": 7,
+   "id": "survey",
+   "start": 313.8,
+   "end": 463,
+   "ground": "drawer",
+   "label": "survey",
+   "trans": "whip"
+  }
+ ]
+}

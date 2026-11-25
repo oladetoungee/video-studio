@@ -1,0 +1,3 @@
+FIRST ~3 s (spoken, whisper small.en): How does one gigabyte folder gets compressed to 400 megabytes
+
+ON SCREEN IN FRAME 1: Faceless, black. Tiny orange handwritten label 'INTERVIEW QUESTION' then white handwritten title typing on 'How does a folder get compressed?'; a folder icon labelled '1 GB' with a mouse cursor about to right-click.

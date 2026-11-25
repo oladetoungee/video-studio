@@ -1,0 +1,917 @@
+{
+  "title": "Font board",
+  "subtitle": "Only fonts found on your boards (design board first, then the shorts formats and thumbnail boards), each with the colours of the picture it comes from (Design N / Formats N / Thumbnails N). Tap \"Not for me\" on any font or colour mix you don't like; we never use those.",
+  "groups": [
+    "From the design board",
+    "From the shorts board",
+    "From the thumbnail board",
+    "Font pairs",
+    "Colour combos"
+  ],
+  "items": [
+    {
+      "id": "design-01",
+      "img": "design-01.png",
+      "group": "From the design board",
+      "title": "Six Caps: the type on Design 377",
+      "font": "Six Caps",
+      "source": "Design 377"
+    },
+    {
+      "id": "design-02",
+      "img": "design-02.png",
+      "group": "From the design board",
+      "title": "Big Shoulders Display: the type on Design 397",
+      "font": "Big Shoulders Display",
+      "source": "Design 397"
+    },
+    {
+      "id": "design-03",
+      "img": "design-03.png",
+      "group": "From the design board",
+      "title": "Big Shoulders Display: the type on Design 400",
+      "font": "Big Shoulders Display",
+      "source": "Design 400"
+    },
+    {
+      "id": "design-04",
+      "img": "design-04.png",
+      "group": "From the design board",
+      "title": "Big Shoulders Display: the type on Design 396",
+      "font": "Big Shoulders Display",
+      "source": "Design 396"
+    },
+    {
+      "id": "design-05",
+      "img": "design-05.png",
+      "group": "From the design board",
+      "title": "Anton: the type on Design 368",
+      "font": "Anton",
+      "source": "Design 368"
+    },
+    {
+      "id": "design-06",
+      "img": "design-06.png",
+      "group": "From the design board",
+      "title": "Archivo (62% width): the type on Design 351",
+      "font": "Archivo",
+      "source": "Design 351"
+    },
+    {
+      "id": "design-07",
+      "img": "design-07.png",
+      "group": "From the design board",
+      "title": "Archivo (75% width): the type on Design 367",
+      "font": "Archivo",
+      "source": "Design 367"
+    },
+    {
+      "id": "design-08",
+      "img": "design-08.png",
+      "group": "From the design board",
+      "title": "Archivo (125% width): the type on Design 357",
+      "font": "Archivo",
+      "source": "Design 357"
+    },
+    {
+      "id": "design-09",
+      "img": "design-09.png",
+      "group": "From the design board",
+      "title": "Inter Tight: the type on Design 394",
+      "font": "Inter Tight",
+      "source": "Design 394"
+    },
+    {
+      "id": "design-10",
+      "img": "design-10.png",
+      "group": "From the design board",
+      "title": "Inter Tight: the type on Design 378",
+      "font": "Inter Tight",
+      "source": "Design 378"
+    },
+    {
+      "id": "design-11",
+      "img": "design-11.png",
+      "group": "From the design board",
+      "title": "Inter Tight: the type on Design 365",
+      "font": "Inter Tight",
+      "source": "Design 365"
+    },
+    {
+      "id": "design-12",
+      "img": "design-12.png",
+      "group": "From the design board",
+      "title": "Inter Tight: the type on Design 398",
+      "font": "Inter Tight",
+      "source": "Design 398"
+    },
+    {
+      "id": "design-13",
+      "img": "design-13.png",
+      "group": "From the design board",
+      "title": "Switzer Light: the type on Design 350",
+      "font": "Switzer",
+      "source": "Design 350"
+    },
+    {
+      "id": "design-14",
+      "img": "design-14.png",
+      "group": "From the design board",
+      "title": "Bagel Fat One: the type on Design 361",
+      "font": "Bagel Fat One",
+      "source": "Design 361"
+    },
+    {
+      "id": "design-15",
+      "img": "design-15.png",
+      "group": "From the design board",
+      "title": "Bagel Fat One: the type on Design 371",
+      "font": "Bagel Fat One",
+      "source": "Design 371"
+    },
+    {
+      "id": "design-16",
+      "img": "design-16.png",
+      "group": "From the design board",
+      "title": "Bodoni Moda: the type on Design 1",
+      "font": "Bodoni Moda",
+      "source": "Design 1"
+    },
+    {
+      "id": "design-17",
+      "img": "design-17.png",
+      "group": "From the design board",
+      "title": "Libre Baskerville Bold: the type on Design 399",
+      "font": "Libre Baskerville",
+      "source": "Design 399"
+    },
+    {
+      "id": "design-18",
+      "img": "design-18.png",
+      "group": "From the design board",
+      "title": "Gloock: the type on Design 391",
+      "font": "Gloock",
+      "source": "Design 391"
+    },
+    {
+      "id": "design-19",
+      "img": "design-19.png",
+      "group": "From the design board",
+      "title": "Caveat Brush: the type on Design 362",
+      "font": "Caveat Brush",
+      "source": "Design 362"
+    },
+    {
+      "id": "design-20",
+      "img": "design-20.png",
+      "group": "From the design board",
+      "title": "Permanent Marker: the type on Design 363",
+      "font": "Permanent Marker",
+      "source": "Design 363"
+    },
+    {
+      "id": "design-21",
+      "img": "design-21.png",
+      "group": "From the design board",
+      "title": "Londrina Solid Black: the type on Design 360",
+      "font": "Londrina Solid",
+      "source": "Design 360"
+    },
+    {
+      "id": "design-22",
+      "img": "design-22.png",
+      "group": "From the design board",
+      "title": "Kaushan Script: the type on Design 392",
+      "font": "Kaushan Script",
+      "source": "Design 392"
+    },
+    {
+      "id": "design-23",
+      "img": "design-23.png",
+      "group": "From the design board",
+      "title": "Shrikhand: the type on Design 359",
+      "font": "Shrikhand",
+      "source": "Design 359"
+    },
+    {
+      "id": "design-24",
+      "img": "design-24.png",
+      "group": "From the design board",
+      "title": "Bricolage Grotesque 300 + 800: the type on Design 409",
+      "font": "Bricolage Grotesque",
+      "source": "Design 409"
+    },
+    {
+      "id": "design-25",
+      "img": "design-25.png",
+      "group": "From the design board",
+      "title": "Figtree ExtraBold: the type on Design 370",
+      "font": "Figtree",
+      "source": "Design 370"
+    },
+    {
+      "id": "design-26",
+      "img": "design-26.png",
+      "group": "From the design board",
+      "title": "Inter Tight + Instrument Serif italic: the type on Design 20",
+      "font": "Inter Tight",
+      "source": "Design 20"
+    },
+    {
+      "id": "design-27",
+      "img": "design-27.png",
+      "group": "From the design board",
+      "title": "General Sans Semibold Italic: the type on Design 355",
+      "font": "General Sans",
+      "source": "Design 355"
+    },
+    {
+      "id": "design-28",
+      "img": "design-28.png",
+      "group": "From the design board",
+      "title": "Archivo Medium (68% width): the type on Design 273",
+      "font": "Archivo",
+      "source": "Design 273"
+    },
+    {
+      "id": "design-29",
+      "img": "design-29.png",
+      "group": "From the design board",
+      "title": "DM Mono Medium: the type on Design 353",
+      "font": "DM Mono",
+      "source": "Design 353"
+    },
+    {
+      "id": "design-30",
+      "img": "design-30.png",
+      "group": "From the design board",
+      "title": "Anton (sticker outline): the type on Design 384",
+      "font": "Anton",
+      "source": "Design 384"
+    },
+    {
+      "id": "design-31",
+      "img": "design-31.png",
+      "group": "From the design board",
+      "title": "Inter Tight (words in bars): the type on Design 406",
+      "font": "Inter Tight",
+      "source": "Design 406"
+    },
+    {
+      "id": "design-32",
+      "img": "design-32.png",
+      "group": "From the design board",
+      "title": "Oswald Bold: the type on Design 405",
+      "font": "Oswald",
+      "source": "Design 405"
+    },
+    {
+      "id": "design-33",
+      "img": "design-33.png",
+      "group": "From the design board",
+      "title": "Archivo Black (70% width) labels: the type on Design 395",
+      "font": "Archivo",
+      "source": "Design 395"
+    },
+    {
+      "id": "design-34",
+      "img": "design-34.png",
+      "group": "From the design board",
+      "title": "Inter Tight Bold: the type on Design 373",
+      "font": "Inter Tight",
+      "source": "Design 373"
+    },
+    {
+      "id": "shorts-01",
+      "img": "shorts-01.png",
+      "group": "From the shorts board",
+      "title": "Montserrat ExtraBold caps, yellow key word: the type on Formats 2",
+      "font": "Montserrat",
+      "source": "Formats 2"
+    },
+    {
+      "id": "shorts-02",
+      "img": "shorts-02.png",
+      "group": "From the shorts board",
+      "title": "Shrikhand (retro script): the type on Formats 3",
+      "font": "Shrikhand",
+      "source": "Formats 3"
+    },
+    {
+      "id": "shorts-03",
+      "img": "shorts-03.png",
+      "group": "From the shorts board",
+      "title": "Permanent Marker (comic caps): the type on Formats 6",
+      "font": "Permanent Marker",
+      "source": "Formats 6"
+    },
+    {
+      "id": "shorts-04",
+      "img": "shorts-04.png",
+      "group": "From the shorts board",
+      "title": "Montserrat ExtraBold + bold serif captions: the type on Formats 14",
+      "font": "Montserrat",
+      "source": "Formats 14"
+    },
+    {
+      "id": "shorts-05",
+      "img": "shorts-05.png",
+      "group": "From the shorts board",
+      "title": "TikTok Sans in a white box + bold serif captions: the type on Formats 24",
+      "font": "TikTok Sans",
+      "source": "Formats 24"
+    },
+    {
+      "id": "shorts-06",
+      "img": "shorts-06.png",
+      "group": "From the shorts board",
+      "title": "Oswald (huge cream condensed caps): the type on Formats 26",
+      "font": "Oswald",
+      "source": "Formats 26"
+    },
+    {
+      "id": "shorts-07",
+      "img": "shorts-07.png",
+      "group": "From the shorts board",
+      "title": "Nunito Black (rounded lime word): the type on Formats 32",
+      "font": "Nunito",
+      "source": "Formats 32"
+    },
+    {
+      "id": "shorts-08",
+      "img": "shorts-08.png",
+      "group": "From the shorts board",
+      "title": "Montserrat ExtraBold + Instrument Serif italic: the type on Formats 36",
+      "font": "Montserrat",
+      "source": "Formats 36"
+    },
+    {
+      "id": "shorts-09",
+      "img": "shorts-09.png",
+      "group": "From the shorts board",
+      "title": "Young Serif (huge yellow serif): the type on Formats 38",
+      "font": "Young Serif",
+      "source": "Formats 38"
+    },
+    {
+      "id": "shorts-10",
+      "img": "shorts-10.png",
+      "group": "From the shorts board",
+      "title": "Bodoni Moda caps + Instrument Serif italic: the type on Formats 48",
+      "font": "Bodoni Moda",
+      "source": "Formats 48"
+    },
+    {
+      "id": "shorts-11",
+      "img": "shorts-11.png",
+      "group": "From the shorts board",
+      "title": "Newsreader (white serif captions on black): the type on Formats 52",
+      "font": "Newsreader",
+      "source": "Formats 52"
+    },
+    {
+      "id": "shorts-12",
+      "img": "shorts-12.png",
+      "group": "From the shorts board",
+      "title": "Archivo Black outline + Shrikhand script: the type on Formats 56",
+      "font": "Archivo Black",
+      "source": "Formats 56"
+    },
+    {
+      "id": "shorts-13",
+      "img": "shorts-13.png",
+      "group": "From the shorts board",
+      "title": "Young Serif + Caveat Brush (mixed fonts): the type on Formats 62",
+      "font": "Young Serif",
+      "source": "Formats 62"
+    },
+    {
+      "id": "shorts-14",
+      "img": "shorts-14.png",
+      "group": "From the shorts board",
+      "title": "Caveat Bold (handwritten slide): the type on Formats 64",
+      "font": "Caveat",
+      "source": "Formats 64"
+    },
+    {
+      "id": "shorts-15",
+      "img": "shorts-15.png",
+      "group": "From the shorts board",
+      "title": "Inter Tight on yellow highlight + mono: the type on Formats 65",
+      "font": "Inter Tight",
+      "source": "Formats 65"
+    },
+    {
+      "id": "shorts-16",
+      "img": "shorts-16.png",
+      "group": "From the shorts board",
+      "title": "Oswald caps, one letter boxed red: the type on Formats 68",
+      "font": "Oswald",
+      "source": "Formats 68"
+    },
+    {
+      "id": "shorts-17",
+      "img": "shorts-17.png",
+      "group": "From the shorts board",
+      "title": "Oswald caps, mint key word: the type on Formats 20",
+      "font": "Oswald",
+      "source": "Formats 20"
+    },
+    {
+      "id": "shorts-18",
+      "img": "shorts-18.png",
+      "group": "From the shorts board",
+      "title": "Silkscreen (pixel): the type on Formats 7",
+      "font": "Silkscreen",
+      "source": "Formats 7"
+    },
+    {
+      "id": "shorts-19",
+      "img": "shorts-19.png",
+      "group": "From the shorts board",
+      "title": "Instrument Serif italic + Anton with white stroke: the type on Formats 37",
+      "font": "Anton",
+      "source": "Formats 37"
+    },
+    {
+      "id": "shorts-20",
+      "img": "shorts-20.png",
+      "group": "From the shorts board",
+      "title": "Satoshi Black Italic (heavy italic lowercase): the type on Formats 57",
+      "font": "Satoshi",
+      "source": "Formats 57"
+    },
+    {
+      "id": "shorts-21",
+      "img": "shorts-21.png",
+      "group": "From the shorts board",
+      "title": "Libre Baskerville (newspaper headline): the type on Formats 45",
+      "font": "Libre Baskerville",
+      "source": "Formats 45"
+    },
+    {
+      "id": "thumbs-01",
+      "img": "thumbs-01.png",
+      "group": "From the thumbnail board",
+      "title": "Anton + red box: the type on Thumbnails 10",
+      "font": "Anton",
+      "source": "Thumbnails 10"
+    },
+    {
+      "id": "thumbs-02",
+      "img": "thumbs-02.png",
+      "group": "From the thumbnail board",
+      "title": "Inter Tight Bold + yellow highlight: the type on Thumbnails 21",
+      "font": "Inter Tight",
+      "source": "Thumbnails 21"
+    },
+    {
+      "id": "thumbs-03",
+      "img": "thumbs-03.png",
+      "group": "From the thumbnail board",
+      "title": "Inter Tight Medium: the type on Thumbnails 31",
+      "font": "Inter Tight",
+      "source": "Thumbnails 31"
+    },
+    {
+      "id": "thumbs-04",
+      "img": "thumbs-04.png",
+      "group": "From the thumbnail board",
+      "title": "Playfair Display Black Italic caps: the type on Thumbnails 41",
+      "font": "Playfair Display",
+      "source": "Thumbnails 41"
+    },
+    {
+      "id": "thumbs-05",
+      "img": "thumbs-05.png",
+      "group": "From the thumbnail board",
+      "title": "Libre Baskerville Regular + Bold: the type on Thumbnails 48",
+      "font": "Libre Baskerville",
+      "source": "Thumbnails 48"
+    },
+    {
+      "id": "thumbs-06",
+      "img": "thumbs-06.png",
+      "group": "From the thumbnail board",
+      "title": "Montserrat Black (huge yellow word): the type on Thumbnails 58",
+      "font": "Montserrat",
+      "source": "Thumbnails 58"
+    },
+    {
+      "id": "thumbs-07",
+      "img": "thumbs-07.png",
+      "group": "From the thumbnail board",
+      "title": "Bodoni Moda caps + Instrument Serif italic: the type on Thumbnails 64",
+      "font": "Bodoni Moda",
+      "source": "Thumbnails 64"
+    },
+    {
+      "id": "thumbs-08",
+      "img": "thumbs-08.png",
+      "group": "From the thumbnail board",
+      "title": "JetBrains Mono ExtraBold (typewriter bold): the type on Thumbnails 65",
+      "font": "JetBrains Mono",
+      "source": "Thumbnails 65"
+    },
+    {
+      "id": "thumbs-09",
+      "img": "thumbs-09.png",
+      "group": "From the thumbnail board",
+      "title": "Inter Tight Bold lowercase + red box: the type on Thumbnails 68",
+      "font": "Inter Tight",
+      "source": "Thumbnails 68"
+    },
+    {
+      "id": "thumbs-10",
+      "img": "thumbs-10.png",
+      "group": "From the thumbnail board",
+      "title": "Poppins Bold lowercase, red key word: the type on Thumbnails 84",
+      "font": "Poppins",
+      "source": "Thumbnails 84"
+    },
+    {
+      "id": "thumbs-11",
+      "img": "thumbs-11.png",
+      "group": "From the thumbnail board",
+      "title": "Oswald Bold on blue: the type on Thumbnails 87",
+      "font": "Oswald",
+      "source": "Thumbnails 87"
+    },
+    {
+      "id": "thumbs-12",
+      "img": "thumbs-12.png",
+      "group": "From the thumbnail board",
+      "title": "Archivo Black red on yellow: the type on Thumbnails 89",
+      "font": "Archivo Black",
+      "source": "Thumbnails 89"
+    },
+    {
+      "id": "thumbs-13",
+      "img": "thumbs-13.png",
+      "group": "From the thumbnail board",
+      "title": "Archivo Black with black outline: the type on Thumbnails 91",
+      "font": "Archivo Black",
+      "source": "Thumbnails 91"
+    },
+    {
+      "id": "thumbs-14",
+      "img": "thumbs-14.png",
+      "group": "From the thumbnail board",
+      "title": "Poppins Bold lowercase: the type on Thumbnails 96",
+      "font": "Poppins",
+      "source": "Thumbnails 96"
+    },
+    {
+      "id": "thumbs-15",
+      "img": "thumbs-15.png",
+      "group": "From the thumbnail board",
+      "title": "Libre Baskerville + caps label on pink: the type on Thumbnails 106",
+      "font": "Libre Baskerville",
+      "source": "Thumbnails 106"
+    },
+    {
+      "id": "thumbs-16",
+      "img": "thumbs-16.png",
+      "group": "From the thumbnail board",
+      "title": "Anton + red box: the type on Thumbnails 113",
+      "font": "Anton",
+      "source": "Thumbnails 113"
+    },
+    {
+      "id": "thumbs-17",
+      "img": "thumbs-17.png",
+      "group": "From the thumbnail board",
+      "title": "Inter Tight + Instrument Serif italic: the type on Thumbnails 152",
+      "font": "Inter Tight",
+      "source": "Thumbnails 152"
+    },
+    {
+      "id": "thumbs-18",
+      "img": "thumbs-18.png",
+      "group": "From the thumbnail board",
+      "title": "Montserrat ExtraBold + yellow line: the type on Thumbnails 162",
+      "font": "Montserrat",
+      "source": "Thumbnails 162"
+    },
+    {
+      "id": "thumbs-19",
+      "img": "thumbs-19.png",
+      "group": "From the thumbnail board",
+      "title": "Inter Tight Medium, very tight: the type on Thumbnails 174",
+      "font": "Inter Tight",
+      "source": "Thumbnails 174"
+    },
+    {
+      "id": "thumbs-20",
+      "img": "thumbs-20.png",
+      "group": "From the thumbnail board",
+      "title": "Permanent Marker caps: the type on Thumbnails 180",
+      "font": "Permanent Marker",
+      "source": "Thumbnails 180"
+    },
+    {
+      "id": "pair-01",
+      "img": "pair-01.png",
+      "group": "Font pairs",
+      "title": "Anton + Archivo (pair from Design 368)",
+      "font": "Anton",
+      "source": "Design 368"
+    },
+    {
+      "id": "pair-02",
+      "img": "pair-02.png",
+      "group": "Font pairs",
+      "title": "Archivo 62% + DM Mono (pair from Design 351)",
+      "font": "Archivo",
+      "source": "Design 351"
+    },
+    {
+      "id": "pair-03",
+      "img": "pair-03.png",
+      "group": "Font pairs",
+      "title": "Inter Tight Black + Instrument Serif (pair from Design 20)",
+      "font": "Inter Tight",
+      "source": "Design 20"
+    },
+    {
+      "id": "pair-04",
+      "img": "pair-04.png",
+      "group": "Font pairs",
+      "title": "Six Caps + Inter Tight (pair from Design 377)",
+      "font": "Six Caps",
+      "source": "Design 377"
+    },
+    {
+      "id": "pair-05",
+      "img": "pair-05.png",
+      "group": "Font pairs",
+      "title": "Libre Baskerville + Newsreader (pair from Design 399)",
+      "font": "Libre Baskerville",
+      "source": "Design 399"
+    },
+    {
+      "id": "pair-06",
+      "img": "pair-06.png",
+      "group": "Font pairs",
+      "title": "Big Shoulders + Archivo condensed (pair from Design 400)",
+      "font": "Big Shoulders Display",
+      "source": "Design 400"
+    },
+    {
+      "id": "pair-07",
+      "img": "pair-07.png",
+      "group": "Font pairs",
+      "title": "Gloock + Switzer (pair from Design 391)",
+      "font": "Gloock",
+      "source": "Design 391"
+    },
+    {
+      "id": "pair-08",
+      "img": "pair-08.png",
+      "group": "Font pairs",
+      "title": "Caveat Brush + Inter Tight (pair from Design 362)",
+      "font": "Caveat Brush",
+      "source": "Design 362"
+    },
+    {
+      "id": "pair-09",
+      "img": "pair-09.png",
+      "group": "Font pairs",
+      "title": "Bricolage Grotesque + Inter Tight (pair from Design 410)",
+      "font": "Bricolage Grotesque",
+      "source": "Design 410"
+    },
+    {
+      "id": "pair-10",
+      "img": "pair-10.png",
+      "group": "Font pairs",
+      "title": "Montserrat ExtraBold + Instrument Serif italic (pair from Formats 36)",
+      "font": "Montserrat",
+      "source": "Formats 36"
+    },
+    {
+      "id": "pair-11",
+      "img": "pair-11.png",
+      "group": "Font pairs",
+      "title": "Young Serif + Caveat Brush (pair from Formats 62)",
+      "font": "Young Serif",
+      "source": "Formats 62"
+    },
+    {
+      "id": "pair-12",
+      "img": "pair-12.png",
+      "group": "Font pairs",
+      "title": "Montserrat ExtraBold + Libre Baskerville Bold (pair from Formats 14)",
+      "font": "Montserrat",
+      "source": "Formats 14"
+    },
+    {
+      "id": "pair-13",
+      "img": "pair-13.png",
+      "group": "Font pairs",
+      "title": "Bodoni Moda caps + Instrument Serif italic (pair from Thumbnails 64)",
+      "font": "Bodoni Moda",
+      "source": "Thumbnails 64"
+    },
+    {
+      "id": "pair-14",
+      "img": "pair-14.png",
+      "group": "Font pairs",
+      "title": "Bagel Fat One + Inter Tight (pair from Design 371)",
+      "font": "Bagel Fat One",
+      "source": "Design 371"
+    },
+    {
+      "id": "pair-15",
+      "img": "pair-15.png",
+      "group": "Font pairs",
+      "title": "Bodoni Moda + italic + Archivo (pair from Design 1)",
+      "font": "Bodoni Moda",
+      "source": "Design 1"
+    },
+    {
+      "id": "pair-16",
+      "img": "pair-16.png",
+      "group": "Font pairs",
+      "title": "Bricolage Grotesque + DM Mono (pair from Design 409)",
+      "font": "Bricolage Grotesque",
+      "source": "Design 409"
+    },
+    {
+      "id": "combo-01",
+      "img": "combo-01.png",
+      "group": "Colour combos",
+      "title": "Colours of Design 368",
+      "font": "Anton",
+      "source": "Design 368"
+    },
+    {
+      "id": "combo-02",
+      "img": "combo-02.png",
+      "group": "Colour combos",
+      "title": "Colours of Design 394",
+      "font": "Inter Tight",
+      "source": "Design 394"
+    },
+    {
+      "id": "combo-03",
+      "img": "combo-03.png",
+      "group": "Colour combos",
+      "title": "Colours of Design 361",
+      "font": "Bagel Fat One",
+      "source": "Design 361"
+    },
+    {
+      "id": "combo-04",
+      "img": "combo-04.png",
+      "group": "Colour combos",
+      "title": "Colours of Design 371",
+      "font": "Bagel Fat One",
+      "source": "Design 371"
+    },
+    {
+      "id": "combo-05",
+      "img": "combo-05.png",
+      "group": "Colour combos",
+      "title": "Colours of Design 357",
+      "font": "Archivo",
+      "source": "Design 357"
+    },
+    {
+      "id": "combo-06",
+      "img": "combo-06.png",
+      "group": "Colour combos",
+      "title": "Colours of Design 351",
+      "font": "Archivo",
+      "source": "Design 351"
+    },
+    {
+      "id": "combo-07",
+      "img": "combo-07.png",
+      "group": "Colour combos",
+      "title": "Colours of Design 397",
+      "font": "Big Shoulders Display",
+      "source": "Design 397"
+    },
+    {
+      "id": "combo-08",
+      "img": "combo-08.png",
+      "group": "Colour combos",
+      "title": "Colours of Design 391",
+      "font": "Gloock",
+      "source": "Design 391"
+    },
+    {
+      "id": "combo-09",
+      "img": "combo-09.png",
+      "group": "Colour combos",
+      "title": "Colours of Design 409",
+      "font": "Bricolage Grotesque",
+      "source": "Design 409"
+    },
+    {
+      "id": "combo-10",
+      "img": "combo-10.png",
+      "group": "Colour combos",
+      "title": "Colours of Design 370",
+      "font": "Figtree",
+      "source": "Design 370"
+    },
+    {
+      "id": "combo-11",
+      "img": "combo-11.png",
+      "group": "Colour combos",
+      "title": "Colours of Design 362",
+      "font": "Caveat Brush",
+      "source": "Design 362"
+    },
+    {
+      "id": "combo-12",
+      "img": "combo-12.png",
+      "group": "Colour combos",
+      "title": "Colours of Design 350",
+      "font": "Switzer",
+      "source": "Design 350"
+    },
+    {
+      "id": "combo-13",
+      "img": "combo-13.png",
+      "group": "Colour combos",
+      "title": "Colours of Design 353",
+      "font": "DM Mono",
+      "source": "Design 353"
+    },
+    {
+      "id": "combo-14",
+      "img": "combo-14.png",
+      "group": "Colour combos",
+      "title": "Colours of Design 365",
+      "font": "Inter Tight",
+      "source": "Design 365"
+    },
+    {
+      "id": "combo-15",
+      "img": "combo-15.png",
+      "group": "Colour combos",
+      "title": "Colours of Design 1",
+      "font": "Bodoni Moda",
+      "source": "Design 1"
+    },
+    {
+      "id": "combo-16",
+      "img": "combo-16.png",
+      "group": "Colour combos",
+      "title": "Colours of Design 367",
+      "font": "Archivo",
+      "source": "Design 367"
+    },
+    {
+      "id": "combo-17",
+      "img": "combo-17.png",
+      "group": "Colour combos",
+      "title": "Colours of Design 363",
+      "font": "Permanent Marker",
+      "source": "Design 363"
+    },
+    {
+      "id": "combo-18",
+      "img": "combo-18.png",
+      "group": "Colour combos",
+      "title": "Colours of Design 389",
+      "font": "Bagel Fat One",
+      "source": "Design 389"
+    },
+    {
+      "id": "combo-19",
+      "img": "combo-19.png",
+      "group": "Colour combos",
+      "title": "Colours of Design 395",
+      "font": "Archivo",
+      "source": "Design 395"
+    },
+    {
+      "id": "combo-20",
+      "img": "combo-20.png",
+      "group": "Colour combos",
+      "title": "Colours of Design 406",
+      "font": "Inter Tight",
+      "source": "Design 406"
+    },
+    {
+      "id": "combo-21",
+      "img": "combo-21.png",
+      "group": "Colour combos",
+      "title": "Colours of Design 116",
+      "font": "Inter Tight",
+      "source": "Design 116"
+    },
+    {
+      "id": "combo-22",
+      "img": "combo-22.png",
+      "group": "Colour combos",
+      "title": "Colours of Design 270",
+      "font": "Inter Tight",
+      "source": "Design 270"
+    }
+  ]
+}

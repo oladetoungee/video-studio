@@ -1,0 +1,35 @@
+1
+00:00:00,150 --> 00:00:02,470
+sometimes a server will return 404 instead
+
+2
+00:00:02,470 --> 00:00:04,470
+of 403 on purpose just to hide that
+
+3
+00:00:04,470 --> 00:00:06,720
+something exists for example, GitHub's API
+
+4
+00:00:06,720 --> 00:00:08,230
+does this if you ask for a private
+
+5
+00:00:08,230 --> 00:00:10,380
+repository that you don't have access to,
+
+6
+00:00:10,380 --> 00:00:13,370
+you get a 404 so that GitHub doesn't confirm
+
+7
+00:00:13,370 --> 00:00:15,290
+to you that the repository exists
+
+8
+00:00:15,290 --> 00:00:16,990
+you shouldn't have access to it, and you
+
+9
+00:00:16,990 --> 00:00:18,967
+shouldn't even know that it exists

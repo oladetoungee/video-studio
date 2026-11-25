@@ -1,0 +1,103 @@
+1
+00:00:00,027 --> 00:00:01,057
+So why does this
+
+2
+00:00:01,057 --> 00:00:01,987
+method work?
+
+3
+00:00:01,987 --> 00:00:04,340
+it's about having somewhere to put things in
+
+4
+00:00:04,340 --> 00:00:05,147
+your mind.
+
+5
+00:00:05,147 --> 00:00:07,450
+When you start reading a book cold,
+
+6
+00:00:07,450 --> 00:00:09,950
+every new idea from the book that arrives,
+
+7
+00:00:09,950 --> 00:00:12,840
+your brain has nowhere to file it.
+
+8
+00:00:12,840 --> 00:00:16,027
+So the idea sort of floats in your mind.
+
+9
+00:00:16,027 --> 00:00:17,257
+And by the time you are in,
+
+10
+00:00:17,257 --> 00:00:19,050
+say, chapter six,
+
+11
+00:00:19,050 --> 00:00:22,170
+you already have a pile of ideas
+
+12
+00:00:22,170 --> 00:00:24,100
+floating around in your mind,
+
+13
+00:00:24,100 --> 00:00:26,983
+and they have nothing to attach themselves
+
+14
+00:00:27,313 --> 00:00:28,393
+But when you have
+
+15
+00:00:28,393 --> 00:00:29,833
+started the structure first,
+
+16
+00:00:29,833 --> 00:00:31,656
+you already know the shape of the argument.
+
+17
+00:00:31,656 --> 00:00:33,974
+So when an idea shows up in the book,
+
+18
+00:00:33,974 --> 00:00:36,133
+you know which part of the book it belongs
+
+19
+00:00:36,133 --> 00:00:37,793
+to and what it is doing there.
+
+20
+00:00:37,793 --> 00:00:38,536
+In your mind,
+
+21
+00:00:38,536 --> 00:00:41,375
+that idea has somewhere to go to.
+
+22
+00:00:41,375 --> 00:00:43,243
+That's the whole mechanism.
+
+23
+00:00:43,243 --> 00:00:44,496
+You're building the
+
+24
+00:00:44,496 --> 00:00:45,133
+shelves
+
+25
+00:00:45,133 --> 00:00:45,736
+before you
+
+26
+00:00:45,736 --> 00:00:47,735
+put something on them.

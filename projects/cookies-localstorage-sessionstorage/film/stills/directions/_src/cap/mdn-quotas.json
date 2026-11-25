@@ -1,0 +1,34 @@
+{
+ "title": "Storage quotas and eviction criteria - Web APIs | MDN",
+ "h1": "Storage quotas and eviction criteria",
+ "h1y": 107,
+ "found": {
+  "5 MiB of local storage": [
+   [
+    479.359375,
+    3043,
+    163.921875,
+    20
+   ]
+  ]
+ },
+ "H": 8068,
+ "focus": {
+  "5 MiB of local storage": {
+   "file": "mdn-quotas__5-mib-of-local-storage.png",
+   "top": 2523,
+   "rects": [
+    [
+     479.359375,
+     520,
+     163.921875,
+     20
+    ]
+   ]
+  }
+ },
+ "clipTop": 0,
+ "scale": 1.5,
+ "url": "https://developer.mozilla.org/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria",
+ "captured": "2026-11-02T19:32:42.026Z"
+}

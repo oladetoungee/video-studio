@@ -1,0 +1,47 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Reading Motion v2</title>
+<style>
+/* full font files (google/fonts repo), loaded locally, no subsets */
+@font-face{font-family:"Bricolage Grotesque";font-weight:200 800;font-stretch:75% 100%;src:url(../fonts/BricolageGrotesque.ttf) format("truetype")}
+@font-face{font-family:Archivo;font-weight:100 900;font-stretch:62% 125%;src:url(../fonts/Archivo.ttf) format("truetype")}
+@font-face{font-family:"DM Mono";font-weight:400;src:url(../fonts/DMMono-Regular.ttf) format("truetype")}
+@font-face{font-family:"DM Mono";font-weight:500;src:url(../fonts/DMMono-Medium.ttf) format("truetype")}
+@font-face{font-family:"Instrument Serif";font-style:italic;font-weight:400;src:url(../fonts/InstrumentSerif-Italic.ttf) format("truetype")}
+@font-face{font-family:"Instrument Serif";font-style:normal;font-weight:400;src:url(../fonts/InstrumentSerif-Regular.ttf) format("truetype")}
+html,body{margin:0;background:#000}canvas{display:block;width:100vw;height:auto}
+</style></head>
+<body><canvas id="c" width="1920" height="1080"></canvas>
+<script src="../data/words.js"></script>
+<script src="lib.js"></script>
+<script src="timeline.js"></script>
+<script src="scenes1.js"></script>
+<script src="scenes2.js"></script>
+<script src="scenes3.js"></script>
+<script>
+window.BUILD_ERROR = null;
+const IMG = {};
+function loadImg(name, src) { return new Promise((res, rej) => { const im = new Image(); im.onload = () => { IMG[name] = im; res(); }; im.onerror = () => rej(new Error('image ' + src)); im.src = src; }); }
+(async () => {
+  try {
+    const cv = document.getElementById('c'); setCtx(cv.getContext('2d'));
+    const fams = ['800 40px "Bricolage Grotesque"', '700 40px Archivo', '600 40px Archivo', '500 40px Archivo', '400 40px "DM Mono"', '500 40px "DM Mono"', 'italic 400 40px "Instrument Serif"', '400 40px "Instrument Serif"'];
+    const loaded = await Promise.all(fams.map(f => document.fonts.load(f)));
+    await document.fonts.ready;
+    window.FONT_CHECK = fams.map((f, i) => [f, loaded[i].length, document.fonts.check(f)]);
+    if (loaded.some(l => !l.length)) throw new Error('font failed to load: ' + JSON.stringify(window.FONT_CHECK));
+    await Promise.all([loadImg('baratta', '../assets/cover_baratta.jpg'), loadImg('convivial', '../assets/cover_convivial.jpg')]);
+    initWords(window.WORDS_RAW);
+    TOTAL = INTRO + window.VOICE_DUR + OUTRO;
+    buildScenes1();
+    if (typeof buildScenes2 === 'function') buildScenes2();
+    if (typeof buildScenes3 === 'function') buildScenes3();
+    SCENES.sort((a, b) => a.start - b.start);
+    autoCutCues(); pruneCues();
+    window.grab = (t, q) => { renderFrame(t); return cv.toDataURL('image/jpeg', q || 0.92); };
+    window.grabPNG = (t) => { renderFrame(t); return cv.toDataURL('image/png'); };
+    window.meta = () => ({ TOTAL, INTRO, OUTRO, CUES, SCENES: SCENES.map(s => ({ start: +s.start.toFixed(3), ground: s.ground, label: s.label, trans: s.trans })) });
+    const q = new URLSearchParams(location.search); if (q.has('t')) renderFrame(+q.get('t'));
+  } catch (e) { window.BUILD_ERROR = String(e && e.stack || e); console.error(e); }
+  window.READY = true;
+})();
+</script></body></html>

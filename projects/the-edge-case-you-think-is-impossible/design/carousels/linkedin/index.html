@@ -1,0 +1,177 @@
+<!doctype html><html><head><meta charset="utf-8"><title>8 edge cases that break real apps (with the real stories)</title>
+<link rel="stylesheet" href="../shared/base.css">
+<style>:root{--W:1080px;--H:1350px;--acc:#D4F04A;--accInk:#D4F04A;}</style></head><body>
+<section class="slide g-accent l-cover" id="s1">
+  
+  
+    <div class="main">
+      <div class="disp fit" data-k="title" data-max="104" style="font-size:104px;">8 edge cases that <em class="acc" style="font-style:normal">break real apps</em></div>
+      <p class="body bal" data-k="sub" style="margin-top:30px;color:var(--fg);font-size:40px">Each one is a real story, from a woman named Null to the leap day that took down part of Azure.</p>
+      <div style="margin-top:60px"><div class="form" data-move="form"><div class="fl err"><div class="lab" data-k="fields.0.label" data-plain>Surname</div><div class="box" data-k="fields.0.value" data-plain>Null</div><div class="msg"><span class="bang">!</span><span data-k="fields.0.msg" data-plain>Surname is required</span></div></div><div class="fl err"><div class="lab" data-k="fields.1.label" data-plain>Date</div><div class="box m" data-k="fields.1.value" data-plain>29 / 02 / 2013</div><div class="msg"><span class="bang">!</span><span data-k="fields.1.msg" data-plain>Invalid date</span></div></div></div></div>
+    </div>
+  <div class="foot"><span class="num"><b>01</b> / 11</span><span class="meter"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></div>
+</section>
+<section class="slide g-ink l-punch" id="s2">
+  
+  
+    <div class="main">
+      <div class="disp fit" data-k="title" data-max="104" style="font-size:104px;">We test the form the way we hope people will use it</div>
+      <p class="body bal" data-k="body" style="margin-top:56px;color:var(--fg)">Real users <span class="nw">double-click,</span> open different tabs and lose their network halfway. I promise you, someone is going to report the edge case you never thought of.</p>
+    </div>
+  <div class="foot"><span class="num"><b>02</b> / 11</span><span class="meter"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></div>
+</section>
+<section class="slide g-accent l-trick" id="s3">
+  
+  
+    <div class="main">
+      <div class="chip" data-move="tag"><b data-k="tag" data-plain>1 · Duplicate submission</b></div>
+      <div class="disp fit" data-k="title" data-max="96" style="font-size:96px;margin-top:36px">One double click, two orders</div>
+      <div style="margin-top:56px"><div data-move="orders"><div class="btnx" data-k="button" data-plain>Place order</div><svg class="cur" viewBox="0 0 30 40"><path d="M2,2 L2,32 L10,25 L15,37 L21,34 L16,23 L27,23 Z" fill="#fff" stroke="#0C0C0C" stroke-width="2.6" stroke-linejoin="round"/></svg>
+    <div class="ui ord"><div class="mono" style="opacity:.6" data-k="ordersLabel" data-plain>Orders</div><div class="rowx"><span data-k="orders.0.k" data-plain>#1041  Running shoes</span><span class="v" data-k="orders.0.v" data-plain>€40</span></div><div class="rowx dup"><span data-k="orders.1.k" data-plain>#1042  Running shoes</span><span class="v" data-k="orders.1.v" data-plain>€40</span></div></div></div></div>
+      <p class="body bal" data-k="body" style="margin-top:56px;color:var(--fg)">Disabling the button stops the double click. An idempotency key (a unique ID per request) also stops retries and second tabs.</p>
+    </div>
+  <div class="foot"><span class="num"><b>03</b> / 11</span><span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></div>
+</section>
+<section class="slide g-card l-trick" id="s4">
+  
+  
+    <div class="main">
+      <div class="chip" data-move="tag"><b data-k="tag" data-plain>2 · Race condition</b></div>
+      <div class="disp fit" data-k="title" data-max="104" style="font-size:104px;margin-top:36px">1 left, <em class="acc" style="font-style:normal">2 sold</em></div>
+      <div style="margin-top:56px"><div data-move="code"><div class="codex" data-k="code">UPDATE products
+SET stock = stock - 1
+WHERE id = 42 <span class="r">AND stock > 0</span>
+<span class="g">-- 0 rows updated = sold out</span></div></div></div>
+      <p class="body bal" data-k="body" style="margin-top:56px;color:var(--fg)">If two requests arrive at the same time, only one of them can take the last item. The other one gets zero rows updated. In 2015 a researcher used this kind of bug to turn $15 of Starbucks gift cards into $20.</p>
+    </div>
+  <div class="foot"><span class="num"><b>04</b> / 11</span><span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></div>
+</section>
+<section class="slide g-accent l-trick" id="s5">
+  
+  
+    <div class="main">
+      <div class="chip" data-move="tag"><b data-k="tag" data-plain>3 · Names</b></div>
+      <div class="disp fit" data-k="title" data-max="96" style="font-size:96px;margin-top:36px">The name O'Brien can break your query</div>
+      <div style="margin-top:56px"><div class="form" data-move="form"><div class="fl err"><div class="lab" data-k="fields.0.label" data-plain>Surname</div><div class="box" data-k="fields.0.value" data-plain>O'Brien</div><div class="msg"><span class="bang">!</span><span data-k="fields.0.msg" data-plain>The apostrophe breaks the SQL query</span></div></div></div></div>
+      <p class="body bal" data-k="body" style="margin-top:56px;color:var(--fg)">The apostrophe is the character that starts and ends text in SQL. If your code glues the name straight into the query, it breaks. The BBC also wrote about Jennifer Null, whose surname gets read as empty.</p>
+    </div>
+  <div class="foot"><span class="num"><b>05</b> / 11</span><span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></div>
+</section>
+<section class="slide g-ink l-trick" id="s6">
+  
+  
+    <div class="main">
+      <div class="chip" data-move="tag"><b data-k="tag" data-plain>4 · NULL</b></div>
+      <div class="disp fit" data-k="title" data-max="84" style="font-size:84px;margin-top:36px">A licence plate that said NULL got <em class="acc" style="font-style:normal">$12,000 in fines</em></div>
+      <div style="margin-top:48px"><div class="shot" data-move="screenshot" style="transform:rotate(-1deg)"><img data-img="shot.img" src="../shared/assets/wired-head.png"><div class="cr" data-k="shot.credit" data-plain>WIRED, Brian Barrett, 13 Aug 2019</div></div></div>
+      <p class="body bal" data-k="body" style="margin-top:110px;color:var(--fg)">Security researcher Joseph Tartaro told the story at DEF CON in 2019. Tickets with no plate on them ended up with his name, because the system read NULL as a plate.</p>
+    </div>
+  <div class="foot"><span class="num"><b>06</b> / 11</span><span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></div>
+</section>
+<section class="slide g-card l-trick" id="s7">
+  
+  
+    <div class="main">
+      <div class="chip" data-move="tag"><b data-k="tag" data-plain>5 · Leap year</b></div>
+      <div class="disp fit" data-k="title" data-max="84" style="font-size:84px;margin-top:36px">29 February 2012 + 1 year = a date that doesn't exist</div>
+      <div style="margin-top:56px"><div class="form" data-move="form"><div class="fl"><div class="lab" data-k="fields.0.label" data-plain>Valid from</div><div class="box m" data-k="fields.0.value" data-plain>29 FEB 2012</div></div><div class="fl err"><div class="lab" data-k="fields.1.label" data-plain>Valid to</div><div class="box m" data-k="fields.1.value" data-plain>29 FEB 2013</div><div class="msg"><span class="bang">!</span><span data-k="fields.1.msg" data-plain>Invalid date</span></div></div></div></div>
+      <p class="body bal" data-k="body" style="margin-top:56px;color:var(--fg)">Microsoft's own summary says the code was “simply taking the current date and adding one to its year”. Creating the certificate failed, and part of Azure went down with it.</p>
+    </div>
+  <div class="foot"><span class="num"><b>07</b> / 11</span><span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></div>
+</section>
+<section class="slide g-accent l-trick" id="s8">
+  
+  
+    <div class="main">
+      <div class="chip" data-move="tag"><b data-k="tag" data-plain>6 · Daylight saving time</b></div>
+      <div class="disp fit" data-k="title" data-max="92" style="font-size:92px;margin-top:36px">In Tallinn, 3:30 a.m. happened twice</div>
+      <div style="margin-top:56px"><div class="clks" data-move="clocks"><div class="clk"><div class="mono" data-k="clocks.0.k" data-plain>29 March 2026</div><div class="t" data-k="clocks.0.t" data-plain>03:30</div><div class="n" data-k="clocks.0.n" data-plain>never happened</div></div><div class="clk r"><div class="mono" data-k="clocks.1.k" data-plain>25 October 2026</div><div class="t" data-k="clocks.1.t" data-plain>03:30</div><div class="n" data-k="clocks.1.n" data-plain>happened twice</div></div></div></div>
+      <p class="body bal" data-k="body" style="margin-top:56px;color:var(--fg)">In Estonia where I live, the clock changes twice a year. A job scheduled for 3:30 skips one day and runs twice on another.</p>
+    </div>
+  <div class="foot"><span class="num"><b>08</b> / 11</span><span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span></div>
+</section>
+<section class="slide g-card l-trick" id="s9">
+  
+  
+    <div class="main">
+      <div class="chip" data-move="tag"><b data-k="tag" data-plain>7 · Unicode</b></div>
+      <div class="disp fit" data-k="title" data-max="92" style="font-size:92px;margin-top:36px">Adébáy<span class="cmb">ọ̀</span> is 7 letters and 13 bytes</div>
+      <div style="margin-top:56px"><div data-move="bytes"><div class="form"><div class="fl"><div class="lab" data-k="fields.0.label" data-plain>First name</div><div class="box" data-k="fields.0.value" data-plain>Adébáy<span class="cmb">ọ̀</span></div></div></div><div class="cnt"><div class="ui c"><div class="mono" data-k="counts.0.k" data-plain>Letters</div><div class="n" data-k="counts.0.n" data-plain>7</div></div><div class="ui c r"><div class="mono" data-k="counts.1.k" data-plain>strlen()</div><div class="n" data-k="counts.1.n" data-plain>13</div></div></div></div></div>
+      <p class="body bal" data-k="body" style="margin-top:56px;color:var(--fg)">In PHP, strlen counts bytes and mb_strlen counts characters. Normalise the text before you save it, too.</p>
+    </div>
+  <div class="foot"><span class="num"><b>09</b> / 11</span><span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span></div>
+</section>
+<section class="slide g-ink l-trick" id="s10">
+  
+  
+    <div class="main">
+      <div class="chip" data-move="tag"><b data-k="tag" data-plain>8 · Hyrum's law</b></div>
+      <div class="disp fit" data-k="title" data-max="92" style="font-size:92px;margin-top:36px">Whatever your API does, someone <em class="acc" style="font-style:normal">depends on it</em></div>
+      <div style="margin-top:56px"><div class="ui qt" data-move="quote"><div class="q" data-k="quote">With a sufficient number of users of an API, it does not matter what you promise in the contract: all observable behaviors of your system will be depended on by somebody.</div><div class="mono by" data-k="by" data-plain>Hyrum's law, named after Hyrum Wright</div></div></div>
+      <p class="body bal" data-k="body" style="margin-top:56px;color:var(--fg)">If your API always returned a list in the same order, someone's code now depends on that order, even though you never promised it.</p>
+    </div>
+  <div class="foot"><span class="num"><b>10</b> / 11</span><span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span></div>
+</section>
+<section class="slide g-accent l-end" id="s11">
+  
+  
+    <div class="main">
+      <div class="disp fit" data-k="title" data-max="92" style="font-size:92px;">Which edge case would you add?</div>
+      <p class="body bal" data-k="body" style="margin-top:34px">You can't predict every single one. If you wait till you can, you probably wouldn't ship anything.</p>
+      <div class="push" data-move="push" style="width:540px">
+        <div class="mono lab" data-k="where" data-plain style="color:var(--mid)">Full video on YouTube</div>
+        <div style="margin-top:22px"><span class="handle" data-k="handle" data-plain>@WithGbemi</span></div>
+      </div>
+    </div>
+    <div class="pol" data-move="polaroid" style="left:640px;top:760px;width:360px;transform:rotate(4deg)"><img data-img="polaroid.img" src="../shared/assets/headshot.png" style="height:400px;object-position:50% 30%"><div class="cap" data-k="polaroid.caption" data-plain>Edge cases</div></div>
+  <div class="foot"><span class="num"><b>11</b> / 11</span><span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></div>
+</section>
+<script>
+function fitAll(){ document.querySelectorAll('.fit').forEach(el=>{ let s=+el.dataset.max; el.style.fontSize=s+'px';
+  const box=el.parentElement.getBoundingClientRect().width; const lim=Math.min(el.clientWidth||box, box);
+  while((el.scrollWidth>lim+1) && s>24){ s-=2; el.style.fontSize=s+'px'; } }); }
+(function(){ var q=new URLSearchParams(location.search), v=q.get('view'); if(!v) return; document.documentElement.classList.add('v-'+v);
+  if(v==='slide'){ var n=+q.get('n')||1; document.querySelectorAll('.slide').forEach(function(s,i){ if(i+1!==n) s.style.display='none'; }); } })();
+window.__checks = function checks(MONO_MIN) {
+  const res = [];
+  document.querySelectorAll('.slide').forEach((sl, i) => {
+    if (getComputedStyle(sl).display === 'none') return;
+    const R = sl.getBoundingClientRect(); const foot = sl.querySelector('.foot').getBoundingClientRect();
+    const tag = el => `<${el.tagName.toLowerCase()} ${el.className}> "${(el.textContent || '').trim().slice(0, 30)}"`;
+    sl.querySelectorAll('.main *').forEach(el => {
+      if (el.closest('.pol') || el.closest('.cal') || !el.childNodes.length) return;
+      const r = el.getBoundingClientRect(); if (!r.width) return;
+      if (r.bottom > foot.top - 24) res.push(`slide ${i + 1}: ${tag(el)} runs into the footer`);
+      if (r.right > R.right - 50 || r.left < R.left + 50) res.push(`slide ${i + 1}: ${tag(el)} outside the margins`);
+    });
+    sl.querySelectorAll('.cal').forEach(el => { if (el.getBoundingClientRect().bottom > foot.top - 16) res.push(`slide ${i + 1}: calendar runs into the footer`); });
+    sl.querySelectorAll('*').forEach(el => {
+      const cs = getComputedStyle(el);
+      if (!/Mono/.test(cs.fontFamily) || el.closest('.meter')) return;
+      const own = [...el.childNodes].some(c => c.nodeType === 3 && c.textContent.trim());
+      if (own && parseFloat(cs.fontSize) < MONO_MIN - 0.5) res.push(`slide ${i + 1}: mono ${parseFloat(cs.fontSize)}px ${tag(el)}`);
+    });
+    sl.querySelectorAll('.pol, .shot').forEach(pe => {
+      const a = pe.getBoundingClientRect();
+      sl.querySelectorAll('.main .disp, .main p, .main .lab, .main .row, .main .handle').forEach(el => {
+        if (el.closest('.pol') || el.closest('.shot')) return;
+        const rg = document.createRange(); rg.selectNodeContents(el); const g = 24;
+        if ([...rg.getClientRects()].some(r => a.left < r.right + g && a.right > r.left - g && a.top < r.bottom + g && a.bottom > r.top - g))
+          res.push(`slide ${i + 1}: ${pe.className} within 24 px of ${tag(el)}`);
+      });
+    });
+    sl.querySelectorAll('p, .body, .bal, .head, .v').forEach(el => {
+      const words = []; const tw = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+      while (tw.nextNode()) { const t = tw.currentNode; const re = /\S+/g; let m;
+        while ((m = re.exec(t.textContent))) { const rg = document.createRange(); rg.setStart(t, m.index); rg.setEnd(t, m.index + m[0].length);
+          const rr = rg.getClientRects()[0]; if (rr) words.push({ w: m[0], top: Math.round(rr.top) }); } }
+      if (words.length < 3) return;
+      const lines = []; words.forEach(w => { const l = lines.find(l => Math.abs(l.top - w.top) < 8); if (l) l.n++; else lines.push({ top: w.top, n: 1 }); });
+      lines.sort((a, b) => a.top - b.top);
+      if (lines.length > 1 && lines[lines.length - 1].n === 1) res.push(`slide ${i + 1}: one-word last line "${words[words.length - 1].w}" in ${tag(el)}`);
+    });
+  });
+  return res.slice(0, 60);
+};
+document.fonts.ready.then(()=>{ fitAll(); document.body.dataset.ready=1; });
+</script></body></html>

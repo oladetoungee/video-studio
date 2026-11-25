@@ -1,0 +1,17 @@
+{
+ "url": "https://techcabal.com/2026/09/08/techcabal-daily-a-451-million-divestiture/",
+ "captured": "2026-10-01T20:56:55.910Z",
+ "h1": "👨🏿‍🚀TechCabal Daily – A $451 million divestiture",
+ "section": [
+  "GOVERNMENT",
+  "Ghana Launches Digital Marriage Records Platform",
+  "In our newsroom, we always say, “there’s tech in everything.” We should probably update that thesis to “there’s an AI use case for everything; you just haven’t figured it out.” An African government using tech and AI for marriage records wasn’t on our bingo card for 2026, but bet against Ghana at your own detriment.",
+  "What happened? Ghana has launched Marrify, a digital platform that lets people search and verify registered marriage and divorce records. It can also verify marriage officers, licensed venues, churches, pastors, and imams, while an AI assistant provides contextual information on Ghanaian marriage law.",
+  "Why it matters: If, at work, you become suspicious of your colleague who has a secret family but keeps denying that they are married, Marrify is your friend in Ghana. (wink)",
+  "More seriously, Marrify turns marriage records from something people largely have to chase through offices and institutions into searchable digital infrastructure. That has obvious value when you need to verify whether a prospective spouse has a registered marriage or divorce. Still, it also matters for inheritance, immigration, property disputes, court cases, and other situations where knowing someone’s legal marital status can have consequences. The same goes for checking whether a pastor, imam, marriage officer, or venue is actually authorised to conduct marriages.",
+  "But there’s a drawback: Marriage and divorce records are sensitive personal information. Making them easier to access can reduce fraud and bureaucracy, but it can also make stalking, harassment, unwanted disclosure, and other forms of misuse easier if the safeguards are weak.",
+  "The bigger picture: The opportunity is what happens when all that information is brought together. Marrify says it pulls data from the Registrar-General’s Department, courts, local assemblies, and the Ghana Gazette. For citizens, that could mean less running around government offices for basic verification. For courts and government agencies, it could mean faster document checks and fewer opportunities for people to exploit gaps between different records.",
+  "Yet, Marrify cannot be a magic marital-status truth machine. Ghana recognises ordinance, customary and Islamic marriages, and they do not all follow the same registration process. A person not appearing in the database could mean they were never married. Still, it could also mean their marriage was registered elsewhere, the record has not been digitised or linked yet, or the information entered does not match what is in the registry.",
+  "Zoom out: Ghana is showing what digital government can look like when it tackles very ordinary problems. The interesting part isn’t even the AI or tech; it’s whether the country can build enough trust in the underlying data for people to use the platform credibly, and how much more of its public records it can digitise."
+ ]
+}

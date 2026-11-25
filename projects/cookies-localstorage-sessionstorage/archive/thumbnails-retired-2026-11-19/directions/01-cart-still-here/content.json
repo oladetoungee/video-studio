@@ -1,0 +1,31 @@
+{
+ "direction": "Flat yellow ground (the specimen's highlight colour). One line across the top: \"why is my cart still here?\" (\"still here?\" knocked out of a black bar). She is on the left (shoot 1559, palm up, presenting, hard-masked cut-out, hand inside the frame); on the right a generic browser window with a shop cart (2 items) that is still there.",
+ "thumbnail_text": "why is my cart / still here?",
+ "kind": "cut-out",
+ "recommended": true,
+ "titles": [
+  "localStorage Explained: Why Your Cart Is Still There",
+  "How Websites Remember Your Cart (localStorage vs Cookies)",
+  "localStorage vs sessionStorage vs Cookies (What Goes Where)"
+ ],
+ "text": {
+  "hd": "why is my cart <span class=\"hl\">still here?</span>",
+  "u": "shop.example/cart",
+  "h": "Your cart (2)",
+  "a": "Running shoes",
+  "b": "Water bottle",
+  "c": "Checkout"
+ },
+ "images": {
+  "me": "../../assets/shoot/1559-hard.png"
+ },
+ "vars": {
+  "--ground": "#F7D51D"
+ },
+ "board": "Thumbnails 21 (pin-02-04 \"Why You're Stuck\": one line across the top with one word highlighted, the creator below holding up the thing the video is about)",
+ "fonts": "Font 57 (thumbs-02: Inter Tight Bold, white + yellow highlight on #1C1C1C, Thumbnails 21)",
+ "colours": "Font 57 specimen colours, swapped: ground = its yellow #F7D51D, words #111111, highlight #111111 with yellow words",
+ "title": "localStorage Explained: Why Your Cart Is Still There",
+ "class": "no-lift",
+ "scores": "fresh cold critic round 6 (alone / with title): 6 / 7 · UPLOAD"
+}

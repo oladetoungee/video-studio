@@ -1,0 +1,33 @@
+{
+  "text": {
+    "w": "Study in<br>Europe for<br><em>free</em>?",
+    "sub": "for Nigerian students",
+    "cap": "",
+    "price": "€11,904",
+    "note": "proof of funds, Germany"
+  },
+  "images": {
+    "photo": "../../assets/px/university-berlin.jpg"
+  },
+  "vars": {},
+  "class": null,
+  "nudge": {},
+  "fonts": [
+    "design-16 Bodoni Moda (cream #FBF3EC on red #990915, as Design 1)",
+    "pair-15 Bodoni Moda + italic + Archivo"
+  ],
+  "colours": "combo-15 (Design 1: #990915, #FBF3EC, #FCBFBA)",
+  "fontboard_note": "2026-11-16 rework of 08 (old 08 stays)",
+  "board": "Design 1 / font pair-15 (\"Study in Europe for free?\")",
+  "kind": "flat Design 1 red, Bodoni serif with italic accent (the pair-15 specimen line itself), a polaroid of a university in Berlin (Pexels, Shvets Anna) with a price tag naming Germany's proof of funds; no face",
+  "direction": "NEW 2026-11-16 (08b, rework of 08 which scored 5: 'the real cost' read as an X: Y title, the festival photo of students' backs did not say university, the tag hole read as a full stop, 'in the bank first' was unclear). Same board (Design 1 / font pair-15), now with the specimen's own line 'Study in Europe for free?' (a search phrase), a Berlin university photo (matches the Germany tag), less text, and the tag naming the thing people search: proof of funds.",
+  "thumbnail_text": "Study in Europe for free? + what Nigerian students really pay + tag €11,904 proof of funds, Germany",
+  "titles": [
+    "Study in Europe for Free? What Nigerians Really Pay",
+    "Tuition Free Universities in Europe Need Proof of Funds",
+    "Cheapest Countries to Study in Europe for Nigerians (2027)"
+  ],
+  "title": "Study in Europe for Free? What Nigerians Really Pay",
+  "recommended": false,
+  "scores": "2026-11-16 weakest pass: R1 5.5 / R2 6.5 / R3 6.5 (old 08: 5 / 6 / 6); photo swapped to the Berlin university after R3, not re-scored"
+}

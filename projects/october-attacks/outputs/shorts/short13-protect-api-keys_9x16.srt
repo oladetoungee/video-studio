@@ -1,0 +1,67 @@
+1
+00:00:00,080 --> 00:00:02,330
+when you put the Railway, the Zeabur and
+
+2
+00:00:02,330 --> 00:00:04,240
+OpenCode's incident side by side you realize
+
+3
+00:00:04,240 --> 00:00:05,750
+they are kind of the same pattern
+
+4
+00:00:05,750 --> 00:00:07,610
+in these situations particularly the
+
+5
+00:00:07,610 --> 00:00:09,790
+attackers went straight for the place where
+
+6
+00:00:09,790 --> 00:00:11,770
+developers keep their secret keys
+
+7
+00:00:11,770 --> 00:00:13,480
+so if you use any of this platform you want
+
+8
+00:00:13,480 --> 00:00:15,280
+to change any key you're not sure about
+
+9
+00:00:15,280 --> 00:00:17,150
+you want to give your keys an expiry date
+
+10
+00:00:17,150 --> 00:00:19,620
+whenever or wherever the service allows it
+
+11
+00:00:19,620 --> 00:00:22,040
+you want to give each keys only the access
+
+12
+00:00:22,040 --> 00:00:24,550
+it needs so if a key only needs to read one
+
+13
+00:00:24,550 --> 00:00:26,900
+storage bucket just give it access to that
+
+14
+00:00:26,900 --> 00:00:28,310
+one storage bucket
+
+15
+00:00:28,310 --> 00:00:31,130
+set spending limits, set alerts on all your
+
+16
+00:00:31,130 --> 00:00:34,030
+AI and cloud accounts and honestly do not
+
+17
+00:00:34,030 --> 00:00:36,733
+store keys in tools that don't need them

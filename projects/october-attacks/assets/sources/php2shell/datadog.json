@@ -1,0 +1,413 @@
+{
+ "story": "php2shell",
+ "outlet": "Datadog Security Labs",
+ "slug": "datadog",
+ "url": "https://securitylabs.datadoghq.com/articles/php2shell-critical-vulnerabilities-in-php/",
+ "finalUrl": "https://securitylabs.datadoghq.com/articles/php2shell-critical-vulnerabilities-in-php/",
+ "status": "loaded",
+ "http": 200,
+ "title": "PHP2Shell - Critical vulnerabilities in PHP (CVE-2026-109618, CVE-2026-109619): detection, analysis, and remediation | Datadog Security Labs",
+ "h1": "PHP2Shell - Critical vulnerabilities in PHP (CVE-2026-109618, CVE-2026-109619): detection, analysis, and remediation",
+ "published": "2026-10-21T00:00:00Z",
+ "files": {
+  "fold": "php2shell/datadog_fold.png",
+  "full": "php2shell/datadog_full.jpg",
+  "scroll": "php2shell/datadog_scroll.mp4"
+ },
+ "full": {
+  "width": 1440,
+  "height": 6000,
+  "pageHeight": 16574,
+  "zoom": 1,
+  "quotes": [
+   {
+    "quote": "each with a CVSS v4.0 score of 9.2",
+    "box": {
+     "x": 64,
+     "y": 1613,
+     "w": 830,
+     "h": 54
+    },
+    "lines": [
+     {
+      "x": 720,
+      "y": 1613,
+      "w": 174,
+      "h": 26
+     },
+     {
+      "x": 64,
+      "y": 1641,
+      "w": 93,
+      "h": 26
+     }
+    ]
+   },
+   {
+    "quote": "application-level authentication can't block an attack: PHP processes the malicious request before any application code runs",
+    "box": {
+     "x": 64,
+     "y": 1641,
+     "w": 849,
+     "h": 54
+    },
+    "lines": [
+     {
+      "x": 615,
+      "y": 1641,
+      "w": 298,
+      "h": 26
+     },
+     {
+      "x": 64,
+      "y": 1669,
+      "w": 689,
+      "h": 26
+     }
+    ]
+   },
+   {
+    "quote": "AWS reported PHP2Shell exploitation attempts in the wild as early as October 17, 2026, four days before public disclosure and the release of patches",
+    "box": {
+     "x": 63,
+     "y": 1713,
+     "w": 819,
+     "h": 54
+    },
+    "lines": [
+     {
+      "x": 63,
+      "y": 1713,
+      "w": 819,
+      "h": 26
+     },
+     {
+      "x": 64,
+      "y": 1741,
+      "w": 350,
+      "h": 26
+     }
+    ]
+   },
+   {
+    "quote": "After a memory allocation fails, PHP leaves invalid data behind for its cleanup routine to process",
+    "box": {
+     "x": 64,
+     "y": 2543,
+     "w": 855,
+     "h": 54
+    },
+    "lines": [
+     {
+      "x": 221,
+      "y": 2543,
+      "w": 698,
+      "h": 26
+     },
+     {
+      "x": 64,
+      "y": 2571,
+      "w": 62,
+      "h": 26
+     }
+    ]
+   },
+   {
+    "quote": "A PHP worker can reuse stale state from a previous request",
+    "box": {
+     "x": 221,
+     "y": 2615,
+     "w": 468,
+     "h": 26
+    },
+    "lines": [
+     {
+      "x": 221,
+      "y": 2615,
+      "w": 468,
+      "h": 26
+     }
+    ]
+   },
+   {
+    "quote": "Restart or replace every worker that still runs the old runtime",
+    "box": {
+     "x": 68,
+     "y": 3709,
+     "w": 487,
+     "h": 26
+    },
+    "lines": [
+     {
+      "x": 68,
+      "y": 3709,
+      "w": 487,
+      "h": 26
+     }
+    ]
+   }
+  ]
+ },
+ "scroll": {
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "seconds": 9.133333333333333,
+  "keyframes": [
+   {
+    "t": 0,
+    "y": 24
+   },
+   {
+    "t": 1,
+    "y": 24
+   },
+   {
+    "t": 2.445,
+    "y": 1169
+   },
+   {
+    "t": 3.545,
+    "y": 1169
+   },
+   {
+    "t": 4.892,
+    "y": 2099
+   },
+   {
+    "t": 5.992,
+    "y": 2099
+   },
+   {
+    "t": 7.434,
+    "y": 3237
+   },
+   {
+    "t": 9.134,
+    "y": 3237
+   }
+  ],
+  "zoom": 1,
+  "easing": "easeInOutCubic between keyframes, holds where y is equal",
+  "capped": false,
+  "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)",
+  "quotes": [
+   {
+    "quote": "each with a CVSS v4.0 score of 9.2",
+    "inVideo": true,
+    "still": true,
+    "t": 2.98,
+    "visibleStill": [
+     2.37,
+     3.6
+    ],
+    "scrollY": 1169,
+    "box": {
+     "x": 276,
+     "y": 410,
+     "w": 897,
+     "h": 54
+    },
+    "lines": [
+     {
+      "x": 932,
+      "y": 410,
+      "w": 241,
+      "h": 26
+     },
+     {
+      "x": 276,
+      "y": 438,
+      "w": 26,
+      "h": 26
+     }
+    ],
+    "docBox": {
+     "x": 276,
+     "y": 1579,
+     "w": 897,
+     "h": 54
+    },
+    "layoutDriftPx": 0
+   },
+   {
+    "quote": "application-level authentication can't block an attack: PHP processes the malicious request before any application code runs",
+    "inVideo": true,
+    "still": true,
+    "t": 2.98,
+    "visibleStill": [
+     2.37,
+     3.6
+    ],
+    "scrollY": 1169,
+    "box": {
+     "x": 276,
+     "y": 438,
+     "w": 853,
+     "h": 54
+    },
+    "lines": [
+     {
+      "x": 759,
+      "y": 438,
+      "w": 370,
+      "h": 26
+     },
+     {
+      "x": 276,
+      "y": 466,
+      "w": 617,
+      "h": 26
+     }
+    ],
+    "docBox": {
+     "x": 276,
+     "y": 1607,
+     "w": 853,
+     "h": 54
+    },
+    "layoutDriftPx": 0
+   },
+   {
+    "quote": "AWS reported PHP2Shell exploitation attempts in the wild as early as October 17, 2026, four days before public disclosure and the release of patches",
+    "inVideo": true,
+    "still": true,
+    "t": 2.98,
+    "visibleStill": [
+     2.37,
+     3.6
+    ],
+    "scrollY": 1169,
+    "box": {
+     "x": 275,
+     "y": 510,
+     "w": 873,
+     "h": 54
+    },
+    "lines": [
+     {
+      "x": 275,
+      "y": 510,
+      "w": 873,
+      "h": 26
+     },
+     {
+      "x": 276,
+      "y": 538,
+      "w": 296,
+      "h": 26
+     }
+    ],
+    "docBox": {
+     "x": 275,
+     "y": 1679,
+     "w": 873,
+     "h": 54
+    },
+    "layoutDriftPx": 0
+   },
+   {
+    "quote": "After a memory allocation fails, PHP leaves invalid data behind for its cleanup routine to process",
+    "inVideo": true,
+    "still": true,
+    "t": 5.45,
+    "visibleStill": [
+     4.83,
+     6.07
+    ],
+    "scrollY": 2099,
+    "box": {
+     "x": 276,
+     "y": 410,
+     "w": 855,
+     "h": 54
+    },
+    "lines": [
+     {
+      "x": 433,
+      "y": 410,
+      "w": 698,
+      "h": 26
+     },
+     {
+      "x": 276,
+      "y": 438,
+      "w": 62,
+      "h": 26
+     }
+    ],
+    "docBox": {
+     "x": 276,
+     "y": 2509,
+     "w": 855,
+     "h": 54
+    },
+    "layoutDriftPx": 0
+   },
+   {
+    "quote": "A PHP worker can reuse stale state from a previous request",
+    "inVideo": true,
+    "still": true,
+    "t": 5.45,
+    "visibleStill": [
+     4.83,
+     6.07
+    ],
+    "scrollY": 2099,
+    "box": {
+     "x": 433,
+     "y": 482,
+     "w": 468,
+     "h": 26
+    },
+    "lines": [
+     {
+      "x": 433,
+      "y": 482,
+      "w": 468,
+      "h": 26
+     }
+    ],
+    "docBox": {
+     "x": 433,
+     "y": 2581,
+     "w": 468,
+     "h": 26
+    },
+    "layoutDriftPx": 0
+   },
+   {
+    "quote": "Restart or replace every worker that still runs the old runtime",
+    "inVideo": true,
+    "still": true,
+    "t": 8.27,
+    "visibleStill": [
+     7.37,
+     9.17
+    ],
+    "scrollY": 3237,
+    "box": {
+     "x": 280,
+     "y": 410,
+     "w": 487,
+     "h": 26
+    },
+    "lines": [
+     {
+      "x": 280,
+      "y": 410,
+      "w": 487,
+      "h": 26
+     }
+    ],
+    "docBox": {
+     "x": 280,
+     "y": 3647,
+     "w": 487,
+     "h": 26
+    },
+    "layoutDriftPx": 0
+   }
+  ]
+ }
+}

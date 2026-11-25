@@ -1,0 +1,34 @@
+{
+ "direction": "Her real room dimmed (shoot 1550, mid-explanation), she on the right. One line on top: HOW AM I STILL LOGGED IN? A generic browser window floats on the left: an avatar and \"Hi, Ada / Welcome back\", the thing a login cookie gives you.",
+ "thumbnail_text": "HOW AM I STILL LOGGED IN?",
+ "kind": "photo",
+ "recommended": false,
+ "titles": [
+  "How Do Websites Keep You Logged In? (Cookies Explained)",
+  "How Login Cookies Work: Session IDs Explained Simply",
+  "localStorage vs sessionStorage vs Cookies (What Goes Where)"
+ ],
+ "text": {
+  "hd": "HOW AM I STILL LOGGED IN?",
+  "hi": "Hi, Ada",
+  "wb": "Welcome back",
+  "av": "A",
+  "u": "shop.example"
+ },
+ "images": {
+  "room": "../../assets/shoot/1550.jpg",
+  "me": "../../assets/shoot/1550-person.png"
+ },
+ "vars": {
+  "--pw": "1700px",
+  "--pl": "-10px",
+  "--pt": "-170px",
+  "--dim": "rgba(30,24,20,.74)"
+ },
+ "board": "Thumbnails 44 (yt-72 \"boring, but it works\": the creator centred in her room, a UI card floating beside her, one line across the top)",
+ "fonts": "Font 72 (thumbs-17: Inter Tight, white on #2B2420, Thumbnails 152)",
+ "colours": "Font 72 specimen: #FFFFFF words on #2B2420 (her room dimmed 55% to it); the card is a generic white browser window",
+ "title": "How Do Websites Keep You Logged In? (Cookies Explained)",
+ "class": "no-lift",
+ "scores": "fresh cold critic round 6 (alone / with title): 6 / 5 (old title; retitled after)"
+}

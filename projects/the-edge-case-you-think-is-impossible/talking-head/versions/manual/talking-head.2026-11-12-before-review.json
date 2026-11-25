@@ -1,0 +1,626 @@
+{
+ "title": "the-edge-case-you-think-is-impossible: talking-head",
+ "source": "../kit/raw-video.mov",
+ "fps": 30,
+ "words": "data/raw_words.json",
+ "faces": "data/face_track.json",
+ "edl": "data/edl.json",
+ "edit": {
+  "silenceDb": -44,
+  "maxPause": 0.42,
+  "keepBefore": 0.14,
+  "keepAfter": 0.1
+ },
+ "out": "../outputs/talking-head",
+ "shortsOut": "../outputs/shorts",
+ "tail": 0.7,
+ "audio": {
+  "voiceFilter": "highpass=f=80,afftdn=nr=8:nf=-52:tn=1,deesser=i=0.3:m=0.5:f=0.5,acompressor=threshold=0.06:ratio=3:attack=6:release=160:knee=3,equalizer=f=3200:t=q:w=1.2:g=1.5",
+  "music": {
+   "dir": "library:music"
+  },
+  "levels": {
+   "voiceLufs": -16.0,
+   "duckDb": -18.0,
+   "openDb": -10.0,
+   "target": -14.0,
+   "ceiling": 0.8
+  },
+  "sfx": {
+   "palette": true,
+   "roles": {},
+   "gainDb": 8
+  }
+ },
+ "moments": [
+  {
+   "id": "full",
+   "kind": "full",
+   "slug": "full",
+   "title": "The whole video, tightened, with graphics (B · The Field)",
+   "in": 0,
+   "out": 495.03,
+   "cuts": [
+    [
+     0.0,
+     2.18
+    ],
+    [
+     107.72,
+     109.45
+    ],
+    [
+     134.64,
+     141.08
+    ],
+    [
+     229.26,
+     232.72
+    ],
+    [
+     268.02,
+     275.77
+    ],
+    [
+     297.8,
+     301.76
+    ],
+    [
+     303.0333,
+     303.8333,
+     "exact"
+    ],
+    [
+     318.78,
+     325.25
+    ],
+    [
+     435.35,
+     436.68
+    ],
+    [
+     438.55,
+     439.45
+    ]
+   ],
+   "retakes": false,
+   "script": "moments/full.js",
+   "music": [
+    "1009",
+    0.0
+   ],
+   "note": "cuts = CLEANUP list + kit Q5 \"Well, let me go\" (438.55-439.45: remove that cut to keep it). Correction: top-level pauses fix-azure (2019 -> 2012). 2026-11-07: + [107.72,109.45] her \"idempotence, like that\" retake (she asked for it out)."
+  },
+  {
+   "id": "sh01",
+   "kind": "short",
+   "slug": "duplicate-orders",
+   "title": "Duplicate orders: when one customer gets charged twice",
+   "label": "Duplicate orders: when one customer gets charged twice",
+   "sublabel": "",
+   "in": 71.3,
+   "out": 126.0,
+   "cuts": [
+    [
+     107.72,
+     109.45
+    ]
+   ],
+   "script": "shorts/sh01.js",
+   "music": [
+    "1009",
+    4.0
+   ],
+   "tail": 0.5,
+   "efStyle": {
+    "lab": "box",
+    "cap": "caps"
+   },
+   "endCard": false,
+   "fmt": "I",
+   "frame9": "fill",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 102.5,
+    "text": "Ever been ~charged twice~ for one order? (duplicate submission)",
+    "style": "photo"
+   }
+  },
+  {
+   "id": "sh02",
+   "kind": "short",
+   "slug": "starbucks-race-condition",
+   "title": "Starbucks gift cards had a race condition bug",
+   "label": "Starbucks gift cards | had a race condition bug",
+   "sublabel": "",
+   "in": 141.1,
+   "out": 168.2,
+   "cuts": [],
+   "script": "shorts/sh02.js",
+   "music": [
+    "1009",
+    13.0
+   ],
+   "tail": 0.5,
+   "efStyle": {
+    "lab": "mix",
+    "cap": "mono"
+   },
+   "endCard": false,
+   "fmt": "G",
+   "frame9": "letterbox",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 152.77,
+    "text": "Hacking Starbucks gift cards with a ~race condition~",
+    "style": "frame",
+    "shift": 250
+   }
+  },
+  {
+   "id": "sh03",
+   "kind": "short",
+   "slug": "race-condition-last-item",
+   "title": "Race condition: two buyers, one item left",
+   "label": "Race condition: | two buyers, one item left",
+   "sublabel": "",
+   "in": 169.9,
+   "out": 195.5,
+   "cuts": [],
+   "script": "shorts/sh03.js",
+   "music": [
+    "1009",
+    22.0
+   ],
+   "tail": 0.5,
+   "efStyle": {
+    "lab": "field",
+    "cap": "word"
+   },
+   "endCard": false,
+   "fmt": "D",
+   "frame9": "wideLow",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 184.47,
+    "text": "What is a ~race condition~?",
+    "style": "card",
+    "big": true
+   }
+  },
+  {
+   "id": "sh04",
+   "kind": "short",
+   "slug": "obrien-sql",
+   "title": "The name O’Brien can break your SQL query",
+   "label": "The name O’Brien can break your SQL query",
+   "sublabel": "",
+   "in": 195.6,
+   "out": 225.6,
+   "cuts": [],
+   "script": "shorts/sh04.js",
+   "music": [
+    "1009",
+    31.0
+   ],
+   "tail": 0.5,
+   "efStyle": {
+    "lab": "plain",
+    "cap": "outline"
+   },
+   "endCard": false,
+   "fmt": "J",
+   "poster": "O’Brien",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 221.03,
+    "text": "Names can ~break~ your database",
+    "style": "photo"
+   }
+  },
+  {
+   "id": "sh05",
+   "kind": "short",
+   "slug": "jennifer-null",
+   "title": "Jennifer Null and the websites that reject her name",
+   "label": "Her surname is Null | and websites reject it",
+   "sublabel": "",
+   "in": 225.75,
+   "out": 252.1,
+   "cuts": [
+    [
+     229.26,
+     232.72
+    ]
+   ],
+   "script": "shorts/sh05.js",
+   "music": [
+    "1009",
+    40.0
+   ],
+   "tail": 0.5,
+   "efStyle": {
+    "lab": "ink",
+    "cap": "karaoke"
+   },
+   "endCard": false,
+   "fmt": "M",
+   "frame9": "fill",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 233.45,
+    "text": "Her surname is ~Null~ and websites reject it",
+    "style": "photo"
+   }
+  },
+  {
+   "id": "sh06",
+   "kind": "short",
+   "slug": "null-license-plate",
+   "title": "The NULL license plate that got $12,000 in fines",
+   "label": "The NULL license plate that got $12,000 in fines",
+   "sublabel": "",
+   "in": 255.8,
+   "out": 286.7,
+   "cuts": [
+    [
+     268.02,
+     275.77
+    ]
+   ],
+   "script": "shorts/sh06.js",
+   "music": [
+    "1009",
+    49.0
+   ],
+   "tail": 0.5,
+   "efStyle": {
+    "lab": "field",
+    "cap": "outline"
+   },
+   "endCard": false,
+   "fmt": "H",
+   "frame9": "fill",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 282.0,
+    "text": "A number plate that said ~NULL~ got $12,000 in fines",
+    "style": "photo"
+   }
+  },
+  {
+   "id": "sh07",
+   "kind": "short",
+   "slug": "azure-leap-day",
+   "title": "A leap day took down part of Microsoft Azure",
+   "label": "A leap day took down part of Microsoft Azure",
+   "sublabel": "",
+   "in": 292.6,
+   "out": 337.5,
+   "cuts": [
+    [
+     297.8,
+     301.76
+    ],
+    [
+     303.0333,
+     303.8333,
+     "exact"
+    ],
+    [
+     318.78,
+     325.25
+    ]
+   ],
+   "script": "shorts/sh07.js",
+   "music": [
+    "1009",
+    58.0
+   ],
+   "tail": 0.5,
+   "efStyle": {
+    "lab": "mix",
+    "cap": "caps"
+   },
+   "endCard": false,
+   "pauses": false,
+   "note": "the wrong \"2019\" is cut out of this short, so no correction pause",
+   "fmt": "C",
+   "frame9": "4x5",
+   "poster": "29 February",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 330.8,
+    "text": "The ~leap year~ bug that took down Microsoft Azure",
+    "style": "card",
+    "bg": "#FF3B1F"
+   }
+  },
+  {
+   "id": "sh08",
+   "kind": "short",
+   "slug": "daylight-saving-bug",
+   "title": "Daylight saving time can break scheduled jobs",
+   "label": "Daylight saving bug | when the clocks change",
+   "sublabel": "",
+   "in": 348.85,
+   "out": 380.95,
+   "cuts": [],
+   "script": "shorts/sh08.js",
+   "music": [
+    "1009",
+    67.0
+   ],
+   "tail": 0.5,
+   "efStyle": {
+    "lab": "ink",
+    "cap": "word"
+   },
+   "endCard": false,
+   "fmt": "K",
+   "frame9": "fill",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 367.14,
+    "text": "~Daylight saving~ time can break your code",
+    "style": "photo"
+   }
+  },
+  {
+   "id": "sh09",
+   "kind": "short",
+   "slug": "unicode-names",
+   "title": "Why the name Adébáyọ̀ breaks character limits",
+   "label": "Why Adébáyọ̀ breaks | character limits",
+   "sublabel": "",
+   "in": 389.1,
+   "out": 417.0,
+   "cuts": [],
+   "script": "shorts/sh09.js",
+   "music": [
+    "1009",
+    76.0
+   ],
+   "tail": 0.5,
+   "efStyle": {
+    "lab": "box",
+    "cap": "karaoke"
+   },
+   "endCard": false,
+   "fmt": "F",
+   "frame9": "1x1top",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 393.37,
+    "text": "Names with ~accents~ break character limits",
+    "style": "photo"
+   }
+  },
+  {
+   "id": "sh10",
+   "kind": "short",
+   "slug": "hyrums-law",
+   "title": "Hyrum’s law explained",
+   "label": "Hyrum’s law | explained",
+   "sublabel": "",
+   "in": 417.1,
+   "out": 474.55,
+   "cuts": [
+    [
+     435.35,
+     436.68
+    ],
+    [
+     438.55,
+     439.45
+    ]
+   ],
+   "script": "shorts/sh10.js",
+   "music": [
+    "1009",
+    85.0
+   ],
+   "tail": 0.5,
+   "efStyle": {
+    "lab": "plain",
+    "cap": "mono"
+   },
+   "endCard": false,
+   "fmt": "B",
+   "frame9": "4x5",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 449.87,
+    "text": "What is ~Hyrum’s law~?",
+    "style": "card"
+   }
+  },
+  {
+   "id": "sh11",
+   "kind": "short",
+   "slug": "real-users-edge-cases",
+   "title": "Real users double-click, open tabs and lose network",
+   "label": "Real users double-click, open tabs and lose network",
+   "sublabel": "",
+   "in": 2.18,
+   "out": 487.2,
+   "cuts": [
+    [
+     67.6,
+     478.15
+    ]
+   ],
+   "script": "shorts/sh11.js",
+   "music": [
+    "1009",
+    94.0
+   ],
+   "tail": 0.5,
+   "efStyle": {
+    "lab": "field",
+    "cap": "helv"
+   },
+   "endCard": false,
+   "pauses": false,
+   "fmt": "A",
+   "frame9": "wide",
+   "cover": {
+    "on": true,
+    "dur": 0.1,
+    "at": 2.58,
+    "text": "Real users ~double-click~: edge cases you must test",
+    "style": "photo"
+   }
+  },
+  {
+   "id": "teaser",
+   "kind": "teaser",
+   "slug": "edge-cases",
+   "title": "Teaser for LinkedIn and X (v3): real users, the idea, four common edge cases, B · The Field look",
+   "bites": [
+    [
+     50.25,
+     67.55
+    ],
+    [
+     16.4,
+     22.4
+    ],
+    {
+     "gap": 0.8,
+     "at": 229.6
+    },
+    [
+     67.6,
+     86.55
+    ],
+    {
+     "gap": 0.8,
+     "at": 229.6
+    },
+    [
+     126.03,
+     134.6
+    ],
+    [
+     169.98,
+     186.05
+    ],
+    {
+     "gap": 0.8,
+     "at": 229.6
+    },
+    [
+     225.62,
+     229.26
+    ],
+    [
+     232.72,
+     243.55
+    ],
+    {
+     "gap": 0.8,
+     "at": 229.6
+    },
+    [
+     341.17,
+     345.28
+    ],
+    [
+     351.75,
+     359.3
+    ],
+    [
+     368.7,
+     377.4
+    ],
+    [
+     478.1,
+     487.3
+    ],
+    [
+     186.2,
+     187.4
+    ]
+   ],
+   "tail": 6.5,
+   "script": "teaser/teaser.js",
+   "music": [
+    "766",
+    0.0
+   ],
+   "endCard": false,
+   "note": "2026-11-12 v3: one story a stranger can follow (TEASER-PLAYBOOK 0a); plan in teaser/PLAN-v3.md; v2 in archive/teaser-v2/. Ends on the outroCard."
+  }
+ ],
+ "common": [
+  "../film/assets/src/clips.js",
+  "../film/scenes/ef.js",
+  "moments/common.js",
+  "moments/visuals.js",
+  "moments/sent.js",
+  "moments/plan.js",
+  "moments/formats.js"
+ ],
+ "pad": "#D4F04A",
+ "frame9": "4x5",
+ "videoTitle": "Edge Cases in Software: A License Plate Called NULL",
+ "images": {
+  "clip_bbc-head": "../film/assets/src/bbc-head.png",
+  "clip_bbc-jn": "../film/assets/src/bbc-jn.png",
+  "clip_wired-head": "../film/assets/src/wired-head.png",
+  "clip_wired-plate": "../film/assets/src/wired-plate.png",
+  "clip_azure": "../film/assets/src/azure.png",
+  "clip_stripe": "../film/assets/src/stripe.png",
+  "clip_sakurity": "../film/assets/src/sakurity.png",
+  "clip_sakurity-race": "../film/assets/src/sakurity-race.png",
+  "clip_hyrum": "../film/assets/src/hyrum.png",
+  "px_7534794": "../film/assets/src/px-7534794.jpg",
+  "px_5357816": "../film/assets/src/px-5357816.jpg",
+  "px_4559756": "../film/assets/src/px-4559756.jpg",
+  "px_35838020": "../film/assets/src/px-35838020.jpg",
+  "px_37730212": "../film/assets/src/px-37730212.jpg",
+  "px_7549098": "../film/assets/src/px-7549098.jpg",
+  "cover_sh01": "assets/covers/sh01.jpg",
+  "cover_sh02": "assets/covers/sh02.jpg",
+  "cover_sh03": "assets/covers/sh03.jpg",
+  "cover_sh03_cut": "assets/covers/sh03-cut.png",
+  "cover_sh04": "assets/covers/sh04.jpg",
+  "cover_sh05": "assets/covers/sh05.jpg",
+  "cover_sh06": "assets/covers/sh06.jpg",
+  "cover_sh07": "assets/covers/sh07.jpg",
+  "cover_sh07_cut": "assets/covers/sh07-cut.png",
+  "cover_sh08": "assets/covers/sh08.jpg",
+  "cover_sh09": "assets/covers/sh09.jpg",
+  "cover_sh10": "assets/covers/sh10.jpg",
+  "cover_sh10_cut": "assets/covers/sh10-cut.png",
+  "cover_sh11": "assets/covers/sh11.jpg",
+  "cover_sh02_frame": "assets/covers/sh02-frame.jpg"
+ },
+ "pauses": [],
+ "outroCard": {
+  "on": true,
+  "thumb": "../outputs/thumbnails/09-testing-vs-real-users.png",
+  "title": "Edge Cases: Why Code That Passes Tests Still Breaks",
+  "dur": 6.5,
+  "photo": "/library/her-photos/avatar.png",
+  "style": {
+   "ground": "#0C0C0C",
+   "ink": "#FFFFFF",
+   "mid": "#B9C77A",
+   "accent": "#D4F04A",
+   "button": "#D4F04A",
+   "buttonInk": "#0C0C0C"
+  }
+ }
+}

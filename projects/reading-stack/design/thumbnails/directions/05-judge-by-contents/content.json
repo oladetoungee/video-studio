@@ -1,0 +1,17 @@
+{
+  "direction": "Wordplay hook + real photo of her holding the book (split)",
+  "title": "Why I Read the Table of Contents Before Chapter One",
+  "text": {
+    "line1": "Judge a<br>book by its",
+    "line2": "contents."
+  },
+  "images": {
+    "photo": "../../assets/photo/convivial_gaze.jpg"
+  },
+  "vars": {
+    "--px": "600px",
+    "--ix": "-500px",
+    "--iy": "-205px",
+    "--iw": "1680px"
+  }
+}

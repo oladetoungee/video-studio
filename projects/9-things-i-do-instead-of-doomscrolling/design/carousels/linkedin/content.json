@@ -1,0 +1,151 @@
+{
+  "_help": "Edit text here (or in the studio), then run: node shared/build.mjs linkedin (from design/carousels). Markup: *word* = the orange dauber behind a word, \n = line break. Item slides fill the little card in the footer.",
+  "deck": "linkedin",
+  "width": 1080,
+  "height": 1350,
+  "accent": "#FF6A1A",
+  "docTitle": "9 things I do instead of doomscrolling (LinkedIn)",
+  "slides": [
+    {
+      "layout": "cover",
+      "ground": "butter",
+      "title": "Why is it so hard to stop *doomscrolling*?",
+      "size": 104,
+      "sub": "Part of it is design. Here are nine easy things I do instead.",
+      "photo": {
+        "img": "reading-sofa.jpg",
+        "h": 420,
+        "w": 760,
+        "r": -2,
+        "side": "left",
+        "gap": 70
+      }
+    },
+    {
+      "layout": "statement",
+      "ground": "ink",
+      "label": "Stopping cues",
+      "title": "A feed that never *ends*",
+      "size": 116,
+      "body": "In a 2023 study of people's scrolling, infinite feeds left people with the most regret afterwards. As an HCI student, I find it interesting how much one small design decision shapes how we spend our free time.",
+      "source": "Source: Rixen et al., 2023",
+      "photo": {
+        "img": "night-phone.jpg",
+        "h": 260,
+        "w": 560,
+        "r": -3,
+        "side": "left",
+        "pos": "50% 20%",
+        "gap": 60
+      }
+    },
+    {
+      "layout": "statement",
+      "ground": "card",
+      "label": "My one rule",
+      "title": "Replace it with something *easy*",
+      "size": 96,
+      "body": "For most of us, doomscrolling is what we do when we're tired, or when we don't want to do something more difficult. So the thing that replaces it can't be too demanding, or the phone wins.",
+      "photo": {
+        "img": "kettle.jpg",
+        "h": 340,
+        "w": 620,
+        "r": 3,
+        "gap": 70
+      }
+    },
+    {
+      "layout": "list",
+      "ground": "butter",
+      "title": "The nine things",
+      "size": 84,
+      "start": 1,
+      "rows": [
+        "Read, even while I eat",
+        "Let myself be bored",
+        "Small talk with people",
+        "Make friends as an adult",
+        "Pick up something new",
+        "Long-form content, on purpose",
+        "Something physical",
+        "Prayer and journaling",
+        "Call the people in my life"
+      ],
+      "body": null
+    },
+    {
+      "layout": "item",
+      "ground": "card",
+      "n": "No. 1",
+      "title": "I read while I *eat*",
+      "body": "Eating always feels like a break to me, and I noticed I picked up my phone every time. So now a book comes to the table.",
+      "photo": {
+        "img": "read-eat.jpg",
+        "h": 500,
+        "w": 660,
+        "r": 3,
+        "gap": 60
+      },
+      "nsize": 88
+    },
+    {
+      "layout": "photoband",
+      "ground": "ink",
+      "n": "No. 4",
+      "title": "Make friends as an *adult*",
+      "size": 76,
+      "body": "Our parents at the school gate: \"My child is going to this school, your child is going to this school.\" Boom. That's how my parents' generation in Nigeria made friends, and I think we can be more intentional about it too.",
+      "photo": {
+        "img": "coffee-talk.jpg",
+        "pos": "50% 40%"
+      },
+      "bandH": 500
+    },
+    {
+      "layout": "item",
+      "ground": "butter",
+      "n": "No. 5",
+      "title": "Not everything has to make *money*",
+      "size": 84,
+      "body": "\"I feel like we are not picking up habits that we cannot monetise.\" I think that's part of why we settle for things like doomscrolling. This summer I learned to ride a bike, and now I hunt for bags at thrift stores.",
+      "photo": {
+        "img": "thrift.jpg",
+        "h": 340,
+        "w": 620,
+        "r": -2,
+        "side": "left",
+        "gap": 50
+      },
+      "nsize": 88
+    },
+    {
+      "layout": "photoband",
+      "ground": "ink",
+      "n": "No. 9",
+      "title": "Call your *people*",
+      "size": 80,
+      "body": "As much as people comment and give feedback on your posts, there are real people in your life who care about you. Social media can never beat that connection.",
+      "photo": {
+        "img": "call.jpg",
+        "pos": "60% 50%"
+      },
+      "bandH": 560
+    },
+    {
+      "layout": "end",
+      "ground": "butter",
+      "title": "What do you reach for instead of your *phone*?",
+      "size": 92,
+      "body": "I made a full video about all nine and why the feed is so hard to put down.",
+      "where": "Full video on YouTube",
+      "handle": "@WithGbemi",
+      "polaroid": {
+        "img": "gbemi-headshot.jpg"
+      },
+      "polX": 620,
+      "polY": 700,
+      "blockGap": 90
+    }
+  ],
+  "hideDots": true
+}

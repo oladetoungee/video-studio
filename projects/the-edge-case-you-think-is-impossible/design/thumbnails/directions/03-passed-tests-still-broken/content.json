@@ -1,0 +1,27 @@
+{
+  "text": {
+    "a": "Passed all tests",
+    "b": "Still broken"
+  },
+  "images": {
+    "room": "../../assets/shoot/room3-1591.jpg",
+    "me": "../../assets/shoot/me3-1591.png"
+  },
+  "kind": "photo (her centred between a top line and a foot line)",
+  "board": "Thumbnails 101 (yt-48: Do THIS After Work / Transform Your Life)",
+  "fonts": [
+    "thumbs-18 Montserrat ExtraBold (white + yellow #F6C343 on #3A3D3A, Thumbnails 162)"
+  ],
+  "colours": "Thumbnails 162: #3A3D3A / #FFFFFF / #F6C343",
+  "thumbnail_text": "PASSED ALL TESTS / STILL BROKEN",
+  "scores": "cold critic r5: 7 / 7.5, then recropped to one pointing hand (not re-scored)",
+  "titles": [
+    "Your Code Passed Every Test. Why Is It Still Broken? (Edge Cases)",
+    "Why Code That Passes Tests Still Breaks (Edge Cases)"
+  ],
+  "title": "Your Code Passed Every Test. Why Is It Still Broken? (Edge Cases)",
+  "direction": "Copies Thumbnails 101: the setup on top, the punchline at the foot in yellow, she points in the middle of her room with a sceptical look (1591).",
+  "nudge": {},
+  "vars": {},
+  "class": "no-lift"
+}

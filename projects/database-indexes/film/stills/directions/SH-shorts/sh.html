@@ -1,0 +1,27 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+/* Helvetica Neue is the macOS system font: loaded with local() only, never copied (SHORTS-PLAYBOOK "Font and licence") */
+@font-face { font-family: HN; src: local("Helvetica Neue"), local("HelveticaNeue"); font-weight: 400; }
+@font-face { font-family: HN; src: local("Helvetica Neue Medium"), local("HelveticaNeue-Medium"); font-weight: 500; }
+html, body { margin: 0; background: #000; }
+#stage { position: relative; overflow: hidden; background: #000; }
+img { position: absolute; display: block; }
+.label { position: absolute; left: 50%; transform: translateX(-50%); top: 130px; background: #fff; color: #000; font: 400 72px HN; padding: 19px 18px; border-radius: 8px; white-space: nowrap; line-height: 1.05; }
+.cap { position: absolute; left: 50%; transform: translateX(-50%); top: 1468px; background: rgba(0,0,0,0.4); color: #DFD7CB; font: 500 76px HN; letter-spacing: -0.08em; line-height: 0.92; padding: 12px 14px; border-radius: 10px; text-align: center; white-space: pre; }
+</style></head><body>
+<div id="stage"></div>
+<script src="../_tools/kit.js"></script>
+<script>
+// SH3 "how a database index works" (raw 2:03.0-2:52.0, ends before the 2:52 slip). Her caption spec (SHORTS-PLAYBOOK):
+// label = Helvetica Neue Regular 82 px in a white box at the top; caption = Helvetica Neue Medium 76 px, #DFD7CB, black 40 % box, centre y ~1535.
+function build(root, bg, caption) {
+  el('img', { left: 0, top: 0, width: '1080px', height: '1920px' }, '', root).src = bg;
+  el('div', {}, 'how a database index works', root).className = 'label';
+  el('div', {}, caption, root).className = 'cap';
+}
+// 1) her footage (2:14 "Say you have an index on the email column…"; 4K frame cropped to 9:16, never flipped)
+scene('face', 0, 1, (root) => build(root, '../_footage/short_134.jpg', 'say you have an index\non the email column'), () => {});
+// 2) a full-screen film scene (A · Query Plan, 9:16) under the same caption (2:23 "Bob comes after Alice, so it moves to the right")
+scene('film', 1, 2, (root) => build(root, '_src/A_btree_step2_9x16.png', 'bob comes after alice so\nit moves to the right'), () => {});
+</script></body></html>

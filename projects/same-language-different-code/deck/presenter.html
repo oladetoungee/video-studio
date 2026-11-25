@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Presenter · Same Language, Different Code</title>
+<style>
+  @font-face { font-family: 'Archivo'; src: url('assets/fonts/Archivo.ttf'); font-weight: 100 900; }
+  @font-face { font-family: 'DM Mono'; src: url('assets/fonts/DMMono-Medium.ttf'); }
+  :root { --bg: #141416; --fg: #EFE8DA; --sub: #8C8577; --lime: #D4F04A; --red: #E8432A; --blue: #6F86FF; }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { height: 100%; background: var(--bg); color: var(--fg); font-family: 'Archivo', system-ui, sans-serif; }
+  body { display: grid; grid-template-rows: auto 1fr auto; gap: 18px; padding: 24px 32px; }
+  header { display: flex; align-items: baseline; gap: 28px; flex-wrap: wrap; }
+  .mono { font-family: 'DM Mono', monospace; letter-spacing: .04em; }
+  #sec { font-size: 30px; font-weight: 800; }
+  #planned, #pos { font-size: 22px; color: var(--sub); }
+  #timer { margin-left: auto; font-size: 54px; }
+  #delta { font-size: 24px; padding: 2px 10px; }
+  #delta.ahead { background: var(--lime); color: #111; } #delta.behind { background: var(--red); color: #111; }
+  #clock { font-size: 24px; color: var(--sub); }
+  #notes { overflow: auto; font-size: 34px; line-height: 1.45; padding-right: 12px; }
+  #notes p { margin: 0 0 18px; color: var(--sub); }
+  #notes p.now { color: var(--fg); }
+  #notes p.done { color: #5a564e; }
+  .tag { font-family: 'DM Mono'; font-size: 18px; background: #2a2a2e; color: var(--lime); padding: 2px 8px; vertical-align: 6px; margin-right: 8px; }
+  footer { display: flex; gap: 20px; align-items: center; border-top: 2px solid #2a2a2e; padding-top: 14px; font-size: 22px; }
+  #next { flex: 1; color: var(--sub); overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+  #next b { color: var(--fg); }
+  button { font: 500 18px 'DM Mono'; background: #2a2a2e; color: var(--fg); border: 0; padding: 10px 16px; cursor: pointer; }
+  button:hover { background: #3a3a40; }
+  #warn { color: var(--red); font-size: 20px; }
+</style>
+</head>
+<body>
+<header>
+  <span id="sec" class="">…</span>
+  <span id="planned" class="mono"></span>
+  <span id="pos" class="mono"></span>
+  <span id="delta" class="mono"></span>
+  <span id="timer" class="mono">0:00</span>
+  <span id="clock" class="mono"></span>
+</header>
+<div id="notes"><p>Waiting for the deck… Open this window from the deck with the S key.</p></div>
+<footer>
+  <div id="next"></div>
+  <span id="warn"></span>
+  <button id="start">Start</button><button id="pause">Pause</button><button id="reset">Reset</button>
+  <button id="prev">◀</button><button id="nextb">▶</button>
+</footer>
+<script>
+(function () {
+  const deck = window.opener;
+  let S = null, started = null, paused = 0, pausedAt = null;
+  const $ = (id) => document.getElementById(id);
+  const send = (m) => { try { deck && deck.postMessage(m, '*'); } catch (e) {} };
+  if (!deck) $('warn').textContent = 'No deck window: open me from the deck (S).';
+  send({ type: 'hello' });
+  setTimeout(() => send({ type: 'hello' }), 500);
+
+  const toSec = (t) => { const m = /(\d+):(\d+)/.exec(t || ''); return m ? (+m[1]) * 60 + (+m[2]) : null; };
+  const fmt = (s) => { s = Math.max(0, Math.floor(s)); return Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0'); };
+  const elapsed = () => started == null ? 0 : ((pausedAt || Date.now()) - started - paused) / 1000;
+  const esc = (t) => String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;');
+
+  function render() {
+    if (!S) return;
+    const cur = S.slides[S.i], nxt = S.slides[S.i + 1];
+    $('sec').textContent = cur.sec || '';
+    $('planned').textContent = cur.t ? 'planned ' + cur.t : '';
+    $('pos').textContent = `slide ${S.i + 1}/${S.total} · step ${S.step}/${S.steps} · ${cur.id}`;
+    // notes: split on [click] markers; paragraph k belongs to step k
+    const parts = (cur.notes || '').split(/\[click\]/);
+    $('notes').innerHTML = parts.map((p, k) => {
+      const cls = k === S.step ? 'now' : k < S.step ? 'done' : '';
+      return `<p class="${cls}">${k ? '<span class="tag">click ' + k + '</span>' : ''}${esc(p.trim()).replace(/\n/g, '<br>')}</p>`;
+    }).join('');
+    const now = $('notes').querySelector('p.now'); if (now) now.scrollIntoView({ block: 'nearest' });
+    $('next').innerHTML = nxt ? `Next: <b>${esc(nxt.id)}</b> · ${esc(((nxt.notes || '').split('\n')[0] || '').slice(0, 140))}` : '<b>End of deck</b>';
+    tick();
+  }
+  function tick() {
+    $('timer').textContent = fmt(elapsed());
+    $('clock').textContent = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    const d = $('delta');
+    if (S && started != null) {
+      // find the planned start of the current section (first slide with a parsable t at or before i)
+      let plan = null; for (let k = S.i; k >= 0; k--) { const v = toSec(S.slides[k].t); if (v != null && !/before/.test(S.slides[k].t)) { plan = v; break; } }
+      if (plan != null) {
+        const diff = elapsed() - plan; // positive = we got here later than planned
+        d.className = diff > 30 ? 'behind' : diff < -30 ? 'ahead' : '';
+        d.textContent = Math.abs(diff) < 30 ? 'on time' : (diff > 0 ? fmt(diff) + ' behind' : fmt(-diff) + ' ahead');
+      }
+    } else d.textContent = '';
+  }
+  setInterval(tick, 500);
+
+  window.addEventListener('message', (e) => {
+    const m = e.data || {};
+    if (m.type !== 'state') return;
+    const moved = S && (m.i !== S.i || m.step !== S.step);
+    if (moved && started == null && m.i > 0) start();
+    S = m; render();
+  });
+  function start() { if (started == null) started = Date.now(); if (pausedAt) { paused += Date.now() - pausedAt; pausedAt = null; } }
+  $('start').onclick = start;
+  $('pause').onclick = () => { if (started != null && !pausedAt) pausedAt = Date.now(); };
+  $('reset').onclick = () => { started = null; paused = 0; pausedAt = null; tick(); };
+  $('prev').onclick = () => send({ type: 'prev' });
+  $('nextb').onclick = () => send({ type: 'next' });
+  addEventListener('keydown', (e) => {
+    if (['ArrowRight', 'ArrowDown', 'PageDown', ' ', 'Enter'].includes(e.key)) { e.preventDefault(); send({ type: 'next' }); }
+    if (['ArrowLeft', 'ArrowUp', 'PageUp', 'Backspace'].includes(e.key)) { e.preventDefault(); send({ type: 'prev' }); }
+  });
+})();
+</script>
+</body>
+</html>

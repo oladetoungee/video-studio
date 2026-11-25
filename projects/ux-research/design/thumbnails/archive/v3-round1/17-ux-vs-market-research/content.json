@@ -1,0 +1,24 @@
+{
+  "direction": "Faceless graphic: the topic as a comparison, two big panels side by side: market research = a shopping cart with a price tag ('Will they buy it?'); UX research = a hand cursor tapping an app ('Can they use it?'). Paper ground, one green accent. References: her database-indexes thumbnail (one idea, drawn literally), yt 'Space complexity' (34), 'Before/After' (32).",
+  "thumbnail_text": "UX research vs market research",
+  "text": {
+    "hd": "UX research <span class=\"it\">vs</span><br>market research",
+    "lm": "market research",
+    "lu": "UX research",
+    "qm": "Will they buy it?",
+    "qu": "Can they use it?"
+  },
+  "images": {},
+  "vars": {
+    "--ground": "#EDE9E2",
+    "--accent": "#2BD27F"
+  },
+  "titles": [
+    "UX Research vs User Research: Are They the Same?",
+    "UX Research vs User Research vs Market Research",
+    "What Is UX Research? Explained From Scratch"
+  ],
+  "title": "UX Research vs User Research: Are They the Same?",
+  "set": 3,
+  "kind": "graphic"
+}

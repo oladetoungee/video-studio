@@ -1,0 +1,303 @@
+{
+ "story": "zeabur",
+ "outlet": "BleepingComputer",
+ "slug": "bleepingcomputer",
+ "url": "https://www.bleepingcomputer.com/news/security/zeabur-shutting-down-after-second-security-breach-in-two-months/",
+ "finalUrl": "https://www.bleepingcomputer.com/news/security/zeabur-shutting-down-after-second-security-breach-in-two-months/",
+ "status": "loaded",
+ "http": 200,
+ "title": "Zeabur shutting down after second security breach in two months",
+ "h1": "Zeabur shutting down after second security breach in two months",
+ "published": "",
+ "files": {
+  "fold": "zeabur/bleepingcomputer_fold.png",
+  "full": "zeabur/bleepingcomputer_full.jpg",
+  "scroll": "zeabur/bleepingcomputer_scroll.mp4"
+ },
+ "full": {
+  "width": 1440,
+  "height": 6000,
+  "pageHeight": 7059,
+  "zoom": 1,
+  "quotes": [
+   {
+    "quote": "Zeabur shutting down after second security breach in two months",
+    "box": {
+     "x": 135,
+     "y": 456,
+     "w": 810,
+     "h": 27
+    },
+    "lines": [
+     {
+      "x": 135,
+      "y": 456,
+      "w": 810,
+      "h": 27
+     }
+    ]
+   },
+   {
+    "quote": "steal over 3.2 million environment variable records and information for 321,810 accounts",
+    "box": {
+     "x": 135,
+     "y": 1103,
+     "w": 828,
+     "h": 46
+    },
+    "lines": [
+     {
+      "x": 796,
+      "y": 1103,
+      "w": 167,
+      "h": 21
+     },
+     {
+      "x": 135,
+      "y": 1128,
+      "w": 537,
+      "h": 21
+     }
+    ]
+   },
+   {
+    "quote": "The admin tokens had no expiry, had not been rotated since they were created in January 2024, and were not included in the post-August rotation",
+    "box": {
+     "x": 135,
+     "y": 3149,
+     "w": 800,
+     "h": 46
+    },
+    "lines": [
+     {
+      "x": 142,
+      "y": 3149,
+      "w": 793,
+      "h": 21
+     },
+     {
+      "x": 135,
+      "y": 3174,
+      "w": 362,
+      "h": 21
+     }
+    ]
+   },
+   {
+    "quote": "it will shut down its services starting December 1, 2026, and finish by December 31, 2026",
+    "box": {
+     "x": 135,
+     "y": 3939,
+     "w": 824,
+     "h": 46
+    },
+    "lines": [
+     {
+      "x": 827,
+      "y": 3939,
+      "w": 132,
+      "h": 21
+     },
+     {
+      "x": 135,
+      "y": 3964,
+      "w": 571,
+      "h": 21
+     }
+    ]
+   }
+  ]
+ },
+ "scroll": {
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "seconds": 8.966666666666667,
+  "keyframes": [
+   {
+    "t": 0,
+    "y": 312
+   },
+   {
+    "t": 1,
+    "y": 312
+   },
+   {
+    "t": 2.024,
+    "y": 693
+   },
+   {
+    "t": 3.124,
+    "y": 693
+   },
+   {
+    "t": 4.904,
+    "y": 2739
+   },
+   {
+    "t": 6.004,
+    "y": 2739
+   },
+   {
+    "t": 7.281,
+    "y": 3529
+   },
+   {
+    "t": 8.981,
+    "y": 3529
+   }
+  ],
+  "zoom": 1,
+  "easing": "easeInOutCubic between keyframes, holds where y is equal",
+  "capped": false,
+  "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)",
+  "quotes": [
+   {
+    "quote": "Zeabur shutting down after second security breach in two months",
+    "inVideo": true,
+    "still": true,
+    "t": 0.53,
+    "visibleStill": [
+     0,
+     1.07
+    ],
+    "scrollY": 312,
+    "box": {
+     "x": 375,
+     "y": 144,
+     "w": 810,
+     "h": 27
+    },
+    "lines": [
+     {
+      "x": 375,
+      "y": 144,
+      "w": 810,
+      "h": 27
+     }
+    ],
+    "docBox": {
+     "x": 375,
+     "y": 456,
+     "w": 810,
+     "h": 27
+    },
+    "layoutDriftPx": 0
+   },
+   {
+    "quote": "steal over 3.2 million environment variable records and information for 321,810 accounts",
+    "inVideo": true,
+    "still": true,
+    "t": 2.58,
+    "visibleStill": [
+     1.97,
+     3.2
+    ],
+    "scrollY": 693,
+    "box": {
+     "x": 375,
+     "y": 410,
+     "w": 828,
+     "h": 46
+    },
+    "lines": [
+     {
+      "x": 1036,
+      "y": 410,
+      "w": 167,
+      "h": 21
+     },
+     {
+      "x": 375,
+      "y": 435,
+      "w": 537,
+      "h": 21
+     }
+    ],
+    "docBox": {
+     "x": 375,
+     "y": 1103,
+     "w": 828,
+     "h": 46
+    },
+    "layoutDriftPx": 0
+   },
+   {
+    "quote": "The admin tokens had no expiry, had not been rotated since they were created in January 2024, and were not included in the post-August rotation",
+    "inVideo": true,
+    "still": true,
+    "t": 5.45,
+    "visibleStill": [
+     4.83,
+     6.07
+    ],
+    "scrollY": 2739,
+    "box": {
+     "x": 375,
+     "y": 410,
+     "w": 800,
+     "h": 46
+    },
+    "lines": [
+     {
+      "x": 382,
+      "y": 410,
+      "w": 793,
+      "h": 21
+     },
+     {
+      "x": 375,
+      "y": 435,
+      "w": 362,
+      "h": 21
+     }
+    ],
+    "docBox": {
+     "x": 375,
+     "y": 3149,
+     "w": 800,
+     "h": 46
+    },
+    "layoutDriftPx": 0
+   },
+   {
+    "quote": "it will shut down its services starting December 1, 2026, and finish by December 31, 2026",
+    "inVideo": true,
+    "still": true,
+    "t": 8.1,
+    "visibleStill": [
+     7.2,
+     9
+    ],
+    "scrollY": 3529,
+    "box": {
+     "x": 375,
+     "y": 410,
+     "w": 824,
+     "h": 46
+    },
+    "lines": [
+     {
+      "x": 1067,
+      "y": 410,
+      "w": 132,
+      "h": 21
+     },
+     {
+      "x": 375,
+      "y": 435,
+      "w": 571,
+      "h": 21
+     }
+    ],
+    "docBox": {
+     "x": 375,
+     "y": 3939,
+     "w": 824,
+     "h": 46
+    },
+    "layoutDriftPx": 0
+   }
+  ]
+ }
+}

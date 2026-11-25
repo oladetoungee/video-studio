@@ -1,0 +1,27 @@
+{
+ "direction": "Flat dark ground: the topic name huge + \"MADE EASY\" in amber; under it the five families with their official names (information, success, redirect, client error, server error), each digit in its class colour. She on the left, cut-out, explaining with her hand. Follows: \"ALGORITHMS MADE EASY\", the Space Complexity sheet, her #11 (which she half liked) but with the real names instead of shorthand.",
+ "thumbnail_text": "HTTP STATUS CODES MADE EASY",
+ "titles": [
+  "HTTP Status Codes: The 5 Groups Every Developer Uses",
+  "How to Remember Every HTTP Status Code",
+  "HTTP Status Codes for Beginners (200, 404, 500 and More)"
+ ],
+ "title": "HTTP Status Codes: The 5 Groups Every Developer Uses",
+ "kind": "flat",
+ "text": {
+  "h1": "HTTP STATUS CODES",
+  "h2": "MADE EASY",
+  "r1": "information",
+  "r2": "success",
+  "r3": "redirect",
+  "r4": "client error",
+  "r5": "server error"
+ },
+ "images": {
+  "me": "../../assets/photo/shoot/1597-person.png"
+ },
+ "vars": {
+  "--ground": "#121212"
+ },
+ "class": "no-lift"
+}

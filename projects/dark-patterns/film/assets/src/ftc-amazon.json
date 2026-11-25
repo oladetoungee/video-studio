@@ -1,0 +1,66 @@
+{
+ "title": "FTC Announces Additional Payments to Consumers Stemming from FTC’s Amazon Prime Settlement | Federal Trade Commission",
+ "h1": "FTC Announces Additional Payments to Consumers Stemming from FTC’s Amazon Prime Settlement",
+ "h1y": 364.3125,
+ "found": {
+  "2.5 billion": [
+   [
+    391.703125,
+    947.359375,
+    25.125,
+    20
+   ],
+   [
+    88,
+    980.5,
+    47.125,
+    20
+   ]
+  ],
+  "without their consent": [
+   [
+    200.875,
+    1079.921875,
+    169.515625,
+    20
+   ]
+  ]
+ },
+ "H": 4161,
+ "focus": {
+  "2.5 billion": {
+   "file": "ftc-amazon__2-5-billion.png",
+   "top": 427.359375,
+   "rects": [
+    [
+     391.703125,
+     520,
+     25.125,
+     20
+    ],
+    [
+     88,
+     553.140625,
+     47.125,
+     20
+    ]
+   ]
+  },
+  "without their consent": {
+   "file": "ftc-amazon__without-their-consent.png",
+   "top": 559.921875,
+   "rects": [
+    [
+     200.875,
+     520,
+     169.515625,
+     20
+    ]
+   ]
+  }
+ },
+ "clipTop": 244.3125,
+ "scale": 1.5,
+ "url": "https://www.ftc.gov/news-events/news/press-releases/2026/09/ftc-announces-additional-payments-consumers-stemming-ftcs-amazon-prime-settlement",
+ "captured": "2026-11-02T19:26:39.908Z"
+}

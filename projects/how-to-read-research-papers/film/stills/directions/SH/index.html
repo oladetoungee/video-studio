@@ -1,0 +1,41 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../_shared/fonts.css">
+<style>
+:root{--g:#2F3136;--paper:#FBFAF4;--hi:#F3EE2E;--pen:#2447C9;--ink:#17171A;--soft:#B9BCC2;--cite:#0E7C3A;--fl:#3DF07B}
+#stage{background:#000}
+.her{position:absolute;overflow:hidden}.her img{position:absolute;max-width:none}
+.pg{position:absolute;left:0;top:0;width:1700px;height:2200px;transform-origin:0 0}.pg>img{width:1700px;height:2200px;box-shadow:0 30px 60px rgba(0,0,0,.38)}
+.hl{position:absolute;background:var(--hi);mix-blend-mode:multiply;border-radius:6px}
+.hand{font-family:Caveat;font-weight:700;color:var(--pen);white-space:nowrap;line-height:1}
+.tab{position:absolute;width:120px;height:120px;background:var(--paper);border-radius:0 14px 14px 0;font-family:Newsreader;font-weight:800;font-size:76px;color:var(--ink);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px rgba(0,0,0,.3)}
+.capA{position:absolute;font-family:"HN Cond";font-weight:900;text-transform:uppercase;color:#fff;text-shadow:0 3px 0 rgba(0,0,0,.55),0 0 3px rgba(0,0,0,.7);line-height:1.02;text-align:center}
+.capA b{background:var(--hi);color:var(--ink);text-shadow:none;padding:0 .1em;border-radius:4px;font-weight:900}
+.cred{font-family:Newsreader;font-style:italic;font-size:24px;color:var(--soft)}
+.card{position:absolute;background:var(--paper);box-shadow:0 24px 50px rgba(0,0,0,.35);overflow:hidden}
+</style></head><body><div id="stage"></div>
+<script src="../_shared/lib.js"></script>
+<script>
+function txt(par, html, css, cls = '') { const e = h(`<div class="abs ${cls}" style="${css}">${html}</div>`); par.appendChild(e); return e; }
+// her frame: show source rect (sx,sy,sw,sh in 3840x2160) inside box (x,y,w,h)
+function her(par, src, x, y, w, hh, sx, sy, sw) { const k = w / sw; const d = h(`<div class="her" style="left:${x}px;top:${y}px;width:${w}px;height:${hh}px"><img src="../_src/her/${src}" style="width:${3840 * k}px;height:${2160 * k}px;left:${-sx * k}px;top:${-sy * k}px"></div>`); par.appendChild(d); return d; }
+const PX = p => p * KS;
+const SCENES = {
+  s1: { draw: (t, S) => { // SH7 hook: label on a paper card, her in a 3:4 window
+      txt(S, '', 'left:0;top:0;width:1080px;height:1920px;background:var(--g)');
+      her(S, 'raw_412.jpg', 0, 400, 1080, 1520, 1135, 0, 1535);
+      txt(S, `<div style="font-family:Newsreader;font-weight:800;font-size:76px;line-height:1.02;letter-spacing:-.02em;color:var(--ink)">Is this research paper <span style="background:var(--hi);padding:0 .08em">any good?</span></div><div style="font-family:Newsreader;font-style:italic;font-size:40px;margin-top:10px;color:#444">Check the sample size</div>`, 'left:60px;top:90px;width:960px;background:var(--paper);padding:30px 40px 32px;transform:rotate(-1deg);box-shadow:0 18px 40px rgba(0,0,0,.35)');
+      txt(S, `three things<br>I would<b style="margin-left:.18em">check</b>`, 'left:40px;top:1440px;width:1000px;font-size:84px', 'capA');
+  } },
+  s2: { draw: (t, S) => { // SH7 receipt: the Caine abstract becomes the heading, pen counts 12
+      txt(S, '', 'left:0;top:0;width:1080px;height:1920px;background:var(--g)');
+      her(S, 'raw_432.5.jpg', 0, 400, 1080, 1520, 1135, 0, 1535);
+      const ox = 432, oy = 501, sc = 2.2; const c = txt(S, `<div class="abs" style="left:0;top:0;transform:scale(${sc});transform-origin:0 0"><img src="../_src/caine__most-common-sample-size.png" style="position:absolute;width:1280px;left:-${ox}px;top:-${oy}px;max-width:none"></div>`, `left:23px;top:110px;width:${470 * sc}px;height:${54 * sc}px;transform:rotate(-1deg);box-shadow:0 18px 40px rgba(0,0,0,.35)`, 'card');
+      [[586, 500, 70, 22], [826, 518, 36, 22], [434, 536, 178, 22]].forEach(r => c.firstChild.appendChild(h(`<div class="hl" style="left:${r[0] - ox}px;top:${r[1] - oy}px;width:${r[2]}px;height:${r[3]}px"></div>`)));
+      txt(S, `Kelly Caine, “Local Standards for Sample Size at CHI”, CHI 2016`, 'left:36px;top:250px;font-size:30px;color:#D8DBE0', 'cred');
+      // twelve pen tally marks on her side
+      let marks = ''; for (let i = 0; i < 12; i++) { const g = Math.floor(i / 5), j = i % 5; marks += j === 4 ? `<path d="M ${g * 150 - 10} 70 L ${g * 150 + 120} 10" />` : `<path d="M ${g * 150 + j * 28} 0 L ${g * 150 + j * 28 + 4} 80" />`; }
+      txt(S, `<svg width="460" height="100" viewBox="-20 -10 460 100"><g fill="none" stroke="#FBFAF4" stroke-width="9" stroke-linecap="round">${marks}</g></svg><div class="hand" style="color:var(--paper);font-size:64px;margin-top:6px">12 people</div>`, 'left:640px;top:560px;transform:rotate(-3deg)');
+      txt(S, `a lot about how people<br><b>experience</b> something`, 'left:40px;top:1440px;width:1000px;font-size:84px', 'capA');
+  } },
+};
+window.SCENES = SCENES; window.TEST = () => 0; boot();
+</script></body></html>

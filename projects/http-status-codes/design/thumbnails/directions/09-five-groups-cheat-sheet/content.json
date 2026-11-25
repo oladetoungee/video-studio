@@ -1,0 +1,23 @@
+{
+ "direction": "Flat cheat sheet, no face: five full-height columns in the class colours, each digit huge with its official name (information, success, redirect, client error, server error; 2026-11-09: no shorthand). Ink band on top with the topic name.",
+ "thumbnail_text": "HTTP STATUS CODES (five classes)",
+ "titles": [
+  "HTTP Status Codes: The 5 Groups Every Developer Uses",
+  "How to Remember Every HTTP Status Code",
+  "HTTP Status Codes Explained (With Real API Examples)"
+ ],
+ "title": "HTTP Status Codes: The 5 Groups Every Developer Uses",
+ "kind": "flat",
+ "text": {
+  "hd": "HTTP status codes",
+  "m1": "information",
+  "m2": "success",
+  "m3": "redirect",
+  "m4": "client error",
+  "m5": "server error"
+ },
+ "images": {},
+ "vars": {
+  "--ground": "#121212"
+ }
+}

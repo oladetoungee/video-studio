@@ -1,0 +1,47 @@
+{
+ "music": "1009",
+ "musicAt": 6,
+ "musicDb": -19,
+ "sfxDb": -5,
+ "roles": {
+  "tape": "tape-switch",
+  "clock": "clock-tick-single",
+  "shutter": "shutter-click",
+  "shutter2": "shutter-vintage",
+  "hit": "hit-weak"
+ },
+ "cues": [
+  [
+   82.34,
+   "tape"
+  ],
+  [
+   83.02,
+   "clock"
+  ],
+  [
+   83.62,
+   "shutter"
+  ],
+  [
+   84.38,
+   "shutter2"
+  ],
+  [
+   85.0,
+   "shutter"
+  ],
+  [
+   85.38,
+   "clock"
+  ],
+  [
+   86.6,
+   "shutter2"
+  ],
+  [
+   87.02,
+   "hit"
+  ]
+ ]
+}

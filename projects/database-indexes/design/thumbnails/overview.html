@@ -1,0 +1,43 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="lib/di.css">
+<style>
+html,body{width:2000px;height:auto;overflow:visible;background:#0E1013;color:#fff}
+.wrap{padding:56px 56px 40px}
+.top{display:flex;justify-content:space-between;align-items:baseline;color:#F7F5F0;margin-bottom:40px}
+.top h1{font-family:'Plex';font-weight:700;font-size:60px;letter-spacing:-.03em;text-transform:uppercase}
+.top .mono{color:rgba(255,255,255,.55)}
+.g{display:grid;grid-template-columns:repeat(3,1fr);gap:44px 36px}
+.c img{width:100%;display:block;border-radius:10px}
+.c .n{font-family:'Plex Mono';font-weight:500;font-size:15px;letter-spacing:.12em;text-transform:uppercase;color:#FFC53D;margin:14px 0 6px}
+.c .ti{font-family:'Inter';font-weight:700;font-size:21px;line-height:1.25;color:#F7F5F0;margin-top:6px;display:flex;gap:10px}
+.c .ti .k{font-family:'Plex Mono';font-weight:500;font-size:15px;color:#FFC53D;padding-top:3px}
+.c .sc{font-family:'Plex Mono';font-weight:500;font-size:15px;color:#FFD23F;margin-top:8px}
+.c .d{font-family:'Inter';font-weight:400;font-size:16px;color:rgba(255,255,255,.55);margin-top:4px}
+.sec{font-family:'Plex';font-weight:700;font-size:40px;letter-spacing:-.02em;text-transform:uppercase;color:#F7F5F0;margin:10px 0 26px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:48px 40px;margin-bottom:70px}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.pair .lb{font-family:'Plex Mono';font-weight:500;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-top:6px}
+</style></head><body><div class="wrap">
+<div class="top"><h1>Database indexes / thumbnails</h1><span class="mono">titles under each · scores: A image-only topic · B with title · C taste (0-10)</span></div>
+<div class="sec">Remakes of your viral samples (sample | remake)</div><div class="g2" id="g2"></div><div class="sec">All directions</div><div class="g" id="g"></div></div>
+<script>
+(async () => {
+  const dirs = await (await fetch('directions/index.json')).json();
+  const g = document.getElementById('g');
+  const order = [...dirs.filter(d => /^R/.test(d)), ...dirs.filter(d => !/^R/.test(d))];
+  for (const d of order) {
+    const c = await (await fetch('directions/' + d + '/content.json')).json();
+    const el = document.createElement('div'); el.className = 'c';
+    if (c.sample) {
+      const ts2 = (c.titles || [c.title]).map((t, i) => '<div class="ti"><span class="k">' + (i + 1) + '</span>' + t + '</div>').join('');
+      el.innerHTML = '<div class="pair"><div><img src="assets/samples/s' + c.sample + '.jpg"><div class="lb">your sample ' + c.sample + '</div></div><div><img src="../../outputs/thumbnails/' + d + '.png"><div class="lb">remake</div></div></div><div class="n">' + d + ' · words: ' + c.thumbnail_text + '</div>' + ts2 + (c.scores ? '<div class="sc">' + c.scores + '</div>' : '') + '<div class="d">' + c.direction + '</div>';
+      document.getElementById('g2').appendChild(el); continue;
+    }
+    const ts = (c.titles && c.titles.length ? c.titles : [c.title]).map((t, i) => '<div class="ti"><span class="k">' + (i + 1) + '</span>' + t + '</div>').join('');
+    el.innerHTML = '<img src="../../outputs/thumbnails/' + d + '.png"><div class="n">' + d + (c.recommended ? ' · recommended' : '') + '</div>' + ts + (c.scores ? '<div class="sc">' + c.scores + '</div>' : '') + '<div class="d">' + c.direction + '</div>';
+    g.appendChild(el);
+  }
+  await document.fonts.ready;
+  await Promise.all([...document.images].map(i => i.complete ? 0 : new Promise(r => { i.onload = i.onerror = r; })));
+  window.__ready = true;
+})();
+</script></body></html>

@@ -1,0 +1,610 @@
+{
+ "title": "phone-distraction: talking-head",
+ "source": "../kit/phone addiction.mov",
+ "fps": 30,
+ "words": "data/raw_words.json",
+ "faces": "data/face_track.json",
+ "edl": "data/edl.json",
+ "film": "phone-distraction",
+ "edit": {
+  "silenceDb": -40,
+  "maxPause": 0.42,
+  "keepBefore": 0.14,
+  "keepAfter": 0.1
+ },
+ "out": "../outputs/talking-head",
+ "shortsOut": "../outputs/shorts",
+ "tail": 0.7,
+ "audio": {
+  "voiceFilter": "highpass=f=80,afftdn=nr=8:nf=-52:tn=1,deesser=i=0.3:m=0.5:f=0.5,acompressor=threshold=0.06:ratio=3:attack=6:release=160:knee=3,equalizer=f=3200:t=q:w=1.2:g=1.5",
+  "music": {
+   "dir": "library:music"
+  },
+  "levels": {
+   "voiceLufs": -16.0,
+   "duckDb": -18.0,
+   "openDb": -10.0,
+   "target": -14.0,
+   "ceiling": 0.8
+  },
+  "sfx": {
+   "palette": true,
+   "roles": {}
+  }
+ },
+ "moments": [
+  {
+   "id": "full",
+   "kind": "full",
+   "slug": "full",
+   "title": "The whole video, tightened, with graphics (Receipt look)",
+   "in": 0,
+   "out": "end",
+   "retakes": false,
+   "script": "moments/full.js",
+   "music": [
+    "1168",
+    0.0
+   ],
+   "cuts": [
+    [
+     14.25,
+     18.4
+    ],
+    [
+     18.39,
+     19.57
+    ],
+    [
+     82.87,
+     83.94
+    ],
+    [
+     122.58,
+     128.6
+    ],
+    [
+     218.28,
+     232.39
+    ]
+   ]
+  },
+  {
+   "id": "s01",
+   "kind": "short",
+   "slug": "free-apps",
+   "title": "who pays for free apps",
+   "label": "who pays for free apps",
+   "sublabel": "",
+   "in": 80.7,
+   "out": 117.07,
+   "cuts": [
+    [
+     82.85,
+     83.98
+    ]
+   ],
+   "script": "shorts/s01.js",
+   "music": [
+    "234",
+    4.0
+   ],
+   "endCard": {
+    "seconds": 4,
+    "thumb": "thumb",
+    "title": "Why Can't I Stop Scrolling? It Was Designed That Way",
+    "ground": "#1F3BD6",
+    "handle": " "
+   }
+  },
+  {
+   "id": "s02",
+   "kind": "short",
+   "slug": "rewards",
+   "title": "why you keep checking your phone",
+   "label": "why you keep checking your phone",
+   "sublabel": "",
+   "in": 239.1,
+   "out": 285.09,
+   "cuts": [],
+   "script": "shorts/s02.js",
+   "music": [
+    "443",
+    4.0
+   ],
+   "endCard": {
+    "seconds": 4,
+    "thumb": "thumb",
+    "title": "Why Can't I Stop Scrolling? It Was Designed That Way",
+    "ground": "#1F3BD6",
+    "handle": " "
+   }
+  },
+  {
+   "id": "s03",
+   "kind": "short",
+   "slug": "pull-to-refresh",
+   "title": "pull-to-refresh",
+   "label": "pull-to-refresh",
+   "sublabel": "",
+   "in": 294.5,
+   "out": 324.99,
+   "cuts": [],
+   "script": "shorts/s03.js",
+   "music": [
+    "1009",
+    4.0
+   ],
+   "endCard": {
+    "seconds": 4,
+    "thumb": "thumb",
+    "title": "Why Can't I Stop Scrolling? It Was Designed That Way",
+    "ground": "#1F3BD6",
+    "handle": " "
+   }
+  },
+  {
+   "id": "s04",
+   "kind": "short",
+   "slug": "infinite-scroll",
+   "title": "infinite scroll",
+   "label": "infinite scroll",
+   "sublabel": "",
+   "in": 329.8,
+   "out": 413.31,
+   "cuts": [
+    [
+     380.06,
+     386.95
+    ],
+    [
+     395.05,
+     402.75
+    ]
+   ],
+   "script": "shorts/s04.js",
+   "music": [
+    "167",
+    4.0
+   ],
+   "endCard": {
+    "seconds": 4,
+    "thumb": "thumb",
+    "title": "Why Can't I Stop Scrolling? It Was Designed That Way",
+    "ground": "#1F3BD6",
+    "handle": " "
+   }
+  },
+  {
+   "id": "s05",
+   "kind": "short",
+   "slug": "red-badges",
+   "title": "why notification badges are red",
+   "label": "why notification badges are red",
+   "sublabel": "",
+   "in": 468.1,
+   "out": 512.5,
+   "cuts": [],
+   "script": "shorts/s05.js",
+   "music": [
+    "234",
+    4.0
+   ],
+   "endCard": {
+    "seconds": 4,
+    "thumb": "thumb",
+    "title": "Why Can't I Stop Scrolling? It Was Designed That Way",
+    "ground": "#1F3BD6",
+    "handle": " "
+   }
+  },
+  {
+   "id": "s06",
+   "kind": "short",
+   "slug": "eu",
+   "title": "the EU vs infinite scroll",
+   "label": "the EU vs infinite scroll",
+   "sublabel": "",
+   "in": 619.85,
+   "out": 673.2,
+   "cuts": [],
+   "script": "shorts/s06.js",
+   "music": [
+    "443",
+    4.0
+   ],
+   "endCard": {
+    "seconds": 4,
+    "thumb": "thumb",
+    "title": "Why Can't I Stop Scrolling? It Was Designed That Way",
+    "ground": "#1F3BD6",
+    "handle": " "
+   }
+  },
+  {
+   "id": "s07",
+   "kind": "short",
+   "slug": "quit-instagram",
+   "title": "I quit Instagram at 19",
+   "label": "I quit Instagram at 19",
+   "sublabel": "",
+   "in": 697.93,
+   "out": 757.2,
+   "cuts": [
+    [
+     700.95,
+     707.25
+    ]
+   ],
+   "script": "shorts/s07.js",
+   "music": [
+    "1009",
+    4.0
+   ],
+   "endCard": {
+    "seconds": 4,
+    "thumb": "thumb",
+    "title": "Why Can't I Stop Scrolling? It Was Designed That Way",
+    "ground": "#1F3BD6",
+    "handle": " "
+   }
+  },
+  {
+   "id": "s08",
+   "kind": "short",
+   "slug": "attention-economy",
+   "title": "the attention economy",
+   "label": "the attention economy",
+   "sublabel": "",
+   "in": 0.0,
+   "out": 67.3,
+   "cuts": [
+    [
+     14.18,
+     45.68,
+     "exact"
+    ]
+   ],
+   "script": "shorts/s08.js",
+   "music": [
+    "234",
+    4.0
+   ],
+   "endCard": {
+    "seconds": 4,
+    "thumb": "thumb",
+    "title": "Why Can't I Stop Scrolling? It Was Designed That Way",
+    "ground": "#1F3BD6",
+    "handle": " "
+   }
+  },
+  {
+   "id": "s09",
+   "kind": "short",
+   "slug": "persuasive-technology",
+   "title": "persuasive technology",
+   "label": "persuasive technology",
+   "sublabel": "",
+   "in": 117.05,
+   "out": 207.42,
+   "cuts": [
+    [
+     122.58,
+     128.6
+    ],
+    [
+     160.2,
+     191.25
+    ],
+    [
+     196.42,
+     199.5
+    ]
+   ],
+   "script": "shorts/s09.js",
+   "music": [
+    "443",
+    4.0
+   ],
+   "endCard": {
+    "seconds": 4,
+    "thumb": "thumb",
+    "title": "Why Can't I Stop Scrolling? It Was Designed That Way",
+    "ground": "#1F3BD6",
+    "handle": " "
+   }
+  },
+  {
+   "id": "s10",
+   "kind": "short",
+   "slug": "why-you-open-apps",
+   "title": "what makes you open an app",
+   "label": "what makes you open an app",
+   "sublabel": "",
+   "in": 160.35,
+   "out": 191.0,
+   "cuts": [],
+   "script": "shorts/s10.js",
+   "music": [
+    "1009",
+    4.0
+   ],
+   "endCard": {
+    "seconds": 4,
+    "thumb": "thumb",
+    "title": "Why Can't I Stop Scrolling? It Was Designed That Way",
+    "ground": "#1F3BD6",
+    "handle": " "
+   }
+  },
+  {
+   "id": "s11",
+   "kind": "short",
+   "slug": "autoplay",
+   "title": "autoplay",
+   "label": "autoplay",
+   "sublabel": "",
+   "in": 414.0,
+   "out": 462.0,
+   "cuts": [],
+   "script": "shorts/s11.js",
+   "music": [
+    "167",
+    4.0
+   ],
+   "endCard": {
+    "seconds": 4,
+    "thumb": "thumb",
+    "title": "Why Can't I Stop Scrolling? It Was Designed That Way",
+    "ground": "#1F3BD6",
+    "handle": " "
+   }
+  },
+  {
+   "id": "s12",
+   "kind": "short",
+   "slug": "likes",
+   "title": "why you keep checking your likes",
+   "label": "why you keep checking your likes",
+   "sublabel": "",
+   "in": 541.45,
+   "out": 595.3,
+   "cuts": [],
+   "script": "shorts/s12.js",
+   "music": [
+    "234",
+    4.0
+   ],
+   "endCard": {
+    "seconds": 4,
+    "thumb": "thumb",
+    "title": "Why Can't I Stop Scrolling? It Was Designed That Way",
+    "ground": "#1F3BD6",
+    "handle": " "
+   }
+  },
+  {
+   "id": "s13",
+   "kind": "short",
+   "slug": "notifications-study",
+   "title": "notifications on for a week: a study",
+   "label": "notifications on for a week: a study",
+   "sublabel": "",
+   "in": 512.6,
+   "out": 541.4,
+   "cuts": [
+    [
+     514.62,
+     517.82,
+     "exact"
+    ]
+   ],
+   "script": "shorts/s13.js",
+   "music": [
+    "443",
+    4.0
+   ],
+   "endCard": {
+    "seconds": 4,
+    "thumb": "thumb",
+    "title": "Why Can't I Stop Scrolling? It Was Designed That Way",
+    "ground": "#1F3BD6",
+    "handle": " "
+   }
+  },
+  {
+   "id": "s14",
+   "kind": "short",
+   "slug": "use-your-phone-less",
+   "title": "how to use your phone less",
+   "label": "how to use your phone less",
+   "sublabel": "",
+   "in": 765.55,
+   "out": 808.95,
+   "cuts": [],
+   "script": "shorts/s14.js",
+   "music": [
+    "1009",
+    4.0
+   ],
+   "endCard": {
+    "seconds": 4,
+    "thumb": "thumb",
+    "title": "Why Can't I Stop Scrolling? It Was Designed That Way",
+    "ground": "#1F3BD6",
+    "handle": " "
+   }
+  },
+  {
+   "id": "s15",
+   "kind": "short",
+   "slug": "before-you-open-an-app",
+   "title": "how I stop myself scrolling",
+   "label": "how I stop myself scrolling",
+   "sublabel": "",
+   "in": 809.0,
+   "out": 836.3,
+   "cuts": [],
+   "script": "shorts/s15.js",
+   "music": [
+    "167",
+    4.0
+   ],
+   "endCard": {
+    "seconds": 4,
+    "thumb": "thumb",
+    "title": "Why Can't I Stop Scrolling? It Was Designed That Way",
+    "ground": "#1F3BD6",
+    "handle": " "
+   }
+  },
+  {
+   "id": "s16",
+   "kind": "short",
+   "slug": "attention-is-an-asset",
+   "title": "your attention is an asset",
+   "label": "your attention is an asset",
+   "sublabel": "",
+   "in": 836.4,
+   "out": 890.4,
+   "cuts": [
+    [
+     867.0,
+     875.5
+    ]
+   ],
+   "script": "shorts/s16.js",
+   "music": [
+    "234",
+    4.0
+   ],
+   "endCard": {
+    "seconds": 4,
+    "thumb": "thumb",
+    "title": "Why Can't I Stop Scrolling? It Was Designed That Way",
+    "ground": "#1F3BD6",
+    "handle": " "
+   }
+  },
+  {
+   "id": "teaser",
+   "kind": "teaser",
+   "slug": "phone-distraction",
+   "title": "Teaser for LinkedIn and X: her best lines, Receipt look",
+   "lead": true,
+   "bites": [
+    [
+     890.45,
+     891.95
+    ],
+    [
+     0,
+     5.86
+    ],
+    [
+     5.89,
+     14.15
+    ],
+    {
+     "gap": 0.8,
+     "at": 890.45
+    },
+    [
+     80.73,
+     82.59
+    ],
+    [
+     113.47,
+     116.94
+    ],
+    [
+     142.94,
+     156.0
+    ],
+    {
+     "gap": 0.8,
+     "at": 890.45
+    },
+    [
+     239.08,
+     247.89
+    ],
+    [
+     407.44,
+     414.09
+    ],
+    [
+     442.75,
+     449.37
+    ],
+    {
+     "gap": 0.8,
+     "at": 890.45
+    },
+    [
+     488.86,
+     496.6
+    ],
+    [
+     527.06,
+     533.72
+    ],
+    {
+     "gap": 0.8,
+     "at": 890.45
+    },
+    [
+     588.4,
+     595.46
+    ],
+    [
+     719.28,
+     723.38
+    ],
+    [
+     878.53,
+     884.39
+    ],
+    {
+     "gap": 1.3,
+     "at": 890.45
+    },
+    [
+     689.82,
+     693.29
+    ]
+   ],
+   "tail": 4.0,
+   "captionStyle": "shorts",
+   "script": "teaser/teaser.js",
+   "music": [
+    "1009",
+    0.0
+   ],
+   "endCard": {
+    "title": "How to Stop Scrolling: Phone Settings That Actually Help"
+   }
+  }
+ ],
+ "common": [
+  "moments/common.js"
+ ],
+ "images": {
+  "thumb": "../outputs/thumbnails/archive-v1/01-1-40-am.png"
+ },
+ "pad": "#1F3BD6",
+ "teaserOut": "../outputs/teaser",
+ "outro": {
+  "16x9": {
+   "src": "../kit/landscape - full video on youtube (1).mp4",
+   "dur": 6.25,
+   "poster": "assets/outro_16x9.jpg"
+  },
+  "9x16": {
+   "src": "../kit/portrait - full video on youtube (1).mp4",
+   "dur": 6.867,
+   "poster": "assets/outro_9x16.jpg"
+  },
+  "note": "her 'FULL VIDEO ON YOUTUBE' clip ends every short and the teaser; the 16:9 clip turns plain white from 6.27 s, so only its first 6.25 s are used"
+ }
+}

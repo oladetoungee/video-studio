@@ -1,0 +1,22 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../lib/set.css"><style>
+.t{background:#111111}
+/* pick1119-12 ("PRODUCTIVE UNI WEEK"): four real photo panels side by side (her at work, desk, class, her at home), one huge condensed caps line across the top, a tiny lowercase aside */
+.p{top:0;height:720px;width:640px}
+.p1{left:0}.p2{display:none}.p3{left:640px}.p4{display:none}
+.p + .p{border-left:4px solid #111111}
+.p1 img{width:1300px;left:-300px;top:-20px}
+.p2 img{height:720px;left:-200px;top:0}
+.p3 img{height:900px;left:-280px;top:-110px}
+.p4 img{height:760px;left:-300px;top:-30px}
+.sh{left:0;right:0;top:0;height:250px;background:var(--dim,rgba(10,10,10,.38))}
+.h{left:0;right:0;top:34px;text-align:center;font:700 150px/.92 FOS,sans-serif;color:#F4EBD3;letter-spacing:-.01em;text-transform:uppercase;white-space:nowrap;text-shadow:0 6px 24px rgba(0,0,0,.6)}
+.small{right:40px;top:180px;font:400 50px/1 FIS,serif;color:#FFFFFF;text-shadow:0 2px 12px rgba(0,0,0,.8)}
+</style></head><body><div class="t">
+<div class="p p1 panel z1"><img data-img="a" data-move="work" alt=""></div>
+<div class="p p2 panel z1"><img data-img="b" data-move="desk" alt=""></div>
+<div class="p p3 panel z1"><img data-img="c" data-move="class" alt=""></div>
+<div class="p p4 panel z1"><img data-img="d" data-move="home" alt=""></div>
+<div class="sh z2"></div>
+<div class="h z3" data-k="h"></div>
+<div class="small z3" data-k="small"></div>
+</div><script src="../../lib/bind.js"></script></body></html>

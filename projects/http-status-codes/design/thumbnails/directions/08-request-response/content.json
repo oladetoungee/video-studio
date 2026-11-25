@@ -1,0 +1,25 @@
+{
+ "direction": "Flat stone ground, her full-colour cut-out with a white outline on the left. The topic name huge on the right, and under it the one idea drawn big: a request card GET /books/9999, an arrow, and the answer tile 404 Not Found in amber. A literal picture of what a status code is. References: her database-indexes thumbnail (topic name huge, card \u2192 arrow \u2192 card), kodekloud request/response explainers.",
+ "thumbnail_text": "HTTP STATUS CODES (request \u2192 response)",
+ "titles": [
+  "HTTP Status Codes Explained With a Bookstore API",
+  "HTTP Status Codes Explained (With Real API Examples)",
+  "HTTP Status Codes Explained: 200, 404, 500 and More"
+ ],
+ "title": "HTTP Status Codes Explained With a Bookstore API",
+ "kind": "flat",
+ "text": {
+  "hd": "HTTP<br>status codes",
+  "req": "GET /books/9999",
+  "code": "404",
+  "msg": "Not Found"
+ },
+ "images": {
+  "me": "../../assets/photo/shoot/1598-person.png"
+ },
+ "vars": {
+  "--ground": "#D9D4C7",
+  "--ol": "#FFFFFF"
+ },
+ "class": "no-lift"
+}

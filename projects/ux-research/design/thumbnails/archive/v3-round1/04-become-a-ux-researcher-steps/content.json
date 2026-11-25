@@ -1,0 +1,28 @@
+{
+  "direction": "Her on the left, hand raised; a staircase of three steps climbs up on the right (learn, practise, get the job), the last step in the accent colour. The path into the field drawn literally. References: viral 'Fitness sales framework' (framework drawn), yt 'Zero to Data scientist' (27), 'Complete roadmap UI UX' (26).",
+  "thumbnail_text": "How to become a UX researcher",
+  "text": {
+    "hd": "How to become<br><span class=\"acc\">a UX researcher</span>",
+    "s1": "Learn",
+    "s2": "Practise",
+    "s3": "Get hired"
+  },
+  "images": {
+    "bg": "../../assets/scene/g/s_309.jpg",
+    "cut": "../../assets/scene/g/mask3/s_309.png"
+  },
+  "vars": {
+    "--accent": "#2BD27F",
+    "--bgb": "0.55",
+    "--bgs": "0.8",
+    "--meb": "1.06"
+  },
+  "titles": [
+    "What Is UX Research? A Beginner's Path Into the Field",
+    "How to Get Into UX Research With No Experience",
+    "UX Research Careers: What I've Noticed as a Student"
+  ],
+  "title": "What Is UX Research? A Beginner's Path Into the Field",
+  "set": 3,
+  "kind": "photo"
+}

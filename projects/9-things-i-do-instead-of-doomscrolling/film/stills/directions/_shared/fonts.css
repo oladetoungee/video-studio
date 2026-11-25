@@ -1,0 +1,15 @@
+@font-face{font-family:"Bowlby One";src:url(../_fonts/BowlbyOne-Regular.ttf)}
+@font-face{font-family:"Figtree";font-weight:300 900;src:url(../_fonts/Figtree.ttf)}
+@font-face{font-family:"Red Hat Mono";font-weight:300 700;src:url(../_fonts/RedHatMono.ttf)}
+@font-face{font-family:"Reenie Beanie";src:url(../_fonts/ReenieBeanie.ttf)}
+@font-face{font-family:"Gloock";src:url(../_fonts/Gloock-Regular.ttf)}
+@font-face{font-family:"Bodoni Moda";font-style:italic;font-weight:400 900;src:url(../_fonts/BodoniModa-Italic.ttf)}
+@font-face{font-family:"Sofia XC";font-weight:100 1000;src:url(../_fonts/SofiaSansExtraCondensed.ttf)}
+@font-face{font-family:"Lora";font-weight:400 700;src:url(../_fonts/Lora.ttf)}
+@font-face{font-family:"Instrument Sans";font-weight:400 700;font-stretch:75% 100%;src:url(../_fonts/InstrumentSans.ttf)}
+html,body{margin:0;padding:0;overflow:hidden;background:#000}
+#stage{position:relative;overflow:hidden}
+#stage *{box-sizing:border-box}
+.abs{position:absolute}
+img{display:block}
+@font-face{font-family:"Dela Gothic One";src:url(../_fonts/DelaGothicOne-Regular.ttf)}

@@ -1,0 +1,34 @@
+{
+ "title": "Recital 32 - Conditions for Consent - General Data Protection Regulation (GDPR)",
+ "h1": "Recital 32 Conditions for Consent*",
+ "h1y": 214,
+ "found": {
+  "Silence, pre-ticked boxes or inactivity": [
+   [
+    882.796875,
+    549.953125,
+    255.53125,
+    19
+   ]
+  ]
+ },
+ "H": 1341,
+ "focus": {
+  "Silence, pre-ticked boxes or inactivity": {
+   "file": "gdpr-r32__silence-pre-ticked-boxes.png",
+   "top": 29.953125,
+   "rects": [
+    [
+     882.796875,
+     520,
+     255.53125,
+     19
+    ]
+   ]
+  }
+ },
+ "clipTop": 94,
+ "scale": 1.5,
+ "url": "https://gdpr-info.eu/recitals/no-32/",
+ "captured": "2026-11-02T12:51:11.048Z"
+}

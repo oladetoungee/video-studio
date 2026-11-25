@@ -1,0 +1,88 @@
+{
+ "id": "teaser",
+ "kind": "teaser",
+ "slug": "edge-cases",
+ "title": "Teaser for LinkedIn and X: her best lines, B \u00b7 The Field look",
+ "bites": [
+  [
+   12.75,
+   18.05
+  ],
+  [
+   50.25,
+   54.4
+  ],
+  [
+   58.75,
+   67.45
+  ],
+  {
+   "gap": 0.8,
+   "at": 229.6
+  },
+  [
+   79.05,
+   86.5
+  ],
+  [
+   157.45,
+   161.75
+  ],
+  [
+   180.4,
+   185.85
+  ],
+  {
+   "gap": 0.8,
+   "at": 229.6
+  },
+  [
+   232.85,
+   238.75
+  ],
+  [
+   255.85,
+   267.85
+  ],
+  [
+   282.8,
+   284.75
+  ],
+  [
+   331.05,
+   337.5
+  ],
+  [
+   351.75,
+   359.15
+  ],
+  [
+   366.0,
+   368.35
+  ],
+  [
+   407.85,
+   410.95
+  ],
+  [
+   483.4,
+   487.2
+  ],
+  {
+   "gap": 0.8,
+   "at": 229.6
+  },
+  [
+   168.2,
+   170.0
+  ]
+ ],
+ "tail": 6.5,
+ "script": "teaser/teaser.js",
+ "music": [
+  "766",
+  0.0
+ ],
+ "endCard": false,
+ "note": "2026-11-10: the old end card is off; the teaser ends on the outroCard (top level)."
+}

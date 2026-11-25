@@ -1,0 +1,63 @@
+1
+00:00:00,067 --> 00:00:02,987
+b.J fogg also described a simple model of
+
+2
+00:00:02,987 --> 00:00:05,217
+behavior for someone to do something
+
+3
+00:00:05,217 --> 00:00:07,507
+one, they need motivation
+
+4
+00:00:07,507 --> 00:00:09,767
+two, they need the ability to do it
+
+5
+00:00:09,767 --> 00:00:11,967
+and three, they need a prompt
+
+6
+00:00:12,027 --> 00:00:14,197
+now thinking in terms of social apps,
+
+7
+00:00:14,357 --> 00:00:15,747
+think about a notification
+
+8
+00:00:15,747 --> 00:00:17,597
+the notification is the prompt
+
+9
+00:00:17,687 --> 00:00:19,417
+opening the app is the ability
+
+10
+00:00:19,647 --> 00:00:20,327
+to do it
+
+11
+00:00:20,327 --> 00:00:22,147
+and that just takes a single tap
+
+12
+00:00:22,147 --> 00:00:24,027
+so it's an easy ability
+
+13
+00:00:24,207 --> 00:00:25,747
+and then the motivation
+
+14
+00:00:25,747 --> 00:00:27,847
+the motivation, especially with social apps,
+
+15
+00:00:27,847 --> 00:00:29,847
+is the curiosity about what is waiting for
+
+16
+00:00:29,847 --> 00:00:30,667
+you there

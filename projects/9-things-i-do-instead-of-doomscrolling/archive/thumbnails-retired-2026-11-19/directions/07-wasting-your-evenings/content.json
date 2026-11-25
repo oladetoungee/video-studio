@@ -1,0 +1,28 @@
+{
+  "text": {
+    "h": "you're<br><span class=\"r\">wasting</span><br>your<br>evenings"
+  },
+  "images": {
+    "room": "../../assets/shoot/1558.jpg",
+    "me": "../../assets/shoot/1558-person.png"
+  },
+  "kind": "her photo, dim room (words left / her right, the only one in the set)",
+  "board": "Thumbnails 84 (yt-31 you're wasting your 20s: white lowercase left, one red word, him right)",
+  "fonts": [
+    "thumbs-10 Poppins Bold lowercase, red key word (white + #E5342B on #2A2522, Thumbnails 84)"
+  ],
+  "colours": "Font thumbs-10 specimen: #2A2522 (the room is dimmed in it) / #FFFFFF / #E5342B",
+  "thumbnail_text": "you're wasting your evenings",
+  "titles": [
+    "How to Stop Doomscrolling: 9 Things I Do Instead",
+    "9 Easy Things I Do Instead of Doomscrolling"
+  ],
+  "direction": "Copies Thumbnails 84 with its own font and colours: four short lowercase lines on the left with \"wasting\" in red, she looks straight at you from the right of her dimmed room (face untouched).",
+  "nudge": {},
+  "scores": "cold critic r4: 7.5 alone / 8 with title (best of round 4)",
+  "recommended": true,
+  "vars": {},
+  "class": "no-lift",
+  "title": "How to Stop Doomscrolling: 9 Things I Do Instead",
+  "census": "words left / her right"
+}

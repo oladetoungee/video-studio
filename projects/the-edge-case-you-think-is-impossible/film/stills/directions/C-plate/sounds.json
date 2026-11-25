@@ -1,0 +1,20 @@
+{
+ "music": "160",
+ "musicAt": 20,
+ "musicDb": -23,
+ "sfxDb": -4,
+ "roles": {
+  "slide": "paper-slide",
+  "punch": "wood-hard-hit",
+  "punch2": "punch-soft-quick",
+  "shutter": "shutter-hard-click",
+  "card": "card-place",
+  "card2": "paper-quick-move",
+  "card3": "card-flick",
+  "coins": "coins-clinking",
+  "hit": "drum-deep-impact",
+  "stamp": "tap-small-hit",
+  "marker": "marker-line",
+  "ding": "bell-service-ding"
+ }
+}

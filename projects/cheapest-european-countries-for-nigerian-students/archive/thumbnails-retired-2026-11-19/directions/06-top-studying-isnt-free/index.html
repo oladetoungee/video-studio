@@ -1,0 +1,13 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../lib/eu.css"><style>
+/* board yt-72 ("boring, but it works": one lowercase line across the top, the creator centred under it, one small card).
+   Font board: Bricolage Grotesque 800 (design-24) + DM Mono (design-29); colours combo-09 (Design 409): #F2F3C4 / #2A1F6E / #6A63B2. */
+.t{background:var(--ground,#F2F3C4)}
+.w{left:0;right:0;top:var(--wy,22px);text-align:center;font:800 var(--ws,102px)/1 "BG",sans-serif;color:#2A1F6E;letter-spacing:-.05em}
+.w span{color:#6A63B2}
+.me{position:absolute;width:var(--mw,1000px);left:var(--mx,140px);top:var(--my,150px)}
+.tag{position:absolute;left:var(--tx,800px);top:var(--ty,440px);background:#5D6A52;color:#F1E381;font:500 var(--ts,62px)/1.12 "Mono",monospace;padding:18px 24px;rotate:3deg;box-shadow:0 14px 28px rgba(40,45,30,.35)}
+.tag b{font-weight:500;color:#F1E381}
+</style></head><body><div class="t">
+<img class="me cut z2" data-img="me" alt="">
+<div class="a w z3" data-k="w"></div><div class="tag z3" data-move="tag" data-k="tag"></div>
+</div><script src="../../lib/bind.js"></script></body></html>

@@ -1,0 +1,203 @@
+{
+  "title": "Anthropic's new rule about being cruel to Claude, and is AI conscious?",
+  "hud": "",
+  "intro": 0.5,
+  "outro": 6.0,
+  "voiceDuration": 262.199,
+  "words": "data/words.json",
+  "captions": "data/captions.srt",
+  "images": {
+    "src_title": "assets/sources/anthropic/ap_01_top.png",
+    "src_rule": "assets/sources/anthropic/ap_crop_rule.png",
+    "src_section": "assets/sources/anthropic/ap_crop_section.png",
+    "src_const_top": "assets/sources/anthropic/ac_01_top.png",
+    "src_moral": "assets/sources/anthropic/ac_crop_moral_status.png",
+    "src_su": "assets/sources/suleyman/su_quote.png"
+  },
+  "scripts": [
+    "scenes/thread.js",
+    "scenes/scenes1.js",
+    "scenes/scenes2.js",
+    "scenes/film.js"
+  ],
+  "cutSounds": {
+    "cutSounds": false
+  },
+  "motionBlur": {
+    "shutter": 180,
+    "px": 6,
+    "max": 24,
+    "min": 1
+  },
+  "audio": {
+    "voice": "audio/voice_edit.flac",
+    "voiceFilter": "highpass=f=75,acompressor=threshold=0.05:ratio=3:attack=6:release=160:knee=3,deesser=i=0.25",
+    "music": {
+      "dir": "library:music",
+      "xfade": 6.0,
+      "tracks": [
+        [
+          "480",
+          "Curiosity - Diego Nava"
+        ],
+        [
+          "722",
+          "Odd Beats 01 - Lily J"
+        ],
+        [
+          "167",
+          "Brainiac - Alejandro Magaña"
+        ]
+      ]
+    },
+    "sfx": {
+      "keys": "audio/sfx/keys",
+      "roles": {
+        "notify": {
+          "files": [
+            "library:notify-message-pop",
+            "library:pop-dry",
+            "library:pop-hard-click"
+          ],
+          "align": "peak",
+          "db": -6
+        },
+        "shutter": {
+          "files": [
+            "library:shutter-click",
+            "library:shutter-hard-click"
+          ],
+          "align": "peak",
+          "db": -1
+        },
+        "pen": {
+          "files": [
+            "library:marker-line",
+            "library:pencil-short"
+          ],
+          "align": "start",
+          "db": -5,
+          "maxlen": 0.8
+        },
+        "hit": {
+          "files": [
+            "library:hit-short-bass",
+            "library:bass-quick-switch"
+          ],
+          "align": "start",
+          "db": -3
+        },
+        "type": {
+          "files": [
+            "library:typewriter-soft-click"
+          ],
+          "align": "peak",
+          "db": -3
+        },
+        "tape": {
+          "files": [
+            "library:tape-stop-slowdown"
+          ],
+          "align": "start",
+          "db": 10,
+          "maxlen": 1.4
+        },
+        "riser": {
+          "files": [
+            "library:riser-metallic-sweep"
+          ],
+          "align": "peak",
+          "db": -1
+        },
+        "fall": {
+          "files": [
+            "library:falling-hit"
+          ],
+          "align": "peak",
+          "db": -1
+        },
+        "tick": {
+          "files": [
+            "library:ui-select-click",
+            "library:switch-tap"
+          ],
+          "align": "start",
+          "db": -3
+        },
+        "strike": {
+          "files": [
+            "library:scribble-on-paper",
+            "library:marker-line"
+          ],
+          "align": "start",
+          "db": -5,
+          "maxlen": 0.6
+        },
+        "paper": {
+          "files": [
+            "library:card-place",
+            "library:paper-slide",
+            "library:page-turn-single"
+          ],
+          "align": "peak",
+          "db": 4
+        },
+        "clock": {
+          "files": [
+            "library:ui-modern-select",
+            "library:ui-click-tone"
+          ],
+          "align": "peak",
+          "db": 3
+        },
+        "ding": {
+          "files": [
+            "library:bell-service-ding",
+            "library:correct-answer"
+          ],
+          "align": "peak",
+          "db": -5
+        },
+        "switch": {
+          "files": [
+            "library:switch-tap"
+          ],
+          "align": "peak",
+          "db": 4
+        },
+        "pop": {
+          "files": [
+            "library:pop-cartoon-bubble",
+            "library:pop-dry"
+          ],
+          "align": "peak",
+          "db": -3
+        },
+        "swipe": {
+          "files": [
+            "library:transition-tech-slide",
+            "library:swipe-fast-zoom"
+          ],
+          "align": "peak",
+          "db": 0
+        }
+      }
+    },
+    "levels": {
+      "voiceLufs": -16.0,
+      "duckDb": -15.0,
+      "openDb": 0.0,
+      "fullDb": -2.0,
+      "target": -14.0,
+      "ceiling": 0.76
+    }
+  },
+  "fonts": [
+    "500 40px \"Schibsted Grotesk\"",
+    "800 40px \"Schibsted Grotesk\"",
+    "400 40px \"IBM Plex Mono\"",
+    "500 40px \"IBM Plex Mono\"",
+    "400 40px Newsreader",
+    "600 40px Newsreader"
+  ]
+}

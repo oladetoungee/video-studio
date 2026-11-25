@@ -1,0 +1,20 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../lib/oa.css"><style>
+.hd{left:46px;top:36px;font-size:150px;color:var(--fg);line-height:.9}
+.tiles{position:absolute;left:640px;top:250px;display:grid;grid-template-columns:repeat(10,52px);gap:8px}
+.tiles i{height:26px;border-radius:4px;background:var(--accent);border-top:6px solid #FF8A5B}
+.tiles i.o{background:#3A322B;border-top-color:#54483E}
+.bots{position:absolute;left:46px;top:420px;display:flex;gap:18px}
+.bots img{width:132px}
+svg.lines{position:absolute;left:0;top:0;z-index:1}
+.price{position:absolute;left:820px;top:560px;rotate:-7deg;background:#EFE7D8;color:#16110D;padding:12px 26px;border-radius:12px 40px 40px 12px;font:400 62px/1 'Anton';white-space:nowrap;box-shadow:0 14px 26px rgba(0,0,0,.45)}
+.price small{display:block;white-space:nowrap;font:600 24px/1.2 'Mono';color:#5C5248;margin-top:4px}
+</style></head><body><div class="t">
+<div class="hd z3" data-k="hd"></div>
+<svg class="lines" width="1280" height="720"><g stroke="#F2541B" stroke-width="4" stroke-dasharray="2 12" stroke-linecap="round" fill="none"><path d="M180 470 Q 420 330 640 300"/><path d="M330 480 Q 500 430 640 420"/><path d="M470 500 Q 560 530 640 520"/></g></svg>
+<div class="bots z2" data-move="agents"><img data-img="robot" alt=""><img data-img="robot" alt=""><img data-img="robot" alt=""></div>
+<div class="tiles z2" data-move="websites" id="tl"></div>
+<div class="price z4" data-move="price"><span data-k="price"></span><small data-k="pricenote"></small></div>
+</div><script src="../../lib/bind.js"></script></body></html>
+<script>
+const T=document.getElementById('tl'); for(let i=0;i<100;i++){const e=document.createElement('i'); if([3,17,28,44,51,66,72,85,93,98].includes(i)) e.className='o'; T.appendChild(e);}
+</script>

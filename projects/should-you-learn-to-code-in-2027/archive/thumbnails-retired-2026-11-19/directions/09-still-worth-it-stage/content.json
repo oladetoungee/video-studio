@@ -1,0 +1,18 @@
+{
+ "board": "pick1119-07",
+ "kind": "photo: a real wide scene (you speaking, mid-smile), huge white caps across the top",
+ "direction": "Copies pick1119-07 (I'm No Longer a Software Engineer... + 'I LEFT TECH?': a real, wide, lived-in scene, the person in it, huge white caps across the top). Here: you speaking on stage, mid-smile, one hand out (Øredev photo; the Øredev logo and the laptop sticker are cropped out), and the question as huge caps: STILL WORTH IT? The title says what; the picture says a real developer answers it.",
+ "thumbnail_text": "STILL WORTH IT?",
+ "fonts": [
+  "design-26 Inter Tight ExtraBold caps (white #FFFFFF, as Design 20; there on #0C0C0C, here on the photo)"
+ ],
+ "colours": "design-26 white #FFFFFF on the photo",
+ "text": {
+  "hd": "Still worth it?"
+ },
+ "images": {
+  "photo": "../../assets/oredev/55642441705.jpg"
+ },
+ "vars": {},
+ "class": "no-lift"
+}

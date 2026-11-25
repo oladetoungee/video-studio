@@ -1,0 +1,20 @@
+{
+  "direction": "MAKE IT BORING with her (11:13, calm): the same generic home screen twice beside her, in colour with red badges, then grayscale with three apps; BORING in a red highlight box.",
+  "concept": "TH20 + her",
+  "follows": "Pinterest one-word highlight (\"JOBS ARE DEAD\") + before/after splits",
+  "thumbnail_text": "MAKE IT BORING",
+  "title": "How to Use Your Phone Less (Simple Settings That Help)",
+  "titles": [
+    "How to Use Your Phone Less (Simple Settings That Help)",
+    "How to Stop Scrolling: Phone Settings That Actually Help"
+  ],
+  "scores": "new in round 3 (the face version of 03, asked for by gates A and C); not gated yet",
+  "text": {
+    "words": "Make it <span class=\"box\">boring</span>"
+  },
+  "images": {
+    "scene": "../../../../assets/scene/warm/s_673.0.jpg",
+    "front": "../../../../assets/scene/warm/mask/s_673.0.png"
+  },
+  "vars": {}
+}

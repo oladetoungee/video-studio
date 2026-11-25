@@ -1,0 +1,33 @@
+{
+ "direction": "16 (2026-11-19): copies pick1119-42 (Stanford lecture: a real wide moment of the speaker at the front, the projected slide carries the topic, no big caption). Her Øredev talk photo (full length at the lectern, slide behind her; the lectern logo is cropped out), her old slide line covered, the slide now asks: where does your login live?",
+ "thumbnail_text": "where does your / login live?",
+ "kind": "photo (real moment)",
+ "recommended": false,
+ "titles": [
+  "How Websites Keep You Logged In (Cookies Explained)",
+  "Cookies vs localStorage: Where Websites Keep Your Login",
+  "How Login Cookies Work (and Where localStorage Fits)"
+ ],
+ "text": {
+  "sl": "where does your<br>login <i>live?</i>"
+ },
+ "images": {
+  "photo": "../../assets/oredev/stage-lecture.jpg"
+ },
+ "vars": {
+  "--pt": "-60px",
+  "--pl": "-700px",
+  "--pw": "2200px"
+ },
+ "board": "pick1119-42 (What Are AI Agents? Agentic Systems Explained | Stanford CS329Z Lecture 1)",
+ "fonts": "Font 72 (thumbs-17: Inter Tight + Instrument Serif italic, white on dark)",
+ "colours": "white on the slide's own dark navy (thumbs-17 is white on near-black)",
+ "photo": "library/her-photos/oredev-2026-11-10/55641049957 (Enhance photo, bg keep)",
+ "title": "How Websites Keep You Logged In (Cookies Explained)",
+ "class": "no-lift",
+ "titles_before_2026_11_19": [
+  "Cookies Explained: How Websites Keep You Logged In",
+  "Where Websites Keep Your Login, Cart and Form",
+  "How Login Cookies Work (and Where localStorage Fits)"
+ ]
+}

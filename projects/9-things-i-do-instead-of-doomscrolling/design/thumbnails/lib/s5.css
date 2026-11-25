@@ -1,0 +1,35 @@
+/* 9 things thumbnails, SET 5 (2026-11-13): lifestyle look. FONT BOARD ONLY, each font in its specimen's own colours
+   (inspiration/boards/fonts/, "Font N"); each thumbnail copies a DIFFERENT thumbnail-board composition ("Thumbnails N").
+   content.json "board", "fonts", "colours" name them. Photos: her 29 Oct shoot (outfit A) through Enhance photo, face untouched
+   (no-lift); stock from Pexels (assets/set5/CREDITS.md). No gradients, glow, outlines on text.
+   Editable: text in content.json "text", photos in "images", colours in "vars", moves in "nudge" (lib/bind.js). */
+@font-face { font-family: 'FBIT'; src: url('../fonts/InterTightMedium.ttf'); font-weight: 500; }
+@font-face { font-family: 'FBIT'; src: url('../fonts/InterTightSemiBold.ttf'); font-weight: 600; }
+@font-face { font-family: 'FBIT'; src: url('../fonts/InterTightBold.ttf'); font-weight: 700; }
+@font-face { font-family: 'FBIT'; src: url('../fonts/InterTightExtraBold.ttf'); font-weight: 800; }
+@font-face { font-family: 'FBIT'; src: url('../fonts/InterTightBlack.ttf'); font-weight: 900; }
+@font-face { font-family: 'FBPop'; src: url('../fonts/Poppins-Bold.ttf'); font-weight: 700; }
+@font-face { font-family: 'FBMon'; src: url('../fonts/Montserrat-Variable.ttf'); font-weight: 100 900; }
+@font-face { font-family: 'FBLib'; src: url('../fonts/LibreBaskerville[wght].ttf'); font-weight: 400 700; }
+@font-face { font-family: 'FBBod'; src: url('../fonts/BodoniModa[opsz,wght].ttf'); font-weight: 400 900; }
+@font-face { font-family: 'FBIns'; src: url('../fonts/InstrumentSerif-Italic.ttf'); font-style: normal; }
+@font-face { font-family: 'FBCB'; src: url('../fonts/CaveatBrush-Regular.ttf'); }
+@font-face { font-family: 'FBYS'; src: url('../fonts/YoungSerif-Regular.ttf'); }
+@font-face { font-family: 'FBBric'; src: url('../fonts/BricolageGrotesque.ttf'); font-weight: 200 800; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1280px; height: 720px; overflow: hidden; background: #111; }
+.t { position: relative; width: 1280px; height: 720px; overflow: hidden; background: var(--ground, #111); color: var(--fg, #fff); }
+.t > * { position: absolute; }
+.guides .badge { position: absolute; right: 10px; bottom: 10px; width: 150px; height: 70px; border: 3px dashed #0f0; z-index: 99; }
+.z1 { z-index: 1; } .z2 { z-index: 2; } .z3 { z-index: 3; } .z4 { z-index: 4; } .z5 { z-index: 5; } .z6 { z-index: 6; }
+.nw { white-space: nowrap; }
+/* her room photo + her enhanced person layer at the SAME place on top (face untouched); .dim darkens the room only */
+.room { width: var(--rw, 2000px); left: var(--rx, 0px); top: var(--ry, 0px); display: block; }
+.dim { inset: 0; background: var(--dim, rgba(12,12,12,.5)); }
+.cut { bottom: 0; display: block; }
+.ph { display: block; object-fit: cover; }
+.die { display: block; filter: drop-shadow(0 18px 22px rgba(0,0,0,.28)); }
+@font-face { font-family: 'FBSat'; src: url('../fonts/Satoshi-VariableItalic.ttf'); font-weight: 300 900; font-style: normal; }
+@font-face { font-family: 'FBAnt'; src: url('../fonts/Anton-Regular.ttf'); }
+@font-face { font-family: 'FBCav'; src: url('../fonts/Caveat.ttf'); font-weight: 400 700; }
+@font-face { font-family: 'FBAB'; src: url('../fonts/ArchivoBlack-Regular.ttf'); }

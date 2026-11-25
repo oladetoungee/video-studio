@@ -1,0 +1,28 @@
+{
+  "text": {
+    "h": "Developer<br>by day.<br>Student<br>by night."
+  },
+  "images": {
+    "me": "../../assets/p1119/stage-cut.png"
+  },
+  "kind": "her speaking on stage (Øredev, grey blazer, mid-sentence, hands explaining), cut out onto the dark stage colour; bold serif headline left",
+  "layout": "words left / her right (1 of 2 in the set)",
+  "board": "pick1119-04 (\"The Kind of Thinker Who Will Thrive in the AI Era\": The Rise of Systems Thinkers, bold serif stacked left, the speaker mid-gesture right on a dark set)",
+  "fonts": [
+    "thumbs-05 Libre Baskerville Bold (white #FFFFFF on #2B2A28 / stage black, Thumbnails 48)"
+  ],
+  "colours": "Thumbnails 48: dark ground / #FFFFFF",
+  "photo": "library/her-photos/oredev-2026-11-10/55642239799_2e35b7888f_o.jpg (Enhance photo 0.4, cut-out; no Øredev logo shown)",
+  "thumbnail_text": "Developer by day. Student by night.",
+  "titles": [
+    "I'm a Software Developer Doing a Full-Time Master's",
+    "How I Work Full Time While Doing a Master's Abroad",
+    "My Week as a Developer and a Full-Time Master's Student"
+  ],
+  "title": "I'm a Software Developer Doing a Full-Time Master's",
+  "direction": "Copies pick1119-04: her as the working professional (speaking at a developer conference, mid-sentence), the dark stage, a stacked bold serif headline. The 11-10 'Developer by day, student by night' wording scored 8/8 cold; this gives it a real, alive photo.",
+  "nudge": {},
+  "vars": {},
+  "class": "no-lift",
+  "scores": "2026-11-19 feed critic: R1 6/7 · R2 7/7 · R3 5/6"
+}

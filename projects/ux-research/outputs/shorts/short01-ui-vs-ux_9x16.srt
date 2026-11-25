@@ -1,0 +1,79 @@
+1
+00:00:00,086 --> 00:00:01,546
+you've probably heard people
+
+2
+00:00:01,765 --> 00:00:05,045
+say UI/UX, like one word, UI/UX designer,
+
+3
+00:00:05,045 --> 00:00:08,526
+UI/UX course but UI and UX are two different
+
+4
+00:00:08,526 --> 00:00:10,966
+things UI stands for user interface
+
+5
+00:00:10,966 --> 00:00:12,746
+it is what you can see and touch, the
+
+6
+00:00:12,746 --> 00:00:14,905
+button, the colours, the layout, the icons,
+
+7
+00:00:14,905 --> 00:00:15,966
+the screen
+
+8
+00:00:16,145 --> 00:00:18,205
+UX, on the other hand, stands for user
+
+9
+00:00:18,205 --> 00:00:20,686
+experience it is how the whole product feels
+
+10
+00:00:20,686 --> 00:00:22,886
+to use can a user find what they're looking
+
+11
+00:00:22,886 --> 00:00:25,145
+for? does it make sense to the user?
+
+12
+00:00:25,145 --> 00:00:27,385
+did users get frustrated using it?
+
+13
+00:00:27,386 --> 00:00:29,346
+did the user come back to use it?
+
+14
+00:00:29,446 --> 00:00:32,066
+so you can have a beautiful app with a
+
+15
+00:00:32,066 --> 00:00:34,886
+beautiful interface that is a nightmare to
+
+16
+00:00:34,886 --> 00:00:37,306
+use in that case, you have a great UI, but
+
+17
+00:00:37,306 --> 00:00:38,195
+terrible UX
+
+18
+00:00:38,315 --> 00:00:40,506
+so your UI is kind of part of your UX
+
+19
+00:00:40,506 --> 00:00:41,816
+the experience is
+
+20
+00:00:42,026 --> 00:00:44,533
+just much bigger than what is on the screen

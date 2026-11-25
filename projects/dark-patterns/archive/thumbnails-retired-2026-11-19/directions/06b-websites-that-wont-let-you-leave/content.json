@@ -1,0 +1,38 @@
+{
+ "direction": "Her real room (photo 1562, hand to her face, 'seriously?'), she centred and natural, the room dimmed (darker behind the line). Two generic shop pop-ups either side of her, tucked behind her shoulders: 'Leaving already? / Stay: 20% off / Leave anyway' and 'Don't go! / Stay / No, I like paying more'. One white line across the top.",
+ "thumbnail_text": "websites that won't let you leave",
+ "kind": "photo + objects",
+ "recommended": false,
+ "titles": [
+  "What Are Dark Patterns? 11 Examples From Online Shops",
+  "The Tricks Online Shops Use to Make You Say Yes",
+  "Dark Patterns Explained: 11 Tricks Websites Use on You"
+ ],
+ "text": {
+  "hd": "websites that won't let you leave",
+  "q1": "Leaving already?",
+  "b1": "Stay: 20% off",
+  "l1": "Leave anyway",
+  "q4": "Don't go!",
+  "b4": "Stay",
+  "l4": "No, I like paying more"
+ },
+ "images": {
+  "room": "../../assets/shoot/1562.jpg",
+  "me": "../../assets/shoot/1562-person.png"
+ },
+ "vars": {
+  "--pw": "1280px",
+  "--pl": "0px",
+  "--pt": "-40px",
+  "--dim": "rgba(8,8,8,.62)",
+  "--ground": "#222222"
+ },
+ "board": "Thumbnails 123 (yt-70 \"upgrade your life with neuroplasticity\": the creator centred in a real room, the topic's objects all around her and behind her shoulders, one white line across the top)",
+ "fonts": "Font 69 (Poppins Bold lowercase, white, Thumbnails 96) for the line + Font 58 (Inter Tight, black on light) in the pop-ups",
+ "colours": "Font 69 specimen: white #FFFFFF words on a dark ground (her room dimmed 55%, like #3A3632); pop-ups white with ink #111, button #21F587",
+ "title": "What Are Dark Patterns? 11 Examples From Online Shops",
+ "class": "no-lift",
+ "replaces": "06-leaving-already (kept beside it)",
+ "scores": "cold critic 2026-11-16 (3 rounds, fresh agent each, PNGs alone): 7 / 7 / 6 (old 06: 5.5 / 5 / 6)"
+}

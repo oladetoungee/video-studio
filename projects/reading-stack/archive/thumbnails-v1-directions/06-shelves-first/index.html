@@ -1,0 +1,16 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../lib/base.css"><style>
+.t{--ground:var(--ink);--fg:var(--white);--accent:var(--green)}
+img.cut{left:var(--x);top:var(--y);width:var(--w)}
+.list{position:absolute;left:44px;top:96px;width:660px}
+.it{display:grid;grid-template-columns:62px 1fr;align-items:end;border-bottom:3px solid var(--rule,rgba(255,255,255,.85));padding:0 0 10px;margin-bottom:22px}
+.it .n{font-family:'DM Mono',monospace;font-weight:500;font-size:22px;color:var(--accent);padding-bottom:10px}
+.it .x{font-size:116px;color:var(--fg);white-space:nowrap}
+.it.hi .x{color:var(--accent)}
+</style></head><body><div class="t"><div class="grid"></div>
+<img class="cut" data-img="person" alt="">
+<div class="list disp" data-move="list">
+ <div class="it"><span class="n">01</span><span class="x" data-k="line1"></span></div>
+ <div class="it hi"><span class="n">02</span><span class="x" data-k="line2"></span></div>
+ <div class="it"><span class="n">03</span><span class="x" data-k="line3"></span></div>
+</div>
+</div><script src="../../lib/bind.js"></script></body></html>

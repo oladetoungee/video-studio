@@ -1,0 +1,33 @@
+{
+  "text": {
+    "t1": "9 AM",
+    "t2": "9 PM",
+    "l1": "Job",
+    "l2": "Master's"
+  },
+  "images": {
+    "a": "../../assets/shoot2/room-1585.jpg",
+    "ame": "../../assets/shoot2/room-1585-cut.png",
+    "b": "../../assets/shoot2/room-1578.jpg",
+    "bme": "../../assets/shoot2/room-1578-cut.png"
+  },
+  "kind": "split: her at 9 AM (room bright and cool) | her at 9 PM (room in the dark); her face untouched in both",
+  "layout": "split",
+  "board": "Thumbnails 69 (yt-16 \"24 Hours of Healthy Student Cooking\": 12:30 PM | 7:30 PM, a time on each photo; she liked it)",
+  "fonts": [
+    "design-34 Inter Tight Bold (white #FFFFFF on red #CB2D26, Design 373)"
+  ],
+  "colours": "Design 373: #CB2D26 / #FFFFFF (+ #0C0C0C tags, Design 20)",
+  "thumbnail_text": "9 AM JOB | 9 PM MASTER'S",
+  "titles": [
+    "How I Work Full Time While Doing a Master's Abroad",
+    "Working a 9-5 While Doing a Master's Abroad",
+    "My Week as a Developer and a Full-Time Master's Student"
+  ],
+  "title": "How I Work Full Time While Doing a Master's Abroad",
+  "direction": "Copies Thumbnails 69: the day told by two photos of her and two times; the 9 AM room bright and cool, the 9 PM room in the dark (only the room is graded). Inter Tight Bold white on red, as Design 373.",
+  "nudge": {},
+  "vars": {},
+  "class": "no-lift",
+  "scores": "2026-11-19 feed critic: R1 6/7 · R2 7/6 · R3 5/5 (both halves read as the same light and face). Earlier: 2026-11-13 blind 8"
+}

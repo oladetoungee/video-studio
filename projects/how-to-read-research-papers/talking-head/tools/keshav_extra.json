@@ -1,0 +1,257 @@
+{
+ "up to three passes": {
+  "page": 1,
+  "lines": [
+   [
+    271,
+    525,
+    293
+   ],
+   [
+    54,
+    536,
+    102
+   ]
+  ]
+ },
+ "Carefully read the title, abstract, and introduction": {
+  "page": 1,
+  "lines": [
+   [
+    76,
+    669,
+    281
+   ]
+  ]
+ },
+ "Read the section and sub-section headings": {
+  "page": 1,
+  "lines": [
+   [
+    76,
+    688,
+    246
+   ]
+  ]
+ },
+ "Read the conclusions": {
+  "page": 1,
+  "lines": [
+   [
+    76,
+    717,
+    161
+   ]
+  ]
+ },
+ "Glance over the references": {
+  "page": 1,
+  "lines": [
+   [
+    339,
+    216,
+    450
+   ]
+  ]
+ },
+ "Category:": {
+  "page": 1,
+  "lines": [
+   [
+    339,
+    274,
+    380
+   ]
+  ]
+ },
+ "Context:": {
+  "page": 1,
+  "lines": [
+   [
+    339,
+    315,
+    375
+   ]
+  ]
+ },
+ "Correctness:": {
+  "page": 1,
+  "lines": [
+   [
+    339,
+    345,
+    392
+   ]
+  ]
+ },
+ "Contributions:": {
+  "page": 1,
+  "lines": [
+   [
+    339,
+    365,
+    400
+   ]
+  ]
+ },
+ "Clarity:": {
+  "page": 1,
+  "lines": [
+   [
+    339,
+    395,
+    373
+   ]
+  ]
+ },
+ "make comments in the margins": {
+  "page": 1,
+  "lines": [
+   [
+    370,
+    603,
+    495
+   ]
+  ]
+ },
+ "Look carefully at the figures": {
+  "page": 1,
+  "lines": [
+   [
+    339,
+    624,
+    451
+   ]
+  ]
+ },
+ "ignore details such as proofs": {
+  "page": 1,
+  "lines": [
+   [
+    317,
+    593,
+    432
+   ]
+  ]
+ },
+ "The second pass": {
+  "page": 2,
+  "lines": [
+   [
+    63,
+    64,
+    130
+   ]
+  ]
+ },
+ "The third pass": {
+  "page": 2,
+  "lines": [
+   [
+    54,
+    252,
+    110
+   ]
+  ]
+ },
+ "The first pass": {
+  "page": 1,
+  "lines": [
+   [
+    231,
+    556,
+    293
+   ]
+  ]
+ },
+ "THE THREE-PASS APPROACH": {
+  "page": 2,
+  "lines": [
+   [
+    132,
+    581,
+    229
+   ]
+  ]
+ },
+ "Abstract": {
+  "page": 1,
+  "lines": [
+   [
+    54,
+    216,
+    118
+   ]
+  ]
+ },
+ "INTRODUCTION": {
+  "page": 1,
+  "lines": [
+   [
+    75,
+    349,
+    170
+   ]
+  ]
+ },
+ "S. Keshav": {
+  "page": 1,
+  "lines": [
+   [
+    278,
+    126,
+    332
+   ]
+  ]
+ },
+ "the key point": {
+  "page": 1,
+  "lines": [
+   [
+    526,
+    593,
+    556
+   ],
+   [
+    317,
+    603,
+    338
+   ]
+  ]
+ },
+ "the first pass is adequate": {
+  "page": 1,
+  "lines": [
+   [
+    540,
+    445,
+    556
+   ],
+   [
+    317,
+    456,
+    400
+   ]
+  ]
+ },
+ "re-implement the paper": {
+  "page": 2,
+  "lines": [
+   [
+    160,
+    304,
+    256
+   ]
+  ]
+ },
+ "making the same assumptions": {
+  "page": 2,
+  "lines": [
+   [
+    54,
+    315,
+    175
+   ]
+  ]
+ }
+}

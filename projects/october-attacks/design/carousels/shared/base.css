@@ -1,0 +1,94 @@
+/* october-attacks carousels (2026-10-26): the film's look A "The Month". Grounds: ink = night #16110D, paper = bone #EFE7D8,
+   card = #FFFDF6, accent = October orange (full bleed for the cover and one punchline). Anton display, Manrope body,
+   Spline Sans Mono labels (>= 32 px). Real news screenshots are never altered and always credited. */
+@font-face { font-family: 'Anton'; src: url('fonts/Anton-Regular.ttf') format('truetype'); }
+@font-face { font-family: 'Manrope'; src: url('fonts/Manrope-VF.ttf') format('truetype'); font-weight: 200 800; }
+@font-face { font-family: 'Spline Sans Mono'; src: url('fonts/SplineSansMono-VF.ttf') format('truetype'); font-weight: 300 700; }
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { background: #2a2a2e; }
+body { font-family: 'Manrope', sans-serif; padding: 40px; display: flex; flex-direction: column; gap: 40px; align-items: flex-start; }
+html.v-slide body, html.v-strip body { padding: 0; gap: 0; }
+html.v-strip body { flex-direction: row; }
+@media print { body { padding: 0; gap: 0; } .slide { break-after: page; } }
+@page { margin: 0; }
+
+.slide { position: relative; width: var(--W); height: var(--H); overflow: hidden; background: var(--bg); color: var(--fg); flex: none; }
+.g-ink    { --bg: #16110D; --fg: #EFE7D8; --sub: rgba(239,231,216,.78); --mid: rgba(239,231,216,.6); --line: rgba(239,231,216,.22); --a: var(--accInk); --onA: var(--onAInk); --chip: #231C16; }
+.g-paper  { --bg: #EFE7D8; --fg: #16110D; --sub: rgba(22,17,13,.78); --mid: rgba(22,17,13,.6); --line: rgba(22,17,13,.2); --a: var(--acc); --onA: var(--onAccent); --chip: #FFFDF6; }
+.g-card   { --bg: #FFFDF6; --fg: #16110D; --sub: rgba(22,17,13,.78); --mid: rgba(22,17,13,.6); --line: rgba(22,17,13,.2); --a: var(--acc); --onA: var(--onAccent); --chip: #EFE7D8; }
+.g-accent { --bg: var(--acc); --fg: var(--onAcc); --sub: var(--onAccMid); --mid: var(--onAccMid); --line: var(--onAccLine); --a: var(--onAccAcc); --onA: var(--acc); --chip: rgba(22,17,13,.12); }
+
+.main { position: absolute; left: 80px; right: 80px; top: 96px; bottom: 150px; display: flex; flex-direction: column; }
+.push { margin-top: auto; }
+.disp { font-family: 'Anton', sans-serif; text-transform: uppercase; line-height: .95; letter-spacing: .005em; color: var(--fg); }
+.disp .acc, .acc { color: var(--a); }
+.body { font-size: 42px; line-height: 1.28; font-weight: 600; letter-spacing: -0.01em; color: var(--sub); text-wrap: pretty; }
+.bal { text-wrap: balance; }
+.nw { white-space: nowrap; }
+.serif { font-style: italic; }
+.mono { font-family: 'Spline Sans Mono', monospace; font-weight: 500; font-size: 32px; letter-spacing: .04em; text-transform: uppercase; }
+.lab { line-height: 1.2; }
+.chip { display: inline-flex; align-self: flex-start; align-items: center; gap: 18px; padding: 12px 20px; background: var(--a); color: var(--onA); }
+.chip b { font-family: 'Anton'; font-weight: 400; font-size: 46px; line-height: 1; letter-spacing: .01em; }
+.corner { position: absolute; left: 80px; top: 44px; font-family: 'Spline Sans Mono'; font-size: 32px; letter-spacing: .06em; text-transform: uppercase; color: var(--mid); }
+
+.foot { position: absolute; left: 80px; right: 80px; bottom: 56px; display: flex; justify-content: space-between; align-items: center; font-family: 'Spline Sans Mono'; font-size: 32px; color: var(--mid); }
+.foot .num b { color: var(--fg); font-weight: 600; }
+.meter { display: flex; gap: 6px; }
+.meter i { width: 26px; height: 8px; background: var(--line); }
+.meter i.on { background: var(--a); }
+
+/* real news screenshot, untouched, credited */
+.shot { position: relative; background: #fff; padding: 12px; box-shadow: 0 24px 50px rgba(0,0,0,.28); }
+.shot img { display: block; width: 100%; }
+.shot .cr { position: absolute; left: 0; top: 100%; margin-top: 14px; font-family: 'Spline Sans Mono'; font-size: 32px; letter-spacing: .04em; text-transform: uppercase; color: var(--mid); white-space: nowrap; }
+
+/* calendar (cover) */
+.cal { background: #EFE7D8; color: #16110D; padding: 26px 30px 30px; box-shadow: 0 26px 50px rgba(0,0,0,.3); }
+.cal .m { font-family: 'Anton'; font-size: 84px; line-height: 1; color: #16110D; }
+.cal .g { display: grid; grid-template-columns: repeat(7, 1fr); margin-top: 14px; }
+.cal .g b { font-family: 'Spline Sans Mono'; font-weight: 500; font-size: 32px; color: rgba(22,17,13,.55); text-align: center; padding-bottom: 6px; }
+.cal .g span { position: relative; height: 76px; border-top: 3px solid rgba(22,17,13,.18); font-weight: 800; font-size: 34px; padding: 8px 0 0 10px; }
+.cal .g span.x { background: #16110D; color: #EFE7D8; }
+.cal .g span.x img { position: absolute; right: 8px; bottom: 8px; width: 62%; max-height: 64%; object-fit: contain; }
+
+/* terminal */
+.term { background: #0D0A08; color: #EFE7D8; font-family: 'Spline Sans Mono'; box-shadow: 0 24px 50px rgba(0,0,0,.35); }
+.term .bar { height: 46px; background: #231C16; display: flex; gap: 12px; align-items: center; padding-left: 22px; }
+.term .bar i { width: 16px; height: 16px; border-radius: 50%; background: #4A3F35; }
+.term .in { padding: 36px 44px 44px; font-size: 60px; line-height: 1.45; }
+.term .p { color: #9C8F7E; }
+.term .ok { color: #49D27E; }
+
+/* rows (numbered list) */
+.rows .row { display: grid; grid-template-columns: var(--numW, 96px) 1fr; align-items: baseline; border-top: 3px solid var(--line); padding: 26px 0 24px; }
+.rows .row:last-child { border-bottom: 3px solid var(--line); }
+.rows .n { font-family: 'Spline Sans Mono'; font-size: 34px; color: var(--a); font-weight: 600; }
+.rows .head { font-size: 50px; font-weight: 800; letter-spacing: -0.02em; line-height: 1.12; color: var(--fg); }
+
+/* flow: request -> PHP reads it -> login -> code */
+.flow .st { display: flex; justify-content: space-between; align-items: center; padding: 36px 34px; border: 4px solid var(--fg); margin-bottom: 22px; font-size: 54px; font-weight: 800; letter-spacing: -0.02em; background: var(--chip); }
+.flow .st .mono { color: var(--mid); }
+.flow .st.hole { background: var(--a); color: var(--onA); border-color: var(--a); }
+.flow .st.hole .mono { color: var(--onA); }
+.flow .st.off { opacity: .45; text-decoration: line-through; text-decoration-thickness: 4px; }
+
+/* receipt */
+.rc { background: #FFFDF6; color: #16110D; padding: 46px 50px; font-family: 'Spline Sans Mono'; font-size: 36px; line-height: 1.8; box-shadow: 0 24px 50px rgba(0,0,0,.3); }
+.rc .ln { display: flex; justify-content: space-between; border-bottom: 3px dashed #CFC5B2; }
+.rc .tot { display: flex; justify-content: space-between; align-items: center; margin-top: 26px; font-family: 'Anton'; font-size: 54px; }
+.rc .tot b { font-weight: 400; color: #C8320C; font-size: 96px; }
+
+/* two columns */
+.cols2 { display: grid; grid-template-columns: 1fr; gap: 30px; }
+.cols2 > div { background: var(--chip); padding: 40px 40px 46px; }
+.cols2 .k { font-family: 'Spline Sans Mono'; font-size: 32px; color: var(--a); text-transform: uppercase; letter-spacing: .04em; }
+.cols2 .v { font-size: 64px; font-weight: 800; letter-spacing: -0.02em; line-height: 1.12; margin-top: 18px; color: var(--fg); text-wrap: balance; }
+
+/* end: her photo as a polaroid */
+.pol { position: absolute; background: #FFFDF6; padding: 14px 14px 0; box-shadow: 0 20px 40px rgba(0,0,0,.3); }
+.pol img { display: block; width: 100%; object-fit: cover; }
+.pol .cap { font-family: 'Spline Sans Mono'; font-size: 32px; color: #16110D; padding: 12px 4px 14px; text-transform: uppercase; letter-spacing: .04em; white-space: nowrap; overflow: hidden; }
+.handle { display: inline-block; font-family: 'Anton'; font-size: 72px; line-height: 1; background: var(--a); color: var(--onA); padding: 12px 22px 14px; }
+.big4 { font-family: 'Anton'; font-size: 400px; line-height: .8; color: var(--a); }

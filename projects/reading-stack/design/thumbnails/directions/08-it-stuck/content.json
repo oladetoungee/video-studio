@@ -1,0 +1,17 @@
+{
+  "direction": "Face (joy) + result hook",
+  "title": "I Memorised a Book’s Contents Before Reading It",
+  "text": {
+    "line1": "The book",
+    "line2": "actually",
+    "line3": "stuck."
+  },
+  "images": {
+    "person": "../../assets/cut/grin.png"
+  },
+  "vars": {
+    "--x": "420px",
+    "--y": "46px",
+    "--w": "1000px"
+  }
+}

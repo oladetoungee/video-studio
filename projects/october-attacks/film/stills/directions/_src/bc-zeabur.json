@@ -1,0 +1,34 @@
+{
+ "title": "Zeabur shutting down after second security breach in two months",
+ "h1": "Zeabur shutting down after second security breach in two months",
+ "h1y": 452,
+ "found": {
+  "The admin tokens had no expiry": [
+   [
+    62.375,
+    3912.96875,
+    255.6875,
+    21
+   ]
+  ]
+ },
+ "H": 8623,
+ "focus": {
+  "The admin tokens had no expiry": {
+   "file": "bc-zeabur__the-admin-tokens-had-no-.png",
+   "top": 3392.96875,
+   "rects": [
+    [
+     62.375,
+     520,
+     255.6875,
+     21
+    ]
+   ]
+  }
+ },
+ "clipTop": 332,
+ "scale": 1.5,
+ "url": "https://www.bleepingcomputer.com/news/security/zeabur-shutting-down-after-second-security-breach-in-two-months/",
+ "captured": "2026-10-25T22:51:58.488Z"
+}

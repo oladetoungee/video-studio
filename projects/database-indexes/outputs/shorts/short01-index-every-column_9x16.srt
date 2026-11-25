@@ -1,0 +1,91 @@
+1
+00:00:00,100 --> 00:00:03,060
+if database indexes makes queries so fast,
+
+2
+00:00:03,060 --> 00:00:05,720
+why don't we just index every column and be
+
+3
+00:00:05,720 --> 00:00:06,830
+done with it?
+
+4
+00:00:06,830 --> 00:00:09,371
+we cannot, because every index has a cost
+
+5
+00:00:09,371 --> 00:00:11,480
+every time you insert, update and delete a
+
+6
+00:00:11,480 --> 00:00:12,320
+row, the
+
+7
+00:00:12,490 --> 00:00:14,510
+database also has to update every index on
+
+8
+00:00:14,510 --> 00:00:17,152
+that table so if your orders table has six
+
+9
+00:00:17,152 --> 00:00:19,285
+indexes, every new order means updating the
+
+10
+00:00:19,285 --> 00:00:20,990
+whole table and all six indexes
+
+11
+00:00:21,180 --> 00:00:23,590
+so the more database indexes you have, the
+
+12
+00:00:23,590 --> 00:00:25,110
+slower your writes get
+
+13
+00:00:25,110 --> 00:00:27,480
+also indexes also take up storage space
+
+14
+00:00:27,480 --> 00:00:30,490
+and for a small table, the database will
+
+15
+00:00:30,490 --> 00:00:32,478
+often skip your index and just scan the
+
+16
+00:00:32,478 --> 00:00:34,430
+table anyway, because that's faster for a
+
+17
+00:00:34,430 --> 00:00:36,250
+small table, you have just like 10 rows,
+
+18
+00:00:36,250 --> 00:00:38,140
+it's faster to read them than to go through
+
+19
+00:00:38,140 --> 00:00:39,230
+an index first
+
+20
+00:00:39,230 --> 00:00:41,730
+so what you do is that you only index the
+
+21
+00:00:41,730 --> 00:00:44,210
+columns that you actually search on or
+
+22
+00:00:44,210 --> 00:00:46,340
+filter on or join or sort by, you don't
+
+23
+00:00:46,340 --> 00:00:46,900
+index everything

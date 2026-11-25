@@ -1,0 +1,85 @@
+[00:00] scenario that we've seen play out over and over again is that whatever companies
+[00:03] go public, the people that started the company are very often sidelined. We've
+[00:07] seen this with Apple, with Steve Jobs. After they went public he got fired. Yes,
+[00:12] they got him back in because Apple was on the brink of collapse but it still
+[00:15] happened. And then with Uber, Travis Kalanick who was a CEO at the time, he
+[00:19] was fired as well. Even though he had super voting rights in the company, he
+[00:24] was still stripped off control and he ended up using the very company that he
+[00:28] started. In order to protect themselves from this fate, the founders of
+[00:31] Entropic have set up a very tight governance structure. So even though they
+[00:35] only own about 2% of the company each, there's about 7 co-founders. They all
+[00:39] own between 1.5%, 1.8%, but let's say approximately 2% each.
+[00:45] Collectively it all adds up to about 14% of the company, which is very far from
+[00:49] being able to control what happens in the company after you go public. Because
+[00:53] normally one share equals one vote, which means if you only own 14%, things could
+[00:58] go in a way that doesn't necessarily align with your mission for the company.
+[01:01] So what the founders of Entropic did was they set up a company, Entropic Founders
+[01:06] LLC. And Entropic Founders LLC owns a 50.1% voting right in Entropic. So if
+[01:14] there's ever anything that needs to be decided on, everyone else essentially can
+[01:18] only agree with the founders of Entropic because they own 50.1%. They are the
+[01:23] majority. If it comes to sales, mergers, hostile takeovers, anything of that sort,
+[01:28] if anyone disagrees with them, it doesn't matter. Yes, when you have certain
+[01:33] transactions, you know, where you need a super majority and all of that, that
+[01:36] becomes a different story. But for the ordinary transactions that could alter
+[01:41] what Entropic becomes, they are the ones that have a final say. And even if they
+[01:45] sell up to 98% of their own equity shares as founders, they can get all of
+[01:51] that economic upside without losing this super vote. Even if the structure
+[01:55] changes, even if new capital gets introduced, whatever happens every single
+[01:59] time, they will reset and recalculate the shareholding to give founders LLC 50.1%
+[02:06] of the voting rights in Entropic. So essentially there's three power caps.
+[02:10] You've got the founders LLC, which is the 50.1% and then you have the 49.9%
+[02:16] which is able to participate in the economics really, because anything other
+[02:22] than that, when it comes to control, that rests on the founders. And then you've
+[02:25] got another part of the camp, which is the long-term benefit trust. So in 2021,
+[02:30] when the guys who started Entropic left OpenAI, they left because they felt like
+[02:35] OpenAI was, you know, too involved in the AI race and they were doing that in a way
+[02:40] that compromises safety. So they left OpenAI to start Entropic and they
+[02:44] started Entropic with the mission of being the safer alternative. And in order
+[02:48] to stay true to this mission, they went around the United States looking for
+[02:51] some of the best minds and governance. There's a professor from Yale who is
+[02:55] specialized one of the best academics when it comes to corporate governance.
+[02:59] They got one of the best Harvard professors when it comes to
+[03:02] constitutionalism and governance. He's also one person who was involved as a
+[03:07] special advisor to the United States in 2003 when they had that issue with Iraq.
+[03:13] So he is one who is able to build organizations that are able to withstand
+[03:17] even the most turbulent of times. And they've maintained relationships with
+[03:20] this Silicon Valley corporate law firm, which is one of the most respected
+[03:24] corporate law firms in the world. This is the board that they had to help them
+[03:28] advise on this long-term benefit trust. And from 2023, they've had this in place,
+[03:34] which is a group of people that helps keep Entropic in check. It helps them stay
+[03:39] true to the mission. They appoint four out of the seven board members. Currently two
+[03:43] of those board members are Dario and Daniela Amadei, which are brother and
+[03:48] sister that founded Entropic. They came from OpenAI and then you've got four
+[03:54] other board members. And then the seventh board member is an investor. So that's
+[03:58] the board and that's the government structure. But essentially what they're
+[04:01] trying to do is they're trying to make sure that even though they introduce new
+[04:05] capital, none of that public capital causes mission drift. And we've seen a
+[04:09] lot of times, mission-driven companies, whenever they start increasing their
+[04:12] capital base, they start experiencing mission drift. We saw it with Ben and
+[04:16] Jerry's. We saw it with the non. We saw it with a number of other companies. Over
+[04:21] and above them being able to get rid of the people that started the company,
+[04:25] they're also able to make sure that they steer you in another direction. Which for
+[04:29] Entropic would not be good because Entropic is a powerful company. They've
+[04:34] reiterated in the S1 that one of the biggest threats is the threat that AI
+[04:38] poses to humanity. So in order for them to keep to this mission of making sure
+[04:42] that Entropic remains a safe company, they need to be the ones that call the
+[04:46] shots essentially. And whether or not Entropic really is being true to this
+[04:51] mission has been tested a little bit lately. And it's a bit mixed, you know. When
+[04:57] Entropic started, a lot of us had a lot of confidence in their commitment to
+[05:00] safety because they repeated it so many times. I think we all started to believe
+[05:04] that. But as of late, their participation in the race might contradict the reason
+[05:11] why they started this company in the first place. Because when Entropic
+[05:14] started, right, the reason why they left OpenAI is because OpenAI was too
+[05:17] concerned about being ahead in the race. And they would do so at the expense of
+[05:22] safety whenever they wanted to. And they started compromising on safety. And as a
+[05:26] result, they were like, you know what, we don't like how you're so committed to
+[05:31] being in the race, we're gonna go start our own safe AI company. And they did
+[05:35] that and we believed it. And when they started Entropic, they had this
+[05:39] responsible scaling policy, which essentially kept them in check. But
+[05:42] Entropic has been the number one company when it comes to, you know, being at the
+[05:48] frontier. They are racing faster than the very OpenAI that they left. And one of
+[05:54] the main criticisms is that their responsible scaling policy has actually
+[05:57] been watered down as time goes to, you know, make it easier for them to meet the
+[06:03] requirements that they've set for themselves. So whether or not this
+[06:06] governance structure is meant to reinforce the safety mission is
+[06:11] something that we're gonna have to find out.

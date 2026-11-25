@@ -1,0 +1,135 @@
+{
+ "label": "Autosave",
+ "auto": true,
+ "savedAt": 1791369716699,
+ "edits": {
+  "t": {
+   "memorising/Memorising *sticks.*": {
+    "pos": {
+     "9x16": {
+      "dx": 252.1,
+      "dy": 33.5
+     }
+    }
+   },
+   "three-books/@cover marple": {
+    "pos": {
+     "16x9": {
+      "hide": true
+     }
+    }
+   },
+   "three-books/@cover convivial": {
+    "pos": {
+     "16x9": {
+      "hide": true
+     }
+    }
+   },
+   "three-books/@cover baratta": {
+    "pos": {
+     "16x9": {
+      "hide": true
+     }
+    }
+   },
+   "three-books/caption Suggested by a course supervisor": {
+    "s": ""
+   },
+   "today/Today:": {
+    "hide": true
+   },
+   "question/Someone asks you, later": {
+    "hide": true
+   },
+   "question/Um… the gist?": {
+    "s": "Um… ?"
+   },
+   "method/The method": {
+    "hide": true
+   },
+   "contents/@new book": {
+    "pos": {
+     "16x9": {
+      "hide": true
+     }
+    }
+   },
+   "cold/Reading it ~cold.~": {
+    "hide": true
+   },
+   "cold/Nowhere to ~file it.~": {
+    "hide": true
+   },
+   "cold/It just ~floats.~": {
+    "hide": true
+   },
+   "cold/The next idea ~arrives.~": {
+    "hide": true
+   },
+   "cold/By chapter six: ~a pile.~": {
+    "hide": true
+   },
+   "cold/One idea from ~chapter one.~": {
+    "hide": true
+   },
+   "cold/Nothing to ~attach to.~": {
+    "hide": true
+   },
+   "challenged/The author’s definition": {
+    "hide": true
+   },
+   "ch3-strategy/Now I'm expecting:": {
+    "hide": true
+   },
+   "ch4-questions/@answer book": {
+    "pos": {
+     "16x9": {
+      "hide": true
+     }
+    }
+   },
+   "ch4-questions/Questions I'm already asking:": {
+    "hide": true
+   },
+   "ch10/The last chapter:": {
+    "hide": true
+   },
+   "b2-parts/The structure: *three parts.*": {
+    "s": "\n*three parts.*"
+   },
+   "b2-ch1/Questions, in the sub-headings": {
+    "hide": true
+   },
+   "who-creative/I don't know.": {
+    "hide": true
+   },
+   "bridging/The last part: ~chapter 10.~": {
+    "s": "\n~chapter 10.~",
+    "pos": {
+     "16x9": {
+      "dx": 7.8,
+      "dy": -22.8
+     }
+    }
+   }
+  },
+  "captions": {},
+  "mix": {
+   "voice": 0,
+   "music": -12,
+   "sfx": -14
+  },
+  "modes": {
+   "link-convivial": "dark",
+   "stack": "light",
+   "theory-practice": "dark",
+   "worth-it": "dark",
+   "b2-ch1": "dark",
+   "quotes": "light",
+   "who-creative": "dark",
+   "gap": "dark",
+   "recap": "dark"
+  }
+ }
+}

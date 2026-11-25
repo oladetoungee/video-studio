@@ -1,0 +1,87 @@
+URL: https://thenextweb.com/news/ai-agents-hacker-cairn-100-sites-deere-norforge
+STATUS: loaded (http 200)
+FINAL: https://thenextweb.com/news/ai-agents-hacker-cairn-100-sites-deere-norforge
+TITLE: AI agents broke into 100+ sites for one hacker at $50 each, researcher says
+H1: 
+OG: ‘It’s not script kiddie stuff’: AI agents hack 100+ sites for one hacker | TNW | Security
+PUBLISHED: 2026-10-19T13:58:43+00:00  MODIFIED: 2026-10-19T13:58:43+00:00
+DOC_H: 5527
+
+SECURITY
+AI agents broke into 100+ sites for one hacker at $50 each, researcher says
+
+Reuters identified Deere, SharkNinja and Cummins among the victims. The hacker’s agents tried more than 1,200 sites, and the researcher put the cost at about $50 per successful hack.
+
+October 19, 2026 - 1:58 pm
+Credit: © Tiero via Canva.com
+
+A cybersecurity researcher watched a Chinese-speaking hacker break into the websites of more than 100 companies, leaving almost all the work to AI agents. Snorre Fagerland, principal threat researcher at NorForge, set out the findings on Monday in a report on Cairn, the open-source AI platform the hacker used.
+
+Reuters saw the report before publication and identified some of the victims by reviewing the hacker’s activity, Raphael Satter reported for Reuters. They include farm equipment maker Deere, appliance company SharkNinja and engine maker Cummins. TNW has not independently verified the intrusions.
+
+Deere told Reuters it had taken remediation steps and had no sign that anyone accessed sensitive information. SharkNinja said the attack hit a standalone product support site and that it had contained the threat. Cummins said it was looking into a report of a possible attack on a website run by one of its vendors. Reuters could not establish how much data, if any, the hackers took.
+
+A hacking campaign run by agents
+
+Cairn is an AI problem-solving platform. It takes a target and a goal, then sets AI agents to work towards it step by step. Each agent posts what it finds to a shared board. Every agent can read it, and the human operator can add hints. The operators set the targets and goals, and can add hints along the way.
+
+Many operators left their Cairn control panels open on the web, where NorForge found them with internet scanning tools. Fagerland began finding them around 2 October, Reuters reported. The Chinese-speaking hacker’s campaign had started on 25 September. It judged more than 20 of the panels likely to be malicious. Most of the activity fell into three clusters.
+
+The Chinese-language cluster, which NorForge assesses as malicious with high confidence, was by far the busiest. It counted more than 1,100 attack projects across the 14 panels it links to the cluster.
+
+Its typical task went after online shops in the US, Canada, Japan and Australia with traffic of 200,000 to 1.5 million. An automated pipeline fed in its tasks. They told the agents to find a way to run code on each site, then plant an uploader web shell. That is a form that saves uploaded files, not one that runs commands.
+
+NorForge says the aim seemed to be lasting access to shop and payment systems, for later use. It checked one claimed break-in, at a large hardware parts vendor, and found the web shell live. By late last week the group’s agents had tried to break into more than 1,200 sites, according to Reuters.
+
+About $50 per break-in
+
+From what NorForge saw, all the tasks ran on a worker named claudecode_deepseek-v4.1-flash. It says that could mean Anthropic’s Claude Code running DeepSeek’s low-cost V4.1 Flash model. Successful attacks took a little under 23 hours on average.
+
+Fagerland estimated to Reuters that the campaign had used about $5,000 worth of tokens, or roughly $50 per successful hack. That is a rough estimate. NorForge’s report puts the average at about $5 per task, counting attempts that failed or ended early. It says the uncertainty is considerable.
+
+In one case, the agents found no flaw in a large company’s public-facing application, so they hunted down a linked control panel. After hours of trial and error, they reported tricking its server into running commands.
+
+“It’s not script kiddie stuff.” Snorre Fagerland, NorForge, to Reuters
+
+Panels left wide open
+
+The second group wrote in English and told its agents to steal credit cards and cryptocurrency. NorForge linked 10 panels to it. A third cluster, a single panel with 59 projects, is malicious only with low confidence, NorForge says. Across the tools it saw, NorForge estimated an average success rate of about 10%, while noting that the clusters had different goals and are not directly comparable.
+
+The open panels also leaked secrets from the targets. A scan of the panel data found hundreds of credentials, API keys and other secrets, and Trufflehog, the scanner it used, verified 11% of the exposed secrets as valid. Some legitimate security testing firms had left client work exposed in the same way. NorForge says it is working with Reuters to warn victims and is asking hosting firms to take the panels down.
+
+Cairn’s author, who posts as le1xia0, wrote on X that Cairn, a multi-agent architecture, was not designed for hacking attacks, Reuters reported.
+
+“If it is used to carry out harmful hacking attacks, that is not my intention.” le1xia0, Cairn’s author, on X
+
+NorForge’s search followed a September report by Gambit Security, which found Cairn among the tools on an attacker’s server. Gambit reported that AI agents stole at least 600,000 credit card records from 25 companies. Earlier this year, Taiwan’s government said AI agents helped hackers break into its systems. India’s cyber agency has said AI agents under testing broke into firms’ live systems.
+
+Fagerland told Reuters he had assumed hacking agents would still need at least some supervision.
+
+“The development in this field is astounding.” Snorre Fagerland, NorForge, to Reuters
+
+Get the TNW newsletter
+
+Get the most important tech news in your inbox each week.
+
+Email address
+Subscribe
+Website 
+
+By subscribing you agree to our Privacy Statement.
+
+Published October 19, 2026 - 1:58 pm UTC
+Back to top
+STORY BY A
+Ana Maria Constantin
+Popular articles
+1
+Microsoft disrupts Chinese-language phishing kits behind 1bn scam messages
+2
+Flock’s CEO says it has never dropped a police customer over abuse
+3
+OpenAI in early talks to buy Trail of Bits, The Information reports
+4
+Microsoft fixes a record 1,400+ flaws, and one is already under attack
+5
+Meta says hackers stole code and data on 1,500 people, SecurityWeek reports
+Get the TNW newsletter

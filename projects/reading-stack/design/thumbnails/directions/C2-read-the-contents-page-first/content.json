@@ -1,0 +1,30 @@
+{
+  "direction": "Her photo 16 (chin on hand), lit a little warmer. The real open contents page of Baratta's book (frame 5:40.97 of her video, un-mirrored, flattened), chapter 1 circled in red pen; the Baratta cover top-right, a coffee. Kicker \"read the\" + serif line \"contents page first.\" (round 1-2 \"Read this page first.\" failed cold: \"this page\" could not be read off the small page).",
+  "concept": "T2",
+  "sample": "capsule-wardrobe (small serif kicker above the big serif line, the thing itself as a cut-out top-left) + viral sample 3 (the method shown)",
+  "thumbnail_text": "read the contents page first.",
+  "title": "Why You Forget the Books You Read (and the Fix I Use)",
+  "titles": [
+    "Why You Forget the Books You Read (and the Fix I Use)",
+    "Can't Explain the Last Book You Read? Here's the Fix",
+    "How to Remember the Non-Fiction Books You Read"
+  ],
+  "text": {
+    "kick": "read the",
+    "big": "contents page first.",
+    "l1": "start here"
+  },
+  "images": {
+    "photo": "../../assets/photo/gbemi16_warm.jpg",
+    "contents": "../../assets/collage/baratta_contents_page.png",
+    "baratta": "../../assets/collage/cover_baratta_clean.jpg",
+    "coffee": "../../assets/collage/coffee_top.png"
+  },
+  "vars": {},
+  "gates": {
+    "round3": "a 3/4 · b 7/6 · c 6.5",
+    "pass": false,
+    "note": "fails: the page is too soft to carry the hook",
+    "key": "a = cold image-only topic confidence/5 and click/10; b = in a mocked feed with the title, clarity/click (pass 8/8); c = taste vs her collage samples (pass 8)"
+  }
+}

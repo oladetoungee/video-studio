@@ -1,0 +1,25 @@
+{
+  "direction": "Faceless. The question as the topic, and UX research in one move: users' sticky-note complaints, a big curved arrow, and a calm app screen that answers them (a tick, \"On its way!\", a delivery progress line). Off-black ground, canary as the only colour.",
+  "thumbnail_text": "What is UX research?",
+  "titles": [
+    "UX Research Explained Simply (No Jargon, Just Examples)",
+    "UX Research for Beginners: Watch Users, Don't Just Ask",
+    "Why Some Apps Are So Confusing (UX Research Explained)"
+  ],
+  "text": {
+    "hd": "What is<br><span class=\"acc\">UX research?</span>",
+    "n1": "Is it shipped yet?",
+    "n2": "Where's my order?",
+    "btn": "Track order",
+    "way": "On its way!"
+  },
+  "images": {},
+  "vars": {
+    "--ground": "#111114",
+    "--fg": "#FFFFFF",
+    "--accent": "#FFE15A"
+  },
+  "scores": "critic vs her thumbnail: R1 7.5 · R2 8 · R3 8 · R4 8 · R5 7.5 · R6 8.5 · R7 7",
+  "recommended": true,
+  "title": "UX Research Explained Simply (No Jargon, Just Examples)"
+}

@@ -1,0 +1,83 @@
+1
+00:00:00,030 --> 00:00:01,830
+the first one is B-tree
+
+2
+00:00:01,830 --> 00:00:04,930
+B-tree the B-tree is the default one, so
+
+3
+00:00:04,930 --> 00:00:07,010
+when you create an index without saying what
+
+4
+00:00:07,010 --> 00:00:08,980
+type it is, this is the one that you get
+
+5
+00:00:08,980 --> 00:00:10,000
+so it's very common
+
+6
+00:00:10,000 --> 00:00:12,260
+it can find exact matches, like the user
+
+7
+00:00:12,260 --> 00:00:13,520
+with this email
+
+8
+00:00:13,520 --> 00:00:15,170
+it can find ranges, like
+
+9
+00:00:15,320 --> 00:00:17,300
+books priced between 10 and 15
+
+10
+00:00:17,300 --> 00:00:19,510
+it can sort, like showing the newest order
+
+11
+00:00:19,510 --> 00:00:21,630
+first, and it can find values by how they
+
+12
+00:00:21,630 --> 00:00:23,367
+start, like every book title that starts
+
+13
+00:00:23,367 --> 00:00:25,510
+with Harry and that works because the index
+
+14
+00:00:25,510 --> 00:00:27,747
+is sorted, so all the titles that start with
+
+15
+00:00:27,747 --> 00:00:29,290
+Harry sit next to each other
+
+16
+00:00:29,290 --> 00:00:32,120
+the second commonly used type of database
+
+17
+00:00:32,330 --> 00:00:33,490
+index is the unique index
+
+18
+00:00:33,490 --> 00:00:35,400
+it makes sure that no two rows have the same
+
+19
+00:00:35,400 --> 00:00:37,790
+value for example, no two user can sign up
+
+20
+00:00:37,790 --> 00:00:38,850
+with the same email
+
+21
+00:00:38,850 --> 00:00:41,233
+your primary key already has one

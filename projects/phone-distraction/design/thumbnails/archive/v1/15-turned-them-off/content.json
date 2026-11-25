@@ -1,0 +1,25 @@
+{
+  "direction": "The most searched fix shown as calm: a generic notification settings card with every switch off; her relaxed (1:03). Best with a photo of her at her desk, phone face down (flagged).",
+  "concept": "TH15",
+  "follows": "viral sample 2 + \"BORING WAY\" (Pinterest)",
+  "needs_photo": "her relaxed at her desk, phone face down",
+  "thumbnail_text": "ALL NOTIFICATIONS: OFF",
+  "title": "Why I Keep My Phone Silent (and You Can Too)",
+  "titles": [
+    "Why I Keep My Phone Silent (and You Can Too)",
+    "How to Stop Scrolling: Phone Settings That Actually Help"
+  ],
+  "scores": "A topic (image only) 7/5 · B with best title 7.5 · C taste 5 (round 2; fixes from round 2 applied after)",
+  "text": {
+    "words": "All notifications: <span class=\"acc\">off</span>",
+    "a1": "Chats",
+    "a2": "Social",
+    "a3": "Video",
+    "a4": "Shopping"
+  },
+  "images": {
+    "scene": "../../../../assets/scene/warm/s_63.5.jpg",
+    "front": "../../../../assets/scene/warm/mask/s_63.5.png"
+  },
+  "vars": {}
+}

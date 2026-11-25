@@ -1,0 +1,50 @@
+/* ghana-marrify thumbnails, round 2 (2026-10-06): photo-led editorial look from her Pinterest board.
+   Her in the real room (wide frame, not a tight cut-out), words woven behind her head (a person mask laid
+   exactly over the same photo), editorial serif + handwriting, real props (news clipping, the real search box). */
+@font-face { font-family: 'Instrument Serif'; src: url('../fonts/InstrumentSerif-Regular.ttf') format('truetype'); font-style: normal; }
+@font-face { font-family: 'Instrument Serif'; src: url('../fonts/InstrumentSerif-Italic.ttf') format('truetype'); font-style: italic; }
+@font-face { font-family: 'Playfair'; src: url('../fonts/PlayfairDisplay.ttf') format('truetype'); font-weight: 400 900; font-style: normal; }
+@font-face { font-family: 'Playfair'; src: url('../fonts/PlayfairDisplay-Italic.ttf') format('truetype'); font-weight: 400 900; font-style: italic; }
+@font-face { font-family: 'Caveat'; src: url('../fonts/Caveat.ttf') format('truetype'); font-weight: 400 700; }
+@font-face { font-family: 'Anton'; src: url('../fonts/Anton-Regular.ttf') format('truetype'); }
+@font-face { font-family: 'Instrument Sans'; src: url('../fonts/InstrumentSans.ttf') format('truetype'); font-weight: 400 700; }
+@font-face { font-family: 'Archivo'; src: url('../fonts/Archivo.ttf') format('truetype'); font-weight: 100 900; }
+@font-face { font-family: 'DM Mono'; src: url('../fonts/DMMono-Medium.ttf') format('truetype'); font-weight: 500; }
+
+:root { --ink: #111114; --paper: #EDE9E2; --card: #FFFDF6; --white: #F7F5F0; --red: #E8352B; --yellow: #FFD23F;
+        --blue: #1B3FD8; --green: #22E08A; --orange: #FF4713; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1280px; height: 720px; overflow: hidden; background: var(--ink); }
+.t { position: relative; width: 1280px; height: 720px; overflow: hidden; background: var(--ground); color: var(--fg); }
+.guides .badge { position: absolute; right: 10px; bottom: 10px; width: 150px; height: 70px; border: 3px dashed #f0f; z-index: 99; }
+
+/* the photo: the scene and its person mask share --px/--py/--pw, so the mask always sits exactly on her */
+.photo { position: absolute; inset: 0; }
+.photo img { position: absolute; left: var(--px, 0px); top: var(--py, 0px); width: var(--pw, 1280px); display: block; }
+.photo .dim { position: absolute; inset: 0; background: rgba(10, 14, 16, var(--dim, 0)); }
+.z1 { z-index: 1; } .z2 { z-index: 2; } .z3 { z-index: 3; } .z4 { z-index: 4; }
+.front { position: absolute; inset: 0; z-index: 2; pointer-events: none; }
+.front img { position: absolute; left: var(--px, 0px); top: var(--py, 0px); width: var(--pw, 1280px); display: block; }
+
+.abs { position: absolute; }
+.nw { white-space: nowrap; }
+.serif { font-family: 'Instrument Serif', serif; font-weight: 400; letter-spacing: -0.02em; line-height: .9; }
+.serif i, i.serif, .it { font-style: italic; }
+.play { font-family: 'Playfair', serif; font-weight: 800; letter-spacing: -0.025em; line-height: .92; }
+.hand { font-family: 'Caveat', cursive; font-weight: 700; line-height: .95; }
+.anton { font-family: 'Anton', sans-serif; text-transform: uppercase; line-height: .92; letter-spacing: 0; }
+.sans { font-family: 'Instrument Sans', 'Archivo', sans-serif; font-weight: 700; letter-spacing: -0.02em; line-height: 1; }
+.mono { font-family: 'DM Mono', monospace; font-weight: 500; text-transform: uppercase; letter-spacing: .12em; }
+.acc { color: var(--accent); font-style: normal; }
+.hl { background: var(--accent); color: var(--ink); padding: 0 .12em; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+.shadow { text-shadow: 0 2px 18px rgba(0, 0, 0, .35); }
+
+/* hand-drawn bits (SVG strokes are drawn in each direction) */
+svg.draw { position: absolute; overflow: visible; }
+svg.draw path { fill: none; stroke: currentColor; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; }
+
+/* paper clipping / card */
+.clip { position: absolute; background: #fff; box-shadow: 0 10px 30px rgba(0, 0, 0, .35); }
+.clip img { display: block; width: 100%; }
+.tape { position: absolute; width: 110px; height: 34px; background: rgba(240, 232, 200, .82); }
+.credit { font-family: 'DM Mono', monospace; font-weight: 500; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; }

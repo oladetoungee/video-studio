@@ -1,0 +1,36 @@
+{
+ "direction": "No face. Three phones side by side, each a generic shop pop-up that stops you leaving: \"Leaving already? Stay: 20% off\", \"Are you sure? You'll lose your saved items\", \"Wait! Free shipping if you stay / No, I like paying for shipping\". One line across the top: \"shops that won't let you leave\".",
+ "thumbnail_text": "shops that won't let you leave",
+ "kind": "collage",
+ "recommended": false,
+ "titles": [
+  "What Are Dark Patterns? 11 Examples From Online Shops",
+  "The Tricks Online Shops Use to Make You Say Yes",
+  "Dark Patterns Explained: 11 Tricks Websites Use on You"
+ ],
+ "text": {
+  "hd": "shops that won't let you leave",
+  "t1": "Leaving already?",
+  "s1": "",
+  "b1": "Stay: 20% off",
+  "n1": "Leave anyway",
+  "t2": "Are you sure?",
+  "s2": "You'll lose your saved items",
+  "b2": "Keep shopping",
+  "n2": "Leave",
+  "t3": "Wait!",
+  "s3": "Free shipping if you stay",
+  "b3": "Stay",
+  "n3": "No, I like paying for shipping"
+ },
+ "images": {},
+ "vars": {
+  "--ground": "#A0B8D7"
+ },
+ "board": "Thumbnails 124 (yt-71 \"the art of offline living\": three panels side by side as one collage, one calm line centred across the top)",
+ "fonts": "Font 25 (Figtree ExtraBold, Design 370) for the line + Font 58 (Inter Tight, black on light) on the screens",
+ "colours": "Font 101 colour combo (Design 370): ground #A0B8D7, line #2E3E58 (the combo's ink; its pale yellow #EEEB98 does not read on this blue)",
+ "title": "What Are Dark Patterns? 11 Examples From Online Shops",
+ "class": "no-lift",
+ "scores": "cold critic round 6: 6 alone; title changed after"
+}

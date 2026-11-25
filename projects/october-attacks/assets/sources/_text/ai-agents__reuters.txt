@@ -1,0 +1,9 @@
+URL: https://www.reuters.com/legal/government/how-one-hacker-used-ai-agents-few-thousand-dollars-break-into-scores-sites-2026-10-19/
+STATUS: error-401 (http 401)
+FINAL: https://www.reuters.com/legal/government/how-one-hacker-used-ai-agents-few-thousand-dollars-break-into-scores-sites-2026-10-19/
+TITLE: reuters.com
+H1: 
+OG:  | 
+PUBLISHED:   MODIFIED: 
+DOC_H: 900
+

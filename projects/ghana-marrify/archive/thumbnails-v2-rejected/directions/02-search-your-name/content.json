@@ -1,0 +1,22 @@
+{
+  "direction": "Her calm, unconvinced look in the room (4:03) + a generic name search that returns a marriage and a divorce record (labelled illustration)",
+  "title": "Ghana Made Marriage and Divorce Records Searchable by Name",
+  "titles": [
+    "Ghana Made Marriage and Divorce Records Searchable by Name",
+    "Anyone in Ghana Can Now Look Up Your Marriage History",
+    "An HCI Researcher on Ghana's New Marriage Records Site"
+  ],
+  "text": {
+    "line1": "should this",
+    "line2": "be public?",
+    "query": "[your name]",
+    "row1": "Marriage record found",
+    "row2": "Divorce record found",
+    "label": "Illustration"
+  },
+  "images": {
+    "scene": "../../assets/scene/s_242.83.jpg",
+    "front": "../../assets/scene/mask/s_242.83.png"
+  },
+  "vars": {}
+}

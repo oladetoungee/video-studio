@@ -1,0 +1,54 @@
+/* should-you-learn-to-code thumbnails, set 3 (2026-11-13). Fonts ONLY from the font board (inspiration/boards/fonts/), each used
+   with its specimen's text + ground colours (see "fonts" / "colours" in every content.json). Each thumbnail copies one board
+   item's composition ("board"). Edit words in content.json "text", photos in "images", colours/positions in "vars",
+   moves in "nudge" (lib/bind.js). */
+@font-face { font-family: 'AB'; src: url('../fonts/ArchivoBlack-Regular.ttf'); }                       /* thumbs-12 */
+@font-face { font-family: 'AN'; src: url('../fonts/Anton-Regular.ttf'); }                              /* thumbs-16 */
+@font-face { font-family: 'LB'; src: url('../fonts/LibreBaskerville.ttf'); font-weight: 400 700; }    /* thumbs-15 */
+@font-face { font-family: 'AR'; src: url('../fonts/Archivo.ttf'); font-weight: 100 900; font-stretch: 62% 125%; }
+@font-face { font-family: 'OS'; src: url('../fonts/Oswald-Variable.ttf'); font-weight: 200 700; }     /* shorts-06, thumbs-11 */
+@font-face { font-family: 'IT'; src: url('../fonts/InterTightBold.ttf'); font-weight: 700; }          /* thumbs-02 */
+@font-face { font-family: 'IT'; src: url('../fonts/InterTightMedium.ttf'); font-weight: 500; }        /* thumbs-17 */
+@font-face { font-family: 'IT'; src: url('../fonts/InterTightRegular.ttf'); font-weight: 400; }
+@font-face { font-family: 'IS'; src: url('../fonts/InstrumentSerif-Italic.ttf'); font-style: italic; } /* thumbs-17 */
+@font-face { font-family: 'BS'; src: url('../fonts/BigShoulders.ttf'); font-weight: 100 900; }        /* design-04 */
+@font-face { font-family: 'MO'; src: url('../fonts/Montserrat-Variable.ttf'); font-weight: 100 900; } /* thumbs-06 */
+@font-face { font-family: 'PB'; src: url('../fonts/Poppins-Bold.ttf'); font-weight: 700; }            /* thumbs-10 */
+@font-face { font-family: 'JB'; src: url('../fonts/JBMono-500.ttf'); font-weight: 500; }              /* thumbs-08 (code on screens) */
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1280px; height: 720px; overflow: hidden; background: #111; }
+.t { position: relative; width: 1280px; height: 720px; overflow: hidden; background: var(--ground, #222); color: var(--fg, #fff); }
+.guides .badge { position: absolute; right: 10px; bottom: 10px; width: 150px; height: 70px; border: 3px dashed #0f0; z-index: 99; }
+.a { position: absolute; }
+.z1 { z-index: 1; } .z2 { z-index: 2; } .z3 { z-index: 3; } .z4 { z-index: 4; } .z5 { z-index: 5; } .z6 { z-index: 6; }
+.nw { white-space: nowrap; }
+
+/* her room photo (4:3, enhanced): room + her person layer share one box so they line up. Size --pw, place --pl / --pt */
+.pf { position: absolute; inset: 0; overflow: hidden; }
+.pf img { position: absolute; left: var(--pl, 0px); top: var(--pt, -120px); width: var(--pw, 1280px); height: auto; }
+.room-dim { position: absolute; inset: 0; background: var(--dim, rgba(0,0,0,.45)); }
+.room-wash { position: absolute; inset: 0; background: var(--wash, #5A4F4A); mix-blend-mode: multiply; }
+.pf .room.gray { filter: grayscale(1) contrast(.8) brightness(1.35); }
+.me { position: absolute; left: var(--pl, 0px); top: var(--pt, -120px); width: var(--pw, 1280px); height: auto; }
+/* her face stays natural: no brightening on the enhanced shoot photos */
+.no-lift .me, .no-lift .cut { filter: none; }
+.cut { position: absolute; bottom: 0; display: block; }
+.shadow-me { filter: drop-shadow(0 18px 30px rgba(0,0,0,.45)) !important; }
+
+/* strong shadow for words on photos (no glow, no outline) */
+.sh { text-shadow: 0 3px 6px rgba(0,0,0,.45), 0 10px 36px rgba(0,0,0,.55); }
+
+/* realistic phone (library/ui/phone.js via bind.js) */
+.phone { position: absolute; }
+.phone .scr { width: 100%; height: 100%; overflow: hidden; position: relative; }
+
+/* generic code editor window (no brand) */
+.ed { position: absolute; background: #1E1F22; border-radius: 12px; overflow: hidden; box-shadow: 0 24px 50px rgba(0,0,0,.45); }
+.ed .bar { height: 40px; background: #2B2D31; display: flex; align-items: center; gap: 9px; padding: 0 16px; }
+.ed .bar i { width: 13px; height: 13px; border-radius: 50%; background: #55585E; display: block; }
+.ed .code { font-family: 'JB', monospace; font-weight: 500; font-size: var(--cs, 25px); line-height: 1.62; color: #D7DAE0; padding: 18px 22px; white-space: pre; }
+.ed .k { color: #C678DD; } .ed .f { color: #61AFEF; } .ed .s { color: #98C379; } .ed .c { color: #7F848E; } .ed .n { color: #6B7079; display: inline-block; width: 1.7em; }
+.ed .err { background: rgba(226,38,43,.28); box-shadow: inset 5px 0 0 #E2262B; display: block; margin: 0 -22px; padding: 0 22px; }
+@font-face { font-family: 'IT'; src: url('../fonts/InterTightExtraBold.ttf'); font-weight: 800; }       /* design-31 */
+@font-face { font-family: 'BF'; src: url('../fonts/BagelFatOne-Regular.ttf'); }                        /* design-15 */

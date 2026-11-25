@@ -1,0 +1,12 @@
+Bor Jinson | https://www.pexels.com/photo/vintage-airport-departure-board-display-36681344/
+flapboard <- 36681344
+Dom J | https://www.pexels.com/photo/six-10-euro-banknotes-45708/
+euros-white <- 45708
+Pixabay | https://www.pexels.com/photo/euro-pound-banknote-lot-259251/
+euros-hand <- 259251
+Claudia  Solano | https://www.pexels.com/photo/brandenburg-gate-in-berlin-iconic-landmark-37120347/
+berlin <- 37120347
+Angelyn Sanjorjo | https://www.pexels.com/photo/screen-in-airport-terminal-6544058/
+terminal <- 6544058
+RDNE Stock project | https://www.pexels.com/photo/close-up-shot-of-a-passport-and-tickets-on-top-of-a-laptop-7310015/
+passport <- 7310015

@@ -1,0 +1,36 @@
+{
+ "board": "yt-76",
+ "kind": "photo: her room dimmed warm-dark, she natural on the left, words right",
+ "direction": "Copies board yt-76 ('Write to Understand Your Life': the person on the left in a real, dim scene, a big serif line in white filling the right). Here the question beginners actually type: IS IT TOO LATE TO learn to code? (her answer: no, it is still worth it).",
+ "thumbnail_text": "IS IT TOO LATE TO / learn to code?",
+ "fonts": [
+  "thumbs-17 Inter Tight + Instrument Serif italic (white #FFFFFF on warm dark #2B2420, as Thumbnails 152)"
+ ],
+ "colours": "thumbs-17 specimen (#2B2420, #FFFFFF); the room is dimmed toward #2B2420",
+ "text": {
+  "sm": "Is it too late to",
+  "big": "learn<br>to code?"
+ },
+ "images": {
+  "room": "../../assets/shoot/1614.jpg",
+  "me": "../../assets/shoot/1614-person.png"
+ },
+ "vars": {
+  "--pw": "1720px",
+  "--pl": "-420px",
+  "--pt": "-235px",
+  "--dim": "rgba(43,36,32,.74)"
+ },
+ "class": "no-lift",
+ "titles": [
+  "Only 4.5% of Developer Job Posts Are Entry Level. Now What?",
+  "Junior Developer Jobs Are Rare. Should You Still Code?",
+  "Should I Learn to Code in 2027? 4 Skills That Matter Now"
+ ],
+ "title": "Only 4.5% of Developer Job Posts Are Entry Level. Now What?",
+ "titles_2026": [
+  "Should I Learn to Code in 2026? 4 Skills That Matter Now"
+ ],
+ "recommended": false,
+ "scores": "R1 7 / 7.5, R2 7 / 8, R3 6 / 7.5 (generic question; the title brings the proof). After R3: caps line 66 px bold (not re-scored)"
+}

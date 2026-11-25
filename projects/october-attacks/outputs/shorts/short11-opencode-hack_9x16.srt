@@ -1,0 +1,91 @@
+1
+00:00:00,070 --> 00:00:02,230
+the OpenCode one is also very very
+
+2
+00:00:02,230 --> 00:00:04,790
+interesting because people found out
+
+3
+00:00:04,790 --> 00:00:07,340
+OpenCode had been hacked from their bills
+
+4
+00:00:07,340 --> 00:00:10,110
+OpenCode is an open source AI coding tool
+
+5
+00:00:10,110 --> 00:00:12,650
+it has an online platform called OpenCode
+
+6
+00:00:12,650 --> 00:00:15,500
+console where people store their AI API keys
+
+7
+00:00:15,500 --> 00:00:17,930
+now OpenCode said attackers broke into an
+
+8
+00:00:17,930 --> 00:00:19,630
+older system and took those keys
+
+9
+00:00:19,630 --> 00:00:22,050
+so people started getting alerts from OpenAI
+
+10
+00:00:22,050 --> 00:00:24,080
+and Anthropic, Google, and some of these
+
+11
+00:00:24,080 --> 00:00:25,730
+charges were in hundreds of dollars
+
+12
+00:00:25,730 --> 00:00:28,150
+a few of them were even over a thousand
+
+13
+00:00:28,150 --> 00:00:30,650
+dollars for AI usage that users did not run
+
+14
+00:00:30,650 --> 00:00:33,110
+like imagine getting alerts for things you
+
+15
+00:00:33,110 --> 00:00:35,870
+didn't use OpenCode calls it a distillation
+
+16
+00:00:35,870 --> 00:00:38,710
+attack that is when someone asks an AI model
+
+17
+00:00:38,710 --> 00:00:40,990
+loads of questions and just uses the answer
+
+18
+00:00:40,990 --> 00:00:42,600
+to train their own model
+
+19
+00:00:42,600 --> 00:00:44,870
+so basically in simple words someone may
+
+20
+00:00:44,870 --> 00:00:46,800
+have been building their own AI on other
+
+21
+00:00:46,800 --> 00:00:49,060
+people's bill of course the AI companies
+
+22
+00:00:49,060 --> 00:00:51,330
+have blocked the stolen keys and refunds are
+
+23
+00:00:51,330 --> 00:00:52,800
+going out which is good

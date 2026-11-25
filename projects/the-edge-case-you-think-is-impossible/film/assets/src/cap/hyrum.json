@@ -1,0 +1,34 @@
+{
+ "title": "Hyrum's Law",
+ "h1": "Hyrum's Law",
+ "h1y": 21.4375,
+ "found": {
+  "With a sufficient number of users": [
+   [
+    48,
+    147.875,
+    213.671875,
+    17
+   ]
+  ]
+ },
+ "H": 919,
+ "focus": {
+  "With a sufficient number of users": {
+   "file": "hyrum__with-a-sufficient-number.png",
+   "top": 0,
+   "rects": [
+    [
+     48,
+     147.875,
+     213.671875,
+     17
+    ]
+   ]
+  }
+ },
+ "clipTop": 0,
+ "scale": 1.5,
+ "url": "https://www.hyrumslaw.com/",
+ "captured": "2026-11-05T23:09:04.160Z"
+}

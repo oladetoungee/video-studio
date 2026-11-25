@@ -1,0 +1,53 @@
+{
+  "direction": "Her actual stack as illustrated spines (fiction crossed out) + big smile",
+  "title": "My Reading Stack, and How I Make Non-Fiction Stick",
+  "text": {
+    "headline": "How I read<br><span class=\"serif\">non-fiction</span>"
+  },
+  "books": [
+    {
+      "title": "Miss Marple's Final Cases",
+      "author": "",
+      "bg": "#D9476A",
+      "fg": "#111114",
+      "off": true,
+      "note": "<span style=\"font-size:24px\">fiction, not today</span>",
+      "shift": 40,
+      "width": 92,
+      "author_full": "Agatha Christie"
+    },
+    {
+      "title": "How to Read and Write Critically",
+      "author": "",
+      "bg": "#FFFDF6",
+      "fg": "#C8102E",
+      "shift": 0,
+      "width": 100,
+      "author_full": "Alex Baratta"
+    },
+    {
+      "title": "Convivial Toolbox",
+      "author": "",
+      "bg": "#CFE7E2",
+      "fg": "#1F2E33",
+      "shift": 24,
+      "width": 96,
+      "author_full": "Sanders & Stappers"
+    }
+  ],
+  "note": "Spines are illustrated (flat colour, real titles and authors), not photographed.",
+  "vars": {
+    "--sx": "40px",
+    "--sy": "300px",
+    "--sw": "700px",
+    "--sh": "112px",
+    "--hs": "112px",
+    "--ts": "28px",
+    "--x": "450px",
+    "--y": "78px",
+    "--w": "960px"
+  },
+  "images": {
+    "person": "../../assets/cut/grin.png"
+  }
+}

@@ -1,0 +1,116 @@
+{
+ "story": "php2shell",
+ "outlet": "Vercel",
+ "slug": "vercel",
+ "url": "https://vercel.com/kb/bulletin/php2shell-security-bulletin",
+ "finalUrl": "https://vercel.com/kb/bulletin/php2shell-security-bulletin",
+ "status": "loaded",
+ "http": 200,
+ "title": "PHP security advisory: php2shell (CVE-2026-109618, CVE-2026-109619) | Vercel Knowledge Base",
+ "h1": "PHP security advisory: php2shell (CVE-2026-109618, CVE-2026-109619)",
+ "published": "",
+ "files": {
+  "fold": "php2shell/vercel_fold.png",
+  "full": "php2shell/vercel_full.jpg",
+  "scroll": "php2shell/vercel_scroll.mp4"
+ },
+ "full": {
+  "width": 1440,
+  "height": 5358,
+  "pageHeight": 5358,
+  "zoom": 1,
+  "quotes": [
+   {
+    "quote": "Working public exploits are already available, and exploitation attempts have been reported across the industry",
+    "box": {
+     "x": 378,
+     "y": 670,
+     "w": 669,
+     "h": 51
+    },
+    "lines": [
+     {
+      "x": 378,
+      "y": 670,
+      "w": 669,
+      "h": 23
+     },
+     {
+      "x": 378,
+      "y": 698,
+      "w": 231,
+      "h": 23
+     }
+    ]
+   }
+  ]
+ },
+ "scroll": {
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "seconds": 8,
+  "keyframes": [
+   {
+    "t": 0,
+    "y": 44
+   },
+   {
+    "t": 1,
+    "y": 44
+   },
+   {
+    "t": 1.882,
+    "y": 260
+   },
+   {
+    "t": 8,
+    "y": 260
+   }
+  ],
+  "zoom": 1,
+  "easing": "easeInOutCubic between keyframes, holds where y is equal",
+  "capped": false,
+  "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)",
+  "quotes": [
+   {
+    "quote": "Working public exploits are already available, and exploitation attempts have been reported across the industry",
+    "inVideo": true,
+    "still": true,
+    "t": 4.92,
+    "visibleStill": [
+     1.8,
+     8.03
+    ],
+    "scrollY": 260,
+    "box": {
+     "x": 616,
+     "y": 410,
+     "w": 669,
+     "h": 51
+    },
+    "lines": [
+     {
+      "x": 616,
+      "y": 410,
+      "w": 669,
+      "h": 23
+     },
+     {
+      "x": 616,
+      "y": 438,
+      "w": 231,
+      "h": 23
+     }
+    ],
+    "docBox": {
+     "x": 616,
+     "y": 670,
+     "w": 669,
+     "h": 51
+    },
+    "layoutDriftPx": 0
+   }
+  ]
+ }
+}

@@ -1,0 +1,171 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Cookies vs localStorage vs sessionStorage, explained with an online shop</title>
+<link rel="stylesheet" href="../shared/base.css">
+<style>:root{--W:1080px;--H:1350px;--acc:#E5262A;--accInk:#E5262A;}</style></head><body>
+<section class="slide g-concrete l-cover" id="s1">
+  
+  
+    <div class="main">
+      <div class="mk-row" data-move="marker"><span class="mk" style="--d:64px"></span><span class="mono lab" data-k="kicker" data-plain>Where browsers keep data</span></div>
+      <div class="disp fit" data-k="title" data-max="92" style="font-size:92px;margin-top:34px">Login, cart, checkout form. <em class="acc" style="font-style:normal">Where does a website keep them?</em></div>
+      <p class="body bal" data-k="sub" style="margin-top:28px;color:var(--fg);font-size:38px">Pick the wrong one and a <span class="nw">half-filled</span> form disappears when the tab closes.</p>
+      <div class="push"><div class="board" data-move="board"><div class="bh" style="grid-template-columns:1fr repeat(2, 190px)"><span></span><span class="mono" data-k="board.cols.0" data-plain>Refresh</span><span class="mono" data-k="board.cols.1" data-plain>Close tab</span></div>
+    <div class="br" style="grid-template-columns:1fr repeat(2, 190px)"><div><div class="bk" data-k="board.rows.0.k" data-plain>Login</div><div class="bv" data-k="board.rows.0.v" data-plain>HttpOnly cookie</div></div><div class="bc"><span class="dotc ok"><svg viewBox="0 0 40 40"><path d="M9 21l7 7 15-16" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div><div class="bc"><span class="dotc ok"><svg viewBox="0 0 40 40"><path d="M9 21l7 7 15-16" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div></div><div class="br" style="grid-template-columns:1fr repeat(2, 190px)"><div><div class="bk" data-k="board.rows.1.k" data-plain>Cart</div><div class="bv" data-k="board.rows.1.v" data-plain>localStorage</div></div><div class="bc"><span class="dotc ok"><svg viewBox="0 0 40 40"><path d="M9 21l7 7 15-16" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div><div class="bc"><span class="dotc ok"><svg viewBox="0 0 40 40"><path d="M9 21l7 7 15-16" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div></div><div class="br" style="grid-template-columns:1fr repeat(2, 190px)"><div><div class="bk" data-k="board.rows.2.k" data-plain>Checkout form</div><div class="bv" data-k="board.rows.2.v" data-plain>sessionStorage</div></div><div class="bc"><span class="dotc ok"><svg viewBox="0 0 40 40"><path d="M9 21l7 7 15-16" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div><div class="bc"><span class="dotc gone"><svg viewBox="0 0 40 40"><path d="M11 11l18 18M29 11L11 29" stroke="#fff" stroke-width="6" stroke-linecap="round"/></svg></span></div></div></div></div>
+    </div>
+  <div class="foot"><span class="num"><b>01</b> / 10</span><span class="meter"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></div>
+</section>
+<section class="slide g-ink l-statement" id="s2">
+  
+  
+    <div class="main">
+      
+      <div class="disp fit" data-k="title" data-max="132" style="font-size:132px;">HTTP doesn't <em class="acc" style="font-style:normal">remember</em> you</div>
+      <div style="margin-top:64px"><div class="codebox" data-move="code"><div class="cl" data-k="code.0">Request 1:  log in</div><div class="cl" data-k="code.1">Request 2:  My Orders</div><div class="cl" data-k="code.2">Server:  <em class="acc" style="font-style:normal">who is this?</em></div></div></div>
+      <p class="body bal" data-k="body" style="margin-top:64px;color:var(--fg)">Logging in and clicking My Orders are two separate requests. So the browser has to remind the server it's still you.</p>
+    </div>
+  <div class="foot"><span class="num"><b>02</b> / 10</span><span class="meter"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></div>
+</section>
+<section class="slide g-concrete l-ticket" id="s3">
+  
+  
+    <div class="main">
+      <div class="chip" data-move="tag"><b data-k="tag" data-plain>Cookies</b></div>
+      <div class="disp fit" data-k="title" data-max="100" style="font-size:100px;margin-top:40px">A cookie works like a cloakroom ticket</div>
+      <div class="tk-row" style="margin-top:70px"><div class="ticket" data-move="ticket"><div class="hole"></div><div class="mono" data-k="ticket.label" data-plain>Cookie</div><div class="no" data-k="ticket.no" data-plain>117</div></div></div>
+      <p class="body bal" data-k="body" style="margin-top:auto;color:var(--fg)">The staff don't remember your face, they use your ticket number. Your browser shows its cookie on every request to that site the same way.</p>
+    </div>
+  <div class="foot"><span class="num"><b>03</b> / 10</span><span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></div>
+</section>
+<section class="slide g-concrete l-number" id="s4">
+  
+  
+    <div class="main">
+      
+      <div class="disp fit" data-k="title" data-max="110" style="font-size:110px;">Cookies are <em class="acc" style="font-style:normal">tiny</em></div>
+      <div style="display:flex;align-items:flex-end;gap:34px;margin-top:44px"><div class="big4" data-k="big" data-plain>4 KB</div><div class="body" style="color:var(--fg);font-weight:600;font-size:46px;line-height:1.12;padding-bottom:10px" data-k="of">per cookie, and it goes with every request to that site</div></div>
+      <p class="body bal" data-k="body" style="margin-top:44px;color:var(--fg)">Browsers must allow at least 4,096 bytes per cookie. Source: RFC 6265, section 6.1.</p>
+      
+    </div>
+  <div class="foot"><span class="num"><b>04</b> / 10</span><span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></div>
+</section>
+<section class="slide g-concrete l-statement" id="s5">
+  
+  
+    <div class="main">
+      
+      <div class="disp fit" data-k="title" data-max="112" style="font-size:112px;">Your login cookie usually holds just <em class="acc" style="font-style:normal">an ID</em></div>
+      <div style="margin-top:64px"><div class="codebox" data-move="code"><div class="cl" data-k="code.0">Cookie: <em class="acc" style="font-style:normal">session_id=8f3a1c77</em></div></div></div>
+      <p class="body bal" data-k="body" style="margin-top:64px;color:var(--fg)">The server keeps the real details about you and uses that ID to look them up, the same way the cloakroom uses the number to find your coat.</p>
+    </div>
+  <div class="foot"><span class="num"><b>05</b> / 10</span><span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></div>
+</section>
+<section class="slide g-concrete l-survive" id="s6">
+  
+  
+    <div class="main">
+      <div class="chip" data-move="tag"><b data-k="tag" data-plain>localStorage</b></div>
+      <div class="disp fit" data-k="title" data-max="92" style="font-size:92px;margin-top:40px">localStorage is why your cart is <em class="acc" style="font-style:normal">still there tomorrow</em></div>
+      <div class="obj" data-move="object"><img data-img="object.img" src="../shared/assets/cart-yellow.png" style="width:360px"><div class="stamp ok" data-k="stamp" data-plain data-move="stamp" style="left:420px;top:280px;font-size:76px">Still there</div><div class="mono lab tagb" data-k="object.label" data-plain>Browser closed</div></div>
+      <p class="body bal" data-k="body" style="margin-top:auto;color:var(--fg)">localStorage stays until your code removes it or you clear your browser data. Closing the tab, or the whole browser, doesn't clear it.</p>
+    </div>
+  <div class="foot"><span class="num"><b>06</b> / 10</span><span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></div>
+</section>
+<section class="slide g-concrete l-number" id="s7">
+  
+  
+    <div class="main">
+      
+      <div class="disp fit" data-k="title" data-max="104" style="font-size:104px;">localStorage holds <em class="acc" style="font-style:normal">a lot more than a cookie</em></div>
+      <div style="display:flex;align-items:flex-end;gap:34px;margin-top:44px"><div class="big4" data-k="big" data-plain>5 MB</div><div class="body" style="color:var(--fg);font-weight:600;font-size:46px;line-height:1.12;padding-bottom:10px" data-k="of">per site</div></div>
+      <p class="body bal" data-k="body" style="margin-top:44px;color:var(--fg)">It varies by browser. localStorage only stores strings, and it never goes to the server unless your code sends it. Source: MDN, Storage quotas.</p>
+      
+    </div>
+  <div class="foot"><span class="num"><b>07</b> / 10</span><span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span></div>
+</section>
+<section class="slide g-concrete l-test" id="s8">
+  
+  
+    <div class="main">
+      <div class="chip" data-move="tag"><b data-k="tag" data-plain>sessionStorage</b></div>
+      <div class="disp fit" data-k="title" data-max="100" style="font-size:100px;margin-top:40px">sessionStorage belongs to one tab</div>
+      <div class="tests" data-move="tests"><div class="tcol"><div class="tname" data-k="tests.0.name" data-plain>Refresh</div><div class="form" data-move="form"><div class="lb" data-k="form.label" data-plain>Checkout form</div><div class="f" data-k="form.fields.0" data-plain>Ada Okafor</div><div class="f" data-k="form.fields.1" data-plain>Tartu mnt 12</div><div class="f" data-k="form.fields.2" data-plain>Tallinn</div></div><div class="stamp ok" data-k="tests.0.stamp" data-plain data-move="tests.0.stamp" style="left:0;top:480px;font-size:64px">Still there</div></div><div class="tcol"><div class="tname" data-k="tests.1.name" data-plain>Close tab</div><div class="form" data-move="form"><div class="lb" data-k="form.label" data-plain>Checkout form</div><div class="f empty" data-k="form.fields.0" data-plain>Ada Okafor</div><div class="f empty" data-k="form.fields.1" data-plain>Tartu mnt 12</div><div class="f empty" data-k="form.fields.2" data-plain>Tallinn</div></div><div class="stamp gone" data-k="tests.1.stamp" data-plain data-move="tests.1.stamp" style="left:0;top:480px;font-size:64px">Gone</div></div></div>
+      <p class="body bal" data-k="body" style="margin-top:120px;color:var(--fg)">That's why a <span class="nw">half-filled</span> checkout form can disappear when you close the tab. A second tab you open yourself gets its own sessionStorage.</p>
+    </div>
+  <div class="foot"><span class="num"><b>08</b> / 10</span><span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span></div>
+</section>
+<section class="slide g-concrete l-read" id="s9">
+  
+  
+    <div class="main">
+      <div class="chip" data-move="tag"><b data-k="tag" data-plain>Who can read it</b></div>
+      <div class="disp fit" data-k="title" data-max="96" style="font-size:96px;margin-top:40px">Every script on your page can read localStorage</div>
+      <div style="margin-top:60px"><div class="kvwrap" data-move="panel"><div class="card kvp"><div class="mono kvt" data-k="panel.title" data-plain>localStorage</div><div class="kv"><div class="h">Key</div><div class="h">Value</div><div data-k="panel.rows.0.0" data-plain>cart</div><div data-k="panel.rows.0.1" data-plain>2 items</div><div data-k="panel.rows.1.0" data-plain>theme</div><div data-k="panel.rows.1.1" data-plain>dark</div></div></div>
+    <div class="scripts"><div class="scr"><span class="code" data-k="scripts.0" data-plain>your-app.js</span><svg viewBox="0 0 120 20" class="ar"><path d="M0 10H110M98 2l12 8-12 8" fill="none" stroke="#0E0E0E" stroke-width="5"/></svg></div><div class="scr"><span class="code" data-k="scripts.1" data-plain>analytics.js</span><svg viewBox="0 0 120 20" class="ar"><path d="M0 10H110M98 2l12 8-12 8" fill="none" stroke="#0E0E0E" stroke-width="5"/></svg></div><div class="scr"><span class="code" data-k="scripts.2" data-plain>chat-widget.js</span><svg viewBox="0 0 120 20" class="ar"><path d="M0 10H110M98 2l12 8-12 8" fill="none" stroke="#0E0E0E" stroke-width="5"/></svg></div></div></div></div>
+      <p class="body bal" data-k="body" style="margin-top:60px;color:var(--fg)">Analytics scripts and chat widgets too, so it's not a place for anything secret. Cookies can be read as well, unless the server marks them HttpOnly.</p>
+    </div>
+  <div class="foot"><span class="num"><b>09</b> / 10</span><span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span></div>
+</section>
+<section class="slide g-ink l-end" id="s10">
+  
+  
+    <div class="main">
+      <div class="disp fit" data-k="title" data-max="104" style="font-size:104px;">Which one to use</div>
+      <div style="margin-top:40px"><div class="board" data-move="board"><div class="bh" style="grid-template-columns:1fr repeat(1, 190px)"><span></span><span class="mono" data-k="board.cols.0" data-plain>Close tab</span></div>
+    <div class="br" style="grid-template-columns:1fr repeat(1, 190px)"><div><div class="bk" data-k="board.rows.0.k" data-plain>Login</div><div class="bv" data-k="board.rows.0.v" data-plain>HttpOnly cookie</div></div><div class="bc"><span class="dotc ok"><svg viewBox="0 0 40 40"><path d="M9 21l7 7 15-16" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div></div><div class="br" style="grid-template-columns:1fr repeat(1, 190px)"><div><div class="bk" data-k="board.rows.1.k" data-plain>Cart</div><div class="bv" data-k="board.rows.1.v" data-plain>localStorage</div></div><div class="bc"><span class="dotc ok"><svg viewBox="0 0 40 40"><path d="M9 21l7 7 15-16" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div></div><div class="br" style="grid-template-columns:1fr repeat(1, 190px)"><div><div class="bk" data-k="board.rows.2.k" data-plain>Checkout form</div><div class="bv" data-k="board.rows.2.v" data-plain>sessionStorage</div></div><div class="bc"><span class="dotc gone"><svg viewBox="0 0 40 40"><path d="M11 11l18 18M29 11L11 29" stroke="#fff" stroke-width="6" stroke-linecap="round"/></svg></span></div></div></div></div>
+      <p class="body bal" data-k="body" style="margin-top:34px;color:var(--fg);font-size:36px;width:500px">sessionStorage is for things that only matter in this tab. localStorage is for things you still want tomorrow.</p>
+      <div class="push" data-move="push">
+        <div class="mono lab" data-k="where" data-plain style="color:var(--mid)">Full video on YouTube</div>
+        <div style="margin-top:22px"><span class="handle" data-k="handle" data-plain>@WithGbemi</span></div>
+      </div>
+    </div>
+    <img class="endme" data-move="photo" data-img="me" src="../shared/assets/headshot-cut.png">
+  <div class="foot"><span class="num"><b>10</b> / 10</span><span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></div>
+</section>
+<script>
+function fitAll(){ document.querySelectorAll('.fit').forEach(el=>{ let s=+el.dataset.max; el.style.fontSize=s+'px';
+  const box=el.parentElement.getBoundingClientRect().width; const lim=Math.min(el.clientWidth||box, box);
+  while((el.scrollWidth>lim+1) && s>24){ s-=2; el.style.fontSize=s+'px'; } }); }
+(function(){ var q=new URLSearchParams(location.search), v=q.get('view'); if(!v) return; document.documentElement.classList.add('v-'+v);
+  if(v==='slide'){ var n=+q.get('n')||1; document.querySelectorAll('.slide').forEach(function(s,i){ if(i+1!==n) s.style.display='none'; }); } })();
+window.__checks = function checks(MONO_MIN) {
+  const res = [];
+  document.querySelectorAll('.slide').forEach((sl, i) => {
+    if (getComputedStyle(sl).display === 'none') return;
+    const R = sl.getBoundingClientRect(); const foot = sl.querySelector('.foot').getBoundingClientRect();
+    const tag = el => `<${el.tagName.toLowerCase()} ${el.className}> "${(el.textContent || '').trim().slice(0, 30)}"`;
+    sl.querySelectorAll('.main *').forEach(el => {
+      if (el.closest('.pol') || el.closest('.cal') || !el.childNodes.length) return;
+      const r = el.getBoundingClientRect(); if (!r.width) return;
+      if (r.bottom > foot.top - 24) res.push(`slide ${i + 1}: ${tag(el)} runs into the footer`);
+      if (r.right > R.right - 50 || r.left < R.left + 50) res.push(`slide ${i + 1}: ${tag(el)} outside the margins`);
+    });
+    sl.querySelectorAll('.cal').forEach(el => { if (el.getBoundingClientRect().bottom > foot.top - 16) res.push(`slide ${i + 1}: calendar runs into the footer`); });
+    sl.querySelectorAll('*').forEach(el => {
+      const cs = getComputedStyle(el);
+      if (!/Mono/.test(cs.fontFamily) || el.closest('.meter')) return;
+      const own = [...el.childNodes].some(c => c.nodeType === 3 && c.textContent.trim());
+      if (own && parseFloat(cs.fontSize) < MONO_MIN - 0.5) res.push(`slide ${i + 1}: mono ${parseFloat(cs.fontSize)}px ${tag(el)}`);
+    });
+    sl.querySelectorAll('.pol, .shot, .photo').forEach(pe => {
+      const a = pe.getBoundingClientRect();
+      sl.querySelectorAll('.main .disp, .main p, .main .lab, .main .row, .main .handle').forEach(el => {
+        if (el.closest('.pol') || el.closest('.shot') || el.closest('.photo')) return;
+        const rg = document.createRange(); rg.selectNodeContents(el); const g = 24;
+        if ([...rg.getClientRects()].some(r => a.left < r.right + g && a.right > r.left - g && a.top < r.bottom + g && a.bottom > r.top - g))
+          res.push(`slide ${i + 1}: ${pe.className} within 24 px of ${tag(el)}`);
+      });
+    });
+    sl.querySelectorAll('p, .body, .bal, .head, .v').forEach(el => {
+      const words = []; const tw = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+      while (tw.nextNode()) { const t = tw.currentNode; const re = /\S+/g; let m;
+        while ((m = re.exec(t.textContent))) { const rg = document.createRange(); rg.setStart(t, m.index); rg.setEnd(t, m.index + m[0].length);
+          const rr = rg.getClientRects()[0]; if (rr) words.push({ w: m[0], top: Math.round(rr.top) }); } }
+      if (words.length < 3) return;
+      const lines = []; words.forEach(w => { const l = lines.find(l => Math.abs(l.top - w.top) < 8); if (l) l.n++; else lines.push({ top: w.top, n: 1 }); });
+      lines.sort((a, b) => a.top - b.top);
+      if (lines.length > 1 && lines[lines.length - 1].n === 1) res.push(`slide ${i + 1}: one-word last line "${words[words.length - 1].w}" in ${tag(el)}`);
+    });
+  });
+  return res.slice(0, 60);
+};
+document.fonts.ready.then(()=>{ fitAll(); document.body.dataset.ready=1; });
+</script></body></html>

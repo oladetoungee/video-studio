@@ -1,0 +1,25 @@
+{
+  "direction": "Before / after split (her saved 'Before / After', 'Day 1 / Day 900'): bundles of paper records (stock) vs a phone search on Ghana yellow, with her smiling photo (5:11) as an insert; Bricolage in black and white boxes",
+  "thumbnail_text": "Marriage records: now online",
+  "title": "Ghana Launched an App to Check If Someone Is Married",
+  "titles": [
+    "Ghana Launched an App to Check If Someone Is Married",
+    "Anyone Can Now Check If You're Married in Ghana",
+    "Ghana's New Marriage App Is a Big Step. Here's My One Worry"
+  ],
+  "text": {
+    "line1": "Marriage records",
+    "line2": "now online",
+    "before": "Before",
+    "after": "Now",
+    "p_app": "Marriage records",
+    "p_q": "Search a name",
+    "p_rl": "Result",
+    "p_res": "Found ✓"
+  },
+  "images": {
+    "paper": "../../assets/stock/paper_bundles.jpg",
+    "her": "../../assets/scene/s_311.00.jpg"
+  },
+  "vars": {}
+}

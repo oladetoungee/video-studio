@@ -1,0 +1,63 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Shorts style frames</title>
+<link rel="stylesheet" href="../_shared/fonts.css"></head><body>
+<script src="../_shared/lib.js"></script>
+<script>
+/* SH7 "Use one calendar for work and school" (kit section 3, raw 5:23.56-6:24.57), in look A (one 24 hours).
+ * Top title T7 mixed stack (Familjen 700 + Familjen 400 in cyan + a tiny mono line; no serif: critic round 1); captions her bold Helvetica,
+ * key word on a bone block; her picture in a 3:2 window (face ~0.16 of the height: CHECKS short-zoom), never flipped.
+ * s1 = graphic panel above her (two calendars merged, the clash marked); s2 = black phrase card cut (#29). */
+const A = { night: '#101418', sand: '#ECE4D3', bone: '#EEF1F4', ink: '#141414', midN: '#8A95A3', track: '#1E252C', cyan: '#29B6E8' };
+const FD = (s, w = 700) => `${w} ${s}px "Familjen Grotesk"`, FM = (s, w = 500) => `${w} ${s}px "JetBrains Mono"`, FSI = (s) => `italic 500 ${s}px "Source Serif 4"`, FHN = (s) => `700 ${s}px "Helvetica Neue"`;
+function label() { // T7 mixed-font stack, inside the safe area (top 250 px is platform UI)
+  txt('working student tips', 80, 300, FM(32, 500), A.midN, 'left', 'alphabetic', 2);
+  txt('One calendar', 80, 392, FD(92), A.bone); txt('for work and school', 80, 466, FD(70, 400), A.cyan);
+}
+function capHN(words, key, y) { const f = FHN(70); const sp = tw(' ', f); const full = words.reduce((a, w) => a + tw(w, f) + sp, -sp); let x = W / 2 - full / 2;
+  words.forEach((w, i) => { const ww = tw(w, f); if (i === key) { rect(x - 10, y - 56, ww + 20, 72, A.bone); txt(w, x, y, f, A.ink); } else { ctx.font = f; ctx.lineWidth = 8; ctx.strokeStyle = 'rgba(0,0,0,0.8)'; ctx.lineJoin = 'round'; ctx.textAlign = 'left'; ctx.strokeText(w, x, y); txt(w, x, y, f, '#fff'); } x += ww + sp; }); }
+function herWin(y) { const w = 1080, h = 960, x = 0; ctx.drawImage(IMG.raw, 450, 200, 900, 800, x, y, w, h); return [x, y, w, h]; }
+function s1() {
+  rect(0, 0, W, H, A.night); label();
+  const cx = W / 2 + 60, cy = 745, r = 150, th = 44; const ang = (h) => -Math.PI / 2 + h / 24 * Math.PI * 2;
+  ctx.lineWidth = th; ctx.strokeStyle = A.track; ctx.beginPath(); ctx.arc(cx, cy, r, 0, Math.PI * 2); ctx.stroke();
+  const arc = (a, b, c) => { ctx.strokeStyle = c; ctx.lineWidth = th; ctx.beginPath(); ctx.arc(cx, cy, r, ang(a), ang(b)); ctx.stroke(); };
+  arc(9, 17, A.bone); arc(18, 19.25, A.bone);
+  ctx.save(); ctx.beginPath(); ctx.arc(cx, cy, r + th / 2, ang(17.75), ang(20.25)); ctx.arc(cx, cy, r - th / 2, ang(20.25), ang(17.75), true); ctx.closePath(); ctx.clip();
+  for (let k = -400; k < 400; k += 16) { ctx.strokeStyle = A.bone; ctx.lineWidth = 5; ctx.beginPath(); ctx.moveTo(cx + k - 200, cy - 300); ctx.lineTo(cx + k + 200, cy + 300); ctx.stroke(); } ctx.restore();
+  ctx.strokeStyle = A.bone; ctx.lineWidth = 12; ctx.beginPath(); ctx.arc(cx, cy, r + th / 2 + 22, ang(18), ang(19.25)); ctx.stroke();
+  rect(cx - r - 215, cy - 128, 150, 54, A.bone); txt('CLASH', cx - r - 140, cy - 89, FM(32, 700), A.ink, 'center', 'alphabetic', 2);
+  txt('24 h', cx, cy + 28, FD(84), A.bone, 'center');
+  txt('work', cx + r + 46, cy + 120, FM(34, 600), A.midN, 'left'); txt('class', cx - r - 60, cy + 30, FM(34, 600), A.midN, 'right');
+  herWin(960);
+  capHN(['you', 'have', 'the', 'same'], -1, 1560); capHN(['one', '24', 'hours'], 0, 1645);
+}
+function s2() {
+  rect(0, 0, W, H, '#000000'); label();
+  ['You have', 'the same', 'one', '24 hours.'].forEach((l, i) => txt(l, W / 2, 820 + i * 150, FD(i === 2 ? 170 : 130, i === 2 ? 700 : 500), i === 2 ? A.cyan : '#F3F6F8', 'center'));
+}
+const DIR = { images: { raw: '../_src/her/raw_330.0.jpg', raw410: '../_src/her/raw_410.0.jpg', raw84: '../_src/her/raw_84.0.jpg' }, fonts: ['700 40px "Familjen Grotesk"', '500 40px "JetBrains Mono"', 'italic 500 40px "Source Serif 4"'],
+  fonts2: 0, draw(t) { ({ 1: s1, 2: s2, 3: s3, 4: s4 })[t](); }, stills: { 's1-SH7-graphic-over-her': { t: 1 }, 's2-SH7-phrase-card': { t: 2 }, 's3-B-SH8-study-leave': { t: 3 }, 's4-C-SH2-letterbox': { t: 4 } } };
+
+/* ---- the same short idea in the other two looks (no timers in shorts: her rule 2026-11-02) ---- */
+const B = { wall: '#23201B', card: '#E7D7AE', ink: '#1D1A15', red: '#C8102E', mid: '#B9AD92' };
+const FB = (s) => `400 ${s}px "Bebas Neue"`, FW = (s, w = 600) => `${w} ${s}px "Work Sans"`, FH = (s, w = 600) => `${w} ${s}px "Caveat"`;
+function s3() { // B · SH8 "Study leave in Estonia" (raw 6:42-7:21): T3 inverse box label in manila, her window, stamps, C1 Bebas captions
+  rect(0, 0, W, H, B.wall);
+  rect(70, 270, W - 140, 190, B.card); txt('STUDY LEAVE', W / 2, 372, FB(112), B.ink, 'center', 'alphabetic', 2); txt('in Estonia, if you work and study', W / 2, 428, FW(40), B.ink, 'center');
+  ctx.drawImage(IMG.raw410, 450, 200, 900, 800, 0, 960, 1080, 960);
+  const st = (s, x, y, c, r) => { ctx.save(); ctx.translate(x, y); ctx.rotate(r); txt(s, 0, 0, FB(120), c, 'center', 'middle', 3); txt(s, 1.2, 0.4, FB(120), c, 'center', 'middle', 3); ctx.strokeStyle = c; ctx.lineWidth = 6; const w = tw(s, FB(120), 3) + 44; ctx.strokeRect(-w / 2, -72, w, 140); ctx.restore(); };
+  st('30 DAYS', 330, 640, B.card, -0.05); st('20 PAID', 740, 820, B.red, 0.05);
+  const f = FB(96); const words = ['20', 'OF', 'THOSE', 'ARE', 'PAID']; const sp = tw(' ', f); let x = W / 2 - (words.reduce((a, w) => a + tw(w, f) + sp, -sp)) / 2;
+  words.forEach((w, i) => { ctx.font = f; ctx.lineWidth = 10; ctx.strokeStyle = 'rgba(0,0,0,0.85)'; ctx.lineJoin = 'round'; ctx.textAlign = 'left'; ctx.strokeText(w, x, 1600); txt(w, x, 1600, f, i === 4 ? B.red : '#fff'); x += tw(w, f) + sp; });
+}
+function s4() { // C · SH2 "Working full time while studying full time abroad" (raw 1:18-1:53): T8 letterbox, title above in Caveat, C8 karaoke below
+  rect(0, 0, W, H, '#0B0B0A');
+  txt('working full time', W / 2, 470, FH(96), '#fff', 'center'); txt('while studying full time abroad', W / 2, 560, FH(76), '#fff', 'center');
+  const y = 640, h = 608; ctx.drawImage(IMG.raw84, 0, 0, 1920, 1080, 0, y, W, h);
+  const ft = '400 46px "DSEG7"'; txt('MON', 40, y + h - 30, `700 42px "Instrument Sans"`, '#FF8A1F', 'left', 'alphabetic', 2); txt('06:50', 40 + tw('MON', `700 42px "Instrument Sans"`, 2) + 14, y + h - 30, ft, '#FF8A1F', 'left');
+  const lines = [['once', 'Monday', 'starts,'], ['it', 'just', 'keeps', 'moving']]; const f = `600 56px "Instrument Sans"`;
+  lines.forEach((ws, li) => { const sp = tw(' ', f); let x = W / 2 - ws.reduce((a, w) => a + tw(w, f) + sp, -sp) / 2; ws.forEach((w, i) => { const lit = li === 0 || i < 2; txt(w, x, 1400 + li * 74, f, lit ? '#FFFFFF' : '#6E6A62'); x += tw(w, f) + sp; }); });
+}
+
+DIR.fonts = DIR.fonts.concat(['400 40px "Bebas Neue"', '600 40px "Work Sans"', '600 40px "Caveat"', '400 40px "DSEG7"', '600 40px "Instrument Sans"', '700 40px "Instrument Sans"']);
+boot(DIR);
+</script></body></html>

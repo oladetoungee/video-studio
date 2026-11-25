@@ -1,0 +1,45 @@
+{
+  "title": "Reading stack: talking-head moments",
+  "hud": "HOW TO READ",
+  "source": "../kit/raw-video.mov",
+  "fps": 30,
+  "words": "data/raw_words.json",
+  "faces": "data/face_track.json",
+  "edl": "data/edl.json",
+  "common": "moments/common.js",
+  "images": {
+    "baratta": "assets/cover_baratta.jpg",
+    "convivial": "assets/book_convivial.jpg",
+    "marple": "assets/cover_marple.jpg"
+  },
+  "edit": {
+    "silenceDb": -44,
+    "maxPause": 0.42,
+    "keepBefore": 0.14,
+    "keepAfter": 0.1
+  },
+  "out": "../outputs/talking-head",
+  "tail": 0.7,
+  "audio": {"voiceFilter": "highpass=f=80,afftdn=nr=8:nf=-52:tn=1,deesser=i=0.3:m=0.5:f=0.5,acompressor=threshold=0.06:ratio=3:attack=6:release=160:knee=3,equalizer=f=3200:t=q:w=1.2:g=1.5", "music": {"dir": "library:music"},
+    "levels": {"voiceLufs": -16.0, "duckDb": -15.0, "openDb": -9.0, "target": -14.0, "ceiling": 0.8},
+    "sfx": {"keys": "audio/sfx/keys", "roles": {"cut": {"files": ["library:whoosh-short-sweep", "mk175", "mk3115", "library:whoosh-small-sweep"], "align": "peak", "db": -11},
+    "whoosh": {"files": ["mk164", "library:whoosh-air"], "align": "peak", "db": -11},
+    "click": {"files": ["mk2568", "library:click-classic"], "align": "start", "db": -6},
+    "card": {"files": ["library:card-place", "library:paper-quick-move", "library:card-flick"], "align": "start", "db": -7},
+    "tick": {"files": ["library:tap-small-hit", "library:click-box-check"], "align": "start", "db": -13},
+    "mark": {"files": ["library:marker-line", "library:pencil-short"], "align": "start", "db": -10, "maxlen": 0.6},
+    "hit": {"files": ["mk1143"], "align": "peak", "db": -10},
+    "hitS": {"files": ["library:punch-soft-quick", "library:hit-weak"], "align": "start", "db": -8},
+    "pop": {"files": ["library:pop-dry", "library:tap-ball"], "align": "start", "db": -9},
+    "page": {"files": ["library:page-turn-single", "library:book-paging-single"], "align": "start", "db": -9},
+    "type": {"files": ["KEYS"], "align": "start", "db": -11}}}},
+  "moments": [
+    {"id": "m01", "slug": "problem", "title": "You remember the vibe, not the book", "in": 86.95, "out": 127.05, "cuts": [[121.0, 122.74]], "script": "moments/m01-problem.js", "music": ["150", 12.0]},
+    {"id": "m02", "slug": "inspectional", "title": "A 1940 idea: inspectional reading", "in": 160.1, "out": 201.1, "cuts": [[169.4, 182.55], [185.95, 188.15, "exact"]], "script": "moments/m02-inspectional.js", "music": ["175", 4.0]},
+    {"id": "m03", "slug": "memorise", "title": "The TikTok version: memorise it", "in": 215.82, "out": 245.98, "cuts": [], "script": "moments/m03-memorise.js", "music": ["766", 20.0]},
+    {"id": "m04", "slug": "shelves", "title": "Build the shelves first", "in": 246.02, "out": 303.62, "cuts": [[248.32, 250.95], [265.35, 272.0, "exact"]], "script": "moments/m04-shelves.js", "music": ["443", 8.0]},
+    {"id": "m05", "slug": "chapter-one", "title": "Chapter one is a question", "in": 407.95, "out": 466.1, "cuts": [[411.49, 414.22], [435.3, 448.8]], "script": "moments/m05-chapter-one.js", "music": ["234", 6.0]},
+    {"id": "m06", "slug": "manual", "title": "A manual masquerading as a textbook", "in": 738.55, "out": 784.75, "cuts": [[740.2, 743.95], [754.3, 758.55], [764.36, 765.26, "exact"]], "script": "moments/m06-manual.js", "music": ["282", 10.0]},
+    {"id": "m07", "slug": "fiction", "title": "Not for fiction", "in": 1021.8, "out": 1048.3, "cuts": [[1024.85, 1026.5]], "holds": [[1037.6, 1041.0, 0.95]], "script": "moments/m07-fiction.js", "music": ["135", 30.0]}
+  ]
+}

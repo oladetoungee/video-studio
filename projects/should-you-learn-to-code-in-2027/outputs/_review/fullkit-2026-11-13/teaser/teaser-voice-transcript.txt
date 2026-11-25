@@ -1,0 +1,32 @@
+
+[00:00:00.000 --> 00:00:04.920]   If you want to get into software development, like right now, the reality is that junior
+[00:00:04.920 --> 00:00:08.960]   developer roles have just become very, very, very rare.
+[00:00:08.960 --> 00:00:14.320]   I was checking and I was seeing this thing from Indeed's research team, and they found
+[00:00:14.320 --> 00:00:19.080]   out that in the first quarter of 2026, 3.5% of software development is job posting on
+[00:00:19.080 --> 00:00:20.920]   Indeed via entry level.
+[00:00:20.920 --> 00:00:25.480]   I almost feel like junior software developer is becoming a rule that just doesn't exist
+[00:00:25.480 --> 00:00:26.480]   anymore.
+[00:00:26.480 --> 00:00:29.520]   I know you're probably asking yourself, and this is a very valid question to add, like,
+[00:00:29.520 --> 00:00:32.200]   is there even a point to doing that anymore?
+[00:00:32.200 --> 00:00:38.120]   I would say yes, personally, but, of course, you are not trying to learn how to code the
+[00:00:38.120 --> 00:00:42.400]   same way people learned how to code three, four years ago, and people are writing a lot
+[00:00:42.400 --> 00:00:46.600]   of code these days that we are all not even reading, but I would say reading code is a
+[00:00:46.600 --> 00:00:49.320]   very, very important skill right now.
+[00:00:49.320 --> 00:00:52.400]   Reading code means that you can look back on whatever AI route and you can tell what
+[00:00:52.400 --> 00:00:57.160]   it does and whether it's what you asked for, say a user sign up on your app and the app
+[00:00:57.160 --> 00:00:58.160]   crashes with this error.
+[00:00:58.160 --> 00:01:02.960]   For example, if I paste this into AI, maybe the model that is not so solid and I say fix
+[00:01:02.960 --> 00:01:03.960]   this.
+[00:01:03.960 --> 00:01:08.160]   One easy fix it might give is to wrap the save in try cache so the error is caught and
+[00:01:08.160 --> 00:01:09.720]   the crash goes away.
+[00:01:09.720 --> 00:01:11.560]   So the page stops crashing, right?
+[00:01:11.560 --> 00:01:13.960]   But the user still isn't signed up.
+[00:01:13.960 --> 00:01:19.160]   When a customer pays for an order on maybe an online shopping platform, the payment provider
+[00:01:19.160 --> 00:01:22.880]   sends your survey message to say that, "Oh, payments were successful."
+[00:01:22.880 --> 00:01:24.240]   That message is called a web hook.
+[00:01:24.240 --> 00:01:27.320]   Many providers will send the web hook again if your server doesn't reply in time.
+[00:01:27.320 --> 00:01:30.100]   So your app can receive the same payment successful message twice.
+[00:01:30.100 --> 00:01:31.840]   Your code has to be ready for that.
+[00:01:31.840 --> 00:01:35.640]   So if anybody is telling you that you can learn how to code now, you get a junior software
+[00:01:35.640 --> 00:01:39.560]   developer rule or more, you have to think about it very well because I'm not sure that
+[00:01:39.560 --> 00:01:44.800]   is a promise you can hold on to at least in this age and time.

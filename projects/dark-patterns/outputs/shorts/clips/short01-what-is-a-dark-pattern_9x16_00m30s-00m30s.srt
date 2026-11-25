@@ -1,0 +1,7 @@
+1
+00:00:00,000 --> 00:00:00,203
+there are a lot of dark patterns that people
+
+2
+00:00:00,223 --> 00:00:00,400
+use to build stuff, and I'll go over a lot

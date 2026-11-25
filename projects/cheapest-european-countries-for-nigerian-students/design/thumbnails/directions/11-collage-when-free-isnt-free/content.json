@@ -1,0 +1,32 @@
+{
+  "board": "pick1119-02",
+  "pick": "pick1119-02 (How Beauty Maintenance Culture Is Keeping Young Women Broke: WHEN 'LUXURY' BECOMES THE NEW NORMAL...)",
+  "kind": "her face centred and alive (Øredev 2026, speaking, smiling), a Berlin university photo on one side and euro notes on the other, two lines of heavy white caps over her chest",
+  "direction": "Copies pick1119-02: centred alive face, pictures of the topic around her, the second message in heavy white outlined caps at the bottom (a feeling every Nigerian student planning Europe knows: the money comes in naira, the bills are in euros).",
+  "thumbnail_text": "WHEN YOU EARN IN NAIRA AND PAY IN EUROS...",
+  "titles": [
+    "What Studying in Europe Really Costs a Nigerian in 2027",
+    "I Added Up What It Costs to Study in Europe as a Nigerian",
+    "Cheapest Countries to Study in Europe for Nigerians (2027)"
+  ],
+  "title": "What Studying in Europe Really Costs a Nigerian in 2027",
+  "class": "no-lift",
+  "text": {
+    "w": "When you earn in <span class=\"y\">naira</span><span class=\"big\">and pay in euros...</span>"
+  },
+  "images": {
+    "mid": "../../assets/collage/tallinn-street.jpg",
+    "p1": "../../assets/px/university-berlin.jpg",
+    "p3": "../../assets/collage/euro-fan.jpg",
+    "me": "../../assets/oredev/55642441705-head.png"
+  },
+  "vars": {},
+  "recommended": false,
+  "fonts": [
+    "thumbs-13 Archivo Black, white with a black outline (Thumbnails 91)",
+    "shorts-01 yellow key word #FFE135 (Formats 2)"
+  ],
+  "colours": "white + black outline (thumbs-13), key word #FFE135 (shorts-01), paper borders #F4EFE6",
+  "photo": "library/her-photos/oredev-2026-11-10/55642441705_54383aa1dd_o.jpg, Enhance photo --bg keep + cut-out, cropped above the lectern",
+  "built": "2026-11-19 rework (projects/THUMBS-REWORK-BRIEF-2026-11-19.md)"
+}

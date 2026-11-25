@@ -1,0 +1,16 @@
+{
+ "t": {
+  "label/label": {
+   "pos": {
+    "9x16": {
+     "k": 0.86
+    }
+   },
+   "s": "Research Study on Phone Notifcations"
+  }
+ },
+ "capShort": {
+  "10": "feel like something urgent is waiting for you",
+  "11": "you need to open your phone, right?"
+ }
+}

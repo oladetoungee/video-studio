@@ -1,0 +1,22 @@
+{
+ "direction": "Amber ground. A white paper card with six everyday codes and their real names as a numbered list (her decks: number, bold line, hairline). Top: the promise in Anton. She on the right, cut-out, chin on hand, looking at the viewer. All six are explained in the video (checked against the transcript). Follows: \"Every DevOps Tool Explained\" (the list IS the picture), \"UI UX Complete Roadmap\".",
+ "thumbnail_text": "THE STATUS CODES YOU\u2019LL ACTUALLY USE",
+ "titles": [
+  "HTTP Status Codes Explained (With Real API Examples)",
+  "Every HTTP Status Code a Backend Developer Needs",
+  "HTTP Status Codes Cheat Sheet for API Developers"
+ ],
+ "title": "HTTP Status Codes Explained (With Real API Examples)",
+ "kind": "flat",
+ "text": {
+  "h1": "THE STATUS CODES<br>YOU\u2019LL ACTUALLY USE",
+  "l": "<b>200</b> OK<br><b>201</b> Created<br><b>400</b> Bad Request<br><b>401</b> Unauthorized<br><b>404</b> Not Found<br><b>500</b> Server Error"
+ },
+ "images": {
+  "me": "../../assets/photo/shoot/1605-person.png"
+ },
+ "vars": {
+  "--ground": "#FFA51F"
+ },
+ "class": "no-lift"
+}

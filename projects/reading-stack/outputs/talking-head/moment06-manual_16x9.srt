@@ -1,0 +1,91 @@
+1
+00:00:00,000 --> 00:00:01,693
+book. It has three parts.
+
+2
+00:00:01,693 --> 00:00:03,875
+Part one is kind of like basics,
+
+3
+00:00:03,875 --> 00:00:05,163
+the underlying
+
+4
+00:00:05,163 --> 00:00:05,853
+principle.
+
+5
+00:00:05,853 --> 00:00:07,860
+And then we have part two,
+
+6
+00:00:07,860 --> 00:00:10,460
+Cases from Practice.
+
+7
+00:00:10,460 --> 00:00:12,807
+And then part three is The tools and the
+
+8
+00:00:12,807 --> 00:00:13,727
+techniques.
+
+9
+00:00:13,727 --> 00:00:15,440
+Also keep in mind the page number,
+
+10
+00:00:15,440 --> 00:00:16,680
+it also tells you something.
+
+11
+00:00:16,680 --> 00:00:17,100
+For example,
+
+12
+00:00:17,100 --> 00:00:17,727
+in this book,
+
+13
+00:00:17,727 --> 00:00:19,277
+part one is about 80 pages,
+
+14
+00:00:19,277 --> 00:00:20,997
+part two is 50 pages,
+
+15
+00:00:20,997 --> 00:00:22,889
+and part three is over
+
+16
+00:00:22,889 --> 00:00:23,657
+140 pages.
+
+17
+00:00:23,657 --> 00:00:26,567
+So more than half the book is
+
+18
+00:00:26,567 --> 00:00:28,347
+the how-to section.
+
+19
+00:00:28,347 --> 00:00:30,429
+So even though it opens with the theory,
+
+20
+00:00:30,429 --> 00:00:33,049
+I already know that this is a very practical
+
+21
+00:00:33,049 --> 00:00:35,289
+book. It's pretty much a manual that is
+
+22
+00:00:35,289 --> 00:00:35,950
+masquerading
+
+23
+00:00:35,950 --> 00:00:37,579
+as a textbook.

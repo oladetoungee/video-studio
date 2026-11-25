@@ -1,0 +1,30 @@
+{
+  "text": {
+    "h": "master's<br>after work."
+  },
+  "images": {
+    "bg": "../../assets/px/laptop.jpg",
+    "me": "../../assets/shoot2/cut-1586c-clean.png"
+  },
+  "kind": "real scene (a desk with code at night, darkened) + her big on the right, hand at her chin; two heavy lowercase lines on the left",
+  "layout": "words left / her right",
+  "board": "Thumbnails 96 (yt-43 \"just start.\": heavy white lowercase on a dark real scene, the person big on the right, hand at the chin)",
+  "fonts": [
+    "thumbs-14 Poppins Bold lowercase (white #FFFFFF on #3A3632, Thumbnails 96)"
+  ],
+  "colours": "Thumbnails 96: #3A3632 / #FFFFFF",
+  "thumbnail_text": "master's after work. (her, a desk with code at night)",
+  "titles": [
+    "Studying After Work: My Master's With a Full-Time Job",
+    "How I Work Full Time While Doing a Master's Abroad",
+    "Working a 9-5 While Doing a Master's Abroad"
+  ],
+  "title": "Studying After Work: My Master's With a Full-Time Job",
+  "direction": "New version of 06 (2026-11-16, 06 stays as it was): copies Thumbnails 96, the night desk with code (Pexels, film/assets/CREDITS.md) darkened, her big on the right thinking (hand at her chin, face untouched), studying after work. in Poppins Bold lowercase white, as Thumbnails 96.",
+  "nudge": {},
+  "vars": {
+    "--dim": "rgba(30,27,25,.72)"
+  },
+  "class": "no-lift",
+  "scores": "2026-11-16 blind critic: R1 5 (3-panel collage, dropped) / R2 6.5 / R3 7 (old 06 in the same rounds: 5.5 / 5 / 5)"
+}

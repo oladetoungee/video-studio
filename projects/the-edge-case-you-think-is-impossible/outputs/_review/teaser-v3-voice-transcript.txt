@@ -1,0 +1,58 @@
+ Real users double-click, like ta-ta-ta-ta-ta-ta-ta.
+ They click a lot.
+ Real users open different tabs.
+ Real users network drop halfway.
+ Real users leave the page open for two hours,
+ and they go, and then they come back.
+ And they're not doing anything strange.
+ They are just being users.
+ Someone is going to report an issue,
+ and it's going to be exactly that hedge case
+ that you never thought it would happen.
+ One of the most common hedge cases in production
+ is the duplicate submission.
+ If, for example, in an online shop,
+ someone clicks "Please order,"
+ and maybe the page feels a little slow,
+ they click it again.
+ Now our server gets two requests,
+ and it creates two orders.
+ And if we charge on each order,
+ we can charge the user twice.
+ Another common hedge case in production
+ is a risk condition.
+ A risk condition is when two things happen at the same time.
+ And your code just assumes that
+ they would happen one after the other.
+ For example, in our online shop,
+ say we have one item left in stock,
+ two people click "Buy" in the exact same second.
+ Both requests check the stock.
+ Both see one time left.
+ Both create an order.
+ And now we have sold an item that we do not have.
+ In China system, the BBC wrote about a woman
+ called Jennifer Noll.
+ When Jennifer Noll tries to buy a plane ticket,
+ most websites tell her that she has left
+ the zoning field blank.
+ A zoning is Noll.
+ The website sees the name Noll and treats it as empty.
+ Another hedge case that can cause issues
+ is time zone and daylight saving.
+ On the 29th of March, 2026, the clocks in Tallinn
+ jumped from 3 a.m. straight to 4 a.m.
+ So 3.30, that money never happened.
+ Now imagine our online shop sends a daily sales report
+ at 3.30, Tallinn time.
+ On one day of the year, that job would not run.
+ We can't protect your app from every single possible hedge case
+ because you can't even predict every single one.
+ If you want to wait till you predict every single one,
+ you probably wouldn't ship anything.
+ What do we do about this?
+ We do.
+ We do.
+ We do.
+ We do.
+ We do.

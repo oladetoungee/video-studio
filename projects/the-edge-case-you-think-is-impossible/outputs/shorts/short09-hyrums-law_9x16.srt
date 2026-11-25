@@ -1,0 +1,111 @@
+1
+00:00:00,110 --> 00:00:02,690
+hyrum's law is about a different kind of
+
+2
+00:00:02,690 --> 00:00:05,120
+edge case it's the behavior in your app that
+
+3
+00:00:05,120 --> 00:00:06,790
+you actually never promised
+
+4
+00:00:06,930 --> 00:00:08,700
+it's named after Hyrum Wright
+
+5
+00:00:08,990 --> 00:00:10,230
+hyrum's law states
+
+6
+00:00:10,490 --> 00:00:12,770
+that with a sufficient number of users of an
+
+7
+00:00:12,770 --> 00:00:15,010
+API, it does not matter what you promise in
+
+8
+00:00:15,010 --> 00:00:17,490
+the contract all observable behaviors of
+
+9
+00:00:17,490 --> 00:00:20,170
+your system will be depended on by someone
+
+10
+00:00:20,397 --> 00:00:22,717
+so let's say our online shop API happens to
+
+11
+00:00:22,717 --> 00:00:24,747
+return products in the order that we had it
+
+12
+00:00:24,747 --> 00:00:25,817
+we didn't choose that
+
+13
+00:00:25,817 --> 00:00:27,657
+the query just happened to come back that
+
+14
+00:00:27,657 --> 00:00:29,967
+way now, if someone is using our API to show
+
+15
+00:00:29,967 --> 00:00:31,377
+products in their app, and they're showing
+
+16
+00:00:31,377 --> 00:00:33,877
+the newest products by taking the last
+
+17
+00:00:33,987 --> 00:00:36,857
+product in the list, then if we, on our end,
+
+18
+00:00:36,857 --> 00:00:39,357
+maybe add an index or change the query, the
+
+19
+00:00:39,357 --> 00:00:41,507
+order will change and the app will break
+
+20
+00:00:41,627 --> 00:00:43,407
+to them, we've broken something
+
+21
+00:00:43,437 --> 00:00:45,117
+to us, we didn't break anything because we
+
+22
+00:00:45,117 --> 00:00:46,397
+never promised that behavior
+
+23
+00:00:46,397 --> 00:00:47,657
+but because they are used
+
+24
+00:00:47,937 --> 00:00:49,337
+to getting that behavior, they now think
+
+25
+00:00:49,337 --> 00:00:50,517
+that we've broken
+
+26
+00:00:50,627 --> 00:00:51,707
+something so this is also
+
+27
+00:00:52,053 --> 00:00:54,043
+the kind of edge case that you also have to
+
+28
+00:00:54,043 --> 00:00:54,467
+consider

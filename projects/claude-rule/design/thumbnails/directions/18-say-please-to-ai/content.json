@@ -1,0 +1,23 @@
+{
+  "direction": "TH18, flat Thread look: lilac ground, the question in huge ink type, and a full-width message box with \"please\" being typed \"To: Claude\" (cursor in red). Refs: sample 2 (one object carries it), the \"saying please to ai\" searches. Scores: Round 3: cold 6 · best pair 7/6 · taste 6.",
+  "concept": "TH18",
+  "thumbnail_text": "SAY PLEASE TO AI?",
+  "title": "Is It Okay to Be Mean to AI? Anthropic's New Rule",
+  "titles": [
+    "Is It Okay to Be Mean to AI? Anthropic's New Rule",
+    "Should You Be Nice to AI? Yes, But Not for Its Sake"
+  ],
+  "scores": "Round 3: cold 6 · best pair 7/6 · taste 6.",
+  "text": {
+    "l1": "SAY PLEASE",
+    "l2": "TO AI?",
+    "to": "To: Claude",
+    "typed": "please"
+  },
+  "images": {},
+  "vars": {
+    "--ground": "#CDBFF3",
+    "--fg": "#15131C",
+    "--accent": "#E8352B"
+  }
+}

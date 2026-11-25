@@ -1,0 +1,262 @@
+{
+ "TOTAL": 504,
+ "INTRO": 0,
+ "OUTRO": 1,
+ "FPS": 30,
+ "CUES": [
+  {
+   "name": "type",
+   "t": 47.55,
+   "db": -10,
+   "keep": true
+  },
+  {
+   "name": "click",
+   "t": 48.72,
+   "db": -2,
+   "keep": true
+  },
+  {
+   "name": "load",
+   "t": 49.8,
+   "db": -12,
+   "keep": true
+  },
+  {
+   "name": "click",
+   "t": 51.06,
+   "db": -3,
+   "keep": true
+  },
+  {
+   "name": "click2",
+   "t": 52.26,
+   "db": -3,
+   "keep": true
+  },
+  {
+   "name": "click",
+   "t": 52.5,
+   "db": -3,
+   "keep": true
+  },
+  {
+   "name": "click2",
+   "t": 52.74,
+   "db": -3,
+   "keep": true
+  },
+  {
+   "name": "click",
+   "t": 52.98,
+   "db": -3,
+   "keep": true
+  },
+  {
+   "name": "click2",
+   "t": 53.22,
+   "db": -3,
+   "keep": true
+  },
+  {
+   "name": "click",
+   "t": 53.46,
+   "db": -3,
+   "keep": true
+  },
+  {
+   "name": "buzz",
+   "t": 53.6,
+   "db": -8,
+   "keep": true
+  },
+  {
+   "name": "pop",
+   "t": 55.1,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "type",
+   "t": 205.7,
+   "db": -10,
+   "keep": true
+  },
+  {
+   "name": "marker",
+   "t": 207.6,
+   "db": -8,
+   "keep": true
+  },
+  {
+   "name": "key",
+   "t": 211.6,
+   "db": -10,
+   "keep": true
+  },
+  {
+   "name": "err",
+   "t": 214.3,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "buzz",
+   "t": 216.6,
+   "db": -8,
+   "keep": true
+  },
+  {
+   "name": "type",
+   "t": 233,
+   "db": -10,
+   "keep": true
+  },
+  {
+   "name": "key",
+   "t": 234,
+   "db": -8,
+   "keep": true
+  },
+  {
+   "name": "pop",
+   "t": 235.5,
+   "db": -8,
+   "keep": true
+  },
+  {
+   "name": "buzz",
+   "t": 237.2,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "marker",
+   "t": 237.4,
+   "db": -10,
+   "keep": true
+  },
+  {
+   "name": "type",
+   "t": 301.1,
+   "db": -10,
+   "keep": true
+  },
+  {
+   "name": "marker",
+   "t": 302.1,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "key",
+   "t": 302.5,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "type",
+   "t": 326,
+   "db": -10,
+   "keep": true
+  },
+  {
+   "name": "pop",
+   "t": 326.8,
+   "db": -8,
+   "keep": true
+  },
+  {
+   "name": "key",
+   "t": 327.6,
+   "db": -8,
+   "keep": true
+  },
+  {
+   "name": "type",
+   "t": 330,
+   "db": -10,
+   "keep": true
+  },
+  {
+   "name": "buzz",
+   "t": 331.6,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "type",
+   "t": 389.6,
+   "db": -10,
+   "keep": true
+  },
+  {
+   "name": "hit",
+   "t": 392,
+   "db": -8,
+   "keep": true
+  },
+  {
+   "name": "buzz",
+   "t": 399.1,
+   "db": -6,
+   "keep": true
+  }
+ ],
+ "SCENES": [
+  {
+   "n": 1,
+   "id": "click",
+   "start": 46,
+   "end": 205.1,
+   "ground": "lime",
+   "label": "click",
+   "trans": "cut"
+  },
+  {
+   "n": 2,
+   "id": "obrien",
+   "start": 205.1,
+   "end": 232.6,
+   "ground": "lime2",
+   "label": "obrien",
+   "trans": "cut"
+  },
+  {
+   "n": 3,
+   "id": "null",
+   "start": 232.6,
+   "end": 301,
+   "ground": "lime",
+   "label": "null",
+   "trans": "cut"
+  },
+  {
+   "n": 4,
+   "id": "fix",
+   "start": 301,
+   "end": 325.3,
+   "ground": "lime2",
+   "label": "fix",
+   "trans": "cut"
+  },
+  {
+   "n": 5,
+   "id": "leap",
+   "start": 325.3,
+   "end": 388.5,
+   "ground": "lime",
+   "label": "leap",
+   "trans": "cut"
+  },
+  {
+   "n": 6,
+   "id": "unicode",
+   "start": 388.5,
+   "end": 504,
+   "ground": "lime2",
+   "label": "unicode",
+   "trans": "cut"
+  }
+ ]
+}

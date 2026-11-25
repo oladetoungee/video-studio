@@ -1,0 +1,122 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../_shared/fonts.css">
+<style>
+:root{--wall:#E4E6E3;--wall2:#DCDBD5;--rail:#2A2B2E;--lab:#FFD60A;--ink:#121212;--red:#E4002B;--white:#FFFFFF}
+#stage{background:var(--wall);font-family:Sofia,sans-serif;color:var(--ink)}
+.rail{position:absolute;left:0;right:0;background:var(--rail)}
+.rail:before{content:"";position:absolute;left:0;right:0;top:0;height:8px;background:#45474B}
+.label{position:absolute;background:var(--lab);overflow:hidden}
+.strip{position:absolute;left:0;right:0;top:0;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:space-between;font-weight:800;letter-spacing:.02em;text-transform:uppercase}
+.price{position:absolute;font-family:SofiaX;font-weight:900;line-height:.8;letter-spacing:-.01em;white-space:nowrap}
+.mono{font-family:Martian;font-stretch:87.5%;font-weight:500;letter-spacing:.01em}
+.sticker{position:absolute;background:var(--red);color:#fff;font-weight:800;display:flex;align-items:center}
+.card{position:absolute;background:#fff;padding:18px 18px 14px}
+.cred{font-family:Martian;font-stretch:87.5%;font-weight:500;font-size:34px;color:#55565A;margin-top:12px}
+.cap2{position:absolute;left:0;right:0;text-align:center;font-family:SofiaX;font-weight:900;text-transform:uppercase;color:#fff;-webkit-text-stroke:0;text-shadow:0 3px 0 rgba(0,0,0,.35)}
+.cap2 b{background:var(--lab);color:var(--ink);padding:0 .14em;text-shadow:none;font-weight:900}
+.t3{position:absolute;background:#fff;color:var(--ink);font-family:Sofia;font-weight:900;text-align:center;border-radius:8px;line-height:1.08}
+.photo{position:absolute;overflow:hidden}.photo img{width:100%;height:100%;object-fit:cover}
+</style></head><body><div id="stage"></div>
+<script src="../_shared/lib.js"></script><script src="../_shared/kit.js"></script><script src="../_shared/rcpt.js"></script>
+<script>
+const W = +Q.get('w') || 1920, H = +Q.get('h') || 1080; const S = $('#stage'); st(S, { width: W + 'px', height: H + 'px' });
+const DAAD = () => receipt('de', [405, 316, 712, 66], 760, [[1071, 320, 30, 25], [415, 352, 139, 25]], { cover: [405, 316, 140, 31] });
+const OEAD = () => receipt('at', [70, 268, 490, 64], 760, [[105, 278, 435, 22], [105, 307, 450, 22]]);
+const FRS = () => receipt('fr', [276, 274, 724, 32], 1000, [[477, 280, 120, 24]]);
+// one shelf label (small)
+function lab(x, y, w, h, c, name, price, line, o = {}) {
+  return `<div class="label" style="left:${x}px;top:${y}px;width:${w}px;height:${h}px;${o.bg ? 'background:' + o.bg + ';color:#fff' : ''}">
+   <div class="strip" style="height:${h * .2}px;padding:0 ${w * .045}px;font-size:${h * .11}px"><span>${name}</span>${c ? flag(c, h * .17) : ''}</div>
+   <div class="price" style="left:${w * .045}px;top:${h * .29}px;font-size:${o.ps || h * .5}px">${price}</div>
+   <div class="mono" style="position:absolute;left:${w * .045}px;bottom:${h * .07}px;font-size:${o.lf || 30}px;line-height:1.15">${line}</div>
+   ${o.bar && 0 ? `<div style="position:absolute;right:${w * .045}px;top:${h * .33}px">${barcode(name, w * .22, h * .22, o.bg ? '#fff' : '#111')}</div>` : ''}
+  </div>`;
+}
+const scenes = {
+  a1: () => `
+   <div class="rail" style="top:430px;height:300px"></div>
+   <div class="label" id="L" style="left:110px;top:250px;width:960px;height:560px">
+     <div class="strip" style="height:104px;padding:0 44px;font-size:60px"><span>Germany</span>${flag('DE', 96)}</div>
+     <div style="position:absolute;left:44px;top:140px;font-weight:800;font-size:54px;letter-spacing:.02em">TUITION</div>
+     <div class="price" style="left:36px;top:206px;font-size:390px">€0<span id="ast" style="color:var(--red)">*</span></div>
+     <div class="mono" style="position:absolute;right:44px;top:150px;font-size:34px;text-align:right">at most public<br>universities</div>
+     <div style="position:absolute;right:44px;bottom:110px">${barcode('germany-de', 300, 96)}</div>
+   </div>
+   <div class="sticker" id="stk" style="left:140px;top:770px;width:930px;height:136px;padding:0 40px;font-size:50px;line-height:1.08;transform:rotate(-2deg)">*Proof of funds not included:<br>€11,904 for the year</div>
+   <div class="card" style="left:1100px;top:330px;transform:rotate(1.5deg)">${DAAD()}<div class="cred">daad.de · 2 Nov 2026</div></div>`,
+  a2: () => `
+   <div class="rail" style="top:400px;height:60px"></div><div class="rail" style="top:900px;height:60px"></div>
+   ${lab(80, 130, 560, 330, 'DE', 'Germany', '€11,904', '€0 + €11,904', { ps: 140, lf: 44 })}
+   ${lab(680, 130, 560, 330, 'FR', 'France', '€14,480', '€3,950 + €10,530', { ps: 140, lf: 44, bg: 'var(--red)' })}
+   ${lab(1280, 130, 560, 330, 'IT', 'Italy', '€10,180+', 'fee + €10,180', { ps: 140, lf: 44 })}
+   ${lab(80, 630, 560, 330, 'AT', 'Austria', '€10,177', '€1,506 + €8,671', { ps: 140, lf: 44 })}
+   ${lab(680, 630, 560, 330, 'EE', 'Estonia', '€14,560', '€4,000 + €10,560', { ps: 140, lf: 44, bg: 'var(--red)' })}
+   ${lab(1280, 630, 560, 330, 'FI', 'Finland', '€19,600', '€10,000 + €9,600', { ps: 140, lf: 44, bg: 'var(--red)' })}
+   <div class="sticker" style="left:300px;top:580px;height:74px;padding:0 24px;font-size:40px;transform:rotate(-4deg);background:var(--ink)">UNDER 24</div>
+   <div class="mono" style="position:absolute;left:80px;top:36px;font-size:44px;font-weight:600">FIRST YEAR = TUITION + PROOF OF FUNDS</div>
+   <div class="mono" style="position:absolute;left:80px;bottom:22px;font-size:36px;color:#2E2F33">starting numbers, official pages, 2 Nov 2026</div>`,
+  a3: () => `
+   <div class="photo" style="left:0;top:0;width:${W}px;height:600px"><img src="../_src/pexels/vienna.jpg" style="object-position:50% 60%"></div>
+   <div class="mono" style="position:absolute;left:24px;top:24px;font-size:22px;color:#fff;background:rgba(0,0,0,.6);padding:6px 10px">Photo: Jonas Horsch / Pexels</div>
+   <div class="rail" style="top:600px;height:110px"></div>
+   ${lab(110, 470, 880, 480, 'AT', 'Under 24', '€722.58', 'a month · for 12 months', { lf: 40 })}
+   ${lab(1050, 520, 780, 420, 'AT', '24 and over', '€1,308.39', 'a month · for 12 months', { bg: 'var(--red)', lf: 36, ps: 168 })}
+   <div class="card" style="left:1060px;top:90px;transform:rotate(-1.2deg)">${OEAD()}<div class="cred">oead.at · 2 Nov 2026</div></div>`,
+  a4: () => `
+   <div class="rail" style="top:0;height:70px"></div>
+   <div class="sticker" style="left:120px;top:150px;height:96px;padding:0 34px;font-size:56px;transform:rotate(-2deg)">CORRECTION</div>
+   <div class="mono" style="position:absolute;left:124px;top:300px;font-size:40px;font-weight:600">FRANCE · HOW MUCH STUDENTS CAN WORK</div>
+   <div class="price" style="left:110px;top:360px;font-size:420px">964 <span style="font-size:180px">hours a year</span></div>
+   <div style="position:absolute;left:124px;top:730px;font-size:44px;font-weight:600;line-height:1.3;max-width:900px">Students from outside the EU can work up to 964 hours a year in France: 60 % of the legal working year.</div>
+   <div class="card" style="left:820px;top:900px;transform:rotate(1.2deg)">${FRS()}<div class="cred">service-public.fr · 2 Nov 2026</div></div>`,
+  p1: () => `
+   <div class="t3" style="left:90px;top:200px;width:900px;padding:30px 36px;font-size:58px">Studying in Germany is free.<br>The proof of funds isn’t.</div>
+   <div class="rail" style="top:760px;height:380px"></div>
+   <div class="label" style="left:80px;top:620px;width:920px;height:640px">
+     <div class="strip" style="height:110px;padding:0 40px;font-size:62px"><span>Germany</span>${flag('DE', 96)}</div>
+     <div style="position:absolute;left:40px;top:150px;font-weight:800;font-size:56px">TUITION</div>
+     <div class="price" style="left:30px;top:220px;font-size:420px">€0<span style="color:var(--red)">*</span></div>
+     <div style="position:absolute;right:40px;bottom:40px">${barcode('germany-de', 260, 90)}</div>
+   </div>
+   <div class="sticker" style="left:110px;top:1300px;width:860px;height:200px;padding:0 40px;font-size:62px;line-height:1.08;transform:rotate(-2deg)">*Proof of funds:<br>€11,904 a year</div>`,
+  p2: () => `
+   <div class="photo" style="left:0;top:0;width:${W}px;height:820px"><img src="../_src/pexels/paris.jpg"></div>
+   <div class="mono" style="position:absolute;left:24px;top:24px;font-size:22px;color:#fff;background:rgba(0,0,0,.6);padding:6px 10px">Photo: Kenrick Baksh / Pexels</div>
+   <div class="rail" style="top:820px;height:120px"></div>
+   <div class="label" style="left:70px;top:760px;width:940px;height:720px">
+     <div class="strip" style="height:110px;padding:0 40px;font-size:58px"><span>France · proof of funds</span>${flag('FR', 90)}</div>
+     <div style="position:absolute;left:44px;top:150px;font-size:70px;font-weight:800">WAS <s style="text-decoration-color:var(--red);text-decoration-thickness:9px">€615</s></div>
+     <div class="price" style="left:36px;top:270px;font-size:300px;color:var(--red)">€877.50</div>
+     <div class="mono" style="position:absolute;left:44px;bottom:50px;font-size:38px">a month · from 1 August 2026</div>
+   </div>
+   <div class="sticker" style="left:610px;top:650px;height:110px;padding:0 34px;font-size:72px;transform:rotate(5deg)">PRICE UP</div>
+   <div class="mono" style="position:absolute;left:80px;top:1560px;font-size:36px;line-height:1.35;width:920px">“You want to check the page for your own country.”</div>`,
+};
+// ---- motion test (raw times 7.0 - 17.15) ----
+function seekT(t) {
+  const her = t < 9.2;
+  if (her) {
+    if (S.dataset.sc !== 'her') { S.dataset.sc = 'her'; S.innerHTML = `<img data-feed="her" style="position:absolute;left:0;top:0;width:${W}px;height:${H}px" src="../_src/raw_12.jpg">
+       <div class="cap2" id="c1" style="top:800px;font-size:124px"></div>`; }
+    const c = $('#c1'); c.innerHTML = t < 8.6 ? 'Someone has probably told you' : 'that Germany is <b>free</b>';
+    const k = P(t, t < 8.6 ? 7.02 : 8.6, 0.3, E.outQuint); c.style.transform = `translateY(${(1 - k) * 30}px)`; c.style.opacity = k;
+    return;
+  }
+  if (S.dataset.sc !== 'shelf') { S.dataset.sc = 'shelf'; S.innerHTML = `<div id="world" style="position:absolute;inset:0;transform-origin:0 0">${scenes.a1()}</div>`; $('.card', S).style.display = 'none'; $('#stk').insertAdjacentHTML('beforeend', '<div id="hl" style="position:absolute;left:40px;bottom:6px;height:8px;width:420px;background:#fff;transform-origin:left center"></div>'); }
+  const L = $('#L'), stk = $('#stk'), ast = $('#ast');
+  // label rises from below the rail on the cut (0.55 s, outQuint), blur clears
+  const k = P(t, 9.2, 0.55, E.outQuint); L.style.transform = `translateY(${(1 - k) * 520}px)`; L.style.filter = k < .9 ? `blur(${(1 - k) * 10}px)` : 'none';
+  // pieces of the label land on her words
+  const tu = L.children[1], pr = L.children[2], side = L.children[3];
+  enter(tu, P(t, 9.52, 0.35, E.outQuint), -30, 0, 6);
+  const pk = P(t, 9.3, 0.45, E.outQuint); pr.style.transform = `scale(${lerp(1.18, 1, pk)})`; pr.style.transformOrigin = 'left bottom'; pr.style.opacity = t >= 9.3 ? 1 : 0;
+  enter(side, P(t, 11.18, 0.4, E.outQuint), 30, 0, 6);
+  ast.style.opacity = t >= 13.76 ? 1 : 0; const ak = P(t, 13.76, 0.25, E.outQuint); ast.style.display = 'inline-block'; ast.style.transform = `scale(${lerp(1.6, 1, ak)})`;
+  stamp(stk, t, 14.87, -2, 0.24); sweep('#hl', t, 16.43, 0.4);
+  // slow push under everything after the cut (3 % over 7 s)
+  { const z = P(t, 16.43, 0.6, E.outQuint); const sc = 1.3 * (1 + 0.03 * P(t, 9.4, 7, E.inOutQuart)) * (1 + 0.18 * z); const fx = lerp(590, 520, z), fy = lerp(578, 820, z); $('#world').style.transform = `translate(${960 - fx * sc}px, ${540 - fy * sc}px) scale(${sc})`; }
+}
+window.seek = async t => { seekT(t); await imagesReady(); };
+window.show = async n => { if (n[0] === "t") { delete S.dataset.sc; seekT(+n.slice(1)); await imagesReady(); return; } S.dataset.sc = n; S.innerHTML = scenes[n](); await imagesReady(); };
+imagesReady().then(() => window.READY = true);
+</script></body></html>

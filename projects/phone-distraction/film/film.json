@@ -1,0 +1,296 @@
+{
+  "title": "Your phone was designed to distract you",
+  "hud": "",
+  "intro": 0.4,
+  "outro": 5.0,
+  "voiceDuration": 867.157,
+  "words": "data/words.json",
+  "captions": "data/captions.srt",
+  "images": {
+    "ht_hand": "assets/receipt/ht_hand.png",
+    "ht_hand2": "assets/receipt/ht_hand2.png",
+    "ht_tilt": "assets/receipt/ht_tilt.png",
+    "ht_up": "assets/receipt/ht_up.png",
+    "ht_desk": "assets/receipt/ht_desk.png",
+    "ht_simon": "assets/receipt/ht_simon.png",
+    "ht_fogg": "assets/receipt/ht_fogg.png",
+    "ht_slot": "assets/receipt/ht_slot.png",
+    "ht_chips": "assets/receipt/ht_chips.png",
+    "ht_books": "assets/receipt/ht_books.png",
+    "ht_tv": "assets/receipt/ht_tv.png",
+    "ht_tvlegs": "assets/receipt/ht_tvlegs.png",
+    "ht_mountains": "assets/receipt/ht_mountains.png",
+    "src_chi": "assets/directions-v2/sources/chi-title.png",
+    "src_fogg_cover": "assets/directions-v2/sources/fogg-cover.jpg",
+    "src_stanford": "assets/directions-v2/sources/stanford-top.png",
+    "src_bm": "assets/directions-v2/sources/bm-top.png",
+    "patent": "assets/sources/patent-US8448084-fig8-ink.png",
+    "eu_tiktok": "assets/sources/eu-tiktok.png",
+    "eu_meta": "assets/sources/eu-meta.png",
+    "ht_krieger": "assets/receipt/ht_krieger.png",
+    "ht_harris": "assets/receipt/ht_harris.png",
+    "ht_coins": "assets/receipt/ht_coins.png",
+    "ht_register": "assets/receipt/ht_register.png",
+    "ht_newspaper": "assets/receipt/ht_newspaper.png",
+    "ht_bandit": "assets/receipt/ht_bandit.png",
+    "ht_gadgets": "assets/receipt/ht_gadgets.png",
+    "ht_metro": "assets/receipt/ht_metro.png",
+    "ht_woman": "assets/receipt/ht_woman.png",
+    "ht_floor": "assets/receipt/ht_floor.png",
+    "ht_reader": "assets/receipt/ht_reader.png",
+    "ht_remote": "assets/receipt/ht_remote.png",
+    "ht_servers": "assets/receipt/ht_servers.png",
+    "ht_gavel": "assets/receipt/ht_gavel.png"
+  },
+  "scripts": [
+    "scenes/kit.js",
+    "scenes/parts.js",
+    "scenes/s1.js",
+    "scenes/s2.js",
+    "scenes/s3.js",
+    "scenes/s4.js",
+    "scenes/nudges.js",
+    "scenes/film.js"
+  ],
+  "cutSounds": {
+    "cutSounds": false
+  },
+  "audio": {
+    "voice": "audio/voice_edit.flac",
+    "voiceFilter": "highpass=f=75,acompressor=threshold=0.05:ratio=3:attack=6:release=160:knee=3,deesser=i=0.25",
+    "music": {
+      "dir": "library:music",
+      "xfade": 6.0,
+      "tracks": [
+        [
+          "1168",
+          "Mixkit track 1168"
+        ],
+        [
+          "234",
+          "Mixkit track 234"
+        ],
+        [
+          "443",
+          "Mixkit track 443"
+        ],
+        [
+          "1009",
+          "Mixkit track 1009"
+        ],
+        [
+          "167",
+          "Mixkit track 167"
+        ]
+      ]
+    },
+    "sfx": {
+      "keys": "audio/sfx/keys",
+      "roles": {
+        "notify": {
+          "files": [
+            "library:notify-message-pop",
+            "library:notify-bubble-pop",
+            "library:notify-positive"
+          ],
+          "align": "start",
+          "db": 4
+        },
+        "pull": {
+          "files": [
+            "library:switch-tap",
+            "library:ui-device-click"
+          ],
+          "align": "start",
+          "db": 2
+        },
+        "refresh": {
+          "files": [
+            "library:pop-dry",
+            "library:ui-modern-select"
+          ],
+          "align": "start",
+          "db": 6
+        },
+        "burst": {
+          "files": [
+            "library:hit-short-bass",
+            "library:drum-deep-impact"
+          ],
+          "align": "peak",
+          "db": -4
+        },
+        "hit": {
+          "files": [
+            "library:punch-soft-quick",
+            "library:hit-futuristic-bass",
+            "library:wood-hard-hit"
+          ],
+          "align": "start",
+          "db": 5
+        },
+        "pop": {
+          "files": [
+            "library:pop-dry",
+            "library:pop-hard-click",
+            "library:pop-cartoon-bubble"
+          ],
+          "align": "start",
+          "db": 6
+        },
+        "tick": {
+          "files": [
+            "library:ui-select-click",
+            "library:ui-click-tone",
+            "library:switch-tap",
+            "library:ui-option-select"
+          ],
+          "align": "start",
+          "db": 6
+        },
+        "mark": {
+          "files": [
+            "library:marker-line",
+            "library:pencil-short"
+          ],
+          "align": "start",
+          "db": 3,
+          "maxlen": 0.6
+        },
+        "shutter": {
+          "files": [
+            "library:shutter-click",
+            "library:shutter-digital",
+            "library:shutter-hard-click"
+          ],
+          "align": "peak",
+          "db": 10
+        },
+        "clock": {
+          "files": [
+            "library:clock-tick-single"
+          ],
+          "align": "peak",
+          "db": 10
+        },
+        "cash": {
+          "files": [
+            "library:coins-clinking",
+            "library:coin-win"
+          ],
+          "align": "start",
+          "db": 4
+        },
+        "riser": {
+          "files": [
+            "library:riser-cinematic-trailer",
+            "library:riser-metallic-sweep"
+          ],
+          "align": "peak",
+          "db": -12
+        },
+        "swipe": {
+          "files": [
+            "library:swipe-fast-zoom",
+            "library:transition-tech-slide"
+          ],
+          "align": "peak",
+          "db": 7
+        },
+        "error": {
+          "files": [
+            "library:wrong-answer",
+            "library:buzzer-fail"
+          ],
+          "align": "start",
+          "db": 3
+        },
+        "glitch": {
+          "files": [
+            "library:glitch-small-electric",
+            "library:glitch-static"
+          ],
+          "align": "start",
+          "db": 0
+        },
+        "tape": {
+          "files": [
+            "library:tape-switch",
+            "library:record-scratch-stop",
+            "library:tape-rewind-fast"
+          ],
+          "align": "peak",
+          "db": 8
+        },
+        "type": {
+          "files": [
+            "KEYS"
+          ],
+          "align": "start",
+          "db": -8
+        },
+        "cut": {
+          "files": [
+            "library:swipe-fast-zoom"
+          ],
+          "align": "peak",
+          "db": -14
+        },
+        "print": {
+          "files": [
+            "library:typewriter-soft-click",
+            "library:typewriter-single-hit"
+          ],
+          "align": "peak",
+          "db": 10
+        },
+        "bell": {
+          "files": [
+            "library:typewriter-return-bell"
+          ],
+          "align": "peak",
+          "db": 8
+        },
+        "tear": {
+          "files": [
+            "library:paper-crumple-quick",
+            "library:paper-slide"
+          ],
+          "align": "peak",
+          "db": 7
+        },
+        "paper": {
+          "files": [
+            "library:paper-quick-move",
+            "library:card-place",
+            "library:paper-slide"
+          ],
+          "align": "peak",
+          "db": 13
+        },
+        "stamp": {
+          "files": [
+            "library:wood-hard-hit",
+            "library:punch-soft-quick"
+          ],
+          "align": "peak",
+          "db": 7
+        }
+      }
+    },
+    "levels": {
+      "voiceLufs": -16.0,
+      "duckDb": -13.0,
+      "openDb": 0.0,
+      "fullDb": -2.0,
+      "target": -14.0,
+      "ceiling": 0.65
+    }
+  },
+  "motionBlur": {
+    "shutter": 90,
+    "px": 6,
+    "max": 16,
+    "min": 1
+  }
+}

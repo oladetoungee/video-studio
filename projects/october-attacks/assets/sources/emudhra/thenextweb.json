@@ -1,0 +1,165 @@
+{
+ "story": "emudhra",
+ "outlet": "The Next Web",
+ "slug": "thenextweb",
+ "url": "https://thenextweb.com/news/emudhra-certificates-weak-keys-browsers-block",
+ "finalUrl": "https://thenextweb.com/news/emudhra-certificates-weak-keys-browsers-block",
+ "status": "loaded",
+ "http": 200,
+ "title": "eMudhra certificates blocked: one private key was the number 4",
+ "h1": "",
+ "published": "2026-10-21T10:25:31+00:00",
+ "files": {
+  "fold": "emudhra/thenextweb_fold.png",
+  "full": "emudhra/thenextweb_full.jpg",
+  "scroll": "emudhra/thenextweb_scroll.mp4"
+ },
+ "full": {
+  "width": 1440,
+  "height": 5235,
+  "pageHeight": 5235,
+  "zoom": 1,
+  "quotes": [
+   {
+    "quote": "Eight eMudhra certificate keys were so weak that one was the number 4",
+    "box": {
+     "x": 145,
+     "y": 186,
+     "w": 1151,
+     "h": 116
+    },
+    "lines": [
+     {
+      "x": 145,
+      "y": 186,
+      "w": 1151,
+      "h": 56
+     },
+     {
+      "x": 241,
+      "y": 246,
+      "w": 958,
+      "h": 56
+     }
+    ]
+   },
+   {
+    "quote": "Chrome, Firefox, Apple and Microsoft have blocked the eMudhra certificates",
+    "box": {
+     "x": 114,
+     "y": 331,
+     "w": 856,
+     "h": 29
+    },
+    "lines": [
+     {
+      "x": 114,
+      "y": 331,
+      "w": 856,
+      "h": 29
+     }
+    ]
+   }
+  ]
+ },
+ "scroll": {
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "seconds": 8,
+  "keyframes": [
+   {
+    "t": 0,
+    "y": 0
+   },
+   {
+    "t": 1,
+    "y": 0
+   },
+   {
+    "t": 2.55,
+    "y": 1400
+   },
+   {
+    "t": 8,
+    "y": 1400
+   }
+  ],
+  "zoom": 1,
+  "easing": "easeInOutCubic between keyframes, holds where y is equal",
+  "capped": false,
+  "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)",
+  "quotes": [
+   {
+    "quote": "Eight eMudhra certificate keys were so weak that one was the number 4",
+    "inVideo": true,
+    "still": true,
+    "t": 0.53,
+    "visibleStill": [
+     0,
+     1.07
+    ],
+    "scrollY": 0,
+    "box": {
+     "x": 385,
+     "y": 186,
+     "w": 1151,
+     "h": 116
+    },
+    "lines": [
+     {
+      "x": 385,
+      "y": 186,
+      "w": 1151,
+      "h": 56
+     },
+     {
+      "x": 481,
+      "y": 246,
+      "w": 958,
+      "h": 56
+     }
+    ],
+    "docBox": {
+     "x": 385,
+     "y": 186,
+     "w": 1151,
+     "h": 116
+    },
+    "layoutDriftPx": 0
+   },
+   {
+    "quote": "Chrome, Firefox, Apple and Microsoft have blocked the eMudhra certificates",
+    "inVideo": true,
+    "still": true,
+    "t": 0.53,
+    "visibleStill": [
+     0,
+     1.07
+    ],
+    "scrollY": 0,
+    "box": {
+     "x": 354,
+     "y": 331,
+     "w": 856,
+     "h": 29
+    },
+    "lines": [
+     {
+      "x": 354,
+      "y": 331,
+      "w": 856,
+      "h": 29
+     }
+    ],
+    "docBox": {
+     "x": 354,
+     "y": 331,
+     "w": 856,
+     "h": 29
+    },
+    "layoutDriftPx": 0
+   }
+  ]
+ }
+}

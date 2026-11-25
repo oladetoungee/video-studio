@@ -1,0 +1,68 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Film render</title>
+<link rel="stylesheet" href="/studio/runtime/fonts.css">
+<style>html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1920" height="1080"></canvas>
+<script src="/studio/runtime/core.js"></script>
+<script src="/studio/runtime/motion.js"></script>
+<script src="/studio/runtime/house.js"></script>
+<script src="/studio/runtime/boot.js"></script>
+<script>
+// Headless render host: /render/<slug>?aspect=9x16&captions=1&edits=1&clipStart=12.3  (&hud=1: the old corner HUD, regression checks only)
+// light / dark: &modesJson={"<sceneId>":"dark"} (exports) or &modes=alt|light|dark|design (checks, contact sheets)
+window.BUILD_ERROR = null;
+(async () => {
+  try {
+    const q = new URLSearchParams(location.search); const slug = location.pathname.split('/').filter(Boolean)[1];
+    const cv = document.getElementById('c');
+    await bootFilm({ slug, canvas: cv, aspect: q.get('aspect') || '16x9', edits: q.get('edits') !== '0' });
+    SHOW.captions = q.get('captions') === '1'; if (q.has('clipStart')) CLIP_START = +q.get('clipStart');
+    // &modes=alt (every screen in its alternative) | light | dark (every screen that can) | design (as designed): checks, sheets
+    window.setModes = (m) => { const out = {}; for (const s of SCENES) { const m0 = sceneMode0(s); if (!m0) continue;
+      const want = m === 'alt' ? (m0 === 'light' ? 'dark' : 'light') : m; if ((want === 'light' || want === 'dark') && want !== m0) out[s.id] = want; }
+      EDIT.data.modes = out; return Object.keys(out).length; };
+    if (q.has('modes')) setModes(q.get('modes'));
+    if (q.has('modesJson')) { const m = JSON.parse(q.get('modesJson')); EDIT.data.modes = m && typeof m === 'object' ? m : {}; }   // an export: the editor's current choice
+    EL.rec = q.get('elements') === '1'; if (q.has('hud')) SHOW.hud = q.get('hud') === '1';
+    window.grab = (t, qq) => { renderFrame(t); return cv.toDataURL('image/jpeg', qq || 0.93); };
+    window.grabPNG = (t) => { renderFrame(t); return cv.toDataURL('image/png'); };
+    // Adaptive motion blur (opt-in: film.json "motionBlur": true | {shutter, px, max}, or &blur=1; &blur=0 forces it off).
+    // Per frame: the shutter (default 180 deg = half a frame, centred on t) is clamped inside the current scene, so it never
+    // blurs across a cut; the biggest move of any text / box in that interval sets the subframes (one per `px` canvas px,
+    // default 5, at most `max`, default 64); subframes are averaged in linear light. A frame where nothing moves is the
+    // plain frame, byte for byte. Only video exports use it (grabPNG stays sharp). Things drawn without an edit box
+    // (grp / txt / KT) are not measured, so a film whose fast moves are unregistered drawings needs `min` subframes.
+    const mbOpt = FILM.man.motionBlur; const mbQ = q.get('blur');
+    const MB = mbQ === '0' ? null : (mbQ === '1' || mbOpt) ? Object.assign({ shutter: 180, px: 5, max: 64, min: 1 }, mbOpt && typeof mbOpt === 'object' ? mbOpt : {}) : null;
+    if (MB) {
+      const grabSharp = window.grab; const c2 = cv.getContext('2d');
+      const LIN = new Float32Array(256); for (let i = 0; i < 256; i++) { const c = i / 255; LIN[i] = c <= 0.04045 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4); }
+      const SRGB = new Uint8ClampedArray(4097); for (let i = 0; i <= 4096; i++) { const v = i / 4096; SRGB[i] = Math.round(255 * (v <= 0.0031308 ? v * 12.92 : 1.055 * Math.pow(v, 1 / 2.4) - 0.055)); }
+      const boxes = (t) => { const r = EL.rec; EL.rec = true; renderFrame(t); EL.rec = r; const m = new Map(); for (const b of EL.list) if (!m.has(b.id)) m.set(b.id, [b.x + b.w / 2, b.y + b.h / 2, b.w, b.h]); return m; };
+      window.blurSamples = (t) => {
+        const half = MB.shutter / 360 / 30 / 2; const i = sceneIndex(t); const ta = Math.max(SCENES[i].start, t - half), tb = Math.min(sceneEnd(i) - 1e-4, t + half);
+        if (tb - ta < 1e-5) return { n: 1, ta, tb, d: 0 };
+        const A = boxes(ta), B = boxes(tb); let d = 0;
+        for (const [id, a] of A) { const b = B.get(id); if (b) d = Math.max(d, Math.hypot(a[0] - b[0], a[1] - b[1]) + Math.abs(a[2] - b[2]) / 2 + Math.abs(a[3] - b[3]) / 2); }
+        return { n: Math.max(MB.min, Math.min(MB.max, Math.ceil(d / MB.px))), ta, tb, d };
+      };
+      window.grab = (t, qq) => {
+        const s = blurSamples(t); if (s.n <= 1) return grabSharp(t, qq);
+        const w = cv.width, h = cv.height, acc = new Float32Array(w * h * 3);
+        for (let k = 0; k < s.n; k++) { renderFrame(s.ta + (s.tb - s.ta) * (k + 0.5) / s.n); const d = c2.getImageData(0, 0, w, h).data;
+          for (let p = 0, j = 0; p < d.length; p += 4, j += 3) { acc[j] += LIN[d[p]]; acc[j + 1] += LIN[d[p + 1]]; acc[j + 2] += LIN[d[p + 2]]; } }
+        const out = c2.createImageData(w, h); const o = out.data; const k = 4096 / s.n;
+        for (let p = 0, j = 0; p < o.length; p += 4, j += 3) { o[p] = SRGB[Math.min(4096, Math.round(acc[j] * k))]; o[p + 1] = SRGB[Math.min(4096, Math.round(acc[j + 1] * k))]; o[p + 2] = SRGB[Math.min(4096, Math.round(acc[j + 2] * k))]; o[p + 3] = 255; }
+        c2.putImageData(out, 0, 0); return cv.toDataURL('image/jpeg', qq || 0.93);
+      };
+      window.MOTION_BLUR = MB;
+    }
+    window.meta = () => FILM.meta();
+    // for a talking-head moment that shows this film's scenes (runtime/layouts.js: the film runs in a hidden frame)
+    window.FILMAPI = { words: () => WORDS, cues: () => CUES, meta: () => FILM.meta(), man: () => FILM.man, render: (t) => renderFrame(t), canvas: cv };
+    window.setView = (o) => { if (o.aspect) setAspect(o.aspect); if (o.captions != null) SHOW.captions = !!o.captions; if ('clipStart' in o) CLIP_START = o.clipStart; };
+    if (q.has('t')) renderFrame(+q.get('t'));
+  } catch (e) { window.BUILD_ERROR = String(e && e.stack || e); console.error(e); }
+  window.READY = true;
+})();
+</script></body></html>

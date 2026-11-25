@@ -1,0 +1,3 @@
+{"music": "766", "musicAt": 40, "musicDb": -23, "sfxDb": -4,
+ "roles": {"swipe": "transition-tech-slide", "pop": "pop-dry", "pop2": "notify-bubble-pop", "tick": "ui-select-click", "cash": "coins-clinking", "marker": "marker-line",
+  "type": "typewriter-single-hit", "rise": "ui-modern-select", "error": "wrong-answer", "shutter": "shutter-click"}}

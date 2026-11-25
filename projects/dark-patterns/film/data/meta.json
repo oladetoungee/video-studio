@@ -1,0 +1,1363 @@
+{
+ "TOTAL": 451.017,
+ "INTRO": 0.4,
+ "OUTRO": 2,
+ "FPS": 30,
+ "CUES": [
+  {
+   "name": "pop",
+   "t": 0.05,
+   "db": -5
+  },
+  {
+   "name": "tick",
+   "t": 3.76,
+   "db": -6
+  },
+  {
+   "name": "typeHit",
+   "t": 5.1,
+   "db": -8
+  },
+  {
+   "name": "marker",
+   "t": 6.278,
+   "db": -5
+  },
+  {
+   "name": "swipe",
+   "t": 8.74,
+   "db": -6
+  },
+  {
+   "name": "typeHit",
+   "t": 10.105,
+   "db": -6
+  },
+  {
+   "name": "marker",
+   "t": 13.405,
+   "db": -6
+  },
+  {
+   "name": "swipe",
+   "t": 18.747,
+   "db": -5
+  },
+  {
+   "name": "typeHit",
+   "t": 24.897,
+   "db": -6
+  },
+  {
+   "name": "marker",
+   "t": 26.617,
+   "db": -6
+  },
+  {
+   "name": "paper",
+   "t": 28.687,
+   "db": -6
+  },
+  {
+   "name": "shutter",
+   "t": 33.407,
+   "db": -5
+  },
+  {
+   "name": "focus",
+   "t": 41.237,
+   "db": -4
+  },
+  {
+   "name": "swipe",
+   "t": 45.017,
+   "db": -6
+  },
+  {
+   "name": "shutter",
+   "t": 47.645,
+   "db": -5
+  },
+  {
+   "name": "pop",
+   "t": 53.435,
+   "db": -5
+  },
+  {
+   "name": "focus",
+   "t": 54.615,
+   "db": -4
+  },
+  {
+   "name": "swipe",
+   "t": 56.185,
+   "db": -5
+  },
+  {
+   "name": "swipe",
+   "t": 60.435,
+   "db": -6
+  },
+  {
+   "name": "shutter",
+   "t": 62.782,
+   "db": -4
+  },
+  {
+   "name": "typeHit",
+   "t": 64.855,
+   "db": -6
+  },
+  {
+   "name": "marker",
+   "t": 67.735,
+   "db": -6
+  },
+  {
+   "name": "marker",
+   "t": 69.155,
+   "db": -6
+  },
+  {
+   "name": "click",
+   "t": 79.535,
+   "db": -3
+  },
+  {
+   "name": "paper",
+   "t": 82.395,
+   "db": -5
+  },
+  {
+   "name": "paper",
+   "t": 83.895,
+   "db": -5
+  },
+  {
+   "name": "tick",
+   "t": 84.642,
+   "db": -5
+  },
+  {
+   "name": "paper",
+   "t": 90.067,
+   "db": -6
+  },
+  {
+   "name": "coin",
+   "t": 95.327,
+   "db": -7
+  },
+  {
+   "name": "pop",
+   "t": 99.487,
+   "db": -3
+  },
+  {
+   "name": "coin",
+   "t": 100.367,
+   "db": -7
+  },
+  {
+   "name": "marker",
+   "t": 101.367,
+   "db": -5
+  },
+  {
+   "name": "coin",
+   "t": 115.6,
+   "db": -6
+  },
+  {
+   "name": "marker",
+   "t": 119.547,
+   "db": -5
+  },
+  {
+   "name": "hit",
+   "t": 121.247,
+   "db": -6
+  },
+  {
+   "name": "shutter",
+   "t": 122.087,
+   "db": -4
+  },
+  {
+   "name": "typeHit",
+   "t": 126.867,
+   "db": -6
+  },
+  {
+   "name": "marker",
+   "t": 133.227,
+   "db": -6
+  },
+  {
+   "name": "pop",
+   "t": 135.197,
+   "db": -5
+  },
+  {
+   "name": "typeHit",
+   "t": 138.607,
+   "db": -6
+  },
+  {
+   "name": "tick",
+   "t": 143.067,
+   "db": -4
+  },
+  {
+   "name": "coin",
+   "t": 144.207,
+   "db": -3
+  },
+  {
+   "name": "paper",
+   "t": 148.477,
+   "db": -6
+  },
+  {
+   "name": "swipe",
+   "t": 156.927,
+   "db": -6
+  },
+  {
+   "name": "typeHit",
+   "t": 158.387,
+   "db": -6
+  },
+  {
+   "name": "marker",
+   "t": 161.347,
+   "db": -6
+  },
+  {
+   "name": "tick",
+   "t": 163.967,
+   "db": -5
+  },
+  {
+   "name": "typeHit",
+   "t": 172.607,
+   "db": -6
+  },
+  {
+   "name": "marker",
+   "t": 177.567,
+   "db": -6
+  },
+  {
+   "name": "typeHit",
+   "t": 178.917,
+   "db": -6
+  },
+  {
+   "name": "pop",
+   "t": 182.147,
+   "db": -6
+  },
+  {
+   "name": "focus",
+   "t": 183.734,
+   "db": -4
+  },
+  {
+   "name": "swipe",
+   "t": 187.507,
+   "db": -6
+  },
+  {
+   "name": "shutter",
+   "t": 188.917,
+   "db": -5
+  },
+  {
+   "name": "pop",
+   "t": 195.834,
+   "db": -4
+  },
+  {
+   "name": "notify",
+   "t": 198.687,
+   "db": -4
+  },
+  {
+   "name": "swipe",
+   "t": 211.987,
+   "db": -6
+  },
+  {
+   "name": "swipe",
+   "t": 213.377,
+   "db": -5
+  },
+  {
+   "name": "paper",
+   "t": 217.587,
+   "db": -6
+  },
+  {
+   "name": "tick",
+   "t": 222.267,
+   "db": -2
+  },
+  {
+   "name": "coin",
+   "t": 224.267,
+   "db": -7
+  },
+  {
+   "name": "marker",
+   "t": 225.727,
+   "db": -5
+  },
+  {
+   "name": "typeHit",
+   "t": 226.667,
+   "db": -6
+  },
+  {
+   "name": "marker",
+   "t": 230.787,
+   "db": -6
+  },
+  {
+   "name": "clock",
+   "t": 231.787,
+   "db": -6
+  },
+  {
+   "name": "click",
+   "t": 236.747,
+   "db": -3
+  },
+  {
+   "name": "shutter",
+   "t": 241.557,
+   "db": -5
+  },
+  {
+   "name": "swipe",
+   "t": 245.747,
+   "db": -6
+  },
+  {
+   "name": "pop",
+   "t": 258.535,
+   "db": -5
+  },
+  {
+   "name": "stamp",
+   "t": 260.73,
+   "db": -4
+  },
+  {
+   "name": "swipe",
+   "t": 266.77,
+   "db": -6
+  },
+  {
+   "name": "shutter",
+   "t": 272.17,
+   "db": -4
+  },
+  {
+   "name": "swipe",
+   "t": 276.68,
+   "db": -5
+  },
+  {
+   "name": "error",
+   "t": 285.97,
+   "db": -6
+  },
+  {
+   "name": "marker",
+   "t": 288.09,
+   "db": -6
+  },
+  {
+   "name": "typeHit",
+   "t": 294.89,
+   "db": -6
+  },
+  {
+   "name": "marker",
+   "t": 296.79,
+   "db": -6
+  },
+  {
+   "name": "typeHit",
+   "t": 301.55,
+   "db": -6
+  },
+  {
+   "name": "marker",
+   "t": 304.51,
+   "db": -6
+  },
+  {
+   "name": "marker",
+   "t": 305.35,
+   "db": -6
+  },
+  {
+   "name": "swipe",
+   "t": 312.41,
+   "db": -6
+  },
+  {
+   "name": "shutter",
+   "t": 313.46,
+   "db": -5
+  },
+  {
+   "name": "hit",
+   "t": 318.58,
+   "db": -5
+  },
+  {
+   "name": "shutter",
+   "t": 324.32,
+   "db": -5
+  },
+  {
+   "name": "hit",
+   "t": 327.98,
+   "db": -5
+  },
+  {
+   "name": "hit",
+   "t": 333.62,
+   "db": -5
+  },
+  {
+   "name": "shutter",
+   "t": 342.36,
+   "db": -5
+  },
+  {
+   "name": "focus",
+   "t": 344.77,
+   "db": -4
+  },
+  {
+   "name": "hit",
+   "t": 346.758,
+   "db": -5
+  },
+  {
+   "name": "shutter",
+   "t": 350.148,
+   "db": -4
+  },
+  {
+   "name": "typeHit",
+   "t": 358.98,
+   "db": -6
+  },
+  {
+   "name": "shutter",
+   "t": 366.655,
+   "db": -5
+  },
+  {
+   "name": "shutter",
+   "t": 377.195,
+   "db": -5
+  },
+  {
+   "name": "paper",
+   "t": 384.525,
+   "db": -6
+  },
+  {
+   "name": "shutter",
+   "t": 391.475,
+   "db": -5
+  },
+  {
+   "name": "shutter",
+   "t": 395.235,
+   "db": -5
+  },
+  {
+   "name": "glitch",
+   "t": 404.405,
+   "db": -10
+  },
+  {
+   "name": "shutter",
+   "t": 409.655,
+   "db": -5
+  },
+  {
+   "name": "typeHit",
+   "t": 418.665,
+   "db": -6
+  },
+  {
+   "name": "marker",
+   "t": 419.645,
+   "db": -6
+  },
+  {
+   "name": "paper",
+   "t": 421.995,
+   "db": -6
+  },
+  {
+   "name": "typeHit",
+   "t": 437.365,
+   "db": -6
+  },
+  {
+   "name": "marker",
+   "t": 438.645,
+   "db": -6
+  },
+  {
+   "name": "swipe",
+   "t": 446.115,
+   "db": -5
+  },
+  {
+   "name": "hit",
+   "t": 446.925,
+   "db": -5
+  }
+ ],
+ "SCENES": [
+  {
+   "n": 1,
+   "id": "open",
+   "start": 0,
+   "end": 8.52,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 2,
+   "id": "name",
+   "start": 8.52,
+   "end": 10.085,
+   "ground": "dpInk",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 3,
+   "id": "definition",
+   "start": 10.085,
+   "end": 18.597,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 4,
+   "id": "bad-vs-dark",
+   "start": 18.597,
+   "end": 21.737,
+   "ground": "dpPaper",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 5,
+   "id": "intentional",
+   "start": 21.737,
+   "end": 24.777,
+   "ground": "dpInk",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 6,
+   "id": "business",
+   "start": 24.777,
+   "end": 28.637,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 7,
+   "id": "eleven",
+   "start": 28.637,
+   "end": 33.357,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 8,
+   "id": "brignull",
+   "start": 33.357,
+   "end": 41.797,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 9,
+   "id": "link",
+   "start": 41.797,
+   "end": 44.897,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 10,
+   "id": "confirmshaming",
+   "start": 44.897,
+   "end": 47.595,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 11,
+   "id": "dd-confirm",
+   "start": 47.595,
+   "end": 53.635,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 12,
+   "id": "look-at-this",
+   "start": 53.635,
+   "end": 56.035,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 13,
+   "id": "confirm-ab",
+   "start": 56.035,
+   "end": 60.315,
+   "ground": "dpPaper",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 14,
+   "id": "hard-to-cancel",
+   "start": 60.315,
+   "end": 62.675,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 15,
+   "id": "roach",
+   "start": 62.675,
+   "end": 64.835,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 16,
+   "id": "easy-in",
+   "start": 64.835,
+   "end": 69.875,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 17,
+   "id": "relate",
+   "start": 69.875,
+   "end": 77.195,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 18,
+   "id": "page-after-page",
+   "start": 77.195,
+   "end": 84.915,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 19,
+   "id": "sneak",
+   "start": 84.915,
+   "end": 90.047,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 20,
+   "id": "cart",
+   "start": 90.047,
+   "end": 101.867,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 21,
+   "id": "hidden-costs",
+   "start": 101.867,
+   "end": 108.027,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 22,
+   "id": "happens",
+   "start": 108.027,
+   "end": 109.427,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 23,
+   "id": "ninety",
+   "start": 109.427,
+   "end": 114.687,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 24,
+   "id": "forty-fiftytwo",
+   "start": 114.687,
+   "end": 122.047,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 25,
+   "id": "card-details",
+   "start": 122.047,
+   "end": 126.747,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 26,
+   "id": "hidden-sub",
+   "start": 126.747,
+   "end": 135.147,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 27,
+   "id": "trial",
+   "start": 135.147,
+   "end": 145.227,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 28,
+   "id": "a-year",
+   "start": 145.227,
+   "end": 148.427,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 29,
+   "id": "five-down",
+   "start": 148.427,
+   "end": 152.127,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 30,
+   "id": "in-place",
+   "start": 152.127,
+   "end": 154.907,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 31,
+   "id": "not-bad-design",
+   "start": 154.907,
+   "end": 156.707,
+   "ground": "dpInk",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 32,
+   "id": "trick-wording",
+   "start": 156.707,
+   "end": 158.267,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 33,
+   "id": "opposite",
+   "start": 158.267,
+   "end": 162.967,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 34,
+   "id": "untick",
+   "start": 162.967,
+   "end": 172.487,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 35,
+   "id": "part-of-page",
+   "start": 172.487,
+   "end": 178.867,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 36,
+   "id": "search",
+   "start": 178.867,
+   "end": 187.387,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 37,
+   "id": "nagging",
+   "start": 187.387,
+   "end": 188.867,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 38,
+   "id": "dd-nagging",
+   "start": 188.867,
+   "end": 194.187,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 39,
+   "id": "notifications",
+   "start": 194.187,
+   "end": 202.147,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 40,
+   "id": "snapchat",
+   "start": 202.147,
+   "end": 205.207,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 41,
+   "id": "this-close",
+   "start": 205.207,
+   "end": 211.867,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 42,
+   "id": "pre-selection",
+   "start": 211.867,
+   "end": 213.327,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 43,
+   "id": "tick-vs",
+   "start": 213.327,
+   "end": 217.567,
+   "ground": "dpPaper",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 44,
+   "id": "gift-wrap",
+   "start": 217.567,
+   "end": 226.547,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 45,
+   "id": "deadline",
+   "start": 226.547,
+   "end": 231.687,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 46,
+   "id": "timer",
+   "start": 231.687,
+   "end": 241.507,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 47,
+   "id": "dd-urgency",
+   "start": 241.507,
+   "end": 245.627,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 48,
+   "id": "scarcity",
+   "start": 245.627,
+   "end": 248.467,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 49,
+   "id": "selling-out",
+   "start": 248.467,
+   "end": 256.965,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 50,
+   "id": "stock",
+   "start": 256.965,
+   "end": 263.53,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 51,
+   "id": "buy-now",
+   "start": 263.53,
+   "end": 266.55,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 52,
+   "id": "why",
+   "start": 266.55,
+   "end": 268.63,
+   "ground": "dpInk",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 53,
+   "id": "numbers",
+   "start": 268.63,
+   "end": 272.03,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 54,
+   "id": "teams",
+   "start": 272.03,
+   "end": 276.63,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 55,
+   "id": "ab-test",
+   "start": 276.63,
+   "end": 282.79,
+   "ground": "dpPaper",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 56,
+   "id": "number-you-pick",
+   "start": 282.79,
+   "end": 285.95,
+   "ground": "dpInk",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 57,
+   "id": "tricked",
+   "start": 285.95,
+   "end": 288.43,
+   "ground": "dpInk",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 58,
+   "id": "benefit",
+   "start": 288.43,
+   "end": 294.77,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 59,
+   "id": "better-worse",
+   "start": 294.77,
+   "end": 298.21,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 60,
+   "id": "end-up",
+   "start": 298.21,
+   "end": 301.53,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 61,
+   "id": "chasing",
+   "start": 301.53,
+   "end": 305.97,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 62,
+   "id": "own-goal",
+   "start": 305.97,
+   "end": 312.19,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 63,
+   "id": "how-common",
+   "start": 312.19,
+   "end": 313.41,
+   "ground": "dpInk",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 64,
+   "id": "ec-head",
+   "start": 313.41,
+   "end": 318.43,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 65,
+   "id": "one-forty-eight",
+   "start": 318.43,
+   "end": 324.37,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 66,
+   "id": "forty-two",
+   "start": 324.37,
+   "end": 327.83,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 67,
+   "id": "seventy",
+   "start": 327.83,
+   "end": 333.47,
+   "ground": "dpInk",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 68,
+   "id": "six-forty-two",
+   "start": 333.47,
+   "end": 342.41,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 69,
+   "id": "seventy-six",
+   "start": 342.41,
+   "end": 346.608,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 70,
+   "id": "sixty-seven",
+   "start": 346.608,
+   "end": 350.108,
+   "ground": "dpInk",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 71,
+   "id": "law",
+   "start": 350.108,
+   "end": 352.828,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 72,
+   "id": "even-laws",
+   "start": 352.828,
+   "end": 357.18,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 73,
+   "id": "not-a-lawyer",
+   "start": 357.18,
+   "end": 358.96,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 74,
+   "id": "ucpd",
+   "start": 358.96,
+   "end": 366.605,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 75,
+   "id": "limited-time",
+   "start": 366.605,
+   "end": 371.985,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 76,
+   "id": "where-you-live",
+   "start": 371.985,
+   "end": 377.145,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 77,
+   "id": "gdpr",
+   "start": 377.145,
+   "end": 384.505,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 78,
+   "id": "extra",
+   "start": 384.505,
+   "end": 391.425,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 79,
+   "id": "money-back",
+   "start": 391.425,
+   "end": 395.185,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 80,
+   "id": "amazon",
+   "start": 395.185,
+   "end": 404.285,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 81,
+   "id": "amazon-fix",
+   "start": 404.285,
+   "end": 409.605,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 82,
+   "id": "dfa",
+   "start": 409.605,
+   "end": 415.225,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 83,
+   "id": "more-directly",
+   "start": 415.225,
+   "end": 418.545,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 84,
+   "id": "not-yet",
+   "start": 418.545,
+   "end": 421.945,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 85,
+   "id": "keep-in-mind",
+   "start": 421.945,
+   "end": 427.185,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 86,
+   "id": "builders",
+   "start": 427.185,
+   "end": 431.765,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 87,
+   "id": "counter",
+   "start": 431.765,
+   "end": 437.245,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 88,
+   "id": "this-is-wrong",
+   "start": 437.245,
+   "end": 441.565,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 89,
+   "id": "sued",
+   "start": 441.565,
+   "end": 444.185,
+   "ground": "dpInk",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 90,
+   "id": "more-seriously",
+   "start": 444.185,
+   "end": 445.965,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 91,
+   "id": "honest",
+   "start": 445.965,
+   "end": 447.377,
+   "ground": "dpPaper",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 92,
+   "id": "better-place",
+   "start": 447.377,
+   "end": 451.017,
+   "ground": "dpPink",
+   "label": "",
+   "trans": "cut"
+  }
+ ]
+}

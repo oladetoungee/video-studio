@@ -1,0 +1,22 @@
+{
+  "direction": "A thick textbook (Illustration) with every jargon word struck through in orange marker, her look to camera; UX RESEARCH named, NO JARGON big in orange. Beginners fear the jargon; the video explains it from scratch. Follows viral sample 1 (big words) plus a prop.",
+  "concept": "T14",
+  "thumbnail_text": "UX RESEARCH, NO JARGON",
+  "title": "UX Research Explained Simply (No Jargon, Just Examples)",
+  "titles": [
+    "UX Research Explained Simply (No Jargon, Just Examples)",
+    "What Is UX Research? Explained With Real App Examples"
+  ],
+  "text": {
+    "l1": "UX RESEARCH,",
+    "l2": "NO JARGON",
+    "jargon": "<s>Triangulation</s><br><s>Heuristics</s><br><s>Ethnography</s><br><s>Synthesis</s>"
+  },
+  "images": {
+    "scene": "../../assets/scene/g/s_41.5.jpg",
+    "front": "../../assets/scene/g/mask/s_41.5.png"
+  },
+  "vars": {},
+  "scores": "a 5/7 · 4/6 · 4/6 | b 8/7 · 8/6 · 8/6 | c 5 · 5 · 5",
+  "recommended": false
+}

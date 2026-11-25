@@ -1,0 +1,19 @@
+1
+00:00:00,057 --> 00:00:01,737
+everyone has been patching and if you're
+
+2
+00:00:01,737 --> 00:00:03,537
+using Laravel, for example, your Laravel
+
+3
+00:00:03,537 --> 00:00:05,287
+version doesn't even protect you here
+
+4
+00:00:05,287 --> 00:00:07,507
+because the loophole is in PHP, which is
+
+5
+00:00:07,507 --> 00:00:08,600
+underneath Laravel

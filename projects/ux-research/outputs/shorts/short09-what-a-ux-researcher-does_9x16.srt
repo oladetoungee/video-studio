@@ -1,0 +1,55 @@
+1
+00:00:00,042 --> 00:00:01,759
+now, who is a UX researcher?
+
+2
+00:00:01,759 --> 00:00:03,819
+a UX researcher works closely with
+
+3
+00:00:03,819 --> 00:00:05,899
+designers, product managers, engineers, and
+
+4
+00:00:05,899 --> 00:00:07,410
+the people running the business
+
+5
+00:00:07,410 --> 00:00:10,340
+their job is to bring real users into
+
+6
+00:00:10,500 --> 00:00:11,609
+those conversations
+
+7
+00:00:11,860 --> 00:00:13,500
+a typical week for a UX researcher might
+
+8
+00:00:13,500 --> 00:00:15,160
+look like planning a study, recruiting
+
+9
+00:00:15,160 --> 00:00:17,500
+people to take part, running user interviews
+
+10
+00:00:17,500 --> 00:00:20,360
+or usability testing, then sitting down with
+
+11
+00:00:20,360 --> 00:00:23,029
+the notes or the recordings to find patterns
+
+12
+00:00:23,029 --> 00:00:24,945
+and finally, sharing what they found, which
+
+13
+00:00:24,945 --> 00:00:27,586
+with the team in a way that actually changes
+
+14
+00:00:27,586 --> 00:00:28,533
+what gets built

@@ -1,0 +1,16 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../lib/base.css"><style>
+/* Before / after: the same person, two states. Left half = before (paper), right half = after (blue). */
+.t{--ground:var(--paper);--fg:var(--ink);--accent:var(--orange)}
+.half{position:absolute;top:0;bottom:0;width:640px;overflow:hidden}
+.L{left:0;background:var(--ground)} .R{left:640px;background:var(--blue)}
+.half img.cut{position:absolute}
+.L img.cut{left:var(--lx,0px);top:var(--ly,150px);width:var(--lw,840px)}
+.R img.cut{left:var(--rx,-250px);top:var(--ry,150px);width:var(--rw,840px)}
+.hd{position:absolute;left:44px;top:40px;font-size:118px;white-space:nowrap;z-index:2}
+.L .hd{color:var(--fg)} .R .hd{color:var(--white)}
+.tag{position:absolute;left:48px;top:170px;z-index:2}
+.L .tag{color:rgba(17,17,20,.55)} .R .tag{color:rgba(255,255,255,.7)}
+</style></head><body><div class="t">
+<div class="half L"><img class="cut" data-img="left" alt=""><div class="hd disp" data-k="left" data-move="left"></div><div class="tag mono" data-k="leftTag"></div></div>
+<div class="half R"><div class="grid"></div><img class="cut" data-img="right" alt=""><div class="hd disp" data-k="right" data-move="right"></div><div class="tag mono" data-k="rightTag"></div></div>
+</div><script src="../../lib/bind.js"></script></body></html>

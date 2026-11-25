@@ -1,0 +1,21 @@
+{
+  "direction": "A shared frustration: a checkout buried under pop-up over pop-up (rate us, notifications, cookies; Illustration), and her knowing, unimpressed look with a hand at her temple. One accent: the word APP in her headband orange.",
+  "concept": "T16",
+  "thumbnail_text": "NOBODY TESTED THIS APP",
+  "title": "What Is UX Research? The Step Bad Apps Skip",
+  "titles": [
+    "What Is UX Research? The Step Bad Apps Skip",
+    "Why Beautiful Apps Can Be Awful to Use (UX Research)"
+  ],
+  "text": {
+    "l1": "NOBODY TESTED",
+    "l2": "THIS <span class=\"acc\">APP</span>"
+  },
+  "images": {
+    "scene": "../../assets/scene/g/s_686.5.jpg",
+    "front": "../../assets/scene/g/mask/s_686.5.png"
+  },
+  "vars": {},
+  "scores": "a 4/7 · 4/7 · 4/7 | b 7/8 · 7/7 · 8/8 | c 6 · 5 · 4",
+  "recommended": false
+}

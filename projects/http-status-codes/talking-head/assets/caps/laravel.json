@@ -1,0 +1,46 @@
+{
+ "title": "Error Handling | Laravel 12.x - The clean stack for Artisans and agents",
+ "h1": "Error Handling",
+ "h1y": 163.59375,
+ "found": {
+  "you risk exposing": [
+   [
+    839.234375,
+    946.546875,
+    55.96875,
+    20
+   ],
+   [
+    427.75,
+    975.34375,
+    67.140625,
+    20
+   ]
+  ]
+ },
+ "H": 16789,
+ "focus": {
+  "you risk exposing": {
+   "file": "laravel__you-risk-exposing.png",
+   "top": 426.546875,
+   "rects": [
+    [
+     839.234375,
+     520,
+     55.96875,
+     20
+    ],
+    [
+     427.75,
+     548.796875,
+     67.140625,
+     20
+    ]
+   ]
+  }
+ },
+ "clipTop": 43.59375,
+ "scale": 1.5,
+ "url": "https://laravel.com/docs/12.x/errors",
+ "captured": "2026-11-03T06:58:27.384Z"
+}

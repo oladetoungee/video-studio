@@ -1,0 +1,26 @@
+{
+ "direction": "Her shoot photo (looking straight at the viewer, hands together) in her room, calmed a little; she on the left. Right: the plain claim in big white condensed caps, a small line saying what for, and the Nigerian flag (drawn, three bands). Fact: Nigeria is eligible for Erasmus Mundus, the Swedish Institute scholarship (34 countries), DAAD EPOS, the NL Scholarship and Stipendium Hungaricum (kit 7f). Follows: board d-kind \"I'D FAIL SLAVERY\" (creator one side, claim the other).",
+ "thumbnail_text": "NIGERIAN STUDENTS + fully funded scholarships in Europe 2027 + flag",
+ "titles": [
+  "Fully Funded Scholarships in Europe for Africans (2027)",
+  "Erasmus Mundus, DAAD and More: Scholarships for 2027",
+  "Studying in Europe as a Nigerian: The Scholarships"
+ ],
+ "kind": "photo",
+ "class": "no-lift",
+ "text": {
+  "head": "Nigerian<br>students",
+  "sub": "fully funded<br>scholarships in<br>Europe 2027"
+ },
+ "images": {
+  "room": "../../assets/shoot/room-1609.jpg",
+  "me": "../../assets/shoot/room-1609-cut.png"
+ },
+ "vars": {
+  "--rw": "1855px",
+  "--rx": "-527px",
+  "--ry": "-164px",
+  "--dim": "rgba(8,8,10,.62)"
+ },
+ "title": "Fully Funded Scholarships in Europe for Africans (2027)"
+}

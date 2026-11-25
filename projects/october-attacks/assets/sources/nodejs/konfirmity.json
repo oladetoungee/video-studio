@@ -1,0 +1,53 @@
+{
+ "story": "nodejs",
+ "outlet": "Konfirmity",
+ "slug": "konfirmity",
+ "url": "https://www.konfirmity.com/advisories/nodejs-october-2026-security-releases",
+ "finalUrl": "https://www.konfirmity.com/advisories/nodejs-october-2026-security-releases",
+ "status": "loaded",
+ "http": 200,
+ "title": "Node.js October 2026 Security Release Advisory | Konfirmity",
+ "h1": "Node.js October 2026 Security Releases",
+ "published": "2026-10-21",
+ "files": {
+  "fold": "nodejs/konfirmity_fold.png",
+  "full": "nodejs/konfirmity_full.jpg",
+  "scroll": "nodejs/konfirmity_scroll.mp4"
+ },
+ "full": {
+  "width": 1440,
+  "height": 6000,
+  "pageHeight": 17300,
+  "zoom": 1,
+  "quotes": []
+ },
+ "scroll": {
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "seconds": 8,
+  "keyframes": [
+   {
+    "t": 0,
+    "y": 94
+   },
+   {
+    "t": 1,
+    "y": 94
+   },
+   {
+    "t": 2.55,
+    "y": 1494
+   },
+   {
+    "t": 8,
+    "y": 1494
+   }
+  ],
+  "zoom": 1,
+  "easing": "easeInOutCubic between keyframes, holds where y is equal",
+  "capped": false,
+  "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)",
+  "quotes": []
+ }
+}

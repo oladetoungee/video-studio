@@ -1,0 +1,352 @@
+1
+00:00:00,000 --> 00:00:03,600
+ A lot of things have been happening on the internet this month. October is supposed to
+
+2
+00:00:03,600 --> 00:00:09,040
+ be cybersecurity awareness month and it has ironically been one attack after the other.
+
+3
+00:00:09,040 --> 00:00:14,080
+ HP, which is the language meant most of the websites in the world, has had two critical
+
+4
+00:00:14,080 --> 00:00:19,040
+ security roles. Railway, which is also a popular platform among developers where we deploy
+
+5
+00:00:19,040 --> 00:00:23,040
+ Hapsun, has had to literally tell their users to change their secrets keys.
+
+6
+00:00:23,040 --> 00:00:27,920
+ There is also another platform, Zebra, that is literally shutting down after being hacked
+
+7
+00:00:27,920 --> 00:00:32,480
+ twice, like they're literally checking out. And there is news of another hacker that has
+
+8
+00:00:32,480 --> 00:00:38,720
+ used AI agents to break into more than a hundred companies. So it's been an overflow of attacks
+
+9
+00:00:38,720 --> 00:00:44,720
+ this month. I believe the PHP one is the biggest one so far. PHP runs nearly three quarters of the
+
+10
+00:00:44,720 --> 00:00:51,040
+ websites in the world. WordPress runs on PHP. Laravel runs on PHP. I write Laravel at work.
+
+11
+00:00:51,040 --> 00:00:57,440
+ Most of the web runs on PHP. And two critical loopholes have been found in PHP this month.
+
+12
+00:00:57,440 --> 00:01:02,400
+ They're calling it the PHP two shell. And the shell part of the name is actually very important.
+
+13
+00:01:02,400 --> 00:01:08,480
+ Getting a shell means that the attack is so bad that an attacker can type commands on your server
+
+14
+00:01:08,480 --> 00:01:15,520
+ as if they were on their own personal computer. PHP has rated this 9.2 out of 10. So it is really
+
+15
+00:01:15,520 --> 00:01:20,320
+ terrible. Now there are two bugs reported. The first one is about memory. So if PHP runs out
+
+16
+00:01:20,320 --> 00:01:26,400
+ of memory at a very specific moment while it's reading a request, it leaves some unfinished data
+
+17
+00:01:26,400 --> 00:01:32,560
+ behind, then it's cleanup code treats that broken data like it's real and an attacker can use it to
+
+18
+00:01:32,560 --> 00:01:38,160
+ run their own commands. The second bug is more about leftover information like leftover stuff
+
+19
+00:01:38,160 --> 00:01:43,280
+ on PHP workers from previous requests that it should have thrown away. Now these are not just
+
+20
+00:01:43,280 --> 00:01:49,280
+ random bugs. These are huge loopholes that people have already tried to exploit. The thing about PHP
+
+21
+00:01:49,280 --> 00:01:56,080
+ two shell and why it's really so crazy is that it happens before your code even runs. So PHP reads
+
+22
+00:01:56,560 --> 00:02:02,640
+ the incoming request first and this loop all is in that reading part. So your login, your middleware,
+
+23
+00:02:02,640 --> 00:02:07,200
+ your authentication, nobody stands a chance against this stuff. You can have the best
+
+24
+00:02:07,200 --> 00:02:11,280
+ login in the world and it wouldn't matter. Even Amazon has reported that someone tried to use
+
+25
+00:02:11,280 --> 00:02:16,240
+ it on one of their on-import servers, which is basically a trap server set up to catch attackers
+
+26
+00:02:16,240 --> 00:02:20,480
+ just for this before it was even announced. And there are government websites in Europe that
+
+27
+00:02:20,480 --> 00:02:25,760
+ literally went off while they patched because of all of this drama. So basically if you're running
+
+28
+00:02:25,760 --> 00:02:31,760
+ PHP anywhere, you have to update your PHP. If you're still on PHP 8.1 or older, you need to upgrade
+
+29
+00:02:31,760 --> 00:02:37,760
+ and updating the package is not even enough. You have to restart your patch and if you use Docker,
+
+30
+00:02:37,760 --> 00:02:41,440
+ you have to rebuild your images. Everyone has been patching and if you're using Laravel,
+
+31
+00:02:41,440 --> 00:02:46,160
+ for example, your Laravel version doesn't even protect you here because the loophole is in PHP,
+
+32
+00:02:46,160 --> 00:02:51,600
+ which is underneath Laravel and it's not even just PHP. Node.js also add its own security release
+
+33
+00:02:51,600 --> 00:02:56,240
+ on that same day. So if you run Node, you need to update to that too. Now why everyone was busy
+
+34
+00:02:56,240 --> 00:03:01,600
+ patching PHP? Railway happened on the same day. If you don't know what railway is, railway is a
+
+35
+00:03:01,600 --> 00:03:06,320
+ deployment platform where you can deploy your apps. So basically, railway says someone may have
+
+36
+00:03:06,320 --> 00:03:10,560
+ accessed their customers' encrypted environment variables and if you're a developer, you know
+
+37
+00:03:10,560 --> 00:03:14,960
+ how important it is to keep your environment variables safe. So railway post deployment for
+
+38
+00:03:14,960 --> 00:03:20,560
+ a while, this even affected me, and the ads asked their users to revoke and change their API keys
+
+39
+00:03:20,560 --> 00:03:25,760
+ and cloud keys. There's still no full details from railway on how the attack has gotten. They did say
+
+40
+00:03:25,760 --> 00:03:32,080
+ however, that it's part of a series of attacks on platforms like theirs with the goal of getting to
+
+41
+00:03:32,080 --> 00:03:37,440
+ AI companies. Now Zibor, the company that is shutting down because of attacks, is a very
+
+42
+00:03:37,440 --> 00:03:43,280
+ interesting one. This is also another platform that developers use to deploy apps and they are
+
+43
+00:03:43,280 --> 00:03:48,640
+ deciding to shut down completely. They got breached in August and on October 14th and 15th, they got
+
+44
+00:03:48,640 --> 00:03:56,320
+ breached again which leaked internal credentials. The second breach covered about 321,810 accounts
+
+45
+00:03:56,320 --> 00:04:01,920
+ and about 3.2 million environment variables records. So how did the attackers get in the
+
+46
+00:04:01,920 --> 00:04:06,800
+ second time after they got in the first time? According to Zibor, their admin token had no
+
+47
+00:04:06,800 --> 00:04:12,480
+ expiry date. So they had not changed this token since January 2024. So after the first attack,
+
+48
+00:04:12,480 --> 00:04:17,200
+ when they changed their keys, they didn't include that particular set of tokens. They didn't change
+
+49
+00:04:17,200 --> 00:04:23,840
+ those set and that kind of opened the gates again and the old platform now is deciding to shut down.
+
+50
+00:04:23,840 --> 00:04:27,920
+ They will pass services and just shut everything down by the end of December. This is crazy.
+
+51
+00:04:27,920 --> 00:04:34,080
+ The open code one is also very very interesting because people found out open code had been hacked
+
+52
+00:04:34,080 --> 00:04:39,920
+ from the abuse. Open code is an open source AI coding tool. It has an online platform called
+
+53
+00:04:39,920 --> 00:04:45,600
+ open code console where people store their AI API keys. Now open code said attackers broke into
+
+54
+00:04:45,600 --> 00:04:50,880
+ an older system and took those keys. So people started getting alerts from open AI and Tropic
+
+55
+00:04:50,880 --> 00:04:56,000
+ Google and some of these charges were in hundreds of dollars. A few of them were even over a thousand
+
+56
+00:04:56,000 --> 00:05:01,760
+ dollars for AI usage that users did not run. Like imagine getting alerts for things you didn't use.
+
+57
+00:05:01,760 --> 00:05:07,520
+ Open code calls it a distillation account. That is when someone asks an AI model loads of questions
+
+58
+00:05:07,520 --> 00:05:13,120
+ and just uses the answer to train their own model. So basically in simple words someone may have been
+
+59
+00:05:13,120 --> 00:05:18,080
+ building their own AI on other people's bill. Of course the AI companies have blocked the stolen
+
+60
+00:05:18,080 --> 00:05:23,120
+ keys and refunds are going out which is good. When you put the railways the borough and open
+
+61
+00:05:23,120 --> 00:05:27,280
+ codes incident side by side you realize they are kind of the same pattern. In these situations
+
+62
+00:05:27,280 --> 00:05:32,320
+ particularly the attackers went straight for the place where developers keep their secret keys.
+
+63
+00:05:32,320 --> 00:05:36,080
+ So if you use any of this platform you want to change any key you're not sure about. You want
+
+64
+00:05:36,080 --> 00:05:41,120
+ to give your keys an expiry date whenever or wherever the service allows it. You want to give
+
+65
+00:05:41,120 --> 00:05:46,400
+ each keys only the access it needs. So if a key only needs to read one storage bucket just give
+
+66
+00:05:46,400 --> 00:05:52,800
+ it access to that one storage bucket. Set spending limits, set alerts on all your AI and cloud
+
+67
+00:05:52,800 --> 00:05:58,960
+ accounts and honestly do not store keys in tools that don't need them. Now there's one more story
+
+68
+00:05:58,960 --> 00:06:05,280
+ from the October drama and this one actually sounds so made up. Emudra is one of the companies that
+
+69
+00:06:05,280 --> 00:06:11,600
+ your browsers need that your browsers trust to confirm that a website is who it really says it
+
+70
+00:06:11,600 --> 00:06:16,080
+ is. That is how important this company is. So it's like this little padlock that your browser
+
+71
+00:06:16,080 --> 00:06:23,840
+ depends on. Now it turns out that eight of the assignee keys were so weak. The keys were so weak
+
+72
+00:06:23,840 --> 00:06:30,320
+ that one of them literally was the number four. Just number four. That's how weak their keys were.
+
+73
+00:06:30,320 --> 00:06:36,960
+ Like just number four. So the scripts went wrong when the keys were made in April 2025 and it made
+
+74
+00:06:36,960 --> 00:06:42,560
+ a second set of weak keys. And with keys like this of course someone could affect the website
+
+75
+00:06:42,560 --> 00:06:47,760
+ and your browser will still have shown the padlock. So be honest in cases like this I don't think
+
+76
+00:06:47,760 --> 00:06:52,320
+ there is anything the average users can even do about these things but just to keep your stuff
+
+77
+00:06:52,320 --> 00:07:00,000
+ updated. And I think in the middle of all of this attack drama is where the role that AI plays on
+
+78
+00:07:00,000 --> 00:07:07,120
+ all sides. Reuters reported that one attacker used AI agents to break into more than a hundred company
+
+79
+00:07:07,120 --> 00:07:12,880
+ websites. These include sites belonging to shark, ninj, commies, all of those. So in this case what
+
+80
+00:07:12,880 --> 00:07:17,440
+ the attackers did was that it gave the agent short instructions and just let them run on for hours on
+
+81
+00:07:17,440 --> 00:07:24,240
+ their own. And the cost estimated to about $50 in AI tokens per successful hack. Like it's so crazy
+
+82
+00:07:24,240 --> 00:07:28,960
+ that we've gotten to the point where it's costing $50 to hack into a company. It's just been so
+
+83
+00:07:28,960 --> 00:07:35,440
+ interesting reading and seeing the news everywhere. What I find even interesting is how AI is
+
+84
+00:07:35,440 --> 00:07:41,520
+ literally on both sides. For example the PHP social loop rules were found with help from AI
+
+85
+00:07:41,520 --> 00:07:45,760
+ and here AI is also being used by the attackers. So the same tools that are helping the defenders
+
+86
+00:07:45,760 --> 00:07:51,520
+ find the box faster are also helping the attackers break in faster. So it's almost like this back and
+
+87
+00:07:51,520 --> 00:07:56,320
+ forth situation. I have people that are working in companies that have literally been stuck over
+
+88
+00:07:56,320 --> 00:07:59,440
+ dealing with attacks. It's been crazy, really crazy.
+

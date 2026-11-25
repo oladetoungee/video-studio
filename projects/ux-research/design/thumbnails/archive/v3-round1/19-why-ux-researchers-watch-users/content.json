@@ -1,0 +1,25 @@
+{
+  "direction": "Faceless, built to read at 320 px: what a user SAYS (a big speech bubble, 'I'd use this every day!') against what they DO (their phone: the app opened 0 times), and a big eye: that gap is why UX researchers watch. Off-black, one accent. References: yt tweet-card thumbnails ('Forget about going viral' 20, 'QUIT DATA NOW'), her database-indexes thumbnail (two things linked).",
+  "thumbnail_text": "Why UX researchers watch users",
+  "text": {
+    "hd": "Why UX researchers<br><span class=\"acc\">watch users</span>",
+    "say": "What they say",
+    "do": "What they do",
+    "said": "“I’d use this every day!”",
+    "n": "0 times",
+    "ns": "opened this week"
+  },
+  "images": {},
+  "vars": {
+    "--ground": "#111114",
+    "--accent": "#FFD84D"
+  },
+  "titles": [
+    "UX Research: Why Users Say One Thing and Do Another",
+    "UX Research for Beginners: Watch Users, Don't Just Ask",
+    "What Is UX Research? Explained From Scratch"
+  ],
+  "title": "UX Research: Why Users Say One Thing and Do Another",
+  "set": 3,
+  "kind": "other"
+}

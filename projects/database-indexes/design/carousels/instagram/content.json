@@ -1,0 +1,210 @@
+{
+  "_help": "Edit text here (or in the studio), then run: node shared/build.mjs <deck> (from design/carousels). Markup: *word* = accent colour, ==word== = yellow highlight, _word_ = serif italic, \\n = line break. In code lines: [[x]] = yellow (works / the query's path), {{x}} = red (slow / wrong). Grounds: ink (default), paper (light), accent (yellow).",
+  "deck": "instagram",
+  "docTitle": "Why your app gets slower as it grows",
+  "width": 1080,
+  "height": 1350,
+  "accent": "#FFC53D",
+  "slides": [
+    {
+      "layout": "hook",
+      "ground": "ink",
+      "title": "Why your app\ngets ==slower==\nas it grows",
+      "size": 96,
+      "sub": "Fast with 10 users, slow with 100,000. Often the fix is a *database index*.",
+      "subSize": 42,
+      "visual": "phones",
+      "phones": [
+        "10 users",
+        "100,000 users"
+      ],
+      "tag": ""
+    },
+    {
+      "layout": "visual",
+      "ground": "ink",
+      "title": "Your database\nreads *every* row",
+      "size": 100,
+      "lede": "Look up one order by email. With no index, the database checks all 1,000,000 rows.",
+      "visual": "scan",
+      "query": "SELECT * FROM orders\n  WHERE customer_email = 'bob@email.com';",
+      "more": "1,000,000 rows",
+      "tag": "",
+      "takeaway": "This is called a *full table scan*.",
+      "cols": [
+        "id",
+        "customer_email"
+      ],
+      "rows": [
+        [
+          "45",
+          "emeka@email.com"
+        ],
+        [
+          "46",
+          "ngozi@email.com"
+        ],
+        [
+          "47",
+          "tolu@email.com"
+        ],
+        [
+          "48",
+          "bob@email.com"
+        ],
+        [
+          "49",
+          "femi@email.com"
+        ]
+      ],
+      "hit": 3,
+      "takeSize": 40
+    },
+    {
+      "layout": "visual",
+      "ground": "paper",
+      "title": "An index works\nlike the one at\nthe back of a book",
+      "size": 86,
+      "lede": "A sorted list, each entry pointing to where its row lives.",
+      "visual": "book",
+      "bookHead": "Index",
+      "entries": [
+        [
+          "ada@email.com",
+          "43"
+        ],
+        [
+          "bob@email.com",
+          "48"
+        ],
+        [
+          "chidi@email.com",
+          "44"
+        ],
+        [
+          "emeka@email.com",
+          "45"
+        ]
+      ],
+      "hit": 1,
+      "row": "48 │ bob@email.com",
+      "tag": "",
+      "gap": 30
+    },
+    {
+      "layout": "visual",
+      "ground": "ink",
+      "title": "Finding Bob in\na million rows",
+      "size": 100,
+      "ledeW": 900,
+      "visual": "tree",
+      "steps": [],
+      "tag": "Simplified, after S. Egorenkov.",
+      "takeaway": "*3 hops* down the tree instead of 1,000,000 row checks.",
+      "gap": 20,
+      "takeSize": 40,
+      "takeTop": 40
+    },
+    {
+      "layout": "visual",
+      "ground": "ink",
+      "title": "Adding one is\n*one line*",
+      "size": 100,
+      "visual": "code",
+      "panels": [
+        {
+          "cap": "SQL",
+          "lines": [
+            "CREATE INDEX idx_orders_email",
+            "  ON orders (customer_email);"
+          ]
+        },
+        {
+          "cap": "Laravel migration",
+          "lines": [
+            "$table->index('customer_email');"
+          ]
+        }
+      ],
+      "takeaway": "Now the database checks the index first, then goes straight to Bob's order.",
+      "takeTop": 40,
+      "tag": "Live table? Add CONCURRENTLY (Postgres)."
+    },
+    {
+      "layout": "visual",
+      "ground": "ink",
+      "title": "Check it's\nactually used",
+      "size": 100,
+      "lede": "Put EXPLAIN in front of your query.",
+      "visual": "code",
+      "panels": [
+        {
+          "cap": "PostgreSQL, before (simplified)",
+          "kind": "bad",
+          "lines": [
+            "EXPLAIN SELECT * FROM orders",
+            "  WHERE customer_email = 'bob@…';",
+            "{{Seq Scan on orders}}"
+          ],
+          "verdict": "Reading every row."
+        },
+        {
+          "cap": "after CREATE INDEX",
+          "kind": "good",
+          "lines": [
+            "[[Index Scan using idx_orders_email]]"
+          ],
+          "verdict": "Using your index. (Bitmap Index Scan too.)"
+        }
+      ],
+      "tag": "Tiny tables may still show Seq Scan. MySQL: ALL = full scan; ref = index.",
+      "gap": 34
+    },
+    {
+      "layout": "list",
+      "ground": "ink",
+      "title": "Don't index\n*every* column",
+      "size": 100,
+      "rows": [
+        {
+          "n": "01",
+          "head": "Slower writes",
+          "sub": "Every insert updates every index. 1 row + 6 indexes = 7 writes."
+        },
+        {
+          "n": "02",
+          "head": "More storage",
+          "sub": "Each index is extra data on disk."
+        },
+        {
+          "n": "03",
+          "head": "Tiny tables don't need one",
+          "sub": "With about 10 rows, the database just scans."
+        }
+      ],
+      "foot": "Index the columns you *search, join or sort by*.",
+      "head": 60,
+      "sub": 40,
+      "pad": "34px 0 32px",
+      "footTop": 56
+    },
+    {
+      "layout": "end",
+      "ground": "ink",
+      "title": "Full video\non YouTube",
+      "size": 120,
+      "body": "Slow lookup? EXPLAIN it, index it, check again.",
+      "where": "WATCH",
+      "video": "Database Indexes: Why Your App Slows Down as It Grows",
+      "handle": "@WithGbemi",
+      "pushW": 560,
+      "polaroid": {
+        "img": "gbemi_22s.jpg",
+        "caption": ""
+      },
+      "ask": "Save this for your next slow query.",
+      "pushTop": 110,
+      "polY": 700
+    }
+  ]
+}

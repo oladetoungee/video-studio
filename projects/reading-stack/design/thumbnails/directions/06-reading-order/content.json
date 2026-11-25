@@ -1,0 +1,17 @@
+{
+  "direction": "The method as a numbered order (title, contents, memorise) + face holding the book",
+  "title": "Read Non-Fiction in This Order (So It Sticks)",
+  "text": {
+    "line1": "Title.",
+    "line2": "Contents.",
+    "line3": "Memorise."
+  },
+  "images": {
+    "person": "../../assets/cut/convivial_gaze.png"
+  },
+  "vars": {
+    "--x": "560px",
+    "--y": "14px",
+    "--w": "900px"
+  }
+}

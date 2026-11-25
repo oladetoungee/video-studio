@@ -1,0 +1,253 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Why your app gets slower as it grows</title>
+<link rel="stylesheet" href="../shared/base.css">
+<style>:root{--W:1080px;--H:1350px;--acc:#FFC53D;--accInk:#FFC53D;--onAInk:#111114;--onAccent:#111114;--onAcc:#111114;--onAccMid:rgba(17,17,20,.66);--onAccLine:rgba(17,17,20,.3);--onAccAcc:#111114;}
+.grid { position:absolute; inset:0; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='135' height='135'%3E%3Cpath d='M0 .5H135M.5 0V135' stroke='%23F1F4FF' stroke-opacity='.26' fill='none'/%3E%3C/svg%3E") -1px -1px; }
+.light-acc .grid { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='135' height='135'%3E%3Cpath d='M0 .5H135M.5 0V135' stroke='%23111114' stroke-opacity='.06' fill='none'/%3E%3C/svg%3E"); }
+</style></head><body>
+<section class="slide g-ink l-hook" id="s1">
+  
+  
+    <div class="grid"></div>
+    <div class="main">
+      <div class="disp fit" data-k="title" data-max="96" style="font-size:96px;">Why your app<br>gets <span class="hl">slower</span><br>as it grows</div>
+      <p class="body" data-k="sub" style="margin-top:34px;width:880px;font-size:42px;color:var(--fg)">Fast with 10 users, slow with 100,000. Often the fix is a <em class="acc">database index</em>.</p>
+      <div class="push"><div class="phs" data-move="phones"><div class="ph-w"><div class="phn"><div class="scr"><div class="app"><div class="hd">Orders</div><div class="it"><i></i><div><b></b><s></s></div></div><div class="it"><i></i><div><b></b><s></s></div></div><div class="it"><i></i><div><b></b><s></s></div></div><div class="it"><i></i><div><b></b><s></s></div></div><div class="it"><i></i><div><b></b><s></s></div></div></div></div></div>
+        <div class="mono" data-k="phones.0" data-plain style="font-size:34px;margin-top:22px;color:var(--fg)">10 users</div></div><div class="ph-w"><div class="phn"><div class="scr"><div class="app slow"><div class="hd">Loading…</div><div class="it"><i></i><div><b></b><s></s></div></div><div class="it"><i></i><div><b></b><s></s></div></div><div class="it"><i></i><div><b></b><s></s></div></div><div class="it"><i></i><div><b></b><s></s></div></div><div class="it"><i></i><div><b></b><s></s></div></div></div></div></div>
+        <div class="mono" data-k="phones.1" data-plain style="font-size:34px;margin-top:22px;color:var(--yellow)">100,000 users</div></div></div>
+      <style>
+        .phs { display: flex; gap: 70px; }
+        .ph-w { width: 360px; }
+        .phn { width: 360px; height: 440px; background: #000; border-radius: 46px; padding: 13px; border: 3px solid var(--line); }
+        .scr { position: relative; width: 100%; height: 100%; background: #FFFDF6; border-radius: 34px; overflow: hidden; color: #0E1013; }
+        .app { padding: 40px 20px 0; font-family: Plex; } .app .hd { font-weight: 700; font-size: 30px; margin-bottom: 12px; }
+        .it { display: flex; gap: 14px; align-items: center; padding: 12px 0; border-top: 2px solid #e6e2d8; }
+        .it i { width: 44px; height: 44px; border-radius: 10px; background: var(--yellow); }
+        .it b { display: block; width: 140px; height: 13px; background: #0E1013; border-radius: 6px; margin-bottom: 9px; }
+        .it s { display: block; width: 90px; height: 11px; background: #cfcabd; border-radius: 5px; }
+        .app.slow .hd { color: #9a958a; } .app.slow i, .app.slow b, .app.slow s { background: #e4e0d6; }
+        .spn { position: absolute; top: 120px; left: 50%; width: 120px; height: 120px; margin-left: -60px; }
+        .dbm { position: absolute; top: 270px; left: 50%; width: 80px; height: 100px; margin-left: -40px; }
+      </style></div>
+      
+    </div>
+  <div class="foot"><span class="num"><b>01</b> / 08</span><span class="meter"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></div>
+</section>
+<section class="slide g-ink l-visual" id="s2">
+  
+  
+    <div class="grid"></div>
+    <div class="main">
+      <div class="disp fit" data-k="title" data-max="100" style="font-size:100px;">Your database<br>reads <em class="acc">every</em> row</div>
+      <p class="body" data-k="lede" style="margin-top:24px;width:900px">Look up one order by email. With no index, the database checks all 1,000,000 rows.</p>
+      <div style="margin-top:44px"><div class="sc" data-move="diagram">
+        <div class="panel" style="padding:22px 30px"><div class="ln" style="font-size:32px" data-k="query" data-plain>SELECT * FROM orders
+  WHERE customer_email = 'bob@email.com';</div></div>
+        <div class="st"><i class="sl"></i><div class="sr hd"><span>id</span><span>customer_email</span></div><div class="sr"><span>45</span><span>emeka@email.com</span></div><div class="sr"><span>46</span><span>ngozi@email.com</span></div><div class="sr"><span>47</span><span>tolu@email.com</span></div><div class="sr hit"><span>48</span><span>bob@email.com</span></div><div class="sr"><span>49</span><span>femi@email.com</span></div><div class="sr more"><span>…</span><span data-k="more" data-plain>1,000,000 rows</span></div></div>
+        
+      </div>
+      <style>
+        .st { position: relative; margin: 22px 0 0 44px; font-family: "Plex Mono"; font-size: 34px; }
+        .sr { display: grid; grid-template-columns: 240px 1fr; padding: 4px 18px; border-bottom: 2px solid var(--line); }
+        .sr.hd { color: var(--mid); font-weight: 600; } .sr.hit { background: var(--yellow); color: #0E1013; font-weight: 600; }
+        .sr.more { color: var(--mid); border-bottom: none; }
+        .sl { position: absolute; left: -40px; top: 8px; bottom: 30px; width: 9px; background: #9AA0A8; border-radius: 5px; }
+        .sl::after { content: ''; position: absolute; bottom: -16px; left: -12px; border: 16px solid transparent; border-top: 22px solid #9AA0A8; }
+      </style></div>
+      <p class="push bal" data-k="takeaway" style="font-size:40px;line-height:1.2;font-weight:600;letter-spacing:-0.015em;color:var(--fg)">This is called a <em class="acc">full table scan</em>.</p>
+    </div>
+  <div class="foot"><span class="num"><b>02</b> / 08</span><span class="meter"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></div>
+</section>
+<section class="slide g-paper l-visual" id="s3">
+  
+  
+    <div class="grid"></div>
+    <div class="main">
+      <div class="disp fit" data-k="title" data-max="86" style="font-size:86px;">An index works<br>like the one at<br>the back of a book</div>
+      <p class="body" data-k="lede" style="margin-top:24px;width:900px">A sorted list, each entry pointing to where its row lives.</p>
+      <div style="margin-top:30px">
+      <div class="bk-w" data-move="diagram">
+        <div class="bk"><div class="bk-h" data-k="bookHead" data-plain>Index</div><div class="be"><span data-k="entries.0.0" data-plain>ada@email.com</span><span data-k="entries.0.1" data-plain>43</span></div><div class="be hit"><span data-k="entries.1.0" data-plain>bob@email.com</span><span data-k="entries.1.1" data-plain>48</span></div><div class="be"><span data-k="entries.2.0" data-plain>chidi@email.com</span><span data-k="entries.2.1" data-plain>44</span></div><div class="be"><span data-k="entries.3.0" data-plain>emeka@email.com</span><span data-k="entries.3.1" data-plain>45</span></div></div>
+        <svg class="bk-a" width="200" height="480" viewBox="0 0 200 480"><path d="M6 185 C 90 185, 120 330, 120 440" fill="none" stroke="var(--fg)" stroke-width="6" stroke-linecap="round"/><path d="M104 420 L120 446 136 420" fill="none" stroke="var(--fg)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div class="bk-r"><div class="panel" style="padding:18px 24px"><div class="ln" style="font-size:32px" data-k="row" data-plain>48 │ bob@email.com</div></div></div>
+      </div>
+      <style>
+        .bk-w { position: relative; height: 540px; }
+        .bk { position: absolute; left: 0; top: 0; width: 520px; background: #FBF6EA; color: #1b1b1b; padding: 30px 36px; transform: rotate(-2deg); font-family: "Instrument Serif"; font-style: italic; }
+        .bk-h { font-size: 62px; margin-bottom: 8px; }
+        .be { display: flex; justify-content: space-between; font-size: 40px; line-height: 1.42; border-bottom: 2px dotted #c9c2b2; }
+        .be.hit { background: var(--yellow); }
+        .bk-a { position: absolute; left: 520px; top: 0; }
+        .bk-r { position: absolute; left: 330px; top: 440px; width: 582px; }
+      </style></div>
+      
+    </div>
+  <div class="foot"><span class="num"><b>03</b> / 08</span><span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></div>
+</section>
+<section class="slide g-ink l-visual" id="s4">
+  
+  
+    <div class="grid"></div>
+    <div class="main">
+      <div class="disp fit" data-k="title" data-max="100" style="font-size:100px;">Finding Bob in<br>a million rows</div>
+      
+      <div style="margin-top:20px">
+      <div data-move="diagram"><svg viewBox="0 0 560 430" width="720"><g font-family="Plex Mono" font-size="30" fill="var(--fg)" stroke-width="3">
+<g stroke="var(--fg)" fill="none"><rect x="250" y="6" width="220" height="64"/><line x1="360" y1="6" x2="360" y2="70"/>
+<rect x="60" y="150" width="220" height="64"/><line x1="170" y1="150" x2="170" y2="214"/>
+<rect x="0" y="292" width="200" height="64"/><line x1="100" y1="292" x2="100" y2="356"/>
+<line x1="470" y1="70" x2="530" y2="150" stroke="var(--mid)" stroke-dasharray="7 9"/><line x1="280" y1="214" x2="330" y2="292" stroke="var(--mid)" stroke-dasharray="7 9"/></g>
+<g stroke="#FFC53D" stroke-width="7" fill="none"><line x1="255" y1="70" x2="170" y2="150"/><line x1="170" y1="214" x2="150" y2="292"/><line x1="150" y1="356" x2="150" y2="380"/></g>
+<rect x="100" y="292" width="100" height="64" fill="#FFC53D"/>
+<g stroke="none" font-size="26"><text x="305" y="48" text-anchor="middle">dave@</text><text x="415" y="48" text-anchor="middle">mia@</text>
+<text x="115" y="192" text-anchor="middle">ada@</text><text x="225" y="192" text-anchor="middle">chidi@</text>
+<text x="50" y="334" text-anchor="middle">ada@</text><text x="150" y="334" text-anchor="middle" fill="#0E1013" font-weight="600">bob@</text></g>
+<rect x="10" y="378" width="480" height="50" fill="none" stroke="#FFC53D" stroke-width="3"/>
+<text x="26" y="412" font-size="26">row 48 │ bob@email.com</text></g></svg></div>
+      <div class="steps" data-move="steps"></div>
+      <div class="mono" data-k="tag" data-plain style="font-size:33px;color:var(--sub);margin-top:18px;margin-bottom:22px">Simplified, after S. Egorenkov.</div>
+      <style>.steps { margin-top: 22px; } .stp { display: grid; grid-template-columns: 60px 400px 1fr; font-size: 34px; line-height: 1.4; }</style></div>
+      <p class="bal" data-k="takeaway" style="margin-top:40px;font-size:40px;line-height:1.2;font-weight:600;letter-spacing:-0.015em;color:var(--fg)"><em class="acc">3 hops</em> down the tree instead of 1,000,000 row checks.</p>
+    </div>
+  <div class="foot"><span class="num"><b>04</b> / 08</span><span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></div>
+</section>
+<section class="slide g-ink l-visual" id="s5">
+  
+  
+    <div class="grid"></div>
+    <div class="main">
+      <div class="disp fit" data-k="title" data-max="100" style="font-size:100px;">Adding one is<br><em class="acc">one line</em></div>
+      
+      <div style="margin-top:44px">
+      <div class="cps" data-move="panels">
+        <div class="panel" style="margin-bottom:26px">
+          <div class="cap" data-k="panels.0.cap" data-plain>SQL</div>
+          <div class="ln" data-k="panels.0.lines.0" data-plain>CREATE INDEX idx_orders_email</div><div class="ln" data-k="panels.0.lines.1" data-plain>  ON orders (customer_email);</div>
+          
+        </div>
+        <div class="panel" style="margin-bottom:26px">
+          <div class="cap" data-k="panels.1.cap" data-plain>Laravel migration</div>
+          <div class="ln" data-k="panels.1.lines.0" data-plain>$table-&gt;index('customer_email');</div>
+          
+        </div></div><div class="mono" data-k="tag" data-plain style="font-size:33px;color:var(--sub);margin-top:18px;margin-bottom:22px">Live table? Add CONCURRENTLY (Postgres).</div>
+      <style>.vd { font-family: Plex; font-weight: 600; font-size: 38px; line-height: 1.2; margin-top: 18px; letter-spacing: -0.01em; color: var(--pfg); }</style></div>
+      <p class="bal" data-k="takeaway" style="margin-top:40px;font-size:44px;line-height:1.2;font-weight:600;letter-spacing:-0.015em;color:var(--fg)">Now the database checks the index first, then goes straight to Bob's order.</p>
+    </div>
+  <div class="foot"><span class="num"><b>05</b> / 08</span><span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span></div>
+</section>
+<section class="slide g-ink l-visual" id="s6">
+  
+  
+    <div class="grid"></div>
+    <div class="main">
+      <div class="disp fit" data-k="title" data-max="100" style="font-size:100px;">Check it's<br>actually used</div>
+      <p class="body" data-k="lede" style="margin-top:24px;width:900px">Put EXPLAIN in front of your query.</p>
+      <div style="margin-top:34px">
+      <div class="cps" data-move="panels">
+        <div class="panel bad-b" style="margin-bottom:26px">
+          <div class="cap" data-k="panels.0.cap" data-plain>PostgreSQL, before (simplified)</div>
+          <div class="ln" data-k="panels.0.lines.0" data-plain>EXPLAIN SELECT * FROM orders</div><div class="ln" data-k="panels.0.lines.1" data-plain>  WHERE customer_email = 'bob@…';</div><div class="ln" data-k="panels.0.lines.2" data-plain><span class="bad">Seq Scan on orders</span></div>
+          <div class="vd" data-k="panels.0.verdict">Reading every row.</div>
+        </div>
+        <div class="panel good-b" style="margin-bottom:26px">
+          <div class="cap" data-k="panels.1.cap" data-plain>after CREATE INDEX</div>
+          <div class="ln" data-k="panels.1.lines.0" data-plain><span class="good">Index Scan using idx_orders_email</span></div>
+          <div class="vd" data-k="panels.1.verdict">Using your index. (Bitmap Index Scan too.)</div>
+        </div></div><div class="mono" data-k="tag" data-plain style="font-size:33px;color:var(--sub);margin-top:18px;margin-bottom:22px">Tiny tables may still show Seq Scan. MySQL: ALL = full scan; ref = index.</div>
+      <style>.vd { font-family: Plex; font-weight: 600; font-size: 38px; line-height: 1.2; margin-top: 18px; letter-spacing: -0.01em; color: var(--pfg); }</style></div>
+      
+    </div>
+  <div class="foot"><span class="num"><b>06</b> / 08</span><span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span></div>
+</section>
+<section class="slide g-ink l-list" id="s7">
+  
+  
+    <div class="grid"></div>
+    <div class="main">
+      <div class="disp fit" data-k="title" data-max="100" style="font-size:100px;">Don't index<br><em class="acc">every</em> column</div>
+      <div style="margin-top:50px"><div class="rows" data-move="rows" style="--numW:96px">
+  <div class="row" style="padding:34px 0 32px"><div class="n" data-k="rows.0.n" data-plain>01</div>
+    <div><div class="head fit" data-k="rows.0.head" data-max="60" style="font-size:60px;white-space:nowrap">Slower writes</div><div class="sub" data-k="rows.0.sub" style="font-size:40px">Every insert updates every index. 1 row + 6 indexes = 7 writes.</div></div></div>
+  <div class="row" style="padding:34px 0 32px"><div class="n" data-k="rows.1.n" data-plain>02</div>
+    <div><div class="head fit" data-k="rows.1.head" data-max="60" style="font-size:60px;white-space:nowrap">More storage</div><div class="sub" data-k="rows.1.sub" style="font-size:40px">Each index is extra data on disk.</div></div></div>
+  <div class="row" style="padding:34px 0 32px"><div class="n" data-k="rows.2.n" data-plain>03</div>
+    <div><div class="head fit" data-k="rows.2.head" data-max="60" style="font-size:60px;white-space:nowrap">Tiny tables don't need one</div><div class="sub" data-k="rows.2.sub" style="font-size:40px">With about 10 rows, the database just scans.</div></div></div></div></div>
+      <p class="bal" data-k="foot" style="margin-top:56px;font-size:42px;line-height:1.2;font-weight:600;color:var(--fg)">Index the columns you <em class="acc">search, join or sort by</em>.</p>
+    </div>
+  <div class="foot"><span class="num"><b>07</b> / 08</span><span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span></div>
+</section>
+<section class="slide g-ink l-end" id="s8">
+  
+  
+    <div class="grid"></div>
+    <div class="main">
+      <div class="disp fit" data-k="title" data-max="120" style="font-size:120px;">Full video<br>on YouTube</div>
+      <p class="body" data-k="body" style="color:var(--fg);margin-top:36px;width:900px;font-size:42px">Slow lookup? EXPLAIN it, index it, check again.</p>
+      <p class="bal" data-k="ask" style="margin-top:30px;width:900px;font-size:44px;line-height:1.15;font-weight:700;color:var(--a)">Save this for your next slow query.</p>
+      <div class="" data-move="push" style="width:560px;margin-top:110px">
+        <div class="mono" style="font-size:34px;color:var(--mid)" data-k="where" data-plain>WATCH</div>
+        <div class="bal" data-k="video" data-plain data-affix="“|”" style="font-weight:700;font-size:50px;line-height:1.08;letter-spacing:-0.03em;margin-top:16px">“Database Indexes: Why Your App Slows Down as It Grows”</div>
+        <div style="margin-top:34px"><span class="ph" data-k="handle" data-plain style="color:var(--a)">@WithGbemi</span></div>
+      </div>
+    </div>
+    <div class="pol" data-move="polaroid" style="left:700px;top:700px;width:290px;transform:rotate(4deg);z-index:1">
+    <img data-img="polaroid.img" src="../shared/assets/gbemi_22s.jpg" style="height:300px;object-position:50% 30%"><div class="cap" data-k="polaroid.caption" data-plain></div></div>
+  <div class="foot"><span class="num"><b>08</b> / 08</span><span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></div>
+</section>
+<script>
+// shrink display lines that would overflow their box (so edited text never runs off the slide)
+function fitAll(){ document.querySelectorAll('.fit').forEach(el=>{ let s=+el.dataset.max; el.style.fontSize=s+'px';
+  const box=el.parentElement.getBoundingClientRect().width; const lim=Math.min(el.clientWidth||box, box);
+  while((el.scrollWidth>lim+1) && s>24){ s-=2; el.style.fontSize=s+'px'; } }); }
+// studio editor views: ?view=slide&n=3 (one slide, no page chrome), ?view=strip (all slides in a row)
+(function(){ var q=new URLSearchParams(location.search), v=q.get('view'); if(!v) return; document.documentElement.classList.add('v-'+v);
+  if(v==='slide'){ var n=+q.get('n')||1; document.querySelectorAll('.slide').forEach(function(s,i){ if(i+1!==n) s.style.display='none'; }); } })();
+window.__checks = function checks(MONO_MIN) {
+  const res = [];
+  document.querySelectorAll('.slide').forEach((sl, i) => {
+    const R = sl.getBoundingClientRect(); const foot = sl.querySelector('.foot').getBoundingClientRect();
+    const tag = el => `<${el.tagName.toLowerCase()} ${el.className}> "${(el.textContent || '').trim().slice(0, 30)}"`;
+    sl.querySelectorAll('.main *').forEach(el => {
+      if (el.closest('.pol') || !el.childNodes.length) return;
+      const r = el.getBoundingClientRect(); if (!r.width) return;
+      if (r.bottom > foot.top - 24) res.push(`slide ${i + 1}: ${tag(el)} runs into the footer`);
+      if (r.right > R.right - 60 || r.left < R.left + 60) res.push(`slide ${i + 1}: ${tag(el)} outside the margins`);
+    });
+    // mono labels (Plex Mono) must be >= MONO_MIN px
+    sl.querySelectorAll('*').forEach(el => {
+      const cs = getComputedStyle(el);
+      if (!cs.fontFamily.includes('Plex Mono') || el.closest('.meter') || el.closest('svg')) return;
+      const own = [...el.childNodes].some(c => c.nodeType === 3 && c.textContent.trim());
+      if (own && parseFloat(cs.fontSize) < MONO_MIN - 0.5) res.push(`slide ${i + 1}: mono ${parseFloat(cs.fontSize)}px ${tag(el)}`);
+    });
+    // polaroids must keep >= 24 px clear of text (rotated box, so this is conservative)
+    sl.querySelectorAll('.pol').forEach(pe => {
+      const a = pe.getBoundingClientRect();
+      sl.querySelectorAll('.main .disp, .main p, .main .bal, .main .lab, .main .row, .main .toc, .main .cmp, .main .ph, .corner').forEach(el => {
+        if (el.closest('.pol')) return;
+        const b = el.getBoundingClientRect(); const g = 24;
+        if (a.left < b.right + g && a.right > b.left - g && a.top < b.bottom + g && a.bottom > b.top - g) {
+          // ignore if the text's actual glyph run ends before the polaroid (measure text width for block elements)
+          const rg = document.createRange(); rg.selectNodeContents(el); const rs = [...rg.getClientRects()];
+          if (rs.some(r => a.left < r.right + g && a.right > r.left - g && a.top < r.bottom + g && a.bottom > r.top - g))
+            res.push(`slide ${i + 1}: polaroid within 24 px of ${tag(el)}`);
+        }
+      });
+    });
+    sl.querySelectorAll('.pol .cap').forEach(el => { if (el.scrollWidth > el.clientWidth + 1) res.push(`slide ${i + 1}: polaroid caption clipped ${tag(el)}`); });
+    // single-word last lines in multi-line text blocks
+    sl.querySelectorAll('p, .body, .sub, .tnote, .bal, .cc span, .ts, .qr span, .disp').forEach(el => {
+      const words = []; const tw = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+      while (tw.nextNode()) { const t = tw.currentNode; const re = /\S+/g; let m;
+        while ((m = re.exec(t.textContent))) { const rg = document.createRange(); rg.setStart(t, m.index); rg.setEnd(t, m.index + m[0].length);
+          const rr = rg.getClientRects()[0]; if (rr) words.push({ w: m[0], top: Math.round(rr.top) }); } }
+      if (words.length < 3) return;
+      const lines = []; words.forEach(w => { const l = lines.find(l => Math.abs(l.top - w.top) < 8); if (l) l.n++; else lines.push({ top: w.top, n: 1, last: w.w }); });
+      lines.sort((a, b) => a.top - b.top);
+      const last = lines[lines.length - 1];
+      if (lines.length > 1 && last.n === 1 && !el.classList.contains('disp')) res.push(`slide ${i + 1}: one-word last line "${words[words.length - 1].w}" in ${tag(el)}`);
+    });
+  });
+  return res.slice(0, 60);
+};
+document.fonts.ready.then(()=>{ fitAll(); document.body.dataset.ready=1; });
+</script></body></html>

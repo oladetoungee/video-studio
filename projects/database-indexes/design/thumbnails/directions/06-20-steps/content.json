@@ -1,0 +1,21 @@
+{
+  "direction": "The film's Query Plan look (off-black, hairline grid, one yellow path): the index tree, pruned to the path that finds bob@email.com and his row, nodes 1.5x bigger than round 1; her real \"this small\" gesture on the right. \"About 20 steps\" is her own phrase (20 comparisons over 3-4 page reads; BRIEF). Round 3: the cut-out (chair fringe) replaced by the film's round corner cam with a yellow ring; \"~20 comparisons\" (a 3-level tree next to \"20 steps\" read as a contradiction).",
+  "concept": "T21",
+  "thumbnail_text": "1 row in a million, ~20 comparisons",
+  "title": "How Database Indexes Find 1 Row in a Million",
+  "titles": [
+    "How Database Indexes Find 1 Row in a Million",
+    "No Index? Your Database Reads Every Single Row",
+    "What Is a Database Index? (And Why Your App Needs One)"
+  ],
+  "text": {
+    "a": "1 row in a million.",
+    "b": "<span class=\"mark\">~20 comparisons.</span>"
+  },
+  "images": {
+    "scene": "../../assets/scene/f_22.7.jpg"
+  },
+  "frame": "0:22.7 (calm, in the corner cam)",
+  "vars": {},
+  "scores": "final gate (round 4): A topic/click 4/6 · B pair 7 · C taste 7"
+}

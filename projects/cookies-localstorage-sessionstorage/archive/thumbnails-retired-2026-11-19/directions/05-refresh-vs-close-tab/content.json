@@ -1,0 +1,36 @@
+{
+ "direction": "No face. sessionStorage as the headline. Left: \"refresh: still there\" over a whole phone with the checkout form filled in. Right: \"close tab: gone\" (gone on red) over the same phone with the form empty. Generic form, no shop.",
+ "thumbnail_text": "sessionStorage: refresh = still there / close tab = gone",
+ "kind": "flat",
+ "recommended": false,
+ "titles": [
+  "sessionStorage: Why Your Form Disappears When You Close the Tab",
+  "sessionStorage vs localStorage: What Survives a Closed Tab?",
+  "localStorage vs sessionStorage vs Cookies (What Goes Where)"
+ ],
+ "text": {
+  "top": "sessionStorage",
+  "k1": "refresh: <b>still there</b>",
+  "k2": "close tab: <b class=\"red\">gone</b>",
+  "h1": "Checkout",
+  "h2": "Checkout",
+  "v11": "Ada Okafor",
+  "v12": "Tartu mnt 12",
+  "v13": "Tallinn",
+  "v21": "&nbsp;",
+  "v22": "&nbsp;",
+  "v23": "&nbsp;",
+  "b1": "Pay now",
+  "b2": "Pay now"
+ },
+ "images": {},
+ "vars": {
+  "--ground": "#F7F7F5"
+ },
+ "board": "Thumbnails 69 (yt-16 \"12:30 PM / 7:30 PM\": two pictures side by side, a short label on top of each, the same thing at two moments)",
+ "fonts": "Font 49 (shorts-15: Inter Tight 800 black on a yellow highlight, on off-white, Formats 65)",
+ "colours": "Font 49 specimen: #111111 on highlight #FFE600, ground #F7F7F5 (the X in the same black); \"gone\" on the video's crash red #E5262A in white so it differs from \"kept\" (readability over the specimen pair)",
+ "title": "sessionStorage: Why Your Form Disappears When You Close the Tab",
+ "class": "no-lift",
+ "scores": "fresh cold critic round 6 (alone / with title): 6 / 7"
+}

@@ -1,0 +1,106 @@
+[00:00] So apparently, Boko Haram has been asking Chad GPT how to fight.
+[00:03] A 2026 Cambridge study found that two factions of Boko Haram, JAS and I-SWAP, set up actual AI units.
+[00:09] So small teams of 5 to 20 people using the same chatbots that you and I use,
+[00:13] like Chad GPT, Claude, Gemini and others, to work out how to fight the war better.
+[00:18] This is a group that's been running one of the deadliest insurgencies in the world,
+[00:21] a conflict that's killed 43,000 people and displaced more than 3.5 million people from their homes across the Lake Chad basin.
+[00:28] The study interviewed 27 former members of Boko Haram.
+[00:31] They said that AI use was extremely organized because both factions had set up dedicated units for it,
+[00:36] which were positioned in their strongholds and staffed with bomb makers, engineers and gun specialists who don't go to war.
+[00:42] And access was restricted by rank, so only the senior people were allowed near the computers.
+[00:47] Now, they did not work out how to use AI on their own, because according to the study,
+[00:51] Islamic State operatives from Libya, Iraq, Algeria, Mali, Niger, Somalia, Sudan and Afghanistan started training their monies from around 2023.
+[01:00] They flew in instructors, they ran sessions, and then that knowledge got passed down through the ranks.
+[01:05] And Boko Haram is just the group this study covered, but they are far from the only one like this,
+[01:09] because terrorism across Africa has been getting worse for years now.
+[01:13] Just above Nigeria, the Sahel region, which is Mali, Burkina Faso and Niger, has become the deadliest region for terrorism in the entire world.
+[01:20] Accounting for over half of all terrorism deaths globally, with groups like GNIM and Islamic State operating across it.
+[01:27] There is also Al-Shabaab, based in Somalia, and it's behind some of the worst attacks that Kenya has ever seen.
+[01:32] And Islamic State linked fighters are operating as far south as northern Mozambique.
+[01:36] While the study only interviewed former members of Boko Haram,
+[01:39] I don't think it's too crazy to think that these other terrorist groups would have access to the same AI as well.
+[01:44] Now, before anyone panics, the study does not show that AI has made Boko Haram more dangerous.
+[01:48] The documented use states' conventional meaning they were using it for things they already knew how to do,
+[01:53] not unlocking some new capability that they never had.
+[01:56] Also, there is no evidence behind it, there is no chart logs, no records from the AI companies themselves.
+[02:01] The research is built entirely on what the former members had to say.
+[02:04] The research also can tell us whether AI actually made them more effective,
+[02:08] or whether it just helped them do faster what they would have done anyway.
+[02:11] But I still think this matters, and there are two reasons why.
+[02:13] The first is about information, because Boko Haram has spent over a decade concentrated in the northeast of Nigeria,
+[02:19] and their knowledge of the country has always been limited to the ground that they physically control.
+[02:23] Now, suddenly they have a tool that would tell them almost anything about the rest of the country that exists online.
+[02:28] Every road, every system, every piece of infrastructure, every part of Nigeria that they've never set foot in.
+[02:33] So now they can just ask and get an unsigned second.
+[02:36] But I would say this first reason is still a half issue, because let's be honest,
+[02:40] how much of Nigeria is actually online for an AI tool to access?
+[02:43] Anyway, the second reason is that none of this was supposed to be possible in the first place.
+[02:46] Because these tools have safety guardrails, so they are built to refuse these kinds of requests,
+[02:51] but the study says that the guardrails did not stop them.
+[02:53] Now, at the time this interview took place, the models they were using were the ones from 2023 and 2024,
+[02:58] and we all know that AI has improved a lot since then,
+[03:01] so we don't know whether the newer safety measures are becoming an issue for them.
+[03:05] I would say they are probably still able to bypass it,
+[03:07] because we've seen recently that people are using AI to assist their suicide.
+[03:11] So you've got the weakness that isn't specific to one group,
+[03:13] sitting inside a technology that gets more powerful every year.
+[03:16] And while that's happening, the actual weapon side of AI is moving faster than most people realize.
+[03:21] Russia has already put an AI-guided drone that hunts for its own target onto the battlefield in Ukraine,
+[03:26] and both sides there are now openly racing towards attacks that run with no human in the loop at all.
+[03:31] Israel has used AI systems such as lavender and gospel to help choose targets in Gaza,
+[03:35] the irony of naming your autonomous killing machine gospel.
+[03:38] Isn't that crazy? Like, is it just me?
+[03:40] And back in 2021, a UN report suggested a Turkish-made drone in Libya
+[03:45] may have attacked fighters entirely on its own with nobody controlling it.
+[03:49] Now, a group like Boko Haram is not about to get its hands on Israeli AI weapons,
+[03:53] because that's state-level military kit.
+[03:55] And researchers at the Allantiran Institute have said that the truly autonomous weapons
+[03:59] are still out of reach for groups like these.
+[04:01] What is within reach is cheaper ordinary drones that anybody can buy and modify,
+[04:06] plus don't know how to do it.
+[04:07] So if these groups already have the information,
+[04:09] and their support is from the same Islamic State networks that trained them on AI in the first place,
+[04:14] how long before what state-level today becomes something they get handed,
+[04:17] or something they learn to build themselves?
+[04:19] And what makes that question urgent isn't only the technology,
+[04:22] it was actually paying attention to it here.
+[04:25] Because in 2024, the African Union did put out a continental AI strategy,
+[04:29] which is a shared plan for how the continent should approach all of this,
+[04:32] but the strategy is not the law.
+[04:34] And when you look at the regulations you can actually enforce,
+[04:37] most of the 55 countries in the African Union don't have any.
+[04:40] So the technology is racing ahead, the weakness is already being used,
+[04:43] and the people who would have to regulate it here, are mostly still writing the first draft.
+[04:48] And besides AI laws even, what is Nigeria doing about counter-terrorism?
+[04:52] Because we've already seen what happens when the threat is real, and the response is in there.
+[04:55] Boko Haram mostly operates from the Sanbisa forest, which is almost twice the size of Belgium,
+[05:00] and roughly 18 times the size of Lagos.
+[05:02] So in their defense, finding anyone in such a dense forest is hard enough on its own.
+[05:06] And while people have asked why their devices can't be tracked,
+[05:10] you should know that it's more than the terrain,
+[05:11] because when these groups make contact, they will often use their victims' phones,
+[05:15] or SIM cards registered in other people's names.
+[05:18] So even when they call Pink's office tower, the identity attached to it is in theirs.
+[05:22] And as one telecoms lawyer put it,
+[05:24] linking everything to NIN solves an identity problem, not a crime problem.
+[05:28] And you might be wondering why that phone number still can't be tracked, even if it is in theirs.
+[05:32] When they call Pink's office cell tower, that still doesn't tell you where they are,
+[05:35] because it doesn't work the way it does in movies.
+[05:37] A phone number on its own doesn't show where someone is standing,
+[05:40] and out in the countryside, one mask can cover dozens of kilometers,
+[05:44] so a Pink only points to a rough, enormous area.
+[05:47] And getting anything faster than that needs caught others,
+[05:50] as well as the telecom companies and the security agencies all moving together quickly,
+[05:54] which we know they rarely do.
+[05:55] But hard to find is not the same as impossible.
+[05:57] In 2025, the Nigerian army was budgeted around 20 billion for security equipment,
+[06:03] and only about 7% of it was ever released.
+[06:05] So the soldiers being sent to fight, one of the deadliest insurgencies in the world,
+[06:09] are doing it without the equipment and the ammunition that they need.
+[06:12] Since the start of 2025, Boko Haram and I-Swap have over around more than a dozen military bases across Borneo and Yobe.
+[06:18] Killing dozens of soldiers, including a colonel and a brigadier general, within a week of each other earlier this year.
+[06:24] Borneo's own governor, Babaganza Zulum, said that the state is losing ground,
+[06:28] that whole local governments are back under Boko Haram control.
+[06:31] So when people ask why these men can't be caught,
+[06:33] part of it is that they are genuinely hard to find,
+[06:36] but a bigger part of it is that the people meant to catch them whenever handed what they needed to do it in the first place.

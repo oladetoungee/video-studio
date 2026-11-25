@@ -1,0 +1,159 @@
+@font-face { font-family: 'DM Mono'; src: url('fonts/DMMono-Medium.ttf') format('truetype'); font-weight: 500 900; }
+@font-face { font-family: 'DM Mono'; src: url('fonts/DMMono-Regular.ttf') format('truetype'); font-weight: 100 400; }
+/* type set 03 Heavy + light (TYPE-SYSTEM.md, her pick 2026-11-07): Helvetica Neue Bold 700 -0.045em sentence case + Light 300 contrast, DM Mono 500 labels; hairlines only */
+/* should-you-learn-to-code carousels (2026-11-03): the film's look B "YOU ARE THE REVIEWER". Grounds: paper = cool grey #E9EBEE
+   (default), card = white, ink = #1B1F24, accent = amber #F2A900 (the punchline, used once). White review sheets with a 4 px ink
+   border, flat, square corners; diff green #1A7F37 on #DDF6E3, red #CF222E on #FFE4E1; amber = "you, the human" (the *word* box).
+   Onest 800 display (mixed case, tight), Onest body, Martian Mono code and labels (>= 32 px). Real screenshots untouched, credited. */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { background: #2a2a2e; }
+body { font-family:"Helvetica Neue", Helvetica, Arial, sans-serif; padding: 40px; display: flex; flex-direction: column; gap: 40px; align-items: flex-start; }
+html.v-slide body, html.v-strip body { padding: 0; gap: 0; }
+html.v-strip body { flex-direction: row; }
+@media print { body { padding: 0; gap: 0; } .slide { break-after: page; } }
+@page { margin: 0; }
+
+.slide { position: relative; width: var(--W); height: var(--H); overflow: hidden; background: var(--bg); color: var(--fg); flex: none; }
+.g-ink    { --bg: #1B1F24; --fg: #FFFFFF; --sub: rgba(255,255,255,.84); --mid: rgba(255,255,255,.62); --line: rgba(255,255,255,.22); }
+.g-card   { --bg: #FFFFFF; --fg: #1B1F24; --sub: rgba(27,31,36,.82); --mid: rgba(27,31,36,.6); --line: rgba(27,31,36,.18); }
+.g-paper  { --bg: #E9EBEE; --fg: #1B1F24; --sub: rgba(27,31,36,.82); --mid: rgba(27,31,36,.6); --line: rgba(27,31,36,.2); }
+.g-accent { --bg: var(--acc); --fg: #1B1F24; --sub: rgba(27,31,36,.85); --mid: rgba(27,31,36,.66); --line: rgba(27,31,36,.25); }
+
+.main { position: absolute; left: 80px; right: 80px; top: 96px; bottom: 150px; display: flex; flex-direction: column; }
+.push { margin-top: auto; }
+.disp { font-family:"Helvetica Neue", Helvetica, Arial, sans-serif; font-weight:700; line-height: 1.08; text-wrap: balance; letter-spacing: -0.045em; color: var(--fg); }
+/* *word* = the amber box (you, the human); on an amber slide it turns ink */
+.acc { background: var(--acc); color: #1B1F24; padding: 0 .08em; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+.g-accent .acc { background: #1B1F24; color: var(--acc); }
+s.del { text-decoration: line-through; text-decoration-thickness: .09em; text-decoration-color: #CF222E; }
+.body { font-size: 42px; line-height: 1.3; font-weight: 500; letter-spacing: -0.01em; color: var(--sub); text-wrap: pretty; }
+.bal { text-wrap: balance; }
+.nw { white-space: nowrap; }
+.mono { font-family:'DM Mono', monospace; font-weight: 600; font-size: 32px; letter-spacing: 0; }
+.lab { line-height: 1.2; }
+.chip { display: inline-flex; align-self: flex-start; align-items: center; padding: 10px 20px 12px; background: #1B1F24; color: #fff; }
+.g-ink .chip { background: #fff; color: #1B1F24; }
+.chip b { font-family:'DM Mono', monospace; font-weight: 700; font-size: 34px; line-height: 1; }
+
+.foot { position: absolute; left: 80px; right: 80px; bottom: 56px; display: flex; justify-content: space-between; align-items: center; font-family:'DM Mono', monospace; font-size: 32px; color: var(--mid); }
+.foot .num b { color: var(--fg); font-weight: 700; }
+.meter { display: flex; gap: 6px; }
+.meter i { width: 26px; height: 8px; background: var(--line); }
+.meter i.on { background: var(--fg); }
+
+/* the review sheet */
+.sheet { background: #fff; border:1px solid rgba(27,31,36,.18); color: #1B1F24; }
+.sheet .bar { display: flex; justify-content: space-between; gap: 20px; background: #1B1F24; color: #fff; font-family:'DM Mono', monospace; font-weight: 600; font-size: 32px; padding: 14px 24px; white-space: nowrap; }
+.sheet .bar .r { color: #AEB6BF; }
+.sheet .lines { padding: 14px 0 18px; }
+.ln { font-family:'DM Mono', monospace; font-weight: 600; font-size: 38px; line-height: 1.55; padding: 0 24px; white-space: nowrap; }
+.ln.add { background: #DDF6E3; color: #0F5A26; }
+.ln.del { background: #FFE4E1; color: #A3141E; }
+.ln.del .tx { text-decoration: line-through; text-decoration-thickness: 3px; }
+.ln.hl { background: var(--acc); }
+.ln .sg { display: inline-block; width: 1.1em; font-weight:700; }
+.status { display: flex; justify-content: space-between; gap: 20px; border-top:1px solid rgba(27,31,36,.18); padding: 16px 24px; font-family:'DM Mono', monospace; font-weight:700; font-size: 34px; white-space: nowrap; }
+.status .ok { color: #1A7F37; } .status .bad { color: #CF222E; }
+.note { position: relative; margin: 30px 0 0 auto; width: 640px; background: var(--acc); color: #1B1F24; border:1px solid rgba(27,31,36,.18); padding: 16px 22px 20px; transform: rotate(-2deg); }
+.note .who { font-family:'DM Mono', monospace; font-weight: 700; font-size: 32px; }
+.note .say { font-weight:700; font-size: 44px; line-height: 1.08; letter-spacing: -.02em; margin-top: 6px; }
+
+/* webhook: provider -> two identical messages -> your server, an order recorded twice */
+.hook { display: grid; grid-template-columns: 230px 1fr 260px; gap: 24px; align-items: center; }
+.hook .box { background: #fff; border:1px solid rgba(27,31,36,.18); font-weight:700; font-size: 38px; line-height: 1.05; padding: 24px 18px; text-align: center; letter-spacing: -.02em; }
+.hook .box.ink { background: #1B1F24; color: #fff; }
+.hook .msgs { display: flex; flex-direction: column; gap: 22px; }
+.hook .msg { background: #DDF6E3; border:1px solid rgba(27,31,36,.18); padding: 12px 16px; font-weight:700; font-size: 34px; letter-spacing: -.02em; line-height: 1.1; }
+.hook .msg .t { display: block; font-size: 32px; color: #0F5A26; margin-bottom: 4px; }
+.hook .msg.again { background: var(--acc); }
+.hook .msg.again .t { color: #1B1F24; }
+.hook .orders { margin-top: 18px; display: flex; flex-direction: column; gap: 10px; }
+.hook .ord { font-family:'DM Mono', monospace; font-weight: 700; font-size: 32px; background: #fff; border:1px solid rgba(27,31,36,.18); padding: 8px 12px; white-space: nowrap; }
+.hook .ord.dup { background: #FFE4E1; color: #A3141E; }
+
+/* pharmacy batches */
+.batches { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+.bt { background: #fff; border:1px solid rgba(27,31,36,.18); padding: 28px 30px 30px; position: relative; color: #1B1F24; }
+.bt .exp { font-weight:700; font-size: 64px; letter-spacing: -.03em; line-height: 1; margin-top: 14px; }
+.bt.first { background: #1B1F24; color: #fff; }
+.bt .sf { position: absolute; right: -14px; top: -26px; background: var(--acc); color: #1B1F24; border:1px solid rgba(27,31,36,.18); font-family:'DM Mono', monospace; font-weight:700; font-size: 32px; padding: 6px 14px; transform: rotate(4deg); }
+
+/* real screenshot, untouched, credited (optional verbatim quote typeset under it) */
+.shot { position: relative; background: #fff; padding: 22px; border:1px solid rgba(27,31,36,.18); }
+.shot img { display: block; width: 100%; }
+.shot .qt { font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;font-weight:300;font-style:normal; font-size: 54px; line-height: 1.08; margin-top: 20px; color: #1B1F24; }
+.shot .qt .acc { background: var(--acc); color: #1B1F24; }
+.shot .cr { position: absolute; left: 0; top: 100%; margin-top: 16px; font-family:'DM Mono', monospace; font-weight: 600; font-size: 32px; color: var(--mid); white-space: nowrap; }
+.pic { position: relative; }
+.pic img { display: block; width: 100%; height: 330px; object-fit: cover; border:1px solid rgba(27,31,36,.18); }
+.pic .cr { font-family:'DM Mono', monospace; font-weight: 600; font-size: 32px; color: var(--mid); margin-top: 12px; }
+
+.big { font-family:"Helvetica Neue", Helvetica, Arial, sans-serif; font-weight:700; font-size: 320px; line-height: .8; letter-spacing: -.06em; background: var(--acc); color: #1B1F24; padding: 26px 26px 10px; align-self: flex-start; }
+
+/* rows (numbered list) */
+.rows .row { display: grid; grid-template-columns: 110px 1fr; align-items: baseline; border-top:1px solid rgba(27,31,36,.18); padding: 24px 0 22px; }
+.rows .row:last-child { border-bottom:1px solid rgba(27,31,36,.18); }
+.rows .n { font-family:'DM Mono', monospace; font-size: 34px; color: var(--fg); font-weight: 700; }
+.rows .head { font-size: 46px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.16; color: var(--fg); }
+
+/* end: her photo as a polaroid */
+.pol { position: absolute; background: #FFFFFF; padding: 14px 14px 0; border:1px solid rgba(27,31,36,.18); }
+.pol img { display: block; width: 100%; object-fit: cover; }
+.pol .cap { font-family:'DM Mono', monospace; font-weight: 600; font-size: 32px; color: #1B1F24; padding: 12px 4px 14px; white-space: nowrap; overflow: hidden; }
+.handle { display: inline-block; font-family:"Helvetica Neue", Helvetica, Arial, sans-serif; font-weight:700; letter-spacing: -.03em; font-size: 76px; line-height: 1; background: #1B1F24; color: var(--acc); padding: 12px 22px 16px; }
+.g-ink .handle { background: var(--acc); color: #1B1F24; }
+/* bigger diagram sizes (after the first look at the deck) */
+.l-statement .ln { font-size: 48px; }
+.hook { grid-template-columns: 250px 1fr 290px; gap: 26px; }
+.hook .box { font-size: 44px; padding: 30px 18px; }
+.hook .msg { font-size: 42px; padding: 16px 18px; }
+.hook .ord { font-size: 34px; }
+.bt .exp { font-size: 66px; white-space: nowrap; }
+.bt { padding: 40px 34px 44px; }
+
+/* bars: share of entry-level postings */
+.bars { display: flex; flex-direction: column; gap: 34px; }
+.br .lb { font-weight: 700; font-size: 40px; letter-spacing: -.02em; color: var(--fg); }
+.br .track { position: relative; height: 96px; margin-top: 12px; background: #fff; border:1px solid rgba(27,31,36,.18); }
+.br .fill { position: absolute; left: 0; top: 0; bottom: 0; background: #59636E; }
+.br.hi .fill { background: var(--acc); border-right:1px solid rgba(27,31,36,.18); }
+.br .v { position: absolute; right: 22px; top: 50%; transform: translateY(-50%); font-family:"Helvetica Neue", Helvetica, Arial, sans-serif; font-weight:700; font-size: 60px; letter-spacing: -.03em; color: #fff; mix-blend-mode: normal; }
+.br.hi .v { left: 50px; right: auto; color: #1B1F24; }
+.src { margin-top: 26px; color: var(--mid); }
+.br .v { left: 24px; right: auto; }
+.br.hi .v { left: calc(4.5% + 24px); }
+
+/* round 3 (fresh critic): before/after, webhook arrows + duplicate tag, list descriptions, quote line gap */
+.ba { display: flex; flex-direction: column; align-items: stretch; }
+.ba .bx { border:1px solid rgba(27,31,36,.18); background: #fff; padding: 22px 28px 26px; color: #1B1F24; }
+.ba .bx.bad { background: #FFE4E1; } .ba .bx.ok { background: #DDF6E3; }
+.ba .bx .mono { color: rgba(27,31,36,.7); }
+.ba .bx .say { font-weight:700; font-size: 50px; letter-spacing: -.025em; line-height: 1.08; margin-top: 8px; }
+.ba .arr { font-family:"Helvetica Neue", Helvetica, Arial, sans-serif; font-weight:700; font-size: 64px; line-height: 1; text-align: center; padding: 8px 0; color: var(--fg); }
+.hook .msg { position: relative; }
+.hook .msg::before { content: "→"; position: absolute; left: -30px; top: 50%; transform: translateY(-50%); font-weight:700; font-size: 36px; color: var(--fg); }
+.hook .msg::after { content: "→"; position: absolute; right: -32px; top: 50%; transform: translateY(-50%); font-weight:700; font-size: 36px; color: var(--fg); }
+.duptag { margin-top: 10px; display: inline-block; background: #CF222E; color: #fff; font-family:'DM Mono', monospace; font-weight:700; font-size: 32px; padding: 6px 12px; }
+.rows .rd { font-size: 34px; font-weight: 500; color: var(--sub); margin-top: 6px; letter-spacing: -.01em; }
+.shot .qt { line-height: 1.22; }
+.shot .qt .acc { padding: 0 .06em; }
+.note .who { font-size: 36px; }
+.l-skill .pic img { height: 200px; }
+.hook .msg::before, .hook .msg::after { font-size: 44px; }
+.l-statement .shot .qt { font-size: 64px; }
+.l-end .body { font-size: 52px; font-weight: 700; color: var(--fg); }
+.l-skill .shot .qt { font-size: 48px; }
+.l-skill .bars { gap: 22px; }
+.l-skill .br .track { height: 84px; }
+.l-skill .shot { margin-bottom: 90px !important; }
+.l-skill .br .track { height: 72px; }
+.l-skill .br .v { font-size: 52px; }
+.l-skill .bars { gap: 14px; }
+.l-skill .br .lb { font-size: 36px; }
+
+.disp .lt, .lt { font-weight: 300; }
+.mono { letter-spacing: .12em; font-weight: 500; }
+
+/* set 03 (2026-11-07): labels are plain DM Mono caps, no filled tags */
+.chip b { background: none !important; color: var(--mid) !important; padding: 0 !important; text-transform: uppercase; letter-spacing: .12em; font-weight: 500; }
+.chip { background: none !important; border: 0 !important; }

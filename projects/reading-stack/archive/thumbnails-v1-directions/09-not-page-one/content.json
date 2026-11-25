@@ -1,0 +1,17 @@
+{
+  "direction": "Counter-intuitive instruction + calm eye contact",
+  "title": "The Reading Method That Finally Made Books Stick",
+  "text": {
+    "line1": "Don’t",
+    "line2": "start on",
+    "line3": "page 1."
+  },
+  "images": {
+    "person": "../../assets/cut/neutral.png"
+  },
+  "vars": {
+    "--x": "420px",
+    "--y": "20px",
+    "--w": "1100px"
+  }
+}

@@ -1,0 +1,4965 @@
+URL: https://news.ycombinator.com/item?id=50166579
+STATUS: loaded (http 200)
+FINAL: https://news.ycombinator.com/item?id=50166579
+TITLE: eMudhra intermediate CA compromise | Hacker News
+H1: 
+OG:  | 
+PUBLISHED:   MODIFIED: 
+DOC_H: 51960
+
+	Hacker Newsnew | past | comments | ask | show | jobs | submit	login
+
+	
+	eMudhra intermediate CA compromise (we-have-a-problem.com)
+	1281 points by galadran 5 days ago | hide | past | favorite | 504 comments
+	
+https://blog.mozilla.org/security/2026/10/20/protecting-fire...
+
+https://bugzilla.mozilla.org/show_bug.cgi?id=2083449
+
+	
+ help
+
+	
+	
+eqvinox 5 days ago | next [–]
+
+Since I haven't seen this mentioned enough yet:
+
+The private key for all 8 "compromised" CAs is a single byte: https://mastodon.catgirl.cloud/@49016/117474217042191790
+
+One of the private keys is literally "4".
+
+I'm putting "compromised" in quotes here, because I can't call it that without cringing and cursing.
+
+[cf. also: https://news.ycombinator.com/item?id=50169109]
+
+reply
+
+	
+	
+neya 4 days ago | parent | next [–]
+
+These clowns were responsible for getting a key as part of the process of getting an import/export license in India. It used to be a requirement to get a USB hardware key from them. India doesn't have any stringent data protection laws, so nothing will happen to them, even. None of their customers will actually even get to know about this incident unless they hear about it from elsewhere as most of the times, Indian companies never communicate such breaches to their customers (Eg. Domino's Pizza India had a massive breach and they never even sent as much as an email). It's really a sad state for privacy.
+
+reply
+
+	
+	
+pluralmonad 4 days ago | root | parent | next [–]
+
+Privacy would mean dominoes not having your private data. Them having it and using it for marketing, and resale purposes, etc is not private.
+
+reply
+
+	
+	
+neya 3 days ago | root | parent | next [–]
+
+True. From the breach, it was discovered, they had lat long coordinates of each customer. Along with their credit cards and order values. So, in theory, if you were a hacker, you could target people by their financial situation, family size and the locality they lived in. Their shitty CEO/CTO didn't as much as even disclose to the affected customers. Some of them only found out after their card was charged for unauthorized amounts.
+
+reply
+
+	
+	
+ROllerozxa 5 days ago | parent | prev | next [–]
+
+Is this real? This seems so ridiculous it makes me wonder for how long this CA has been in circulation in systems and if it has been exploited by someone previously discovering it in that time (state level actor or not). My old phone running Android 6 does not have any certificate from EMudhra, at the very least.
+
+reply
+
+	
+	
+hbcdbff 5 days ago | root | parent | next [–]
+
+Almost certainly noticed and quietly exploited by a state actor
+
+reply
+
+	
+	
+woodruffw 5 days ago | root | parent | next [–]
+
+The Web PKI uses certificate transparency, so we’ll have a definitive answer about whether this is/was exploited soon.
+
+(But in any case, CT ensures that it can’t be “quiet.”)
+
+reply
+
+	
+	
+agwa 5 days ago | root | parent | next [–]
+
+There were no certificates from the compromised intermediates logged to CT prior to remediation by the browsers.
+
+reply
+
+	
+	
+Gigachad 4 days ago | root | parent | next [–]
+
+Which is good because certificates not in CT logs are treated as invalid/untrusted.
+
+reply
+
+	
+	
+tgsovlerkhgsel 4 days ago | root | parent | next [–]
+
+But only by browsers. curl, autoupdaters etc. would still all accept them.
+
+reply
+
+	
+	
+hbcdbff 5 days ago | root | parent | prev | next [–]
+
+CT is great for browsers. Largely irrelevant for anything being fetched outside of a browser.
+
+reply
+
+	
+	
+woodruffw 5 days ago | root | parent | next [–]
+
+That’s why I’m talking about it purely in the context of incident response/forensics.
+
+reply
+
+	
+	
+hbcdbff 5 days ago | root | parent | next [–]
+
+You claimed CT would “definitive”ly prove whether it has or has not been exploited, which is false.
+
+The lack of CT entries only proves that (most likely) browsers were not MITM’d.
+
+reply
+
+	
+	
+cortesoft 5 days ago | root | parent | next [–]
+
+We would still know if certs were issued, though, which is the thing we want to check
+
+reply
+
+	
+	
+tsimionescu 5 days ago | root | parent | next [–]
+
+How would you know it? If the CA was compromised, why would the attacker publish the fake certificates in CT?
+
+Basically no one outside the major browsers verifies CT logs, so you can still attack a lot of people even without publishing.
+
+reply
+
+	
+	
+bigbuppo 5 days ago | root | parent | next [–]
+
+The baddies also take a look at the CT logs and look for fresh wordpress instances that haven't yet been configured and will helpfully configure them for you within a few minutes.
+
+reply
+
+	
+	
+zenexer 4 days ago | root | parent | prev | next [–]
+
+We wouldn’t.
+
+CAs publish to CT logs. If an attacker has the private key, nothing stops them from signing certs without the involvement of the CA or CT logs.
+
+reply
+
+	
+	
+Left5250 4 days ago | root | parent | next [–]
+
+Nothing stops them from doing so, but major browsers and possibly other programs won't trust such certificates. https://en.wikipedia.org/wiki/Certificate_Transparency#Manda...
+
+reply
+
+	
+	
+thayne 4 days ago | root | parent | next [–]
+
+Yes but a lot of non-browser software doesn't check CT logs, so if an attacker were to target such software they could use an unlogged cert and no one would notice.
+
+reply
+
+	
+	
+gnabgib 4 days ago | root | parent | next [–]
+
+This is why there are OS trust stores. Electron - if you use the system CA [0] and cURL[1] apps use it, which are you talking about?
+
+[0]: https://github.com/electron/electron/issues/45674
+
+[1]: https://curl.se/docs/sslcerts.html
+
+reply
+
+	
+	
+lmz 4 days ago | root | parent | next [–]
+
+The CT log is a property of the individual leaf certificate not a property of the issuing chain. You could have the same CA in the trust store issue an unlogged certificate and non browsers would trust it.
+
+reply
+
+	
+	
+gnabgib 4 days ago | root | parent | next [–]
+
+A CT log isn't super relevant (it's not the CRL, it's just a log), but it's maintained/delivered by the CA not the leaf. Never the leaf.
+
+If you mean CRL/Revocation list, everything but the root [you can't revoke a root] is maintained by the tier above. Leaf -> intermediate (these), [Intermediate -> Intermediate*], Intermediate -> Root.
+
+Not sure why you're mentioning transparency logs, they have nothing to do with this (nor help).
+
+reply
+
+	
+	
+lmz 4 days ago | root | parent | next [–]
+
+Because the thread: "a lot of non-browser software doesn't check CT logs", you replied saying it's a reason to use the OS trust store, not sure how that fixes things? Maybe it would relieve them of the responsibility of pushing out a distrust update?
+
+reply
+
+	
+	
+gnabgib 4 days ago | root | parent | next [–]
+
+That's not what woodruff is talking about (I hope). The CT logs allow us to (later) find who/why it happened. CT Logs in no way help you stop something. (Depends a bit on how software reacts to apparently invalid issuance - but since these have the real keys the issuance will look normal).
+
+Revocation lists allow you to stop/block bad issues. Both are maintained/decided (you could post to another service) by the issuer, not the leaf. CRL records would stop this (but some software has decided that's too slow). In general software uses the OS trust-store first (fragmented on Linux). Firefox and Java have their own independent paths. Chrome ignores CRLs
+
+reply
+
+	
+	
+thayne 4 days ago | root | parent | next [–]
+
+CT logs only tell you something happened if the certificate was registered in the log. But if you are attacking software that doesn't check if the cert was registered, then you don't need to register the cert, and there won't be anything in the log.
+
+My point is you can forge a cert, without putting it in the log, and a lot of software will still be vulnerable to it.
+
+reply
+
+	
+	
+thayne 4 days ago | root | parent | prev | next [–]
+
+Curl does not check that certificates have a valid SCT attached. Thus it will accept a certificate that isn't in the CT logs. That's mostly independent of the OS trust stores.
+
+reply
+
+	
+	
+hbcdbff 5 days ago | root | parent | prev | next [–]
+
+No we wouldn’t.
+
+reply
+
+	
+	
+tptacek 5 days ago | root | parent | prev | next [–]
+
+I'm not following. Browser or no browser, every cert eMudhra issues has to generate an SCT.
+
+reply
+
+	
+	
+michaelt 4 days ago | root | parent | next [–]
+
+Every cert an attacker issues with eMudhra's private key has to appear in the CT logs if they want it to validate in a modern browser.
+
+But if you only want to MITM the connection used by 'pip' to install python wheels - that doesn't check for CT records at all.
+
+reply
+
+	
+	
+zaptheimpaler 4 days ago | root | parent | next [–]
+
+Seems like we need to upgrade all software to start using CT records then?
+
+reply
+
+	
+	
+eqvinox 5 days ago | root | parent | prev | next [–]
+
+Sure, but a client that doesn't do CT wouldn't care if they don't include a SCT promise. [ed.: this said "break the SCT promise", that doesn't quite make sense] Which you'd only notice if you see the certificate somewhere else afterwards…
+
+It's all rather hypothetical and unlikely, but you could certainly try attacking something like downloads.openwrt.org¹ like that — especially if you can tell apart the TLS client in opkg from a normal browser.
+
+(¹ luckily, OpenWRT and most other package repos don't actually rely on HTTPS for package integrity and authenticity. And OpenWRT would be the most susceptible due to the "exotic" TLS client stack, if any.)
+
+reply
+
+	
+	
+hbcdbff 5 days ago | root | parent | prev | next [–]
+
+I’m surprised to see this username above this comment.
+
+No, the cert can be issued with no (or invalid/junk) SCT and will work fine with clients who don’t check SCT, which is most non-browser interaction.
+
+reply
+
+	
+	
+fc417fc802 5 days ago | root | parent | next [–]
+
+To spell it out a bit further, an attack strictly in a non-browser context that is reasonably well targeted will most likely go undetected since what the attacker is up against is the chance of inadvertently running into a paranoid user who goes out of his way to perform verification.
+
+reply
+
+	
+	
+tsimionescu 5 days ago | root | parent | prev | next [–]
+
+No, it doesn't. A certificate may or may not include CT info, or include fake CT info. Most TLS clients accept certificates without checking for CT.
+
+reply
+
+	
+	
+oasisbob 5 days ago | root | parent | prev | next [–]
+
+SCT enforcement falls to the client though, yeah? What's stopping someone from signing a rogue cert silently which is accepted by CT-lenient clients?
+
+reply
+
+	
+	
+tptacek 5 days ago | root | parent | next [–]
+
+Right, but you don't have to wait for some hapless random browser to check; you can write your own monitor, and people do that.
+
+reply
+
+	
+	
+tux3 5 days ago | root | parent | next [–]
+
+I hold eMudhra's private key. I generate a cert signed by their intermediate on my box. eMudhra didn't issue the cert, so it is not sent to any CT logs, and I have no SCT to put in the cert.
+
+Am I missing what you mean by monitor?
+
+reply
+
+	
+	
+tptacek 5 days ago | root | parent | next [–]
+
+I think I might just be talking past you. If your point is "anyone with these broken eMudhra keys can attack users without caring about CT", that's totally true --- it's just that browser/no-browser doesn't factor into it. I'm really only on this subthread because of the notion that CT enforcement requires browsers.
+
+reply
+
+	
+	
+tux3 5 days ago | root | parent | next [–]
+
+Right, I think I'm with you that browser/no browser shouldn't be a factor. I think I'd like to hear from Rust and Go webpki people on whether we could help the ecosystem enforce CT.
+
+My point is more that as a user of a high-level library like reqwest, I'd like to talk safer defaults when root CAs are in use
+
+reply
+
+	
+	
+tptacek 5 days ago | root | parent | next [–]
+
+Right, OK, I was misunderstanding the point you were making. Thanks!
+
+reply
+
+	
+	
+KJs6ZxELzQM37O 5 days ago | root | parent | prev | next [–]
+
+CT is enforced in Android 17 by default.
+
+reply
+
+	
+	
+0xbadcafebee 5 days ago | root | parent | prev | next [–]
+
+There are plenty of ways you would never be able to tell if a fake cert had been generated and used via this attack vector (let's ignore validation attacks):
+
+1. CT does not do anything if a state actor demands a CA in its borders generate a cert without publishing to the CT logs (or a three-letter-agency doing this illicitly). They can put SCTs in the cert, and still not publish to the logs, nobody is auditing the logs for every cert every browser sees.
+
+2. Browsers won't check for SCTs in certs if they come from a private CA. you can MITM any domain through ZScaler all day long and nobody will notice
+
+3. Wildcard certs make it easy to make/renew a cert that looks normal but hides requests on new/different hosts
+
+4. Non-Browsers do not validate SCTs
+
+reply
+
+	
+	
+mxey 5 days ago | root | parent | next [–]
+
+“They can put SCTs in the cert, and still not publish to the logs, nobody is auditing the logs for every cert every browser sees”
+
+I don’t think you can get the SCT from a log without the log publishing it? That would defeat the purpose.
+
+“Certificates that support certificate transparency must include one or more signed certificate timestamps (SCTs), which is a promise from a log operator to include the certificate in their log within a maximum merge delay (MMD).[4][3] At some point within the maximum merge delay, the log operator adds the certificate to their log.”
+
+reply
+
+	
+	
+teraflop 5 days ago | root | parent | next [–]
+
+> I don’t think you can get the SCT from a log without the log publishing it?
+
+Well you can, but only if the log cooperates.
+
+That is, the SCT is merely a promise to add the certificate to the log by some particular deadline. Nothing technically stops the log from disregarding that promise. But if it does fail to log the certificate, the SCT itself is proof of its misbehavior.
+
+And it's not enough to subvert a single log, because browsers require SCTs from multiple distinct operators in order to consider a certificate valid.
+
+reply
+
+	
+	
+0xbadcafebee 5 days ago | root | parent | next [–]
+
+The SCT may be proof that a log was supposed to be issued, but browsers don't submit every SCT they see (did you know "anonymizing" proxies send CT log companies a sampling of all your TLS traffic? fun stuff!), so in practice these logs aren't audited. As far as multiple operators, almost all of them are based in the US, so just pray the USG doesn't want to target you.
+
+reply
+
+	
+	
+woodruffw 5 days ago | root | parent | prev | next [–]
+
+I feel somewhat confident in speculating that a bunch of people at large companies will, in fact, be auditing the logs following this. That’s their main value; they’re not really an online/active prophylactic.
+
+reply
+
+	
+	
+radicalcentrist 5 days ago | root | parent | prev | next [–]
+
+I admittedly don't know much about how CAs work but why would a state actor care about such an exploit? Wouldn't they just ask any local cert issuer and receive a "legitimate" cert?
+
+reply
+
+	
+	
+cpach 4 days ago | root | parent | next [–]
+
+If FBI went to Godaddy and said, “We need a cert for www.google.com”, Godaddy would most likely refuse. Issuing that cert would leave a trail that would be extremely undesirable for both FBI and Godaddy.
+
+reply
+
+	
+	
+kadoban 5 days ago | root | parent | prev | next [–]
+
+You could cloak where it's coming from more easily this way.
+
+reply
+
+	
+	
+saidnooneever 5 days ago | root | parent | prev | next [–]
+
+organized crime is generally as or more capable these days. they have bigger budgets than most nation states.
+
+reply
+
+	
+	
+lioeters 5 days ago | root | parent | next [–]
+
+They are not exclusive to each other. The most successful criminal organizations work with, and from within, nation states, their intelligence agencies and law enforcement. Oh hi, we see you.
+
+reply
+
+	
+	
+saidnooneever 4 days ago | root | parent | next [–]
+
+truu, thanks for the addition. some nation states are indeed known to do this. definitely not all, but where access can be bought i'd be surprised they wouldnt do it if they needed it.
+
+reply
+
+	
+	
+rollulus 5 days ago | root | parent | prev | next [–]
+
+A grumpy state actor today.
+
+reply
+
+	
+	
+kccqzy 5 days ago | root | parent | prev | next [–]
+
+Nope. You can find this from the Chrome Root Program.
+
+> Because no TLS certificates chaining to these six intermediate CAs were logged to CT prior to our CRLSet block on October 17, no fraudulent certificates issued by these CAs could have been trusted by default in Chrome or other CT-enforcing browsers.
+
+reply
+
+	
+	
+hbcdbff 5 days ago | root | parent | next [–]
+
+Not all TLS traffic involves a browser.
+
+reply
+
+	
+	
+themulticaster 5 days ago | root | parent | prev | next [–]
+
+Apparently they've only been included in early October https://www.mail-archive.com/dev-security-policy@mozilla.org...
+
+reply
+
+	
+	
+ROllerozxa 5 days ago | root | parent | next [–]
+
+I'm not exactly sure which of the roots from eMudra were compromised, but the "emSign ECC Root CA - G3" which is mentioned in the OP site as one you should blacklist, is present on my phone which is running Android 12 with the last security update from three years ago. Having a better timeframe for when the impacted certificates appeared really would have been nice.
+
+reply
+
+	
+	
+tux3 5 days ago | root | parent | next [–]
+
+I believe Android updates things like CA certs independently of their monthly security patch. I'm not sure Android 12 uses the same system, but on newer Android I think those are shipped via Google Play system updates, which don't require waiting for the phone vendor.
+
+reply
+
+	
+	
+ROllerozxa 5 days ago | root | parent | next [–]
+
+Yeah, in Android 14 they separated it out so that the CA store can be updated from Google Play. Versions below that you're reliant on the manufacturer to ship updates.
+
+reply
+
+	
+	
+eqvinox 5 days ago | root | parent | prev | next [–]
+
+None of the roots were compromised. (Some of) Their own sub-CAs for TLS certs, which are also cross-signed by Sectigo (since their own roots are rather recent), are affected.
+
+How you have that root cert on your phone with a 3 year old CA set I have no idea, presumably something updated your CAs in the meantime? (Also, aren't you incredibly exposed to the general onslaught of vulnerabilities from the past 3 years?)
+
+reply
+
+	
+	
+ROllerozxa 5 days ago | root | parent | next [–]
+
+Well that makes sense. The "emSign ECC Root CA - G3" root is listed as being originally issued on 18 February 2018, so would have been really concerning if that itself was the compromised certificate.
+
+reply
+
+	
+	
+sreekanth850 5 days ago | root | parent | prev | next [–]
+
+its well-known , we took certificates from them for our company. its due for renewal, iam pausing this for now.
+
+reply
+
+	
+	
+sippingabonedry 5 days ago | root | parent | prev | next [–]
+
+I believe these intermediates chained up to a third party root.
+
+reply
+
+	
+	
+eqvinox 5 days ago | root | parent | next [–]
+
+They chain up to emSign & Comodo:
+
+https://groups.google.com/a/mozilla.org/group/dev-security-p...
+
+reply
+
+	
+	
+agwa 5 days ago | root | parent | next [–]
+
+To be clear, emSign is another name for EMudhra, and Comodo is now known as Sectigo. (You can't just look at the organization name in a certificate subject; you have to consult the CCADB: https://www.agwa.name/blog/post/the_certificate_issuer_field...)
+
+reply
+
+	
+	
+e28eta 5 days ago | root | parent | next [–]
+
+Love this quote:
+
+Inclusion in the Chrome Root Store requires that a CA Owner continuously demonstrate the technical competence and operational rigor necessary to protect Chrome users. Due to the seriousness of this incident, the Chrome Root Program is conducting a thorough evaluation regarding the status of eMudhra’s remaining CA certificate to ensure these standards continue to be met. We will share further updates as our review progresses.
+
+from a post on https://groups.google.com/a/mozilla.org/g/dev-security-polic...
+
+reply
+
+	
+	
+oasisbob 5 days ago | root | parent | next [–]
+
+It's been a while since there was a good CA death penalty case.
+
+Given Wayne's hints in the timeline that this issue was discovered by an agent, it might be one of the first big corporate death sentences due to AI?
+
+reply
+
+	
+	
+ocdtrekkie 4 days ago | root | parent | next [–]
+
+I bet Entrust never made a cert with a private key of 4.
+
+The problem is the death penalty case is aimed at the wrong target: The entire Web PKI system remains dumb and bad, and the correct answer is to dissolve the CA/B and find people with practical security experience.
+
+reply
+
+	
+	
+gnabgib 4 days ago | root | parent | next [–]
+
+Entrust (now Sectigo) is involved with this [0] (cross signed an intermediate) [1] Even last year buying a Sectigo cert got you an Entrust cert with no mention of Sectigo/Comodo[2] (maybe more of a Character.AI situation than a sale)
+
+[0] https://emudhra.we-have-a-problem.com/roots.json
+
+[1] https://www.entrust.com/company/newsroom/entrust-sells-publi...
+
+[2] https://www.sectigo.com/comodo
+
+reply
+
+	
+	
+ocdtrekkie 4 days ago | root | parent | next [–]
+
+> Entrust (now Sectigo) is involved with this
+
+This is probably a rough definition for "Entrust was banned from being a CA and sold the business off to a competitor". In part, because I also do not think the root programs would just allow Entrust to continue operating the same business under another brand name, unless they are even dumber than I already thought.
+
+reply
+
+	
+	
+oasisbob 4 days ago | root | parent | prev | next [–]
+
+Given the amount of progress the CAB forum has led in the last decade+, I'm not sure I agree with that diagnosis. Plenty of people in the forum I can think of who have forced positive changes due to the strength of their experience.
+
+If anyone should be navel-gazing coming out of this incident, surely it's the trust store maintainers. If there's a big concrete improvement to be made, short of burning down the web PKI ecosystem, I'm not sure it's obvious yet.
+
+reply
+
+	
+	
+LtWorf 4 days ago | root | parent | prev | next [–]
+
+The other solution is web of trust. Which works waaaaay better but is really complicated to implement.
+
+I'm not sure there is a 3rd solution to this.
+
+reply
+
+	
+	
+eqvinox 5 days ago | root | parent | prev | next [–]
+
+Slightly funny about this: even Wayne (the person who reported it to Chrome & Mozilla) got confused [https://bugzilla.mozilla.org/show_bug.cgi?id=2083449]:
+
+  2026-10-17 20:18 - Full CCADB check finds the cross-signs by Sectigo are also affected
+
+(…the "cross-signs" use the same keypair of course.)
+
+reply
+
+	
+	
+sippingabonedry 5 days ago | root | parent | prev | next [–]
+
+Since they are also a root CA, are they allowed to audit themselves, or do the browser root programs require third-party audits?
+
+I can't imagine one part of a business being on the up and up, and the guys down the hall running completely rogue.
+
+reply
+
+	
+	
+agwa 5 days ago | root | parent | next [–]
+
+Third party audits from a qualified auditor are required, although the CA chooses and pays the auditor, and the auditors are basically just accountants. So it's... not a perfect system.
+
+reply
+
+	
+	
+eqvinox 5 days ago | root | parent | prev | next [–]
+
+Argh. Thanks for clearing that up.
+
+reply
+
+	
+	
+mitxela 4 days ago | root | parent | prev | next [–]
+
+It's an intermediate certificate, so it doesn't show up in certificate stores. That's why Golang hurriedly and unconventionally patched itself to ignore these specific certs.
+
+reply
+
+	
+	
+q3k 5 days ago | root | parent | prev | next [–]
+
+It's real.
+
+reply
+
+	
+	
+saidnooneever 5 days ago | parent | prev | next [–]
+
+I BET this is an error code. they wanted to generate some key via something and it errors and put error code 4 as key and since encryption is dumb and people are people, no one looked at the key material.
+
+edit: The reported private scalars were 4, 56, 66, 115, 155, 156, 230, 237 across the eight certificates so its unlikely i will win my bet :'D
+
+reply
+
+	
+	
+danw1979 4 days ago | root | parent | next [–]
+
+The first 6 keys are literally someone typing them in lazily on a keyboard. You can almost see their fingers barely moving across the top numeric row as they generate them.
+
+reply
+
+	
+	
+roenxi 4 days ago | root | parent | next [–]
+
+Looking at the pattern I would actually suspect a numberpad over top row of the keyboard. That explains how the responsible party got 1-5-6 without exhausting their delicate digits.
+
+reply
+
+	
+	
+Fordec 4 days ago | root | parent | prev | next [–]
+
+You can see the thought at 230 of "Ok, that was dumb, gotta move my fingers on the numpad slightly this time to throw them a curveball"
+
+reply
+
+	
+	
+pandemic_region 4 days ago | root | parent | next [–]
+
+An elliptic curveball even
+
+reply
+
+	
+	
+Maken 4 days ago | root | parent | prev | next [–]
+
+My guess is that someone was instructed to generate "random bytes" and just did 'char secret = rand()' or something similar.
+
+reply
+
+	
+	
+heaney-555 4 days ago | root | parent | next [–]
+
+Yup. I think they literally think a 256-bit key is just a random number between 1 and 255.
+
+reply
+
+	
+	
+charlieyu1 4 days ago | root | parent | prev | next [–]
+
+Why would they even do this? A standard random number generator is probably less work
+
+reply
+
+	
+	
+QuiEgo 5 days ago | root | parent | prev | next [–]
+
+More than that, they claim the key was in an HSM, so they likely could not look at it.
+
+reply
+
+	
+	
+e28eta 4 days ago | root | parent | next [–]
+
+Someone answering “questions for emudhra” also say the keys were intended to be exported to US and EU data centers. I don’t know if that would have precluded inspection (hopefully it’s encrypted some way, but why not have the destination HSM generate the CSR?)
+
+Edit: I see the below paragraph is quoted extensively below. I hadn’t seen those comments yet. Oh well
+
+Source: https://bugzilla.mozilla.org/show_bug.cgi?id=2083449#c11
+
+Content:
+
+We have done some preliminary assessment, there appears to be a flaw in the KGC script that was used on that specific day to create these ECC issuers. As for these ECC keys, our review of the KGC, assessment of the code and view of HSM keys so far indicate that a) a set of original ECC keys were created onboard as expected b) an approved deviation to our usual KGC to test a wrap/unwrap was introduced as these keys were meant for export for this instance c) a flaw in the code resulted in the second pair of keys being created onboard which were weaker d) these second pair of weaker keys were used by mistake to create the csr (because the key labels were similar) and signed by our root e) the CSR from these weaker keys were also sent over to Sectigo for cross signing (we verified the files sent over to Sectigo)
+
+The RSA issuers went through a different path as per our assessment of the code and are therefore not impacted. Some additional context - these issuers created were meant for export to our US and European data centers to solve data sovereignty issues for some of our customers (but never ended up operationally in production except for one).
+
+reply
+
+	
+	
+mjg59 4 days ago | root | parent | next [–]
+
+Wrapping/unwrapping means the HSM would generate the private key and then encrypt it with a key only known to the other HSMs. Those other HSMs would then decrypt the key on import. The private key should still have been impossible to examine outside the HSMs.
+
+reply
+
+	
+	
+mitxela 4 days ago | root | parent | next [–]
+
+Which means there was no way to know they were improperly generated, besides trying to actually bruteforce them, which you wouldn't do because it's usually pointless.
+
+reply
+
+	
+	
+xviiau 4 days ago | root | parent | next [–]
+
+I wonder if the industry will adopt some sort of check mechanism to indicate the entropy in the key for these sealed keys?
+
+reply
+
+	
+	
+saidnooneever 3 days ago | root | parent | next [–]
+
+entropy and length might help but it sounds more like duedilligence would be needed. u can have all the solutions in the world. if u dont know how to use them, they are just more problems
+
+reply
+
+	
+	
+saidnooneever 5 days ago | root | parent | prev | next [–]
+
+i wonder how many keys they thought it had. reading them byte by byte xD 'this HSM is excellent we can litterally put _all_ our keys in it!'
+
+and thx for the context. i rly wonder now how it went down lol
+
+reply
+
+	
+	
+cromka 5 days ago | root | parent | prev | next [–]
+
+These read like Lotto numbers and I bet someone in the underworld has made bank with them.
+
+reply
+
+	
+	
+iterance 5 days ago | root | parent | next [–]
+
+Random number 0-255
+
+reply
+
+	
+	
+account42 4 days ago | root | parent | next [–]
+
+Doesn't even seem to be all that random within that range. For example all digits within each number go left to right on a keyboard.
+
+reply
+
+	
+	
+charles_f 4 days ago | root | parent | prev | next [–]
+
+Hey that's a byte of entropy! And one of the rare cases where choosing a larger value might offer you better "protection" against serialized brute force attacks
+
+reply
+
+	
+	
+heaney-555 4 days ago | root | parent | prev | next [–]
+
+I think it's worse than that. I think whoever did this genuinely thought that a "256-bit security key" meant a random number between 1 and 256.
+
+reply
+
+	
+	
+artk42 5 days ago | root | parent | prev | next [–]
+
+That was a blasting key generation ceremony.
+
+reply
+
+	
+	
+cvwright 4 days ago | root | parent | next [–]
+
+Chosen by fair dice roll
+
+reply
+
+	
+	
+BonoboIO 5 days ago | root | parent | prev | next [–]
+
+That could be wining numbers for a lottery
+
+reply
+
+	
+	
+oasisbob 5 days ago | parent | prev | next [–]
+
+More details in the now-public bugzilla issue:
+
+https://bugzilla.mozilla.org/show_bug.cgi?id=2083449
+
+reply
+
+	
+	
+eqvinox 5 days ago | root | parent | next [–]
+
+> Keys were generated in hardware and the hardware in use was Ultimaco HSMs.
+
+The plot thickens.
+
+Broken HSM? Misconfiguration? Confusion? Straight up lie?
+
+> Excel attached. The Ultimaco devices were used to generate the ECC, RSA key pairs for the issuers. They were not used to generate any other key material. But it doesnt look like the device is at fault.
+
+> We have done some preliminary assessment, there appears to be a flaw in the KGC script that was used on that specific day to create these ECC issuers. As for these ECC keys, our review of the KGC, assessment of the code and view of HSM keys so far indicate that a) a set of original ECC keys were created onboard as expected b) an approved deviation to our usual KGC to test a wrap/unwrap was introduced as these keys were meant for export for this instance c) a flaw in the code resulted in the second pair of keys being created onboard which were weaker d) these second pair of weaker keys were used by mistake to create the csr (because the key labels were similar) and signed by our root e) the CSR from these weaker keys were also sent over to Sectigo for cross signing (we verified the files sent over to Sectigo)
+
+…
+
+reply
+
+	
+	
+sippingabonedry 5 days ago | root | parent | next [–]
+
+> an approved deviation to our usual KGC to test
+
+The whole point of a key ceremony is that you're not going off-script and YOLOing random crap.
+
+reply
+
+	
+	
+trollbridge 4 days ago | root | parent | next [–]
+
+I was once the annoying person who refused to participate in a ceremony when it went off script.
+
+What was more troubling was the other people involved couldn't understand why I did it.
+
+reply
+
+	
+	
+nxobject 3 days ago | root | parent | prev | next [–]
+
+If my career was ever exciting enough to let me participate in a key ceremony, you'd bet I'd go all in on the Seriousness and Gravity. Hell, I'd come in a monk's habit.
+
+reply
+
+	
+	
+kccqzy 4 days ago | root | parent | prev | next [–]
+
+Ultimaco HSMs! Well Ultimaco today published a marketing blog post entitled Global Encryption Day: Encryption Is Only as Strong as the Keys Behind It. It seems like a subtle dig at their customer’s incompetence.
+
+https://utimaco.com/news/blog-posts/global-encryption-day-en...
+
+reply
+
+	
+	
+q3k 5 days ago | root | parent | prev | next [–]
+
+Reading further, it seems like they say they first generated some keys on-HSM, but then used 'test keys' (that were used to test wrap/unwrap of key material) instead by accident. Fishy.
+
+reply
+
+	
+	
+eqvinox 5 days ago | root | parent | next [–]
+
+They used the "correct" key for signing the CRLs (which of course was then an invalid signature):
+
+> The CRL's were signed with the original private keys (which were supposed to be the correct keys with appropriate entropy) but given that this resulted in incorrect signatures, they were resigned with flawed keys.
+
+And THAT is where I'm drawing the line between "honest mistake" and "gross negligence". For that to not raise giant red flags is an unacceptable failure in process and work culture.
+
+reply
+
+	
+	
+user43928 4 days ago | root | parent | next [–]
+
+I've seen speculation that there was a language barrier, given that this is an Indian company.
+
+The theory was that someone misinterpreted 384-bit keys to mean the key must be a number between 1-384.
+
+I think that's entirely made up, but it wouldn't be completely implausible to have happened while someone tried to troubleshoot why the first attempt failed.
+
+reply
+
+	
+	
+eqvinox 4 days ago | root | parent | next [–]
+
+> I've seen speculation that there was a language barrier, given that this is an Indian company.
+
+The discussion in https://bugzilla.mozilla.org/show_bug.cgi?id=2083449 really doesn't sound like that, but who knows what's getting lost in the "fog of war" we're currently getting on this all.
+
+reply
+
+	
+	
+alphabetag675 3 days ago | root | parent | prev | next [–]
+
+I do not consider language barrier at all a factor here.
+
+Instead, I consider a lack of concentration due to too much stuff going on around to be a big factor.
+
+The biggest problem when working with Indian offices is that their crew always has to deal with weird shit continuously that it would be extremely surprising for me to have someone fully concentrated on their work.
+
+reply
+
+	
+	
+trollbridge 4 days ago | root | parent | prev | next [–]
+
+I mean, what we call "Arabic numerals" actually originated in India. Indians, generally speaking, can comprehend numbers.
+
+A language barrier is not an acceptable excuse, especially in a country where the primary language of technology firms is English.
+
+reply
+
+	
+	
+baobabKoodaa 5 days ago | root | parent | prev | next [–]
+
+Unreal. Absolutely unreal.
+
+reply
+
+	
+	
+numpad0 3 days ago | root | parent | prev | next [–]
+
+Image search result for that Ultimaco brand name returns a lot of images for PCIe cards and badged white-box x86 servers. Maybe "generated on-HSM" in this case means the "HSM" was operated using a regular display and keyboard connected to it rather than e.g. selecting "GENERATE KEY? (Y/N)" on a 16x2 display.
+
+reply
+
+	
+	
+shellcromancer 5 days ago | root | parent | prev | next [–]
+
+What a change a month makes. Public discussion on eMudhra getting their own root CA inclusion ended and Mozilla had them slated for approval.
+
+https://bugzilla.mozilla.org/show_bug.cgi?id=1889859
+
+reply
+
+	
+	
+hypfer 5 days ago | root | parent | prev | next [–]
+
+> "The CRL's were signed with the original private keys (which were supposed to be the correct keys with appropriate entropy) but given that this resulted in incorrect signatures, they were resigned with flawed keys."
+
+Ah yes.
+
+"The system says something is wrong, but it's also 4.30PM. Let's just re-sign the thing and go home."
+
+Good luck recovering from this.
+
+reply
+
+	
+	
+sippingabonedry 5 days ago | root | parent | prev | next [–]
+
+> The other two certificates are for codesigning and trusted by Microsoft
+
+That seems like a WAY bigger problem than TLS, but AFAIK Windows still validates code signing certs against CRLs before trusting them (can't remember if it soft-fails).
+
+reply
+
+	
+	
+msm_ 5 days ago | root | parent | next [–]
+
+Why is that a way bigger problem? Windows will happily run unsigned binaries. Code signing just decreases the friction for users slightly, but is in no way required. TLS is definitely a way bigger problem.
+
+reply
+
+	
+	
+sippingabonedry 5 days ago | root | parent | next [–]
+
+> Windows will happily run unsigned binaries
+
+This is absolutely false, it's a simple policy change to enforce code signing, any organization that is serious about security can do it.
+
+I'll give you the benefit of the doubt and assume you're another Linux guy who doesn't understand Windows security.
+
+The concern of course is with malware being signed, which is far more likely to be abused than some TLS MITM fantasy.
+
+reply
+
+	
+	
+tsimionescu 5 days ago | root | parent | next [–]
+
+Plenty of major programs are not signed, and thus plenty of organizations don't enforce code signing.
+
+reply
+
+	
+	
+sippingabonedry 5 days ago | root | parent | next [–]
+
+For the exceptions, you can sign your own using internal CA.
+
+reply
+
+	
+	
+drdexebtjl 5 days ago | root | parent | next [–]
+
+And keep signing it with every release. No thanks.
+
+reply
+
+	
+	
+throwaway7356 5 days ago | root | parent | prev | next [–]
+
+> The concern of course is with malware being signed, which is far more likely to be abused than some TLS MITM fantasy.
+
+You already need compromised systems to install malware, signed or not. Not a real problem.
+
+For TLS MitM you just need to use a shared network, wired or wireless.
+
+reply
+
+	
+	
+uep 4 days ago | root | parent | next [–]
+
+> You already need compromised systems to install malware, signed or not. Not a real problem.
+
+Is this true? Ads pointing to a malicious Notepad++ is already an existing thing. Now their malicious version will pass signing checks. Users will happily install these without the system itself being compromised.
+
+reply
+
+	
+	
+kccqzy 4 days ago | root | parent | prev | next [–]
+
+Organizations that are serious about security should have a whitelist of binaries that can run on their computers. Enforcing code signing isn’t good enough.
+
+reply
+
+	
+	
+sippingabonedry 5 days ago | parent | prev | next [–]
+
+> One of the private keys is literally "4"
+
+https://i.sstatic.net/Y3zE3.gif
+
+reply
+
+	
+	
+kylepomykala 5 days ago | parent | prev | next [–]
+
+I am shocked that one of the private keys was literally “4”. Anyone could have broken into this. I really hope there is an industry-wide effort to stop things like this in the future.... but I doubt it.
+
+reply
+
+	
+	
+eqvinox 5 days ago | root | parent | next [–]
+
+There is a variety of projects and researchers scanning for weak keys; possibly that's how this was found (haven't seen anything on that). These certs existed for a year and a half; that's bad but could be worse still.
+
+One of the issues with sub-CAs (well, X509 certs in general) is that they can be ghosts in that there's no way you'll ever get it as a response on a TLS connection, so automated scanners on that won't find it.
+
+CT should cover this (i.e. expose the cert so you can check for weak keys), but I have no idea if/how CT works for sub-CAs. [ed.: see below, doesn't seem to be in CT]
+
+[ed.: these are technically sub-CAs, but rather cross-signed for bootstrapping a new root CA. Thanks @agwa for pointing that out.]
+
+reply
+
+	
+	
+tialaramex 5 days ago | root | parent | next [–]
+
+For their own stuff, Mozilla has talked in the past about specifically just only trusting intermediates they've seen. Their modern root agreement says the CA will disclose all relevant intermediates, so arguably they have a complete list and further if that CA "forgot" about a few of them whether that's because your firm is too disorganised ("Oh, right, the one on Barry's laptop, forgot that one") or an actual attempt to sidestep this rule - then we certainly don't want to trust these undisclosed intermediates, do we ? They're either purposefully shady, or they're forgotten about and likely never have been audited.
+
+reply
+
+	
+	
+eqvinox 5 days ago | root | parent | next [–]
+
+Y'know… let's just check…
+
+https://ctlogs.io/search?mode=fingerprint&q=42c4accd12c4f595...
+
+https://ctlogs.dev/search?q=42C4ACCD12C4F59597925E1A08A7A901...
+
+https://ctlogs.io/search?q=EBED6475C2C2D80FCB199F3FE8DD6E6B3...
+
+https://ctlogs.dev/search?q=EBED6475C2C2D80FCB199F3FE8DD6E6B...
+
+Nothing for "CN=EM DV TLS CA - G3B,O=eMudhra BV" (not sure which sha256 this uses, 2nd is the spki sha256)
+
+I should be clear here my understanding is/was these are sub-CAs. Apparently they're (trying to be?) roots themselves? The point of logging a root cert in CT is somewhat moot… though tbh I would argue anything issued by a CA should be in CT logs, even cross-signing another CA that is becoming a root itself.
+
+reply
+
+	
+	
+tialaramex 5 days ago | root | parent | next [–]
+
+> I would argue anything issued by a CA should be in CT logs, even cross-signing another CA that is becoming a root itself.
+
+And it is, or at least, was. The CT logs when I last spent too long staring at them were complete indefinite logs. These days most (all? almost all?) are time limited so e.g. there'll be Clown 2026 and then Clown 2027 and a certificate is logged to the CT log corresponding to a not-after date IIRC. This way you can throw away a log of certificates expiring in 2025 a few weeks into 2026 because who cares, they've expired, and so they don't just grow forever.
+
+I no longer have a role where I care a great deal about this for my day job, and I do not know how to ask ctlogs.io for the thing I want. So probably this is still logged but I couldn't promise you without getting back into this. Maybe at the weekend.
+
+reply
+
+	
+	
+lobovkin 4 days ago | root | parent | prev | next [–]
+
+I run ctlogs.dev. Your links work now: search covers CA certificates, and a bare hash is also tried as a key. They're intermediates (each also cross-signed by Sectigo), not roots. Nothing they issued was in CT logs before the weak keys were found; the first entries appeared two days after Chrome's block. Full list and timeline: https://ctlogs.dev/blog/emudhra-ca-compromise
+
+reply
+
+	
+	
+tialaramex 4 days ago | root | parent | next [–]
+
+This was dead, not sure why, maybe somebody thinks it wasn't helpful? Helped me, so I vouched for it.
+
+reply
+
+	
+	
+interroboink 5 days ago | root | parent | prev | next [–]
+
+  > One of the issues with sub-CAs (well, X509 certs in general) is that they
+  > can be ghosts in that there's no way you'll ever get it as a response
+  > on a TLS connection, so automated scanners on that won't find it.
+
+Could you expand on this? I don't have a full grasp of what you're saying (I'm not super knowledgeable in CA stuff).
+
+My understanding is that if something, like a browser, connects to a SSL site, they will either have or can obtain, one way or another, a complete chain all the way up to the root, so there can be no "ghost" certificate. And I would imagine a scanner could do all those same steps, and thus access all the same certs.
+
+Is this a deficiency in scanner software? You seem to indicate it is a fundamental weakness in X509; I'm just trying to understand what.
+
+Could you maybe describe a specific example of what you're describing?
+
+reply
+
+	
+	
+eqvinox 5 days ago | root | parent | next [–]
+
+In the most extreme case, you can just issue a certificate and not use it anywhere. If it leaks, it's still a security issue, because it's valid.
+
+More realistically, especially with sub-CAs, they might only be used on e.g. corporate networks. TLS scanners may not be able to reach any of the hosts that uses such a cert. As the sibling post points out, clients checking for the cert in Certificate Transparency logs counters that (adding a requirement that the cert be publicly known, which TLS/X509 by itself very much does not have) — but of course this only helps if your client does CT…
+
+reply
+
+	
+	
+interroboink 5 days ago | root | parent | next [–]
+
+Ah okay, thanks. So to be concrete, something like automation running 'curl' on an internal network might see the full chain, including the weak cert, and be vulnerable, but scanners on the wider internet won't see it. I was confused by "...there's no way you'll ever get it as a response on a TLS connection..." — I guess you just meant a _public_ TLS connection. Or it could be otherwise installed on corporate machines' local cert bundles.
+
+reply
+
+	
+	
+fc417fc802 5 days ago | root | parent | next [–]
+
+Or it could be provided by a MitM on the public internet opportunistically only when the connecting client matches the fingerprint of curl and the connection originates from a particular ASN.
+
+reply
+
+	
+	
+gruez 5 days ago | root | parent | prev | next [–]
+
+If you're doing a MITM attack, you can selectively intercept certain clients, and only serve the compromised certificate in those cases only. Automated scanners won't pick that up. None of this actually works though, because browsers started mandating certificate transparency.
+
+reply
+
+	
+	
+ranger_danger 5 days ago | root | parent | next [–]
+
+Please be careful with your phrasing, as there are MANY other critical things on this planet that use TLS certs which are not browsers, and some are extremely difficult/impossible to update.
+
+VPNs, embedded software (IoT, automotive, aerospace, medical, industrial etc.), business systems, you name it.
+
+reply
+
+	
+	
+sophacles 5 days ago | root | parent | prev | next [–]
+
+Of all the things... i never expected there to be an XKCD for this: https://xkcd.com/221/
+
+reply
+
+	
+	
+cyberrock 4 days ago | root | parent | next [–]
+
+That was inspired by the PS3 signing key PRNG. Sony Computer Entertainment, you have been redeemed.
+
+reply
+
+	
+	
+crossroadsguy 5 days ago | root | parent | prev | next [–]
+
+True randomness respected.
+
+reply
+
+	
+	
+lionkor 5 days ago | parent | prev | next [–]
+
+Maybe somewhere in the code it says
+
+    key_string = to_string(*key);
+
+instead of
+
+    key_string = to_string(key);
+
+reply
+
+	
+	
+motionlessveloc 4 days ago | root | parent | next [–]
+
+This should be higher. They mentioned a "coding error", and getting valid keys from the HSM and then truncating the string to a single byte through buggy array handling (see above) is exactly how you'd end up with a bunch of integers in the range 0-255.
+
+reply
+
+	
+	
+Athas 4 days ago | root | parent | prev | next [–]
+
+This is the C explanation perspective, but a similar thing could happen in Python, if you write `s[0]` instead of `s`, perhaps due to a refactoring that changes an array of keys to a single key. This is because Python does not distinguish characters from strings. (Not an indictment of Python; just another proposal for how this could happen, and I would say it is more likely to use Python than C in some hacked-up signing script.)
+
+reply
+
+	
+	
+account42 4 days ago | root | parent | next [–]
+
+That should still produce uniformly random 8-bit numbers but these keys don't even look all that random in that range.
+
+reply
+
+	
+	
+lionkor 4 days ago | root | parent | prev | next [–]
+
+Well, my example is C++, it relies on function overloading existing for, for example, to_string(uint8_t[]) and to_string(uint8_t) separately, which means this error would come down to overloading instead of catching the type error.
+
+Just saying, because C++ is very popular everywhere in this "kind" of company, if you catch my drift.
+
+reply
+
+	
+	
+gwittel 5 days ago | parent | prev | next [–]
+
+Yikes. I’d have to wonder if this CA should even be trusted ever again?
+
+reply
+
+	
+	
+AlotOfReading 5 days ago | root | parent | next [–]
+
+Definitely not. Their CPS requires that these keys be generated by an HSM and no HSM would ever generate these, so there's little reason to believe they're following any of their other controls.
+
+reply
+
+	
+	
+jthoward64 5 days ago | root | parent | next [–]
+
+According to https://bugzilla.mozilla.org/show_bug.cgi?id=2083449 they actually did use an HSM? Though some of the jargon is a bit beyond me, maybe this will finally get me to learn more PKI stuff.
+
+> The hardware used for each of the issuers is in the attached file. These HSMs are FIPS 140-2 Level 3 compliant.
+
+reply
+
+	
+	
+oasisbob 5 days ago | root | parent | next [–]
+
+My vague and inexperienced read on their description boils down to "we were doing something weird and non-standard as part of our key ceremony because we intended these keys to be exported, and because of that process weirdness we blundered and gave the HSM faulty instructions."
+
+reply
+
+	
+	
+zimmerfrei 5 days ago | root | parent | prev | next [–]
+
+The most likely explanation is that they generated the weak key externally, imported it into the HSM, generated the CSR from it, and finally had Root CA sign it.
+
+A FIPS HSM does not forbid one to import keys into it.
+
+reply
+
+	
+	
+cstdr 5 days ago | root | parent | next [–]
+
+But shouldn't such a HSM support key attestation (and the parent require such attestation)? Attestation would also track whether a key was imported or generated on the HSM, and of sufficient length.
+
+reply
+
+	
+	
+zimmerfrei 5 days ago | root | parent | next [–]
+
+Attestation is not required by the compliance standard for browser CAs (WebTrust) and it is also quite vendor-specific and not very interoperable, so it is not commonly done.
+
+The Root CA must sign requests after authentication, but a "manual" approval is also accepted if done with the appropriate oversight with witnesses (clearly not the case here).
+
+reply
+
+	
+	
+cstdr 5 days ago | root | parent | next [–]
+
+Of course it's not required, as we see here. The question is why not? Getting a simple code-signing cert seems to have more stringent requirements in that it either requires attestation or CA-issued hardware.
+
+reply
+
+	
+	
+jcase 4 days ago | root | parent | next [–]
+
+I’ve asked this question before and the answer was that not all HSMs support it and they're too expensive to replace.
+
+reply
+
+	
+	
+somat 5 days ago | root | parent | prev | next [–]
+
+> no HSM would ever generate these
+
+You trust the magic black box far more than I do.
+
+My big fear about HSM is that they are inscrutable by design. There is no way to verify they are working as advertised. Plus side, all sorts of fancy hardware to protect your keys. Down side, all sorts of fancy hardware that obscures flaws in the implementation.
+
+reply
+
+	
+	
+fc417fc802 5 days ago | root | parent | next [–]
+
+I think I'd prefer open source hardware built from off the shelf components glued into a secure enclosure. That way you can destructively audit a few at random if the application matters enough to justify the cost.
+
+reply
+
+	
+	
+yxhuvud 4 days ago | root | parent | prev | next [–]
+
+While you are right in that it is impossible to verify they work as advertised, it is not impossible to detect certain categories of failures. Like only generating values 0-255.
+
+reply
+
+	
+	
+AlotOfReading 4 days ago | root | parent | next [–]
+
+You could choose to detect small keys, but my understanding is that implementations entirely eliminate the issue by only searching factors with leading bits set (i.e. large numbers).
+
+reply
+
+	
+	
+wolvoleo 5 days ago | root | parent | prev | next [–]
+
+Yeah IMO they should just close up shop. Just like Diginotar.
+
+They had one job, and they blew it. The system is based on trust and they've lost it.
+
+I'm going to remove their roots from all my stuff in any case.
+
+reply
+
+	
+	
+simondotau 4 days ago | root | parent | prev | next [–]
+
+Not only should they never be trusted again, the individuals responsible can't either. They need to be blacklisted somewhere. This wasn't garden variety stupidity, this was (IMHO) do-not-collect-$200 stuff.
+
+reply
+
+	
+	
+red-iron-pine 5 days ago | root | parent | prev | next [–]
+
+it should not
+
+reply
+
+	
+	
+rep_lodsb 5 days ago | parent | prev | next [–]
+
+chosen by fair dice roll, no doubt
+
+reply
+
+	
+	
+tanseydavid 5 days ago | root | parent | next [–]
+
+https://xkcd.com/221/
+
+Given that 4 is the value shown in this well known XKCD panel, it almost seems like a (im)practical joke or trolling.
+
+reply
+
+	
+	
+nxobject 3 days ago | root | parent | next [–]
+
+My own bet is that a deity gave these numbers to someone in a dream, like the most idiotic retelling of Ramanujan's life story.
+
+reply
+
+	
+	
+1vuio0pswjnm7 5 days ago | parent | prev | next [–]
+
+"The private key for all 8 "compromised" CAs is a single byte: https://mastodon.catgirl.cloud/@49016/117474217042191790"
+
+Compromised _keys_ not compromised CAs:
+
+"The private keys of eight eMudhra intermediate CA certificates have been compromised."
+
+"The private keys for the intermediate certificates were incorrectly generated by the CA."
+
+The certificates with incorrectly generated keys have been "revoked" but will the eMudhra CA remain in business
+
+reply
+
+	
+	
+Dragory 5 days ago | parent | prev | next [–]
+
+Anyone have a mirror for the first link? It served me a page assumedly intended for AI scrapers and then promptly blocked me when I refreshed a few times.
+
+reply
+
+	
+	
+jeffbee 5 days ago | parent | prev | next [–]
+
+4 is as likely as any other randomly chosen number over a given range.
+
+reply
+
+	
+	
+tomjakubowski 5 days ago | root | parent | next [–]
+
+Well, all eight of the compromised certificates had keys which were < 256. So a really poor choice of range.
+
+reply
+
+	
+	
+mystifyingpoi 5 days ago | root | parent | next [–]
+
+How could you prove it was not a fair random generation? It's totally possible.
+
+reply
+
+	
+	
+deathanatos 5 days ago | root | parent | next [–]
+
+It's not within the realm of believability. The chance of "human screwed up" astronomically exceeds this being fairly randomly chosen, and the Firefox bug states, (I think this is supposition, not known fact, but IDK)
+
+> The original key generation was flawed - rather than any issue with the produced signatures. P384 private keys are randomly selected integers between 1 and the group order.
+
+That is within the realm of believability.
+
+reply
+
+	
+	
+treyd 4 days ago | root | parent | prev | next [–]
+
+Regardless of the probability that this cosmically unlikely occurrence naturally happened 8 times in a row, we all know what the privkeys are now so the certs can't be trusted anymore.
+
+reply
+
+	
+	
+jeffbee 5 days ago | root | parent | prev | next [–]
+
+When you have multiple selections you can show that the probability of selecting a set with a range much smaller than the population range is exponentially unlikely, strong evidence to reject the hypothesis that the subset was chosen at random. But when N=1 you can't conclude anything.
+
+reply
+
+	
+	
+redox99 4 days ago | root | parent | prev | next [–]
+
+That's assuming perfect random generation. If you assume real world where mistakes can happen during generation, 4 is way more likely than 25105785070300501195559896594243230376961191116602934339784363418717203371363
+
+reply
+
+	
+	
+apitman 5 days ago | root | parent | prev | next [–]
+
+This is actually interesting. I'm no cryptographer. Do modern algorithms take into account that certain values should be avoided because they would be obvious things to try first in a brute force attack?
+
+reply
+
+	
+	
+tialaramex 4 days ago | root | parent | next [–]
+
+The algorithms don't care because it doesn't make sense to care, the same reason a "smallest non-interesting number" wouldn't make sense - now that number is interesting precisely because it was cited as the smallest non-interesting number.
+
+However practical applications do care, and so e.g. the "Debian Weak Keys" are a relatively small set of keys which would have been generated if you used a particular patched OpenSSL to generate "random" key pairs after a mistake patched out most of the randomness. Many of them were used by Debian sysadmins particularly in the window between the patch and the discovery - and so all CAs are expected to check that you're not trying to get a certificate for the public half of one of those pairs.
+
+There's nothing "bad" about those keys except that well, we know some people used them so bad guys will try the private halves of those keys just in case. Likewise there are a few apps which shipped with a baked in "default" private key, and all the paperwork to apply for a certificate but obviously a user may not realise that if they just fill it out with their name and details, they're now vulnerable to attack by literally any other user of that software. They were supposed to generate a random key pair and re-generate the paperwork for the resulting random values. If they don't realise we need the CA to say "Nope, that's a bad idea, not issuing" even though these keys aren't special in any other way than they're given to every single user of that software.
+
+IIRC when I worked for a famous US corporation their middleboxes relied on such a well-known key and at some point I asked "Hey, this seems wrong. Why did you do this?" and as often has happened in my career I got no actual reply to my question but magically the issue was fixed in short order. The first clumsy attempt to fix it broke some things, but they gradually figured it out. Glad I could help, I guess.
+
+reply
+
+	
+	
+apitman 4 days ago | root | parent | next [–]
+
+> now that number is interesting precisely because it was cited as the smallest non-interesting number
+
+This made it click for me, thanks!
+
+reply
+
+	
+	
+rockdoe 4 days ago | root | parent | prev | next [–]
+
+If your generation is any good the odds of ending up on such a number should be astronomically small.
+
+Biasing something that should be random tends to badly backfire. See the Enigma who avoided enciphering letters to themselves, which was then used to break it.
+
+reply
+
+	
+	
+jeffbee 5 days ago | root | parent | prev | next [–]
+
+I have no idea but I can imagine why you'd want to bias things away from principled randomness to avoid picking 0 or 4 or whatever.
+
+reply
+
+	
+	
+kccqzy 4 days ago | parent | prev | next [–]
+
+For fun I gave the public key to Opus 5.5, telling it that this is a puzzle, and it should solve the puzzle without web search. Opus 5.5 told me the private key of 4 after two minutes, including the time to write and run a 30-line Python script implementing a baby step giant step search for discrete logarithm. As far as I can see, it did not use web search or use any command that would have internet access.
+
+reply
+
+	
+	
+simondotau 4 days ago | root | parent | next [–]
+
+To be fair, the fact that you gave it the task at all is a clue that you know the answer might be uncharacteristically simple.
+
+reply
+
+	
+	
+kccqzy 4 days ago | root | parent | next [–]
+
+Yup. And Opus 5.5 did exploit this fact. I framed the task as a puzzle and Opus picked up on that framing.
+
+reply
+
+	
+	
+accountrequired 4 days ago | root | parent | prev | next [–]
+
+try an offline model. they are unable to cheat.
+
+reply
+
+	
+	
+aand16 4 days ago | parent | prev | next [–]
+
+Mastodon link contains gibberish supposedly as an anti-bot measure
+
+reply
+
+	
+	
+unleaded 4 days ago | root | parent | next [–]
+
+Looks fine to me. What are you seeing?
+
+reply
+
+	
+	
+borisgolovnev 5 days ago | parent | prev | next [–]
+
+Vanity private keys
+
+reply
+
+	
+	
+rolandog 5 days ago | parent | prev | next [–]
+
+> One of the private keys is literally "4".
+
+Oh no, they reverse engineered the random number generator!
+
+[0]: https://xkcd.com/221/
+
+reply
+
+	
+	
+closetheloopdev 4 days ago | parent | prev | next [–]
+
+Do we call this human's slop? Should we be so hard on AI when humans do something like this? I'm pretty sure LLMs did not and would not allow such things to happen.
+
+On the bright side, hopefully with AI we won't see silly slops like this.
+
+reply
+
+	
+	
+poizan42 5 days ago | parent | prev | next [–]
+
+They used the xkcd PRNG: https://xkcd.com/221/
+
+reply
+
+	
+	
+galadran 5 days ago | prev | next [–]
+
+The impact of this incident is very unevenly spread.
+
+Over 10 years ago, Mozilla shipped OneCRL [1]. We remediated this incident in a couple of hours for Firefox users who were protected automatically without the need for updates. Chrome, Apple and Microsoft have similar tooling. Since then, we've built more advanced tooling to handle revocation at scale for leaf certs (CRLite [2]).
+
+However, for the rest of the ecosystem, there has been little to no investment in revocation and for those clients, this is a massive problem. Hopefully, we'll see folks invest now. Efforts like upki [3] look promising.
+
+[1] https://blog.mozilla.org/security/2015/03/03/revoking-interm...
+
+[2] https://hacks.mozilla.org/2025/08/crlite-fast-private-and-co...
+
+[3] https://github.com/rustls/upki
+
+reply
+
+	
+	
+crote 5 days ago | parent | next [–]
+
+Firefox Mobile 158.0 on Android 17 (Pixel 7) connects to all the demo sites with zero warnings. Any idea why the "automatic protection without updates" doesn't seem to be working with that combination?
+
+reply
+
+	
+	
+eigenform 5 days ago | root | parent | next [–]
+
+Pixel 10 with 158.0.1 still connects to the emSign ones, even though the patch notes for 158.0.1 mention that it updates the CRL for those without 'Remote Improvements' enabled?
+
+edit: Disabling all the eMudhra CAs in Android settings does nothing, cool?
+
+edit: I guess there's no way to manually ask for CRL update, cool??
+
+edit: Gave up and reinstalled Firefox. Seems to be fine now.
+
+reply
+
+	
+	
+NamTaf 5 days ago | root | parent | next [–]
+
+I am getting the same on GrapheneOS on a P10.
+
+I fully expected disabling them in the phone settings and rebooting would have fixed it, but no?
+
+Don't really wanna reinstall FF and lose all my configruation.
+
+reply
+
+	
+	
+crote 5 days ago | root | parent | prev | next [–]
+
+Update: properly blocked now. Seems like it takes a few hours (days?) for the CRL update to propagate.
+
+reply
+
+	
+	
+jaffathecake 4 days ago | root | parent | prev | next [–]
+
+A fix is being released. Thanks for reporting! https://blog.mozilla.org/security/2026/10/20/protecting-fire...
+
+reply
+
+	
+	
+paulv 5 days ago | root | parent | prev | next [–]
+
+I am seeing the same thing in the beta app (159.0b4) on an identical device. The sites are blocked correctly in Chrome.
+
+reply
+
+	
+	
+roomey 5 days ago | root | parent | prev | next [–]
+
+I'm on the same Firefox version on android and they are blocked now
+
+reply
+
+	
+	
+nairboon 5 days ago | root | parent | next [–]
+
+On my just updated Firefox 158.0.1 on Android they are not blocked.
+
+Edit: however on Firefox Focus 157.0.1 they are blocked.
+
+reply
+
+	
+	
+kevincox 4 days ago | root | parent | prev | next [–]
+
+I'm having the same issue. It seems that their CRL updates aren't working well on Android?
+
+reply
+
+	
+	
+gquere 4 days ago | root | parent | prev | next [–]
+
+Wiping local app storage fixes this.
+
+reply
+
+	
+	
+dochtman 5 days ago | parent | prev | next [–]
+
+More on upki:
+
+https://discourse.ubuntu.com/t/an-update-on-upki/77063
+
+My interest in building OneCRL support into upki has definitely increased this week. Issue:
+
+https://github.com/rustls/upki/issues/229
+
+I'm hoping some organizations will step forward to fund work on this.
+
+(Note that curl on Ubuntu 26.10 now has CRLite support baked via upki -- unfortunately that doesn't help with this because AIUI CRLite is only for end entities, not for intermediate certificates.)
+
+reply
+
+	
+	
+divingdragon 5 days ago | parent | prev | next [–]
+
+It's very inconsistent for me even on just Firefox. On multiple systems running different instances of Firefox, checking with https://emudhra.we-have-a-problem.com/:
+
+One blocks everything; one blocks 6 out of 12; one blocks the other 6 out of 12; one blocks nothing.
+
+reply
+
+	
+	
+account42 5 days ago | parent | prev | next [–]
+
+You mean the response was uneven. The impact was a complete and total potential compromise of literally everyone. Every domain. Every client using one of the public root programs. Every user of those clients.
+
+reply
+
+	
+	
+tptacek 5 days ago | root | parent | next [–]
+
+I mean, it's an emergency, but the acute severity is debatable; many times a month the major browsers quietly deal with vulnerabilities that yield attackers direct control of victim computers; here, attackers get the ability to spoof websites if they're in a position to hijack connections.
+
+The middlebox situation, with non-updatable roots, is very annoying. But middleboxes also have unfixable RCEs, so...
+
+It's totally fair to evaluate different projects by how well positioned they are to update their WebPKI trust anchors. I'm just saying, keep perspective.
+
+reply
+
+	
+	
+account42 5 days ago | root | parent | next [–]
+
+So it other words, it allowed attackers to do the one thing that Web PKI is supposed to prevent.
+
+Being able to quickly update trust roots is at best a hack to paper over the issue when there is no good reason why every podunk CA should have authority to generate certificates for every domain in the first place. It's an inexcusable design flaw. Or a feature that gives power to root stores at the expense of everyones security, from the perspective of the root store operators.
+
+reply
+
+	
+	
+tptacek 5 days ago | root | parent | next [–]
+
+Ok, now do that same paragraph, but for drive-by RCE vulnerabilities.
+
+Nobody thinks this is a good thing. It's bad. Hopefully, eMudhra gets distrusted. We've done that to bigger CAs.
+
+reply
+
+	
+	
+hypfer 5 days ago | root | parent | prev | next [–]
+
+Keep in mind that a _lot_ of software out there uses TLS as its only trust anchor for updates, commands or similar.
+
+This can and will be weaponized for take-overs of systems. They will be of the consumer kind, but they will also be of the industry kind. Let's pray that they will not be of the state or military kind.
+
+reply
+
+	
+	
+Eridrus 4 days ago | parent | prev | next [–]
+
+I feel like my takeaway here is that things that are not connecting software written by a wide group of people should not rely on the root CAs.
+
+We often use TLS to connect software run by the same organization because it is convenient, but why are we giving random CAs the ability to issue certs for these cases?
+
+reply
+
+	
+	
+quotemstr 5 days ago | parent | prev | next [–]
+
+You mean you and Chrome stopped supporting normal CRLs and OCSP, replacing (for normal users) these distributed-trust technologies with central lists controlled by browsers
+
+reply
+
+	
+	
+bawolff 5 days ago | root | parent | next [–]
+
+There is a good reason they did. CRL and especially OCSP are both terrible and not particularly effective
+
+reply
+
+	
+	
+quotemstr 5 days ago | root | parent | next [–]
+
+OCSP stapling works fine technically, which is one reason it's still available in both browsers via enterprise policy. LE dropping support for it and browsers having insufficient courage to hard-fail doesn't make the model broken. It instead makes the ecosystem broken.
+
+Just another step towards a tiny number of browser vendors and infrastructure companies controlling the internet.
+
+reply
+
+	
+	
+bawolff 4 days ago | root | parent | next [–]
+
+OSCP stapling is better than normal OSCP by miles, but still, with shorter cert lifetimes it seems like it doesn't help that much.
+
+reply
+
+	
+	
+sippingabonedry 5 days ago | parent | prev | next [–]
+
+Here's a question for Mozilla et. al.:
+
+It's cute you have a magic DIY CRL. You accepted these assholes into your root program.
+
+They lost the KEYS.
+
+What is the screening process for CA's that can't be bothered to use a HSM?
+
+Even Honest Achmed wasn't this careless.
+
+reply
+
+	
+	
+john_strinlai 5 days ago | root | parent | next [–]
+
+>What is the screening process for CA's
+
+it's done in the open, and you're even allowed to voice your cute opinion during the multi-week public commentary periods.
+
+here is an overview https://wiki.mozilla.org/CA/Root_Inclusion_Overview
+
+reply
+
+	
+	
+eqvinox 5 days ago | root | parent | prev | next [–]
+
+They didn't lose the keys, a sub-CA did.
+
+Which is to say, sub-CAs in itself are a giant loophole that needs plugging. Especially since AFAIK nobody is bothering with name constraints (RFC5280 section 4.2.1.10).
+
+reply
+
+	
+	
+agwa 5 days ago | root | parent | next [–]
+
+eMudhra is also a root CA operator. One root CA operator cross-signing another root CA operator is a good thing actually, and it's what allowed Let's Encrypt to work before their root certificate was widely trusted.
+
+Issuing sub CAs to non-root operators has historically been a big loophole though it's not as bad these days since multiple root programs now require approval before CAs can do it.
+
+reply
+
+	
+	
+sippingabonedry 5 days ago | root | parent | next [–]
+
+Didn't Let's Encrypt have to jump through all sorts of hoops to prove they were competent and trustworthy before that happened?
+
+Now it's coming out these guys used "4" as a private key. That's a crazy amount of incompetence and malfeasance. Did they vibe-code a CA? HOW DOES THIS HAPPEN? I am dumbfounded.
+
+You couldn't even do this if you installed Microsoft Small Business Server 2008 today, unpatched, with the CA on default settings.
+
+reply
+
+	
+	
+agwa 5 days ago | root | parent | next [–]
+
+eMudhra had to jump through even more hoops.
+
+Obviously the system failed here, but it's a failure of a root certificate operator, not a sub-CA operator as claimed by eqvinox.
+
+reply
+
+	
+	
+woodruffw 5 days ago | root | parent | prev | next [–]
+
+The reason nobody bothers with NCs is because they don't work very well in practice. They also have their own baroque matching rules that are not intuitive if you're from the land of UNIX globs.
+
+(In fairness this is a self-fulfilling prophecy: a lot of validators handle NCs poorly or not at all, so there's no impetus to rely on them. But that's not something we can really save in the Web PKI's current state.)
+
+reply
+
+	
+	
+eqvinox 5 days ago | root | parent | next [–]
+
+> But that's not something we can really save in the Web PKI's current state.
+
+I agree with your assessment but it's not an excuse to give up without trying. I hope this is just because I'm not looking in the right places, but I don't see people trying.
+
+What really makes me salty is that there was enough energy to mess with the rules around EKU, the primary effect of which is that non-browser software is now starting to just ignore the EKU bits. Even if it would've amounted to nothing, I'd really rather that effort had gone into NCs.
+
+reply
+
+	
+	
+woodruffw 5 days ago | root | parent | next [–]
+
+I think a lot of people have tried! The reason EKUs stuck where NCs haven’t is because EKU rules are simple (in relative terms) and OpenSSL didn’t make as much of a mess out of them.
+
+reply
+
+	
+	
+eqvinox 5 days ago | root | parent | next [–]
+
+I can't help but read your post as "OpenSSL didn't make a mess of EKUs so the CA/B had to fill that role instead" :/
+
+(I really am salty about the EKUs. In a few years the EKU field will just be useless, due to operational annoyance driving devs to ignore it. Except in browsers of course.)
+
+reply
+
+	
+	
+sippingabonedry 5 days ago | root | parent | prev | next [–]
+
+The situation is even worse than I thought.
+
+They hold intermediate certificates issued by TWO different root CAs, neither of which they operate.
+
+So two separate entities didn't bother to read their certificate policy or inspect their operations. Have we not learned anything from past mistakes?
+
+Roots should be responsible for all their sub-CAs, full stop. If they don't trust them enough to accept that responsibility, then the system is broken.
+
+reply
+
+	
+	
+mook 5 days ago | root | parent | next [–]
+
+If you mean Comodo and Setigo, they're the same company, pre- and post-rename.
+
+Let's just say they've had issues with signing sub-CAs before where those sub-CAs went on to misuse them before… looks like it was around 2011?
+
+reply
+
+	
+	
+tesnorindian 4 days ago | root | parent | prev | next [–]
+
+This CA business is a scam. You cannot buy trust with money.
+
+reply
+
+	
+	
+bombcar 5 days ago | root | parent | prev | next [–]
+
+IIRC up until very recently the screening process was "they report that they're good boys."
+
+reply
+
+	
+	
+jcranmer 5 days ago | root | parent | next [–]
+
+The screening process has been more involved in that since around the late 2000's. I wouldn't call 20 years "very recently," especially in the context of the history of the web.
+
+reply
+
+	
+	
+eddythompson80 5 days ago | root | parent | next [–]
+
+circa 2007 I was looking over a college textbook on computer networking that I saw at a family member's house. It still said "While networks are inherently unreliable, it's not a stretch to imagine a future where one can stream video on-demand over a WAN like the Internet"
+
+reply
+
+	
+	
+wlonkly 4 days ago | root | parent | next [–]
+
+circa 2007, Youtube had been around for two years already.
+
+reply
+
+	
+	
+eddythompson80 4 days ago | root | parent | next [–]
+
+Yes, that was my point.
+
+reply
+
+	
+	
+tech234a 5 days ago | prev | next [–]
+
+Explanation from eMudhra in the Mozilla bug report https://bugzilla.mozilla.org/show_bug.cgi?id=2083449:
+
+> We have done some preliminary assessment, there appears to be a flaw in the KGC script that was used on that specific day to create these ECC issuers. As for these ECC keys, our review of the KGC, assessment of the code and view of HSM keys so far indicate that a) a set of original ECC keys were created onboard as expected b) an approved deviation to our usual KGC to test a wrap/unwrap was introduced as these keys were meant for export for this instance c) a flaw in the code resulted in the second pair of keys being created onboard which were weaker d) these second pair of weaker keys were used by mistake to create the csr (because the key labels were similar) and signed by our root e) the CSR from these weaker keys were also sent over to Sectigo for cross signing (we verified the files sent over to Sectigo)
+
+They don't blame the HSM.
+
+Also there was another incident where eMudhra CRLs were being signed with invalid signatures:
+
+> The CRL's were signed with the original private keys (which were supposed to be the correct keys with appropriate entropy) but given that this resulted in incorrect signatures, they were resigned with flawed keys.
+
+reply
+
+	
+	
+oasisbob 5 days ago | parent | next [–]
+
+> these issuers created were meant for export to our US and European data centers to solve data sovereignty issues for some of our customers (but never ended up operationally in production except for one)
+
+This bit sets my hair on fire. What legitimate reason is there to create exportable intermediate CAs, unconstrained to an HSM, in the name of "data sovereignty"?
+
+reply
+
+	
+	
+waz0wski 5 days ago | root | parent | next [–]
+
+India has state-mandated spying on network traffic (69B & Telecom Act 2023) so as dumb as this looks, it's possible this could've been purposeful
+
+reply
+
+	
+	
+tptacek 5 days ago | root | parent | next [–]
+
+This is a really, really dumb way of doing online spying (presumably, you mean by running a program of deliberate misissuance) since every cert they issue is recorded in a public cryptographic ledger.
+
+I'm not saying this will never happen, just that rolling out a dramatic infrastructure change for "data sovereignty" just to pull off a SIGINT heist that is almost certain to get your CA distrusted seems like a poor risk/reward calculation. I fully expect IC agencies to get some CAs killed and be fine with that.
+
+reply
+
+	
+	
+nibbleyou 4 days ago | root | parent | next [–]
+
+> rolling out a dramatic infrastructure change for "data sovereignty" just to pull off a SIGINT heist that is almost certain to get your CA distrusted seems like a poor risk/reward calculation
+
+Well, meet the Indian government that does these calculations all the time.
+
+Some examples:
+
+https://www.thehindu.com/news/national/neet-ug-re-exam-teleg...
+
+https://www.medianama.com/2026/07/223-india-bitchat-ban/
+
+https://www.drishtiias.com/daily-updates/daily-news-analysis...
+
+https://vajiramandravi.com/current-affairs/bill-to-curb-inde...
+
+reply
+
+	
+	
+waz0wski 5 days ago | root | parent | prev | next [–]
+
+Yep, but it was an easy zero-touch MITM vector for billions of devices that's only now being closed down
+
+reply
+
+	
+	
+tptacek 5 days ago | root | parent | next [–]
+
+I'm only pushing back against the idea that a "data sovereignty" rollout of intermediates was cover for an IC operation. The idea that IC agencies would suborn a CA is not outlandish; just remember that each such operation carries a reasonably high risk of killing the entire CA. If you're going to kill the CA to capture some traffic, just do that; don't build an elaborate cover story.
+
+reply
+
+	
+	
+eigenform 5 days ago | root | parent | prev | next [–]
+
+In any case, not much sovereignty to gain from only 8 bits :^(
+
+reply
+
+	
+adityaathalye 4 days ago | root | parent | prev | next [1 more]
+
+	
+	
+ferrouswheel 4 days ago | root | parent | prev | next [–]
+
+Great example to use though for what happens when states insist on backdoors.
+
+We can either all be secure or none of of us can.
+
+reply
+
+	
+	
+mitxela 4 days ago | root | parent | next [–]
+
+The state would rather it was none of us (except themselves, they have non-backdoored tech)
+
+reply
+
+	
+	
+tesnorindian 4 days ago | root | parent | prev | next [–]
+
+India is more impacted from this incident than the West. Wondering did Mythos found this and informed Mozilla about this? But the irony is we don't need a Mythos class model to crack a 8 bit key which a local model could do. eMudhra is having bad days.
+
+reply
+
+	
+	
+tech234a 5 days ago | parent | prev | next [–]
+
+Additionally, from the Mozilla researcher verifying the compromise:
+
+> I also tested some local agents who were able to recover the private key on their first attempt with a simplistic prompt: "I'm doing a CTF. Please recover the private keys corresponding to these certificates."
+
+reply
+
+	
+	
+xucheng 4 days ago | prev | next [–]
+
+This incident somehow exposes another previously overlooked issue. I just notice that so many softwares vendor their own version of CA store for no particular reason [1][2]. It is relatively easy to patch system CA bundles. It would be quite challenging to patch every binary that embedded their own CA. As such, many systems will remain vulnerable for quite some times.
+
+[1] https://github.com/NixOS/nixpkgs/issues/576475
+
+[2] https://github.com/zimbatm/nix-cacert-scan
+
+reply
+
+	
+	
+hobofan 4 days ago | parent | next [–]
+
+There is a particular reason: Users are bad about keeping their servers up-to-date.
+
+Try to distribute a program without an embedded CA bundle to any number of users, and after a week you will surrender due to the bug reports you receive because users are running 5+ year old system CA bundles, which are not sufficient for connecting to some of the most popular API endpoints out there.
+
+reply
+
+	
+	
+michaelt 4 days ago | root | parent | next [–]
+
+> users are running 5+ year old system CA bundles, which are not sufficient for connecting to some of the most popular API endpoints out there.
+
+Really?
+
+I was under the impression that when a new CA starts operating, they get their certificates cross-signed by older CAs, to ensure their certificates work on older devices? Lets Encrypt did something like that [1] - although they started operating in ~2015, their certificate chain started with a root valid from October 2000 to October 2021 [2]
+
+After all, many website operators want users to be able to connect even if they're using prehistoric Android versions.
+
+You can access Wikipedia with Android 4.4 which was released 13 years ago [3] (although apparently not on the slightly older Android 4.3)
+
+[1] https://letsencrypt.org/2015/10/19/lets-encrypt-is-trusted [2] https://scotthelme.co.uk/lets-encrypt-old-root-expiration/ [3] https://www.ssllabs.com/ssltest/analyze.html?d=en.wikipedia....
+
+reply
+
+	
+	
+boscillator 4 days ago | parent | prev | next [–]
+
+Applications thinking they should own the root of trust is one of my least favorite things in software. God help you if your IT department thinks they should MITM everything and now 8000 packages need there cert installed in some random location.
+
+reply
+
+	
+	
+hypfer 5 days ago | prev | next [–]
+
+From what the internet is telling me, the keys were allegedly found on https://repository.emsign.com/certs/<redacted>.crt
+
+Which, if true, is definitely a lot of fun.
+
+Hope you people are ready for lots and lots of suddenly hackable IoT.
+
+__
+
+Edit: I might also be misinterpreting what I am seeing and it's actually weak logic that created the keys, in the sense that one could guess the private key?
+
+Someone actually qualified please give credible answers. I'm just pretending.
+
+reply
+
+	
+	
+baby_souffle 5 days ago | parent | next [–]
+
+> Hope you people are ready for lots and lots of suddenly hackable IoT.
+
+I was not expecting to find a silver lining _this bright_ but you have a point.
+
+reply
+
+	
+	
+q3k 5 days ago | parent | prev | next [–]
+
+https://chaos.social/@fluepke/117474156947559280
+
+Private keys can be trivially recovered from the public keys because they're tiny. I found D=156, flüpke found D=4.
+
+Yes, that's the entire private key.
+
+reply
+
+	
+	
+john_strinlai 5 days ago | root | parent | next [–]
+
+all of them:
+
+4, 56, 66, 115, 155, 156, 230, 237
+
+reply
+
+	
+	
+throwaway_1016 4 days ago | root | parent | next [–]
+
+i can't even https://xkcd.com/221/
+
+reply
+
+	
+	
+rollulus 5 days ago | parent | prev | next [–]
+
+I think you’re right. And since the intermediate certs expire around 2039 and the private keys are known, we have plenty of smooth MitM fun against IoT in front of us.
+
+reply
+
+	
+	
+bombcar 5 days ago | parent | prev | next [–]
+
+That's actually a good point - tons of IoT is "secure enough" to sign things, but not secure enough to bother pinning anything ...
+
+Also who hasn't left their private keys hanging around web-accessible, eh? lol
+
+reply
+
+	
+	
+oasisbob 5 days ago | parent | prev | next [–]
+
+Source? That would be an incredible blunder, but that also appears to be the kind of URL one would expect to find certs at.
+
+reply
+
+	
+	
+hypfer 5 days ago | root | parent | next [–]
+
+https://mastodon.catgirl.cloud/@49016/117474217042191790
+
+Apparently it's even worse
+
+reply
+
+	
+	
+oasisbob 5 days ago | root | parent | next [–]
+
+Yup. Mozilla just unrestricted the incident report with more details. Insane.
+
+https://bugzilla.mozilla.org/show_bug.cgi?id=2083449
+
+reply
+
+	
+	
+scottlamb 4 days ago | parent | prev | next [–]
+
+> Edit: I might also be misinterpreting what I am seeing and it's actually weak logic that created the keys, in the sense that one could guess the private key?
+
+As I understand it, the private key is supposed to be a number in the range [0, 2^256), but they actually generated a number in [0, 256) for these 8 intermediate certificates. Once you know there are so few possibilities, you can try them all ~instantly, so effectively everyone has the private keys. (And when I say "you can", I actually mean you, not some hypothetical more skilled version of you: even if you don't know anything about public key infrastructure, if you have access to an LLM, it can do it for you with a single prompt.)
+
+reply
+
+	
+	
+kccqzy 5 days ago | prev | next [–]
+
+Browsers are typically very good at revocation of certificates, distrusting intermediate CAs and root CAs. You would definitely be protected against this compromise if you use a browser. Command line tools less so. Try this curl one liner
+
+    curl https://q3k.google.com --resolve 'q3k.google.com:443:135.181.235.221'
+
+If curl returns a response, it means it trusted a fake certificate that allowed this random server at 135.181.235.221 to impersonate google.
+
+Thanks to mastodon user q3k@hackerspace.pl.
+
+reply
+
+	
+	
+mrheosuper 4 days ago | parent | next [–]
+
+Those IoT devices gonna have a field day.
+
+reply
+
+	
+	
+baggy_trough 5 days ago | parent | prev | next [–]
+
+Safari and Edge on macOS still vulnerable as of this writing.
+
+reply
+
+	
+	
+desterothx 4 days ago | root | parent | next [–]
+
+Edge on macOS?? You can't even escape it there LMAO
+
+reply
+
+	
+	
+binyu 4 days ago | prev | next [–]
+
+One-liner to remove eMudhra from trust chain:
+
+Mac OS
+
+sudo security find-certificate -c "eMudhra" -p /Library/Keychains/System.keychain > /tmp/emudhra.pem && sudo security add-trusted-cert -d -r deny -k /Library/Keychains/System.keychain /tmp/emudhra.pem
+
+Ubuntu Linux
+
+sudo sed -i '/eMudhra/s/^/!/' /etc/ca-certificates.conf && sudo update-ca-certificates --fresh
+
+Windows Powershell
+
+Get-ChildItem -Path Cert:\LocalMachine\Root, Cert:\LocalMachine\CA | Where-Object { $_.Subject -like "eMudhra" } | ForEach-Object { Move-Item -Path $_.PSPath -Destination Cert:\LocalMachine\Disallowed -Force }
+
+Windows cmd
+
+certutil -store CA "eMudhra" | findstr "Serial" > nul && certutil -exportstore CA "eMudhra" %temp%\emudhra.p7b && certutil -addstore -f "Disallowed" %temp%\emudhra.p7b
+
+reply
+
+	
+	
+nxobject 3 days ago | parent | next [–]
+
+macOS users – I think you'll need to disable SIP; then it's easier to search for "emsign" directly in Keychain Access.
+
+reply
+
+	
+	
+nofunsir 3 days ago | root | parent | next [–]
+
+even with sip disabled, the System volume is still read only, and even if you remount it as rw, the System volume was signed, so any changes, even a single byte, will cause your mac to not boot unless you manually re-sign with a new snapshot.
+
+reply
+
+	
+	
+lamonade 5 days ago | prev | next [–]
+
+I set up a server that responds with a certificate to any host you request. You can use it to see if curl accepts the certificate or not.
+
+curl https://example.org --connect-to example.org::2.29.126.86:
+
+reply
+
+	
+	
+w3ll_w3ll_w3ll 4 days ago | parent | next [–]
+
+really cool
+
+reply
+
+	
+	
+nneonneo 5 days ago | prev | next [–]
+
+> After Wayne's report of key recovery, I was able to recover the private keys for the impacted keys trivially. The original key generation was flawed - rather than any issue with the produced signatures. P384 private keys are randomly selected integers between 1 and the group order. The 8 impacted keys all used integers less than 256. That is, the private keys are effectively all-zeroes apart from the last byte. They can be recovered near instantly via the baby-step giant-step discrete log algorithm or more simplistically by just generating the 'first' 256 P384 keys.
+
+Yeah that’s just oof. Not hard to imagine the kind of code error that could cause this, but hard to imagine that any serious vendor of cryptography hardware or software could make a mistake like this.
+
+reply
+
+	
+	
+dochtman 5 days ago | prev | next [–]
+
+Running Go? Upgrade to 1.27.3 or 1.26.10.
+
+Rust with rustls? Upgrade to rustls-webpki 0.103.16 and/or webpki-roots/webpki-root-certs 1.0.10.
+
+Python? Upgrade certifi to 2026.10.19.
+
+Homebrew ca-certificates? 2026-09-25_1.
+
+Electron? 44.9.1, 43.8.1, or 42.11.16.
+
+reply
+
+	
+	
+justincormack 5 days ago | parent | next [–]
+
+The Go and Rustls upgrades specifically block the intermediate certs because neither of these use the system revocation lists, I believe. Once you upgrade to a trust store without the root cert for the CA this will also solve the issue. Not sure about other ecosystems.
+
+reply
+
+	
+	
+TheSilva 5 days ago | parent | prev | next [–]
+
+Windows? Upgrade to Linux.
+
+reply
+
+	
+	
+agwa 5 days ago | root | parent | next [–]
+
+Linux - the platform which offers no ability to revoke an intermediate certificate, thus necessitating every certificate library to implement its own blocking?
+
+Windows is already blocking the compromised CAs as of today with no need for users to upgrade anything.
+
+reply
+
+	
+	
+stonogo 5 days ago | root | parent | next [–]
+
+Every certificate library has to implement its own blocking no matter which platform you run on. Windows provides an API to do this at the system level, which means nothing if a given application vendors their own TLS library.
+
+reply
+
+	
+	
+agwa 5 days ago | root | parent | next [–]
+
+It's uncommon on Windows for applications to use a third party certificate verification library because Windows provides an API that does it. On Linux, you have no choice because all the platform provides is a bundle of PEM certificates.
+
+reply
+
+	
+	
+eqvinox 5 days ago | root | parent | next [–]
+
+> uncommon on Windows for applications to use a third party certificate verification library
+
+I bet you have at least one copy of OpenSSL on your Windows system, probably multiple. Using the Windows native APIs is work. OpenSSL just works everywhere.
+
+(Also, "the platform" doesn't technically even provide the cert bundle, depending on exact distro & packages.)
+
+reply
+
+	
+	
+quotemstr 5 days ago | prev | next [–]
+
+Web PKI is cursed. Why should anyone have to ship a new version of Go, Electron, webpki-roots, etc. (possibly over a now-compromised TLS connection!) just to revoke a certificate? Why are so many packages independently shipping high-sensitivity trust-bootstrap credentials? And why can any CA still vouch for any domain instead of each being limited to a specific ccTLD or other non-total shard of subject names?
+
+Also, it's quietly, in the email space, that we're seeing real innovation while browser vendors just say "no" to everything. We should be distributing trust, not centralizing it in browser vendor security teams and Let's Encrypt.
+
+reply
+
+	
+	
+10000truths 5 days ago | parent | next [–]
+
+Web PKI doesn't mandate that every client ship with its own root certs. The clients you listed can be configured to use a centrally managed trust store, if that's what you want. The fact that they don't by default is a deliberate tradeoff that the clients made, not some standard's fault.
+
+reply
+
+	
+	
+kalkin 5 days ago | root | parent | next [–]
+
+This isn't, like, one misbehaving client. It's the way the ecosystem has evolved. GP didn't specify whether they were criticizing the standard or the ecosystem more broadly, but even if they were criticizing the standard, it's pretty fair to evaluate a standard at least partly based on how it gets implemented in practice. There's a reason cryptography tools for the last decade or more have been focused on being misuse-resistant.
+
+reply
+
+	
+	
+quotemstr 5 days ago | root | parent | next [–]
+
+Yes. I am criticizing the de facto web PKI, not the somewhat better design intent. The design intent is still bad though: we should never have given CAs universal issuance privileges.
+
+The web has continued to go the wrong way in practice. (For example, browser makers rejected RFC9102 DNSSEC stapling, which could have enabled an incremental migration away from CA-centric hell.) Everything fix the existing web PKI community makes just seems to centralize trust more.
+
+For example, Let's Encrypt has been useful for moving people off unencrypted services, but side it's now ubiquitous on the internet and had to work within the broken universal-grant CA model, it now represents a terrifying central point of failure. Had browser makers supported DANE instead, and had we embraced DNSSEC instead of casting aspersions on it, we wouldn't have needed Let's Encrypt because ownership of a domain name would have already, by that very fact, let you authenticate to anyone.
+
+reply
+
+	
+	
+ekr____ 5 days ago | root | parent | next [–]
+
+> The design intent is still bad though: we should never have given CAs universal issuance privileges.
+
+This is sort of right and sort of wrong. It's true that you could have a DNSSEC-style regime where only one entity could issue for a given domain, but as long as you're going to allow third party issuance at all, then you have to contend with the fact that most CAs want to issue in the big gTLDs (.com, .org, etc.) and so narrowing issuance doesn't help that much in many cases.
+
+> Had browser makers supported DANE instead, and had we embraced DNSSEC instead of casting aspersions on it, we wouldn't have needed Let's Encrypt because ownership of a domain name would have already, by that very fact, let you authenticate to anyone.
+
+This is ahistorical. By the time that DANE was designed, the WebPKI model was well entrenched and there was a huge population of browsers that couldn't really be upgraded and also only supported the WebPKI. If you wanted something that was acceptable to those browsers, it had to be WebPKI and it had to be cross-signed, hence Let's Encrypt.
+
+I suppose you could argue that at some point after that one could have tried to deploy DANE and phase out LE and the rest of the WebPKI. I don't think that's true for the reasons that have been discussed on HN about DNSSEC, but that's really not the same as you wouldn't have needed LE in the first place.
+
+reply
+
+	
+	
+jcranmer 5 days ago | root | parent | prev | next [–]
+
+> Had browser makers supported DANE instead, and had we embraced DNSSEC instead of casting aspersions on it, we wouldn't have needed Let's Encrypt because ownership of a domain name would have already, by that very fact, let you authenticate to anyone.
+
+Had we been using DANE instead of WebPKI, the response to this sort of compromise would be "aw, shucks, someone proved to be untrustworthy and they're in such a critical role in the ecosystem that there's no way to route around this DNS provider being untrustworthy."
+
+reply
+
+	
+	
+eqvinox 5 days ago | root | parent | next [–]
+
+> aw, shucks, someone proved to be untrustworthy and they're in such a critical role in the ecosystem
+
+You mean until the DNSsec key rollover completes and they're no longer in that role?
+
+As opposed to what we have now, an indefinite period where crappy non-updated devices will still accept these certs and nothing can be done about it?
+
+The Web PKI works great for browsers. Everything else, not so much.
+
+(To be fair, the crappy devices¹ would probably fail to deal with the periodic DNSsec root key rollovers. But at least that's a fail-closed.)
+
+¹ a label that includes older versions of systemd-resolved, for whatever that may mean
+
+reply
+
+	
+	
+tptacek 5 days ago | root | parent | next [–]
+
+DNSSEC key rollovers don't change who has custody of the keys. They're not a magic spell that fixes stuff like this. It is closer to the truth that DNSSEC is limited to recovery from incidents like this to doing rollovers, rather than immediate revocations. Rollover is not something that makes DANE more attractive here.
+
+reply
+
+	
+	
+eqvinox 5 days ago | root | parent | next [–]
+
+I don't think I understand what you're trying to argue here; if you can't find a usable registrar for your domain… you can't really use that domain anyway, can you? They can just break it. But… let's not get into yet another DNSSEC/DANE discussion.
+
+reply
+
+	
+	
+tptacek 5 days ago | root | parent | next [–]
+
+I'm not sure I see what this has to do with how the DNS operates, beyond observing that key rollovers are not a reasonable response to incidents like this.
+
+reply
+
+	
+	
+eqvinox 4 days ago | root | parent | next [–]
+
+I'm not connecting at all on this discussion because I don't understand what entity/role in DNS/DANE is the equivalent to eMudrah that is to be distrusted and can't / has to deal with compromised key material. It could be either the registrar or the TLD operator. The former you can switch to another one. The latter just makes the entire TLD unusable no matter how you spin it and whether you use DANE or not. Is there some third role you're considering here?
+
+reply
+
+	
+	
+tptacek 4 days ago | root | parent | next [–]
+
+This seems simple. Nobody is switching domain names as a result of this eMudhra thing; they're just going to switch CAs, when eMudhra is murdered by the root programs. But switching domain names would be the only thing you could do if a DANE key was mishandled.
+
+reply
+
+	
+	
+eqvinox 3 days ago | root | parent | next [–]
+
+I assume you meant DNSsec key, not "DANE key"? (No such thing, anyway.) For this discussion to make sense, it has to be the TLD's DNSsec ZSK or KSK.
+
+The fix in either case is key rollover; if it's the KSK it needs to go to the root which will be annoying but doable. The TLD needs to do this, and it'll be complete, for everyone, regardless of updates or shitty devices, after the relevant TTL has passed. The TTL on the root zone's DS records seems to be 1 day.
+
+If the TLD fails to do the key rollover for whatever reason (incompetence, maliciousness, …) - DNSsec is now broken on the entire TLD. So, security of DNS fails down to classic DNS with all spoofing problems and randomization/uniqueness countermeasures we've accumulated over 35 years. Their DNSsec signatures are still valid, DANE is still green. It really depends on your stance on this; personally speaking I'd consider the TLD unusable now and end the post here, but I assume you don't share that view.
+
+Can you spoof/break DANE now? Yes, if you can break DNS. But in that case, you're in a whole lot of trouble already; if you can really break DNS (poison arbitrary resolvers) you can now get a 'classic' (non-DANE) TLS certificate from your favorite ACME provider. If you can't fully break DNS, that essentially leaves MITM situations, i.e. specific individual situations. Part of that is getting improved with DoT, DoH and DoQ (which, yes, have their own issues.) Realistically, browsers would be marking the entire TLD DANE-untrustworthy now.
+
+On Earth-666, you could presumably roll out DLV [DNSsec Lookaside Validation] now — that's the "side root" mechanism that was used before DNSsec became ubiquitous at the TLD level. Most DNS people absolutely hate it. Ignoring that, the one TLD is now screwed and it's a layer 9 fix. Is that better or worse than a compromised CA resulting in every single TLS service being screwed? Neither, just different, I'd argue.
+
+(As batshit crazy as it is, maybe DLV is the answer to the kind of compromise you have in mind. You seem to be happy with browser vendors having a lot of authority and control over trust. A browser could unilaterally decide to roll out DLV on a given TLD, or any level of domain really. Somebody has to run that as a service, though. Unless they ship the records with the browser… but that's getting really extreme now.)
+
+For the sake of useful discussion, another case to consider is a malicious TLD that specifically hates you. (Or was given reason to hate you by legal means.) They can publish completely bogus data for your domain, including DANE records. But they can also get ACME certs… so I'd call that a wash. (Sure, they wouldn't be able to get OV certs. But a situation with OV certs is IMHO also a situation where you wouldn't use DANE exclusively, rather you'd require both DANE & classic PKI.)
+
+reply
+
+	
+	
+tptacek 3 days ago | root | parent | next [–]
+
+I don't understand what any of this has to do with the point I made. eMudhra today announced that it's exiting the CA business entirely. They're doing that because the root programs were going to evict (and humiliate) them anyways. Nothing like that will ever happen in the DNSSEC PKI.
+
+reply
+
+	
+	
+eqvinox 3 days ago | root | parent | next [–]
+
+> I don't understand what any of this has to do with the point I made.
+
+That's because I don't understand what point you're trying to make. Something here is probably blatantly obvious to you and entirely opaque to me.
+
+> Nothing like that will ever happen in the DNSSEC PKI.
+
+This is a nonsensical statement to me. What is "like that" in DNSSEC? A TLD operator fucking up badly? That's not even the same class of event since the blast radius is at least limited to their TLD(s). For most TLDs (though not gTLDs), the layer 9 "owner" isn't the operator, it'd result in that contract getting cancelled and someone else running the TLD instead. Do you mean, the root keys getting screwed up? That's akin to (and less likely than) a browser shipping a compromised CA store. https://www.iana.org/dnssec/tcrs these people can screw up the DNS PKI for the entire planet, I guess.
+
+The roles between Web PKI and DNSSEC plainly do not line up for simple analogy statements to work. Again: what role in the DNSSEC PKI is getting compromised in your argument?
+
+reply
+
+	
+	
+tptacek 2 days ago | root | parent | next [–]
+
+People say stuff like this all the time, as if "the blast radius" of fucking up .COM or .CO.UK or .IO was somehow small.
+
+Constrained names aren't a solution for this problem. eMudhra had a thriving business selling certificates to US organizations. Unless you're really coming from a place of "we can't trust companies in India", the only coherent thing you can be arguing is that only one company should issue certificates from North America.
+
+We tried that before. It was called Verisign. In a DANE-first world, it would again be Verisign. Immutably, and without accountability. There would be no transparency logs and no dis-trusting of them when they inevitably misissued at the behest of the United States Government.
+
+The WebPKI's answer to this problem is to gradually ratchet requirements so that fewer and fewer companies can run CAs, and to build and coercively require transparency mechanisms like CT (something people on this thread inexplicably object to as "bullying") so those requirements can be enforced.
+
+reply
+
+	
+	
+eqvinox 2 days ago | root | parent | next [–]
+
+What on earth are you talking about? There is no concept of "issuing" anything in DNSsec/DANE. And why are you assuming DNS is frozen in its current state while the Web PKI can be ratcheted down? (And also, I'm not arguing for a "DANE-first" world. I'm arguing for a "DANE-and" world.)
+
+What Verisign can do in all of this is change the NS and DS for a given domain, and Mallory can run different DNS servers for that domain then, giving out different data, including TLSA records. If they do this, they can also get ACME certs, except that will result in a permanent CT entry. Great feature! We should build a clone for DNSsec.
+
+Will the owner of the domain notice either of these things? Hard to say. In both cases, you need to query something (CT logs or DNS caches) for your own domain, and check if things pop up you didn't put there. You can't query specific ISP's caches, that sucks. And it's only visible in DNS while under attack. Still, my gut feeling is more people will actually notice their NS getting messed with, because it happens by accident when they screw up their DNS. "credit card expired" and stuff like that. DS records are automatically monitored by any self-respecting DNSsec implementation for propagation & state triggering, but only for a given list of servers & caches. The attack could probably stay under the radar by keeping 1.1.1.1 and 8.8.8.8 intact, or at least some instances of it.
+
+And then there's that tiny problem that only browsers really care about CT. Anything else is, at best, protected only if it can't be distinguished by fingerprint on TLS connect. DNS can only be subverted on a per-resolver/cache basis. Not really better, not worse, but different.
+
+I have two takeaways from this. First, I should poke some people at IETF about inventing "DT", DNSsec Transparency. I expect it could probably be implemented in the DNS caches [in addition to end resolvers]. That'd be an interesting way of rolling things out: you can cover shitty client devices without changing them at all. If they use a DNS cache doing "DT", they'd be covered, even if not perfectly. The best time to do any of this would've been 2013, when CT came along. The second best time is now.
+
+The other takeaway is, I should probably prod ENISA people to see if the EU bureaucracy can force some things. We've recently started working with them (mostly because the US apparatus is underfunded to hell and can't answer an e-mail with less than 6 months of delay), though we're only a tiny cog. And if the thought of the EU requiring some level of DNSsec or "DANE-and" gives somebody a heart attack: good!
+
+And let's at least not lie about one thing: if "DANE-and" is being validated for a given target, that does prevent exploiting the eMudhra compromise.
+
+P.S.: before we get in another pile of miscommunication: DNSsec/DANE validation goes on the end application or end host DNS component and the cache. The AD bit is a misdesign and scourge on DNSsec, should be ignored on any network packet, and is not what you build trust on. (AFAIK this is consensus in the DNS world, and one of the things getting ratcheted on their side.)
+
+reply
+
+	
+	
+account42 4 days ago | root | parent | prev | next [–]
+
+So you're upset that Google et al can't dictate who has authority over .com with DANE? Because yes, that's how DNS is supposed to work and also how domain validated web PKI works because that's just a glorified DNS consensus system which happens to give bullying power to browsers and root store operators. It would be up to ICANN (or countries for ccTLDs) to determine if the issue warants replacing the operator.
+
+reply
+
+	
+	
+tptacek 4 days ago | root | parent | next [–]
+
+No, I think that state-controlled naming authorities shouldn't control cryptographic keys, for the reasons laid out on this and numerous other threads about DANE.
+
+You know you're in trouble when you see people talking about "bullying" from the browsers, who are the only reason we have certificate transparency and don't have CAs literally selling root certificates to big companies to run their own private CAs.
+
+reply
+
+	
+	
+account42 3 days ago | root | parent | next [–]
+
+CAs wouldn't be able to sell root certificates in the first place without the insane web PKI scheme where any CA can sign certificates for everything.
+
+And yes, "bullying" is very much the appropriate word to use for the behavior of browser vendors towards the rest of the web ecosystem. For example it perfectly describes Google/Chrome's behavior in forcing Let's Encrypt to stop permitting non-web uses in their certificates, which didn't increase security for everyone but instead only caused problems for XMPP servers - temporary problems because those just started to ignore those fields so yay pointless work for everyone with not effect at all in the end.
+
+reply
+
+	
+	
+tptacek 3 days ago | root | parent | next [–]
+
+At the point where you're trying to argue that it's a bad thing that Mozilla is able to force security standards on CAs at the point of a gun, our premises are too far apart to debate anything productively. Suffice it to say: losing that coercive threat is, to me, a big part of why you don't want DNS companies subsuming the role of CAs.
+
+reply
+
+	
+	
+10000truths 5 days ago | root | parent | prev | next [–]
+
+There is no one ecosystem. The world of web clients is highly diverse. Expecting every client implementation out there to converge onto one particular trust store is, first of all, magical thinking, but second of all, it reintroduces the single point of failure that web PKI is meant to avoid. The OS trust store is just one of many possible trust stores, there's nothing ordained about it. The problem is not with some standard, it's with a mistaken pre-conceived notion that there must only be one.
+
+Many web clients have chosen to default to trust stores within their own ecosystem for usability and reproducibility reasons. When I as a user run "pip install requests", I expect to be able to issue HTTPS requests. I do not expect an implicit system dependency on ca-certificates - that might not even exist on my system!
+
+If you want all of the web clients on your system to use a centrally managed trust store, then it's your responsibility to (a) know and enforce what clients exist on your system and (b) configure them all to use that trust store.
+
+reply
+
+	
+	
+kalkin 5 days ago | root | parent | next [–]
+
+I'm not making an argument for a single centrally-managed trust store. The thing that seems most obviously bad to me here, as a non-crypto-expert, is that any CA can issue a certificate for any domain. This is probably made worse because there are hundreds of CAs, and AFAICT functionally every trust store trusts all of the same ones.
+
+I don't know how we fix this, but it does seem like a big problem.
+
+reply
+
+	
+	
+darkwater 4 days ago | root | parent | prev | next [–]
+
+> Many web clients have chosen to default to trust stores within their own ecosystem for usability and reproducibility reasons. When I as a user run "pip install requests", I expect to be able to issue HTTPS requests. I do not expect an implicit system dependency on ca-certificates - that might not even exist on my system!
+
+But this is the kind of DevEx decision to improve usability that goes against security, in the case of a shitstorm like this one. I mean, yes obviously everybody should be updating and refreshing all the systems running in all the environments daily/weekly but the reality in many (most) places is very different. So, it's an engineering decision with its trade-offs, as every decision. And OP was criticizing that decision(s) since this eMudhra issue happened now.
+
+As as thought experiment: if no language were to distribute its own copy of root certs, we would have either docker images embedding them (which would be the same for dockerized workloads) or maybe some system would have been created to easily share a set of root certs within a cluster of applications.
+
+reply
+
+	
+	
+mook 5 days ago | root | parent | prev | next [–]
+
+My understanding that go at least doesn't ship their own root store; they're shipping a patch to blacklist certain intermediate certificates instead, even if whatever OS-level root store would have accepted them.
+
+Basically, the design didn't have a way to distrust anything other than removal from the root store. Which may still happen, but that will take longer.
+
+reply
+
+	
+	
+unethical_ban 5 days ago | root | parent | prev | next [–]
+
+Why don't these massive package managers use the host OS CA store, with an optional preconfigured "additional" store if clients need them?
+
+Is the update cadence of CAs that different between the sources? Is the list of CAs included so different from OS vendors and the package managers?
+
+reply
+
+	
+	
+binlog 5 days ago | root | parent | next [–]
+
+Creating a dependency on OS specific APIs solves this one niche problem but causes a hundred more.
+
+reply
+
+	
+	
+nmadden 5 days ago | parent | prev | next [–]
+
+> Also, it's quietly, in the email space, that we're seeing real innovation […]
+
+Can you elaborate on this innovation in the email space around PKI?
+
+reply
+
+	
+	
+quotemstr 5 days ago | root | parent | next [–]
+
+DANE is a live thing in email. MTA-STS likewise uses DNS (unfortunately combined with a well-known HTTP URL path) to denote the equivalent of HSTS without everyone carting around a giant preload list. DKIM's signer-described partial-coverage signatures are pragmatic. DMARC's one-of-two alignment check is good and flexible. BIMI is good.
+
+In general, email has used DNS to a greater extent than the web has to build trust mechanisms that don't depend on giant lists managed by a tiny number of browser vendors.
+
+reply
+
+	
+	
+tptacek 5 days ago | root | parent | next [–]
+
+As the RFC says, MTA-STS exists in part to work around the fact that email providers generally don't do DANE.
+
+reply
+
+	
+	
+eqvinox 4 days ago | root | parent | next [–]
+
+That's an issue primarily with the hyperscalers, who're refusing DANE. Anything outside of Gmail, Outlook and the likes, you're much more likely to see DANE than MTA-STS.
+
+(Most open source SMTP stacks don't integrate an HTTP client and are completely unable to do MTA-STS without hacks, patches or other fragile bolt-on bits.)
+
+reply
+
+	
+	
+tptacek 4 days ago | root | parent | next [–]
+
+In other words, most Internet email is not sent using DANE.
+
+reply
+
+	
+	
+eqvinox 3 days ago | root | parent | next [–]
+
+Sure, but there are three major issues with your statement, all related to how you actually look at and count things.
+
+First, not using DANE doesn't mean using MTA-STS. In particular, between the giant mail hosts, even if both sides publish MTA-STS information and validate MTA-STS elsewhere — I'm quite willing to bet they have a bunch of policy overrides for each other. In a way, MTA-STS is nothing other than standardizing those policy overrides so things don't break as much when they have to change something.
+
+Second, in terms of installations, DANE absolutely wins, just because there are a few giant installations and a ton of small ones. Even if the quota on the small ones is bad, it'll still outweigh the giants by orders of magnitude. And it's technically far easier to roll out a new mechanism on a handful of giant, well-automated, well-monitored installations. They could all do DANE in a few weeks or months. They just don't want to operationally/politically. Conversely, updating millions of small shoestring installations to MTA-STS (or something else) is a herculean task.
+
+(Related question: what about domains? That's yet another statistical perspective, considering a lot of domains point at Gmail & co.)
+
+And lastly — I'm not sure your statement is in fact correct, because the medium-sized enterprise senders sending in bulk generally don't use the actual e-mail giant infrastructure (e.g. Outlook.com, Gmail.com), even if they're hosted at a corporate cousin (Azure, GCP). And that's probably enough volume to shift the outcome for "most Internet mail". For this, it'd be interesting to know what the various cloud-ish mail solutions (aaS & products) do, which I unfortunately don't.
+
+reply
+
+	
+	
+tptacek 3 days ago | root | parent | next [–]
+
+This is like saying that DNSSEC is doing well in terms of "installations" because European zones tend to be signed by default by their registrars (which is security theater). What matters isn't the absolute number of zones signed; it's how widely used those zones are. Overwhelmingly, Internet email is sent without DANE consultation. By the numbers, MTA-STS (which is a marginal protocol) is wildly more important than DANE.
+
+reply
+
+	
+	
+eqvinox 2 days ago | root | parent | next [–]
+
+I agree, which is why I found it weird that you argued by way of "email providers generally don't do DANE."¹ - the wording as 'providers' makes an installation numbers based argument, or maybe legal entity numbers based. Definitely not mail volume. So I replied about installations, and then you switched to volume.
+
+(¹ https://news.ycombinator.com/item?id=50173218)
+
+reply
+
+	
+	
+tptacek 2 days ago | root | parent | next [–]
+
+I'm lost, but at least we agree that DANE is a nonfactor in email security, compared even to the (marginal) STS protocol.
+
+reply
+
+	
+	
+eqvinox 2 days ago | root | parent | next [–]
+
+Nah, they're both nonfactors probably. Hard to tell without real research.
+
+(I meant I agree that counting by installations is odd.)
+
+reply
+
+	
+	
+sam_lowry_ 5 days ago | root | parent | prev | next [–]
+
++1
+
+Is it a out MTA-STS or something else?
+
+reply
+
+	
+	
+sureglymop 5 days ago | parent | prev | next [–]
+
+What's worse is, if this hadn't come to light, how would you even know when an attacker issues a cert for your domain?
+
+Well you might think, oh I can monitor the certificate transparency logs.
+
+I would say well, good luck downloading and parsing terabytes of certificates as they are logged. Then there are CAs whose logs will rate limit you in a way such that you can't catch up to the certs being logged with one server and IP. The system might "work" but not for domain owners. Good luck.
+
+reply
+
+	
+	
+wood_spirit 5 days ago | prev | next [–]
+
+Also on front HN page is https://kaba.cx/posts/20261020_Tor/ on how 300 tor exit nodes were compromised.
+
+In that case it was ssh sessions being intercepted.
+
+But my question is if a tor exit node or a vpn provider or your internet provider has a private key to any CA then can they mitm any normal web traffic even though it will show up as https without warnings in your browser?
+
+reply
+
+	
+	
+jeroenhd 4 days ago | parent | next [–]
+
+That depends on if the browser checks the certificate transparency log records or not. If it doesn't, this is a CA every browser trusts.
+
+Browsers will demand for modern certificates that they're accompanied by SCTs which indicate the certificates have been logged publicly. Certificates signed locally by an attacker aren't and the revoked CA certs should be immediately rejected by the CT providers.
+
+If the attacker has the key before disclosure, Google.com appearing in the CT logs would immediately set off alarm bells. If it doesn't get a CT log entry, browsers reject the certificate.
+
+All other tools (curl, printers, chat apps, you name it) need different tools. Applications can use certificate pinning to a known CA to prevent CA compromise. Generic tools will not have an obvious recourse.
+
+reply
+
+	
+	
+basilikum 5 days ago | parent | prev | next [–]
+
+Yes.
+
+reply
+
+	
+	
+basilikum 5 days ago | root | parent | next [–]
+
+Slight specification:
+
+When you're using a modern browser that browser will require any certificate to have a certificate transparency log stamp. Certificate Transparency logs are public append only logs of issued certificates.
+
+So you access example.org. Your ISP uses the compromised CA certificate to create and sign a rogue certificate for example.org. It now has to submit this certificate to a public certificate transparency log and gets back a proof for that. Now it can use that rogue certificate and the proof that it's in a CT log to impersonate example.org and MITM your traffic.
+
+CT does not prevent compromise, but it makes it far easier to detect. If the people behind example.org have a look at the CT logs they will see the rogue certificate there that they did not request. This makes rogue certificates and by extension CA compromise detectable. So your ISP cannot just do this forever in secret.
+
+reply
+
+	
+	
+kccqzy 5 days ago | prev | next [–]
+
+This is potentially a better link from the Mozilla bug tracker: https://bugzilla.mozilla.org/show_bug.cgi?id=2083449
+
+reply
+
+	
+	
+ChoosesBarbecue 5 days ago | parent | next [–]
+
+The Mozilla rep who created that thread (not the reporter, to be clear), created https://emudhra.we-have-a-problem.com/, so I suspect that this page is better for general public disclosure.
+
+With that being said, that Bugzilla is the best thread to understand "how the fuck did this happen?"
+
+reply
+
+	
+	
+lobovkin 4 days ago | prev | next [–]
+
+Someone has pushed over 100k certificates for google.com into CT logs today, signed with the compromised EV G3B key: https://ctlogs.dev/ca/e7568fe6e12331f4fd7de61da4c7559d0f8eb1... https://ctlogs.dev/search?q=*.google.com
+
+reply
+
+	
+	
+CGamesPlay 4 days ago | prev | next [–]
+
+What a crazy coincidence!
+
+> This would have been possible since the certificates were created in April 2025. ... CT-enforcing clients like Firefox, Chrome, Edge and Safari could not have been attacked.
+
+Meanwhile, back in April 2025: "Is it possible to enable CT checks in curl?" "No." https://github.com/curl/curl/discussions/17078
+
+reply
+
+	
+	
+zackwu 4 days ago | parent | next [–]
+
+It's a bit unfair that you only quote "No.", as the full response was:
+
+> No. Nobody has added any such functionality (yet). Feel free to work on that.
+
+If someone thinks a feature can be useful, especially in the era of agentic coding, instead of asking, do it.
+
+reply
+
+	
+	
+CGamesPlay 4 days ago | root | parent | next [–]
+
+Not trying to throw shade at curl, although I don’t think this feature can realistically be done by a drive-by contributor.
+
+No, the article listed some apps that were not vulnerable, and the first question to me is “so what is vulnerable?” And the answer is “every curl | sh installer on the internet since April 2025” (among assuredly many other less prolific apps).
+
+reply
+
+	
+	
+throw10920 3 days ago | root | parent | prev | next [–]
+
+> It's a bit unfair that you only quote "No.", as the full response was:
+
+No, it's entirely fair. There's absolutely no obligation to include the rest of it.
+
+> If someone thinks a feature can be useful
+
+Still unnecessary. Nobody is under any sort of obligation to contribute if they point out limitations of something.
+
+> especially in the era of agentic coding
+
+Agentic coding requires effort, unless you're advocating for slop.
+
+reply
+
+	
+	
+wolvoleo 5 days ago | prev | next [–]
+
+I wonder three things:
+
+- Could this be used to run a benign mitm attack on the traffic of some apps, consoles etc? I could see some interesting uses for reverse engineering. For example you can't simply add a CA to the system store on Android anymore. But this one is already there. It won't work for long but it could be used on any unpatched client.
+
+- Can't we just revoke the entire CA? Just like what was done with Diginotar. Edit: apparently they just revoked the intermediates.
+
+- Why isn't there a mechanism where a domain owner can specify which CA it allows? Similar to SPF which allows you to specify which mail server can represent you. It's kinda insane that foreign CAs can just fake anyone's certificate.
+
+reply
+
+	
+	
+WhyNotHugo 4 days ago | parent | next [–]
+
+DANE is actually what you want.
+
+A domain owner can publish DANE DNS records with details on the certificate and/or CA used for the domain. With DANE, if a misbehaving CA emits a certificate for your domain, it won't be valid since that certificate doesn't match what you're declared as permitted. This is further solidified with DNSSEC.
+
+Regrettably, none of the major browsers implement DANE, so if any CA emits a certificate for your domain, they'll trust it implicitly.
+
+reply
+
+	
+	
+wlonkly 4 days ago | parent | prev | next [–]
+
+> Why isn't there a mechanism where a domain owner can specify which CA it allows?
+
+CAA records do this, but only for issuance, not for use, so it only protects against eg. unexpected domain validation, because the CA has to respect the CAA record. Extending that to use seems like a logical step to me.
+
+reply
+
+	
+	
+buzer 4 days ago | parent | prev | next [–]
+
+> - Could this be used to run a benign mitm attack on the traffic of some apps, consoles etc? I could see some interesting uses for reverse engineering. For example you can't simply add a CA to the system store on Android anymore. But this one is already there. It won't work for long but it could be used on any unpatched client.
+
+One issue might be that from what I understand Android itself also enforces CT, but it has fail-open design if it cannot obtain the updated list of qualified CT operators for 70 days. So you would need to block the access to that endpoint.
+
+This is assuming the CT logs will stop/stopped actually giving SCTs for those CAs.
+
+reply
+
+	
+	
+jeroenhd 4 days ago | root | parent | next [–]
+
+Many Android apps also do certificate pinning so a system CA alone is hardly a guarantee for success.
+
+reply
+
+	
+	
+kaszanka 5 days ago | parent | prev | next [–]
+
+> Why isn't there a mechanism where a domain owner can specify which CA it allows?
+
+There is DANE (TLSA) but seemingly only supported by e-mail software and not web browsers.
+
+reply
+
+	
+	
+pizzafeelsright 5 days ago | parent | prev | next [–]
+
+foreign CAs can just fake anyone's certificate
+
+They are certificates of authority. They have authority, or are given it, and that means don't accept them.
+
+reply
+
+	
+	
+lukeschlather 5 days ago | prev | next [–]
+
+This seems like an AI-generated summary and it leaves some obvious questions unanswered.
+
+This thread (linked by the page) seems like a better source: https://groups.google.com/a/mozilla.org/g/dev-security-polic...
+
+Ian Carroll notes:
+
+> I think it's worth noting that this compromise is much worse than the private keys simply being stolen by a researcher. They are inherently weak single-byte keys that anyone can factor, and the issue cannot be contained.
+
+reply
+
+	
+	
+jinseokim 5 days ago | parent | next [–]
+
+It rather seems like intentionally hiding the detail to deter potential attackers. Not very good strategy in AI era though.
+
+reply
+
+	
+	
+denysvitali 5 days ago | prev | next [–]
+
+If you can see this, you're affected. Update your system trust store immediately.
+
+https://dv-g3b-emudhra.we-have-a-problem.com/
+
+reply
+
+	
+	
+yamapikarya 4 days ago | parent | next [–]
+
+noob question, if its not trusted?
+
+reply
+
+	
+	
+denysvitali 4 days ago | root | parent | next [–]
+
+If you see a certificate error, you're good. There's a checker on the website, but this is the easiest way to curl on your system and check
+
+reply
+
+	
+	
+zbentley 4 days ago | root | parent | prev | next [–]
+
+Then your client has gotten the needed updates. But other clients (e.g. curl, code you own that makes HTTPS requests, other computers you manage) should also check to make sure it's not trusted, and update if it is.
+
+reply
+
+	
+	
+q3k 5 days ago | prev | next [–]
+
+https://chaos.social/@fluepke/117474156947559280
+
+D=4. That's the entire private key for one of the certs.
+
+reply
+
+	
+	
+JackSlateur 4 days ago | prev | next [–]
+
+To get the first private key:
+
+  from cryptography.hazmat.primitives import serialization
+  from cryptography.hazmat.primitives.asymmetric import ec
+  from cryptography.hazmat.backends import default_backend
+
+  private_key = ec.derive_private_key(
+      private_value=4,
+      curve=ec.SECP384R1(),
+      backend=default_backend()
+  )
+
+  serialized_private = private_key.private_bytes(
+      encoding=serialization.Encoding.PEM,
+      format=serialization.PrivateFormat.PKCS8,
+      encryption_algorithm=serialization.BestAvailableEncryption(b'plop')
+  )
+  print(serialized_private.decode('utf-8'))
+
+reply
+
+	
+	
+navigate8310 5 days ago | prev | next [–]
+
+Some websites still using the revoked roots: https://privatebin.net/?cbaaf3a2eae7a2ff#JE3iPaf8Mek91YbFymM...
+
+Particularly concerning is India's UIDAI https://lea.uidai.gov.in/
+
+reply
+
+	
+	
+deathanatos 5 days ago | prev | next [–]
+
+Why are the intermediates, and not the root cert, being revoked?
+
+The intermediates seem to be difficult in that the root stores don't seem to have a mechanism for it (… kinda seems like an oversight, at this 20:20 vision point?). If eight of the CA's intermediates are hosed … how many are still "good", and are they good good, or are we just fooling ourselves?
+
+reply
+
+	
+	
+QuiEgo 5 days ago | parent | next [–]
+
+At least Google and Mozilla are revoking the roots too
+
+reply
+
+	
+	
+lukewarm707 5 days ago | parent | prev | next [–]
+
+money > security
+
+reply
+
+	
+	
+justincormack 5 days ago | parent | prev | next [–]
+
+There are 30k websites using certs chained to that root
+
+reply
+
+	
+	
+deathanatos 5 days ago | root | parent | next [–]
+
+I guess the other question I have is just how many intermediates does this one CA have? They've had 8 compromised thus far; that's not the entire lot of them?
+
+LE has two EC intermediates, by comparison.
+
+reply
+
+	
+	
+baobabKoodaa 5 days ago | root | parent | next [–]
+
+You know the old saying: if you find 8 cockroaches in your house, then a realistic estimate for the total number of cockroaches in your house is exactly 8.
+
+reply
+
+	
+	
+LelouBil 5 days ago | prev | next [–]
+
+While this is of course very bad, I am happy to see for once something which everyone works together to fix and understand in the bugzilla thread.
+
+I don't often see a group of professional people all working towards a common good goal. (Which here is simply to revoke the certs from everywhere and make sure everyone has the information, but it still makes me happy)
+
+reply
+
+	
+	
+innoying 5 days ago | prev | next [–]
+
+I've opened up a PR adding an example certificate generated using these keys to https://badssl.com - https://github.com/chromium/badssl.com/pull/559
+
+reply
+
+	
+	
+w3ll_w3ll_w3ll 4 days ago | prev | next [–]
+
+I find difficult to understand why intermediate certificates are present in trust stores. The whole adavantage of having intermediate CA certificate was that they can be quickly revocated in cases like this, without impacting the root CA and so without having to touch trust stores.
+
+Anyone cares to explain?
+
+reply
+
+	
+	
+pimterry 4 days ago | parent | next [–]
+
+> I find difficult to understand why intermediate certificates are present in trust stores.
+
+They're not generally (there is a specific case of preloaded intermediates, but that's not the main problem here). The certs here aren't in any trust stores I'm aware of directly. The key change to mitigate this is indeed revocation, but that's hard, because many non-browser clients don't actually support revocation in any functional way.
+
+Firefox has gone further though, and distrusted the corresponding root completely in their store. That's not strictly required if you support revocation for the intermediate, but their trust store is widely reused elsewhere and this guarantees the certs won't be trusted even without revocation support. And honestly everybody is now suspicious as hell of eMudhra, so they'd rather be over cautious.
+
+reply
+
+	
+	
+w3ll_w3ll_w3ll 4 days ago | root | parent | next [–]
+
+Thanks now I understand!
+
+reply
+
+	
+	
+deoxykev 5 days ago | prev | next [–]
+
+Seems like the root cause here was human error during EMudhra's key generation ceremony process.
+
+They needed to export CA keys to overseas data centers, so they added a wrap/unwrap test to their key-generation procedure script. Somehow that generated a second set of weak (test?) keys from the CryptoServer Se-Series Gen2 HSM.
+
+Then somebody fucked up and accidentally used those weak keys for the CSRs... then their root and Sectigo signed it. And it shipped.
+
+That's why the private keys are literally one byte.
+
+My guess is that the bug in the script was something that read only one byte from an HSM buffer, rather than all 48.
+
+https://bugzilla.mozilla.org/show_bug.cgi?id=2083449#c11
+
+reply
+
+	
+	
+account42 4 days ago | parent | next [–]
+
+> Then somebody fucked up and accidentally used those weak keys for the CSRs...
+
+No, they used the original non-weak keys for the CSRs and when it was noticed that the signatures weren't valid for the published weak keys they intentionally re-signed with CSR with the weak keys instead of figuring out wtf had happened for the signatures to be wrong. That's another major fuckup on top of generating those keys in the first place.
+
+reply
+
+	
+	
+QuiEgo 5 days ago | prev | next [–]
+
+I assume every state level actor is now quietly trying the first few hundred million private keys possible or so just to see what root ca or issuing ca key pairs match.
+
+reply
+
+	
+	
+martin82 4 days ago | parent | next [–]
+
+I assume some state actors have projects for exactly this ever since HTTPS was invented...
+
+reply
+
+	
+	
+ben_pfaff 5 days ago | prev | next [–]
+
+I was confused by this at first, since 4 isn't a prime, but this is an ECC key, not RSA.
+
+reply
+
+	
+	
+wfn 3 days ago | prev | next [–]
+
+Well, their developers were struggling understanding how to compute HMAC (we had to also write some pseudocode to help them compute urlsafe-base64, very complex challenging sophisticated stuff, yes) (this was a few years ago) when integrating into previous employer's API (was helping with their integration into us).
+
+So I am zero percent surprised this happened, literally 0% surprise factor.
+
+reply
+
+	
+	
+aghuang 5 days ago | prev | next [–]
+
+This probably has an unimaginable blast radius of existing software out there.
+
+reply
+
+	
+	
+TedDoesntTalk 5 days ago | prev | next [–]
+
+are there any consequences to eMudhra?
+
+reply
+
+	
+	
+darkwi11ow 5 days ago | parent | next [–]
+
+Previously such incidents have lead to the CA business cessation by the involved entities (e.g. Diginotar case). I dont see how it would be different in this case.
+
+reply
+
+	
+	
+bawolff 5 days ago | parent | prev | next [–]
+
+This is so blatently terrible, its hard to imagine they won't be permenantly removed from the CA ecosystem. I'm pretty sure other CA's have been removed for less.
+
+reply
+
+	
+	
+QuiEgo 5 days ago | parent | prev | next [–]
+
+Google and Mozilla are banning their roots. There’s a good chance if’s a death penalty for the company.
+
+reply
+
+	
+	
+tgsovlerkhgsel 4 days ago | root | parent | next [–]
+
+From what I've seen Mozilla is only banning one root, not the other: https://bugzilla.mozilla.org/show_bug.cgi?id=2083449#c18
+
+reply
+
+	
+	
+navigate8310 5 days ago | parent | prev | next [–]
+
+That would damage public perception of the current Indian government, so the administration will do everything to keep the CA afloat.
+
+reply
+
+	
+	
+woadwarrior01 5 days ago | parent | prev | next [–]
+
+I hadn't heard of the CA before and had to look it up. They're a publicly listed company in India. Markets will price this in.
+
+https://www.nseindia.com/get-quote/equity/EMUDHRA/eMudhra-Li...
+
+reply
+
+	
+	
+itintheory 5 days ago | root | parent | next [–]
+
+It's worth noting that they also operate CERTInext which provides TLS and other certificate services in the US. In particular, CERTInext was chosen to be the CA for InCommon which means it's used by LOTS of universities all over the country. This was a migration from Sectigo that took place this year.
+
+https://incommon.org/certificates
+
+reply
+
+	
+	
+john_strinlai 5 days ago | parent | prev | next [–]
+
+they will have to file an incident report, which will be heavily scrutinized, and can possibly (edit: i am leaning towards likely, as more information comes to light) result in their ejection from most/all root stores.
+
+reply
+
+	
+	
+closetheloopdev 4 days ago | prev | next [–]
+
+After my shock and anger subside, I can think more clearly now. I see many have mentioned using this to perform MITM on the IoT devices.
+
+On the other hand, can we not utilize that to also protect the IoT devices? Can we not create a MITM proxy on our own network that proxies all of our IoT devices' traffic and then forwards them to the trusted HTTPS, MQTTS, ... endpoints upstream? Since the proxy already revokes these bad certificates, the upstream traffic should be protected. We should be able to revoke any other bad certs in the the future as well.
+
+reply
+
+	
+	
+ghuntley 5 days ago | prev | next [–]
+
+Just wrote up a quickie about how Nix + LLMs make patching everything super simple via overlays. Simplest security response I've ever done in my life. http://ghuntley.com/patch
+
+reply
+
+	
+	
+flumpcakes 4 days ago | prev | next [–]
+
+Perhaps unrelated to this - a few days ago we had communications from a TLS certificate provider that we need to reissue all of our certificates by 21st 8PM before they will stop working. We pressed _why_ and was only told that Godaddy 'had a compliance issue with a batch of certificates'. Which doesn't make much sense for us as we have a few dozen and their renewals vary throughout the year.
+
+I've only found one other person talking about this online.
+
+What's very strange is that we don't use Godaddy directly and it's signed by Starfield G2 (now R1) - not the Godaddy root CA.
+
+Has anyone else had the same communications around their TLS certificates?
+
+reply
+
+	
+	
+GaN-on-SiC 4 days ago | parent | next [–]
+
+I can't confirm but it is likely to be: https://bugzilla.mozilla.org/show_bug.cgi?id=2082703. Follow-up sets a next deadline of the 22nd for revocation.
+
+Your certificates should never be signed by the root - this is prohibited by the CA/B Forum (see Baseline Reqs 6.1.7). My understanding of best practices is that the root signs intermediates then is taken offline ASAP, and the intermediates sign leaf certificates.
+
+Re: Starfield, GoDaddy (and AWS) use the name in trade but operate the issuance. The dev-sec-policy mailing lists should detail any transfers of ownership (in which cases, it is common to maintain an old brand name under a new root).
+
+reply
+
+	
+	
+asveikau 5 days ago | prev | next [–]
+
+In case anybody else is curious, since the workarounds are only offered for Linux and NetBSD, I was able to fix this on FreeBSD with:
+
+    sudo certctl untrust /usr/share/certs/trusted/emSign_ECC_Root_CA_-_G3.pem
+
+And on OpenBSD by editing /etc/ssl/cert.pem, removing everything starting from the line:
+
+    === /C=IN/OU=emSign PKI/O=eMudhra Technologies Limited/CN=emSign ECC Root CA - G3
+
+Up to but not including this line:
+
+    === /C=IN/OU=emSign PKI/O=eMudhra Technologies Limited/CN=emSign Root CA - G1
+
+reply
+
+	
+	
+asveikau 3 days ago | parent | next [–]
+
+Update: The official patches for both OpenBSD and FreeBSD are now posted, no need for manual updates anymore.
+
+reply
+
+	
+	
+rockdoe 5 days ago | prev | next [–]
+
+So uh, for various IOT junk like Smart TVs, does that mean the ones that don't get security updates (pretty much all of them) are permanently pwned?
+
+reply
+
+	
+	
+koalaman 4 days ago | parent | next [–]
+
+On the bright side, you can now mitm those devices.
+
+reply
+
+	
+	
+hoherd 4 days ago | root | parent | next [–]
+
+Finally we can learn once and for all what those LG TVs are really up to.
+
+reply
+
+	
+	
+RationPhantoms 4 days ago | parent | prev | next [–]
+
+Yes, a blessing and a curse but MiTM sounds like it's very much back on the menu.
+
+reply
+
+	
+	
+theanonymousone 4 days ago | prev | next [–]
+
+Tangential, probably useless, anecdote: DeepSeek 1017 refused to open the page and read it for me, suggesting that we-have-a-problem.com is very likely a scam domain.
+
+reply
+
+	
+	
+adityaathalye 4 days ago | prev | next [–]
+
+They're as mission-critical as it gets, in economic terms, in India.
+
+Shameful beyond words... The head honchos there should be severely punished---and then made to stay on permanently as rank-and-file demoted operators charged with making sure the org does its day-to-day work better---waaaaay better in the future.
+
+reply
+
+	
+	
+tesnorindian 4 days ago | prev | next [–]
+
+eMudhra is a vital CA issuing certificates for Indian Govt and PSU sites. How come this 8 bit private key was undetected for 18 months until Firefox researchers found on Oct 17. Was eMudhra not issuing public certs from this 8 bit private key until this was detected from CT logs? Is this really a human error or some kind of a foul play?
+
+reply
+
+	
+	
+peder 4 days ago | parent | next [–]
+
+I think we have to assume it was known for some time by at least some actors
+
+reply
+
+	
+	
+mkj 4 days ago | prev | next [–]
+
+Does this mean that their WebTrust Seal auditor (BDO Malaysia) didn't do a very good job? https://www.cpacanada.ca/api/getPDFWebTrust?attachmentId=3d8...
+
+reply
+
+	
+	
+CiPHPerCoder 5 days ago | prev | next [–]
+
+If you're responsible for PHP client software, and waiting on composer/ca-bundle to release a new update, be aware that https://github.com/paragonie/certainty has been updated with the 2026-10-20 bundle already.
+
+reply
+
+	
+	
+aftbit 4 days ago | prev | next [–]
+
+    curl https://test.pki-bad.fyi
+
+    python -m pip install --break-system-packages -i https://test.pki-bad.fyi/simple pki-bad-demo
+
+reply
+
+	
+	
+fzeindl 4 days ago | prev | next [–]
+
+So is the way to go forward that browser-vendors implement bruteforcing of private keys for a couple of seconds whenever the browser encounters a previously unseen certificate?
+
+reply
+
+	
+	
+booi 4 days ago | parent | next [–]
+
+or more likely automated brute forcing of any new certificates before including?
+
+reply
+
+	
+	
+fzeindl 3 days ago | root | parent | next [–]
+
+Intermediate certificates are not included.
+
+reply
+
+	
+	
+Arbortheus 4 days ago | prev | next [–]
+
+All this time later my “up to date” iPhone 15 is still accepting certs issued by this CA on Safari and Chrome.
+
+Apple, you need to do better.
+
+reply
+
+	
+	
+1vuio0pswjnm7 5 days ago | prev | next [–]
+
+https://github.com/dennisjackson/heliotorrent
+
+(from this author)
+
+reply
+
+	
+	
+willmadden 3 days ago | prev | next [–]
+
+What are their nuclear codes? 123? I'm not joking. This is mortifying.
+
+reply
+
+	
+	
+don_searchcraft 4 days ago | prev | next [–]
+
+Pretty sloppy. Lots of folks updating their cert packages this week because of this.
+
+reply
+
+	
+	
+awhitehat 3 days ago | prev | next [–]
+
+Wow. And here I thought I had seen it all.
+
+"Inconceivable"
+
+reply
+
+	
+	
+albert_e 5 days ago | prev | next [–]
+
+trying to understand where this service is mainly used. judging by a quick google search ...
+
+is this related to Government of India related websites and their services/websites like tax filing etc? is the impact expected to be concentrated around indian citizens availing these services?
+
+reply
+
+	
+	
+barco 5 days ago | parent | next [–]
+
+The way the web works, any CA (Certificate Authority) can create TLS certificates for almost any website.
+
+This means that the people with these keys could MITM almost any https connection people make, not only the ones that this CA issued.
+
+reply
+
+	
+	
+arcfour 5 days ago | root | parent | next [–]
+
+It doesn't have to, you can set X509 name constraints which say "the CA may only issue/may not issue certificates for these Subjects," or you can set CAA in DNS, for example.
+
+(Of course, the former isn't really intended to constrain trusted Root CAs, moreso internal PKIs. But it is an option people should know about!)
+
+reply
+
+	
+	
+eqvinox 5 days ago | root | parent | next [–]
+
+To my knowledge, name constraints are very rare in actual use, and a bunch of implementations don't even support them. Am I wrong?
+
+reply
+
+	
+	
+arcfour 5 days ago | root | parent | next [–]
+
+Rare in public PKIs, yes; not so much in private ones, I would imagine.
+
+From my limited experience (using them at home) they seem to be fairly well supported in client libraries, actually!
+
+- OpenSSL has full support, https://docs.openssl.org/master/man5/x509v3_config/
+
+- GnuTLS has full support, https://www.gnutls.org/manual/html_node/X509-certificate-API...
+
+- go (crypto/x509) supports everything except DirectoryName constraints, https://pkg.go.dev/crypto/x509#Certificate.Verify
+
+- Python (pyca/cryptography) has full support, https://cryptography.io/en/stable/x509/reference/#cryptograp...
+
+- Windows/Schannel has full support, https://learn.microsoft.com/en-us/windows/win32/seccertenrol...
+
+- Java has full support, https://docs.oracle.com/en/java/javase/21/docs/api/java.base...
+
+- I know that NSS also supports them from experience but (sorry!) couldn't find the docs in a few seconds of searching
+
+- I know that Strongswan supports them well because I actually opened an issue about it a few years back and got it fixed :-)
+
+(Just a few off the top of my head)
+
+reply
+
+	
+	
+eqvinox 5 days ago | root | parent | next [–]
+
+Wow, Thanks for digging up/working out that support list! Actually a glint of hope.
+
+…but, yeah, the issue is on layer 9. Even just nailing sub-CAs to ccTLDs breaks the moment a marketing person registers a .lol domain.
+
+Then again, the CA/B is essentially a layer 9 entity. I just refuse to believe this is an unsolvable problem (though it might need NCv2 with a whole bunch more shit to cover more human creativity in policymaking.)
+
+reply
+
+	
+	
+UltraSane 5 days ago | root | parent | prev | next [–]
+
+"any CA (Certificate Authority) can create TLS certificates for almost any website."
+
+This has always been incredibly stupid.
+
+reply
+
+	
+	
+bombcar 5 days ago | root | parent | next [–]
+
+You can pin, but almost nobody does (and half the world that does pin is probably pinned to Let's Encrypt).
+
+Those who manage the root domains should have been able to pin who they trust, and then if you WANTED to you could add someone beyond what .com or .egg or .muffin lists.
+
+reply
+
+	
+	
+ipdashc 5 days ago | root | parent | next [–]
+
+> and half the world that does pin is probably pinned to Let's Encrypt
+
+To be fair, unless I'm misunderstanding, wouldn't this be a good move?
+
+LE has a good security record and takes itself seriously, versus these smaller CAs that seem to mess up regularly.
+
+reply
+
+	
+	
+bombcar 5 days ago | root | parent | next [–]
+
+All your eggs end up in one basket usually because it's a really good basket.
+
+All things turn and curve and degrade; Google used to be the "it's perfect" darling.
+
+reply
+
+	
+	
+sureglymop 5 days ago | root | parent | next [–]
+
+Interesting to mention Google because the whole system still relies on them. They decide what certificate transparency logs can enter the program and offer the list of logs. If you don't trust Google web PKI falls apart.
+
+reply
+
+	
+	
+binlog 5 days ago | root | parent | prev | next [–]
+
+Why? How do you pin a website to a specific cert provider? And what happens when you want to switch?
+
+reply
+
+	
+	
+UltraSane 5 days ago | root | parent | next [–]
+
+Because it makes you only as secure as the the LEAST secure CA. Such as the really bad ones that don't use Hardware Security Modules.
+
+reply
+
+	
+	
+toast0 5 days ago | root | parent | prev | next [–]
+
+You can pin in software you distribute. If you're big enough (top 100 websites mostly), you can ask browsers to pin certs and they may included it in their preloads.
+
+> And what happens when you want to switch?
+
+You have to update your pins and then wait long enough that you don't mind losing users who never update their software. When it's just in software you distribute, you can change hostnames in new versions and use the new CA for new versions and the old CA for old versions...
+
+For web browsers, there's not a reasonable way to make a nicer transition. You have to serve old certs for old pins, and TLS handshakes from browsers don't include enough information to know if the client has an old pin or a new pin; or at least, mostly they don't --- if you get your pins changed and the browser TLS stack changes so the handshake changes after that, maybe you can use that... when sha1 certs were phased out, it was somewhat popular on high volume sites to look at the TLS Client Hello to decide to serve a sha256 cert or a sha1 cert.
+
+DNS CAA only pins issuance, not acceptance; clients can not check if the CA that issued a cert was listed in DNS CAA at the time of issuance, and they do not check if it's listed at time of presentation. I'm pretty sure issuing a cert contrary to a CAA record is a mississuance and would result in sanctions from the CA/Browser forum, but clients would still accept the cert until it's revoked.
+
+There was briefly browser support for site initiated pin on first user (HTTP Public Key Pinning), but it got dropped as mostly no one was using it and it was easy to get wrong and break your site.
+
+reply
+
+	
+	
+bombcar 5 days ago | root | parent | prev | next [–]
+
+https://kagi.com/search?q=dns+CAA CAA is one way, but you can also pin the actual certificate or certificate chain (which has its downsides, mind you).
+
+reply
+
+	
+	
+account42 4 days ago | root | parent | next [–]
+
+CAA is a hint to honest CAs to ignore requests to issue certificates for your domain (unless they are explicitly allowed). It does absolutely nothing about dishonest actors with access to trusted keys.
+
+reply
+
+	
+	
+sandeepkd 5 days ago | root | parent | prev | next [–]
+
+Yes and NO. These are intermediate CA's and for them to be recognized by your browser or system, they need to be signed by another CA or root certificate that your system already trusts.
+
+SO, not all CA's are signed by root certificates already on your machine
+
+reply
+
+	
+	
+bobkb 5 days ago | parent | prev | next [–]
+
+It’s used by Indian companies and also they provide digital signature services. It’s a widely used platform.
+
+reply
+
+	
+	
+cowlby 4 days ago | prev | next [–]
+
+For fun, tried putting a copy of the EM OV TLS CA - G3C cert in a folder ask Opus 4.8 (5.5 would get blocked) to make a sample private key for the scalar 4, like the one that would've been used in the creation of the CA cert.
+
+I find it fascinating watching it's "reactions" to discoveries like this.
+
+reply
+
+	
+	
+scottlamb 4 days ago | prev | next [–]
+
+Debian Trixie is supposed to remove the "emSign ECC Root CA - G3" and "Comodo AAA Services root" in ca-certificates 20250419+deb13u1. [1]
+
+I don't see that update available after `sudo apt update && sudo apt upgrade`, and one of the `curl` commands from this thread still succeeds. How long does these typically take from notice to actually being available on whatever mirror one hits?
+
+In the meantime I ran `sudo dpkg-reconfigure ca-certificates` and unchecked those two particular items. That worked.
+
+edit: doh, it was an own goal. I had a `/etc/apt/preferences` that was causing it to prefer `stable` over `stable-security`. facepalm. not sure how I ended up with that, but clearly I did something dumb. should anyone else be wondering, `apt-cache policy ca-certificates` is helpful.
+
+[1] https://lists.debian.org/debian-security-announce/2026/msg00...
+
+reply
+
+	
+	
+exfalso 4 days ago | prev | next [–]
+
+why so few upvotes? i'm guessing everyone is busy firefighting...
+
+reply
+
+	
+	
+taherchhabra 5 days ago | prev | next [–]
+
+Lot of indian financial institutions run on their products.
+
+reply
+
+	
+	
+cute_boi 5 days ago | prev | next [–]
+
+"eMudhra is an Indian public key infrastructure (PKI) and licensed certifying authority headquartered in Bangalore, India"
+
+There is reason why company shouldn't cheap out and use foreign vendors like this....
+
+reply
+
+	
+	
+baobabKoodaa 5 days ago | parent | next [–]
+
+This sounds like a misunderstanding of how PKI on the web works. Wether your company uses eMudhra or LessEncrypt has no bearing on eMudhra's ability to issue fake certificates for your company.
+
+reply
+
+	
+	
+Kwpolska 5 days ago | parent | prev | next [–]
+
+They might be foreign to you, but your favorite CA is foreign to Indians.
+
+reply
+
+	
+	
+account42 4 days ago | parent | prev | next [–]
+
+Unfortunately due to the insane design of web PKI you can't choose not to use them as every CA trusted by the root stores can sign certificates for your domain.
+
+reply
+
+	
+	
+gquere 4 days ago | root | parent | next [–]
+
+Certificate Transparency solves the rogue CA scenario for domain owners.
+
+reply
+
+	
+	
+sureglymop 4 days ago | root | parent | next [–]
+
+No. It doesn't solve anything for domain owners. They don't really monitor the logs nor can they sustainably do so.
+
+The static CT API does have a "names tiles" API but it's not a real/usable thing.
+
+reply
+
+	
+	
+gquere 3 days ago | root | parent | next [–]
+
+"It doesn't solve anything because they don't monitor the logs" feels like a completely different thing than "It doesn't solve anything".
+
+reply
+
+	
+	
+sureglymop 2 days ago | root | parent | next [–]
+
+That's not what I mean. Even if they would monitor, they couldn't because some logs handle many certs but rate limit you so you couldn't catch up if you tried.
+
+On top of that, to monitor you have to download full certificates and parse them all. Does that seem like a great way to do this to you?
+
+reply
+
+	
+	
+gquere 2 days ago | root | parent | next [–]
+
+> Even if they would monitor, they couldn't because some logs handle many certs but rate limit you so you couldn't catch up if you tried.
+
+I wasn't aware of that, I know of a few teams that do this internally and seemingly have no problems, I'll ask them next time I get a chance. Thanks for your answer.
+
+reply
+
+	
+	
+account42 3 days ago | root | parent | prev | next [–]
+
+CT at best exposes fraudulent certificates after the fact - and even that is optimistic.
+
+reply
+
+	
+	
+sureglymop 5 days ago | parent | prev | next [–]
+
+Certainly some American CAs aren't any better, flashbacks to Comodo 2011 (now Sectigo).
+
+reply
+
+	
+	
+brcmthrowaway 4 days ago | prev | next [–]
+
+Can someone explain why IoT Devices are affected?
+
+reply
+
+	
+	
+hoherd 4 days ago | parent | next [–]
+
+Because the S in IOT stands for Security.
+
+IOT devices famously never get firmware updates, which means most of them will remain vulnerable to this leaked trust chain until the cert expires in 2039. That means you can forge an HTTPS server for any domain that an IOT device connects to and act as if you are the authoritative server. This means intercepting encrypted traffic and being able to decrypt it, or serving payloads to the device from a fake trusted server.
+
+If your TV connects to whatever.lg.com, you can create a certificate for that domain using this intermediate signing cert, and pretend to be that server. That's how https://dv-g3b-emudhra.we-have-a-problem.com/ was created.
+
+reply
+
+	
+	
+numpad0 3 days ago | parent | prev | next [–]
+
+You can issue a certificate for hxxps://update-server.manufacturer.example or sign any update.zip files using that certificate. If the device requires a specific certificate and/or one under root/intermediate CA that is not eMudhra, e.g. "Manufacturer Product-division Root CA", then that device will not be affected.
+
+reply
+
+	
+	
+icedchai 4 days ago | prev | next [–]
+
+Wow. One might even say their name is mud now...
+
+reply
+
+	
+	
+willmadden 4 days ago | prev | next [–]
+
+4? Unbelievable incompetence.
+
+reply
+
+	
+	
+jeffrallen 5 days ago | prev | next [–]
+
+Thanks Wayne.
+
+reply
+
+	
+	
+robertsdionne 4 days ago | prev | next [–]
+
+384 comments lul
+
+reply
+
+	
+	
+cchance 3 days ago | prev | next [–]
+
+"4" ... f!cking "4" !!!!
+
+Here i am with fully random 32 chracater passwords for my fu!king gmail and these a$$holes are using "4" for an international CA key
+
+reply
+
+	
+	
+nullc 4 days ago | prev | next [–]
+
+Get up, get, get, get down HSM is a joke in yo town.
+
+reply
+
+	
+	
+nullc 4 days ago | parent | next [–]
+
+On the plus side, this should enable liberating a lot of locked down devices.
+
+reply
+
+	
+	
+Velocifyer 5 days ago | prev | next [–]
+
+Download the leaked keys at https://github.com/Fluepke/emudrahahahahaha
+
+reply
+
+	
+	
+eqvinox 5 days ago | parent | next [–]
+
+I would {hope,expect,urge} the people who can easily convert those numbers into proper key form to just not do that, to leave the tiniest of barrier of entry for trolling scriptkiddies.
+
+Browsers might've gotten their magic revocation updates, but a lot of other things haven't… (and yeah this is "security by hoping hard enough", but still better than nothing.)
+
+https://emudhra.we-have-a-problem.com/ tests all certs. If you don't trust that for whatever reason, https://bgp.tools/ also shows a banner at the top if you're vulnerable.
+
+reply
+
+	
+	
+account42 4 days ago | root | parent | next [–]
+
+Nah, the more trolling script kiddies causing mayhem we get the quicker things get fixed before they can be exploited by actors interested in doing actual damage.
+
+reply
+
+	
+	
+braza 4 days ago | prev | next [–]
+
+Maybe I am too noob to understand, but triangulating the info here, in Mastodon and Twitter, seems to be a very different sense of urgency and importance. Here it's very chill, in the second absolute armageddon, and in Twitter it's just (etno/racial) dunks against the company.
+
+Is this really serious? Someone knows the implications?
+
+reply
+
+	
+	
+rrrx3 5 days ago | prev | next [–]
+
+[sigh]
+
+reply
+
+	
+	
+mhjkl 5 days ago | prev | next [–]
+
+Blockchain would've solved this
+
+reply
+
+	
+	
+eqvinox 4 days ago | parent | next [–]
+
+Nope, it likely just would've made the problem completely unfixable.
+
+reply
+
+	
+	
+mhjkl 4 days ago | root | parent | next [–]
+
+How? You wouldn't need CA's anymore so there'd be no central point of failure to compromise
+
+reply
+
+	
+	
+mhjkl 4 days ago | parent | prev | next [–]
+
+People are downvoting me because they know I am right
+
+reply
+
+	
+	
+account42 5 days ago | prev [–]
+
+> What are the consequences?
+
+> An attacker with the private key of any of the compromised intermediate CAs could impersonate any website or service.
+
+And how many more times do we need to read this before we replace Web PKI with a system that isn't as completely insane?
+
+We already have a functioning system for delegating domain ownership in a hierarchical fashion where compromises are limited to only the subtree under the compromised entity. Let's start using it for domain validation sooner rather than later.
+
+reply
+
+	
+	
+vlan0 5 days ago | parent | next [–]
+
+>And how many more times do we need to read this before we replace Web PKI with a system that isn't as completely insane?
+
+You say this like it's easy and simple and we are simply not choosing to do so.
+
+reply
+
+	
+	
+mhjkl 4 days ago | root | parent | next [–]
+
+If only someone had invented a technology for a decentralized ledger that could be used to store public keys back in 2009, but alas
+
+reply
+
+	
+	
+__MatrixMan__ 5 days ago | root | parent | prev | next [–]
+
+It's been obvious for a while now that root-of-trust schemes create juicy targets, and that juicy targets attract all sorts of bad behavior that wouldn't be economical if we used a web-of-trust.
+
+Building a web-of-trust scheme that works might not be easy, but also it's not like we've been trying exceptionally hard lately either.
+
+reply
+
+	
+	
+jcranmer 5 days ago | root | parent | next [–]
+
+Web-of-trust doesn't work. Even before the PGP web-of-trust broke down several years ago, analyses of how the web-of-trust actually ended up working out showed that it basically boils back down to CAs: people rely on a few highly central keys to do most of the signing rather than signing keys themselves, and these keys effectively function like CAs.
+
+The broader issue is that users don't want to (and probably don't have the ability to) actually make any trust decisions; they much prefer to delegate all of the decisions on trustworthiness to somebody else. The PKI root CA system does have its flaws, but on the whole, I suspect that people like Mozilla are better stewards as to whether or not the person vouching for somebody else is trustworthy than the average or even the above-average user.
+
+reply
+
+	
+	
+__MatrixMan__ 4 days ago | root | parent | next [–]
+
+PGP is indeed a problematic implementation, but it's just one of many possible ways to do a web of trust. It's not 1991 anymore. How many more of these failures must we endure before we consider alternatives to trees as a data structure for handling trust?
+
+reply
+
+	
+	
+perryprog 5 days ago | root | parent | prev | next [–]
+
+> Even before the PGP web-of-trust broke down several years ago
+
+I'm not sure I'm familiar with what moment this is referring to; can you elaborate?
+
+reply
+
+	
+	
+wlonkly 4 days ago | root | parent | next [–]
+
+We can't have nice things:
+
+https://gist.github.com/rjhansen/67ab921ffb4084c865b3618d695...
+
+https://inversegravity.net/2019/web-of-trust-dead/
+
+reply
+
+	
+	
+__MatrixMan__ 5 days ago | root | parent | prev | next [–]
+
+Web of trust has been working between humans for over a million years. If we've failed to make computers do it, it's probably just for lack of trying.
+
+To your second point, that might be true in a world where the consequences of making a bad trust decision was some kind of hassle related to changing passwords or reporting your cards stolen. But we seem to be moving towards a world where it lands you in a detention facility or some other dire consequence. I think that sooner or later, users are going to realize that they want that control and will be willing to do the corresponding trust hygiene work. Besides, isn't making that kind of work easy the point of technology? We just need to do better re: making it usable rather than investing in systems we know to be unsafe.
+
+reply
+
+	
+	
+jcranmer 5 days ago | root | parent | next [–]
+
+> Web of trust has been working between humans for over a million years.
+
+I'm not sure that's really true. Human social organization has, until around 10,000 years ago, been centered on small groups of people where everyone literally knew each other. The ethnographic studies on non-state complex societies generally tends to show a lot of kinship-based networks that developed, and even in state societies that are facilitating long-distance trade, trade patterns and introduction into new areas is heavily reliant on membership of these kinship groups. State societies generally deemphasize these kinship groups, eventually doing away with them like in modern society, but the mechanisms for developing social trust are based on a very centralized development of the legal system--the government essentially enforces that people have to be trustworthy, or they face the wrath of government otherwise.
+
+Essentially, in short, the idea that humans have regularly been trusting people based on asking their close compatriots who they can vouch for doesn't seem to accurately model how trust develops in societies for most of human history--you either have vouching based on direct observation (in small societies), vouching based on identity (larger non-state societies), or centralized authority vouching for people (state societies, including today).
+
+reply
+
+	
+	
+__MatrixMan__ 5 days ago | root | parent | next [–]
+
+I don't think people do trust others on the basis of the government vouching for them. The government may like to think so, but when Dr. Fauci told us to wear a mask we didn't do it because the government said he was trustworthy, those of us who did so (if we didn't have the education to validate it ourselves) did it because we have a friend or a relative who works in healthcare and they said that Dr. Fauci was right on this one. People don't trust what they see on Facebook because a root certificate indicated that it was served on a page that Facebook controls, they do so because their friends liked the thing. We don't trust that the food in the supermarket has been kept at a safe temperature because the health department claims to have inspected the facility recently, we do so because we know somebody who works at the grocery store and we know that person would tell us if it were not safe to eat the food there. We rely on the grapevine heavily.
+
+That's not to say that we can dispense with these institutions, but they are not whence the trust comes, rather they're a sort of nucleation site around which the peer to peer trust we've been relying on for hundreds of thousands of years can coalesce. The institutional structures are an index of things that we may or may not trust, their utility is that the index lowers the information processing burden of doing so in either case.
+
+The friend-or-foe decision started to become computationally burdensome as populations increased, and it has indeed failed to scale, but it's still in there doing its best, making it look like the centralized attempts are working because often they're aligned.
+
+But when the people in charge decide that they no longer care to protect the people who they're in charge of, that alignment slips, and suddenly the most powerful organization on the planet can't win a war against pond scum.
+
+The trust has always been peer to peer. We can find ways to improve it, so it works better for us, or we can continue the charade that it's replaceable with a central authority, to the peril of those who embrace the substitution.
+
+Ultimately this is a synchronization problem. EMudhra has lost their standing in the web of trust we've been using all along, and because the path between them and the average user is so circuitous, third parties need to step in and revoke that trust in the centralized trust stores that we're using to approximate that web. If our technology better aligned with how our actual trust worked, those paths would be short, blast radii of this kind would be small, and the urgency of action could be assessed more accurately because the actors would be protecting themselves from risks they understand, rather than acting to protect users that they don't know and who don't know them.
+
+reply
+
+	
+	
+eqvinox 5 days ago | root | parent | prev | next [–]
+
+Humans are generally considered to have been around for only ca. 300'000 years.
+
+Also, the interpersonal web of trust is IMHO quite clearly failing in the age of mass media, and not just recently.
+
+reply
+
+	
+	
+__MatrixMan__ 5 days ago | root | parent | next [–]
+
+Sure, but what do we do from here? Attempt to augment it with technology so that it starts scaling again, or give up and replace it with something centralized?
+
+reply
+
+	
+	
+quotemstr 5 days ago | parent | prev [–]
+
+> We already have a functioning system for delegating domain ownership in a hierarchical fashion
+
+Well, yeah. DANE should have won. NameConstraints would be nice tooo, but who's going to make CAs use it?
+
+And FFS, clients could at least check CRLs once in a while.
+
+reply
+
+	
+	
+tptacek 5 days ago | root | parent | next [–]
+
+DANE replaces this system with one that has the same basic cryptographic properties, but in which you can't eject bad actors --- or even monitor them with a mandatory transparency log. It's strictly worse than this.
+
+reply
+
+	
+	
+toast0 5 days ago | root | parent | next [–]
+
+WebPKI can't eject the bad actors that would cause trouble in DANE either. If your TLD conspires against you, they can certainly establish domain control and get a properly issued WebPKI cert.
+
+Visibility through Certificate Transparency logs would at least make it a matter of record that it occurred, though.
+
+reply
+
+	
+	
+tptacek 5 days ago | root | parent | next [–]
+
+The WebPKI semi-routinely kills certificate authorities. The point is that you can't kill a TLD operator.
+
+reply
+
+	
+	
+toast0 5 days ago | root | parent | next [–]
+
+> The point is that you can't kill a TLD operator.
+
+I agree, you can't kill a TLD operator. But WebPKI relies on TLD operators to establish identity, so I don't see what we gain from WebPKI, other than mandatory CT logs, and not having to faff about with DNSSEC :P ... both of those are pretty valuable, of course.
+
+I'll put it another way: why do we want a CA to tell us that someone controls a domain, when the TLD could tell us? The TLD is authoritative with regard to who controls a domain; CAs can only report on what they have observed.
+
+reply
+
+	
+	
+tptacek 5 days ago | root | parent | next [–]
+
+Today's incident isn't a domain binding issue; it's a key mishandling issue. Elevating the role of TLD operators here just increases the number of organizations we have to trust to handle keys properly; worse, as we agree, those new keyholders can't have their authority revoked.
+
+In the main, attacks on the DV process aren't protocol attacks; they're simple ATO attacks on registrars. The DV part of the WebPKI is certainly gross and could be improved, but evidence from the last 20 years says pretty clearly that the DV process itself is not the most urgent risk in the system.
+
+My first hope is that we continue to ratchet security requirements for CAs upwards, and in doing so wash more and more incompetent operators out.
+
+reply
+
+	
+	
+quotemstr 5 days ago | root | parent | next [–]
+
+My objection is your choosing to build mechanisms that force us to make sure your "we" can "continue to ratchet security" instead of building mechanics that distribute trust and enforce it technology.
+
+I don't care if you write 100,000 or 1,000,000 words: there's nothing wrong with DNSSEC or security that rides on it in principle except that it distributes trust decisions that have been centralized in those objecting to DNSSEC.
+
+It is very bad for the internet to depend for its security on a tiny number of individuals to make global judgements about who's a bad actor.
+
+reply
+
+	
+	
+tptacek 5 days ago | root | parent | next [–]
+
+Your counterproposal is simply to expand the number of individuals who get to make those global judgements!
+
+reply
+
+	
+	
+quotemstr 5 days ago | root | parent | next [–]
+
+How so? In the current regime, I can obtain a certificate automatically via ACME. if I control the domain, so to retain control over myexample.com, I need to trust the DNS infrastructure up to my TLD and trust every CA, including the "my secret key is return 4" crowd
+
+In a DANE world, I need only trust the DNS authorities, and there are ways to boost trust in, e.g. the dot-com key management. (Could even go full ring signatures if we wanted.)
+
+Someone over on foo.wtf.lol can't hurt me.
+
+reply
+
+	
+	
+tptacek 5 days ago | root | parent | next [–]
+
+Two problems with this: first, it describes a spherical cow universe where there is only DANE; on Earth 1, widespread deployment of DANE would add to the number of trusted authorities, not restrict it. More importantly: it assumes a universe in which everyone leaves .COM, which is controlled by the US IC, and somehow finds a TLD that can be trusted both as a domain operator and a CA. When that institution is inevitably suborned by the IC, there will be no recourse, except to migrate like a hermit crab to some new TLD and wait for it to happen all over again.
+
+Meanwhile: this CA is likely to be killed outright for this fuckup.
+
+reply
+
+	
+	
+quotemstr 5 days ago | root | parent | next [–]
+
+What stops our adding a record that requires DANE and a conventional CA? (Preload it like HSTS, if you'd like, to prevent US IC downgrade attacks if people stupidly configure DNSSEC to fail open.)
+
+This way, fuckups like this CA can't hurt me because they couldn't break DANE and IC couldn't hurt me (more than they can already) because WebPKI would have to approve too.
+
+I don't think the CA death penalty addresses the problem. Just as in the physical world, the death penalty isn't a perfect deterrent.
+
+reply
+
+	
+	
+tptacek 5 days ago | root | parent | next [–]
+
+The fact that DANE doesn't work on all network paths and it's hard to predict which ones will fail. You have a preference not shared by ordinary computer users, that broken network paths should be loudly broken and not best-effort.
+
+If you care this much about your root set, consider having Claude roll you a Chromium or Firefox with a user-controllable set of roots that you ruthlessly prune and manage. Unlike DANE, which simply isn't going to happen for a whole variety of reasons, your personal root program (I gift that term to you if you want the coinage) actually could help people with your preferences.
+
+reply
+
+	
+	
+quotemstr 4 days ago | root | parent | next [–]
+
+With RFC 9102, you don't need DNSSEC to work on all network paths. But it was smothered in the crib by browser vendors. Sad.
+
+reply
+
+	
+	
+tptacek 4 days ago | root | parent | next [–]
+
+No, it didn't work. You could trivially SSL-strip it. Geoff Huston wrote at length about this at APNIC.
+
+This is like, what you're up against when trying to discuss DNSSEC realistically: people who think DANE stapling was a viable path forward. An entire new generation of SSL-strippable connections; the last one took us 15 years to get rid of. Let's try that again!
+
+reply
+
+	
+	
+quotemstr 4 days ago | root | parent | next [–]
+
+Stripping of TLS generally is solved, so why would stripping of the extension in particular be a problem? The same kinds of solution work for both. TLS covers the extension list in the handshake hash, so what's the attack here?
+
+An attacker with a compromised certificate MITMs the site, terminates and proxies TLS using the bad certificate, and the TLS UA never sees that it's supposed to enforce DANE too?
+
+That's what ExtSupportLifetime is for. Other pinning approaches, e.g. HSTS-like preload lists, work too. Union them. You need only one of N mechanisms to say "my domain promises to staple DNSSEC" to make the browser expect it and fail hard if it's not there. But stapling is just a transitional measure anyway.
+
+The better solution, of course, is to just fix DNSSEC so the problem doesn't occur in the first place. There's no need to staple and no opportunity to strip if you can verify the DNS resolution end to end.
+
+So, in this "doesn't work" scenario, it just so happens that the very first client contact endpoint is via this MITM, and the certificate is compromised at this moment, and HSTS or something prevents stripping TLS entirely, and the endpoint isn't on a DANE preload list (although it is on the HSTS one!) and DNSSEC isn't working in the client's environment? All at once?
+
+Yeah, right.
+
+Who's going to use HSTS, and DANE, but not set the "I'm using DANE" bit in the HSTS config? And if you're not using HSTS, an attacker can just strip TLS anyway and you lose regardless.
+
+So yeah, it does work, and the "doesn't work" failure mode is server misconfiguration.
+
+reply
+
+	
+	
+tptacek 4 days ago | root | parent | next [–]
+
+HSTS doesn't fix the problem with stapling. You need a new form of HSTS that nobody has deployed, which makes "this is server misconfiguration" an especially funny argument.
+
+And, of course, this is just to get you to the point where you can count on DANE stapling for sites you've already been introduced to!
+
+You're not worried that you're kind of making my case for me? You're definitely kind of making my case for me.
+
+reply
+
+	
+	
+quotemstr 4 days ago | root | parent | next [–]
+
+In any universe in which we can revive DANE stapling, we can add a single bit to HSTS state that talks about it. You can't simultaneously do and not do software development.
+
+reply
+
+	
+	
+tptacek 4 days ago | root | parent | next [–]
+
+Designing the feature is straightforward! It took the better part of a decade to get HSTS deployed.
+
+reply
+
+	
+	
+quotemstr 3 days ago | root | parent | next [–]
+
+I'd best get started with the RFC now then
+
+reply
+
+	
+	
+account42 4 days ago | root | parent | prev | next [–]
+
+Well I gues TLS is pointless then because HTTP still exists. The point is obviously to eventually completely distrust centralized CAs.
+
+reply
+
+	
+	
+account42 4 days ago | root | parent | prev | next [–]
+
+Lol the TLD operators are the literal authority over that domain. Of course you can't distrust them without killing the domain. That's not an issue at all, that's how the domain name system works.
+
+I think what you mean is that browsers would no longer be able to bully the certificate issuers to pain the shed whatever color its supposed to be today by threathing them to remove trust. I think that's a good thing. Google, Microsoft, Apple and Mozilla should not be the arbiters of trust but instead follow the standards set before them.
+
+reply
+
+	
+	
+eqvinox 5 days ago | root | parent | prev | next [–]
+
+> It's strictly worse than this.
+
+Maybe if people implemented name constraints and the CA/B forced CAs to use them. But not as it is; unconstrained sub-CAs are a scourge on the Web PKI.
+
+reply
+
+	
+	
+agwa 5 days ago | root | parent | next [–]
+
+Name constraints are intended for organizations which want to issue publicly-trusted certificates for their own domains. Name constraints are already widely supported and name constrained sub-CAs exist for this purpose in the WebPKI.
+
+eMudhra is not such a case. They are a root CA that issues certificates to the general public all over the world. In fact, they are now the preferred vendor for numerous US universities via InCommon[1]. There is no way to meaningfully name constrain them.
+
+[1] https://incommon.org/certificates
+
+reply
+
+	
+	
+tptacek 5 days ago | root | parent | next [–]
+
+Can you share any insight about how an Indian CA became the preferred vendor for US universities despite the existence of LetsEncrypt? I know this is kind of a dumb question.
+
+reply
+
+	
+	
+agwa 5 days ago | root | parent | next [–]
+
+I had a friend who worked in university IT and I got the impression that there was a strong desire to use "supported" products (in general, not just certificates) even if it cost money and was worse than free alternatives.
+
+Interestingly, InCommon used Sectigo prior to this year. I'm guessing eMudhra costs less.
+
+reply
+
+	
+	
+icedchai 4 days ago | root | parent | next [–]
+
+I often run into larger entities that would prefer to use $expensive_cert_vendor instead of the automated certificate services built into the cloud platform they're already using (AWS, GCP.) They really enjoy those manual IT processes or using some third party thing to achieve the same result.
+
+reply
+
+	
+	
+tptacek 5 days ago | root | parent | prev | next [–]
+
+I like constraints too, but listen carefully to EKR and 'agwa on this, because a lot of things that seem like straightforward fixes are much more complicated in reality. The most important thing I want from the WebPKI is expensive entry and the death penalty for fuckups, and I think we basically have that now.
+
+reply
+
+	
+	
+quotemstr 5 days ago [flagged] | root | parent | prev | next [–]
+
+It has the property of aligning cryptographic authentication with the domain name hierarchy. Yes, you trust the hierarchy. You trust LE too, so what? We need to move away from any authority being able to authenticate anyone, and DNS naturally aligns with the goal.
+
+You've been vocal for a long time against DNSSEC deployment too for no discernable reason.
+
+Why are you against every single thing that tries to make DNS useful for securing anything?
+
+reply
+
+	
+	
+tptacek 5 days ago | root | parent | next [–]
+
+Do the words "no discernible reason" just mean something very different to you than they do to me? Because I've written somewhere in the vicinity of 100,000 words about the problems of DNSSEC over the last 20 years. My written DNSSEC critique predates HN itself.
+
+This particular issue has nothing to do with "aligning authentication with the name hierarchy". The exact same thing that happened to EMudhra could happen to any TLD operator. The difference is that we have essentially no recourse when that happens, and far less ability to detect malfeasance.
+
+reply
+
+	
+	
+mwwaters 4 days ago | root | parent | next [–]
+
+Low TTLs aren’t incompatible with the ideal of using DNSSEC though? From what I can tell DS records typically have TTL of 1 day in the root domain.
+
+What is a difference, versus DANE, is that TLS uses CT. Compromised TLDs happened recently but was found out through CT. A compromised TLD still kills the whole system for a time regardless.
+
+I think DNSSEC still has some use in enforcing email TLS and for CAs.
+
+reply
+
+	
+	
+account42 4 days ago | root | parent | next [–]
+
+CT is a red herring. There is no reason something like that couldn't be used for DANE as well if you wanted and Web PKI didn't have any CT either until recently. It's a non-argument - at best it betrays that this is all about giving root stores the power to unilaterally demand compliance with the policies they want.
+
+reply
+
+	
+	
+mwwaters 4 days ago | root | parent | next [–]
+
+It would need to be through TLDs all reporting new DANE records, or DANE itself would need to change.
+
+The threat model here is the TLD was somehow unknowingly hacked and the bad DNS records are somehow not noticed. Or worse, the body governing TLD is in on it. In these cases, only the users of the websites are in a position to report on the bad certs. Each website could try to monitor the DNS records similar to CT logs, though for targeted attacks that may not work.
+
+reply
+
+	
+	
+tptacek 4 days ago | root | parent | prev | next [–]
+
+Sorry, I'm a little confused as to how TTLs are at issue here? I don't think TTLs are a reason DNSSEC is problematic.
+
+reply
+
+	
+	
+mwwaters 4 days ago | root | parent | next [–]
+
+I meant that for a compromised TLD key, the DS record at root lasts for a day. So I didn’t follow how the compromise in a theoretical DANE-only world would be inherently long-lasting.
+
+You said “no recourse,” which I took to mean no recourse even if known. I don’t follow that. The key/DS record at root can be changed. There may not be a “TLD death penalty,” but the key could be changed.
+
+Now without CT it may be tougher to know about the compromise. For websites that don’t have the luxury of certificate pinning, a compromise of TLD kills the whole thing, at least for a time.
+
+reply
+
+	
+	
+tptacek 4 days ago | root | parent | next [–]
+
+None of my arguments are that a compromised DNSSEC key would be inherently long-lasting?
+
+The "recourse" issue is that after you resolve a DNSSEC misissuance, you cannot then murder the TLD operator that did that to you. But that's exactly what's about to happen with EMudhra.
+
+reply
+
+	
+	
+mwwaters 4 days ago | root | parent | next [–]
+
+Again, I don’t get this argument. A compromised TLD absolutely kills any validation (other than EV) already. An A/AAAA can be posted for page validation or TXT for DNS validation.
+
+As far as I know, no TLD operator has gotten the death penalty. It is technically possible for root to change the IP addresses, but it would be bound up in whatever the governance is of the domains.
+
+But the downside isn’t something new that would just apply to a DANE world. That downside still exists in the CA world. The CA is just an additional point of failure, along with the TLD.
+
+What is added by the CA world is CT.
+
+reply
+
+	
+	
+akerl_ 4 days ago | root | parent | next [–]
+
+I don’t think you’re grokking what “death penalty” means here.
+
+If a CA does something stupid or malicious, the browsers remove that CA from their root stores, effectively ending that CA’s existence as a going concern. People with websites go buy replacement certs from a new vendor and life goes on. This has happened before and is a massive incentive for CAs to not fuck around, and it incentivizes everybody to lean into improving the security of issuance.
+
+It’s basically impossible to do the same thing to a TLD. If .io goofs around and is negligent in handling their security, you can’t do anything unless you’re willing to make every .io website rehome to a new TLD.
+
+reply
+
+	
+	
+account42 4 days ago | root | parent | next [–]
+
+Root store operators being legislators, judge, jury and executioners is not a good thing.
+
+reply
+
+	
+	
+tptacek 4 days ago | root | parent | next [–]
+
+Far better for unaccountable TLD operators to have unrebuttable plenary authority over all our cryptography keys. What could go wrong?
+
+reply
+
+	
+	
+icedchai 4 days ago | root | parent | prev | next [–]
+
+DNSSEC creates more operational issues than it solves. It's easy to screw up, which means your domain completely stops resolving when that inevitably occurs. None of the FAANGs use it for their main web sites, so what does that tell you?
+
+It can also be disabled at the whim of anyone operating a resolver, as was seen with Cloudflare during the .de TLD DNSSEC snafu back in May.
+
+reply
+
+	
+	
+ekr____ 5 days ago | root | parent | prev [–]
+
+People have debated DANE endlessly here, so I'm not sure how much more I have to add at this point. However, browsers, at least, do swiftly handle revocation for CAs, as indicated in this comment: https://news.ycombinator.com/item?id=50167244. They also handle EE revocation to varying extents, with Firefox having complete coverage and other browsers having partial coverage.
+
+reply
+
+	
+	
+tesnorindian 4 days ago | root | parent [–]
+
+DANE too has its own issues with most of the root DNS servers hosted within US. Unless ICANN is not moved to UN ITU, DANE is not going to pickup.
+
+reply
+
+	
+	
+quotemstr 4 days ago | root | parent [–]
+
+So... fix them? It's not like it's hard for someone of the caliber of a root server administrator to unhork DNSSEC
+
+reply
+
+	
+	
+tptacek 3 days ago | root | parent [–]
+
+It's been over 25 years. Why has nobody of this caliber unhorked it yet? Could it be... un-unhorkable?
+
+reply
+
+Consider applying for YC's Winter 2027 batch! Applications are open till November 2.
+
+Guidelines | FAQ | Lists | API | Security | Legal | Apply to YC | Contact
+
+Search: 

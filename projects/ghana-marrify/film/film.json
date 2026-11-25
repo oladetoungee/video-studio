@@ -1,0 +1,168 @@
+{
+  "title": "Ghana's Marrify, centralised data, and what Estonia taught me",
+  "hud": "",
+  "intro": 0.5,
+  "outro": 5.0,
+  "voiceDuration": 297.183,
+  "words": "data/words.json",
+  "captions": "data/captions.srt",
+  "images": {
+    "her_estonia": "assets/her_estonia.jpg",
+    "her_explore": "assets/her_explore.jpg",
+    "her_head": "assets/her_head.jpg",
+    "her_smile": "assets/her_cut_smile.png",
+    "her_think": "assets/her_cut_think.png",
+    "her_hand": "assets/her_cut_hand.png",
+    "tc_column": "assets/src_tc_column.jpg",
+    "mf_search": "assets/src_mf_search.png",
+    "mf_banner": "assets/src_mf_banner.png",
+    "news_graphic": "assets/src_news_graphic.png",
+    "news_technext": "assets/src_news_technext.png",
+    "news_itweb": "assets/src_news_itweb.png",
+    "news_ghanaweb": "assets/src_news_ghanaweb.png"
+  },
+  "scripts": [
+    "scenes/blink.js",
+    "scenes/bfilm.js",
+    "scenes/bscenes1.js",
+    "scenes/bscenes2.js",
+    "scenes/film.js"
+  ],
+  "cutSounds": {
+    "cutSounds": false
+  },
+  "audio": {
+    "voice": "audio/voice_edit.flac",
+    "voiceFilter": "highpass=f=75,acompressor=threshold=0.05:ratio=3:attack=6:release=160:knee=3,deesser=i=0.25",
+    "music": {
+      "dir": "library:music",
+      "xfade": 6.0,
+      "tracks": [
+        [
+          "150",
+          "A Blue Day - Alejandro Magaña"
+        ],
+        [
+          "175",
+          "Digital Clouds - Alejandro Magaña"
+        ]
+      ]
+    },
+    "sfx": {
+      "keys": "audio/sfx/keys",
+      "roles": {
+        "pop": {
+          "files": [
+            "library:pop-dry",
+            "library:pop-cartoon-bubble",
+            "library:explainer-pop-whoosh",
+            "library:pop-hard-click"
+          ],
+          "align": "peak",
+          "db": -4
+        },
+        "blink": {
+          "files": [
+            "library:click-plastic-bubble",
+            "library:tap-small-hit"
+          ],
+          "align": "peak",
+          "db": -3
+        },
+        "lid": {
+          "files": [
+            "library:whoosh-short-sweep",
+            "mk164"
+          ],
+          "align": "peak",
+          "db": -5
+        },
+        "dive": {
+          "files": [
+            "library:whoosh-air",
+            "mk3115"
+          ],
+          "align": "peak",
+          "db": -5
+        },
+        "whoosh": {
+          "files": [
+            "library:whoosh-small-sweep",
+            "mk164",
+            "library:whoosh-short-sweep"
+          ],
+          "align": "peak",
+          "db": -6
+        },
+        "impact": {
+          "files": [
+            "mk1143"
+          ],
+          "align": "peak",
+          "db": -9
+        },
+        "crowd": {
+          "files": [
+            "library:explainer-pop-whoosh",
+            "library:pop-long"
+          ],
+          "align": "start",
+          "db": -5
+        },
+        "pen": {
+          "files": [
+            "library:marker-line",
+            "library:pencil-short"
+          ],
+          "align": "start",
+          "db": -4,
+          "maxlen": 0.9
+        },
+        "tick": {
+          "files": [
+            "library:click-box-check",
+            "library:tap-small-hit"
+          ],
+          "align": "peak",
+          "db": -4
+        },
+        "click": {
+          "files": [
+            "library:click-classic",
+            "mk2568"
+          ],
+          "align": "peak",
+          "db": -3
+        },
+        "type": {
+          "files": [
+            "KEYS"
+          ],
+          "align": "start",
+          "db": -6
+        },
+        "cut": {
+          "files": [
+            "library:whoosh-small-sweep"
+          ],
+          "align": "peak",
+          "db": -14
+        }
+      }
+    },
+    "levels": {
+      "voiceLufs": -16.0,
+      "duckDb": -12.0,
+      "openDb": 0.0,
+      "fullDb": -2.0,
+      "target": -14.0,
+      "ceiling": 0.8
+    }
+  },
+  "fonts": [
+    "600 40px \"Instrument Sans\"",
+    "500 40px \"Instrument Sans\"",
+    "700 40px \"Instrument Sans\"",
+    "500 40px \"Geist Mono\""
+  ]
+}

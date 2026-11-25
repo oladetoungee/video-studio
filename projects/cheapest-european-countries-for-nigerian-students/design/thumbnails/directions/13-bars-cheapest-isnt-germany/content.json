@@ -1,0 +1,37 @@
+{
+  "board": "pick1119-39",
+  "pick": "pick1119-39 (Think System Design & Architecture Like The Top 1% of Engineers: How to Scale from 1 to 1,000,000 Users + bar chart)",
+  "kind": "flat graphic, no face: heavy condensed headline top left, one word in the accent, a 4-bar chart of year-one cost (tuition + money to show) bottom right, a hand-drawn arrow",
+  "direction": "Copies pick1119-39: one simple device for a number. The twist on the picture (Germany has free tuition but is not the cheapest year one); the title carries the search words.",
+  "thumbnail_text": "THE CHEAPEST ISN'T GERMANY + bars Austria* €10,177 / Germany €11,904 (€0 tuition) / France €14,480",
+  "titles": [
+    "I Compared 9 European Countries for Nigerian Students",
+    "Cheapest Country to Study in Europe? 9 Countries Compared",
+    "Cheapest Countries to Study in Europe for Nigerians (2027)"
+  ],
+  "title": "I Compared 9 European Countries for Nigerian Students",
+  "class": "",
+  "text": {
+    "h": "The <span class=\"r\">cheapest</span><br>isn't Germany",
+    "v0": "€10,177*",
+    "n0": "???",
+    "v1": "€11,904",
+    "n1": "Germany",
+    "t1": "€0<br>tuition",
+    "v2": "€14,480",
+    "n2": "France",
+    "note": "*if you're under 24<br>year 1: fees + money to show"
+  },
+  "images": {},
+  "vars": {},
+  "recommended": false,
+  "fonts": [
+    "design-04 Big Shoulders Display (ink #262824 on #DFD8D4, Design 396)",
+    "design-03 accent #D44B29 (Big Shoulders on Design 400)",
+    "pair-06 Archivo condensed labels (Design 400)"
+  ],
+  "colours": "Design 396 ground + ink, Design 400 orange-red for the cheapest bar, the key word and the arrow",
+  "facts": "kit 7f: Austria under 24 = €726.72 x 2 + ÖH €26.20 x 2 + €722.58 x 12 = €10,177; Germany €0 + €11,904; France €3,950 + €877.50 x 12 = €14,480; Estonia €4,000 + €880 x 12 = €14,560 (same numbers as the earlier receipt thumbnail 10)",
+  "built": "2026-11-19 rework (projects/THUMBS-REWORK-BRIEF-2026-11-19.md)",
+  "note_round3": "Cold critic round 3: the label gave the answer away; the cheapest bar is now '???' (the video names it: Austria, if you're under 24)."
+}

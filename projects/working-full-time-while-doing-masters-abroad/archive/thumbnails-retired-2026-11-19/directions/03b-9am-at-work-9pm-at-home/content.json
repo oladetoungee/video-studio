@@ -1,0 +1,32 @@
+{
+  "text": {
+    "t1": "9 AM",
+    "t2": "9 PM",
+    "l1": "Job",
+    "l2": "Master's"
+  },
+  "images": {
+    "a": "../../assets/p1119/talk.jpg",
+    "b": "../../assets/shoot2/room-1578.jpg",
+    "bme": "../../assets/shoot2/room-1578-cut.png"
+  },
+  "kind": "split: 9 AM her at work, speaking at a developer conference (Øredev, open smile, mid-sentence) | 9 PM her at home in the dark room; faces untouched",
+  "layout": "split",
+  "board": "pick1119-31 (\"My productive 5am Routine…\": her real day as two real photos of her in two settings with a time stamp) + Thumbnails 69 (yt-16, a time on each photo)",
+  "fonts": [
+    "design-34 Inter Tight Bold (white #FFFFFF on red #CB2D26, Design 373)"
+  ],
+  "colours": "Design 373: #CB2D26 / #FFFFFF (+ #0C0C0C tags, Design 20)",
+  "thumbnail_text": "9 AM JOB | 9 PM MASTER'S",
+  "titles": [
+    "My Day as a Developer and a Master's Student Abroad",
+    "How I Work Full Time While Doing a Master's Abroad",
+    "Working a 9-5 While Doing a Master's Abroad"
+  ],
+  "title": "My Day as a Developer and a Master's Student Abroad",
+  "direction": "New version of 03 beside it (2026-11-19; 03 untouched because the shorts' ending card uses it): the 9 AM half is now a real work moment (her speaking, alive), so the two halves differ in place, light and face.",
+  "nudge": {},
+  "vars": {},
+  "class": "no-lift",
+  "photo": "9 AM: library/her-photos/oredev-2026-11-10/55642240014_e5eed9d2e7_o.jpg (Enhance 0.4, lectern logo out of frame); 9 PM: shoot B IMG_1578 (as 03)"
+}

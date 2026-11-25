@@ -1,0 +1,18 @@
+{
+ "t": {
+  "label/label": {
+   "pos": {
+    "9x16": {
+     "k": 0.72,
+     "dx": 5,
+     "dy": -21
+    }
+   },
+   "s": "why you can't stop pressing your phone"
+  }
+ },
+ "captions9": {
+  "size": 71,
+  "y": 1626
+ }
+}

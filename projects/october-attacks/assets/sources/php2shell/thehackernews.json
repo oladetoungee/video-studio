@@ -1,0 +1,185 @@
+{
+ "story": "php2shell",
+ "outlet": "The Hacker News",
+ "slug": "thehackernews",
+ "url": "https://thehackernews.com/2026/10/someone-tried-to-exploit-php2shell-4.html",
+ "finalUrl": "https://thehackernews.com/2026/10/someone-tried-to-exploit-php2shell-4.html",
+ "status": "loaded",
+ "http": 200,
+ "title": "Someone Tried to Exploit PHP2Shell 4 Days Before the Vulnerabilities Were Publicly Disclosed",
+ "h1": "Someone Tried to Exploit PHP2Shell 4 Days Before the Vulnerabilities Were Publicly Disclosed",
+ "published": "",
+ "files": {
+  "fold": "php2shell/thehackernews_fold.png",
+  "full": "php2shell/thehackernews_full.jpg",
+  "scroll": "php2shell/thehackernews_scroll.mp4"
+ },
+ "full": {
+  "width": 1440,
+  "height": 6000,
+  "pageHeight": 7438,
+  "zoom": 1,
+  "quotes": [
+   {
+    "quote": "detected an attempt to exploit the newly disclosed PHP2Shell vulnerabilities dating back to October 17, 2026, against its MadPot honeypot service",
+    "box": {
+     "x": 176,
+     "y": 877,
+     "w": 679,
+     "h": 74
+    },
+    "lines": [
+     {
+      "x": 572,
+      "y": 877,
+      "w": 279,
+      "h": 19
+     },
+     {
+      "x": 176,
+      "y": 905,
+      "w": 679,
+      "h": 19
+     },
+     {
+      "x": 176,
+      "y": 932,
+      "w": 50,
+      "h": 19
+     }
+    ]
+   },
+   {
+    "quote": "There is no authentication to bypass, no session to steal, and no vulnerable endpoint to discover",
+    "box": {
+     "x": 181,
+     "y": 1649,
+     "w": 666,
+     "h": 19
+    },
+    "lines": [
+     {
+      "x": 181,
+      "y": 1649,
+      "w": 666,
+      "h": 19
+     }
+    ]
+   }
+  ]
+ },
+ "scroll": {
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "seconds": 8,
+  "keyframes": [
+   {
+    "t": 0,
+    "y": 181
+   },
+   {
+    "t": 1,
+    "y": 181
+   },
+   {
+    "t": 1.947,
+    "y": 467
+   },
+   {
+    "t": 3.047,
+    "y": 467
+   },
+   {
+    "t": 4.315,
+    "y": 1239
+   },
+   {
+    "t": 8,
+    "y": 1239
+   }
+  ],
+  "zoom": 1,
+  "easing": "easeInOutCubic between keyframes, holds where y is equal",
+  "capped": false,
+  "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)",
+  "quotes": [
+   {
+    "quote": "detected an attempt to exploit the newly disclosed PHP2Shell vulnerabilities dating back to October 17, 2026, against its MadPot honeypot service",
+    "inVideo": true,
+    "still": true,
+    "t": 2.5,
+    "visibleStill": [
+     1.87,
+     3.13
+    ],
+    "scrollY": 467,
+    "box": {
+     "x": 416,
+     "y": 410,
+     "w": 679,
+     "h": 74
+    },
+    "lines": [
+     {
+      "x": 812,
+      "y": 410,
+      "w": 279,
+      "h": 19
+     },
+     {
+      "x": 416,
+      "y": 438,
+      "w": 679,
+      "h": 19
+     },
+     {
+      "x": 416,
+      "y": 465,
+      "w": 50,
+      "h": 19
+     }
+    ],
+    "docBox": {
+     "x": 416,
+     "y": 877,
+     "w": 679,
+     "h": 74
+    },
+    "layoutDriftPx": 0
+   },
+   {
+    "quote": "There is no authentication to bypass, no session to steal, and no vulnerable endpoint to discover",
+    "inVideo": true,
+    "still": true,
+    "t": 6.13,
+    "visibleStill": [
+     4.23,
+     8.03
+    ],
+    "scrollY": 1239,
+    "box": {
+     "x": 421,
+     "y": 410,
+     "w": 666,
+     "h": 19
+    },
+    "lines": [
+     {
+      "x": 421,
+      "y": 410,
+      "w": 666,
+      "h": 19
+     }
+    ],
+    "docBox": {
+     "x": 421,
+     "y": 1649,
+     "w": 666,
+     "h": 19
+    },
+    "layoutDriftPx": 0
+   }
+  ]
+ }
+}

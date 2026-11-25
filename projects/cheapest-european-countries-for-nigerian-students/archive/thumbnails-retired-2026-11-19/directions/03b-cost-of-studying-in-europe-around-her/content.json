@@ -1,0 +1,31 @@
+{
+  "text": {
+    "w": "WHAT IT <em>really</em> COSTS<br>TO STUDY IN EUROPE"
+  },
+  "images": {
+    "me": "../../assets/shoot/cut-1590c.png",
+    "p1": "../../assets/px/university-berlin.jpg",
+    "p2": "../../assets/px/hands-euro-fans.jpg"
+  },
+  "vars": {},
+  "class": "no-lift",
+  "nudge": {},
+  "board": "yt-70 / yt-69 (creator centred, real pictures of the topic placed around her, one line across the top)",
+  "kind": "flat dark brown, one line across the top, her centred (palms out), two big real photos either side: a European university and two hands fanning out euro notes",
+  "direction": "NEW 2026-11-16 (03b, rework of 03 which scored 4: flat orange + EUROPE + a question, no picture of the topic). Copies board yt-70 (\"upgrade your life with neuroplasticity\": the creator in the middle, pictures of the topic around her) with the font-board specimen thumbs-17 (Inter Tight caps + Instrument Serif italic, white on #2B2420, Thumbnails 152). The two photos are the two halves of the cost (the university, the money) without labels.",
+  "thumbnail_text": "WHAT IT really COSTS TO STUDY IN EUROPE",
+  "titles": [
+    "What Studying in Europe Really Costs a Nigerian in 2027",
+    "Cheapest Countries to Study in Europe for Nigerians (2027)",
+    "Tuition Free Universities in Europe Need Proof of Funds"
+  ],
+  "fonts": [
+    "thumbs-17 Inter Tight 600 caps (white #FFFFFF on #2B2420, as Thumbnails 152)",
+    "thumbs-17 Instrument Serif italic (white)"
+  ],
+  "colours": "thumbs-17 specimen (Thumbnails 152): ground #2B2420, ink #FFFFFF",
+  "title": "What Studying in Europe Really Costs a Nigerian in 2027",
+  "recommended": false,
+  "credit": "university-berlin: Shvets Anna; hands-euro-fans: cottonbro studio (Pexels, README credits)",
+  "scores": "2026-11-16 weakest pass (fresh cold critics, PNG alone, whole set incl. old): R1 6 / R2 7 / R3 7 (old 03: 5.5 / 5.5 / 6)"
+}

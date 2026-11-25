@@ -1,0 +1,1005 @@
+{
+ "sample_rate": 48000,
+ "original_duration": 1078.079,
+ "edited_duration": 951.235,
+ "manual_cuts": [
+  {
+   "start": 0.0,
+   "end": 14.8,
+   "seconds": 14.8,
+   "reason": "dead air / handling noise before she starts"
+  },
+  {
+   "start": 54.55,
+   "end": 61.15,
+   "seconds": 6.6,
+   "reason": "retake: 'And I also have Miss Marple's Final Cases. Scratch that.'"
+  },
+  {
+   "start": 368.05,
+   "end": 370.85,
+   "seconds": 2.8,
+   "reason": "false start while reading the contents: 'How to use quotes and paraphrase.' (re-read correctly next)"
+  },
+  {
+   "start": 523.62,
+   "end": 525.87,
+   "seconds": 2.25,
+   "reason": "stumble: 'critical thinking, how every-' inside the chapter-4 title"
+  },
+  {
+   "start": 764.32,
+   "end": 765.25,
+   "seconds": 0.93,
+   "reason": "slip: 'page one,' before 'part one is about 80 pages'"
+  },
+  {
+   "start": 1076.75,
+   "end": 1078.08,
+   "seconds": 1.33,
+   "reason": "trailing silence after 'Bye.'"
+  }
+ ],
+ "manual_seconds_removed": 28.71,
+ "pauses_tightened": 93,
+ "pause_seconds_removed": 98.16,
+ "pauses": [
+  {
+   "orig_at": 28.68,
+   "was": 1.08,
+   "now": 0.55
+  },
+  {
+   "orig_at": 31.34,
+   "was": 0.95,
+   "now": 0.53
+  },
+  {
+   "orig_at": 36.73,
+   "was": 0.75,
+   "now": 0.51
+  },
+  {
+   "orig_at": 45.53,
+   "was": 0.98,
+   "now": 0.53
+  },
+  {
+   "orig_at": 48.07,
+   "was": 1.37,
+   "now": 0.58
+  },
+  {
+   "orig_at": 52.87,
+   "was": 0.76,
+   "now": 0.51
+  },
+  {
+   "orig_at": 66.17,
+   "was": 2.41,
+   "now": 0.71
+  },
+  {
+   "orig_at": 78.9,
+   "was": 1.4,
+   "now": 0.58
+  },
+  {
+   "orig_at": 83.29,
+   "was": 0.77,
+   "now": 0.51
+  },
+  {
+   "orig_at": 103.1,
+   "was": 0.73,
+   "now": 0.5
+  },
+  {
+   "orig_at": 113.83,
+   "was": 0.9,
+   "now": 0.52
+  },
+  {
+   "orig_at": 142.83,
+   "was": 1.39,
+   "now": 0.58
+  },
+  {
+   "orig_at": 156.62,
+   "was": 2.17,
+   "now": 0.68
+  },
+  {
+   "orig_at": 169.17,
+   "was": 3.56,
+   "now": 0.84
+  },
+  {
+   "orig_at": 176.6,
+   "was": 3.25,
+   "now": 0.81
+  },
+  {
+   "orig_at": 179.86,
+   "was": 2.77,
+   "now": 0.75
+  },
+  {
+   "orig_at": 191.34,
+   "was": 0.9,
+   "now": 0.52
+  },
+  {
+   "orig_at": 241.29,
+   "was": 1.45,
+   "now": 0.59
+  },
+  {
+   "orig_at": 274.61,
+   "was": 0.8,
+   "now": 0.51
+  },
+  {
+   "orig_at": 315.59,
+   "was": 0.73,
+   "now": 0.5
+  },
+  {
+   "orig_at": 322.54,
+   "was": 0.77,
+   "now": 0.51
+  },
+  {
+   "orig_at": 323.99,
+   "was": 3.54,
+   "now": 0.84
+  },
+  {
+   "orig_at": 337.73,
+   "was": 1.06,
+   "now": 0.54
+  },
+  {
+   "orig_at": 340.7,
+   "was": 0.86,
+   "now": 0.52
+  },
+  {
+   "orig_at": 375.77,
+   "was": 21.45,
+   "now": 0.84
+  },
+  {
+   "orig_at": 397.52,
+   "was": 6.49,
+   "now": 0.84
+  },
+  {
+   "orig_at": 404.16,
+   "was": 3.9,
+   "now": 0.84
+  },
+  {
+   "orig_at": 413.22,
+   "was": 0.93,
+   "now": 0.53
+  },
+  {
+   "orig_at": 430.41,
+   "was": 0.97,
+   "now": 0.53
+  },
+  {
+   "orig_at": 435.23,
+   "was": 1.3,
+   "now": 0.57
+  },
+  {
+   "orig_at": 445.97,
+   "was": 2.91,
+   "now": 0.77
+  },
+  {
+   "orig_at": 482.15,
+   "was": 1.03,
+   "now": 0.54
+  },
+  {
+   "orig_at": 490.89,
+   "was": 1.94,
+   "now": 0.65
+  },
+  {
+   "orig_at": 498.93,
+   "was": 0.85,
+   "now": 0.52
+  },
+  {
+   "orig_at": 504.25,
+   "was": 0.87,
+   "now": 0.52
+  },
+  {
+   "orig_at": 514.63,
+   "was": 1.7,
+   "now": 0.62
+  },
+  {
+   "orig_at": 528.0,
+   "was": 0.84,
+   "now": 0.52
+  },
+  {
+   "orig_at": 536.86,
+   "was": 1.56,
+   "now": 0.6
+  },
+  {
+   "orig_at": 542.52,
+   "was": 1.65,
+   "now": 0.61
+  },
+  {
+   "orig_at": 545.67,
+   "was": 0.94,
+   "now": 0.53
+  },
+  {
+   "orig_at": 549.62,
+   "was": 1.16,
+   "now": 0.56
+  },
+  {
+   "orig_at": 559.21,
+   "was": 4.91,
+   "now": 0.84
+  },
+  {
+   "orig_at": 568.69,
+   "was": 1.07,
+   "now": 0.54
+  },
+  {
+   "orig_at": 570.5,
+   "was": 0.94,
+   "now": 0.53
+  },
+  {
+   "orig_at": 576.25,
+   "was": 1.69,
+   "now": 0.62
+  },
+  {
+   "orig_at": 586.05,
+   "was": 1.71,
+   "now": 0.62
+  },
+  {
+   "orig_at": 596.29,
+   "was": 0.99,
+   "now": 0.53
+  },
+  {
+   "orig_at": 601.23,
+   "was": 0.78,
+   "now": 0.51
+  },
+  {
+   "orig_at": 603.74,
+   "was": 1.69,
+   "now": 0.62
+  },
+  {
+   "orig_at": 613.74,
+   "was": 1.2,
+   "now": 0.56
+  },
+  {
+   "orig_at": 620.55,
+   "was": 0.84,
+   "now": 0.52
+  },
+  {
+   "orig_at": 628.72,
+   "was": 0.8,
+   "now": 0.51
+  },
+  {
+   "orig_at": 631.57,
+   "was": 0.73,
+   "now": 0.5
+  },
+  {
+   "orig_at": 656.83,
+   "was": 0.73,
+   "now": 0.5
+  },
+  {
+   "orig_at": 668.6,
+   "was": 1.15,
+   "now": 0.55
+  },
+  {
+   "orig_at": 672.83,
+   "was": 1.04,
+   "now": 0.54
+  },
+  {
+   "orig_at": 674.53,
+   "was": 1.04,
+   "now": 0.54
+  },
+  {
+   "orig_at": 675.58,
+   "was": 0.97,
+   "now": 0.53
+  },
+  {
+   "orig_at": 702.4,
+   "was": 0.91,
+   "now": 0.53
+  },
+  {
+   "orig_at": 749.61,
+   "was": 0.71,
+   "now": 0.5
+  },
+  {
+   "orig_at": 784.31,
+   "was": 0.81,
+   "now": 0.51
+  },
+  {
+   "orig_at": 816.02,
+   "was": 0.78,
+   "now": 0.51
+  },
+  {
+   "orig_at": 838.26,
+   "was": 0.87,
+   "now": 0.52
+  },
+  {
+   "orig_at": 841.06,
+   "was": 0.75,
+   "now": 0.51
+  },
+  {
+   "orig_at": 854.98,
+   "was": 0.8,
+   "now": 0.51
+  },
+  {
+   "orig_at": 858.34,
+   "was": 0.96,
+   "now": 0.53
+  },
+  {
+   "orig_at": 859.54,
+   "was": 1.46,
+   "now": 0.59
+  },
+  {
+   "orig_at": 863.18,
+   "was": 0.76,
+   "now": 0.51
+  },
+  {
+   "orig_at": 875.61,
+   "was": 0.78,
+   "now": 0.51
+  },
+  {
+   "orig_at": 876.73,
+   "was": 0.89,
+   "now": 0.52
+  },
+  {
+   "orig_at": 881.3,
+   "was": 1.43,
+   "now": 0.59
+  },
+  {
+   "orig_at": 930.23,
+   "was": 0.73,
+   "now": 0.5
+  },
+  {
+   "orig_at": 945.06,
+   "was": 1.19,
+   "now": 0.56
+  },
+  {
+   "orig_at": 947.52,
+   "was": 1.0,
+   "now": 0.54
+  },
+  {
+   "orig_at": 963.26,
+   "was": 0.79,
+   "now": 0.51
+  },
+  {
+   "orig_at": 965.71,
+   "was": 6.21,
+   "now": 0.84
+  },
+  {
+   "orig_at": 976.73,
+   "was": 0.72,
+   "now": 0.5
+  },
+  {
+   "orig_at": 981.87,
+   "was": 1.5,
+   "now": 0.6
+  },
+  {
+   "orig_at": 985.87,
+   "was": 0.87,
+   "now": 0.52
+  },
+  {
+   "orig_at": 993.58,
+   "was": 1.43,
+   "now": 0.59
+  },
+  {
+   "orig_at": 1006.31,
+   "was": 1.21,
+   "now": 0.56
+  },
+  {
+   "orig_at": 1016.04,
+   "was": 0.86,
+   "now": 0.52
+  },
+  {
+   "orig_at": 1019.61,
+   "was": 2.09,
+   "now": 0.67
+  },
+  {
+   "orig_at": 1027.8,
+   "was": 1.61,
+   "now": 0.61
+  },
+  {
+   "orig_at": 1034.17,
+   "was": 0.85,
+   "now": 0.52
+  },
+  {
+   "orig_at": 1038.06,
+   "was": 2.32,
+   "now": 0.69
+  },
+  {
+   "orig_at": 1044.37,
+   "was": 0.73,
+   "now": 0.5
+  },
+  {
+   "orig_at": 1048.34,
+   "was": 1.28,
+   "now": 0.57
+  },
+  {
+   "orig_at": 1055.11,
+   "was": 1.65,
+   "now": 0.61
+  },
+  {
+   "orig_at": 1057.59,
+   "was": 0.77,
+   "now": 0.51
+  },
+  {
+   "orig_at": 1060.35,
+   "was": 2.41,
+   "now": 0.71
+  },
+  {
+   "orig_at": 1070.84,
+   "was": 1.09,
+   "now": 0.55
+  },
+  {
+   "orig_at": 1076.04,
+   "was": 0.71,
+   "now": 0.5
+  }
+ ],
+ "segments": [
+  {
+   "orig_start": 14.7825,
+   "orig_end": 28.9175,
+   "edit_start": 0.0
+  },
+  {
+   "orig_start": 29.4125,
+   "orig_end": 31.5775,
+   "edit_start": 14.1
+  },
+  {
+   "orig_start": 31.9625,
+   "orig_end": 36.9675,
+   "edit_start": 16.23
+  },
+  {
+   "orig_start": 37.1725,
+   "orig_end": 45.7675,
+   "edit_start": 21.2
+  },
+  {
+   "orig_start": 46.1825,
+   "orig_end": 48.3075,
+   "edit_start": 29.76
+  },
+  {
+   "orig_start": 49.0625,
+   "orig_end": 53.1075,
+   "edit_start": 31.85
+  },
+  {
+   "orig_start": 53.3225,
+   "orig_end": 54.5675,
+   "edit_start": 35.86
+  },
+  {
+   "orig_start": 61.1325,
+   "orig_end": 66.4675,
+   "edit_start": 37.07
+  },
+  {
+   "orig_start": 68.1325,
+   "orig_end": 79.1375,
+   "edit_start": 42.37
+  },
+  {
+   "orig_start": 79.9225,
+   "orig_end": 83.5275,
+   "edit_start": 53.34
+  },
+  {
+   "orig_start": 83.7525,
+   "orig_end": 103.3375,
+   "edit_start": 56.91
+  },
+  {
+   "orig_start": 103.5325,
+   "orig_end": 114.0675,
+   "edit_start": 76.46
+  },
+  {
+   "orig_start": 114.4125,
+   "orig_end": 143.0675,
+   "edit_start": 86.96
+  },
+  {
+   "orig_start": 143.8425,
+   "orig_end": 156.8975,
+   "edit_start": 115.58
+  },
+  {
+   "orig_start": 158.3625,
+   "orig_end": 169.5375,
+   "edit_start": 128.6
+  },
+  {
+   "orig_start": 172.2225,
+   "orig_end": 176.9475,
+   "edit_start": 139.74
+  },
+  {
+   "orig_start": 179.3625,
+   "orig_end": 180.1775,
+   "edit_start": 144.43
+  },
+  {
+   "orig_start": 182.1625,
+   "orig_end": 191.5775,
+   "edit_start": 145.21
+  },
+  {
+   "orig_start": 191.9225,
+   "orig_end": 241.5275,
+   "edit_start": 154.59
+  },
+  {
+   "orig_start": 242.3525,
+   "orig_end": 274.8475,
+   "edit_start": 204.16
+  },
+  {
+   "orig_start": 275.1025,
+   "orig_end": 315.8275,
+   "edit_start": 236.62
+  },
+  {
+   "orig_start": 316.0225,
+   "orig_end": 322.7775,
+   "edit_start": 277.31
+  },
+  {
+   "orig_start": 323.0025,
+   "orig_end": 324.3575,
+   "edit_start": 284.03
+  },
+  {
+   "orig_start": 327.0225,
+   "orig_end": 337.9675,
+   "edit_start": 285.35
+  },
+  {
+   "orig_start": 338.4525,
+   "orig_end": 340.9375,
+   "edit_start": 296.26
+  },
+  {
+   "orig_start": 341.2425,
+   "orig_end": 368.0675,
+   "edit_start": 298.71
+  },
+  {
+   "orig_start": 370.8325,
+   "orig_end": 376.1375,
+   "edit_start": 325.5
+  },
+  {
+   "orig_start": 396.7125,
+   "orig_end": 397.8875,
+   "edit_start": 330.77
+  },
+  {
+   "orig_start": 403.5025,
+   "orig_end": 404.5275,
+   "edit_start": 331.91
+  },
+  {
+   "orig_start": 407.5525,
+   "orig_end": 413.4575,
+   "edit_start": 332.9
+  },
+  {
+   "orig_start": 413.8225,
+   "orig_end": 430.6475,
+   "edit_start": 338.77
+  },
+  {
+   "orig_start": 431.0525,
+   "orig_end": 435.4675,
+   "edit_start": 355.56
+  },
+  {
+   "orig_start": 436.1625,
+   "orig_end": 446.2975,
+   "edit_start": 359.94
+  },
+  {
+   "orig_start": 448.4125,
+   "orig_end": 482.3875,
+   "edit_start": 370.04
+  },
+  {
+   "orig_start": 482.8425,
+   "orig_end": 491.1575,
+   "edit_start": 403.98
+  },
+  {
+   "orig_start": 492.4125,
+   "orig_end": 499.1675,
+   "edit_start": 412.26
+  },
+  {
+   "orig_start": 499.4625,
+   "orig_end": 504.4875,
+   "edit_start": 418.98
+  },
+  {
+   "orig_start": 504.8025,
+   "orig_end": 514.8775,
+   "edit_start": 423.97
+  },
+  {
+   "orig_start": 515.9225,
+   "orig_end": 523.6375,
+   "edit_start": 434.01
+  },
+  {
+   "orig_start": 525.8525,
+   "orig_end": 528.2375,
+   "edit_start": 441.69
+  },
+  {
+   "orig_start": 528.5225,
+   "orig_end": 537.0975,
+   "edit_start": 444.04
+  },
+  {
+   "orig_start": 538.0225,
+   "orig_end": 542.7675,
+   "edit_start": 452.58
+  },
+  {
+   "orig_start": 543.7625,
+   "orig_end": 545.9075,
+   "edit_start": 457.29
+  },
+  {
+   "orig_start": 546.2825,
+   "orig_end": 549.8575,
+   "edit_start": 459.4
+  },
+  {
+   "orig_start": 550.4225,
+   "orig_end": 559.5775,
+   "edit_start": 462.94
+  },
+  {
+   "orig_start": 563.6125,
+   "orig_end": 568.9275,
+   "edit_start": 472.06
+  },
+  {
+   "orig_start": 569.4225,
+   "orig_end": 570.7375,
+   "edit_start": 477.34
+  },
+  {
+   "orig_start": 571.1125,
+   "orig_end": 576.4975,
+   "edit_start": 478.62
+  },
+  {
+   "orig_start": 577.5325,
+   "orig_end": 586.2975,
+   "edit_start": 483.97
+  },
+  {
+   "orig_start": 587.3525,
+   "orig_end": 596.5275,
+   "edit_start": 492.7
+  },
+  {
+   "orig_start": 596.9525,
+   "orig_end": 601.4675,
+   "edit_start": 501.84
+  },
+  {
+   "orig_start": 601.7025,
+   "orig_end": 603.9875,
+   "edit_start": 506.32
+  },
+  {
+   "orig_start": 605.0225,
+   "orig_end": 613.9775,
+   "edit_start": 508.57
+  },
+  {
+   "orig_start": 614.5825,
+   "orig_end": 620.7875,
+   "edit_start": 517.49
+  },
+  {
+   "orig_start": 621.0725,
+   "orig_end": 628.9575,
+   "edit_start": 523.66
+  },
+  {
+   "orig_start": 629.2125,
+   "orig_end": 631.8075,
+   "edit_start": 531.51
+  },
+  {
+   "orig_start": 632.0025,
+   "orig_end": 657.0675,
+   "edit_start": 534.07
+  },
+  {
+   "orig_start": 657.2625,
+   "orig_end": 668.8375,
+   "edit_start": 559.1
+  },
+  {
+   "orig_start": 669.4025,
+   "orig_end": 673.0675,
+   "edit_start": 570.64
+  },
+  {
+   "orig_start": 673.5325,
+   "orig_end": 674.7675,
+   "edit_start": 574.27
+  },
+  {
+   "orig_start": 675.2325,
+   "orig_end": 675.8175,
+   "edit_start": 575.47
+  },
+  {
+   "orig_start": 676.2225,
+   "orig_end": 702.6375,
+   "edit_start": 576.02
+  },
+  {
+   "orig_start": 702.9825,
+   "orig_end": 749.8475,
+   "edit_start": 602.4
+  },
+  {
+   "orig_start": 750.0225,
+   "orig_end": 764.3375,
+   "edit_start": 649.23
+  },
+  {
+   "orig_start": 765.2325,
+   "orig_end": 784.5475,
+   "edit_start": 663.51
+  },
+  {
+   "orig_start": 784.8125,
+   "orig_end": 816.2575,
+   "edit_start": 682.79
+  },
+  {
+   "orig_start": 816.4925,
+   "orig_end": 838.4975,
+   "edit_start": 714.2
+  },
+  {
+   "orig_start": 838.8125,
+   "orig_end": 841.2975,
+   "edit_start": 736.17
+  },
+  {
+   "orig_start": 841.5025,
+   "orig_end": 855.2175,
+   "edit_start": 738.62
+  },
+  {
+   "orig_start": 855.4725,
+   "orig_end": 858.5775,
+   "edit_start": 752.3
+  },
+  {
+   "orig_start": 858.9725,
+   "orig_end": 859.7775,
+   "edit_start": 755.37
+  },
+  {
+   "orig_start": 860.6125,
+   "orig_end": 863.4175,
+   "edit_start": 756.14
+  },
+  {
+   "orig_start": 863.6325,
+   "orig_end": 875.8475,
+   "edit_start": 758.91
+  },
+  {
+   "orig_start": 876.0825,
+   "orig_end": 876.9675,
+   "edit_start": 771.09
+  },
+  {
+   "orig_start": 877.3025,
+   "orig_end": 881.5375,
+   "edit_start": 771.94
+  },
+  {
+   "orig_start": 882.3425,
+   "orig_end": 930.4675,
+   "edit_start": 776.14
+  },
+  {
+   "orig_start": 930.6625,
+   "orig_end": 945.2975,
+   "edit_start": 824.23
+  },
+  {
+   "orig_start": 945.8925,
+   "orig_end": 947.7575,
+   "edit_start": 838.83
+  },
+  {
+   "orig_start": 948.1825,
+   "orig_end": 963.4975,
+   "edit_start": 840.66
+  },
+  {
+   "orig_start": 963.7425,
+   "orig_end": 966.0775,
+   "edit_start": 855.94
+  },
+  {
+   "orig_start": 971.4125,
+   "orig_end": 976.9675,
+   "edit_start": 858.24
+  },
+  {
+   "orig_start": 977.1525,
+   "orig_end": 982.1075,
+   "edit_start": 863.76
+  },
+  {
+   "orig_start": 982.9725,
+   "orig_end": 986.1075,
+   "edit_start": 868.68
+  },
+  {
+   "orig_start": 986.4225,
+   "orig_end": 993.8175,
+   "edit_start": 871.78
+  },
+  {
+   "orig_start": 994.6225,
+   "orig_end": 1006.5475,
+   "edit_start": 879.14
+  },
+  {
+   "orig_start": 1007.1625,
+   "orig_end": 1016.2775,
+   "edit_start": 891.03
+  },
+  {
+   "orig_start": 1016.5825,
+   "orig_end": 1019.8875,
+   "edit_start": 900.11
+  },
+  {
+   "orig_start": 1021.2725,
+   "orig_end": 1028.0475,
+   "edit_start": 903.38
+  },
+  {
+   "orig_start": 1029.0125,
+   "orig_end": 1034.4075,
+   "edit_start": 910.12
+  },
+  {
+   "orig_start": 1034.7025,
+   "orig_end": 1038.3475,
+   "edit_start": 915.48
+  },
+  {
+   "orig_start": 1039.9425,
+   "orig_end": 1044.6075,
+   "edit_start": 919.09
+  },
+  {
+   "orig_start": 1044.8025,
+   "orig_end": 1048.5775,
+   "edit_start": 923.72
+  },
+  {
+   "orig_start": 1049.2525,
+   "orig_end": 1055.3575,
+   "edit_start": 927.46
+  },
+  {
+   "orig_start": 1056.3525,
+   "orig_end": 1057.8275,
+   "edit_start": 933.5299
+  },
+  {
+   "orig_start": 1058.0525,
+   "orig_end": 1060.6475,
+   "edit_start": 934.97
+  },
+  {
+   "orig_start": 1062.3125,
+   "orig_end": 1071.0775,
+   "edit_start": 937.53
+  },
+  {
+   "orig_start": 1071.5825,
+   "orig_end": 1076.2775,
+   "edit_start": 946.26
+  },
+  {
+   "orig_start": 1076.4525,
+   "orig_end": 1076.7675,
+   "edit_start": 950.92
+  }
+ ]
+}

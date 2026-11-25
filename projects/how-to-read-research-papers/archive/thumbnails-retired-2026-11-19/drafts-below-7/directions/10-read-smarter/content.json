@@ -1,0 +1,26 @@
+{
+  "text": {
+    "a": "Read Smarter"
+  },
+  "images": {
+    "bg": "../../assets/stock/px-6958526.jpg"
+  },
+  "kind": "real overhead moment (a hand highlighting a printed paper) + two words in a yellow box",
+  "board": "pick1119-28 (\"Forget Your Reading Journal, Do This Instead\", yellow box \"Learn Deeply\" over an overhead reading desk)",
+  "fonts": [
+    "thumbs-02 Inter Tight Black (#1C1C1C on the yellow box #F7D51D, from Thumbnails 21)"
+  ],
+  "colours": "thumbs-02: #1C1C1C on #F7D51D over the photo",
+  "photo": "Pexels 6958526 (kaboompics.com), free licence",
+  "thumbnail_text": "Read Smarter",
+  "titles": [
+    "Forget Reading Papers Start to Finish, Do This Instead",
+    "How to Read a Research Paper (The 3-Pass Method)",
+    "How I Read Research Papers Now (and Remember Them)"
+  ],
+  "direction": "Copies pick1119-28: a real overhead reading moment fills the frame, one short outcome in a yellow box at the top. The title carries the search words and the \"do this instead\" promise; the box only says what you get.",
+  "nudge": {},
+  "vars": {},
+  "class": "no-lift",
+  "title": "Forget Reading Papers Start to Finish, Do This Instead"
+}

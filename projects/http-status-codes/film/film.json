@@ -1,0 +1,338 @@
+{
+  "title": "HTTP status codes explained (with a bookstore API)",
+  "hud": "",
+  "intro": 0.3,
+  "outro": 2.5,
+  "voiceDuration": 511.488,
+  "words": "data/words.json",
+  "captions": "data/captions.srt",
+  "images": {
+    "clip_rfc-first": "../talking-head/assets/src/rfc-first.png",
+    "clip_gh-404": "../talking-head/assets/src/gh-404.png",
+    "clip_gh-line": "../talking-head/assets/src/gh-line.png",
+    "clip_google-4xx": "../talking-head/assets/src/google-4xx.png",
+    "clip_google-line": "../talking-head/assets/src/google-line.png",
+    "clip_rfc-301": "../talking-head/assets/src/rfc-301.png",
+    "clip_rfc-401": "../talking-head/assets/src/rfc-401.png",
+    "clip_laravel-false": "../talking-head/assets/src/laravel-false.png",
+    "clip_rfc-teapot": "../talking-head/assets/src/rfc-teapot.png",
+    "px_5865624": "../talking-head/assets/px/px-5865624.jpg",
+    "px_4907178": "../talking-head/assets/px/px-4907178.jpg",
+    "px_17489152": "../talking-head/assets/px/px-17489152.jpg",
+    "px_416583": "../talking-head/assets/px/px-416583.jpg",
+    "px_4801686": "../talking-head/assets/px/px-4801686.jpg",
+    "px_39183052": "../talking-head/assets/px/px-39183052.jpg",
+    "clip_gh-hl": "../talking-head/assets/src/gh-hl.png"
+  },
+  "scripts": [
+    "../talking-head/assets/src/clips.js",
+    "scenes/fdkit.js",
+    "scenes/fdsent.js",
+    "scenes/shim.js",
+    "../talking-head/moments/plan.js",
+    "scenes/film.js"
+  ],
+  "cutSounds": {
+    "cutSounds": false
+  },
+  "audio": {
+    "voice": "audio/voice_edit.flac",
+    "voiceFilter": "highpass=f=80,afftdn=nr=8:nf=-52:tn=1,deesser=i=0.3:m=0.5:f=0.5,acompressor=threshold=0.06:ratio=3:attack=6:release=160:knee=3,equalizer=f=3200:t=q:w=1.2:g=1.5",
+    "music": {
+      "dir": "library:music",
+      "xfade": 6.0,
+      "tracks": [
+        [
+          "722",
+          "Mixkit track 722"
+        ],
+        [
+          "1009",
+          "Mixkit track 1009"
+        ],
+        [
+          "443",
+          "Mixkit track 443"
+        ],
+        [
+          "750",
+          "Mixkit track 750"
+        ]
+      ]
+    },
+    "levels": {
+      "voiceLufs": -16.0,
+      "duckDb": -16.0,
+      "openDb": -13.0,
+      "fullDb": -10.0,
+      "target": -14.0,
+      "ceiling": 0.5
+    },
+    "sfx": {
+      "roles": {
+        "thud": {
+          "files": [
+            "library:hit-short-bass",
+            "library:drum-deep-impact"
+          ],
+          "align": "start",
+          "db": 3
+        },
+        "hit": {
+          "files": [
+            "library:punch-soft-quick",
+            "library:hit-futuristic-bass",
+            "library:wood-hard-hit"
+          ],
+          "align": "start",
+          "db": -2
+        },
+        "slide": {
+          "files": [
+            "library:paper-slide",
+            "library:paper-quick-move"
+          ],
+          "align": "peak",
+          "db": 15
+        },
+        "place": {
+          "files": [
+            "library:card-place",
+            "library:card-flick"
+          ],
+          "align": "peak",
+          "db": 14
+        },
+        "marker": {
+          "files": [
+            "library:marker-line"
+          ],
+          "align": "peak",
+          "db": 8
+        },
+        "scribble": {
+          "files": [
+            "library:pencil-short",
+            "library:scribble-on-paper"
+          ],
+          "align": "start",
+          "db": 11,
+          "maxlen": 0.8
+        },
+        "pop": {
+          "files": [
+            "library:pop-dry",
+            "library:pop-hard-click",
+            "library:notify-bubble-pop",
+            "library:pop-cartoon-bubble"
+          ],
+          "align": "start",
+          "db": 9
+        },
+        "tick": {
+          "files": [
+            "library:click-classic",
+            "library:ui-select-click",
+            "library:switch-tap"
+          ],
+          "align": "peak",
+          "db": 14
+        },
+        "check": {
+          "files": [
+            "library:click-box-check",
+            "library:ui-option-select"
+          ],
+          "align": "start",
+          "db": 4
+        },
+        "shutter": {
+          "files": [
+            "library:shutter-click",
+            "library:shutter-hard-click",
+            "library:shutter-digital",
+            "library:shutter-vintage"
+          ],
+          "align": "peak",
+          "db": 13
+        },
+        "swipe": {
+          "files": [
+            "library:swipe-fast-zoom",
+            "library:transition-tech-slide",
+            "library:air-zoom-vacuum"
+          ],
+          "align": "peak",
+          "db": 9
+        },
+        "whoosh": {
+          "files": [
+            "library:whoosh-small-sweep",
+            "library:whoosh-short-sweep"
+          ],
+          "align": "peak",
+          "db": 3
+        },
+        "type": {
+          "files": [
+            "library:typewriter-single-hit"
+          ],
+          "align": "peak",
+          "db": 15
+        },
+        "typeHit": {
+          "files": [
+            "library:typewriter-single-hit"
+          ],
+          "align": "peak",
+          "db": 11
+        },
+        "glitch": {
+          "files": [
+            "library:glitch-small-electric",
+            "library:glitch-static",
+            "library:glitch-intro-text"
+          ],
+          "align": "start",
+          "db": 10
+        },
+        "error": {
+          "files": [
+            "library:wrong-answer",
+            "library:buzzer-fail"
+          ],
+          "align": "start",
+          "db": 7
+        },
+        "notify": {
+          "files": [
+            "library:notify-message-pop",
+            "library:notify-positive",
+            "library:bell-notification"
+          ],
+          "align": "start",
+          "db": 3
+        },
+        "cash": {
+          "files": [
+            "library:coins-clinking",
+            "library:coin-win"
+          ],
+          "align": "start",
+          "db": 7
+        },
+        "clock": {
+          "files": [
+            "library:clock-tick-single",
+            "library:clock-wall-tick-tock"
+          ],
+          "align": "peak",
+          "db": 6
+        },
+        "riser": {
+          "files": [
+            "library:riser-cinematic-trailer",
+            "library:riser-metallic-sweep"
+          ],
+          "align": "peak",
+          "db": -2
+        },
+        "stamp": {
+          "files": [
+            "library:wood-hard-hit",
+            "library:typewriter-single-hit",
+            "library:punch-soft-quick"
+          ],
+          "align": "peak",
+          "db": 9
+        },
+        "door": {
+          "files": [
+            "library:creaky-door-open"
+          ],
+          "align": "start",
+          "db": 9,
+          "maxlen": 1.6
+        },
+        "tape": {
+          "files": [
+            "library:tape-switch",
+            "library:record-scratch-stop"
+          ],
+          "align": "peak",
+          "db": 8
+        },
+        "ding": {
+          "files": [
+            "library:bell-service-ding",
+            "library:correct-answer"
+          ],
+          "align": "start",
+          "db": -2
+        },
+        "page": {
+          "files": [
+            "library:page-turn-single",
+            "library:book-paging-single"
+          ],
+          "align": "peak",
+          "db": 14
+        },
+        "fall": {
+          "files": [
+            "library:falling-hit",
+            "library:tap-ball"
+          ],
+          "align": "start",
+          "db": 3
+        },
+        "tap": {
+          "files": [
+            "library:tap-small-hit",
+            "library:click-plastic-bubble"
+          ],
+          "align": "start",
+          "db": 7
+        },
+        "paper": {
+          "files": [
+            "library:card-place",
+            "library:card-flick",
+            "library:paper-quick-move"
+          ],
+          "align": "peak",
+          "db": 12
+        },
+        "focus": {
+          "files": [
+            "library:camera-autofocus"
+          ],
+          "align": "peak",
+          "db": 2
+        },
+        "bell": {
+          "files": [
+            "library:typewriter-return-bell",
+            "library:bell-service-ding"
+          ],
+          "align": "peak",
+          "db": 4
+        },
+        "ratchet": {
+          "files": [
+            "library:tape-switch"
+          ],
+          "align": "peak",
+          "db": 10
+        },
+        "spin": {
+          "files": [
+            "library:clock-wall-tick-tock"
+          ],
+          "align": "peak",
+          "db": 4
+        }
+      }
+    }
+  }
+}

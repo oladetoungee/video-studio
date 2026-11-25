@@ -1,0 +1,25 @@
+{
+  "direction": "Collage: her calm, looking at the camera, a lined notebook page with a beginner's notes in blue handwriting, a coffee, a sticky note; the topic in a big serif with 'for beginners' handwritten in yellow. References: viral collage 'Capsule wardrobe', 'Thought of these?', Pinterest 'keep trying' (mixed fonts).",
+  "thumbnail_text": "UX research for beginners",
+  "text": {
+    "hd": "UX research<br><i>for beginners</i>",
+    "notes": "UI vs UX<br>who is it for?<br>talk to users<br>watch them",
+    "n1": "Start here"
+  },
+  "images": {
+    "bg": "../../assets/scene/g/s_9.5.jpg",
+    "cut": "../../assets/scene/g/mask3/s_9.5.png"
+  },
+  "vars": {
+    "--bgb": "0.85",
+    "--meb": "1.05"
+  },
+  "titles": [
+    "What Is UX Research? Explained From Scratch",
+    "UX Research Explained Simply (No Jargon, Just Examples)",
+    "What Is UX Research? Explained With Real App Examples"
+  ],
+  "title": "What Is UX Research? Explained From Scratch",
+  "set": 3,
+  "kind": "collage"
+}

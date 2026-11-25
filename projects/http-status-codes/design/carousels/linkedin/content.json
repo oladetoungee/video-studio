@@ -1,0 +1,228 @@
+{
+ "_help": "Edit text here (or in the studio), then run: node shared/build.mjs linkedin (from design/carousels). Markup: *word* = one word boxed, \\n = line break. ground = stone | mint | sky | amber | tomato | ink | card.",
+ "deck": "linkedin",
+ "width": 1080,
+ "height": 1350,
+ "accent": "#FFA51F",
+ "accentOnInk": "#FFA51F",
+ "docTitle": "Is your API returning the right HTTP status code?",
+ "slides": [
+  {
+   "layout": "cover",
+   "ground": "tomato",
+   "odo": {
+    "from": "2",
+    "to": "2",
+    "f": 1,
+    "blur": 0,
+    "rest": "00"
+   },
+   "odoSize": 440,
+   "title": "Is your API returning the *right* HTTP status code?",
+   "size": 100,
+   "sub": "The codes I use in real APIs, and the mistakes I see most."
+  },
+  {
+   "layout": "statement",
+   "ground": "stone",
+   "title": "Your front end and your monitoring read the *status\u00a0code* first",
+   "size": 92,
+   "resp": {
+    "parts": [
+     {
+      "t": "HTTP/1.1"
+     },
+     {
+      "t": "200",
+      "l": "status code"
+     },
+     {
+      "t": "OK",
+      "l": "reason phrase"
+     }
+    ]
+   },
+   "body": "The code tells them what happened, and the body gives the detail. If the code is wrong, everything that reads it is wrong too."
+  },
+  {
+   "layout": "classes",
+   "ground": "stone",
+   "title": "The first digit tells you which class it is",
+   "size": 84,
+   "rows": [
+    "Informational, you rarely see these",
+    "Success",
+    "Redirection",
+    "Client error, *check the request*",
+    "Server error, *check the server*"
+   ]
+  },
+  {
+   "layout": "calls",
+   "ground": "mint",
+   "title": "200 isn't the only success",
+   "size": 92,
+   "calls": [
+    {
+     "code": "200",
+     "req": "GET /books/42",
+     "nm": "OK, with the book in the body"
+    },
+    {
+     "code": "201",
+     "req": "POST /books",
+     "nm": "Created, usually with a Location header"
+    },
+    {
+     "code": "204",
+     "req": "DELETE /books/42",
+     "nm": "No Content, an empty body"
+    }
+   ]
+  },
+  {
+   "layout": "grid",
+   "ground": "sky",
+   "title": "Which redirect? 301, 302, 307 or 308",
+   "size": 84,
+   "cols": [
+    "Permanent",
+    "Temporary"
+   ],
+   "rowsG": [
+    {
+     "k": "May switch POST\u00a0to\u00a0GET",
+     "cells": [
+      {
+       "v": "301",
+       "n": "Moved for good"
+      },
+      {
+       "v": "302",
+       "n": "Back soon"
+      }
+     ]
+    },
+    {
+     "k": "Keeps POST as\u00a0POST",
+     "cells": [
+      {
+       "v": "308",
+       "n": "Moved for good",
+       "dk": true
+      },
+      {
+       "v": "307",
+       "n": "Back soon",
+       "dk": true
+      }
+     ]
+    }
+   ],
+   "body": "With 301 and 302 a POST can turn into a GET, and the data you sent is dropped. If POST requests matter, I would use 307 and 308."
+  },
+  {
+   "layout": "duo",
+   "ground": "amber",
+   "title": "400 or 422?",
+   "size": 110,
+   "cols": [
+    {
+     "k": "400",
+     "n": "Bad Request",
+     "v": "The server can't read the request, like broken JSON"
+    },
+    {
+     "k": "422",
+     "n": "Unprocessable Content",
+     "v": "The JSON is valid. The data inside makes no sense",
+     "dk": true
+    }
+   ],
+   "body": "I think 422 is clearer for validation, because it tells the front end that the format was fine and the data is what needs fixing."
+  },
+  {
+   "layout": "duo",
+   "ground": "stone",
+   "title": "401 and 403 lead to different screens",
+   "size": 90,
+   "cols": [
+    {
+     "k": "401",
+     "n": "Expired token",
+     "v": "Send the user to log in or refresh their token"
+    },
+    {
+     "k": "403",
+     "n": "Not allowed",
+     "v": "Show a message that they don't have access",
+     "dk": true
+    }
+   ],
+   "body": "If you return 403 for an expired token, your front end never sends the user back to log in, and they are just stuck."
+  },
+  {
+   "layout": "receipt",
+   "ground": "amber",
+   "title": "GitHub hides private repos behind a 404",
+   "size": 88,
+   "shot": {
+    "img": "../../thumbnails/assets/src/gh-para.png",
+    "w": 920,
+    "credit": "GitHub Docs, Troubleshooting the REST API",
+    "mark": [
+     [
+      3,
+      69.5,
+      82,
+      11
+     ],
+     [
+      3,
+      82,
+      23.5,
+      11
+     ]
+    ]
+   },
+   "body": "RFC 9110 allows this too, as a way to avoid confirming that private resources exist."
+  },
+  {
+   "layout": "calls",
+   "ground": "tomato",
+   "title": "Your app sends 500. The proxy sends 502 and 504",
+   "size": 88,
+   "calls": [
+    {
+     "code": "500",
+     "req": "Internal Server Error",
+     "nm": "Usually an uncaught\u00a0exception"
+    },
+    {
+     "code": "502",
+     "req": "Bad Gateway",
+     "nm": "The proxy got an invalid answer from your app"
+    },
+    {
+     "code": "504",
+     "req": "Gateway Timeout",
+     "nm": "Your app took too long, like a slow query"
+    }
+   ]
+  },
+  {
+   "layout": "list",
+   "ground": "ink",
+   "title": "4 common status code mistakes",
+   "size": 92,
+   "rows": [
+    "Returning *200 OK* when the request\u00a0failed",
+    "A 500 for a record that doesn't exist, instead of a 404",
+    "A 403 for an expired token, instead of\u00a0a\u00a0401",
+    "Leaking stack traces in your 500\u00a0responses"
+   ],
+   "where": "Full video on YouTube",
+   "handle": "@WithGbemi"
+  }
+ ]
+}

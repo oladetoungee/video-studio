@@ -1,0 +1,54 @@
+{
+ "title": "Industry sponsorship and research outcome - PubMed",
+ "h1": "Industry sponsorship and research outcome",
+ "h1y": 572,
+ "found": {
+  "leads to more favorable efficacy results and conclusions": [
+   [
+    150,
+    1796.171875,
+    406.015625,
+    18
+   ]
+  ],
+  "Industry sponsorship": [
+   [
+    150,
+    573,
+    286.34375,
+    33
+   ]
+  ]
+ },
+ "H": 40510,
+ "focus": {
+  "leads to more favorable efficacy results and conclusions": {
+   "file": "pubmed__leads-to-more-favorable-.png",
+   "top": 1276.171875,
+   "rects": [
+    [
+     150,
+     520,
+     406.015625,
+     18
+    ]
+   ]
+  },
+  "Industry sponsorship": {
+   "file": "pubmed__industry-sponsorship.png",
+   "top": 53,
+   "rects": [
+    [
+     150,
+     520,
+     286.34375,
+     33
+    ]
+   ]
+  }
+ },
+ "clipTop": 452,
+ "scale": 1.5,
+ "url": "https://pubmed.ncbi.nlm.nih.gov/28207928/",
+ "captured": "2026-11-02T19:32:58.122Z"
+}

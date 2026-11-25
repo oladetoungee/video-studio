@@ -1,0 +1,47 @@
+1
+00:00:00,023 --> 00:00:01,863
+400 Bad Request means the server can't read
+
+2
+00:00:01,863 --> 00:00:03,023
+your request properly
+
+3
+00:00:03,023 --> 00:00:05,063
+like broken JSON with a missing bracket
+
+4
+00:00:05,063 --> 00:00:07,583
+422 Unprocessable Content means that the
+
+5
+00:00:07,583 --> 00:00:09,283
+server could read the request just fine, but
+
+6
+00:00:09,283 --> 00:00:10,823
+the data inside does not make sense
+
+7
+00:00:10,823 --> 00:00:13,553
+if you send a bookstore a new book with no
+
+8
+00:00:13,553 --> 00:00:16,093
+title or something like that, you get 422
+
+9
+00:00:16,093 --> 00:00:18,963
+some APIs send 400 for validation errors too
+
+10
+00:00:18,963 --> 00:00:21,023
+I think 422 is clearer because it tells the
+
+11
+00:00:21,023 --> 00:00:23,173
+front end that the format was fine and data
+
+12
+00:00:23,173 --> 00:00:24,567
+is what needs fixing

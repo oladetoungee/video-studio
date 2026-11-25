@@ -1,0 +1,99 @@
+/* claude-rule thumbnails: the film's "Thread" look (lilac #CDBFF3, ink #15131C, Schibsted Grotesk, IBM Plex Mono)
+   on her real room photos. Every chat window / phone / laptop screen is a generic ILLUSTRATION, never Claude's real UI,
+   no logo; the model never "speaks" (only system lines such as "This chat has ended"). */
+@font-face { font-family: 'Schibsted'; src: url('../fonts/SchibstedGrotesk.ttf') format('truetype'); font-weight: 400 900; }
+@font-face { font-family: 'Plex Mono'; src: url('../fonts/IBMPlexMono-Medium.ttf') format('truetype'); font-weight: 500; }
+@font-face { font-family: 'Plex Mono'; src: url('../fonts/IBMPlexMono-Regular.ttf') format('truetype'); font-weight: 400; }
+@font-face { font-family: 'Newsreader'; src: url('../fonts/Newsreader.ttf') format('truetype'); font-weight: 200 800; }
+@font-face { font-family: 'Newsreader'; src: url('../fonts/Newsreader-Italic.ttf') format('truetype'); font-weight: 200 800; font-style: italic; }
+@font-face { font-family: 'Instrument Serif'; src: url('../fonts/InstrumentSerif-Italic.ttf') format('truetype'); font-style: italic; }
+@font-face { font-family: 'Instrument Serif'; src: url('../fonts/InstrumentSerif-Regular.ttf') format('truetype'); font-style: normal; }
+@font-face { font-family: 'Caveat'; src: url('../fonts/Caveat.ttf') format('truetype'); font-weight: 400 700; }
+
+:root { --lilac: #CDBFF3; --lilac2: #B9A8EE; --ink: #15131C; --paper: #F4F1FA; --mute: #3E3852; --rule: #A99BD6;
+        --red: #E8352B; --grey: #DCD7E6; --yellow: #FFE14D; --white: #FFFFFF; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1280px; height: 720px; overflow: hidden; background: var(--ink); }
+.t { position: relative; width: 1280px; height: 720px; overflow: hidden; background: var(--ground, var(--lilac)); color: var(--fg, var(--ink));
+     font-family: 'Schibsted', sans-serif; }
+.abs { position: absolute; }
+
+/* ---------- her photo: the same 4K frame twice (background + her cut-out on top) so words can sit behind her ---------- */
+img.bg, img.fg { position: absolute; display: block; left: var(--px, 0px); top: var(--py, 0px); width: var(--pw, 1280px); max-width: none; }
+img.bg { z-index: 1; } img.fg { z-index: 5; }
+.behind, .hl.behind { z-index: 3; } .front, .hl.front { z-index: 8; }
+/* a very light vignette under type on a photo (never a coloured gradient) */
+.shade { position: absolute; inset: 0; z-index: 2; background: rgba(10,8,16,var(--shade, 0)); pointer-events: none; }
+
+/* ---------- headline type ---------- */
+.hl { position: absolute; z-index: 8; font-family: 'Schibsted', sans-serif; font-weight: 900; text-transform: uppercase; letter-spacing: -0.045em;
+      line-height: .86; white-space: nowrap; color: var(--fg, var(--ink)); }
+.hl.w { color: #fff; }
+.hl .acc { color: var(--accent, var(--red)); }
+/* text on a solid box (line by line), like the "JOBS ARE DEAD" pins */
+.boxl { display: inline-block; padding: .06em .14em .1em; background: var(--box, var(--ink)); color: var(--boxfg, var(--paper)); }
+.boxl.l { background: var(--lilac); color: var(--ink); }
+.boxl.r { background: var(--accent, var(--red)); color: #fff; }
+.boxl.y { background: var(--yellow); color: var(--ink); }
+.boxl.wh { background: #fff; color: var(--ink); }
+.serif { font-family: 'Newsreader', serif; font-style: italic; font-weight: 500; text-transform: none; letter-spacing: -0.02em; }
+.iserif { font-family: 'Instrument Serif', serif; font-style: italic; font-weight: 400; text-transform: none; letter-spacing: -0.01em; }
+.hand { font-family: 'Caveat', cursive; font-weight: 700; text-transform: none; letter-spacing: 0; }
+.mono { font-family: 'Plex Mono', monospace; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; }
+.ill { font-family: 'Plex Mono', monospace; font-weight: 500; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--mute); }
+.cred { position: absolute; font-family: 'Plex Mono', monospace; font-weight: 500; font-size: 11px; letter-spacing: .1em; text-transform: uppercase;
+        color: var(--mute); white-space: nowrap; }
+
+/* ---------- generic chat window (ILLUSTRATION). Everything in em: set font-size on .win to scale it ---------- */
+.win { position: absolute; z-index: 6; font-size: var(--fs, 20px); width: var(--ww, 20em); background: #fff; border-radius: .9em;
+       box-shadow: 0 .5em 1.6em rgba(20,14,40,.28); overflow: hidden; color: var(--ink); }
+.win .hd { display: flex; align-items: center; justify-content: space-between; padding: .55em .9em; border-bottom: .08em solid #E7E2F0; }
+.win .nm { font-weight: 800; font-size: 1.15em; letter-spacing: -0.02em; }
+.win .hd .ill { font-size: .5em; }
+.win .bd { padding: .8em .9em .9em; display: flex; flex-direction: column; gap: .55em; }
+.bub { align-self: flex-end; max-width: 92%; padding: .5em .75em .55em; border-radius: .9em; border-bottom-right-radius: .25em;
+       background: var(--ink); color: var(--paper); font-weight: 600; line-height: 1.15; letter-spacing: -0.01em; }
+.bub.soft { background: #EDE9F6; color: var(--ink); }
+.bub.rude { background: var(--red); color: #fff; font-weight: 800; text-transform: uppercase; }
+.bub.rude span, .blur { filter: blur(var(--blur, .14em)); display: inline-block; }
+.endbar { align-self: stretch; text-align: center; padding: .55em .6em .6em; border-radius: .5em; background: var(--grey); color: var(--ink);
+          font-weight: 800; letter-spacing: -0.02em; font-size: 1.25em; line-height: 1.05; }
+.sysline { display: flex; align-items: center; gap: .6em; color: var(--mute); font-weight: 700; font-size: 1.05em; white-space: nowrap; }
+.sysline::before, .sysline::after { content: ''; flex: 1; height: .1em; background: var(--rule); }
+.win .in { display: flex; justify-content: space-between; align-items: center; padding: .6em .9em .7em; border-top: .08em solid #E7E2F0;
+           color: #9A93AE; font-family: 'Plex Mono', monospace; font-size: .62em; }
+.win .in .ill { font-size: .85em; }
+
+/* drawn phone (ILLUSTRATION): ink body, the .win fills the screen */
+.phone { position: absolute; z-index: 6; width: var(--phw, 300px); height: var(--phh, 600px); background: #121018; border-radius: 46px;
+         padding: 14px; box-shadow: 0 18px 40px rgba(10,6,24,.4); }
+.phone .scr { position: relative; width: 100%; height: 100%; border-radius: 34px; overflow: hidden; background: #fff; }
+.phone .win { position: absolute; inset: 0; width: auto; border-radius: 0; box-shadow: none; padding-top: 1.6em; }
+.phone .notch { position: absolute; left: 50%; top: 10px; width: 34%; height: 22px; border-radius: 12px; background: #121018; transform: translateX(-50%); z-index: 9; }
+
+/* drawn laptop (ILLUSTRATION) */
+.laptop { position: absolute; z-index: 6; width: var(--lw, 640px); }
+.laptop .lid { position: relative; background: #1B1922; border-radius: 18px 18px 6px 6px; padding: 16px; aspect-ratio: 16 / 10.4; }
+.laptop .lid .win { position: absolute; inset: 16px; width: auto; border-radius: 6px; box-shadow: none; }
+.laptop .base { height: 18px; margin: 0 -6%; background: #2A2733; border-radius: 0 0 22px 22px; }
+
+/* real screenshot card (Anthropic's public page), always with a source line */
+.shot { position: absolute; z-index: 6; background: #FAF9F5; border-radius: 10px; box-shadow: 0 12px 32px rgba(10,6,24,.32); overflow: hidden; }
+.shot img { display: block; width: 100%; }
+.shot .src { padding: 7px 14px 8px; border-top: 1px solid #E4E0D8; font-family: 'Plex Mono', monospace; font-weight: 500; font-size: 11px;
+             letter-spacing: .08em; text-transform: uppercase; color: #6B6577; background: #FAF9F5; white-space: nowrap; }
+.mark { position: absolute; background: var(--hlc, rgba(205,191,243,.85)); mix-blend-mode: multiply; }
+
+/* sticky note / sticker */
+.note { position: absolute; z-index: 7; background: var(--yellow); color: var(--ink); padding: 14px 18px; box-shadow: 0 8px 18px rgba(0,0,0,.25);
+        font-family: 'Caveat', cursive; font-weight: 700; line-height: .95; }
+
+.guides .badge { position: absolute; right: 10px; bottom: 10px; width: 150px; height: 70px; border: 3px dashed #f0f; z-index: 99; }
+
+.phone .endbar { font-size: 1.02em; }
+.cutrow { position: relative; height: 1.6em; margin: .2em -1em; border-top: .2em dashed var(--ink); top: .8em; }
+.cutrow svg { position: absolute; left: -.4em; top: -2.2em; width: 5.4em; }
+.after-cut { opacity: .45; transform: translate(.5em,.35em) rotate(1.5deg); }
+
+.phone .win .nm { font-size: 1em; }
+.phone .win .hd .ill { font-size: .42em; }

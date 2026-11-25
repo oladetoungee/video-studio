@@ -1,0 +1,47 @@
+1
+00:00:00,110 --> 00:00:03,430
+there's a study from CHI, which is the main
+
+2
+00:00:03,430 --> 00:00:05,040
+conference in my field, human-computer
+
+3
+00:00:05,040 --> 00:00:07,710
+interaction, where researchers had people
+
+4
+00:00:07,710 --> 00:00:09,610
+keep their phone notifications on for one
+
+5
+00:00:09,610 --> 00:00:11,290
+week and off for the other week
+
+6
+00:00:11,330 --> 00:00:13,070
+in the week where the phone notifications
+
+7
+00:00:13,070 --> 00:00:16,377
+were on, the people had more symptoms of
+
+8
+00:00:16,377 --> 00:00:17,817
+inattention and hyperactivity
+
+9
+00:00:18,147 --> 00:00:19,837
+because that's what notifications are meant
+
+10
+00:00:19,837 --> 00:00:21,737
+to do, to call your attention, to make you
+
+11
+00:00:21,737 --> 00:00:23,497
+feel like something urgent is waiting for
+
+12
+00:00:23,497 --> 00:00:25,367
+you you need to open your phone, right?

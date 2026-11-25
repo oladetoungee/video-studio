@@ -1,0 +1,103 @@
+URL: https://news.sbs.co.kr/english/article.do?news_id=N1008805974
+STATUS: loaded (http 200)
+FINAL: https://news.sbs.co.kr/english/article.do?news_id=N1008805974
+TITLE: "A Single Hacker Successfully Hacks 100 Companies Using AI Agents"
+H1: "A Single Hacker Successfully Hacks 100 Companies Using AI Agents"
+OG: "A Single Hacker Successfully Hacks 100 Companies Using AI Agents" | SBS World News
+PUBLISHED: 2026-10-20T11:32:07+09:00  MODIFIED: 
+DOC_H: 900
+
+"A Single Hacker Successfully Hacks 100 Companies Using AI Agents"
+Gwak Sang-eun
+Published
+October 20, 2026 at 11:32 AM
+View
+73
+Enlarge image
+▲ Hacking (The photo above is not related to the article.)
+
+It has been revealed that a Chinese-speaking hacker has successfully hacked the websites of more than 100 companies worldwide over the past few weeks by utilizing artificial intelligence (AI) agents.
+
+Citing a report by cybersecurity firm Norfoge, Reuters reported on the 19th local time that the victimized companies include agricultural machinery maker Deere & Company (John Deere), home appliance firm SharkNinja, and engine manufacturer Cummins.
+
+Snorre Fagerland, a senior researcher at Norfoge, explained in the report that he discovered the hacker while scanning the web to find instances where Cairn, an open-source AI problem-solving platform favored by hackers, was accidentally exposed to the internet.
+
+According to Fagerland, the hacker instructed the AI agents to autonomously scan and infiltrate target sites for several hours.
+
+The instructions were given in Chinese text consisting of fewer than 100 characters.
+
+Until last week, the AI agents attempted intrusions on more than 1,200 corporate websites, successfully breaching over 100 of them.
+
+It took an average of 23 hours to achieve a successful intrusion.
+
+Fagerland noted that a mix of China's DeepSeek and Anthropic's Claude Code appears to have been used in the hacking, estimating that a total of 5,000 dollars was spent on token costs.
+
+This breaks down to about 50 dollars spent per successful hack.
+
+Fagerland stated that since around the 2nd, he has discovered 24 cases of Cairn being used for malicious activities, allowing him to observe hackers deploying AI tools to launch attacks globally.
+
+John Deere told Reuters that it has "taken the necessary measures" following the incident and that "there is no indication that sensitive information was accessed."
+
+SharkNinja also stated that the hacking was limited to an independent site containing only product support information, and the threat has now been blocked.
+
+Cummins stated, "We are investigating a report regarding a potential cyberattack that occurred on a website operated by one of our third-party vendors."
+
+Fagerland pointed out that this discovery serves as a real-world example showing that commercial AI agents can execute complex penetration processes from start to finish without human intervention.
+
+Reuters reported that it was unable to confirm the extent to which data was leaked due to this hacking.
+
+The creator of Cairn emphasized in a recent post on X (formerly Twitter) that "Cairn is an innovative form of multi-agent architecture and was not designed for hacking attacks," adding, "If it is used to carry out harmful hacking attacks, this is not my intention."
+
+Fagerland noted that while he previously believed AI hacking agents would require minimal human oversight, it has now become clear that technology has moved past that stage, describing the progress in this field as "astonishing."
+
+※ Please note: This article was translated by AI and may contain errors.
+View Korean Article (한국어 기사 보기)
+Copyright Ⓒ SBS & SBSi. All rights reserved.
+Copying, redistribution, and unauthorized use in AI training are strictly prohibited.
+All your favorite K‑stars in one place →
+Trending Now
+Video News
+
+"It's the Last Time": People Flock to Jamsugyo Bridge Following Successive Social Media Posts
+
+Video News
+
+Three Patrol Cars Join Chase: Why Chaos Erupted in the Middle of the Night
+
+Video News
+
+"Go to Muslim-Specialized Stores": Video by Foreigner Sparks Controversy
+
+Video News
+
+Quick-Witted Citizen Spots Missing Person After Remembering Emergency Text
+
+Video News
+
+Woman Found Dead in Broad Daylight... Had Cried for Help Twice Before
+
+Most Read
+
+1.
+Absurd Accident at Paris Motor Show: Child Climbs Into Mercedes and Reverses
+
+2.
+"I Regret Watching South Korean Dramas": Weeping North Korean Soldier Shown in Video
+
+3.
+'514 Assaults' Over 3 Hours and 20 Minutes: The Truth Behind 'Gukpeu'
+
+4.
+"Should We Yield to Multicultural Families, Too?" Backlash Erupts Over Daycare Admission
+
+5.
+Super-Strong Typhoon Champi Moving North: Will It Impact South Korea?
+
+6.
+"Kim Jong Un Is Alive": More Photos Released, but Are These Suspected to Be a 'Body Double' Too?
+
+7.
+North Korea Responds to Foreign Media Rumors of Kim Jong Un's "Coma from Cerebral Hemorrhage" with Latest Photos
+
+8.
+Death Rumors Swirl Online, but Xi Jinping Sends Reply to Kim Jong Un

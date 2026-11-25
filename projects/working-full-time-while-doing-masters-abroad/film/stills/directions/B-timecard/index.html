@@ -1,0 +1,129 @@
+<!doctype html><html><head><meta charset="utf-8"><title>B · Clock in, clock out</title>
+<link rel="stylesheet" href="../_shared/fonts.css"></head><body>
+<script src="../_shared/clips.js"></script>
+<script src="../_shared/lib.js"></script>
+<script>
+/* B · CLOCK IN / CLOCK OUT. Her week is a punch-clock time card: work IN/OUT and class IN/OUT, stamped on her words.
+ * Ground: wall charcoal #23201B. Card manila #E7D7AE, printed rules #A08A5E, stamp ink #1D1A15.
+ * ONE accent: stamp red #C8102E (her headband) = the time that matters / the rule. Type: Bebas Neue (headlines, times),
+ * Work Sans 600 (sentences), Cutive Mono (stamps). Motion: the stamp lands (scale 1.25 -> 1, 0.12 s, then 0.4 s settle). */
+const C = { wall: '#23201B', card: '#E7D7AE', rule: '#A08A5E', ink: '#1D1A15', red: '#C8102E', paper: '#F4EBD3', mid: '#B9AD92', dim: '#C9B98F' };
+const FB = (s) => `400 ${s}px "Bebas Neue"`, FW = (s, w = 600) => `${w} ${s}px "Work Sans"`, FC = (s) => `400 ${s}px "Cutive Mono"`;
+const DAYS = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'];
+/** a stamped mark: lands with a short press (scale 1.25 -> 1) and a slightly uneven ink (deterministic) */
+function stamp(t, at, s, x, y, f, col, o = {}) {
+  if (t < at) return; const p = clamp((t - at) / 0.12); const sc = lerp(1.25, 1, EASE.outQuint(p)); const rot = (o.rot || 0) + (hash(x * 3 + y) - 0.5) * 0.03;
+  ctx.save(); ctx.translate(x, y); ctx.rotate(rot); ctx.scale(sc, sc); ctx.globalAlpha *= lerp(0.5, o.alpha || 0.92, p);
+  txt(s, 0, 0, f, col, o.align || 'center', 'middle', o.ls || 0); txt(s, 1.2, 0.4, f, col, o.align || 'center', 'middle', o.ls || 0);
+  if (o.box) { ctx.strokeStyle = col; ctx.lineWidth = o.lw || 5; const w = tw(s, f, o.ls || 0) + 40, h = o.bh || 76; ctx.strokeRect(-w / 2, -h / 2 - 2, w, h); }
+  ctx.restore();
+}
+/** the time card. o: x, y, w, rot, rows {MON: [in, out, in, out, times[4]]}, dimWork (0..1), hiRow, strike {row, col, p}, red {row, col, s, at} */
+function card(t, o) {
+  const { x, y, w } = o; const rh = o.rh || 92, head = 210, h = head + rh * 7 + 120; const cw = [110, (w - 110) / 4, (w - 110) / 4, (w - 110) / 4, (w - 110) / 4];
+  ctx.save(); ctx.translate(x + w / 2, y + h / 2); ctx.rotate(o.rot || 0); ctx.translate(-w / 2, -h / 2);
+  rect(10, 12, w, h, 'rgba(0,0,0,0.28)'); rect(0, 0, w, h, C.card);
+  txt('TIME CARD', 34, 72, FB(64), C.ink, 'left', 'alphabetic', 2); txt('WEEK 45', w - 34, 72, FC(36), C.ink, 'right');
+  txt('NAME  GBEMI', 34, 118, FC(32), C.ink, 'left'); line(34, 132, w - 34, 132, C.rule, 2);
+  const cx = (i) => cw.slice(0, i).reduce((a, b) => a + b, 0);
+  txt('WORK', cx(1) + cw[1], 176, FW(30, 700), C.ink, 'center', 'alphabetic', 3); txt('CLASS', cx(3) + cw[3], 176, FW(30, 700), C.ink, 'center', 'alphabetic', 3);
+  ['IN', 'OUT', 'IN', 'OUT'].forEach((s, i) => txt(s, cx(i + 1) + cw[i + 1] / 2, 202, FC(28), C.ink, 'center'));
+  for (let r = 0; r <= 7; r++) line(20, head + 12 + r * rh, w - 20, head + 12 + r * rh, C.rule, 2);
+  for (let c = 1; c < 5; c++) line(cx(c), 150, cx(c), head + 12 + 7 * rh, C.rule, c === 3 ? 4 : 2);
+  DAYS.forEach((d, r) => { const ry = head + 12 + r * rh + rh / 2;
+    if (o.hiRow === d) rect(20, ry - rh / 2 + 2, w - 40, rh - 4, 'rgba(200,16,46,0.10)');
+    txt(d, 34, ry + 10, FW(30, 700), C.ink, 'left', 'alphabetic', 2);
+    const v = (o.rows || {})[d]; if (!v) return;
+    for (let c = 0; c < 4; c++) { if (!v[c]) continue; const at = v[4] ? v[4][c] : -1; const isWork = c < 2;
+      withA(isWork ? 1 - 0.42 * (o.dimWork || 0) : 1, () => stamp(t, at, v[c], cx(c + 1) + cw[c + 1] / 2, ry + 2, FC(38), (o.redCell && o.redCell.row === d && o.redCell.col === c) ? C.red : C.ink));
+      if (o.strike && o.strike.row === d && o.strike.col === c) { const p = ez(t, o.strike.at, 0.3, 'outExpo'); if (p > 0) { const sx = cx(c + 1) + 22; rect(sx, ry - 4, (cw[c + 1] - 44) * p, 8, C.red); } } }
+  });
+  (o.extra || []).forEach((e) => { if (e.row) { const r = DAYS.indexOf(e.row); e = Object.assign({}, e, { x: cx(e.col + 1) + cw[e.col + 1] / 2, y: head + 12 + r * rh + rh / 2 + (e.dy || 0) }); } stamp(t, e.at, e.s, e.x, e.y, e.f || FB(70), e.col || C.red, { box: e.box, rot: e.rot || -0.08, bh: e.bh, ls: e.ls || 2, alpha: 0.95 }); });
+  ctx.restore(); return h;
+}
+function clockFace(t, cx, cy, r, hours) { // a flat punch-clock face: manila disc, ink numerals, hands at `hours` (24 h)
+  circle(cx, cy, r + 14, C.ink); circle(cx, cy, r, C.paper);
+  for (let i = 0; i < 60; i++) { const a = i / 60 * Math.PI * 2; const big = i % 5 === 0; const r1 = r - (big ? 34 : 18); line(cx + Math.cos(a) * r1, cy + Math.sin(a) * r1, cx + Math.cos(a) * (r - 8), cy + Math.sin(a) * (r - 8), C.ink, big ? 5 : 2); }
+  [12, 3, 6, 9].forEach((n, i) => { const a = -Math.PI / 2 + i * Math.PI / 2; txt(String(n), cx + Math.cos(a) * (r * 0.6), cy + Math.sin(a) * (r * 0.6) + r * 0.17, FB(r * 0.42), C.ink, 'center'); });
+  const h12 = hours % 12, mn = (hours % 1) * 60; const ah = -Math.PI / 2 + h12 / 12 * Math.PI * 2, am = -Math.PI / 2 + mn / 60 * Math.PI * 2;
+  ctx.lineCap = 'round'; line(cx, cy, cx + Math.cos(ah) * r * 0.5, cy + Math.sin(ah) * r * 0.5, C.ink, 14); line(cx, cy, cx + Math.cos(am) * r * 0.78, cy + Math.sin(am) * r * 0.78, C.ink, 8); ctx.lineCap = 'butt';
+  circle(cx, cy, 14, C.red);
+}
+function wall() { rect(0, 0, W, H, C.wall); }
+const WEEK = { MON: ['09:00', '17:00', '17:45', '20:00'], TUE: ['09:00', '17:00', '', ''], WED: ['09:00', '17:00', '17:45', '20:00'], THU: ['09:00', '17:00', '17:45', '20:00'], FRI: ['09:00', '', '', ''] };
+const staged = (t0, step) => { const o = {}; let i = 0; for (const d of Object.keys(WEEK)) { o[d] = WEEK[d].concat([WEEK[d].map(() => t0 + (i++) * step)]); } return o; };
+
+function sOpen(t) {
+  wall(); const k = { job: P('full-time job', 0.5), ms: P('Full-time master\'s degree', 7.4), since: P('since October 2025', 10) };
+  const x = V(110, 80);
+  wordsOn(t, ['FULL-TIME', 'JOB'], [k.job.w[0], k.job.w[1]], x, V(400, 470), FB(V(170, 150)), C.card, { rise: 24 });
+  wordsOn(t, ['+', 'FULL-TIME'], [k.ms.t - 0.2, k.ms.w[0]], x, V(560, 610), FB(V(170, 150)), C.card, { rise: 24 });
+  wordsOn(t, ['MASTER\'S'], [k.ms.w[1]], x, V(720, 750), FB(V(170, 150)), C.red, { rise: 24 });
+  withA(ez(t, k.ms.w[2], 0.4), () => txtW2('A developer in Estonia, doing both.', x, V(800, 820), FW(V(40, 38)), C.mid));
+  const rows = { MON: ['09:00', '17:00', '17:45', '20:00', [k.job.w[1], k.job.w[1] + 0.25, k.ms.w[1], k.ms.w[1] + 0.25]] };
+  card(t, { x: V(1080, 150), y: V(60, 900), w: V(720, 780), rh: V(84, 74), rot: -0.02, rows, hiRow: 'MON',
+    extra: [{ at: k.since.w[1], s: 'SINCE OCT 2025', x: V(470, 520), y: V(870, 840), f: FB(V(62, 58)), box: true, bh: 80, rot: -0.1 }] });
+}
+function txtW2(s, x, y, f, c) { txt(s, x, y, f, c); }
+function sRules(t) {
+  wall(); const k = { lim: P('no limit to the number of hours', 47), keep: P('keeping up with your studies', 50), ects: P('around 30 credits', 59) };
+  const x = V(110, 80);
+  wordsOn(t, ['HOURS', 'YOU', 'CAN', 'WORK:'], [k.lim.w[5] - 0.4, k.lim.w[5] - 0.3, k.lim.w[5] - 0.2, k.lim.w[5]], x, V(400, 460), FB(V(120, 110)), C.card);
+  stamp(t, k.lim.w[1], 'NOT LIMITED', x + V(260, 300), V(550, 600), FB(V(120, 110)), C.red, { box: true, bh: 132, rot: -0.06, ls: 3 });
+  wordsOn(t, ['IF', 'YOU', 'STAY', 'FULL-TIME:'], [k.keep.t, k.keep.w[1], k.keep.w[2], k.keep.w[3]], x, V(780, 820), FB(V(84, 80)), C.card);
+  wordsOn(t, ['~30', 'ECTS', 'A', 'SEMESTER'], [k.ects.w[1], k.ects.w[2], k.ects.w[2] + 0.4, k.ects.w[2] + 0.8], x, V(880, 910), FB(V(84, 80)), C.red);
+  const cx = V(1080, 80);
+  const h1 = clipCard(t, 'sie-hours', cx + V(40, 0), V(270, 1030), V(640, 620), { at: k.lim.t - 0.4, hlAt: k.lim.w[1], cs: 30, creditCol: C.mid, creditFont: '"Cutive Mono"' });
+  clipCard(t, 'sie-ects', cx - V(240, 0), V(270, 1030) + h1 + 170, V(1000, 920), { at: k.ects.t - 0.4, hlAt: k.ects.w[1], cs: 30, creditCol: C.mid, creditFont: '"Cutive Mono"' });
+}
+function sLeave(t) {
+  wall(); const k = { sl: P('something called study leave', 429), thirty: P('30 calendar days of study leave', 434.5), paid: P('20 of those are paid', 438) };
+  const x = V(110, 80);
+  wordsOn(t, ['STUDY', 'LEAVE'], [k.sl.w[2], k.sl.w[3]], x, V(290, 470), FB(V(190, 170)), C.card, { rise: 24 });
+  withA(ez(t, k.sl.w[3], 0.4), () => txt('in Estonia, for formal studies', x, V(360, 540), FW(V(40, 38)), C.mid));
+  stamp(t, k.thirty.w[0], '30 DAYS', x + V(190, 200), V(560, 720), FB(V(140, 120)), C.card, { box: true, bh: 150, rot: -0.04, ls: 3 });
+  stamp(t, k.paid.w[0], '20 PAID', x + V(560, 600), V(760, 900), FB(V(140, 120)), C.red, { box: true, bh: 150, rot: 0.05, ls: 3 });
+  const cx = V(900, 80);
+  const h1 = clipCard(t, 'rt-30', cx, V(300, 1040), V(820, 920), { at: k.thirty.t - 0.3, hlAt: k.thirty.w[0], cs: 30, creditCol: C.mid, creditFont: '"Cutive Mono"', credit: false });
+  clipCard(t, 'rt-20', cx, V(300, 1040) + h1 + 60, V(820, 920), { at: k.paid.t - 0.3, hlAt: k.paid.w[3], cs: 30, creditCol: C.mid, creditFont: '"Cutive Mono"' });
+}
+function sOut(t) { // 8:35 "you can just clock out of work and forget to work and just focus. For me, I don't think that 5 p.m. is really when work ends for me."
+  wall(); const k = { co: P('clock out of work', 516.5), fg: P('forget to work and just focus', 517.8), me: P('For me', 519.4), line: P('I don\'t think that 5 p.m. is really when work ends for me', 520.5) };
+  const L = k.line.w; const x = V(110, 80); const fs = V(150, 130), lh = fs * 0.98, y0 = V(300, 430);
+  const swap = ez(t, k.me.t - 0.1, 0.25);
+  withA(1 - swap, () => { wordsOn(t, ['CLOCK', 'OUT.'], [k.co.w[0], k.co.w[1]], x, y0, FB(fs), C.card); wordsOn(t, ['FORGET', 'WORK.'], [k.fg.w[0], k.fg.w[2]], x, y0 + lh, FB(fs), C.card); wordsOn(t, ['FOCUS.'], [k.fg.w[5]], x, y0 + 2 * lh, FB(fs), C.red); });
+  if (swap > 0) { const f2 = FB(V(120, 92)), l2 = V(116, 92), yy = V(330, 600);
+    wordsOn(t, ['FOR', 'ME,'], [k.me.w[0], k.me.w[1]], x, yy - V(130, 110), FB(V(66, 60)), C.mid);
+    wordsOn(t, ['I', 'DON\'T', 'THINK', 'THAT'], L.slice(0, 4), x, yy, f2, C.card);
+    wordsOn(t, ['5', 'P.M.', 'IS', 'REALLY'], L.slice(4, 8), x, yy + l2, f2, C.card);
+    wordsOn(t, ['WHEN', 'WORK', 'ENDS'], L.slice(8, 11), x, yy + 2 * l2, f2, C.card, { cols: [C.card, C.card, C.red] });
+    wordsOn(t, ['FOR', 'ME.'], L.slice(11, 13), x, yy + 3 * l2, f2, C.card); }
+  const rows = staged(-10, 0); rows.FRI = ['09:00', '17:00', '', '', [-10, k.co.w[1], 0, 0]];
+  const sl = 1 - ez(t, 514.95, 0.7); ctx.save(); ctx.translate(0, sl * V(700, 900));
+  // push in to the FRI row on "5 p.m." (1 -> 1.4 over 0.7 s, around the row so it stays put)
+  const zp = io(t, L[4] - 0.1, 0.7), zs = 1 + V(0.12, 0.10) * zp, zx = V(1480, 540), zy = V(705, 1335);
+  ctx.translate(zx, zy); ctx.scale(zs, zs); ctx.translate(-zx, -zy);
+  card(t, { x: V(1140, 180), y: V(80, 980), w: V(680, 720), rh: V(86, 70), rot: 0.015, rows, hiRow: 'FRI', dimWork: ez(t, k.fg.w[2], 0.6),
+    strike: { row: 'FRI', col: 1, at: L[5] }, redCell: { row: 'FRI', col: 1 }, extra: [{ at: L[10], s: 'OUT ??:??', row: 'FRI', col: 2, dy: 6, f: FB(V(48, 44)), box: true, bh: 62, rot: -0.07 }] });
+  ctx.restore();
+  // the punch clock: 17:00 when she clocks out, then it keeps running on "really when work ends"
+  const hrs = 17 + 4.6 * io(t, L[7], 2.2);
+  withA(ez(t, k.co.w[0] - 0.3, 0.4), () => clockFace(t, V(840, 905), V(890, 440), V(122, 105), hrs));
+}
+function sFix(t) { // a correction in the edit (her rule 2026-11-02): she says "at any university, after your first year, you need at least 45";
+  // the rule is Estonia's (Universities Act: 45 ECTS by the end of each study year) and schools set their own checks. Pause her, plain card, type on.
+  rect(0, 0, W, H, C.card);
+  txt('QUICK CORRECTION', V(110, 80), V(250, 520), FC(40), C.ink, 'left', 'alphabetic', 2); line(V(110, 80), V(280, 550), V(1810, 1000), V(280, 550), C.rule, 3);
+  const L = PORT ? ['THE 45 ECTS RULE', 'IS ESTONIA\'S:', 'BY THE END OF', 'EACH STUDY YEAR.'] : ['THE 45 ECTS RULE IS ESTONIA\'S:', 'BY THE END OF EACH STUDY YEAR.'];
+  L.forEach((l, i) => txt(l, V(110, 80), V(440, 720) + i * V(150, 130), FB(V(150, 128)), i === L.length - 1 ? C.red : C.ink));
+  txt('Your own school can check more often. Read its study rules.', V(110, 80), V(700, 1180), FW(V(40, 40)), C.ink);
+  clipCard(t, 'tt-45', V(110, 80), V(780, 1260), V(1200, 920), { hlAt: -1, cs: 30, creditCol: C.ink, creditFont: '"Cutive Mono"', shadow: false });
+}
+const DIR = {
+  fonts: ['400 40px "Bebas Neue"', '600 40px "Work Sans"', '700 40px "Work Sans"', '400 40px "Cutive Mono"'],
+  draw(t) { if (t === 999) return sFix(t); if (t < 30) sOpen(t); else if (t < 120) sRules(t); else if (t < 480) sLeave(t); else sOut(t); },
+  stills: { b1: { t: 11.6 }, b2: { t: 62.6 }, b3: { t: 440.6 }, b4: { t: 524.3 }, b5: { t: 518.9 }, b6: { t: 999 }, p1: { t: 524.3 }, p2: { t: 440.6 } },
+};
+DIR.cues = [[515.0, 'slide'], [517.38, 'stamp'], [518.02, 'tick'], [518.94, 'tick2'], [519.6, 'pop'], [521.34, 'swipe'], [521.6, 'marker'], [522.48, 'clock'], [523.36, 'stamp2']];
+boot(DIR);
+</script></body></html>

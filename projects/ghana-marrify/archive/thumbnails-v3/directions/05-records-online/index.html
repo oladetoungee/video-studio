@@ -1,0 +1,26 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../lib/r3.css"><style>
+.t{--ground:#111114;--fg:#F7F5F0;--accent:#FFFFFF}
+.left{position:absolute;left:0;top:0;width:640px;height:720px;overflow:hidden}
+.left img{width:100%;height:100%;object-fit:cover;object-position:50% 70%;filter:saturate(.85) brightness(.82)}
+.right{position:absolute;left:640px;top:0;width:640px;height:720px;background:#FCD116}
+.lab{top:24px;font-size:28px;color:#fff;background:#111114;padding:8px 14px}
+.lab.l{left:24px} .lab.r{left:664px}
+.hd{left:0;right:0;top:96px;text-align:center;z-index:5}
+.hd span{display:inline-block;background:#111114;color:#fff;font-size:96px;padding:10px 26px 14px}
+.hd .b{background:#fff;color:#111114;font-size:118px;margin-top:-4px;transform:rotate(-2deg)}
+.phone{left:560px;top:300px;transform:rotate(-5deg) scale(.74);z-index:4}
+.pol{left:960px;top:356px;width:270px;transform:rotate(5deg);padding-bottom:12px;z-index:3}
+.pol .crop{width:246px;height:250px;overflow:hidden;position:relative}
+.pol .crop img{position:absolute;width:780px;left:-262px;top:-60px}
+</style></head><body><div class="t">
+<div class="left" data-move="paper"><img data-img="paper" alt=""></div>
+<div class="right"></div>
+<div class="abs lab l mono z3" data-k="before"></div><div class="abs lab r mono z3" data-k="after"></div>
+<div class="abs hd bric" data-move="headline"><span class="a" data-k="line1"></span><br><span class="b" data-k="line2"></span></div>
+<div class="pol" data-move="her"><div class="crop"><img data-img="her" alt=""></div></div>
+<div class="phone " data-move="phone"><div class="scr"><div class="notch"></div>
+<div class="app"><span class="flag il" data-flag="gh"></span><span data-k="p_app"></span></div>
+<div class="sb"><svg viewBox="0 0 24 24" width="30" height="30"><circle cx="10" cy="10" r="7" fill="none" stroke="#111114" stroke-width="2.8"/><path d="M15.5 15.5 L22 22" stroke="#111114" stroke-width="2.8" stroke-linecap="round"/></svg><span data-k="p_q"></span></div>
+<div class="res"><div class="rl" data-k="p_rl"></div><div class="stamp found" data-k="p_res"></div><div class="bars"><i></i><i></i><i></i></div></div>
+<div class="ill">Illustration</div></div></div>
+</div><script src="../../lib/flags.js"></script><script src="../../lib/bind.js"></script></body></html>

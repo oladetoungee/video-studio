@@ -1,0 +1,419 @@
+URL: https://zeabur.com/blogs/october-2026-security-incident
+STATUS: loaded (http 200)
+FINAL: https://zeabur.com/blogs/october-2026-security-incident
+TITLE: Blogs: Zeabur October 2026 security incident (preliminary report) - Zeabur
+H1: Zeabur October 2026 security incident (preliminary report)
+OG: Blogs: Zeabur October 2026 security incident (preliminary report) - Zeabur | Zeabur
+PUBLISHED: 2026-10-19  MODIFIED: 
+DOC_H: 20280
+
+Zeabur will shut down on December 31, 2026. Some services will begin shutting down on December 1.
+Read announcement
+→
+
+October 19, 2026
+
+Zeabur October 2026 security incident (preliminary report)
+
+An attacker compromised the shared cluster and GCP Dedicated Servers and read the environment variables stored in the Zeabur platform database. This post explains what happened, what data was affected, what we have done, and what you need to do.
+
+Yuanlin Lin
+
+This article is also available in 繁體中文, 简体中文, 日本語, Español, and Bahasa Indonesia.
+
+All times in this article are in Coordinated Universal Time (UTC). The investigation is ongoing, and we will update this article as it progresses.
+
+Summary
+What happened: On October 14–15, 2026, an attacker used leaked Zeabur internal credentials to break into the shared cluster, some Dedicated Servers, and Zeabur internal systems, and eventually read the platform database.
+Entry points closed: The cluster admin tokens, AWS and GCP keys, and internal network node the attacker used have all been revoked or removed, and public SSH access to the admin interfaces and servers has been blocked. All users have been signed out, and all platform Access Tokens have been revoked. The attacker's last recorded activity was on October 15, 21:05.
+Who is affected: Mainly services on the shared cluster and GCP Dedicated Servers. Environment variables stored in the Zeabur platform database were also read. Projects that followed our guidance after August and moved their environment variables to their own Dedicated Server are outside the scope of the platform database read.
+What you need to do: Leaked data can still be misused. Replace every password and key stored on Zeabur, even if you already replaced them after the August incident. See What you need to do for the steps.
+Root cause: The root cause of this incident lies with Zeabur: long-lived admin credentials were stored in plaintext and could be used from the public internet. See Why it happened.
+Relation to the August incident: The rotation in August did not cover the credentials used this time. Projects that moved their environment variables as advised in August avoided the platform database leak. See Relation to the August incident.
+
+Terms used in this article: "Confirmed" means a log directly records it. "Assessed" means the timing and content match, but there is no direct record. "Cannot be confirmed" means there are no records to check, and we treat it as leaked. "Hypothesis" means a possible explanation supported only by indirect evidence; these are collected in Unconfirmed hypotheses.
+
+What happened
+
+The attacker took two paths that eventually met inside Zeabur's internal network.
+
+Path A: shared cluster and AWS
+
+From October 14, 01:36, the attacker used Zeabur internal AWS keys, and from 01:40, the shared cluster's admin tokens. These credentials were stored in plaintext in a private Zeabur configuration repository. How the attacker obtained them currently cannot be confirmed; we hypothesize it is related to the GitHub App private key leaked in the August incident. See Unconfirmed hypotheses.
+The shared cluster's admin interface was open to the public internet at the time, and the admin tokens had no expiry. This let the attacker access the shared cluster in 9 regions from outside.
+From 01:51, the attacker read some system secrets. From 12:39, this widened to the settings and secrets of all services, including environment variables. In regions with complete read logs, we confirmed the content was read. Other regions lack logs, and we treat them as leaked.
+From 13:40, the attacker ran read commands inside user database containers. They started with a few new-api/one-api instances, read n8n at scale from 15:41, and read some PostgreSQL databases table by table from 16:50. The last command was at 17:04. In total, the attacker ran commands in 865 database services, though not every command succeeded.
+Using another over-privileged key in the cluster, the attacker read a backup of an old cluster (Assessed). The backup contained a key that could read Zeabur's secrets management service.
+From October 15, 14:52 to 16:51, the attacker read about 53 production secrets (Confirmed). These included the internal network's admin credentials, a platform database account, and the GitHub App private key.
+
+Path B: GCP Dedicated Servers
+
+From October 14, 13:40, the attacker signed in as root to 101 Dedicated Servers that Zeabur manages on GCP.
+These servers' initialization settings stored the root password in plaintext. The attacker held an old GCP key that could read these settings. We assess that the attacker used this key to obtain the passwords.
+From October 15, 14:26, the attacker used the old GCP key to modify server settings and add their own SSH key. At 15:05, the attacker also obtained a production GCP key from the secrets management service. After we disabled the old key at 17:17, the attacker used this new key at 17:28 to add the SSH key again, and we disabled it as well at 17:31. The first sign-in to the GCP servers on October 14 came before the first known read of production secrets on October 15, so the latter cannot be described as the starting point of the former.
+Earlier still, from September 1 to 5, an unknown source signed in to the same servers with the root password, reaching about 98 servers on September 5 alone. Whether this was the same attacker currently cannot be confirmed.
+
+Where the two paths met
+
+On October 15, 15:30, on a compromised GCP server, the attacker used the internal network admin credentials from Path A to add a node to Zeabur's internal network.
+The internal network rules allowed this kind of node to connect to the platform database. From 16:10 to 16:47, the attacker read the platform database using an internal read-only account (Confirmed). We compared connection records from both ends of the internal network with the database logs. All 29 database connections in this period map to this node, and every sign-in and query in those connections can be traced, for a total of 8,903 operation records.
+At 17:58, we removed this node.
+Incident path
+The two paths met in the internal network. Next to each arrow is the credential or gap the attacker exploited at that step.
+Path A Shared cluster and AWS
+Starting point
+Already held AWS keys and cluster admin tokens
+How they were obtained cannot be confirmed
+Admin tokens had no expiry, and the admin interface was open to the public internet
+Shared cluster in 9 regions
+Environment variables of all services, 865 database containers
+Assessed: an over-privileged key read an old cluster backup
+AWS
+Key to the secrets management service
+Confirmed: production secrets read
+Zeabur secrets management service
+About 53 production secrets
+Including internal network admin credentials and a database account
+Path B GCP Dedicated Servers
+Starting point
+An old GCP service account key
+The source of the leak cannot be confirmed
+Assessed: root passwords read from initialization settings
+GCP Dedicated Servers
+Root access to 101 servers
+Added a node from a compromised server using internal network admin credentials
+Zeabur internal network
+A node with production access
+Internal network rules allowed the connection, then signed in with an internal read-only account
+Zeabur platform database
+Environment variables, account, and project data stored on Zeabur
+Figure 1: This time, the attacker added the node from a server compromised through Path B, using internal network credentials obtained through Path A. However, compromising a customer server was not required to join the internal network.
+
+Some credentials rotated during the incident were later used without authorization. Zeabur's daily cluster backups store all secrets, and on October 15, 15:04, the attacker read the access key for these backups. The new key we put in place at 15:40 was captured by the 16:00 backup, and the attacker used it at 20:30. We deleted the backup access key at 18:51 and rotated the affected credentials again at 21:47. That the new key was captured by the backup and later used is confirmed; whether the attacker downloaded that backup is assessed. The attacker may have obtained the backup before 18:51, so the use at 20:30 does not mean downloads were still possible after 18:51.
+
+What data was involved
+System	Affected data	Scope	Certainty
+Platform database	Service environment variables stored on Zeabur (names and values)	3,218,965 records	Confirmed
+Platform database	Accounts (email, username, phone number, etc.), project, environment, and service data	321,810 accounts	Confirmed
+Platform database	zSend API keys (plaintext)	566 keys, revoked	Confirmed
+Platform database	Platform Access Tokens	11,536 tokens, stored only as hashes that cannot be reversed; all revoked	Confirmed
+Shared cluster	Environment variables and secrets of all services	9 regions	Partly confirmed; the rest cannot be confirmed
+Shared cluster	Database contents	865 database services	Assessed (see below)
+GCP Dedicated Servers	All data on the servers	101 servers, 92 users	Sign-ins confirmed
+Hetzner and DigitalOcean Dedicated Servers	Admin access to the servers	359 and 48 servers	Cannot be confirmed whether used
+GitHub App	Access to GitHub repositories users authorized	10/15 15:05 to 18:54	No use found
+User database backups	Backups in the Taipei (tpe1) and Hong Kong (hkg1) regions	Two regions	Cannot be confirmed whether downloaded
+
+Platform database. From October 15, 16:10 to 16:47, the attacker read the data in the table above. Account data includes the information on your profile page, such as email, username, and phone number. The attacker also searched environment variables and config files for API keys and private keys. Based on the commands and their later behavior, the attacker was mainly looking for API keys they could use directly, especially keys for AI services: they searched the platform database for keys, read credentials in n8n and new-api/one-api at scale, and tried to call Amazon Bedrock with Zeabur's AWS keys. This is only an observation of the attacker's intent. The attacker also read account data, and we still treat everything that was read as leaked. For the two-factor authentication and passkey tables, only statistics were queried; there is no record of their contents being read. We have revoked all users' platform Access Tokens, and none of the old tokens can be used anymore.
+
+Migrated environment variables are outside the scope of the platform database read. After the August incident, Zeabur gave Dedicated Server users guidance and features to rotate credentials, delete the environment variables and config files stored on Zeabur, and migrate them to their own servers in one click. For projects that completed the migration, this data is stored only on the user's server and is not kept by Zeabur, so it was not part of the platform database data read this time. For projects that have not migrated, environment variables are still stored on Zeabur and were read this time. This does not rule out leaks from a compromised host; the recommendations below still apply to compromised GCP Dedicated Servers.
+
+Account impersonation. The attacker read the key used to sign login credentials, and we assess that the attacker used it to forge login credentials. The attacker did not read platform Access Tokens at scale until 16:47, and the tokens are stored only as hashes, so they cannot explain impersonation that began at 16:12. From October 15, 16:12 to 17:19, the attacker called the Zeabur API as two accounts and read account and project lists. One of them was a Zeabur employee's account. These requests did not modify any resources. We rotated the signing key at 20:25, and all users have been signed out.
+
+Shared cluster databases. The attacker ran read commands inside the containers of 865 databases. Audit logs record only the commands, not their output, and some commands failed with errors, so how much was actually taken from each database cannot be confirmed. Based on the commands, our assessment is:
+
+Target	Count	Data read
+n8n using PostgreSQL	736	Third-party credentials, users, projects, variables, and workflows
+PostgreSQL (read table by table)	211	Up to 50,000 rows per table; none in the Taipei (tpe1) region
+new-api/one-api	10	AI service keys, access tokens, and users
+Redis	1	Entries with names containing words such as token or secret
+MongoDB, MariaDB	1 each	Taipei (tpe0) has no command contents; treated as fully leaked
+
+Of the n8n instances using PostgreSQL, 602 (of the 607 we checked) had their encryption key set in an environment variable, so the third-party credentials in n8n were effectively leaked in plaintext. Because these reads took place inside the containers, the database password rotation after the August incident did not close this access path.
+
+In addition, at least 2 PostgreSQL databases in the Tokyo (hnd1) region had a program planted from October 14, 01:51 that connected back to an external host. One of them was still connecting back on October 15, 16:24. Whether the entry point was a password leaked in August currently cannot be confirmed. We notified the affected users to replace their credentials when we found it.
+
+GCP Dedicated Servers. The investigation confirmed that the attacker signed in with root privileges to 101 servers, most recently on October 15, 20:36. On 50 of these servers, the attacker also added SSH public keys under their control to establish persistent access. The attacker created 5 virtual machines in Zeabur's GCP project and attached 16 copies of customer server disks to those machines.
+
+Given this level of access, all 101 servers are classified as affected hosts with possible data exposure and possible unauthorized access mechanisms left in place. We have notified the affected users by email and reset the root passwords of these servers.
+
+Hetzner and DigitalOcean. The tokens used to manage customer servers with these two providers were in internal code and environment variables and leaked along with the platform database. Anyone holding the tokens could reset passwords, reinstall systems, or copy disks. We revoked all of these tokens on October 16, 01:09. Neither provider keeps operation audit logs. Events on the Hetzner account all map to the users themselves or to scheduled system jobs; DigitalOcean is still being checked.
+
+Linode and Tencent Cloud. Of 890 Linode servers, the 847 with records show no attacker sign-ins. Tencent Cloud's admin credentials have no record of being used.
+
+GitHub App. On October 15, 15:05, the attacker read the private key of the Zeabur GitHub App. Holding the private key allows access to repositories that users have authorized Zeabur to access. We rotated the private key at 18:54 and have found no use of it so far. We have asked GitHub Support for complete audit logs and have not yet received a reply.
+
+Zeabur internal systems. The attacker used several Zeabur AWS keys. Most requests were denied, but the attacker listed user database backups in two regions and the contents of source code uploads; whether they downloaded them cannot be confirmed. The attacker tried to call Amazon Bedrock, but every attempt failed and no charges were incurred.
+
+What we have done
+Completed
+Time (October 15)	Action
+14:43–15:56	Allowed only Zeabur systems to connect to the shared cluster's admin interface
+15:32	Revoked the cluster admin tokens that were used; rotated again at 21:47
+17:17, 17:31	Disabled the two GCP keys the attacker used
+17:58	Removed the attacker's internal network node and revoked the credential that created it
+18:51	Deleted the cluster backup access key
+18:54	Rotated the GitHub App private key, payment service key, and GitHub OAuth secret
+18:55	Removed root passwords from GCP server initialization settings
+20:05–21:22	Disabled 24 AWS keys that were leaked or could not be ruled out as leaked, and replaced them with new keys with narrower permissions
+20:25	Rotated the login signing key; all users were signed out
+20:34–20:36	Removed permissions from the GCP servers' default service account; blocked public SSH to GCP servers
+20:47	Revoked all 566 zSend API keys
+21:46	Allowed only Zeabur systems to connect to Zeabur-managed dedicated clusters
+10/16 01:09	Revoked the leaked Hetzner and DigitalOcean tokens
+
+We also disabled the Tencent Cloud, Alibaba Cloud, and Linode credentials hardcoded in our code, removed the attacker's SSH key from the GCP servers, and preserved audit logs from each system.
+
+We have since also:
+
+Revoked all users' platform Access Tokens.
+Rotated the remaining production secrets that were read, including the platform database account password, and revoked other leaked credentials.
+Emailed users of GCP Dedicated Servers and reset the servers' root passwords.
+Restricted platform database connections to specific services only.
+Stopped storing plaintext secrets in cluster backups, and stored backup keys separately from other secrets.
+Deleted the disk copies, snapshots, and test resources the attacker left behind.
+In progress
+Tracing the leak source of the configuration repository, the old GCP key, and the server sign-ins in early September.
+Adding alerts for: unusual use of admin access, commands run inside containers, bulk reads of secrets or databases, new nodes joining the internal network, and cloud keys used from unfamiliar sources.
+Impact on services
+Feature	Impact period (UTC)	Current status
+Sign-in	Sign-in required again from 10/15 20:25	Normal
+zSend and system emails (including login links)	10/15 20:00–22:02	Restored; zSend keys must be recreated
+GitHub sign-in and deployments	10/15 18:54–22:49	Restored
+Builds	10/15 20:05–22:56; China regions until 10/16 01:44	Restored
+Database backups	10/15 20:33–22:13	Restored
+GCP Dedicated Server management	10/15 17:31–20:35	Restored; only web SSH available
+Dedicated Server auto-renewal	Tencent Cloud 10/15 22:55–10/16 01:08, 154 failures	Restored; charges refunded as account balance
+Tencent Cloud password reset and SSH login records	From 10/15	Restored
+Linode dedicated Kubernetes clusters	From 10/15	Restored
+What you need to do
+
+Please act now; do not wait for a notification email. Credentials you replaced after the August incident must be replaced again.
+
+All users
+Replace all credentials in your environment variables. This includes API keys, cloud keys, database passwords, and signing and encryption keys. Revoke the old ones with the service provider first, then create new ones and redeploy. For projects that moved their environment variables to their own Dedicated Server after August, those variables are outside the scope of this platform database read; if the host itself was compromised, you still need to replace the credentials stored on it.
+Sign in again and recreate your Access Tokens. All old platform Access Tokens have been revoked. Create new tokens on the Access Token management page, and check for any unfamiliar requests.
+zSend users: Recreate your zSend API keys.
+GitHub users: Check your GitHub audit log for actions by the Zeabur GitHub App from October 15, 15:05 to 18:54. Look for:
+Unexpected clones or pushes
+New deploy keys
+Modified webhooks
+Check your bills. Review usage and bills for each service from October 14, 2026 onward. GCP Dedicated Server users should go back to September 1. October 14 is the earliest time we currently know the attacker used credentials; it does not mean the credentials were not leaked before then. If you have earlier records, check them as well.
+Shared cluster users
+Change passwords inside your databases. Changing environment variables on Zeabur does not change the passwords inside the database. Changing passwords also does not invalidate data that has already leaked. If your database stores your users' password hashes, login sessions, or tokens, revoke and regenerate them as well.
+n8n: Replace the n8n encryption key and recreate all third-party credentials in n8n.
+new-api/one-api: Revoke upstream AI service keys and regenerate access tokens.
+PostgreSQL: Check for roles, functions, triggers, scheduled jobs, or extensions you do not recognize. If in doubt, create a new database and import only the data.
+Taipei (tpe1) and Hong Kong (hkg1) regions: Treat the data in database backups as leaked.
+GCP Dedicated Server users
+
+Treat your server as compromised:
+
+Back up your data and rebuild the server. This is the most reliable way to remove backdoors.
+If you cannot rebuild right away, at minimum:
+Remove keys in /root/.ssh/authorized_keys with the comment @zeabur-pentest or that you do not recognize.
+Check the google-sudoers group, system accounts, crontab, systemd services, and k3s workloads.
+Change the root password and disable password login for SSH.
+Replace all credentials on the server, including your own cloud credentials, and check the related bills.
+Check sign-in records against the indicators of compromise, going back to September 1, 2026.
+Hetzner and DigitalOcean Dedicated Server users
+
+In the provider console, check whether the root password was reset or the system was reinstalled after October 14, and use the GCP checklist above to make sure there are no unfamiliar ways to sign in.
+
+Why it happened
+
+Trigger: The attacker held Zeabur's cluster admin tokens and several cloud keys. These credentials were stored in plaintext in the configuration repository. How the attacker obtained them currently cannot be confirmed; for the most likely path, see Unconfirmed hypotheses.
+
+Factors that widened the impact:
+
+Admin token lifecycle and interface access control. The admin tokens had no expiry, had not been rotated since they were created in January 2024, and were not included in the post-August rotation. The admin interface was reachable from the public internet.
+Secret storage and remediation progress. Plaintext keys existed in the configuration repository, in code, and in shared cluster service settings and build jobs. GCP server initialization settings also stored root passwords; this issue was identified on September 3 but had not been fixed before the incident. A secrets migration started on October 3 had not been merged into the main branch when the incident occurred.
+Backup contents and key isolation. Cluster backups contained all secrets, and the backup access key was stored in the same environment as other secrets, creating a further path to the backup contents. Some credentials rotated during the incident were also captured by later backups.
+Access permissions and resource scope.
+A key that only needed to read one storage bucket could in fact read every bucket in the AWS account.
+The default service account on GCP servers had project-level write permissions.
+Internal network rules allowed nodes with certain tags to connect to the platform database.
+The internal read-only database account could read all data.
+A deploy key for a decommissioned service remained valid four months after the service was shut down.
+Environment isolation between internal and user services. Both ran on the same cluster, so while reading user settings the attacker could also obtain internal service credentials.
+Detection and audit log coverage. More than 16 hours of attack activity on October 14 triggered no alerts; the team identified the incident the next day after a user report. Because access logs for storage, GCP, and GitHub are incomplete, part of the access and impact scope still cannot be confirmed.
+Relation to the August incident
+
+This is Zeabur's second security incident in less than two months. Many users made changes following our guidance after August and will want to know why this still happened despite those measures, and whether the two incidents are related.
+
+What we did after August. We rotated the internal keys confirmed as leaked at the time and disabled Legacy API Keys. On the product side, projects on Dedicated Servers can move environment variables and config files to their own servers, delete the SSH credentials Zeabur stores, and view SSH login records. In the notices and announcements for the August incident, we also advised users to rotate credentials, delete the environment variables and config files stored on Zeabur, and migrate them to their own servers.
+
+Why it still happened. The August rotation did not cover the cluster admin tokens and AWS keys stored in plaintext in the configuration repository, and the root passwords in GCP server initialization settings had not yet been fixed. These are exactly the credentials the attacker used this time. The August incident report stated that "all internal admin keys have been disabled or rotated." That statement was incomplete, and we are correcting it here. How the attacker obtained these credentials currently cannot be confirmed; for our hypothesis, see Unconfirmed hypotheses.
+
+What worked. For projects that completed the migration as advised in August, environment variables and config files are stored only on the user's own server and were not part of the platform database data read this time.
+
+Timeline
+Attacker activity and our response
+Attacker activity on each system and our actions from October 14 to 15, plotted in UTC
+Attacker activity
+Attacker had access, no continuous record
+Our response
+Investigation started
+Shared cluster admin interface
+User database containers
+AWS keys and secrets
+GCP Dedicated Servers
+Internal network and platform database
+Accounts and third-party keys
+10/14
+06:00
+12:00
+18:00
+10/15
+06:00
+12:00
+18:00
+Figure 2: For each system, attacker activity is shown above and our actions below. The attacker used valid credentials and Zeabur's legitimate access paths, so the roughly 36 hours between the first known credential use (10/14 01:36) and the start of the investigation triggered no alerts. About 4 hours after the investigation started, the attacker's internal network node had been removed.
+Time (UTC)	Event
+January 10, 2024	Shared cluster admin token created with no expiry
+January 20, 2026	Admin token written in plaintext to the configuration repository
+August 27	GitHub App private key read during the August incident; its link to this incident is a hypothesis
+August 30, September 2	Configuration repository downloaded as an archive using an employee's GitHub authorization; who downloaded it cannot be confirmed
+August 31	GitHub App private key replaced; plaintext credentials in the configuration repository not rotated
+September 1–5	An unknown source signed in to about 98 GCP Dedicated Servers with the root password
+September 3	Root passwords found in GCP server initialization settings; not fixed before the incident
+October 10, 18:27	An IP later used for credential abuse first appeared in Zeabur API access logs (not signed in)
+October 13, 21:27	Attacker IP attempted SSH sign-ins to 3 Dedicated Servers until 23:04; all failed
+October 14, 01:36	Attacker first used a Zeabur AWS key
+October 14, 01:40	Attacker first accessed the shared cluster with an admin token
+October 14, 12:39	Attacker read the settings and secrets of all services on the shared cluster
+October 14, 13:40	Attacker began reading data inside database containers; also began signing in to GCP Dedicated Servers
+October 14, 17:04	Last command inside a database container
+October 15, 13:56	Investigation started after a user report
+October 15, 14:43	Began restricting connection sources for the shared cluster admin interface
+October 15, 14:52	Attacker began reading about 53 production secrets, until 16:51
+October 15, 15:02	A deploy key for a decommissioned service read the configuration repository (hypothesized to be the attacker)
+October 15, 15:30	Attacker added a node to Zeabur's internal network
+October 15, 15:42	Attacker downloaded user database backups from Zeabur storage
+October 15, 16:06	Attacker searched the obtained data for API keys, until 18:13
+October 15, 16:10	Attacker began reading the platform database, until 16:47
+October 15, 16:12	Attacker began calling the API as impersonated accounts, until 17:19
+October 15, 17:58	Attacker's internal network node removed
+October 15, 19:50	Attacker's second wave of sign-ins to GCP Dedicated Servers, until 20:36
+October 15, 20:25	Login signing key rotated; all users signed out
+October 15, 20:36	Public SSH to GCP Dedicated Servers blocked; attacker sign-ins stopped
+October 15, 20:48	Status page updated to show the platform database and Dedicated Servers were also affected
+October 15, 21:01	Attacker attempted to access shared cluster nodes and was denied
+October 15, 21:05	Last attacker activity observed so far (AWS)
+October 16, 01:09	Hetzner and DigitalOcean tokens revoked
+October 16, 01:50	A user's OpenAI key was abused until 02:56 (hypothesized to come from this leak)
+Open questions and investigation limits
+
+The following items cannot yet be confirmed because of gaps in the coverage or completeness of the available records. For data and credentials where unauthorized access cannot be ruled out, our response assumes they may have been exposed.
+
+How the initial credentials were obtained. The available GitHub audit logs do not cover clone operations; they only record archive downloads. They show that the configuration repository was downloaded through an employee's GitHub authorization on August 30 and September 2, but who performed these downloads cannot yet be confirmed. We have asked GitHub for complete records. Our current assessment is in Unconfirmed hypotheses.
+How much data was actually read from shared cluster databases. Audit logs retain the commands that were run but not their output, so the data actually obtained cannot be fully confirmed.
+Download scope of backups and storage objects. Evidence on a compromised host confirms that on October 15, 15:42, the attacker obtained a customer database backup through a presigned download URL. This evidence is separate from the cluster backup assessed to be involved in the exposure of internal credentials; whether that cluster backup was downloaded has not been confirmed. Because object access logging was not enabled at the time, the actual download scope of other objects and of cluster backups cannot be fully confirmed.
+Read activity on GCP resources. The available GCP project logs do not cover read operations; only write operations can currently be confirmed.
+Use of the Hetzner and DigitalOcean tokens. Neither provider offers operation audit logs usable for this investigation, so it cannot be confirmed whether these tokens were used.
+What the platform database queries returned. The queries the attacker ran, and the number of records returned by 7 of the main queries, are confirmed. However, the database logs do not record the returned content, and how the attacker later stored or used this data cannot be confirmed.
+Activity on some clusters. Audit logs for the Taipei (tpe0) cluster and the dedicated cluster where the attacker created resources are incomplete, which limits how far the related activity can be verified.
+Activity and impact before October 14. The available shared cluster and AWS records show no activity using valid credentials before October 14, 01:36. Some IPs later involved in credential abuse appear in unauthenticated Zeabur API access logs from October 10; however, these IPs may be shared by proxy services, so the same IP alone cannot confirm who was operating it. On October 13 there were also SSH login attempts against Dedicated Servers, all unsuccessful. Whether any data was exposed during this period cannot yet be confirmed.
+Unconfirmed hypotheses
+
+The following are the explanations we currently consider most likely. They are supported by indirect evidence but lack direct records, and should not be cited as fact. We will update or withdraw them as new evidence comes in.
+
+1. The initial credentials may have come from the August incident
+
+Hypothesis: The attacker used the GitHub App private key leaked in the August incident to obtain the contents of Zeabur's private configuration repository, including the AWS keys and cluster admin tokens used on October 14.
+There is currently no evidence that directly proves this path. The following are only indirect clues that match in timing and capability.
+What was replaced and what was not:
+GitHub App private key: replaced. In the August incident, this private key was read on August 27. Based on GitHub audit logs and version timestamps in the secrets management service, the key was replaced on August 31, leaving a window of about 4 days in which it could be used. The App is installed on Zeabur's GitHub organization, and holding the private key allows reading every repository in the organization.
+Plaintext credentials in the configuration repository: not replaced. The AWS keys and cluster admin tokens the attacker first used on October 14 already existed in plaintext in the configuration repository on August 27. After the August incident, we replaced only the private key, not these credentials, and they were not disabled until our incident response on October 15. So even though the private key had been replaced, anyone who obtained the repository contents between August 27 and 31 would have held credentials that were still valid in October.
+Other indirect clues:
+Some internal secret names the attacker tried to read appear only in another internal repository. The attacker may have held the contents of both repositories, which is consistent with the App private key's organization-level access.
+Before October 14, 01:36, there is no record of valid credentials being used on the shared cluster or AWS, and the IPs later used to abuse credentials never signed in on the Zeabur API. This fits a scenario in which the attacker held only the credentials from the repository.
+Clues that do not support it: The attacker IPs in the August incident and this incident do not overlap.
+Evidence collection: We have asked GitHub Support for the relevant records, including access tokens issued by this App between August 27 and 31, clone and download records for the configuration repository, and the source of the August 30 and September 2 downloads of the configuration repository using an employee's authorization. As of this update, we have not received a reply. Until we have these records, this path remains a hypothesis, and the downloads using an employee's authorization cannot be ruled out as a separate way the credentials were obtained.
+
+2. The probing before October 14 may have been reconnaissance by the same attacker
+
+Hypothesis: The anonymous probing and SSH attempts from October 10 to 13 were reconnaissance by the same attacker before using the credentials.
+Supporting evidence:
+103.237.102.191: browsed Zeabur without signing in on October 10, 18:27, and accessed the shared cluster with an admin token on October 14.
+23.106.46.239: made a large number of unauthenticated attempts against the Zeabur API from October 12, 12:52, attempted SSH sign-ins to Dedicated Servers on October 13, and first used the leaked AWS key on October 14, 01:36.
+Not yet proven: The attacker made heavy use of proxy servers, and the same IP may be shared by different people, so matching IPs alone cannot confirm it was the same person.
+
+3. The deploy key access on October 15 may have been the attacker
+
+Hypothesis: On October 15, 15:02, a deploy key for a decommissioned service read the configuration repository; we assess this was the attacker.
+Supporting evidence: This access happened while the attacker was reading production secrets (14:52 to 16:51), and the service the key belonged to had been decommissioned for four months, so there should have been no legitimate access.
+Not yet proven: No record currently links this access directly to the attacker.
+
+4. Leaked user keys may already have been abused
+
+Hypothesis: From October 16, 01:50 to 02:56, an OpenAI API key that a user stored on Zeabur was used to send about 1,107 image generation requests. We hypothesize that this key came from the environment variables leaked in this incident.
+Not yet proven: We cannot rule out that the key leaked through another channel. This is also why this article recommends that all users replace their keys; see What you need to do.
+Indicators of compromise
+
+If you find any of the following indicators in your systems or your service providers' logs, treat the related credentials as leaked and contact us. The attacker made heavy use of rotating proxy servers, so the table lists only representative addresses.
+
+Type	Indicator	Seen in
+IP	23.106.46.239	Cluster access, cloud APIs, SSH sign-ins
+IP	102.244.78.57	Cloud APIs, GCP settings changes
+IP	103.237.102.191	Cluster access, cloud APIs
+IP	103.112.139.162	First use of a cluster admin token
+IP	45.146.232.28	AWS key validation
+IP	216.98.11.198, 45.58.38.175	Dedicated Server SSH sign-ins
+IP	52.220.72.188	Callback address of the program planted in PostgreSQL
+IP	31.57.201.201	Root password sign-ins to GCP Dedicated Servers in early September; link to this incident cannot be confirmed
+SSH key	Comment *@zeabur-pentest, fingerprint SHA256:EdBc0uephoOMemIRKK0SRV2TRR45n52tJm1yErVU1iM	Key the attacker added to Dedicated Servers
+User-Agent	Boto3/1.43.111 (Linux 6.12.86)	Client the attacker used with AWS keys
+Glossary
+Shared Cluster: A Kubernetes cluster where services from many users run together. We announced its retirement in February 2026; all affected services were deployed before that announcement.
+Dedicated Server: A server managed by Zeabur that runs services for a single user only.
+Admin token: A credential that can manage an entire cluster. Its holder can read the settings of all services and run commands in any container.
+Secrets management service: The AWS service Zeabur uses to store production secrets centrally.
+Internal network: The private network (Tailscale) connecting Zeabur's production services. The platform database accepts connections only from this network.
+Platform database: Zeabur's production database, which stores all accounts, projects, services, and environment variables.
+More information
+
+If you need help, or notice unusual access or unexplained charges, contact us through Zeabur Support. Before contacting us, revoke the related credentials and share only masked information. Do not post keys or passwords that are still valid in tickets or public channels.
+
+If your third-party API keys or cloud accounts incurred extra charges because of this incident, request compensation through a support ticket. We will check the provider's usage records and charges and explain the results.
+
+Zeabur has announced that it will shut down on December 31, 2026, which is an operational decision. Until then, we will continue to handle support and compensation requests related to this incident, and keep updating this article and the status page. We apologize to all affected users.
+
+The Zeabur team
+
+←
+Blogs
+Summary
+What happened
+What data was involved
+What we have done
+Completed
+In progress
+Impact on services
+What you need to do
+All users
+Shared cluster users
+GCP Dedicated Server users
+Hetzner and DigitalOcean Dedicated Server users
+Why it happened
+Relation to the August incident
+Timeline
+Open questions and investigation limits
+Unconfirmed hypotheses
+Indicators of compromise
+Glossary
+More information
+Products
+Servers & Clusters
+Domains & DNS
+Email Service
+Resources
+Documentation
+Blogs
+Changelogs
+Pricing
+Community
+Support
+Discord
+X
+Threads
+Company
+About Us
+Join Us
+Legal
+Terms of Service
+Privacy Policy
+Security
+All systems normal
+
+© 2026 Zeabur Inc.

@@ -1,0 +1,26 @@
+{
+  "direction": "Collage over her full photo (her 10-07 style): small cut-out objects float around her (a magnifying glass, a sticky note, a phone with an app), one big elegant serif line across the middle, one tiny handwritten label. References: viral collage 'Time to lock in.', 'Capsule wardrobe', 'Thought of these?'.",
+  "thumbnail_text": "UX research, no jargon",
+  "text": {
+    "hd": "UX research,<br>no jargon",
+    "n1": "Who is it for?",
+    "l1": "watch real users"
+  },
+  "images": {
+    "bg": "../../assets/scene/g/s_736.jpg",
+    "cut": "../../assets/scene/g/mask3/s_736.png"
+  },
+  "vars": {
+    "--bgb": "0.72",
+    "--bgs": "0.85",
+    "--meb": "1.05"
+  },
+  "titles": [
+    "What Is UX Research? Explained With Real App Examples",
+    "UX Research for Beginners: What It Is and How It Works",
+    "What Is UX Research? Explained From Scratch"
+  ],
+  "title": "What Is UX Research? Explained With Real App Examples",
+  "set": 3,
+  "kind": "collage"
+}

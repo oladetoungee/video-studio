@@ -1,0 +1,32 @@
+{
+ "direction": "Her cut-out centred on flat blue (photo 1564, hand on her cheek, fed up). Top left a white box IN MY CART €40, top right a black box AT CHECKOUT €45 (+ cleaning spray), a white drawn arrow over her head from one to the other, and a tilted black tag at the bottom: I didn't add this! The example she gives in the video.",
+ "thumbnail_text": "IN MY CART €40 / AT CHECKOUT €45 / I didn't add this!",
+ "kind": "cut-out + flat",
+ "recommended": true,
+ "titles": [
+  "How Websites Trick You Into Buying Things You Didn't Add",
+  "Something Ended Up in My Cart I Never Added. Here's Why",
+  "Dark Patterns Examples: How Online Shops Trick You"
+ ],
+ "text": {
+  "l1": "IN MY CART",
+  "p1": "€40",
+  "l2": "AT CHECKOUT",
+  "p2": "€45",
+  "x2": "+ cleaning spray",
+  "hook": "I didn't add this!"
+ },
+ "images": {
+  "me": "../../assets/shoot/1564-cut.png"
+ },
+ "vars": {
+  "--ground": "#2FA8E0"
+ },
+ "board": "Thumbnails 81 (yt-28 \"ZERO -> DATA SCIENTIST / 6 MONTHS!\": the creator centred, a boxed word top left and one top right joined by a curved arrow over the head, one tilted tag at the bottom)",
+ "fonts": "Font 66 (Oswald Bold, Thumbnails 87: ink #111111 on blue #2FA8E0)",
+ "colours": "Font 66 specimen (Thumbnails 87): ground #2FA8E0, ink #111111; boxes white / ink; the price that grew in red #FF4B3E",
+ "title": "How Websites Trick You Into Buying Things You Didn't Add",
+ "class": "no-lift",
+ "replaces": "08-i-didnt-add-this (kept beside it; 08 is a Test & Compare pick)",
+ "scores": "UPLOAD THIS (2026-11-19) · cold critic R1 7/8, R2 7/8, R3 8/8 (critic's upload pick); '+ cleaning spray' bigger, arc no longer cut off"
+}

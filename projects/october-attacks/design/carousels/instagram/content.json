@@ -1,0 +1,182 @@
+{
+  "_help": "Edit text here (or in the studio), then run: node shared/build.mjs instagram (from design/carousels). Markup: *word* = accent colour, \\n = line break.",
+  "deck": "instagram",
+  "width": 1080,
+  "height": 1350,
+  "accent": "#F2541B",
+  "accentOnInk": "#F2541B",
+  "docTitle": "October 2026 developer security news (Instagram)",
+  "slides": [
+    {
+      "layout": "cover",
+      "ground": "accent",
+      "title": "October 2026 was a rough month for developer security",
+      "size": 104,
+      "sub": "Here is what happened, in plain words. Swipe →",
+      "month": "October 2026",
+      "offset": 3,
+      "marks": [
+        {
+          "d": 14,
+          "img": "key.svg"
+        },
+        {
+          "d": 17,
+          "img": "padlock.svg"
+        },
+        {
+          "d": 19,
+          "img": "robot.svg"
+        },
+        {
+          "d": 21,
+          "img": "elephant.svg"
+        }
+      ]
+    },
+    {
+      "layout": "story",
+      "ground": "ink",
+      "tag": "PHP2Shell",
+      "date": "Oct 21",
+      "title": "PHP had two *critical* security holes",
+      "body": "They're called PHP2Shell. PHP runs nearly three quarters of the websites in the world.",
+      "shot": {
+        "img": "bc-php-hero.png",
+        "credit": "BleepingComputer · Oct 21, 2026",
+        "w": 740
+      }
+    },
+    {
+      "layout": "flow",
+      "ground": "paper",
+      "title": "It happens before your code *even runs*",
+      "steps": [
+        {
+          "t": "A request comes in"
+        },
+        {
+          "t": "PHP reads it",
+          "note": "the hole",
+          "kind": "hole"
+        },
+        {
+          "t": "Your login",
+          "note": "never reached",
+          "kind": "off"
+        },
+        {
+          "t": "Your code",
+          "note": "never reached",
+          "kind": "off"
+        }
+      ],
+      "body": "PHP2Shell happens while PHP reads the request, so your login can't stop it."
+    },
+    {
+      "layout": "terminal",
+      "ground": "ink",
+      "title": "Update PHP, then *restart* it",
+      "cmd": "php -v",
+      "lines": [
+        "PHP 8.5.12",
+        "PHP 8.4.27",
+        "PHP 8.3.36",
+        "PHP 8.2.35"
+      ],
+      "body": "Any of these versions (or newer) has the fix. After updating, restart PHP-FPM or Apache."
+    },
+    {
+      "layout": "story",
+      "ground": "paper",
+      "tag": "Railway",
+      "date": "Oct 22",
+      "title": "Railway told its users to change their *secret keys*",
+      "body": "Railway is a platform developers deploy apps on. Someone may have reached customers' environment variables, where those keys live.",
+      "shot": {
+        "img": "tc-railway.png",
+        "credit": "TechCrunch · Oct 22, 2026",
+        "w": 640
+      },
+      "rot": 1.5
+    },
+    {
+      "layout": "story",
+      "ground": "ink",
+      "tag": "Zeabur",
+      "date": "Oct 20",
+      "title": "Zeabur is shutting down after *two breaches*",
+      "body": "The second one came through an admin token that never expired.",
+      "shot": {
+        "img": "bc-zeabur-hero.png",
+        "credit": "BleepingComputer · Oct 20, 2026",
+        "w": 600
+      }
+    },
+    {
+      "layout": "bill",
+      "ground": "paper",
+      "tag": "OpenCode",
+      "date": "Oct 19",
+      "title": "Some people found out from their *AI bills*",
+      "lines": [
+        {
+          "k": "Your usage",
+          "v": "$20"
+        },
+        {
+          "k": "Not you",
+          "v": "$480"
+        },
+        {
+          "k": "Not you",
+          "v": "$560"
+        }
+      ],
+      "totalLabel": "Total",
+      "total": "$1,060",
+      "body": "Attackers took AI keys stored in OpenCode. A few bills went over $1,000 for usage people never ran."
+    },
+    {
+      "layout": "list",
+      "ground": "accent",
+      "title": "What you can do with *your keys*",
+      "rows": [
+        "Change keys you're unsure about",
+        "Give every key an expiry date",
+        "Give each key only what it needs",
+        "Turn on spending alerts"
+      ],
+      "body": "Three of this month's breaches went for the place developers keep these keys."
+    },
+    {
+      "layout": "duo",
+      "ground": "ink",
+      "title": "AI is on *both sides*",
+      "cols": [
+        {
+          "k": "Finding holes",
+          "v": "AI helped find PHP2Shell."
+        },
+        {
+          "k": "Breaking in",
+          "v": "One hacker used AI agents to break into 100+ company websites."
+        }
+      ]
+    },
+    {
+      "layout": "end",
+      "ground": "paper",
+      "title": "Did you have to patch or change keys this month?",
+      "body": "I put all of it in one video, in plain words.",
+      "where": "Full video on YouTube",
+      "handle": "@WithGbemi",
+      "polaroid": {
+        "img": "gbemi_9.jpg",
+        "caption": "Gbemi"
+      },
+      "size": 130,
+      "polY": 720
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+ "story": "emudhra",
+ "outlet": "eMudhra (press release)",
+ "slug": "emudhra-press",
+ "url": "https://emudhra.com/en/press-release/emudhra-to-exit-global-ssl-tls-certificate-business",
+ "finalUrl": "https://emudhra.com/en/press-release/emudhra-to-exit-global-ssl-tls-certificate-business",
+ "status": "loaded",
+ "http": 200,
+ "title": "eMudhra to Exit global SSL/TLS Certificate Business",
+ "h1": "eMudhra to Exit global SSL/TLS Certificate Business",
+ "published": "2026-10-22T00:00:00.000Z",
+ "files": {
+  "fold": "emudhra/emudhra-press_fold.png",
+  "full": "emudhra/emudhra-press_full.jpg",
+  "scroll": "emudhra/emudhra-press_scroll.mp4"
+ },
+ "full": {
+  "width": 1440,
+  "height": 3752,
+  "pageHeight": 3752,
+  "zoom": 1,
+  "quotes": [
+   {
+    "quote": "eMudhra to Exit global SSL/TLS Certificate Business",
+    "box": {
+     "x": 92,
+     "y": 230,
+     "w": 921,
+     "h": 52
+    },
+    "lines": [
+     {
+      "x": 92,
+      "y": 230,
+      "w": 921,
+      "h": 52
+     }
+    ]
+   }
+  ]
+ },
+ "scroll": {
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "seconds": 8,
+  "keyframes": [
+   {
+    "t": 0,
+    "y": 92
+   },
+   {
+    "t": 1,
+    "y": 92
+   },
+   {
+    "t": 2.55,
+    "y": 1492
+   },
+   {
+    "t": 8,
+    "y": 1492
+   }
+  ],
+  "zoom": 1,
+  "easing": "easeInOutCubic between keyframes, holds where y is equal",
+  "capped": false,
+  "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)",
+  "quotes": [
+   {
+    "quote": "eMudhra to Exit global SSL/TLS Certificate Business",
+    "inVideo": true,
+    "still": true,
+    "t": 0.53,
+    "visibleStill": [
+     0,
+     1.07
+    ],
+    "scrollY": 92,
+    "box": {
+     "x": 332,
+     "y": 138,
+     "w": 921,
+     "h": 52
+    },
+    "lines": [
+     {
+      "x": 332,
+      "y": 138,
+      "w": 921,
+      "h": 52
+     }
+    ],
+    "docBox": {
+     "x": 332,
+     "y": 230,
+     "w": 921,
+     "h": 52
+    },
+    "layoutDriftPx": 0
+   }
+  ]
+ }
+}

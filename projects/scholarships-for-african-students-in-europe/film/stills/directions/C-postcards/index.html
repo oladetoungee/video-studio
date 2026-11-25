@@ -1,0 +1,113 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>C Postcards</title>
+<link rel="stylesheet" href="../_shared/fonts.css">
+<style>
+:root{--card:#FFFFFF;--ink:#121212;--mark:#FFD43B;--soft:#6B6B6B;--night:#0B0B0B}
+#stage{background:var(--night);font-family:"Plus Jakarta Sans";color:var(--ink)}
+.photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.tint{position:absolute;inset:0;background:rgba(10,10,10,.16)}
+.card{position:absolute;background:var(--card);box-shadow:0 24px 60px rgba(0,0,0,.35)}
+.huge{font-family:"Big Shoulders Display";font-weight:900;text-transform:uppercase;line-height:.86;letter-spacing:-.005em}
+.serif{font-family:"Instrument Serif";font-style:italic;font-weight:400}
+.lab{font-family:"DM Mono";font-weight:500;font-size:30px;letter-spacing:.08em;text-transform:uppercase;color:var(--soft)}
+.line{position:absolute;left:0;right:0;height:2px;background:#E2E2E2}
+.mk{background:linear-gradient(transparent,transparent);box-shadow:inset 0 -0.55em 0 var(--mark)}
+.post{position:absolute;padding:26px;line-height:1.1;border:5px solid var(--ink);border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:"DM Mono";font-weight:500;text-transform:uppercase;text-align:center;letter-spacing:.06em;color:var(--ink);mix-blend-mode:multiply}
+.stampbox{position:absolute;border:3px dashed #BDBDBD;padding:8px;background:#fff}
+.win{position:absolute;overflow:hidden;border-radius:30px;background:#222}
+.win img{position:absolute;width:100%;height:100%;object-fit:cover}
+.credit{position:absolute;font-family:"DM Mono";font-size:24px;color:rgba(255,255,255,.85);letter-spacing:.04em}
+</style></head>
+<body><div id="stage"></div>
+<script src="../_shared/lib.js"></script>
+<script>
+const W = +Q.get('w') || 1920, H = +Q.get('h') || 1080, PORT = H > W;
+const S = $('#stage'); st(S, { width: W + 'px', height: H + 'px' });
+const PX = { stockholm: ['Jakob Stöberl'], budapest: ['Efrem Efre'], amsterdam: ['Magda Ehlers'], tallinn: ['Sergei Gussev'] };
+const ph = (n) => `<img class="photo" src="../_src/pexels/${n}.jpg"><div class="tint"></div><div class="credit" style="right:28px;bottom:20px">Photo: ${PX[n][0]} / Pexels</div>`;
+// a postcard back: title, message lines, stamp + postmark (the postmark carries the date)
+function cardBack(x, y, w, h, o) {
+  return `<div class="card" id="${o.id || 'card'}" style="left:${x}px;top:${y}px;width:${w}px;height:${h}px">
+   <div class="abs" style="left:${w * 0.56}px;top:40px;bottom:40px;width:2px;background:#E2E2E2"></div>
+   <div class="abs lab" style="left:48px;top:44px">${o.kicker}</div>
+   <div class="abs huge" style="left:44px;top:88px;font-size:${o.ts || 120}px;width:${w * 0.52}px">${o.title}</div>
+   <div class="abs" style="left:48px;top:${o.my || 330}px;width:${w * 0.5}px;font-size:${o.fs || 38}px;line-height:1.28;font-weight:600">${o.msg}</div>
+   <div class="stampbox" style="right:48px;top:44px;width:${o.sw || 170}px;height:${(o.sw || 170) * 1.21}px"><img src="../_src/pexels/${o.img}.jpg" style="width:100%;height:100%;object-fit:cover"></div>
+   <div class="post" id="${(o.id || 'card')}-pm" style="right:${o.pmr || 236}px;top:${o.pmy || 90}px;width:${o.pms || 250}px;height:${o.pms || 250}px;transform:rotate(-12deg)">${o.post}</div>
+   ${(o.addr || []).map((a, i) => `<div class="abs" style="left:${w * 0.6}px;right:48px;top:${430 + i * 92}px;font-size:${o.afs || 34}px;font-weight:600">${a}</div><div class="abs" style="left:${w * 0.6}px;right:48px;top:${480 + i * 92}px;height:2px;background:#DADADA"></div>`).join('')}
+  </div>`;
+}
+const SHOTS = {};
+SHOTS.c1 = () => {
+  S.innerHTML = ph('stockholm') + `<div class="abs huge" style="left:70px;top:70px;font-size:250px;color:#fff">Sweden</div>` + cardBack(560, 380, 1300, 640, {
+    kicker: 'Swedish Institute', title: 'Full<br>scholarship', ts: 110, my: 330, msg: 'Tuition and a monthly living allowance. For people with <span class="mk">work and leadership experience</span>.', img: 'stockholm',
+    post: '<div style="font-size:26px">Apply by</div><div style="font-size:38px;font-weight:500">15 Jan</div><div style="font-size:26px">2027</div>',
+    addr: ['To: Nigerian students', 'Nigeria ✓ eligible'] });
+  return t => { };
+};
+SHOTS.c2 = () => {
+  S.innerHTML = ph('budapest') + cardBack(120, 220, 1680, 720, {
+    kicker: 'Hungary · government scholarship', title: 'Stipendium<br>Hungaricum', ts: 130, my: 370, fs: 40, msg: 'Covers tuition, a monthly stipend, a dorm place or rent money and medical insurance. <span class="mk">It doesn\'t cover your full living cost.</span>', img: 'budapest',
+    post: '<div style="font-size:26px">2027/28 call</div><div style="font-size:32px;font-weight:500">Not open</div><div style="font-size:26px">yet</div>',
+    addr: ['Nigeria ✓ on the list', 'Nominated by: Federal Scholarship Board'], afs: 28 });
+  return t => { };
+};
+SHOTS.c3 = () => {
+  const ww = PORT ? 960 : 1380, wh = PORT ? 720 : 776;
+  S.innerHTML = `<div class="win" style="left:${(W - ww) / 2}px;top:${PORT ? 440 : 70}px;width:${ww}px;height:${wh}px"><img data-feed="v" src="../_src/pexels/still-stockholm-v.jpg"></div>
+   <div class="abs serif" style="left:0;right:0;text-align:center;top:${PORT ? 1220 : 870}px;font-size:${PORT ? 150 : 120}px;color:#F5F1E8;line-height:1">Sweden</div>
+   <div class="abs" style="left:0;right:0;text-align:center;top:${PORT ? 1400 : 1000}px;font-size:${PORT ? 44 : 38}px;color:#BDBDBD;font-weight:600">Swedish Institute Scholarship<br>for Global Professionals</div>
+   <div class="credit" style="right:${PORT ? 70 : 290}px;top:${PORT ? 1170 : 856}px;color:#8A8A8A;font-size:22px">Video: Damir K / Pexels</div>`;
+  return t => { };
+};
+SHOTS.c4 = () => {
+  S.innerHTML = ph('amsterdam') + cardBack(560, 330, 1300, 640, {
+    kicker: 'The Netherlands', title: 'NL<br>Scholarship', ts: 130, my: 360, msg: '<span class="mk">€5,000 for your first year.</span> Partial. You need the university\'s offer first.', img: 'amsterdam',
+    post: '<div style="font-size:26px">Deadline</div><div style="font-size:32px;font-weight:500">Per uni</div>',
+    addr: ['From outside the EEA', 'Nigeria ✓ included'] }) +
+    `<div class="card" style="left:70px;top:40px;width:620px;height:300px;transform:rotate(-4deg);background:#F4F1EA"><div class="abs lab" style="left:36px;top:30px">Orange Knowledge Programme</div><div class="abs huge" style="left:32px;top:80px;font-size:92px;color:#C62828">Ended<br>in 2024</div><div class="abs" style="left:300px;top:100px;width:280px;font-size:30px;font-weight:600;color:#C62828;border:4px solid #C62828;padding:10px 14px;transform:rotate(8deg);font-family:'DM Mono';text-transform:uppercase">Return to sender</div></div>`;
+  return t => { };
+};
+SHOTS.p1 = () => {
+  S.innerHTML = ph('tallinn') + `<div class="abs huge" style="left:60px;top:160px;font-size:230px;color:#fff">Estonia</div>` + `<div class="card" style="left:60px;top:560px;width:960px;height:1120px">
+   <div class="abs lab" style="left:48px;top:44px">Where I study</div>
+   <div class="abs huge" style="left:44px;top:96px;font-size:104px;width:640px">State<br>scholarship</div>
+   <div class="stampbox" style="right:48px;top:44px;width:170px;height:206px"><img src="../_src/pexels/tallinn.jpg" style="width:100%;height:100%;object-fit:cover"></div>
+   <div class="post" style="right:120px;top:190px;width:220px;height:220px;transform:rotate(-12deg)"><div style="font-size:26px">Nigeria</div><div style="font-size:40px;font-weight:500">✗</div><div style="font-size:23px">not on<br>the list</div></div>
+   <div class="abs" style="left:48px;top:440px;width:860px;font-size:44px;line-height:1.25;font-weight:600">It is <span class="mk">not available for Nigerians.</span></div>
+   <div class="abs lab" style="left:48px;top:640px">Realistic options</div>
+   <div class="abs" style="left:48px;top:700px;width:860px;font-size:40px;line-height:1.3;font-weight:600">The university's own tuition discount<div style="height:2px;background:#E2E2E2;margin:22px 0"></div>Erasmus Mundus programmes with an Estonian university</div></div>`;
+  return t => { };
+};
+SHOTS.p2 = () => SHOTS.c3();
+// motion test: raw 241.15 -> 251.35 (Sweden): rounded cinematic insert -> title flash -> the postcard
+function buildTest() {
+  S.innerHTML = `<div id="v1" class="abs" style="inset:0;background:var(--night)">
+     <div class="win" id="win" style="left:270px;top:70px;width:1380px;height:776px"><img data-feed="v" src="../_src/pexels/still-stockholm-v.jpg"></div>
+     <div class="abs serif" id="t1" style="left:0;right:0;text-align:center;top:870px;font-size:120px;color:#F5F1E8;line-height:1">Swedish Institute</div>
+     <div class="abs" id="t2" style="left:0;right:0;text-align:center;top:1000px;font-size:38px;color:#BDBDBD;font-weight:600">Scholarship for Global Professionals</div>
+     <div class="credit" style="right:290px;top:856px;color:#8A8A8A;font-size:22px">Video: Damir K / Pexels</div>
+     <div class="abs huge" id="flash" style="left:0;right:0;top:250px;text-align:center;font-size:520px;color:var(--mark);display:none">Sweden</div></div>
+   <div id="v2" class="abs" style="inset:0;display:none">${ph('stockholm')}${cardBack(400, 300, 1440, 720, {
+    id: 'cd', kicker: 'Swedish Institute', title: 'Who it\'s for', ts: 110, my: 230, fs: 52,
+    msg: '<span id="m1">People from certain countries</span> <span id="m2">who want to do a master\'s in Sweden</span> <span id="m3">and already have <span class="mk" id="mk">work and leadership experience.</span></span>', img: 'stockholm',
+    sw: 300, pmr: 230, pmy: 300, pms: 290, post: '<div style="font-size:26px">Nigeria</div><div style="font-size:48px;font-weight:500">✓</div><div style="font-size:23px">one of those<br>countries</div>', addr: [] })}</div>`;
+  return t => {
+    const a = t < 244.08, fl = t >= 244.08 && t < 245.0, b = t >= 245.0;
+    st('#v1', { display: b ? 'none' : 'block' }); st('#v2', { display: b ? 'block' : 'none' });
+    const k = P(t, 241.15, .7, E.outQuint); st('#win', { transform: `scale(${lerp(.94, 1, k) + 0.02 * clamp((t - 241.15) / 3)})`, opacity: clamp(0.35 + k * 1.5) });
+    const bg = $('#v2 .photo'); if (bg) bg.style.transform = `scale(${1 + 0.06 * clamp((t - 245) / 6.4)})`;
+    enter('#t1', P(t, 241.5, .45), 0, 30, 8); enter('#t2', P(t, 242.86, .45), 0, 24, 6);
+    st('#flash', { display: fl ? 'block' : 'none', transform: `scale(${lerp(1.12, 1, P(t, 244.08, .35, E.outQuint))})` });
+    st('#t1', { visibility: fl ? 'hidden' : 'visible' }); st('#t2', { visibility: fl ? 'hidden' : 'visible' });
+    const c = P(t, 245.0, .55, E.outQuint); const cd = $('#cd'); cd.style.transform = `translateY(${(1 - c) * 700}px) rotate(${(1 - c) * 3}deg)`;
+    enter('#m1', P(t, 245.3, .4), 0, 14, 4); enter('#m2', P(t, 246.4, .4), 0, 14, 4); enter('#m3', P(t, 248.2, .4), 0, 14, 4);
+    const mk = P(t, 249.0, .6, E.outCubic); $('#mk').style.boxShadow = `inset ${-(1 - mk) * 900}px -0.55em 0 ${t >= 249 ? 'var(--mark)' : 'transparent'}`;
+    stamp('#cd-pm', t, 250.3, -12, .25);
+  };
+}
+let TEST = null;
+window.show = async (n) => { const f = SHOTS[n](); await imagesReady(); f(99); };
+window.seek = async (t) => { if (!TEST) { TEST = buildTest(); await imagesReady(); } TEST(t); };
+window.READY = true;
+</script></body></html>

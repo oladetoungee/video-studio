@@ -1,0 +1,578 @@
+{
+ "slug": "october-attacks",
+ "aspect": "16x9",
+ "note": "Transition board. Fill carrier (what brings the next shot in: a shape, a line, a word, the camera, or \"hard cut\") and why (>= 20 characters: the reason, e.g. \"cut on the beat of 'licensed', new idea\"). Re-running lab.mjs board keeps them.",
+ "cuts": [
+  {
+   "from": "month",
+   "to": "php",
+   "frame": 266,
+   "t": 8.86,
+   "kind": "cut",
+   "lands_on": "the @ 8.80 s (f264)",
+   "carrier": "camera dive into day 21 (the cell grows to fill the frame)",
+   "why": "the story of PHP2Shell happens inside its day, so the camera enters the calendar instead of cutting away"
+  },
+  {
+   "from": "php",
+   "to": "railway",
+   "frame": 477,
+   "t": 15.9,
+   "kind": "whip",
+   "lands_on": "Railway, @ 16.02 s (f481)",
+   "carrier": "whip (same ground: the day continues)",
+   "why": "same day, next beat: the whip keeps us inside the night day while the subject changes on \"Railway,\""
+  },
+  {
+   "from": "railway",
+   "to": "zeabur-open",
+   "frame": 697,
+   "t": 23.21,
+   "kind": "cut",
+   "lands_on": "There @ 23.36 s (f701)",
+   "carrier": "hard cut on her word (ground changes)",
+   "why": "new ground (night -> bone) marks a new part of the story; the cut lands on \"There\""
+  },
+  {
+   "from": "zeabur-open",
+   "to": "agents-open",
+   "frame": 923,
+   "t": 30.76,
+   "kind": "cut",
+   "lands_on": "And @ 30.86 s (f926)",
+   "carrier": "hard cut on her word (ground changes)",
+   "why": "new ground (bone -> night) marks a new part of the story; the cut lands on \"And\""
+  },
+  {
+   "from": "agents-open",
+   "to": "overflow",
+   "frame": 1099,
+   "t": 36.62,
+   "kind": "cut",
+   "lands_on": "So @ 36.72 s (f1102)",
+   "carrier": "hard cut on her word (ground changes)",
+   "why": "new ground (night -> oct) marks a new part of the story; the cut lands on \"So\""
+  },
+  {
+   "from": "overflow",
+   "to": "share",
+   "frame": 1280,
+   "t": 42.64,
+   "kind": "cut",
+   "lands_on": "PHP @ 42.76 s (f1283)",
+   "carrier": "hard cut; the 100-square grid builds from the first frame",
+   "why": "a deliberate build: the squares count the web one by one, so the frame fills over 0.3 s"
+  },
+  {
+   "from": "share",
+   "to": "found",
+   "frame": 1638,
+   "t": 54.57,
+   "kind": "cut",
+   "lands_on": "And @ 54.67 s (f1640)",
+   "carrier": "hard cut on her word (ground changes)",
+   "why": "new ground (bone -> night) marks a new part of the story; the cut lands on \"And\""
+  },
+  {
+   "from": "found",
+   "to": "shell",
+   "frame": 1790,
+   "t": 59.64,
+   "kind": "whip",
+   "lands_on": "And @ 59.76 s (f1793)",
+   "carrier": "whip (same ground: the day continues)",
+   "why": "same day, next beat: the whip keeps us inside the night day while the subject changes on \"And\""
+  },
+  {
+   "from": "shell",
+   "to": "score",
+   "frame": 2147,
+   "t": 71.56,
+   "kind": "cut",
+   "lands_on": "PHP @ 71.66 s (f2150)",
+   "carrier": "hard cut on her word (ground changes)",
+   "why": "new ground (night -> oct) marks a new part of the story; the cut lands on \"PHP\""
+  },
+  {
+   "from": "score",
+   "to": "bug1",
+   "frame": 2294,
+   "t": 76.46,
+   "kind": "cut",
+   "lands_on": "Now @ 76.56 s (f2297)",
+   "carrier": "hard cut on her word (ground changes)",
+   "why": "new ground (oct -> bone) marks a new part of the story; the cut lands on \"Now\""
+  },
+  {
+   "from": "bug1",
+   "to": "bug1b",
+   "frame": 2622,
+   "t": 87.39,
+   "kind": "whip",
+   "lands_on": "then @ 87.49 s (f2625)",
+   "carrier": "whip (same ground: the day continues)",
+   "why": "same day, next beat: the whip keeps us inside the bone day while the subject changes on \"then\""
+  },
+  {
+   "from": "bug1b",
+   "to": "bug2",
+   "frame": 2831,
+   "t": 94.35,
+   "kind": "whip",
+   "lands_on": "The @ 94.45 s (f2834)",
+   "carrier": "whip (same ground: the day continues)",
+   "why": "same day, next beat: the whip keeps us inside the bone day while the subject changes on \"The\""
+  },
+  {
+   "from": "bug2",
+   "to": "exploit",
+   "frame": 3082,
+   "t": 102.73,
+   "kind": "cut",
+   "lands_on": "Now @ 102.83 s (f3085)",
+   "carrier": "hard cut on her word (ground changes)",
+   "why": "new ground (bone -> night) marks a new part of the story; the cut lands on \"Now\""
+  },
+  {
+   "from": "exploit",
+   "to": "before",
+   "frame": 3252,
+   "t": 108.38,
+   "kind": "whip",
+   "lands_on": "The @ 108.48 s (f3254)",
+   "carrier": "whip (same ground: the day continues)",
+   "why": "same day, next beat: the whip keeps us inside the night day while the subject changes on \"The\""
+  },
+  {
+   "from": "before",
+   "to": "login",
+   "frame": 3794,
+   "t": 126.46,
+   "kind": "cut",
+   "lands_on": "You @ 126.56 s (f3797)",
+   "carrier": "hard cut on her word (ground changes)",
+   "why": "new ground (night -> bone) marks a new part of the story; the cut lands on \"You\""
+  },
+  {
+   "from": "login",
+   "to": "amazon",
+   "frame": 3889,
+   "t": 129.61,
+   "kind": "whip",
+   "lands_on": "Even @ 129.71 s (f3891)",
+   "carrier": "whip (same ground: the day continues)",
+   "why": "same day, next beat: the whip keeps us inside the bone day while the subject changes on \"Even\""
+  },
+  {
+   "from": "amazon",
+   "to": "offline",
+   "frame": 4162,
+   "t": 138.72,
+   "kind": "cut",
+   "lands_on": "And @ 138.82 s (f4165)",
+   "carrier": "hard cut on her word (ground changes)",
+   "why": "new ground (bone -> night) marks a new part of the story; the cut lands on \"And\""
+  },
+  {
+   "from": "offline",
+   "to": "fix",
+   "frame": 4341,
+   "t": 144.7,
+   "kind": "cut",
+   "lands_on": "So @ 144.80 s (f4344)",
+   "carrier": "hard cut on her word (ground changes)",
+   "why": "new ground (night -> bone) marks a new part of the story; the cut lands on \"So\""
+  },
+  {
+   "from": "fix",
+   "to": "laravel",
+   "frame": 4785,
+   "t": 159.5,
+   "kind": "cut",
+   "lands_on": "Everyone @ 159.60 s (f4788)",
+   "carrier": "hard cut on her word (ground changes)",
+   "why": "new ground (bone -> night) marks a new part of the story; the cut lands on \"Everyone\""
+  },
+  {
+   "from": "laravel",
+   "to": "node",
+   "frame": 5035,
+   "t": 167.82,
+   "kind": "whip",
+   "lands_on": "And @ 167.92 s (f5038)",
+   "carrier": "whip (same ground: the day continues)",
+   "why": "same day, next beat: the whip keeps us inside the night day while the subject changes on \"And\""
+  },
+  {
+   "from": "node",
+   "to": "busy",
+   "frame": 5252,
+   "t": 175.06,
+   "kind": "cut",
+   "lands_on": "Now @ 175.16 s (f5255)",
+   "carrier": "hard cut on her word (ground changes)",
+   "why": "new ground (night -> oct) marks a new part of the story; the cut lands on \"Now\""
+  },
+  {
+   "from": "busy",
+   "to": "deploy",
+   "frame": 5390,
+   "t": 179.65,
+   "kind": "cut",
+   "lands_on": "If @ 179.75 s (f5393)",
+   "carrier": "hard cut on her word (ground changes)",
+   "why": "new ground (oct -> bone) marks a new part of the story; the cut lands on \"If\""
+  },
+  {
+   "from": "deploy",
+   "to": "env",
+   "frame": 5525,
+   "t": 184.14,
+   "kind": "cut",
+   "lands_on": "So @ 184.24 s (f5527)",
+   "carrier": "hard cut on her word (ground changes)",
+   "why": "new ground (bone -> night) marks a new part of the story; the cut lands on \"So\""
+  },
+  {
+   "from": "env",
+   "to": "paused",
+   "frame": 5814,
+   "t": 193.8,
+   "kind": "cut",
+   "lands_on": "So @ 193.90 s (f5817)",
+   "carrier": "hard cut on her word (ground changes)",
+   "why": "new ground (night -> bone) marks a new part of the story; the cut lands on \"So\""
+  },
+  {
+   "from": "paused",
+   "to": "unknown",
+   "frame": 6042,
+   "t": 201.4,
+   "kind": "cut",
+   "lands_on": "There's @ 201.50 s (f6045)",
+   "carrier": "hard cut on her word (ground changes)",
+   "why": "new ground (bone -> night) marks a new part of the story; the cut lands on \"There's\""
+  },
+  {
+   "from": "unknown",
+   "to": "series",
+   "frame": 6149,
+   "t": 204.94,
+   "kind": "cut",
+   "lands_on": "They @ 205.04 s (f6151)",
+   "carrier": "hard cut on her word (ground changes)",
+   "why": "new ground (night -> bone) marks a new part of the story; the cut lands on \"They\""
+  },
+  {
+   "from": "series",
+   "to": "zeabur",
+   "frame": 6394,
+   "t": 213.13,
+   "kind": "cut",
+   "lands_on": "Now @ 213.23 s (f6397)",
+   "carrier": "hard cut on her word (ground changes)",
+   "why": "new ground (bone -> night) marks a new part of the story; the cut lands on \"Now\""
+  },
+  {
+   "from": "zeabur",
+   "to": "breaches",
+   "frame": 6748,
+   "t": 224.92,
+   "kind": "cut",
+   "lands_on": "They @ 225.02 s (f6751)",
+   "carrier": "hard cut on her word (ground changes)",
+   "why": "new ground (night -> bone) marks a new part of the story; the cut lands on \"They\""
+  },
+  {
+   "from": "breaches",
+   "to": "count",
+   "frame": 6948,
+   "t": 231.6,
+   "kind": "cut",
+   "lands_on": "The @ 231.70 s (f6951)",
+   "carrier": "hard cut on her word (ground changes)",
+   "why": "new ground (bone -> oct) marks a new part of the story; the cut lands on \"The\""
+  },
+  {
+   "from": "count",
+   "to": "zeabur-keys",
+   "frame": 7214,
+   "t": 240.44,
+   "kind": "cut",
+   "lands_on": "So @ 240.54 s (f7216)",
+   "carrier": "hard cut on her word (ground changes)",
+   "why": "new ground (oct -> night) marks a new part of the story; the cut lands on \"So\""
+  },
+  {
+   "from": "zeabur-keys",
+   "to": "gates",
+   "frame": 7694,
+   "t": 256.46,
+   "kind": "whip",
+   "lands_on": "tokens. @ 256.52 s (f7696)",
+   "carrier": "whip (same ground: the day continues)",
+   "why": "same day, next beat: the whip keeps us inside the night day while the subject changes on \"tokens.\""
+  },
+  {
+   "from": "gates",
+   "to": "december",
+   "frame": 7920,
+   "t": 263.97,
+   "kind": "cut",
+   "lands_on": "They @ 264.07 s (f7922)",
+   "carrier": "hard cut on her word (ground changes)",
+   "why": "new ground (night -> bone) marks a new part of the story; the cut lands on \"They\""
+  },
+  {
+   "from": "december",
+   "to": "bills",
+   "frame": 8041,
+   "t": 268.03,
+   "kind": "whip",
+   "lands_on": "The @ 268.13 s (f8044)",
+   "carrier": "whip (same ground: the day continues)",
+   "why": "same day, next beat: the whip keeps us inside the bone day while the subject changes on \"The\""
+  },
+  {
+   "from": "bills",
+   "to": "console",
+   "frame": 8339,
+   "t": 277.95,
+   "kind": "cut",
+   "lands_on": "It @ 278.05 s (f8342)",
+   "carrier": "hard cut on her word (ground changes)",
+   "why": "new ground (bone -> night) marks a new part of the story; the cut lands on \"It\""
+  },
+  {
+   "from": "console",
+   "to": "alerts",
+   "frame": 8631,
+   "t": 287.68,
+   "kind": "cut",
+   "lands_on": "So @ 287.78 s (f8633)",
+   "carrier": "hard cut on her word (ground changes)",
+   "why": "new ground (night -> bone) marks a new part of the story; the cut lands on \"So\""
+  },
+  {
+   "from": "alerts",
+   "to": "imagine",
+   "frame": 8976,
+   "t": 299.2,
+   "kind": "cut",
+   "lands_on": "Like @ 299.30 s (f8979)",
+   "carrier": "hard cut on her word (ground changes)",
+   "why": "new ground (bone -> oct) marks a new part of the story; the cut lands on \"Like\""
+  },
+  {
+   "from": "imagine",
+   "to": "distill",
+   "frame": 9055,
+   "t": 301.83,
+   "kind": "cut",
+   "lands_on": "OpenCode @ 301.93 s (f9058)",
+   "carrier": "hard cut; the AI model block and the headline land together",
+   "why": "the new idea (distillation) starts from its name; the model block is on screen from frame 1, the rest builds on her words"
+  },
+  {
+   "from": "distill",
+   "to": "blocked",
+   "frame": 9486,
+   "t": 316.19,
+   "kind": "cut",
+   "lands_on": "Of @ 316.29 s (f9489)",
+   "carrier": "hard cut on her word (ground changes)",
+   "why": "new ground (night -> bone) marks a new part of the story; the cut lands on \"Of\""
+  },
+  {
+   "from": "blocked",
+   "to": "pattern",
+   "frame": 9623,
+   "t": 320.75,
+   "kind": "cut",
+   "lands_on": "When @ 320.85 s (f9626)",
+   "carrier": "hard cut on her word (ground changes)",
+   "why": "new ground (bone -> oct) marks a new part of the story; the cut lands on \"When\""
+  },
+  {
+   "from": "pattern",
+   "to": "do-change",
+   "frame": 9973,
+   "t": 332.42,
+   "kind": "cut",
+   "lands_on": "So @ 332.52 s (f9976)",
+   "carrier": "hard cut on her word (ground changes)",
+   "why": "new ground (oct -> bone) marks a new part of the story; the cut lands on \"So\""
+  },
+  {
+   "from": "do-change",
+   "to": "do-expiry",
+   "frame": 10076,
+   "t": 335.84,
+   "kind": "whip",
+   "lands_on": "You @ 335.94 s (f10078)",
+   "carrier": "whip (same ground: the day continues)",
+   "why": "same day, next beat: the whip keeps us inside the bone day while the subject changes on \"You\""
+  },
+  {
+   "from": "do-expiry",
+   "to": "do-access",
+   "frame": 10217,
+   "t": 340.54,
+   "kind": "whip",
+   "lands_on": "You @ 340.64 s (f10219)",
+   "carrier": "whip (same ground: the day continues)",
+   "why": "same day, next beat: the whip keeps us inside the bone day while the subject changes on \"You\""
+  },
+  {
+   "from": "do-access",
+   "to": "do-limits",
+   "frame": 10470,
+   "t": 348.98,
+   "kind": "whip",
+   "lands_on": "Set @ 349.08 s (f10472)",
+   "carrier": "whip (same ground: the day continues)",
+   "why": "same day, next beat: the whip keeps us inside the bone day while the subject changes on \"Set\""
+  },
+  {
+   "from": "do-limits",
+   "to": "do-store",
+   "frame": 10618,
+   "t": 353.91,
+   "kind": "whip",
+   "lands_on": "and @ 354.01 s (f10620)",
+   "carrier": "whip (same ground: the day continues)",
+   "why": "same day, next beat: the whip keeps us inside the bone day while the subject changes on \"and\""
+  },
+  {
+   "from": "do-store",
+   "to": "one-more",
+   "frame": 10719,
+   "t": 357.27,
+   "kind": "cut",
+   "lands_on": "Now @ 357.37 s (f10721)",
+   "carrier": "hard cut on her word (ground changes)",
+   "why": "new ground (bone -> oct) marks a new part of the story; the cut lands on \"Now\""
+  },
+  {
+   "from": "one-more",
+   "to": "trust",
+   "frame": 10907,
+   "t": 363.54,
+   "kind": "cut",
+   "lands_on": "eMudhra @ 363.64 s (f10909)",
+   "carrier": "hard cut on her word (ground changes)",
+   "why": "new ground (oct -> bone) marks a new part of the story; the cut lands on \"eMudhra\""
+  },
+  {
+   "from": "trust",
+   "to": "four",
+   "frame": 11273,
+   "t": 375.75,
+   "kind": "whip",
+   "lands_on": "Now @ 375.85 s (f11276)",
+   "carrier": "whip (same ground: the day continues)",
+   "why": "same day, next beat: the whip keeps us inside the bone day while the subject changes on \"Now\""
+  },
+  {
+   "from": "four",
+   "to": "april",
+   "frame": 11729,
+   "t": 390.96,
+   "kind": "cut",
+   "lands_on": "So @ 391.06 s (f11732)",
+   "carrier": "hard cut on her word (ground changes)",
+   "why": "new ground (bone -> night) marks a new part of the story; the cut lands on \"So\""
+  },
+  {
+   "from": "april",
+   "to": "fake",
+   "frame": 11932,
+   "t": 397.71,
+   "kind": "cut",
+   "lands_on": "And @ 397.81 s (f11934)",
+   "carrier": "hard cut on her word (ground changes)",
+   "why": "new ground (night -> bone) marks a new part of the story; the cut lands on \"And\""
+  },
+  {
+   "from": "fake",
+   "to": "updated",
+   "frame": 12128,
+   "t": 404.24,
+   "kind": "cut",
+   "lands_on": "To @ 404.34 s (f12130)",
+   "carrier": "hard cut on her word (ground changes)",
+   "why": "new ground (bone -> night) marks a new part of the story; the cut lands on \"To\""
+  },
+  {
+   "from": "updated",
+   "to": "ai-sides",
+   "frame": 12343,
+   "t": 411.41,
+   "kind": "cut",
+   "lands_on": "And @ 411.51 s (f12345)",
+   "carrier": "hard cut on her word (ground changes)",
+   "why": "new ground (night -> oct) marks a new part of the story; the cut lands on \"And\""
+  },
+  {
+   "from": "ai-sides",
+   "to": "hundred",
+   "frame": 12610,
+   "t": 420.32,
+   "kind": "cut",
+   "lands_on": "Reuters @ 420.42 s (f12613)",
+   "carrier": "hard cut on her word (ground changes)",
+   "why": "new ground (oct -> night) marks a new part of the story; the cut lands on \"Reuters\""
+  },
+  {
+   "from": "hundred",
+   "to": "run-hours",
+   "frame": 12909,
+   "t": 430.27,
+   "kind": "cut",
+   "lands_on": "So @ 430.37 s (f12911)",
+   "carrier": "hard cut on her word (ground changes)",
+   "why": "new ground (night -> bone) marks a new part of the story; the cut lands on \"So\""
+  },
+  {
+   "from": "run-hours",
+   "to": "fifty",
+   "frame": 13095,
+   "t": 436.47,
+   "kind": "cut",
+   "lands_on": "And @ 436.57 s (f13097)",
+   "carrier": "hard cut on her word (ground changes)",
+   "why": "new ground (bone -> oct) marks a new part of the story; the cut lands on \"And\""
+  },
+  {
+   "from": "fifty",
+   "to": "news",
+   "frame": 13395,
+   "t": 446.48,
+   "kind": "cut",
+   "lands_on": "It's @ 446.58 s (f13397)",
+   "carrier": "hard cut; the headline wall pins up clip by clip",
+   "why": "a deliberate build: each real headline lands with a shutter, the wall is the point of the shot"
+  },
+  {
+   "from": "news",
+   "to": "both",
+   "frame": 13526,
+   "t": 450.84,
+   "kind": "cut",
+   "lands_on": "What @ 450.94 s (f13528)",
+   "carrier": "hard cut on her word (ground changes)",
+   "why": "new ground (bone -> night) marks a new part of the story; the cut lands on \"What\""
+  },
+  {
+   "from": "both",
+   "to": "end",
+   "frame": 14049,
+   "t": 468.3,
+   "kind": "cut",
+   "lands_on": "So @ 468.40 s (f14052)",
+   "carrier": "hard cut on her word (ground changes)",
+   "why": "new ground (night -> oct) marks a new part of the story; the cut lands on \"So\""
+  }
+ ],
+ "flags": []
+}

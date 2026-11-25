@@ -1,0 +1,30 @@
+{
+  "direction": "Graphic (refined from set 2): three generic app screens in a row; UI is the one circled screen, UX is the long arrow across the whole trip. Warm paper, orange only; her calm cut-out now in colour with a white outline. References: her database-indexes thumbnail (one mechanism drawn literally), yt 'Complete roadmap UI UX' (26), 'Two sum' (notebook sketch).",
+  "thumbnail_text": "UI or UX? The real difference",
+  "titles": [
+    "UI vs UX: The Experience Is Bigger Than the Screen",
+    "UI vs UX Explained: What Users See vs How It Feels",
+    "UI vs UX: Why a Pretty App Can Still Fail"
+  ],
+  "text": {
+    "hd": "UI or UX?",
+    "ui": "UI",
+    "ux": "UX",
+    "done": "Done!",
+    "sub": "the real difference"
+  },
+  "images": {
+    "me": "../../assets/cut/gbemi-direct-hard.png"
+  },
+  "vars": {
+    "--ground": "#EAE6DA",
+    "--fg": "#17140F",
+    "--accent": "#FF4713",
+    "--ol": "#FFFFFF"
+  },
+  "title": "UI vs UX: The Experience Is Bigger Than the Screen",
+  "set": 3,
+  "kind": "graphic",
+  "scores": "critic scores R1 7.5 · R2 7 · R3 7 · R4 7.5 · R5 7.5",
+  "recommended": false
+}

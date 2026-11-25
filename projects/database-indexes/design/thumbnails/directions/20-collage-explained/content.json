@@ -1,0 +1,24 @@
+{
+  "direction": "Collage over the creator (her collage samples \"Time to lock in.\", \"Capsule wardrobe\"): the full photo of her, three objects of the topic (the book index page, the index tree on a sticky note, a terminal line), one big lowercase serif line set off-centre over the dark chair, two tiny labels. Round 2: 3 props instead of 6, line moved left and lowercase (round 1 was centred like reading-stack). Round 3: \"when not to add one\" moved up out of the duration-badge corner.",
+  "concept": "new (collage style she asked for, 2026-10-07)",
+  "thumbnail_text": "database indexes, explained",
+  "title": "Database Indexes: Why Your App Slows Down as It Grows",
+  "titles": [
+    "Database Indexes: Why Your App Slows Down as It Grows",
+    "What Is a Database Index? (And Why Your App Needs One)",
+    "Database Indexes Explained: How Apps Search Fast"
+  ],
+  "text": {
+    "a": "database indexes,",
+    "b": "explained",
+    "s1": "why apps get slow",
+    "s3": "when not to add one"
+  },
+  "images": {
+    "scene": "../../assets/scene/f_22.7.jpg"
+  },
+  "frame": "0:22.7 (calm, mouth closed)",
+  "vars": {},
+  "scores": "final gate (round 4): A topic/click 5/5 · B pair 8 · C taste 8 · RECOMMENDED",
+  "recommended": true
+}

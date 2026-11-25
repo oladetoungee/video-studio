@@ -1,0 +1,26 @@
+{
+  "direction": "Graphic (kept from set 2): research on a small budget, literally: a laptop on a video call, her (in colour) on one side and a user on the other, a big '$0' tag hanging off the corner. Warm paper, orange only. References: yt '13 girl tips on a budget' (2), 'Run AI agents locally' (22), her database-indexes thumbnail.",
+  "thumbnail_text": "UX research with no budget",
+  "titles": [
+    "Can't Afford UX Research? Start With 5 Conversations",
+    "How to Do UX Research for Free (Beginner's Guide)",
+    "UX Research on a Small Budget: Start With 5 Users"
+  ],
+  "text": {
+    "hd": "UX research<br>with <span class=\"acc\">no budget</span>",
+    "tag": "$0"
+  },
+  "images": {
+    "me": "../../assets/cut/gbemi-direct-hard.png"
+  },
+  "vars": {
+    "--ground": "#EDE9E2",
+    "--fg": "#17140F",
+    "--accent": "#FF4713"
+  },
+  "title": "Can't Afford UX Research? Start With 5 Conversations",
+  "set": 3,
+  "kind": "graphic",
+  "scores": "critic scores R1 8 · R2 7.5 · R3 7 · R4 7.5 · R5 8",
+  "recommended": true
+}

@@ -1,0 +1,7 @@
+{
+  "direction": "Bold statement on a full-bleed accent + face (the problem)",
+  "title": "How to Actually Remember the Books You Read",
+  "text": { "line1": "You only", "line2": "remember the", "line3": "vibe." },
+  "images": { "person": "../../assets/cut/concerned.png" },
+  "vars": { "--x": "640px", "--y": "-30px", "--w": "830px" }
+}

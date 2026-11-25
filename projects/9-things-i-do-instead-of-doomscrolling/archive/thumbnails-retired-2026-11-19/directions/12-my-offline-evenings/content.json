@@ -1,0 +1,28 @@
+{
+  "text": {
+    "h": "My offline evenings"
+  },
+  "images": {
+    "left": "../../assets/set5/knitting.jpg",
+    "me": "../../assets/oredev/profile.jpg",
+    "right": "../../assets/set5/reading-sofa.jpg"
+  },
+  "kind": "collage of three real evening moments (knitting, her talking with people, reading on the sofa) + one heavy condensed headline across the top",
+  "board": "pick1119-12 (i stopped scrolling for a week... / PRODUCTIVE UNI WEEK)",
+  "fonts": [
+    "shorts-06 Oswald (huge cream condensed caps, #EADB9A, Formats 26)"
+  ],
+  "colours": "Font shorts-06 specimen: cream #EADB9A caps; ground = the photos",
+  "thumbnail_text": "MY OFFLINE EVENINGS",
+  "titles": [
+    "What I Do Instead of Doomscrolling (9 Real Things)",
+    "I Replaced Doomscrolling With These 9 Things",
+    "Things to Do Instead of Doomscrolling (That I Actually Do)"
+  ],
+  "direction": "Copies pick1119-12: three real moments side by side (stock knitting and reading, Pexels; her in the middle talking with people at a dinner, Oredev photo), one heavy condensed line across the top. The pictures ARE the list.",
+  "nudge": {},
+  "vars": {},
+  "class": "no-lift",
+  "title": "What I Do Instead of Doomscrolling (9 Real Things)",
+  "census": "three-photo collage, words top"
+}

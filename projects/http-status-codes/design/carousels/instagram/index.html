@@ -1,0 +1,166 @@
+<!doctype html><html><head><meta charset="utf-8"><title>HTTP status codes: read the first digit (Instagram)</title>
+<link rel="stylesheet" href="../shared/base.css">
+<style>:root{--W:1080px;--H:1350px;--acc:#FFA51F;--accInk:#FFA51F;}</style></head><body>
+<section class="slide g-amber l-cover" id="s1">
+  
+  
+    <div class="main">
+      <div class="odo" data-move="odometer" style="font-size:520px"><span class="win" style="--f:1;--bl:0px"><span class="a">4</span><span class="b">4</span></span><span class="rest xx" data-k="odo.rest" data-plain>xx</span></div>
+      <div class="disp fit" data-k="title" data-max="92" style="font-size:92px;margin-top:56px">What the first digit of an HTTP status code <em class="acc" style="font-style:normal">tells you</em></div>
+      <p class="body bal" data-k="sub" style="margin-top:30px;font-size:42px">A 4 means check the request. A 5 means check the server.</p>
+    </div>
+  <div class="foot"><span class="num"><b>01</b> / 10</span><span class="meter"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></div>
+</section>
+<section class="slide g-stone l-statement" id="s2">
+  
+  
+    <div class="main mid">
+      
+      <div class="disp fit" data-k="title" data-max="96" style="font-size:96px;">Every response carries a <span class="nw">three-digit</span> <em class="acc" style="font-style:normal">status code</em></div>
+      <div class="card resp" data-move="response" style="margin-top:64px;align-self:flex-start;font-size:64px"><span class="seg"><span data-k="resp.parts.0.t" data-plain>HTTP/1.1</span></span> <span class="seg"><span data-k="resp.parts.1.t" data-plain>200</span><span class="lb" data-k="resp.parts.1.l" data-plain>status code</span></span> <span class="seg"><span data-k="resp.parts.2.t" data-plain>OK</span><span class="lb" data-k="resp.parts.2.l" data-plain>reason phrase</span></span></div>
+      <p class="body bal" data-k="body" style="margin-top:auto">The code tells you what happened, and the body gives you the detail. You can already tell a lot from the first digit.</p>
+    </div>
+  <div class="foot"><span class="num"><b>02</b> / 10</span><span class="meter"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></div>
+</section>
+<section class="slide g-stone l-classes" id="s3">
+  
+  
+    <div class="main mid">
+      <div class="disp fit" data-k="title" data-max="84" style="font-size:84px;">HTTP status codes at a bookshop counter</div>
+      <div class="cls" data-move="classes" style="margin-top:50px"><div class="r"><div class="chipx" style="background:#D9D4C7">1<i>xx</i></div><div class="m" data-k="rows.0">Got it, keep going</div></div><div class="r"><div class="chipx" style="background:#8FE3B0">2<i>xx</i></div><div class="m" data-k="rows.1">Here's your book</div></div><div class="r"><div class="chipx" style="background:#8EC5FF">3<i>xx</i></div><div class="m" data-k="rows.2">We moved it to our other branch</div></div><div class="r"><div class="chipx" style="background:#FFA51F">4<i>xx</i></div><div class="m" data-k="rows.3">The problem is on <em class="acc" style="font-style:normal">your side</em></div></div><div class="r"><div class="chipx" style="background:#FF5A3C">5<i>xx</i></div><div class="m" data-k="rows.4">Your request was fine, <em class="acc" style="font-style:normal">our system broke</em></div></div></div>
+      
+    </div>
+  <div class="foot"><span class="num"><b>03</b> / 10</span><span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></div>
+</section>
+<section class="slide g-mint l-calls" id="s4">
+  
+  
+    <div class="main mid">
+      
+      <div class="disp fit" data-k="title" data-max="84" style="font-size:84px;">2xx means it worked. Three you'll use all the time</div>
+      <div class="calls" data-move="calls" style="margin-top:48px"><div class="card c"><div class="code" data-k="calls.0.code" data-plain>200</div><div class="req" data-k="calls.0.req" data-plain>GET /books/42</div><div class="nm" data-k="calls.0.nm">OK, and here's the book</div></div><div class="card c"><div class="code" data-k="calls.1.code" data-plain>201</div><div class="req" data-k="calls.1.req" data-plain>POST /books</div><div class="nm" data-k="calls.1.nm">Created, usually with a Location header</div></div><div class="card c"><div class="code" data-k="calls.2.code" data-plain>204</div><div class="req" data-k="calls.2.req" data-plain>DELETE /books/42</div><div class="nm" data-k="calls.2.nm">No Content, success with an empty body</div></div></div>
+      
+    </div>
+  <div class="foot"><span class="num"><b>04</b> / 10</span><span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></div>
+</section>
+<section class="slide g-sky l-grid" id="s5">
+  
+  
+    <div class="main mid">
+      
+      <div class="disp fit" data-k="title" data-max="84" style="font-size:84px;">Which redirect? 301, 302, 307 or 308</div>
+      <div class="grid2" data-move="grid" style="margin-top:50px">
+        <div></div><div class="h" data-k="cols.0" data-plain>Permanent</div><div class="h" data-k="cols.1" data-plain>Temporary</div>
+        <div class="rh" data-k="rowsG.0.k" data-plain>May switch POST to GET</div><div class="cell"><b data-k="rowsG.0.cells.0.v" data-plain>301</b><span data-k="rowsG.0.cells.0.n" data-plain>Moved for good</span></div><div class="cell"><b data-k="rowsG.0.cells.1.v" data-plain>302</b><span data-k="rowsG.0.cells.1.n" data-plain>Back soon</span></div><div class="rh" data-k="rowsG.1.k" data-plain>Keeps POST as POST</div><div class="cell dk"><b data-k="rowsG.1.cells.0.v" data-plain>308</b><span data-k="rowsG.1.cells.0.n" data-plain>Moved for good</span></div><div class="cell dk"><b data-k="rowsG.1.cells.1.v" data-plain>307</b><span data-k="rowsG.1.cells.1.n" data-plain>Back soon</span></div>
+      </div>
+      <p class="body bal" data-k="body" style="margin-top:auto">For normal web pages, 301 and 302 are fine. If you're redirecting an API where POST requests matter, I would use 307 and 308.</p>
+    </div>
+  <div class="foot"><span class="num"><b>05</b> / 10</span><span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></div>
+</section>
+<section class="slide g-amber l-duo" id="s6">
+  
+  
+    <div class="main mid">
+      
+      <div class="disp fit" data-k="title" data-max="110" style="font-size:110px;">400 or 422?</div>
+      <div class="duo" data-move="cards" style="margin-top:52px"><div class="card"><div class="k" data-k="cols.0.k" data-plain>400</div><div class="n" data-k="cols.0.n" data-plain>Bad Request</div><div class="v" data-k="cols.0.v">Broken JSON, like a missing bracket</div></div><div class="card dk"><div class="k" data-k="cols.1.k" data-plain>422</div><div class="n" data-k="cols.1.n" data-plain>Unprocessable Content</div><div class="v" data-k="cols.1.v">The data inside makes no sense, like a book with no title</div></div></div>
+      <p class="body bal" data-k="body" style="margin-top:auto">Some APIs send 400 for validation errors too. I think 422 is clearer, because it tells the front end the format was fine and the data needs fixing.</p>
+    </div>
+  <div class="foot"><span class="num"><b>06</b> / 10</span><span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></div>
+</section>
+<section class="slide g-ink l-statement" id="s7">
+  
+  
+    <div class="main mid">
+      
+      <div class="disp fit" data-k="title" data-max="88" style="font-size:88px;">Ask for book 9999 when it doesn't exist, and you get a <em class="acc" style="font-style:normal">404</em></div>
+      <div class="card resp" data-move="response" style="margin-top:64px;align-self:flex-start;font-size:56px"><span class="seg"><span data-k="resp.parts.0.t" data-plain>HTTP/1.1</span></span> <span class="seg"><span data-k="resp.parts.1.t" data-plain>404</span><span class="lb" data-k="resp.parts.1.l" data-plain>status code</span></span> <span class="seg"><span data-k="resp.parts.2.t" data-plain>Not Found</span><span class="lb" data-k="resp.parts.2.l" data-plain>reason phrase</span></span></div>
+      <p class="body bal" data-k="body" style="margin-top:auto">410 Gone says the book was there and it's gone for good.</p>
+    </div>
+  <div class="foot"><span class="num"><b>07</b> / 10</span><span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span></div>
+</section>
+<section class="slide g-amber l-duo" id="s8">
+  
+  
+    <div class="main mid">
+      
+      <div class="disp fit" data-k="title" data-max="88" style="font-size:88px;">401 asks who you are. 403 says <em class="acc" style="font-style:normal">you can't do this</em></div>
+      <div class="duo" data-move="cards" style="margin-top:52px"><div class="card"><div class="k" data-k="cols.0.k" data-plain>401</div><div class="n" data-k="cols.0.n" data-plain>Unauthorized</div><div class="v" data-k="cols.0.v">No hotel keycard at all, or the card doesn't work</div></div><div class="card dk"><div class="k" data-k="cols.1.k" data-plain>403</div><div class="n" data-k="cols.1.n" data-plain>Forbidden</div><div class="v" data-k="cols.1.v">Your card works fine, but it's for another room</div></div></div>
+      <p class="body bal" data-k="body" style="margin-top:auto">On a 401, send the user to log in. On a 403, logging in again with the same account won't help.</p>
+    </div>
+  <div class="foot"><span class="num"><b>08</b> / 10</span><span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span></div>
+</section>
+<section class="slide g-tomato l-calls" id="s9">
+  
+  
+    <div class="main mid">
+      
+      <div class="disp fit" data-k="title" data-max="84" style="font-size:84px;">Your app sends 500. The proxy sends 502 and 504</div>
+      <div class="calls" data-move="calls" style="margin-top:48px"><div class="card c"><div class="code" data-k="calls.0.code" data-plain>500</div><div class="req" data-k="calls.0.req" data-plain>Internal Server Error</div><div class="nm" data-k="calls.0.nm">Usually an uncaught exception</div></div><div class="card c"><div class="code" data-k="calls.1.code" data-plain>502</div><div class="req" data-k="calls.1.req" data-plain>Bad Gateway</div><div class="nm" data-k="calls.1.nm">The proxy got an invalid answer from your app</div></div><div class="card c"><div class="code" data-k="calls.2.code" data-plain>504</div><div class="req" data-k="calls.2.req" data-plain>Gateway Timeout</div><div class="nm" data-k="calls.2.nm">Your app took too long, like a slow query</div></div></div>
+      
+    </div>
+  <div class="foot"><span class="num"><b>09</b> / 10</span><span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span></div>
+</section>
+<section class="slide g-ink l-end" id="s10">
+  
+  
+    <div class="main">
+      <div class="disp fit" data-k="title" data-max="96" style="font-size:96px;">Never send<br><em class="acc" style="font-style:normal">200 OK</em> when something failed</div>
+      <p class="body bal" data-k="body" style="margin-top:34px">Your front end only sees the 200, and your monitoring counts it as a success. Send the real code and put the detail in the body.</p>
+      <div class="push" data-move="push" style="width:520px">
+        <div class="mono lab" data-k="where" data-plain style="color:var(--mid)">Full video on YouTube</div>
+        <div style="margin-top:22px"><span class="handle" data-k="handle" data-plain>@WithGbemi</span></div>
+      </div>
+    </div>
+    <div class="pol" data-move="polaroid" style="left:690px;top:660px;width:320px"><img data-img="polaroid.img" src="../shared/assets/headshot.png" style="height:440px;object-position:50% 25%"><div class="cap" data-k="polaroid.caption" data-plain>Gbemisola</div></div>
+  <div class="foot"><span class="num"><b>10</b> / 10</span><span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></div>
+</section>
+<script>
+function fitAll(){ document.querySelectorAll('.fit').forEach(el=>{ let s=+el.dataset.max; el.style.fontSize=s+'px';
+  const box=el.parentElement.getBoundingClientRect().width; const lim=Math.min(el.clientWidth||box, box);
+  while((el.scrollWidth>lim+1) && s>24){ s-=2; el.style.fontSize=s+'px'; } }); }
+(function(){ var q=new URLSearchParams(location.search), v=q.get('view'); if(!v) return; document.documentElement.classList.add('v-'+v);
+  if(v==='slide'){ var n=+q.get('n')||1; document.querySelectorAll('.slide').forEach(function(s,i){ if(i+1!==n) s.style.display='none'; }); } })();
+window.__checks = function checks(MONO_MIN) {
+  const res = [];
+  document.querySelectorAll('.slide').forEach((sl, i) => {
+    if (getComputedStyle(sl).display === 'none') return;
+    const R = sl.getBoundingClientRect(); const foot = sl.querySelector('.foot').getBoundingClientRect();
+    const tag = el => `<${el.tagName.toLowerCase()} ${el.className}> "${(el.textContent || '').trim().slice(0, 30)}"`;
+    sl.querySelectorAll('.main *').forEach(el => {
+      if (el.closest('.pol') || el.closest('.cal') || !el.childNodes.length) return;
+      const r = el.getBoundingClientRect(); if (!r.width) return;
+      if (r.bottom > foot.top - 24) res.push(`slide ${i + 1}: ${tag(el)} runs into the footer`);
+      if (r.right > R.right - 50 || r.left < R.left + 50) res.push(`slide ${i + 1}: ${tag(el)} outside the margins`);
+    });
+    sl.querySelectorAll('.cal').forEach(el => { if (el.getBoundingClientRect().bottom > foot.top - 16) res.push(`slide ${i + 1}: calendar runs into the footer`); });
+    sl.querySelectorAll('*').forEach(el => {
+      const cs = getComputedStyle(el);
+      if (!/Mono/.test(cs.fontFamily) || el.closest('.meter')) return;
+      const own = [...el.childNodes].some(c => c.nodeType === 3 && c.textContent.trim());
+      if (own && parseFloat(cs.fontSize) < MONO_MIN - 0.5) res.push(`slide ${i + 1}: mono ${parseFloat(cs.fontSize)}px ${tag(el)}`);
+    });
+    sl.querySelectorAll('.pol, .shot').forEach(pe => {
+      const a = pe.getBoundingClientRect();
+      sl.querySelectorAll('.main .disp, .main p, .main .lab, .main .row, .main .handle').forEach(el => {
+        if (el.closest('.pol') || el.closest('.shot')) return;
+        const rg = document.createRange(); rg.selectNodeContents(el); const g = 24;
+        if ([...rg.getClientRects()].some(r => a.left < r.right + g && a.right > r.left - g && a.top < r.bottom + g && a.bottom > r.top - g))
+          res.push(`slide ${i + 1}: ${pe.className} within 24 px of ${tag(el)}`);
+      });
+    });
+    sl.querySelectorAll('p, .body, .bal, .head, .v').forEach(el => {
+      const words = []; const tw = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+      while (tw.nextNode()) { const t = tw.currentNode; const re = /\S+/g; let m;
+        while ((m = re.exec(t.textContent))) { const rg = document.createRange(); rg.setStart(t, m.index); rg.setEnd(t, m.index + m[0].length);
+          const rr = rg.getClientRects()[0]; if (rr) words.push({ w: m[0], top: Math.round(rr.top) }); } }
+      if (words.length < 3) return;
+      const lines = []; words.forEach(w => { const l = lines.find(l => Math.abs(l.top - w.top) < 8); if (l) l.n++; else lines.push({ top: w.top, n: 1 }); });
+      lines.sort((a, b) => a.top - b.top);
+      if (lines.length > 1 && lines[lines.length - 1].n === 1) res.push(`slide ${i + 1}: one-word last line "${words[words.length - 1].w}" in ${tag(el)}`);
+    });
+  });
+  return res.slice(0, 60);
+};
+document.fonts.ready.then(()=>{ fitAll(); document.body.dataset.ready=1; });
+</script></body></html>

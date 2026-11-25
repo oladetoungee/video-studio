@@ -1,0 +1,1552 @@
+{
+ "TOTAL": 779.84,
+ "INTRO": 0.4,
+ "OUTRO": 2,
+ "FPS": 30,
+ "CUES": [
+  {
+   "name": "marker",
+   "t": 3.262,
+   "db": -7
+  },
+  {
+   "name": "paper",
+   "t": 10.143,
+   "db": -5
+  },
+  {
+   "name": "marker",
+   "t": 13.763,
+   "db": -5
+  },
+  {
+   "name": "swipe",
+   "t": 15.548,
+   "db": -8
+  },
+  {
+   "name": "shutter",
+   "t": 18.293,
+   "db": -6
+  },
+  {
+   "name": "hit",
+   "t": 23.493,
+   "db": -4
+  },
+  {
+   "name": "tape",
+   "t": 31.163,
+   "db": -8
+  },
+  {
+   "name": "pop",
+   "t": 36.642,
+   "db": -6
+  },
+  {
+   "name": "pop",
+   "t": 38.222,
+   "db": -6
+  },
+  {
+   "name": "tick",
+   "t": 38.947,
+   "db": -6
+  },
+  {
+   "name": "dab",
+   "t": 42.765,
+   "db": -3
+  },
+  {
+   "name": "paper",
+   "t": 43.89,
+   "db": -7
+  },
+  {
+   "name": "tick",
+   "t": 52.71,
+   "db": -5
+  },
+  {
+   "name": "card",
+   "t": 56.898,
+   "db": -4
+  },
+  {
+   "name": "card",
+   "t": 65.612,
+   "db": -6
+  },
+  {
+   "name": "hit",
+   "t": 78.902,
+   "db": -5
+  },
+  {
+   "name": "card",
+   "t": 84.224,
+   "db": -7
+  },
+  {
+   "name": "slide",
+   "t": 90.934,
+   "db": -4
+  },
+  {
+   "name": "tap",
+   "t": 97.272,
+   "db": -6
+  },
+  {
+   "name": "paper",
+   "t": 99.7,
+   "db": -6
+  },
+  {
+   "name": "pop",
+   "t": 111.185,
+   "db": -7
+  },
+  {
+   "name": "shutter",
+   "t": 113.625,
+   "db": -7
+  },
+  {
+   "name": "paper",
+   "t": 114.985,
+   "db": -7
+  },
+  {
+   "name": "paper",
+   "t": 116.515,
+   "db": -6
+  },
+  {
+   "name": "pop",
+   "t": 122.357,
+   "db": -8
+  },
+  {
+   "name": "notify",
+   "t": 127.995,
+   "db": -6
+  },
+  {
+   "name": "tap",
+   "t": 134.735,
+   "db": -6
+  },
+  {
+   "name": "shutter",
+   "t": 141.185,
+   "db": -6
+  },
+  {
+   "name": "notify",
+   "t": 163.414,
+   "db": -7
+  },
+  {
+   "name": "card",
+   "t": 172.29,
+   "db": -7
+  },
+  {
+   "name": "pop",
+   "t": 183.427,
+   "db": -7
+  },
+  {
+   "name": "shutter",
+   "t": 186.672,
+   "db": -7
+  },
+  {
+   "name": "slide",
+   "t": 194.57,
+   "db": -4
+  },
+  {
+   "name": "clock",
+   "t": 200.702,
+   "db": -6
+  },
+  {
+   "name": "paper",
+   "t": 207.459,
+   "db": -7
+  },
+  {
+   "name": "swipe",
+   "t": 212.859,
+   "db": -8
+  },
+  {
+   "name": "card",
+   "t": 218.179,
+   "db": -6
+  },
+  {
+   "name": "paper",
+   "t": 220.359,
+   "db": -6
+  },
+  {
+   "name": "tap",
+   "t": 223.05,
+   "db": -6
+  },
+  {
+   "name": "clock",
+   "t": 224.988,
+   "db": -8
+  },
+  {
+   "name": "slide",
+   "t": 235.084,
+   "db": -4
+  },
+  {
+   "name": "dab",
+   "t": 235.864,
+   "db": -2
+  },
+  {
+   "name": "shutter",
+   "t": 242.374,
+   "db": -7
+  },
+  {
+   "name": "tap",
+   "t": 245.338,
+   "db": -6
+  },
+  {
+   "name": "pop",
+   "t": 252.078,
+   "db": -8
+  },
+  {
+   "name": "paper",
+   "t": 259.808,
+   "db": -6
+  },
+  {
+   "name": "card",
+   "t": 267.338,
+   "db": -6
+  },
+  {
+   "name": "paper",
+   "t": 271.523,
+   "db": -7
+  },
+  {
+   "name": "pop",
+   "t": 282.315,
+   "db": -6
+  },
+  {
+   "name": "hit",
+   "t": 287.405,
+   "db": -5
+  },
+  {
+   "name": "slide",
+   "t": 293.05,
+   "db": -4
+  },
+  {
+   "name": "pop",
+   "t": 300.82,
+   "db": -6
+  },
+  {
+   "name": "paper",
+   "t": 313.107,
+   "db": -6
+  },
+  {
+   "name": "ding",
+   "t": 316.254,
+   "db": -9
+  },
+  {
+   "name": "card",
+   "t": 322.163,
+   "db": -6
+  },
+  {
+   "name": "shutter",
+   "t": 328.135,
+   "db": -7
+  },
+  {
+   "name": "swipe",
+   "t": 330.995,
+   "db": -8
+  },
+  {
+   "name": "tap",
+   "t": 348.494,
+   "db": -6
+  },
+  {
+   "name": "slide",
+   "t": 352.332,
+   "db": -4
+  },
+  {
+   "name": "dab",
+   "t": 357.397,
+   "db": -2
+  },
+  {
+   "name": "paper",
+   "t": 358.177,
+   "db": -6
+  },
+  {
+   "name": "tick",
+   "t": 366.52,
+   "db": -7
+  },
+  {
+   "name": "pop",
+   "t": 374.139,
+   "db": -8
+  },
+  {
+   "name": "click",
+   "t": 378.802,
+   "db": -6
+  },
+  {
+   "name": "tap",
+   "t": 387.76,
+   "db": -7
+  },
+  {
+   "name": "shutter",
+   "t": 393.3,
+   "db": -7
+  },
+  {
+   "name": "card",
+   "t": 394.16,
+   "db": -6
+  },
+  {
+   "name": "pop",
+   "t": 405.482,
+   "db": -7
+  },
+  {
+   "name": "shutter",
+   "t": 406.342,
+   "db": -7
+  },
+  {
+   "name": "paper",
+   "t": 408.542,
+   "db": -7
+  },
+  {
+   "name": "paper",
+   "t": 415.462,
+   "db": -6
+  },
+  {
+   "name": "tap",
+   "t": 432.505,
+   "db": -7
+  },
+  {
+   "name": "shutter",
+   "t": 433.585,
+   "db": -7
+  },
+  {
+   "name": "card",
+   "t": 436.657,
+   "db": -6
+  },
+  {
+   "name": "pop",
+   "t": 443.477,
+   "db": -6
+  },
+  {
+   "name": "ding",
+   "t": 450.562,
+   "db": -8
+  },
+  {
+   "name": "ding",
+   "t": 458.973,
+   "db": -7
+  },
+  {
+   "name": "error",
+   "t": 466.304,
+   "db": -9
+  },
+  {
+   "name": "pop",
+   "t": 473.949,
+   "db": -6
+  },
+  {
+   "name": "ding",
+   "t": 479.367,
+   "db": -8
+  },
+  {
+   "name": "cash",
+   "t": 491.714,
+   "db": -6
+  },
+  {
+   "name": "paper",
+   "t": 497.239,
+   "db": -7
+  },
+  {
+   "name": "cash",
+   "t": 501.764,
+   "db": -7
+  },
+  {
+   "name": "card",
+   "t": 507.874,
+   "db": -6
+  },
+  {
+   "name": "cash",
+   "t": 510.57,
+   "db": -6
+  },
+  {
+   "name": "swipe",
+   "t": 514.84,
+   "db": -8
+  },
+  {
+   "name": "pop",
+   "t": 518.12,
+   "db": -7
+  },
+  {
+   "name": "shutter",
+   "t": 522.9,
+   "db": -7
+  },
+  {
+   "name": "paper",
+   "t": 526.08,
+   "db": -7
+  },
+  {
+   "name": "tap",
+   "t": 527.7,
+   "db": -7
+  },
+  {
+   "name": "shutter",
+   "t": 530.345,
+   "db": -7
+  },
+  {
+   "name": "card",
+   "t": 532.122,
+   "db": -6
+  },
+  {
+   "name": "dab",
+   "t": 546.619,
+   "db": -2
+  },
+  {
+   "name": "pop",
+   "t": 560.33,
+   "db": -7
+  },
+  {
+   "name": "shutter",
+   "t": 563.03,
+   "db": -7
+  },
+  {
+   "name": "paper",
+   "t": 565.022,
+   "db": -7
+  },
+  {
+   "name": "page",
+   "t": 566.78,
+   "db": -6
+  },
+  {
+   "name": "tap",
+   "t": 577.184,
+   "db": -6
+  },
+  {
+   "name": "slide",
+   "t": 584.837,
+   "db": -4
+  },
+  {
+   "name": "tap",
+   "t": 590.855,
+   "db": -6
+  },
+  {
+   "name": "tape",
+   "t": 597.739,
+   "db": -8
+  },
+  {
+   "name": "tick",
+   "t": 615.82,
+   "db": -6
+  },
+  {
+   "name": "slide",
+   "t": 620.935,
+   "db": -4
+  },
+  {
+   "name": "dab",
+   "t": 621.635,
+   "db": -2
+  },
+  {
+   "name": "shutter",
+   "t": 628.592,
+   "db": -6
+  },
+  {
+   "name": "page",
+   "t": 642.434,
+   "db": -6
+  },
+  {
+   "name": "hit",
+   "t": 649.944,
+   "db": -5
+  },
+  {
+   "name": "card",
+   "t": 664.939,
+   "db": -6
+  },
+  {
+   "name": "marker",
+   "t": 678.857,
+   "db": -6
+  },
+  {
+   "name": "paper",
+   "t": 683.882,
+   "db": -6
+  },
+  {
+   "name": "page",
+   "t": 690.067,
+   "db": -7
+  },
+  {
+   "name": "tick",
+   "t": 695.039,
+   "db": -6
+  },
+  {
+   "name": "pop",
+   "t": 706.682,
+   "db": -7
+  },
+  {
+   "name": "tick",
+   "t": 718.162,
+   "db": -6
+  },
+  {
+   "name": "slide",
+   "t": 721.74,
+   "db": -4
+  },
+  {
+   "name": "dab",
+   "t": 723.5,
+   "db": -2
+  },
+  {
+   "name": "pop",
+   "t": 730.724,
+   "db": -6
+  },
+  {
+   "name": "pop",
+   "t": 739.881,
+   "db": -8
+  },
+  {
+   "name": "hit",
+   "t": 752.177,
+   "db": -3
+  },
+  {
+   "name": "riser",
+   "t": 752.177,
+   "db": -8,
+   "keep": true
+  },
+  {
+   "name": "notify",
+   "t": 755.357,
+   "db": -7
+  }
+ ],
+ "SCENES": [
+  {
+   "n": 1,
+   "id": "open",
+   "start": 0,
+   "end": 3.732,
+   "ground": "bgButter",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 2,
+   "id": "designed",
+   "start": 3.732,
+   "end": 10.143,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 3,
+   "id": "npr",
+   "start": 10.143,
+   "end": 15.448,
+   "ground": "bgButter",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 4,
+   "id": "never-stops",
+   "start": 15.448,
+   "end": 18.293,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 5,
+   "id": "infinitely",
+   "start": 18.293,
+   "end": 23.493,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 6,
+   "id": "no-cues",
+   "start": 23.493,
+   "end": 31.163,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 7,
+   "id": "pause",
+   "start": 31.163,
+   "end": 35.022,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 8,
+   "id": "cues",
+   "start": 35.022,
+   "end": 43.89,
+   "ground": "bgButter",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 9,
+   "id": "chronic",
+   "start": 43.89,
+   "end": 48.05,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 10,
+   "id": "screen-time",
+   "start": 48.05,
+   "end": 56.848,
+   "ground": "bgButter",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 11,
+   "id": "card-intro",
+   "start": 56.848,
+   "end": 65.612,
+   "ground": "bgButter",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 12,
+   "id": "replace",
+   "start": 65.612,
+   "end": 71.65,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 13,
+   "id": "tired",
+   "start": 71.65,
+   "end": 78.902,
+   "ground": "bgButter",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 14,
+   "id": "easy",
+   "start": 78.902,
+   "end": 84.224,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 15,
+   "id": "demanding",
+   "start": 84.224,
+   "end": 90.914,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 16,
+   "id": "item1",
+   "start": 90.914,
+   "end": 97.272,
+   "ground": "bgButter",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 17,
+   "id": "i-like",
+   "start": 97.272,
+   "end": 99.65,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 18,
+   "id": "without-book",
+   "start": 99.65,
+   "end": 106.605,
+   "ground": "bgButter",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 19,
+   "id": "time-gap",
+   "start": 106.605,
+   "end": 116.465,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 20,
+   "id": "reach-book",
+   "start": 116.465,
+   "end": 122.357,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 21,
+   "id": "break",
+   "start": 122.357,
+   "end": 127.995,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 22,
+   "id": "pick-phone",
+   "start": 127.995,
+   "end": 134.735,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 23,
+   "id": "read-eat",
+   "start": 134.735,
+   "end": 141.185,
+   "ground": "bgButter",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 24,
+   "id": "fiction",
+   "start": 141.185,
+   "end": 163.414,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 25,
+   "id": "dont-enjoy",
+   "start": 163.414,
+   "end": 168.239,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 26,
+   "id": "formats",
+   "start": 168.239,
+   "end": 194.55,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 27,
+   "id": "item2",
+   "start": 194.55,
+   "end": 200.702,
+   "ground": "bgButter",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 28,
+   "id": "bored",
+   "start": 200.702,
+   "end": 207.459,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 29,
+   "id": "sit",
+   "start": 207.459,
+   "end": 212.759,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 30,
+   "id": "the-second",
+   "start": 212.759,
+   "end": 218.179,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 31,
+   "id": "places",
+   "start": 218.179,
+   "end": 220.359,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 32,
+   "id": "kettle",
+   "start": 220.359,
+   "end": 223.05,
+   "ground": "bgButter",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 33,
+   "id": "busstop",
+   "start": 223.05,
+   "end": 224.988,
+   "ground": "bgButter",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 34,
+   "id": "wander",
+   "start": 224.988,
+   "end": 235.064,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 35,
+   "id": "item3",
+   "start": 235.064,
+   "end": 242.374,
+   "ground": "bgButter",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 36,
+   "id": "not-talking",
+   "start": 242.374,
+   "end": 245.338,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 37,
+   "id": "small-talk",
+   "start": 245.338,
+   "end": 252.078,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 38,
+   "id": "friend",
+   "start": 252.078,
+   "end": 259.758,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 39,
+   "id": "real-life",
+   "start": 259.758,
+   "end": 267.338,
+   "ground": "bgButter",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 40,
+   "id": "please",
+   "start": 267.338,
+   "end": 271.523,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 41,
+   "id": "let-it-be",
+   "start": 271.523,
+   "end": 282.315,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 42,
+   "id": "coffee",
+   "start": 282.315,
+   "end": 287.405,
+   "ground": "bgButter",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 43,
+   "id": "awkward",
+   "start": 287.405,
+   "end": 293.03,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 44,
+   "id": "item4",
+   "start": 293.03,
+   "end": 300.82,
+   "ground": "bgButter",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 45,
+   "id": "parents",
+   "start": 300.82,
+   "end": 313.057,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 46,
+   "id": "more-easily",
+   "start": 313.057,
+   "end": 316.254,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 47,
+   "id": "school",
+   "start": 316.254,
+   "end": 321.418,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 48,
+   "id": "boom",
+   "start": 321.418,
+   "end": 322.163,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 49,
+   "id": "not-impossible",
+   "start": 322.163,
+   "end": 328.135,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 50,
+   "id": "intentional",
+   "start": 328.135,
+   "end": 330.895,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 51,
+   "id": "influencers",
+   "start": 330.895,
+   "end": 348.494,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 52,
+   "id": "hang-out",
+   "start": 348.494,
+   "end": 352.312,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 53,
+   "id": "item5",
+   "start": 352.312,
+   "end": 357.977,
+   "ground": "bgButter",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 54,
+   "id": "bike",
+   "start": 357.977,
+   "end": 366.52,
+   "ground": "bgButter",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 55,
+   "id": "own-bike",
+   "start": 366.52,
+   "end": 374.139,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 56,
+   "id": "destination",
+   "start": 374.139,
+   "end": 378.802,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 57,
+   "id": "cant-press",
+   "start": 378.802,
+   "end": 387.66,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 58,
+   "id": "busy",
+   "start": 387.66,
+   "end": 394.16,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 59,
+   "id": "crochet",
+   "start": 394.16,
+   "end": 405.382,
+   "ground": "bgButter",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 60,
+   "id": "hobbies",
+   "start": 405.382,
+   "end": 415.412,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 61,
+   "id": "banana",
+   "start": 415.412,
+   "end": 429.705,
+   "ground": "bgButter",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 62,
+   "id": "try-new",
+   "start": 429.705,
+   "end": 436.657,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 63,
+   "id": "thrift",
+   "start": 436.657,
+   "end": 443.477,
+   "ground": "bgButter",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 64,
+   "id": "hunter",
+   "start": 443.477,
+   "end": 450.562,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 65,
+   "id": "special",
+   "start": 450.562,
+   "end": 458.973,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 66,
+   "id": "diamond",
+   "start": 458.973,
+   "end": 466.304,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 67,
+   "id": "nothing",
+   "start": 466.304,
+   "end": 473.949,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 68,
+   "id": "reputation",
+   "start": 473.949,
+   "end": 479.367,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 69,
+   "id": "accomplish",
+   "start": 479.367,
+   "end": 489.194,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 70,
+   "id": "steal",
+   "start": 489.194,
+   "end": 497.239,
+   "ground": "bgButter",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 71,
+   "id": "something-else",
+   "start": 497.239,
+   "end": 501.764,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 72,
+   "id": "money",
+   "start": 501.764,
+   "end": 507.874,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 73,
+   "id": "really",
+   "start": 507.874,
+   "end": 510.57,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 74,
+   "id": "monetise",
+   "start": 510.57,
+   "end": 514.74,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 75,
+   "id": "settle",
+   "start": 514.74,
+   "end": 518.12,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 76,
+   "id": "curiosity",
+   "start": 518.12,
+   "end": 519.94,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 77,
+   "id": "try-things",
+   "start": 519.94,
+   "end": 532.122,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 78,
+   "id": "plants",
+   "start": 532.122,
+   "end": 546.739,
+   "ground": "bgButter",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 79,
+   "id": "item6",
+   "start": 546.739,
+   "end": 557.53,
+   "ground": "bgButter",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 80,
+   "id": "long-video",
+   "start": 557.53,
+   "end": 565.022,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 81,
+   "id": "more-long",
+   "start": 565.022,
+   "end": 566.78,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 82,
+   "id": "background",
+   "start": 566.78,
+   "end": 577.184,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 83,
+   "id": "engage",
+   "start": 577.184,
+   "end": 584.817,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 84,
+   "id": "item7",
+   "start": 584.817,
+   "end": 590.855,
+   "ground": "bgButter",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 85,
+   "id": "pushups",
+   "start": 590.855,
+   "end": 597.739,
+   "ground": "bgButter",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 86,
+   "id": "lazy",
+   "start": 597.739,
+   "end": 612.549,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 87,
+   "id": "ten-pushups",
+   "start": 612.549,
+   "end": 620.915,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 88,
+   "id": "item8",
+   "start": 620.915,
+   "end": 628.592,
+   "ground": "bgButter",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 89,
+   "id": "pray",
+   "start": 628.592,
+   "end": 642.434,
+   "ground": "bgButter",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 90,
+   "id": "journal",
+   "start": 642.434,
+   "end": 649.944,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 91,
+   "id": "profound",
+   "start": 649.944,
+   "end": 664.939,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 92,
+   "id": "junk",
+   "start": 664.939,
+   "end": 678.857,
+   "ground": "bgButter",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 93,
+   "id": "brain-dump",
+   "start": 678.857,
+   "end": 683.882,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 94,
+   "id": "polished",
+   "start": 683.882,
+   "end": 690.067,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 95,
+   "id": "library",
+   "start": 690.067,
+   "end": 695.039,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 96,
+   "id": "reduce",
+   "start": 695.039,
+   "end": 704.502,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 97,
+   "id": "apps",
+   "start": 704.502,
+   "end": 721.72,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 98,
+   "id": "item9",
+   "start": 721.72,
+   "end": 730.724,
+   "ground": "bgButter",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 99,
+   "id": "call",
+   "start": 730.724,
+   "end": 739.881,
+   "ground": "bgButter",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 100,
+   "id": "genuine",
+   "start": 739.881,
+   "end": 749.497,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 101,
+   "id": "never-beat",
+   "start": 749.497,
+   "end": 755.357,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 102,
+   "id": "care",
+   "start": 755.357,
+   "end": 771.515,
+   "ground": "bgInk",
+   "label": "",
+   "trans": "whip"
+  },
+  {
+   "n": 103,
+   "id": "bingo-end",
+   "start": 771.515,
+   "end": 777.74,
+   "ground": "bgButter",
+   "label": "",
+   "trans": "cut"
+  },
+  {
+   "n": 104,
+   "id": "end",
+   "start": 777.74,
+   "end": 779.84,
+   "ground": "bgButter",
+   "label": "",
+   "trans": "whip"
+  }
+ ]
+}

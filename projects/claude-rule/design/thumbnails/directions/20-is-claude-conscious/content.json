@@ -1,0 +1,26 @@
+{
+  "direction": "★ RECOMMENDED. The big evergreen search (\"is claude conscious\"): \"IS CLAUDE\" in an ink box and \"CONSCIOUS?\" in a lilac box, top left, clear of her head; her sly sideways look, mouth closed; a big handwritten \"my answer: no\" (her view in the video). Refs: sample 1, Fireship \"Claude is definitely not conscious\" (802K), Decoded Genius \"No, AI Isn't Conscious\" (2.8M). Scores: Round 3: cold image 8 · best pair (title 1) 8/8 (a top-3 pair) · taste 7.5.",
+  "concept": "consciousness family",
+  "thumbnail_text": "IS CLAUDE CONSCIOUS?",
+  "title": "Why I'm Kind to AI, Even Though It Can't Feel",
+  "titles": [
+    "Why I'm Kind to AI, Even Though It Can't Feel",
+    "AI Can't Feel. So Why Protect Claude From Cruelty?"
+  ],
+  "scores": "Round 3: cold image 8 · best pair (title 1) 8/8 (a top-3 pair) · taste 7.5.",
+  "recommended": true,
+  "text": {
+    "l1": "<span class=\"boxl\">IS CLAUDE</span>",
+    "l2": "<span class=\"boxl l\">CONSCIOUS?</span>",
+    "hand": "my answer: no"
+  },
+  "images": {
+    "scene": "../../assets/scene/s_116.0.jpg",
+    "cut": "../../assets/cut/c_116.0.png"
+  },
+  "vars": {
+    "--px": "-109px",
+    "--py": "-234px",
+    "--pw": "1946px"
+  }
+}

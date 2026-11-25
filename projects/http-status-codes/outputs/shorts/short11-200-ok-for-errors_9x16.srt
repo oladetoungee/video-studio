@@ -1,0 +1,35 @@
+1
+00:00:00,163 --> 00:00:01,843
+if your request fails and your API still
+
+2
+00:00:01,843 --> 00:00:03,813
+returns 200 OK, with something like error or
+
+3
+00:00:03,813 --> 00:00:05,623
+something went wrong inside the body, your
+
+4
+00:00:05,623 --> 00:00:07,063
+front end only sees 200
+
+5
+00:00:07,063 --> 00:00:08,733
+your front end sees 200 and is like, OK,
+
+6
+00:00:08,733 --> 00:00:09,623
+yeah, book saved
+
+7
+00:00:09,623 --> 00:00:12,023
+your monitoring also counts it as a success
+
+8
+00:00:12,023 --> 00:00:14,663
+so you need to send the actual status code
+
+9
+00:00:14,663 --> 00:00:16,367
+and then put the details in the body

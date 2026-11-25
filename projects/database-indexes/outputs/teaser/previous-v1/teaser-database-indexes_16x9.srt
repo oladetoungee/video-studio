@@ -1,0 +1,159 @@
+1
+00:00:03,183 --> 00:00:05,873
+as you get more users, your database grows
+
+2
+00:00:05,873 --> 00:00:07,637
+and your tables get bigger
+
+3
+00:00:07,637 --> 00:00:09,317
+now it might take a little bit longer for
+
+4
+00:00:09,317 --> 00:00:10,937
+your app to load and you're now having
+
+5
+00:00:10,937 --> 00:00:11,917
+performance issues
+
+6
+00:00:11,917 --> 00:00:14,030
+it starts at the first row and it checks
+
+7
+00:00:14,030 --> 00:00:16,860
+every single row, all one million of them,
+
+8
+00:00:16,950 --> 00:00:19,320
+and that is called a full table scan
+
+9
+00:00:19,320 --> 00:00:21,600
+when your table has maybe 10, 100 rows,
+
+10
+00:00:21,600 --> 00:00:23,800
+maybe it wouldn't be a problem, maybe you
+
+11
+00:00:23,800 --> 00:00:24,690
+wouldn't notice,
+
+12
+00:00:24,920 --> 00:00:27,513
+but at a million rows, then it's a problem
+
+13
+00:00:27,513 --> 00:00:29,403
+the easiest way to think about it is the
+
+14
+00:00:29,403 --> 00:00:31,257
+index at the back of a book
+
+15
+00:00:31,257 --> 00:00:32,597
+so with this strategy,
+
+16
+00:00:32,877 --> 00:00:35,367
+even with a million rows, you can get to the
+
+17
+00:00:35,367 --> 00:00:38,197
+row you're looking for in about 20 steps or
+
+18
+00:00:38,197 --> 00:00:40,970
+so without an index, you will do up to a
+
+19
+00:00:40,970 --> 00:00:43,063
+million checks in the worst case scenario
+
+20
+00:00:43,063 --> 00:00:45,398
+adding a database index will literally up
+
+21
+00:00:45,398 --> 00:00:47,543
+your query optimisation game, and it's kind
+
+22
+00:00:47,543 --> 00:00:48,500
+of a one-liner
+
+23
+00:00:48,500 --> 00:00:50,540
+just put the word EXPLAIN in front of your
+
+24
+00:00:50,540 --> 00:00:50,963
+query
+
+25
+00:00:50,963 --> 00:00:53,483
+so now that begs the question, if database
+
+26
+00:00:53,483 --> 00:00:56,293
+indexes makes queries so fast, why don't we
+
+27
+00:00:56,293 --> 00:00:59,230
+just index every column and be done with it?
+
+28
+00:00:59,230 --> 00:01:01,847
+we cannot, because every index has a cost
+
+29
+00:01:01,847 --> 00:01:04,257
+so the more database indexes you have, the
+
+30
+00:01:04,257 --> 00:01:05,673
+slower your writes get
+
+31
+00:01:05,673 --> 00:01:08,243
+another database index gotcha is
+
+32
+00:01:08,353 --> 00:01:09,403
+that in MySQL,
+
+33
+00:01:09,703 --> 00:01:11,613
+when you add a foreign key, the database
+
+34
+00:01:11,613 --> 00:01:14,433
+creates an index on that column for you
+
+35
+00:01:14,433 --> 00:01:16,453
+automatically, if there isn't one already
+
+36
+00:01:16,453 --> 00:01:18,493
+but in PostgreSQL, it doesn't
+
+37
+00:01:18,493 --> 00:01:20,975
+and it's one of the common reasons why joins
+
+38
+00:01:20,975 --> 00:01:22,583
+suddenly get slow
+
+39
+00:01:22,583 --> 00:01:24,883
+you can have a database index and the
+
+40
+00:01:24,883 --> 00:01:26,700
+database still won't use it

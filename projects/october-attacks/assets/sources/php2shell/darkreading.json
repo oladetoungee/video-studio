@@ -1,0 +1,116 @@
+{
+ "story": "php2shell",
+ "outlet": "Dark Reading",
+ "slug": "darkreading",
+ "url": "https://www.darkreading.com/application-security/php2shell-bugs-red-alert-security-industry",
+ "finalUrl": "https://www.darkreading.com/application-security/php2shell-bugs-red-alert-security-industry",
+ "status": "loaded",
+ "http": 200,
+ "title": "'PHP2Shell' Bugs Signal Red Alert for Security Industry",
+ "h1": "'PHP2Shell' Bugs Signal Red Alert for Security Industry",
+ "published": "",
+ "files": {
+  "fold": "php2shell/darkreading_fold.png",
+  "full": "php2shell/darkreading_full.jpg",
+  "scroll": "php2shell/darkreading_scroll.mp4"
+ },
+ "full": {
+  "width": 1440,
+  "height": 6000,
+  "pageHeight": 6983,
+  "zoom": 1,
+  "quotes": [
+   {
+    "quote": "Security teams are scrambling to remediate two critical PHP vulnerabilities following leaked details and reports of exploitation attempts",
+    "box": {
+     "x": 202,
+     "y": 402,
+     "w": 962,
+     "h": 48
+    },
+    "lines": [
+     {
+      "x": 202,
+      "y": 402,
+      "w": 962,
+      "h": 21
+     },
+     {
+      "x": 202,
+      "y": 429,
+      "w": 177,
+      "h": 21
+     }
+    ]
+   }
+  ]
+ },
+ "scroll": {
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "seconds": 8,
+  "keyframes": [
+   {
+    "t": 0,
+    "y": 202
+   },
+   {
+    "t": 1,
+    "y": 202
+   },
+   {
+    "t": 2.55,
+    "y": 1602
+   },
+   {
+    "t": 8,
+    "y": 1602
+   }
+  ],
+  "zoom": 1,
+  "easing": "easeInOutCubic between keyframes, holds where y is equal",
+  "capped": false,
+  "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)",
+  "quotes": [
+   {
+    "quote": "Security teams are scrambling to remediate two critical PHP vulnerabilities following leaked details and reports of exploitation attempts",
+    "inVideo": true,
+    "still": true,
+    "t": 0.53,
+    "visibleStill": [
+     0,
+     1.07
+    ],
+    "scrollY": 202,
+    "box": {
+     "x": 442,
+     "y": 200,
+     "w": 962,
+     "h": 48
+    },
+    "lines": [
+     {
+      "x": 442,
+      "y": 200,
+      "w": 962,
+      "h": 21
+     },
+     {
+      "x": 442,
+      "y": 227,
+      "w": 177,
+      "h": 21
+     }
+    ],
+    "docBox": {
+     "x": 442,
+     "y": 402,
+     "w": 962,
+     "h": 48
+    },
+    "layoutDriftPx": 0
+   }
+  ]
+ }
+}

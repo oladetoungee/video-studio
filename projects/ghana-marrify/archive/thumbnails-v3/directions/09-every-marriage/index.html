@@ -1,0 +1,20 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../lib/r3.css"><style>
+.t{--ground:#16110c;--fg:#F7F5F0;--accent:#FFD23F}
+.bg{position:absolute;inset:0} .bg img{width:100%;height:100%;object-fit:cover;object-position:50% 60%;filter:brightness(.8) saturate(.9)}
+.bg::after{content:'';position:absolute;inset:0;background:rgba(14,10,6,.32)}
+.hd{left:56px;top:40px;color:var(--fg)}
+.hd .a{display:block;font-size:100px} .hd .a .flag{width:84px;height:56px;margin-right:16px;vertical-align:6px}
+.hd .b{display:block;font-size:146px;color:var(--accent);margin-top:-2px}
+.sbar{left:56px;top:470px;width:640px;height:104px}
+.sbar .q{font-size:46px}
+.pol{left:900px;top:300px;width:320px;transform:rotate(4deg);padding-bottom:12px;z-index:3}
+.pol .crop{width:296px;height:300px;overflow:hidden;position:relative}
+.pol .crop img{position:absolute;width:900px;left:-328px;top:-50px}
+.illb{left:60px;top:590px;color:rgba(255,255,255,.65)}
+</style></head><body><div class="t">
+<div class="bg" data-move="records"><img data-img="files" alt=""></div>
+<div class="abs hd z3 shadow" data-move="headline"><span class="a serif it"><span class="flag il" data-flag="gh"></span><span data-k="line1"></span></span><span class="b anton" data-k="line2"></span></div>
+<div class="sbar z3" data-move="searchbar"><svg viewBox="0 0 24 24" width="52" height="52"><circle cx="10" cy="10" r="7" fill="none" stroke="#111114" stroke-width="2.8"/><path d="M15.5 15.5 L22 22" stroke="#111114" stroke-width="2.8" stroke-linecap="round"/></svg><span class="q" data-k="s_q"></span><span class="cur"></span></div>
+<div class="pol" data-move="her"><div class="crop"><img data-img="her" alt=""></div></div>
+<div class="abs ill illb z3">Illustration</div>
+</div><script src="../../lib/flags.js"></script><script src="../../lib/bind.js"></script></body></html>

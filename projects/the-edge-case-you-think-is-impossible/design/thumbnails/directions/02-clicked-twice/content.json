@@ -1,0 +1,27 @@
+{
+  "text": {
+    "h": "Clicked<br>twice?",
+    "a": "1 click = 1 order",
+    "b": "2 clicks = paid twice"
+  },
+  "images": {
+    "me": "../../assets/shoot/cut-1593.png"
+  },
+  "kind": "flat + her cut-out (the only words left / her right in the set)",
+  "board": "Thumbnails 82 (yt-29: two pills, one crossed, one ticked, him pointing)",
+  "fonts": [
+    "design-02 Big Shoulders Display 900 (Design 397)"
+  ],
+  "colours": "Design 397 / combo-07: ground #E99A3F, ink #000000",
+  "thumbnail_text": "CLICKED TWICE? + 1 click = 1 order (tick) / 2 clicks = paid twice (cross)",
+  "scores": "cold critic r4: 8 alone / 8.5 with title",
+  "titles": [
+    "Why Users Get Charged Twice (Edge Cases Explained)",
+    "Edge Cases: Why Code That Passes Tests Still Breaks"
+  ],
+  "title": "Why Users Get Charged Twice (Edge Cases Explained)",
+  "direction": "Copies Thumbnails 82: the picture is the comparison (one click, one order ticked; two clicks, two orders crossed), she points at it from the right. Big Shoulders black on orange, as Design 397.",
+  "nudge": {},
+  "vars": {},
+  "class": "no-lift"
+}

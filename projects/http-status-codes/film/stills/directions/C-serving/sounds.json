@@ -1,0 +1,2 @@
+{"music": "480", "musicAt": 30, "musicDb": -24, "sfxDb": -4,
+ "roles": {"print": "paper-quick-move", "tear": "paper-crumple-quick", "ding": "bell-service-ding", "buzz": "buzzer-fail", "tick": "ui-select-click", "marker": "marker-line", "type": "typewriter-single-hit", "shutter": "shutter-hard-click", "tape": "card-place"}}

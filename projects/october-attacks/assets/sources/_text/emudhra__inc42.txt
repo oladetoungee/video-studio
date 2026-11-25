@@ -1,0 +1,170 @@
+URL: https://inc42.com/buzz/emudhras-security-key-flaw-what-went-wrong-and-why-google-mozilla-stepped-in/
+STATUS: loaded (http -1)
+FINAL: https://inc42.com/buzz/emudhras-security-key-flaw-what-went-wrong-and-why-google-mozilla-stepped-in/
+TITLE: eMudhra’s Security Key Flaw: What Went Wrong And Why Google, Mozilla Stepped In
+H1: eMudhra’s Security Key Flaw: What Went Wrong And Why Google, Mozilla Stepped In
+OG: eMudhra’s Security Key Flaw: What Went Wrong And Why Google, Mozilla Stepped In | Inc42 Media
+PUBLISHED: 2026-10-21T19:17:06+05:30  MODIFIED: 2026-10-22T05:20:56+05:30
+DOC_H: 13334
+
+NEWS
+eMudhra’s Security Key Flaw: What Went Wrong And Why Google, Mozilla Stepped In
+21 Oct'26 | By Anjali Jain
+SUMMARY
+
+A researcher recovered eight eMudhra private keys from publicly available certificates after discovering that they had been generated using predictable numbers, prompting major technology companies to distrust the affected certificates
+
+Compromised certificate authority keys can potentially enable fraudulent website certificates, raising concerns about internet security and the reliability of digital trust infrastructure
+
+eMudhra has attributed the flaw to an error during a 2025 key-generation ceremony, with browser makers and software developers now working to block affected certificates and secure systems
+
+FOLLOW US
+FOLLOW US
+
+Eight private keys underpinning part of listed digital trust company eMudhra’s certificate infrastructure were so weak that researchers could recover them from publicly available certificates. The discovery prompted Google, Mozilla, Apple, and Microsoft to block the affected certificates, triggering a wider effort to protect browsers, applications, and enterprise systems.
+
+The incident also rattled investors. eMudhra shares hit their 20% lower circuit at ₹431.55 on the BSE today. 
+
+The immediate concern is whether software still trusting the compromised keys could accept fraudulent certificates. A related challenge is replacing legitimate certificates affected by browser makers’ decision to withdraw trust in a parent certificate.
+
+Here is what happened, how the flaw arose, and what it means for businesses.
+
+What Happened In The eMudhra Security Incident?
+
+Digital trust company eMudhra disclosed that eight of its digital certificate authorities had a serious security flaw after a researcher discovered that their private keys could be reconstructed from publicly available certificates.  
+
+The keys were not stolen from eMudhra’s systems but instead generated using extremely small numbers that were easy to guess. The eight values were 4, 56, 66, 115, 155, 156, 230 and 237.
+
+The discovery prompted major technology companies, including Google, Mozilla, Apple and Microsoft, to block or distrust the affected certificates. The incident has also raised concerns about the security of systems that rely on digital certificates to establish trust online.
+
+What Is eMudhra And Its Significance In The Digital Ecosystem?
+
+BSE-listed eMudhra provides digital identity, authentication and security solutions to businesses, financial institutions and governments. Its services include digital signature certificates (DSCs), electronic signatures and tools that help organisations secure digital transactions and manage identities.
+
+In India, its DSCs are used for activities such as filing documents with government portals, including GST, the Ministry of Corporate Affairs, and income tax systems. Its eSign services also support paperless digital workflows.
+
+The company operates internationally as well, providing digital certificates that help websites establish secure connections with users by acquiring digital certificates. 
+
+eMudhra said the incident affected its global website-security business, not its Indian DSC and eSign operations. Its Indian services run on separate infrastructure and continue to operate normally, according to the company.
+
+How Were Keys Weakened? 
+
+The problem began during a key-generation ceremony on April 30, 2025. According to eMudhra, a flaw in the process created a second set of weak keys alongside the intended strong ones. Staff mistakenly used the weak keys when preparing the certificates, and the company is still investigating the exact error.
+
+On October 17, 2026, a researcher identified as Wayne discovered that he could reconstruct the private keys from publicly available certificates. He demonstrated control over each key by signing a message with it and reported the findings to browser security teams.
+
+Mozilla independently recovered the same keys on the day of the report, confirming the vulnerability. The eight affected keys included six used for website security and two intended for code signing.
+
+What Has eMudhra Said About The Incident & Its Impact?
+
+eMudhra said its core infrastructure was not compromised, no data was breached, and its physical and digital security controls remained intact.
+
+RECOMMENDED FOR YOU
+NEWS
+New-Age Tech Stocks Tumble This Week, Swiggy Leads Sell-Off ...
+Akshit P.
+25th October, 2026
+ECOMMERCE
+Myntra Slips Into The Red In FY26, Reports ₹582 Cr Loss
+Anne F.
+24th October, 2026
+FINTECH
+Flipkart-Backed super.money’s FY26 Revenue Triples To ₹292 C...
+Gaurav B.
+24th October, 2026
+
+The company said the incident was confined to eight intermediate certificate authorities and did not affect its root CA private keys or other intermediate authorities. It also said none of the eight affected authorities had issued certificates to end users or websites, an assessment it said was supported by public records of issued certificates.
+
+The affected global TLS business contributes around 1% of eMudhra’s revenue. However, the company acknowledged that the reputational impact could not yet be quantified.
+
+eMudhra said it was working with customers who might be affected to provide replacement certificates and prevent disruptions to critical services. Its investigation into the root cause and security controls is ongoing.
+
+Meanwhile, the IT ministry (MeitY) has said that the impact of the incident on Indian websites and apps was very limited and for a very short interval. Additionally, the department has also formed a special team to investigate the matter and is engaging with relevant stakeholders.
+
+How Could Compromised Keys Affect The Internet’s Security Infrastructure?
+
+Digital certificates help browsers establish whether a website is what it claims to be. They are a key part of the security system that allows users to connect to websites over HTTPS.
+
+If someone obtains a certificate authority’s private key, they may be able to create fraudulent certificates that make an unauthorised website appear legitimate. In certain circumstances, this could enable an attacker to impersonate a website and intercept or modify communications.
+
+There is no public evidence establishing that the compromised keys were used in a successful malicious attack
+
+Google said no certificates issued through the six affected website-security authorities appeared in public Certificate Transparency logs before the company blocked them. Chrome requires such records for publicly trusted certificates, helping prevent fraudulent certificates from being accepted by the browser.
+
+Other software, including applications and devices that do not enforce the same checks or use updated certificate lists, could face different risks. 
+
+India’s Computer Emergency Response Team (CERT-In) warned that the compromised code-signing keys could be used to make malicious software appear to have been signed by a trusted publisher, extending the potential risk to software whose authenticity is verified through digital signatures. It asked organisations to consider applications, servers and devices that rely on certificate trust stores.
+
+How Have Technology Companies Responded?
+
+Technology companies have moved to block the affected certificates and update their systems.
+
+Mozilla: Blocked the certificates in Firefox within hours of receiving the report. It also released browser updates and is updating its wider certificate store to protect other applications.
+Google: Blocked the affected keys in Chrome and took additional steps to remove the eMudhra’s root certificate authority from its Chrome Root Store. The removal is scheduled to reach supported Chrome devices on October 27, 2026.
+ 
+Apple And Microsoft: Took steps to distrust the affected certificates through their respective security and certificate-trust programmes.
+Cloudflare: Updated critical services, shared certificate stores and products including Cloudflare One and Cloudflare Tunnel. The company said its investigation had not identified active exploitation of the vulnerability on its own services.
+
+These measures are intended to prevent systems from trusting certificates linked to the compromised keys. However, organisations using separate or outdated certificate stores may still need to update their software and infrastructure.
+
+What Should Businesses & Developers Do To Mitigate The Risk?
+
+Businesses should check whether their websites and applications rely on the affected certificates and follow the relevant software vendors’ advisories. Google has asked website operators using certificates linked to emSign ECC Root CA – G3, which is eMudhra’s root certificate authority, to obtain and install replacement Transport Layer Security certificates from another trusted certificate authority before Chrome removes the root from its trust store on October 27. 
+
+Developers and IT teams should also update affected certificate stores, software dependencies and applications. Cloudflare has warned that applications using their own certificate stores may require separate remediation, including rebuilding or redeploying affected systems. 
+
+Developers should not disable certificate verification to work around resulting errors, as this would remove the security protection the updates are intended to restore.
+
+What Happens Next? 
+
+The incident has prompted scrutiny of eMudhra’s wider certificate infrastructure. Google said it is reviewing whether the company’s remaining certificate authorities should continue to be trusted by Chrome. 
+
+eMudhra is still investigating how its key-generation process produced weak keys and why they were used in the certificates. Another unresolved question is whether the keys were accessed or misused by anyone else before the affected certificates were revoked. 
+
+The issue has also snowballed into a wider debate about the viability of digital trust infrastructures. The Internet Freedom Foundation today said it is preparing representations for the IT ministry, the Controller of Certifying Authorities (CCA) and CERT-In regarding the vulnerability.
+
+Latest Funding Rounds
+
+Vectorial
+
+Full Profile 
+
+Sector
+N/A
+
+Total Funding
+$3.0 Mn+
+
+Stage
+Undisclosed
+
+Firstwork
+
+Full Profile 
+
+Sector
+N/A
+
+Total Funding
+$15.0 Mn+
+
+Stage
+Series A
+
+Different
+
+Full Profile 
+
+Sector
+N/A
+
+Total Funding
+$48.0 Mn+
+
+Stage
+Seed
+
+EXPLORE MORE
+TBD
+Note: We at Inc42 take our ethics very seriously. More information about it can be found here.
+

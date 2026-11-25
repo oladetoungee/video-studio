@@ -1,0 +1,3 @@
+All fonts here are SIL Open Font License 1.1 (Google Fonts, github.com/google/fonts/tree/main/ofl):
+InstrumentSans, Geist, GeistMono, JetBrainsMono, InterTight (downloaded 2026-10-02 for the ghana-marrify direction tests);
+Archivo, ArchivoBlack, DMMono, InstrumentSerif (copies from library/fonts).

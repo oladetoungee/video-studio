@@ -1,0 +1,20 @@
+{
+  "direction": "Research anyone can do this week: one line, 5 USERS. $0., across the top; a laptop on a video call with five people (initials, no stock faces; Illustration); her chin-on-hand knowing look, big, on the left. Follows the laptop thumbnails on her YouTube board.",
+  "concept": "T10",
+  "thumbnail_text": "5 USERS. $0.",
+  "title": "Can't Afford UX Research? Start With 5 Conversations",
+  "titles": [
+    "Can't Afford UX Research? Start With 5 Conversations",
+    "No Budget for UX Research? Talk to 5 Users First"
+  ],
+  "text": {
+    "hd": "5 USERS. <span class=\"acc\">$0.</span>"
+  },
+  "images": {
+    "scene": "../../assets/scene/g/s_757.jpg",
+    "front": "../../assets/scene/g/mask/s_757.png"
+  },
+  "vars": {},
+  "scores": "a 3/6 · 2/5 · 2/6 | b 8/8 · 7/8 · 8/8 | c 3 · 5 · 6",
+  "recommended": false
+}

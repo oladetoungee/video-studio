@@ -1,0 +1,83 @@
+1
+00:00:00,042 --> 00:00:01,523
+now, what is UX?
+
+2
+00:00:01,652 --> 00:00:04,153
+user experience or UX covers
+
+3
+00:00:04,272 --> 00:00:06,712
+everything about how a person experiences a
+
+4
+00:00:06,712 --> 00:00:07,982
+product or a service
+
+5
+00:00:07,982 --> 00:00:10,206
+the term was popularised by Don Norman when
+
+6
+00:00:10,206 --> 00:00:11,416
+he was at Apple
+
+7
+00:00:11,526 --> 00:00:15,286
+and the way he and Jakob Nielsen describe it
+
+8
+00:00:15,426 --> 00:00:17,806
+is that user experience covers every part of
+
+9
+00:00:17,806 --> 00:00:20,826
+a person's interaction with a company, its
+
+10
+00:00:20,826 --> 00:00:22,186
+services and its products
+
+11
+00:00:22,186 --> 00:00:24,145
+and all of this connects back to an idea
+
+12
+00:00:24,145 --> 00:00:25,506
+called human-centred design
+
+13
+00:00:25,506 --> 00:00:26,876
+the idea is simple
+
+14
+00:00:26,876 --> 00:00:28,593
+I love this phrase that I found on, like, a
+
+15
+00:00:28,593 --> 00:00:30,206
+Medium article it says that good design
+
+16
+00:00:30,206 --> 00:00:32,785
+doesn't start with screens, it starts with
+
+17
+00:00:32,785 --> 00:00:33,375
+people
+
+18
+00:00:33,485 --> 00:00:35,466
+so you start from the people who use a
+
+19
+00:00:35,466 --> 00:00:38,386
+product, their needs, their abilities, their
+
+20
+00:00:38,386 --> 00:00:40,366
+limitations, their real lives, and you
+
+21
+00:00:40,366 --> 00:00:41,333
+design around them

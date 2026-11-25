@@ -1,0 +1,34 @@
+{
+ "title": "Why infinite scroll's inventor wants to kill his creation - TPR: The Public's Radio",
+ "h1": "Why infinite scroll’s inventor wants to kill his creation",
+ "h1y": 467.171875,
+ "found": {
+  "infinite scroll": [
+   [
+    177.734375,
+    467.171875,
+    305.109375,
+    61
+   ]
+  ]
+ },
+ "H": 7852,
+ "focus": {
+  "infinite scroll": {
+   "file": "npr__infinite-scroll.png",
+   "top": 0,
+   "rects": [
+    [
+     177.734375,
+     467.171875,
+     305.109375,
+     61
+    ]
+   ]
+  }
+ },
+ "clipTop": 347.171875,
+ "scale": 1.5,
+ "url": "https://thepublicsradio.org/npr/why-infinite-scrolls-inventor-wants-to-kill-his-creation/",
+ "captured": "2026-11-02T19:33:06.270Z"
+}

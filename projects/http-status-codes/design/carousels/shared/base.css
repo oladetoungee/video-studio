@@ -1,0 +1,142 @@
+/* http-status-codes carousels (2026-11-03): the film's look B "THE FIRST DIGIT". One flat ground per class:
+   1xx stone #D9D4C7, 2xx mint #8FE3B0, 3xx sky #8EC5FF, 4xx amber #FFA51F, 5xx tomato #FF5A3C; ink #121212; white cards.
+   Funnel Display 800 (numbers only), Funnel Sans 800 (headlines, the handle) and 500 (her words), Fragment Mono (labels >= 32 px).
+   The signature: a giant odometer digit caught mid-roll. Real screenshots are never altered and always credited. */
+/* 2026-11-07: type set 02 Bold condensed (TYPE-SYSTEM.md): 'FD' = Anton (headlines, numbers, UPPERCASE), 'FS' = Inter Tight, 'FM' = DM Mono;
+   'IS' / 'Hand' map to Inter Tight (no serif, no handwriting in set 02). No outlines, rings or sticker borders. */
+@font-face { font-family: 'FD'; src: url('fonts/Anton-Regular.ttf') format('truetype'); font-weight: 100 900; }
+@font-face { font-family: 'FS'; src: url('fonts/InterTightRegular.ttf') format('truetype'); font-weight: 400; }
+@font-face { font-family: 'FS'; src: url('fonts/InterTightMedium.ttf') format('truetype'); font-weight: 500; }
+@font-face { font-family: 'FS'; src: url('fonts/InterTightSemiBold.ttf') format('truetype'); font-weight: 600; }
+@font-face { font-family: 'FS'; src: url('fonts/InterTightBold.ttf') format('truetype'); font-weight: 700 900; }
+@font-face { font-family: 'FM'; src: url('fonts/DMMono-Medium.ttf') format('truetype'); }
+@font-face { font-family: 'IS'; src: url('fonts/InterTightMedium.ttf') format('truetype'); }
+@font-face { font-family: 'Hand'; src: url('fonts/InterTightSemiBold.ttf') format('truetype'); }
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { background: #2a2a2e; }
+body { font-family: 'FS', sans-serif; padding: 40px; display: flex; flex-direction: column; gap: 40px; align-items: flex-start; }
+html.v-slide body, html.v-strip body { padding: 0; gap: 0; }
+html.v-strip body { flex-direction: row; }
+@media print { body { padding: 0; gap: 0; } .slide { break-after: page; } }
+@page { margin: 0; }
+
+.slide { position: relative; width: var(--W); height: var(--H); overflow: hidden; background: var(--bg); color: var(--fg); flex: none;
+  --fg: #121212; --sub: rgba(18,18,18,.84); --mid: rgba(18,18,18,.62); --line: rgba(18,18,18,.2); }
+.g-stone { --bg: #D9D4C7; } .g-mint { --bg: #8FE3B0; } .g-sky { --bg: #8EC5FF; } .g-amber { --bg: #FFA51F; } .g-tomato { --bg: #FF5A3C; }
+.g-card { --bg: #FFFFFF; }
+.g-ink { --bg: #121212; --fg: #FFFFFF; --sub: rgba(255,255,255,.84); --mid: rgba(255,255,255,.6); --line: rgba(255,255,255,.22); }
+
+.main { position: absolute; left: 80px; right: 80px; top: 96px; bottom: 150px; display: flex; flex-direction: column; }
+.push { margin-top: auto; }
+.disp { font-family: 'FS', sans-serif; font-weight: 800; line-height: 1.12; text-wrap: balance; letter-spacing: -0.012em; font-kerning: normal; color: var(--fg); }
+/* *word* = one word in a white box (on ink: in the slide's accent colour) */
+.acc { background: linear-gradient(transparent 16%, var(--fg) 16%, var(--fg) 96%, transparent 96%); color: var(--bg); padding: 0 .14em; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+.g-ink .acc { background: linear-gradient(transparent 16%, var(--accInk, #FFA51F) 16%, var(--accInk, #FFA51F) 96%, transparent 96%); color: #121212; }
+.body { font-size: 42px; line-height: 1.28; font-weight: 500; letter-spacing: -0.01em; color: var(--sub); text-wrap: pretty; }
+.bal { text-wrap: balance; }
+.nw { white-space: nowrap; }
+.mono { font-family: 'FM', monospace; font-size: 32px; letter-spacing: .02em; }
+.lab { line-height: 1.2; }
+.corner { position: absolute; left: 80px; top: 64px; font-family: 'FM'; font-size: 32px; color: var(--mid); }
+
+.foot { position: absolute; left: 80px; right: 80px; bottom: 56px; display: flex; justify-content: space-between; align-items: center; font-family: 'FM'; font-size: 34px; color: var(--mid); }
+.foot .num b { color: var(--fg); font-weight: 400; }
+.meter { display: flex; gap: 6px; }
+.meter i { width: 26px; height: 8px; background: var(--line); }
+.meter i.on { background: var(--fg); }
+
+/* the odometer: a giant number whose first digit is caught mid-roll */
+.odo { display: flex; align-items: flex-end; font-family: 'FD'; font-weight: 800; letter-spacing: -.05em; line-height: 1; color: var(--fg); }
+.odo .win { position: relative; overflow: hidden; height: .76em; width: .62em; }
+.odo .win span { position: absolute; left: 0; right: 0; text-align: center; line-height: .76em; height: .76em; top: 0; }
+.odo .win .a { translate: 0 calc(var(--f, .3) * -100%); filter: blur(calc(var(--bl, 5px) * 2)); opacity: var(--ao, 0); }
+.odo .win .b { translate: 0 calc((1 - var(--f, .3)) * 100%); filter: blur(var(--bl, 5px)); }
+.odo .rest { line-height: .76em; height: .76em; display: block; }
+.odo .xx { opacity: .3; }
+
+/* white card (a response, a code tile) */
+.card { background: #FFFFFF; color: #121212; }
+.g-ink .card { box-shadow: none; }
+.resp { padding: 40px 46px; font-family: 'FM'; font-size: 64px; letter-spacing: -.01em; white-space: nowrap; }
+.resp { display: flex; gap: .55em; align-items: flex-start; padding-bottom: 34px; }
+.resp .seg { display: flex; flex-direction: column; align-items: flex-start; }
+.resp .lb { font-family: 'FS'; font-weight: 700; font-size: 36px; letter-spacing: -.01em; border-top: 6px solid #121212; padding-top: 10px; margin-top: 16px; white-space: nowrap; }
+
+/* the five classes */
+.cls { display: flex; flex-direction: column; gap: 16px; }
+.cls .r { display: grid; grid-template-columns: 210px 1fr; align-items: center; gap: 30px; }
+.cls .chipx { height: 128px; display: flex; align-items: center; justify-content: center; font-family: 'FD'; font-weight: 800; font-size: 96px; letter-spacing: -.04em; color: #121212; }
+.cls .chipx i { font-style: normal; opacity: .35; }
+.cls .m { font-size: 44px; font-weight: 700; letter-spacing: -.02em; line-height: 1.1; color: var(--fg); }
+
+/* a split slide: two class grounds, top and bottom */
+.split { position: absolute; inset: 0; display: grid; grid-template-rows: 1fr 1fr; }
+.split > div { position: relative; padding: 96px 80px 0; }
+.split .hi { font-family: 'FD'; font-weight: 800; font-size: 330px; line-height: .78; letter-spacing: -.05em; color: #121212; }
+.split .hi i { font-style: normal; opacity: .3; }
+.split .t2 { font-family: 'FD'; font-weight: 800; font-size: 76px; line-height: 1.02; letter-spacing: -.03em; color: #121212; margin-top: 30px; }
+.split .b2 { font-size: 38px; font-weight: 500; line-height: 1.25; color: rgba(18,18,18,.82); margin-top: 16px; max-width: 900px; }
+
+/* request -> code rows */
+.calls { display: flex; flex-direction: column; gap: 24px; }
+.calls .c { padding: 30px 38px; display: grid; grid-template-columns: 230px 1fr; gap: 8px 30px; align-items: center; }
+.calls .code { font-family: 'FD'; font-weight: 800; font-size: 120px; line-height: .85; letter-spacing: -.05em; grid-row: span 2; }
+.calls .req { font-family: 'FM'; font-size: 34px; color: rgba(18,18,18,.66); }
+.calls .nm { font-size: 44px; font-weight: 800; letter-spacing: -.02em; line-height: 1.08; }
+
+/* 2 x 2 grid (redirects) */
+.grid2 { display: grid; grid-template-columns: 250px 1fr 1fr; gap: 16px 20px; }
+.grid2 .h { font-family: 'FM'; font-size: 32px; color: var(--fg); display: flex; align-items: flex-end; padding-bottom: 8px; line-height: 1.15; }
+.grid2 .rh { font-family: 'FM'; font-size: 32px; color: var(--fg); display: flex; align-items: center; line-height: 1.15; }
+.grid2 .cell { background: #fff; padding: 26px 28px; height: 230px; display: flex; flex-direction: column; justify-content: space-between; }
+.grid2 .cell b { font-family: 'FD'; font-weight: 800; font-size: 120px; line-height: .85; letter-spacing: -.05em; }
+.grid2 .cell span { font-size: 32px; font-weight: 700; line-height: 1.1; }
+.grid2 .cell.dk { background: #121212; color: #fff; }
+
+/* two code cards side by side */
+.duo { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+.duo > div { padding: 34px 34px 40px; }
+.duo .k { font-family: 'FD'; font-weight: 800; font-size: 150px; line-height: .8; letter-spacing: -.05em; }
+.duo .n { font-family: 'FM'; font-size: 32px; margin-top: 18px; color: rgba(18,18,18,.66); }
+.duo .v { font-size: 46px; font-weight: 800; letter-spacing: -.02em; line-height: 1.1; margin-top: 22px; }
+.duo > div.dk { background: #121212; color: #fff; }
+.duo > div.dk .n { color: rgba(255,255,255,.66); }
+
+/* real screenshot, untouched, credited; a highlight box drawn over it (never inside the pixels) */
+.shot { position: relative; background: #fff; padding: 18px; }
+.shot .in { position: relative; }
+.shot img { display: block; width: 100%; }
+.shot .mk { position: absolute; background: rgba(255,165,31,.6); mix-blend-mode: multiply; }
+.shot .cr { position: absolute; left: 0; top: 100%; margin-top: 30px; font-family: 'FM'; font-size: 32px; color: var(--mid); white-space: nowrap; }
+
+/* numbered list */
+.rows .row { display: grid; grid-template-columns: var(--numW, 96px) 1fr; align-items: baseline; border-top: 3px solid var(--line); padding: 28px 0 26px; }
+.rows .row:last-child { border-bottom: 3px solid var(--line); }
+.rows .n { font-family: 'FM'; font-size: 34px; color: var(--fg); }
+.rows .head { font-size: 46px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.16; color: var(--fg); }
+
+/* end: her photo as a print */
+.pol { position: absolute; background: #FFFFFF; padding: 14px 14px 0; }
+.pol img { display: block; width: 100%; object-fit: cover; }
+.pol .cap { font-family: 'FM'; font-size: 32px; color: #121212; padding: 12px 4px 14px; white-space: nowrap; overflow: hidden; }
+.handle { display: inline-block; font-family: 'FS'; font-weight: 800; letter-spacing: -.005em; font-size: 80px; line-height: 1; background: var(--fg); color: var(--bg); padding: 12px 22px 18px; }
+.g-ink .handle { background: #FFA51F; color: #121212; }
+
+/* content sits together in the middle of the slide (no dead gap above the body) */
+.main.mid { justify-content: center; }
+.main.mid .body { margin-top: 56px !important; }
+.main.mid .shot + .body { margin-top: 110px !important; }
+
+/* set 02 overrides (2026-11-07) */
+* { font-synthesis: none; }
+.hd, .num, h1, h2 { letter-spacing: 0; }
+.disp { font-family: 'FD', sans-serif; font-weight: 400; text-transform: uppercase; line-height: 1.04; letter-spacing: .005em; }
+.handle { font-family: 'FD'; font-weight: 400; text-transform: none; }
+.resp .lb { border-top-width: 2px; }
+.pol { background: transparent; padding: 0; }
+.pol .cap { padding: 14px 0 0; color: var(--fg); }
+.odo, .split .hi, .split .t2, .calls .code, .grid2 .cell b, .duo .k, .cls .chipx { font-weight: 400; letter-spacing: 0; }
+.split .t2 { text-transform: uppercase; }
+.resp, .shot, .pol, .card { rotate: 0deg !important; box-shadow: none !important; }
+.mono, .grid2 .h, .grid2 .rh { font-size: 34px; }

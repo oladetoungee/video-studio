@@ -1,0 +1,2 @@
+{"video": "B-receipt/B_receipt_motiontest_silent.mp4", "out": "B-receipt/B_receipt_motiontest_16x9.mp4", "voice": ["/Users/gbemi/Desktop/CODE/videos/projects/phone-distraction/kit/transcripts/voice.m4a", 87.6, 94.6],
+ "cues": [[0.3, "ui-device-click", -4], [1.02, "typewriter-single-hit", -6], [1.77, "typewriter-soft-click", -6], [2.77, "pop-dry", -3], [3.52, "typewriter-return-bell", -8], [4.1, "marker-line", -2]]}

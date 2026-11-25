@@ -1,0 +1,78 @@
+[00:00] Say you buy something online and you don't receive the goods that you bought or you get
+[00:03] scammed or you receive something that is fake. What do you do then? Right? The first thing that
+[00:09] you'd need to do is you'd need to contact the merchant. So the business that you bought,
+[00:13] whatever it is from, and you need to get a good reason in writing. Make sure that this process
+[00:19] doesn't last for too long. So if this person is back and faulting with you, just take it to the
+[00:23] next step. You want to make sure that you don't waste time because it compromises your ability
+[00:28] to meet the timelines for the next step. So around about seven days beyond that, just make sure that
+[00:34] you pass this over to the next step. The next step is you need to see which rules does your bank
+[00:39] play by in terms of payment processing. So if you look at your bank card, right, it would have a
+[00:44] symbol on it. So the symbol on this bank card is those two circles at the bottom. So this is
+[00:50] a MasterCard, right? It would be clearer here. So these two circles, this is a MasterCard. And then
+[00:59] with this bank card, for example, it's written Visa debit at the top. So those are the rules
+[01:08] that govern the payment processing. And because you've used, hopefully, your Visa card or your
+[01:14] MasterCard or something that uses any of these rails, you're able to refer to the rules of Visa
+[01:20] or MasterCard. For the purposes of this conversation, we're going to keep it to MasterCard.
+[01:23] You head on over to MasterCard, right? It says if, you know, the card holder, which is you,
+[01:29] requests their money back because the goods or services that they got were not as described or
+[01:36] they were defective, including merchandise that was received damage, not suitable for the intended
+[01:41] purpose or the merchant didn't honor the terms of the contract. Goods or services were not provided
+[01:47] so you didn't get what you ordered or you receive an empty box or a box containing worthless items,
+[01:54] such as a break or a stack of paper. There's also tons of other things that are covered,
+[01:58] but we're going to keep it to this. So if goods and services are not provided, you can get your
+[02:02] money back in terms of charge back code 4853, provided that you meet all the other conditions.
+[02:09] But this is pretty much the rule that is going to allow you to get your payment back. Then this is
+[02:15] the process that that whole dispute is going to follow. This is you, the card holder. So you are
+[02:21] going to get in touch with the issuer. The issuer is your bank because they're the ones that issued
+[02:25] you the MasterCard. You are going to get in touch with your bank via notification or call or whatever
+[02:32] it is and your bank, which is the issuer, will then put this on the fraud and loss database.
+[02:37] This is on MasterCom. So this from here to there is something that only your bank has access to.
+[02:44] If your bank hates you for whatever reason, and they don't want to give you access to this platform,
+[02:49] you would need to then go to the embarrassment to file a complaint against the bank or whatever
+[02:53] the case may be. But if you have a good bank, they are going to initiate this process for you
+[02:58] because it doesn't cost them anything. Also, when the money gets sent back to you eventually,
+[03:03] the money is not coming from your bank. So if your bank doesn't do this for you,
+[03:08] you need to think about getting another bank, but that's not the point of this conversation.
+[03:13] After that, this is on the fraud and loss database. And then Ithaca is an alert network.
+[03:18] It would alert the merchant that dude, someone has laid a complaint against you to say that they
+[03:25] didn't receive ABC, what is going on? The collaboration phase is where it's friendly
+[03:29] for everyone involved. So the merchant can be like, no, I gave this person this or they provide
+[03:35] further information, or they would give you your money back, you know, either give it to their bank
+[03:41] or your bank or whatever. But essentially this can be resolved at this stage. And most of the time,
+[03:46] it does get resolved at this stage because this doesn't count against the merchant. No one wants
+[03:53] it to go beyond this red line, right? But sometimes it does. But hopefully by this stage, they resolve
+[04:00] the issue. If you've provided enough documentation and the merchant accepts it, then happy days,
+[04:06] you get your money back. If not, it would proceed to the charge back phase. And with a charge back,
+[04:12] it's essentially a court between your bank and the acquirer. So I should have done this in the
+[04:20] beginning. Your bank is the issuer because they issue the bank card. The acquirer is the person
+[04:27] who acquires the merchant. So a business is able. So when you have a checkout page,
+[04:34] the person who gives that business the ability to collect money on MasterCard is called the acquirer.
+[04:42] So they do a background check on the business. You can't just sell online. You need to have your
+[04:48] stuff checked. So they look at the business, they look at the operations, they look at the disputes
+[04:52] in the past. Do you scam people? And if you don't meet any of their requirements, the acquirer would
+[04:59] be like, you're too high risk. We're going to charge you more, or we're not going to take you on
+[05:03] as a merchant. But essentially the same way when you open a bank account, you get checked,
+[05:07] they do a KYC on you and they want to know where does your money come from and all of that sort
+[05:12] of stuff. They want to know your identity documents and all of that. Same thing is done for the
+[05:18] merchant. So this acquirer knows exactly who this is the same way the issuer knows exactly who you
+[05:24] are, which is very important because this guy keeps a demerit book of this guy. So this guy wants to
+[05:32] make sure that that book is kept clean, which is why a lot of the time this gets resolved at this
+[05:38] stage. If the merchant doesn't give back the money for whatever reason, it would then proceed to this
+[05:45] entire process, which is essentially a court between your bank and the bank that is representing the
+[05:53] merchant, the one that acquired the merchant. And then MasterCard is the one that is going to be
+[05:58] ruling on this process. So MasterCard is going to consider the documents that have been provided by
+[06:03] you, the card holder, the documents that have been provided by the merchant to the acquirer. And
+[06:10] based on all of this, it would then decide on whether or not you're going to get your money back.
+[06:16] This costs money. So most people don't get to this process because then it's very bad for
+[06:26] the merchant because it affects their score. And the higher the score, it's almost like you can
+[06:31] get blacklisted as a merchant. If a lot of people complain that you keep taking money,
+[06:37] but you don't deliver on business services, which is why a lot of the time things get resolved at
+[06:44] this stage. If you are dealing with an honest merchant, and this is just an honest mistake,
+[06:48] in order for you to make sure that you always have access to this process and you're protected as a
+[06:54] customer, you need to make sure that you pay very careful attention to how you pay. Because if you
+[07:00] pay by cash or Ozo or pay shop, anything that is essentially an instant EFT or bank transfer,
+[07:08] you're not able to follow this process. So if you've paid and they don't honor the transaction,
+[07:13] you don't get your goods and services, that's it. So you're not able to fall back on this protection
+[07:20] that is offered by Visa or Mastercard. So be very careful with how you pay. And just a gentle
+[07:26] reminder, because this video might inspire some people to get charge backs on things that they
+[07:32] actually did get. A reminder that fraud is a crime.

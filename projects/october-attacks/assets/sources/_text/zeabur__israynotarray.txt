@@ -1,0 +1,273 @@
+URL: https://israynotarray.com/en/misc/2026/10/18/zeabur-shutting-down-taiwanese-startup-growing-pains/
+STATUS: loaded (http 200)
+FINAL: https://israynotarray.com/en/misc/2026/10/18/zeabur-shutting-down-taiwanese-startup-growing-pains/
+TITLE: Zeabur Is Shutting Down: A Taiwanese Startup's Growing Pains | Is Ray, Not Array
+H1: Zeabur Is Shutting Down: A Taiwanese Startup's Growing Pains
+OG: Zeabur Is Shutting Down: A Taiwanese Startup's Growing Pains | Is Ray, Not Array | Is Ray, Not Array
+PUBLISHED: 2026-10-18T20:39:25.000Z  MODIFIED: 2026-10-18T20:39:25.000Z
+DOC_H: 13634
+
+ray@blog:~$ cat 2026-10-18.md
+
+Zeabur Is Shutting Down: A Taiwanese Startup's Growing Pains
+2026-10-18
+·
+MISC
+·
+13 min read
+
+SUPPORT MY WORK
+
+Did this article help?
+
+Buy Ray a coffee ↗
+
+advertisement · sponsor process
+
+loaded
+
+Ray
+
+Software Engineer
+
+About →
+
+Zeabur Is Shutting Down: A Taiwanese Startup's Growing Pains
+
+Intro
+
+Zeabur recently announced it's shutting down, and honestly, it made me pretty sad. So I wanted to write down my own history with Zeabur and some of my thoughts, as a way of looking back.
+
+Zeabur shutdown announcement
+
+Let me get this out of the way first: I'm friends with Zeabur's founder. But I'm also one of the victims of the August security incident (someone ran up over $500 on my API Key), so I'm writing this wearing both hats.
+
+How I met Zeabur
+
+I met Zeabur's founder, Yuanlin, sometime around 2023 (going by our Discord history). How exactly we met? Honestly, I don't remember.
+
+Around that time, Heroku had announced it was ending its free plans on 2022/11/28, and I was looking for somewhere else to host a few small MVP projects. I was weighing Render.com and Fly.io, and a while later I happened to run into Yuanlin, who was out promoting Zeabur.
+
+And then... yeah, somehow we became friends xD
+
+Back then, Zeabur's pitch was the familiar "simple, fast, convenient." You could deploy your project with pretty much one click, skip a lot of tedious setup, and focus on building instead of spending ages figuring out deployment.
+
+In the early days... I actually helped catch quite a few small things, like color issues in the docs:
+
+Zeabur docs, early version
+
+And since it was still early and the docs were pretty thin, I also gave some suggestions on direction, like just listing docs for the mainstream frameworks first:
+
+Zeabur docs, early version
+
+That's roughly how I met Zeabur. I guess that makes me one of its really early users lol.
+
+Helping spread the word
+
+After chatting with Yuanlin a bunch of times, I could tell he genuinely wanted to fix the pain developers have with deployment, and to make Zeabur a tool that actually helps developers.
+
+But I have to say, that's a tough road. The PaaS market already had plenty of competitors, like Render, Fly.io, and Vercel, and every one of them is a strong opponent. So how do you carve out a path that's truly your own? That's a real test.
+
+When the market already has similar products, how are you going to convince me to use yours?
+
+I think Yuanlin was thinking about that too. He tried a few different approaches, like community, blog posts, and docs, to get more people to know Zeabur existed. And at the time, the best entry point was probably "developers in Asia."
+
+Sure, reading English is normal for developers. But a platform that lets you deploy your project quickly without reading English docs? For Mandarin-speaking developers, that's genuinely convenient xD
+
+Through all those little conversations along the way, I chose to trust Yuanlin and started writing a few posts to help promote Zeabur, like Beyond Render and Fly: Zeabur Is Worth a Look (2023/04/01) and Day 24 - Deploying to Zeabur (2023/10/08).
+
+Not that I have any idea how much my help actually did.
+
+Later on, since the company I work for is in education, I was dealing with a lot of students, and I was really worried about the deployment problems they kept running into. After Heroku killed its free plans, students basically had nowhere to deploy their projects. So I thought I'd recommend Zeabur to my company and see if it could become part of the course material. It got turned down at first, which honestly makes sense. Pushing any platform needs a proper evaluation.
+
+So instead... I roped Yuanlin into being a guest speaker or doing customer support, which also gave him a chance to plug his product XD
+
+Was it smooth sailing all the way?
+
+Honestly, I don't think it ever was. Like I said, the market already had plenty of PaaS platforms. When developers are used to the one they're on, why would they switch for no reason? Moving servers, databases, and projects all costs time and money, so convincing developers to move to Zeabur was really hard.
+
+Then around 2024–2025, AI took off fast: ChatGPT, Gemini, Claude, and so on. I'd bet that's when Zeabur started thinking about how to combine AI with Zeabur. If you're only competing as a PaaS, it's just a contest of who's more convenient, and if you can't find a way to add more value, it's honestly really hard to survive.
+
+As it happened, the hottest thing at the time was n8n.
+
+Note
+
+n8n is an open-source workflow automation tool that helps you automate repetitive work, like scraping data, processing data, and sending notifications.
+
+So Zeabur added n8n to its templates, letting people spin up their own n8n quickly and then use it to automate things like deployments and monitoring.
+
+I have to say, I think that decision was spot on. Even I found it super convenient. I didn't have to mess with Docker at all; I just picked the n8n template when deploying and it was up in no time, which saved a lot of time and let me focus on designing the workflows.
+
+And it wasn't just developers. A lot of non-developers loved that convenience too. It really did help Zeabur break out of the developer bubble, so more people found out about Zeabur and started deploying their own services on it.
+
+The more convenient a system is, the more risk there is that you can't see.
+
+Sounds like smooth sailing, right? Actually, way back in the early days, there was already an incident where an intern made a mistake and deleted a cluster (Zeabur Taipei region outage report, Oct 27, 2023).
+
+Reading this, a lot of people are probably already firing off:
+
+"Wait, an intern had that much access? That's insane."
+
+"Their permission management is clearly broken."
+
+"If I'd known about this, I'd never have used them for n8n!"
+
+Stuff like that, right?
+
+But I think for a startup, having something like this happen early is actually a good thing.
+
+It forces Zeabur to start thinking about how to manage permissions and build a proper permission system, so users can use Zeabur more safely. Better that than having it happen after the company has grown and has way more users, when it'd be a much bigger mess to clean up.
+
+And the incident report does show they followed through: they redesigned IAM (the cloud settings that control who can do what) so developers only get the minimum permissions they need, and risky operations now also require admin approval and MFA (multi-factor authentication, like entering a code from your phone after logging in).
+
+The thing is, permissions are hard to fix in one go. Patching one hole doesn't mean there aren't holes somewhere else. We'll come back to that later.
+
+This incident also reflects a common problem at a lot of companies:
+
+Companies rushing to ship products tend to overlook security and permission management.
+
+But is there a right and wrong here?
+
+I think it depends on where you're standing:
+
+From a user's point of view, of course it looks outrageous.
+From the company's point of view, it was kind of an "accident." The company didn't mean any harm; it just wanted to ship fast.
+
+Fall even a little behind your competitors and the market might leave you behind, and what usually gets sacrificed is security and permission management.
+
+Security in the AI Agent era: a startup's dilemma
+
+Then came the events most people have heard about recently:
+
+2026/08/27: Zeabur was breached for the first time, and a lot of users' environment variables were stolen. (I was affected too. I happened to be on a company trip and could only watch someone burn through $500+ on my API Key.)
+2026/10/14: Zeabur was breached a second time, and this one was even bigger than expected.
+
+Zeabur published an incident report for the August breach (we'll get to the attack path later). The root cause of the October one is still under investigation as of now.
+
+Through all of this, what a lot of users found hardest to accept was this: after the first breach, Zeabur didn't catch it right away (they found out from an outside report), the first notice underestimated the impact, and the story kept changing. They did apologize afterward and promised to do better, but for users, the damage was already done.
+
+Trust takes a long time to build, but only a second to destroy.
+
+Plenty of users still chose to keep trusting Zeabur (and some stayed just because it was convenient), but the hit to Zeabur was already huge. Back then I sent Yuanlin a message to try to cheer him up a bit. It's in Chinese, but it basically says: no need to reply or even read this right away, it's been a rough time, get some rest so you can face it all, and hang in there.
+
+My message to Yuanlin
+
+I don't think anyone would joke about something like this. Zeabur is pretty much a kid he raised himself.
+
+After the first breach, it looked like Zeabur had finally gotten things under control, and I figured that if they could make it through this, they'd come out stronger.
+
+It wasn't easy, though. Broken trust takes a long time to rebuild, and I don't think anyone expected a second breach, let alone a bigger one. Add the growth bottleneck and the system complexity and maintenance burden the founder mentioned in his letter, and Zeabur ultimately decided to shut down.
+
+As a founder, having to write that shutdown letter yourself... I can't imagine the pressure. Going from a hyped AI deployment platform everyone recommended to a "security hole platform" everyone piles on, even getting used as a security case study. That's a hard drop to even imagine.
+
+Through all this, I also saw a lot of people flip completely. Early on they were all hyping it, then once things went wrong they turned around and chased the clicks by trashing it.
+
+I'm not saying nobody's allowed to criticize when something goes wrong. Users really did lose money. But what scared me most about all this is human nature. A lot of people attacked Zeabur online just to chase clicks, and some of it even turned into personal attacks. But have you ever thought about whether "he" wanted any of this to happen?
+
+I think criticizing Zeabur's bad decisions is completely fair. Those should be scrutinized. Yuanlin himself wrote in the announcement, "Protecting your services and data is our responsibility, and we have fallen short." He's already owned it. But scrutinizing decisions and personally attacking someone are two completely different things.
+
+Criticize the bad decisions, not the person.
+
+Maybe Zeabur's underlying architecture really was poorly planned. But I think this is worth all of us thinking about, because it's not just Zeabur's problem. It's a problem a lot of Taiwanese startups could run into.
+
+What problem?
+
+The MVP (Minimum Viable Product) we all love to talk about makes it easy to neglect security and permission management. The whole point of an MVP is to validate an idea fast. Once the idea works, the next thing on your mind is how to scale and add more value, and in that process, security and permission management are usually the first things pushed down the list.
+
+Then going back to fix decisions and architecture that were wrong "from the start" is really hard, because people are already using them, and some users already depend on them to get things done. How do you fix things at that point? For a startup, that's a huge challenge.
+
+It's like how running typeof on null in JavaScript returns object.
+
+That's a bug left over from JavaScript's early implementation. By the time people noticed, too many websites depended on that behavior, so it couldn't be fixed, and it has just stuck around ever since.
+
+Zeabur's August incident report is a pretty good example. The attacker first got in through a vulnerability in a service a user had deployed on a shared cluster (lots of users' services running on the same set of machines). From there, they pulled old API Keys (Legacy API Keys) out of a cache and found one with team admin permissions.
+
+Then they dug a long-retained AWS root key (basically the master key to the whole AWS account) out of an internal service's environment variables, and worked their way all the way to the production database.
+
+You'll notice that almost every step along this path is a permissions problem. Just like in 2023, only in a different place.
+
+There's one detail in the report I think is key: the shared cluster and the Legacy API Keys on this path were already being phased out before the incident. In other words, Zeabur knew these were old things that needed to go, but users still had services running on them, so they couldn't just pull the plug.
+
+The most dangerous thing usually isn't the new feature. It's the old thing you said you'd shut down but never did.
+
+We're now in the AI Agent era. Everyone's deploying all kinds of AI tools, but those AI tools can themselves be the way in.
+
+Take Zeabur's August breach: the attacker's entry point was NextChat, an AI chat tool a user had deployed, through an authorization flaw in its MCP feature (MCP is a protocol that lets AI connect to external tools).
+
+On top of that, AI Agents can also be used to automatically hunt for vulnerabilities and attack websites. Attacks are only going to get faster, and keeping watch with human effort alone is getting harder and harder.
+
+So how do we balance security and permission management while building an MVP from here on? That's a big challenge.
+
+Once a product launches and people start using it, it's no longer just "your product." It's "your users' product," and you can't control how they'll use it.
+
+That's even more true for Taiwanese startups.
+
+Take Zeabur: its seed round in 2025 was $2 million (about NT$64 million). Meanwhile, of the competitors I mentioned earlier, Vercel raised $300 million in its September 2025 Series F alone, and Render raised another $100 million just this February, bringing its total funding to $258 million.
+
+Both are PaaS companies, and Vercel raised 150 times Zeabur's seed round in a single round.
+
+With a gap like that, how much money can you put into stopping these automated attacks? How much can you spend hiring security experts to plan your security and permissions? Or do you set aside a chunk of money for that every time you build a product? Finding that balance is really hard.
+
+Of course, something like keeping a root key around for years doesn't really have much to do with how much money you have. But when the whole team is busy chasing features and growth, those "we know we should shut this off but haven't yet" things keep getting pushed down the list.
+
+Which brings up another common startup problem: positioning.
+
+I'm sure some people think Zeabur's positioning was too vague, going from a one-click PaaS, to n8n templates, to AI Hub, all the way to the AI DevOps engineer they pitched in their 2025 fundraise. That's hard to deny.
+
+But a lot of the time, startups have to try all sorts of things to see what actually lands with users, then narrow back down and refocus. The thing is, if a few of those steps aren't solid, the cost keeps piling up.
+
+Yuanlin actually wrote about this in the announcement: "Our system also began as a project built quickly three and a half years ago. As we adapted our architecture and changed direction to meet market needs, it became increasingly complex and difficult to maintain."
+
+For a startup, every step is a cost decision, but you can't just not try either. So I don't think the question is whether to try. It's whether anyone remembers to go back and clean up what each turn leaves behind.
+
+Wrapping up
+
+By now I think my stance is pretty clear: I'm Yuanlin's friend, and I'm also a user who lost over $500.
+
+So I'm not going to say Zeabur did nothing wrong. A long-retained root key, old API Keys with no scope, database credentials with way too many permissions: those were real, bad decisions.
+
+But I also don't think turning those mistakes into attacks on a person helps the next Taiwanese startup do any better.
+
+One last reminder: if you're still on Zeabur, starting December 1, dedicated servers can no longer be renewed and all running services on shared clusters will be paused, and everything shuts down by December 31. Back up your data and migrate early.
+
+Account balance refunds and compensation for security-incident losses are two separate requests, and both go through Zeabur Support.
+
+Support my work
+
+If this article saved you some time
+
+You can buy Ray a coffee and help me keep turning hard-earned lessons into practical articles.
+
+Buy Ray a coffee ↗
+See other ways to support →
+
+advertisement · sponsor process
+
+standby
+
+Advertisement slot ready.
+
+❯ 
+
+> Ready. Scroll this slot into view to start.
+
+SHARE THIS POST
+
+Copy link
+Share on X
+Share on Facebook
+NEXT →
+30 Days of Vibe Coding | Day 30: Series Recap and the Full Table of Contents
+Related posts
+2026-07-10
+·
+23 min read
+My 100-Day Body Recomposition Experiment, as a Software Engineer
+2026-06-23
+·
+5 min read
+Stats — The Free Open-Source macOS Menu Bar System Monitor I Use Every Day (CPU, GPU, Temperature, Network)
+2026-05-26
+·
+6 min read
+Can a Blog Really Make Tens of Thousands of Dollars a Month? Real Google AdSense Numbers, Explained

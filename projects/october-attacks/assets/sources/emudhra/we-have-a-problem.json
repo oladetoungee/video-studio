@@ -1,0 +1,222 @@
+{
+ "story": "emudhra",
+ "outlet": "Incident site (Dennis Jackson, Mozilla)",
+ "slug": "we-have-a-problem",
+ "url": "https://emudhra.we-have-a-problem.com/",
+ "finalUrl": "https://emudhra.we-have-a-problem.com/",
+ "status": "loaded",
+ "http": 200,
+ "title": "eMudhra Intermediate CA Compromise",
+ "h1": "eMudhra Intermediate CA Compromise",
+ "published": "",
+ "files": {
+  "fold": "emudhra/we-have-a-problem_fold.png",
+  "full": "emudhra/we-have-a-problem_full.jpg",
+  "scroll": "emudhra/we-have-a-problem_scroll.mp4"
+ },
+ "full": {
+  "width": 1440,
+  "height": 6000,
+  "pageHeight": 7733,
+  "zoom": 1,
+  "quotes": [
+   {
+    "quote": "The private keys of eight eMudhra intermediate CA certificates have been compromised",
+    "box": {
+     "x": 270,
+     "y": 228,
+     "w": 706,
+     "h": 21
+    },
+    "lines": [
+     {
+      "x": 270,
+      "y": 228,
+      "w": 706,
+      "h": 21
+     }
+    ]
+   },
+   {
+    "quote": "We have a problem here - Wayne",
+    "box": {
+     "x": 292,
+     "y": 592,
+     "w": 266,
+     "h": 21
+    },
+    "lines": [
+     {
+      "x": 292,
+      "y": 592,
+      "w": 266,
+      "h": 21
+     }
+    ]
+   },
+   {
+    "quote": "The certificates have been blocked in Firefox and Chrome since the 17th of October",
+    "box": {
+     "x": 270,
+     "y": 854,
+     "w": 886,
+     "h": 48
+    },
+    "lines": [
+     {
+      "x": 1033,
+      "y": 854,
+      "w": 123,
+      "h": 21
+     },
+     {
+      "x": 270,
+      "y": 881,
+      "w": 545,
+      "h": 21
+     }
+    ]
+   }
+  ]
+ },
+ "scroll": {
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "seconds": 8,
+  "keyframes": [
+   {
+    "t": 0,
+    "y": 0
+   },
+   {
+    "t": 1,
+    "y": 0
+   },
+   {
+    "t": 1.847,
+    "y": 182
+   },
+   {
+    "t": 2.947,
+    "y": 182
+   },
+   {
+    "t": 3.873,
+    "y": 444
+   },
+   {
+    "t": 8,
+    "y": 444
+   }
+  ],
+  "zoom": 1,
+  "easing": "easeInOutCubic between keyframes, holds where y is equal",
+  "capped": false,
+  "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)",
+  "quotes": [
+   {
+    "quote": "The private keys of eight eMudhra intermediate CA certificates have been compromised",
+    "inVideo": true,
+    "still": true,
+    "t": 0.53,
+    "visibleStill": [
+     0,
+     1.07
+    ],
+    "scrollY": 0,
+    "box": {
+     "x": 510,
+     "y": 228,
+     "w": 706,
+     "h": 21
+    },
+    "lines": [
+     {
+      "x": 510,
+      "y": 228,
+      "w": 706,
+      "h": 21
+     }
+    ],
+    "docBox": {
+     "x": 510,
+     "y": 228,
+     "w": 706,
+     "h": 21
+    },
+    "layoutDriftPx": 0
+   },
+   {
+    "quote": "We have a problem here - Wayne",
+    "inVideo": true,
+    "still": true,
+    "t": 2.4,
+    "visibleStill": [
+     1.77,
+     3.03
+    ],
+    "scrollY": 182,
+    "box": {
+     "x": 532,
+     "y": 410,
+     "w": 266,
+     "h": 21
+    },
+    "lines": [
+     {
+      "x": 532,
+      "y": 410,
+      "w": 266,
+      "h": 21
+     }
+    ],
+    "docBox": {
+     "x": 532,
+     "y": 592,
+     "w": 266,
+     "h": 21
+    },
+    "layoutDriftPx": 0
+   },
+   {
+    "quote": "The certificates have been blocked in Firefox and Chrome since the 17th of October",
+    "inVideo": true,
+    "still": true,
+    "t": 5.92,
+    "visibleStill": [
+     3.8,
+     8.03
+    ],
+    "scrollY": 444,
+    "box": {
+     "x": 510,
+     "y": 410,
+     "w": 886,
+     "h": 48
+    },
+    "lines": [
+     {
+      "x": 1273,
+      "y": 410,
+      "w": 123,
+      "h": 21
+     },
+     {
+      "x": 510,
+      "y": 437,
+      "w": 545,
+      "h": 21
+     }
+    ],
+    "docBox": {
+     "x": 510,
+     "y": 854,
+     "w": 886,
+     "h": 48
+    },
+    "layoutDriftPx": 0
+   }
+  ]
+ }
+}

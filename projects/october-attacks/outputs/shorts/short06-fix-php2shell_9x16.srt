@@ -1,0 +1,63 @@
+1
+00:00:00,070 --> 00:00:02,590
+so basically if you're running PHP anywhere,
+
+2
+00:00:02,590 --> 00:00:04,210
+you have to update your PHP
+
+3
+00:00:04,210 --> 00:00:06,770
+if you're still on PHP 8.1 or older, you
+
+4
+00:00:06,770 --> 00:00:09,190
+need to upgrade and updating the package is
+
+5
+00:00:09,190 --> 00:00:10,210
+not even enough
+
+6
+00:00:10,210 --> 00:00:13,140
+you have to restart your Apache and if you
+
+7
+00:00:13,140 --> 00:00:15,090
+use Docker, you have to rebuild your images
+
+8
+00:00:15,090 --> 00:00:16,770
+everyone has been patching and if you're
+
+9
+00:00:16,770 --> 00:00:18,570
+using Laravel, for example, your Laravel
+
+10
+00:00:18,570 --> 00:00:20,320
+version doesn't even protect you here
+
+11
+00:00:20,320 --> 00:00:22,540
+because the loophole is in PHP, which is
+
+12
+00:00:22,540 --> 00:00:24,810
+underneath Laravel and it's not even just
+
+13
+00:00:24,810 --> 00:00:27,150
+PHP node.js also add its own security
+
+14
+00:00:27,150 --> 00:00:28,430
+release on that same day
+
+15
+00:00:28,430 --> 00:00:30,440
+so if you run Node, you need to update to
+
+16
+00:00:30,440 --> 00:00:30,767
+that too

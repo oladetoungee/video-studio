@@ -1,0 +1,86 @@
+<!doctype html><html><head><meta charset="utf-8"><title>C · The new syllabus</title>
+<link rel="stylesheet" href="../_shared/fonts.css"></head><body>
+<script src="../_shared/clips.js"></script>
+<script src="../_shared/lib.js"></script>
+<script>
+/* C · THE NEW SYLLABUS. The whole film is one school exercise book: her lines are written in blue ballpoint as she says
+ * them; the old way of learning (syntax, for loops) is struck through in red teacher's pen; the four skills are the new
+ * syllabus, ticked. Paper #F8F7F2 with blue rules #B9CCE8 every 64 px and a red margin #E26A6A. Ink: ballpoint #1F3A9A.
+ * ONE accent: teacher red #D7262E (strikes, ticks, circles). Type: Kalam 700/400 (her hand), Libre Franklin 800 for the
+ * printed heading strip only. Motion: handwriting reveals left-to-right at 14 chars/s with a pen sound; strikes draw in
+ * 0.3 s outExpo; the page turns (0.6 s) between sections; a camera drift of 2 % keeps every hold alive. */
+const C = { p: '#F8F7F2', rule: '#B9CCE8', margin: '#E26A6A', pen: '#1F3A9A', red: '#D7262E', print: '#22252B', dim: '#7A86A8' };
+const FK = (s, w = 700) => `${w} ${s}px "Kalam"`, FL = (s, w = 800) => `${w} ${s}px "Libre Franklin"`;
+const RG = () => V(100, 112);
+function page(o = {}) {
+  rect(0, 0, W, H, C.p); const g = RG(); for (let y = V(200, 260); y < H; y += g) line(0, y, W, y, C.rule, 2);
+  const mx = V(190, 120); line(mx, 0, mx, H, C.margin, 3); line(mx + 8, 0, mx + 8, H, C.margin, 1.5);
+  if (o.head) { txt(o.head, mx + 40, V(120, 170), FL(V(40, 40)), C.print, 'left', 'alphabetic', 4); }
+}
+const LX = () => V(250, 160);
+/** handwriting: reveals left to right from at, rate chars/s; returns width */
+function hand(t, s, x, y, f, c, at, rate = 14) {
+  const n = at == null ? s.length : clamp((t - at) * rate, 0, s.length); if (n <= 0) return 0; const full = tw(s, f);
+  const part = s.slice(0, Math.floor(n)); const w = tw(part, f) + (tw(s.slice(0, Math.min(s.length, Math.floor(n) + 1)), f) - tw(part, f)) * (n % 1);
+  ctx.save(); ctx.beginPath(); ctx.rect(x - 10, y - 200, w + 10, 300); ctx.clip(); txt(s, x, y, f, c); ctx.restore(); return full;
+}
+function strike(t, at, x, y, w, lw = 7) { const p = ez(t, at, 0.3, 'outExpo'); if (p <= 0) return; ctx.save(); ctx.strokeStyle = C.red; ctx.lineWidth = lw; ctx.lineCap = 'round';
+  ctx.beginPath(); ctx.moveTo(x - 8, y + 4); ctx.lineTo(x - 8 + (w + 16) * p, y - 6 + 10 * p); ctx.stroke(); ctx.restore(); }
+function tick(t, at, x, y, s = 50) { const p = ez(t, at, 0.35, 'outExpo'); if (p <= 0) return; ctx.save(); ctx.strokeStyle = C.red; ctx.lineWidth = 8; ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+  ctx.beginPath(); const pts = [[x, y], [x + s * 0.35, y + s * 0.4], [x + s, y - s * 0.6]]; const L1 = 0.4; ctx.moveTo(...pts[0]);
+  if (p < L1) ctx.lineTo(lerp(pts[0][0], pts[1][0], p / L1), lerp(pts[0][1], pts[1][1], p / L1)); else { ctx.lineTo(...pts[1]); const q = (p - L1) / (1 - L1); ctx.lineTo(lerp(pts[1][0], pts[2][0], q), lerp(pts[1][1], pts[2][1], q)); }
+  ctx.stroke(); ctx.restore(); }
+function circleMark(t, at, cx, cy, rx, ry) { const p = ez(t, at, 0.5, 'outExpo'); if (p <= 0) return; ctx.save(); ctx.strokeStyle = C.red; ctx.lineWidth = 6; ctx.beginPath();
+  ctx.ellipse(cx, cy, rx, ry, -0.05, -2.2, -2.2 + Math.PI * 2.1 * p); ctx.stroke(); ctx.restore(); }
+const drift = (t) => { const s = 1 + 0.02 * ((t % 20) / 20); ctx.translate(W / 2, H / 2); ctx.scale(s, s); ctx.translate(-W / 2, -H / 2); };
+const rowY = (i) => V(200, 260) + RG() * i - 14;
+/* 1:10 "but of course you are not trying to learn how to code the same way people learned how to code three, four years ago." */
+function sSame(t) {
+  page({ head: 'LEARNING TO CODE' }); const k = P('you are not trying to learn how to code the same way people learned how to code three, four years ago.', 71);
+  const f = FK(V(84, 80)); const x = LX();
+  const L = PORT ? ['You are not trying', 'to learn how to code', 'the same way people', 'learned how to code', 'three, four years ago.'] : ['You are not trying to learn how to code', 'the same way people learned how to code', 'three, four years ago.'];
+  let at = k.t - 0.1; L.forEach((l, i) => { hand(t, l, x, rowY(2 + i * 1), f, C.pen, at, 30); at += l.length / 30; });
+  const last = L[L.length - 1]; const yy = rowY(2 + L.length - 1); const wl = tw(last, f);
+  const p = ez(t, k.w[18], 0.4, 'outExpo'); if (p > 0) line(x, yy + 16, x + wl * p, yy + 16, C.red, 6);
+}
+/* 1:44 four things */
+function sFour(t) {
+  page({ head: 'SYLLABUS · 2027' }); const k = { f: P('focus on four things,', 104), rc: P('reading code,', 105.5), db: P('debugging,', 106.4), fu: P('fundamentals with a little bit of system design', 107), dk: P('domain knowledge.', 109.4) };
+  const x = LX(); hand(t, 'Focus on four things:', x, rowY(1), FK(V(80, 80)), C.pen, k.f.t - 0.3, 22);
+  const it = [['1.', 'Reading code', k.rc.t], ['2.', 'Debugging', k.db.t], ['3.', 'Fundamentals', k.fu.t, '+ a little system design', k.fu.w[3]], ['4.', 'Domain knowledge', k.dk.t]];
+  it.forEach(([n, s, at, sub, sat], i) => { const y = rowY(2 + i * (PORT ? 2 : 1)); const f = FK(V(96, 76));
+    hand(t, n + ' ' + s, x + 10, y, f, C.pen, at - 0.05, 24); const w = tw(n + ' ' + s, f);
+    if (sub) hand(t, sub, PORT ? x + 90 : x + w + 40, PORT ? y + RG() : y, FK(V(54, 56), 400), C.pen, sat, 26);
+    tick(t, at + 0.35, V(1720, 960), y - 24, V(70, 56)); });
+}
+/* 0:20 the receipt glued into the book */
+function sCut(t) {
+  page({ head: 'WHAT INDEED FOUND' }); const k = { n: P('4.5% of software development', 20), el: P('were entry level,', 23) };
+  const x = LX(); ctx.save(); ctx.translate(x + V(700, 440), V(380, 760)); ctx.rotate(-0.025); ctx.translate(-(x + V(700, 440)), -V(380, 760));
+  const h = clipCard(t, 'ind-45', x, V(300, 640), V(1560, 860), { at: k.n.t - 0.6, hlAt: null, pad: 22, cs: 32, creditCol: C.dim, creditFont: '"Kalam"', shadow: false });
+  // red pen circle on "4.5% in software development in Q1 2026"
+  const c = CLIPS['ind-45'], s = (V(1560, 860) - 44) / c.w, r = c.hl[0];
+  { const p = ez(t, k.n.w[0] + 0.1, 0.35, 'outExpo'); if (p > 0) rect(x + 22 + r[0] * s, V(300, 640) + 22 + (r[1] + r[3]) * s + 4, r[2] * s * p, 6, C.red); }
+  ctx.restore();
+  hand(t, '4.5% were entry level.', x, rowY(PORT ? 9 : 6), FK(V(110, 96)), C.red, k.el.t - 0.2, 26);
+}
+/* 5:32 "I think it's still worth it. I just think you might need to focus on other things as opposed to like maybe learning
+ *  syntax or learning how to write a for loop or stuff like that." (motion test 332.4-340.4) */
+function sWorth(t) {
+  page({ head: 'SO, SHOULD YOU?' }); const k = { w: P("I think it's still worth it.", 332.4), o: P('focus on other things', 334.4), sy: P('learning syntax', 336.2), fl: P('how to write a for loop', 337.5) };
+  ctx.save(); drift(t - 332);
+  const x = LX(); hand(t, "I think it's still", x, rowY(PORT ? 3 : 3), FK(V(130, 108)), C.pen, k.w.t - 0.05, 30); hand(t, 'worth it.', x, rowY(PORT ? 4.6 : 4.6), FK(V(170, 180)), C.pen, k.w.w[3] - 0.05, 22);
+  tick(t, k.w.w[5] + 0.15, x + tw('worth it.', FK(V(170, 180))) + 40, rowY(PORT ? 4.6 : 4.6) - 50, V(100, 100));
+  const y2 = rowY(PORT ? 7 : 6.5); const f2 = FK(V(64, 48), 400);
+  hand(t, 'Focus on other things, as opposed to:', x, y2, f2, C.pen, k.o.t - 0.1, 26);
+  const fs = FK(V(84, 84)); const ya = rowY(PORT ? 9 : 8); hand(t, 'syntax', x + 40, ya, fs, C.pen, k.sy.w[1] - 0.1, 22); strike(t, k.sy.w[1] + 0.35, x + 40, ya - 22, tw('syntax', fs));
+  const xb = PORT ? x + 40 : x + 520, yb = PORT ? rowY(11) : ya; hand(t, 'for loops', xb, yb, fs, C.pen, k.fl.w[4] - 0.1, 22); strike(t, k.fl.w[5] + 0.3, xb, yb - 22, tw('for loops', fs));
+  ctx.restore();
+}
+const DIR = {
+  fonts: ['700 40px "Kalam"', '400 40px "Kalam"', '800 40px "Libre Franklin"'],
+  draw(t) { if (t < 60) sCut(t); else if (t < 90) sSame(t); else if (t < 200) sFour(t); else sWorth(t); },
+  stills: { c1: { t: 76.0 }, c2: { t: 111.5 }, c3: { t: 25.0 }, c4: { t: 340.3 }, p1: { t: 340.3 }, p2: { t: 111.5 } },
+};
+boot(DIR);
+</script></body></html>

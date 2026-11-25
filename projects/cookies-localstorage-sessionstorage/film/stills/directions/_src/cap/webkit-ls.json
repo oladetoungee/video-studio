@@ -1,0 +1,106 @@
+{
+ "title": "Full Third-Party Cookie Blocking and More | WebKit",
+ "h1": "Full Third-Party Cookie Blocking and More",
+ "h1y": 111,
+ "found": {
+  "deleting all of a website’s script-writable storage": [
+   [
+    408.546875,
+    2974.515625,
+    378.859375,
+    20
+   ]
+  ],
+  "script-writable storage": [
+   [
+    538.359375,
+    2948.515625,
+    177.765625,
+    20
+   ]
+  ],
+  "seven days of Safari use": [
+   [
+    833.28125,
+    2974.515625,
+    156.875,
+    20
+   ],
+   [
+    263.796875,
+    3000.515625,
+    27.921875,
+    20
+   ]
+  ],
+  "LocalStorage": [
+   [
+    328.421875,
+    2814.515625,
+    102.796875,
+    20
+   ]
+  ]
+ },
+ "H": 4815,
+ "focus": {
+  "deleting all of a website’s script-writable storage": {
+   "file": "webkit-ls__deleting-all-of-a-websit.png",
+   "top": 2454.515625,
+   "rects": [
+    [
+     408.546875,
+     520,
+     378.859375,
+     20
+    ]
+   ]
+  },
+  "script-writable storage": {
+   "file": "webkit-ls__script-writable-storage.png",
+   "top": 2428.515625,
+   "rects": [
+    [
+     538.359375,
+     520,
+     177.765625,
+     20
+    ]
+   ]
+  },
+  "seven days of Safari use": {
+   "file": "webkit-ls__seven-days-of-safari-use.png",
+   "top": 2454.515625,
+   "rects": [
+    [
+     833.28125,
+     520,
+     156.875,
+     20
+    ],
+    [
+     263.796875,
+     546,
+     27.921875,
+     20
+    ]
+   ]
+  },
+  "LocalStorage": {
+   "file": "webkit-ls__localstorage.png",
+   "top": 2294.515625,
+   "rects": [
+    [
+     328.421875,
+     520,
+     102.796875,
+     20
+    ]
+   ]
+  }
+ },
+ "clipTop": 0,
+ "scale": 1.5,
+ "url": "https://webkit.org/blog/10218/full-third-party-cookie-blocking-and-more/",
+ "captured": "2026-11-02T19:57:23.852Z"
+}

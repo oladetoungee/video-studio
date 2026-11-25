@@ -1,0 +1,25 @@
+{
+  "direction": "The two jobs people mix up, as two big lanyard badges held up in her pinched fingers (RESEARCHER / DESIGNER), and a question that pulls the viewer in. Follows props-as-the-topic on her Pinterest board.",
+  "concept": "T05",
+  "thumbnail_text": "WHICH ONE ARE YOU?",
+  "title": "UX Researcher or UX Designer: Which Job Fits You?",
+  "titles": [
+    "UX Researcher or UX Designer: Which Job Fits You?",
+    "UX Researcher vs UX Designer: Who Does What on a Team?",
+    "UX Researcher or UX Designer? Here's the Real Difference"
+  ],
+  "scores": "a 3/5 · 4/7 · 4/7 | b 8/8 · 8/7 · 8/8 | c 4 · 6 · 4",
+  "recommended": false,
+  "text": {
+    "hd": "WHICH ONE ARE YOU?",
+    "k1": "UX",
+    "b1": "RESEARCHER",
+    "k2": "UX",
+    "b2": "DESIGNER"
+  },
+  "images": {
+    "scene": "../../assets/scene/g/s_409.jpg",
+    "front": "../../assets/scene/g/mask/s_409.png"
+  },
+  "vars": {}
+}

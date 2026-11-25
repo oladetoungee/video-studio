@@ -1,0 +1,115 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>C The End</title>
+<link rel="stylesheet" href="../_shared/fonts.css">
+<style>
+:root{--night:#0D0C0B;--butter:#F2E2A0;--bone:#EDE6D6;--dim:#8A8170;--line:#2A2724}
+#stage{background:var(--night);font-family:"Lora";color:var(--bone)}
+.bod{position:absolute;font-family:"Bodoni Moda";font-style:italic;font-weight:600;line-height:.95;letter-spacing:-.01em}
+.lab{position:absolute;font-family:"Sofia XC";font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--dim)}
+.lora{position:absolute;font-family:"Lora";line-height:1.25}
+.bar{position:absolute;height:8px;background:var(--line)}
+.bar i{position:absolute;left:0;top:0;bottom:0;background:var(--butter);transform-origin:0 50%}
+.pane{position:absolute;overflow:hidden;border-radius:14px}
+.post{position:absolute;left:30px;right:30px;height:300px;background:#262320;border-radius:12px}
+.post:before{content:"";position:absolute;left:24px;top:22px;width:56px;height:56px;border-radius:50%;background:#5A534A}
+.post:after{content:"";position:absolute;left:24px;right:24px;top:100px;bottom:24px;background:#423C35;border-radius:6px}
+.clip{position:absolute;background:#fff;overflow:hidden;border-radius:14px}
+.hl{position:absolute;background:var(--butter);mix-blend-mode:multiply}
+.cr{position:absolute;font-family:"Sofia XC";font-weight:500;font-size:30px;letter-spacing:.06em;color:var(--dim);text-transform:uppercase}
+.feed{position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover}
+</style></head>
+<body><div id="stage"></div>
+<script src="../_shared/lib.js"></script>
+<script>
+const W = +Q.get('w') || 1920, H = +Q.get('h') || 1080, PORT = H > W;
+const S = $('#stage'); st(S, { width: W + 'px', height: H + 'px' });
+// a countdown ring (stroke) with a number inside
+const ring = (id, x, y, r, n, frac) => `<svg id="${id}" class="abs" style="left:${x}px;top:${y}px" width="${2 * r + 8}" height="${2 * r + 8}"><circle cx="${r + 4}" cy="${r + 4}" r="${r}" fill="none" stroke="#2A2724" stroke-width="6"/><circle class="arc" cx="${r + 4}" cy="${r + 4}" r="${r}" fill="none" stroke="#F2E2A0" stroke-width="6" stroke-dasharray="${2 * Math.PI * r}" stroke-dashoffset="${2 * Math.PI * r * (1 - frac)}" transform="rotate(-90 ${r + 4} ${r + 4})"/><text class="num" x="${r + 4}" y="${r + 4 + r * 0.36}" text-anchor="middle" font-family="Sofia XC" font-weight="700" font-size="${r}" fill="#F2E2A0">${n}</text></svg>`;
+// the three panes: a chapter that ends, an episode that ends, a feed that does not
+function panes(x0, y0, pw, ph, gap) {
+  let feed = ''; for (let i = 0; i < 8; i++) feed += `<div class="post" style="top:${30 + i * 330}px"></div>`;
+  return `<div class="pane" id="pa" style="left:${x0}px;top:${y0}px;width:${pw}px;height:${ph}px;background:#F1EBDD">
+     ${[0, 1, 2, 3, 4, 5].map(i => `<div class="abs" style="left:56px;right:${56 + (i === 5 ? 160 : (i * 37) % 60)}px;top:${70 + i * 34}px;height:12px;background:#CFC6B2;border-radius:3px"></div>`).join('')}
+     <div class="bod" id="paE" style="left:0;right:0;top:${ph - 250}px;text-align:center;font-size:76px;color:#1A1714">The End</div>
+     <div class="abs" style="left:0;right:0;top:${ph - 150}px;text-align:center;font-family:'Sofia XC';font-weight:700;font-size:30px;letter-spacing:.12em;color:#7A7262">OF CHAPTER 3</div></div>
+   <div class="pane" id="pb" style="left:${x0 + pw + gap}px;top:${y0}px;width:${pw}px;height:${ph}px;background:#000;border:3px solid #2A2724">
+     <div class="lab" style="left:40px;top:${ph * 0.3}px;font-size:40px">End of</div>
+     <div class="bod" style="left:40px;top:${ph * 0.3 + 56}px;font-size:84px;color:var(--butter)">Episode 3</div>
+</div>
+   <div class="pane" id="pc" style="left:${x0 + 2 * (pw + gap)}px;top:${y0}px;width:${pw}px;height:${ph + 200}px;background:#121110;border-radius:14px 14px 0 0"><div id="fd" class="abs" style="left:0;right:0;top:0">${feed}</div></div>
+   <div class="lab" style="left:${x0}px;top:${y0 + ph + 26}px;font-size:36px;color:var(--bone)">The end of a chapter</div>
+   <div class="lab" style="left:${x0 + pw + gap}px;top:${y0 + ph + 26}px;font-size:36px;color:var(--bone)">The end of an episode</div>
+   <div class="lab" style="left:${x0 + 2 * (pw + gap)}px;top:${y0 - 60}px;font-size:36px;color:var(--butter)">Your feed</div>`;
+}
+const bar = (id, x, y, w, k, label) => `<div class="bar" id="${id}" style="left:${x}px;top:${y}px;width:${w}px"><i style="width:100%;transform:scaleX(${k})"></i></div>` + (label ? `<div class="lab" style="left:${x}px;top:${y - 76}px;font-size:58px">${label}</div>` : '');
+const SHOTS = {};
+// c1 · stopping cues: two things that end, one that never does (raw 1:10-1:25)
+SHOTS.c1 = () => {
+  S.innerHTML = `<div class="bod" style="left:110px;top:90px;font-size:110px;color:var(--butter)">Stopping cues</div>
+   <div class="lora" style="left:116px;top:220px;font-size:40px;color:var(--bone)">"a small moment that makes you pause"</div>` + panes(110, 340, 520, 560, 70);
+};
+// c2 · the end card between items (every item gets the stopping cue a feed doesn't have)
+SHOTS.c2 = () => {
+  S.innerHTML = `<div class="lab" style="left:140px;top:240px;font-size:62px;color:var(--dim)">End of</div>
+   <div class="bod" style="left:130px;top:320px;font-size:300px;color:var(--butter)">01</div>
+   <div class="bod" style="left:520px;top:380px;font-size:190px;color:var(--bone)">Reading</div>
+   ${bar('b', 140, 960, 1640, 1, '01 / 09')}
+   <div class="lab" style="left:1300px;top:690px;font-size:58px">Next</div>
+   <div class="lora" style="left:1300px;top:756px;font-size:60px;font-style:italic">02 · Boredom</div>`;
+};
+// c3 · the receipt: the NPR headline, highlighted on her words "infinite scroll" (raw 0:47)
+SHOTS.c3 = () => {
+  const k = 0.86, cw = 1780 * k, ch = 212 * k;
+  S.innerHTML = `<div class="lab" style="left:${(1920 - cw) / 2}px;top:210px;font-size:40px;color:var(--butter)">The feed that never stops</div>
+   <div class="clip" style="left:${(1920 - cw) / 2}px;top:280px;width:${cw}px;height:${ch + 40}px"><div class="hl" id="h1" style="left:${176 * k}px;top:${20 + 18 * k}px;width:${480 * k}px;height:${82 * k}px"></div><img src="../_src/cap/npr-head.png" class="abs" style="left:0;top:20px;width:${cw}px;mix-blend-mode:multiply"></div>
+   <div class="cr" style="left:${(1920 - cw) / 2}px;top:${300 + ch + 50}px">Source · NPR, The Indicator from Planet Money, 7 April 2026</div>
+   <div class="lora" style="left:${(1920 - cw) / 2}px;top:700px;width:1400px;font-size:52px;color:var(--bone)">"One of the features that powers doomscrolling is the <span style="font-family:'Bodoni Moda';font-style:italic;color:var(--butter)">infinite scroll</span> feature."</div>`;
+};
+// c4 · a Pexels insert full-bleed with the item's progress bar running under it (02 boredom, raw 5:48)
+SHOTS.c4 = () => {
+  S.innerHTML = `<img src="${PX('waiting')}" class="abs" style="left:0;top:0;width:1920px;height:1080px;object-fit:cover">
+   <div class="abs" style="left:0;right:0;bottom:0;height:300px;background:rgba(13,12,11,.82)"></div>
+   <div class="lab" style="left:140px;top:800px;font-size:56px;color:var(--butter)">02 · Boredom</div>
+   <div class="lora" style="left:140px;top:870px;width:1500px;font-size:56px">"Just letting myself be bored, without doing anything."</div>
+   ${bar('b', 140, 1000, 1640, 0.42)}<div class="cr" style="right:60px;top:40px;color:#fff">Photo · Pexels</div>`;
+};
+// p1 · portrait opening: the question over a feed that runs off the bottom
+SHOTS.p1 = () => {
+  let feed = ''; for (let i = 0; i < 5; i++) feed += `<div class="post" style="top:${30 + i * 330}px"></div>`;
+  S.innerHTML = `<div class="bod" style="left:80px;top:170px;width:920px;font-size:128px;color:var(--bone)">Why is it so hard to <span style="color:var(--butter)">stop?</span></div>
+   <div class="pane" style="left:140px;top:800px;width:800px;height:1300px;background:#121110">${feed}</div>
+   <div class="lab" style="left:140px;top:720px;font-size:50px;color:var(--butter)">A feed has no end</div>`;
+};
+// p2 · black phrase card (raw 20:24)
+SHOTS.p2 = () => {
+  S.innerHTML = `<div class="lab" style="left:90px;top:700px;font-size:52px;color:var(--bone)">Social media can never beat</div>
+   <div class="bod" style="left:84px;top:780px;width:920px;font-size:170px;color:var(--butter)">genuine connection.</div>`;
+};
+// motion test (raw 69.3 -> 79.5): "The stopping cue is like a small moment that makes you pause. It's like the end of a chapter, the end of an episode,"
+function buildTest() {
+  S.innerHTML = `<div id="s1" class="abs" style="inset:0">
+     <div class="lab" id="the" style="left:0;right:0;top:300px;text-align:center;font-size:48px">The</div>
+     <div class="bod" id="sc" style="left:0;right:0;top:360px;text-align:center;font-size:220px;color:var(--butter)">stopping cue</div>
+     <div class="lora" id="sm" style="left:0;right:0;top:640px;text-align:center;font-size:52px"></div>
+     ${bar('b1', 460, 780, 1000)}<div class="abs" id="pz" style="left:930px;top:820px;width:60px;height:70px;opacity:0"><div class="abs" style="left:6px;top:0;width:16px;height:70px;background:var(--butter)"></div><div class="abs" style="left:38px;top:0;width:16px;height:70px;background:var(--butter)"></div></div></div>
+   <div id="s2" class="abs" style="inset:0;display:none"><div class="bod" style="left:110px;top:90px;font-size:110px;color:var(--butter)">Stopping cues</div>${panes(110, 300, 520, 600, 70)}</div>`;
+  return t => {
+    const two = t >= 75.98; st('#s1', { display: two ? 'none' : 'block' }); st('#s2', { display: two ? 'block' : 'none' });
+    enter('#the', P(t, 70.35, .4), 0, 24, 5); enter('#sc', P(t, 70.7, .55), 0, 40, 10);
+    typeOn('#sm', 'a small moment that makes you pause', t, 72.1, 17);
+    // the bar runs while she talks and stops dead on "pause"
+    const run = clamp((Math.min(t, 74.3) - 72.1) / 3.2) * 0.62; $('#b1 i').style.transform = `scaleX(${t < 72.1 ? 0 : run})`;
+    const pz = P(t, 74.3, 0.2, E.outQuint); st('#pz', { opacity: t >= 74.3 ? 1 : 0, transform: `scale(${lerp(1.6, 1, pz)})` });
+    st('#s1', { transform: t >= 74.3 ? `scale(${1 + 0.02 * P(t, 74.3, 1.6, E.outCubic)})` : 'none' });
+    // panes rise in on her words; the end marks light; the feed scrolls forever
+    enter('#pa', P(t, 76.0, .45, E.outQuint), 0, 120, 0); enter('#pb', P(t, 77.6, .45, E.outQuint), 0, 120, 0); enter('#pc', P(t, 78.7, .45, E.outQuint), 0, 120, 0);
+    st('#paE', { color: t >= 76.45 ? '#B8892B' : '#1A1714' });
+    // (no autoplay countdown: the end card simply holds)
+    st('#fd', { transform: `translateY(${-((Math.max(0, t - 78.7)) * 420) % 330}px)` });
+  };
+}
+let TEST = null;
+window.show = async (n) => { SHOTS[n](); await imagesReady(); };
+window.seek = async (t) => { if (!TEST) { TEST = buildTest(); await imagesReady(); } TEST(t); };
+window.READY = true;
+</script></body></html>

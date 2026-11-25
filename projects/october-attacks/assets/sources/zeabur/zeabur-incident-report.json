@@ -1,0 +1,299 @@
+{
+ "story": "zeabur",
+ "outlet": "Zeabur (incident report)",
+ "slug": "zeabur-incident-report",
+ "url": "https://zeabur.com/blogs/october-2026-security-incident",
+ "finalUrl": "https://zeabur.com/blogs/october-2026-security-incident",
+ "status": "loaded",
+ "http": 200,
+ "title": "Blogs: Zeabur October 2026 security incident (preliminary report) - Zeabur",
+ "h1": "Zeabur October 2026 security incident (preliminary report)",
+ "published": "2026-10-19",
+ "files": {
+  "fold": "zeabur/zeabur-incident-report_fold.png",
+  "full": "zeabur/zeabur-incident-report_full.jpg",
+  "scroll": "zeabur/zeabur-incident-report_scroll.mp4"
+ },
+ "full": {
+  "width": 1440,
+  "height": 6000,
+  "pageHeight": 20280,
+  "zoom": 1,
+  "quotes": [
+   {
+    "quote": "On October 14–15, 2026, an attacker used leaked Zeabur internal credentials to break into the shared cluster",
+    "box": {
+     "x": 312,
+     "y": 834,
+     "w": 811,
+     "h": 53
+    },
+    "lines": [
+     {
+      "x": 441,
+      "y": 834,
+      "w": 682,
+      "h": 21
+     },
+     {
+      "x": 312,
+      "y": 866,
+      "w": 103,
+      "h": 21
+     }
+    ]
+   },
+   {
+    "quote": "long-lived admin credentials were stored in plaintext and could be used from the public internet",
+    "box": {
+     "x": 312,
+     "y": 1202,
+     "w": 825,
+     "h": 53
+    },
+    "lines": [
+     {
+      "x": 754,
+      "y": 1202,
+      "w": 383,
+      "h": 21
+     },
+     {
+      "x": 312,
+      "y": 1234,
+      "w": 310,
+      "h": 21
+     }
+    ]
+   },
+   {
+    "quote": "The shared cluster's admin interface was open to the public internet at the time, and the admin tokens had no expiry",
+    "box": {
+     "x": 312,
+     "y": 1866,
+     "w": 845,
+     "h": 21
+    },
+    "lines": [
+     {
+      "x": 312,
+      "y": 1866,
+      "w": 845,
+      "h": 21
+     }
+    ]
+   },
+   {
+    "quote": "321,810 accounts",
+    "box": {
+     "x": 761,
+     "y": 4539,
+     "w": 110,
+     "h": 18
+    },
+    "lines": [
+     {
+      "x": 761,
+      "y": 4539,
+      "w": 110,
+      "h": 18
+     }
+    ]
+   }
+  ]
+ },
+ "scroll": {
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "seconds": 11.166666666666666,
+  "keyframes": [
+   {
+    "t": 0,
+    "y": 94
+   },
+   {
+    "t": 1,
+    "y": 94
+   },
+   {
+    "t": 1.984,
+    "y": 424
+   },
+   {
+    "t": 3.084,
+    "y": 424
+   },
+   {
+    "t": 4.099,
+    "y": 792
+   },
+   {
+    "t": 5.199,
+    "y": 792
+   },
+   {
+    "t": 6.406,
+    "y": 1456
+   },
+   {
+    "t": 7.506,
+    "y": 1456
+   },
+   {
+    "t": 9.477,
+    "y": 4129
+   },
+   {
+    "t": 11.177,
+    "y": 4129
+   }
+  ],
+  "zoom": 1,
+  "easing": "easeInOutCubic between keyframes, holds where y is equal",
+  "capped": false,
+  "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)",
+  "quotes": [
+   {
+    "quote": "On October 14–15, 2026, an attacker used leaked Zeabur internal credentials to break into the shared cluster",
+    "inVideo": true,
+    "still": true,
+    "t": 2.53,
+    "visibleStill": [
+     1.9,
+     3.17
+    ],
+    "scrollY": 424,
+    "box": {
+     "x": 552,
+     "y": 410,
+     "w": 811,
+     "h": 53
+    },
+    "lines": [
+     {
+      "x": 681,
+      "y": 410,
+      "w": 682,
+      "h": 21
+     },
+     {
+      "x": 552,
+      "y": 442,
+      "w": 103,
+      "h": 21
+     }
+    ],
+    "docBox": {
+     "x": 552,
+     "y": 834,
+     "w": 811,
+     "h": 53
+    },
+    "layoutDriftPx": 0
+   },
+   {
+    "quote": "long-lived admin credentials were stored in plaintext and could be used from the public internet",
+    "inVideo": true,
+    "still": true,
+    "t": 4.65,
+    "visibleStill": [
+     4.03,
+     5.27
+    ],
+    "scrollY": 792,
+    "box": {
+     "x": 552,
+     "y": 410,
+     "w": 825,
+     "h": 53
+    },
+    "lines": [
+     {
+      "x": 994,
+      "y": 410,
+      "w": 383,
+      "h": 21
+     },
+     {
+      "x": 552,
+      "y": 442,
+      "w": 310,
+      "h": 21
+     }
+    ],
+    "docBox": {
+     "x": 552,
+     "y": 1202,
+     "w": 825,
+     "h": 53
+    },
+    "layoutDriftPx": 0
+   },
+   {
+    "quote": "The shared cluster's admin interface was open to the public internet at the time, and the admin tokens had no expiry",
+    "inVideo": true,
+    "still": true,
+    "t": 6.95,
+    "visibleStill": [
+     6.33,
+     7.57
+    ],
+    "scrollY": 1456,
+    "box": {
+     "x": 552,
+     "y": 410,
+     "w": 845,
+     "h": 21
+    },
+    "lines": [
+     {
+      "x": 552,
+      "y": 410,
+      "w": 845,
+      "h": 21
+     }
+    ],
+    "docBox": {
+     "x": 552,
+     "y": 1866,
+     "w": 845,
+     "h": 21
+    },
+    "layoutDriftPx": 0
+   },
+   {
+    "quote": "321,810 accounts",
+    "inVideo": true,
+    "still": true,
+    "t": 10.3,
+    "visibleStill": [
+     9.4,
+     11.2
+    ],
+    "scrollY": 4129,
+    "box": {
+     "x": 1001,
+     "y": 410,
+     "w": 110,
+     "h": 18
+    },
+    "lines": [
+     {
+      "x": 1001,
+      "y": 410,
+      "w": 110,
+      "h": 18
+     }
+    ],
+    "docBox": {
+     "x": 1001,
+     "y": 4539,
+     "w": 110,
+     "h": 18
+    },
+    "layoutDriftPx": 0
+   }
+  ]
+ }
+}

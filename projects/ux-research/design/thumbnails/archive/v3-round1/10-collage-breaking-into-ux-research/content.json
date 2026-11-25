@@ -1,0 +1,26 @@
+{
+  "direction": "Collage: her thoughtful (hand at her temple) in her room, a clipboard with a short hand-written plan, a blank staff badge 'UX Researcher', one handwritten label; the topic in a big italic serif bottom-left. References: viral collage 'How to be Feminine', 'Capsule wardrobe', Pinterest 'new york city writing'.",
+  "thumbnail_text": "Breaking into UX research",
+  "text": {
+    "hd": "Breaking into<br>UX research",
+    "list": "1. learn the basics<br>2. talk to users<br>3. share your work",
+    "badge": "UX Researcher",
+    "l1": "no experience yet?"
+  },
+  "images": {
+    "bg": "../../assets/scene/g/s_686.7.jpg",
+    "cut": "../../assets/scene/g/mask3/s_686.7.png"
+  },
+  "vars": {
+    "--bgb": "0.85",
+    "--meb": "1.05"
+  },
+  "titles": [
+    "How to Get Into UX Research With No Experience",
+    "How to Become a UX Researcher (From a Master's Student)",
+    "What Is UX Research? A Beginner's Path Into the Field"
+  ],
+  "title": "How to Get Into UX Research With No Experience",
+  "set": 3,
+  "kind": "collage"
+}

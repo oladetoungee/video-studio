@@ -1,0 +1,25 @@
+{
+  "direction": "Research as looking closely: a big magnifying glass over a generic app shows a user's tap landing just above the Pay button. Flat canary ground, ink type, one orange tap ring; her calm cut-out bottom-left in black and white with an ink outline.",
+  "thumbnail_text": "UX Research",
+  "titles": [
+    "What Is UX Research? The Step Bad Apps Skip",
+    "Why Some Apps Are So Confusing (UX Research Explained)",
+    "UX Research for Beginners: Watch Users, Don't Just Ask"
+  ],
+  "text": {
+    "hd": "UX<br>Research",
+    "btn": "Pay"
+  },
+  "images": {
+    "me": "../../assets/cut/gbemi-direct-hard.png"
+  },
+  "vars": {
+    "--ground": "#FFE15A",
+    "--fg": "#17140F",
+    "--accent": "#FF4713",
+    "--ol": "#17140F"
+  },
+  "scores": "",
+  "recommended": false,
+  "title": "What Is UX Research? The Step Bad Apps Skip"
+}

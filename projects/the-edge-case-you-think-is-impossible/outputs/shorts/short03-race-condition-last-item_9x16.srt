@@ -1,0 +1,55 @@
+1
+00:00:00,060 --> 00:00:02,870
+for example, in our online shop, say we have
+
+2
+00:00:02,870 --> 00:00:04,670
+one item left in stock,
+
+3
+00:00:04,830 --> 00:00:07,110
+two people click buy in the exact same
+
+4
+00:00:07,110 --> 00:00:07,610
+second,
+
+5
+00:00:08,130 --> 00:00:09,990
+both requests check the stock,
+
+6
+00:00:10,240 --> 00:00:12,730
+both see one item left, both create an
+
+7
+00:00:12,730 --> 00:00:13,210
+order,
+
+8
+00:00:13,340 --> 00:00:15,410
+and now we have sold an item that we do not
+
+9
+00:00:15,410 --> 00:00:15,890
+have
+
+10
+00:00:16,010 --> 00:00:17,350
+what do we do about this?
+
+11
+00:00:17,590 --> 00:00:19,610
+so if the two requests arrive at the same
+
+12
+00:00:19,610 --> 00:00:21,010
+time, only one of them can take the last
+
+13
+00:00:21,010 --> 00:00:23,730
+item the other one gets zero rows updated,
+
+14
+00:00:23,730 --> 00:00:25,300
+and that's how you know it's sold out

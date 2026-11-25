@@ -1,0 +1,32 @@
+{
+  "direction": "Photo background (kit T6): her room washed in October orange, she in full colour with both palms up as if to say 'what now?'; one big golden key between her hands with a paper tag that says STOLEN. Three things only. References: her ux-research thumbnail (she gestures at the object), viral 1 'Financial literacy' (the topic's object in the scene).",
+  "thumbnail_text": "STOLEN SECRET KEYS",
+  "titles": [
+    "Railway Hack, Zeabur and OpenCode: Change Your API Keys",
+    "OpenCode Hacked, Railway Breached: Protect Your API Keys"
+  ],
+  "title": "Railway Hack, Zeabur and OpenCode: Change Your API Keys",
+  "kind": "photo",
+  "text": {
+    "hd": "Stolen<br><span class=\"acc\">secret</span><br>keys",
+    "tag": "API KEYS"
+  },
+  "images": {
+    "bg": "../../assets/scene/gbemi-176.6.jpg",
+    "me": "../../assets/scene/gbemi-176.6-person.png",
+    "key": "../../assets/draw/key.svg"
+  },
+  "vars": {
+    "--ground": "#16110D",
+    "--fg": "#FFF4E6",
+    "--accent": "#FFD08A",
+    "--wash": "#F2541B",
+    "--dim": "rgba(22,17,13,.12)",
+    "--sc": "1.2",
+    "--sc-x": "128px",
+    "--sc-y": "0px",
+    "--onacc": "#C8320C"
+  },
+  "scores": "cold critic R1 7.5 · R2 7.5",
+  "recommended": true
+}

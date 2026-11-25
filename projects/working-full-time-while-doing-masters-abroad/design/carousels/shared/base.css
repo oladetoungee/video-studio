@@ -1,0 +1,103 @@
+/* set 02 Bold condensed (TYPE-SYSTEM.md, her pick 2026-11-07): the old family names now point at Anton / Inter Tight / DM Mono */
+@font-face { font-family: 'Bebas'; src: url('fonts/Anton-Regular.ttf') format('truetype'); size-adjust: 84%; }
+@font-face { font-family: 'Work'; src: url('fonts/InterTightRegular.ttf') format('truetype'); font-weight: 100 450; }
+@font-face { font-family: 'Work'; src: url('fonts/InterTightMedium.ttf') format('truetype'); font-weight: 451 550; }
+@font-face { font-family: 'Work'; src: url('fonts/InterTightSemiBold.ttf') format('truetype'); font-weight: 551 650; }
+@font-face { font-family: 'Work'; src: url('fonts/InterTightBold.ttf') format('truetype'); font-weight: 651 900; }
+@font-face { font-family: 'Cutive'; src: url('fonts/DMMono-Medium.ttf') format('truetype'); }
+@font-face { font-family: 'Cutive Mono'; src: url('fonts/DMMono-Medium.ttf') format('truetype'); }
+@font-face { font-family: 'Fam'; src: url('fonts/InterTightMedium.ttf') format('truetype'); }
+@font-face { font-family: 'JB'; src: url('fonts/DMMono-Medium.ttf') format('truetype'); size-adjust: 86%; }
+@font-face { font-family: 'DMS'; src: url('fonts/Anton-Regular.ttf') format('truetype'); size-adjust: 84%; }
+@font-face { font-family: 'DMSi'; src: url('fonts/Anton-Regular.ttf') format('truetype'); size-adjust: 84%; }
+@font-face { font-family: 'Hand'; src: url('fonts/InterTightMedium.ttf') format('truetype'); }
+/* working-full-time carousels (2026-11-02): the film's look B "Clock in / Clock out" + A's 24-hour dial.
+   Grounds: ink = charcoal wall #23201B, paper = manila #E7D7AE, card = #F6F0E0, accent = stamp red #C8102E (one punchline).
+   Bebas Neue display, Work Sans body, Cutive Mono labels (>= 32 px). Real pages are never altered and always credited. */
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { background: #2a2a2e; }
+body { font-family: 'Work', sans-serif; padding: 40px; display: flex; flex-direction: column; gap: 40px; align-items: flex-start; }
+html.v-slide body, html.v-strip body { padding: 0; gap: 0; }
+html.v-strip body { flex-direction: row; }
+@media print { body { padding: 0; gap: 0; } .slide { break-after: page; } }
+@page { margin: 0; }
+
+.slide { position: relative; width: var(--W); height: var(--H); overflow: hidden; background: var(--bg); color: var(--fg); flex: none; }
+.g-ink    { --bg: #23201B; --fg: #E7D7AE; --sub: rgba(231,215,174,.8); --mid: rgba(231,215,174,.62); --line: rgba(231,215,174,.22); --a: var(--accInk); --onA: #F6EEDB; --chip: #2E2A24; }
+.g-paper  { --bg: #E7D7AE; --fg: #1D1A15; --sub: rgba(29,26,21,.8); --mid: rgba(29,26,21,.62); --line: rgba(29,26,21,.2); --a: var(--acc); --onA: #F6EEDB; --chip: #F6F0E0; }
+.g-card   { --bg: #F6F0E0; --fg: #1D1A15; --sub: rgba(29,26,21,.8); --mid: rgba(29,26,21,.62); --line: rgba(29,26,21,.2); --a: var(--acc); --onA: #F6EEDB; --chip: #E7D7AE; }
+.g-accent { --bg: var(--acc); --fg: var(--onAcc); --sub: var(--onAccMid); --mid: var(--onAccMid); --line: var(--onAccLine); --a: #1D1A15; --onA: var(--acc); --chip: rgba(29,26,21,.12); }
+
+.main { position: absolute; left: 80px; right: 80px; top: 96px; bottom: 150px; display: flex; flex-direction: column; }
+.push { margin-top: auto; }
+.disp { font-family: 'Bebas', sans-serif; text-transform: uppercase; line-height: .92; letter-spacing: .005em; color: var(--fg); }
+.disp .acc, .acc { color: var(--a); }
+.body { font-size: 44px; line-height: 1.3; font-weight: 600; letter-spacing: -0.01em; color: var(--sub); text-wrap: pretty; }
+.bal { text-wrap: balance; }
+.nw { white-space: nowrap; }
+.mono { font-family: 'Cutive Mono', monospace; font-size: 34px; letter-spacing: .04em; text-transform: uppercase; }
+.lab { line-height: 1.2; }
+.handle { font-family: 'Bebas'; font-size: 96px; color: var(--a); letter-spacing: .01em; }
+
+.foot { position: absolute; left: 80px; right: 80px; bottom: 56px; display: flex; justify-content: space-between; align-items: center; font-family: 'Cutive Mono'; font-size: 32px; color: var(--mid); }
+.foot .num b { color: var(--fg); font-weight: 600; }
+.meter { display: flex; gap: 6px; }
+.meter i { width: 26px; height: 8px; background: var(--line); }
+.meter i.on { background: var(--a); }
+
+/* the tip number as a rubber stamp */
+.numst { align-self: flex-start; font-family: 'Bebas'; font-size: 92px; line-height: 1; color: var(--a); border: 0 solid var(--a); padding: 8px 22px 0; transform: rotate(-4deg); }
+
+/* real page, untouched, credited */
+.shot { position: relative; background: #fff; padding: 16px 18px; box-shadow: 0 24px 50px rgba(0,0,0,.3); }
+.shot img { display: block; width: 100%; }
+.shot .cr { position: absolute; left: 0; top: 100%; margin-top: 14px; font-family: 'Cutive Mono'; font-size: 32px; letter-spacing: .02em; color: var(--mid); white-space: nowrap; }
+
+/* time-card stub */
+.stub { background: #E7D7AE; color: #1D1A15; border: 1px solid #A08A5E; padding: 18px 28px; box-shadow: 0 20px 40px rgba(0,0,0,.35); min-width: 470px; }
+.stub .r { display: flex; justify-content: space-between; gap: 40px; align-items: baseline; border-bottom: 2px solid #A08A5E; padding: 6px 0; }
+.stub .r:last-child { border: none; }
+.stub b { font-family: 'Bebas'; font-weight: 400; font-size: 52px; letter-spacing: .04em; }
+.stub span { font-family: 'Cutive Mono'; font-size: 44px; }
+.stub .x span, .stub .x b { color: #C8102E; }
+
+/* stamps */
+.stamps { display: flex; flex-direction: column; gap: 34px; margin-top: 70px; align-items: flex-start; }
+.stamp { font-family: 'Bebas'; font-size: 150px; line-height: 1; color: var(--a); border: 0 solid var(--a); padding: 12px 34px 0; }
+.stamp.fill { background: var(--a); color: var(--onA); }
+.stamp.strike { color: var(--mid); border-color: var(--mid); position: relative; }
+.stamp.strike:after { content: ''; position: absolute; left: -16px; right: -16px; top: 46%; height: 12px; background: var(--a); transform: rotate(-6deg); }
+
+/* week calendar */
+.wk { position: relative; background: #F6F0E0; border: 1px solid #1D1A15; color: #1D1A15; }
+.wk .dh { position: absolute; top: 8px; font-family: 'Bebas'; font-size: 52px; text-align: center; letter-spacing: .03em; }
+.wk .col { position: absolute; border-left: 1px solid #A08A5E; }
+.wk .b { position: absolute; padding: 10px 14px; font-weight: 800; font-size: 40px; text-transform: uppercase; line-height: 1; }
+.wk .b.w { background: #1D1A15; color: #E7D7AE; }
+.wk .b.c { background: #C8102E; color: #F6EEDB; }
+.wk .b.s { border: 1px dashed #1D1A15; }
+
+/* two dials -> one */
+.dials { display: flex; align-items: center; gap: 30px; margin-top: 60px; }
+.dials > div { display: flex; flex-direction: column; align-items: center; gap: 18px; }
+.dials .eq { font-family: 'Bebas'; font-size: 120px; color: var(--a); }
+.dials .lab { color: var(--fg); }
+
+/* polaroid of her */
+.pol { position: absolute; background: #fff; padding: 16px 16px 70px; box-shadow: 0 24px 50px rgba(0,0,0,.35); }
+.pol img { display: block; width: 100%; object-fit: cover; }
+.pol .cap { position: absolute; left: 0; right: 0; bottom: 18px; text-align: center; font-family: 'Cutive Mono'; font-size: 34px; color: #1D1A15; }
+.obj img { display: block; filter: drop-shadow(0 20px 26px rgba(0,0,0,.35)); }
+
+/* 2026-11-07 critic: bigger headlines (type is the image), no polaroid frames, no boxes in the calendar, mono >= 32 px */
+
+.pol { background: none !important; padding: 0 !important; box-shadow: none !important; }
+.pol .cap { position: static !important; margin-top: 16px; text-align: left !important; color: var(--fg) !important; font-size: 34px; }
+.wk, .wk * { outline: none !important; }
+.wk .b { border: 0 !important; }
+.wk { border: 0 !important; }
+.wk .b.s { border: 0 !important; background: var(--acc, #C8102E) !important; color: #F6EEDB !important; }
+.stub { box-shadow: none !important; border: 0 !important; }
+.main > .disp, .main .disp:first-of-type { zoom: 1; }
+.stamp { text-transform: uppercase; }

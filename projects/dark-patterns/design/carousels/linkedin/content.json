@@ -1,0 +1,164 @@
+{
+ "_help": "Edit text here (or in the studio), then run: node shared/build.mjs linkedin (from design/carousels). Markup: *word* = the marker, \\n = line break.",
+ "deck": "linkedin",
+ "width": 1080,
+ "height": 1350,
+ "accent": "#FF9EC4",
+ "accentOnInk": "#FF9EC4",
+ "docTitle": "Dark patterns: 11 tricks apps and online shops use, and why",
+ "slides": [
+  {
+   "layout": "cover",
+   "ground": "accent",
+   "title": "How *dark patterns* get into good products",
+   "size": 96,
+   "sub": "Dark patterns are designs that trick users, like this button. A lot of them win A/B tests.",
+   "subSize": 40,
+   "popup": {
+    "off": "10% OFF",
+    "yes": "Yes please",
+    "no": "No thanks, I hate saving money"
+   },
+   "lens": "*I hate saving money*"
+  },
+  {
+   "layout": "statement",
+   "ground": "card",
+   "tag": "Dark pattern",
+   "title": "A design that tricks you into doing something you *didn't mean to*",
+   "size": 100,
+   "body": "Harry Brignull, a UX designer, came up with the name in 2010. And most of the time, dark patterns are intentional."
+  },
+  {
+   "layout": "trick",
+   "ground": "accent",
+   "tag": "Hard to cancel",
+   "title": "Easy to join, *hard to leave*",
+   "ui": "stairs",
+   "steps": [
+    "Join in one click",
+    "Are you sure?",
+    "Wait! 50% off",
+    "Tell us why you're leaving"
+   ],
+   "stepLabels": [
+    "Join",
+    "Cancel, page 1",
+    "Page 2",
+    "Page 3"
+   ],
+   "body": "Joining takes one click. To cancel, you go through page after page of offers."
+  },
+  {
+   "layout": "trick",
+   "ground": "accent",
+   "tag": "Hidden costs",
+   "title": "The price changes at *checkout*",
+   "ui": "price",
+   "price": {
+    "label": "Checkout",
+    "rows": [
+     {
+      "k": "Running shoes",
+      "v": "€40"
+     },
+     {
+      "k": "+ Service fee",
+      "v": "€12",
+      "fee": true
+     },
+     {
+      "k": "Total",
+      "v": "€52"
+     }
+    ]
+   },
+   "body": "The shoes were €40 on the product page. At checkout, a service fee you never saw makes it €52."
+  },
+  {
+   "layout": "trick",
+   "ground": "card",
+   "tag": "Pre-selection",
+   "title": "The box was *already ticked*",
+   "ui": "check",
+   "check": {
+    "item": "Gift wrapping",
+    "price": "+ €2.99"
+   },
+   "body": "You end up paying for gift wrapping you never asked for. In the EU, a pre-ticked box doesn't count as consent."
+  },
+  {
+   "layout": "trick",
+   "ground": "ink",
+   "tag": "Fake urgency",
+   "title": "The countdown starts again when you *refresh*",
+   "size": 96,
+   "ui": "timer",
+   "timer": {
+    "label": "Offer ends in",
+    "clock": "09:59",
+    "again": "Refresh: 10:00 again"
+   },
+   "body": "A deadline that isn't real is there to make you buy faster. EU law already bans it."
+  },
+  {
+   "layout": "number",
+   "ground": "accent",
+   "title": "In 2023, the EU checked *399 online shops*",
+   "big": "148",
+   "of": "had at least one of the dark patterns it looked for",
+   "body": "42 of them used fake countdown timers.",
+   "shot": {
+    "img": "ec-head.png",
+    "credit": "European Commission, 30 Jan 2023",
+    "w": 920
+   }
+  },
+  {
+   "layout": "duo",
+   "ground": "ink",
+   "tag": "Why teams build them",
+   "title": "A trick can win an *A/B test*",
+   "size": 104,
+   "cols": [
+    {
+     "k": "Version A",
+     "v": "Honest design",
+     "w": "fewer sign-ups"
+    },
+    {
+     "k": "Version B",
+     "v": "The trick",
+     "w": "more sign-ups"
+    }
+   ],
+   "body": "Teams test which version gets more sign-ups. The test can't see who was tricked into signing up."
+  },
+  {
+   "layout": "list",
+   "ground": "card",
+   "title": "What the law says *now*",
+   "size": 100,
+   "rows": [
+    "EU: fake \"ends soon\" offers are banned",
+    "EU: a pre-ticked box is not consent",
+    "US: Amazon settled the FTC's Prime case for $2.5 billion"
+   ],
+   "body": "Sources: UCPD 2005, GDPR, FTC."
+  },
+  {
+   "layout": "end",
+   "ground": "ink",
+   "title": "If you're asked to build one, say *“we could be sued for this”*",
+   "size": 84,
+   "body": "I think people take that more seriously than “this is wrong”. Then build the honest version.",
+   "where": "Full video on YouTube",
+   "handle": "@WithGbemi",
+   "polaroid": {
+    "img": "gbemi_headshot.jpg",
+    "caption": "Gbemi"
+   },
+   "polY": 715
+  }
+ ]
+}

@@ -1,0 +1,24 @@
+{
+  "direction": "Faceless numbers in the film's look: up to 1,000,000 checks with no index against about 20 comparisons with one, bars drawn to scale (the 20 is a sliver, labelled). Wording per BRIEF (\"about 20 comparisons\", never \"20 disk reads\").",
+  "concept": "new (pairs S2, C1)",
+  "thumbnail_text": "1,000,000 checks or ~20?",
+  "title": "How Database Indexes Find 1 Row in a Million",
+  "titles": [
+    "How Database Indexes Find 1 Row in a Million",
+    "No Index? Your Database Reads Every Single Row",
+    "Database Indexes Explained: How Apps Search Fast"
+  ],
+  "text": {
+    "h": "Find 1 row in a million",
+    "l1": "NO INDEX",
+    "n1": "1,000,000",
+    "u1": "checks",
+    "l2": "WITH AN INDEX",
+    "n2": "~20",
+    "u2": "comparisons"
+  },
+  "images": {},
+  "frame": "none (faceless, Query Plan look)",
+  "vars": {},
+  "scores": "final gate (round 4): A topic/click 4/5 · B pair 7 · C taste 6"
+}

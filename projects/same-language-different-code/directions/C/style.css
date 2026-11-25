@@ -1,0 +1,18 @@
+/* Direction C · "One World"
+   The environment is a place. One calm map is the stage; the camera travels between Lagos, Tallinn, Mumbai, São Paulo.
+   Cool paper sea, white land, hairline borders. Green = Lagos / Africa, blue = Tallinn / EU. Instrument Sans + one serif italic word. */
+@font-face { font-family: 'ISans'; src: url('../shared/fonts/InstrumentSans.ttf'); font-weight: 400 700; font-stretch: 75% 100%; }
+@font-face { font-family: 'ISerif'; src: url('../shared/fonts/InstrumentSerif-Italic.ttf'); font-style: italic; }
+@font-face { font-family: 'GeistMono'; src: url('../shared/fonts/GeistMono.ttf'); font-weight: 100 900; }
+
+:root { --sea: #E6EBEF; --land: #FFFFFF; --border: #C5CED8; --ink: #101418; --mid: #6B7682; --lagos: #0E9F6E; --tallinn: #2457F5; --warn: #F0482E; --night: rgba(16, 24, 48, .13); }
+.bg-sea { --bg: var(--sea); --fg: var(--ink); --hlc: #FFE27A; }
+.slide { font-family: 'ISans', sans-serif; }
+.t-l { font-weight: 600; font-size: 86px; line-height: 1.02; letter-spacing: -.035em; }
+.t-m { font-weight: 600; font-size: 52px; line-height: 1.06; letter-spacing: -.02em; }
+.ser { font-family: 'ISerif'; font-style: italic; font-weight: 400; letter-spacing: -.01em; }
+.lab { font-family: 'GeistMono'; font-weight: 500; font-size: 26px; color: var(--mid); letter-spacing: .01em; }
+.city { position: absolute; font-weight: 600; font-size: 40px; letter-spacing: -.015em; white-space: nowrap; }
+.dot { position: absolute; width: 26px; height: 26px; margin: -13px 0 0 -13px; border-radius: 50%; border: 4px solid var(--land); }
+.panel { position: absolute; background: var(--land); padding: 34px 40px; }
+.map path { vector-effect: non-scaling-stroke; }

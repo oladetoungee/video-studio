@@ -1,0 +1,116 @@
+{
+ "story": "zeabur",
+ "outlet": "Start With Identity",
+ "slug": "startwithidentity",
+ "url": "https://startwithidentity.com/blog/2026-10-19-zeabur-to-shut-down-after-a-non-expiring-admin-token-opened-its-shared-cluster/",
+ "finalUrl": "https://startwithidentity.com/blog/2026-10-19-zeabur-to-shut-down-after-a-non-expiring-admin-token-opened-its-shared-cluster/",
+ "status": "loaded",
+ "http": 200,
+ "title": "Zeabur to shut down after a non-expiring admin token opened",
+ "h1": "Zeabur to shut down after a non-expiring admin token opened its shared cluster",
+ "published": "2026-10-19T02:00:00Z",
+ "files": {
+  "fold": "zeabur/startwithidentity_fold.png",
+  "full": "zeabur/startwithidentity_full.jpg",
+  "scroll": "zeabur/startwithidentity_scroll.mp4"
+ },
+ "full": {
+  "width": 1440,
+  "height": 3321,
+  "pageHeight": 3321,
+  "zoom": 1,
+  "quotes": [
+   {
+    "quote": "a shared-cluster admin token created in January 2024 with no expiry",
+    "box": {
+     "x": 360,
+     "y": 391,
+     "w": 661,
+     "h": 57
+    },
+    "lines": [
+     {
+      "x": 645,
+      "y": 391,
+      "w": 376,
+      "h": 24
+     },
+     {
+      "x": 360,
+      "y": 424,
+      "w": 270,
+      "h": 24
+     }
+    ]
+   }
+  ]
+ },
+ "scroll": {
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "seconds": 8,
+  "keyframes": [
+   {
+    "t": 0,
+    "y": 51
+   },
+   {
+    "t": 1,
+    "y": 51
+   },
+   {
+    "t": 2.55,
+    "y": 1451
+   },
+   {
+    "t": 8,
+    "y": 1451
+   }
+  ],
+  "zoom": 1,
+  "easing": "easeInOutCubic between keyframes, holds where y is equal",
+  "capped": false,
+  "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)",
+  "quotes": [
+   {
+    "quote": "a shared-cluster admin token created in January 2024 with no expiry",
+    "inVideo": true,
+    "still": true,
+    "t": 0.53,
+    "visibleStill": [
+     0,
+     1.07
+    ],
+    "scrollY": 51,
+    "box": {
+     "x": 600,
+     "y": 340,
+     "w": 661,
+     "h": 57
+    },
+    "lines": [
+     {
+      "x": 885,
+      "y": 340,
+      "w": 376,
+      "h": 24
+     },
+     {
+      "x": 600,
+      "y": 373,
+      "w": 270,
+      "h": 24
+     }
+    ],
+    "docBox": {
+     "x": 600,
+     "y": 391,
+     "w": 661,
+     "h": 57
+    },
+    "layoutDriftPx": 0
+   }
+  ]
+ }
+}

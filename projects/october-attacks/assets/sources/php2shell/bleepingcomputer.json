@@ -1,0 +1,222 @@
+{
+ "story": "php2shell",
+ "outlet": "BleepingComputer",
+ "slug": "bleepingcomputer",
+ "url": "https://www.bleepingcomputer.com/news/security/php-ships-emergency-patches-for-critical-php2shell-flaws/",
+ "finalUrl": "https://www.bleepingcomputer.com/news/security/php-ships-emergency-patches-for-critical-php2shell-flaws/",
+ "status": "loaded",
+ "http": 200,
+ "title": "PHP ships emergency patches for critical PHP2Shell flaws",
+ "h1": "PHP ships emergency patches for critical PHP2Shell flaws",
+ "published": "",
+ "files": {
+  "fold": "php2shell/bleepingcomputer_fold.png",
+  "full": "php2shell/bleepingcomputer_full.jpg",
+  "scroll": "php2shell/bleepingcomputer_scroll.mp4"
+ },
+ "full": {
+  "width": 1440,
+  "height": 5137,
+  "pageHeight": 5137,
+  "zoom": 1,
+  "quotes": [
+   {
+    "quote": "The PHP security team released emergency security patches for two critical remote code execution (RCE) vulnerabilities",
+    "box": {
+     "x": 135,
+     "y": 1078,
+     "w": 832,
+     "h": 46
+    },
+    "lines": [
+     {
+      "x": 135,
+      "y": 1078,
+      "w": 832,
+      "h": 21
+     },
+     {
+      "x": 135,
+      "y": 1103,
+      "w": 114,
+      "h": 21
+     }
+    ]
+   },
+   {
+    "quote": "discovered by Calif, OpenAI, and Wiz security researchers",
+    "box": {
+     "x": 466,
+     "y": 1143,
+     "w": 459,
+     "h": 21
+    },
+    "lines": [
+     {
+      "x": 466,
+      "y": 1143,
+      "w": 459,
+      "h": 21
+     }
+    ]
+   },
+   {
+    "quote": "Admins should install PHP 8.5.12, 8.4.27, 8.3.36, or 8.2.35 as soon as possible",
+    "box": {
+     "x": 135,
+     "y": 1481,
+     "w": 620,
+     "h": 21
+    },
+    "lines": [
+     {
+      "x": 135,
+      "y": 1481,
+      "w": 620,
+      "h": 21
+     }
+    ]
+   }
+  ]
+ },
+ "scroll": {
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "seconds": 8,
+  "keyframes": [
+   {
+    "t": 0,
+    "y": 312
+   },
+   {
+    "t": 1,
+    "y": 312
+   },
+   {
+    "t": 2.005,
+    "y": 668
+   },
+   {
+    "t": 3.105,
+    "y": 668
+   },
+   {
+    "t": 4.145,
+    "y": 1071
+   },
+   {
+    "t": 8,
+    "y": 1071
+   }
+  ],
+  "zoom": 1,
+  "easing": "easeInOutCubic between keyframes, holds where y is equal",
+  "capped": false,
+  "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)",
+  "quotes": [
+   {
+    "quote": "The PHP security team released emergency security patches for two critical remote code execution (RCE) vulnerabilities",
+    "inVideo": true,
+    "still": true,
+    "t": 2.55,
+    "visibleStill": [
+     1.93,
+     3.17
+    ],
+    "scrollY": 668,
+    "box": {
+     "x": 375,
+     "y": 410,
+     "w": 832,
+     "h": 46
+    },
+    "lines": [
+     {
+      "x": 375,
+      "y": 410,
+      "w": 832,
+      "h": 21
+     },
+     {
+      "x": 375,
+      "y": 435,
+      "w": 114,
+      "h": 21
+     }
+    ],
+    "docBox": {
+     "x": 375,
+     "y": 1078,
+     "w": 832,
+     "h": 46
+    },
+    "layoutDriftPx": 0
+   },
+   {
+    "quote": "discovered by Calif, OpenAI, and Wiz security researchers",
+    "inVideo": true,
+    "still": true,
+    "t": 2.55,
+    "visibleStill": [
+     1.93,
+     3.17
+    ],
+    "scrollY": 668,
+    "box": {
+     "x": 706,
+     "y": 475,
+     "w": 459,
+     "h": 21
+    },
+    "lines": [
+     {
+      "x": 706,
+      "y": 475,
+      "w": 459,
+      "h": 21
+     }
+    ],
+    "docBox": {
+     "x": 706,
+     "y": 1143,
+     "w": 459,
+     "h": 21
+    },
+    "layoutDriftPx": 0
+   },
+   {
+    "quote": "Admins should install PHP 8.5.12, 8.4.27, 8.3.36, or 8.2.35 as soon as possible",
+    "inVideo": true,
+    "still": true,
+    "t": 6.05,
+    "visibleStill": [
+     4.07,
+     8.03
+    ],
+    "scrollY": 1071,
+    "box": {
+     "x": 375,
+     "y": 410,
+     "w": 620,
+     "h": 21
+    },
+    "lines": [
+     {
+      "x": 375,
+      "y": 410,
+      "w": 620,
+      "h": 21
+     }
+    ],
+    "docBox": {
+     "x": 375,
+     "y": 1481,
+     "w": 620,
+     "h": 21
+    },
+    "layoutDriftPx": 0
+   }
+  ]
+ }
+}

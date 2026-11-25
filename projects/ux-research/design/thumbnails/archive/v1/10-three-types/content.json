@@ -1,0 +1,24 @@
+{
+  "direction": "Three index cards pinned over her real photo, one pair each in plain words (BEFORE vs AFTER: generative/evaluative; WHY vs HOW MANY: qualitative/quantitative; SAY vs DO: attitudinal/behavioural); the count in big type; her direct look on the right. Follows props-as-the-topic and viral sample 9 (the things themselves).",
+  "concept": "T08",
+  "thumbnail_text": "3 TYPES OF UX RESEARCH",
+  "title": "3 Types of UX Research, Explained Simply",
+  "titles": [
+    "3 Types of UX Research, Explained Simply",
+    "Types of UX Research Explained: Qualitative vs Quantitative"
+  ],
+  "text": {
+    "l1": "3 TYPES",
+    "l2": "OF <span class=\"acc\">UX RESEARCH</span>",
+    "c1": "BEFORE<br><span>vs</span> AFTER",
+    "c2": "WHY<br><span>vs</span> HOW MANY",
+    "c3": "SAY<br><span>vs</span> DO"
+  },
+  "images": {
+    "scene": "../../assets/scene/g/s_628.jpg",
+    "front": "../../assets/scene/g/mask/s_628.png"
+  },
+  "vars": {},
+  "scores": "a 5/7 · 4/6 · 4/6 | b 6/6 · 6/5 · 8/6 | c 6 · 2 · 3",
+  "recommended": false
+}

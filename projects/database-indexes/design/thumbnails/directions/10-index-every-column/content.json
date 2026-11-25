@@ -1,0 +1,23 @@
+{
+  "direction": "The beginner's question on a real-looking orders table: every column header highlighted as indexed; her sceptical side look. Follows viral sample 4 (the question the viewer already has). Round 2: no pill tags (the whole header row is yellow instead), closed-mouth frame. Round 3: the note is plain words now. Round 4 (composition): split headline around her centred head (like the \"Fast… then slow?\" split), the table as a full-width strip at the bottom.",
+  "concept": "T09",
+  "thumbnail_text": "Index every column?",
+  "title": "Why Indexing Every Column Makes Your Database Slower",
+  "titles": [
+    "Why Indexing Every Column Makes Your Database Slower",
+    "6 Indexes, 7 Writes: The Hidden Cost of Database Indexes",
+    "Don't Add a Database Index Before You Run EXPLAIN"
+  ],
+  "text": {
+    "a": "Index",
+    "b": "<span class=\"mark\">every</span>",
+    "c": "column?",
+    "n": ""
+  },
+  "images": {
+    "scene": "../../assets/scene/f_148.0.jpg"
+  },
+  "frame": "2:28 (sceptical side look, mouth closed)",
+  "vars": {},
+  "scores": "final gate (round 4): A topic/click 4/6 · B pair 6 · C taste 6"
+}

@@ -1,0 +1,24 @@
+{
+  "direction": "Faceless, the film lock screen as the thumbnail: three notification banners (pull to refresh, autoplay, likes) on ink; IT'S NOT YOU answers the guilt question the title asks.",
+  "concept": "extra (film look)",
+  "follows": "the approved film look A + Pinterest \"BORING WAY\" (notifications stacked)",
+  "thumbnail_text": "IT'S NOT YOU.",
+  "title": "Why Am I Addicted to My Phone? 5 Design Tricks to Blame",
+  "titles": [
+    "Why Am I Addicted to My Phone? 5 Design Tricks to Blame",
+    "Phone Addiction Isn't an Accident: The 5 Features Behind It"
+  ],
+  "scores": "A topic (image only) 8/8 · B with best title 9 · C taste 7 (round 2; fixes from round 2 applied after)",
+  "recommended": "2 · pair with \"Why Am I Addicted to My Phone? 5 Design Tricks to Blame\"",
+  "text": {
+    "words": "It's not <span class=\"acc\">you.</span>",
+    "h1": "Feed",
+    "m1": "Pull down for new posts",
+    "h2": "Video",
+    "m2": "Up next: playing in 5",
+    "h3": "Likes",
+    "m3": "Someone liked your photo"
+  },
+  "images": {},
+  "vars": {}
+}

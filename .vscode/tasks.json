@@ -1,0 +1,20 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Start Studio",
+      "type": "shell",
+      "command": "if curl -s -o /dev/null http://localhost:7700/; then echo 'Studio already running'; open -a 'Google Chrome' http://localhost:7700/; else (sleep 1; open -a 'Google Chrome' http://localhost:7700/) & node studio/server.mjs; fi",
+      "options": { "cwd": "${workspaceFolder}" },
+      "isBackground": true,
+      "problemMatcher": [],
+      "presentation": { "reveal": "always", "panel": "dedicated" }
+    },
+    {
+      "label": "Open Studio in Chrome",
+      "type": "shell",
+      "command": "open -a 'Google Chrome' http://localhost:7700/",
+      "problemMatcher": []
+    }
+  ]
+}

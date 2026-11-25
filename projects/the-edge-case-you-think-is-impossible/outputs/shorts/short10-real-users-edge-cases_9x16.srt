@@ -1,0 +1,135 @@
+1
+00:00:00,197 --> 00:00:01,637
+someone is going to report an issue
+
+2
+00:00:01,637 --> 00:00:02,887
+and it's going to be
+
+3
+00:00:03,120 --> 00:00:05,050
+exactly that edge case that you never
+
+4
+00:00:05,050 --> 00:00:05,850
+thought of
+
+5
+00:00:06,097 --> 00:00:07,537
+it doesn't even have to be something big
+
+6
+00:00:07,537 --> 00:00:10,067
+you don't even have to have a lot of users
+
+7
+00:00:10,257 --> 00:00:12,087
+for edge cases that you didn't
+
+8
+00:00:12,527 --> 00:00:13,997
+write for to exist
+
+9
+00:00:14,027 --> 00:00:15,977
+usually when we build, we create a
+
+10
+00:00:16,117 --> 00:00:17,867
+direct simple path, you know?
+
+11
+00:00:18,237 --> 00:00:19,677
+and just before that,
+
+12
+00:00:19,817 --> 00:00:21,657
+you know, the user fills a form, they click
+
+13
+00:00:21,657 --> 00:00:23,437
+a button, and then they wait
+
+14
+00:00:23,703 --> 00:00:24,423
+but it
+
+15
+00:00:24,543 --> 00:00:26,273
+sounds straightforward, but it's not
+
+16
+00:00:26,373 --> 00:00:28,273
+real users don't always do that
+
+17
+00:00:28,273 --> 00:00:30,383
+real users don't just always fill the form
+
+18
+00:00:30,383 --> 00:00:32,103
+and click the button and wait
+
+19
+00:00:32,233 --> 00:00:33,683
+real users double-click,
+
+20
+00:00:33,803 --> 00:00:34,493
+like ta-ta-ta-ta-ta-ta-ta
+
+21
+00:00:35,207 --> 00:00:36,057
+they click a lot
+
+22
+00:00:36,057 --> 00:00:38,017
+real users open different tabs
+
+23
+00:00:38,017 --> 00:00:40,357
+real users network drop halfway
+
+24
+00:00:40,357 --> 00:00:41,267
+real users
+
+25
+00:00:41,497 --> 00:00:44,017
+leave the page open for two hours, and they
+
+26
+00:00:44,017 --> 00:00:45,317
+go and then they come back
+
+27
+00:00:45,457 --> 00:00:46,797
+and they're not doing anything strange
+
+28
+00:00:46,797 --> 00:00:48,627
+they are just being users
+
+29
+00:00:48,717 --> 00:00:50,857
+you can't protect your app from every single
+
+30
+00:00:50,857 --> 00:00:52,857
+possible edge case because you can't even
+
+31
+00:00:52,857 --> 00:00:53,897
+predict every single one
+
+32
+00:00:53,897 --> 00:00:55,327
+if you want to wait till you predict every
+
+33
+00:00:55,327 --> 00:00:57,377
+single one, you probably wouldn't ship
+
+34
+00:00:57,377 --> 00:00:57,667
+anything

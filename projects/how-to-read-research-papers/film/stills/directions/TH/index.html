@@ -1,0 +1,54 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../_shared/fonts.css">
+<style>
+:root{--g:#2F3136;--paper:#FBFAF4;--hi:#F3EE2E;--pen:#2447C9;--ink:#17171A;--soft:#B9BCC2;--cite:#0E7C3A;--fl:#3DF07B}
+#stage{background:#000}
+.her{position:absolute;overflow:hidden}.her img{position:absolute;max-width:none}
+.pg{position:absolute;left:0;top:0;width:1700px;height:2200px;transform-origin:0 0}.pg>img{width:1700px;height:2200px;box-shadow:0 30px 60px rgba(0,0,0,.38)}
+.hl{position:absolute;background:var(--hi);mix-blend-mode:multiply;border-radius:6px}
+.hand{font-family:Caveat;font-weight:700;color:var(--pen);white-space:nowrap;line-height:1}
+.tab{position:absolute;width:120px;height:120px;background:var(--paper);border-radius:0 14px 14px 0;font-family:Newsreader;font-weight:800;font-size:76px;color:var(--ink);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px rgba(0,0,0,.3)}
+.capA{position:absolute;font-family:"HN Cond";font-weight:900;text-transform:uppercase;color:#fff;text-shadow:0 3px 0 rgba(0,0,0,.55),0 0 3px rgba(0,0,0,.7);line-height:1.02;text-align:center}
+.capA b{background:var(--hi);color:var(--ink);text-shadow:none;padding:0 .1em;border-radius:4px;font-weight:900}
+.cred{font-family:Newsreader;font-style:italic;font-size:24px;color:var(--soft)}
+.card{position:absolute;background:var(--paper);box-shadow:0 24px 50px rgba(0,0,0,.35);overflow:hidden}
+</style></head><body><div id="stage"></div>
+<script src="../_shared/lib.js"></script>
+<script>
+function txt(par, html, css, cls = '') { const e = h(`<div class="abs ${cls}" style="${css}">${html}</div>`); par.appendChild(e); return e; }
+// her frame: show source rect (sx,sy,sw,sh in 3840x2160) inside box (x,y,w,h)
+function her(par, src, x, y, w, hh, sx, sy, sw) { const k = w / sw; const d = h(`<div class="her" style="left:${x}px;top:${y}px;width:${w}px;height:${hh}px"><img src="../_src/her/${src}" style="width:${3840 * k}px;height:${2160 * k}px;left:${-sx * k}px;top:${-sy * k}px"></div>`); par.appendChild(d); return d; }
+const PX = p => p * KS;
+const SCENES = {
+  th1: { draw: (t, S) => { // A · half and half: her left, the marked-up paper right
+      her(S, 'raw_161.jpg', 0, 0, 960, 1080, 330, 0, 1920);
+      const R = txt(S, '', 'left:960px;top:0;width:960px;height:1080px;background:var(--g);overflow:hidden');
+      const pg = h(`<div class="pg" style="transform:translate(${50 - PX(54) * 1.25}px,${330 - PX(641) * 1.25}px) rotate(-1.5deg) scale(1.25)"><img src="../_src/keshav_p1.png"></div>`); R.appendChild(pg);
+      pg.appendChild(h(`<div class="hl" style="left:${kr([194, 641, 293], 3)[0]}px;top:${kr([194, 641, 293], 3)[1]}px;width:${kr([194, 641, 293], 3)[2]}px;height:${kr([194, 641, 293], 3)[3]}px"></div>`));
+      pg.appendChild(h(`<div class="tab" style="left:1700px;top:${PX(600)}px">1</div>`));
+      txt(R, `S. Keshav, “How to Read a Paper”, 2.1`, 'left:40px;top:1030px', 'cred');
+      txt(S, `pass one takes about<br><b>five to ten minutes</b>`, 'left:40px;top:860px;width:880px;font-size:76px', 'capA');
+  } },
+  th2: { draw: (t, S) => { // B · her as Figure 2 inside the typeset page
+      txt(S, '', 'left:0;top:0;width:1920px;height:1080px;background:#fff');
+      txt(S, `<div style="font-family:'CMU Serif';font-weight:700;font-size:44px">1&nbsp;&nbsp;&nbsp;Introduction</div><div style="font-family:'CMU Serif';font-size:36px;line-height:1.42;text-align:justify;margin-top:22px">Research papers are not written to be read from start to finish, like a novel. So in this video, I will show you the parts of a paper and the order to read them in.</div><div style="font-family:'CMU Serif';font-size:36px;line-height:1.42;text-align:justify;margin-top:16px;text-indent:1.5em">Most research papers are built from the same parts, and you need to know what each part is for.</div>`, 'left:110px;top:120px;width:640px;color:#141414');
+      her(S, 'raw_31.5.jpg', 830, 110, 980, 760, 360, 0, 2793);
+      txt(S, '', 'left:830px;top:110px;width:980px;height:760px;border:2px solid #141414');
+      txt(S, `<b>Figure 2:</b> There’s this method I like, it’s called a <i>three-pass method</i>.`, "left:830px;top:900px;width:980px;font-family:'CMU Serif';font-size:40px;line-height:1.35;color:#141414");
+  } },
+  th3: { draw: (t, S) => { // C · words behind her
+      her(S, 'raw_482.5.jpg', 0, 0, 1920, 1080, 0, 0, 3840);
+      txt(S, `<div style="font-family:'Space Grotesk';font-weight:700;text-transform:uppercase;letter-spacing:-.04em;line-height:.84;font-size:170px;color:#F1F0EB">Who<br><span style="color:var(--fl)">funded</span><br><span style="padding-left:200px">it?</span></div>`, 'left:1200px;top:150px');
+      her(S, 'cut_482.5.png', 0, 0, 1920, 1080, 0, 0, 3840);
+      txt(S, `funding`, "left:1250px;top:760px;font-family:'Space Grotesk';font-weight:700;text-transform:uppercase;letter-spacing:-.03em;font-size:96px;color:#0F0F0F;background:#F1F0EB;padding:2px 18px 6px");
+  } },
+  th4: { draw: (t, S) => { // A · receipt card over her + in-edit correction
+      her(S, 'raw_430.5.jpg', 0, 0, 1920, 1080, 0, 0, 3840);
+      const ox = 432, oy = 501, sc = 1.55; const c0 = txt(S, `<div class="abs" style="left:14px;top:12px;width:${470 * sc}px;height:${54 * sc}px;overflow:hidden"><div class="abs" style="left:0;top:0;transform:scale(${sc});transform-origin:0 0"><img src="../_src/caine__most-common-sample-size.png" style="position:absolute;width:1280px;left:-${ox}px;top:-${oy}px;max-width:none"></div></div>`, `left:1100px;top:90px;width:${470 * sc + 28}px;height:${54 * sc + 24}px;transform:rotate(1.5deg)`, 'card'); const c = c0.firstChild;
+      [[592, 500, 64, 19], [826, 518, 36, 19], [434, 536, 175, 19]].forEach(r => c.firstChild.appendChild(h(`<div class="hl" style="left:${r[0] - ox}px;top:${r[1] - oy}px;width:${r[2]}px;height:${r[3]}px"></div>`)));
+      txt(S, `correction: every paper <u>at CHI</u> 2014`, 'left:1110px;top:240px;font-size:54px;transform:rotate(-1.5deg);background:var(--paper);padding:8px 22px 12px;box-shadow:0 14px 30px rgba(0,0,0,.3)', 'hand');
+      txt(S, `Kelly Caine, “Local Standards for Sample Size at CHI”, CHI 2016`, 'left:1110px;top:345px;color:#fff;text-shadow:0 1px 3px #000', 'cred');
+      txt(S, `the most common sample size was <b>12</b>`, 'left:0;top:900px;width:1920px;font-size:80px', 'capA');
+  } },
+};
+window.SCENES = SCENES; window.TEST = () => 0; boot();
+</script></body></html>

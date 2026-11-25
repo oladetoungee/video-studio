@@ -1,0 +1,55 @@
+1
+00:00:00,090 --> 00:00:02,950
+take Adébáyọ̀ Adébáyọ̀, for example, you can
+
+2
+00:00:02,950 --> 00:00:04,230
+see seven letters,
+
+3
+00:00:04,570 --> 00:00:05,530
+but some
+
+4
+00:00:05,690 --> 00:00:07,780
+functions count bytes, not letters,
+
+5
+00:00:08,070 --> 00:00:10,630
+right? so in this case, you would have 13,
+
+6
+00:00:10,630 --> 00:00:12,880
+because letters like é and ọ̀
+
+7
+00:00:13,003 --> 00:00:14,743
+take more than one byte each
+
+8
+00:00:14,823 --> 00:00:17,843
+so if we check the name must be at most 20
+
+9
+00:00:17,843 --> 00:00:18,333
+characters
+
+10
+00:00:18,573 --> 00:00:20,143
+if we check that with the wrong function,
+
+11
+00:00:20,143 --> 00:00:21,823
+you can reject actual names
+
+12
+00:00:21,943 --> 00:00:23,653
+so the fix for this is usually to count with
+
+13
+00:00:23,653 --> 00:00:25,763
+a function that counts characters and to
+
+14
+00:00:25,763 --> 00:00:27,633
+normalize the text before it saves

@@ -1,0 +1,26 @@
+{
+  "direction": "Film look A at night: a lock screen reading 1:40 AM, one notification banner, AGAIN in badge red; her on the right, steady look (3:06), lightly dimmed. Best with a real night photo of her lit by the phone (flagged).",
+  "concept": "TH19",
+  "follows": "Pinterest moody real scenes + the film lock screen",
+  "needs_photo": "her in bed or on the sofa at night, lit by the phone",
+  "thumbnail_text": "1:40 AM. AGAIN.",
+  "title": "Why You Can't Put Your Phone Down at Night",
+  "titles": [
+    "Why You Can't Put Your Phone Down at Night",
+    "Why Can't I Stop Scrolling? It Was Designed That Way",
+    "Why You Can't Stop Scrolling: 5 Features Designed on Purpose"
+  ],
+  "scores": "A topic (image only) 7/7 · B with best title 8.5 · C taste 6 (round 2; fixes from round 2 applied after)",
+  "text": {
+    "clock": "1:40",
+    "ampm": "AM",
+    "again": "Again.",
+    "b1h": "Feed",
+    "b1": "12 new posts for you"
+  },
+  "images": {
+    "scene": "../../../../assets/scene/warm/s_186.0.jpg",
+    "front": "../../../../assets/scene/warm/mask/s_186.0.png"
+  },
+  "vars": {}
+}

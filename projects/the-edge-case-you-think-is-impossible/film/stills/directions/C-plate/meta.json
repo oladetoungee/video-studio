@@ -1,0 +1,208 @@
+{
+ "TOTAL": 504,
+ "INTRO": 0,
+ "OUTRO": 1,
+ "FPS": 30,
+ "CUES": [
+  {
+   "name": "punch",
+   "t": 205.9,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "punch2",
+   "t": 206.2,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "marker",
+   "t": 207.6,
+   "db": -8,
+   "keep": true
+  },
+  {
+   "name": "stamp",
+   "t": 214.3,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "slide",
+   "t": 257,
+   "db": -8,
+   "keep": true
+  },
+  {
+   "name": "punch",
+   "t": 260.4,
+   "db": -2,
+   "keep": true
+  },
+  {
+   "name": "punch2",
+   "t": 260.53,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "punch",
+   "t": 260.66,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "punch2",
+   "t": 260.79,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "card",
+   "t": 263.8,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "coins",
+   "t": 264,
+   "db": -10,
+   "keep": true
+  },
+  {
+   "name": "card2",
+   "t": 264.05,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "card3",
+   "t": 264.3,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "card",
+   "t": 264.55,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "card2",
+   "t": 264.8,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "ding",
+   "t": 264.85,
+   "db": -10,
+   "keep": true
+  },
+  {
+   "name": "card3",
+   "t": 265.05,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "punch",
+   "t": 326,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "punch2",
+   "t": 326.4,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "punch",
+   "t": 326.97,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "card",
+   "t": 328.9,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "punch",
+   "t": 330.89,
+   "db": -2,
+   "keep": true
+  },
+  {
+   "name": "hit",
+   "t": 331.6,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "punch",
+   "t": 357.1,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "card",
+   "t": 358.6,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "punch",
+   "t": 366.38,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "card2",
+   "t": 367.25,
+   "db": -6,
+   "keep": true
+  }
+ ],
+ "SCENES": [
+  {
+   "n": 1,
+   "id": "obrien",
+   "start": 205.1,
+   "end": 255.1,
+   "ground": "steel2",
+   "label": "obrien",
+   "trans": "cut"
+  },
+  {
+   "n": 2,
+   "id": "null",
+   "start": 255.1,
+   "end": 325.3,
+   "ground": "steel",
+   "label": "null",
+   "trans": "cut"
+  },
+  {
+   "n": 3,
+   "id": "leap",
+   "start": 325.3,
+   "end": 356.9,
+   "ground": "steel",
+   "label": "leap",
+   "trans": "whip"
+  },
+  {
+   "n": 4,
+   "id": "dst",
+   "start": 356.9,
+   "end": 504,
+   "ground": "steel2",
+   "label": "dst",
+   "trans": "cut"
+  }
+ ]
+}

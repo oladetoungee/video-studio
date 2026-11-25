@@ -1,0 +1,23 @@
+{
+  "direction": "Faceless. What users say vs what they do, as two linked things: a speech bubble 'So easy!' and, at the end of a big arrow, the same user's three missed taps on a generic screen. Flat electric blue, canary as the only colour.",
+  "thumbnail_text": "UX Research (+ 'So easy!' vs three missed taps)",
+  "titles": [
+    "UX Research: Why Users Say One Thing and Do Another",
+    "UX Research for Beginners: Watch Users, Don't Just Ask",
+    "Why Some Apps Are So Confusing (UX Research Explained)"
+  ],
+  "text": {
+    "hd": "UX<br>Research",
+    "say": "“So easy!”",
+    "btn": "Pay"
+  },
+  "images": {},
+  "vars": {
+    "--ground": "#1B3FD8",
+    "--fg": "#FFFFFF",
+    "--accent": "#FFE15A"
+  },
+  "scores": "",
+  "recommended": false,
+  "title": "UX Research: Why Users Say One Thing and Do Another"
+}

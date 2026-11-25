@@ -1,0 +1,157 @@
+/* the-edge-case-you-think-is-impossible thumbnails. Look: the film's B "THE FIELD" (lime #D4F04A, ink #0C0C0C, white form fields,
+   ONE accent: error red #FF3B1F), re-typed 2026-11-07 to her type set 05 "Warm serif + mono" (inspiration/know-how/TYPE-SYSTEM.md):
+   DM Serif Display 400 sentence case for headlines, DM Mono 500 for labels and small text, Inter Tight only for typed-in values that
+   must read as UI. No thick borders, outlines, rings, sticker edges or handwriting: fields are flat white blocks, an error is red text
+   + a 2 px red rule. Editable: text in content.json "text", photos in "images", colours in "vars", moves in "nudge" (lib/bind.js). */
+@font-face { font-family: 'DSerif'; src: url('../fonts/DMSerifDisplay-Regular.ttf') format('truetype'); }
+@font-face { font-family: 'DSerifI'; src: url('../fonts/DMSerifDisplay-Italic.ttf') format('truetype'); }
+@font-face { font-family: 'DMono'; src: url('../fonts/DMMono-Medium.ttf') format('truetype'); font-weight: 500; }
+@font-face { font-family: 'DMono'; src: url('../fonts/DMMono-Regular.ttf') format('truetype'); font-weight: 400; }
+@font-face { font-family: 'ITight'; src: url('../fonts/InterTightExtraBold.ttf') format('truetype'); font-weight: 800; }
+@font-face { font-family: 'ITight'; src: url('../fonts/InterTightMedium.ttf') format('truetype'); font-weight: 500; }
+/* legacy names used by older direction CSS map to the set-05 faces */
+@font-face { font-family: 'JB'; src: url('../fonts/DMMono-Medium.ttf') format('truetype'); }
+@font-face { font-family: 'Plate'; src: url('../fonts/InterTightExtraBold.ttf') format('truetype'); }
+@font-face { font-family: 'Onest'; src: url('../fonts/DMSerifDisplay-Regular.ttf') format('truetype'); }
+
+:root { --lime: #D4F04A; --ink: #0C0C0C; --white: #FFFFFF; --red: #FF3B1F; --paper: #EAE6DA; --grey: #6B6B6B; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1280px; height: 720px; overflow: hidden; background: #111; }
+.t { position: relative; width: 1280px; height: 720px; overflow: hidden; background: var(--ground, #D4F04A); color: var(--fg, #0C0C0C);
+  font-family: 'DSerif', serif; font-weight: 400; }
+.guides .badge { position: absolute; right: 10px; bottom: 10px; width: 150px; height: 70px; border: 3px dashed #0f0; z-index: 99; }
+.z1 { z-index: 1; } .z2 { z-index: 2; } .z3 { z-index: 3; } .z4 { z-index: 4; } .z5 { z-index: 5; } .z6 { z-index: 6; }
+
+/* headline: DM Serif Display, sentence case, tight */
+.hd { position: absolute; font-family: 'DSerif', serif; font-weight: 400; text-transform: none !important; line-height: 1.0;
+  letter-spacing: -.025em; white-space: nowrap; color: var(--fg, #0C0C0C); }
+.hd.tall { font-family: 'DSerif', serif; }
+.acc { color: var(--accent, #FF3B1F); }
+.red { color: var(--red); }
+.on-red .red, .red.blk { background: var(--red); color: var(--white); padding: 0 .08em; }
+.ink { background: var(--ink); color: var(--lime); padding: 0 .08em; }
+.limeb { color: var(--lime); }
+.serif, .serifi { font-family: 'DSerifI', serif; text-transform: none; letter-spacing: -.01em; font-weight: 400; }
+.mono { font-family: 'DMono', monospace; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; }
+.hand { display: none !important; }
+.cmb { letter-spacing: 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-weight: 700; }
+
+/* the form field: a flat white block, mono label above; .err = red label, red value, a 2 px red rule under the block */
+.fl { position: absolute; }
+.fl .lab { font-family: 'DMono', monospace; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; font-size: var(--lf, 28px); margin-bottom: 12px; color: var(--fg, #0C0C0C); }
+.fl .box { background: var(--fieldbg, #FFFFFF); color: var(--ink); border: 0 !important; padding: .1em .32em .14em; font-family: 'ITight', sans-serif; font-weight: 800;
+  letter-spacing: -.03em; line-height: 1.1; white-space: nowrap; position: relative; }
+.fl.err .lab { color: var(--red); }
+.fl.err .box { color: var(--red); box-shadow: inset 0 -2px 0 var(--red); }
+.fl .caret { display: inline-block; width: .05em; height: .9em; background: var(--ink); vertical-align: -.1em; margin-left: .04em; }
+.fl .msg { color: var(--red); font-family: 'DMono', monospace; font-weight: 500; letter-spacing: .02em; margin-top: 14px; display: flex; align-items: center; gap: .45em; white-space: nowrap; }
+.bang { display: inline-flex; width: 1.1em; height: 1.1em; border-radius: 50%; background: var(--red); color: var(--white); align-items: center;
+  justify-content: center; font-size: .8em; font-family: 'DMono'; flex: none; line-height: 1; }
+.on-dark .fl .lab { color: var(--white); }
+.on-dark .fl.err .lab { color: var(--red); }
+
+/* the button + a cursor */
+.btn { position: absolute; background: var(--ink); color: var(--white); font-family: 'ITight', sans-serif; font-weight: 800; letter-spacing: -.02em; padding: .32em .8em .38em; white-space: nowrap; }
+.cur { position: absolute; width: 90px; height: 120px; }
+
+/* a generic licence plate (no real state design): flat white, ink letters, two holes, no frame */
+.plate { position: absolute; background: var(--white); border: 0 !important; border-radius: 22px; color: var(--ink);
+  display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 18px 40px rgba(0,0,0,.25); }
+.plate::before, .plate::after { content: ""; position: absolute; top: 9%; width: 3.6%; aspect-ratio: 1; border-radius: 50%; background: var(--ink); opacity: .7; }
+.plate::before { left: 8%; } .plate::after { right: 8%; }
+.plate .pt { font-family: 'ITight', sans-serif; font-weight: 800; letter-spacing: .04em; line-height: .9; }
+.plate .ps { font-family: 'DMono', monospace; font-weight: 500; letter-spacing: .3em; text-transform: uppercase; opacity: .8; }
+
+/* a parking fine: white slip, red band */
+.tk { position: absolute; width: 250px; background: var(--white); color: var(--ink); box-shadow: 0 12px 26px rgba(0,0,0,.22); }
+.tk .band { background: var(--red); color: var(--white); font-family: 'DMono'; font-weight: 500; font-size: 19px; letter-spacing: .1em; padding: 10px 14px; }
+.tk .amt { font-family: 'DMono'; font-weight: 500; font-size: 46px; padding: 12px 14px 4px; }
+.tk .ln { height: 9px; margin: 8px 14px; background: rgba(12,12,12,.12); }
+.tk .ln.s { width: 55%; }
+.tk .bc { height: 34px; margin: 12px 14px 16px; background: repeating-linear-gradient(90deg, #0C0C0C 0 3px, transparent 3px 6px, #0C0C0C 6px 7px, transparent 7px 11px); }
+[data-move="tickets"] .tk:not(:last-child) .band { color: transparent; }
+
+/* a calendar page */
+.cal { position: absolute; background: var(--white); color: var(--ink); box-shadow: 0 18px 40px rgba(0,0,0,.25); text-align: center; }
+.cal .mth { background: var(--red); color: var(--white); font-family: 'DMono'; font-weight: 500; letter-spacing: .16em; padding: .35em 0 .3em; text-transform: uppercase; position: relative; }
+.cal .rings { display: none; }
+.cal .day { font-family: 'DSerif'; letter-spacing: -.03em; line-height: 1; padding: .06em 0 .12em; }
+.cal .yr { font-family: 'DMono'; letter-spacing: .1em; padding-bottom: .9em; opacity: .55; }
+
+/* error badge (filled, no ring) */
+.eb { position: absolute; border-radius: 50%; background: var(--red); color: var(--white); display: flex; align-items: center; justify-content: center;
+  font-family: 'DMono'; font-weight: 500; line-height: 1; }
+
+/* code block */
+.code { position: absolute; background: var(--ink); color: var(--white); font-family: 'DMono'; font-weight: 400; white-space: pre; line-height: 1.35; padding: 26px 34px; }
+.code b { font-weight: 500; }
+.code .r { background: var(--red); color: var(--white); }
+.code .g { color: #8d8d8d; }
+
+/* photo of her: room (grey + one colour wash), she in full colour on top (her ux-research method) */
+.scene { position: absolute; left: 0; top: 0; width: 1280px; height: 720px; transform-origin: var(--sc-o, 50% 30%); scale: var(--sc, 1);
+  translate: var(--sc-x, 0px) var(--sc-y, 0px); }
+.scene img { position: absolute; left: 0; top: 0; width: 1280px; height: 720px; display: block; }
+.scene .bg { filter: grayscale(1) contrast(var(--bgc, 1.05)) brightness(var(--bgb, 1)); }
+.scene .wash { position: absolute; inset: 0; background: var(--wash, #D4F04A); mix-blend-mode: multiply; }
+.scene .dim { position: absolute; inset: 0; background: var(--dim, rgba(12,12,12,0)); }
+.scene .me-c { filter: saturate(1.05) contrast(1.06) brightness(var(--meb, 1.08)); }
+.scene.natural .bg { filter: saturate(var(--bgs, .9)) contrast(1.05) brightness(var(--bgb, 1.05)); }
+.scene.bw .me-c { filter: grayscale(1) contrast(1.12) brightness(1.1); }
+
+/* her studio photo as a full-height panel (library/her-photos), and her cut-out: no outline, no sticker edge */
+.panel { position: absolute; top: 0; height: 720px; overflow: hidden; }
+.panel img { height: 100%; width: 100%; object-fit: cover; display: block; }
+.cut { position: absolute; bottom: 0; display: block; filter: none !important; }
+.cut.bw { filter: grayscale(1) contrast(1.08) brightness(1.06) !important; }
+.stk { position: absolute; filter: none !important; box-shadow: 0 14px 30px rgba(0,0,0,.28); }
+
+/* real clipping on a white card, untouched, small credit */
+.clip { position: absolute; background: var(--white); padding: 18px; box-shadow: 0 18px 40px rgba(0,0,0,.22); }
+.clip img { display: block; width: 100%; }
+.clip .cr { font-family: 'DMono'; font-weight: 500; font-size: 16px; letter-spacing: .08em; text-transform: uppercase; color: var(--grey); margin-top: 10px; white-space: nowrap; }
+.tag { position: absolute; background: var(--ink); color: var(--white); font-family: 'DMono'; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; padding: 8px 14px; white-space: nowrap; }
+.shadow-t { text-shadow: 0 2px 18px rgba(0,0,0,.35); }
+.card { position: absolute; background: var(--white); color: var(--ink); box-shadow: 0 18px 40px rgba(0,0,0,.22); }
+
+/* ---------- set 2 (2026-11-10, ROLLOUT-BRIEF): her shoot photos (outfit B white tee, red headband) through Enhance photo ---------- */
+/* her shoot photos are already bright and enhanced: no extra brightening on top (her note 2026-11-08, face too light) */
+.t.no-lift .scene .me-c, .t.no-lift .cut { filter: none; }
+/* her room photo full-bleed (assets/shoot/<n>.png), placed with --rw (width) --rx --ry; .me = her cut-out at the SAME place on top */
+.room { position: absolute; width: var(--rw, 1400px); left: var(--rx, 0px); top: var(--ry, 0px); display: block; }
+.room.calm { filter: saturate(.8) brightness(.92); }
+.dim { position: absolute; inset: 0; background: var(--dim, rgba(12,12,12,.25)); }
+/* a quiet same-hue pattern on a bold ground (THUMBNAIL-STUDY §7): fine static lines a few % darker, the colour still reads flat */
+.pat-lines { background-image: repeating-linear-gradient(135deg, rgba(12,12,12,.055) 0 2px, transparent 2px 13px); }
+.pat-dots { background-image: radial-gradient(rgba(12,12,12,.07) 1.6px, transparent 1.7px); background-size: 14px 14px; }
+.pat-lines-w { background-image: repeating-linear-gradient(135deg, rgba(255,255,255,.045) 0 2px, transparent 2px 13px); }
+.shd { text-shadow: 0 3px 24px rgba(0,0,0,.5); }
+/* a phone (lib/phone.js makes it realistic): generic, no brand */
+.phone { position: absolute; }
+.phone .scr { background: #FFFFFF; color: #0C0C0C; position: relative; }
+
+/* ---------- set 3 (2026-11-12): plain words a stranger knows ("bugs", "your app breaks"), heavy sans like her board
+   (WEB3 EXPLAINED, STOP WASTING TIME, IT'S A TRAP). Inter Tight Black for claims, Instrument Serif italic for the one soft line. ---------- */
+@font-face { font-family: 'ITBlack'; src: url('../fonts/InterTightBlack.ttf') format('truetype'); }
+@font-face { font-family: 'ISerifI'; src: url('../fonts/InstrumentSerif-Italic.ttf') format('truetype'); }
+@font-face { font-family: 'Archivo'; src: url('../fonts/Archivo.ttf') format('truetype'); font-weight: 100 900; }
+.hx { position: absolute; font-family: 'ITBlack', sans-serif; letter-spacing: -.035em; line-height: .9; text-transform: uppercase;
+  white-space: nowrap; color: var(--fg, #fff); }
+.hx .y { color: var(--hy, #FFD23F); }
+.hx .bx { background: var(--hb, #FF3B1F); color: #fff; padding: 0 .1em; display: inline-block; line-height: .95; }
+.hs { position: absolute; font-family: 'ISerifI', serif; letter-spacing: -.01em; line-height: .95; white-space: nowrap; color: #fff; }
+.s3 { text-shadow: 0 4px 34px rgba(0,0,0,.6), 0 2px 8px rgba(0,0,0,.45); }
+/* her full photo: the room (dimmed by .dim) + her enhanced cut-out at the SAME place on top, untouched (class no-lift) */
+.t .me3 { filter: none !important; }
+/* generic UI bits (no brand) */
+.ui { font-family: 'Archivo', sans-serif; }
+.chk { position: absolute; background: #FFFDF6; color: #111114; box-shadow: 0 22px 50px rgba(0,0,0,.4); padding: 26px 30px 22px; }
+.chk .row { display: flex; align-items: center; gap: 18px; font-family: 'Archivo'; font-weight: 700; font-size: 34px; letter-spacing: -.01em; line-height: 1; padding: 11px 0; }
+.chk .bx { width: 34px; height: 34px; border: 3.5px solid #111114; border-radius: 6px; flex: none; position: relative; }
+.chk .bx.on::after { content: ""; position: absolute; left: 7px; top: -4px; width: 12px; height: 24px; border: solid #18A957; border-width: 0 6px 6px 0; transform: rotate(40deg); }
+.win { position: absolute; background: #FFFFFF; color: #111114; border-radius: 14px; overflow: hidden; box-shadow: 0 24px 54px rgba(0,0,0,.28); }
+.win .bar { height: 44px; background: #ECECEE; display: flex; align-items: center; gap: 9px; padding: 0 16px; }
+.win .bar i { width: 13px; height: 13px; border-radius: 50%; background: #C9C9CE; display: block; }
+.win .bar .url { margin-left: 16px; flex: 1; height: 26px; border-radius: 7px; background: #fff; }
+.err-ic { width: 1em; height: 1em; border-radius: 50%; background: #E5322D; color: #fff; display: inline-flex; align-items: center; justify-content: center;
+  font-family: 'ITBlack'; font-size: 1em; line-height: 1; }

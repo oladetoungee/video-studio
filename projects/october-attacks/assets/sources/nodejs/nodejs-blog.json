@@ -1,0 +1,153 @@
+{
+ "story": "nodejs",
+ "outlet": "Node.js (official blog)",
+ "slug": "nodejs-blog",
+ "url": "https://nodejs.org/en/blog/vulnerability/october-2026-security-releases",
+ "finalUrl": "https://nodejs.org/en/blog/vulnerability/october-2026-security-releases",
+ "status": "loaded",
+ "http": 200,
+ "title": "Node.js — Wednesday, October 21, 2026 Security Releases",
+ "h1": "Wednesday, October 21, 2026 Security Releases",
+ "published": "",
+ "files": {
+  "fold": "nodejs/nodejs-blog_fold.png",
+  "full": "nodejs/nodejs-blog_full.jpg",
+  "scroll": "nodejs/nodejs-blog_scroll.mp4"
+ },
+ "full": {
+  "width": 1440,
+  "height": 6000,
+  "pageHeight": 6529,
+  "zoom": 1,
+  "quotes": [
+   {
+    "quote": "Wednesday, October 21, 2026 Security Releases",
+    "box": {
+     "x": 337,
+     "y": 281,
+     "w": 667,
+     "h": 41
+    },
+    "lines": [
+     {
+      "x": 337,
+      "y": 281,
+      "w": 667,
+      "h": 41
+     }
+    ]
+   },
+   {
+    "quote": "ca-cert (eMudhra Intermediate CA Compromise) on 26.x, 24.x, 22.x",
+    "box": {
+     "x": 361,
+     "y": 972,
+     "w": 495,
+     "h": 22
+    },
+    "lines": [
+     {
+      "x": 361,
+      "y": 972,
+      "w": 495,
+      "h": 22
+     }
+    ]
+   }
+  ]
+ },
+ "scroll": {
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "seconds": 8,
+  "keyframes": [
+   {
+    "t": 0,
+    "y": 144
+   },
+   {
+    "t": 1,
+    "y": 144
+   },
+   {
+    "t": 2.109,
+    "y": 646
+   },
+   {
+    "t": 8,
+    "y": 646
+   }
+  ],
+  "zoom": 1,
+  "easing": "easeInOutCubic between keyframes, holds where y is equal",
+  "capped": false,
+  "formula": "scrollY(t): find keyframes a,b with a.t<=t<=b.t; scrollY = a.y + (b.y-a.y)*easeInOutCubic((t-a.t)/(b.t-a.t)); box on screen = docBox.y - scrollY(t)",
+  "quotes": [
+   {
+    "quote": "Wednesday, October 21, 2026 Security Releases",
+    "inVideo": true,
+    "still": true,
+    "t": 0.53,
+    "visibleStill": [
+     0,
+     1.07
+    ],
+    "scrollY": 144,
+    "box": {
+     "x": 513,
+     "y": 137,
+     "w": 667,
+     "h": 41
+    },
+    "lines": [
+     {
+      "x": 513,
+      "y": 137,
+      "w": 667,
+      "h": 41
+     }
+    ],
+    "docBox": {
+     "x": 513,
+     "y": 281,
+     "w": 667,
+     "h": 41
+    },
+    "layoutDriftPx": 0
+   },
+   {
+    "quote": "ca-cert (eMudhra Intermediate CA Compromise) on 26.x, 24.x, 22.x",
+    "inVideo": true,
+    "still": true,
+    "t": 5.03,
+    "visibleStill": [
+     2.03,
+     8.03
+    ],
+    "scrollY": 646,
+    "box": {
+     "x": 537,
+     "y": 410,
+     "w": 495,
+     "h": 22
+    },
+    "lines": [
+     {
+      "x": 537,
+      "y": 410,
+      "w": 495,
+      "h": 22
+     }
+    ],
+    "docBox": {
+     "x": 537,
+     "y": 1056,
+     "w": 495,
+     "h": 22
+    },
+    "layoutDriftPx": 0
+   }
+  ]
+ }
+}

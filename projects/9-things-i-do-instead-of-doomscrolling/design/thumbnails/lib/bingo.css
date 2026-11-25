@@ -1,0 +1,108 @@
+/* 9 things I do instead of doomscrolling: thumbnails (2026-11-03). Look: the film's A "OFFLINE BINGO" (butter #F7D44C, card
+   #FFFDF5, ink #161616, the orange dauber #FF6A1A = "done, offline"; Dela Gothic One numerals/headlines, Figtree 800, Red Hat Mono),
+   used freely so each kind looks different. Collage options add an Instrument Serif italic line + Reenie Beanie notes.
+   Editable: text in content.json "text", photos in "images", colours in "vars" (--ground, --fg, --accent, --wash), moves in "nudge". */
+/* type set 06 Ultra condensed (TYPE-SYSTEM.md, her pick 2026-11-07): League Gothic caps + Inter Tight + DM Mono. The old family
+   names stay as aliases so every direction picks the new faces up: Dela -> League Gothic, Fig -> Inter Tight, RHMono -> DM Mono;
+   the serif / handwriting faces are gone (they map to Inter Tight). */
+@font-face { font-family: 'Dela'; src: url('../fonts/LeagueGothicRegular.ttf') format('truetype'); }
+@font-face { font-family: 'Fig'; src: url('../fonts/InterTightMedium.ttf') format('truetype'); font-weight: 300 550; }
+@font-face { font-family: 'Fig'; src: url('../fonts/InterTightBold.ttf') format('truetype'); font-weight: 551 1000; }
+@font-face { font-family: 'RHMono'; src: url('../fonts/DMMono-Medium.ttf') format('truetype'); }
+@font-face { font-family: 'ISerif'; src: url('../fonts/InterTightSemiBold.ttf') format('truetype'); }
+@font-face { font-family: 'Gloock'; src: url('../fonts/LeagueGothicRegular.ttf') format('truetype'); }
+@font-face { font-family: 'Hand'; src: url('../fonts/InterTightMedium.ttf') format('truetype'); }
+
+:root { --butter: #F7D44C; --card: #FFFDF5; --ink: #161616; --daub: #FF6A1A; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1280px; height: 720px; overflow: hidden; background: #161616; }
+.t { position: relative; width: 1280px; height: 720px; overflow: hidden; background: var(--ground, #F7D44C); color: var(--fg, #161616);
+  font-family: 'Fig', sans-serif; }
+.guides .badge { position: absolute; right: 10px; bottom: 10px; width: 150px; height: 70px; border: 3px dashed #0f0; z-index: 99; }
+.z1 { z-index: 1; } .z2 { z-index: 2; } .z3 { z-index: 3; } .z4 { z-index: 4; } .z5 { z-index: 5; } .z6 { z-index: 6; }
+
+/* headline: Dela Gothic One, huge, tight */
+.hd { position: absolute; font-family: 'Dela', sans-serif; font-weight: 400; line-height: .84; letter-spacing: 0; white-space: nowrap;
+  color: var(--fg, #161616); text-transform: uppercase; }
+.hd.lc { text-transform: none; }
+.fig { font-family: 'Fig', sans-serif; font-weight: 900; letter-spacing: -.03em; }
+.acc { color: var(--accent, #FF6A1A); }
+.blk { color: var(--butter); padding: 0; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+.blkb { color: var(--butter); padding: 0; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+.serif { font-family: 'ISerif', serif; text-transform: none; font-weight: 400; letter-spacing: -.01em; }
+.gloock { font-family: 'Gloock', serif; text-transform: none; font-weight: 400; letter-spacing: -.01em; }
+.mono { font-family: 'RHMono', monospace; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; }
+.hand { font-family: 'Hand', cursive; font-weight: 400; line-height: .9; }
+.shadow-t { text-shadow: 0 3px 0 rgba(0,0,0,.18), 0 10px 28px rgba(0,0,0,.35); }
+
+/* the dauber: an irregular orange blot behind a word or number (the film's "done" mark) */
+.daub { position: relative; display: inline-block; z-index: 0; color: var(--accent, #FF6A1A) !important; }
+.daub::before { content: none; }
+.blot { position: absolute; background: var(--accent, #FF6A1A); border-radius: 46% 54% 42% 58% / 55% 45% 58% 42%; }
+
+/* photo of her: her room (grey + one colour wash), she in full colour on top (her ux-research method) */
+.scene { position: absolute; left: 0; top: 0; width: 1280px; height: 720px; transform-origin: var(--sc-o, 50% 30%); scale: var(--sc, 1);
+  translate: var(--sc-x, 0px) var(--sc-y, 0px); }
+.scene img { position: absolute; left: 0; top: 0; width: 1280px; height: 720px; display: block; }
+.scene .bg { filter: grayscale(1) contrast(var(--bgc, 1.05)) brightness(var(--bgb, 1)); }
+.scene .wash { position: absolute; inset: 0; background: var(--wash, #F7D44C); mix-blend-mode: multiply; }
+.scene .dim { position: absolute; inset: 0; background: var(--dim, rgba(22,22,22,0)); }
+/* her footage is cool and dim: warm it and lift it (never flipped, never retouched beyond light and colour) */
+.scene .me-c { filter: brightness(var(--mb, 1.04)) contrast(1.04); }
+.scene.natural .bg { filter: brightness(var(--bgb, 1.5)) contrast(1.08) saturate(.9) sepia(.3); }
+.scene.bw .me-c { filter: grayscale(1) contrast(1.15) brightness(1.45); }
+
+/* cut-out of her (frame edge at the bottom) */
+.cut { position: absolute; bottom: 0; display: block; filter: brightness(1.04) contrast(1.04); }
+.cut.ol { filter: brightness(1.04) contrast(1.04); }
+.cut.bw { filter: grayscale(1) contrast(1.1) brightness(1.1); }
+
+/* die-cut objects (Pexels stand-ins): white sticker edge + soft drop */
+.obj { position: absolute; display: block; filter: drop-shadow(0 14px 18px rgba(0,0,0,.28)); }
+.stk { position: absolute; display: block; filter: drop-shadow(0 12px 18px rgba(0,0,0,.28)); }
+
+/* the bingo card */
+.card { position: absolute; background: var(--ink); border-radius: 22px; padding: 12px; box-shadow: 0 22px 44px rgba(0,0,0,.25); }
+.card .ch { font-family: 'Dela', sans-serif; color: var(--card); text-align: center; text-transform: uppercase; line-height: 1; padding: 14px 0 16px; white-space: nowrap; }
+.card .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 5px; background: var(--ink); }
+.card .sq { position: relative; background: var(--card); overflow: hidden; }
+.card .sq .n { position: absolute; font-family: 'Dela', sans-serif; color: var(--ink); line-height: 1; z-index: 2; }
+.card .sq .l { position: absolute; font-family: 'Fig', sans-serif; font-weight: 800; color: var(--ink); line-height: 1.02; z-index: 2; letter-spacing: -.01em; }
+.card .sq img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.card .sq .dot { position: absolute; background: var(--accent, #FF6A1A); border-radius: 46% 54% 42% 58% / 55% 45% 58% 42%; z-index: 1; }
+.card .sq.now { box-shadow: inset 0 0 0 7px var(--ink); }
+
+/* a generic phone (dark, face down or off), never a real app */
+.phone { position: absolute; background: var(--ink); border-radius: 40px; padding: 12px; box-shadow: 0 22px 44px rgba(0,0,0,.3); }
+.phone .scr { background: #2a2a2a; border-radius: 30px; width: 100%; height: 100%; overflow: hidden; position: relative; }
+/* polaroid */
+.pol { position: absolute; background: none; padding: 0; box-shadow: 0 16px 30px rgba(0,0,0,.3); }
+.pol .tape { display: none; }
+.pol img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.pol .cap { position: absolute; left: 0; right: 0; bottom: 6px; text-align: center; font-family: 'Hand', cursive; font-size: 40px; color: var(--ink); line-height: 1; }
+/* tape */
+.tape { position: absolute; width: 120px; height: 36px; background: rgba(255,253,245,.72); box-shadow: 0 2px 4px rgba(0,0,0,.12); }
+.tag { position: absolute; background: var(--ink); color: var(--card); font-family: 'RHMono', monospace; font-weight: 700; letter-spacing: .03em; text-transform: uppercase; padding: 8px 14px; }
+.arrow { position: absolute; overflow: visible; }
+/* cut-outs with the outline baked in (hard edge, no glow): assets/cut/*-butter|-orange|-bw-ink.png */
+.cut.plain { filter: none; }
+
+/* 2026-11-07: flat grounds behind her new photo cut-outs (no filters on the ground) */
+.scene.flat .bg { filter: none; }
+
+/* ===== 2026-11-10 rollout: her shoot photos (outfit A white shirt, Enhance photo) + quiet same-hue patterns ===== */
+/* her shoot photos are already bright and enhanced: no extra brightening on top (her note 2026-11-08, face too light) */
+.t.no-lift .scene .me-c, .t.no-lift .cut { filter: none !important; }
+/* full photo of her room (4:3): room + her person layer share one box, so they line up; size --pw, place --pl / --pt */
+.pf { position: absolute; inset: 0; overflow: hidden; }
+.pf img { position: absolute; left: var(--pl, 0px); top: var(--pt, -120px); width: var(--pw, 1280px); height: auto; }
+.pf .wash { position: absolute; left: var(--pl, 0px); top: var(--pt, -120px); width: var(--pw, 1280px); height: calc(var(--pw, 1280px) * .75);
+  background: var(--wash, #F7D44C); mix-blend-mode: multiply; opacity: var(--washo, 1); }
+.pf .dim { position: absolute; inset: 0; background: var(--dim, rgba(22,22,22,0)); }
+.pf.washed .room { filter: grayscale(1) contrast(var(--wc, .7)) brightness(var(--wb, 1.5)); }
+.pf.natural .room { filter: saturate(.9) contrast(1.02); }
+/* a bold ground with a fine static pattern in the same hue, a few % darker (THUMBNAIL-STUDY §7) */
+.pat::before { content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background-image: repeating-linear-gradient(var(--pata, 135deg), var(--patc, rgba(22,22,22,.055)) 0 2px, transparent 2px var(--patg, 13px)); }
+.sh { text-shadow: 0 2px 4px rgba(0,0,0,.25), 0 8px 30px rgba(0,0,0,.35); }
+.it { font-family: 'Fig', sans-serif; font-weight: 600; text-transform: none; letter-spacing: -.02em; }

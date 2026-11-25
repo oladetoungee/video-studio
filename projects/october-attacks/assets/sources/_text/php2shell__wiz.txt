@@ -1,0 +1,710 @@
+URL: https://www.wiz.io/vulnerability-database/cve/cve-2026-109618
+STATUS: loaded (http 200)
+FINAL: https://www.wiz.io/vulnerability-database/cve/cve-2026-109618
+TITLE: CVE-2026-109618 Impact, Exploitability, and Mitigation Steps | Wiz
+H1: CVE-2026-109618: 
+PHP vulnerability analysis and mitigation
+OG: CVE-2026-109618 Impact, Exploitability, and Mitigation Steps | Wiz | wiz.io
+PUBLISHED:   MODIFIED: 
+DOC_H: 7265
+
+PHP2Shell: Read our blog on the critical RCE vulnerabilities affecting 70% of the Internet
+Wiz
+Platform
+Solutions
+Pricing
+Resources
+Customers
+Company
+Sign in
+Under attack?
+Get a demo
+Vulnerability Database
+CVE-2026-109618
+CVE-2026-109618: 
+PHP vulnerability analysis and mitigation
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+High-profile threat    •    
+Overview
+
+CVE-2026-109618 is a critical remote code execution (RCE) vulnerability affecting all PHP versions from PHP 5 onward. The CVE was reserved and first surfaced publicly around October 20, 2026, when details were reportedly leaked ahead of an embargo, prompting PHP maintainers to announce emergency patches were imminent. The vulnerability is estimated to carry a HIGH/Critical CVSS severity, with some sources citing a score of 9.2 (BleepingComputer, Cryptika). It is closely related to a companion vulnerability, CVE-2026-109619, and the pair has been dubbed "PHP2Shell" by the security community (Huntress, SecurityWeek).
+
+Technical details
+
+CVE-2026-109618 is a remote code execution flaw rooted in PHP core, affecting all versions from PHP 5 onward. An unauthenticated attacker can exploit this vulnerability over the network to execute arbitrary code on the affected server with the privileges of the web server process. The precise root cause (CWE classification) and specific vulnerable code path have not been fully disclosed publicly, as the vulnerability was leaked ahead of the official patch release and technical details remain limited pending the official advisory (watchTowr, Sansec, ThreatLandscape). No public proof-of-concept exploit code has been confirmed at the time of initial disclosure (Feedly).
+
+Impact
+
+Successful exploitation allows an unauthenticated remote attacker to execute arbitrary code on any PHP server running PHP 5 or later, with the privileges of the web server process. Given PHP's ubiquity in web infrastructure — powering a significant portion of the internet — the potential attack surface is enormous, affecting web applications, CMS platforms, e-commerce systems, and APIs worldwide. Exploitation could lead to full server compromise, data exfiltration, web shell deployment, lateral movement within internal networks, and supply chain attacks against hosted applications (SecurityWeek, TheHackerNews, Qualys Blog).
+
+Exploitability
+
+At the time of initial disclosure, no confirmed public proof-of-concept exploit code existed and no in-the-wild exploitation had been observed (Feedly). However, the premature leak of vulnerability details ahead of the official patch significantly increased the risk of rapid weaponization, with SecurityWeek warning that mass exploitation was looming (SecurityWeek). The CVE status remains "Reserved" and no EPSS score or CISA KEV catalog entry has been confirmed at this stage. The vulnerability's unauthenticated, network-exploitable nature and the breadth of affected PHP versions make it a high-priority target for threat actors (Aikido, CERT-EU).
+
+Mitigation and workarounds
+
+Official patches had not been released at the time of initial disclosure, but PHP maintainers announced emergency security releases were imminent (BleepingComputer). Organizations should immediately monitor the official PHP security announcements and apply patches as soon as they become available for all supported PHP branches. In the interim, recommended mitigations include implementing network access controls to restrict external connections to PHP services, disabling unnecessary PHP functions that could facilitate RCE (e.g., exec, shell_exec, system, passthru), deploying a Web Application Firewall (WAF) to detect and block exploitation attempts, and ensuring PHP processes run with minimal required privileges (Feedly, CERT-EU, ASD ACSC).
+
+Community reactions
+
+The vulnerability generated significant community attention due to the unusual circumstance of details leaking ahead of the official embargo, with PHP maintainers publicly warning administrators to prepare for emergency patches (BleepingComputer, Ars Technica). Security researcher Kevin Beaumont (GossiTheDog) commented on the situation via Mastodon, and the topic trended on Hacker News and Reddit's r/sysadmin (Cyberplace Social, Reddit). CERT-EU and the Australian Cyber Security Centre (ACSC) both issued advisories urging immediate action (CERT-EU, ASD ACSC). SecurityWeek warned of looming mass exploitation, and multiple security vendors including Huntress, Qualys, Aikido, and Sansec published rapid-response analyses under the "PHP2Shell" moniker (SecurityWeek, Huntress).
+
+Additional resources
+BleepingComputer
+watchTowr FAQ
+Huntress PHP2Shell
+Sansec Research
+CERT-EU Advisory
+ASD ACSC Alert
+SecurityWeek Analysis
+Linux Distribution fix status
+
+Fix availability across major Linux distributions and their releases.
+
+Debian
+
+Fixed
+
+bookworm
+
+php8.2: 8.2.35-1~deb12u1
+
+Fixed
+
+sid
+
+php8.4: 8.4.27-1
+
+Fixed
+
+trixie
+
+php8.4: 8.4.27-1~deb13u1
+
+Fixed
+
+Ubuntu
+
+Fixed
+
+bionic (esm-infra)
+
+php7.2: 7.2.24-0ubuntu0.18.04.17+esm14
+
+Fixed
+
+devel
+
+php8.5: 8.5.9-0ubuntu2.1
+
+Affected
+
+focal (esm-infra)
+
+php7.4: 7.4.3-4ubuntu2.29+esm5
+
+Fixed
+
+jammy
+
+php8.1: 8.1.2-1ubuntu2.28
+
+Fixed
+
+noble
+
+php8.3: 8.3.6-0ubuntu0.24.04.13
+
+Fixed
+
+resolute
+
+php8.5: 8.5.4-0ubuntu1.5
+
+Fixed
+
+trusty (esm-infra-legacy)
+
+php5: 5.5.9+dfsg-1ubuntu4.29+esm18
+
+Fixed
+
+xenial (esm-infra-legacy)
+
+php7.0: 7.0.33-0ubuntu0.16.04.16+esm22
+
+Fixed
+
+RHEL / CentOS
+
+Fixed
+
+RHEL 8
+
+:appstream:php-0:7.4-8100020261021081045.f7998665.src
+
+Fixed
+
+RHEL 9
+
+:appstream:php-0:8.0.30-1.el9_2.2.src
+
+Fixed
+
+RHEL 10
+
+php-0:8.3.19-1.el10_0.2.src
+
+Fixed
+
+Alpine
+
+Fixed
+
+edge
+
+php83: 8.3.36-r0, 8.4.27-r0, 8.5.12-r0
+
+Fixed
+
+v3.21
+
+php82: 8.2.35-r0
+
+Fixed
+
+v3.22
+
+php82: 8.2.35-r0
+
+Fixed
+
+v3.23
+
+php83: 8.3.36-r0, 8.4.27-r0, 8.5.12-r0
+
+Fixed
+
+Source: This report was generated using AI
+
+View vulnerable instances
+
+Not a customer? See how Wiz maps CVEs like this one to real cloud attack paths.
+
+Watch 12-min demo
+Overview
+CVSS Information
+9.2
+
+Score
+
+Published October 21, 2026
+
+Severity CRITICAL
+
+CNA Score 9.2
+
+High-profile Vulnerability Yes
+
+Affected Technologies
+
+PHP
+PAN-OS
++16 See all
+
+Has Public Exploit Yes
+
+Has CISA KEV Exploit No
+
+CISA KEV Release Date N/A
+
+CISA KEV Due Date N/A
+
+Exploitation Probability Percentile (EPSS) 96.1
+
+Exploitation Probability (EPSS) 11.8
+
+Affected packages and libraries
+
+php8-phar
+php:8.4::php-enchant
++48 See all
+
+Sources
+
+AlmaLinux Security Advisory
+AlmaLinux 8 
+Severity CRITICAL
+Has Fix
+Added at: Oct 21, 2026
+AlmaLinux 9 
+Severity HIGH
+Has Fix
+Added at: Oct 21, 2026
+Alpine Security Tracker
+Alpine 3.2, 3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 3.13, 3.14, 3.15, 3.16, 3.17, 3.18, 3.19, 3.20 
+Severity CRITICAL
+No Fix
+Added at: Oct 21, 2026
+Alpine 3.21, 3.22, 3.23, 3.24, edge 
+Severity CRITICAL
+Has Fix
+Added at: Oct 21, 2026
+CBL-Mariner
+CBL-Mariner 1.0, 2.0 
+Severity CRITICAL
+No Fix
+Added at: Oct 21, 2026
+CBL-Mariner 3.0 
+Severity CRITICAL
+Has Fix
+Added at: Oct 21, 2026
+Chainguard
+Chainguard  
+Severity CRITICAL
+Has Fix
+Added at: Oct 21, 2026
+Debian Security Tracker
+Debian 7, 8, 9, 10, 11 
+Severity CRITICAL
+No Fix
+Added at: Oct 21, 2026
+Debian 12, 13, 14 
+Severity CRITICAL
+Has Fix
+Added at: Oct 21, 2026
+Echo
+Echo  
+Severity CRITICAL
+Has Fix
+Added at: Oct 21, 2026
+Gentoo Advisory Database
+Gentoo  
+Severity CRITICAL
+Has Fix
+Added at: Oct 21, 2026
+Homebrew
+Homebrew  
+Severity CRITICAL
+Has Fix
+Added at: Oct 21, 2026
+Minimus
+MinimOS  
+Severity CRITICAL
+Has Fix
+Added at: Oct 21, 2026
+Red Hat Errata
+Red Hat 3, 4, 5, 7, 8 
+Severity CRITICAL
+Has Fix
+Added at: Oct 21, 2026
+Red Hat 6 
+Severity HIGH
+Has Fix
+Added at: Oct 21, 2026
+Red Hat 9 
+Severity HIGH
+Has Fix
+Added at: Oct 21, 2026
+Red Hat 10 
+Severity HIGH
+Has Fix
+Added at: Oct 21, 2026
+Rocky Linux Product Errata
+Rocky 8 
+Severity CRITICAL
+Has Fix
+Added at: Oct 21, 2026
+Rocky 9 
+Severity HIGH
+Has Fix
+Added at: Oct 21, 2026
+Rocky 10 
+Severity HIGH
+Has Fix
+Added at: Oct 21, 2026
+TuxCare
+AlmaLinux 9.2, 9.6 
+Severity LOW
+Has Fix
+Added at: Oct 21, 2026
+Ubuntu Security Tracker
+Ubuntu 12.04, 12.10, 13.04, 13.10, 14.10, 15.04, 15.10, 16.10, 17.04, 17.10, 18.10, 19.04, 19.10, 20.10, 21.04, 21.10, 22.10, 23.04, 23.10, 24.10, 25.04, 25.10 
+Severity CRITICAL
+No Fix
+Added at: Oct 21, 2026
+Ubuntu 14.04, 16.04, 18.04, 20.04, 22.04, 24.04, 26.04, 26.10 
+Severity CRITICAL
+Has Fix
+Added at: Oct 21, 2026
+Wolfi
+Wolfi  
+Severity CRITICAL
+Has Fix
+Added at: Oct 21, 2026
+NVD
+Linux  
+Severity CRITICAL
+Has Fix
+Added at: Oct 21, 2026
+Windows  
+Severity CRITICAL
+Has Fix
+Added at: Oct 21, 2026
+Get a CVE risk assessment
+
+Get a prioritized view of CVEs in your cloud—so you can focus on what's exploitable, not just what's listed.
+
+Request assessment
+Related PHP vulnerabilities:
+
+CVE ID
+
+	
+
+Severity
+
+	
+
+Score
+
+	
+
+Technologies
+
+	
+
+Component name
+
+	
+
+CISA KEV exploit
+
+	
+
+Has fix
+
+	
+
+Published date
+
+GHSA-f9x3-7vq9-cph6
+	CRITICAL	9.2	
+PHP
+	
+laravel/framework
+	No	
+Yes
+	Oct 24, 2026
+
+GHSA-mhf7-xp6r-6qrc
+	MEDIUM	6.5	
+PHP
+	
+livewire/livewire
+	No	
+Yes
+	Oct 23, 2026
+
+GHSA-3qcx-mjf6-48vj
+	HIGH	N/A	
+PHP
+	
+craftcms/commerce-mollie
+	No	
+Yes
+	Oct 23, 2026
+
+GHSA-5v62-pcq7-fxj9
+	LOW	N/A	
+PHP
+	
+craftcms/cms
+	No	
+Yes
+	Oct 23, 2026
+
+GHSA-hvp5-pwxx-2752
+	LOW	N/A	
+PHP
+	
+craftcms/cms
+	No	
+Yes
+	Oct 23, 2026
+
+FREE VULNERABILITY ASSESSMENT
+
+Benchmark your Cloud Security Posture
+
+Evaluate your cloud security practices across 9 security domains to benchmark your risk level and identify gaps in your defenses.
+
+Request assessment
+Additional Wiz resources
+Cloud Vulnerability DB
+
+A community-led vulnerabilities database
+
+Explore
+Cloud Threat Landscape
+
+A threat intelligence database
+
+Explore
+PEACH
+
+A tenant isolation framework
+
+Explore
+
+GET A PERSONALIZED DEMO
+
+Ready to see Wiz in action?
+"Best User Experience I have ever seen, provides full visibility to cloud workloads."
+David Estlick
+CISO
+"Wiz provides a single pane of glass to see what is going on in our cloud environments."
+Adam Fletcher
+Chief Security Officer
+"We know that if Wiz identifies something as critical, it actually is."
+Greg Poniatowski
+Head of Threat and Vulnerability Management
+Get a demo
+Footer
+PLATFORM
+Cloud & AI Security
+Wiz Code
+Wiz Cloud
+Wiz Defend
+Integrations
+Environments
+Documentation
+LEARN
+Customer Stories
+Cloud Security Courses
+Blog
+CloudSec Academy
+Resources Center
+Cloud Threat Landscape
+Cloud Security Assessment
+Vulnerability Database
+COMPANY
+About Wiz
+Join the Team
+Newsroom
+Events
+Contact Us
+Trust Center
+Wiz Partner Alliance
+English (US)
+X
+LinkedIn
+Bluesky
+RSS
+The content in this page is licensed under the Creative Commons Attribution Share-Alike 4.0 International License
+
+© 2026 Wiz, Inc.
+
+Status
+Privacy Policy
+Terms of Use
+Modern Slavery Statement
+Cookie Preferences

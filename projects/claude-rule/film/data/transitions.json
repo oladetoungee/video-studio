@@ -1,0 +1,568 @@
+{
+ "slug": "claude-rule",
+ "aspect": "16x9",
+ "note": "Transition board. Fill carrier (what brings the next shot in: a shape, a line, a word, the camera, or \"hard cut\") and why (>= 20 characters: the reason, e.g. \"cut on the beat of 'licensed', new idea\"). Re-running lab.mjs board keeps them.",
+ "cuts": [
+  {
+   "from": "open",
+   "to": "cruel",
+   "frame": 297,
+   "t": 9.87,
+   "kind": "cut",
+   "lands_on": "cruel @ 9.89 s (f297)",
+   "carrier": "breakout: \"cruel.\" flies out of her bubble word",
+   "why": "the rule is about cruelty; the word she lands on takes the whole frame"
+  },
+  {
+   "from": "cruel",
+   "to": "not-a-fight",
+   "frame": 347,
+   "t": 11.54,
+   "kind": "cut",
+   "lands_on": "And @ 11.64 s (f349)",
+   "carrier": "hard cut back into the same chat",
+   "why": "the thread resumes exactly where it was: one conversation, nothing lost"
+  },
+  {
+   "from": "not-a-fight",
+   "to": "questions",
+   "frame": 527,
+   "t": 17.56,
+   "kind": "cut",
+   "lands_on": "a @ 17.52 s (f526)",
+   "carrier": "hard cut to her three questions, full frame, on \"do I want\"",
+   "why": "the questions she rules out get their own screen, then struck"
+  },
+  {
+   "from": "questions",
+   "to": "thought-process",
+   "frame": 720,
+   "t": 23.97,
+   "kind": "cut",
+   "lands_on": "What @ 24.07 s (f722)",
+   "carrier": "hard cut back into the same chat",
+   "why": "back to her real topic: the thinking behind the rule"
+  },
+  {
+   "from": "thought-process",
+   "to": "meter",
+   "frame": 930,
+   "t": 31,
+   "kind": "cut",
+   "lands_on": "is @ 30.94 s (f928)",
+   "carrier": "cut to the full-frame meter on \"not sure\"",
+   "why": "her reading of Anthropic swings between two poles, so it becomes a dial"
+  },
+  {
+   "from": "meter",
+   "to": "wording",
+   "frame": 1121,
+   "t": 37.34,
+   "kind": "cut",
+   "lands_on": "So @ 37.44 s (f1123)",
+   "carrier": "hard cut back to the chat on her question",
+   "why": "\"what does the rule actually say?\" asked as a message"
+  },
+  {
+   "from": "wording",
+   "to": "page-rule",
+   "frame": 1266,
+   "t": 42.181,
+   "kind": "cut",
+   "lands_on": "bans @ 42.23 s (f1267)",
+   "carrier": "the real page fills the frame on \"bans\" (shutter)",
+   "why": "the exact source at the moment she reads it"
+  },
+  {
+   "from": "page-rule",
+   "to": "lift",
+   "frame": 1394,
+   "t": 46.44,
+   "kind": "cut",
+   "lands_on": "And @ 46.82 s (f1405)",
+   "carrier": "the highlighted words lift into serif type",
+   "why": "Anthropic voice gets its own type once she finishes reading"
+  },
+  {
+   "from": "lift",
+   "to": "ended",
+   "frame": 1509,
+   "t": 50.3,
+   "kind": "cut",
+   "lands_on": "And @ 50.42 s (f1513)",
+   "carrier": "hard cut back into the chat",
+   "why": "back to her voice for how the rule is enforced"
+  },
+  {
+   "from": "ended",
+   "to": "chat-ends",
+   "frame": 1631,
+   "t": 54.34,
+   "kind": "cut",
+   "lands_on": "if @ 54.58 s (f1637)",
+   "carrier": "the divider breaks out full width on the tape stop",
+   "why": "the chat ending is the rule itself: give it the frame"
+  },
+  {
+   "from": "chat-ends",
+   "to": "other-side",
+   "frame": 1667,
+   "t": 55.54,
+   "kind": "cut",
+   "lands_on": "as @ 55.65 s (f1670)",
+   "carrier": "cut back into the chat for her next line",
+   "why": "she explains when the chat ends"
+  },
+  {
+   "from": "other-side",
+   "to": "new-chat",
+   "frame": 1812,
+   "t": 60.38,
+   "kind": "cut",
+   "lands_on": "Then @ 60.30 s (f1809)",
+   "carrier": "new chat: \"New chat\" and her first message on the cut",
+   "why": "chapter break after the chat ended: the constitution"
+  },
+  {
+   "from": "new-chat",
+   "to": "page-constitution",
+   "frame": 1874,
+   "t": 62.45,
+   "kind": "cut",
+   "lands_on": "the @ 62.50 s (f1875)",
+   "carrier": "the constitution page fills the frame on \"the document\"",
+   "why": "the source she names, at full size"
+  },
+  {
+   "from": "page-constitution",
+   "to": "moral-chat",
+   "frame": 1986,
+   "t": 66.2,
+   "kind": "cut",
+   "lands_on": "be. @ 66.08 s (f1982)",
+   "carrier": "back into the chat on \"They call\"",
+   "why": "her message carries the quote in"
+  },
+  {
+   "from": "moral-chat",
+   "to": "page-moral",
+   "frame": 2009,
+   "t": 66.94,
+   "kind": "cut",
+   "lands_on": "Claude's @ 66.99 s (f2010)",
+   "carrier": "the page zooms in on \"Claude's moral status\"",
+   "why": "real source, highlighted as she says it"
+  },
+  {
+   "from": "page-moral",
+   "to": "two-voices",
+   "frame": 2077,
+   "t": 69.21,
+   "kind": "cut",
+   "lands_on": "So @ 69.70 s (f2091)",
+   "carrier": "the highlighted sentence lifts into serif, her bubbles answer",
+   "why": "two voices on one screen"
+  },
+  {
+   "from": "two-voices",
+   "to": "leadership",
+   "frame": 2304,
+   "t": 76.77,
+   "kind": "cut",
+   "lands_on": "What @ 76.87 s (f2306)",
+   "carrier": "hard cut to the chat",
+   "why": "her own thought starts a new beat"
+  },
+  {
+   "from": "leadership",
+   "to": "stickers",
+   "frame": 2444,
+   "t": 81.46,
+   "kind": "cut",
+   "lands_on": "is @ 81.56 s (f2447)",
+   "carrier": "her words become stickers on \"Claude\"",
+   "why": "she lists the human things being put on the tool"
+  },
+  {
+   "from": "stickers",
+   "to": "tool",
+   "frame": 2809,
+   "t": 93.62,
+   "kind": "cut",
+   "lands_on": "Claude @ 93.68 s (f2810)",
+   "carrier": "stickers fall off, \"Claude is a tool.\" lands",
+   "why": "\"the fact still stands\": the human labels drop away"
+  },
+  {
+   "from": "tool",
+   "to": "amazing",
+   "frame": 2868,
+   "t": 95.57,
+   "kind": "cut",
+   "lands_on": "It @ 95.69 s (f2871)",
+   "carrier": "hard cut back to the chat on \"It is an incredibly amazing tool\"",
+   "why": "she qualifies: a tool, but an amazing one"
+  },
+  {
+   "from": "amazing",
+   "to": "calculation",
+   "frame": 3056,
+   "t": 101.84,
+   "kind": "cut",
+   "lands_on": "to @ 101.81 s (f3054)",
+   "carrier": "cut to the big sum on \"compute\"",
+   "why": "an illustration of a capability most people lack"
+  },
+  {
+   "from": "calculation",
+   "to": "believe",
+   "frame": 3169,
+   "t": 105.61,
+   "kind": "cut",
+   "lands_on": "But @ 105.69 s (f3171)",
+   "carrier": "cut to night on \"But\"",
+   "why": "the turn of her argument"
+  },
+  {
+   "from": "believe",
+   "to": "conversation",
+   "frame": 3320,
+   "t": 110.64,
+   "kind": "cut",
+   "lands_on": "I @ 110.74 s (f3322)",
+   "carrier": "cut back to the lilac chat",
+   "why": "the aside \"should never have been a conversation\" is chat-shaped"
+  },
+  {
+   "from": "conversation",
+   "to": "living",
+   "frame": 3432,
+   "t": 114.37,
+   "kind": "cut",
+   "lands_on": "Consciousness @ 114.45 s (f3434)",
+   "carrier": "cut to night: big type on her words",
+   "why": "her core claim, stacked in her order"
+  },
+  {
+   "from": "living",
+   "to": "impose",
+   "frame": 3557,
+   "t": 118.54,
+   "kind": "cut",
+   "lands_on": "So @ 118.64 s (f3559)",
+   "carrier": "cut back to the chat",
+   "why": "argument continues as messages"
+  },
+  {
+   "from": "impose",
+   "to": "attributes",
+   "frame": 3961,
+   "t": 132.02,
+   "kind": "cut",
+   "lands_on": "We @ 132.14 s (f3964)",
+   "carrier": "invisible cut: next message",
+   "why": "screen boundary for editing only"
+  },
+  {
+   "from": "attributes",
+   "to": "powerful",
+   "frame": 4102,
+   "t": 136.73,
+   "kind": "cut",
+   "lands_on": "And @ 136.83 s (f4105)",
+   "carrier": "hard cut to the plank on \"And this tool is\"",
+   "why": "C set piece: weight piles onto the rule"
+  },
+  {
+   "from": "powerful",
+   "to": "slope",
+   "frame": 4263,
+   "t": 142.1,
+   "kind": "cut",
+   "lands_on": "The @ 142.10 s (f4263)",
+   "carrier": "the first pile slides off, a new pile builds",
+   "why": "second pile: the company claim and the rules, in her order"
+  },
+  {
+   "from": "slope",
+   "to": "illusion",
+   "frame": 4566,
+   "t": 152.18,
+   "kind": "cut",
+   "lands_on": "This @ 152.10 s (f4563)",
+   "carrier": "the pile slides off the tilted plank; new chat",
+   "why": "after the slope, a fresh chat for the illusion and the quote"
+  },
+  {
+   "from": "illusion",
+   "to": "page-suleyman",
+   "frame": 4759,
+   "t": 158.63,
+   "kind": "cut",
+   "lands_on": "I'm @ 158.69 s (f4761)",
+   "carrier": "the real essay fills the frame on \"I'm quoting\"",
+   "why": "she cites Microsoft AI: show the essay itself"
+  },
+  {
+   "from": "page-suleyman",
+   "to": "digital-person",
+   "frame": 5031,
+   "t": 167.67,
+   "kind": "cut",
+   "lands_on": "I @ 167.88 s (f5036)",
+   "carrier": "the highlighted sentence lifts into serif",
+   "why": "his written words, her answer below"
+  },
+  {
+   "from": "digital-person",
+   "to": "interesting",
+   "frame": 5364,
+   "t": 178.78,
+   "kind": "cut",
+   "lands_on": "And @ 178.88 s (f5366)",
+   "carrier": "hard cut to big type on \"And it's even interesting\"",
+   "why": "a new argument starts: the what-if"
+  },
+  {
+   "from": "interesting",
+   "to": "chain",
+   "frame": 5490,
+   "t": 182.97,
+   "kind": "cut",
+   "lands_on": "could @ 183.05 s (f5492)",
+   "carrier": "cut to the chain on \"could be conscious\"",
+   "why": "her if-then logic drawn step by step"
+  },
+  {
+   "from": "chain",
+   "to": "what-if",
+   "frame": 5713,
+   "t": 190.42,
+   "kind": "cut",
+   "lands_on": "For @ 190.34 s (f5710)",
+   "carrier": "cut to a chat at 9:00 AM on her first message",
+   "why": "the what-if plays out as a day in one chat"
+  },
+  {
+   "from": "what-if",
+   "to": "nine-pm",
+   "frame": 5895,
+   "t": 196.48,
+   "kind": "cut",
+   "lands_on": "9pm @ 196.54 s (f5896)",
+   "carrier": "cut to night on \"9pm\"",
+   "why": "the time of day is the point of her what-if"
+  },
+  {
+   "from": "nine-pm",
+   "to": "tired",
+   "frame": 5923,
+   "t": 197.43,
+   "kind": "cut",
+   "lands_on": "does @ 197.49 s (f5925)",
+   "carrier": "back into the chat on \"does that mean\"",
+   "why": "the what-if continues as messages"
+  },
+  {
+   "from": "tired",
+   "to": "tired-big",
+   "frame": 6035,
+   "t": 201.14,
+   "kind": "cut",
+   "lands_on": "I'm @ 200.99 s (f6030)",
+   "carrier": "breakout: \"Hey, I'm tired.\" from the grey what-if bubble",
+   "why": "her what-if is the turn of the video"
+  },
+  {
+   "from": "tired-big",
+   "to": "why-not",
+   "frame": 6098,
+   "t": 203.24,
+   "kind": "cut",
+   "lands_on": "Because @ 203.34 s (f6100)",
+   "carrier": "cut back into the same chat",
+   "why": "the reasoning continues as messages"
+  },
+  {
+   "from": "why-not",
+   "to": "offender",
+   "frame": 6188,
+   "t": 206.26,
+   "kind": "cut",
+   "lands_on": "And @ 206.36 s (f6191)",
+   "carrier": "invisible cut: same chat",
+   "why": "screen boundary for editing only"
+  },
+  {
+   "from": "offender",
+   "to": "offender-big",
+   "frame": 6326,
+   "t": 210.86,
+   "kind": "cut",
+   "lands_on": "an @ 210.71 s (f6321)",
+   "carrier": "breakout: \"an offender?\" from her bubble word",
+   "why": "the twist of her logic in one word"
+  },
+  {
+   "from": "offender-big",
+   "to": "slave-owner",
+   "frame": 6351,
+   "t": 211.68,
+   "kind": "cut",
+   "lands_on": "Because @ 211.78 s (f6353)",
+   "carrier": "cut back into the chat",
+   "why": "her strongest line, plain, in her bubble"
+  },
+  {
+   "from": "slave-owner",
+   "to": "selling",
+   "frame": 6498,
+   "t": 216.6,
+   "kind": "cut",
+   "lands_on": "It's @ 216.65 s (f6500)",
+   "carrier": "cut to big type on \"It's selling it\"",
+   "why": "the line that follows gets the frame"
+  },
+  {
+   "from": "selling",
+   "to": "night",
+   "frame": 6555,
+   "t": 218.48,
+   "kind": "cut",
+   "lands_on": "and @ 218.33 s (f6550)",
+   "carrier": "ground flips to night on the word \"night\"",
+   "why": "the picture does what she says: day and night"
+  },
+  {
+   "from": "night",
+   "to": "day",
+   "frame": 6592,
+   "t": 219.71,
+   "kind": "cut",
+   "lands_on": "day. @ 219.73 s (f6592)",
+   "carrier": "ground flips back on the word \"day\"",
+   "why": "day and night, night and day"
+  },
+  {
+   "from": "day",
+   "to": "reasoning",
+   "frame": 6616,
+   "t": 220.51,
+   "kind": "cut",
+   "lands_on": "it's @ 220.61 s (f6618)",
+   "carrier": "cut to the chat on \"it's just a funny way\"",
+   "why": "back to the conversation, which then ends"
+  },
+  {
+   "from": "reasoning",
+   "to": "own-sake",
+   "frame": 6692,
+   "t": 223.06,
+   "kind": "cut",
+   "lands_on": "So @ 222.98 s (f6689)",
+   "carrier": "new chat with typing dots after \"This conversation has ended\"",
+   "why": "chapter break: kindness for our own sake (deliberate fresh chat)"
+  },
+  {
+   "from": "own-sake",
+   "to": "sake",
+   "frame": 6769,
+   "t": 225.62,
+   "kind": "cut",
+   "lands_on": "I @ 225.68 s (f6770)",
+   "carrier": "cut to big type on \"I don't think you should be cruel\"",
+   "why": "her rule of kindness, stated large"
+  },
+  {
+   "from": "sake",
+   "to": "heart",
+   "frame": 7003,
+   "t": 233.43,
+   "kind": "cut",
+   "lands_on": "to @ 233.40 s (f7002)",
+   "carrier": "cut to night on \"You want to try\"",
+   "why": "the most personal line gets the dark screen"
+  },
+  {
+   "from": "heart",
+   "to": "because",
+   "frame": 7090,
+   "t": 236.32,
+   "kind": "cut",
+   "lands_on": "But @ 236.42 s (f7093)",
+   "carrier": "cut back to the chat on \"But\"",
+   "why": "the turn back to Claude"
+  },
+  {
+   "from": "because",
+   "to": "no",
+   "frame": 7232,
+   "t": 241.05,
+   "kind": "cut",
+   "lands_on": "it's @ 241.02 s (f7231)",
+   "carrier": "breakout: \"No, it's not.\" from her bubble",
+   "why": "her answer fills the frame"
+  },
+  {
+   "from": "no",
+   "to": "why",
+   "frame": 7296,
+   "t": 243.18,
+   "kind": "cut",
+   "lands_on": "So @ 243.23 s (f7297)",
+   "carrier": "hard cut to the two reasons on \"So I don't think\"",
+   "why": "the wrong reason struck, the right one marked"
+  },
+  {
+   "from": "why",
+   "to": "overall",
+   "frame": 7499,
+   "t": 249.95,
+   "kind": "cut",
+   "lands_on": "But @ 250.05 s (f7502)",
+   "carrier": "hard cut to big type on \"But overall\"",
+   "why": "the closing thought"
+  },
+  {
+   "from": "overall",
+   "to": "end-slope",
+   "frame": 7540,
+   "t": 251.33,
+   "kind": "cut",
+   "lands_on": "this @ 251.39 s (f7542)",
+   "carrier": "her words drop onto the plank again",
+   "why": "callback: the slope from 2:30"
+  },
+  {
+   "from": "end-slope",
+   "to": "i-dont-know",
+   "frame": 7692,
+   "t": 256.4,
+   "kind": "cut",
+   "lands_on": "And @ 256.48 s (f7694)",
+   "carrier": "cut to night on \"And I don't know\"",
+   "why": "her honest ending, full frame"
+  },
+  {
+   "from": "i-dont-know",
+   "to": "ended-big",
+   "frame": 7862,
+   "t": 262.05,
+   "kind": "cut",
+   "lands_on": null,
+   "carrier": "the chat ends: the line breaks out on the tape stop",
+   "why": "the film ends the way a chat ends"
+  },
+  {
+   "from": "ended-big",
+   "to": "end-card",
+   "frame": 7928,
+   "t": 264.25,
+   "kind": "cut",
+   "lands_on": null,
+   "carrier": "cut to night end card, the handle types on",
+   "why": "the handle, once the conversation is over"
+  }
+ ],
+ "flags": []
+}

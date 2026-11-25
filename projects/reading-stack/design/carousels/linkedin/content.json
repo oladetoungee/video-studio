@@ -1,0 +1,218 @@
+{
+  "_help": "Edit text here, then run: node shared/build.mjs linkedin (from design/carousels). Markup: *word* = accent colour, _word_ = serif italic, \\n = line break. docTitle = the document title LinkedIn asks for on upload.",
+  "deck": "linkedin",
+  "docTitle": "A 4-step system to remember the books you read for work",
+  "width": 1080,
+  "height": 1350,
+  "accent": "#FF4713",
+  "accentOnInk": "#FF4713",
+  "slides": [
+    {
+      "layout": "cover",
+      "ground": "accent",
+      "corner": "",
+      "title": "Remember\n*what* you\nread for\n*work.*",
+      "sub": "A 4-step system for non-fiction. A few minutes per book.",
+      "polaroid": {
+        "img": "../../thumbnails/assets/photo/neutral.jpg",
+        "caption": ""
+      },
+      "nudge": {
+        "title": {
+          "dx": -4,
+          "dy": -42
+        }
+      }
+    },
+    {
+      "layout": "quote",
+      "ground": "paper",
+      "quote": "“So what was that book about?”",
+      "body": "Weeks after finishing a book for work or study, you can give the gist and one or two points. Not the argument.",
+      "punch": "You keep a _feeling_ about the book,\nnot the book itself."
+    },
+    {
+      "layout": "compare",
+      "ground": "ink",
+      "title": "Ideas stick when they\nhave a place to *go.*",
+      "cols": [
+        "Start at page 1",
+        "Structure first"
+      ],
+      "rows": [
+        {
+          "k": "A new idea arrives",
+          "a": "Nowhere to file it.",
+          "b": "You know which part it belongs to."
+        },
+        {
+          "k": "By chapter six",
+          "a": "A pile of floating ideas.",
+          "b": "Each idea has somewhere to go."
+        },
+        {
+          "k": "What’s left",
+          "a": "A feeling about the book.",
+          "b": "The shape of the argument."
+        }
+      ]
+    },
+    {
+      "layout": "step",
+      "ground": "paper",
+      "step": 1,
+      "of": 4,
+      "title": "Decode the title.",
+      "word": "Convivial",
+      "meaning": "A term from philosopher Ivan Illich: tools that give power back to the person using them.",
+      "guess": "My guess before page one: it argues research tools should be usable by ordinary people, not just experts.",
+      "polaroid": {
+        "img": "book_convivial.jpg",
+        "caption": ""
+      },
+      "lede": "Example: _Convivial Toolbox_.\nLook up the word you don’t know.",
+      "nudge": {
+        "polaroid": {
+          "dy": 50
+        }
+      }
+    },
+    {
+      "layout": "step-bars",
+      "ground": "paper",
+      "step": 2,
+      "of": 4,
+      "title": "Map the contents.",
+      "lede": "Chapters, sub-headings, even page counts. Then group them into blocks.",
+      "example": "Same book, pages per part",
+      "rows": [
+        {
+          "n": "Part 1",
+          "s": "Underlying principles",
+          "v": 80,
+          "label": "~80 pp"
+        },
+        {
+          "n": "Part 2",
+          "s": "Cases from practice",
+          "v": 50,
+          "label": "~50 pp"
+        },
+        {
+          "n": "Part 3",
+          "s": "Tools and techniques",
+          "v": 140,
+          "label": "140+ pp",
+          "accent": true
+        }
+      ],
+      "takeaway": "A manual _masquerading_ as a textbook: the theory up front is there to make the tools make sense."
+    },
+    {
+      "layout": "step-meter",
+      "ground": "paper",
+      "step": 3,
+      "of": 4,
+      "title": "Memorise it.",
+      "lede": "Learn the chapter titles by heart. Sub-headings too, if you can.",
+      "meterLabel": "",
+      "meters": [],
+      "quote": "Skimming the headings helps. Memorising them sticks: it makes the map stronger in my mind.",
+      "note": "An old idea: Mortimer Adler’s inspectional reading (_How to Read a Book_, 1940). Others call it priming.",
+      "nudge": {
+        "quote": {
+          "dy": 120
+        }
+      }
+    },
+    {
+      "layout": "step-guess",
+      "ground": "paper",
+      "step": 4,
+      "of": 4,
+      "title": "Guess, then read\nto check.",
+      "example": "Its sub-headings",
+      "questions": [
+        "Where are the gaps?",
+        "Where and when does bridging happen?",
+        "Who is bridging the gap?",
+        "What are the ways we can bridge the gap?"
+      ],
+      "takeaway": "My guess: a “gap” problem sits at the heart of this book. So when “gap” turns up early, I’ll notice. Read cold, I’d have missed it.",
+      "lede": "From _Convivial Toolbox_: the last chapter, “Bridging”."
+    },
+    {
+      "layout": "uses",
+      "ground": "ink",
+      "title": "Where it\npays *off.*",
+      "rows": [
+        {
+          "n": "01",
+          "head": "Thesis and research",
+          "sub": "Dense sources you’ll cite or build on."
+        },
+        {
+          "n": "02",
+          "head": "Textbooks and manuals",
+          "sub": "Anything with a real contents page."
+        },
+        {
+          "n": "03",
+          "head": "Books you’ll have to explain",
+          "sub": "When someone asks what it was about."
+        }
+      ],
+      "note": "Skip it for fiction. With a novel, not knowing what comes next is the point."
+    },
+    {
+      "layout": "checklist",
+      "ground": "card",
+      "corner": "// the system on one page",
+      "title": "Before you read\na book for work",
+      "rows": [
+        {
+          "n": "01",
+          "head": "Decode the title.",
+          "sub": "What is it already telling you?"
+        },
+        {
+          "n": "02",
+          "head": "Map the contents.",
+          "sub": "Chapters, sub-headings, page counts, blocks."
+        },
+        {
+          "n": "03",
+          "head": "Memorise it.",
+          "sub": "If you can. Then every new idea has a place."
+        },
+        {
+          "n": "04",
+          "head": "Guess, then check.",
+          "sub": "Read to find out: right or wrong?"
+        }
+      ],
+      "footLeft": "A few minutes per book",
+      "footRight": "Non-fiction"
+    },
+    {
+      "layout": "end",
+      "ground": "accent",
+      "corner": "// save it for your next book",
+      "title": "Try it on\nyour next\n*book.*",
+      "video": "How to Actually Remember What You Read",
+      "where": "Full video on YouTube",
+      "placeholder": "@WithGbemi",
+      "placeholderNote": "Placeholder: edit content.json",
+      "polaroids": [
+        {
+          "img": "book_baratta.jpg",
+          "caption": ""
+        },
+        {
+          "img": "book_convivial.jpg",
+          "caption": ""
+        }
+      ]
+    }
+  ]
+}

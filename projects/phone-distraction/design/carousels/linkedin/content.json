@@ -1,0 +1,170 @@
+{
+  "_help": "Edit text here (or in the studio), then run: node shared/build.mjs linkedin (from design/carousels). Markup: *word* = accent colour, _word_ = serif italic, \\n = line break. The PDF is outputs/carousels/linkedin/carousel.pdf.",
+  "deck": "linkedin",
+  "docTitle": "Addictive design and the EU: LinkedIn carousel",
+  "width": 1080,
+  "height": 1350,
+  "accent": "#FF4433",
+  "slides": [
+    {
+      "layout": "hook",
+      "ground": "ink",
+      "title": "The EU says\naddictive feed\ndesign may\nbreak *the law.*",
+      "size": 150,
+      "sub": "Preliminary findings against TikTok (6 Feb 2026) and Instagram and Facebook (10 Jul 2026). Plus 5 questions for your next design review.",
+      "subSize": 42,
+      "tag": "",
+      "gap": 50,
+      "swipe": "Swipe →"
+    },
+    {
+      "layout": "visual",
+      "ground": "paper",
+      "title": "Not the content.\nThe *design.*",
+      "size": 112,
+      "visual": "source",
+      "from": "European Commission",
+      "date": "10 Jul 2026",
+      "img": "eu-meta-lead.png",
+      "credit": "Screenshot, ec.europa.eu",
+      "gap": 44,
+      "takeaway": "Under the Digital Services Act, the Commission named infinite scroll, autoplay, push notifications and highly personalised recommendations.",
+      "takeSize": 38,
+      "imgH": 330,
+      "takeTop": 50
+    },
+    {
+      "layout": "visual",
+      "ground": "ink",
+      "corner": "What the Commission wants changed",
+      "title": "Change the\n*defaults.*",
+      "size": 118,
+      "visual": "toggles",
+      "rows": [
+        {
+          "head": "Infinite scroll: off",
+          "sub": "Meta: off by default. TikTok: phase it out."
+        },
+        {
+          "head": "Autoplay: off",
+          "sub": "By default (Meta)"
+        },
+        {
+          "head": "Screen-time breaks: on",
+          "sub": "Both. Including at night (TikTok)",
+          "on": true
+        }
+      ],
+      "gap": 40,
+      "takeaway": "Both findings are preliminary. TikTok called its finding “categorically false and entirely meritless”.",
+      "takeSize": 36,
+      "source": "EC press releases, Feb and Jul 2026; TikTok via AP",
+      "takeTop": 40
+    },
+    {
+      "layout": "visual",
+      "ground": "ink",
+      "title": "Old formats had\n*stopping points.*",
+      "size": 120,
+      "visual": "bookfeed",
+      "end": "The End",
+      "gap": 44,
+      "takeaway": "Chapters, episodes, a Next page button. Infinite scroll (Aza Raskin, 2006) and autoplay took those stopping points away.",
+      "takeSize": 40
+    },
+    {
+      "layout": "visual",
+      "ground": "ink",
+      "title": "Notifications:\none week on,\none week _off._",
+      "size": 110,
+      "visual": "toggles",
+      "gap": 50,
+      "takeaway": "Notifications are a design choice too. In a CHI 2016 study, 221 people spent one week each way; the “on” week brought more self-reported symptoms.",
+      "takeSize": 40,
+      "source": "Kushlev, Proulx and Dunn, “Silence Your Phones”, CHI 2016",
+      "rows": [
+        {
+          "head": "Alerts on, phone in reach",
+          "sub": "More inattention and hyperactivity",
+          "on": true
+        },
+        {
+          "head": "Alerts off, phone away",
+          "sub": "Fewer of those symptoms"
+        }
+      ],
+      "lh": 1.1
+    },
+    {
+      "layout": "visual",
+      "ground": "paper",
+      "title": "Behaviour =\nmotivation, ability,\n*prompt.*",
+      "size": 100,
+      "lede": "B.J. Fogg's Behavior Model (Stanford). The features on the earlier pages each supply one of the three.",
+      "visual": "questions",
+      "gap": 44,
+      "rows": [
+        {
+          "n": "M",
+          "head": "Motivation: curiosity, what's new?"
+        },
+        {
+          "n": "A",
+          "head": "Ability: one tap opens the app"
+        },
+        {
+          "n": "P",
+          "head": "Prompt: the notification you designed"
+        }
+      ]
+    },
+    {
+      "layout": "visual",
+      "ground": "paper",
+      "corner": "For your next design review",
+      "title": "5 questions\nto *ask.*",
+      "size": 130,
+      "visual": "questions",
+      "rows": [
+        {
+          "n": "01",
+          "head": "Where can people stop?"
+        },
+        {
+          "n": "02",
+          "head": "Is this default good for the user, or for time in the app?"
+        },
+        {
+          "n": "03",
+          "head": "Does this notification help, or just bring people back?"
+        },
+        {
+          "n": "04",
+          "head": "Can people turn it off in one step?"
+        },
+        {
+          "n": "05",
+          "head": "Could we defend it to a regulator?"
+        }
+      ],
+      "gap": 40
+    },
+    {
+      "layout": "end",
+      "ground": "accent",
+      "title": "Which one would\nyour product fail?",
+      "size": 118,
+      "body": "I made a video on the design choices that keep people scrolling, and where they came from. Tell me in the comments.",
+      "bodySize": 42,
+      "where": "Full video on YouTube",
+      "video": "Why Can't I Stop Scrolling? It Was Designed That Way",
+      "handle": "@WithGbemi",
+      "pushW": 500,
+      "polaroid": {
+        "img": "her_157.0.jpg",
+        "caption": ""
+      },
+      "ctaSize": 42
+    }
+  ]
+}

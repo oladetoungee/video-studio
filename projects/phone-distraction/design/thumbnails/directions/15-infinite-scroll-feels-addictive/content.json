@@ -1,0 +1,22 @@
+{
+  "direction": "Paper ground; the question top-left in ink, \"addictive\" in red; her black-and-white cut-out (red outline, glancing) under it; a phone whose feed keeps going above and below it, off both edges of the frame, with a red ∞.",
+  "kind": "graphic",
+  "concept": "v3 (2026-10-16)",
+  "references": "her database-indexes thumbnail (one drawn mechanism + cut-out) · div div div (repetition) · Two Sum (flat drawing)",
+  "thumbnail_text": "Why infinite scroll feels addictive",
+  "title": "Why Websites Got Rid of the \"Next Page\" Button",
+  "titles": [
+    "Why Websites Got Rid of the \"Next Page\" Button",
+    "Why Can’t I Stop Scrolling? It Was Designed That Way"
+  ],
+  "scores": "fresh critics vs her bar: r1 7 · r2 5.5 · r3 6.7 · r4 7",
+  "recommended": "",
+  "text": {
+    "words": "Why infinite<br>scroll feels<br><span class=\"acc\">addictive</span>",
+    "inf": "∞"
+  },
+  "images": {
+    "photo": "../../assets/cut/895.9_bw_red.png"
+  },
+  "vars": {}
+}

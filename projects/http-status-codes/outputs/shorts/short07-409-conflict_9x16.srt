@@ -1,0 +1,31 @@
+1
+00:00:00,150 --> 00:00:02,690
+say two admins open book 42 at the same time
+
+2
+00:00:02,690 --> 00:00:04,150
+admin A changes the price and save
+
+3
+00:00:04,150 --> 00:00:05,950
+admin B is still looking at the old version
+
+4
+00:00:05,950 --> 00:00:07,630
+they change the title and save
+
+5
+00:00:07,630 --> 00:00:09,510
+and that save will put the old price back
+
+6
+00:00:09,510 --> 00:00:11,770
+so if the API keeps track of versions, It
+
+7
+00:00:11,770 --> 00:00:13,820
+can reply with 409 Conflict to admin B
+
+8
+00:00:13,820 --> 00:00:16,133
+instead, so that it can reload and try again

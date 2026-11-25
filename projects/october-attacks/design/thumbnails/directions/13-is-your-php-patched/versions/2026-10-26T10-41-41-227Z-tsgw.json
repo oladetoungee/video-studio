@@ -1,0 +1,29 @@
+{
+ "label": "Before this session’s edits",
+ "auto": true,
+ "savedAt": 1793011301227,
+ "content": {
+  "direction": "Flat graphic (kit T2): night ground, a wall of 12 generic browser windows, most marked with the elephant and 'runs on PHP' in quiet grey (running PHP is not the same as being hacked), one window lit orange with an unpatched version and a question mark; her black-and-white cut-out with an orange outline on the right. Honest: nearly three quarters of websites run PHP (W3Techs via Reuters). References: her database-indexes thumbnail (flat dark ground, one mechanism, her B&W cut-out), viral 2 (one object = the stakes).",
+  "thumbnail_text": "IS YOUR PHP PATCHED?",
+  "titles": [
+   "PHP Vulnerability 2026: How to Check and Patch PHP2Shell",
+   "Is PHP Patched? PHP2Shell and the October 2026 Hacks"
+  ],
+  "title": "PHP Vulnerability 2026: How to Check and Patch PHP2Shell",
+  "kind": "graphic",
+  "text": {
+   "hd": "Is your PHP <span class=\"acc\">patched?</span>"
+  },
+  "images": {
+   "me": "../../assets/cut/gbemi-9.0.png"
+  },
+  "vars": {
+   "--ground": "#16110D",
+   "--fg": "#EFE7D8",
+   "--accent": "#F2541B",
+   "--ol": "#F2541B"
+  },
+  "scores": "cold critic R1 7.5 · R2 8.5",
+  "recommended": true
+ }
+}

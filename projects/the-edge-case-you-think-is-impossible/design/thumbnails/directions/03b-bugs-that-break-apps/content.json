@@ -1,0 +1,33 @@
+{
+  "text": {
+    "h": "Bugs that break apps",
+    "note": "Only<br>1 left",
+    "lab": "In stock",
+    "num": "−1",
+    "sub": "2 people<br>bought it"
+  },
+  "images": {
+    "room": "../../assets/shoot/room3-1590.jpg",
+    "me": "../../assets/shoot/me3-1590.png"
+  },
+  "kind": "photo, her room washed in one colour, her in the middle (new version of 03)",
+  "board": "Thumbnails 126 (her own UX RESEARCH: one-colour room, huge condensed topic on top, sticky note -> arrow -> phone)",
+  "fonts": [
+    "shorts-06 Oswald SemiBold caps (cream #EDE2A0 on #5A4F4A, Formats 26)",
+    "Inter Tight inside the phone (generic UI)"
+  ],
+  "colours": "Formats 26 / shorts-06: #5A4F4A / #EDE2A0 (+ error red #E5322D on the phone)",
+  "thumbnail_text": "BUGS THAT BREAK APPS + sticky note \"Only 1 left\" -> phone \"In stock: -1, 2 people bought it\"",
+  "titles": [
+    "Edge Cases: The Bugs That Break Real Apps",
+    "Edge Cases Explained: 8 Bugs That Break Apps",
+    "Edge Cases: Why Code That Passes Tests Still Breaks"
+  ],
+  "title": "Edge Cases: The Bugs That Break Real Apps",
+  "replaces": "03-passed-tests-still-broken (kept beside it)",
+  "scores": "cold critic 2026-11-16, 3 fresh rounds, PNGs only, alone: r1 7, r2 6, r3 4 (r3 was a try without the note + arrow, undone). Old 03 in the same rounds: 6 / 5 / 5.5",
+  "direction": "Copies Thumbnails 126 (her own UX RESEARCH): the room washed in one warm colour so it goes calm, the topic huge across the top, she holds out her palms under a phone; a sticky note \"Only 1 left\" points to the phone showing stock at -1 after 2 people bought it.",
+  "nudge": {},
+  "vars": {},
+  "class": "no-lift"
+}

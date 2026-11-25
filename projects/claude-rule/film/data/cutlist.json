@@ -1,0 +1,83 @@
+{
+ "sample_rate": 48000,
+ "original_duration": 272.299,
+ "edited_duration": 262.199,
+ "manual_cuts": [
+  {
+   "start": 110.62,
+   "end": 111.41,
+   "seconds": 0.79,
+   "reason": "retake: 'I don't even,' (keeps 'I don't even think')"
+  },
+  {
+   "start": 119.29,
+   "end": 121.24,
+   "seconds": 1.95,
+   "reason": "trailing start: 'And I don't think that, so' (BRIEF: mumble at 1:59)"
+  },
+  {
+   "start": 154.84,
+   "end": 155.38,
+   "seconds": 0.54,
+   "reason": "retake: 'This,' (keeps 'this illusion')"
+  },
+  {
+   "start": 226.5,
+   "end": 232.44,
+   "seconds": 5.94,
+   "reason": "trailing off: 'If you follow through with the formula, it's just... I can't place it, but if you somehow...'"
+  }
+ ],
+ "manual_seconds_removed": 9.22,
+ "pauses_tightened": 2,
+ "pause_seconds_removed": 0.88,
+ "pauses": [
+  {
+   "orig_at": 72.49,
+   "was": 0.95,
+   "now": 0.53
+  },
+  {
+   "orig_at": 218.97,
+   "was": 0.99,
+   "now": 0.53
+  }
+ ],
+ "segments": [
+  {
+   "orig_start": 0.0,
+   "orig_end": 72.7275,
+   "edit_start": 0.0
+  },
+  {
+   "orig_start": 73.1125,
+   "orig_end": 110.6375,
+   "edit_start": 72.6925
+  },
+  {
+   "orig_start": 111.3925,
+   "orig_end": 119.3075,
+   "edit_start": 110.1825
+  },
+  {
+   "orig_start": 121.2225,
+   "orig_end": 154.8575,
+   "edit_start": 118.0625
+  },
+  {
+   "orig_start": 155.3625,
+   "orig_end": 219.2075,
+   "edit_start": 151.6625
+  },
+  {
+   "orig_start": 219.6325,
+   "orig_end": 226.5175,
+   "edit_start": 215.4725
+  },
+  {
+   "orig_start": 232.4225,
+   "orig_end": 272.299,
+   "edit_start": 222.3225
+  }
+ ]
+}

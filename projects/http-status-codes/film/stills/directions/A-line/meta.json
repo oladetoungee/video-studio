@@ -1,0 +1,145 @@
+{
+ "TOTAL": 529,
+ "INTRO": 0,
+ "OUTRO": 1,
+ "FPS": 30,
+ "CUES": [
+  {
+   "name": "pop",
+   "t": 30.8,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "marker",
+   "t": 31.3,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "pencil",
+   "t": 31.46,
+   "db": -5,
+   "keep": true
+  },
+  {
+   "name": "type",
+   "t": 57.39,
+   "db": -8,
+   "keep": true
+  },
+  {
+   "name": "click",
+   "t": 61.5,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "pop",
+   "t": 62.4,
+   "db": -5,
+   "keep": true
+  },
+  {
+   "name": "pencil",
+   "t": 110.1,
+   "db": -10,
+   "keep": true
+  },
+  {
+   "name": "type",
+   "t": 110.17,
+   "db": -9,
+   "keep": true
+  },
+  {
+   "name": "click",
+   "t": 110.45,
+   "db": -5,
+   "keep": true
+  },
+  {
+   "name": "pop",
+   "t": 111.79,
+   "db": -4,
+   "keep": true
+  },
+  {
+   "name": "tick",
+   "t": 112.64,
+   "db": -7,
+   "keep": true
+  },
+  {
+   "name": "type",
+   "t": 113.81,
+   "db": -8,
+   "keep": true
+  },
+  {
+   "name": "pencil",
+   "t": 116.68,
+   "db": -6,
+   "keep": true
+  },
+  {
+   "name": "click",
+   "t": 118.16,
+   "db": -5,
+   "keep": true
+  },
+  {
+   "name": "pop",
+   "t": 120.95,
+   "db": -4,
+   "keep": true
+  }
+ ],
+ "SCENES": [
+  {
+   "n": 1,
+   "id": "pre",
+   "start": 0,
+   "end": 30.7,
+   "ground": "a5",
+   "label": "pre",
+   "trans": "cut"
+  },
+  {
+   "n": 2,
+   "id": "rfc",
+   "start": 30.7,
+   "end": 57.3,
+   "ground": "a4",
+   "label": "rfc",
+   "trans": "cut"
+  },
+  {
+   "n": 3,
+   "id": "classes",
+   "start": 57.3,
+   "end": 110,
+   "ground": "a3",
+   "label": "classes",
+   "trans": "cut"
+  },
+  {
+   "n": 4,
+   "id": "get",
+   "start": 110,
+   "end": 113.7,
+   "ground": "a1",
+   "label": "get",
+   "trans": "cut"
+  },
+  {
+   "n": 5,
+   "id": "created",
+   "start": 113.7,
+   "end": 529,
+   "ground": "a2",
+   "label": "created",
+   "trans": "cut"
+  }
+ ]
+}

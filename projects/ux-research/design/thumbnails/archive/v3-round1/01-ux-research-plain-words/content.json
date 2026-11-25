@@ -1,0 +1,26 @@
+{
+  "direction": "Her in her room, making a frame with her hands, the topic huge beside her in white, 'in plain words' in a warm serif. Room darkened a touch so she and the words lead. References: yt 'UI UX roadmap' (26), Pinterest 'keep trying', viral 'Financial literacy'.",
+  "thumbnail_text": "UX research in plain words",
+  "text": {
+    "hd": "UX<br>research",
+    "sub": "in plain words"
+  },
+  "images": {
+    "bg": "../../assets/scene/g/s_246.8.jpg",
+    "cut": "../../assets/scene/g/mask3/s_246.8.png"
+  },
+  "vars": {
+    "--accent": "#FFD84D",
+    "--bgb": "0.72",
+    "--bgs": "0.8",
+    "--meb": "1.04"
+  },
+  "titles": [
+    "What Is UX Research? Explained From Scratch",
+    "UX Research for Beginners: What It Is and How It Works",
+    "What Is UX Research? Explained With Real App Examples"
+  ],
+  "title": "What Is UX Research? Explained From Scratch",
+  "set": 3,
+  "kind": "photo"
+}

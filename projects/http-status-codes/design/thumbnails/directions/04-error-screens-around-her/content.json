@@ -1,0 +1,35 @@
+{
+  "direction": "Collage: she in the middle (cut-out, palm out as if presenting), around her the screens everyone has met: a \"404 Not Found\" page, \"500 Internal Server Error\", \"403 Forbidden\", and a network panel showing 200 OK. One lowercase line on top. Follows: \"upgrade your life with neuroplasticity\" and \"I DID 1 YEAR OF PERSONAL CURRICULUMS\" (creator surrounded by the real objects of the topic).",
+  "thumbnail_text": "http status codes, explained",
+  "titles": [
+    "HTTP Status Codes: What 404, 403 and 500 Mean",
+    "HTTP Status Codes Explained: Is It You or the Server?",
+    "What Your Browser Errors Are Actually Telling You"
+  ],
+  "title": "HTTP Status Codes: What 404, 403 and 500 Mean",
+  "kind": "collage",
+  "text": {
+    "top": "HTTP Status Codes, explained",
+    "w1": "404 Not Found",
+    "w2": "500 Internal Server Error",
+    "w3": "403 Forbidden",
+    "u1": "example.com/books/9999",
+    "u2": "example.com/checkout",
+    "u3": "example.com/admin"
+  },
+  "images": {
+    "me": "../../assets/photo/shoot/1604-person.png"
+  },
+  "vars": {
+    "--ground": "#EDE9E2",
+    "--fg": "#111114",
+    "--gridc": "rgba(17,17,20,.08)",
+    "--rule": "rgba(17,17,20,.85)"
+  },
+  "class": "no-lift",
+  "nudge": {
+    "her": {
+      "s": 1.019
+    }
+  }
+}

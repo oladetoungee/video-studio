@@ -1,0 +1,47 @@
+{
+ "title": "October attacks: direction C-status",
+ "hud": "",
+ "intro": 0,
+ "outro": 2,
+ "voiceDuration": 480,
+ "words": "../_shared/words.json",
+ "images": {
+  "clip_php-quote": "../_src/clips/php-quote.png",
+  "clip_php-head": "../_src/clips/php-head.png",
+  "clip_zeabur-quote": "../_src/clips/zeabur-quote.png",
+  "clip_zeabur-head": "../_src/clips/zeabur-head.png",
+  "clip_emudhra-quote": "../_src/clips/emudhra-quote.png",
+  "clip_railway-head": "../_src/clips/railway-head.png",
+  "clip_railway-text": "../_src/clips/railway-text.png",
+  "clip_railway-revoke": "../_src/clips/railway-revoke.png"
+ },
+ "scripts": [
+  "../_shared/clips.js",
+  "../_shared/oa.js",
+  "kit.js",
+  "scenes.js"
+ ],
+ "cutSounds": {
+  "cutSounds": false
+ },
+ "fonts": [
+  "400 40px Anton",
+  "700 40px Manrope",
+  "500 40px Manrope",
+  "500 40px \"Spline Sans Mono\"",
+  "600 40px \"Spline Sans Mono\"",
+  "400 40px \"Spline Sans Mono\"",
+  "400 40px \"Bowlby One\"",
+  "700 40px Figtree",
+  "500 40px Figtree",
+  "800 40px Figtree",
+  "500 40px \"Overpass Mono\"",
+  "600 40px \"Overpass Mono\"",
+  "800 40px \"Public Sans\"",
+  "900 40px \"Public Sans\"",
+  "600 40px \"Public Sans\"",
+  "500 40px \"Public Sans\"",
+  "500 40px \"Red Hat Mono\"",
+  "600 40px \"Red Hat Mono\""
+ ]
+}

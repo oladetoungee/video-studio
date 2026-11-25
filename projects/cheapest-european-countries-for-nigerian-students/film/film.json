@@ -1,0 +1,155 @@
+{
+ "title": "Cheapest Countries to Study in Europe for Nigerians (2027)",
+ "hud": "",
+ "intro": 0.3,
+ "outro": 2.5,
+ "voiceDuration": 672.311,
+ "words": "data/words.json",
+ "captions": "data/captions.srt",
+ "images": {
+  "clip_at-list": "../talking-head/assets/src/at-list.png",
+  "clip_at-oead": "../talking-head/assets/src/at-oead.png",
+  "clip_at-tuw": "../talking-head/assets/src/at-tuw.png",
+  "clip_cz-mv": "../talking-head/assets/src/cz-mv.png",
+  "clip_de-bw": "../talking-head/assets/src/de-bw.png",
+  "clip_de-daad": "../talking-head/assets/src/de-daad.png",
+  "clip_fr-cnam": "../talking-head/assets/src/fr-cnam.png",
+  "clip_fr-funds": "../talking-head/assets/src/fr-funds.png",
+  "clip_fr-icef": "../talking-head/assets/src/fr-icef.png",
+  "clip_fr-work": "../talking-head/assets/src/fr-work.png",
+  "clip_no-udi": "../talking-head/assets/src/no-udi.png",
+  "px_berlin": "../talking-head/assets/px/berlin.jpg",
+  "px_bologna": "../talking-head/assets/px/bologna.jpg",
+  "px_card": "../talking-head/assets/px/card.jpg",
+  "px_euro-100": "../talking-head/assets/px/euro-100.jpg",
+  "px_euro-fan": "../talking-head/assets/px/euro-fan.jpg",
+  "px_helsinki": "../talking-head/assets/px/helsinki.jpg",
+  "px_oslo": "../talking-head/assets/px/oslo.jpg",
+  "px_paris": "../talking-head/assets/px/paris.jpg",
+  "px_prague": "../talking-head/assets/px/prague.jpg",
+  "px_tallinn-street": "../talking-head/assets/px/tallinn-street.jpg",
+  "px_vienna": "../talking-head/assets/px/vienna.jpg",
+  "px_warsaw": "../talking-head/assets/px/warsaw.jpg"
+ },
+ "scripts": [
+  "../talking-head/assets/src/clips.js",
+  "scenes/pckit.js",
+  "scenes/pcsent.js",
+  "scenes/film.js"
+ ],
+ "cutSounds": {
+  "cutSounds": false
+ },
+ "audio": {
+  "voice": "audio/voice_edit.flac",
+  "voiceFilter": "highpass=f=80,afftdn=nr=8:nf=-52:tn=1,deesser=i=0.3:m=0.5:f=0.5,acompressor=threshold=0.06:ratio=3:attack=6:release=160:knee=3,equalizer=f=3200:t=q:w=1.2:g=1.5",
+  "music": {
+   "dir": "library:music",
+   "xfade": 6.0,
+   "tracks": [
+    [
+     "157",
+     "Mixkit track 157"
+    ],
+    [
+     "480",
+     "Mixkit track 480"
+    ],
+    [
+     "160",
+     "Mixkit track 160"
+    ]
+   ]
+  },
+  "sfx": {
+   "roles": {
+    "shutter": {
+     "files": [
+      "library:shutter-hard-click"
+     ],
+     "align": "peak",
+     "db": 7
+    },
+    "bell": {
+     "files": [
+      "library:bell-service-ding"
+     ],
+     "align": "peak",
+     "db": 5
+    },
+    "pop": {
+     "files": [
+      "library:pop-dry",
+      "library:pop-hard-click"
+     ],
+     "align": "peak",
+     "db": 6
+    },
+    "ast": {
+     "files": [
+      "library:pop-hard-click"
+     ],
+     "align": "peak",
+     "db": 7
+    },
+    "sticker": {
+     "files": [
+      "library:wood-hard-hit",
+      "library:punch-soft-quick"
+     ],
+     "align": "peak",
+     "db": 9
+    },
+    "marker": {
+     "files": [
+      "library:marker-line"
+     ],
+     "align": "start",
+     "db": 5,
+     "maxlen": 0.7
+    },
+    "paper": {
+     "files": [
+      "library:card-place",
+      "library:paper-quick-move"
+     ],
+     "align": "peak",
+     "db": 8
+    },
+    "tick": {
+     "files": [
+      "library:ui-select-click",
+      "library:click-classic",
+      "library:switch-tap"
+     ],
+     "align": "peak",
+     "db": 6
+    },
+    "coins": {
+     "files": [
+      "library:coins-clinking"
+     ],
+     "align": "start",
+     "db": 3,
+     "maxlen": 0.9
+    },
+    "scan": {
+     "files": [
+      "library:ui-device-click",
+      "library:ui-click-tone"
+     ],
+     "align": "peak",
+     "db": 6
+    }
+   }
+  },
+  "levels": {
+   "voiceLufs": -16.0,
+   "duckDb": -15.0,
+   "openDb": -10.0,
+   "fullDb": -7.0,
+   "target": -14.0,
+   "ceiling": 0.7
+  }
+ }
+}
